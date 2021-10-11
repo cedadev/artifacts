@@ -1,5 +1,5 @@
 
-This directory contains items for raw presentation on the web. 
+This directory contains items for raw presentation on the web
 
 Sub directories are used to contain collections of items.
 
