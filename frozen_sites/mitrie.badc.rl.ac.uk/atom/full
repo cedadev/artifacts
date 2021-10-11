@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed version="0.3" xmlns="http://purl.org/atom/ns#" xml:lang="en">
+<title>Leonardo Sample Blog</title>
+<link rel="alternate" type="text/html" href="http://mitrie.badc.rl.ac.uk/blog"/>
+<author><name>Martin Juckes</name></author>
+
+</feed>

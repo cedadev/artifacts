@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracQuery – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracQuery?format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="TracQuery.html" title="View TracQuery">TracQuery</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><a href="WikiStart.html">Start Page</a></li><li><a href="TitleIndex.html">Index</a></li><li class="last"><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracQuery?action=history">History</a></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <div class="wikipage searchable">
+        
+          
+          <div class="trac-modifiedby"><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracQuery?action=diff&amp;version=1" title="Version 1 by trac">Last modified</a> <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A01%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:01+01:00 in Timeline">6 years</a> ago</div>
+          <div id="wikipage"><h1 id="TracTicketQueries">Trac Ticket Queries</h1>
+<p>
+</p><div class="wiki-toc"><h4>Table of Contents</h4><ul><li class="False"><a class="False" href="TracGuide.html">Index</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInstall">Installation</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization">Customization</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracPlugins">Plugins</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUpgrade">Upgrading</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">Configuration</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracAdmin">Administration</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracBackup">Backup</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLogging">Logging</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracPermissions">Permissions</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWiki">The Wiki</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">Wiki Formatting</a></li><li class="False"><a class="False" href="TracTimeline.html">Timeline</a></li><li class="False"><a class="False" href="TracBrowser.html">Repository Browser</a></li><li class="False"><a class="False" href="TracRevisionLog.html">Revision Log</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracChangeset">Changesets</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTickets">Tickets</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWorkflow">Workflow</a></li><li class="False"><a class="False" href="TracRoadmap.html">Roadmap</a></li><li class="active"><a class="False" href="TracQuery.html">Ticket Queries</a></li><li class="False"><a class="False" href="TracReports.html">Reports</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracRss">RSS Support</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracNotification">Notification</a></li></ul></div><p>
+</p>
+<p>
+In addition to <a class="wiki" href="TracReports.html">reports</a>, Trac provides support for <em>custom ticket queries</em>, used to display lists of tickets meeting a specified set of criteria. 
+</p>
+<p>
+To configure and execute a custom query, switch to the <em>View Tickets</em> module from the navigation bar, and select the <em>Custom Query</em> link.
+</p>
+<h2 id="Filters">Filters</h2>
+<p>
+When you first go to the query page the default filter will display tickets relevant to you:
+</p>
+<ul><li>If logged in then all open tickets it will display open tickets assigned to you.
+</li><li>If not logged in but you have specified a name or email address in the preferences then it will display all open tickets where your email (or name if email not defined) is in the CC list.
+</li><li>If not logged and no name/email defined in the preferences then all open issues are displayed.
+</li></ul><p>
+Current filters can be removed by clicking the button to the left with the minus sign on the label.  New filters are added from the pulldown lists at the bottom corners of the filters box ('And' conditions on the left, 'Or' conditions on the right).  Filters with either a text box or a pulldown menu of options can be added multiple times to perform an <em>or</em> of the criteria.
+</p>
+<p>
+You can use the fields just below the filters box to group the results based on a field, or display the full description for each ticket.
+</p>
+<p>
+Once you've edited your filters click the <em>Update</em> button to refresh your results.
+</p>
+<h2 id="NavigatingTickets">Navigating Tickets</h2>
+<p>
+Clicking on one of the query results will take you to that ticket.  You can navigate through the results by clicking the <em>Next Ticket</em> or <em>Previous Ticket</em> links just below the main menu bar, or click the <em>Back to Query</em> link to return to the query page.  
+</p>
+<p>
+You can safely edit any of the tickets and continue to navigate through the results using the <em>Next/Previous/Back to Query</em> links after saving your results.  When you return to the query <em>any tickets which were edited</em> will be displayed with italicized text.  If one of the tickets was edited such that <span style="color: grey">it no longer matches the query criteria </span> the text will also be greyed. Lastly, if <strong>a new ticket matching the query criteria has been created</strong>, it will be shown in bold. 
+</p>
+<p>
+The query results can be refreshed and cleared of these status indicators by clicking the <em>Update</em> button again.
+</p>
+<h2 id="SavingQueries">Saving Queries</h2>
+<p>
+Trac allows you to save the query as a named query accessible from the reports module. To save a query ensure that you have <em>Updated</em> the view and then click the <em>Save query</em> button displayed beneath the results.
+You can also save references to queries in Wiki content, as described below.
+</p>
+<p>
+<em>Note:</em> one way to easily build queries like the ones below, you can build and test the queries in the Custom report module and when ready - click <em>Save query</em>. This will build the query string for you. All you need to do is remove the extra line breaks.
+</p>
+<h3 id="UsingTracLinks">Using <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">TracLinks</a></h3>
+<p>
+You may want to save some queries so that you can come back to them later.  You can do this by making a link to the query from any Wiki page.
+</p>
+<pre class="wiki">[query:status=new|assigned|reopened&amp;version=1.0 Active tickets against 1.0]
+</pre><p>
+Which is displayed as:
+</p>
+<blockquote>
+<p>
+<a class="query" href="http://proj.badc.rl.ac.uk/preparde/query?status=new&amp;status=assigned&amp;status=reopened&amp;version=1.0&amp;order=priority">Active tickets against 1.0</a>
+</p>
+</blockquote>
+<p>
+This uses a very simple query language to specify the criteria (see <a class="wiki" href="TracQuery.html#QueryLanguage">Query Language</a>).
+</p>
+<p>
+Alternatively, you can copy the query string of a query and paste that into the Wiki link, including the leading <tt>?</tt> character:
+</p>
+<pre class="wiki">[query:?status=new&amp;status=assigned&amp;status=reopened&amp;group=owner Assigned tickets by owner]
+</pre><p>
+Which is displayed as:
+</p>
+<blockquote>
+<p>
+<a class="query" href="http://proj.badc.rl.ac.uk/preparde/query?status=new&amp;status=assigned&amp;status=reopened&amp;group=owner">Assigned tickets by owner</a>
+</p>
+</blockquote>
+<h3 id="UsingtheTicketQueryMacro">Using the <tt>[[TicketQuery]]</tt> Macro</h3>
+<p>
+The <a class="ext-link" href="http://trac.edgewall.org/intertrac/TicketQuery" title="TicketQuery in Trac project trac"><span class="icon"> </span>TicketQuery</a> macro lets you display lists of tickets matching certain criteria anywhere you can use <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">WikiFormatting</a>.
+</p>
+<p>
+Example:
+</p>
+<pre class="wiki">[[TicketQuery(version=0.6|0.7&amp;resolution=duplicate)]]
+</pre><p>
+This is displayed as:
+</p>
+<blockquote>
+<p>
+<span class="query_no_results">No results</span>
+</p>
+</blockquote>
+<p>
+Just like the <a class="wiki" href="TracQuery.html#UsingTracLinks">query: wiki links</a>, the parameter of this macro expects a query string formatted according to the rules of the simple <a class="wiki" href="TracQuery.html#QueryLanguage">ticket query language</a>.
+</p>
+<p>
+A more compact representation without the ticket summaries is also available:
+</p>
+<pre class="wiki">[[TicketQuery(version=0.6|0.7&amp;resolution=duplicate, compact)]]
+</pre><p>
+This is displayed as:
+</p>
+<blockquote>
+<p>
+<span class="query_no_results">No results</span>
+</p>
+</blockquote>
+<p>
+Finally, if you wish to receive only the number of defects that match the query, use the <tt></tt>count<tt></tt> parameter.
+</p>
+<pre class="wiki">[[TicketQuery(version=0.6|0.7&amp;resolution=duplicate, count)]]
+</pre><p>
+This is displayed as:
+</p>
+<blockquote>
+<p>
+<span class="query_count" title="0 tickets for which version=0.6|0.7&amp;resolution=duplicate&amp;max=0&amp;order=id">0</span>
+</p>
+</blockquote>
+<h3 id="Customizingthetableformat">Customizing the <em>table</em> format</h3>
+<p>
+You can also customize the columns displayed in the table format (<em>format=table</em>) by using <em>col=&lt;field&gt;</em> - you can specify multiple fields and what order they are displayed by placing pipes (<tt>|</tt>) between the columns like below:
+</p>
+<pre class="wiki">[[TicketQuery(max=3,status=closed,order=id,desc=1,format=table,col=resolution|summary|owner|reporter)]]
+</pre><p>
+This is displayed as:
+</p><div xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+  
+  
+  
+    
+  
+  <table class="listing tickets">
+    <thead>
+      
+    <tr class="trac-columns">
+      <th class="id desc">
+        
+        <a title="Sort by Ticket (ascending)" href="http://proj.badc.rl.ac.uk/preparde/query?status=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=id">Ticket</a>
+      </th><th class="resolution">
+        
+        <a title="Sort by Resolution (ascending)" href="http://proj.badc.rl.ac.uk/preparde/query?status=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=resolution">Resolution</a>
+      </th><th class="summary">
+        
+        <a title="Sort by Summary (ascending)" href="http://proj.badc.rl.ac.uk/preparde/query?status=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=summary">Summary</a>
+      </th><th class="owner">
+        
+        <a title="Sort by Owner (ascending)" href="http://proj.badc.rl.ac.uk/preparde/query?status=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=owner">Owner</a>
+      </th><th class="reporter">
+        
+        <a title="Sort by Reporter (ascending)" href="http://proj.badc.rl.ac.uk/preparde/query?status=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=reporter">Reporter</a>
+      </th>
+    </tr>
+  
+    </thead>
+    
+      
+      <tbody>
+        <tr class="even">
+          <td colspan="5">
+            No tickets found
+          </td>
+        </tr>
+        
+        
+      </tbody>
+    
+  </table>
+  
+</div><p>
+</p>
+<h4 id="Fullrows">Full rows</h4>
+<p>
+In <em>table</em> format you can also have full rows by using <em>rows=&lt;field&gt;</em> like below:
+</p>
+<pre class="wiki">[[TicketQuery(max=3,status=closed,order=id,desc=1,format=table,col=resolution|summary|owner|reporter,rows=description)]]
+</pre><p>
+This is displayed as:
+</p><div xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+  
+  
+  
+    
+  
+  <table class="listing tickets">
+    <thead>
+      
+    <tr class="trac-columns">
+      <th class="id desc">
+        
+        <a title="Sort by Ticket (ascending)" href="http://proj.badc.rl.ac.uk/preparde/query?status=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=id&amp;row=description">Ticket</a>
+      </th><th class="resolution">
+        
+        <a title="Sort by Resolution (ascending)" href="http://proj.badc.rl.ac.uk/preparde/query?status=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=resolution&amp;row=description">Resolution</a>
+      </th><th class="summary">
+        
+        <a title="Sort by Summary (ascending)" href="http://proj.badc.rl.ac.uk/preparde/query?status=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=summary&amp;row=description">Summary</a>
+      </th><th class="owner">
+        
+        <a title="Sort by Owner (ascending)" href="http://proj.badc.rl.ac.uk/preparde/query?status=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=owner&amp;row=description">Owner</a>
+      </th><th class="reporter">
+        
+        <a title="Sort by Reporter (ascending)" href="http://proj.badc.rl.ac.uk/preparde/query?status=closed&amp;max=3&amp;col=id&amp;col=resolution&amp;col=summary&amp;col=owner&amp;col=reporter&amp;order=reporter&amp;row=description">Reporter</a>
+      </th>
+    </tr>
+  
+    </thead>
+    
+      
+      <tbody>
+        <tr class="even">
+          <td colspan="5">
+            No tickets found
+          </td>
+        </tr>
+        
+        
+      </tbody>
+    
+  </table>
+  
+</div><p>
+</p>
+<h3 id="QueryLanguage">Query Language</h3>
+<p>
+<tt>query:</tt> <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">TracLinks</a> and the <tt>[[TicketQuery]]</tt> macro both use a mini “query language” for specifying query filters. Basically, the filters are separated by ampersands (<tt>&amp;</tt>). Each filter then consists of the ticket field name, an operator, and one or more values. More than one value are separated by a pipe (<tt>|</tt>), meaning that the filter matches any of the values. To include a literal <tt>&amp;</tt> or <tt>|</tt> in a value, escape the character with a backslash (<tt>\</tt>).
+</p>
+<p>
+The available operators are:
+</p>
+<table class="wiki">
+<tr><td> <strong><tt>=</tt></strong> </td><td> the field content exactly matches one of the values 
+</td></tr><tr><td> <strong><tt>~=</tt></strong> </td><td> the field content contains one or more of the values 
+</td></tr><tr><td> <strong><tt>^=</tt></strong> </td><td> the field content starts with one of the values 
+</td></tr><tr><td> <strong><tt>$=</tt></strong> </td><td> the field content ends with one of the values 
+</td></tr></table>
+<p>
+All of these operators can also be negated:
+</p>
+<table class="wiki">
+<tr><td> <strong><tt>!=</tt></strong> </td><td> the field content matches none of the values 
+</td></tr><tr><td> <strong><tt>!~=</tt></strong> </td><td> the field content does not contain any of the values 
+</td></tr><tr><td> <strong><tt>!^=</tt></strong> </td><td> the field content does not start with any of the values 
+</td></tr><tr><td> <strong><tt>!$=</tt></strong> </td><td> the field content does not end with any of the values 
+</td></tr></table>
+<p>
+The date fields <tt>created</tt> and <tt>modified</tt> can be constrained by using the <tt>=</tt> operator and specifying a value containing two dates separated by two dots (<tt>..</tt>). Either end of the date range can be left empty, meaning that the corresponding end of the range is open. The date parser understands a few natural date specifications like "3 weeks ago", "last month" and "now", as well as Bugzilla-style date specifications like "1d", "2w", "3m" or "4y" for 1 day, 2 weeks, 3 months and 4 years, respectively. Spaces in date specifications can be left out to avoid having to quote the query string. 
+</p>
+<table class="wiki">
+<tr><td> <strong><tt>created=2007-01-01..2008-01-01</tt></strong> </td><td> query tickets created in 2007 
+</td></tr><tr><td> <strong><tt>created=lastmonth..thismonth</tt></strong> </td><td> query tickets created during the previous month 
+</td></tr><tr><td> <strong><tt>modified=1weekago..</tt></strong> </td><td> query tickets that have been modified in the last week 
+</td></tr><tr><td> <strong><tt>modified=..30daysago</tt></strong> </td><td> query tickets that have been inactive for the last 30 days 
+</td></tr></table>
+<hr />
+<p>
+See also: <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTickets">TracTickets</a>, <a class="wiki" href="TracReports.html">TracReports</a>, <a class="wiki" href="TracGuide.html">TracGuide</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <script type="text/javascript">
+        jQuery.loadStyleSheet("/preparde/chrome/common/css/report.css", "text/css");
+    </script>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracQuery?format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

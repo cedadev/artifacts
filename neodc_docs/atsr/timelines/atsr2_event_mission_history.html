@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> ATSR-2 Mission Timeline (20 April 1995 - present) </TITLE>
+
+<script src="http://simile.mit.edu/timeline/api/timeline-api.js" type="text/javascript"></script>
+</head>
+
+<body style="text-align: left; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+    font-size: 62.5%;" onload="onLoad();" onresize="onResize();">
+<script language="javascript">
+var tl;
+function onLoad() {
+  var eventSource = new Timeline.DefaultEventSource();
+  var theme = Timeline.ClassicTheme.create();
+  theme.event.label.width = 100; // px
+  theme.event.bubble.width = 250;
+  theme.event.bubble.height = 80;
+  theme.ether.backgroundColors[0] = "#333366";
+  theme.event.label.insideColor = "333366";
+  theme.event.label.outsideColor = "#C0C0C0";
+//theme.event.instant.lineColor = "#FF0000";
+
+  var bandInfos = [
+    Timeline.createHotZoneBandInfo({
+        zones: [
+            {   start:    "Jan 01 2006 00:00:00 GMT",
+                end:      "Jan 18 2006 00:00:00 GMT",
+                magnify:  5,
+                unit:     Timeline.DateTime.DAY
+            }
+        ],
+	eventSource:    eventSource,
+        date:           "June 01 1995 00:00:00 GMT",
+        width:          "75%", 
+        intervalUnit:   Timeline.DateTime.MONTH, 
+        intervalPixels: 250,
+        theme:          theme
+    }),
+    Timeline.createHotZoneBandInfo({
+        zones: [
+            {   start:    "Jan 01 2006 00:00:00 GMT",
+                end:      "Jan 22 2006 00:00:00 GMT",
+                magnify:  30,
+                unit:     Timeline.DateTime.WEEK
+            }
+        ],
+        showEventText:  false,
+        trackHeight:    0.5,
+        trackGap:       0.2,
+	eventSource:    eventSource,
+        date:           "June 01 1995 00:00:00 GMT",
+        width:          "25%", 
+        intervalUnit:   Timeline.DateTime.YEAR, 
+        intervalPixels: 100,
+        theme:          theme
+    })
+  ];
+  bandInfos[1].syncWith = 0;
+  bandInfos[1].highlight = true;
+
+bandInfos[1].decorators = [
+new Timeline.SpanHighlightDecorator({
+startDate:  "April 20 1995",
+endDate:    "January 01 2008",
+color:      "#333366",
+opacity:    50,
+startLabel: "Launch of ATSR-2 Mission >",
+endLabel: "",
+theme:      theme})
+];
+
+  var tl = Timeline.create(document.getElementById("my-timeline"), bandInfos);
+  Timeline.loadXML("atsr2_event_mission_history.xml", function(xml, url) { eventSource.loadXML(xml, url); });
+}
+
+var resizeTimerID = null;
+function onResize() {
+    if (resizeTimerID == null) {
+        resizeTimerID = window.setTimeout(function() {
+            resizeTimerID = null;
+            tl.layout();
+        }, 500);
+    }
+}
+</script>
+
+<div style="width: 640px; margin-left: 20px; margin-top: 20px; font-size: 20px; text-align: left">
+	<strong>ATSR-2 Mission Timeline (20 April 1995 - present)</strong>
+
+</div>
+
+<div style="margin-left: 20px; margin-top: 8px; font-size: 12px; text-align: left">
+	Click on an event to show more details. Click and drag
+	on the top or bottom panel to scroll left or right.
+</div>
+<div style="margin-left: 20px; margin-top: 8px; font-size: 12px; text-align: left">
+<strong>Legend:</strong><P>
+<img src="sphere_green.png" width="12" height="12" alt="green sphere" /> Data not impaired.<br>
+<img src="sphere_orange.png" width="12" height="12" alt="orange sphere" /> Data impaired.<br>
+<img src="sphere_red.png" width="12" height="12" alt="red sphere" /> No data.<br>
+
+</div>
+
+<div id="my-timeline" style="height: 500px; margin: 20px; border: 1px solid #aaa"></div>
+
+
+</body>
+</html>

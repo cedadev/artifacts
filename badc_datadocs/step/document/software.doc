@@ -1,0 +1,95 @@
+    SOFTWARE.DOC
+
+    Included in the SOFTWARE directory are five FORTRAN subroutines which can
+    be used to read those data files which are in the STEP data exchange 
+    format, calculate GMT's if necessary, and convert the scaled integer data
+    to appropriate engineering units.  The routines are written using standard
+    FORTRAN 77 statements with the exception of the subroutine which reads the
+    data file header records.  RDHEAD.FOR uses the VAX FORTRAN Q-format for
+    locating the end of character strings.  Each subroutine is internally 
+    documented.  The routines are:
+
+    RDHEAD.FOR  reads the data file header records and returns information
+                which is needed to identify the file, read the data values, and
+                scale the data to appropriate units.  This routine uses the VAX
+                FORTRAN Q-format to locate the end of each character string in
+                the header, and tacks a "$" onto the end of each string 
+                returned to the calling program.  The FORTRAN function INDEX
+                can then be used to easily locate the end of each character
+                string.
+
+    RDAT1.FOR   reads times and data from those files which contain a time at
+                the beginning of each data record.  This routine is set up to
+                selectively return a specified subset of the data contained
+                in the file.  This feature is illustrated in the example below.
+                It is useful for reading only a few variables from files which
+                contain many.  For example, the microwave temperature profiler
+                data files contain 33 variables and you may only want to look
+                at the two lapse rates.
+
+    RDAT2.FOR   reads recorded times and data from those files which contain
+                a time record followed by several records of data.
+
+    GMT2ND.FOR  calculates implied times for data values read in using 
+                subroutine RDAT2.
+
+    ENGINE.FOR  converts scaled integer data values to appropriate engineering
+                units.  Also appropriately scales missing values.
+
+
+    What follows is an example of one way these routines can be used to read
+    files which are in the STEP data exchange format.
+    
+
+          PARAMETER    ( MAXTIM = 25000 )
+          PARAMETER    ( MAXVPF = 33    )
+          PARAMETER    ( MXKEEP = 10    )
+    C
+          CHARACTER*80   MISSION
+          CHARACTER*80      NAME
+          CHARACTER*80    VARNAM( MAXVPF )
+    C
+          DIMENSION    GMT  ( MAXTIM ),  VAR( MAXTIM,MXKEEP ),  DUM1( MAXVPF )
+          DIMENSION    SCALE( MAXVPF ),  VMISS( MAXVPF ),      IWANT( MXKEEP )
+    C
+    C
+    C  read file header info.
+    C
+          CALL RDHEAD ( NAME, NYR, NMO, NDY, MISSION, IDISK, NDISK,
+         *              NVAR, NSPT, NSPL, DSINT, SCALE, VMISS, VARNAM,
+         *              NFLITE, MAXVPF, IUN, IOU )
+    C
+    C  read data.
+    C
+          IF( NSPT .EQ. 1 ) THEN
+    C
+    C         for this example assume NVAR > 5 and we only want variable 
+    c         numbers 1,3,5.
+    C
+              NKEEP    = 3
+              IWANT(1) = 1
+              IWANT(2) = 3
+              IWANT(3) = 5
+              SCALE(2) = SCALE(3)
+              SCALE(3) = SCALE(5)
+              VMISS(2) = VMISS(3)
+              VMISS(3) = VMISS(5)
+    C
+              CALL RDAT1 ( GMT, VAR, NTIM, NKEEP, NVAR, MXKEEP, MAXTIM,
+         *                 IWANT, DUM1, IUN, IOU )
+          ELSE
+    C
+    C         RDAT2 assumes that NKEEP=NVAR.
+    C
+              CALL RDAT2 ( GMT, VAR, NKEEP, NTIM, NSPT, NSPL,
+         *                 MAXTIM, IUN, IOU )
+    C
+    C         calculate GMT seconds.
+    C
+              CALL GMT2ND ( GMT, NTIM, NSPT, DSINT, IOU )
+          ENDIF
+    C
+    C  convert data to engineering units by appropriate scaling.
+    C  also scale missing values.
+    C
+          CALL ENGINE ( VAR, SCALE, VMISS, NTIM, NKEEP, MAXTIM )

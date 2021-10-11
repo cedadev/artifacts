@@ -1,0 +1,189 @@
+EARTH SCIENCE|CRYOSPHERE|Snow/Ice|Snow Cover|Snow/ice cover (percent)                     
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Total number of pixels                                                     
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels                                                    
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of IR-cloudy pixels                                                 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of IR-only-cloudy pixels                                            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of NI-cloudy pixels                                                 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of NI-only-cloudy pixels                                            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of IR-marginally-cloudy pixels                                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of VIS/IR-marginally-cloudy pixels                                  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of NI-only-marginally-cloudy pixels                                    
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of IR-cloudy pixels  10 <= PC <=  180 mb                            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of IR-cloudy pixels 180  < PC <=  310 mb                            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of IR-cloudy pixels 310  < PC <=  440 mb                            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of IR-cloudy pixels 440  < PC <=  560 mb                            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of IR-cloudy pixels 560  < PC <=  680 mb                            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of IR-cloudy pixels 680  < PC <=  800 mb                            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of IR-cloudy pixels 800  < PC <= 1000 mb                            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels  10 <= PC <=  180 mb,  0.02 <= TAU <=   1.27       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels  10 <= PC <=  180 mb,  1.27  < TAU <=   3.55
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels  10 <= PC <=  180 mb,  3.55  < TAU <=   9.38       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels  10 <= PC <=  180 mb,  9.38  < TAU <=  22.63       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels  10 <= PC <=  180 mb, 22.63  < TAU <=  60.36       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels  10 <= PC <=  180 mb, 60.36  < TAU <= 378.65       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 180  < PC <=  310 mb,  0.02 <= TAU <=   1.27       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 180  < PC <=  310 mb,  1.27  < TAU <=   3.55       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 180  < PC <=  310 mb,  3.55  < TAU <=   9.38       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 180  < PC <=  310 mb,  9.38  < TAU <=  22.63       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 180  < PC <=  310 mb, 22.63  < TAU <=  60.36       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 180  < PC <=  310 mb, 60.36  < TAU <= 378.65       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 310  < PC <=  440 mb,  0.02 <= TAU <=   1.27       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 310  < PC <=  440 mb,  1.27  < TAU <=   3.55       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 310  < PC <=  440 mb,  3.55  < TAU <=   9.38       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 310  < PC <=  440 mb,  9.38  < TAU <=  22.63       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 310  < PC <=  440 mb, 22.63  < TAU <=  60.36       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 310  < PC <=  440 mb, 60.36  < TAU <= 378.65       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 440  < PC <=  560 mb,  0.02 <= TAU <=   1.27       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 440  < PC <=  560 mb,  1.27  < TAU <=   3.55       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 440  < PC <=  560 mb,  3.55  < TAU <=   9.38       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 440  < PC <=  560 mb,  9.38  < TAU <=  22.63       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 440  < PC <=  560 mb, 22.63  < TAU <=  60.36       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 440  < PC <=  560 mb, 60.36  < TAU <= 378.65       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 560  < PC <=  680 mb,  0.02 <= TAU <=   1.27       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 560  < PC <=  680 mb,  1.27  < TAU <=   3.55       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 560  < PC <=  680 mb,  3.55  < TAU <=   9.38       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 560  < PC <=  680 mb,  9.38  < TAU <=  22.63       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 560  < PC <=  680 mb, 22.63  < TAU <=  60.36       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 560  < PC <=  680 mb, 60.36  < TAU <= 378.65       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 680  < PC <=  800 mb,  0.02 <= TAU <=   1.27       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 680  < PC <=  800 mb,  1.27  < TAU <=   3.55       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 680  < PC <=  800 mb,  3.55  < TAU <=   9.38       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 680  < PC <=  800 mb,  9.38  < TAU <=  22.63       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 680  < PC <=  800 mb, 22.63  < TAU <=  60.36       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 680  < PC <=  800 mb, 60.36  < TAU <= 378.65       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 800  < PC <= 1000 mb,  0.02 <= TAU <=   1.27       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 800  < PC <= 1000 mb,  1.27  < TAU <=   3.55       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 800  < PC <= 1000 mb,  3.55  < TAU <=   9.38       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 800  < PC <= 1000 mb,  9.38  < TAU <=  22.63       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 800  < PC <= 1000 mb, 22.63  < TAU <=  60.36       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels 800  < PC <= 1000 mb, 60.36  < TAU <= 378.65       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels for cloud type  4 = Cumulus, ice                   
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels for cloud type  5 = Stratocumulus, ice             
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels for cloud type  6 = Stratus, ice                   
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels for cloud type 10 = Altocumulus, ice               
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels for cloud type 11 = Altostratus, ice               
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Number of cloudy pixels for cloud type 12 = Nimbostratus, ice 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloudy pixels (VIS-adjusted day, unadjusted night)
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for IR-cloudy pixels (unadjusted)  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for IR-only-cloudy pixels (VIS-adjusted)   
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for NI-only-cloudy pixels (unadjusted)                
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for IR-marginally-cloudy pixels (unadjusted)    
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for VIS/IR-marginally-cloudy pixels (VIS-adjusted)             
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Sigma for IR-cloudy pixels (unadjusted)
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloudy pixels (VIS-adjusted day, unadjusted night)    
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for IR-cloudy pixels (unadjusted)
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for IR-only-cloudy pixels (VIS-adjusted) 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for NI-only-cloudy pixels (unadjusted)             
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for IR-marginally-cloudy pixels (unadjusted)       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for VIS/IR-marginally-cloudy pixels (VIS-adjusted)        
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Sigma for IR-cloudy pixels (unadjusted)  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloudy pixels            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for IR-cloudy pixels        
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean TAU for IR-only-cloudy pixels   
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean TAU for NI-only-cloudy pixels    
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean TAU for IR-marginally-cloudy pixels           
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean TAU for VIS/IR-marginally-cloudy pixels              
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Sigma-TAU for IR-cloudy pixels
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloudy pixels     
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for IR-cloudy pixels
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for IR-only-cloudy pixels        
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for NI-only-cloudy pixels 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for IR-marginally-cloudy pixels 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for VIS/IR-marginally-cloudy pixels 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Sigma for IR-cloudy pixels       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for IR-cloudy pixels  10 <= PC <=  180 mb            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for IR-cloudy pixels 180  < PC <=  310 mb             
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for IR-cloudy pixels 310  < PC <=  440 mb                
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for IR-cloudy pixels 440  < PC <=  560 mb             
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for IR-cloudy pixels 560  < PC <=  680 mb              
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for IR-cloudy pixels 680  < PC <=  800 mb             
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for IR-cloudy pixels 800  < PC <= 1000 mb               
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 1 = Cumulus,liquid                                EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 1 = Cumulus,liquid                       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 1 = Cumulus,liquid                            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 2 = Stratocumulus,liquid                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 2 = Stratocumulus,liquid 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 2 = Stratocumulus,liquid   
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 3 = Stratus,liquid                           
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 3 = Stratus,liquid 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 3 = Stratus,liquid  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 4 = Cumulus,ice                        
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 4 = Cumulus,ice 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 4 = Cumulus,ice     
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 5 = Stratocumulus,ice                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 5 = Stratocumulus,ice   
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 5 = Stratocumulus,ice 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 6 = Stratus,ice                             
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 6  = Stratus,ice  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 6 = Stratus,ice
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 7 = Altocumulus,liquid                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 7 = Altocumulus,liquid 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 7 = Altocumulus,liquid  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 8 = Altostratus,liquid                     
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 8 = Altostratus,liquid  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 8 = Altostratus,liquid  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 9 = Nimbostratus,liquid                     
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 9 = Nimbostratus,liquid 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 9 = Nimbostratus,liquid
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 10 = Altocumulus,ice                        
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 10 = Altocumulus,ice
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 10 = Altocumulus,ice 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 11 = Altostratus,ice                       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 11 = Altostratus,ice  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 11 = Altostratus,ice
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 12 = Nimbostratus,ice                        
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 12  = Nimbostratus,ice      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 12  = Nimbostratus,ice 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 13 = Cirrus                                  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 13 = Cirrus  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 13 = Cirrus
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 14 = Cirrostratus                            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 14  = Cirrostratus                          
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 14  = Cirrostratus                    
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for cloud type 15 = Deep convective                   
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean for cloud type 15 = Deep convective 
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Water Path|Mean for cloud type 15 = Deep convective 
+EARTH SCIENCE|LAND SURFACE|Land Temperature|Land Surface Temperature|Mean from clear sky composite                          
+EARTH SCIENCE|LAND SURFACE|Land Temperature|Land Surface Temperature|Mean TS for clear pixels      
+EARTH SCIENCE|LAND SURFACE|Land Temperature|Land Surface Temperature|Mean TS for IR-clear pixels  
+EARTH SCIENCE|LAND SURFACE|Land Temperature|Land Surface Temperature|Mean TS for VIS/IR-clear pixels 
+EARTH SCIENCE|LAND SURFACE|Land Temperature|Land Surface Temperature|Sigma-TS for IR-clear pixels
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Surface Reflectance|Mean from clear sky composite          
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Surface Reflectance|Mean for clear pixels   
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Surface Reflectance|Mean for IR-clear pixels      
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Surface Reflectance|Mean for VIS/IR-clear pixels         
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Surface Reflectance|Sigma- for IR-clear pixels       
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Surface Reflectance|Mean NI reflectance from clear sky composite 
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Net Radiation|Mean IR radiance for IR-cloudy pixels   
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Net Radiation|Sigma-IR radiance for IR-cloudy pixels 
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Net Radiation|Mean IR radiance for VIS/IR-cloudy pixels     
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Net Radiation|Mean IR radiance for IR-clear pixels                          
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Net Radiation|Sigma-IR radiance for IR-clear pixels                       
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Net Radiation|Mean IR radiance for VIS/IR-clear pixels                     
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Net Radiation|Mean IR radiance from clear sky composite                   
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Net Radiation|Mean VIS radiance for VIS/IR-cloudy pixels                 
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Net Radiation|Sigma-VIS radiance for VIS/IR-cloudy pixels               
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Net Radiation|Mean VIS radiance for IR-cloudy pixels                    
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Net Radiation|Mean VIS radiance for VIS/IR-clear pixels             
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Net Radiation|Sigma-VIS radiance for VIS/IR-clear pixels          
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Net Radiation|Mean VIS radiance for IR-clear pixels               
+EARTH SCIENCE|ATMOSPHERE|Radiation Budget|Net Radiation|Mean VIS radiance from clear sky composite
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Pressure|Surface Pressure|Surface pressure 
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Surface Air Temperature|Near-surface air temperature
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Temperature at 900 mb                                     
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Temperature at 740 mb                          
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Temperature at 620 mb                                  
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Temperature at 500 mb                            
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Temperature at 375 mb                            
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Temperature at 245 mb       
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Temperature at 115 mb          
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Pressure|Atmospheric Pressure|Tropopause pressure                  
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Tropopause temperature             
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Stratosphere temperature at 50 mb                          
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Stratosphere temperature at 15 mb               
+EARTH SCIENCE|ATMOSPHERE|Clouds|Clouds Precipitable Water|Precipitable water for 1000-800 mb   
+EARTH SCIENCE|ATMOSPHERE|Clouds|Clouds Precipitable Water|Precipitable water for 800-680 mb  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Clouds Precipitable Water|Precipitable water for 680-560 mb  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Clouds Precipitable Water|Precipitable water for 560-440 mb          
+EARTH SCIENCE|ATMOSPHERE|Clouds|Clouds Precipitable Water|Precipitable water for 440-310 mb  
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Chemistry|Ozone|Ozone abundance                 
+

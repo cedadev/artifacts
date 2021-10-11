@@ -1,0 +1,140 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>NASA Ames Format - Header Top Lines</title>
+</head>
+
+<body bgcolor="#ffffff">
+<h1><font color="#333399">NASA Ames Format: Header Top Lines</font></h1>
+<hr>
+
+<h2>General format</h2>
+
+All NASA Ames formatted files have the same first seven lines (header top):
+
+<p>
+<table>
+ <tr><td>NLHEAD FFI</td>
+     <td width=10></td>
+     <td><i>Line 1</i></td>
+     </tr>
+ <tr><td>ONAME</td>
+     <td></td>
+     <td><i>Line </i>2</td>
+     </tr>
+ <tr><td>ORG</td>
+     <td></td>
+     <td><i>Line 3</i></td>
+     </tr>
+ <tr><td>SNAME</td>
+     <td></td>
+     <td><i>Line 4</i></td>
+     </tr>
+ <tr><td>MNAME</td>
+     <td></td>
+     <td><i>Line 5</i></td>
+     </tr>
+ <tr><td>IVOL NVOL</td>
+     <td></td>
+     <td><i>Line 6</i></td>
+     </tr>
+ <tr><td>DATE RDATE</td>
+     <td></td>
+     <td><i>Line 7</i></td>
+     </tr>
+</table>
+</p>
+
+<ul>
+ <li>NLHEAD, FFI, IVOL, NVOL are integers.
+ <li>ONAME, ORG, SNAME, MNAME are character strings of maximum 132 characters.
+ <li>DATE, RDATE are dates in the format YYYY MM DD (with 1 blank between YYYY
+     &#038; MM and between MM &#038; DD).
+     If the first digit of MM or DD is 0, it can be replaced by a blank but its
+     space may not be deleted.
+</ul>
+
+<p>
+There may be any number of blank spaces (at least one) between
+<ul>
+ <li>NLHEAD &#038; FFI
+ <li>IVOL &#038; NVOL
+ <li>DATE &#038; RDATE
+</ul>
+but each of the corresponding lines (1, 6 &#038; 7) must not extend beyond row
+132.
+</p>
+
+<h2>Definition of symbols</h2>
+
+<table>
+ <tr valign=top><td>NLHEAD</td>
+     <td width=6></td>
+     <td>Number of lines in file header</td>
+     </tr>
+ <tr valign=top><td>FFI</td>
+     <td></td>
+     <td>File format index</td>
+     </tr>
+ <tr valign=top><td>ONAME</td>
+     <td></td>
+     <td>List of author(s) in the format <i>Lastname, Firstname</i>
+         separated by an arbitrary character (for example, a hyphen or a
+         semi-colon).</td>
+     </tr>
+ <tr valign=top><td>ORG</td>
+     <td></td>
+     <td>Organisation name (university, institute, etc).
+         May include address and phone numbers.</td>
+     </tr>
+ <tr valign=top><td>SNAME</td>
+     <td></td>
+     <td>Source of data, <i>i.e.</i> instrument, platform, model name, etc.</td>
+     </tr>
+ <tr valign=top><td>MNAME</td>
+     <td></td>
+     <td>Name of mission, campaign, programme and/or project.<br>
+     </td>
+     </tr>
+ <tr valign=top><td>NVOL</td>
+     <td></td>
+     <td>Total number of files belonging to the considered dataset
+         (<i>i.e.</i> with same ONAME, ORG, SNAME, MNAME).</td>
+     </tr>
+ <tr valign=top><td>IVOL</td>
+     <td></td>
+     <td>Number of the file in the above dataset (between 1 and NVOL).</td>
+     </tr>
+ <tr valign=top><td>DATE</td>
+     <td></td>
+     <td>Universal Time date at which the data within the file begin.</td>
+     </tr>
+ <tr valign=top><td>RDATE</td>
+     <td></td>
+     <td>Universal Time date at which the data within the file have been
+         reduced or revised.</td>
+     </tr>
+</table>
+
+<h2>Example</h2>
+
+<table border=1><tr><td>
+<pre>
+27 1001
+Morgan, Caroline; Smith, John
+University of Moreton-in-the-Marsh, 32, Forest Road, YZ55 0AB, UK, +44 01234 567890
+X1000 Interferometer onboard FAST Jet
+INTERESTING Programme / Project No 2259
+1 5
+1999 06 18  2000 08 03
+</td></tr></table>
+
+<p>
+<a href="FFI-summary.html">Back to FFI Summary.</a>
+</p>
+
+<p>
+</body>
+
+</html>

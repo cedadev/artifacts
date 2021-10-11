@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "CH4FLASK "
+"SUM_DATA_SET"       "GRNHS-GASES  "
+"SUM_DATATYPE"       "CH4-FLASK    "
+"ARCHIVE_NAME"       "NCDS                 "
+"ARCHIVE_STATUS"     "Available            "
+"DS_DESCRIPTION"     "Concentrations of atmospheric greenhouse effect gases  "
+"DT_DESCRIPTION"     "Flask Samples Analyzed for Methane                     "
+"SUM_BEGIN_DATE"     "01-Jan-1983          "
+"SUM_END_DATE"       "31-Dec-1985          "
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Point data measured at 21 stations                     "
+"SPATIAL2"           "                                                       "
+"SPATIAL3"           "station              "
+"SPATIAL4"           "                                                       "
+"TEMPORAL1"          "January, 1983 - December, 1985                         "
+"TEMPORAL2"          "                                                       "
+"TEMPORAL3"          "Monthly averages     "
+"TEMPORAL4"          "                                                       "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF).    "
+"PRODUCT2"           "Available on GEDEX CD-ROM.               "
+"PRODUCT3"           "21 ASCII files on MS-DOS format floppy disk            "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"CH4"   "Methane Concentration"  "ppbv"
+EOF
+
+SOURCES
+"FIELD-OBS"       "CH4-ANALYZER"
+EOF

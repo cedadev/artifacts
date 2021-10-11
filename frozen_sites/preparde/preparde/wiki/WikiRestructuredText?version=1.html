@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      WikiRestructuredText – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredText?version=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredText" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredText" title="View WikiRestructuredText">WikiRestructuredText</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredText" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A01%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:01+01:00 in Timeline">6 years</a> ago)
+               (<a href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredText?action=diff&amp;version=1">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="reStructuredTextSupportinTrac">reStructuredText Support in Trac</h1>
+<p>
+Trac supports using <em>reStructuredText</em> (RST) as an alternative to wiki markup in any context <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">WikiFormatting</a> is used.
+</p>
+<p>
+From the reStucturedText webpage:
+</p>
+<blockquote>
+<p>
+"<em>reStructuredText is an easy-to-read, what-you-see-is-what-you-get plaintext markup syntax and parser   system. It is useful for in-line program documentation (such as Python docstrings), for quickly creating  simple web pages, and for standalone documents. reStructuredText is designed for extensibility for  specific application domains. </em>"
+</p>
+</blockquote>
+<p>
+If you want a file from your Subversion repository be displayed as reStructuredText in Trac's source browser, set <tt>text/x-rst</tt> as value for the Subversion property <tt>svn:mime-type</tt>. See <a class="ext-link" href="http://trac.edgewall.org/intertrac/source%3A/trunk/INSTALL" title="source:/trunk/INSTALL in Trac project trac"><span class="icon"> </span>this example</a>.
+</p>
+<h3 id="Requirements">Requirements</h3>
+<p>
+Note that to activate RST support in Trac, the python docutils package must be installed. 
+If not already available on your operating system, you can download it at the <a class="ext-link" href="http://docutils.sourceforge.net/rst.html"><span class="icon"> </span>RST Website</a>.
+</p>
+<p>
+Install docutils using <tt>easy_install docutils</tt>. Do not use the package manager of your OS (e.g. <tt>apt-get install python-docutils</tt>), because Trac will not find docutils then.
+</p>
+<h3 id="MoreinformationonRST">More information on RST</h3>
+<ul><li>reStructuredText Website -- <a class="ext-link" href="http://docutils.sourceforge.net/rst.html"><span class="icon"> </span>http://docutils.sourceforge.net/rst.html</a>
+</li><li>RST Quick Reference -- <a class="ext-link" href="http://docutils.sourceforge.net/docs/rst/quickref.html"><span class="icon"> </span>http://docutils.sourceforge.net/docs/rst/quickref.html</a>
+</li></ul><hr />
+<h2 id="UsingRSTinTrac">Using RST in Trac</h2>
+<p>
+To specify that a block of text should be parsed using RST, use the <em>rst</em> processor. 
+</p>
+<h3 id="TracLinksinreStructuredText"><a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">TracLinks</a> in reStructuredText</h3>
+<ul><li>Trac provides a custom RST directive <tt>trac::</tt> to allow <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">TracLinks</a> from within RST text.
+</li></ul><table class="wiki">
+<tr><th> Wiki Markup </th><th> Display 
+</th></tr><tr><td><pre class="wiki">{{{
+#!rst
+This is a reference to |a ticket|
+
+.. |a ticket| trac:: #42
+}}}
+</pre></td><td><div class="document">
+<p>This is a reference to <a class="missing reference external" href="WikiRestructuredText%3Fversion=1.html">#42</a></p>
+</div>
+</td></tr></table>
+<ul><li>Trac allows an even easier way of creating <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">TracLinks</a> in RST, using the custom <tt>:trac:</tt> role.
+</li></ul><table class="wiki">
+<tr><th> Wiki Markup </th><th> Display 
+</th></tr><tr><td><pre class="wiki">{{{
+#!rst
+This is a reference to ticket `#12`:trac:
+
+To learn how to use Trac, see `TracGuide`:trac:
+}}}
+</pre></td><td><div class="document">
+<p>This is a reference to ticket <a class="missing reference external" href="WikiRestructuredText%3Fversion=1.html">#12</a></p>
+<p>To learn how to use Trac, see <a class="reference external" href="TracGuide.html">TracGuide</a></p>
+</div>
+</td></tr></table>
+<blockquote>
+<p>
+For a complete example of all uses of the <tt>:trac:</tt> role, please see <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredTextLinks">WikiRestructuredTextLinks</a>. 
+</p>
+</blockquote>
+<h3 id="SyntaxhighlightinginreStructuredText">Syntax highlighting in reStructuredText</h3>
+<p>
+There is a directive for doing <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracSyntaxColoring">TracSyntaxColoring</a> in RST as well. The directive is called
+code-block
+</p>
+<table class="wiki">
+<tr><th> Wiki Markup </th><th> Display 
+</th></tr><tr><td><pre class="wiki">{{{
+#!rst
+
+.. code-block:: python
+
+   class Test:
+
+       def TestFunction(self):
+           pass
+
+}}}
+</pre></td><td><div class="document">
+<div class="code"><pre><span class="k">class</span> <span class="nc">Test</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">TestFunction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">pass</span>
+</pre></div></div>
+</td></tr></table>
+<p>
+Note the need to indent the code at least one character after the <tt>.. code-block</tt> directive.
+</p>
+<h3 id="WikiMacrosinreStructuredText">Wiki Macros in reStructuredText</h3>
+<p>
+For doing <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiMacros">Wiki Macros</a> in RST you use the same directive as for syntax highlighting i.e code-block.
+</p>
+<table class="wiki">
+<tr><th> Wiki Markup </th><th> Display 
+</th></tr><tr><td><pre class="wiki">{{{
+#!rst
+
+.. code-block:: RecentChanges
+
+   Trac,3
+
+}}}
+</pre></td><td><div class="document">
+<div><h3>12/07/12</h3><ul><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWorkflow">TracWorkflow</a> </li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWiki">TracWiki</a> </li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUpgrade">TracUpgrade</a> </li></ul></div></div>
+</td></tr></table>
+<p>
+Or a more concise Wiki Macro like syntax is also available, using the <tt>:code-block:</tt> role:
+</p>
+<table class="wiki">
+<tr><th> Wiki Markup </th><th> Display 
+</th></tr><tr><td><pre class="wiki">{{{
+#!rst
+
+:code-block:`RecentChanges:Trac,3`
+}}}
+</pre></td><td><div class="document">
+<p><div><h3>12/07/12</h3><ul><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWorkflow">TracWorkflow</a> </li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWiki">TracWiki</a> </li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUpgrade">TracUpgrade</a> </li></ul></div></p>
+</div>
+</td></tr></table>
+<h3 id="BiggerRSTExample">Bigger RST Example</h3>
+<p>
+The example below should be mostly self-explanatory:
+</p>
+<table class="wiki">
+<tr><th> Wiki Markup </th><th> Display 
+</th></tr><tr><td><pre class="wiki">{{{
+#!rst
+FooBar Header
+=============
+reStructuredText is **nice**. It has its own webpage_.
+
+A table:
+
+=====  =====  ======
+   Inputs     Output
+------------  ------
+  A      B    A or B
+=====  =====  ======
+False  False  False
+True   False  True
+False  True   True
+True   True   True
+=====  =====  ======
+
+RST TracLinks
+-------------
+
+See also ticket `#42`:trac:.
+
+.. _webpage: http://docutils.sourceforge.net/rst.html
+}}}</pre>
+</td><td><div class="document" id="foobar-header">
+<h1 class="title">FooBar Header</h1>
+<p>reStructuredText is <strong>nice</strong>. It has its own <a class="reference external" href="http://docutils.sourceforge.net/rst.html">webpage</a>.</p>
+<p>A table:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="31%" />
+<col width="31%" />
+<col width="38%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head" colspan="2">Inputs</th>
+<th class="head">Output</th>
+</tr>
+<tr><th class="head">A</th>
+<th class="head">B</th>
+<th class="head">A or B</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>False</td>
+<td>False</td>
+<td>False</td>
+</tr>
+<tr><td>True</td>
+<td>False</td>
+<td>True</td>
+</tr>
+<tr><td>False</td>
+<td>True</td>
+<td>True</td>
+</tr>
+<tr><td>True</td>
+<td>True</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="rst-traclinks">
+<h1>RST TracLinks</h1>
+<p>See also ticket <a class="missing reference external" href="WikiRestructuredText%3Fversion=1.html">#42</a>.</p>
+</div>
+</div>
+</td></tr></table>
+<hr />
+<p>
+See also: <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredTextLinks">WikiRestructuredTextLinks</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors">WikiProcessors</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">WikiFormatting</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <script type="text/javascript">
+        jQuery.loadStyleSheet("/preparde/pygments/trac.css", "text/css");
+    </script>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredText?version=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20051128T000000Z
+DTEND:20051201T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:ESTEC, Noordwijk, The Netherlands=20
+TRANSP:1
+UID:040000008200E00074C5B7101A82E008000000002016D2D0B7D4C5010000000000000000100
+ 00000D203FB16D36FD34A8FF77A3C8D7FF51A
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:ESA Mars Express Workshop - The Meani=
+ng of Methane on Mars=0D=0A28 to 30 November 2005 at ESTEC, Noordwijk, The =
+Netherlands =0D=0A=0D=0AFollowing exciting and independent measurements of =
+methane in the Martian atmosphere, both from the Martian orbit and Earth-ba=
+sed telescopes, there is a need for an open discussion on the subject, amon=
+g methane specialists and Mars scientists alike. =0D=0A=0D=0AFor the propos=
+ed workshop we are anxious to cross-fertilise between terrestrial and space=
+ scientists potentially interested in understanding the discovery of methan=
+e on Mars. Indeed interested people from outside the space community will b=
+e most welcome.=0D=0A=0D=0AFour sessions are available for presentations an=
+d plenty of time is being set aside for discussions. =0D=0AA book of abstra=
+cts will be compiled and distributed at the meeting. =0D=0A=0D=0AWe have co=
+me up with four possible session titles to help you focus abstract submissi=
+ons:=0D=0A(i) Observations of Methane on Mars=0D=0A(ii) Sources and sinks o=
+f methane, methods of production and destruction (Earth and Mars)=0D=0A(iii=
+) Future measurements of methane needed for Mars (from lander and orbiters)=
+=0D=0A(iv) Potential landing sites of interest and places for high resoluti=
+on observations from Earth and orbit=0D=0A=0D=0A=0D=0APlease contact the me=
+eting conveners immediately if you would be interested in attending the wor=
+kshop and presenting a paper: =0D=0A=0D=0AColin Pillinger: PSRG@open.ac.uk =
+and Agustin Chicarro: agustin.chicarro@esa.int =0D=0A=0D=0AAbstract deadlin=
+e: 30 October 2005=0D=0AAbstract format is the usual LPSC format but one pa=
+ge maximum, including figures (see attached template)=0D=0A=0D=0A**********=
+*************************************************=0D=0ANERC-Atmos mailing l=
+ist=0D=0ANERC-Atmos@ncas.ac.uk =0D=0Ahttp://www.ncas.ac.uk/mailman/listinfo=
+/nerc-atmos =0D=0A=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:ESA Mars Express Workshop - The Meaning o=
+fMethane on Mars
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

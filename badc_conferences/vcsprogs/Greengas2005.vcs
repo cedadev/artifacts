@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050201T080000Z
+DTEND:20050203T180000Z
+LOCATION:Met Office, Exeter, UK
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE: Scientific Symposium on the Stabilisation of Greenhouse Gases=0D=0Ahttp://www.stabilisation2005.com=0D=0A
+SUMMARY:Scientific Symposium on the Stabilisation of Greenhouse Gases 
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

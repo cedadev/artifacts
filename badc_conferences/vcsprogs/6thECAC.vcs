@@ -1,0 +1,34 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060903T230000Z
+DTEND:20060908T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Ljubljana, Slovenia
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000B0DCBC8F7647C6010000000000000000100
+ 000001BE44C8612F8DA4A9221E05A107B7D34
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:We hereby would like to draw your att=
+ention to the 6th Annual Meeting of the European Meteorological Society (EM=
+S) with Part and Partner the 6th European Conference on Applied Climatology=
+ (ECAC), that will take place 4 - 8 September 2006 in Ljubljana, Slovenia. =
+=0D=0AAt the interface of applications and atmospheric sciences the Europea=
+n Meteorological Society organizes their Annual Meetings since 2000. These =
+meetings are open scientific conferences with lecture and poster sessions a=
+s well as symposia and a scientific exhibition. =0D=0AThe ECAC conference i=
+s organized by the European Climate Support Network (ECSN) of EUMETNET: it =
+aims at promoting a fruitful exchange of information on the applications of=
+ climatology at a European level between all parties concerned, as national=
+ meteorological and climatological services, universities, international or=
+ganisations, agencies and private service providers.=0D=0A=0D=0APlease find=
+ the scientific program and abstract instructions at: =0D=0Ahttp://meetings=
+.copernicus.org/ems2006/=0D=0A =0D=0AAbstract deadline: 28 April 2006 =0D=
+=0A=0D=0APlease do not hesitate to forward this message to colleagues who m=
+ay be interested in submitting an abstract. =0D=0A=0D=0AWe look forward to =
+your participation in the 6th ECAC and 6th EMS Annual Meeting.=0D=0A=0D=0AM=
+artina Junge=0D=0AExecutive Secretary, European Meteorological Society=0D=
+=0Aems-sec@mail.met.fu-berlin.de =0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:6th ECAC and 6th EMS Annual Meeting
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SONDETMP "
+"SUM_DATA_SET"       "ANGELL       "
+"SUM_DATATYPE"       "TMP_DEV      "
+"ARCHIVE_NAME"       "NCDS         "
+"ARCHIVE_STATUS"     "Available as online CDF within NCDS, updated periodically.   "
+"DS_DESCRIPTION"     "Jim Angell's Rawinsonde Zonal Temperature Analysis"
+"DT_DESCRIPTION"     "Atmospheric Temperature Deviation"
+"SUM_BEGIN_DATE"     "01-Dec-1957  "
+"SUM_END_DATE"       "03-Nov-1991  "
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "63 globally distributed radiosonde stations"
+"SPATIAL2"           " "
+"SPATIAL3"           "Zonal, Tropical, Hemispheric and Global Averages "
+"SPATIAL4"           " "
+"TEMPORAL1"          "Ongoing since winter of 1957/58                              "
+"TEMPORAL2"          " "
+"TEMPORAL3"          "Seasonally averaged data for winter (Dec - Feb), spring      "
+"TEMPORAL4"          "(Mar - May), summer (Jun - Aug), and fall (Sep - Nov)        "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF).          "
+"PRODUCT2"           "Available from NCDS in ASCII format.                         "
+"PRODUCT3"           "Handwritten notes of data values by the producer."
+"PRODUCT4"           "Available on GEDEX CD-ROM. "
+EOF
+                                                                                                                                    
+PARAMETERS
+"TEMPERATURE"  "Temperature Deviations" "Deg C"
+EOF
+
+SOURCES
+"BALLOON"      "RADIOSONDE"
+EOF

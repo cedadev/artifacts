@@ -1,0 +1,60 @@
+47  1001
+Sutton, Mark; Campbell, Claire
+CEH Edinburgh, Bush Estate, Penicuik, Midlothian EH26 0QB, UK
+Meteorological sensors
+NitroEurope Integrated Project (NEU IP) Component 1
+1  1
+2006 08 01  2006 08 30
+0.0
+time (days since 1900-01-01 00:00:00 +0:00)
+3
+1.  1.  100.
+999.  999.  9.999
+temperature (C)
+pressure (kPa)
+relative_humidity (per_cent)
+10
+The data recorded in this file represent instantaneous values of the variables measured.
+site_name: Easter Bush
+country: UK
+longitude: 3.20 degrees_east
+latitude: 55.87 degrees_north
+height_above_sea_level: 190 m
+ecosystem: lolium perenne
+average_annual_temperature: 9.6 C
+average_annual_precipitation: 850 mm
+This site is a NEU Level 3 site (cf. NEU IP Description of Work for the definition of "Level 3").
+20
+ -------------------------------------------------------------------------------------------
+These data were generated or collected within the framework of the NitroEurope IP.
+The user agrees
+ - to restrict the use of the data to the context of the research topic specified at the time
+   of the application, when this application was made to access data still restricted from
+   the public domain;
+ - not to disclose the data to other parties;
+ - not to use the data for commercial purposes;
+ - that the Intellectual Property Right remains with the Data Originator;
+ - as long as feasible, to contact the Data Originator prior to any use of the data;
+ - to offer the Data Originator(s) co-authorship of any publication or communication based on
+   NitroEurope IP data; in the event that the offer is declined or when the Data Originators
+   cannot be contacted, Data Originators must be duly acknowledged.
+ -------------------------------------------------------------------------------------------
+This file uses the NASA Ames format developed in
+S. E. Gaines and R. S. Hipskind, Format Specification for Data Exchange, Version 1.3, 1998.
+ -------------------------------------------------------------------------------------------
+N.B. The data below have no scientific value. They are entirely fictitious and their sole
+     purpose is to illustrate format features.
+      t          T       p       RH
+  38927.000000    10.0    99.0   0.600
+  38927.020833    10.1    98.9   0.591
+  38927.041667     9.5    99.3   0.620
+  38927.062500     9.2    99.5   0.632
+  38927.083333     9.3    99.4   9.999
+  38927.104167     8.9    99.9   9.999
+  38927.125000     8.5   100.1   0.632
+  38927.145833     8.9    99.8   0.622
+  38927.166667     9.4    99.7   0.610
+  38927.187500    10.1    99.5   0.604
+  38927.208333    10.2    99.3   0.595
+  38927.229167    10.4    99.0   0.580
+  38927.245000    10.3    99.2   0.587

@@ -1,0 +1,29 @@
+Flight Folder File Names
+------ ------ ---- -----
+
+\d denotes a single digit
+
+afds    - Aries Flight data summary
+al\d\d  - Aries Flight data log sheet
+as\d\d   - Aircraft Scientists log (Time, Run, GPS positions, Remarks)
+asd\d   - Aircraft Scientists debrief log - summarising flight
+asxx    - Meteorological Conditions Map
+bot\d   - Bottle sample log
+ccn\d   - Cloud Condensation Nuclei Log
+cfl\d   - Chemistry Flight Log
+cp\d\d   - Cloud Physics Log
+crl\d   - Chilbolton Radio Log
+ffol    - Flight Folder Front Page
+flc\d   - Flight Leaders Pre/In-flight Check List
+flo\d   - Flight Leaders In-flight Log
+fltr    - Map of Flight
+form    - List of Forms used on this flight
+ipl\d   - Interactive Processing log
+is[lr]\d   - Flight Leaders Instrument Status Log
+nav\d   - Navigators log
+nev\d   - Nevzero Log
+obj\d   - Outline Objectives and planning
+oz\d\d   - Ozone Analyzer Log
+pfrl    - Pre flight requirements form
+sbo\d   - Sortie Brief
+vtl\d   - video tape log

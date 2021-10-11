@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SOLRFLUX "
+"SUM_DATA_SET"       "PENTICTON    "
+"SUM_DATATYPE"       "DAILY-FLUX   "
+"ARCHIVE_NAME"       "DRAO, NGDC, NCDS     "
+"ARCHIVE_STATUS"     "Available "
+"DS_DESCRIPTION"     "Penticton, British Columbia 2800 MHz Solar Radio Flux"
+"DT_DESCRIPTION"     "Daily Values of Ground-Measured Solar Radio Flux     "
+"SUM_BEGIN_DATE"     "14-Feb-1947"
+"SUM_END_DATE"       "31-Apr-1992"
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "Full Solar Disk"
+"SPATIAL2"           " "
+"SPATIAL3"           "No resolution within the solar disk"
+"SPATIAL4"           " "
+"TEMPORAL1"          "February 14, 1947 to present (updated periodically)"
+"TEMPORAL2"          " "
+"TEMPORAL3"          "Daily"
+"TEMPORAL4"          " "
+"PRODUCT1"           "IBM diskette in ASCII format"
+"PRODUCT2"           "Supported online by NCDS in Common Data Format (CDF)."
+"PRODUCT3"           "Available on GEDEX CD-ROM. "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"SOLAR_FLUX"      "2800 MHz Solar Radio Flux" "10**-22 Jy/s/m**2/Hz"
+EOF
+
+SOURCES
+"OBSERVATORY"     "TELESCOPE"
+EOF

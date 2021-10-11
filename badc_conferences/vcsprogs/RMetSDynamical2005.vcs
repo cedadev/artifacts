@@ -1,0 +1,34 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050608T230000Z
+DTEND:20050609T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Department of Meteorology, University of=
+ Reading
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000080E04B021B56C5010000000000000000100
+ 000000275608D86181B43886D31B4747966E6
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0ARoyal Meteorological Society Dy=
+namical Problems Specialist Group=0D=0A=0D=0AStatistical/stochastic approac=
+hes to atmospheric physics=0D=0A=0D=0Adate: Thursday 9 June=0D=0Avenue: Dep=
+artment of Meteorology, University of Reading=0D=0A=0D=0A(For details of ve=
+nue see=0D=0Ahttp://www.met.rdg.ac.uk/Contact/where.html.)=0D=0A=0D=0AProgr=
+amme=0D=0A=0D=0A1330 Dan Cornford (Aston) =0D=0AWhat has statistical physic=
+s ever done for us?=0D=0A=0D=0A1400 Cecile Penland (NOAA-CIRES Climate Diag=
+nostics Center)=0D=0AAre El Nino SSTs really skewed? Tests with a stochasti=
+c model.=0D=0A=0D=0A1430 Jacques Vanneste (Edinburgh)=0D=0AModels of small-=
+scale mixing in the atmosphere and oceans=0D=0A=0D=0A1500 Terry Lyons (Oxfo=
+rd) =0D=0AMathematical formulation of models for short-time coupling in ran=
+dom =0D=0Asystems=0D=0A=0D=0A1530 Tea=0D=0A=0D=0A1600 Bob Plant (Reading) =
+=0D=0AStochastic aspects of convection=0D=0A=0D=0A1630 Glenn Shutts (Met Of=
+fice) =0D=0AKinetic energy backscatter for ensemble forecast systems - some=
+=0D=0Aphysical =0D=0Ajustification=0D=0A=0D=0A1700 Leon Hermanson (Reading)=
+ =0D=0AA study of stochastic parametrizations and missing variance in the=
+=0D=0AECMWF =0D=0Amodel=0D=0A=0D=0A1730 close=0D=0A=0D=0Aorganiser: Peter H=
+aynes (DAMTP, Cambridge)=0D=0Ahttp://www.atm.damtp.cam.ac.uk/people/phh/RMS=
+DPG_june05.html =0D=0A=0D=0A=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:RMetS Dynamical Problems Specialist Group
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

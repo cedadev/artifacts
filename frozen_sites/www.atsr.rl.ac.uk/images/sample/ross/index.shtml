@@ -1,0 +1,533 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>Ross Iceberg B-15
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../../documentation/index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../documentation/docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title></title>
+</head>
+
+<body>
+
+<h2>Antarctic: B-15 Iceberg - One of the largest icebergs ever
+seen.</h2>
+
+<p>ATSR-2 has been used to track a large iceberg which broke away
+or calved from the Ross Ice Shelf in the Antarctic. The iceberg,
+at nearly 300km in length and 40km in width, was one of the
+largest ever seen at the time of its formation in March 2000.
+Since then, it has broken into two main icebergs and other
+smaller ones have formed including B-17, probably caused by B-15
+crashing into the ice-shelf. This sequence of images shows how
+the various pieces have developed over the last few months.<br>
+</p>
+
+<p>Calving of icebergs from the Antarctic ice-shelf is common. As
+the snow accumulates it turns into ice and a shelf of ice is
+pushed out into the surrounding ocean. Eventually, pieces break
+off the ice-shelf and an iceberg is born. The formation of
+icebergs in the Antarctic in this manner is completely different
+from that in the Arctic which leads to icebergs at either end of
+the world being different shapes. Antarctic icebergs tend to be
+relatively low and flat but can be very large whilst arctic
+icebergs are much smaller. Over 90% of the ice locked in icebergs
+is to be found in Antarctica.<br>
+</p>
+
+<p>It is unlikely that this particular event is connected to
+global warming as the advance of the icesheet is a continual
+process. Even with the calving of this monster, the edge of the
+ice-shelf has simply returned to where it was about 50 years ago.
+There is much interest in what will happen to B-15 and associated
+icebergs. Most scientists expect it to drift north-west then west
+staying close to the Antarctic coast. Another scenario is that it
+will drift north and then east passing through the Drake Passage
+between Antarctica and South America and into the South Atlantic
+Ocean<br>
+</p>
+
+	<BR>
+	 <P><IMG SRC="../../../std_template/std_images/icons/std_movie.gif" 
+         ALIGN="middle" ALT="Ross Movie : ">
+	 <a href="movie/ross_video_small.mov" target="NEW_WINDOW">
+	 <font size="2"><font color="#FF0000">
+	    Ross Iceberg Movie </font color="#FF0000"></font> </a>
+	   - To view the movie, you'll need to
+	  <a href="http://www.apple.com/quicktime/download/" target="NEW_WINDOW"><font size="2">
+	 download QuickTime </font></a>
+	 
+	<BR>
+	<BR>
+	<BR>
+	
+	
+	
+	
+	
+	
+<table border="0" cellspacing="7">
+    <tr>
+       <td align="center" valign="top" width="220"><a
+	href="html_files/RossA_020401.html" target="NEW_WINDOW"><font
+        size="2"><img src="gif_files/RossA_020401copy.gif" width="200"
+        height="102"></font></a><font size="2"><br>
+        April 2, 2001, Night<br>
+        B-15 Iceberg Developments<br>
+        </font></p>
+        </td>    
+     
+    	 <td align="center" valign="top" width="220"><a
+	href="html_files/RossA_310301.html" target="NEW_WINDOW"><font
+        size="2"><img src="gif_files/RossA_310301copy.gif" width="200"
+        height="102"></font></a><font size="2"><br>
+        March 31, 2001, Night<br>
+        Interesting cloud formations in the top left corner<br>
+        </font></p>
+        </td>  
+	
+    </tr>	
+	
+<table border="0" cellspacing="7">
+    <tr>
+       <td align="center" valign="top" width="220"><a
+	href="html_files/dec14.html" target="NEW_WINDOW"><font
+        size="2"><img src="gif_files/ross-14dec00copy.gif" width="200"
+        height="102"></font></a><font size="2"><br>
+        December 14, 2000, Day<br>
+        Rifts in the Ross Ice Shelf<br>
+        </font></p>
+        </td>    
+     
+    	 <td align="center" valign="top" width="220"><a
+	href="html_files/dec17.html" target="NEW_WINDOW"><font
+        size="2"><img src="gif_files/ross-17dec00copy.gif" width="200"
+        height="102"></font></a><font size="2"><br>
+        December 17, 2000, Day<br>
+        Rifts in the Ross Ice Shelf<br>
+        </font></p>
+        </td>    
+	
+	 <td align="center" valign="top" width="220"><a
+	href="html_files/dec21.html" target="NEW_WINDOW"><font
+        size="2"><img src="gif_files/ross-21dec00copy.gif" width="200"
+        height="102"></font></a><font size="2"><br>
+        December 21, 2000, Day<br>
+        Rifts in the Ross Ice Shelf<br>
+        </font></p>
+        </td>    
+    
+    </tr>
+    
+    <tr>
+    
+        <td align="center" valign="top" width="220"><a
+	href="html_files/dec12.html" target="NEW_WINDOW"><font
+        size="2"><img src="gif_files/RossD071200.gif" width="200"
+        height="102"></font></a><font size="2"><br>
+        December 07, 2000, Day<br>
+        A new iceberg, <font color="#FF0000">B-15F</font color="#FF0000">, has broken off B-15B?<br>
+        </font></p>
+        </td>    
+    
+    
+      <td align="center" valign="top" width="220"><a
+	href="html_files/oct24.html" target="NEW_WINDOW"><font
+        size="2"><img src="gif_files/RossD24100012&#32;copy.gif" width="200"
+        height="102"></font></a><font size="2"><br>
+        October 24, 2000, Day<br>
+        B-15A continues to move along the coast, drifitng away from B-15B<br>
+        </font></p>
+        </td>
+     
+       
+       <td align="center" valign="top" width="220"><a
+	href="html_files/oct12.html" target="NEW_WINDOW"><font
+        size="2"><img src="gif_files/RossD121000&#32;copy.gif" width="200"
+        height="102"></font></a><font size="2"><br>
+        October 12, 2000, Night<br>
+        </font></p>
+        </td>	
+        </tr>   
+    
+    
+        <tr>
+        <td align="center" valign="top" width="220"><a
+	href="html_files/sep29.html" target="NEW_WINDOW"><font
+        size="2"><img src="gif_files/RossD290900_B20&#32;copy.gif" width="200"
+        height="102"></font></a><font size="2"><br>
+        September 29, 2000, Day<br>
+        B-15A and B-15B both clearly visible and continuing to drift apart. <font color="#FF0000"> 
+	New Iceberg Forms - B20</font color="#FF0000"><br>
+        </font></p>
+        </td>
+   
+    	<td align="center" valign="top" width="220"><a
+	href="html_files/sep17.html" target="NEW_WINDOW"><font
+        size="2"><img src="gif_files/RossA170900&#32;copy.gif" width="200"
+        height="102"></font></a><font size="2"><br>
+        September 17, 2000, Night<br>
+        B-15 drifting north, away from B-15A<br>
+        </font></p>
+        </td>
+   
+    	<td align="center" valign="top" width="220"><p
+        align="center"><a href="html_files/sep01.html" target="NEW_WINDOW"><font
+        size="2"><img src="gif_files/RossA010900&#32;copy.gif" width="206"
+        height="105"></font></a><font size="2"><br>
+        September 1, 2000, Night<br>
+        B-15A and B-15B now parallel<br>
+        </font></p>
+        </td>
+        </tr>
+	
+	
+	<tr>
+	<td align="center" valign="top" width="220"><p
+        align="center"><a href="html_files/aug12.html" target="NEW_WINDOW"><font
+        size="2"><img src="gif_files/RossA120800&#32;copy.GIF" width="200"
+        height="102"></font></a><font size="2"><br>
+        August 12, 2000, Night<br>
+        All of the icebergs have moved further away and B-15B
+        continues to rotate B-15A<br>
+        </font></p>
+        </td>
+        
+	<td align="center" valign="top" width="220"><a
+	href="html_files/jul14.html" target="NEW_WINDOW"><font
+        size="2"><img src="gif_files/RossA140700&#32;copy.GIF" width="200"
+        height="102"></font></a><font size="2"><br>
+        July 14, 2000, Night<br>
+        B-17 now rotated more than 90° to the ice-shelf<br>
+        </font></p>
+        </td>
+        
+	<td align="center" valign="top" width="220"><a
+        href="html_files/jul12.html" target="NEW_WINDOW"><font size="2"><img
+        src="gif_files/RossA120700&#32;copy.GIF" width="200" height="102"></font></a><font
+        size="2"><br>
+        July 12, 2000, Night<br>
+        B-15B moves away from the ice-shelf and in doing so,
+        twists B-15A so, once again, it is parallel to the ice<br>
+        </font></td>
+        </tr>
+	
+	
+	<tr>
+	<td align="center" valign="top" width="220"><a
+        href="html_files/jun15.html" target="NEW_WINDOW"><font size="2"><img
+        src="gif_files/ROSS1506-A&#32;copy.GIF" width="200" height="102"></font></a><font
+        size="2"><br>
+        June 15, 2000, Night<br>
+        B-15B has moved west to the original break-off point of B-15A<br>
+        </font></td>
+        
+	<td align="center" valign="top" width="220"><a
+        href="html_files/jun12.html" target="NEW_WINDOW"><font size="2"><img
+        src="gif_files/ROSS1206-A&#32;copy.GIF" width="200" height="102"></font></a><font
+        size="2"><br>
+        June 12, 2000, Night<br>
+        B-15A now almost 45° to the ice-shelf. <br>
+        </font></td>
+    	
+        <td align="center" valign="top" width="220"><a
+        href="html_files/may28.html" target="NEW_WINDOW"><font size="2"><img
+        src="gif_files/ROSSD2805-D&#32;copy.GIF" width="200" height="102"></font></a><font
+        size="2"><br>
+        May 28, 2000, Day<br>
+        B-15A and B-15B both clearly visible. B-17 now almost at
+        90° to the ice-shelf<br>
+        </font></td>
+        </tr>
+	
+	
+	<tr>
+	<td align="center" valign="top" width="220"><a
+        href="html_files/may23.html" target="NEW_WINDOW"><font size="2"><img
+        src="gif_files/ROSS2305-A&#32;brake&#32;copy.GIF" width="200"
+        height="102"></font></a><font size="2"><br>
+        May 23, 2000, Night<br>
+        </font><a
+        href="../../../news/details/09052000/01/index.shtml"
+        target="NEW_WINDOW"><font size="2">News:B15 iceberg
+        broken in two! </font></a><font size="2">Also, another
+        crack has appeared in the ice-shelf- a future iceberg?<br>
+        </font></td>
+        
+	<td align="center" valign="top" width="220"><a
+        href="html_files/apr26.html" target="NEW_WINDOW"><font size="2"><img
+        src="gif_files/ROSS2604-A&#32;copy.GIF" width="200" height="102"></font></a><font
+        size="2"><br>
+        April 26, 2000, Night<br>
+        B-15 gradually moving away<br>
+        from the ice-shelf and sliding<br>
+        further west<br>
+        </font></td>
+    	
+        <td align="center" valign="top" width="220"><a
+        href="html_files/apr13.html" target="NEW_WINDOW"><font size="2"><img
+        src="gif_files/ROSS1304-A&#32;copy.GIF" width="200" height="102"></font></a><font
+        size="2"><br>
+        April 13, 2000, Night <br>
+        New iceberg to the east-B-17 <br>
+        </font></td>
+        </tr>
+
+
+        <tr>
+	<td align="center" valign="top" width="220"><a
+        href="html_files/Mar27.html" target="NEW_WINDOW"><font size="2"><img
+        src="gif_files/ROSSD2703-D&#32;copy.GIF" width="200" height="102"></font></a><font
+        size="2"><br>
+        March 27, 2000. Daytime <br>
+        B-15 and the much smaller B-16<br>
+        to the west<br>
+        </font></td>
+        
+	<td align="center" valign="top" width="220"><a
+        href="html_files/Mar20.html" target="NEW_WINDOW"><font size="2"><img
+        src="gif_files/ROSSA20MAR-A&#32;copy.GIF" width="200" height="102"></font></a><font
+        size="2"><br>
+        March 20, 2000, Night. <br>
+        Three days after the first report of the calving<br>
+        <br>
+        </font></td>
+    	
+        <td align="center" valign="top" width="220"><a
+        href="html_files/sep16.html" target="NEW_WINDOW"><font size="2"><img
+        src="gif_files/RossA160999&#32;copy.GIF" width="200" height="102"></font></a><font
+        size="2"><br>
+        September 16, 1999, Night.<br>
+        Before the calving of the iceberg.</font></td>
+    	</tr>
+</table>
+
+<BR>
+	
+	
+
+
+<BR><BR>
+<H3> Timeline/Diary of main events </H3>
+<BR>
+<p><B>20-March-2000:</B> first image of the B-15 Iceberg, three days after the initial
+report of the calving </p>
+<p><B>13-April-2000:</B> new iceberg to the East - B-17 </p>
+<p><B>09-May-2000:</B><a href="../../../news/details/09052000/01/index.shtml"
+   target="NEW_WINDOW">
+   Press Release from RAL: B-15 Iceberg.</a></p>
+<p> <B>23-May-2000:</B> B-15 iceberg broken in two - B-15A and B-15B </p>
+<p> <B>17-Sept-2000:</B> 
+	 <a href="vortex/index.shtml">
+   Cloud Streets</a></p>
+<p> <B>29-Sept-2000:</B> new iceberg forms - B-20, with the B-15A and B-15B
+continuing to drift apart </p>
+<p> <B>24-Oct-2000:</B> B-20 renamed C-16, since it broke away from the Ross Ice Shelf
+in the 'C' sector of the Atlantic </p>
+<p> <B>07-Dec-2000:</B> It appears that perhaps a new iceberg, B-15F, has 
+broken from the B-15B iceberg.</p>  
+<p> <B>21-Dec-2000:</B>
+	 <a href="cracks/index.shtml">
+         ATSR clearly identifies significant rift in the Ross Ice Shelf</a></p> 
+<BR>
+<BR>
+
+
+	
+<H3> Acknowledgements </H3>
+
+<p> Many thanks to ESA's NRT system for the help that has been provided in
+tracking the Ross Iceberg </p>
+
+
+</body>
+</html>
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Thursday, 06-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

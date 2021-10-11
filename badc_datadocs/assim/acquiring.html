@@ -1,0 +1,166 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Datasets: Met Office Assimilated Data Help File</TITLE>
+</HEAD>
+<!-- Created 25th May 1996 12:25:17  -->
+<!-- Author: Simon Williams BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>Acquiring the Met Office Assimilated data
+held at the BADC<BR CLEAR="ALL"></H1>
+
+<P><EM>This file contains basic background information to help
+you use the Met Office Assimilated data held at the BADC.</EM> <HR ALIGN=LEFT></P>
+
+<OL>
+  <LI><A HREF="#directories">Checking the data directories</A>
+  <LI><A HREF="#transfer">Transferring Data from the BADC</A>
+  <LI><A HREF="#files">Reading the data files</A>
+</OL>
+
+<P><HR ALIGN=LEFT>The Met Office assimilated data was supplied to the
+BADC by the Met Office as IEEE Unix binary files in Met Office
+&quot;PP&quot; format. For the vast majority of users, the binary
+files can be read directly, without going through a ascii-binary
+conversion step. The files were written on HP machines and have
+been read directly on SUN, SGI and AIX. We have also read them
+under DEC Unix using the f77 -convert big_endian compiler option.</P>
+
+<P>We supply an example read program to read the binary data,
+and 3rd party software written by other users of the data, which
+we do not support.</P>
+
+
+
+<H3><A NAME="directories"></A>1. Browsing the Data Directories</H3>
+
+<BLOCKQUOTE>
+  <P>The Met Office Assimilated Data directories can be browsed
+  using the web at <A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-assim/data/">/badc/ukmo-assim/data/</A>.
+  We suggest that you look here to check whether the data you require
+  is available. Please note that since these data are restricted, 
+  you need to apply for access to the Met Office assimilated data, before
+downloading the data over the WWW. The <A HREF="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=assim">online application for access to the Met Office Assimilated data</a>
+ includes the Met Office Agreement to be electronically accepted.</P>
+  <P>The data are updated every night from the Met Office -
+  check the updates file for the latest file additions.</P></BLOCKQUOTE>
+
+<P><BR>
+</P>
+
+<H3><A NAME="transfer"></A>2. Transferring Data from the BADC</H3>
+
+<BLOCKQUOTE>
+  <P>All data and software is located beneath the directory
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-assim/">/badc/ukmo-assim</a> from the Browse Archive facility.
+  Here you will find a README file and the following subdirectories</P>
+  <UL>
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-assim/data/"
+>data</a> - contains the binary data files. and monthly mean and
+    zonally averaged data in gzipped ASCII format.
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-assim/doc/"
+>doc</a> - contains Met Office documentation
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-assim/software/"
+>software</a> - contains the ASCII conversion, example read and
+    any 3rd party software available
+  </UL>
+  </BLOCKQUOTE>
+
+<P><BR>
+</P>
+
+<H3><A NAME="files"></A>3. Reading the data files</H3>
+
+<BLOCKQUOTE>
+  <H4><A NAME="structure"></A>3.1 The file structure</H4>
+  <P>Each file contains an analysis for a single date, or in cases
+  where the analyses have been produced every six hours, for a
+  single time.</P>
+  <P>The file contains fixed length 28288 byte records. The first
+  record contains a text header incorporating the standard UARS
+  headers, and a list of meta data including geographical and vertical
+  ranges and parameters available in the file.</P>
+  <P>Each subsequent record contains a parameter field for a single
+  pressure level. The records are ordered by decreasing pressure,
+  and all records for one parameter are grouped together in the
+  file. Thus zonal wind fields for all 22 pressure levels are followed
+  by the fields for the meridional winds and so on.</P>
+  <P>Schematically the file has the following structure (the letters
+  <I>pl </I>denote pressure level):</P>
+  <P>&nbsp;</P>
+  <PRE>
+    ________________________________________________________
+   |                                                        |
+   | Record 1 : SFDU label and UARS Header Record           |
+   |________________________________________________________|
+   |                                                        |
+   | Record 2 : Zonal Wind Field at zeroth pl (1000hPa)     |
+   | Record 3 : Zonal Wind Field at 1st pl                  |
+   | Record 4 : Zonal Wind Field at 2rd pl                  |
+   |                                                        |
+    ....
+   |                                                        |
+   | Record 23 : Zonal Wind Field at 21st pl (0.316hPa)     |
+   |________________________________________________________|
+   |
+   | Record 24 : Merid. Wind Field at zeroth pl (1000hPa)   |
+   |                                                        |
+    ....
+   |                                                        |
+   | Record 46 : Geopot. Height Field at zeroth pl (1000hPa)|
+   |                                                        |
+    ....
+   |                                                        |
+   | Record 68 : Temperature Field at zeroth pl (1000hPa)   |
+   |                                                        |
+    ....
+   |                                                        |
+   | Record 90 : Vertical  Wind Field at zeroth pl (1000hPa)|
+   |________________________________________________________|
+ </PRE>
+  <P>This file structure is also used for the monthly averaged
+  data which are stored in the &quot;means&quot; sub-directory.</P>
+  <P>Using the Met Office -supplied access routines is recommended, (see
+  below) since you are then shielded from the underlying file structure.
+  For a very detailed description of the file structure and the
+  contents of each field refer to the <A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-assim/doc/ieee_binary/badc_ukmo.txt">documentation</A>
+  produced by the Met Office.</P>
+  <H4><A NAME="routines"></A>3.2 The Met Office Access Routines</H4>
+  <P>Software routines to read these data have been supplied by
+  the Met Office. There is also a routine to calculate Ertel Potential
+  Vorticity from the analyses.</P>
+  <P>Two basic approaches may be used to read the Met Office analyses.
+  Firstly, a complete field may be read at a single level (eg.
+  for map plotting); this method minimises interpolation errors
+  since the values are on the original horizontal grid points.
+  Alternatively, a set of profiles may be derived at specific locations;
+  this method is intended for comparing the analysis data with
+  observed profiles.</P>
+  <P>To access this data use the following routines:</P>
+ 
+  <PRE>
+    To open a file:                         UKAOPN
+    To read a field at one level:           UKAFLD
+    To define profiles at several levels:   UKAPRF
+    To calculate Ertel potential velocity:  PV_UKA
+    To close a file:                        UKACLS
+    To print a diagnostic message:          UKAPRT</PRE>
+  <P>Users should note the the routines which extract a field of
+  data (UKAFLD and PV_UKA), return the field as a 1-dimensional
+  array of 7008 points. Within this array, gridpoints are grouped
+  in rows at a constant latitude, with high northerly latitudes
+  appearing first.</P>
+  <P>Detailed documentation on these routines was produced by the
+  Met Office and is <A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-assim/doc/ieee_binary/badc_ukmo.txt">available
+  online</A> from the BADC.</P>
+  <H4><A NAME="3rdparty"></A>3.3 Third Party Software</H4>
+  <P>In the <A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-assim/software/">software directories</A>
+  for the Met Office Assimilations, there is a subdirectory for 3rd Party
+  software. If you develop software to use with the Met Office assimilation
+  data, then we encourage you to let us have a copy so that we
+  can make it available to other researchers.</P></BLOCKQUOTE>
+
+<P>
+</BODY>
+</HTML>

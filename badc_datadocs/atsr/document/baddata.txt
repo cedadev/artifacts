@@ -1,0 +1,72 @@
+ This table summarises the time ranges which have been removed from the 
+ supplied data set.
+  
+ Dates are given as ymmdd, where y is the (year-1990), mm is the
+ month of the year, and dd the day of the month.
+ The start and finish times are given in seconds for each day, with 
+ END representing the end of the day.
+ Thus the first entry "10801 0 END" indicates that all data for 1st
+ August 1991 have been removed.
+
+
+     Date      Start   Finish
+    (ymmdd)    (secs)  (secs)
+     10801          0     END
+     10802          0   50600
+     10807      85980     END
+     10827      27600   47207
+     10902      15638   35227
+     10914      31385   46966 
+     11219      42909     END
+     11220          0     END
+     11221          0     END
+     11222          0     END
+     11223          0   64518
+     20407      53018     END
+     20408          0     END
+     20409          0     END
+     20410          0     END
+     20411          0   21118
+     20526      17591   30023
+     20610      49825     END 
+     20611          0     END
+     20612          0     END
+     20613          0     END
+     20614          0     END
+     20615          0     END 
+     20616          0   54354 
+     20705      38400   50401
+     20723      58594     END
+     20724          0   29189
+     20801      22312   29444
+     20818      86239     END
+     20819          0    6306
+     21116          0    7272
+     21124      70040     END
+     21125          0     END
+     21126          0   51807
+     21213      79803   82980
+     21229      28539   28922
+     30629      22800     END
+     30630          0     END
+     30701          0   48214
+     30705      14525   21084
+     31216      32933   67418
+     40318      62990     END
+     40319          0     END
+     40320          0     END
+     40321          0   64310
+     40411      81568     END
+     40412          0   52166
+     40702       3091    3319
+     41024      22519   22888
+     41215      86158     END
+     41216          0     END
+     41217          0     END
+     41218          0     END
+     41219          0     END
+     41220          0     END
+     41221          0    5453
+     50310       2344    2492
+     50705      26412   74433
+     50730      20504   27666

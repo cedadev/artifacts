@@ -1,0 +1,232 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>ERA-40 News</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<IMG SRC="/graphics/logos/ecmwflogo.gif" ALT="ECMWF logo" ALIGN="BOTTOM">
+<IMG SRC="/graphics/logos/ecmwf_era_logo.gif" ALIGN="BOTTOM" ALT="ERA logo">
+
+<H1>Latest News regarding the ERA-40 Re-Analysis data</H1>
+<I>This page documents news items regarding the ECMWF ERA-40 project.</I>
+
+<HR ALIGN=LEFT>
+
+<H2>Introduction</H2>
+
+<P>Whilst the ECMWF <a href="/data/ecmwf-e40/">ERA-40 Re-analysis project</a> 
+produced data there were regular updates regarding issues such as validation, 
+data problems and changes in plans. Much of this information is recorded on 
+the <a href="/data/ecmwf-e40/status.html">status page</a> but all news items 
+are detailed here in reverse date order.
+<P>
+<TABLE BORDER="1" cellPadding="3">
+ <TR>
+   <TD WIDTH="95"><B>DATE</B></TD>
+   <TD><B>NEWS ITEM</B></TD>
+ </TR>
+
+ <TR>
+    <TD>22/12/2005</TD>
+       <TD><b>Incorrect time steps found in some Analysis on Potential Temperature (ggat) files</b>
+<br>It came to our attention in November 2005 that some of the time steps in the potential temperature analyses in the ERA-40 archive. The problem occurred in all files listed at:
+
+<p><a href="http://badc.nerc.ac.uk/data/ecmwf-e40/ggat_incorrect_times.txt">http://badc.nerc.ac.uk/data/ecmwf-e40/ggat_incorrect_times.txt</a>
+
+<p>The affected files held were ozone (o3), potential vorticity (pv) and specific humidity (q). There was one file in 1972:
+
+<p><kbd>/badc/ecmwf-e40/data/gg/at/1972/02/08/ggat1972020812o3.grb</kbd>
+
+<p>The rest of the files were in the date range from July 1995 to November 1996
+with the first and last being:
+
+<p><kbd>/badc/ecmwf-e40/data/gg/at/1995/07/01/ggat1995070100o3.grb</kbd>
+
+<p><kbd>/badc/ecmwf-e40/data/gg/at/1996/11/30/ggat1996113000q.grb</kbd>
+
+<p>Note that we have not been able to establish why this problem occurred but re-extraction of the data has taken place (by 10/12/2005) and the new data has been checked for correct times.
+
+    </TD>
+  </TR>
+
+  <TR>
+   <TD>19/10/2005</TD>
+   <TD><B>Additional forecast fields available in ERA-40 dataset</B>
+<br>Due to user demand additional single/surface level forecasts have been extracted as follows in the ERA-40 archive:
+<UL>
+  <LI><b>Maximum/Minimum temp. at 2m since previous post-processing (MX2T/MN2T)</b> are available at additional forecast steps of +3/+6/+9/+12 hours from both the 00hr and 12hr analyses. Sampling the data at this frequency captures the maximum (or minimum) between each post-processing step (3-hourly frequency).
+  <LI><b>A number of variables are available at additional forecast steps of +6/+12/+18/+24/+30/+36 hours</b> from both the 00hr and 12hr analyses. These variables are mainly moisture-related fields that are accumulated with time. The data was extracted to allow greater investigation into moisture-related fields within the ERA-40 dataset. The variables are:
+  <UL>
+    <LI>Snow evaporation (accum.) [ES]
+    <LI>Snow melt (accum.) [SMLT]
+    <LI>Large scale precipitation fraction (accum.) [LSPF]
+    <LI>Large scale precipitation (accum.) [LSP]
+    <LI>Convective precipitation (accum.) [CP]
+    <LI>Snow fall (accum.) [SF]
+    <LI>Evaporation (accum.) [E]
+    <LI>Runoff (accum.) [RO]
+    <LI>Instantaneous surface moisture flux (evaporation) [IE]
+    <LI>Convective snow fall (accum.) [CSF]
+    <LI>Large scale snow fall (accum.) [LSF]
+    <LI>Wind gusts at 10 m [10FG]
+    <LI>Boundary layer height [BLH]
+  </UL>
+</UL>
+   </TD>
+ </TR>
+
+ <TR>
+   <TD>16/02/2005</TD>
+   <TD><b>Specific Humidity and wind component files corrupt for January 1985</b>
+<br>Thanks to user feedback we have found that a number of specific humidity (q), eastward (u) and northward (v) wind component files in the pressure level archive for January 1985 are corrupt. We have been unable to diagnose the cause of the corruption nor were we able to identify a pattern to it. Hence all ERA-40 pressure level specific humidity (q), eastward wind (u) and northward wind (v) files for January 1985 have been re-extracted.
+<br>
+<br>The new files were put in place on 4th February 2005. The old files were moved as in the following example:
+<br><kbd>ggap1985012818q.grb</kbd>  MOVED TO  <kbd>.ggap1985012818q.grb.corrupt</kbd>
+<br>
+<br>The specific humidity files were replaced on the 4th February 2005 and the wind component files were replaced on the 16th February 2005.
+<br>
+<br>The corruption occurred as incorrect (very low) values in parts of the horizontal grid on certain vertical levels.
+   </TD>
+ </TR>
+
+ <TR>
+   <TD>21/04/2004</TD>
+   <TD><b>ERA-40 Forecasts renamed</b>
+
+<br>The filenames for forecasts files in the ERA-40 archive have been renamed in line with a new file-naming convention that includes the forecast time step. These changes are listed on the <a href="file_naming.html">ERA-40 File Naming web page</a>.
+   </TD>
+ </TR>
+
+ <TR>
+   <TD>12/12/2003</TD>
+   <TD><b>ERA-40 Live Access Server (LAS) launched</b>
+
+<br>We have now launched the <a href="http://titania.badc.rl.ac.uk:8080/las6_1/servlets/dataset">ERA-40 Live Access Server (LAS)</a>. This service allows sub-sets, plots and animations to be created dynamically from the ERA-40 dataset. 
+
+<P><b>Please note the ERA-40 LAS is only available to users that are registered for access to ERA-40. Users must <a href="http://badc.nerc.ac.uk/cgi-bin/mybadc/mybadc.cgi.pl?action=login">log-in to the usual BADC web site</a> before entering the LAS, after which you can go directly to the LAS in any subsequent sessions.</b>
+
+<P>More information about the LAS is available on the <a href="gridded_data.html#badc_las">ERA-40 Regular Gridded Data page</a>.
+
+   </TD>
+ </TR>
+
+
+ <TR>
+   <TD>03/07/2003</TD>
+   <TD><b>Main ERA-40 dataset complete!</b>
+
+<P>The 6-hourly data for the ERA-40 dataset is NOW COMPLETE in the main BADC archive from September 1957 - August 2002. Details about the type of data available can be found at:
+
+<P><a href="http://badc.nerc.ac.uk/data/ecmwf-e40">http://badc.nerc.ac.uk/data/ecmwf-e40</a> and the links from that page. 
+
+<P>A parameters page provides a list of those available on each level type:
+
+<P><a href="http://badc.nerc.ac.uk/data/ecmwf-e40/params.html">http://badc.nerc.ac.uk/data/ecmwf-e40/params.html</a>
+   </TD>
+ </TR>
+
+ <TR>
+   <TD>03/07/2003</TD>
+   <TD><b>ERA-40 Monthly Means Now Available</b>
+
+<P>Two types of monthly mean are now available for the ERA-40 dataset. These are the:
+
+<UL>
+<LI>Monthly diurnal means (moda) - calculated from all time steps in a given month (i.e. one mean per month).
+<LI>Monthly synoptic (6-hourly) means (mm) - calculated from all values of a given time of day in a given month (i.e. 4 means exist per month, at 00, 06, 12 and 18UTC).
+</UL>
+<P>Details on these means are now available at:
+
+<P><a href="http://badc.nerc.ac.uk/data/ecmwf-e40/means.html">http://badc.nerc.ac.uk/data/ecmwf-e40/means.html</a>
+
+   </TD>
+ </TR>
+
+ <TR>
+   <TD>20/06/2003</TD>
+   <TD><b>SPECIAL NOTE FOR USERS ACCESSING ERA-40 MEANS DURING THE EXTRACTION PERIOD</b>
+
+<P>Please note that during the extraction period (January - May 2003) some of the monthly mean files were incorrect. The means were not clearly visible and had not been advertised at this period so I am not aware of anyone having used them. 
+
+<P>However, if you did locate the means and you have used those located under one of the following directories then please obtain the new means as directed in the link above. The directories where errors occurred were <b>/badc/ecmwf-e40/data/diags</b>, <b>/disks/tornado4/e40_means/mm</b> and <b>/disks/tornado4/e40_moda/moda</b>. All the erroneous means were deleted on 20th June 2003.
+
+
+<P>Details on these means are available at:
+<P><a href="http://badc.nerc.ac.uk/data/ecmwf-e40/means.html">http://badc.nerc.ac.uk/data/ecmwf-e40/means.html</a>
+
+   </TD>
+ </TR>
+
+ <TR>
+   <TD>07/05/2003</TD>
+   <TD><B>Older versions of ERA-40 data deleted:</B>
+   <P>The ECMWF has produced more than one version of some of periods 
+of the ERA-40 dataset and they have now published a list of the 
+recommended versions to use (see: 
+<a
+href="http://www.ecmwf.int/research/era/Data_Services/section1.html">http://www.ecmwf.int/research/era/Data_Services/section1.html</a>).
+<p>In some cases the data for these periods has now been replaced 
+at the BADC by the newer, recommed version.
+<p>If you have been accessing the ERA-40 dataset from the standard 
+BADC archive then please check the date ranges below to see if you 
+should re-extract the recommended version of the data.
+<p>Any previous versions of the data were deleted on 7th May 2003 
+so any data present after that preiod will be from the new experiment 
+versions.
+<p>The version numbers in the archive are now:
+	<table>
+	<tr><td width="100"><b>Start</b></td><td width="100"><b>End</b></td><td><b>Experiment Version</b></td></tr>
+	<tr><td>19740501</td><td>19740630</td><td>EXPVER=0035</td></tr>
+	<tr><td>19850101</td><td>19850331</td><td>EXPVER=0030</td></tr>
+	<tr><td>19881101</td><td>19881231</td><td>EXPVER=0338</td></tr>
+	<tr><td>19950101</td><td>19950430</td><td>EXPVER=0274</td></tr>
+	</table>
+   </TD>
+ </TR>
+ <TR> 
+ <TR>
+   <TD>03/09/2002</TD>
+   <TD><B>BADC migrating ERA-40 archive to disk:</B><P>As our disk 
+capacity increases we are gradually migrating all the ERA-40 data 
+held on our tape library to disk. This will allow users immediate 
+access to the data without any intermediate waiting or software 
+manipulation.</TD>
+ </TR>
+ <TR>
+   <TD>17/07/2002</TD>
+   <TD><B>ECMWF ERA-40 web pages updated to include information on:</B>
+<UL>
+  <LI><A HREF="http://www.ecmwf.int/research/era/Data_Services/section1.html">Current availability of ERA-40</A>.
+  <LI><A HREF="http://www.ecmwf.int/research/era/Data_Services/section2.html">Completion of initial production and possible partial rerun</A>.
+  <LI><A HREF="http://www.ecmwf.int/research/era/Data_Services/section3.html">The quality of the ERA-40 analyses</A>.
+</UL></TD>
+ </TR>
+ <TR>
+   <TD>24/05/2002</TD>
+   <TD><B>Stream 1 problem corrected from 1997 onwards:</B><BR>
+The problem with the hydrological cycle encountered in Stream 1 was fixed 
+for 1997 and following years.</TD>
+ </TR>
+ <TR>
+   <TD>06/05/2002</TD>
+   <TD><B>Stream 1 (years 1991-1994) validated status removed:</B><BR>
+'Validated' status has been removed from years 1991-1994 in Stream 1 
+after problems were found with the hydrological cycle in tropical regions (see the 
+<A HREF="http://www.mpimet.mpg.de/Depts/Modell/LSP/ERA/result.htm">MPI pages</A> 
+for more detail).</TD>
+ </TR>
+ <TR>
+   <TD>24/09/2001</TD>
+   <TD><B>Stream 1 (years 1989-1990) validated status removed:</B><BR>
+'Validated' status has been removed from years 1989-1990 in Stream 1 
+after problems were found in the handling of some observations. These years 
+are likely to be reprocessed at the end of Stream 3.</TD>
+ </TR>
+</TABLE>
+
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<P>
+</BODY>
+</HTML>

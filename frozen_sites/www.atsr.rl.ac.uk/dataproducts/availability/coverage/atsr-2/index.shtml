@@ -1,0 +1,1060 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>ATSR-2 Coverage plots
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../../../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../../../documentation/index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../documentation/docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../../../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <P>In order to help visualise the ground coverage of the ATSR-2 swath the following 
+  plots have been prepared.<BR>
+  There are two sets of plots viz <STRONG>High Rate Coverage</STRONG> and <STRONG>IDHT 
+  Descoping Regions</STRONG>. </P>
+<P></P>
+<P><STRONG>High Rate Coverage - </STRONG>The instrument data handling system operates 
+  in several modes as described in the ATSR Handbook, basically due to data bandwidth 
+  limitations on the low bitrate (LBR) payload experiments and data rates change 
+  throughout the orbit based on a series of constraints. Without going into detail 
+  which are embedded in the ERS Mission Planning rules, ATSR-2 highrate data, 
+  where data from all 7 detectors are downlinked at full resolution occurs on 
+  the <STRONG>day-side</STRONG> of the orbit and <STRONG>only</STRONG> over land. 
+  At all other times the instrument data handler operates in low-rate flexible 
+  format where there are varying degrees of data compression and or limitation.</P>
+<P><STRONG>IDHT Descoping Regions</STRONG> - The IDHT is the ERS Instrument Data 
+  Handling and Transmission system, the crucial component of which is the onboard 
+  tape recorder. Due to constraints of the the four ground stations coverage for 
+  downlinking the recorded data, it is not possible to record and subsequently 
+  transmit a complete data set. The ERS mission planning system attempts to optimise 
+  the global coverage of the LBR instruments but cannot achieve 100%. The plots 
+  shown here give an indication again in the form of a normal ATSR swath pattern 
+  <STRONG>missing data </STRONG>that is never collected because of the mission 
+  planning <STRONG>descoping</STRONG>.</P>
+<P>All the plots each cover 501 orbits of ERS-2 by Cycle Numbers as defined in 
+  the ERS Mission Scenario, the actual orbit number range and dates are given 
+  on each plot. The plots trace a swath which equates to the nominal 512Km wide 
+  scene on the earth surface when the instrument data collection mode was in High 
+  Rate or Descoped.</P>
+<P>What can be visualised is the systematic build up in each ERS-2 Cycle of the 
+  global coverage by the instrument. There are within the ERS mission planning 
+  system regionalised priorities given to the areas of descoping.</P>
+<P>Potential users of ATSR data, particulary of the visible channels, may find 
+  the High Rate plots useful for selecting regions of interest for studies,for 
+  example it would not be very productive to request day-time or descending data 
+  over the Indian sub continent. </P>
+<P align="center"><B>Swath Data</B></P>
+<TABLE align=center border=2 >
+  <TR> 
+    <TD> 
+      <P align="center"><B>Cycle number</B></P>
+    </TD>
+    <TD> 
+      <P align="center"><B>High Rate Coverage</B></P>
+    </TD>
+    <TD> 
+      <P align="center"><B>IDHT Descoping Regions</B></P>
+    </TD>
+  </TR>
+
+  <!-- Include script generated table code file -->
+  
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">1</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_01.PDF">May - June 1995</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_01.pdf">May - June 1995</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">2</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_02.PDF">June - July 1995</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_02.pdf">June - July 1995</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">3</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_03.PDF">July - August 1995</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_03.pdf">July - August 1995</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">4</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_04.PDF">August - October 1995</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_04.pdf">August - October 1995</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">5</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_05.PDF">October - November 1995</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_05.pdf">October - November 1995</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">6</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_06.PDF">November - December 1995</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_06.pdf">November - December 1995</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">7</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_07.PDF">December - January 1996</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_07.pdf">December - January 1996</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">8</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="http://www.atsr.rl.ac.uk/dataproducts/availability/coverage/atsr-2/plots/hrate/ATSR2_HRATE_CYCLE_08.PDF">January - February 1996</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_08.pdf">January - February 1996</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">9</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="http://www.atsr.rl.ac.uk/dataproducts/availability/coverage/atsr-2/plots/hrate/ATSR2_HRATE_CYCLE_09.PDF">February - March 1996</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_09.pdf">February - March 1996</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">10</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="http://www.atsr.rl.ac.uk/dataproducts/availability/coverage/atsr-2/plots/hrate/ATSR2_HRATE_CYCLE_10.PDF">March - April 1996</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_10.pdf">March - April 1996</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">11</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="http://www.atsr.rl.ac.uk/dataproducts/availability/coverage/atsr-2/plots/hrate/ATSR2_HRATE_CYCLE_11.PDF">April - June 1996</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_11.pdf">April - June 1996</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">12</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_12.PDF">July - July 1996</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_12.pdf">June - July 1996</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">13</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_13.PDF">July - August 1996</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_13.pdf">July - August 1996</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">14</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_14.PDF">August - September 1996</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_14.pdf">August - September 1996</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">15</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_15.PDF">September - October 1996</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_15.pdf">September - October 1996</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">16</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_16.PDF">October - November 1996</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_16.pdf">October - November 1996</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">17</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_17.PDF">November - December 1996</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_17.pdf">November - December 1996</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">18</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_18.PDF">December - February 1997</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_18.pdf">December - February 1997</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">19</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_19.PDF">February - March 1997</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_19.pdf">February - March 1997</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">20</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_20.PDF">March - April 1997</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_20.pdf">March - April 1997</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">21</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_21.PDF">April - May 1997</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_21.pdf">April - May 1997</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">22</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_22.PDF">May - June 1997</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_22.pdf">May - June 1997</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">23</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_23.PDF">June - July 1997</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_23.pdf">June - July 1997</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">24</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_24.PDF">July - September 1997</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_24.pdf">July - September 1997</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">25</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_25.PDF">September - October 1997</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_25.pdf">September - October 1997</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">26</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_26.PDF">October - November 1997</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_26.pdf">October - November 1997</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">27</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_27.PDF">November - December 1997</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_27.pdf">November - December 1997</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">28</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_28.PDF">December - January 1998</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_28.pdf">December - January 1998</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">29</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_29.PDF">January - February 1998</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_29.pdf">January - February 1998</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">30</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_30.PDF">February - March 1998</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_30.pdf">February - March 1998</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">31</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_31.PDF">March - May 1998</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_31.pdf">March - May 1998</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">32</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_32.PDF">May - June 1998</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_32.pdf">May - June 1998</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">33</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_33.PDF">June - July 1998</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_33.pdf">June - July 1998</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">34</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_34.PDF">July - August 1998</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_34.pdf">July - August 1998</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">35</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_35.PDF">August - September 1998</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_35.pdf">August - September 1998</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">36</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_36.PDF">September - October 1998</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_36.pdf">September - October 1998</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">37</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_37.PDF">October - November 1998</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_37.pdf">October - November 1998</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">38</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_38.PDF">November - January 1999</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_38.pdf">November - January 1999</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">39</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_39.PDF">January - February 1999</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_39.pdf">January - February 1999</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">40</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_40.PDF">February - March 1999</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_40.pdf">February - March 1999</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">41</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_41.PDF">March - April 1999</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_41.pdf">March - April 1999</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">42</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_42.PDF">April - May 1999</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_42.pdf">April - May 1999</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">43</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_43.PDF">May - June 1999</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_43.pdf">May - June 1999</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">44</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_44.PDF">June - August 1999</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_44.pdf">June - August 1999</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">45</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_45.PDF">August - September 1999</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_45.pdf">August - September 1999</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">46</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_46.PDF">September - October 1999</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_46.pdf">September - October 1999</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">47</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_47.PDF">October - November 1999</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_47.pdf">October - November 1999</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">48</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_48.PDF">November - December 1999</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_48.pdf">November - December 1999</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">49</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_49.PDF">December - January 2000</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_49.pdf">December - January 2000</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">50</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_50.PDF">January - February 2000</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_50.pdf">January - February 2000</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">51</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_51.PDF">February - April 2000</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_51.pdf">February - April 2000</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">52</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_52.PDF">April - May 2000</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_52.pdf">April - May 2000</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">53</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_53.PDF">May - June 2000</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_53.pdf">May - June 2000</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">54</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_54.PDF">June - July 2000</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_54.pdf">June - July 2000</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">55</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_55.PDF">July - August 2000</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_55.pdf">July - August 2000</A></P>
+	</TD>
+</TR>
+
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">54</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_54.PDF">June - July 2000</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_54.pdf">June - July 2000</A></P>
+	</TD>
+</TR>
+
+<!-- ADDED by www_newcoverageplot -->
+<TR>
+	<TD>
+		<P align="center">55</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_55.PDF">July - August 2000</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_55.pdf">July - August 2000</A></P>
+	</TD>
+</TR>
+
+
+<TR>
+	<TD>
+		<P align="center">56</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_56.PDF">August - September 2000</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_56.pdf">August - September 2000</A></P>
+	</TD>
+</TR>
+
+
+<TR>
+	<TD>
+		<P align="center">57</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_57.PDF">September - October 2000</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_57.pdf">September - October 2000</A></P>
+	</TD>
+</TR>
+
+<TR>
+	<TD>
+		<P align="center">58</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_58.PDF">October - December 2000</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_58.pdf">October - December 2000</A></P>
+	</TD>
+</TR>
+
+<TR>
+	<TD>
+		<P align="center">59</P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/hrate/ATSR2_HRATE_CYCLE_59.PDF">December 2000 - January 2001</A></P>
+	</TD>
+	<TD>
+		<P align="center"><A href="plots/descope/ATSR2_DESCOPE_CYCLE_59.pdf">December 2000 - January 2001</A></P>
+	</TD>
+</TR>
+
+
+</TABLE>
+
+<p><FORM method="get" action="http://www.badc.nerc.ac.uk/cgi-bin/mailit.cgi.pl">
+  <TABLE border="0">
+    <TR> 
+      <TD> 
+        <INPUT type=hidden name="subject" value="/dataproducts/availability/coverage/atsr-2/index.shtml ( ATSR-2 Coverage plots
+ )"> 
+        <INPUT type=hidden name="recipient" value="wwwadmin@www.atsr.rl.ac.uk">
+        <INPUT type=hidden name="env_report" value="REMOTE_HOST, REMOTE_ADDR, HTTP_USER_AGENT">
+	<FONT size="-2"><B>Did you find this information helpful?</B></FONT><FONT size="-2"> 
+        Yes 
+        <INPUT type="radio" value="Yes" name="radiobutton">
+        No 
+        <INPUT type="radio" name="radiobutton" value="No"><BR>
+        <INPUT type="submit" name="Submit" value="Submit">
+        <INPUT type="reset" name="Reset" value="Reset"> 
+	 &nbsp<a href = "../../../../feedback/index.shtml">Give details...</a></FONT>
+      </TD>
+ 
+    </TR>
+  </TABLE>
+</FORM>
+
+</p>
+
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Tuesday, 04-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

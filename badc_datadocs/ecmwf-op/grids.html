@@ -1,0 +1,209 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC ECMWF Model Grids</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<!--SELECTION--><!--/SELECTION--><IMG SRC="ecmwflogo.gif"
+ALT="ECMWF logo:" ALIGN="BOTTOM">
+
+<H1>The ECMWF Model Grids</H1>
+
+<HR ALIGN=LEFT>
+
+<H2><IMG SRC="/graphics/blue/info.gif" BORDER="0" ALIGN="BOTTOM">Introduction</H2>
+
+
+The ECMWF data held at the BADC is archived at a number of grid resolutions. The aim of this page is to explain the difference between the following grid types:
+
+<OL>
+<LI><a href="#spectral">Spectral Resolution</a>
+	<UL>
+	<LI><a href="#t159">T159 resolution</a>
+	<LI><a href="#t106">T106 resolution</a>
+	</UL>
+<LI><a href="#gaussian">Gaussian Grids</a>
+	<UL>
+	<LI><a href="#n80_full">N80 Full Gaussian grid</a>
+	<LI><a href="#n80_reduced">N80 Reduced Gaussian grid</a>
+	</UL>
+<LI><a href="#lat-long">Regular Latitude-Longitude Grids</a>
+	<UL>
+	<LI><a href="#1_deg">1&deg; x 1&deg; grid</a>
+	<LI><a href="#1.125_deg">1.125&deg; x 1.125&deg; grid</a>
+	<LI><a href="#2.5_deg">2.5&deg; x 2.5&deg; grid</a>
+	</UL>
+</OL>
+
+<P>Information is also provided on the <a href="#interp">interpolation methods</a> used to convert spectral data to a regular grid.
+
+<HR>
+<H2><a name="spectral"></a><a name="t159"></a><a name="t106"></a>Spectral Resolution</H2>
+The ECMWF <a href="http://www.ecmwf.int/research/ifsdocs/">Integrated Forecasting System (IFS)</a> uses a spectral model with <a href="levels.html#model">model levels</a> calculated
+ in the vertical axis. Spectral models calculate their parameters using spherical harmonics as opposed 
+ to grid points. This is computationally more efficient than a regular grid-point model. Spectral model resolution is typically expressed with the number of levels (e.g. T159L60 - where 'T' is the spectral resolution and 'L' is the number of model levels)
+, although the
+ number of levels is often omitted. As the Operational model is improved, the resolution increases. The current Operational
+ model runs at T511, equivalent to a grid size of approximately 40 km.<P>
+ 
+ Only upper air data is stored in spectral form so the complementary surface data sets are provided on a <a href="#gaussian">Gaussian grid</a>. 
+ The ECMWF data archived at the BADC is stored in two spectral resolutions, T159 and T106.
+ <P>
+ <B>T159 resolution</B>
+ <P>The <a href="/data/ecmwf-e40/index.html">ERA-40 Re-analysis</a>  and <a href="">Operational Analyses</a> data are stored at a resolution of T159. The surface data for this data is provided on an <a href="#n80_reduced">N80 Reduced Gaussian grid</a>.
+ 
+ <P>
+ <B>T106 resolution</B>
+ <P>The <a href="/data/ecmwf-era/index.html">ERA-15 Re-analysis project</a> and <a href="">Operational Analyses</a> are both stored at a
+ resolution of T106. 
+The surface data for the ERA-15 data set is provided on an <a href="#n80_reduced">N80 Reduced Gaussian grid</a> whilst the surface data for the Operational data set is on an <a href="#n80_full">N80 Full Gaussian grid</a>.
+ <p>
+ <HR>
+
+
+ <H2><a name="gaussian">Gaussian Grids</a></H2>
+The ECMWF provides surface fields on an N80 Gaussian grid to be used alongside the spectral upper air fields (on <a href="levels.html#model">model levels</a>). Gaussian grids are used in the 
+model calculations in preference to regular grids because they provide superior numerical accuracy. 
+The ECMWF has used an N80 Gaussian grid in its Operational spectral
+model since 1 May 1985. 
+
+<P>There are two types of N80 Gaussian grid, the <i>full</i> and <i>reduced</i> Gaussian grid. The BADC holds ECMWF data stored on both types of Gaussian grid. The ECMWF web site contains information on the <a href="http://wms.ecmwf.int/products/data/tech
+nical/gaussian">different types of Gaussian grid</a>.
+ <P>
+ <B><a name="n80_full">N80 Full Gaussian Grid</a></B>
+ <P>The N80 Full Gaussian grid is equivalent to a 1.125&deg; grid along its longitudinal axis. This means that it has 320 grid points encircling the earth at each latitude. The grid is symmetric about the Equator with 80 latitudinal points in each hemisphere (see <a href="#table_1">Table 1</a>). The ECMWF surface <a href="/data/ecmwf-op/index.html">Operational data</a> held at the BADC is stored on an N80 Full Gaussian grid.
+ <P>
+ <B><a name="n80_reduced">N80 Reduced Gaussian Grid</a></B>
+ <P>The N80 Reduced Gaussian grid is more complicated than the N80 Full Gaussian grid. The reduced grid has the same number of latitudinal grid points but the number of longitudinal grid points varies. The number of longitudinal grid points decreases from the equator to the poles as shown in <a href="#table_1">Table 1</a>, with 320 grid points around the equatorial region but only 18 grid points at 89.1416&deg;N and 89.1416&deg;S.  This reduces storage time and computing resources when running the model. The ECMWF <a href="/data/ecmwf-era/index.html">ERA-15 Re-analysis project</a> and the <a href="/data/ecmwf-e40/index.html">ERA-40 Re-analysis project</a> surface data is available in the N80 Reduced Gaussian grid. 
+
+<P><a name="table_1"><B>Table 1.</B></a>  </b>Grid points on the "full" and "reduced" N80 Gaussian grids.<BR>
+
+<table border=1 style="font-size: smaller">
+<tr><td></td><td></td><td><b>"Reduced" N80 Gaussian grid</b></td><td><b>"Full" N80 Gaussian grid</b></td></tr>
+<tr><td><b>No. from pole</b></td><td><b>Latitude (degrees)</b></td><td><b>No. of points on a Lat. circle</b></td><td><b>No. of points on a Lat. circle</b></td></tr>
+<tr><td>1</td><td>89.1416</td><td>18</td><td>320</td></tr>
+<tr><td>2</td><td>88.0294</td><td>25</td><td>320</td></tr>
+<tr><td>3</td><td>86.9108</td><td>36</td><td>320</td></tr>
+<tr><td>4</td><td>85.7906</td><td>40</td><td>320</td></tr>
+<tr><td>5</td><td>84.6699</td><td>45</td><td>320</td></tr>
+<tr><td>6</td><td>83.5489</td><td>54</td><td>320</td></tr>
+<tr><td>7</td><td>82.4278</td><td>60</td><td>320</td></tr>
+<tr><td>8</td><td>81.3066</td><td>64</td><td>320</td></tr>
+<tr><td>9</td><td>80.1853</td><td>72</td><td>320</td></tr>
+<tr><td>10</td><td>79.0640</td><td>72</td><td>320</td></tr>
+<tr><td>11</td><td>77.9426</td><td>80</td><td>320</td></tr>
+<tr><td>12</td><td>76.8212</td><td>90</td><td>320</td></tr>
+<tr><td>13</td><td>75.6998</td><td>96</td><td>320</td></tr>
+<tr><td>14</td><td>74.5784</td><td>100</td><td>320</td></tr>
+<tr><td>15</td><td>73.4570</td><td>108</td><td>320</td></tr>
+<tr><td>16</td><td>72.3356</td><td>120</td><td>320</td></tr>
+<tr><td>17</td><td>71.2141</td><td>120</td><td>320</td></tr>
+<tr><td>18</td><td>70.0927</td><td>128</td><td>320</td></tr>
+<tr><td>19</td><td>68.9712</td><td>135</td><td>320</td></tr>
+<tr><td>20</td><td>67.8498</td><td>144</td><td>320</td></tr>
+<tr><td>21</td><td>66.7283</td><td>144</td><td>320</td></tr>
+<tr><td>22</td><td>65.6069</td><td>150</td><td>320</td></tr>
+<tr><td>23</td><td>64.4854</td><td>160</td><td>320</td></tr>
+<tr><td>24</td><td>63.3639</td><td>160</td><td>320</td></tr>
+<tr><td>25</td><td>62.2425</td><td>180</td><td>320</td></tr>
+<tr><td>26</td><td>61.1210</td><td>180</td><td>320</td></tr>
+<tr><td>27</td><td>59.9995</td><td>180</td><td>320</td></tr>
+<tr><td>28</td><td>58.8780</td><td>192</td><td>320</td></tr>
+<tr><td>29</td><td>57.7566</td><td>192</td><td>320</td></tr>
+<tr><td>30</td><td>56.6351</td><td>200</td><td>320</td></tr>
+<tr><td>31</td><td>55.5136</td><td>200</td><td>320</td></tr>
+<tr><td>32</td><td>54.3921</td><td>216</td><td>320</td></tr>
+<tr><td>33</td><td>53.2707</td><td>216</td><td>320</td></tr>
+<tr><td>34</td><td>52.1492</td><td>216</td><td>320</td></tr>
+<tr><td>35</td><td>51.0277</td><td>225</td><td>320</td></tr>
+<tr><td>36</td><td>49.9062</td><td>225</td><td>320</td></tr>
+<tr><td>37</td><td>48.7847</td><td>240</td><td>320</td></tr>
+<tr><td>38</td><td>47.6632</td><td>240</td><td>320</td></tr>
+<tr><td>39</td><td>46.5418</td><td>240</td><td>320</td></tr>
+<tr><td>40</td><td>45.4203</td><td>256</td><td>320</td></tr>
+<tr><td>41</td><td>44.2988</td><td>256</td><td>320</td></tr>
+<tr><td>42</td><td>43.1773</td><td>256</td><td>320</td></tr>
+<tr><td>43</td><td>42.0558</td><td>256</td><td>320</td></tr>
+<tr><td>44</td><td>40.9343</td><td>288</td><td>320</td></tr>
+<tr><td>45</td><td>39.8129</td><td>288</td><td>320</td></tr>
+<tr><td>46</td><td>38.6914</td><td>288</td><td>320</td></tr>
+<tr><td>47</td><td>37.5699</td><td>288</td><td>320</td></tr>
+<tr><td>48</td><td>36.4484</td><td>288</td><td>320</td></tr>
+<tr><td>49</td><td>35.3269</td><td>288</td><td>320</td></tr>
+<tr><td>50</td><td>34.2054</td><td>288</td><td>320</td></tr>
+<tr><td>51</td><td>33.0839</td><td>288</td><td>320</td></tr>
+<tr><td>52</td><td>31.9624</td><td>288</td><td>320</td></tr>
+<tr><td>53</td><td>30.8410</td><td>300</td><td>320</td></tr>
+<tr><td>54</td><td>29.7195</td><td>300</td><td>320</td></tr>
+<tr><td>55</td><td>28.5980</td><td>300</td><td>320</td></tr>
+<tr><td>56</td><td>27.4765</td><td>300</td><td>320</td></tr>
+<tr><td>57</td><td>26.3550</td><td>320</td><td>320</td></tr>
+<tr><td>58</td><td>25.2335</td><td>320</td><td>320</td></tr>
+<tr><td>59</td><td>24.1120</td><td>320</td><td>320</td></tr>
+<tr><td>60</td><td>22.9905</td><td>320</td><td>320</td></tr>
+<tr><td>61</td><td>21.8690</td><td>320</td><td>320</td></tr>
+<tr><td>62</td><td>20.7476</td><td>320</td><td>320</td></tr>
+<tr><td>63</td><td>19.6261</td><td>320</td><td>320</td></tr>
+<tr><td>64</td><td>18.5046</td><td>320</td><td>320</td></tr>
+<tr><td>65</td><td>17.3831</td><td>320</td><td>320</td></tr>
+<tr><td>66</td><td>16.2616</td><td>320</td><td>320</td></tr>
+<tr><td>67</td><td>15.1401</td><td>320</td><td>320</td></tr>
+<tr><td>68</td><td>14.0186</td><td>320</td><td>320</td></tr>
+<tr><td>69</td><td>12.8971</td><td>320</td><td>320</td></tr>
+<tr><td>70</td><td>11.7756</td><td>320</td><td>320</td></tr>
+<tr><td>71</td><td>10.6542</td><td>320</td><td>320</td></tr>
+<tr><td>72</td><td>9.53270</td><td>320</td><td>320</td></tr>
+<tr><td>73</td><td>8.41120</td><td>320</td><td>320</td></tr>
+<tr><td>74</td><td>7.28970</td><td>320</td><td>320</td></tr>
+<tr><td>75</td><td>6.16820</td><td>320</td><td>320</td></tr>
+<tr><td>76</td><td>5.04670</td><td>320</td><td>320</td></tr>
+<tr><td>77</td><td>3.92520</td><td>320</td><td>320</td></tr>
+<tr><td>78</td><td>2.80370</td><td>320</td><td>320</td></tr>
+<tr><td>79</td><td>1.68220</td><td>320</td><td>320</td></tr>
+<tr><td>80</td><td>0.56070</td><td>320</td><td>320</td></tr>
+</table>
+ <p>
+ <HR>
+<H2><a name="lat-long">Regular Latitude-Longitude Grids</a></H2>
+The simplest type of grid is the latitude-longitude regular grid. This represents the Earth's surface or upper air layers as a number of grid points at regular intervals (defined in degrees). 
+<P>
+<B><a name="1_deg">1&deg; x 1&deg; grid</a></B>
+<P>Some of the <a href="/data/ecmwf-e40/index.html">ERA-40 Re-analysis</a> data is archived on a regular 1&deg; x 1&deg; grid.
+ <P>
+<B><a name="1.125_deg">1.125&deg; x 1.125&deg; grid</a></B>
+<P>The ECMWF <a href="/data/ecmwf-op/index.html">Operational</a> data set is archived on a regular 1.125&deg; x 1.125&deg; grid for upper air <a href="levels.html#model">model</a> levels.
+ <P>
+
+<B><a name="2.5_deg">2.5&deg; x 2.5&deg; grid</a></B>
+<P>There are two ECMWF data sets held on a regular 2.5&deg; x 2.5&deg; grid. These are the <a href="/data/ecmwf-era/index.html">ERA-15 Re-analysis</a> and the <a href="/data/ecmwf-op/index.html">Operational</a> data sets. Both surface and upper air data (on <a href="levels.html#pressure">pressure</a> levels) are archived at this resolution.
+ <p>
+ <HR>
+<H2><a name="interp">Interpolation methods</a></H2>
+
+The ECMWF archives its upper air data in spectral form and its surface or single level data on a Gaussian grid. In order to convert the data to a regular latitude-longitude grid the BADC has used interpolation software. The method used to interpolate ECMWF data has varied depending on the dataset. Although the interpolation methods produce similar outputs, information on the methods may be relevant to users performing sensitivity tests using ECMWF data from more than data set.
+
+<P>The ERA-15 Re-analysis and Operational data was interpolated using <b>bi-linear</b> interpolation routines provided by the ECMWF (see the <a href="http://wms.ecmwf.int/publications/manuals/libraries/interpolation/overviewFIS.html">ECMWF web pages</a> for details).
+
+<P>The same software and method of interpolation was used to convert ERA-40 data from the N80 Reduced Gaussian grid to a 1&deg; x 1&deg; regular grid are described here.
+
+<P>The BADC also makes  the <a href="http://www.met.reading.ac.uk/~jeff/xconv/">XCONV/CONVSH</a> software package available from the <a href="/help/software/xconv">BADC web pages</a>.  XCONV is Graphical User Interface that allows the user to visualise, subset and convert data files. CONVSH is a command line utility that allows access to the same features as XCONV via a shell prompt. Some users will download XCONV/CONVSH to interpolate data themselves. 
+
+<P>XCONV/CONVSH also uses a form of <b>bi-linear</b> interpolation to convert from one grid resolution to another. Users of the data should be aware that data values will vary slightly depending on the method of interpolation applied. The bi-linear interpolation used for ERA-40 may produce occasional spurious results such as very slightly negative values in precipitation fields. Users who wish to access the data in its original model form should use the spectral and N80 Gaussian gridded data instead of the interpolated regular gridded data.
+
+<P>To ensure that the two interpolation methods did not produce significantly different output the BADC ran a comparison of data sets interpolated by the ECMWF routines and the XCONV/CONVSH package. Figures 1 and 2 show two data sets interpolated from one original spectral data set of  temperature on model level 60 (nearest the Earth's surface) on 1 January 1989. The comparison shows that the interpolation routines produce almost identical results.<P>
+
+<TABLE style="font-size: smaller">
+<tr><td>
+<img src="interp1.gif"><br>
+<B>Figure 1. </b>  Level 60 air temperatures (01/01/1989) interpolated by XCONV/CONVSH package.</td>
+<td width="60"></td>
+<td><img src="interp2.gif"><br>
+<B>Figure 2. </b>  Level 60 air temperatures (01/01/1989) interpolated by ECMWF routines.</td></tr>
+</TABLE>
+
+
+<P>The difference between the two interpolated data sets was less than 0.0012K (around 0.0005%) throughout the globe. This confirms that the there is minimal difference between the XCONV/CONVSH interpolation routine and the ECMWF's own interpolation routines.
+
+<P></BODY>
+</HTML>

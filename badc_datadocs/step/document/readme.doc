@@ -1,0 +1,88 @@
+    README.DOC    November 1988
+    
+
+    1. Introduction
+
+    The intention of this document is to inform you of the structure and format
+    of the directories and files contained within this preliminary release, and
+    some general information that may be useful for reading and interpreting
+    the accompanying data files.  The exchange data files are for data collected
+    onboard the NASA ER-2 during the 1987 Stratosphere-Troposphere Exchange 
+    Project (STEP) based in Darwin Australia.  All files within this release 
+    are standard ASCII files with variable length records.
+
+    The DOCUMENT directory contains several files documenting the contents of
+    this release.
+
+        FORMAT.DOC    gives the format specifications which all experimenters
+                      were encouraged to use when writing files for data
+                      exchange.  The standard format includes header 
+                      information which describes the data, and the data in the
+                      form of time series.
+
+        SOFTWARE.DOC  contains documentation on FORTRAN subroutines included 
+                      in the SOFTWARE directory which can be used to read those
+                      files which are in the standard format.
+
+        CATALOG.DOC   contains a list of the principal investigators, their
+                      instruments, and the available data.
+
+        FLTNOTES.DOC  contains Edwin Danielsen's notes which briefly describe
+                      the scientific objectives and meteorological context of
+                      each of the ER-2 flights out of Darwin.
+
+    The SOFTWARE directory contains several FORTRAN subroutines which can be
+    used to read those data files which are in the standard format described
+    in FORMAT.DOC.
+
+    The data directories are organized by flight number (FLIGHT01, FLIGHT02,
+    FLIGHT03, etc.) and contain all available exchange data files for a 
+    particular flight.
+
+
+    2. References
+
+    The Stratosphere-Troposphere Exchange Project, An Overview and Handbook,
+    1986.  STEP Office, NASA Ames Research Center MS 245-5, Moffett Field,
+    CA 94035.
+
+    At the same time that the 1987 STEP was in progress there were two other
+    major atmospheric experiments being conducted in northern Australia.
+    These were the Australian Monsoon Experiment (AMEX) and the Equatorial
+    Mesoscale Experiment (EMEX).  Both of these experiments utilized a
+    variety of observation platforms including satellites, aircraft, radar,
+    and radiosondes.
+
+    AMEX Newsletter #6 reviews the status of AMEX data and can be obtained 
+    from:
+
+       David Jasper
+       Scientific and Technical Services Branch
+       Bureau of Meteorology
+       P.O. Box 1289K
+       Melbourne Vic.
+       Australia 3001
+
+    An EMEX Data Report may be obtained from:
+
+       NOAA/AOML/Hurricane Research Division
+       Attn: C. Arnhols
+       4301 Rickenbacker Causeway
+       Miami, Florida 33149
+       USA
+
+
+    This documentation and the accompanying data files were compiled by:
+
+       Steven Gaines/Steve Hipskind
+       NASA Ames Research Center
+       M/S 245-3
+       Moffett Field, CA 94035
+       USA
+       415-694-5076
+       FTS 464-5076
+
+    We have left the quality control of the data to the principal investigators
+    and have only checked the data files for readability.  Therefore, if
+    problems with the data are encountered please inform either us or the
+    appropriate principal investigator.

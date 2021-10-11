@@ -1,0 +1,361 @@
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>NASA Ames Format for Data Exchange - Welcome Page</title>
+</head>
+
+<body bgcolor="#ffffff">
+<h1><font color="#333399">NASA Ames Format for Data Exchange</font></h1>
+<hr>
+
+<center>
+<font size=-1>Quick links to</font>
+<table cellpadding=8><tr><td align=center bgcolor=#0055aa>
+<a href="FFI-summary.html"><b><font color=#ffffff>FFI Summary</font></b></a>
+<br>
+<b><font color=#ffffff size=-1>3 tables summarising the nine NASA Ames Format 
+styles and displaying all possible file headers.
+</font></b>
+</td></tr></table>
+<table cellpadding=8><tr><td align=center bgcolor=#0055aa>
+<a href="NASA-Ames-templates-1001-1020.xls"><b><font color=#ffffff>Annotated
+Excel templates of FFIs 1001 and 1020</font></b></a>
+<br>
+<b><font color=#ffffff size=-1>Including examples and instructions on Excel to
+NASA Ames conversion.
+</font></b></td></tr></table>
+</center>
+
+<b>Note: The BADC recommends NASA-Ames format version 1.3.</b> 
+
+<h3>
+Contents
+</h3>
+<ul>
+<li><a href="#Eme">Emergence and general characteristics</a> 
+<li><a href="#Nat">NASA Ames Format: for which type of data?</a> 
+<li><a href="#Arc">Archive concept</a> 
+<li><a href="#Nam">File names</a> 
+<li><a href="#FFI">File format indices</a> 
+<li><a href="#Str">File structure</a> 
+<li><a href="#Fur">Further reading</a> 
+<li><a href="#Exa">Examples</a> 
+<li><a href="#For">Formatting your data</a> 
+<li><a href="#Che">Checking your data files</a> 
+<li><a href="#Upl">Uploading NASA Ames files to BADC</a> 
+<li><a href="#Rea">Reading and understanding NASA Ames formatted data</a>
+</ul>
+
+<h3><a name="Eme">Emergence and general characteristics</a></h3>
+
+The NASA Ames Format for Data Exchange, often referred to as NASA Ames Format,
+grew out of NASA aircraft campaigns and was first formalised at the Ames
+Research Centre, California, during the 1987 Stratosphere Troposphere Exchange
+Project (STEP), when uniform rules to record data were needed to <b>facilitate
+the data exchange</b> between the participants and allow <b>shared use of a
+minimised amount of software</b> to analyse and display different datasets.
+The issue was that the adopted data format should meet the following
+requirements:
+<ul>
+ <li>it had to be <b>portable</b> (readable on any machine by any programming
+     language);
+ <li>it had to be <b>self-describing</b> (that is, the data had to include an
+     attachment containing all the information needed to read, understand and
+     interpret them &#150; thus ensuring the reader's autonomy);
+ <li>it had to be <b>readable by humans</b> (to retain the benefit of its
+     self-description!).
+</ul>
+The first and third requirements implied the adoption of a text format (namely
+<b>ASCII</b>).
+The second condition was met by including in each data file a <b>header</b>
+containing the descriptive information (<i>metadata</i>).
+
+<p>
+Very well suited to field campaigns involving several teams that need to share
+their observations, the NASA Ames Format is not well adapted to very voluminous
+datasets.
+In this case, although less portable, a binary format is recommended.
+</p>
+
+<h3><a name="Nat">NASA Ames Format: for which type of data?</a></h3>
+
+Any set of functions of 1 to 4 variables can be recorded using the NASA Ames
+format, which makes it particularly suitable for atmospheric datasets, whether
+modelled or observed.
+Some NASA Ames file format indices (see below) are better adapted to airborne
+platforms (balloons, aircraft).
+<br><br>
+The number of values taken by one (and only one) of the independent variables 
+is not defined <i>a priori</i> in the data file &#150; so that the data provider
+does not need to know in advance how many values it takes.
+This single independent variable is called <i>unbounded</i>, although it is
+bounded in a mathematical sense.
+All other independent variables, if they exist, are <i>bounded</i>, meaning that
+the number of values they take is explicitly defined in the data file &#150;
+and implying that the data provider has determined these numbers before
+formatting the data.
+<br><br>
+The NASA Ames Format nomenclature distinguishes between
+<table>
+<tr valign=top>
+    <td width=12><img src="blue-dot.gif"></td>
+    <td>up to four <b>independent variables</b> (usually but <u>not
+        necessarily</u> time and/or space) &#150; in most cases, real numbers,
+        one FFI allowing the use of one alphanumeric independent variable
+        (<i>i.e.</i> a piece of text);</td>
+</tr>
+<tr valign=top>
+    <td><img src="blue-dot.gif"></td>
+    <td>the <b>primary dependent variables</b> (functions of the former) &#150;
+        real numbers;</td>
+</tr>
+<tr valign=top>
+    <td><img src="blue-dot.gif"></td>
+    <td>the <b>auxiliary dependent variables</b> (depending solely on the
+        <i>unbounded</i> independent variable) &#150; real numbers or character
+        strings.</td>
+</tr>
+</table>
+The fact that dependent variables are functions of the independent variables
+implies that only one dependent variable value is associated to one given
+set of values of the independent variables.
+For real numbers, this means that the independent variable values can be
+ordered in strictly increasing or decreasing order (the variable is
+<i>monotonic</i>), which is indeed a requirement of the NASA Ames format.
+There is always a way to order a finite number of objects, so that this is a
+condition that can always be met (if necessary, by choosing an appropriate
+independent variable such as a subset of the integers).
+<br>
+Except in a few instances, auxiliary variables are optional.
+
+<h3><a name="Arc">Archive concept</a></h3>
+
+<p>
+The underlying philosophy is that data are stored in a file-based system, a
+dataset being formed out of a series of numbered files.
+Typically, files belonging to a same dataset share some common feature such
+as the people who issued the data, the experiment, the platform,...
+This, however, is not a requirement and it is up to the data provider to
+organise the data files into datasets (possibilities ranging from one single
+dataset including all files to one file per dataset).
+The number of files of the dataset and the number of the file within the data
+set are two elements of information that appear in the file header.
+</p>
+
+<h3><a name="Nam">File names</a></h3>
+
+<p>
+Whilst the first definitions of NASA Ames Format included rules regarding file
+names, these have been dropped from most recent versions, that now allow any
+naming convention or no convention at all.
+File names and their extensions may of course include elements of information
+on the data (<i>e.g.</i> site name, date, <i>etc</i>) or provide a way to
+sort them out.
+<br><br>
+File name rules have been set up for specific NERC thematic programmes
+(<a href="http://badc.nerc.ac.uk/help/file_naming.html">Polluted Troposphere</a>,
+<a href="http://badc.nerc.ac.uk/help/file_naming.html">UFAM</a>,
+<a href="/data/acsoe/NASA-Ames/">ACSOE</a>,
+<a href="/filespec_doc?id=soapex">SOAPEX</a>,
+<a href="/data/utls-ozone/NASAAmes.html#File names">UTLS-Ozone</a>,
+<a href="/data/urgent/FileNames.html">URGENT</a>,)
+</p>
+
+<h3><a name="FFI">File format indices (FFI)</a></h3>
+
+The NASA Ames Format is actually a set of nine formats that comply with an
+overall common structure but make provision of different features adapted
+to various cases (depending on the number of independent variables, whether
+their values are regularly spaced out, <i>etc</i>).
+To each of the nine formats is univokely associated a File Format Index (FFI),
+which is a 4-digit number.
+
+<h3><a name="Str">File structure</a></h3>
+
+Each file is made of two parts.
+At the top of the file, the file header includes information on the data
+(metadata).
+The actual data are recorded in the lines that follow the header.
+In many cases, some of the independent variables are defined in the header and
+are not repeated in the data section (<i>e.g.</i> for a regular grid).
+An accurate description of each format is provided in the BADC <i>NASA Ames FFI
+Summary</i> (see <a href="#For">Formatting your data</a>
+below).
+Here is a brief description of the contents of the two file sections.
+<br><br>
+
+<table>
+<tr valign=top>
+ <td width=12><img src="blue-dot.gif"></td>
+ <td><b>Header</b> or <b>Metadata section</b><br>
+     The header includes, in a defined order and format, all the information
+     needed to read and understand the data. Namely:
+     <table>
+     <tr valign=top>
+         <td width=12><img src="green-dot.gif"></td>
+         <td>the number of the file within the dataset;
+             </td>
+     </tr>
+     <tr valign=top>
+         <td><img src="green-dot.gif"></td>
+         <td>the number of lines in the header;</td>
+     </tr>
+     <tr valign=top>
+         <td><img src="green-dot.gif"></td>
+         <td>the FFI (which unambiguously defines the structure of the data
+             section) and additional required information on the data format;
+             </td>
+     </tr>
+     <tr valign=top>
+         <td><img src="green-dot.gif"></td>
+         <td>the number, nature and <u>units</u> of all types of variables
+             (independent, primary and, when used, auxiliary), ordered as in the
+             data section;</td>
+     </tr>
+     <tr valign=top>
+         <td><img src="green-dot.gif"></td>
+         <td>information on the source of the data (name and affiliation of data
+             providers, experiment, instrumentation, model used, <i>etc</i>.);
+             </td>
+     </tr>
+     <tr valign=top>
+         <td><img src="green-dot.gif"></td>
+         <td>information on the data, data processing and data quality
+             (location, date, revision date, <i>etc</i>.).
+             </td>
+     </tr>
+     </table>
+     Comment fields are provided at the end of the header for any type of
+     additional information that would not fit in the predefined formatted
+     lines.
+     </td>
+</tr>
+<tr valign=top>
+ <td><img src="blue-dot.gif"></td>
+ <td><b>Data section</b><br>
+     The data proper are subdivided in a hierarchy of two-dimensional blocks,
+     the last independent variable (which is always the <i>unbounded</i>
+     variable &#150; see <A HREF="#Nat">NASA Ames Format: for which type of data?</A> above)
+     being the most slowly varying one.
+     Note that error margins can be supplied as either primary or auxiliary
+     variables, if needed.
+</tr>
+</table>
+
+<h3><a name="Exa">Examples</a></h3>
+
+Each file format index is illustrated by one or several <a href="examples.html">examples</a>.
+
+<h3><a name="Fur">Further reading</a></h3>
+
+<a href="G-and-H-June-1998.html">Format Specification for Data Exchange, Version
+1.3</a> (Gaines and Hipskind, 1998) is the primary reference for NASA Ames
+formatting.
+As far as possible, the BADC documentation keeps the same nomenclature and
+notation system as in this original document.
+
+<h3><a name="For">Formatting your data</a></h3>
+
+<table>
+<tr valign=top>
+ <td width=12><img src="blue-dot.gif"></td>
+ <td><a href="FFI-summary.html">NASA Ames FFI Summary</a> is a straightforward
+     instrument to identify the appropriate file format index and to format your
+     data step by step.
+     For each FFI, it includes links to detailed descriptions of the
+     corresponding data and metadata formats.
+     </td>
+</tr>
+<tr valign=top>
+ <td><img src="blue-dot.gif"></td>
+ <td><a href="makeheader.f">Makeheader.f</a>
+     is a self-explanatory Fortran program that generates NASA Ames file headers
+     tailored to the user's needs.
+     It does not require any knowledge of Fortran, only a Fortran compiler.
+     </td>
+</tr>
+<tr valign=top>
+ <td><img src="blue-dot.gif"></td>
+ <td>Many data files contain the variable <i>time</i> which can be expressed in 
+     several ways. 
+     <a href="http://badc.nerc.ac.uk/help/formats/NASA-Ames/nasa-ames-time.htm">Guidelines on the recommended format 
+     of the time-variable header lines, units and the data values are available</a>.
+     </td>
+</tr>
+<tr valign=top>
+ <td><img src="blue-dot.gif"></td>
+ <td>The <font color=#ff0000><a href="NASA-Ames-templates-1001-1020.xls"><i>Excel</i>
+     templates of FFIs 1001 and 1020</a></font> (<i>Excel</i> format) also
+     include instructions on inserting metadata in NASA Ames files and
+     converting <i>Excel</i> spreadsheets to NASA Ames compliant ASCII files.
+     Two examples of spreadsheets are given for each FFI.
+     Their ASCII versions can be viewed here:
+     <ul>
+     <li><a href="./example-1001-a.na">Example 1001-a</a>.
+     <li><a href="./example-1001-b.na">Example 1001-b</a>.
+     <li><a href="./example-1020-a.na">Example 1020-a</a>.
+     <li><a href="./example-1020-b.na">Example 1020-b</a>.
+     </ul>
+     </td>
+</tr>
+<tr valign=top>
+ <td><img src="blue-dot.gif"></td>
+ <td><a href="http://badc.nerc.ac.uk/help/formats/NASA-Ames/na-for-dummies-1D.html">
+ Dummies Guide to NASA Ames format with 1D data</a></td>
+</tr>
+
+<tr valign=top>
+ <td><img src="blue-dot.gif"></td>
+ <td><a href="http://badc.nerc.ac.uk/help/formats/NASA-Ames/na-for-dummies-2D.html">
+  Dummies Guide to NASA Ames format with 2D data</a></td>
+</tr>
+
+<tr valign=top>
+ <td><img src="blue-dot.gif"></td>
+ <td>Specific additional rules apply to some NERC thematic programmes (ACSOE,
+     SOAPEX, UTLS-Ozone, URGENT, NEU).
+     Please refer to the Web pages of these data sets.
+     </td>
+</tr>
+</table>
+
+<h3><a name="Che">Checking your data files</a></h3>
+
+The <a href="/cgi-bin/dataex_file.cgi.pl">NASA Ames
+Format checker</a> is an interactive facility provided by BADC, that allows you
+to check your NASA Ames formatted files online.
+It is based on a program written by S. Gaines, NASA Ames Research Center.
+
+<h3><a name="Upl">Uploading NASA Ames files to BADC</a></h3>
+
+For programmes currently submitting NASA Ames formatted files, the BADC provides
+a Web based <a href="/data/upload.html">file uploader</a>.
+In the process, files are checked for compliance with the NASA Ames standard.
+
+<h3><a name="Rea">Reading and understanding NASA Ames formatted data</a></h3>
+
+<table>
+<tr valign=top>
+ <td width=12><img src="blue-dot.gif"></td>
+ <td>Every File Format Index is explained line by line in the
+     <a href="FFI-summary.html">NASA Ames FFI Summary</a> provided by BADC.
+     </td>
+</tr>
+<tr valign=top>
+ <td><img src="blue-dot.gif"></td>
+ <td>See also the source manual
+     <a href="G-and-H-June-1998.html">Gaines and Hipskind, 1998</a>.
+     </td>
+</tr>
+<tr valign=top>
+ <td><img src="blue-dot.gif"></td>
+ <td>Download an
+     <a href="idlcode.html">IDL
+     code</a> for reading NASA-Ames formatted files.</td>
+</tr>
+</table>
+
+<p>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20090421T230000Z
+DTEND:20090422T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:The Blackett Lecture Theatre 1, Imperial=
+ College, London, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000305DE811B0B6C9010000000000000000100
+ 000002ED63D335A70A143B09101C74C0D4EDE
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0ATHE BUTTERFLY EFFECT =96 MYTH O=
+R REALITY?=0D=0A=0D=0AThe Blackett Lecture Theatre 1, Imperial College, Sou=
+th Kensington Campus, London SW7 2AZ=0D=0A=0D=0AWEDNESDAY 22 APRIL 2009=0D=
+=0A		The =93butterfly effect=94 is emblematic in meteorology and mathematic=
+s for fundamental issues of predictability. Following Ed Lorenz (1917-2008)=
+, it=92s suggested that atmospheric perturbations grow =93chaotically=94 ov=
+er time, to the extent that the disturbance from a butterfly=92s wings coul=
+d eventually create a major storm.=0D=0A=0D=0A		This meeting will explore t=
+he ramifications of Lorenz=92s iconic ideas from a 2009 perspective. What d=
+id he and others really say? Were they right =96 or are there other laws of=
+ predictability? What are the implications for predicting weather and clima=
+te and how we use observational data? Ultimately, is the =93butterfly effec=
+t=94 just a beautiful story or is it truly how the atmosphere works?=0D=0A=
+=0D=0A1400 	INTRODUCTION	Chairman: Professor Geraint Vaughan=0D=0AVice Pres=
+ident =96 Royal Meteorological Society=0D=0A	=0D=0A		Meeting Organiser: Dr =
+Steve Derbyshire=0D=0AMet Office=0D=0A	=0D=0A1410 	LORENZ, BUTTERFLIES AND =
+CHAOS	Professor Ian Stewart FRS=0D=0AUniversity of Warwick=0D=0A	=0D=0A1440=
+	A MILLION-DOLLAR PROBLEM WITH TRILLION-DOLLAR IMPLICATIONS	Dr Tim Palmer F=
+RS=0D=0AECMWF=0D=0A	=0D=0A1510	WHY ARE DETERMINISTIC FORECASTS SO GOOD?	Dr =
+Mike Cullen=0D=0AMet Office=0D=0A	=0D=0A1540	TEA 		=0D=0A1610	ENERGY CASCAD=
+ES IN THE MARINE BOUNDARY LAYER	Professor Robert Kerr=0D=0AUniversity of Wa=
+rwick=0D=0A	=0D=0A1640	MAKING USE OF OBSERVATIONS IN AN UNCERTAIN WORLD: DA=
+TA ASSIMILATION FOR DETERMINISTIC AND PROBABILISTIC NWP	Dr Dale Barker=0D=
+=0AMet Office, formally NCAR	=0D=0A1710	PANEL DISCUSSION: MYTH OR REALITY?	=
+	=0D=0A1740	CLOSE		=0D=0A=0D=0ANON-MEMBERS ARE WELCOME TO ATTEND THIS MEETI=
+NG, FOR WHICH REGISTRATION IS NOT REQUIRED. MAPS AND FURTHER INFORMATION CO=
+NCERNING ALL MEETINGS AND MEMBERSHIP IS AVAILABLE FROM THE ROYAL METEOROLOG=
+ICAL SOCIETY, 104 Oxford Road, Reading RG1 7LL  OR FROM OUR WEB SITE: www.r=
+mets.org. =0D=0A		Telephone +44(0)118 9568500=0D=0A		 =0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Meeting THE BUTTERFLY EFFECT =96 MYTH OR =
+REALITY?
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

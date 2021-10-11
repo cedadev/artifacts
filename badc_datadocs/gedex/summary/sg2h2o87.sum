@@ -1,0 +1,36 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SG2H2O87 "
+"SUM_DATA_SET"       "SAGEII-PROF  "
+"SUM_DATATYPE"       "H2OVAPOR     "
+"ARCHIVE_NAME"       "NSSDC, NCDS          "
+"ARCHIVE_STATUS"     "Available                                                    "
+"DS_DESCRIPTION"     "ERBS Stratospheric Aerosol and Gas Experiment II Profiles    "
+"DT_DESCRIPTION"     "Water Aerosol Profiles                                       "
+"SUM_BEGIN_DATE"     "01-Jan-1987                                                                 "
+"SUM_END_DATE"       "31-Dec-1987                                                                 "
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "80 deg N to 80 deg S (above 5 km or cloud tops)              "
+"SPATIAL2"           "                                                             "
+"SPATIAL3"           "250 km X 250 km  Vertical resolution is 1 km below 25 km     "
+"SPATIAL4"           "and 5 km above 25 km.                                         "
+"TEMPORAL1"          "January 1, 1987 - December 31, 1987                          "
+"TEMPORAL2"          "Sunrise and sunset                                 "
+"TEMPORAL3"          "Full coverage obtained in about 3 weeks, but latitude       "
+"TEMPORAL4"          "coverage varies with season                                           "
+"PRODUCT1"           "Water Vapor number density and volume mixing ratio profiles  "
+"PRODUCT2"           "One 6250-bpi tape per year.                                  "
+"PRODUCT3"           "Available on GEDEX CD-ROM.                     "
+"PRODUCT4"           "  "
+EOF
+
+PARAMETERS
+"EXTINCTION"   "Water Vapor Extinction Coefficient"   "1.0E-4 km**(-1)"
+"MIXING RATIO" "Volume Mixing Ratio" "None"
+"NUMBER DENSITY" "Water Vapor Number Density" "1.0E11 cm**(-3)"
+"TEMPERATURE" "Temperature" "Deg K"
+"PRESSURE" "Atmospheric Pressure" "mb"
+EOF
+
+SOURCES
+"ERBS"   "SAGEII"
+EOF

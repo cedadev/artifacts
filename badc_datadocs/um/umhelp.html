@@ -1,0 +1,723 @@
+<HTML>
+
+    <HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC: Met. Office Operational NWP Data Products Help</TITLE>
+</HEAD>
+
+    <body bgcolor="#ffffff">
+        <h1><img src="/graphics/logos/metlogos.gif" align="BOTTOM"></h1>
+        <h1>Met. Office Operational NWP Products -Background Information</h1>
+        <p><!-- Navigation bar --></p>
+        <hr align=LEFT>
+        <a name="Contents"></a>Go to: [ Contents | <a href="#Introduction">Introduction</a> | <a href="#Data">Data</a> | <a href="#UsingData">Using Data</a> | <a href="#End">End</a> ]
+        <hr align=LEFT>
+        </P>
+        <h2>Contents</h2>
+        <ol>
+            <li><a href="#Introduction">Introduction</a>
+            <ul>
+                <li><a href="#Model">1.1 The UK Unified Model</a>
+            </ul>
+            <li><a href="#Data">The UM data</a>
+            <ul>
+                <li><a href="#Fields">2.1 The model output data fields</a>
+                <ul>
+                    <li><a href="#FcScMapping">2.1.1 Field Code to Stash Code Mapping</a>
+                </ul>
+                <li><a href="#Spatial">2.2 Spatial coverage and resolution</a>
+                <ul>
+                    <li><a href="#Horizontal">2.2.1 Horizontal coverage</a>
+                    <li><a href="#Vertical">2.2.2 Vertical coverage</a>
+                </ul>
+                <li><a href="#Temporal">2.3 Temporal coverage and resolution</a>
+            </ul>
+            <li><a href="#UsingData">Obtaining and using UM data from the BADC</a>
+            <ul>
+                <li><a href="#UMfiles">3.1 The UM data files</a>
+                <li><a href="#ReadSoft">3.2 Software to read the data</a>
+                <li><a href="#Plot">3.3 Software to manipulate and plot the data</a>
+            </ul>
+        </ol>
+        <p><!-- Navigation bar --></p>
+        <hr align=LEFT>
+        <a name="Introduction"></a>Go to: [ <a href="#Contents">Contents</a> | Introduction | <a href="#Data">Data</a> | <a href="#UsingData">UsingData</a> | <a href="#End">End</a> ]
+        <hr align=LEFT>
+        </P>
+        <h2><u>IMPORTANT</u>: byte swapping of these data files may be required before they can be read on your systems. Utilities are available to perform the byte-swapping and convert these files into several other formats such as NetCDF.</h2>
+        <h2>Byte swapping software has been available for some time from the BADC and is described at <a href="http://badc.nerc.ac.uk/help/software/xconv/index.html">http://badc.nerc.ac.uk/help/software/xconv/index.html</a> .</h2>
+        <h2>1. Introduction</h2>
+        <p>This document describes the UK Met. Office Operational NWP data products (based on the Unified Model (UM)) which have been retrieved from the Met. Office since 23 October 2000. Data files are recovered every 6 hours (0,6,12,18Z), which contain analysis fields and forecast fields out to 6 hours from these times. These files are processed by the BADC to convert then into a format more suited to the UM community (binary PP), with the analysis fields and forecasts out to 12 hours being archived at the BADC.</p>
+        <h3><a name="Model"></a>1.1 The UK Unified Model</h3>
+        <p>The UK&nbsp;unified global model outputs a number of variables onto a global grid for a number of vertical levels. The initial output is onto &quot;model&quot; vertical levels, and from these additional processing is used to produce another set of global variables on pressure levels in the atmosphere. For the past 6 years, the output resolution was fixed (432x325, 38 model levels, 38km top height). However, in December 2005, enhancements were made to the output, so that output is now available on a 640x481 grid, at 50 model levels, top level 65km . Please see <a href="global_res_improvements.html" title="Global resolution improvements">this page</a> for more details.</p>
+        <p>The UK operational Mesoscale model uses a rotated latitude and longitude coordinate system in which the computational north pole is shifted to an actual position of 37.5 deg. N, 177.5 E. This is done to obtain fairly uniform horizontal resolution over the area of interest. The corners of the computational area are approximately in actual latitude/longitude: (60.1N, 16.6W; 60.2N, 10.7E; 46.6N, 12.7W; 46.7N, 7.1E). The grid-length is 0.15 deg. in each direction which is approximately 16.8 Km, giving 92x92 grid points running from the north - west corner.</p>
+        <p><!-- Navigation bar --></p>
+        <hr align=LEFT>
+        <a name="JCMM"></a>Go to: [ <a href="#Contents">Contents</a> | Introduction | <a href="#Data">Data</a> | <a href="#UsingData">UsingData</a> | <a href="#End">End</a> ]
+        <hr align=LEFT>
+        </P>
+        <h2>2. The UM data</h2>
+        <h3><a name="Fields"></a>2.1 Model output data fields</h3>
+        <p>Model dumps are retrieved from the UKMO once each day. These consist of global and mesoscale data (on model and standard levels) generated at 0, 6, 12, and 18 Z. The output data from each model run include a variety of field types and have forecasts out to 6 hours from each step. This gives a data rate of around 1.5 Gb per day, depending on the packing method used. These files are processed to split the data into 1 file per variable/timestep. The analysis and forecast data are stored in separate directories for both mesoscale and global data. The format of the saved filenames is described in <a href="#UMfiles">section 3</a>.</p>
+        <p>The following table shows the most common <b>Field</b> codes (Note these are not the same as STASH codes).</p>
+        <p>&nbsp;</p>
+        <p></p>
+        <center>
+            <table width="360" border="0" cellspacing="2" cellpadding="0">
+                <caption align="BOTTOM"><i>Table of common pp field codes.</i></caption>
+                <tr>
+                    <td width="45%">
+                        <p></p>
+                        <center>
+                            1</center>
+                    </td>
+                    <td width="55%">&nbsp;Height</td>
+                </tr>
+                <tr>
+                    <td width="45%">
+                        <p></p>
+                        <center>
+                            8</center>
+                    </td>
+                    <td width="55%">Pressure, p</td>
+                </tr>
+                <tr>
+                    <td width="45%">
+                        <p></p>
+                        <center>
+                            16</center>
+                    </td>
+                    <td width="55%">&nbsp;Temperature, T</td>
+                </tr>
+                <tr>
+                    <td width="45%">
+                        <p></p>
+                        <center>
+                            28</center>
+                    </td>
+                    <td width="55%">&nbsp;d(p*)/dt p*=surface pressure</td>
+                </tr>
+                <tr>
+                    <td width="45%">
+                        <p></p>
+                        <center>
+                            39</center>
+                    </td>
+                    <td width="55%">&nbsp;Coriolis parameter</td>
+                </tr>
+                <tr>
+                    <td width="45%">
+                        <p></p>
+                        <center>
+                            40</center>
+                    </td>
+                    <td width="55%">&nbsp;Omega (=dp/dt)</td>
+                </tr>
+                <tr>
+                    <td width="45%">
+                        <p></p>
+                        <center>
+                            43</center>
+                    </td>
+                    <td width="55%">&nbsp;Eta dot</td>
+                </tr>
+                <tr>
+                    <td width="45%">
+                        <p></p>
+                        <center>
+                            56</center>
+                    </td>
+                    <td width="55%">&nbsp;Westerly cpt of wind, u</td>
+                </tr>
+                <tr>
+                    <td width="45%">
+                        <p></p>
+                        <center>
+                            57</center>
+                    </td>
+                    <td width="55%">&nbsp;Southerly cpt of wind, v</td>
+                </tr>
+                <tr>
+                    <td width="45%">
+                        <p></p>
+                        <center>
+                            61</center>
+                    </td>
+                    <td width="55%">&nbsp;'x' cpt of wind stress</td>
+                </tr>
+                <tr>
+                    <td width="45%">
+                        <p></p>
+                        <center>
+                            62</center>
+                    </td>
+                    <td width="55%">&nbsp;'y' cpt of wind stress</td>
+                </tr>
+                <tr>
+                    <td width="45%">
+                        <p></p>
+                        <center>
+                            79</center>
+                    </td>
+                    <td width="55%">&nbsp;QCL- liquid cloud water</td>
+                </tr>
+                <tr>
+                    <td width="45%">
+                        <p></p>
+                        <center>
+                            95</center>
+                    </td>
+                    <td width="55%">&nbsp;Specific Humidity, q</td>
+                </tr>
+                <tr>
+                    <td width="45%"></td>
+                    <td width="55%"></td>
+                </tr>
+            </table>
+        </center>
+        </P>
+        <p>Note that all winds are held on the U-grid. The U and V winds on Pressure levels are true Westerly and Southerly wind components but all other winds are orientated with the model grid.</p>
+        <h3><a name="FcScMapping"></a>2.1 Field Code to STASH Code Mapping</h3>
+        A text file describing the Met Office full list of <a href="/help/formats/pp-format/files/stash_field.txt">stash and field codes</a> for the UM&nbsp;model is also available.<br>
+        This may be useful when examining NWP data held at the BADC under the &quot;old&quot; filenaming convention.<br>
+        <br>
+        </p>
+        <p><!-- Navigation bar --></p>
+        <hr align=LEFT>
+        <a name="Spatial"></a>Go to: [ <a href="#Contents">Contents</a> | <a href="#Introduction">Introduction</a> | Data | <a href="#UsingData">UsingData</a> | <a href="#End">End</a> ]
+        <hr align=LEFT>
+        </P>
+        <h2>2.2 Spatial coverage and resolution</h2>
+        <h3><a name="Horizontal"></a>2.2.1 Horizontal coverage</h3>
+        <p>Global Data: The data points are now given on a global (640x480) longitude-latitude grid, giving resolutions of  0.56 and 0.375 deg (prior to Dec 2005 it used a 432 x 324 grid, giving 0.83 and 0.56 deg.respectively.</p>
+        <p>Mesoscale Data: The data points are given on a (146 x 181) longitude-latitude grid, giving a resolution of 0.11 deg, which is approximately 12.3 Km.</p>
+        <p>The corners of this grid are located at (353.00 368.96 11.44 -8.36), on a non-standard polar axis system (polar lat,lonitude= 37.5,177.0).</p>
+        <h3>&nbsp;</h3>
+        <h3><a name="Vertical"></a>2.2.2 Vertical coverage</h3>
+        <p>The upper level of the global model level output is now 65 km (previously 38km), and there are 50 model levels (previously 38).</p>
+        <p>The data fields are output on standard pressure levels and model (hybrid) levels, for global and mesoscale runs.</p>
+        <p>There are now 27 standard pressure levels in the output global datafiles, and 13 pressure levels for the mesoscale data.</p>
+        <p></p>
+        <center>
+            <table width="450" border="1" cellspacing="2" cellpadding="0">
+                <caption align="BOTTOM">
+                    <p>&nbsp;</p>
+                    <p>UM Global Data Standard Pressure levels (mbar)</p>
+                </caption>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<b>Pressure (mbar)</b></center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            <b>&nbsp;Global</b></center>
+                    </td>
+                    <td width="34%">
+                        <p></p>
+                        <center>
+                            <b>Mesoscale</b></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            1000</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            950</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            925</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            900</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            850</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            700</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            600</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            500</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            400</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            300</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            250</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            200</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            150</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            100</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            70</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            50</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            30</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            20</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            15</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            10</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            7</center>
+                    </td>
+                    <td width="33%">
+                        <p></p>
+                        <center>
+                            &nbsp;<font face="StarMath">&#136;</font></center>
+                    </td>
+                    <td width="34%">&nbsp; </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <div align="center">
+                            5</div>
+                    </td>
+                    <td width="33%">
+                        <div align="center">
+                            &nbsp;<font face="StarMath">&#136;</font></div>
+                    </td>
+                    <td width="34%"> </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <div align="center">
+                            3</div>
+                    </td>
+                    <td width="33%">
+                        <div align="center">
+                            &nbsp;<font face="StarMath">&#136;</font></div>
+                    </td>
+                    <td width="34%"></td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <div align="center">
+                            2</div>
+                    </td>
+                    <td width="33%">
+                        <div align="center">
+                            &nbsp;<font face="StarMath">&#136;</font></div>
+                    </td>
+                    <td width="34%"> </td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <div align="center">
+                            1</div>
+                    </td>
+                    <td width="33%">
+                        <div align="center">
+                            &nbsp;<font face="StarMath">&#136;</font></div>
+                    </td>
+                    <td width="34%"></td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <div align="center">
+                            0.5</div>
+                    </td>
+                    <td width="33%">
+                        <div align="center">
+                            &nbsp;<font face="StarMath">&#136;</font></div>
+                    </td>
+                    <td width="34%"></td>
+                </tr>
+                <tr>
+                    <td width="33%">
+                        <div align="center">
+                            0.4</div>
+                    </td>
+                    <td width="33%">
+                        <div align="center">
+                            &nbsp;<font face="StarMath">&#136;</font></div>
+                    </td>
+                    <td width="34%"></td>
+                </tr>
+            </table>
+        </center>
+        </P>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h2><a name="Temporal"></a>2.3 Temporal coverage and resolution</h2>
+        <p>The data held in the NWP&nbsp;archive can now be viewed on-line for the period 1/1/2004-30/6/2005: <a href="http://badc.nerc.ac.uk/cgi-bin/ukmo-nwp/generate_global_percent_page.py" title="Global Stats">global data</a> <a href="http://badc.nerc.ac.uk/cgi-bin/ukmo-nwp/generate_meso_percent_page.py" title="Mesoscale Stats">mesoscale data </a>. We are currently continuing to fill in the gaps in the archive as quickly as possible.</p>
+        <p>From 2000-2003, the datafiles available at the BADC were extracted from raw UM dump files, which contained both analyses and forecasts. From 2004 onwards, the data were recovered from the Met Office MASS system.</p>
+        <p>Analyses are available every 6 hours for most of the fields, and corresponding forecasts up to 6 hours are current archived at the BADC.</p>
+        <p>For pre-2004 data, there may be forecasts greater than 6 hours available -please see below for details of the &quot;old&quot; archive. It may also be possible to retrieve UM data for dates prior to 23 October 2000, if required -please contact the BADC for further information.</p>
+        <p></p>
+        <hr align=LEFT>
+        <a name="UsingData"></a>Go to: [ <a href="#Contents">Contents</a> | <a href="#Introduction">Introduction</a> | <a href="#Data">Data</a> | <a href=""#UsingData">Using Data</a> | <a href="#End">End</a> ]
+        <hr align=LEFT>
+        </P>
+        <h2>3. Obtaining and using UM data from the BADC</h2>
+        <h3><a name="UMfiles"></a>3.1 The UM data files</h3>
+        <p>These data are IEEE binary files in Met. Office &quot;PP&quot; format, consisting of unpacked headers (mostly integer data) followed by floating point field data. There are text files available descibing the Met Office format for the <a href="/help/formats/pp-format/files/header.txt">PP file header</a>, and a full list of the <a href="/help/formats/pp-format/files/stash_field.txt">stash codes</a> used.</p>
+        <p><b>Old Data, New Data</b></p>
+        <p>Up until mid 2003, data in the BADC archive were stored in what we term the &quot;old&quot; filenaming convention. With the Met Office move to Exeter, the archive was reasssesed, and it was decided to change the filenaming convention to identify the files by stash code, and to have a similar directory structure to that used for other model data held at the BADC, such as ECMWF.</p>
+        <p>The use of field codes has proved confusing, as field codes relate to a broad description of a parameter (such as &quot;field code 16 = temperature field&quot;, but variables with different &quot;stash&quot; codes (usually unique) can have the same field code. For example, &quot;temperature on theta levels&quot; (stash code = 16004) and &quot;temperature at 1.5m&quot; (stash code = 03236), would both be stored in the same file under the old naming convention, but in separate files under the new. This new convention makes it much simpler to locate the field of interest.</p>
+        <p>We are currently recovering data from the Met Office archive from 2000-2004 to fill the gaps in our archive. This will then provide a consistent archive of NWP data using the &quot;new&quot; filenaming convention.</p>
+        <p><b>Old Data (2000-2003)</b></p>
+        <p>For &quot;old&quot; data, the directory structure is of the form <i>year, month, day, creation time, um-type, filename, </i>where <i>creation time</i> is 00, 06, 12, 18 and <i>um-type file</i> is : mg (model levels/global), mm (model levels/mesoscale), sg (standard levels/global), sm (standard levels/mesoscale).</p>
+        <p>The individual datafiles are in pp format, with a separate file for each paramter and timestep. They have filenames of the form:</p>
+        <p></p>
+        <table width="450" border="0" cellspacing="2" cellpadding="0">
+            <tr>
+                <td width="8%">&nbsp;<font face="Courier New">m</font></td>
+                <td width="8%">&nbsp;g</td>
+                <td width="8%">2000</td>
+                <td width="8%">11</td>
+                <td width="8%">13</td>
+                <td width="8%">00</td>
+                <td width="8%">&nbsp;p8</td>
+                <td width="8%">s00</td>
+                <td width="9%">.pp</td>
+            </tr>
+            <tr>
+                <td width="8%">&nbsp;1</td>
+                <td width="8%">&nbsp;2</td>
+                <td width="8%">3</td>
+                <td width="8%">4</td>
+                <td width="8%">5</td>
+                <td width="8%">6</td>
+                <td width="8%">7</td>
+                <td width="8%">8</td>
+                <td width="9%">&nbsp;</td>
+            </tr>
+        </table>
+        </P>
+        <p>1: m/s (model/standard) levels<br>
+            2: g/m (global/mesoscale) data<br>
+            3: year<br>
+            4: month<br>
+            5: day<br>
+            6: time of file (00,06,12,18)<br>
+            7: parameter field code (pp)<br>
+            8: step(hr from time of file (6))</p>
+        <p>for example:</p>
+        <p>mg2000111300p8s00.pp : <i>model levels, global, yr=2000, m=11, d=13, run at 00hrs, parameter=1 (pressure), step=0 (analysis).</i></p>
+        <p>mm2000111300p8s00.pp : <i>model levels, mesoscale ..(as above).</i></p>
+        <p>sg2000111300p8s00.pp : <i>standard levels, global ..(as above).</i></p>
+        <p>sm2000111300p8s00.pp : <i>standard levels, mesoscale ..(as above).</i></p>
+        <p>The parameter codes are as given in the UM model documentation, and the forecast steps are up to 6 hrs only.</p>
+        <p><b>New Data (2004-present)</b></p>
+        <p></p>
+        <p>Data collected since 1/1/2004 are being held in the following way. These files now have 1 diagnostic variable per file per timestep (rather than the field code used previously -see above).</p>
+        <p>Mesoscale : lb[a,f][m,p]yyyymmddhh_STASHCODE_fh.pp</p>
+        <p>Global: ag[a,f][m,p]yyyymmddhh_STASHCODE_fh.pp</p>
+        <p>where yyyymmddhh is the year, month,day and assimilation time, STASHCODE&nbsp;is the STASHMASTER&nbsp;parameter code, fh is the forecast timestep (from the assimilation time), and pp indicates that the files are in binary &quot;pp&quot; format.</p>
+        <p>The directory structure has also been changed to bring it in line with the BADC&nbsp;ECMWF&nbsp;holdings. The mesoscale files and global data are now stored under:<br>
+        </p>
+        <p>/badc/ukmo-um/data/meso/lb/a[m,p] for the analysis fields<br>
+        </p>
+        <p>/badc/ukmo-um/data/meso/lb/f[m,p] for the forecast fields<br>
+        </p>
+        <p>/badc/ukmo-um/data/global/ag/a[m,p] for the analysis fields<br>
+        </p>
+        <p>/badc/ukmo-um/data/global/ag/f[m,p] for the forecast fields<br>
+        </p>
+        Note that mesocale data is now held under &quot;meso&quot;, rather than &quot;mesoscale&quot;.
+        <p>So for example, global analysis data on pressure levels for the variable with stashcode=16202 at 0Z on 1/6/2005 would be referenced as:<br>
+            /badc/ukmo-um/data/global/ag/ap/2005/06/01/agap2005060100_16202_00.pp.</p>
+        <p>Pre-2004 data are still available in the old format under /badc/ukmo-um/data/mesocale/[sm,mm] and /badc/ukmo-um/data/global/[mg,sg], although these will be phased out as the data are archived in the newer format. We have also converted the global pre-2004 data to the new format, and these are also available under /badc/ukmo-um/data/global/ag/a[m,p]</p>
+        <p></p>
+        <hr align=LEFT>
+        <a name="ReadSoft"></a>Go to: [ <a href="#Contents">Contents</a> | <a href="#Introduction">Introduction</a> | <a href="#Data">Data</a> | <a href=""#UsingData">Using Data</a> | <a href="#End">End</a> ]
+        <hr align=LEFT>
+        </P>
+        <h3>3.2 Software to read the data</h3>
+        <p>Both old and &quot;new&quot; data can be read using the following utilities.</p>
+        <p>As mentioned above, the UM data are stored in very large binary files, so software is required to read the files and extract the fields of interest.</p>
+        <p><b>Xconv/convsh</b>:</p>
+        <p>Xconv is a program designed to convert model output into a format suitable for use in various plotting packages (such as NetCDF). The package is simple to use, and has a X-windows based interface. It can be used to see what fields are contained within a data file, and to look at the data values, either directly or via a graphical plot of the data. Xconv can also be used to manipulate the input data before it is converted into chosen output format.</p>
+        <p>Convsh is a command line package which allows scripts to be written to automate various xconv tasks. Convsh uses the Tcl scripting language, plus various extensions for reading, writing and manipulating data files.<br>
+        </p>
+        <p><a href="http://www.ugamp.rdg.ac.uk/~jeff/xconv/">http://www.ugamp.rdg.ac.uk/~jeff/xconv/</a></p>
+        <p>These utilities are now <a href="/help/software/xconv/index.html">available from the BADC</a> . These also allow the user to convert these files into several other formats such as NetCDF. A <a href="/help/software/xconv/subset.html">subsetting utility</a> based on Xconv/convsh is also provided.</p>
+        <h3><a name="Plot"></a>3.3 Software to manipulate and plot the data</h3>
+        <p><b>Ferret</b>: <a href="http://ferret.wrc.noaa.gov/Ferret">http://ferret.wrc.noaa.gov/Ferret</a></p>
+        <p><b>Xconv/convsh</b>: <a href="http://www.ugamp.rdg.ac.uk/~jeff/xconv/">http://www.ugamp.rdg.ac.uk/~jeff/xconv/</a></p>
+        <p>Software to rotate the co-ordinates to allow for the offset pole position of the mesoscale data may also be required.<br>
+        </p>
+        Please report any problems with this page to: <a href="/help/contact.html">BADC support</a>.
+        <p></p>
+    </body>
+
+</HTML>

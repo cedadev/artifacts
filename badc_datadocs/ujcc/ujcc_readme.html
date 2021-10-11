@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+   <TITLE>UJCC - Readme</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UJCC - Readme</H1>
+<HR ALIGN=LEFT>
+<p>A brief description of the experiment IDs that make up the UJCC Dataset Matrix</p>
+<br>
+<b>eacsd</b><a name="anchor_eacsd"</a>
+   <p>
+   Present-day (pre-release) HadGEM1a run from 1/9/78.<br>
+   Equivalent to eacsc, but with the stricter convergence tolerance in the GCR
+   solver for the atmospheric dynamics:<br>
+   eacsc: Absolute tolerance=1e-2<br>
+   eacsd: Absolute tolerance=1e-3<br>
+   </p>
+   <br>
+<b>eacye</b><a name="anchor_eacye"</a>
+   <p>
+   Present-day (pre-release) HadGEM1a run from 1/9/78 to 1/12/08.<br>
+   Equivalent to eacsb/c, but with bit-level perturbations added to the initial
+   atmosphere dump to explore model sensitivity to initial conditions.
+   </p>
+   <br>
+<b>eadvi eadvj eadvl</b><a name="anchor_eadv*"</a>
+   <p>
+   These runs together make up a  50-year n144 atmosphere 1deg ocean run.
+   </p>
+   <br>
+<b>eadwh</b><a name="anchor_eadwh"</a>
+   <p>
+   Present-day (pre-release) HiGEM1a run from 1/9/78 to its failure on 26/9/93.<br>
+   The run was restarted from 1/9/93 as job eafeb, which includes mods to get
+   around the problem that caused the failure.
+   </p>
+   <br>
+<b>eadze</b><a name="anchor_eadze"</a>
+   <p>
+   Present-day (pre-release) HadGEM1a run from 1/9/78 to 01/12/88<br>
+   Equivalent to eacsc, but starting from ECMWF atmospheric analysis.
+   </p>
+   <br>
+<b>eaepc eaepd eaeva</b><a name="anchor_eae*"</a>  
+   <p>
+   5 year n144 atmosphere-only runs (with SSTs from HiGEM).<br> 
+   These experiments are aimed at checking the influence of Tropical Instability Waves on the atmosphere. 
+   </p>
+   <br>
+<b>eafeb</b><a name="anchor_eafeb"</a>
+   <p>
+   Present-day (pre-release) HiGEM1a run started from eadwh; 1/9/93 onwards.<br>
+   For the first 3 months (i.e. to 1/12/93) the model setup was the same as eadwh
+   except that polar filtering of increments was turned off. Following this, a
+   mod (moses2_snow_vn1.mf77) was also introduced in order to get around problems
+   related to the melting of ice pillars in the Himalayan region.<br>
+   The job archive, eafeb_job.tar.gz, is for this second version.
+   </p>
+   <br>
+
+<hr>
+</body>
+</HTML>

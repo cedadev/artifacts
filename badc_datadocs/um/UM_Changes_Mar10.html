@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Met Office Operational NWP Product Changes March 2010</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<P><IMG SRC="/graphics/logos/metlogos.gif" ALIGN="BOTTOM"></P>
+
+<H1>Met. Office Operational NWP Product Changes March 2010</H1>
+
+<HR ALIGN=LEFT>
+
+<H2><IMG SRC="/graphics/blue/info.gif" BORDER="0" ALIGN="BOTTOM">Introduction</H2>
+
+<P>These pages describe the changes made to the operational numerical analyses and forecast data obtained from the UK Met. Office Unified Model (UM) during March 2010. The dataset consist of global and mesoscale fields of various meteorological parameters on a number of vertical levels. Both analyses and forecast data up to 12 hours (in some cases) are available. Infrastructure support in retrieving these data is provided by the Met. Office.</P>
+
+
+<p>Changes for PS23 were implemented in 2 parts: </p>
+<p>1) global model horizontal resolution upgrade from N320 to N512 (40km to 25km) plus assimilation resolution N108 to N144 (120km to 90km) before December 2010; </p>
+<p>2) remaining scientific enhancements.
+  
+  
+  
+  Parallel Suite 23 (PS23) </p>
+<p><strong>Implementation</strong></p>
+<p>PS23 was implemented on 9 March. There are a number of significant model changes and the impacts on downstream systems and services.
+  The key changes are:</p>
+<ul>
+  <li>global model resolution upgrade to 25 km;    </li>
+  <li>North Atlantic and European (NAE) resolution upgrade to 70 levels; </li>
+  <li>Global Ensemble resolution upgrade to 60 km and 70 levels;        </li>
+  <li>NAE Ensemble resolution upgrade to 18 km (70 levels is due in PS24);        </li>
+  <li>70-level resolution upgrades to our regional models (Southern Asia, Falklands, German 4 km and the Horn of Africa).</li>
+</ul>
+
+ 
+
+ <p><strong>Technical Information on the main changes</strong></p>
+ <p>A significant change to the operational global model was implemented on
+   9 March as tested in Parallel Suite 23. A major package of model and assimilation upgrades had been developed aimed at improving performance through enhanced horizontal resolution, key components comprising:   </p>
+ <ul>
+   <li>increase in model resolution from 40 km to 25 km, and an increase in assimilation resolution from 120 km to 90 km;   </li>
+   <li> accompanying revisions to surface properties, with minor changes in physics and dynamics schemes to improve model resilience; </li>
+   <li> introduction of assimilation in cloudy areas through direct use of satellite microwave window channels; </li>
+   <li> assimilation of GPSRO bending angle directly rather than through processed refractivity data; </li>
+   <li> extra surface observations and enhanced quality control.
+     
+     There are general improvements in humidity analyses over oceans and an increased use of stratospheric data. PS23 generally showed some advantages in medium range synoptic evolution and in the skill of forecasting smaller scale depressions. </li>
+ </ul>
+ <p><strong>NAE   </strong></p>
+ <p>A significant change to the NAE model was also implemented at the same time with an increase in vertical levels from 38 to 70 (bringing the NAE into line with the global model). A combined physics and data assimilation package has also been implemented following an extensive period of testing. The key components being: </p>
+ <ul>
+   <li>70 levels;   </li>
+   <li> new NAE forecast error covariance statistics; </li>
+   <li> use of variable errors for MOPS cloud and a change to the quality control of sonde RH; </li>
+   <li> a package of satellite changes involving the replacement of SSM/I with SSMIS, SSIREM-derived sea emissivity for IASI and minor changes to AIRS and ATOVS; </li>
+   <li> changes to the boundary layer formulation including turbulent mixing over the whole troposphere and revisions to orographic form drag and critical Richardson number; </li>
+   <li> a revised screen temperature diagnostic (also applied to other
+     configurations) that has particular benefit around the evening transition; </li>
+   <li> Van Genuchten soil hydraulics (also applied to other configurations). Soil moisture will now be interpolated daily from the global model even over the UK, replacing use of soil moisture from the UKPP-MOSES-PDM model; </li>
+   <li> changes to the downward flow for super-saturated soil water and canopy radiation following the Global model.
+     
+     The new package gives a significant improvement to cloud and screen temperature in winter months, particularly in blocked anticyclonic situations, with a better representation of inversion structures. </li>
+</ul>
+ <p><strong>MOGREPS</strong></p>
+ <p>The operational global ensemble system, MOGREPS-G, was upgraded in line with the global deterministic forecast model. The horizontal grid spacing was reduced from 90 km to 60 km and the number of levels was increased from 38 to 70, with the model top raised from about 40 km to about 80 km. At the same time the model physics was updated to the latest 70L version, along with the implementation of a second-generation stochastic kinetic energy backscatter scheme. The global ensemble forecasts skill, based on ranked probability scores, showed generally strong advantages - consistent with improved performance of the global model. These improvements have also been implemented in the research medium-range ensemble system, MOGREPS-15.
+   
+   The horizontal resolution of the regional ensemble, MOGREPS-R, was improved from 24 km to 18 km, leading to some improvement in forecast scores. At this parallel suite the model levels were unchanged. It is planned to upgrade to 70 levels and introduce significant physics improvements in parallel suite 24; initial trials of the 70 level configuration have shown very promising results. </p>
+<H2><IMG SRC="/graphics/blue/letter.gif" BORDER="0" ALIGN="BOTTOM">Who
+to Contact</H2>
+
+<P>General queries about these pages and access to the data should
+be directed to the <A HREF="/help/contact.html">BADC support line</A>.
+Your query should be answered within one working day. When follow-up
+work is required, the BADC support will carry out the work as
+quickly and efficiently as possible, and in any case, the user
+will be kept informed of progress. <BR>
+</P>
+
+<P>
+</BODY>
+</HTML>

@@ -1,0 +1,33 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SSC10YRG "
+"SUM_DATA_SET"       "SSCLIMATE    "
+"SUM_DATATYPE"       "10YR_GLOBAL  "
+"ARCHIVE_NAME"       "NCDC, NCAR   "
+"ARCHIVE_STATUS"     "Available    "
+"DS_DESCRIPTION"     "World Monthly Surface Station Climatology                    "
+"DT_DESCRIPTION"     "10 Year Global Station Means                                 "
+"SUM_BEGIN_DATE"     "01-Jan-1750  "
+"SUM_END_DATE"       "01-Dec-1970  "
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "Global       "
+"SPATIAL2"           " "
+"SPATIAL3"           "Station      "
+"SPATIAL4"           " "
+"TEMPORAL1"          "January 1750 - December 1970"
+"TEMPORAL2"          " "
+"TEMPORAL3"          "10 year monthly means"
+"TEMPORAL4"          "Number of 10 year periods varies with station"
+"PRODUCT1"           "Available online through NCDS in Common Data Format (CDF).   "
+"PRODUCT2"           "Available on GEDEX CD-ROM. "
+"PRODUCT3"           " "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"TEMPERATURE"   "Station Temperature"    "Deg C"
+"PRECIPITATION" "Station Precipitation"  "mm"
+EOF
+
+SOURCES
+"STATION"         "IN SITU"
+EOF

@@ -1,0 +1,718 @@
+--14:44:31--  http://badc.nerc.ac.uk/data/faam/campaigns.html
+Resolving badc.nerc.ac.uk... 130.246.191.211
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/faam/campaigns.html'
+
+     0K .......... .......... .......... .....                 78.2M=0s
+
+14:44:31 (78.2 MB/s) - `badc.nerc.ac.uk/data/faam/campaigns.html' saved [36730]
+
+Loading robots.txt; please ignore errors.
+--14:44:31--  http://badc.nerc.ac.uk/robots.txt
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 439 [text/plain]
+Saving to: `badc.nerc.ac.uk/robots.txt'
+
+     0K                                                       100%  140M=0s
+
+14:44:31 (140 MB/s) - `badc.nerc.ac.uk/robots.txt' saved [439/439]
+
+Removing badc.nerc.ac.uk/data/faam/campaigns.html.
+--14:44:31--  http://badc.nerc.ac.uk/styles/menu.new.css
+Reusing existing connection to badc.nerc.ac.uk:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 1244 (1.2K) [text/css]
+Saving to: `badc.nerc.ac.uk/styles/menu.new.css'
+
+     0K .                                                     100%  395M=0s
+
+14:44:31 (395 MB/s) - `badc.nerc.ac.uk/styles/menu.new.css' saved [1244/1244]
+
+Removing badc.nerc.ac.uk/styles/menu.new.css.
+--14:44:31--  http://badc.nerc.ac.uk/graphics/tabs/spacer30.gif
+Reusing existing connection to badc.nerc.ac.uk:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 845 [image/gif]
+Saving to: `badc.nerc.ac.uk/graphics/tabs/spacer30.gif'
+
+     0K                                                       100%  269M=0s
+
+14:44:31 (269 MB/s) - `badc.nerc.ac.uk/graphics/tabs/spacer30.gif' saved [845/845]
+
+Removing badc.nerc.ac.uk/graphics/tabs/spacer30.gif.
+--14:44:31--  http://badc.nerc.ac.uk/graphics/tabs/tabs_white_under_lblue.gif
+Reusing existing connection to badc.nerc.ac.uk:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 1141 (1.1K) [image/gif]
+Saving to: `badc.nerc.ac.uk/graphics/tabs/tabs_white_under_lblue.gif'
+
+     0K .                                                     100%  363M=0s
+
+14:44:31 (363 MB/s) - `badc.nerc.ac.uk/graphics/tabs/tabs_white_under_lblue.gif' saved [1141/1141]
+
+Removing badc.nerc.ac.uk/graphics/tabs/tabs_white_under_lblue.gif.
+--14:44:31--  http://badc.nerc.ac.uk/home/
+Reusing existing connection to badc.nerc.ac.uk:80.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/home/index.html'
+
+     0K ......                                                 1.25G=0s
+
+14:44:31 (1.25 GB/s) - `badc.nerc.ac.uk/home/index.html' saved [6711]
+
+Removing badc.nerc.ac.uk/home/index.html.
+--14:44:31--  http://badc.nerc.ac.uk/graphics/logos/badc-logo-onlb-30.gif
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1316 (1.3K) [image/gif]
+Saving to: `badc.nerc.ac.uk/graphics/logos/badc-logo-onlb-30.gif'
+
+     0K .                                                     100%  418M=0s
+
+14:44:31 (418 MB/s) - `badc.nerc.ac.uk/graphics/logos/badc-logo-onlb-30.gif' saved [1316/1316]
+
+Removing badc.nerc.ac.uk/graphics/logos/badc-logo-onlb-30.gif.
+--14:44:31--  http://badc.nerc.ac.uk/graphics/tabs/tabs_lblue_over_lblue.gif
+Reusing existing connection to badc.nerc.ac.uk:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 1166 (1.1K) [image/gif]
+Saving to: `badc.nerc.ac.uk/graphics/tabs/tabs_lblue_over_lblue.gif'
+
+     0K .                                                     100%  371M=0s
+
+14:44:31 (371 MB/s) - `badc.nerc.ac.uk/graphics/tabs/tabs_lblue_over_lblue.gif' saved [1166/1166]
+
+Removing badc.nerc.ac.uk/graphics/tabs/tabs_lblue_over_lblue.gif.
+--14:44:31--  http://badc.nerc.ac.uk/mybadc
+Reusing existing connection to badc.nerc.ac.uk:80.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/mybadc'
+
+     0K ..                                                      117M=0s
+
+14:44:32 (117 MB/s) - `badc.nerc.ac.uk/mybadc' saved [2323]
+
+Removing badc.nerc.ac.uk/mybadc.
+--14:44:32--  http://badc.nerc.ac.uk/graphics/tabs/tabs_lblue_under_dblue.gif
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1172 (1.1K) [image/gif]
+Saving to: `badc.nerc.ac.uk/graphics/tabs/tabs_lblue_under_dblue.gif'
+
+     0K .                                                     100%  279M=0s
+
+14:44:32 (279 MB/s) - `badc.nerc.ac.uk/graphics/tabs/tabs_lblue_under_dblue.gif' saved [1172/1172]
+
+Removing badc.nerc.ac.uk/graphics/tabs/tabs_lblue_under_dblue.gif.
+--14:44:32--  http://badc.nerc.ac.uk/data/
+Reusing existing connection to badc.nerc.ac.uk:80.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/index.html'
+
+     0K ....                                                    722M=0s
+
+14:44:32 (722 MB/s) - `badc.nerc.ac.uk/data/index.html' saved [4543]
+
+Removing badc.nerc.ac.uk/data/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/graphics/tabs/tabs_dblue_over_lblue.gif
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1173 (1.1K) [image/gif]
+Saving to: `badc.nerc.ac.uk/graphics/tabs/tabs_dblue_over_lblue.gif'
+
+     0K .                                                     100%  373M=0s
+
+14:44:32 (373 MB/s) - `badc.nerc.ac.uk/graphics/tabs/tabs_dblue_over_lblue.gif' saved [1173/1173]
+
+Removing badc.nerc.ac.uk/graphics/tabs/tabs_dblue_over_lblue.gif.
+--14:44:32--  http://badc.nerc.ac.uk/search/
+Reusing existing connection to badc.nerc.ac.uk:80.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/search/index.html'
+
+     0K ......                                                 1.03G=0s
+
+14:44:32 (1.03 GB/s) - `badc.nerc.ac.uk/search/index.html' saved [6655]
+
+Removing badc.nerc.ac.uk/search/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/community/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/community/index.html'
+
+     0K .......                                                1.06G=0s
+
+14:44:32 (1.06 GB/s) - `badc.nerc.ac.uk/community/index.html' saved [7932]
+
+Removing badc.nerc.ac.uk/community/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/help/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/help/index.html'
+
+     0K ..........                                              151M=0s
+
+14:44:32 (151 MB/s) - `badc.nerc.ac.uk/help/index.html' saved [10610]
+
+Removing badc.nerc.ac.uk/help/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/graphics/tabs/tabs_lblue_over_white.gif
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1139 (1.1K) [image/gif]
+Saving to: `badc.nerc.ac.uk/graphics/tabs/tabs_lblue_over_white.gif'
+
+     0K .                                                     100%  362M=0s
+
+14:44:32 (362 MB/s) - `badc.nerc.ac.uk/graphics/tabs/tabs_lblue_over_white.gif' saved [1139/1139]
+
+Removing badc.nerc.ac.uk/graphics/tabs/tabs_lblue_over_white.gif.
+--14:44:32--  http://badc.nerc.ac.uk/graphics/tabs/topleft.jpg
+Reusing existing connection to badc.nerc.ac.uk:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 596 [image/jpeg]
+Saving to: `badc.nerc.ac.uk/graphics/tabs/topleft.jpg'
+
+     0K                                                       100%  189M=0s
+
+14:44:32 (189 MB/s) - `badc.nerc.ac.uk/graphics/tabs/topleft.jpg' saved [596/596]
+
+Removing badc.nerc.ac.uk/graphics/tabs/topleft.jpg.
+--14:44:32--  http://badc.nerc.ac.uk/data/rules.html
+Reusing existing connection to badc.nerc.ac.uk:80.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/rules.html'
+
+     0K .......... ..                                           379M=0s
+
+14:44:32 (379 MB/s) - `badc.nerc.ac.uk/data/rules.html' saved [12312]
+
+Removing badc.nerc.ac.uk/data/rules.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/submit.html
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/submit.html'
+
+     0K ...                                                     399M=0s
+
+14:44:32 (399 MB/s) - `badc.nerc.ac.uk/data/submit.html' saved [3351]
+
+Removing badc.nerc.ac.uk/data/submit.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/dataset_index/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/dataset_index/index.html'
+
+     0K .......... .......... .......... .......... .......... 78.8M
+    50K .......... .......... .......... .......... .......... 83.5M
+   100K .......... .......... .......... .......... .......... 63.2M
+   150K .......... .......... .......... .......... .......... 79.1M
+   200K .......... .......... .......... .......... .......... 75.2M
+   250K ..                                                     22.3M=0.003s
+
+14:44:32 (73.8 MB/s) - `badc.nerc.ac.uk/data/dataset_index/index.html' saved [258173]
+
+Removing badc.nerc.ac.uk/data/dataset_index/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/graphics/tabs/topright.jpg
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 636 [image/jpeg]
+Saving to: `badc.nerc.ac.uk/graphics/tabs/topright.jpg'
+
+     0K                                                       100%  121M=0s
+
+14:44:32 (121 MB/s) - `badc.nerc.ac.uk/graphics/tabs/topright.jpg' saved [636/636]
+
+Removing badc.nerc.ac.uk/graphics/tabs/topright.jpg.
+--14:44:32--  http://badc.nerc.ac.uk/reg/user_register_info.html
+Reusing existing connection to badc.nerc.ac.uk:80.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/reg/user_register_info.html'
+
+     0K ....                                                    456M=0s
+
+14:44:32 (456 MB/s) - `badc.nerc.ac.uk/reg/user_register_info.html' saved [4777]
+
+Removing badc.nerc.ac.uk/reg/user_register_info.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/itop/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/itop/index.html'
+
+     0K .......... .....                                       83.8M=0s
+
+14:44:32 (83.8 MB/s) - `badc.nerc.ac.uk/data/itop/index.html' saved [15549]
+
+Removing badc.nerc.ac.uk/data/itop/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/adriex/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/adriex/index.html'
+
+     0K .......... ..                                           108M=0s
+
+14:44:32 (108 MB/s) - `badc.nerc.ac.uk/data/adriex/index.html' saved [12738]
+
+Removing badc.nerc.ac.uk/data/adriex/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/eaquate/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/eaquate/index.html'
+
+     0K .......... .                                            123M=0s
+
+14:44:32 (123 MB/s) - `badc.nerc.ac.uk/data/eaquate/index.html' saved [11719]
+
+Removing badc.nerc.ac.uk/data/eaquate/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/autex-wintex/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/autex-wintex/index.html'
+
+     0K ........                                                198M=0s
+
+14:44:32 (198 MB/s) - `badc.nerc.ac.uk/data/autex-wintex/index.html' saved [9113]
+
+Removing badc.nerc.ac.uk/data/autex-wintex/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/nu-wave/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/nu-wave/index.html'
+
+     0K .........                                               154M=0s
+
+14:44:32 (154 MB/s) - `badc.nerc.ac.uk/data/nu-wave/index.html' saved [9503]
+
+Removing badc.nerc.ac.uk/data/nu-wave/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/covex/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/covex/index.html'
+
+     0K ........                                                104M=0s
+
+14:44:32 (104 MB/s) - `badc.nerc.ac.uk/data/covex/index.html' saved [8972]
+
+Removing badc.nerc.ac.uk/data/covex/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/rico/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/rico/index.html'
+
+     0K .......... .                                           1.08G=0s
+
+14:44:32 (1.08 GB/s) - `badc.nerc.ac.uk/data/rico/index.html' saved [11622]
+
+Removing badc.nerc.ac.uk/data/rico/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/utls-ozone/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/utls-ozone/index.html'
+
+     0K .......... ......                                      90.9M=0s
+
+14:44:32 (90.9 MB/s) - `badc.nerc.ac.uk/data/utls-ozone/index.html' saved [16498]
+
+Removing badc.nerc.ac.uk/data/utls-ozone/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/polluted-tropo/projects/ampep.html
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/polluted-tropo/projects/ampep.html'
+
+     0K ......                                                  634M=0s
+
+14:44:32 (634 MB/s) - `badc.nerc.ac.uk/data/polluted-tropo/projects/ampep.html' saved [6652]
+
+Removing badc.nerc.ac.uk/data/polluted-tropo/projects/ampep.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/polluted-tropo/projects/clopap.html
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/polluted-tropo/projects/clopap.html'
+
+     0K ......                                                  651M=0s
+
+14:44:32 (651 MB/s) - `badc.nerc.ac.uk/data/polluted-tropo/projects/clopap.html' saved [6144]
+
+Removing badc.nerc.ac.uk/data/polluted-tropo/projects/clopap.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/cwvc/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/cwvc/index.html'
+
+     0K .......... .                                           97.7M=0s
+
+14:44:32 (97.7 MB/s) - `badc.nerc.ac.uk/data/cwvc/index.html' saved [11682]
+
+Removing badc.nerc.ac.uk/data/cwvc/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/icepic/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/icepic/index.html'
+
+     0K ..........                                              131M=0s
+
+14:44:32 (131 MB/s) - `badc.nerc.ac.uk/data/icepic/index.html' saved [11101]
+
+Removing badc.nerc.ac.uk/data/icepic/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/fluxex/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/fluxex/index.html'
+
+     0K ..........                                              135M=0s
+
+14:44:32 (135 MB/s) - `badc.nerc.ac.uk/data/fluxex/index.html' saved [10917]
+
+Removing badc.nerc.ac.uk/data/fluxex/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/micromix/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/micromix/index.html'
+
+     0K ..........                                              803M=0s
+
+14:44:32 (803 MB/s) - `badc.nerc.ac.uk/data/micromix/index.html' saved [10945]
+
+Removing badc.nerc.ac.uk/data/micromix/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/caesar/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/caesar/index.html'
+
+     0K .......... .                                            108M=0s
+
+14:44:32 (108 MB/s) - `badc.nerc.ac.uk/data/caesar/index.html' saved [12234]
+
+Removing badc.nerc.ac.uk/data/caesar/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/dabex/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/dabex/index.html'
+
+     0K ..........                                              973M=0s
+
+14:44:32 (973 MB/s) - `badc.nerc.ac.uk/data/dabex/index.html' saved [11226]
+
+Removing badc.nerc.ac.uk/data/dabex/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/neon/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/neon/index.html'
+
+     0K ..........                                             1.73G=0s
+
+14:44:32 (1.73 GB/s) - `badc.nerc.ac.uk/data/neon/index.html' saved [11140]
+
+Removing badc.nerc.ac.uk/data/neon/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/solas/projects/dodo.html
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/solas/projects/dodo.html'
+
+     0K ..........                                              939M=0s
+
+14:44:32 (939 MB/s) - `badc.nerc.ac.uk/data/solas/projects/dodo.html' saved [10827]
+
+Removing badc.nerc.ac.uk/data/solas/projects/dodo.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/t-rex/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/t-rex/index.html'
+
+     0K ..........                                             1.04G=0s
+
+14:44:32 (1.04 GB/s) - `badc.nerc.ac.uk/data/t-rex/index.html' saved [11204]
+
+Removing badc.nerc.ac.uk/data/t-rex/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/land-emiss/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/land-emiss/index.html'
+
+     0K ..........                                              131M=0s
+
+14:44:32 (131 MB/s) - `badc.nerc.ac.uk/data/land-emiss/index.html' saved [10324]
+
+Removing badc.nerc.ac.uk/data/land-emiss/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/amma/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/amma/index.html'
+
+     0K .......... .......                                      123M=0s
+
+14:44:32 (123 MB/s) - `badc.nerc.ac.uk/data/amma/index.html' saved [17498]
+
+Removing badc.nerc.ac.uk/data/amma/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/gfdex/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/gfdex/index.html'
+
+     0K .......... ..                                           854M=0s
+
+14:44:32 (854 MB/s) - `badc.nerc.ac.uk/data/gfdex/index.html' saved [12543]
+
+Removing badc.nerc.ac.uk/data/gfdex/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/jaivex/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/jaivex/index.html'
+
+     0K .......... ..                                           116M=0s
+
+14:44:32 (116 MB/s) - `badc.nerc.ac.uk/data/jaivex/index.html' saved [12939]
+
+Removing badc.nerc.ac.uk/data/jaivex/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/faam/mo-projects.html
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/faam/mo-projects.html'
+
+     0K .........                                              1.43G=0s
+
+14:44:32 (1.43 GB/s) - `badc.nerc.ac.uk/data/faam/mo-projects.html' saved [9241]
+
+Removing badc.nerc.ac.uk/data/faam/mo-projects.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/cops/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/cops/index.html'
+
+     0K ........                                                975M=0s
+
+14:44:32 (975 MB/s) - `badc.nerc.ac.uk/data/cops/index.html' saved [9204]
+
+Removing badc.nerc.ac.uk/data/cops/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/appraise/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/appraise/index.html'
+
+     0K .........                                               961M=0s
+
+14:44:32 (961 MB/s) - `badc.nerc.ac.uk/data/appraise/index.html' saved [10072]
+
+Removing badc.nerc.ac.uk/data/appraise/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/op3/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/op3/index.html'
+
+     0K ..........                                             1.12G=0s
+
+14:44:32 (1.12 GB/s) - `badc.nerc.ac.uk/data/op3/index.html' saved [10784]
+
+Removing badc.nerc.ac.uk/data/op3/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/caviar/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/caviar/index.html'
+
+     0K ..........                                             1.67G=0s
+
+14:44:32 (1.67 GB/s) - `badc.nerc.ac.uk/data/caviar/index.html' saved [10771]
+
+Removing badc.nerc.ac.uk/data/caviar/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/vocals/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/vocals/index.html'
+
+     0K ..........                                             1.64G=0s
+
+14:44:32 (1.64 GB/s) - `badc.nerc.ac.uk/data/vocals/index.html' saved [10582]
+
+Removing badc.nerc.ac.uk/data/vocals/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/cosic/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/cosic/index.html'
+
+     0K .........                                               916M=0s
+
+14:44:32 (916 MB/s) - `badc.nerc.ac.uk/data/cosic/index.html' saved [9604]
+
+Removing badc.nerc.ac.uk/data/cosic/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/trompex/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/trompex/index.html'
+
+     0K .........                                               915M=0s
+
+14:44:32 (915 MB/s) - `badc.nerc.ac.uk/data/trompex/index.html' saved [9599]
+
+Removing badc.nerc.ac.uk/data/trompex/index.html.
+--14:44:32--  http://badc.nerc.ac.uk/data/cims/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/cims/index.html'
+
+     0K ........                                                535M=0s
+
+14:44:33 (535 MB/s) - `badc.nerc.ac.uk/data/cims/index.html' saved [8973]
+
+Removing badc.nerc.ac.uk/data/cims/index.html.
+--14:44:33--  http://badc.nerc.ac.uk/data/t-nawdex/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/t-nawdex/index.html'
+
+     0K .........                                               532M=0s
+
+14:44:33 (532 MB/s) - `badc.nerc.ac.uk/data/t-nawdex/index.html' saved [9488]
+
+Removing badc.nerc.ac.uk/data/t-nawdex/index.html.
+--14:44:33--  http://badc.nerc.ac.uk/data/quefa/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/quefa/index.html'
+
+     0K ........                                               1.17G=0s
+
+14:44:33 (1.17 GB/s) - `badc.nerc.ac.uk/data/quefa/index.html' saved [8780]
+
+Removing badc.nerc.ac.uk/data/quefa/index.html.
+--14:44:33--  http://badc.nerc.ac.uk/data/cap-2009/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/cap-2009/index.html'
+
+     0K .........                                               848M=0s
+
+14:44:33 (848 MB/s) - `badc.nerc.ac.uk/data/cap-2009/index.html' saved [9782]
+
+Removing badc.nerc.ac.uk/data/cap-2009/index.html.
+--14:44:33--  http://badc.nerc.ac.uk/data/ronoco/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/ronoco/index.html'
+
+     0K .........                                               524M=0s
+
+14:44:33 (524 MB/s) - `badc.nerc.ac.uk/data/ronoco/index.html' saved [9339]
+
+Removing badc.nerc.ac.uk/data/ronoco/index.html.
+--14:44:33--  http://badc.nerc.ac.uk/data/thaw/
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/data/thaw/index.html'
+
+     0K ........                                               1.06G=0s
+
+14:44:33 (1.06 GB/s) - `badc.nerc.ac.uk/data/thaw/index.html' saved [9101]
+
+Removing badc.nerc.ac.uk/data/thaw/index.html.
+--14:44:33--  http://badc.nerc.ac.uk/graphics/tabs/bottomleft.jpg
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 647 [image/jpeg]
+Saving to: `badc.nerc.ac.uk/graphics/tabs/bottomleft.jpg'
+
+     0K                                                       100%  206M=0s
+
+14:44:33 (206 MB/s) - `badc.nerc.ac.uk/graphics/tabs/bottomleft.jpg' saved [647/647]
+
+Removing badc.nerc.ac.uk/graphics/tabs/bottomleft.jpg.
+--14:44:33--  http://badc.nerc.ac.uk/
+Reusing existing connection to badc.nerc.ac.uk:80.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: http://badc.nerc.ac.uk/home/index.html [following]
+--14:44:33--  http://badc.nerc.ac.uk/home/index.html
+Reusing existing connection to badc.nerc.ac.uk:80.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/home/index.html'
+
+     0K ......                                                 1.25G=0s
+
+14:44:33 (1.25 GB/s) - `badc.nerc.ac.uk/home/index.html' saved [6711]
+
+Removing badc.nerc.ac.uk/home/index.html.
+--14:44:33--  http://badc.nerc.ac.uk/help/contact.html
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: `badc.nerc.ac.uk/help/contact.html'
+
+     0K ....                                                    896M=0s
+
+14:44:33 (896 MB/s) - `badc.nerc.ac.uk/help/contact.html' saved [4695]
+
+Removing badc.nerc.ac.uk/help/contact.html.
+--14:44:33--  http://badc.nerc.ac.uk/conditions/badc_anon.html
+Connecting to badc.nerc.ac.uk|130.246.191.211|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3277 (3.2K) [text/html]
+Saving to: `badc.nerc.ac.uk/conditions/badc_anon.html'
+
+     0K ...                                                   100% 1.02G=0s
+
+14:44:33 (1.02 GB/s) - `badc.nerc.ac.uk/conditions/badc_anon.html' saved [3277/3277]
+
+Removing badc.nerc.ac.uk/conditions/badc_anon.html.
+--14:44:33--  http://badc.nerc.ac.uk/graphics/tabs/bottomright.jpg
+Reusing existing connection to badc.nerc.ac.uk:80.
+HTTP request sent, awaiting response... 200 OK
+Length: 683 [image/jpeg]
+Saving to: `badc.nerc.ac.uk/graphics/tabs/bottomright.jpg'
+
+     0K                                                       100%  163M=0s
+
+14:44:33 (163 MB/s) - `badc.nerc.ac.uk/graphics/tabs/bottomright.jpg' saved [683/683]
+
+Removing badc.nerc.ac.uk/graphics/tabs/bottomright.jpg.
+Found no broken links.
+
+FINISHED --14:44:33--
+Downloaded: 64 files, 761K in 0.006s (131 MB/s)

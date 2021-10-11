@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<!-- Written by Helen Walker, BADC RAL CCLRC Feb 2003 -->
+
+<HEAD>
+
+<TITLE>BADC: Language types for netCDF</TITLE>
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+
+<FONT FACE="ARIAL","HELVETICA">
+
+<H1>BADC: Language types corresponding to netCDF data types</H1>
+
+<P>
+The following information is taken from the 
+<A HREF="http://www.unidata.ucar.edu/packages/netcdf/guide_9.html#IDX440">Unidata netCDF 
+language</A> page, it gives the correspondence between netCDF data types and 
+C and FORTRAN data types.
+</P>
+<P>
+<TABLE>
+<TR>
+<TH>            </TH><TH COLSPAN="2">    C  </TH><TH COLSPAN="2">FORTRAN</TH><TH> </TH>
+</TR>
+<TR>
+<TH>netCDF/CDL</TH><TH>  Data  </TH><TH>API</TH><TH>  Data </TH><TH>API</TH><TH> </TH>
+</TR>
+<TR>
+<TH>Data Type</TH><TH>Type</TH><TH>  Mnemonic*</TH><TH>Type</TH><TH>Mnemonic*</TH><TH>Bits</TH>
+</TR>
+<TR>
+<TD>byte</TD><TD>char</TD><TD>NC_BYTE</TD><TD>BYTE, LOGICAL*1 (INTEGER)</TD><TD>NCBYTE</TD><TD>8</TD>
+</TR>
+<TR>
+<TD>char</TD><TD>char</TD><TD>NC_CHAR</TD><TD>CHARACTER                </TD><TD>NCCHAR</TD><TD>8</TD>
+</TR>
+<TR>
+<TD>short</TD><TD>short</TD><TD>NC_SHORT</TD><TD>INTEGER*2 (INTEGER)  </TD><TD>NCSHORT</TD><TD>16</TD>
+</TR>
+<TR>
+<TD>long</TD><TD>nclong</TD><TD>NC_LONG</TD><TD>INTEGER*4 (INTEGER)  </TD><TD>NCLONG</TD><TD>32</TD>
+</TR>
+<TR>
+<TD>float</TD><TD>float</TD><TD>NC_FLOAT</TD><TD>REAL*4 (REAL)      </TD><TD>NCFLOAT</TD><TD>32</TD>
+</TR>
+<TR>
+<TD>double</TD><TD>double</TD><TD>NC_DOUBLE</TD><TD>REAL*8 (DOUBLEPRECISION)</TD><TD>NCDOUBLE</TD><TD>64</TD>
+</TR>
+</TABLE>
+</P>
+
+<P>
+*API Mnemonic: this is the name used in the Application Programmable Interface 
+(API) provided in the NetCDF package.
+</P>
+
+<P>
+The first column gives the netCDF data type, which is the same as the CDL data type. 
+The next pair of columns give, respectively, the C data type corresponding to the 
+first column and the corresponding C preprocessor macro for use in netCDF functions 
+(the preprocessor macros are defined in the netCDF C header-file netcdf.h). The 
+next pair of columns give, respectively, the FORTRAN data type corresponding to the 
+first column and the corresponding FORTRAN parameter for use when calling netCDF 
+routines (the parameters are defined in the netCDF FORTRAN include-file netcdf.inc). 
+You should use the un-parenthesized FORTRAN types if possible. For any type that 
+your FORTRAN compiler doesn't support, use the corresponding parenthesized type. 
+The last column gives the number of bits used in the external representation of 
+values of the corresponding type.
+</P>
+<P>
+Note that the C data type corresponding to a netCDF long is nclong. This type should be 
+used rather than int or long. It is defined in the netCDF header-file netcdf.h, where 
+it is set to the appropriate type.
+</P>
+<P>
+Note that there are no netCDF types corresponding to 64-bit integers or to wide 
+characters in the current version of the netCDF library.
+</P>
+
+</FONT>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,312 @@
+CATALOG.DOC  (1990-03-13)
+
+1. The following table indicates the ER-2 files which are contained in this 
+release and the two character file prefix for each type of file (BR for BrO, 
+NO for NOy, etc.).
+
+    X = dataset is contained in this release
+blank = dataset not available for release
+
+        (No distinction is made as to why a particular dataset is not
+         available. Some blanks are a result of a temporary instrument
+         failure. In other cases there may be data available for a given 
+         flight, but for whatever reason the PI could not assure its 
+         reliability and therefore did not include it in this 
+         release. The user is encouraged to contact the PI directly, if a 
+         particular data file they desire is missing - see CONTACT.DOC for 
+         names and addresses).
+
+                       DEC   JAN                           FEB
+    FLIGHT DATE (GMT)   29 31  3  6  7 12 16 19 20 24 25 30  7  8  9 10 20 21
+        FLIGHT NUMBER    1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18
+    --------------------------------------------------------------------------|
+    James Anderson                                                            |
+      BrO           BR   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+      ClO           CL   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                              |
+    K. Roland Chan                                                            |
+      MMS           FP   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                    PT   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                    WI   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                              |
+    David Fahey                                                               |
+      NOy           NO         X  X  X  X  X  X  X  X  X  X  X  X  X  X       |
+                                                                              |
+    G.Ferry/B.Gandrud                                                         |
+      PMS (FSSP)    PS   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                              |
+    Bruce Gary                                                                |
+      MTP           MP   X  X  X  X  X  X     X  X  X  X  X  X  X  X  X  X  X |
+                                                                              |
+    Patti Hathaway                                                            |
+      Nav.Recorder  NP   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                    NT   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                    NW   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                              |
+    L.Heidt/J.Vedder                                                          |
+      Whole Air     WA      X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X    |
+                                                                              |
+    Ken Kelly                                                                 |
+      H2O Vapor     WV   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                              |
+    Max Lowenstein                                                            |
+      N2O           N2   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                              |
+    Mike Proffitt                                                             |
+      Ozone         O3   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                              |
+    Mark Schoeberl                                                            |
+      ER-2 PV       QF   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+      NMC PV        QN   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                              |
+    Chuck Wilson                                                              |
+      CNC           CN   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+      PMS (PCAS)    PC   X  X  X        X  X  X  X  X  X  X  X  X  X  X  X  X :
+
+1.1 Notes:
+There is a separate subdirectory for each flight which contains all files for 
+that particular flight.  If pp represents an arbitrary filename prefix then 
+the file naming convention is ppyymmdd.ER2, where yy=last two digits of the 
+year number, mm=month number, dd=day of month number.
+
+Ferry flight NOy data is available but requires additional processing.  
+Contact D.Fahey for details.
+
+
+2. The following table indicates the DC-8 files which are contained in this 
+release and the two character file prefix for each type of file (OZ for ozone, 
+etc.).  
+
+    X = dataset is contained in this release
+blank = dataset not available for release
+
+        (No distinction is made as to why a particular dataset is not
+         available. Some blanks are a result of a temporary instrument
+         failure. In other cases there may be data available for a given 
+         flight, but for whatever reason the PI could not assure its 
+         reliability and therefore did not include it in this 
+         release. The user is encouraged to contact the PI directly, if a 
+         particular data file they desire is missing - see CONTACT.DOC for 
+         names and addresses).
+
+                       JAN                              FEB
+    FLIGHT DATE (GMT)    2  6  9 11 14 17 19 24 26 29 31  2  5  7  9 15
+        FLIGHT NUMBER    1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 
+    --------------------------------------------------------------------|
+                                                                        |
+    Edward Browell                                                      |
+      DIAL Ozone    DO   X  X  X  X  X     X  X  X  X  X  X  X  X  X  X |
+      IR depolariz  ID      X     X        X  X  X     X  X             |
+      IR scat ratio IS      X     X     X  X  X  X  X  X  X  X          |
+      VIS depolariz VD      X     X        X  X  X     X  X             |
+      VIS scat rat  VS   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                        |
+    Mary Anne Carroll                                                   |
+      NOx           NX   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                        |
+    Gerald Gregory                                                      |
+      Ozone         OZ   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                        |
+    Patti Hathaway                                                      |
+      Nav.Recorder  NP   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                    NT   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                    NW   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                        |
+    L.Heidt/J.Vedder                                                    |
+      Whole Air     WA      X  X        X  X  X  X                      |
+                                                                        |
+    Gerhard Hubler                                                      |
+      NOy           NY   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                        |
+    Ken Kelly                                                           |
+      Total Water   TW   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                        |
+    W.Mankin/M.Coffey                                                   |
+      F.T. Spec.    IR      X  X     X     X     X  X  X  X  X  X  X    |
+                                                                        |
+    Pat McCormick                                                       |
+      Depol. ratio  DP                        X  X  X  X  X             |
+      Scatt. ratio  SR                        X  X  X  X  X             |
+                                                                        |
+    Michael McElroy                                                     |
+      Clx           CX   X  X  X  X  X     X  X  X  X  X  X  X  X  X    |
+      Fx            FX   X  X  X  X  X     X  X  X  X  X  X  X  X  X    |
+      HCl           HC   X  X  X  X  X     X  X  X  X  X  X  X  X  X    |
+      HF            HF   X  X  X  X  X     X  X  X  X  X  X  X  X  X    |
+      HNO3 cons.    HN   X  X  X  X  X     X  X  X  X  X  X  X  X  X    |
+      HNO3 uncons.  HU   X  X  X  X  X     X  X  X  X  X  X  X  X  X    |
+      NOy  cons.    NC   X  X  X  X  X     X  X  X  X  X  X  X  X  X    |
+      NOy  uncons.  NU   X  X  X  X  X     X  X  X  X  X  X  X  X  X    |
+                                                                        |
+    Mark Schoeberl                                                      |
+      NMC PV        QD   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+      NMC T         TD   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+      NMC Z         ZD   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                        |
+    Geoffrey Toon                                                       |
+      Mark IV       M4      X  X     X     X     X  X  X  X  X  X       |
+                                                                        |
+    Andreas Wahner                                                      |
+      NUVAAE        SS   X  X  X  X  X  X  X  X  X  X  X  X  X  X  X    |
+
+2.2 Notes:
+There is a separate subdirectory for each flight which contains all files for 
+that particular flight.  The file naming convention is ppyymmdd.DC8.
+One exception to this rule is the file named M489AASE.DC8 which is in the 
+DC8MISC subdirectory and contains all of the Mark IV interferometer data.
+
+The scale factors in the file headers are intended to be numbers by which to
+multiply the recorded values to obtain the units specified in the file header.
+The CX, FX, HC, HF, HN, HU, NC, and NU files give scale factors of 1.0E-12 
+while stating 'units' of parts per trillion by volume (pptv).  The recorded
+numbers in these files are actually ALREADY in pptv, indicating a correct
+scale factor of 1.0; multiplying by the given scale factor of 1.0E-12 yields
+a true, unscaled mixing ratio (the value used in numerical calculations 
+involving these quantities).
+
+Note on the NX data files:
+Nitric oxide (NO) measurements were obtained over a 10 second averaging period.
+The ambient mixing ratios were determined by subtracting the instrument
+background signal from the measurement signal and accounting for instrument
+artifact as determined from measurements obtained during periods of darkness
+(where ambient NO is expected to be zero).  All numbers thus obtained are
+reported, including negative values (although negative values are not
+representative of real mixing ratios, they demonstrate the scatter in the 10
+second data).  Nitrogen dioxide (NO2) ambient mixing ratios were determined by
+subtracting the NO measure signal from the NO2 measure signal and accounting
+for instrument artifact as determined from tests conducted with zero air.  For
+the measurement of NO2, the photolysis cell was maintained at 0 C.  NO2+ mixing
+ratios were determined in the same manner as were the NO2 mixing ratios except
+that the photolysis cell was heated to 40 C, and the artifact for this mode
+was not determined.
+
+Note on the NY data files:
+NOy was measured alternately through a forward and a backward facing inlet
+(NOy(2), NOy(1), two minutes each mode).  The backward facing inlet 
+discriminates against larger particles (>0.5 micrometers) thus sampling mainly
+gas phase NOy.  The forward facing inlet oversamples large particles due to the
+much higher linear speed of the aircraft verses the inlet flow velocity.  The
+amount of any enhancement depends on the particle size distribution.  That
+information is not available for the AASE measurements.  Hence any increase in
+NOy-`forward' over NOy-`backward' can only be interpreted as a qualitative 
+measure of the presence of NOy on particles.  Some NOy-`forward' data were
+omitted due to contamination of the forward inlet, presumably by cloud water, on
+a few ascents out of Sola airfield.  This contamination of the NOy converter 
+led to reduced detection efficiencies (~80%) for HNO3 and an underestimation of
+NOy.
+
+
+3. Vertical profiles of aerosol extinction coefficients and temperatures from
+SAM II satellite measurements are presented for the time period 89-01-01 to
+89-02-18.  All aerosol data is contained in one file (SAM2ARSL.DAT), and all
+temperature data is contained in SAM2TEMP.DAT.
+
+
+4. Global grid point values of TOMS total ozone measurements (Version 5) are 
+available for December 1988, and January and February 1989.  There is one file
+per day with filenames TOyymmdd.DAT.
+
+
+5. Ozonesonde soundings from Angmagssalik and Scoresbysund Greenland, and 
+Lerwick, U.K. are available for most of the duration of the experiment.  On the
+average, each station launched an ozonesonde every other day.  There is a
+separate subdirectory for each launch site.  The file naming convention is 
+AMyymmdd.Bhh (Angmagssalik), LWyymmdd.Bhh (Lerwick), and SByymmdd.Bhh 
+(Scoresbysund), where hh=GMT hour of launch.  
+
+A.Torres has cautioned us that the Lerwick tracking antenna had problems at 
+low elevation angles, so after about t+30 minutes the winds in the Lerwick 
+soundings should be used with caution.
+
+
+6. The following table indicates the positions of the radiosonde stations for
+which we received sounding data during the deployment in Stavanger.  Three of
+the locations (Angmagssalik, Scoresbysund, and Lerwick) were also ozonesonde
+launch sites.  All soundings are in one subdirectory.  The file naming 
+convention is RSyymmdd.Bhh.  Each file contains all available soundings for a 
+particular time interval (+- 2 hours from the hour hh).
+
+We received the radiosonde soundings (RAOB's) from the Norwegian Meteorological
+Institute (DNMI) in Oslo in the WMO coded format.  A complete sounding comes 
+in four separate transmissions (parts A, B, C, and D) and, unfortunately, many 
+of the soundings are incomplete.  However, having the coded soundings allowed
+us to remove any obvious coding errors.
+
+      Station  E.Long   Lat. Elev.  Station
+	Code    (deg)  (deg)  (m)    Name
+
+	01001   -8.67  70.93    9  JAN MAYEN          
+	01028   19.02  74.52   18  BJORNOYA           
+	01152   14.40  67.25    8  BODO               
+	01241    9.60  63.70   10  ORLAND (NOR-AFB)   
+	01384   11.10  60.20  204  OSLO/GARDERMOEN    
+	01415    5.67  58.87   33  STAVANGER/SOLA     
+	02185   22.13  65.55   17  LULEA/KALLAX AFB   
+	02365   17.45  62.53    6  SUNDSVALL/HARNOSAND
+	02465   17.95  59.35   22  STOCKHOLM/BROMMA   
+	02527   12.30  57.67  155  GOTEBORG (UPR-AIR) 
+	02591   18.35  57.65   45  VISBY AERO STA.    
+	02836   26.65  67.37  178  SODANKYLA          
+	02935   25.67  62.40  140  JYVASKYLA FAFB     
+	02963   23.50  60.82  103  JOKIOINEN          
+	03005   -1.18  60.13   82  LERWICK            
+	03026   -6.32  58.22   13  STORNOWAY          
+	03170   -2.87  56.43    5  SHANWELL           
+	03496    1.68  52.68   14  HEMSBY             
+	03920   -6.10  54.48   38  LONG KESH          
+	04018  -22.60  63.97   37  KEFLAVIK           
+	04202  -68.75  76.53   59  THULE AB           
+	04220  -52.75  68.70   39  EGEDESMINDE        
+	04270  -45.43  61.18    4  NARSSARSSUAQ       
+	04320  -18.77  76.77   14  DANMARKSHAVN       
+	04339  -21.97  70.48   66  SCORESBYSUND       
+	04360  -37.63  65.60   50  ANGMAGSSALIK       
+	06011   -6.77  62.02   55  THORSHAVN          
+	06181   12.52  55.77   40  COPENHAGEN/JAEGERS 
+	06260    5.18  52.10    2  DE BILT            
+	07510   -0.70  44.83   51  BORDEAUX/MERIGNAC  
+	10868   11.58  48.25  484  MUNCHEN            
+	12374   20.97  52.40   99  LEGIONOWO          
+	20046   58.05  80.62   20  HEYSA ISLAND       
+	20107   14.22  78.07   18  BARENTSBURG        
+	20353   68.58  76.95    8  CAPE ZHELANIYA     
+	20744   52.73  72.38   16  MALYYE KARMAKULY   
+	22113   33.05  68.97   65  MURMANSK           
+	71082  -62.33  82.50   66  ALERT/ELLESMERE IS 
+	99C7C  -35.50  52.75    0  SHIP C7C                 (approx. position)
+	99C7L  -20.00  57.00    0  SHIP C7L                 (approx. position)
+	99C7M    2.00  66.00    0  SHIP C7M                 (approx. position)
+
+
+7. Two sets of 12 Z meteorological analyses are presented: one is analyses of 
+potential vorticity and pressure on constant potential temperature surfaces;
+the other is analyses of temperature, geopotential height, and horizontal wind
+components on constant pressure surfaces.
+
+All isentropic analyses are in one subdirectory.  The file naming convention is
+PVyymmdd.ttt (potential vorticity) and PRyymmdd.ttt (pressure), where
+ttt=potential temperature surface value.  The isentropic analyses cover the 
+time period 88-12-29 to 89-02-21, and are derived from NMC analyses.
+
+All isobaric analyses are in one subdirectory.  The data is generated using
+the Goddard Space Flight Center (GSFC) STRATAN data assimilation scheme to 
+improve upon an initial, first guess field.  The file naming convention is 
+AAyymmdd.ppp and AFyymmdd.ppp, where AA or AF indicate the type of first 
+guess field and ppp=pressure surface value.  AA indicates that NMC ANALYSES 
+were used as the first guess fields, while AF indicates that NMC FORECAST 
+fields were used as the first guess. The isobaric analyses cover the time 
+period 89-01-01 to 89-02-24.
+
+
+8. Two files containing 5 Hz ER-2 MMS data are also included.  The files are in
+a separate subdirectory and have the names MM890130.ER2 and MM890210.ER2.  The
+dates were selected because there were observed mesoscale disturbances on those
+days, thus providing good test cases for applying the 5 Hz data to their 
+analysis.  These are LARGE files (greater than 20 Mb each); there are more 
+variables recorded per flight than in the 1 Hz MMS data, and unlike the 1 Hz 
+data, all of the variables are contained in a single file.  As indicated in 
+the README.DOC file, these two files along with the remaining 5 Hz MMS data 
+files for the 1989 AASE flights are contained on a separate, companion CDROM 
+(which contains only the 5 Hz MMS data).  Contact Steve Hipskind or Steve
+Gaines (see README.DOC for addresses and phone numbers) for details on this 
+companion disc.

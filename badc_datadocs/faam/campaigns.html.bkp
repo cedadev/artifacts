@@ -1,0 +1,670 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>FAAM Campaigns</title>
+ <meta name="keywords" content="FAAM, BAE-146, NERC, Met Office, NCAS">
+</head>
+
+<body bgcolor="#ffffff">
+
+<style>
+<!--
+P.right-shift {text-indent: -0.5em; margin-left: 0.5em; margin-top: 0.1em; margin-bottom: 0.1em}
+-->
+</style>
+
+<h1>
+Application for access to Data from FAAM Campaigns
+</h1>
+
+<i><font size=-1>Last update: 25 January 2010</font></i>
+<hr>
+
+<ul>
+<li>
+The table below lists the
+<a href="http://www.faam.ac.uk/public/campaigns.html">FAAM campaigns</a>
+by chronological order
+and, for each of them, defines the communities entitled to access the
+archived non-core and processed core data.
+Authorised users can apply by clicking on the relevant APPLY link in
+the table.
+Application for public processed core data must be done only once.
+No application is needed to access public non-core data.
+<li>
+Access to FAAM test flight data as well as FAAM raw core data from field
+campaigns is restricted to the staff involved in test flights
+(<a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_ps">APPLY</a>
+here).
+<li>
+To apply for access to any of these datasets, you should first
+<a href="/reg/user_register_info.html">register as a BADC user</a>
+(anyone is allowed to register).
+If you are already a registered BADC user, skip this step.
+If you have forgotten your BADC user ID and/or password, please contact the
+BADC helpdesk at <a href="mailto:badc@rl.ac.uk">badc@rl.ac.uk</a>.
+</ul>
+
+<p>
+<table border=1 cellspacing=0 cellpadding=2 bgcolor=#dddddf bordercolor=#ffffff
+cols=6>
+<tr>
+ <td align=middle><b>Campaign</b> <br> 
+ <font size=-1><i>(Click on campaign name <br> to view web page)</i></font></td>
+ <td align=middle><b>Dates</b><br> 
+ <font size=-1><i>(Click on Year number <br> to view full schedule)</i></font></td>
+ <th>Aircraft base</th>
+ <th>Flight numbers</th>
+ <th>Access to processed core data</th><th>Access to non-core data</th></tr>
+
+<tr valign=top><td><a href="../itop/">ITOP-UK</a>,  <br> 
+     <font size=-1>(UTLS Ozone project)</font></td>
+ <td>12 Jul - 3 Aug <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2004">2004</a></td>
+ <td>Horta, Azores</td>
+ <td>B028-39</td>
+ <td>Public, on application &#150;
+ <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+     (*)</td>
+ <td><p>Public </p>
+</tr>
+
+<tr valign=top><td><a href="../adriex/">ADRIEX</a></td>
+ <td>27 Aug - 6 Sep <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2004">2004</a></td>
+ <td>Treviso, Italy</td>
+ <td>B043-50</td>
+ <td>Public, on application &#150;
+     <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+     (*)</td>
+ <td> Public 
+ </td>
+</tr>
+
+<tr valign=top><td><a href="../eaquate/">EAQUATE</a></td>
+ <td>14-18 Sep <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2004">2004</a></td>
+ <td>Cranfield, UK</td>
+ <td>B051-54</td>
+ <td>
+     </p><p >Public on application &#150;
+     <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+     (*)</p></td>
+ <td>Public</td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../autex-wintex/">AUTEX-WINTEX</a></td>
+ <td>27 Oct <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2004">2004</a> - 11 Feb 2005</td>
+ <td>Cranfield, UK</td>
+ <td>B056, B058, B060, B062-63, B065-68, B084-86, B251-267</td>
+ <td></p><p class=right-shift> Public on application &#150;
+     <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+     (*)</p></td>
+ <td><p>Public</p>
+ </td>
+</tr>
+
+<tr valign=top><td><a href="../nu-wave/">NU-WAVE</a></td>
+ <td>17-24 Nov <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2004">2004</a></td>
+ <td>Cranfield, UK</td>
+ <td>B059, B061</td>
+ <td></p><p class=right-shift> Public on application &#150;
+     <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+     (*)</p></td>
+ <td>Public</td>
+
+</tr>
+
+<tr valign=top><td><a href="../covex/">COVEX</a></td>
+ <td>8 Dec <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2004">2004</a></td>
+ <td>Cranfield, UK</td>
+ <td>B064</td>
+ <td>Public, on application &#150; 
+ <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+     (*)</td>
+ <td>Public</td>
+</tr>
+
+<tr valign=top><td><a href="../rico/">RICO</a></td>
+ <td>5-28 Jan <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2005">2005</a></td>
+ <td>Antigua, Antilles</td>
+ <td>B069-83</td>
+ <td>Public, on application &#150; 
+ <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+     (*)</td>
+ <td>Public</td>
+</tr>
+
+<tr valign=top><td>CIRRUS, <br> 
+     <font size=-1>(<a href="../utls-ozone/">UTLS Ozone</a> project)</font></td>
+ <td>5 April - 17 August <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2005">2005</a> </td>
+ <td>Cranfield, UK</td>
+ <td>B087-88 (tests), B089-90, B094, B100, B104, B115-116, 
+     B122</td>
+ <td>Public, on application &#150; 
+ <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+ (*)</td>
+  <td>Public</td>
+</tr>
+
+<tr valign=top>
+ <td><a href="/data/polluted-tropo/projects/ampep.html">AMPEP</a>, <br> 
+     <font size=-1>(Polluted Troposphere project)</font></td>
+ <td>21 Apr <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2005">2005</a> - 19 September 2006</td>
+ <td>Cranfield, UK</td>
+ <td>B087-88 (tests), B091-92, B097, B102, B111-113, B118-119, 
+     B126, B130, B132-133, B134, B136, B244</td>
+ <td>Public, on application &#150; 
+ <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+ (*)</td>
+ <td><p class=right-shift> Public</td>
+</tr>
+
+<tr valign=top>
+ <td><a href="/data/polluted-tropo/projects/clopap.html">CLOPAP</a>, <br> 
+     <font size=-1>(Polluted Troposphere project)</font></td>
+ <td>13 May <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2005">2005</a> - 27 September 2006</td>
+ <td>Cranfield, UK</td>
+ <td>B087-88 (tests), B095, B097, B099, B103, B109, 
+     B128-129, B131, B137, B247</td>
+ <td>Public, on application &#150; 
+ <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+ (*)</td>
+ <td><p class=right-shift> Polluted Troposphere for 2 years after end of project&#150;
+     <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=polltro&datasetid=faam_core">APPLY</a>
+     </p><p class=right-shift> Public release due end of April 2010</p></td>
+</tr>
+
+<tr valign=top><td>MIXED PHASE CLOUDS, <br>
+     <font size=-1>(<a href="../cwvc/">CWVC</a> project)</font></td>
+ <td>19 May - 27 July <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2005">2005</a></td>
+ <td>Cranfield, UK</td>
+ <td>B087-88 (tests), B096, B098, B108, B117</td>
+ <td>Public, on application &#150; 
+ <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+ (*)</td>
+  <td>Public</td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../icepic/">ICEPIC</a></td>
+ <td>29 June  <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2005">2005</a>
+     - 22 Sep <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2006">2006</a></td>
+ <td>Cranfield, UK</td>
+ <td>B087-88 (tests), B105-107, B110, B120-121, B127, B135, B191, B198, B200, B202, B246</td>
+ <td>Public, on application &#150;
+  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+   (*)</td>
+  <td>Public</td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../fluxex/">FLUXEX</a></td>
+ <td>19 July - 29 Sep <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2005">2005</a></td>
+ <td>Cranfield, UK</td>
+ <td>B087-88 (tests), B112, B118, B126, B130, B132, B134, B136</td>
+ <td>Public, on application &#150;
+  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+   (*)</td>
+   <td><p class=right-shift> All flights shared with AMPEP - see above.</td>
+</tr>
+
+<tr valign=top>
+ <td>POSE</td>
+ <td>18 August <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2005">2005</a></td>
+ <td>Cranfield, UK</td>
+ <td>B123</td>
+ <td>Public, on application &#150;
+  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+   (*)</td>
+ <td>&nbsp;</td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../micromix/">MICROMIX</a></td>
+ <td>14 November - 16 December <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2005">2005</a>
+     + 19 May <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2006">2006</a></td>
+ <td>Cranfield, UK</td>
+ <td>B138, B140, B142-144, B151, B201</td>
+ <td>Public, on application &#150;
+  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+   (*)</td>
+   <td><p class=right-shift> Public</p></td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../caesar/">CAESAR</a></td>
+ <td>14 November 2005 - 20 September <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2007">2007</a> </td>
+ <td>Cranfield, UK</td>
+ <td>B138-139,  B141,  B145-145,  B150-152, B194, B194, B195, B199, B320, B324, B326-7</td>
+  <td><p> Restricted to CAESAR participants for 1 year - <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=caesar">APPLY</a> then public, on application</p></td>
+   <td>CAESAR for 2 years following last flight - <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=caesar">Apply</a> - Public afterwards </td>
+</tr>
+</tr>
+<tr valign=top>
+ <td>Buncefield Smoke Expt</td>
+ <td>12 - 13 December <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2005">2005</a></td>
+ <td>Cranfield</td>
+ <td>B148-149</td>
+  <td>Public, on application &#150;
+  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+   (*)</p></td>
+ <td>Public</td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../dabex/">DABEX</a></td>
+ <td>19 December <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2005">2005</a> - 
+<p class=right-shift>2 February <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2006">2006</a></td>
+ <td>Cranfield, UK; <br>Niamey, Niger</td>
+ <td>B153-163  B165-167</td>
+ <td>Public, on application &#150;
+  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+   (*)</td>
+ <td>Public</td>
+</tr>
+<tr valign=top>
+ <td><a href="../neon/">NEON</a></td>
+ <td>28 January <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2006">2006</a>
+- 11 September <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2007">2007</a></td>
+ <td>Niamey, Niger;<br> Cranfield</td>
+ <td>B164, B196, B203-B206 , B249-B250 , B313-B315, B325</td>
+ <td>Public, on application &#150;
+  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+   (*)</td>
+   <td><p class=right-shift> MO-aircraft for 2 years following
+       project end (TBD) &#150;
+       <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mo-aircraft&datasetid=faam_core">APPLY</a>
+       </p><p class=right-shift> Public afterwards</p></td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../solas/projects/dodo.html">DODO</a></td>
+ <td>03 February - 28 August <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2006">2006</a></td>
+ <td>Niamey, Niger; <br>Dakar, Senegal</td>
+ <td>B168-175, B236-B242</td>
+ <td>Public, on application &#150;
+  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+   (*)</td>
+   <td>Public</td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../t-rex/">T-REX</a></td>
+ <td>17 March  - 8 April <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2006">2006</a></td>
+ <td>Fresno, California (USA)</td>
+ <td>B176-190</td>
+   <td>Public, on application &#150;
+  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+   (*)</p></td>
+ <td>Public</td>
+
+</tr>
+<tr valign=top>
+ <td>VISURB</td>
+ <td>26 April <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2006">2006</a>
+    - 18 December <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2007">2007</a></td>
+ <td>Cranfield</td>
+ <td>B192-B193, B245, B281, B293, B334</td>
+ <td>Public, on application &#150;
+  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+   (*)</td>
+   <td><p class=right-shift> MO-aircraft for 2 years following
+       flight (TBD) &#150;
+       <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mo-aircraft&datasetid=faam_core">APPLY</a>
+       </p><p class=right-shift> Public afterwards</p></td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../land-emiss/">LAND-EMISS</a></td>
+ <td>11 May - 14 June <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2006">2006</a></td>
+ <td>Cranfield; Beja, Portugal</td>
+ <td>B197, B209, B211</td>
+ <td>Public, on application &#150;
+  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+   (*)</td>
+ <td>Public</td>
+</tr>
+
+<tr valign=top>
+ <td>CAPEX</td>
+ <td>01 - 14 June <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2006">2006</a></td>
+ <td>Beja, Portugal</td>
+ <td>B203 - B212</td>
+ <td>Public, on application &#150;
+  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+   (*)</td>
+ <td>Public</td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../amma/">AMMA</a></td>
+ <td>10 July - 17 August <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2006">2006</a></td>
+ <td>Niamey, Niger</td>
+ <td>B213 -B235</td>
+ <td>Public, on application &#150;
+  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+   (*)</td>
+   <td><p class=right-shift> AMMA for 1<sup>st</sup> 5 years following
+       last flight (until 17 Aug 2011) &#150;
+       <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=amma&datasetid=faam_core">APPLY</a>
+       </p><p class=right-shift> Public afterwards</p></td>
+</tr>
+<tr valign=top>
+ <td><a href="../autex-wintex/">WINTEX</a></td>
+ <td>6 December <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2006">2006</a>- 7 February <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2007">2007</a></td>
+ <td>Cranfield</td>
+ <td>B251-B267</td>
+ <td>Public, on application &#150;
+  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>
+   (*)</td>
+ <td>Public</td>
+</tr>
+<tr valign=top>
+ <td><a href="../gfdex/">GFDex</a></td>
+ <td>21 February - 10 March <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2007">2007</a></td>
+ <td>Keflavik, Iceland</td>
+ <td>B268-B279</td>
+ <td>Public, on application - <a href="http://badc.nerc.ac.uk/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY<a>(*)</td>
+       <td>Public</p></td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../jaivex/">JAIVEX/IASI</a></td>
+ <td>15 April - 12 December <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2007">2007</a></td>
+ <td>Houston, Texas, USA</td>
+ <td>B282-B292, B332</td>
+ <td> Public, on application - <a href="http://badc.nerc.ac.uk/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td><p class=right-shift> JAIVEX for 2 years following
+       last flight  &#150;
+       <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=iasi&datasetid=faam_core">APPLY</a>
+       </p><p class=right-shift> Public afterwards</p></td>
+</tr>
+
+<tr valign=top>
+ <td><a href="mo-projects.html">GERBIL</a></td>
+ <td>12 -29 June <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2007">2007</a></td>
+ <td>Cranfield</td>
+ <td> B293-B303</td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>Met Office Aircraft users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mo-aircraft&datasetid=faam_core">(APPLY)</a> for 2 years following
+       flight; Public afterwards</p></td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../cops/">COPS</a></td>
+ <td>9 July-29 August <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2007">2007</a></td>
+ <td>Baden - Baden</td>
+ <td>B304-B323 </td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>COPS users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=cops&datasetid=faam_core">(APPLY)</a> until June 2011; Public afterwards</p></td>
+ <td></td>
+</tr>
+
+<tr valign=top>
+ <td>AETIAQ</td>
+ <td>25 September <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2007">2007</a> -
+     18 June <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a></td>
+ <td>Cranfield</td>
+ <td> B329, B333, B335, B340-B341, b382</td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>Met Office Aircraft users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mo-aircraft&datasetid=faam_core">(APPLY)</a>for 2 years following the last flight. Public afterwards.</td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../appraise/">ADIENT</a><br> APPRAISE project</td>
+ <td>27 November <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2007">2007</a>
+     - 25 September <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a></td>
+ <td>Cranfield, <br>Oberpfaffenhofen <br>- Rostock, Germany </td>
+ <td>B329, B333, B335, B361-375, B379-380, B401, B402, B404, B406 </td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>APPRAISE users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=appraise&datasetid=faam_core">(APPLY)</a> for 1 year following
+       the end ofthe project; Public afterwards</p></td>
+</tr>
+
+<tr valign=top>
+ <td><a href="mo-projects.html">RAINCLOUDS</td>
+ <td>18-23 January <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a></td>
+ <td>Cranfield</td>
+ <td> B339, B343</td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>Met Office Aircraft users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mo-aircraft&datasetid=faam_core">(APPLY)</a> for 2 years following
+       flight; Public afterwards</p></td>
+</tr>
+
+
+<tr valign=top>
+ <td><a href="../appraise/">APPRAISE-CLOUDS</a></td>
+ <td>6 December <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2007">2007</a> - 
+     17 January <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a></td>
+ <td>Cranfield</td>
+ <td> B331-B338</td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>APPRAISE users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=appraise&datasetid=faam_core">(APPLY)</a> for 1 year following
+       the end ofthe project; Public afterwards</p></td>
+</tr>
+
+
+<tr valign=top>
+ <td><a href="mo-projects.html">CLPX-II</a></td>
+ <td>25 January - 1 March <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a></td>
+ <td>Fairbanks, Alaska, USA</td>
+ <td> B344-B353</td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>Met Office Aircraft users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mo-aircraft&datasetid=faam_core">(APPLY)</a> for 2 years following
+       flight; Public afterwards</p></td>
+</tr>
+
+<tr valign=top>
+ <td>ACAS (EUFAR)</td>
+ <td>22 -24 April <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a></td>
+ <td>Rotterdam</td>
+ <td> B358-B360</td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td></td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../appraise/">APPRAISE-EUCARRI</a></td>
+ <td>15-18 May <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a></td>
+ <td>Cranfield</td>
+ <td> B376-B378</td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>APPRAISE users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=appraise&datasetid=faam_core">(APPLY)</a> for 1 year following
+       the end ofthe project; Public afterwards</p></td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../op3/">OP3</a></td>
+ <td>17 June -22 July <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a></td>
+ <td>Cranfield</td>
+ <td> B381,B383-B389,B391-B393</td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>OP3 users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=op3&datasetid=faam_core">(APPLY)</a> for 2 years following
+       the end of the project; Public after September 2012</p></td>
+</tr>
+
+<tr valign=top>
+ <td>CASCADE</td>
+ <td>19 July <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a></td>
+ <td>Borneo</td>
+ <td> B390</td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td></td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../caviar/">CAVIAR</a></td>
+ <td>13 August <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2007">2008</a> - 
+23 September <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a></td>
+ <td>Cranfield,Sion (US)</td>
+ <td>B394, B396, B397, B399, B400, B404</td>
+ <td>Restricted to CAVIAR participants <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=caviar&datasetid=faam_core">(APPLY)</a> 
+    and Met Office Aircraft users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mo-aircraft">(APPLY)</a> for 1 year then public, on application(*)</td>
+ <td> CAVIAR <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=caviar&datasetid=faam_core">(APPLY)</a> and 
+Met Office Aircraft users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mo-aircraft">(APPLY)</a> for 2 years following
+       last flight; Public afterwards</p></td>
+</tr>
+
+<tr valign=top>
+ <td><a href="mo-projects.html">VACAR</a></td>
+ <td>13 August <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a>
+     - March <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2009">2009</a></td>
+ <td>Cranfield</td>
+ <td>B394 - </td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>Met Office Aircraft users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mo-aircraft&datasetid=faam_core">(APPLY)</a> for 2 years following
+       last flight; Public afterwards</p></td>
+</tr>
+
+<tr valign=top>
+ <td><a href="mo-projects.html">VIROSS</a></td>
+ <td>13 August-September <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a></td>
+ <td>Cranfield</td>
+ <td>B394 - </td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>Met Office Aircraft users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mo-aircraft&datasetid=faam_core">(APPLY)</a> for 2 years following
+       last flight; Public afterwards</p></td>
+</tr>
+
+<tr valign=top>
+ <td>TOFAMS</td>
+ <td>11 September <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a></td>
+ <td>Cranfield</td>
+ <td>B398</td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td></td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../vocals/">VOCALS</a.=></td>
+ <td>17 October - 13 November <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a></td>
+ <td>Chile</td>
+ <td>B407 - B420</td>
+ <td>Restricted to VOCALs participants <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=vocals&datasetid=faam_core">(APPLY)</a> 
+    and Met Office Aircraft users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mo-aircraft">(APPLY)</a> for 1 year then public, on application(*)</td>
+ <td><p class=right-shift> VOCALS <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=vocals&datasetid=faam_core">(APPLY)</a> and 
+Met Office Aircraft users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mo-aircraft">(APPLY)</a> for 1 year after end of project 
+    (ie June 2012); Public afterwards</p></td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../appraise/">APPRAISE-ICE</a></td>
+ <td>17 December <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2008">2008</a> - 
+     3 March <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2009">2009</a></td>
+ <td>Cranfield</td>
+ <td> B421-B427, B430-B434</td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>APPRAISE users <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=appraise&datasetid=faam_core">(APPLY)</a> for 1 year following
+       the end of the project (until Jan 2012); Public afterwards</p></td>
+</tr>
+<tr valign=top>
+ <td><a href="mo-projects.html">MEVEX</td>
+ <td>17 April -13 May <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2009">2009</a></td>
+ <td>Oman</td>
+ <td>B435-B448</td>
+ <td>Restricted to MEVEX participants <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mevex&datasetid=faam_core">(APPLY)</a> and Met Office Aircraft users (<a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mo-aircraft&datasetid=faam_core">APPLY</a>) until released by PI</td>
+ <td>Restricted to MEVEX participants <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mevex&datasetid=faam_core">(APPLY)</a> and Met Office Aircraft Users (<a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=mo-aircraft&datasetid=faam_core">APPLY</a>) until released by PI</td>
+</tr>
+<tr valign=top>
+ <td><a href="../cosic/">COSIC</td>
+ <td>3 June <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2009">2009</a></td>
+ <td>Cranfield</td>
+ <td>B455- </td>
+ <td>Public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>COSIC participants  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=cosic&datasetid=faam_core">(APPLY)</a> for 18 Months following
+       last flight; Public afterwards</p></td>
+</tr>
+<tr valign=top>
+ <td><a href="../trompex/">TROMPEX</td>
+ <td>7 -11 September <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2009">2009</a></td>
+ <td>Cape Verde</td>
+ <td>B475- 479</td>
+ <td>TROMPEX participants for 1 year <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=trompex&datasetid=faam_core">APPLY</a> then public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>TROMPEX participants  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=trompex&datasetid=faam_core">(APPLY)</a> for 18 Months following
+       last flight; Public afterwards</p></td>
+
+<tr valign=top>
+ <td><a href="../cims/">CIMS</td>
+ <td>02 November <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2009">2009</a></td>
+ <td>Cranfield</td>
+ <td>B482</td>
+ <td>public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>CIMS participants  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=cims&datasetid=faam_core">(APPLY)</a> for 18 Months following
+       last flight; Public afterwards</p></td>
+</td>
+
+<tr valign=top>
+ <td><a href="../t-nawdex/">T-NAWDEX</td>
+ <td>03 November <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2009">2009</a></td>
+ <td>Cranfield</td>
+ <td>B483, B486</td>
+ <td>public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>T-NAWDEX participants  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=t-nawdex&datasetid=faam_core">(APPLY)</a> for 18 Months following
+       last flight; Public afterwards</p></td>
+</td>
+
+<tr valign=top>
+ <td><a href="../quefa/">QUEFA</td>
+
+ <td>05 November <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2009">2009</a></td>
+ <td>Cranfield</td>
+ <td>B484</td>
+ <td>public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>QUEFA participants  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=quefa&datasetid=faam_core">(APPLY)</a> for 18 Months following
+       last flight; Public afterwards</p></td>
+</td>
+
+<tr valign=top>
+ <td><a href="../cap-2009/">CAP-2009</td>
+ <td>06 November <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2009">2009</a></td>
+ <td>Cranfield</td>
+ <td>B480 - </td>
+ <td>Restricted to CAP participants <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=cap-2009&datasetid=faam_core">(APPLY)</a> 
+     for 1 year then public, on application(*)</td>
+ <td>CAP-2009 participants for 18 months <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=cap-2009&datasetid=faam_core">APPLY</a> then public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+</td>
+
+<tr valign=top>
+ <td><a href="../ronoco/">RONOCO</td>
+ <td>07 Dec <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2009">2009</a></td>
+ <td>Cranfield</td>
+ <td>B494, B495 </td>
+ <td>public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>RONOCO participants  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=ronoco&datasetid=faam_core">(APPLY)</a> 
+ for 18 Months following last flight; Public afterwards
+ </td>
+
+<tr valign=top>
+ <td><a href="../thaw/">THAW</td>
+ <td>27 Nov <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2009">2009</a></td>
+ <td>Cranfield</td>
+ <td>B490, B491</td>
+ <td>public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td>
+ <td>THAW participants  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=thaw&datasetid=faam_core">(APPLY)</a> 
+ for 18 Months following last flight; Public afterwards
+</td>
+
+<tr valign=top>
+ <td><a href="../constrain/">CONSTRAIN</td>
+ <td> 12 Jan <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2010">2010</a> </td>
+ <td>Prestwick</td>
+ <td> B496 -</td>
+ <td> public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td></td>
+ <td> provisionally CONSTRAIN participants  for 18 Months following last flight; Public afterwards</td>
+</tr>
+
+<tr valign=top>
+ <td><a href="../constrain/">volc_ash_0410</td>
+ <td> Apr <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/faam/doc/FAAM_Flight_Schedule.html#2010">2010</a> </td>
+ <td>Cranfield</td>
+ <td> </td>
+ <td> public, on application &#150;  <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_core">APPLY</a>(*)</td></td>
+ <td> n/a </td>
+</tr>
+
+<tr><td colspan=6 bgcolor=#ffffff>(*)
+<font size=-1>Apply only once to access public processed core data from all campaigns.</font></td></tr>
+
+</table>
+</body>
+</html>

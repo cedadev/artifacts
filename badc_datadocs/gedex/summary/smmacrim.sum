@@ -1,0 +1,33 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SMMACRIM "
+"SUM_DATA_SET"       "SMM-ACRIM    "
+"SUM_DATATYPE"       "SOLIRR       "
+"ARCHIVE_NAME"       "JPL, NCDS    "
+"ARCHIVE_STATUS"     "Available    "
+"DS_DESCRIPTION"     "SMM Active Cavity Radiometer Irradiance Monitor"
+"DT_DESCRIPTION"     "Total Solar Irradiance "
+"SUM_BEGIN_DATE"     "16-Feb-1980"
+"SUM_END_DATE"       "14-Jul-1989"
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "Full solar disk."
+"SPATIAL2"           " "
+"SPATIAL3"           "No resolution within the solar disk"
+"SPATIAL4"           " "
+"TEMPORAL1"          "February 16, 1980 to July 14, 1989 "
+"TEMPORAL2"          "Two resolutions available: (1) measured once every 2 minutes "
+"TEMPORAL3"          "except between 1981 and 83 when measurements were every      "
+"TEMPORAL4"          "14 minutes.  Measurements were integrated over each orbit.   "
+"PRODUCT1"           "(2) Daily Means                                              "
+"PRODUCT2"           "Daily Means of solar irradiance from JPL in ASCII format.    "
+"PRODUCT3"           "Available through NCDS in Common Data Format (CDF)           "
+"PRODUCT4"           "Available on GEDEX CD-ROM. "
+EOF
+                                                                                                                                    
+PARAMETERS
+"SOLAR_FLUX"  "Solar Irradiance"    "W/m**2"
+"SOLAR_FLUX"  "Standard Error"      "W/m**2"
+EOF
+
+SOURCES
+"SMM"             "ACRIM"
+EOF

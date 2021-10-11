@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070402T230000Z
+DTEND:20070403T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:University of Leicester, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000005AF519C067C7010000000000000000100
+ 00000E758FE345CDC524EABA613F92B4F58B0
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Please find attached the near-final a=
+genda for ACSG-07.  We urge you to book in advance:=0D=0A  * it saves you m=
+oney=0D=0A  * it saves you trouble on the day, particularly if you've forgo=
+tten your cheque book and have to borrow the cash=0D=0A  * it gives us more=
+ accurate numbers for the caterers=0D=0A=0D=0ABest wishes, Howard Roscoe & =
+Paul Monks=0D=0A=0D=0A*****************************************************=
+*************************************=0D=0A <<02_Agenda.doc>> =0D=0A=0D=0A=
+=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Atmospheric Chemistry Special Interest Gr=
+oup
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

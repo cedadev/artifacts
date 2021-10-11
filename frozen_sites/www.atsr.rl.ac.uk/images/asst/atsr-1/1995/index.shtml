@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>ATSR-1 ASST Images for 1995
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../../index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../../../documentation/index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../documentation/docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../../../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+       
+<H2>ATSR-1 ASST images for 1995</H2>
+<P>Below are processed images produced from ASST data for the period of 1995. 
+</P>
+<P>Click on the images to obtain the full sized pictures. </P>
+<BLOCKQUOTE> 
+  <P><IMG src="../../../../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+    <A href="animate/anim-ATSR-1_1995.gif"> 1995 ASST images combined 
+    in an animation</A> </P>
+</BLOCKQUOTE>
+<TABLE border="0">
+  <TR> 
+    <TD><A HREF="fullsize/january.gif"><IMG src="thumb/january.gif" alt="ASST for January 1995"></A></TD>
+    <TD><A HREF="fullsize/february.gif"><IMG src="thumb/february.gif" alt="ASST for February 1995"></A></TD>
+    <TD><A HREF="fullsize/march.gif"><IMG src="thumb/march.gif" alt="ASST for March 1995"></A></TD>
+  </TR>
+  <TR> 
+    <TD> 
+      <DIV align="center"><B>January 1995</B></DIV>
+    </TD>
+    <TD> 
+      <DIV align="center"><B>February 1995</B></DIV>
+    </TD>
+    <TD> 
+      <DIV align="center"><B>March 1995</B></DIV>
+    </TD>
+  </TR>
+  <TR> 
+    <TD><A href="fullsize/april.gif"><IMG src="thumb/april.gif" alt="ASST for April 1995"></A></TD>
+    <TD><A href="fullsize/may.gif"><IMG src="thumb/may.gif" alt="ASST for May 1995"></A></TD>
+    <TD><A href="fullsize/june.gif"><IMG src="thumb/june.gif" alt="ASST for June 1995"></A></TD>
+  </TR>
+  <TR> 
+    <TD> 
+      <DIV align="center"><B>April 1995</B></DIV>
+    </TD>
+    <TD> 
+      <DIV align="center"><B>May 1995</B></DIV>
+    </TD>
+    <TD> 
+      <DIV align="center"><B>June 1995</B></DIV>
+    </TD>
+  </TR>
+  <TR> 
+    <TD><A href="fullsize/july.gif"><IMG src="thumb/july.gif" alt="ASST for July 1995"></A></TD>
+    <TD><A href="fullsize/august.gif"><IMG src="thumb/august.gif" alt="ASST for August 1995"></A></TD>
+    <TD><A href="fullsize/september.gif"><IMG src="thumb/september.gif" alt="ASST for September 1995"></A></TD>
+  </TR>
+  <TR> 
+    <TD> 
+      <DIV align="center"><B>July 1995</B></DIV>
+    </TD>
+    <TD> 
+      <DIV align="center"><B>August 1995</B></DIV>
+    </TD>
+    <TD> 
+      <DIV align="center"><B>September 1995</B></DIV>
+    </TD>
+  </TR>
+  <TR> 
+    <TD><A href="fullsize/october.gif"><IMG src="thumb/october.gif" alt="ASST for October 1995"></A></TD>
+    <TD><A href="fullsize/november.gif"><IMG src="thumb/november.gif" alt="ASST for November 1995"></A></TD>
+    <TD><A href="fullsize/december.gif"><IMG src="thumb/december.gif" alt="ASST for December 1995"></A></TD>
+  </TR>
+  <TR> 
+    <TD> 
+      <DIV align="center"><B>October 1995</B></DIV>
+    </TD>
+    <TD> 
+      <DIV align="center"><B>November 1995</B></DIV>
+    </TD>
+    <TD> 
+      <DIV align="center"><B>December 1995</B></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<P>&nbsp;</P>
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Thursday, 06-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

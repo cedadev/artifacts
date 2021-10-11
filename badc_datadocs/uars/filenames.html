@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>UARS File Name Convention</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UARS level 3A file name convention<BR CLEAR="ALL"></H1>
+
+<P><EM>Explains how UARS 3A data file names are built up from
+the instrument, species, UARS day and so on.</EM> <HR ALIGN=LEFT> 
+
+<H2>Components of the filename</H2>
+
+<P>The standard UARS filename convention is:- 
+
+<P><EM>instrument</EM>_L<EM>level</EM>_S<EM>species</EM>_D<EM>UARS
+day</EM>. V<EM>version</EM>_C<EM>cycle</EM>_PROD 
+
+<P>where 
+
+<UL>
+  <LI><EM>Instrument</EM> is the instrument name, e.g. MLS or ISAMS.
+  <LI><EM>Level</EM> is the processing level: 3AL or 3AT for data
+  files, 3LP or 3TP for parameter files - the L and T represent
+  latitude or time gridded files.
+  <LI><EM>Species</EM> is the measured quantity or file type, e.g.
+  for MLS the possible values are ClO, H2O, O3_183, O3_205 (for
+  the 2 ozone channels, 183GHz and 205GHz), SO2, TEMP and PARAM_L3LP
+  or PARAM_L3TP for the parameter files containing metadata values
+  relating to the AL and AT files, respectively.
+  <LI><EM>UARS day </EM>is expressed as a 4 figure integer. UARS
+  day 1 = September 12 1991.
+  <LI><EM>Version </EM>is also expressed as a 4 figure integer,
+  For example 0003 for data at version 3
+  <LI><EM>Cycle </EM>is a 2 figure integer indicating the number
+  of times the processing algorithm was run to successfully produce
+  this file. Files with different cycle numbers for the same day,
+  level and version contain the same data, processed in the same
+  way. BADC stores only the file with the highest cycle number
+  for each day.
+</UL>
+
+<P>The ASCII files produced by BADC have the same filename as
+the equivalent binary files, although Gzip adds the suffix &quot;-GZ&quot;. 
+
+<H3>An Example</H3>
+
+<P>As an example consider the following MLS file: 
+
+<PRE>
+       MLS_L3AL_SCLO_D0020.V0003_C01_PROD</PRE>
+
+<P>or after compression by Gzip: 
+
+<PRE>
+       MLS_L3AL_SCLO_D0020.V0003_C01_PROD-GZ</PRE>
+
+<P>This is the MLS level 3AL data for ClO, UARS day 20, version
+3, cycle 1. 
+
+<P>
+</BODY>
+</HTML>

@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20080906T230000Z
+DTEND:20080912T230000Z
+LOCATION:University of Hertfordshire de Havilland Campus, Hatfield, London,
+	 UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000B0B6DAFA378FC801000000000000000
+	01000000041C55D76B891504CB3405E92B527D9CE
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+Registration is now open for the 11th Conference on Electromagnetic and L=
+ight Scattering to be held at the University of Hertfordshire de Havillan=
+d Campus in =0D=0AHatfield, near London.=0D=0A=0D=0AThis conference falls=
+ in the year of the centenary celebration of the publication of an epoch-=
+making paper in scattering theory by Gustav Mie.=0D=0AIt will bring toget=
+her scientists and engineers from around the world who are actively invol=
+ved in research into light scattering and will=0D=0Aaddress theoretical d=
+evelopments and simulations, laboratory and field experiments, astronomic=
+al observations, measurements and applications.=0D=0AThere will be specia=
+l sessions on atmospheric aerosols and cirrus, including remote sensing.=
+=0D=0A=0D=0AInvited speakers include Michael Mishchenko, Timo Nousiainen,=
+ Joop Hovenier, Anthony Baran, Didier Tanre, Jay Eversole, Jonathan Reid =
+and=0D=0AMiroslaw Jonasz.=0D=0A=0D=0AThe conference dinner, an Elizabetha=
+n banquet, will be held at Hatfield House which was previously home to El=
+izabeth I of England, and the=0D=0Aconference trip is a cruise on the Riv=
+er Thames.=0D=0A=0D=0AFor futher information see http://www.els-xi-08.org=
+. =0D=0A=0D=0A
+SUMMARY:The 11th Conference on Electromagetic and Light Scattering
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

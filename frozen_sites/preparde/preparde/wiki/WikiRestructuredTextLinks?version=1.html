@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      WikiRestructuredTextLinks – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredTextLinks?version=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredTextLinks" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredTextLinks" title="View WikiRestructuredTextLinks">WikiRestructuredTextLinks</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredTextLinks" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A01%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:01+01:00 in Timeline">6 years</a> ago)
+               (<a href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredTextLinks?action=diff&amp;version=1">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="TracLinksinreStructuredText"><a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">TracLinks</a> in reStructuredText</h1>
+<p>
+This document illustrates how to use the <tt>:trac:</tt> role in reStructuredText. The page is written like:
+</p>
+<pre class="wiki">{{{
+#!rst 
+Examples:
+
+ * Tickets: :trac:`#1` or :trac:`ticket:1`
+ * Ticket comments: :trac:`comment:ticket:1:2`
+ * Reports: :trac:`{1}` or :trac:`report:1`
+ * Changesets: :trac:`r1`, :trac:`[1]` or :trac:`changeset:1`
+ * Revision log: :trac:`r1:3`, :trac:`[1:3]` or :trac:`log:@1:3`, :trac:`log:trunk@1:3`
+ * Diffs (since version 0.10): :trac:`diff:@20:30`, :trac:`diff:tags/trac-0.9.2/wiki-default//tags/trac-0.9.3/wiki-default` or :trac:`diff:trunk/trac@3538//sandbox/vc-refactoring/trac@3539`
+ * Wiki pages: :trac:`CamelCase` or :trac:`wiki:CamelCase`
+ * Milestones: :trac:`milestone:1.0`
+ * Attachment: :trac:`attachment:ticket:944:attachment.1073.diff`
+ * Files: :trac:`source:trunk/COPYING`
+ * A specific file revision: :trac:`source:/trunk/COPYING@200`
+ * A particular line of a specific file revision: :trac:`source:/trunk/COPYING@200#L25`
+
+An explicit label can be specified, separated from the link by a space:
+
+ * See :trac:`#1 ticket 1` and the :trac:`source:trunk/COPYING license`.
+}}}
+</pre><p>
+Provided you have docutils installed, the above block will render as:
+</p>
+<hr />
+<div class="document">
+<p>Examples:</p>
+<blockquote>
+<ul class="simple">
+<li>Tickets: <a class="missing reference external" href="WikiRestructuredTextLinks%3Fversion=1.html">#1</a> or <a class="missing reference external" href="WikiRestructuredTextLinks%3Fversion=1.html">ticket:1</a></li>
+<li>Ticket comments: <a class="reference external" href="http://proj.badc.rl.ac.uk/preparde/ticket/1#comment:2">comment:ticket:1:2</a></li>
+<li>Reports: <a class="reference external" href="../report/1.html">{1}</a> or <a class="reference external" href="../report/1.html">report:1</a></li>
+<li>Changesets: <a class="missing reference external" href="WikiRestructuredTextLinks%3Fversion=1.html">r1</a>, <a class="missing reference external" href="WikiRestructuredTextLinks%3Fversion=1.html">[1]</a> or <a class="missing reference external" href="WikiRestructuredTextLinks%3Fversion=1.html">changeset:1</a></li>
+<li>Revision log: <a class="reference external" href="http://proj.badc.rl.ac.uk/preparde/log/?revs=1-3">r1:3</a>, <a class="reference external" href="http://proj.badc.rl.ac.uk/preparde/log/?revs=1-3">[1:3]</a> or <a class="reference external" href="http://proj.badc.rl.ac.uk/preparde/log/?revs=1-3">log:&#64;1:3</a>, <a class="reference external" href="http://proj.badc.rl.ac.uk/preparde/log/trunk?revs=1-3">log:trunk&#64;1:3</a></li>
+<li>Diffs (since version 0.10): <a class="reference external" href="http://proj.badc.rl.ac.uk/preparde/changeset?new=30&amp;old=20">diff:&#64;20:30</a>, <a class="reference external" href="http://proj.badc.rl.ac.uk/preparde/changeset?new_path=tags%2Ftrac-0.9.3%2Fwiki-default&amp;old_path=tags%2Ftrac-0.9.2%2Fwiki-default">diff:tags/trac-0.9.2/wiki-default//tags/trac-0.9.3/wiki-default</a> or <a class="reference external" href="http://proj.badc.rl.ac.uk/preparde/changeset?new=3539&amp;new_path=sandbox%2Fvc-refactoring%2Ftrac&amp;old=3538&amp;old_path=trunk%2Ftrac">diff:trunk/trac&#64;3538//sandbox/vc-refactoring/trac&#64;3539</a></li>
+<li>Wiki pages: <a class="reference external" href="http://proj.badc.rl.ac.uk/preparde/wiki/CamelCase">CamelCase</a> or <a class="reference external" href="http://proj.badc.rl.ac.uk/preparde/wiki/CamelCase">wiki:CamelCase</a></li>
+<li>Milestones: <a class="missing reference external" href="WikiRestructuredTextLinks%3Fversion=1.html">milestone:1.0</a></li>
+<li>Attachment: <a class="missing reference external" href="WikiRestructuredTextLinks%3Fversion=1.html">attachment:ticket:944:attachment.1073.diff</a></li>
+<li>Files: <a class="reference external" href="http://proj.badc.rl.ac.uk/preparde/browser/trunk/COPYING">source:trunk/COPYING</a></li>
+<li>A specific file revision: <a class="reference external" href="http://proj.badc.rl.ac.uk/preparde/browser/trunk/COPYING?rev=200">source:/trunk/COPYING&#64;200</a></li>
+<li>A particular line of a specific file revision: <a class="reference external" href="http://proj.badc.rl.ac.uk/preparde/browser/trunk/COPYING?rev=200#L25">source:/trunk/COPYING&#64;200#L25</a></li>
+</ul>
+</blockquote>
+<p>An explicit label can be specified, separated from the link by a space:</p>
+<blockquote>
+<ul class="simple">
+<li>See <a class="missing reference external" href="WikiRestructuredTextLinks%3Fversion=1.html">ticket 1</a> and the <a class="reference external" href="http://proj.badc.rl.ac.uk/preparde/browser/trunk/COPYING">license</a>.</li>
+</ul>
+</blockquote>
+</div>
+<hr />
+<p>
+Note also that any of the above could have been written using substitution references and the <tt>trac::</tt> directive:
+</p>
+<pre class="wiki">{{{
+#!rst
+See |ticket123|.
+
+ .. |ticket123| trac:: ticket:123 this ticket
+}}}
+</pre><p>
+This renders as:
+</p>
+<hr />
+<div class="document">
+<p>See <a class="missing reference external" href="WikiRestructuredTextLinks%3Fversion=1.html">this ticket</a>.</p>
+<blockquote>
+</blockquote>
+</div>
+<hr />
+<p>
+See also: <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredText">WikiRestructuredText</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">TracLinks</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredTextLinks?version=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

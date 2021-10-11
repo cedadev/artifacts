@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20080719T230000Z
+DTEND:20080725T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:University of Manchester
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000704C878F1773C8010000000000000000100
+ 00000295EF3DDBB337F4584603F4E6491DF7D
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:The Gas Kinetics Group of the Royal S=
+ociety of Chemistry is pleased to announce details on the 20th Internationa=
+l Symposium  on Gas=0D=0AKinetics to take place in Manchester from 20th - 2=
+5th July. As usual there will sessions on atmospheric chemistry. Relevant p=
+lenary=0D=0Aspeakers include Roger Atkinson (UC Riverside, Chambers), Dwayn=
+e Heard (University of Leeds, Field Measurement and Kinetics in=0D=0AAtmosp=
+heric Chemistry) and Reinhardt Zellner (University of Essen, Heterogeneous =
+Reactions).=0D=0A=0D=0AFurther information can be found at the conference w=
+ebsite www.gk08.org.uk=0D=0A=0D=0A=0D=0APaul Seakins=0D=0APostgraduate Tuto=
+r,=0D=0ASchool of Chemistry,=0D=0AUniversity of Leeds,=0D=0ALS2 9JT, UK.=0D=
+=0A+44 (0)113 3436568=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:20th International Symposium  on Gas Kine=
+tics
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

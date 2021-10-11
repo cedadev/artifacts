@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050516T090000Z
+DTEND:20050520T170000Z
+LOCATION:Victoria, B.C., Canada.
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:International GLOBEC Symposium  "Climate variability and sub-arctic marine ecosystems"=0D=0Ahttp://www.pml.ac.uk/globec/structure/regional/essas/symposium/symposium_final_announce.pdf?id=56=0D=0A
+SUMMARY:International GLOBEC Symposium 
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

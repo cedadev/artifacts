@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050105T090000Z
+DTEND:20050107T170000Z
+LOCATION:Manchester, UK
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:IGAC Specialty Conference on the Indirect Effects of Aerosols on Climate=0D=0Ahttp://www.al.noaa.gov/igac/=0D=
+=0A
+SUMMARY:IGAC Conference -Indirect Effects of Aerosols on Climate
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

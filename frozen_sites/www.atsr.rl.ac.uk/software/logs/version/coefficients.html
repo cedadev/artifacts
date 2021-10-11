@@ -1,0 +1,35 @@
+<h2>Sadist-2 coefficients</h2>
+<p>The coefficients represent a linear regression of SST on brightness temperature.  In practice, 
+regression is based on model brightness temperatures derived from an ensemble of
+atmospheric profiles using a Radiative Transfer Model.  The coefficients used for ATSR
+processing are based on RAL model RADGEN.</p>
+<p>The following steps are involved in coefficient derivation:</p>
+<p><blockquote>Generate ensemble of atmospheric profiles </blockquote></p>
+<p><blockquote>Profile set should be statistically representative </blockquote> </p>
+<p><blockquote>Run radiative transfer model (RADGEN) to derive brightness temperatures for each profile </blockquote></p>
+<p><blockquote> Derive regression coefficients of surface temperature vs. brightness temperatures </blockquote></p>
+<p><blockquote>Impose constraints at this stage if stratospheric aerosol robust coefficients required </blockquote></p>
+<BR>
+<p> The coefficient derivation depends on an ensemble of atmospheric profiles, RADGEN version and auxiliary data. </p>
+<p> For more detailed information on coefficients retrieval <A href="../../../documentation/docs/coefficients/COEFFICI.pdf">click here</A>
+ .</P>
+<BR>
+<BR>
+<p><h2> Sadist versions - coefficients used </h2></p>
+<b>v100 to v303 coefficients</b>
+<p><blockquote>Original coefficients based on scheme having 10 across-track bands.</blockquote></p>
+<BR>
+<b>v310 to v321 coefficients</b>
+<p><blockquote>Aerosol robust coefficients developed by C.J.Merchant (This was done in order
+to generate coefficients insensitive to the presence of stratospheric aerosol)</blockquote><p>
+<p><blockquote>Revised scheme for ATSR processing uses new treatment of stratospheric aerosol (Merchant et al 
+1999) </blockquote></p>
+<p><blockquote>New across-track banding scheme</blockquote><p>
+<p><blockquote>Earlier versions used a scheme of 10 bands across the swath (Zavody et al 1995)</blockquote></p>
+<p><blockquote>5 bands from center to edge</blockquote><p>
+<p><blockquote>New scheme with 76 bands incorporated to reduce discontinuities at band edges</blockquote></p>
+<p><blockquote>38 bands from center to edge</blockquote></p>
+
+<BR>
+<b>v322 coefficients</b>
+<p><blockquote>Corrects known errors in derivation of ATSR-2 coefficients used in V310 to V321.</blockquote></p>

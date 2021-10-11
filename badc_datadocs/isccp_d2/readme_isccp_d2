@@ -1,0 +1,596 @@
+                   
+                     ISCCP D2 Data Set Readme File
+
+NOTE: The file contents for the time periods July 1983 - January 1994
+and February 1994 - present are different.  The later files no longer
+contain the read software and the ancillary data are included as a
+VDATA.  The latest FORTRAN read software will read both formats.  
+
+
+1.0 Introduction
+
+This file contains information about the International Satellite Cloud
+Climatology Project (ISCCP) D2  data set. (ISCCP_D2)
+The data files are in HDF format. The home page for ISCCP is 
+located at http://isccp.giss.nasa.gov/
+
+This readme file also includes the following sections:
+
+Section 2.0 - provides general information about the data set.
+Section 3.0 - describes the format of the data.
+Section 4.0 - provides the user with science parameter information
+Section 5.0 - describes the sample read software.
+Section 6.0 - discusses how to invoke the run-time executable.
+Section 7.0 - provides an example of an actual run of the sample read
+              software.
+
+If users have questions while using the ISCCP_D2 sample read software,
+please contact the Langley Data Center Science, User and Data Services office at:
+
+	Langley Atmospheric Sciences Data Center
+	NASA Langley Research Center
+	Mail Stop 157D, 2 S. Wright St.
+	Hampton, VA 23681-2199
+	USA
+	E-Mail:	larc@eos.nasa.gov 
+	Phone:	(757)864-8656 
+	FAX:	(757)864-8807
+URL:   http://eosweb.larc.nasa.gov
+
+
+2.0 Data Set Description
+
+Documentation on the ISCCP_D2 data set can be obtained from the following
+URL: http://isccp.giss.nasa.gov/doc/documents.html
+
+Contact for scientific inquiries: 
+Dr. William B. Rossow 
+NASA Goddard Institute for Space Studies 
+2880 Broadway
+New York, NY 10025
+
+email: clwbr@giss.nasa.gov
+Phone: 212-678-5567
+FAX:   212-678-5662
+
+Contact for technical assistance: 
+
+Chris Brest, PhD. 
+NASA Goddard Institute for Space Studies
+2880 Broadway, Rm 322A
+New York, NY 10025
+
+email:cbrest@giss.nasa.gov
+Phone: 212 678-5565
+FAX: 212 678-5552
+
+3.0 Format and Packaging
+
+NOTE: The file contents for the time periods July 1983 - January 1994
+and February 1994 - present are different.  The later files no longer
+contain the read software and the ancillary data are included as a
+VDATA.  The latest FORTRAN read software will read both formats.  
+
+There are 2 naming conventions for these files.  The first convention
+is as follows: 
+
+d2_3hrlymon_YYYYMM
+ YYYY is the year, 
+ MM is the month, 
+
+For example:
+d2_3hrlymon_198312 
+
+There are 4 files that would be included in the ISCCP_D2 data file. 
+They are volume identification file (volid), table of contents
+(toc1) file, ancillary data file (ancil) and Calibration Correction
+Factors/Meteosat RS Correction Factors (calmetcor) file. Each file
+is followed with a .YYYY. The ancillary files cover the entire 
+year. 
+
+For example:
+d2ancil.1993
+d2calmetcor.1993
+d2toc1.1993
+d2volid1.1993
+
+
+The second file naming convention is as follows:
+
+ISCCP.TTTTTT.V.SATID.YYYY.MM.DD.HH.MM.DCN.hdf
+
+TTTTTT - data type
+	 D2 - ISCCP D2 data file
+V      - version number
+SATID  - GLOBAL - used if multiple or no satellites apply
+YYYY   - year = 1981...2005 (always 4 numbers, fill = 9999)
+MM     - month number = 1...12 (always 2 numbers, fill = 99)    
+DD     - day of month = 1...31 (always 2 numbers, fill = 99)
+HHMM   - hour-minute GMT = 0000...2100 (always 4 characters, 
+         fill = 9999)
+DCN    - data center name where data originated.
+For non-data files, the date and time fields may be fill values.
+
+Example: ISCCP.D2.0.GLOBAL.1995.01.99.9999.GPC.hdf (data file)
+         
+The ISCCP D2 data set has one file per day for the data years
+currently archived at the Data Center.  These files each contain
+data for 8 UTCs (GMT 0, GMT 3, GMT 6, ..., GMT 21) and the monthly
+average for all hours.  There are 130 variables per UTC.  These
+variables are identified in the README file which the user can
+extract from the HDF file using the sample read software.
+
+
+Hierarchical Data Format Libraries (HDF):
+=========================================
+
+The HDF libraries, source code and documentation can be obtained free of 
+charge from the National Center for Supercomputing Applications (NCSA) at 
+the following URL
+ http://hdf.ncsa.uiuc.edu
+
+NCSA also provides a variety of tools to assist in viewing, analyzing, and
+displaying HDF formatted data files.
+
+4.0 Science Parameters Information
+
+The ISCCP_D2 data set contains monthly, 280 KM equal-area grid data from
+various polar and geostationary satellites. More information on the 
+ancillary and data files can be obtained from the International Satellite 
+Cloud Climatology Project (ISCCP) Documentation of New Cloud Datasets
+documentation available at URL 
+http://isccp.giss.nasa.gov/doc/documents.html
+
+
+5.0 Description of Sample Read Software
+
+The Hierarchical Data Formatted (HDF) ISCCP D2 data files also have an
+embedded FORTRAN read program supplied by the data provider.  This program
+is sample software intended to provide minimal capabilities.  Users should
+modify the program to accommodate their specific needs.
+
+A "C" language version of the program was developed by the Langley Data Center
+and is also provided as sample read software. It is the user's responsibility
+to modify the program to accommodate their specific needs.
+
+Both read software programs have been tested with the HDF 3.3r4 and HDF
+4.1r1 libraries. If using any of the HDF 4.0 beta releases of the HDF 
+libraries, the user should be aware of additional HDF libraries which must be 
+included for the program to load correctly. The release notes for the various 
+beta releases specify the additional required libraries and the order in which
+they should be specified for proper loading.
+
+6.0 Implementing Sample Read Software
+
+Example command line compilation statements are included here. The various
+paths need to be changed to correspond to those being used on your platform.
+In additional special DEFINES may be required for specific platforms. For 
+example an HP platform may require a "-DHP9000", while an SGI platform may 
+require a "-32" or "-n32" in the command line compilation statement.
+
+    HDF 3.3r4 and earlier:
+
+    f77 -o read_d2_f isccp_d2_read.f -I/usr/local/hdf-3.3r4/hdf/include
+     -L/usr/local/hdf-3.3r4/hdf/lib -ldf
+ 
+     /bin/cc -Aa -DHP9000 -o read_d2_c -I/usr/local/hdf-3.3r4/hdf/include
+     isccp_d2_read.c -L/usr/local/hdf-3.3r4/hdf/lib -ldf -lm
+ 
+    HDF 4.1r1:
+ 
+        a) for SUN OS: (must be one continuous line)
+
+   f77 isccp_d2_read.f -I/usr/local/HDF4.1r1/hdf/include 
+   -I/usr/local/HDF4.1r1/include -DSUN -o read_D2_f 
+   -L/usr/local/HDF4.1r1/lib -lmfhdf -ldf -ljpeg -lz
+
+   gcc isccp_d2_read.c -I/usr/local/HDF4.1r1/hdf/include 
+   -I/usr/local/HDF4.1r1/include -DSUN -o read_D2_c 
+   -L/usr/local/HDF4.1r1/lib -lmfhdf -ldf -ljpeg -lz /usr/lib/libm.a
+     
+   b) for SGI:
+    
+     f77 -64 -mips4 -O -s -o read_d2_f isccp_d2_read.f 
+     -I/usr/local/HDF4.1r1/hdf/include -I/usr/local/HDF4.1r1/include
+     -I/usr/local/HDF4.1r1/mfhdf/libsrc -I/usr/local/HDF4.1r1/mfhdf/port
+     -L/usr/local/HDF4.1r1/lib -ldf -lz
+
+     cc -ansi -64 -mips4 -O -s -o read_d2_c isccp_d2_read.c 
+     -I/usr/local/HDF4.1r1/hdf/include -I/usr/local/HDF4.1r1/include
+     -I/usr/local/HDF4.1r1/mfhdf/libsrc -I/usr/local/HDF4.1r1/mfhdf/port
+     -L/usr/local/HDF4.1r1/lib -ldf -lz
+     -L/usr/lib64/mips4 -lc -lm
+
+     c) for HP:
+     
+     f77 -o read_d2_f isccp_D2_read.f -I/usr/local/hdf4.1r1/include/ 
+     /usr/local/hdf4.1r1/lib/libmfhdf.a /usr/local/hdf4.1r1/lib/libz.a
+     /usr/lib/libm.a
+
+     cc -AE -O -o read_d2_c isccp_D2_read.c -I/usr/local/hdf4.1r1/include/
+     -L/usr/local/hdf4.1r1/lib -lmfhdf -ldf -ljpeg -lz /usr/lib/libm.a
+
+
+6.1 Notes on sample FORTRAN read software
+
+The sample FORTRAN read software can be modified to print out the specific
+data desired.  To assist the user in this effort the following notes are
+included:
+
+1) Change line "DO 600 IUTC=1,9" to match whatever UTCs (GMTs) you want to
+   extract (~line 75)
+
+2) Change line "IF ( LAT .EQ. 36 .AND. LON .LT. 5 ) THEN" (~line 108) to match
+   the latitude longitudes values for whatever cells you want the program to
+   output.  The correlation between the cell number and the latitude/longitude
+   can be found in the fourth HDF file description included in the file.
+
+3) Change variable HDFFILE (~line 65) to the appropriate file name.
+
+   If many different files will be processed, it will be easier to use a
+   generic name (something like HDF_LINK) and use the UNIX symbolic link
+   capability.  This will avoid the necessity of re-editing the program to
+   change the file name assigned to HDFFILE and recompiling the program.
+ 
+      ln -s /ISCCP_D2/1990/d2_3hrlymon_9001.hdf.bin D2_LINK
+
+     After that file is processed, remove the link and generate a new one:
+
+      rm -f D2_LINK
+      ln -s /ISCCP_D2/1990/d2_3hrlymon_9002.hdf.bin D2_LINK 
+
+    The Langley Data Center's on-line version of the FORTRAN read program is 
+   identical to the FORTRAN program embedded by the data provider in the ISCCP
+   D2 HDF file, with one exception:
+ 
+    the HDFFILE variable name has been changed to D2_LINK.
+
+4) The ISCCP D2 read program also prints a series of messages when it is
+   converting the integer values to physical values similar to:
+ 
+   D1PHYS:  LAT BAND   1 CONVERTED TO PHYSICAL VALUES
+ 
+   These are messages printed out by the routine named "D1PHYS" and
+   simply indicate processing of data by the program.  This should not be
+   confused in any way with ISCCP D1. The "D1PHYS:" should be "D2PHYS:".
+
+5) Two discrepancies were noted in the README file embedded in the ISCCP D2
+   HDF data files:
+ 
+   a) The line "FILE DESCRIPTION 5 - ANCILLARY DATA TABLE"  should indicate
+      "FILE DESCRIPTION 4 - ANCILLARY DATA TABLE" instead.
+ 
+   b) The line "FILE DESCRIPTION 6 - CALIBRATION CORRECTION COEFFICIENTS"
+      should indicate FILE DESCRIPTION 5 - CALIBRATION CORRECTION COEFFICIENTS"
+      instead.
+
+6) On the SGI, ICHAR evidently interprets the high order (leftmost) bit in
+   the byte as the sign of the number (+ or-), which means that values 
+   greater than 127 are interpreted on the SGI as being negative, with 
+   values ranging from -128 to -1. This is a compiler "bug" which has
+   apparently been fixed in IRIX 7.2. If you are using an earlier version
+   of IRIX then you need to use the following fix.
+
+   To fix this problem, add the following code in the DO 490 loop after the
+   ICHAR line (after line 244):
+  
+   IF (IVAR(I,LON) .LT. 0) THEN
+     IVAR(I,LON) = IVAR(I,LON) + 256
+   ENDIF
+
+
+Section: 7.0  A Sample Run
+
+Sample Output From The FORTRAN Program:
+=======================================
+
+%read_d2_f
+ FILE ID: ISCCP-D2 Year   90 Month 01
+ FILE POSITIONED AT DATA LABEL: UTC 255
+ D1PHYS:  LAT BAND   1 CONVERTED TO PHYSICAL VALUES
+
+
+****************************************************************************
+
+PROCESSING EQUAL-AREA LON/LAT         1         1
+ 
+ PRINTI:  COUNT VALUES FOR ALL VARIABLES
+                          1       2       3       4       5       6       7       8       9      10
+ VARIABLE (001-010)       1       1       1      48       2       8       8      64       4      54
+ VARIABLE (011-020)      29      24      22      22      15      14      10       9       1     124
+ VARIABLE (021-030)      12       2      50      18       4      97      64      44     145     101
+ VARIABLE (031-040)      77       0     255     255       3     110      46       1      83      36
+ VARIABLE (041-050)       0     255     255     255     255       0     255     255     255     255
+ VARIABLE (051-060)       0     255     255     255     255       5     140      57      41      44
+ VARIABLE (061-070)       6     140      56     127     132       0     139      58     187     188
+ VARIABLE (071-080)       0     255     255     255     255       0     255     255     255     255
+ VARIABLE (081-090)       0     255     255     255     255      24     125      50      43      45
+ VARIABLE (091-100)      32     124      50     130     134       1     120      49     194     212
+ VARIABLE (101-110)       1      69      29      25      27       1      82      36     129     130
+ VARIABLE (111-120)       0      78      31     200     200      51      14     238     100     138
+ VARIABLE (121-130)      54      55      41      30      64      27      44       1       4     140
+
+ PRINTR:  PHYSICAL VALUES FOR ALL VARIABLES
+                          1       2       3       4       5       6       7       8       9      10
+ VARIABLE (001-010)    1.00    1.00    1.00   48.00    2.00    8.00    8.00   32.00    2.00   54.00
+ VARIABLE (011-020)   29.00   24.00   22.00   22.00   15.00   14.00   10.00    9.00    1.00  615.00
+ VARIABLE (021-030)   55.00    5.00  241.90    5.10    0.90    5.66    2.82    1.62   83.56   38.44
+ VARIABLE (031-040)   23.85    0.00-1000.00-1000.00    1.50  545.00  238.40    0.50  410.00  228.60
+ VARIABLE (041-050)    0.00-1000.00-1000.00-1000.00-1000.00    0.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (051-060)    0.00-1000.00-1000.00-1000.00-1000.00    2.50  695.00  247.70    1.47   10.19
+ VARIABLE (061-070)    3.00  695.00  246.90    9.71   66.63    0.00  690.00  248.50   29.63  190.58
+ VARIABLE (071-080)    0.00-1000.00-1000.00-1000.00-1000.00    0.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (081-090)    0.00-1000.00-1000.00-1000.00-1000.00   12.00  620.00  241.90    1.57   10.51
+ VARIABLE (091-100)   16.00  615.00  241.90   10.23   69.02    0.50  595.00  241.00   34.74  356.06
+ VARIABLE (101-110)    0.50  340.00  220.50    0.75    5.22    0.50  405.00  228.60   10.05   64.37
+ VARIABLE (111-120)    0.00  385.00  223.10   40.26  253.32  242.80    3.90    0.95  100.00  685.00
+ VARIABLE (121-130)  245.30  246.10  233.80  221.80  315.00  217.90  236.60    0.00    0.09  278.00
+ 
+ CENTER:  CENTER LON/LAT   60.00  -88.75
+ 
+ MIDPRS:  ACTUAL PRESSURE LAYER MID-POINTS (MB)-1000.00  682.50  620.00  500.00  375.00  245.00  247.50
+ 
+ CLDHGT:  CLOUD TOP HEIGHT (M)      138.
+
+
+****************************************************************************************************
+
+ PROCESSING EQUAL-AREA LON/LAT         2         1
+ 
+ PRINTI:  COUNT VALUES FOR ALL VARIABLES
+                          1       2       3       4       5       6       7       8       9      10
+ VARIABLE (001-010)       1       2      49      96       2       8       8      64       9      27
+ VARIABLE (011-020)      47      31      33      19      21      12       7       2       2     116
+ VARIABLE (021-030)      12       3      48      15       6      96      58      49     144      96
+ VARIABLE (031-040)      79       0     255     255       6     104      42       5      81      35
+ VARIABLE (041-050)       0     255     255     255     255       0     255     255     255     255
+ VARIABLE (051-060)       0     255     255     255     255       0     255     255     255     255
+ VARIABLE (061-070)       0     255     255     255     255       0     255     255     255     255
+ VARIABLE (071-080)       0     135     101      20      22       0     255     255     255     255
+ VARIABLE (081-090)       0     135     138     239     240      23     117      49      41      44
+ VARIABLE (091-100)      33     118      49     130     133       1     117      49     194     206
+ VARIABLE (101-110)       2      69      30      35      37       3      81      35     133     135
+ VARIABLE (111-120)       0      76      33     187     187      50      11     239     100     135
+ VARIABLE (121-130)      54      60      41      25      64      27      44       1       4     139
+ 
+PRINTR:  PHYSICAL VALUES FOR ALL VARIABLES
+                          1       2       3       4       5       6       7       8       9      10
+ VARIABLE (001-010)    1.00    2.00   49.00   96.00    2.00    8.00    8.00   32.00    4.50   27.00
+ VARIABLE (011-020)   47.00   31.00   33.00   19.00   21.00   12.00    7.00    2.00    2.00  575.00
+ VARIABLE (021-030)   55.00   10.00  240.10    4.20    1.50    5.56    2.43    1.89   82.11   34.98
+ VARIABLE (031-040)   24.92    0.00-1000.00-1000.00    3.00  515.00  234.80    2.50  400.00  227.50
+ VARIABLE (041-050)    0.00-1000.00-1000.00-1000.00-1000.00    0.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (051-060)    0.00-1000.00-1000.00-1000.00-1000.00    0.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (061-070)    0.00-1000.00-1000.00-1000.00-1000.00    0.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (071-080)    0.00  670.00  276.70    0.57    4.03    0.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (081-090)    0.00  670.00  295.50  228.13 1575.77   11.50  580.00  241.00    1.47   10.19
+ VARIABLE (091-100)   16.50  585.00  241.00   10.23   67.83    0.50  580.00  241.00   34.74  297.67
+ VARIABLE (101-110)    1.00  340.00  221.80    1.18    7.99    1.50  400.00  227.50   10.78   70.22
+ VARIABLE (111-120)    0.00  375.00  225.40   29.63  186.43  241.90    3.00    0.96  100.00  670.00
+ VARIABLE (121-130)  245.30  250.10  233.80  215.40  315.00  217.90  236.60    0.00    0.09  276.00
+ 
+ CENTER:  CENTER LON/LAT  180.00  -88.75
+ 
+ MIDPRS:  ACTUAL PRESSURE LAYER MID-POINTS (MB)-1000.00-1000.00  615.00  500.00  375.00  245.00  247.50
+ 
+ CLDHGT:  CLOUD TOP HEIGHT (M)      277.
+
+*******************************************************************************************************
+
+PROCESSING EQUAL-AREA LON/LAT         3         1
+ 
+ PRINTI:  COUNT VALUES FOR ALL VARIABLES
+                          1       2       3       4       5       6       7       8       9      10
+ VARIABLE (001-010)       1       3      97     144       2       8       8      84      10      39
+ VARIABLE (011-020)      14      23      21      20      22      15      22      13      10     125
+ VARIABLE (021-030)      15       3      50      18       5      95      59      57     149     110
+ VARIABLE (031-040)     103       0     255     255       8     111      45       5      78      35
+ VARIABLE (041-050)       0     255     255     255     255       0     255     255     255     255
+ VARIABLE (051-060)       0     255     255     255     255       5     141      55      42      44
+ VARIABLE (061-070)       9     141      56     129     133       0     141      56     197     215
+ VARIABLE (071-080)       0     255     255     255     255       0     255     255     255     255
+ VARIABLE (081-090)       0     255     255     255     255      30     124      50      42      44
+ VARIABLE (091-100)      35     125      50     132     135       2     117      48     195     206
+ VARIABLE (101-110)       3      66      28      29      32       3      78      35     131     133
+ VARIABLE (111-120)       0      79      37     202     212      52      12     234     100     140
+ VARIABLE (121-130)      55      55      41      31      64      27      44       1       5     140
+ 
+ PRINTR:  PHYSICAL VALUES FOR ALL VARIABLES
+                          1       2       3       4       5       6       7       8       9      10
+ VARIABLE (001-010)    1.00    3.00   97.00  144.00    2.00    8.00    8.00   42.00    5.00   39.00
+ VARIABLE (011-020)   14.00   23.00   21.00   20.00   22.00   15.00   22.00   13.00   10.00  620.00
+ VARIABLE (021-030)   70.00   10.00  241.90    5.10    1.20    5.45    2.49    2.36   89.66   45.24
+ VARIABLE (031-040)   39.89    0.00-1000.00-1000.00    4.00  550.00  237.50    2.50  385.00  227.50
+ VARIABLE (041-050)    0.00-1000.00-1000.00-1000.00-1000.00    0.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (051-060)    0.00-1000.00-1000.00-1000.00-1000.00    2.50  700.00  246.10    1.52   10.19
+ VARIABLE (061-070)    4.50  700.00  246.90   10.05   67.83    0.00  700.00  246.90   37.35  392.62
+ VARIABLE (071-080)    0.00-1000.00-1000.00-1000.00-1000.00    0.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (081-090)    0.00-1000.00-1000.00-1000.00-1000.00   15.00  615.00  241.90    1.52   10.19
+ VARIABLE (091-100)   17.50  620.00  241.90   10.59   70.22    1.00  580.00  240.10   35.58  297.67
+ VARIABLE (101-110)    1.50  325.00  219.20    0.92    6.54    1.50  385.00  227.50   10.41   67.83
+ VARIABLE (111-120)    0.00  390.00  229.60   42.42  356.06  243.70    3.30    0.94  100.00  695.00
+ VARIABLE (121-130)  246.10  246.10  233.80  223.10  315.00  217.90  236.60    0.00    0.12  278.00
+ 
+ CENTER:  CENTER LON/LAT  300.00  -88.75
+ 
+ MIDPRS:  ACTUAL PRESSURE LAYER MID-POINTS (MB)-1000.00  687.50  620.00  500.00  375.00  245.00  247.50
+ 
+ CLDHGT:  CLOUD TOP HEIGHT (M)      277.
+
+******************************************************************************************************
+ In LAT BAND 1 there are three cells , all the integer values are printed first and converted values
+ are in the next table. Next starts the LAT BAND 2 which will have 9 cells. Due to the space consump-
+ tion only first three cells are printed.
+****************************************************************************************************
+ D1PHYS:  LAT BAND   2 CONVERTED TO PHYSICAL VALUES
+                    |  
+                    |
+                    |
+                    v
+ D1PHYS:  LAT BAND  65 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  66 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  67 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  68 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  69 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  70 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  71 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  72 CONVERTED TO PHYSICAL VALUES
+
+ NUMBER OF FULL BOXES:  6596
+ 
+ NORMAL END OF PROGRAM
+STOP: 0
+
+**************************************************************************************
+
+Sample Output From The C Program:
+=================================
+%read_d2_c
+
+
+This program reads the ISCCP D2 HDF formatted data files
+ Please enter file name to read: d2_3hrlymon_9001
+
+Please enter report file name (use `-' to print to screen): D2_9001_REPORT
+ 
+ 
+ 
+************************************************************************
+ISCCP_D2 HDF formatted files include five file descriptions - they are:
+1) README SECTION - including information the contributing satellites,
+ processing centers, file format description, etc.
+2) TABLE OF CONTENTS - Lists the date and spatial coverage of each 
+data object in the HDF file
+in ASCII text tabular form and cell stats
+3) FORTRAN READ SOFTWARE
+4) ANCILLARY DATA TABLE - Lists characteristics of each ISCCP grid 
+box in tabular form
+5) CALIBRATION - Calibration correction factor
+***********************************************************************
+ 
+ 
+ 
+ This program can write these descriptors into a set of files
+Input file is d2_3hrlymon_9001
+ 
+Output file is D2_9001_REPORT
+ 
+Would you like to have the README SECTION, TABLE OF CONTENTS,
+FORTRAN READ software and ANCILLARY FILE written to local files? (Y or N): Y
+ 
+ 
+Please enter file name to write the README data into: 9001README
+ 
+Please enter file name to write the Table Of Contents data into: 9001TOC
+ 
+Please enter file name to write the FORTRAN READ SOFTWARE into: READCODE
+ 
+Please enter file name to write the Ancillary file into: 9001ANC
+ 
+Please enter file name to write the Calibration Factor into: 9001CALFAC
+ 
+Enter whether you would like to further subset based on lat/lon?
+yes (Y) or no subsetting (N): y
+ 
+ 
+Enter beginning and end cell numbers separated by a space
+)  (1 <= cell no. <= 6596):  1 1
+ 
+Item    Dims            Label
+ 
+  1     (6596X130)       UTC   0
+  2     (6596X130)       UTC   3
+  3     (6596X130)       UTC   6
+  4     (6596X130)       UTC   9
+  5     (6596X130)       UTC  12
+  6     (6596X130)       UTC  15
+  7     (6596X130)       UTC  18
+  8     (6596X130)       UTC  21
+  9     (6596X130)       UTC 255
+ 
+Please choose the numbers of the data items to dump separated by a space.
+Enter 0 to quit entering parameters
+
+1 0
+ 
+ 
+Getting data, Please wait ...
+ 
+***************************************************************
+*                                                             *
+*         Program has completed processing                    *
+*                                                             *
+***************************************************************
+
+
+********************************************************************
+Contents of the report file D2_9001_REPORT used by the user as the
+output file .......
+*******************************************************************
+
+
+File ID:  ISCCP-D2 Year   90 Month 01
+ 
+Original data dimensions are 6596 by 130
+ 
+Data attributes are as follows:
+ 
+Label            : UTC   0
+ 
+Units            : counts
+Format           : I3
+Fill Value       : 0.000000
+ 
+Coordinate System:  
+ 
+ No min/max values set
+ 
+Data values for each ISCCP cell from 1 to 1 
+for variables 1 to 130 are:
+
+********** CELL NO. 1 **********
+ 
+        COUNT VALUES FOR EACH VARIABLE:
+( 1)       1       1       1      48       2      31      31      69       3      39
+( 11)      26      26      39      13      26      13      13       6       0     124
+( 21)       9       3      50      17       5      99      56      42     148     138
+( 31)      93       0     255     255       2     104      44       1      85      36
+( 41)       0     255     255     255     255       0     255     255     255     255
+( 51)       0     255     255     255     255       6     139      57      45      48
+( 61)       9     139      56     117     123       0     255     255     255     255
+( 71)       0     255     255     255     255       0     255     255     255     255
+( 81)       0     255     255     255     255      24     124      50      48      49
+( 91)      34     124      50     125     128       1     118      47     191     205
+(101)       1      67      29      25      28       1      86      34     126     127
+(111)       0      78      31     200     200      51      14     240     100     138
+(121)      54      55      41      30      64      27      44       1       4     140
+(131)
+ 
+        PHYSICAL VALUES:
+( 1)    1.00    1.00    1.00   48.00    2.00   31.00   31.00   34.50    1.50   39.00
+( 11)   26.00   26.00   39.00   13.00   26.00   13.00   13.00    6.00    0.00  615.00
+( 21)   40.00   10.00  241.90    4.80    1.20    5.88    2.30    1.52   88.09   73.99
+( 31)   33.03    0.00-1000.00-1000.00    1.00  515.00  236.60    0.50  420.00  228.60
+( 41)    0.00-1000.00-1000.00-1000.00-1000.00    0.00-1000.00-1000.00-1000.00-1000.00
+( 51)    0.00-1000.00-1000.00-1000.00-1000.00    3.00  690.00  247.70    1.67   11.51
+( 61)    4.50  690.00  246.90    8.15   57.01    0.00-1000.00-1000.00-1000.00-1000.00
+( 71)    0.00-1000.00-1000.00-1000.00-1000.00    0.00-1000.00-1000.00-1000.00-1000.00
+( 81)    0.00-1000.00-1000.00-1000.00-1000.00   12.00  615.00  241.90    1.83   11.89
+( 91)   17.00  615.00  241.90    9.38   62.16    0.50  585.00  239.20   32.40  289.43
+(101)    0.50  330.00  220.50    0.75    5.47    0.50  425.00  226.50    9.54   61.10
+(111)    0.00  385.00  223.10   40.26  253.32  242.80    3.90    0.96  100.00  685.00
+(121)  245.30  246.10  233.80  221.80  315.00  217.90  236.60    0.00    0.09  278.00
+(131)
+ 
+ CENTER:  CENTER LON/LAT   60.00  -88.75
+ 
+ MIDPRS:  ACTUAL PRESSURE LAYER MID-POINTS (MB)-1000.00  682.50  620.00  500.00  375.00  245.00  247.50
+ 
+ CLDHGT:  CLOUD TOP HEIGHT (M)       138
+
+
+*****************************************************************************************************
+
+
+
+Last updated: May 2, 2002

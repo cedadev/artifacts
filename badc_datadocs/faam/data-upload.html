@@ -1,0 +1,239 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>FAAM FTP Submission</title>
+ <meta name="keywords" content="FAAM, BAE-146, NERC, Met Office, NCAS">
+</head>
+
+<body bgcolor="#ffffff">
+
+<h1>
+FAAM Data Submission
+</h1>
+<font size=-1><i>Updated 30 June 2005.</i></font>
+<hr>
+<b>N.B.</b> This page explains how to submit core and test flight data.
+It does not deal with non-core data from field campaigns, which are submitted
+via the uploaders of the various projects involved.
+
+<h3>Contents</h3>
+<ul>
+<li>1. <a href="#pre">Preliminaries</a>
+<li>2. <a href="#upl">Submission via the Web uploader</a>
+<li>3. <a href="#ftp">Submission via FTP</a>
+</ul>
+
+<h3>
+<a name="pre">1. Preliminaries</a>
+</h3>
+<p>
+Before submitting your data to the BADC, please make sure that your files
+comply with the
+<a href="file-names.html">FAAM File Name Convention</a>
+and that they are properly formatted.
+An online
+<a href="http://titania.badc.rl.ac.uk/cgi-bin/cf-checker.pl">NetCDF File Format Checker</a>
+is available.
+</p>
+<p>
+Access to the <i>/incoming/faam/</i> directory is reserved to FAAM staff who
+are registered BADC users (please
+<a href="/reg/user_register_info.html">register</a>
+with the BADC if you have not done so yet) and have been granted access to
+FAAM test flight data (you can
+<a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=faam_ps">apply</a>
+here).
+</p>
+<p>
+Whether you use the uploader or FTP, please choose carefully the subdirectory
+to where you upload the data.
+The FAAM archive directory where the data is to be copied, as well as the
+<a href="users.html">access permissions</a>,
+will be automatically determined from both the file name and the name of
+the <i>/incoming/faam/</i> subdirectory.
+</p>
+
+<h3>
+<a name="upl">2. Submission via the FAAM web file uploader</a>
+</h3>
+
+<p>
+This route is recommended for most cases.
+The <a href="../upload.html">uploader</a>
+will accept any type of file format.
+File names will be checked at the time of uploading, as well as the format of
+NetCDF files.
+<br><br>
+You will be led through the following steps.
+<ol>
+<li>
+<a href="/cgi-bin/fileuploader/FAAM_directory_selection">Directory selection</a>.
+Select the directory to which you want to upload the data.
+The options are
+<p>
+<table>
+<tr valign=top>
+<td width=200em>&#149; campaign-processed-core</td>
+<td><font size=-1>Processed data from core instruments, collected during a
+    field campaign, to be made <u>public right away</u></font></td>
+</tr>
+<tr valign=top>
+<td width=200em>&#149; restricted-processed-core</td>
+<td><font size=-1>Processed data from core instruments, collected during a
+    field campaign, to be kept <u>restricted for some time</u></font></td>
+</tr>
+<tr valign=top>
+<td>&#149; campaign-raw-core</td>
+<td><font size=-1>Raw data from core instruments, collected during a field
+    campaign, and associated flight constants</font></td>
+</tr>
+<tr valign=top>
+<td>&#149; test-processed-core</td>
+<td><font size=-1>Processed data from core instruments, collected
+    during a test or calibration flight</font></td>
+</tr>
+<tr valign=top>
+<td>&#149; test-raw-core</td>
+<td><font size=-1>Raw data from core instruments, collected during a test or
+    calibration flight, and associated flight constants</font></td>
+</tr>
+<tr valign=top>
+<td>&#149; test-processed-non-core</td>
+<td><font size=-1>Processed data from non-core instruments, collected
+    during a test or calibration flight</font></td>
+</tr>
+<tr valign=top>
+<td>&#149; test-raw-non-core</td>
+<td><font size=-1>Raw data from non-core instruments, collected
+    during a test or calibration flight</font></td>
+</tr>
+<tr valign=top>
+<td>&#149; flight-constants</td>
+<td><font size=-1>Flight constants for individual or grouped flights
+    </font></td>
+</tr>
+<td>&#149; flight-logs</td>
+<td><font size=-1>Flight logs
+    </font></td>
+</tr>
+<td>&#149; documentation</td>
+<td><font size=-1>All documentation on data (e.g. instrument metadata not already
+    included in data files)
+    </font></td>
+</tr>
+<td>&#149; software</td>
+<td><font size=-1>Reading and processing software (source codes, executables, etc.)
+    </font></td>
+</tr>
+</table>
+</p><p>
+The <a href="flight-schedule.html">FAAM Flight Schedule</a> shows which past
+flights were test or calibration flights and which ones belonged to field
+campaigns.
+</p>
+<li>Data type selection.
+The options are
+<p>
+<table>
+<tr valign=top>
+<td width=140em>&#149; NetCDF data file</td></td></td>
+</tr>
+<tr valign=top>
+<td>&#149; Image file</td><td><font size=-1>GIF, JPEG, etc.</font></td>
+</tr>
+<tr valign=top>
+<td>&#149; Software/text file</td>
+<td><font size=-1>Any ASCII or plain text file (e.g. source codes such as
+.f fortran programs)</font></td>
+</tr>
+<tr valign=top>
+<td>&#149; PDF/other file</td>
+<td><font size=-1>Anything not included in the previous three options,
+including PDF files (e.g. scanned flight-logs), zipped VMS files,
+gzipped files, etc.</font></td>
+</tr>
+</table>
+</p>
+<li>Login to the BADC.
+Please enter your BADC user ID and password.
+<br><br>
+<li>Upload your file(s).
+A browser allows you to select from your home computer the file you want to
+upload.
+<br><br>
+<li>If your file fails the checkings, you will be returned an error message.
+If your file is accepted, you will be asked to confirm that you want it
+copied to the BADC.
+</ol>
+
+<h3>
+<a name="ftp">3. Submission via FTP</a>
+</h3>
+
+<p>
+If you have a large number of files to upload, you can do so by FTP.
+General instructions on how to use FTP are available from the BADC
+<a href="/help/ftp_guide.html">Guide to FTP</a>.
+</p>
+
+<p>
+<b><u>Example of Unix-based uploading ftp session</u>:</b><br><br>
+&#036; <b>ftp ftp.badc.rl.ac.uk</b>
+<font color=#006644>&#060;Return&#062;</font><br><br>
+Connected to ftp.badc.rl.ac.uk (130.246.191.168).<br>
+220 ProFTPD 1.2.9 Server (ProFTPD Default Installation) [web.badc.rl.ac.uk]<br>
+<br>
+Name (ftp.badc.rl.ac.uk:my-local-user-id): <b>my-badc-user-id</b>
+<font color=#006644>&#060;Return&#062;</font><br><br>
+331 Password required for my-badc-user-id.<br><br>
+Password: <b>my-badc-password</b>
+<font color=#006644>&#060;Return&#062;</font><br><br>
+230 User my-badc-user-id logged in.<br>
+Remote system type is UNIX.<br>
+Using binary mode to transfer files.<br><br>
+ftp> <b>cd incoming</b>
+<font color=#006644>&#060;Return&#062;</font><br><br>
+250 CWD command successful.<br><br>
+ftp> <b>cd faam</b>
+<font color=#006644>&#060;Return&#062;</font><br><br>
+250 CWD command successful.<br><br>
+ftp> <b>ls</b>
+<font color=#006644>&#060;Return&#062;</font><br><br>
+<table border=0>
+<tr>
+<td align=left>
+campaign-processed-core<br>
+campaign-raw-core<br>
+documentation<br>
+flight-constants
+</td><td width=5em></td><td align=left>
+flight-logs<br>
+format-testing-samples<br>
+restricted-processed-core<br>
+software
+</td><td width=5em></td><td align=left>
+test-processed-core<br>
+test-processed-non-core<br>
+test-raw-core<br>
+test-raw-non-core
+</td></tr>
+</table>
+<br>
+ftp> <b>cd test-processed-core</b>
+<font color=#006644>&#060;Return&#062;</font><br><br>
+ftp> <b>mput core_faam_2004*.nc</b>
+<font color=#006644>&#060;Return&#062;</font><br><br>
+ftp> <b>ls</b>
+<font color=#006644>&#060;Return&#062;</font><br><br>
+core_faam_20040406_r0_b007.nc<br>
+core_faam_20040406_r1_b007,nc<br>
+core_faam_20040407_r1_b008.nc<br>
+core_faam_20040506_r0_b017.nc<br><br>
+ftp> <b>quit</b>
+<font color=#006644>&#060;Return&#062;</font><br><br>
+</p>
+
+<p>
+</body>
+</html>

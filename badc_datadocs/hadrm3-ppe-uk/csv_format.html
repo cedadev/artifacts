@@ -1,0 +1,127 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>HadRM3-PPE-UK Dataset: CSV format description</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<P><IMG SRC="/graphics/logos/metlogos.gif" ALIGN="BOTTOM"  NATURALSIZEFLAG="0"></P>
+
+<H1>HadRM3-PPE-UK Dataset: CSV format description</H1>
+
+<HR ALIGN=LEFT>
+
+<H2>Introduction</H2>
+
+<P>The <a href="index.html">HadRM3-PPE-UK dataset</a> has also been converted to a text format for users not accustomed to working with binary data. This comma-separated variable (CSV) format is similar to that used in the UK Climate Projections (UKCP09) as described in the <a href="http://ukclimateprojections-ui.defra.gov.uk/ui/docs/formats/ukcp09_file_format_spec.pdf">UKCP09 format specification</a>. This page provides an overview of the structure of the CSV archive and files. It contains the following sections:</P>
+
+<UL>
+    <a href="#where"><LI>Location of the CSV files in the archive</LI></a>
+    <a href="#zip"><LI>Grouping of CSV files into zip files</LI></a>
+    <a href="#inside_zip"><LI>Contents of each zip file</LI></a>
+    <a href="#csv"><LI>Contents of a single CSV file</LI></a>
+    <a href="#header"><LI>Understanding the file header</LI></a>
+    <a href="#data"><LI>Understanding the data section</LI></a>
+    <a href="#rot_grid"><LI>Rotated grid descriptionts</LI></a>
+</UL>
+
+
+<a name="where"><H2>Location of the CSV files in the archive</H2></a>
+    
+    <p>The converted CSV version of the archive mirrors the NetCDF archive except for the directory <kbd>um_csv</kbd> replacing <kbd>um_nc</kbd> in terms of the directory structure. However, the CSV files are provided in sub-directories by NetCDF Variable ID (see <a href="variables.html">variables page</a> for a list of these). To save space and improve download efficiency the CSV are grouped into zip files as described in the <a href="#zip">section below</a>. An example path to a single zip file is:</p>
+    
+    <p><kbd>/badc/hadrm3/data/hadrm3-ppe-uk/um_csv/afixq/ape/blht/afixqa.peh0jun-blht.zip</kbd></p>
+
+    <p>Where <kbd>blht</kbd> is the variable ID used to describe <kbd>BOUNDARY LAYER DEPTH AFTER TIMESTEP</kbd>.</p>
+
+    <p>A renamed set of directories has also been created to aid access to the files. These are located under the directory:</p>
+
+    <p><kbd>/badc/hadrm3/data/hadrm3-ppe-uk/renamed_csv/</kbd></p>
+
+    <p>The full file paths follow the naming convention below:</p>
+
+    <p><kbd>/badc/hadrm3/data/hadrm3-ppe-uk/renamed_csv/&lt;rcm_member&gt;/&lt;time_processing&gt;/&lt;variable_id&gt;/&lt;zip_file_of_csv_files&gt;</kbd></p>
+
+    <p>For example:</p>
+
+    <p><kbd>/badc/hadrm3/data/hadrm3-ppe-uk/renamed_csv/hadrm3q16/daily/blht/afixqa.peh0jun-blht.zip</kbd></p>
+
+<p> With the following mappings: </p>
+    <ul>
+        <li><kbd>&lt;rcm_member&gt;</kbd> is the id used for the HadRM3 ensemble member</li>
+        <li><kbd>&lt;time_processing&gt;</kbd> = &quot;daily&quot; </li>
+        <li><kbd>&lt;variable_id&gt;</kbd> is the NetCDF variable ID.</li>
+    </ul>
+
+<a name="zip"><H2>Grouping of CSV files into zip files</H2></a>
+
+    <p>CSV formats are less efficient than binary formats for storing data. As a result they take up significantly more disk space and are slower to download. We have therefore grouped the CSV files into zip files. Each zip file contains 30 daily CSV files for a single variable.</p>
+
+<a name="inside_zip"><H2>Contents of each zip file</H2></a>
+
+    <p>The contents of each zip file is straightforward for users to interpret as the CSV file names contain the variable ID and the date/time. An example listing is:</p>
+    <p><b>Zip file:</b> <kbd>afixqa.peh0jun-blht.zip<kbd></p>
+    <p><b>Contents:</b><br>
+
+        <kbd>afixqa.peh0jun-blht-1970060112.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970060212.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970060312.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970060412.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970060512.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970060612.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970060712.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970060812.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970060912.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970061012.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970061112.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970061212.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970061312.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970061412.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970061512.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970061612.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970061712.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970061812.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970061912.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970062012.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970062112.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970062212.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970062312.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970062412.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970062512.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970062612.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970062712.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970062812.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970062912.csv</kbd><br>
+        <kbd>afixqa.peh0jun-blht-1970063012.csv</kbd><br>
+
+    </p>
+
+<a name="csv"><H2>Contents of a single CSV file</H2></a>
+
+    <p>Each individual CSV file contains a single variable for a single daily time step. The data has been structured this way so that each UK domain grid is written in a tabulated data block that can be read into a standard spreadsheet package. Some variables have a single vertical level so there is only one 2-dimensional data block in the file. Other variables have multiple vertical levels, these are presented in a 2-dimensional data block per level</p>
+    <p>The basic structure of the file is as follows:</p>
+    <p><img src="simple_csv_model.png" alt="Simple CSV model" width="500" height="360" /></p>
+
+    <p>The first column provides annotations that aid the user in understanding the header and data sections. Note that once you have developed this understanding it is simple to remove or hide the first column when viewing or processing the data.</p>
+
+<a name="header"><H3>Understanding the file header</H3></a>
+
+    <p>The CSV header contains a significant amount of relevant and useful metadata. The annotation column explains this metadata line by line. The image below highlights some of the key features.</p>
+    <p><img src="csv_header_overview.png" alt="CSV header overview" /></p>
+
+<a name="data"><H3>Understanding the data section</H3></a>
+
+    <p>The data section of the file contains one, or more, groups of the following:</p>
+    <ul>
+        <li>Vertical level value plus any level-definition variables used to calculate the level (if sigma levels used)</li>
+        <li>52 rows, each corresponding to a rotated latitude.<li>
+        <li>Each row contains 39 columns, each cell corresponding to a rotated longitude.</li>
+    </ul>
+
+<a name="rot_grid"><H2>Rotated grid descriptionts</H2></a>
+
+    <p>The data is described on the Met Office Hadley Centre Regional Model grids. There are two versions of the grid, slightly offset from each other. The <a href="variables.html">variables page</a> shows which grid is used for each variable. The <a href="grids.html">grids page</a> describes the grids in detail.</p>
+    <p>Due to the pole having a rotated North Pole the x-axis and y-axis of the grids correspond to rotated longitude and rotated latitude. Since these are not real latitudes and longitudes the header of the CSV file uses index values rather than rotated coordinate values. Those wishing to find out the real location of each grid cell should consult the <a href="grids.html">grids page</a>.</p>
+
+</body>
+</html>

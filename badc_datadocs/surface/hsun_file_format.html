@@ -1,0 +1,129 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Hourly Sunshine measurements - File Format</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Hourly Sun data - .hsun (hourly sunshine observations)
+file format<BR CLEAR="ALL"></H1>
+
+<hr>
+<blockquote>
+<strong><FONT COLOR="#FB0000"><Strong>PLEASE NOTE:</strong></FONT> The file format described below refers to the Met Office Land Surface data (1900-2000) dataset which has been superseded by the <a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__dataent_ukmo-midas">Met Office MIDAS dataset (1853-present)</a> at the BADC.
+</strong>
+</blockquote>
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<P>A <STRONG>list of UK stations</STRONG> for which the BADC holds
+.hsun files is available (<A HREF="/data/surface/station_lists/ukstation.hsun.html">.hsun
+stations</A>).</P>
+
+<P>The file name convention is (STATION_NAME)(YEAR).(MESSAGE_TYPE).(FILE_EXTENSION)</P>
+
+<UL>
+  <LI>STATION_NAMES is the complete station name.<BR>
+  <LI>YEAR is the year expressed in full, ie 1998. <BR>
+  <LI>Description of the <A HREF="met_domain.html">message types</A>
+  is available.<BR>
+  <LI>The file extension is <STRONG>.hsun</STRONG> meaning that
+  the file contains hourly sunshine measurements.<BR>
+</UL>
+
+<P>These .hsun files contain sunshine duration measured during
+the hour ending at the specified time. <BR>
+Year of first hourly sunshine data is 1980. <BR>
+<BR>
+<STRONG>-999</STRONG> indicates a missing value. <BR>
+<BR>
+The first line of the data file are the fields headers (which
+are detailed in the table below).<BR>
+<BR>
+The fields in the .hsun data files are : <BR>
+<BR>
+<td><TABLE BORDER="1" CELLSPACING="2" CELLPADDING="0">
+  <TR>
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">HEADER</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">PARAMETER</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">FIELDS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">COLUMNS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">UNITS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">COMMENTS</FONT></TH> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">ID</TD> 
+    <TD BGCOLOR="#ffffff">Station Number</TD> 
+    <TD BGCOLOR="#ffffff">1</TD> 
+    <TD BGCOLOR="#ffffff">1-8</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">IDTYPE</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">2</TD> 
+    <TD BGCOLOR="#d4d4d4">9-17</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">MET_DOM</TD> 
+    <TD BGCOLOR="#ffffff">Meteorological Domain</TD> 
+    <TD BGCOLOR="#ffffff">3</TD> 
+    <TD BGCOLOR="#ffffff">18-28</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="met_domain.html">Message types</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">YEAR</TD> 
+    <TD BGCOLOR="#d4d4d4">Year</TD> 
+    <TD BGCOLOR="#d4d4d4">4</TD> 
+    <TD BGCOLOR="#d4d4d4">29-35</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">4 characters</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">MON</TD> 
+    <TD BGCOLOR="#ffffff">Month</TD> 
+    <TD BGCOLOR="#ffffff">5</TD> 
+    <TD BGCOLOR="#ffffff">36-43</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff">1 or 2 characters (from 1 to 12)</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">DAY</TD> 
+    <TD BGCOLOR="#d4d4d4">Day</TD> 
+    <TD BGCOLOR="#d4d4d4">6</TD> 
+    <TD BGCOLOR="#d4d4d4">44-51</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">1 or 2 characters (from 1 to 31max)</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">TIME</TD> 
+    <TD BGCOLOR="#ffffff">Hour</TD> 
+    <TD BGCOLOR="#ffffff">7</TD> 
+    <TD BGCOLOR="#ffffff">52-59</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff">Hour of observation from 0 to 2300</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">SUN_DUR</TD> 
+    <TD BGCOLOR="#d4d4d4">Sunshine duration</TD> 
+    <TD BGCOLOR="#d4d4d4">8</TD> 
+    <TD BGCOLOR="#d4d4d4">60-68</TD> 
+    <TD BGCOLOR="#d4d4d4">0.1 hour</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas/ukmo_guide.html#5.8">See Met Office
+      documentation</A></TD> 
+  </TR>
+</TABLE><!--SELECTION--><!--/SELECTION--><BR>
+More information about the sunshine and radiation network is available
+in the <A HREF="../ukmo-midas/ukmo_guide.html#3.5">documentation provided by
+the Met Office</A>.
+<P>
+</BODY>
+</HTML>

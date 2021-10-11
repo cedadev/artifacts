@@ -1,0 +1,47 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060620T230000Z
+DTEND:20060621T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Edinburgh, Scotland, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000D0493AA26126C6010000000000000000100
+ 00000C71D1071999B9849BE71C5A33CFF6039
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:NERC Earth Observation Conference 200=
+6=0D=0ADynamic Earth, Edinburgh, 21st June 2006=0D=0A=0D=0ACALL FOR ABSTRAC=
+TS: Deadline 9th March 2006=0D=0A=0D=0A- An event hosted jointly with the E=
+dinburgh Earth Observatory (EEO) Annual Symposium in partnership with CEH E=
+dinburgh and CEH Monks Wood.=0D=0A=0D=0AThis conference aims to bring toget=
+her scientists actively engaged in research into environmental sciences usi=
+ng Earth Observation, and to promote cross-disciplinary research.=0D=0A=0D=
+=0ATHEME: =0D=0ABiodynamics: Modelling and Observation of the Biosphere=0D=
+=0A=0D=0A"Understanding the biosphere is a major challenge for science - th=
+e potential feedbacks between natural processes and human induced change ar=
+e poorly understood and limit capabilities for modelling and mitigation. Ea=
+rth observation, through its global reach, provides a novel and critical me=
+ans to develop theories and test understanding of the entire biosphere.  Th=
+is conference will bring together the latest research in this area."=0D=0A=
+=0D=0A=0D=0AThe one-day NERC event will focus on the use of earth observati=
+on to detect, measure and understand the physical, chemical and biological =
+processes that cause changes to the biosphere.  Abstracts that examine inte=
+ractions between different systems and cycles are encouraged.=0D=0A=0D=0APo=
+ssible topics include: =0D=0A=B7	Remote sensing of the land surface=0D=0A=
+=B7	Biogeochemical cycles=0D=0A=B7	Ecosystems and climate change=0D=0A=B7	L=
+and-ocean-atmosphere interactions=0D=0A=B7	Biological cycles in the ocean=
+=0D=0A=B7	Understanding changes in terrestrial vegetation=0D=0A=B7	Interact=
+ion of the carbon-water cycle=0D=0A=B7	Validation of land-surface models=0D=
+=0A=B7	Measurement and modelling of changes in river bathymetry=0D=0A=B7	Ne=
+w observing techniques=0D=0A=0D=0A=0D=0APlease e-mail abstract submissions =
+for the poster and oral sessions (no more than 250 words) to eoconf@nerc.ac=
+.uk. The deadline for submission of abstracts is Thursday 9th March 2006. A=
+uthors will be notified by 10th April 2006.=0D=0A=0D=0AIf you would like to=
+ register your interest for the NERC and/or EEO Annual Symposium, so that w=
+e can keep you informed, please send an email to NERC: eoconf@nerc.ac.uk or=
+ the EEO (Dr Iain Woodhouse): i.h.woodhouse@ed.ac.uk  =0D=0A=0D=0AFor furth=
+er details please go to: http://www.nerc.ac.uk/funding/earthobs/conference =
+=0D=0Aor http://www.geos.ed.ac.uk/research/eeo =0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:NERC Earth Observation Conference 2006
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

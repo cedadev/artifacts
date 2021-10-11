@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060625T230000Z
+DTEND:20060629T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:St Catherine's College, Oxford, UK=20
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000D0486D75347BC6010000000000000000100
+ 00000EBE96B2E0615174584840E0F2D85C8EA
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0AAn international conference wil=
+l take place in June on all aspects of the impact of the different modes of=
+ transport (aviation, road transport, shipping etc.) on atmospheric chemist=
+ry, microphysics, radiation and climate. =0D=0A=0D=0AThe TAC conference is =
+a follow-on from the European conference "Aviation, Atmosphere and Climate =
+(AAC)" in Friedrichshafen, Germany (2003) and the Seeheim (Germany) Worksho=
+p "Aviation, Aerosols, Contrails and Cirrus Clouds (A2C3)" in 2000.=0D=0A=
+=0D=0ADetails of the conference can be found at http://www.pa.op.dlr.de/tac=
+/ =0D=0A=0D=0ANOTE: Please register asap as number of guest rooms limited. =
+The 'early bird' incentive has now been extended beyond 12th May 2006. Stud=
+ent discounts are available as is partial registration for the event. Payme=
+nt can also be made online using a credit card or by money transfer. Please=
+ note that there is an additional levy for on-site registration and payment=
+.=0D=0A=0D=0AContacts: =0D=0A=0D=0AProf. Robert Sausen: robert.sausen@dlr.d=
+e Tel.: +44 161 247 3663=0D=0AProf David S. Lee d.s.lee@mmu.ac.uk Tel.: +44=
+ (0) 161 247 3663=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Transport Atmosphere and Climate conferen=
+ce=20
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

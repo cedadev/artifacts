@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>BADC Datasets: metDB - UK Met Office metDB RASS page</TITLE>
+  <!-- Created 21st Janurary  2011 -->
+  <!-- Author: Graham Parton BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><IMG SRC="/graphics/logos/metlogos.gif" ALT="Met Office Logo"></h1><h1>
+Met Office - metDB Data: RASS data</H1>
+
+<HR ALIGN=LEFT>
+
+<H2>Brief description</H2>
+<p>Observations from Radio Acoustic Sounding Systems. </p>
+
+<h2>Observation frequency</h2>
+<p>Hourly observations from around 120 RASS stations distributed globally.</p>
+
+
+<h2>Delivery and ingest schedule</h2>
+<p>
+Data are extracted daily at around 00 UT for the previous day's coverage and delivered to the BADC at around 0200 UT.
+
+<p>Ingest scripts run at the BADC every 20 minutes, converting the incoming files to the self describing BADC-CSV format, but neither the processed or raw data are placed into archive until the following day.</p>
+
+<h2>Known problems</h2>
+<p> There are no known problems with these data.
+</p>
+<h2>Additional information</h2>
+<p>
+</p>
+<h2>Parameter list</h2>
+<p>Each station report is a separate record in the file consisting of header information about the station and data section. The header section contains the following information:</p>
+
+
+<table cellspacing="2" cellpadding="1" border="1" align="center">
+<tr><th>Header Elements</th><th>Description</th></tr>
+<tr><td>location</td><td>latitude and longitude</td></tr>
+<tr><td>height</td><td>Station Height (m)</td></tr>
+<tr><td>observation_station</td><td>WMO station ID</td></tr>
+<tr><td>station_type</td><td>Details of the station type according to WMO code table 002001</td></tr>
+<tr><td>type_of_measuring_equipment</td> <td>Details of the type of equipment according to WMO code table 002003</td></tr>
+<tr><td>type_of_antenna</td><td>Details of the type of antenna according to WMO code table 002101</td></tr>
+<tr><td>beamwidth</td><td>Beamwidth (degrees)</td></tr>
+<tr><td>mean_frequency</td><td>Mean frequency (Hz)</td></tr>
+<tr><td>range_gate_length</td><td>Length of range gates (m)</td></tr>
+<tr><td>mean_speed_estimation</td><td>Mean speed estimation WMO code table 025020</td></tr>
+<tr><td>wind_computation_enhancement</td><td>wmo code table 025021</td></tr>
+<tr><td>rass_computation_correction</td><td>wmo code table 025093</td></tr>
+<tr><td>averaging_time_period</td><td>Time period for averaging (minutes)</td></tr>
+<tr><td>pressure_at_mean_sea_level</td><td>Mean sea level pressure at station (Pa)</td></tr>
+</table>
+
+<p>The table below provides the list of available parameters in the column order that they appear in the BADC-CSV files in the archive.
+</p>
+
+<table cellspacing="2" cellpadding="1" border="1" align="center">
+<tr><th>Column number</th><th>Parameter</th<th>Unit</th></tr>
+<tr><td>1</td><td>Height</td><td>m</td></tr> 
+<tr><td>2</td><td>Virtual temperature</td><td>K</td></tr> 
+<tr><td>3</td><td>Virtual temperature quality control information</td><td>1</td></tr> 
+<tr><td>4</td><td>Wind w component</td><td>m/s</td></tr> 
+<tr><td>5</td><td>Vertical wind quality control information</td><td>1</td></tr> 
+<tr><td>6</td><td>Signa to noise ratio</td><td>DB</td></tr>
+</table>
+<br />
+<br />
+
+</BODY>
+</HTML>

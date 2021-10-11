@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070409T230000Z
+DTEND:20070410T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Scott Polar Institute Cambridge, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000C0A540D8B06BC7010000000000000000100
+ 0000073966FAB2636A24A89DD660B9494D603
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UK IPY Youth Steering Committee Meeti=
+ng=0D=0A=0D=0A  *CALLING ALL YOUNG POLAR SCIENTISTS*=0D=0A=0D=0AThe UK Inte=
+rnational Polar Year Youth Steering Committee is going to have=0D=0Aits fir=
+st meeting at the Scott Polar Institute Cambridge on the 10th April=0D=0A20=
+07. If you would like to become involved in the UK IPY YSC and become part=
+=0D=0Aof a growing network of Young Polar Scientists please visit=0D=0Awww.=
+ipyyouth.org.uk for more information.=0D=0A=0D=0AThe UK YSC offers a chance=
+ to organise and participate in educational and=0D=0Aoutreach projects to p=
+romote the IPY, and the opportunity to network with=0D=0Aothers interested =
+in the Polar Regions. The UK YSC has tremendous potential-=0D=0Ait would be=
+ great to have as much support as possible from the Young Polar=0D=0AScient=
+ist community.=0D=0A=0D=0AIf you would like to attend the meeting, or are i=
+nterested in the IPY YSC,=0D=0Aplease email ipyyouthuk@gmail.com to registe=
+r and join the googlegroup.=0D=0A=0D=0AMany thanks,=0D=0A--=0D=0AJames Ches=
+hire=0D=0A=0D=0AUK IPY Youth Steering Committee=0D=0Awww.ipyyouth.org.uk  =
+=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:UK IPY Youth Steering Committee Meeting
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

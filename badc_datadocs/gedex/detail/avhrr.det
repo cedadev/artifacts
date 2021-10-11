@@ -1,0 +1,722 @@
+Advanced Very High Resolution Radiometer (AVHRR)
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Visible and infrared radiances are measured in
+four or five spectral channels by the Advanced Very High Resolution
+Radiometer (AVHRR).  This instrument is part of the payload on the National
+Oceanic and Atmospheric Administration (NOAA) polar orbiting satellite
+series.  The spectral band widths (in micrometers), of the AVHRR channels
+for the TIROS-N and NOAA series satellites are shown in the following
+table:
+
+   Channel    Wavelength (um)     Primary Use
+   -------    ---------------     ---------------------------------
+     1*        0.58  -  0.68      Daytime Cloud and Surface Mapping
+
+     2         0.725 -  1.10      Surface Water Delineation
+          
+     3         3.55  -  3.93      SST, Nighttime Cloud Mapping
+
+     4**      10.50  - 11.50      SST, Day/Night Cloud Mapping
+
+     5***     11.50  - 12.50      SST (Sea Surface Temperature)
+
+*   TIROS-N wavelength was 0.55 - 0.90 um.
+**  NOAA-7 ,-9, -11, and -12 wavelength was 10.3 - 11.3 (um).
+*** TIROS-N, NOAA-6, -8 and -10 wavelength was a repeat of Channel 4.
+
+1.2  Unit of Measurement.
+
+            Parameter                     Units
+            ---------                     -----
+            Radiance                      W/m**2-steradian
+            Temperature                   degrees Celsius
+            Spectral Albedo               percent (%)
+
+1.3  Data Source.  The AVHRR flown aboard the TIROS-N, NOAA-6, -8, and -10
+has four channels, and the AVHRR aboard NOAA-7, -9, -11, and -12  has five
+channels.  Subsequent satellites in the series will have either four or
+five channels.  Provision has been made for five channels in the data
+format for all satellites.  Channel 5 contains a repeat of Channel 4 data,
+when only four different channels are available.
+
+1.4  Data Set Identification.  AVHRR data are a portion of the NOAA "Polar
+Orbiter Data Base" designated as the "AVHRR Level 1b Data Set."  The AVHRR
+data set is composed of two components:  1) The high resolution (1 km)
+Local Area Coverage and High Resolution Picture Transmission (LAC/HRPT),
+and 2) the low resolution (4 km) Global Area Coverage (GAC).
+
+As a result of the design of the AVHRR scanning system, the normal
+operating mode of the satellite calls for direct transmission to Earth
+(continuously real-time) of AVHRR data.  This direct transmission is called
+HRPT, for High Resolution Picture Transmission.  In addition to the HRPT
+mode, about ten minutes of data may be selectively recorded on each
+playback.  These recorded data are referred to as LAC (Local Area Coverage)
+data.  LAC data may be recorded over any portion of the world as selected
+by NOAA National Environmental Satellite Data and Information Service
+(NOAA/NESDIS) and played back on the same orbit as recorded or during a
+subsequent orbit.  LAC and HRPT data have identical formats.
+
+The full resolution data are also processed on-board the satellite into GAC
+(Global Area Coverage) data which are recorded only for readout by Command
+and Data Acquisition (CDA) stations.  GAC data contains only one out of
+three original AVHRR lines and the data volume and resolution are further
+reduced by averaging every four adjacent samples and skipping the fifth
+sample along the scan line.
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  The AVHRR provides a global (pole-to-pole) on-board
+collection of data from all spectral channels.  The 110.8 degree scan
+equates to a swath 27.2 degrees in width (at the Equator) centered on the
+subsatellite track.  This swath width is greater than the 25.3 degree
+separation between successive orbital tracks, providing overlapping
+coverage (side-lap).
+
+2.2  Spatial Resolution.  The instantaneous field-of-view (IFOV) of each
+channel is approximately 1.4 milliradians (mrads) leading to a resolution
+at the satellite subpoint of 1.1 km for a nominal altitude of 833 km.  The
+scanning rate of the AVHRR is 360 scans per minute.  The time within each
+scan line of AVHRR data represents IFOV #1.  These data provide continuous
+transmission for the HRPT data and selectively recorded LAC data.  In
+addition, data are processed on-board the spacecraft to provide a 1.1 x 4
+km resolution with a 3 km gap between pixels across the scan line
+(generally referred to as 4 km resolution) for the GAC data.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  The overall coverage of the archived AVHRR data
+base is shown in the following table.  However, there may be short gaps in
+the time ranges and additional data coverage outside these dates associated
+with equipment malfunctions.  Start and end dates indicate operational
+range.
+
+           SATELLITE           START DATE            END DATE
+           _________           __________            ________
+
+            TIROS-N             10/19/78             01/30/80
+
+            NOAA-6              06/27/79             03/05/83
+            w/o GAC             06/21/84            *06/30/86
+
+            NOAA-7              08/24/81             06/07/86
+
+            NOAA-8              06/20/83            *06/12/84
+                                07/01/85             10/31/85
+
+            NOAA-9              02/25/85             11/07/88
+
+            NOAA-10             11/17/86             present
+
+            NOAA-11             11/08/88             present
+
+            NOAA-12             09/01/91             present
+
+* The quality of these data is poor due to excessive noise.
+
+3.2  Temporal Resolution.  Each scan of the AVHRR views the Earth for a
+period of 51.282 msec.  The analog data output from the sensors is
+digitized on-board the satellite at a rate of 39,936 samples per second per
+channel.  Each sample step corresponds to an angle of scanner rotation of
+0.95 mrads.  At this sampling rate, there are 1.362 samples per IFOV.  A
+total of 2048 samples will be obtained per channel per Earth scan, which
+will span an angle of +/- 55.4 degrees from the nadir (subpoint view).
+Successive scans occur at the rate of 6 per second, or at intervals of 167
+msec.
+
+Successive sets of 4 out of every 5 samples in every third scan line are
+averaged to obtain an array of data spaced at intervals of 125 msec along
+the scan and at 500 msec along the satellite track.  This leads to a data
+rate of 49,080 samples-per-minute and 2 scans-per-second.
+
+Because the satellite is sun-synchronous, visible data revisit time is
+daily.  Infrared imaging is accomplished twice daily with the second visit
+occurring during the pass over the dark side of the Earth.  Instrument
+operation is continuous.
+
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  The Advanced Very High Resolution Radiometer
+(AVHRR) provides data for real-time transmission to the NOAA local read-out
+services, termed High Resolution Picture Transmission (HRPT).  It also
+provides data for storage on the two spacecraft digital tape recorders for
+later playback.  The objective of the instrument is to provide radiance
+data for investigation of clouds, land-water boundaries, snow and ice
+extent, ice or snow melt inception, day and night cloud distribution,
+temperatures of radiating surfaces, and sea surface temperature.  It is an
+integral member of the payload on the advanced TIROS-N spacecraft and its
+successors in the NOAA series and, as such, contributes data required to
+meet a number of operational and research-oriented meteorological
+objectives.
+
+4.2  Key Satellite Flight Parameters.  Nominal orbit parameters for the
+spacecraft of the TIROS-N and NOAA Series are:
+
+           o Launch date          TIROS-N:  October 13, 1978
+                                  NOAA-6:   June 27, 1979
+                                  NOAA-7:   June 23, 1981
+                                  NOAA-8:   March 28, 1983
+                                  NOAA-9:   December 12, 1984
+                                  NOAA-10:  September 17, 1986
+                                  NOAA-11:  September 24, 1988
+                                  NOAA-12:  May 14, 1991
+
+           o Duration, planned    At least two years
+
+           o Duration, actual     TIROS-N:  January 30, 1980
+                                  NOAA-6:   June 30, 1986
+                                  NOAA-7:   June 7, 1986
+                                  NOAA-8:   October 31, 1985
+                                  NOAA-9:   November 7, 1988
+                                  NOAA-10:  Presently operating
+                                  NOAA-11:  Presently operating
+                                  NOAA-12:  Presently operating
+
+           o Orbit type           Near polar, circular,
+                                  sun-synchronous
+
+           o Semi-major axis      7231.8 km
+
+           o Nominal altitude     853.7 km
+
+           o Inclination angle    TIROS-N:    102.3
+                                  NOAA-6:     98.7
+                                  NOAA-7:     98.9
+                                  NOAA-8:     98.8
+                                  NOAA-9:     98.9
+                                  NOAA-10:    98.9
+                                  NOAA-11:    98.9
+                                  NOAA-12:    98.7
+
+           o Nodal period         TIROS-N:    101.90 minutes
+                                  NOAA-6:     101.12
+                                  NOAA-7:     101.95
+                                  NOAA-8:     101.29
+                                  NOAA-9:     102.09
+                                  NOAA-10:    102.13
+                                  NOAA-11:    102.10
+                                  NOAA-12:    101.34
+
+           o Equator crossing times:
+             (ascending)
+               
+               Afternoon orbit    TIROS-N:    1500
+                                  NOAA-7:     1431
+                                  NOAA-9:     1420
+                                  NOAA-11:    1340
+
+
+               Morning orbit      NOAA-6:     0730
+                                  NOAA-8:     0730
+                                  NOAA-10:    0730
+                                  NOAA-12:    0730
+
+ *Local main solar time
+
+4.3  Principles of Operation.  The AVHRR is a four- or five-channel
+scanning radiometer which detects emitted and reflected radiation from the
+Earth in the visible, near-infrared and far-infrared regions of the
+spectrum.  A fifth channel has been added to the follow-on instrument
+designated AVHRR/2 and flown on NOAA-7, -9, -11, and -12 to improve the
+correction for atmospheric vapor.  Scanning is provided by an elliptical
+beryllium mirror rotating at 360 rpm about an axis parallel to the Earth. A
+two-stage radiant cooler is used to maintain a constant temperature for the
+IR detectors of 95 degrees Kelvin (K).  The operating temperature is
+selectable at either 105 or 110 degrees K.  The telescope is an 8-inch
+afocal, all-reflective Cassegrain system.  Polarization is less than 10
+percent.  Instrument operation is controlled by 26 commands and monitored
+by 20 analog housekeeping parameters.
+
+4.4  Instrument Measurement Geometry.  The AVHRR is a cross-track scanning
+system.  The instantaneous field-of-view (IFOV) of each sensor is
+approximately 1.4 mrads giving a resolution of 1.1 km at the satellite
+subpoint.  There is about a 36 percent overlap between IFOVs (1.362 samples
+per IFOV).  The scanning rate of the AVHRR is six  scans per second, and
+each scan spans an angle of +/- 55.4 degrees from the nadir.  The five
+spectral bands measured are:  Channel 1, visible .58-.68 micrometers;
+Channel 2, surface water delineation; Channel 3, nighttime cloud mapping;
+Channel 4, thermal infra-red, 10.5-11.5 micrometers; Channel 5, a second
+thermal infrared channel at 11.5-12.5 micrometers (NOAA-7 and NOAA-9).
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  Each Global Area Coverage (GAC) data
+set contains an individual satellite recorder playback (or a portion of a
+playback if there is an interruption in the data due to noise, etc., in
+which case a single playback may be fragmented into a number of data sets.)
+Data within each GAC data set are in chronological order with one logical
+record per scan.  Two logical records are written per 6400-byte physical
+record.  Each logical record contains 3220 bytes written in binary format.
+
+Each High Resolution Picture Transmission (HRPT) data set contains the HRPT
+data from one CDA contact.  Each LAC data set contains an individual
+satellite recorder playback (10 minutes of recorded data).  Each data set
+is ordered chronologically with one scan contained in two records.
+
+NOAA/NESDIS operates two CDA stations, one in Wallops Island, Virginia and
+one in Gilmore Creek, Alaska, to receive both recorded and direct read-out
+data from the satellites.  The CDAs send these data to Suitland, Maryland
+via satellite relay.  The NOAA/NESDIS ground receiving station in Redwood
+City, California receives direct read-out HRPT data which provide coverage
+over the western two-thirds of the coterminous United States.  The Redwood
+City station maintains a ninety-day rotating file of these data and
+continues to receive direct read-out HRPT data.
+
+A dedicated computer system is used at the NESDIS facility to perform the
+processing function as soon as possible after receipt of the data from the
+receiving stations.  The processing function is set up to perform quality
+checks and calibration computations on the incoming data and to attach
+Earth location and calibration information to the data.  It should be noted
+that the calibration is attached to, rather than applied to, the data. This
+provides a product of calibrated and Earth-located data and yet performs no
+irreversible processing on the original sensor data.
+
+The processed data were stored on an AMPEX TeraBit Memory (TBM) System
+until April 1985.  This system, processing on the NOAA IBM S360/195, served
+as both an online storage medium for the product and as the storage medium
+for archived products.  The TBM system has been abandoned as a means of
+storing ingested polar orbiter data.  NESDIS has copied all of the
+retrievable data from the TBM tapes.  Approximately seven percent of the
+LAC and eighty percent of the GAC data were converted onto 6250-bpi tapes.
+Satellite Data Services Division (SDSD) sent all of the TBM tapes to the
+National Center for Atmospheric Research (NCAR) in exchange for copying all
+of the available Level 1b TOVS (TIROS Operational Vertical Soudnder) data
+and selected GAC data and putting them onto 6250-bpi tapes.
+
+5.2  Derivation Techniques/Algorithms.  For each grid point, the average of
+all Multi-Channel Sea Surface Temperature (MCSST) measurements available
+for one week is computed.  Open areas are interpolated using an interactive
+Laplacian relaxation technique until all such areas connected to valid
+observations are filled.  A first guess of open areas is provided by
+computing the mean of horizontal bounding "good" data-filled pixels.
+
+5.3  Special Corrections/Adjustments.  There have been several minor
+changes in the equations used to extrapolate higher level data (sea surface
+temperature) from the AVHRR.  These changes are too numerous and
+insignificant to list in this catalog, but are described in detail in the
+Polar Orbiter Users Guide (Kidwell, 1991).
+
+5.4  Processing Changes.  The AMPEX TeraBit Memory (TBM) system was
+replaced (April 1985) by an IBM 3090 system.  NESDIS has completed all of
+the recovery, that time permitted, of the Level 1b data from the TBM tapes.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  Quality assessment information is
+appended to each scan line of AVHRR data (each record of GAC, every two
+records of LAC/HRPT) during processing.  The 32-bit quality word contains
+bit flags indicating detected timing or transmission synchronization errors
+and data gaps which occur on-board the spacecraft or in data transmission
+and handling.  Program checks limit the production of data sets with high
+error rates.
+
+6.2  Confidence Level/Accuracy Judgment.  The AVHRR visible channels 1 and
+2 are designed to accommodate a dynamic range of 200 to 1.  A full scale
+signal corresponds to 100 percent albedo, that is, the radiance from a
+diffuse (Lambertion) reflector (a bright cloud) under full solar
+illumination.  A minimum detectable signal corresponds to 0.5 percent
+albedo with a signal-to-noise ratio of at least 3 to 1.  The infrared
+channels 3, 4, and 5 are calibrated in-flight using a view of a stable
+blackbody and space as a reference.  These channels are designed to measure
+emitted thermal radiation with an accuracy better than 0.14 degree C for a
+source blackbody temperature of 300 degrees K.  These design goals are
+being met.
+
+AVHRR Channel 3 data on each TIROS-N series spacecraft have been very noisy
+due to a spacecraft problem and may be unusable, especially when the
+satellite is in daylight.
+
+6.3  Usage Guidance.  AVHRR data are used in the preparation of a number of
+products required for meteorological and climate research, the NOAA
+operational weather forecasting system, and the international weather
+forecast community.  In addition, AVHRR data are used to determine
+vegetation cover over large regions.  These products include temperature
+and water vapor soundings, oceanographic and hydrological products,
+radiation budget products, and a variety of mapped and gridded imagery.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+7.1  The Multi-Channel Sea Surface Temperature (MCSST) data product was
+     developed by:
+
+         Ms. Helen Wood, Director   
+         Satellite Data and Processing Distribution                   
+         NOAA/NESDIS                                                            
+         FOB 4, Room 1069      
+         Washington, DC  20233                                                 
+         (301) 763-1564                                                         
+                                                                                
+7.2  Chief, Information Processing Division                                     
+                                                                                
+         Mr. Robert Mairs                                                       
+         Chief of Information Processing Division                               
+         FOB 4, Room 0301                                                       
+         NOAA/NESDIS                                                            
+         Washington, DC  20233                                                 
+         (301) 763-5687                                                         
+                                                                                
+7.3  Archiver                                                                   
+                                                                                
+         Mr. Wil Gould                                   
+         NOAA/NESDIS/NCDC                                                       
+         Satellite Data Services Division                                       
+         Princeton Executive Square, Room 100                                  
+         Washington, DC  20233                                               
+         (301) 763-8402                                                         
+         FTS:  763-8400 
+         Telex:  248376 OBSWUR
+         FAX:  301-763-8443
+ 
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products.
+
+8.1.1  AVHRR Level-1b Dataset Copies                                            
+                                                                                
+        Medium/Specification:  Data can be delivered to meet user
+        requirements on 9-track 1600- or 6250-bpi magnetic tapes and IBM
+        3480 cartridges.  These products contain raw data with Earth
+        location and calibration information included.
+                                                                                
+        Format and Content:  HRPT data are in chronological order with one
+        scan contained in two records of 7400 bytes each.  GAC data are
+        organized with two scans per 6440-byte record.  Although data from
+        all sensors on the spacecraft are merged in the archival record,
+        AVHRR products are available to the user from any channel, or set
+        of channels, and from any time or area interval.  GAC and LAC/HRPT
+        data have similar formats for individual channels.
+                                                                                
+        Data Quantity/Rate:  The NOAA archival system can no longer store
+        all the data obtained in one day from two TIROS-N type spacecraft
+        on one tape (TBM).  About 1.5 billion samples of AVHRR data have
+        been stored per day beginning November 1978.  About eighty percent
+        of the GAC and about seven percent of the LAC data are available
+        for dates prior to April 1985.  One km data from April 1985 through
+        the present can be ordered from SDSD.  A user must schedule all
+        needed LAC passes through Information Processing Division (IPD)
+        first.
+                                                                                
+        Status:  These products are available with a three to five day
+        turnaround provided that they are ordered within 24 hours after
+        collection.  After that time, they are retained in the SDSD
+        archive.  Scheduling a collection of LAC data must be requested
+        from the Interactive Processing Branch (IPB).  There is no
+        additional charge for this service.
+
+8.1.2   Mapped AVHRR GAC Products, Level III (Polar Stereographic)              
+                                                                                
+        Medium/Specification:  Mapped mosaics on 9-track, 1600- or 6250-bpi
+        magnetic tapes.
+                                                                               
+        Format and Content:  Format information is provided when filling
+        each user request.  Tapes contain the polar stereographic and
+        Mercator mosaics.  The mapped mosaics are of daytime visible (VIS)
+        and infrared (IR), and nighttime IR imagery.  Coastal outlines and
+        latitude and longitude grids are included.
+                                                                                
+        Data Quantity/Rate:  An operational mapped GAC product which is
+        known as the Global Vegetation Index Product provides a means of
+        monitoring the density and vigor of green vegetation over the
+        growing areas of the Earth.  Plate Carree, polar stereographic and
+        Mercator mosaics of the Global Vegetation Index, derived from AVHRR
+        Channels 1, 2, plus coincident channels 4 and 5, and supporting
+        information are produced weekly.  For more information, contact
+        SDSD to obtain a copy of the Global Vegetation Index Users Guide
+        (Kidwell, 1990).
+                                                                                
+        Status:  Available from SDSD.  Specific hemispheres can be
+        extracted from the daily data and stacked on one tape.
+                                                                                
+        Plans/Schedule:  The plan is to continue the current operational
+        system and make data available to the public.  All the digital data
+        received prior to April 1985 will continue to be archived in order
+        to provide data library service to non real-time users.  On June
+        24, 1985 SDSD began archiving the mapped GAC Product in the
+        Mercator form.  These mapped mosaics are displayed on a Mercator
+        map which extends from 40 degrees North to 40 degrees South with a
+        9.8 km resolution at the Equator, and 7.5 km resolution at 40
+        degrees North and 40 degrees South.
+
+8.2  Film Products.  
+
+8.2.1  Hemispheric Mapped GAC Stereographic Polar Mosaics (Visible and IR)  
+                                                                                
+        Medium/Specification:  Original negatives are on 25 x 25 cm film.
+        User requests for prints, 35 mm slides, or other enlargements or
+        reductions can be filled.  The mapped mosaics are displayed on a
+        1024 x 1024 polar stereographic grid that provides 14.8 km
+        resolution at the Equator decreasing to 29.6 km near the poles.
+                                                                                
+        Format:  For each day of data, channels 1 and 4 are each archived
+        as North Polar Stereographic, South Polar Stereographic, and
+        Mercator projections.  Pass-by-pass images from one satellite at a
+        time are also prepared.
+                                                                                
+        Data Quantity/Rate:  Images are received daily for Computer
+        Compatible Tape (CCT) imagery, weekly for mapped composites, and
+        orbit-by-orbit for gridded imagery.  A log recording receipt of
+        data is maintained.
+                                                                                
+8.3  Other Products.  The AVHRR data set in the SDSD archive contains
+available high resolution HRPT/LAC data for selected areas, as well as the
+GAC data.  A number of standard and specialized tape, map, and image
+products are available to meet needs for high resolution regional data.  In
+addition, hardcopy reproductions of the products described above may be
+obtained from SDSD.  Details are available from SDSD.
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification
+
+     Ms. Katherine Kidwell
+     NOAA/NESDIS/NCDC
+     Satellite Data Services Division
+     Princeton Executive Square, Room 100
+     Washington, DC  20233
+     (301) 763-8400 
+     FTS:  763-8400 
+     Telex:  248376 OBSWUR
+     FAX:  301-763-8443
+                    
+9.2  Procedures for Obtaining Data.  Data requests may be made (with
+prepayment required) by visit, telephone call, through the Electronic
+Catalog System (ECS), or by written request to SDSD.  Identification of
+specific data sets requires consultation with SDSD staff.  The custom
+nature of most requests make it impossible to publish fixed prices for
+data.
+
+9.3  NCDS Status/Plans.  The NCDS archives subsets of AVHRR tapes in
+support of the First ISCCP Regional Experiment (FIRE) project.
+
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+      Mr. Wil Gould                                      
+      NOAA/NESDIS/NCDC                                                          
+      Satellite Data Services Division                                          
+      Washington, DC  20233
+      (301) 763-8400                                                            
+      FTS:  763-8400 
+      Telex:  248376 OBSWUR
+      FAX:  301-763-8443
+                    
+      Goddard DAAC User Support Office
+      Code 935
+      NASA Goddard Space Flight Center
+      Greenbelt, Maryland  20771
+      (301) 286-3209
+      FTS:  888-3209
+      INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+      NSI DECnet:  NSSDCA::NCDSUSO
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      a.  Hussey, J.W., 1977. "The TIROS-N NOAA Operational Satellite
+          System."  U.S. Department of Commerce, NOAA/NESS.
+
+      b.  Kidwell, K., July 1991.  "NOAA Polar Orbiter Data Users Guide."
+          NCDC/SDSD.  (Updated from original 1984 edition)
+                                                      
+      c.  Lauritson, L., et al., 1979. "Data Extraction and Calibration of
+          TIROS-N/NOAA Radiometers."  NOAA Technical Memorandum NESS 107,
+          U.S. Department of Commerce, NOAA/NESS.
+
+      d.  Needham, Bruce H., 1991. "Instrumentation and Services for the
+          NOAA Polar Orbiting Environmental Satellites (POES) in the 21st
+          Century," paper given at the Satellite and Information Services
+          Technical Workshop, Seventh International Conference on
+          Interactive Information and Processing Systems for Meteorology,
+          Oceanography and Hydrology.  71st AMS Annual meeting in New
+          Orleans, Louisiana, 4 pp.
+
+      e.  Smith, E., 1990.  "A Users Guide to the NOAA Advanced Very High
+          Resolution Radiometer Multichannel Sea Surface Temperature Data
+          Set."  (Updated from 1989 edition)
+
+      f.  Werbowetzki, A., 1981.  "Atmospheric Sounding Users Guide." NOAA
+          Technical Report NESS 83, U.S. Department of Commerce, NOAA/NESS.
+
+11.2  Journal Articles and Study Reports.
+
+      a.  Barton, I.J., 1985.  "Transmission Model and Ground-Truth
+          Investigation of Satellite-Derived Sea Surface Temperatures." J.
+          Climate and Appl. Meteor., 24:508-516.
+
+      b.  Bernstein, R.L., and D.B. Chelton, 1985.  "Large-Scale Sea
+          Surface Temperature Variability From Satellite and Shipboard
+          Measurements."  J. Geoph. Res., 90:11619-11630.
+
+      c.  Brown, O.B., J.W. Brown, and R.H. Evans, 1985.  "Calibration of
+          Advanced Very High Resolution Radiometer Infrared Observations."
+          J. Geoph. Res., 90:11667-11677.
+
+      d.  Inoue, T., 1987.  "A Cloud Type Classification with NOAA-7
+          Split-window Measurements."  J. Geophys. Res., 92:3991-4000.
+
+      e.  McClain, E.P., W.G. Pichel and C.C. Walton, 1985. "Comparative
+          Performance of AVHRR-Based Multichannel Sea Surface
+          Temperatures."  J. Geophys. Res. 90:11587-11601.
+
+      f.  Olson, D.B., G.P. Podesta, R.H. Evans and O.B. Brown (1988)
+          "Temporal variation in the separation of Brazil and Malvinas
+          Currents"  Deep-Sea Research, 35, 1971 - 1990.
+
+      g.  Njoku, E.G., 1985. "Satellite-Derived Sea Surface Temperature:
+          Workshop Comparisons."  Bull. of the Amer. Meteor. Society,
+          66:274-281.
+
+      h.  Walton, C., 1985.  "Satellite Measurement of Sea Surface
+          Temperature in the Presence of Volcanic Aerosols." J. Climate and
+          Appl. Meteor., 24:501-507.
+
+11.3  Archive/DBMS Usage Documentation
+
+       a.  Kidwell, K., July 1991.  "NOAA Polar Orbiter Data Users Guide,"
+           NCDC/SDSD.  (Updated from original 1984 edition)
+
+       b.  Kidwell, K., October 1990.  "Global Vegetation Index Users
+           Guide,"  NOAA/NESDIS.  50 pp.
+
+       c.  Olsen, L.M., J.W. Closs, and F.E. Corprew, November 1991.
+           "NASA's Climate Data System Primer:  Version 4.0.",  EOS DAAC,
+           NASA Goddard Space Flight Center, Greenbelt, Maryland.
+
+
+12.  RELATED DATA SETS
+
+     The University of Miami Processed Sea Surface Temperatures data set
+     contains sea surface temperatures derived from radiance data collected
+     by a number of spaceborne platforms.  This data set is available from
+     NCDS in Common Data Format upon request.  It is also available on
+     6250-bpi magnetic tape.  To access catalog information about this data
+     set, specify the following data set name within the search criteria of
+     the Data Access subsystem of the NCDS:
+
+                             Miami-SST_Weekly
+
+
+13.  SUMMARY/SAMPLE
+
+
+14.  NOTES
+
+The term "Pathfinder" refers to a new generation of Earth science data sets
+which are being developed specifically for the study of global
+environmental change.  Pathfinders take advantage of the long history of
+satellite observations that are available in currently existing archives,
+but have been reprocessed to add new features that will be the hallmarks of
+data available from EOS.  Pathfinder datasets all share the following
+characteristics:
+ 
+       - produced as a global dataset
+       - able to span several years
+       - internally consistent processing
+       - created from remotely sensed data
+       - of demonstrable scientific value.
+
+The AVHRR GAC Pathfinder is an effort to produce an 11-year calibrated data
+set for the 5-channel AVHRR instruments on-board the NOAA polar orbiting
+series satellites.  NOAA and NASA have chartered four working groups to
+provide recommendations for generating science data products for the land,
+atmosphere and ocean research communities.  The Science Working Groups
+represent these three disciplines, with a fourth group addressing
+calibration issues.  These groups are responsible for defining data product
+needs for their respective communities and coming up with a consensus on
+the best, currently available, well understood algorithms for deriving the
+requested products.
+
+Among the output products from the AVHRR Pathfinder will be composites of
+Vegetation Indicies at resolutions of 9 km, daily daytime and nighttime
+Multi-Channel Sea Surface Temperatures at 9 km resolutions, and selected
+5-channel radiance, albedo and brightness temperature datasets.  The
+definition of algorithms and data products should be complete by the end of
+1992.  Processing will begin in early 1993, and the data products will
+become available, after validation, to the research community through the
+NASA EOS archives (DAACs) and NOAA/NESDIS sometime in mid-1993.
+
+In addition to the processed Pathfinder products, the NOAA 1B GAC data will
+also be available through NOAA/NESDIS and the NASA/EOS archives.  The 60000
+orbits of GAC data, which are the input to the Pathfinder processing, are
+being transcribed to readily accessible storage media (12-inch, double
+density WORM platters).  These data, along with the Pathfinder calibration
+coefficients, will be released to the archives once the derived products
+are generated and validated.
+
+
+*92/03/11

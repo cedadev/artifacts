@@ -1,0 +1,144 @@
+<HTML>
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>CLIMAT Upper Air Standard Level Data Table</TITLE>
+  <!-- Created 13th April 2010 -->
+  <!-- Author: Graham Parton BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>CLIMAT Upper Air Values from standard pressure levels - Columns in the CURL table <BR CLEAR="ALL"></H1>
+
+    <p><b>Description: </b>This entity contains monthly values at specified pressure levels from
+	  CLIMAT upper air reports.<br><br>
+<P>
+For the convenience of users, the CURL file column headers are available for download in <a href="Headers/CURL_Column_Headers.xlsx    ">Excel</a> or as a <a href="Headers/CURL_Column_Headers.csv">comma separated text file</a>
+<P>
+
+<table border="1" cellspacing="0" width="95%">
+      <tr>
+        <td valign="TOP" width="5%" align="center"><b>PK</b></td>
+        <td valign="TOP" width="40%"><b>Attribute</b></td>
+        <td valign="TOP" width="20%"><b>Datatype</b></td>
+
+        <td valign="TOP" width="35%"><b>Description / Units / Precision</b></td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_id</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(6)</font></td>
+        <td valign="TOP" width="35%">Unique source identifier</td>
+
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_date</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">DATE</font></td>
+        <td valign="TOP" width="35%">Last day of month of observation</td>
+      </tr>
+
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">version_flag</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">CHAR(1)</font></td>
+        <td valign="TOP" width="35%">Observation version number</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+
+        <td valign="TOP" width="40%"><font face="Courier New">pres_coord</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(5,1)</font></td>
+        <td valign="TOP" width="35%">Upper air atmospheric pressure<br>0.1 hpa</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ua_month_mean_height</font></td>
+
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(6)</font></td>
+        <td valign="TOP" width="35%">Monthly mean geopotential height<br>metres</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ua_month_mean_air_temp</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(3,1)</font></td>
+
+        <td valign="TOP" width="35%">Mean monthly air temperature<br>0.1 deg C</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ua_month_mean_dewpoint</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(4,1)</font></td>
+        <td valign="TOP" width="35%">Mean monthly dewpoint<br>0.1 deg C</td>
+
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ua_month_steadiness_wind</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(3)</font></td>
+        <td valign="TOP" width="35%">Monthly wind steadiness factor<br>%</td>
+      </tr>
+
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ua_month_mean_wind_dir</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(3)</font></td>
+        <td valign="TOP" width="35%">Monthly mean vector wind dir'n<br>deg True</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+
+        <td valign="TOP" width="40%"><font face="Courier New">ua_month_mean_wind_speed</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(3)</font></td>
+        <td valign="TOP" width="35%">Monthly mean vector wind speed<br>knots</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">temp_miss_mo_day_cnt</font></td>
+
+        <td valign="TOP" width="20%"><font face="Courier New">CHAR(1)</font></td>
+        <td valign="TOP" width="35%">Count of days when air temperature not reported at this pressure level / code</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ua_wind_miss_mo_day_cnt_code</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">CHAR(1)</font></td>
+
+        <td valign="TOP" width="35%">Count of days when wind not reported at this pressure level / code</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ua_month_mean_height_qc_code</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">CHAR(1)</font></td>
+        <td valign="TOP" width="35%">Quality of monthly mean height at this pressure level / code</td>
+
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ua_month_mean_air_temp_qc_code</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">CHAR(1)</font></td>
+        <td valign="TOP" width="35%">Quality of monthly mean air temperature at this pressure level / code</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+
+        <td valign="TOP" width="40%"><font face="Courier New">ua_month_mean_dewpoint_qc_code</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">CHAR(1)</font></td>
+        <td valign="TOP" width="35%">Quality of monthly mean dewpoint at this pressure level / code</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ua_month_mean_wind_qc_code</font></td>
+
+        <td valign="TOP" width="20%"><font face="Courier New">CHAR(1)</font></td>
+        <td valign="TOP" width="35%">Quality of monthly mean wind at this pressure level / code</td>
+      </tr>
+      </table><BR>
+<BR>
+** Details available to registered users only.
+<P>
+More information about the Met Office surface data is available
+in the <A HREF="ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+</BODY>
+</HTML>

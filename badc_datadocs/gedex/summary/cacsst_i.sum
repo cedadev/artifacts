@@ -1,0 +1,36 @@
+SUMMARY
+"SUM_DATA_PRODUCT"  "CACSST_I"
+"SUM_DATA_SET"		"CAC_SST"
+"SUM_DATATYPE"      "IN-SITU    "
+"SUM_BEGIN_DATE"    "01-Jan-1970"
+"SUM_END_DATE"      "31-Dec-1981"
+"SUM_PROCESS_LEVEL"	"3"
+"CONTRIBUTOR"		"Reynolds"
+"ARCHIVE_NAME"		"NOAA, NCDS"
+"ARCHIVE_STATUS"    "Available"
+"SUM_DATA_SET2"		"CAC_SST"
+"DS_DESCRIPTION"	"Climate Analysis Center Sea Surface Temperature"
+"SUM_DATATYPE2"     "In-Situ Sea Surface Temperature"
+"DT_DESCRIPTION"    "In-Situ Sea Surface Temperature"
+"SPATIAL1"        "Global 40S - 60N deg"
+"SPATIAL2"        " "
+"SPATIAL3"        "2 X 2 deg"
+"SPATIAL4"        " "
+"TEMPORAL1"       "January 1970 to December 1981""
+"TEMPORAL2"       " "
+"TEMPORAL3"       "Monthly"
+"TEMPORAL4"       " "
+"PRODUCT1"        "Available through NCDS in Common Data Format (CDF)"
+"PRODUCT2"        "One 1600-bpi ASCII tape (file three)"
+"PRODUCT3"        "Available in on GEDEX CD-ROM "
+"PRODUCT4"        " "
+EOF
+
+PARAMETERS
+"SST"       "Monthly Mean SST"  "Deg C"
+EOF
+
+SOURCES
+"BUOYS"           "IN-SITU"
+"SHIPS"           "IN-SITU"
+EOF

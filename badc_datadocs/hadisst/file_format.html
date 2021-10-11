@@ -1,0 +1,118 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>HadiSST File Format</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>HadISST File Format <BR CLEAR="ALL"></H1>
+
+<HR ALIGN=LEFT>
+
+<UL>
+  <LI><A HREF="#sst">HadISST - SST file format</A>
+  <LI><A HREF="#ice">HadISST - ICE file format</A>
+</UL>
+<BR>
+<HR ALIGN=LEFT><A NAME="sst"></A>
+
+<H2>HadISST SST File Format</H2>
+
+<P>Data are stored in ASCII.<BR>
+<BR>
+All values are integers. Temperature values are in Degree Celsius.<BR>
+<BR>
+
+
+<UL>
+  <LI>Monthly mean SST are stored as counts * 100 (in Degree Celsius)
+  <LI>IF SST ice covered, gridboxes are flagged as -1000
+  <LI>missing data are set to -32768.
+</UL>
+
+<P><BR>
+The month and year are stored at the start of each month. <BR>
+<BR>
+Data Array (360x180).<BR>
+Item (1,1) stores the value for the 1-deg-area centred at 179.5W
+and 89.5N.<BR>
+Item (360,180) stores the value for the 1-deg-area centred at
+179.5E and 89.5S.<BR>
+<BR>
+
+
+<PRE>
+
+          -----------
+         |     |     |
+         | MON | YR  |
+         |_____|_____|__________________________________
+     90N |(1,1)                                         |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+         |(1,90)                                        |
+     Equ |                                              |
+         |(1,91)                                        |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+     90S |(1,180)______________________________(360,180)|
+          180W                 0                    180E</PRE>
+
+<P><BR>
+<BR>
+<HR ALIGN=LEFT><A NAME="ice"></A>
+
+<H2>HadISST ICE File Format</H2>
+
+<P>Data are stored in ASCII.<BR>
+<BR>
+All values are integers.<BR>
+<BR>
+
+
+<UL>
+  <LI>Ice concentrations are stored as as percentage of gridbox covered with ice.
+  <LI>missing data (here land gridboxes) are set to '-32768'
+</UL>
+
+<P><BR>
+The month and year are stored at the start of each month. These data are
+monthly averages.
+<br>
+<br>
+Data Array (360x180)<br>
+Item (1,1) stores the value for the 1-deg-area centred at 179.5W and 89.5N<br>
+Item (360,180) stores the value for the 1-deg-area centred at 179.5E and 89.5S
+
+<BR>
+
+<PRE>
+          ----- -----
+         |     |     |
+         | MON | YR  |
+         |_____|_____|__________________________________
+     90N |(1,1)                                         |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+         |(1,90)                                        |
+     Equ |                                              |
+         |(1,91)                                        |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+     90S |(1,180)______________________________(360,180)|
+          180W                 0                    180E
+
+
+</PRE>
+
+<P><BR>
+</BODY>
+</HTML>

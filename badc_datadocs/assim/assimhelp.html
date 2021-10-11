@@ -1,0 +1,323 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Datasets: Met Office Assimilated Data Help File</TITLE>
+</HEAD>
+<!-- Created 25th May 1996 12:25:17  -->
+<!-- Author: Simon Williams BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top">BADC Help File: Met Office Assimilated
+Data<BR CLEAR="ALL"></H1>
+
+<P><EM>This file contains basic background information to help
+you use the Met Office Assimilated data held at the BADC.</EM> <HR ALIGN=LEFT></P>
+
+<H2><A NAME="contents"></A>Contents</H2>
+
+<OL>
+  <LI><A HREF="#scheme">The Met Office Assimilation System</A>
+  <UL>
+    <LI>1.1 <A HREF="#assimilation">Data Assimilation</A>
+    <LI>1.2 <A HREF="#process">Overview of Data Processing</A>
+    <LI>1.3 <A HREF="#non-uars">&quot;Non-UARS&quot; Assimilations</A>
+    <LI>1.4 <A HREF="#uars">&quot;UARS&quot; Assimilations</A>
+    <LI>1.5 <A HREF="#average">Averaged Data</A>
+</UL>
+  <LI><A HREF="#data">The Data</A>
+  <UL>
+    <LI>2.1 <A HREF="#spatial_coverage">Spatial Coverage</A>
+    <LI>2.2 <A HREF="#temporal_coverage">Temporal Coverage</A>
+    <LI>2.3 <A HREF="#resolution">Resolution</A>
+    <LI>2.4 <A HREF="#quality">Quality</A>
+    <LI>2.5 <A HREF="#units">Units</A>
+  </UL>
+  <LI><A HREF="#changes">Data Assimilation Changes</A>
+</OL>
+
+<HR ALIGN=LEFT>
+
+<H2><A NAME="scheme"></A>1. The Met Office Assimilation Scheme</H2>
+
+<P>This section contains only a brief outline of the assimilation
+scheme and the data processing steps which involved in the production
+of these data. Users requiring a more detailed description should
+consult <A HREF="references.html">Swinbank and O'Neill</A> (1994)</P>
+
+<BLOCKQUOTE>
+  <H3><A NAME="assimilation"></A>1.1 Data Assimilation</H3>
+  <P>Assimilation is essentially an analysis technique that fits
+  a model to observed data. The model (in this case a numerical
+  forecast model of the stratosphere and troposphere) provides
+  a strong constraint to the analysis problem, i.e. the model ensures
+  that the analysed fields are physically self-consistent. The
+  assimilation technique allows data of many different types (for
+  example satellite soundings, radiosondes and aircraft data) to
+  be included in the analysis. By contrast, conventional analysis
+  schemes can only use data of a single type - for example the
+  <A HREF="/data/tovs/">Met Office TOVS analyses</A> described
+  by <A HREF="/data/tovs/references.html">Bailey et al.</A> (1991) which are
+  also available form the BADC.</P>
+  <P>While the model is being integrated forward in time, the model
+  state is nudged towards observed values; the observation weights
+  take into account the expected accuracy of each observation type.</P>
+  <P>The UARS assimilation system has been developed from the new
+  Met Office data assimilation scheme for operational weather forecasting
+  - the so called analysis-correction scheme described in <A HREF="references.html">Lorenc
+  et al.</A> (1991). The forecast model at the heart of the assimilation
+  system is the Met. Office Unified Model which is capable of being
+  run at many different resolutions. For the UARS project it is
+  configured so that its vertical coverage extends from the earth's
+  surface to above the stratopause.</P>
+  <P>The model is a global primitive equation model, with a split-explicit
+  time integration scheme. It incorporates a comprehensive range
+  of physical parametrization schemes. It uses a hybrid vertical
+  coordinate system, with terrain-following model levels at low
+  levels, gradually changing to pressure levels in the stratosphere.</P>
+  <H3><A NAME="process"></A>1.2 Overview of Data Processing</H3>
+  <P>The assimilation system can be divided into the following
+  separate stages, which are shown schematically in <A HREF="figures/ukmo_assimilation.html">Fig.
+  1</A>:</P>
+  <H4>Extraction of Observations</H4>
+  <P>The first stage in the production is the extraction the necessary
+  data from the Met. Office Data banks, or in case of Level 3A
+  UARS data, from the UARS <A HREF="http://www-uars.gsfc.nasa.gov/"
+  TARGET="_top">Central Data Handling Facility</A> (CDHF) at NASA
+  Goddard.</P>
+  <H4>Observation pre-processing and quality control:</H4>
+  <P>The observational data are transcribed into a standard format
+  and are quality controlled by checking against forecast data,
+  using a Bayesian approach devised by <A HREF="references.html">Lorenc
+  and Hammond</A> (1988). Data are extracted from forecast fields
+  at observation locations, and a statistical test is performed
+  to establish whether an observation is grossly in error. In addition
+  a &quot;buddy check&quot; is carried out so that if observations
+  of a different type are consistent with each other, then they
+  are more likely to be accepted, even if they differ substantially
+  from the forecast.</P>
+  <H4>Assimilation and forecast:</H4>
+  <P>The assimilation is run by integrating the numerical model
+  in assimilation mode. The model is integrated forward in time
+  and model fields are adjusted towards the observed data so that
+  the model state is a realistic representation of the atmosphere
+  within the assumed errors. The model is also run in forecast
+  mode - in which the model state is governed purely by the model
+  equations.</P>
+  <P>At the end of the assimilation, the analyzed fields are interpolated
+  to standard pressure levels and written out.</P>
+  <H4>Observation post-processing:</H4>
+  <P>In the final stage of the observation processing, an observation
+  processing dataset (OPD) is compiled. For each observation used
+  in the analysis, this contains the observed value, the difference
+  between the observation and the analysis value and the difference
+  from the background value. Thus the OPD is a valuable resource
+  for validating both the assimilation and the observations.</P>
+  <P>Error statistics generated from the OPD give users of the
+  assimilated data information on the quality of the analysis.</P>
+  <H3><A NAME="non-uars"></A>1.3 &quot;Non-UARS&quot; Assimilations</H3>
+  <P>The standard product consists of analyses produced using operational
+  data - essentially the same data as is used for operational weather
+  forecasting i.e. the World Weather Watch network of surface and
+  upper air observations and satellite data. They are also referred
+  to as &quot;correlative analyses&quot; since they are produced to allow
+  UARS investigators to check their retrievals against an independent
+  analysis. The analyses have been produced operationally since
+  October 1995.</P>
+  <H3><A NAME="uars"></A>1.4 &quot;UARS&quot; Assimilations</H3>
+  <P>The assimilation scheme has also been run in experiments to
+  incorporate UARS data <EM>in addition</EM> to the standard meteorological
+  observations. These do not form a continuous sequence, but rather
+  a set of experiments to assimilate particular combinations of
+  data from different instruments.</P>
+  <P>Note that in the case of the 1991-92 NH winter, the assimilations
+  incorporating temperatures from the UARS ISAMS instrument are
+  thought to be superior to the &quot;non-UARS&quot; data, and
+  should be used in preference.</P></BLOCKQUOTE>
+
+<P><BR>
+</P>
+
+<H2><A NAME="data"></A>2. The Data</H2>
+
+<BLOCKQUOTE>
+  <H3><A NAME="spatial_coverage"></A>2.1 Spatial Coverage</H3>
+  <H4>Vertical Coverage</H4>
+  <P>All fields are on the 22 UARS pressure levels from 1000 HPa
+  to 0.316 HPa inclusive - approximately 0-55km. (These fields
+  are vertically interpolated from the model data; currently the
+  model has 42 levels, with a vertical resolution in the stratosphere
+  of about 1.6 km)</P>
+  <H4>Horizontal Coverage</H4>
+  <P>The data fields are on the grid used by the numerical model
+  which covers the whole globe. The grid is described in the section
+  on the Resolution below.</P>
+  <H3><A NAME="temporal_coverage"></A>2.2 Temporal Coverage</H3>
+  <P>Analyses are available at the CDHF for 12 GMT daily from Oct
+  17th 1991 with a time lag of a 2-3 days, and shortly thereafter
+  from the BADC. There is a separate file for each day. For periods
+  of special interest, files may be provided four times per day
+  at 0:00, 6.00, 12.00 and 18.00 GMT. The near real-time assimilation
+  data have version numbers V0001 or V0002; higher version numbers
+  denote periods re-run at a later date. Most of the changes made
+  to the assimilation system have not made large differences to
+  the analyses. However, users should note the following significant
+  changes:-</P>
+  <P>&nbsp;</P>
+  <PRE>
+   07-Dec-91    The original assimilation run has poor 
+                upper levels  (p &lt; 3 hPa), which was 
+                improved mainly by quality control 
+                changes (from 7 Dec  to 16 Dec.
+  
+   07-Jan-92    Polar filtering improved. 
+  
+   27-May-92    Polar filtering improved.
+                This error gave very poor flow near the 
+                pole on a few occasions where there 
+                were strong winds at high latitudes.  
+  
+   26-Aug-92    Vertical velocities introduced.  
+  
+   22-Feb-93    Divergence damping increased. Gave 
+                less noisy temperatures at  upper levels 
+                (p ~1hPa), with a better fit to
+                observations.
+                
+   16-Oct-95    Switch over to operational stratospheric run. 
+                Still uses the same version of the model, but is
+                run as four six-hourly cycles per day instead of 
+                one 24hour assimilation job. It is run closer to 
+                real-time, so the observation coverage might be 
+                slightly poorer if data is delayed.</PRE>
+  <P>The temporal coverage of the various assimilation types is
+  summarised in <A HREF="figures/ukmo_status.html">Fig. 2.</A>.
+  Users should note that there is a sequence of data from the 1991-92
+  northern winter which assimilates temperatures from the ISAMS
+  instrument. These files should be used in preference to the standard
+  product.</P>
+  <H3><A NAME="resolution"></A>2.3 Resolution</H3>
+  <P>The assimilated data are stored on standard UARS pressure
+  levels from 100hPa to 0.316hPa (approximately 55km). The UARS
+  pressure levels are given by the following relation:</P>
+  <PRE>
+     <EM> p(i) = 1000 x 10^(-i/6),  i=0 to 21</EM></PRE>
+  <P>The horizontal resolution is the same as the numerical model
+  used for data assimilation. The model uses a staggered grid (known
+  as an &quot;Arakawa B grid&quot;, so that wind fields are stored
+  on different points from the other fields.</P>
+  <P>The wind fields (u,v,w) are on a 2.5 degree (latitude) * 3.75
+  degree (longitude) global grid, with the first point at 88.75N,
+  1.875E ( 72 rows of 96 points making 6912 points in all).</P>
+  <P>&nbsp;</P>
+  <PRE>
+   (88.75,1.875) (88.75,5.625) (88.75,9.375) ... (88.75,358.125)
+   (86.25,1.875)  ...           ...          ...  ...
+    ...           ...           ...          ...  ...
+   (-88.75,1.875) ...           ...          ... (-88.75,358.125)</PRE>
+  <P>The other fields (geopotential height and temperature) are
+  on a 2.5 degree (latitude)* 3.75 degree (longitude) global grid,
+  with the first point at 90.0N, 0E (73 rows of 96 points making
+  7008 points in all).</P>
+  <PRE>
+   (90,0)     (90,3.75)   (90,7.5)  ....    (90,356.25)
+   (87.5,0)    ....        ....     ....     ....
+    ....       ....        ....     ....     ....
+   (-90,0)     ....        ....     ....    (-90, 356.25)</PRE>
+  <H3><A NAME="quality"></A>2.4 Data Quality</H3>
+  <P>The tables presented below are provided to give users a rough
+  estimate of the errors and bias in the analysed fields, using
+  information provided by the Met Office.</P>
+  <H4>Temperature</H4>
+  <PRE>
+Pressure           Est. RMS error     Est. bias}
+_______________________________________________________
+
+1000 hPa           1.0K               magnitude &lt;0.3K
+tropopause         1.5K                                 
+100 hPa            1.0K               magnitude &lt;0.3K
+10 hPa             1.0K               magnitude &lt;0.3K
+increasing to...                                         
+1hPa               2.0K               magnitude &lt;0.5K
+_______________________________________________________</PRE>
+  <P>These are representative global-average errors, derived from
+  the `Observation Processing Dataset' (or OPD), a dataset of observed
+  and analysed values compiled as part of the assimilation process.
+  Note that the figures do NOT take into account any bias in the
+  original operational (NOAA/NESDIS) temperature retrievals. In
+  general, the errors will be more than average at high latitudes
+  and in winter. In particular, errors will be larger (perhaps
+  10-20K locally) during dynamically active periods such as stratospheric
+  warmings. The errors will also be larger near the tropopause
+  (200-300 hPa in mid-latitudes), as indicated in the table.</P>
+  <H4>Westerly and Southerly wind components</H4>
+  <PRE>
+Pressure          Est. RMS error    Est. bias
+_____________________________________________________
+
+1000 hPa          6.0 m/s           magnitude &lt;1 m/s
+tropopause        9.0 m/s
+100 hPa           6.0 m/s           magnitude &lt;1 m/s
+10 hPa            (8 m/s)      
+1hPa              (12 m/s)      
+_____________________________________________________</PRE>
+  <P>The wind errors in the troposphere are derived from OPD statistics
+  for radiosondes, where available. The OPD gives very similar
+  statistics for both westerly and southerly components. Since
+  these errors are applicable to the two wind components independently,
+  the RMS vector wind error will be a factor of approximately sqrt(2)
+  larger. The 10 hPa and 1 hPa figures (in brackets) are indicative
+  estimates; they are consistent with differences found between
+  the <A HREF="/data/tovs/">Met Office TOVS analyses</A> and the
+  UARS correlative analyses. As with the temperature statistics
+  these are global figures; errors will be larger in winter and
+  dynamically active periods.</P>
+  <H4>Geopotential Height</H4>
+  <PRE>
+Pressure        Est. RMS error      Est. bias
+______________________________________________
+
+1000 hPa        (10 m)              -
+100 hPa         (20 m)              -
+10 hPa          (70 m)              -   
+1hPa            (100 m)             -
+______________________________________________
+       </PRE>
+  <P>These are rough estimates based on comparisons with the <A
+  HREF="/data/tovs/">Met Office TOVS analyses</A> and the NMC analyses.
+  As with the temperature data, they do not take into account any
+  systematic errors in the original operational (NOAA/NESDIS) satellite
+  data, which are used in all three sets of stratospheric analyses</P>
+  <H4>Vertical Velocity</H4>
+  <P>The vertical velocity is a diagnostic quantity produced from
+  the numerical model used in the data assimilation system. These
+  data are subject to considerable uncertainty, and should be used
+  with caution. Experience suggests that the diagnostic appears
+  to capture the broad-scale vertical circulation, but there are
+  unrealistic features at smaller scales.</P>
+  <H3><A NAME="units"></A>2.5 Units</H3>
+  <P>The units for the parameters present in the Met Office data files
+  are tabulated below :</P>
+  <P>&nbsp;</P>
+  <PRE>
+     Parameter                        Units     
+     ________________________________________
+     
+     Temperature                T     Kelvins        
+     Zonal wind component       u     m/s            
+     Meridional wind component  v     m/s            
+     Geopotential height        z     m              
+     Vertical velocity dp/dt    w     Pa/s 
+     ________________________________________        </PRE>
+
+</BLOCKQUOTE>
+<H2><A NAME="changes"></A>3. Data Assimilation Changes</h2>
+<BLOCKQUOTE>
+<P>In November 2000, a new stratospheric data assimilation system was implemented, based on the 3D variational (3DVAR) data assimilation system used for the standard global forecast suite. The 3DVAR stratospheric system includes the assimilation of radiances (rather than temperature retrievals) from the operational polar orbiter satellites.
+<P>In October 2003, the assimilation model was changed to use a new semi-Lagrangian dynamical core, usually referred to as "new dynamics". The model is a 50-level configuration of the Unified Model; the tropospheric levels are the same as those used in the 38-level global forecast model, but additional stratospheric levels have been introduced. This model configuration has been designed to help to demonstrate the benefit of additional stratospheric levels on the processing of satellite temperature soundings. More details about the New Dynamics package is available on the Met Office <a href="http://www.metoffice.gov.uk/research/nwp/numerical/unified_model/new_dynamics.html">New Dynamics factsheet</a>.
+
+</BLOCKQUOTE>
+
+<P>
+
+</BODY>
+</HTML>

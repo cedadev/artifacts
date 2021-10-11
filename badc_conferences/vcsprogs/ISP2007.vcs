@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070418T230000Z
+DTEND:20070419T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Savoy Place, London=20
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000060AAD7D1A276C7010000000000000000100
+ 000005A1214E91D840E40BE4FD37BEB3A49EF
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:The 19th meeting of the Intelligent S=
+ensing Programme (ISP) to be held at The Institution of Engineering and Tec=
+hnology (formerly=0D=0AIEE), Savoy Place, London on Thursday, 19 April:=0D=
+=0A=0D=0AThe quarterly ISP meeting is the national forum for developers, su=
+ppliers and =0D=0Aend-users of sensor systems and instrumentation. It is a =
+great opportunity for =0D=0Anetworking and collaboration building for the b=
+enefit of your organisation.=0D=0A=0D=0AThe ISP meeting is organised by the=
+ Sensors Knowledge Transfer Network with the =0D=0Aaim of keeping you up to=
+ date with sensor technology developments and =0D=0Aindustrial requirements=
+, and keeping you abreast of the latest news from the =0D=0Asensing communi=
+ty.=0D=0A=0D=0APlease click here to view the agenda.The presentations cover=
+ a range of topics -=0D=0Afrom fibre optic sensing to measurement in gas tu=
+rbines, through to optical =0D=0Asensing of chemical applicationsto sensing=
+ and funding opportunities in sensing =0D=0Aand instrumentation from EPSRC.=
+=0D=0Ahttp://click.npl-networks.co.uk/?ffcb10-fe2b1572736c047b7d1574-fdea10=
+777d660d7471117377-ff051772746606-febd1d7776620078-fdf51571716c0d7e751c7471=
+ =0D=0Ac27aba60d43f18380e1a0/ =0D=0A=0D=0AThe Sensors KTN's team of Technol=
+ogy Translators will be on hand to give =0D=0Asupport and answer any querie=
+s you may have on funding opportunities, brokering =0D=0Aintroductions, ide=
+ntifying potential collaborative partners on developing =0D=0Aproposals. Pl=
+enty of networking time has also been scheduled into the day.=0D=0A=0D=0AIf=
+ you or a colleague would like to attend this complimentary event, please =
+=0D=0Aregister by clicking here=0D=0Ahttp://click.npl-networks.co.uk/?ffcb1=
+0-fe2d1572736c047b7d1473-fdea10777d660d7471117377-ff051772746606-febd1d7776=
+620078-fdf51571716c0d7e751c7471 =0D=0A=0D=0A=0D=0A=0D=0A=0D=0ADr Simon Aliw=
+ell=0D=0ADirector, Sensors KTN=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Intelligent Sensing Programme Meeting
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

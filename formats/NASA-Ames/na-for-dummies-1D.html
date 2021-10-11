@@ -1,0 +1,84 @@
+<html >
+<title>Dummies Guide to NASA Ames format with 1D data </title>
+<head>
+</head>
+<body>
+<h1>Dummies Guide to NASA Ames format with 1D data</h1>
+<hr>
+These guidelines assume a 1D file consisting of atmospheric parameters measured over time, but most 
+1D data files using a different dimension will fit into this structure.
+<p>
+Do not start with line 1, leave this for now. Start with line 2 onwards as follows,</p>
+<pre><blockquote><p style='font-family:Courier'>
+Your name
+Your institute
+Instrument name
+Project name
+1 1
+Date of observations Date file produced
+Size of intervals in time (use 0.0 if non-uniform)
+Name for time variable with units
+Number of variables for each time point
+Scaling factors for these variables
+Missing values for these variables
+Name of first variable
+Name of second variable
+0
+Number of lines of comments to be used
+Comment line 1
+Comment line 2
+Comment line 3
+Comment line 4
+</pre></blockquote></p>
+Thus your file will look something like this:
+
+<pre><blockquote><p style='font-family:Courier'>
+Kilburn, Charles
+British Atmospheric Data Centre, CCLRC Rutherford Appleton Laboratory
+Synop wind data extracted from UK Met Office MetDB for Tahiti station
+2nd Tropical Ocean Observation (TOO2)
+1 1
+2006 06 01 2006 06 01
+0.0
+Time (seconds since 2005-07-17 00:00:00 +00:00)
+2
+1.0 1.0
+9999.0 9999.0
+wind speed (m/s)
+wind direction (degrees)
+0
+4
+#Start of NASA-Ames normal comments#
+Data type: certified
+Original data was in knots
+#End of NASA-Ames normal comments#
+</pre></p></blockquote>
+
+Now go back to the top of the file and fill in the first line with the total number of lines in the header including this top line, followed by 1001. i.e.:
+
+<pre><blockquote><p style='font-family:Courier'>
+20 1001
+</pre></blockquote></p>
+
+Now go back down to the end of the file and add in the data:
+
+<pre><blockquote><p style='font-family:Courier'>
+1st time in seconds 1st variable and 2nd variable at this time 
+2nd time in seconds 1st variable and 2nd variable at this time 
+3rd time in seconds 1st variable and 2nd variable at this time
+etc.
+</pre></blockquote></p>
+which will look similar to this:
+
+<pre><blockquote><p>
+8583 16.88 -25 62
+8589 14.9 -23.52
+8594 16.73 -22.95
+  etc.
+</pre></blockquote></p>
+
+The file ends with the last data point.
+<p>
+<a href = "na-brief-guide.html"> What does it all mean?</a></p>
+</body>
+</html>

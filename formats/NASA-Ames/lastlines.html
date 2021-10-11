@@ -1,0 +1,153 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>NASA Ames Format - Comment Lines</title>
+</head>
+
+<body bgcolor="#ffffff">
+<h1><font color="#333399">NASA Ames Format: Comment Fields</font></h1>
+<hr>
+
+All NASA Ames formatted file headers end by a section reserved to
+comments.
+This section is divided into two distinct subsections, the Special Comments
+and the Normal Comments.
+Normal comments include those that apply to all data of a same data set,
+<i>i.e.</i> to the NVOL files of that data set.
+Special comments apply to the data recorded in the considered file (of number
+IVOL).
+Comments may include blank lines.
+The last normal comment lines may include data column headers.
+
+<h2>Symbols used</h2>
+
+<table>
+ <tr valign=top><td>NSCOML</td>
+     <td width=8></td>
+     <td>Number of special comment lines including blank lines
+         (= 0 if no special comment is given)
+     </td>
+     </tr>
+ <tr valign=top><td>NNCOML</td>
+     <td></td>
+     <td>Number of normal comment lines including blank lines
+         (= 0 if no normal comment is given)</td>
+     </tr>
+ <tr valign=top><td>SCOM</td>
+     <td></td>
+     <td>Special comment lines</td>
+     </tr>
+ <tr valign=top><td>NCOM</td>
+     <td></td>
+     <td>Normal comment lines</td>
+     </tr>
+</table>
+
+<h2>Format</h2>
+
+<h3>Condensed notation</h3>
+
+<p>
+<table>
+ <tr><td colspan=2>NSCOML</td>
+     </tr>
+ <tr><td>[ SCOM(k) ]</td>
+     <td>k = 1, NSCOML</td>
+     </tr>
+ <tr><td colspan=2>NNCOML</td>
+     </tr>
+ <tr><td>[ NCOM(k) ]</td>
+     <td>k = 1, NNCOML</td>
+     </tr>
+</table>
+</p>
+
+<h3>Expanded notation</h3>
+
+<p>
+<table>
+ <tr valign=top>
+  <td>NSCOML</td>
+  <td width=8></td>
+  <td><i>Number of special comment lines</i></td>
+  </tr>
+ <tr valign=top>
+  <td>SCOM<sub>1</sub></td>
+  <td></td>
+  <td><i>First line of special comments</i></td>
+  </tr>
+ <tr valign=top>
+  <td>...</td>
+  <td></td>
+  <td></td>
+  </tr>
+ <tr valign=top>
+  <td>SCOM<sub>NSCOML</sub></td>
+  <td></td>
+  <td><i>Last line of special comments</i></td>
+  </tr>
+ <tr valign=top>
+  <td>NNCOML</td>
+  <td></td>
+  <td><i>Number of normal comment lines</i></td>
+  </tr>
+ <tr valign=top>
+  <td>NCOM<sub>1</sub></td>
+  <td></td>
+  <td><i>First line of normal comments</i></td>
+  </tr>
+ <tr valign=top>
+  <td>...</td>
+  <td></td>
+  <td></td>
+  </tr>
+ <tr valign=top>
+  <td>NCOM<sub>NNCOML</sub></td>
+  <td></td>
+  <td><i>Last line of normal comments</i></td>
+  </tr>
+</table>
+</p>
+
+<h2>Examples</h2>
+
+<h3>Example 1</h3>
+
+<table border=1><tr><td>
+<pre>
+0
+1
+UT (days)    Speed (m/s)    Direction (deg)
+</td></tr></table>
+
+<h3>Example 2</h3>
+
+<table border=1><tr><td>
+<pre>
+4
+For J(O1D), both radiometers were facing upwards.
+For J(NO2), the 2*pi radiometer was facing upwards while
+the 4*pi radiometer was facing both upwards and downwards.
+THIS-FILE-ENDS = 1999 12 31
+7
+SITE-NAME = Pritchatts Road
+LATITUDE = 52.3 deg
+LONGITUDE = -1.56 deg
+E-MAIL-CONTACT = xyz@university.ac.uk
+
+UT (days)    J(O1D) (s-1)    J(NO2) (s-1)
+
+</td></tr></table>
+
+<p>
+</p>
+
+<p>
+<a href="FFI-summary.html">Back to FFI Summary.</a>
+</p>
+
+<p>
+</body>
+
+</html>

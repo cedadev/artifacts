@@ -1,0 +1,34 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SSC_YR61 "
+"SUM_DATA_SET"       "SSCLIMATE    "
+"SUM_DATATYPE"       "GLB_YR_PST61 "
+"ARCHIVE_NAME"       "NCDC, NCAR   "
+"ARCHIVE_STATUS"     "Available    "
+"DS_DESCRIPTION"     "World Monthly Surface Station Climatology           "
+"DT_DESCRIPTION"     "Global Station Annual Meteorological Means After 1961"
+"SUM_BEGIN_DATE"     "01-Jan-1962  "
+"SUM_END_DATE"       "01-Jan-1990  "
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "Global       "
+"SPATIAL2"           " "
+"SPATIAL3"           "Station      "
+"SPATIAL4"           " "
+"TEMPORAL1"          "January 1962 - January 1990"
+"TEMPORAL2"          " "
+"TEMPORAL3"          "Annual       "
+"TEMPORAL4"          " "
+"PRODUCT1"           "Available online through NCDS in Common Data Format (CDF).   "
+"PRODUCT2"           "Available on GEDEX CD-ROM. "
+"PRODUCT3"           " "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"TEMPERATURE"   "Station Temperature"    "Deg C"
+"PRECIPITATION" "Station Precipitation"  "mm"
+"HUMIDITY"      "Station Humidity"       "mb, Percent"
+EOF
+
+SOURCES
+"STATION"         "IN SITU"
+EOF

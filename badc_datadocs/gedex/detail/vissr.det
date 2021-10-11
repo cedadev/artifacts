@@ -1,0 +1,810 @@
+VISSR on SMS/GOES
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Visible and infrared radiances are measured in
+two spectral channels by the Visible and Infrared Spin-Scan Radiometer
+(VISSR) on the Synchronous Meteorological Satellite (SMS) series and the
+Geostationary Operational Environmental Satellite (GOES) series.  Eight
+visible detectors simultaneously scan the 0.55 to 0.75 micrometer region,
+while two infrared (IR) detectors scan the 10.5 to 12.6 micrometer regions
+as the VISSR views the Earth.  These channels are used for day/night cloud
+mapping, surface temperature determination, and weather forecasting.
+
+1.2  Unit of Measurement.
+
+                    Parameter             Units
+                    -----------           -----------------
+                    Radiance              mW/m**2-steradian
+                    Temperature           degrees Kelvin
+                    -----------           -----------------
+
+1.3  Data Source.  Visible and Infrared Spin-Scan Radiometer (VISSR) flown
+on the SMS-1 and -2 and the GOES-1, -2 and -3.  GOES-4, -5, -6, and -7
+carry an advanced VISSR Atmospheric Sounder (VAS), which can obtain
+atmospheric soundings as well as VISSR images.
+
+1.4  Data Set Identification.  The VISSR image/radiance data comprise a
+Level I data base archived by Satellite Data Services Division (SDSD) and
+produced by the NOAA Environmental Data and Information Service (NESDIS)
+Field Service Stations.  This data base is comprised of two complete
+full-disk image data sets.  The GOES satellites are named according to
+their longitude position, either GOES-East or GOES-West.  One data set is
+derived from the satellite over 135 degrees west created at 15 and 45
+minutes after the hour and the other at 75.0 degrees west created on the
+hour and the half-hour.   When only one satellite is operational it is
+moved regularly to provide better coverage of local weather events. From
+these data sets, the full disks and various sectors (1, 2, 4, and 8 km
+resolutions) are produced. For each of these areas the photographic display
+contains an equal amount of data points, thereby obtaining a finer
+resolution for the smaller regions. Each photographic display contains a
+legend at the top and is available gridded or ungridded.
+
+In addition, partial data sets are maintained by NASA/Goddard Space Flight
+Center.  These data are maintained not only as imagery, but also in three
+different digital tape formats:  the Atmospheric and Oceanographic Image
+Processing System (AOIPS) tape format; the Image Display and Manipulation
+System (IDAMS) tape format; and the Experimenter History Tape (EHT) format.
+The first two formats are unique to image processing systems at NASA
+Goddard Space Flight Center.  The third format is more generally usable.
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  The VISSR provided for coverage at the equator from
+5 degrees west to 145 degrees west (GOES-East) and 65 degrees west to 155
+degrees east (GOES-West) through July 30, 1984.  The longitudinal coverage
+decreases poleward from the equator, and the maximum latitude viewed is 81
+degrees. The scan limits are +/- 10 degrees about the satellite subpoint
+requiring 1821 latitude steps for a full-earth scan.  Coverage after July
+30, 1984 was provided by GOES-6, which was moved regularly to provide
+better coverage of local weather events until GOES-7 became operational.
+GOES-7 is presently operating at 75 degrees west.  When GOES-6 failed on
+January 21, 1989, GOES-7 became known as GOES-MAIN.
+
+2.2  Spatial Resolution.  The instantaneous field-of-view (IFOV) of the
+visible channels is 0.021 x 0.025 mrads.  The IFOV of the IR channels is
+0.192 mrads, leading to a resolution of 0.9 km and 8 km for the visible and
+IR channels, respectively.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  The NOAA-archived full Earth disk and sector
+images began on June 27, 1974 and continue to the present.
+
+The NASA-archived digital data set covers various subsets of this period,
+which are discussed further in the description of each product in Item 8
+below.
+
+3.2  Temporal Resolution.  Each scan of the VISSR views the Earth for a
+period of 32.3 msec.  During this period each channel of the analog data
+output is digitized to obtain 15,276 samples for the visible channels and
+3822 samples for the IR channels.  The full-earth scan requires 1821
+latitude steps and 19.93 minutes to execute the scan and scan return.  This
+produces 14,568 visible lines. The images are produced daily by NOAA
+starting on the hour and half-hour.  More frequent images at seven and
+fifteen minute intervals are made for special weather events in the spring
+and summer.
+
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  The VISSR provides data to produce photographic
+displays for the National Weather Service (NWS).  These data allow
+day/night cloud mapping, surface temperature determination, atmospheric
+temperature determination, weather forecasting, and meteorological
+research.
+
+4.2  Key Satellite Flight Parameters.  Nominal orbit parameters for the
+Synchronous Meteorological Satellite (SMS) and Geostationary Operational
+Environmental Satellite (GOES) series of spacecraft are:
+
+Satellite   Launch   Failure   Nominal   Longitude  Inclination   Period
+             Date     Date     Altitude  (Degrees)   (Degrees)   (Minutes)
+---------  -------  --------   --------  ---------  -----------  ---------
+ SMS- 1    5/17/74   1/29/81   35,790 km   130W         0.6        1436.4
+ SMS- 2    2/06/75   8/05/81   35,793       75W         0.4        1436.4
+GOES- 1   10/06/75   2/03/85   35,788       90W         0.8        1436.4
+GOES- 2    6/16/77   1/26/79   35,900      105W         0.5        1436.4
+GOES- 3    6/15/78   3/05/81   35,900      135W         0.5        1436.4
+GOES- 4    9/09/80  11/25/82   35,900      135W         0.5        1436.4
+GOES- 5    5/15/81  11/29/84   35,600       75W         0.3        1436.4
+GOES- 6    4/28/83  01/21/89   35,600      135W *       0.3        1436.4
+GOES- 7    2/26/87  operating  35,600       75W         0.1        1436.4
+---------  -------  ---------  --------  ---------  -----------  ---------
+* GOES-6 was moved periodically between 135 W and 98 W.
+
+4.3  Principles of Operation.  The VISSR provides visible and IR images of
+the Earth from geosynchronous orbit.  Since the instrument is stationary
+relative to a point on the Earth's surface, it can observe the movement of
+clouds associated with weather patterns across the Earth.
+
+The visible channel detector consists of eight S-20 Photo-Multiplier Tubes
+(PMT) arranged in a linear array, which is sensitive to radiation in the
+0.55 to 0.75 micrometer range.  Each PMT is 0.025 x 0.021 mrads. The
+dynamic range is 3-100% albedo.  Calibration can be made by direct solar
+illumination through prisms designed to provide 50% albedo.  Signal
+bandwidth is 210 kHz.  However, routine calibrations are not made on the
+visible sensor.  Some calibrations have been made for research programs on
+a sporadic basis.  The two IR detectors are HgCdTe cooled to 95 degrees K.
+The noise equivalent radiance is 1 x 10**-5 watts/cm**2-steradian.  Each
+detector's instantaneous field-of-view (IFOV) is 192 x 192 microradians and
+measures thermal radiance within the 10.5 to 12.6 micrometer range.
+
+The VISSR telescope has an aperture of 40 cm and focal length of 291 cm. It
+focuses the visible radiance onto eight filter optical cords that are
+incident upon the eight PMT detectors.  The 0.06 x 0.06 mm dimensions of
+the fiber form the visible band field stops.  The IR bands are filtered and
+routed by lenses to each of the HgCdTe detectors.  The video analog output
+of all detectors is routed to the VISSR Digital Multiplexer (VDM).  The VDM
+sequentially samples the inputs: each visible line every 2 microseconds and
+each IR line every 8 microseconds.  The samples are multiplexed and
+converted to digital values. Each visible band is encoded to six bits and
+each IR value to eight bits. In the output data stream, a ninth bit has
+been added to the infrared pixel for drawing geographical and political
+boundaries.
+
+The VDM operates in either of two modes, as commanded by the ground
+station. Mode 1 multiplexes all eight visible line outputs into the output
+stream, giving a data rate of 28 Mbps.  Mode 2 averages adjacent visible
+lines before converting to digital values and reduces the data rate to 14
+Mbps.  Track and hold logic within the VDM holds the signal level of a
+sample constant while it is converted to a digital format.  The values are
+merged with a scan-line identifier, sun pulse data (calibration), and
+synchronization data for each scan-line.
+
+All data are immediately transmitted to the ground.  There is no buffering
+or on-board recording.  The data are collected, processed as just
+described, and transmitted to the ground during the time that the Earth is
+in view (+/- 10 degrees of the subpoint) which is about 5 percent of each
+scan.
+
+Ground stations can select the mode, focus the optical system, and select
+the scan volume to be viewed.  The starting of each scan frame requires
+ground commands.
+
+4.4  Measurement Geometry.  The VISSR is a cross-track scanning system. The
+optical axis of the instrument is parallel to the spacecraft spin axis,
+which in turn is parallel to the Earth's axis.  The optical axis is thus
+perpendicular to the direction of the Earth scene.  The optically flat scan
+mirror is placed at 45 degrees to the optical axis, and directs the Earth
+scene into the VISSR. The spin of the satellite provides a west-east scan
+of the Earth.  On each scan, eight scan lines of visible data and one
+scan-line of IR data are collected. Following each scan, the field-of-view
+is stepped to the next most southernly adjacent set of scan lines.  The
+full-earth disk or any portion may be scanned as directed by ground
+command.  A time of 19.93 minutes is required for full scan and scan
+return.  Each visible channel has an IFOV of .021 x 0.25 mrad (0.9 km at
+satellite subpoint), and the IR has an IFOV of 0.192 mrad (8 km). There is
+a 20 percent underlap in the FOV of the adjacent visible scans.  The IR is
+digitized at twice the rate at which it scans an 8 km IFOV.  Thus, IR
+pixels are produced for 4 km east-west by 8 km north-south FOVs.  Scan
+limits are +/- 10 degrees of the subpoint, and there are 1821 latitude
+steps required for a full-earth scan.
+
+Data sampling is as follows:
+
+     Spectral       Sample/        Sample/            Quantizing
+       Band          Scan           Sec.              Resolution
+     --------       -------        -------        ------------------
+      Visible        15276         129.0 k        6-bit (64 levels)
+      IR              3822         32.25 k        8-bit (256 levels)
+     --------       -------        -------        ------------------
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  The radiance values detected by the
+VISSR are merged with a scan line identifier, sun pulse data (calibration),
+and synchronization data for each scan line.  All data are immediately
+transmitted to the Command and Data Acquisition (CDA) station at Wallops
+Island, Virginia. There is no buffering or on-board recording.
+
+At the CDA station, the data are adjusted for bias and gain, calibrated,
+gridded and registered by the GOES Processor/Distribution Unit (P/DU).
+These data, termed Stretched VAS (SVAS), are then retransmitted to the
+satellite at 14 Mbps and relayed to remote receiving stations at Goddard
+Space Flight Center (GSFC) and the University of Wisconsin (UW).  The data
+acquired by GSFC are checked for quality, merged with orbit and attitude
+data and output tapes (AOIPS, IDAMS, and EHT) and images are produced.
+
+5.2  Derivation Techniques/Algorithms.  The images provided by VISSR are
+not extensively processed beyond what is necessary to produce the images.
+At the CDA station, the data are adjusted for sensor gain and bias,
+interpolated and sampled using interpolation between bits to minimize
+degradation of the original data.  This technique is necessary to
+standardize the bit content and start time of each scan line, simplifying
+subsequent processing of the data. After resampling, visible data are
+stored in a Visible Data Buffer and are processed into four resolution
+grades for transmission to NESDIS and to the University of Wisconsin.
+
+Due to the physical arrangement of the detectors, IR data are sampled at
+separate times from the visible data.  The time sequence of the data are
+rearranged so that the IR and visible images of a terrestrial point occur
+at identical locations in both formats.  The IR data are then converted to
+temperatures via look-up tables.  At this point the NOAA and NASA
+processing diverge.  NOAA simply transfers the data to magnetic tape,
+reformats them, transmits them to a film recorder and produces a gridded
+image.
+
+5.3  SPECIAL CORRECTIONS/ADJUSTMENTS
+
+The VISSR channels are calibrated in a thermal/vacuum environment at five
+instrument temperature plateaus.  Some adjustments described above in Item
+5.2 are made to standardize the bit content and start time of the stretched
+data scans.
+
+5.3.1  Preflight Calibration
+
+       a.  Visible Channel Calibration:  The visible channel calibration
+           source is a quartz iodine lamp, the output of which is
+           collimated and spectrally shaped using appropriate optical
+           filters similar to the Sun over the spectral band of the VISSR
+           visible channels.  The output level of the calibration source is
+           established by eight neutral density filters to provide a
+           calibration albedo range from 0.16 to 1.0.  The absolute
+           calibration accuracy of the VISSR visible channels is estimated
+           to be +/- 10 percent.
+
+       b.  Thermal Channel Calibration:  The VISSR thermal channels are
+           calibrated at eight target scene temperatures between 180 and
+           315 degrees K, using a temperature controlled blackbody source.
+           The estimated absolute calibration accuracy is +/- 1.5 degrees
+           C, +/- 1 percent of full scale, whichever is larger.
+
+5.3.2  Inflight Calibration
+
+       a.  Visible Channels:  In-flight calibration of the eight VISSR
+           visible channels is accomplished by viewing the sun through the
+           complete visible channel optical train via a "side-looking",
+           reduced aperture collecting prism.  The area of the prism
+           aperture is approximately 10**-5 of the normal VISSR collecting
+           aperture area to provide a signal input equal to approximately a
+           50 percent albedo calibration point.  The visible channel gains
+           are adjusted in the ground station processing to equalize the
+           eight scanners.  This is done to remove stripping of the images.
+           Other gain adjustments are occasionally made for image clarity.
+           Absolute calibrations with the sun viewer are not part of the
+           GOES operating procedure.  However, some research programs have
+           produced limit calibrations for parts of the GOES data record.
+
+       b.  Thermal Channels:  The in-flight calibration of the VISSR
+           thermal channels is accomplished by means of a blackbody whose
+           temperature is monitored.  This blackbody is activated by
+           command and introduced into the optical path just ahead of the
+           infrared relay optical system.  The space view by VISSR provides
+           a zero signal reference in the thermal bands that is used to
+           establish the zero-end of the measurement scale.
+
+5.4  Processing Changes.  In November 1986, NOAA began testing new hardware
+to replace the Synchronizer/Data Buffer (S/DB) then used for VISSR data
+manipulation.  In February 1987, this system became operational as the VAS
+Image Processor (VIP), performing data manipulation for VISSR, Dwell
+Sounding and Multispectral Imaging modes.  It utilizes the GOES Monitoring
+and Control System (GMACS) as a central controller for format, calibration,
+resampling, frame synchronization and gain offset calculation.  These
+processing changes offer a more user-friendly atmosphere for data usage but
+are otherwise transparent to the user.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  The Command and Data Acquisition Center
+(CDA) uses a sixteen-bit error checking field in the header of the data
+tape to validate transmission accuracy.  Data are also validated by visual
+examination of selected scenes.
+
+A quality assurance analysis is included in the processing.  This entails
+an examination of the data for consistency and completeness.
+
+6.2  Confidence Level/Accuracy Judgment.  The VISSR accuracy estimates are
+given below.
+
+                               Signal/      Radiance
+                               Noise
+                  VISIBLE:     ---------    -----------
+                               3:1          0.5% albedo
+
+                               NETD *       Temperature
+                       IR:     ------       -----------
+                               0.14 K       3 degrees K
+
+   * Noise Equivalent Temperature Difference
+
+The quoted accuracy for the temperatures derived from the IR channel is
+much larger than the Noise Equivalent Temperature Difference (NETD) due to
+inaccuracies in the VISSR absolute calibration:  the relative calibration
+is much closer to the NETD.
+
+6.3  Usage Guidance.  VISSR data are used for production of a number of
+products relating to meteorological and climate research.  These include
+various cloud and temperature maps for the National Weather Service office,
+international weather forecasting, and real-time field experiments viewed
+GOES images through the Man-computer Interactive Data Access System
+(McIDAS).
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+7.1    Manager, Satellite Operations Control Center (SOCC)
+
+       Mr. Gary Davis
+       NOAA/NESDIS/SOCC
+       Federal Building 4, Room 0135
+       Washington, DC  20233
+       (301) 763-1610
+       FTS 763-1610
+
+7.2    Data Products from VISSR
+
+       Ms. Kay Metcalf
+       NOAA/NESDIS/NCDC
+       Satellite Data Services Division
+       Room 100, Princeton Executive Square
+       Washington, DC  20233
+       (301) 763-8400
+       FTS 763-8400
+
+7.3    Sensor Scientist
+
+       Mr. William Shenk
+       Code 910
+       NASA/Goddard Space Flight Center
+       Greenbelt, Maryland  20771
+       (301) 286-4725
+
+7.4    Tape Storage Supervisor
+
+       Mr. Ralph Post
+       Code 933
+       NASA/Goddard Space Flight Center
+       Greenbelt, Maryland  20771
+       (301) 286-7134
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products
+
+8.1.1  AOIPS-Formatted Tape, Level-I.
+
+       Medium/Specification:  9-track, 1600-bpi computer tape.  For
+       specification, see the references in Item 11.1.
+
+       Format and Content:  The AOIPS tapes are produced specifically for
+       use on Goddard Space Flight Center's Atmospheric and Oceanographic
+       Image Processing System (AOIPS).  Each tape comprises up to the
+       following four files:  visible image data file; IR image data file;
+       IR grid data file, and a calibration data file.  A tape may contain
+       fewer than four files depending on the availability of calibration
+       data and whether or not visible and/or IR data are requested.  The
+       visible and IR data on a tape correspond to the same geographic
+       area.  Each file includes an AOIPS label which contains information
+       to identify the image, the physical characteristics of the file, and
+       the data records, as well as up to two blocks of orbit and attitude
+       information, when available.  Each image data record contains all of
+       the pixel values for one image line.  The number of pixels in each
+       image data record will vary depending on the sector size and data
+       type.
+
+       Data Quantity/Rate:  There are approximately 17,630 AOIPS-formatted
+       tapes available for the period July 19, 1975 through May 2, 1979.
+
+       Status:  Available at the Federal Records Center (FRC) through
+       NSSDC.
+
+       Plans/Schedule:  The GOES-1, -2, and -3 AOIPS tapes have been
+       restored on 6250-bpi (9-track) tapes.  The restoration process does
+       not change the format of the tapes.
+
+8.1.2  IDAMS-Formatted Tape, Level-I
+
+       Medium/Specification:  7-track, 800-bpi.  For specification, see the
+       references in Item 11.1.
+
+       Format and Content:  Each tape contains either one GOES VISSR
+       visible or IR image.  Visible image tapes contain 400 image records,
+       at 1 km resolution; IR image tapes are produced in sizes of 500,
+       1000, and 2000 scan records.  The first two records on IDAMS tapes
+       are labels; the next two records contain orbit/attitude data.  The
+       next records on the visible (IR) tape contain title information. The
+       rest of the tape contains up to 400 records.  Each record represents
+       one line of the image.  The tape is terminated by a double
+       end-of-file.
+
+       Data Quantity/Rate:  There are 2012 IDAMS tapes, covering the period
+       from May 17, 1974 to February 2, 1976.
+
+       Status:  Available at the Federal Records Center (FRC) through
+       NSSDC.
+
+       Plans/Schedule:  The IDAMS-formatted tapes are no longer in use. The
+       IDAMS-formatted tapes are expected to be restored to 6250-bpi
+       (9-track) tapes.
+
+8.1.3  Experimenter History Tape (EHT), Level-I
+
+       Medium/Specification:  9-track, 1600-bpi computer tape.  For
+       specification, use reference in Item 11.1.b.
+
+       Format and Content:  Each GOES VISSR digitized image section is
+       recorded on one or more reels and divided into files with one or
+       more files on each reel.  Each file of image data contains one or
+       more complete scan lines of data, each of which includes an IR image
+       line and 8 visible data lines.  An adjoining file contains
+       orbit/attitude and telemetry information.
+
+       Data Quantity/Rate:  There are approximately 1006 EHTs, which span
+       the period from May 17, 1974 to June 8, 1979..
+
+       Status:  Available at the Federal Records Center (FRC) through
+       NSSDC.
+
+       Plans/Schedule:  The EHTs are produced only upon request from
+       investigators.  Future plans are dependent upon future requests. The
+       GOES-1 EHT tapes have been restored.  The restoration process does
+       not change the format of the tapes.
+
+8.1.4  GOES-East and -West Digital Data, Level-I
+
+       Medium/Specification:  9-track, 1600- and 6250-bpi computer tape.
+
+       Format and Content:  NOAA SDSD maintains an archive of reduced
+       resolution digital imagery from both the GOES-East and GOES-West
+       spacecrafts.  From July 26, 1976, through September 5, 1978, one
+       visible and 5 IR images per day per spacecraft were archived on
+       computer compatible tapes (CCT).  From September 6, 1978 through
+       September 1983, 5 visible and 5 IR images per day per spacecraft
+       were archived.  These images all have 8 km resolution at nadir,
+       extend in latitude from 39 degrees S and cover 99 degrees longitude,
+       centered on the satellite subpoint. Some gaps in the period of
+       record are due to mechanical and operational difficulties.
+
+       Data Quantity/Rate:  From August 26, 1976, to September 5, 1978, one
+       CCT per day per spacecraft was archived, and from September 6, 1978
+       through July 29, 1984, three CCTs per day per spacecraft were
+       archived.  From July 30, 1984 to the present, one CCT per day is
+       being archived.
+
+       Status:  This archive is presently operational.  Additional images
+       are archived on a continuing basis.
+
+       Plans/Schedule:  GOES digital data at additional resolutions,
+       including full resolution 1 km visible and 8 km infrared are
+       available from SDSD and the University of Wisconsin.  Full
+       resolution data are available from February 18, 1978 through July
+       29, 1984.  From July 30, 1984 until February 1987 data are available
+       only from GOES-6.  Since January 1989 only GOES-7 data are
+       available.
+
+8.2  Film Products
+
+8.2.1  GOES Visible/IR IMAGES, Level-I
+
+       Medium/Specification:  25 cm x 25 cm negatives (various photographic
+       products can be made from the negatives)
+
+       Format and Content:  SDSD archives all data received from the GOES
+       satellites in image form.
+
+       Two complete full-disk data sets (one for the geostationary
+       satellite over the subpoint 0.0 degrees north latitude, 135 degrees
+       west longitude; and, the other for the subpoint 0.0 degrees north,
+       75.0 degrees west created on the hour and the half-hour.  From these
+       data sets, the full disks and various sections (1, 2, 4, and 8 km
+       resolution) are produced.  For each of these areas the photographic
+       display contains an equal amount of data points, thereby obtaining a
+       finer resolution for the smaller regions.  Each photographic display
+       contains a legend at the top and is available gridded or ungridded.
+       Image data are available from May 1974 to the present time.
+
+       The resolution, area, and quantity of images archived by NOAA are
+       shown below:
+
+       Product     Resolution   Area           Quantity/satellite/day/year
+       -------     ----------   ----           ---------------------------
+       IR           8 m        Full Disc                45 - 16,425
+       Visible      4 km       Full Disc                32 - 11,680
+       Visible      2 km       1/4 Disc                 32 - 11,680
+       Visible      1 & 2 km   Variable Sectors        180 - 102,200
+       -------     ----------  ---------------- --------------------------
+
+       Data Quantity/Rate:  The archive has been acquiring GOES data since
+       1974.
+
+       Status:  The full-earth disk and sector images from June 27, 1974
+       through December 1977, are now stored at the Federal Records Center.
+       Since January 1, 1978 images have been archived on a continuing
+       basis at SDSD.
+
+       Plans/Schedule:  Processing of sectors was eliminated September 30,
+       1984, although these can be made available on a requested basis with
+       assistance from NOAA/NESDIS Research Library via SDSD.  The
+       University of Wisconsin plans to continue archiving images as they
+       are produced.
+
+8.2.2  GOES Microfilm, Level-I
+
+       Cognizant Agency:  NOAA/NESDIS, Satellite Data Services Division
+
+       Medium/Specification:  35 mm microfilm reels.
+
+       Format and Content:  SDSD has full-disk, gridded visible and IR
+       imagery from both the GOES-East and GOES-West satellites archived on
+       35 mm microfilm.  Each reel of microfilm is approximately 100 feet
+       long and contains 15 days of data from either the East or West
+       satellite.  Each 35 mm reel can be reproduced in either a positive
+       transparency or negative format.  Since January 21, 1989, this
+       product is available from GOES-7.
+
+       Data Quantity/Rate:  Each reel of microfilm contains 15 days of GOES
+       data.
+
+       Status:  GOES microfilm data are available for the period from
+       September 1974 through September 1986 (except between November 1982
+       and April 1983).  GOES-East (GOES-5) failed in July 1984.  When
+       GOES-5 failed, GOES-6 was moved to a more central longitudinal
+       location.  GOES-6 failed on January 21, 1989.
+      
+       Plans/Schedule:  GOES microfilm data were in production through
+       September 1986.
+
+8.2.3  VISSR Digitally Derived Imagery, Level-I
+
+       Medium/Specification:  70 mm negatives or 9.5 x 9.5 inch prints.
+
+       Format and Content:  These images are produced from VISSR digital
+       data tapes.  They may have a combination of the following options:
+
+       a.  Contrast enhancement
+       b.  Image sectorization
+       c.  Full-earth or sector imagery (IR only)
+       d.  1/4 size imagery (IR only)
+       e.  1/16 size imagery (IR and Visible)
+
+       The positive prints are second generation products, made from the
+       first generation negatives.
+
+       Data Quantity/Rate:  There are over 12,000 images available,
+       spanning the period from May 17, 1974 to the present.
+
+       Status:  Available 
+
+       Plans/Schedule:  Sectorized images may be requested from NSSDC
+       (GOES-1, -2, -3) or the University of Wisconsin (for later dates) by
+       date, time, and geographic area.
+
+8.3  Other Products.   
+
+8.3.1   Available from SDSD.
+
+        a.  Television movies, 16mm.  Each movie is constructed from
+            individual frames which cover a period of 21 hours. They show
+            meteorological events which are centered over the United States
+            and adjacent coastal waters.  The movies were available from
+            December 1969 through September 1983.  This product is no
+            longer being produced.
+
+        b.  Hurricane/seasonal movies, 16mm, 100 feet in length.  A
+            hurricane movie (May to November) and a winter movie (November
+            to May) are available from May to November 1984.
+
+        c.  Wind vectors are available on computer compatible tape.
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification
+
+9.1.1  NOAA Archive
+
+          Ms. Kay Metcalf
+          NOAA/NESDIS/NCDC
+          Satellite Data Services Division
+          Room 100, Princeton Executive Square
+          Washington, DC  20233
+          (301) 763-8400
+
+9.1.2  NASA Archive
+
+          Code 933-Central Data Services Facility
+          National Space Science Data Center
+          NASA/Goddard Space Flight Center
+          Greenbelt, Maryland  20771
+          (301) 286-6695
+
+9.2  Procedures for Obtaining Data.  
+
+9.2.1  NOAA Data
+
+Data are provided, with prepayment required, via visit, telephone call or
+written request to SDSD or the University of Wisconsin.  Identification of
+specific data requires discussion/exchange with SDSD or University of
+Wisconsin staff.
+
+9.2.2  NASA Data
+
+Researchers who reside outside the USA should direct their request to:
+
+          World Data Center-A for Rockets and Satellites
+          Code 930.2
+          Goddard Space Flight Center
+          Greenbelt, Maryland  20771
+          USA
+          (301) 286-6695
+          NSI DECnet: NSSDCA::REQUEST
+
+Users may request data by letter, telephone, electronic mail, or personal
+visit.  Data costs are dependent on affiliation and sponsorship of the user
+program. Data are free to NASA affiliated scientists.  Communication with
+NSSDC personnel before ordering is advised.
+
+9.3  NCDS Status/Plans.  The NCDS provides limited VISSR images in original
+format for First ISCCP (International Satellite Cloud Climatology Project)
+Regional Experiment (FIRE) researchers.
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+10.1  NOAA Archive
+
+         Ms. Kay Metcalf
+         NOAA/NESDIS/NCDC
+         Satellite Data Services Division
+         Room 100, Princeton Executive Square
+         Washington, DC  20233
+         (301) 763-8400
+
+10.2  NASA Archive
+
+         Code 933-Central Data Services Facility
+         National Space Science Data Center
+         Greenbelt, Maryland  20771
+         (301) 286-6695
+         NSI DECnet:  NSSDCA::REQUEST
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      a.  Goddard Space Flight Center, 1977.  "VISSR Data Processing Plan
+          for Synchronous Meteorological and Geostationary Operational
+          Environmental Satellites (SMS/GOES)."  NASA/GSFC Publication
+          X-565-77-219, Goddard Space Flight Center, Greenbelt, Maryland.
+
+      b.  Clark, J.D., 1983.  "The GOES Users Guide."  NOAA/NESDIS.
+
+      c.  National Environmental Satellite Service, 1975. "Central
+          Processing and Analysis of Geostationary Satellite Data." NOAA
+          Technical Memorandum: NESS 64.
+
+      d.  NOAA/NESDIS, 1987.  "Operational VAS Mode AAA Format Version
+          2.5."  Specification SFP 002.
+
+      e.  Rao, P.K., and S.J. Holmes, R.K. Anderson, J.S. Winston, P.E.
+          Lehr, 1990.  "Weather Satellites:  Systems, Data and
+          Environmental Applications."  American Meteorology Society.
+          Boston, Massachusetts.
+
+11.2  Journal Articles and Study Reports
+
+      a.  Coakley, James A. Jr. and R. Davies, 1986.  "The Effect of Cloud
+          Sides on Reflected Solar Radiation as Deduced from Satellite
+          Observations." J. Atmos. Sci. 43:1025-1035.
+
+      b.  Chou, Ming-Dah, J. Childs, and P. Dorian, 1986.  "Cloud Cover
+          Estimation Using Bispectral Satellite Measurements." J. Climate
+          Appl. Meteor. 25:1280-1292.
+
+      c.  Dvorak, V.F., 1975. "Tropical Cyclone Intensity Analysis and
+          Forecasting from Satellite Imagery."  Monthly Weather Review
+          103:198-212.
+
+      d.  Legeckis, R., W. Pichel, and G. Nesterczuk, 1983.  "Equatorial
+          Long Waves in Geostationary Satellite Observations and in a
+          Multichannel Sea Surface Temperature Analysis."  Bull. Amer.
+          Meteor. Soc., 64:133-139.
+
+      e.  Maul, G.A., 1981. "Application of GOES Visible-Infrared Data to
+          Quantifying Mesoscale Ocean Surface Temperatures."  J. Geophys.
+          Res. 86:8007-8021.
+
+      f.  Rodgers, E.B., S.W. Chang, J. Stout, J. Steranka, and J-J. Shi,
+          1991.  "Satellite Observations of Variations in Tropical Cyclone
+          Convections Caused by Upper-Tropospheric Troughs."  Journal of
+          Applied Meteorology 30:1163-1184.
+
+11.3  Archive/DBMS Usage Documentation
+
+      a.  U.S. Department of Commerce, November 19, 1981. "Satellites Data
+          Users Bulletin." Satellite Data Services Division, Vol. 3, No. 1.
+
+      b.  NOAA, August 1981, November 1983 and October 1985. "National
+          Holdings of Environmental Satellite Data of the National Oceanic
+          and Atmospheric Administration."
+
+
+12.  RELATED DATA SETS
+
+Other geostationary meteorological satellites with VISSR-type instruments
+are maintained by Japan (GMS) and the European Space Agency (Meteosat).
+More details about these spacecraft, their instruments, and contacts can be
+obtained from NOAA.  SDSD now archives Computer Compatible Tape (CCT)
+digital data from the Meteosat and GMS satellites.
+
+
+13.  SUMMARY/SAMPLE
+
+None.
+
+
+14.  NOTES
+
+None.
+
+*92/03/12

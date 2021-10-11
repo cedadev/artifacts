@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050215T080000Z
+DTEND:20050225T180000Z
+LOCATION:Paris, France
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:3rd International Conference on Air Pollution Modelling and Simulation=0D=0Ahttp://www.inria.fr/actualites/colloques/apms05=0D=0A
+SUMMARY:3rd International Conference on Air Pollution Modelling and Simulation - AMPS 2005
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

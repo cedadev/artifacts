@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20101024T230000Z
+DTEND:20101030T230000Z
+LOCATION:Toulouse, France
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000B0CC6E9AD3ACCA01000000000000000
+	0100000008EC38C1AA263AF41A639DFBACD632B7C
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+For the 10th anniversary of the EUFAR project,  an International Conferen=
+ce on Airborne Reseach for the Environment (ICARE), including an aircraft=
+ exhibition and an inter-calibration experiment will be organised in Toul=
+ouse, October 25-30th 2010=0D=0A=0D=0ADetails available at http://badc.ne=
+rc.ac.uk/community/conferences/Flyer_ICARE-2010.pdf=0D=0A=0D=0A=0D=0A
+SUMMARY:ICARE 2010
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

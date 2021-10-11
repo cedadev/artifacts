@@ -1,0 +1,146 @@
+<HTML>
+<HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>CLIMAT Upper Air Data Table</TITLE>
+  <!-- Created 13th April 2010 -->
+  <!-- Author: Graham Parton BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>CLIMAT Upper Air Values - Columns in the CURS table <BR CLEAR="ALL"></H1>
+
+    <p></table><br>
+
+	  <b>Description: </b>This entity contains monthly values at the surface received in WMO code
+	  FM-75-CLIMAT TEMP which is a monthly report of upper air CLIMAT values. The record is for the
+	  specified year, month and station.<br><br>
+<P>For the convenience of users, the CURS file column headers are available for download in <a href="Headers/CURS_Column_Headers.xlsx    ">Excel</a> or as a <a href="Headers/CURS_Column_Headers.csv">comma separated text file</a>
+<P>
+
+<table border="1" cellspacing="0" width="95%">
+      <tr>
+        <td valign="TOP" width="5%" align="center"><b>PK</b></td>
+        <td valign="TOP" width="40%"><b>Attribute</b></td>
+        <td valign="TOP" width="20%"><b>Datatype</b></td>
+        <td valign="TOP" width="35%"><b>Description / Units / Precision</b></td>
+
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_id</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(6)</font></td>
+        <td valign="TOP" width="35%">Unique source identifier</td>
+      </tr>
+
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_date</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">DATE</font></td>
+        <td valign="TOP" width="35%">Last day of month of observation</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+
+        <td valign="TOP" width="40%"><font face="Courier New">version_flag</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">CHAR(1)</font></td>
+        <td valign="TOP" width="35%">Observation version number</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id_type</font></td>
+
+        <td valign="TOP" width="20%"><font face="Courier New">VARCHAR2(4)</font></td>
+        <td valign="TOP" width="35%">Identifier type</font></td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">VARCHAR2(8)</font></td>
+
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_domain_name</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">VARCHAR2(8)</font></td>
+        <td valign="TOP" width="35%"><A HREF="met_domain.html">Message type</a></td>
+      </tr>
+
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rec_st_ind</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(4)</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/state_indicators.html">State indicator for the record</a>**</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+
+        <td valign="TOP" width="40%"><font face="Courier New">mean_stn_lvl_pres</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(5,1)</font></td>
+        <td valign="TOP" width="35%">Monthly mean surface pressure<br>0.1 hpa</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">mean_sfc_air_temp</font></td>
+
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(3,1)</font></td>
+        <td valign="TOP" width="35%">Mean monthly air temperature<br>0.1 deg C</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">mean_surface_dewpoint</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(4,1)</font></td>
+
+        <td valign="TOP" width="35%">Mean monthly dew point<br>0.1 deg C</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">nom_rsnd_hr_id</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">CHAR(1)</font></td>
+        <td valign="TOP" width="35%">Nominal hour of radio-sonde ascent / code</td>
+
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">mean_stn_lvl_pres_qc_code</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">CHAR(1)</font></td>
+        <td valign="TOP" width="35%">Quality of mean station-level air pressure / code</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+
+        <td valign="TOP" width="40%"><font face="Courier New">mean_sfc_air_temp_qc_code</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">CHAR(1)</font></td>
+        <td valign="TOP" width="35%">Quality of mean surface air temperature / code</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">mean_surface_dewpoint_qc_code</font></td>
+
+        <td valign="TOP" width="20%"><font face="Courier New">CHAR(1)</font></td>
+        <td valign="TOP" width="35%">Quality of mean surface dewpoint / code</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">meto_stmp_time</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">DATE</font></td>
+
+        <td valign="TOP" width="35%">Met Office receipt stamp time</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">qual_analyst_id</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">VARCHAR2(3)</font></td>
+        <td valign="TOP" width="35%">Identifier of QC staff member</td>
+
+      </tr>
+      </table><BR>
+<BR>
+** Details available to registered users only.
+<P>
+More information about the Met Office surface data is available
+in the <A HREF="ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+</BODY>
+</HTML>

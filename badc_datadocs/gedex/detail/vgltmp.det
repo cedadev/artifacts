@@ -1,0 +1,479 @@
+Vinnikov, Groisman and Lugina Temperature Anomalies
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement. Surface air temperature
+
+1.2  Unit of Measurement.  Degrees Centigrade
+
+1.3  Data Source. The mean monthly values of surface air temperature have
+been taken from the archives of climate information available on magnetic
+tape.  The sources of this information include the reference books "World
+Weather Records", "Monthly Climatic Data for the World" and "Meteorological
+Data for Individual Years over the Northern Hemisphere Excluding the USSR",
+and are supplemented with information from various national publications.
+                                                                                
+1.4  Data Set Identification. The zonal temperature data reside within NCDS
+as VGL-TMP-DEV_MONTHLY, VGL-TMP-DEV_SEASONAL, VGL-TMP-DEV_ANNUAL.  The
+station data are available through NCDS as VGL-TMP-MON_NORTH-STATN and
+VGL_TMP_MON_SOUTH-STATN.  VGL is an acronym for the data set producers:
+Vinnikov, Groisman, and Lugina.
+
+                                                                                
+2.  SPATIAL CHARACTERISTICS                                                     
+                                                                                
+2.1  Spatial Coverage.  Based on statistically optimum spatial averaging of
+meteorological fields developed by Gandin (1965), and Kagin (1979), 301
+stations in the Northern Hemisphere, and 265 stations in the Southern
+Hemisphere were used for determining the mean temperatures.
+                                                                                
+2.2  Spatial Resolution. 30 degree latitudinal zones (6) 
+                                                                                
+                      90 deg N -60 deg N                                        
+                      60 deg N -30 deg N                                        
+                      30 deg N - 0 deg                                          
+                      0  deg   -30 deg S                                        
+                      30 deg S -60 deg S                                        
+                      60 deg S -90 deg S                                        
+                                                                                
+For the 60 - 90 degree South zone, data are available only after 1957. As a
+result, the estimate that is calculated for the 0 - 60 degree South zone is
+used to characterize the entire Southern Hemisphere for the period 1881 to
+1990.
+
+                                                                                
+3.  TEMPORAL CHARACTERISTICS                                                    
+                                                                                
+3.1  Temporal Coverage.  These data cover the time period 1881-1990.            
+                                                                                
+3.2  Temporal Resolution.  Monthly                                              
+                                                                                
+                                                                                
+4.  INSTRUMENT DESCRIPTION                                                      
+                                                                                
+4.1  Mission Objectives.  N/A                                                   
+                                                                                
+4.2  Key Satellite Flight Parameters.  N/A                                      
+                                                                                
+4.3  Principles of Operation.  N/A                                              
+                                                                                
+4.4  Instrument Measurement Geometry.  N/A                                      
+                                                                                
+                                                                                
+5.  DATA PROCESSING SEQUENCE                                                    
+                                                                                
+5.1  Processing Steps and Data Sets.  Statistically optimum spatial
+averaging of the time series of the mean surface air temperature anomalies
+was employed.  More precise information concerning the exact steps and data
+can be obtained from Vinnikov et al. (1987, 1990) and Groisman and Lugina
+(1985).
+                                                                                
+5.2  Derivation Techniques/Algorithms.  All the data used have been
+thoroughly checked for homogeneity of observational series,
+representativeness, and presence of random errors.  The inferences about
+series homogeneity and proposals for their correction from Jones et al.
+(1985, 1986) have been also taken into account.  As a result, the following
+networks have been selected:  301 stations are used to estimate the mean
+temperature of the Northern Hemisphere and 265 stations are used to
+estimate the mean temperature of the Southern Hemisphere.  For the 1881 -
+1990 period, the Northern Hemisphere network proved to be sufficient to
+provide an accurate spatial averaging (Vinnikov et al. 1987).  In the last
+quarter of the 19th century, the Southern Hemisphere network of stations is
+very sparse.  The increase in the number of stations in different parts of
+the hemisphere between 1881 - 1941 is documented as follows:
+                                                                                
+                                 Australia    Total number                      
+Year    Africa    S. America    and Oceania    of stations                      
+_____________________________________________________________                   
+                                                                                
+1881      1            2             6               9                          
+1901     12           13            12              37                          
+1921     17           22            23              62                          
+1941     40           54            35             129                          
+All                                                                             
+Years    80          100            85             265                          
+____________________________________________________________                    
+                                                                                
+                                                                                
+5.3  Special Corrections/Adjustments.  A homogenous time series has been
+created for the following locations from data of neighboring stations using
+an overlapping period of data.  These stations include:  Honolulu, Hawaii;
+Lihue, Hawaii; Tarawa, Kilibatchee; Guam; Piarco, Trinidad; and 3 others.
+In addition, spatial averaging of anomalies from normals has been
+approximated using the mean temperature from the period 1951-1975. For
+those few stations where the "normals" were absent, the "normals" were
+estimated from data of surrounding stations.
+                                                                                
+5.4  Processing Changes.  The empirical data on changing global surface air
+temperature recently have been revised.  Compared to previous analyses,
+rough disturbances in the homogeneity of the observational series at
+individual meteorological stations have been eliminated and more adequate
+methods for spatial averaging have been used.  Similar revisions have been
+carried out in the United Kingdom and the United States (Jones et al. 1985,
+1986), in the United States (Hansen and  Lebedeff 1987, 1988), and in
+Russia (Vinnikov et al., 1987).  The present archive provides only the
+revised data (Vinnikov et al., 1987, 1990).
+                                                                                
+                                                                                
+6.  QUALITY ASSESSMENT                                                          
+                                                                                
+6.1  Data Validation by Producer.  All the data used have been thoroughly
+checked for homogeneity of observational series, representativeness, and
+presence of random errors.  The inferences about series homogeneity and
+proposals for their correction from Jones, et al. (1985, 1986) have been
+also taken into account.
+                                                                                
+6.2  Confidence Level/Accuracy Judgment.  The estimates obtained with the
+monthly resolution can be compared with those from Jones et al., (1986).
+The standard deviations, Sigma, linear trend coefficients Beta, correlation
+coefficients, Rho, and the mean square values of closure of comparison,
+Delta, were compared.  Comparison of mean monthly values of surface air
+temperature show a satisfactory agreement of the estimates for both
+hemispheres but do not allow us to determine which estimate is more
+accurate (Vinnikov et al., 1990).  The three independent estimates are
+available for the mean annual surface air temperature.  The first and
+second agree well with those from Hansen and Lebedeff (1987, 1988).  The
+observed agreement between the series is completely satisfactory.  The
+results of estimating the trends confirm the conclusion that modern climate
+warming is a global reality.
+                                                                                
+6.3  Usage Guidance.  The Russian studies, as opposed to others, are based
+on the statistically optimum methods for spatial averaging of
+meteorological fields developed first by Gandin (1965) and Kagan (1979).
+These methods are most effective when information is scarce. Therefore, the
+statistically optimum technique provides a sufficiently accurate spatial
+averaging procedure when using data from a limited number of stations,
+smaller than used by other research groups.  These data are designed for
+large-scale temperature change studies.
+                                                                                
+                                                                                
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION                                    
+                                                                                
+     Dr. Konstantin Ya. Vinnikov                                                
+     State Hydrological Institute                                               
+     23 Line 2                                                                  
+     Leningrad 199053, U.S.S.R.                                                 
+     (Temporarily assigned to GFDL until August 1992)
+     609-452-6532        
+                                                                                
+     Dr. P.Y. Groisman                                                          
+     State Hydrological Institute
+     23 Line 2
+     Leningrad 199053, U.S.S.R.                                          
+     (Temporarily assigned to NCDC until October 1992) 
+
+     Dr. P.Y. Groisman
+     National Climatic Data Center
+     Federal Building
+     Asheville, North Carolina   28801-2696                
+     704-259-0307   
+     INTERNET:  pgroisma@gclsun01.ncdc.noaa.gov
+
+                                                                      
+8.  OUTPUT PRODUCTS AND AVAILABILITY                                            
+                                                                                
+8.1  Tape Products.  None                                           
+                                                                                
+8.2  Film Products.  None                                                       
+                                                                                
+8.3  Other products                                                             
+                                                                                
+8.3.1  Vinnikov, Groisman and Lugina Temperature Data in Common Data 
+       Format (CDF).                                                
+                                                                                
+       Medium/Specification:  Magnetic disk                                     
+                                                                                
+       Format and Content:  The data are stored in a special
+       data-set-independent format, designated the Common Data Format
+       (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk. Each CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" allows a user within an NCDS session to create and access
+       these data and descriptions.  These CDF files may be accessed within
+       the DATA APPLICATIONS Subsystem of NCDS, by specifying as input
+       VGL-TMP-DEV_MONTHLY, VGL-TMP-DEV_SEASONAL, VGL-TMP-DEV_ANNUAL,
+       VGL-TMP-MON_NORTH-STATN and VGL-TMP-MON_SOUTH-STATN.
+                                                                                
+       Data Quantity/Rate:                                                      
+                                                                                
+       VGL-TMP-DEV_MONTHLY consists of 1 file, 5.6 Kb                       
+       VGL-TMP-DEV_SEASONAL consists of 1 file, 5.6 Kb                      
+       VGL-TMP-DEV_ANNUAL consists of 1 file, 5.6 Kb                        
+       VGL-TMP-MON_NORTH-STATN consists of 1 file, 6.7 Kb                  
+       VGL-TMP-MON_SOUTH-STATN consists of 1 file, 7.2 Kb                   
+                                                                                
+       Status: These data are currently available online in the NASA
+       Climate Data System (NCDS).
+                                                                                
+       Plans/Schedule: NCDS will continue to support these data and will
+       continue to update this data set as new data are received.
+                                                                                
+8.3.2  Monthly, seasonal and annual temperature deviations as well as
+       monthly mean surface temperature for the northern and southern
+       hemisphere are available on floppy disk from the data producer. The
+       seasonal data are identified by the first month of that season: for
+       example, winter is represented by the month of January, spring by
+       the month of April, summer by the month of July and autumn by the
+       month of October.
+         
+8.3.3  The Greenhouse Effect Detection Experiment (GEDEX) CD-ROM                
+                                                                                
+       Medium/Specification:  CD-ROM in ISO 9660 standard.
+                                                                                
+       Format and Content:  The data on this disk will be stored in a
+       special data-set-independent format, designated the Common Data
+       Format (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk. Each CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" will be included with this CD-ROM allowing a user to create
+       and access these data and descriptions.  The CD-ROM will consist of
+       many different data sets related to the study of the Greenhouse
+       Effect including the VGL data sets, and the accompanying NCDS data
+       set documentation.
+                                                                                
+       Data Quantity/Rate: 1 CD-ROM disk set.                  
+                                                                                
+       Status: Release date for this product is scheduled for early 1992.
+                                                                                
+       Plans/Schedule: Users interested in this product should contact NCDS
+       staff for more details.
+                                             
+                                   
+9.  DATA ACCESS                                                                 
+                                                                                
+9.1  Archive Identification.                                                    
+                                                                                
+     Goddard DAAC User Support Office      
+     NASA/Goddard Space Flight Center                                           
+     Code 935 
+     Greenbelt, Maryland  20771   
+     (301) 286-3209                                                             
+     FTS:  888-3209                                                             
+     INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+     NSI DECnet:  NSSDCA::NCDSUSO    
+                                                                                
+9.2  Procedures for Obtaining Data.  These data are available through the
+NASA Climate Data System in Common Data Format (CDF).  These CDFs are
+accessible through the Data Applications subsystem of NCDS by specifying
+the following names:
+                                                                                
+                      NCDS$DATA:VGL-TMP-DEV_MONTHLY
+                      NCDS$DATA:VGL-TMP-DEV_SEASONAL 
+                      NCDS$DATA:VGL-TMP-DEV_ANNUAL    
+                      NCDS$DATA:VGL-TMP-MON_NORTH-STATN      
+                      NCDS$DATA:VGL-TMP-MON_SOUTH-STATN    
+                                                                                
+To obtain more information on accessing online data or for more information
+on the GEDEX CD-ROM contact the Goddard DAAC User Support Office. (See Item
+10).
+                                                                                
+9.3  NCDS Status/Plans.  NCDS currently supports these data online, and
+will continue to update as additional data are received.  A CD-ROM with
+many "Greenhouse Effect" data sets will be released to the research
+community in the near future and will contain the Vinnikov, Groisman and
+Lugina Temperature Deviations.
+                                                  
+                                                                                
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION                               
+                                                                                
+     Goddard DAAC User Support Office    
+     NASA/Goddard Space Flight Center                                           
+     Code 935 
+     Greenbelt, Maryland  20771                   
+     (301) 286-3209                                                             
+     FTS:  888-3209                                                             
+     INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV   
+     NSI DECnet:  NSSDCA::NCDSUSO      
+                                                                                
+                                                                                
+11.  REFERENCES                                                                 
+                                                                                
+11.1  Satellite/Instrument/Data Processing Documentation                        
+                                                                                
+      a.  Groisman P.Ya. and K.M. Lugina. 1985.  "Computer implementation
+          of the algorithm for spatial averaging of meteorological fields,"
+          - Proc. State Hydrological Institute, 317, p.38 - 46. (in
+          Russian).
+                                                                                
+      b.  Kagan, R.L., 1979.  Averaging meteorological fields.
+          Gidrometeoisdat, Leningrad, 212 pp.  (in Russian).
+                                                                                
+      c.  Vinnikov K.Ya. and K.M. Lugina. 1982.  "Some problems of the
+          global thermal regime monitoring of the Northern Hemisphere," -
+          Meteorol. and Hydrol., No 11, p. 5 - 14. (in Russian).
+                                                                                
+      d.  Vinnikov K.Ya., P.Ya. Groisman, K.M. Lugina and A.A. Golubev,
+          1987.  The mean surface air temperature variations in the
+          Northern Hemisphere over 1841 - 1985.  Meteorol. and Hydrol., No
+          1,. 45 - 55 (in Russian).
+                                                                                
+11.2  Journal Articles and Study Reports                                        
+                                                                                
+      a.  Gandin, L.S., 1965.  Objective analysis of meteorological fields.
+          Gidrometeoizdat, Leningrad.  Translated by Israel Program
+          Scientific Translations, Jerusalem, 242 pp.
+                                                                                
+      b.  Groisman, P.Y., and K.M. Lugina, 1985.  Computer implementation
+          of the algorithm for spatial averaging of meteorological fields.
+          Proc. State Hydrological Institute, vyp. 317, 38-46 (in Russian).
+                                                                                
+      c.  Kagan, R.L., 1979.  Averaging meteorological fields.
+          Gidrometeoisdat, Leningrad, 212 pp.  (in Russian).
+                                                                                
+      d.  Hansen, J.E., and S. Lebedeff, 1987.  Global trends of measured
+          surface air temperature.  J. Geophys. Res. 92, 13,345-13,372.
+                                                                                
+      e.  Hansen, J.E., and S. Lebedeff, 1988.  Global surface air
+          temperatures:  update through 1987.  Geophys. Res. Lett., 15,
+          323-326.
+                                                                                
+      f.  Jones, P.D., et al., 1985/1986.  A grid point surface air
+          temperature data set for the Northern (Southern) Hemisphere.
+          TRO-22(27).  U.S. Dept. of Energy, Washington.
+                                                                                
+      g.  Jones, P.D., R.S. Bradley, H.F. Diaz, P.M. Kelly and T.M.L.
+          Wigley, 1986.  Northern Hemisphere surface air temperature
+          variations: 1851-1984.  J. Climate Appl. Meteor., 25, 161-179.
+                                                                                
+      h.  Jones, P.D., S.C.B. Raper and T.M.L. Wigley, 1986.  Southern
+          Hemisphere surface air temperature variations:  1851-1984. J.
+          Climate Appl. Meteor., 25, 1213-1230.
+                                                                                
+      i.  Lugina, K.M., 1988:  On the variability of mean monthly surface
+          air temperature in the Northern Hemisphere.  Proc. State
+          Hydrological Institute, vyp. 330, 22-23.
+                                                                                
+      j.  Vinnikov K.Ya., P.Ya. Groisman, K.M. Lugina and A.A. Golubev,
+          1987.  The mean surface air temperature variations in the
+          Northern Hemisphere over 1841 - 1985.  Meteorol. and Hydrol., No
+          1,. 45 - 55 (in Russian).
+                                                                                
+      k.  Vinnikov K.Ya., P.Ya. Groisman and K.M.Lugina, 1990. Empirical
+          Data on Contemporary Global Climate Changes (Temperature and
+          Precipitation).  Journal of Climate. vol.3, p. 662 - 677.
+                                                                                
+11.3  Archive/DBMS Usage Documentation                                          
+                                                                                
+      a.  Olsen, L.M., J.W. Closs, and F.E. Corprew, November 1991. "NASA's
+          Climate Data System Primer:  Version 4.0."  EOS DAAC, NASA
+          Goddard Space Flight Center, Greenbelt, Maryland.
+                                                                                
+                                                                                
+12.  RELATED DATA SETS  
+                                                        
+     Several related data sets exist online through NCDS.  
+                                                                                
+     1) The Climate Research Unit Global Temperature Deviations data set
+        contains surface air and marine air temperature anomalies derived
+        from the World Weather Records (WWR).  These data are available
+        online through NCDS in Common Data Format (CDF).  To access these
+        CDFs, specify the following as input within the Data Applications
+        subsystem of NCDS.
+
+                      NCDS$DATA:CLIM-RSRCH-U_TMP-DEV
+
+     2) The Angell Global Temperature Deviations data set contains zonal
+        temperature deviations derived from radiosonde measurements
+        compiled in Monthly Climatic Data for the World, published by the
+        National Climatic Data Center.  These data are available online
+        through NCDS in Common Data Format (CDF).  To access these CDFs,
+        specify the following as input within the Data Applications
+        subsystem of NCDS.
+
+                      NCDS$DATA:ANGELL_TMP_DEV
+
+     3) The GISS Temperature Deviations data set contains monthly
+        temperature deviations for the period 1880 through 1988 and is
+        available online through NCDS in Common Data Format (CDF).  To
+        access these CDFs, specify the following as input within the Data
+        Applications subsystem of NCDS.
+                                                     
+                      NCDS$DATA:GISS-TMP-DEV_MON-GLB
+                      NCDS$DATA:GISS-TMP-DEV_MON-NH  
+                      NCDS$DATA:GISS-TMP-DEV_MON-SH
+                      NCDS$DATA:GISS-TMP-DEV_MON-ZONE  
+                      NCDS$DATA:GISS-TMP-DEV_MON-BOXES
+                      NCDS$DATA:GISS-TMP-DEV_MON-SUBBOXES
+
+                                                                                
+13.  SUMMARY/SAMPLE                                                             
+                                                                                
+      Sample plots of these data will be available through NCDS in       
+      early January 1992.  
+
+                                                                                
+14.  NOTES                                                                      
+                                                                                
+     The Russian studies, as opposed to others, are based on the
+     statistically optimum methods for spatial averaging of meteorological
+     fields developed first by Gandin (1965) and Kagan (1979).  These
+     methods are most effective when information is scarce.  Therefore, the
+     statistically optimum technique provides a sufficiently accurate
+     spatial averaging procedure when using data from a limited number of
+     stations, smaller than used by other research groups.
+                                                            
+*92/03/12

@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070715T230000Z
+DTEND:20070717T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:School of Biological Sciences at the Uni=
+versity of Liverpool=20
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000000F02FFCC5A9C7010000000000000000100
+ 00000D1BFF853A5089B4E8363FFDC8AE3F4EC
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Molecular Microbial Ecology Group mee=
+ting=0D=0A=0D=0AThe 13th Molecular Microbial Ecology Group meeting (MMEG13)=
+ is being =0D=0Ahosted by the Microbiology group of the School of Biologica=
+l Sciences at =0D=0Athe University of Liverpool this year. It is a two-day =
+meeting of oral =0D=0Apresentations and will take place on the 16th and 17t=
+h of July.=0D=0A=0D=0AThe meeting is aimed at enabling PhD students and ear=
+ly career =0D=0Ascientists to present their work at a slightly less formal =
+gathering of =0D=0AUK Microbial Ecologists, it is well-attended by UK resea=
+rchers in the =0D=0Afield.=0D=0A=0D=0ARegistration forms and abstract submi=
+ssion details can be found at =0D=0Ahttp://marine.liv.ac.uk/mmeg13 . The ab=
+stract and registration deadline =0D=0Ais the 15th June. For further inform=
+ation please contact Dr. Mike Cox at =0D=0Ammeg13@gmail.com=0D=0A=0D=0A=0D=
+=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Molecular Microbial Ecology Group meeting
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

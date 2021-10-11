@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050911T230000Z
+DTEND:20050916T230000Z
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000A0579D0C30FEC4010000000000000000100
+ 00000161ABF84A8D2654CBDCEA64D5570976D
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0A------------=0D=0AFrom:	nerc-at=
+mos-bounces@ncas.ac.uk on behalf of Louisa Watts [lw@nerc.ac.uk]=0D=0ASent:=
+	14 January 2005 18:37=0D=0ATo:	nerc-atmos@ncas.ac.uk=0D=0ASubject:	[nerc-a=
+tmos] ACCENT - First Symposium - First Announcement and Call for Papers=0D=
+=0A=0D=0ANCAS/NERC Atmospheric Sciences Listserver=0D=0A*******************=
+***************************************************************************=
+=0D=0A=0D=0AAnnouncement of the first symposium of ACCENT, the European Net=
+work of=0D=0AExcellence in Atmospheric Composition Change:=0D=0A=0D=0A"The =
+Changing Chemical Climate of the Atmosphere" =0D=0A=0D=0ADate: 12th-16th Se=
+ptember 2005=0D=0AVenue:  Urbino, Italy=0D=0A=0D=0APlease find attached pdf=
+ file with details of this meeting.=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:[nerc-atmos] ACCENT - First Symposium - F=
+irst Announcement and Call for Papers
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

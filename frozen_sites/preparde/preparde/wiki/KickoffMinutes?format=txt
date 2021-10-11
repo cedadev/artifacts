@@ -1,0 +1,306 @@
+ == PREPARDE Kick-off Meeting ==
+Mon 2 July 2012, University of Leicester (Physics Meeting Room F10)[[BR]]
+11.00am – 4.30pm
+
+Present:
+ * Dr Sarah Callaghan (British Atmospheric Data Centre)			(SC)
+ * Dr Rebecca Lawrence (F1000)						(RL)
+ * Dr Fiona Murphy (Wiley-Blackwell) (via Skype)				(FM)
+ * Tim Roberts (Wiley-Blackwell)						(TR)
+ * Dr Jonathan Tedds (University of Leicester)				(JT)
+ * Dr Angus Whyte (DCC)							(AW)
+ * Dr Andrew Burnham (University of Leicester) (Note taking)		(AB)
+
+Present for part of the meeting:
+ * Dr Roland Leigh (University of Leicester) (1.00pm onwards)		(RoL)
+ * John Kunze (California Digital Library) (via Skype) (3.15pm onwards)	(JK)
+ * Dr Matt Mayernik (NCAR) (via Skype) (3.15pm onwards)			(MM)
+
+
+'''Project Overview'''
+
+
+(JT) This is a widely scoped project so there is need to focus, identify where it can make a difference, the direction, and who can lead where.
+The original start date was postponed from 1 June 2012, to 1 July 2012 with end date 30th June 2013.
+The Project budget had to be revised down to £135,000 – and agreed by JISC - from the originally proposed £150,000.
+There is a revised document and risk report accordingly (distributed).
+Project documents and slides – agreed that project partners’ logos should be included. Need therefore to add DCC, F1000, and new Wiley logo which is currently being developed.  There was agreement that logos could be resized accordingly.
+
+'''Geoscience Data Journal'''
+
+(FM) To produce a press release next week.
+The Editorial board is currently being compiled.
+The content of the journal will be a) data papers and b) papers about data.
+In relation to papers about data publication, there may be additional funding for this element from “CODATA”, which is less geoscience specific.
+The publisher to pay to publish - £1000.
+There is the issue of peer-review process to reassure funder that dataset is good quality.
+
+(RL) Also looking at this – allowing data only papers, encouraging deposit of data into repositories.
+There is a general move towards linking data to articles.
+
+See BMJ editorial on open access – “BMJ Editorial: Open Science and Reproducible Research” (27 June 2012, http://blog.datadryad.org/2012/06/27/bmj-editorial-open-science-and-reproducible-research/)
+
+(JT) Springer publishers are considering an open access, on-line only publication to include articles from a range of disciplines regarding data publication. JT has been invited to take a leading role.
+
+(FM) Wants to be at the AGU (American Geophysical Union) conference to engage with community.  To send through details of the meeting.
+This will be chance to meet up with US partners in this project (w/c 3.12.2012).
+
+'''OJIMS'''
+
+(SC) SC was OJIMS Project Manager.
+OJIMS - Overlay Journal Infrastructure for Meteorological Sciences JISC project – this developed software for overlay journals i.e. papers about data sets.
+The project proved that this would technically work.
+The issue was quiet for a while until Geoscience Data Journal picked it up.
+
+All OJIMS project documents are available and online.
+The project put a technical framework in for how to publish datasets – a test-bed.
+Have covered “How to review datasets” - IJDC Papers 
+Referred to the NERC Science Information Strategy Data Citation and Publication project (http://www.ijdc.net/index.php/ijdc/article/view/208/277) - 
+Can now mint DOIs (Digital Object Identifiers).
+Going out to known authors of good datasets in relation to getting a DOI and publishing.
+Will help people to do this and dataset creators will get credit.
+
+'''Objectives (PowerPoint slides to be forwarded by JT)'''
+
+1.	Capture & manage workflows to operate GDJ (Repository-controlled & Journal-Controlled Diagram)
+The project will involve examining the workflows shown.
+Those shown on orange are to be investigated by this project.
+
+(RL) Queried whether there are other approaches?  It assumes that data is in a repository first, but what happens where they aren’t available?
+Is currently taking another approach with F1000 i.e. people come with a paper and then look at repository issues.
+
+(SC) GDJ is core test-case so need to learn from that and look broader.
+The project should come up with alternative use case diagrams.
+
+Other issues discussed:
+ * 	Orphan datasets.
+ * 	(SC) Issues with Figshare e.g. not enough metadata.
+
+2.	Develop procedures and policies for authors, reviewers and editors
+(FM) Need to clarify what a data paper is.
+How do retrospective linking?
+
+(RL) Guidelines for the F100 new publication include issues regarding:
+•	Whether data is raw or processed.
+•	How it has been processed etc.
+The author guidelines are on line – RL to will forward them.
+
+(JT) Different disciplines will have different levels of data i.e. beyond simply raw vs. processed.
+This was thought to be a possible area for a DCC briefing document based on a recent ALPSP presentation he had given entitled “What is (research) data?”
+
+'''Work Package 1 – Project Management'''
+
+(SC) Delivery requirements within the first month:
+ * 	Project plan required within a month (with sub plans).
+SC to do the first draft and send round for comments.
+
+ * 	Consortium agreement – this needs to come from Leicester (JT).
+SC to look for similar documents.
+JT to check with Simon Hodson (JISC) if there is a favoured format for consortium agreements.
+
+ * 	A web page needs to be on JISC site
+
+BADC can set up a wiki, and will split it into the separate work packages.
+A project blog also will be important – it requires monthly posts and a “we’ve started” kick-off post.
+There is an issue of where to site all this as UoL is the lead institute, but the Project Manager is based at BADC.
+(JT) There should be a team blog but it isn’t necessary to tie this to UoL (e.g. use Drupal in the JISC-funded BRISSkit project). A project website will be established at Leicester which points to the wiki and blog assuming hosted elsewhere.
+JT is using “#PREPARDE” hash tag for tweets.
+
+A Mid-term report is required after 6 months.
+Internal project communications – a project mailing list has been set up and this should be used for all communications until other facilities have been established.
+A monthly teleconference/Skype will take place (all agreed to use Skype). This will be important to keep things ticking over.
+There should also be face to face meetings when possible e.g. when workshops are running.
+
+'''Work Package 2 – Journal and Data Repository workflows'''
+
+(FM) Information about what people need?
+How accessible are data repos to potential publishers.
+Have got some peer-review guidance documents.
+Best way to engage? 
+See GDJ home page – author guidelines (and on submissions page)
+Reviewer guidelines not yet published.
+What meetings/survey etc. to gather information?
+
+(SC) Sees the work package slightly differently, concerned with points where interactions with repositories can be made, looking for example at what are the BADC workflows when publishing.
+Thinks guidelines fit into the next work package.
+First pass capture is required before move further.
+
+Required activity is to a) sit down with those in the organisation, with a sheet of paper and literally talk about what happens in the publication process, and b) get the results into e-format and send round for comment.
+(SC) Asked AW to do submission flows for IJDC – as baseline for traditional publishing.
+
+Need to start to get academics involved relatively early to view what considering.
+(JT) Whilst framing the project in the first month, wondered if there are others to contact/liaise with.
+(SC) When we have our own workflows others may be more likely to comment/share.
+
+Others to contact re their workflows:
+a)	DRYAD – Ryan Scherle (http://wiki.datadryad.org/Publications ).  AW to talk to him at an Open Repository event.
+b)	Brian Hole (Ubiquity Press and PI for other new JISCMRD data publication project based around new Journal of Open Archaeological Data)
+c)	Pensoft?
+(SC) Also need to ask US colleagues to do workflows from their perspective.
+SC agreed to lead this work package alongside FM.
+
+'''Work Package 4 – Cross-linking between repositories and data publishers'''
+
+(FM)
+Can technically cross-link but it is a very manual process.
+This involves what can be automated, places to collect information, and best practice to emerge.
+The more specific about what is needed the better.
+
+(SC) There is an issue about where exactly a data citation should be.  This needs to be thrashed out with DataCite etc.
+(RL) Her own discussion about this concluded that it should be in the reference list.  There is need to send a paper round to publishers to get agreement.
+(SC) Agreeing with this, it was thought that the citation should be in the paper’s abstract also.
+
+(RL) ISB & BioShare are working on unique identifiers and links through a BBSRC funded project.
+The article and the dataset will both have their own DOI.
+
+'''Work Package 3 – Scientific review of datasets'''
+
+(RL)
+Through experience of ESA datasets there are validation points and programmes.
+Need major data provider e.g. Met Office, ESA to get a peer review process in for publishing algorithms.
+Wants to know how datasets are reviewed, what methods are used, have they been peer- reviewed.  This influences whether there is trust in the data.
+The aim is for a structured way to have confidence in datasets.
+See: CEMS - Climate and Environmental Monitoring from Space (http://isic-space.com/driving-innovation/climate-and-environmental-monitoring-from-space/)
+
+There is a Knowledge exchange interest, and issues move towards “can a validation portal be created?”.
+Also looking at Data review guidelines.
+
+(SC) Referred to International Journal of Data Curation (IJDC) article with data quality/metadata quality guidelines etc. (Issue 2, Volume 6, 2011 “Citation and Peer Review of Data: Moving Towards Formal Data Publication” - http://www.ijdc.net/index.php/ijdc/article/view/181/265)
+
+(RoL) Raised the issue of what researchers are looking for to make data trustworthy - How can you trust data?
+Suggested a link to the National Centre for Earth Observation (algorithm developers) as they create new datasets and are interested in validation etc.
+
+(?)
+Scientific and technical (what the repos. Does – data scientist e.g. won’t give them a DOI if not required metadata, not using accepted terminology) validation/review
+Generalities vs. specifics of subsets of disciplines/types of data
+(RL)  Repos. Needs to know about peer review e.g. “it’s rubbish”
+(SC) – they don’t currently know/express an opinion 
+There was seen to be need for domain knowledge in review.
+
+(AW) The NERC Data Value Checklist addresses what makes a dataset long-term scientifically valuable.
+
+Allocation of DOIs – It was noted that UKDA allocate a new DOI for major revisions (and not minor revisions), but practice varies.
+(SC) Minting DOI’s is relatively new so there is a not lot of experience.
+
+(JT) Concluded that with so many issues and questions, the key question is which aspects to concentrate on. Will work with RoL, Heiko Balzter and other academics to produce recommendations.
+
+'''Work Package 6 – Stakeholder engagement and dissemination, including external communications'''
+
+(JT) Will be running stakeholder workshops later on, shaped by earlier work.
+There is potential for a briefing paper, questionnaire approach, to target audiences for workshops.
+(SC) Should also include the DCC organised Research Data Management Forum.
+It was agreed that the appropriate format would be to tag onto other events e.g. as per IDCC conference.
+
+Possibilities to follow up:
+ * 	STM Association - http://www.stm-assoc.org/ (International Association of Scientific, Technical & Medical Publishers) (FM)
+ * 	Learned Societies
+ * 	Royal Astronomical Society (JT)
+ * 	AGU (SC)
+ * 	AMS – American Meteorological Society (FM)
+ * 	Use GDJ Review Board as now putting it together (RL)
+ * 	IPCC (RL)
+
+(SC) It was suggested that a portable “standard workshop” should be created and taken from place to place.
+(JT) Developments in this area should be recorded on the Wiki.
+
+'''Work Package 5 - Data Repository Accreditation'''
+
+(SC) Leading on this with a clear idea of initial leads and contacts.
+There is a first draft report for IDCC conference in January focussing on guidelines for publishers to help them identify trustworthy repositories.
+A request was made for others to point to any information if they are aware of any.
+Note:
+ * 	The “Data Seal of Approval” (http://www.datasealofapproval.org/)
+ * 	16363 – ISO standard. (http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=56510)
+
+'''3.15pm onwards – American colleagues joined at this point and work package discussions were reviewed'''
+
+a)	Matt Mayernik – NCAR 
+b)	John Kunze – Associate Director, University of California Curation Center
+
+'''Work Package 1 – Project Management'''
+
+SC confirmed that a project Mailing List had set up, and she was writing a Project Plan.
+SC/JT to work on a project website/wiki/collaborative environment. JK/MM confirmed that they were not too concerned about which platform was used for these.
+A monthly telecom will be set up and Leicester will draw up a consortium agreement.
+
+Agreed Communications:
+a)	Telecons to default to 4.00pm UK time monthly, via Skype, days to be decided by Doodle Poll.
+b)	Quarterly or 6 monthly face to face meetings.
+
+'''Work Package 2 – Journal and Data Repository workflows'''
+
+(SC) Each project team member should go into each of their own organisations and look at the publishing workflows – steps that happen before a DOI is created, the work is frozen and it is made available.
+Workflow comparison to be conducted, to bring together to see common procedures and differences and where crosslinks can be made easily.
+
+(MM) Within NCAR there are many workflows rather than one.
+Data management teams are very specific, different labs with very specific work e.g. the climate modelling team.
+Data systems and workflows have grown independently.
+We need to see what should cut across all e.g. citation, peer review.
+Noted that this is well timed as this was work which was needed.
+
+To focus on 3 groups, better organised, and have already contacted and confirmed that they are interested in this proposal:
+a)	NCAR earth observing lab (observation data).
+b)	Climate modelling team (simulation data).
+c)	Research Data Archive (reference collection of diverse data types).
+
+Suggestions have been made about other US groups which may be appropriate.
+
+(JK) Confirmed that have their own repository and issue DOI’s.
+
+'''Work Package 3 – Scientific review of datasets'''
+
+Are working towards reviewer guidance, and will use what exists (RL evidence).
+(RL) How many different flavours will be required? – this will be interesting.
+
+(MM) Aware that this will be tricky, with technical vs. scientific review.  There are wide variations in time spent, and results.
+Issues include:
+ * 	Who is qualified to review?
+ * 	Who would you send a dataset to?  Peer review implies review by somebody outside of the team responsible for creating and archiving data, but people outside will have less context, and may require more than project documentation.
+ * 	Review before or after a data set is made available is interesting question. There, users may find issues with the data e.g. calibration errors, and results in change.  
+ * 	Common practice at NCAR is to require login before data can be downloaded, which allows the data archiving teams to inform those who have used data if there is a data set change.
+
+(JK) Experiences much less formal review and so feels an outlier in this.
+Within versioning the important thing is keeping the version history, whatever the DOI policy.
+
+(RL) Is asked to peer reviews and they make take days.  Issues are therefore,
+ * 	How much time is reasonable?
+ * 	Tools used?
+ * 	Prioritisation of which is important and needs/doesn’t need review.
+ * 	How do you structure this extra work?
+He concluded that best review is when people actually use the data.
+
+'''Work Package 6 – Stakeholder engagement and dissemination, including external communications'''
+
+Suggested events:
+ * 	Agree that IDCC workshop will be good idea.
+ * 	(MM) American meteorological Society January 2013
+ * 	AGU
+
+(SC) Decided against a dedicated Project Twitter feed for now but to use #PREPARDE in personal tweets, show activity on web pages, and get information on Wiki and point to it via #PREPARDE as soon as possible.
+
+'''Work Package 4 – Cross-linking between repositories and data publishers'''
+
+(RL)
+Worth linking into BBSRC funded iBioDBCore (Internal BioCreators / Bio-Sharers)
+List of all biology repositories - Catalogue data they take, back-up plan, how funded etc.
+BioDBCore Stamp
+Last year and a half
+
+(SC) A “Publication Roadmap” for CDL is required as a deliverable.
+Next step is linking papers to data with a DOI.
+What metrics should be used? e.g. usage counters.
+
+(JK) Reuters are looking at launching data citation index, but SC noted that this is some way off yet.
+
+'''Work Package 5 - Data Repository Accreditation'''
+
+(SC) The initial step is the need to do Google searches to find out what is out there.  Get what information we can find.
+(MM) What exactly will Accreditation mean? – How active? How much self-certification?
+(SC) What we need to do is requirements for this.
+
+Suggested sources:
+ * 	(FM) NISO – National Inst. Standards Org
+ * 	(AW) Digital Preservation Consortium, Center for research Libraries, DCC risk management approach (DRAMBORA)
+ * 	(JT) Compare to Biomed ISO standards work (UCL pilot group with BRISSkit http://www.brisskit.le.ac.uk project led by JT)
+
+SC to draw up timelines in the next month.

@@ -1,0 +1,33 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SAGE2NO2 "
+"SUM_DATA_SET"       "SAGEII-PROF  "
+"SUM_DATATYPE"       "NO2          "
+"ARCHIVE_NAME"       "NSSDC, NCDS          "
+"ARCHIVE_STATUS"     "Available.  Reprocessed in March, 1991.                      "
+"DS_DESCRIPTION"     "ERBS Stratospheric Aerosol and Gas Experiment II Profiles    "
+"DT_DESCRIPTION"     "NO2 Profiles                                                 "
+"SUM_BEGIN_DATE"     "24-Oct-1984                                                                 "
+"SUM_END_DATE"       "30-Nov-1989                                                                 "
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "80 deg N to 80 deg S (above 5 km or cloud top)               "
+"SPATIAL2"           "                                                             "
+"SPATIAL3"           "250 km X 250 km  Vertical resolution is 1 km below 25 km     "
+"SPATIAL4"           "and 5 km above 25 km                                         "
+"TEMPORAL1"          "October, 1984 - ongoing                                      "
+"TEMPORAL2"          "Latitudinal coverage varies with each season,                "
+"TEMPORAL3"          "however full coverage reached in 1 month.                    "
+"TEMPORAL4"          "                                                             "
+"PRODUCT1"           "NO2 number density and volume mixing ratio profiles          "
+"PRODUCT2"           "One 6250 tape per year.                                      "
+"PRODUCT3"           "Available on GEDEX CD-ROM.                     "
+"PRODUCT4"           "   "
+EOF
+                                                                                                                                    
+PARAMETERS
+"NO2"      "NO2 Mixing Ratio"      "None"
+"NO2"      "NO2 Number Density"    "No./cm**3"
+EOF
+
+SOURCES
+"ERBS"     "SAGEII"
+EOF

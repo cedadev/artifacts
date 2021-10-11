@@ -1,0 +1,180 @@
+ <HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>Met Office Special Request data file Headers</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Met Office Special Request data file Headers<BR CLEAR="ALL"></H1>
+
+<P><HR ALIGN=LEFT>
+<ul>
+<li><a href="all_headers.html#dwx">MD.DWX.DRNL</a> file format for <strong>daily weather</strong> measurements<br> 
+<li><a href="all_headers.html#hwx">MD.HWX.HRLY</a> file format for <strong>hourly weather</strong> measurements including <strong>sunshine</strong> hours<br>
+<li><a href="all_headers.html#drain">MD.RAIN.DRNL</a> file format for <strong>daily rain</strong> measurements <br>
+<li><a href="all_headers.html#hrain">MD.RAIN.HRLY</a> file format for <strong>hourly rain </strong>measurements<br>
+<li><a href="all_headers.html#wind">MD.WIND.HRLY</a> file format for <strong>hourly mean wind</strong> measurements<br>
+<li><a href="all_headers.html#temp">MD.TEMP.DRNL</a> file format for <strong>daily temperature extreme</strong> measurements<br>
+<li><a href="all_headers.html#soilt">MD.SOILT.DRNL</a> file format for <strong>daily soil temperature</strong> measurements<br> 
+<li><a href="all_headers.html#radt">MD.RADT.HRLY</a> file format for <strong>hourly and daily radiation</strong> measurements<br> 
+</ul>
+<P><HR ALIGN=LEFT><BR><strong>Important notes:</strong> 
+<blockquote>
+1- The Met Office "now" use Standard International (S.I) Units.<br>
+2 - Values of -999 indicate missing data
+</blockquote>
+<P><HR ALIGN=LEFT>
+<a name="dwx"></a><h3>MD.DWX.DRNL file format</h3>
+<table border=1>
+<tr><td><b>Headers</b></td><td><b>Parameters</b></td><td><b>Units</b></td></tr>
+<tr><td>OBS_END_TIME</td><td>Observation End Time</td><td>YYYY-MM-DD HH24:MI</td></tr>
+<tr><td>ID_T</td><td>ID Type</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">DCNN, WMO, ICAO...</a></td></tr>
+<tr><td>ID</td><td>ID number</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">Station number</A></td></tr>
+<tr><td>MET_DOM</td><td>Met Domain</td><td><a href="met_domain.html">Met Domain</a></td></tr>
+<tr><td>OB_HOUR_COUNT</td><td>Observation Hour Count</td><td><a href="count.html">Count</a></td></tr>
+<tr><td>CS_24HR_SUN_DUR</td><td>Campbell-Stokes sunshine duration</td><td>hour</td></tr>			     
+<tr><td>WMO_24HR_SUN_DUR</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>CONC</td><td>State of concrete slab</td><td><a href="code.html#slab">WMO Code</a></td></tr>
+<tr><td>SNWL</td><td>Snow Lying</td><td><a href="code.html#slying">WMO Code</a></td></tr>
+<tr><td>SNOW_DEPTH</td><td>Snow Depth</td><td>cm</td></tr>
+<tr><td>FRSH_SNW_AMT</td><td>Fresh Snow Amount</td><td>cm</td></tr>
+<tr><td>SNOW</td><td>Day of Snow</td><td><a href="code.html#dsnow">WMO Code</a></td></tr>
+<tr><td>HAIL</td><td>Day of Hail</td><td><a href="code.html#dhail">WMO Code</a></td></tr>
+<tr><td>THUN</td><td>Day of Thunder</td><td><a href="code.html#dthunder">WMO Code</a></td></tr>
+<tr><td>GALE</td><td>Day of Gale</td><td><a href="code.html#dgale">WMO Code</a></td></tr>
+<tr><td>FMSF</td><td>Fresh Amount Snowfall Flag</td><td>&nbsp;</td></tr>
+
+</table>
+<a name="hwx"></a><h3>MD.HWX.HRLY file format</h3>
+<table border=1>
+
+<tr><td><b>Headers</b></td><td><b>Parameters<b></td><td><b>Units - Comments<b></td></tr>
+<tr><td>OBSERVATION_TIME</td><td>Observation Time</td><td>YYYY-MM-DD HH24:MI</td></tr>
+<tr><td>ID_T</td><td>ID Type</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">DCNN, WMO, ICAO...</a></td></tr>
+<tr><td>ID</td><td>ID number</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">Station number</a></td></tr>
+<tr><td>MET_DOM</td><td>Met Domain</td><td><a href="met_domain.html">Met Domain</a></td></tr>
+<tr><td>WIND_DIR</td><td>Wind Direction</td><td><a href="../ukmo-midas/ukmo_guide.html#5.5">Degree true - From 0 to 360 degrees, clockwise</a></td></tr>
+<tr><td>WIND_SPEED</td><td>Wind Speed</td><td>knots</td></tr>
+<tr><td>PRST</td><td>Present Weather ID</td><td><a href="code.html#presweath">WMO Code</a> and <a href="../ukmo-midas/ukmo_guide.html#5.10">Met Office Doc.</a></td></tr>
+<tr><td>PAS1</td><td>Past Weather ID-1</td><td><a href="code.html#pastweath">WMO Code</a> and <a href="../ukmo-midas/ukmo_guide.html#5.10">Met Office Doc.</a></td></tr>
+<tr><td>PAS2</td><td>Past Weather ID-2</td><td><a href="code.html#pastweath">WMO Code</a> and <a href="../ukmo-midas/ukmo_guide.html#5.10">Met Office Doc.</a></td></tr>
+<tr><td>TCA</td><td>Cloud Total Amount ID</td><td><a href="code.html#oktas">WMO Code</a> and <a href="../ukmo-midas/ukmo_guide.html#5.11">Met Office Doc.</a></td></tr>
+<tr><td>LCT</td><td>Low Cloud Type ID</td><td><a href="code.html#lowcl">WMO Code</a></td></tr>
+<tr><td>MCT</td><td>Medium Cloud Type ID</td><td><a href="code.html#medcl">WMO Code</a></td></tr>
+<tr><td>HCT</td><td>High Cloud Type ID</td><td><a href="code.html#highcl">WMO Code</a></td></tr>
+<tr><td>CBA</td><td>Cloud Base Amount ID</td><td><a href="code.html#oktas">WMO Code</a></td></tr>
+<tr><td>CBH</td><td>Cloud Base Height</td><td>decameters (dam)</td></tr>
+<tr><td>VIS</td><td>Horizontal visibility</td><td>decameters (dam) and <a href="../ukmo-midas/ukmo_guide.html#5.9">Met Office Doc.</A></td></tr>
+<tr><td>MSLP</td><td>MSL Pressure</td><td>hPa or mb</td></tr>
+<tr><td>CA1</td><td>Cloud Amount ID-1</td><td><a href="code.html#oktas">WMO Code</a></td></tr>
+<tr><td>CT1</td><td>Cloud Type ID-1</td><td><a href="code.html#layer">WMO Code</a></td></tr>
+<tr><td>CBH1</td><td>Cloud Base Height ID-1</td><td>decameters (dam)</td></tr>
+<tr><td>CA2</td><td>Cloud Amount ID-2</td><td><a href="code.html#oktas">WMO Code</a></td></tr>
+<tr><td>CT2</td><td>Cloud Type ID-2</td><td><a href="code.html#layer">WMO Code</a></td></tr>
+<tr><td>CBH2</td><td>Cloud Base Height ID-2</td><td>decameters (dam)</td></tr>
+<tr><td>CA3</td><td>Cloud Amount ID-3</td><td><a href="code.html#oktas">WMO Code</a></td></tr>
+<tr><td>CT3</td><td>Cloud Type ID-3</td><td><a href="code.html#layer">WMO Code</a></td></tr>
+<tr><td>CBH3</td><td>Cloud Base Height ID-3</td><td>decameters (dam)</td></tr>
+<tr><td>CA4</td><td>Cloud Amount ID-4</td><td><a href="code.html#oktas">WMO Code</a></td></tr>
+<tr><td>CT4</td><td>Cloud Type ID-4</td><td><a href="code.html#layer">WMO Code</a></td></tr>
+<tr><td>CBH4</td><td>Cloud Base Height ID-4</td><td>decameters (dam)</td></tr>                               
+<tr><td>VVIS</td><td>Vertical Visibility</td><td>decameters (dam) and <a href="../ukmo-midas/ukmo_guide.html#5.9">Met Office doc.</a>	</td></tr>	 
+<tr><td>AIR_TEMP</td><td>Dry-bulb Air Temperature</td><td>degree celsius and <a href="../ukmo-midas/ukmo_guide.html#5.2">Met Office doc.</a></td></tr>	         
+<tr><td>DEWPOINT</td><td>Dew Point Temperature</td><td>degree celsius and <a href="../ukmo-midas/ukmo_guide.html#5.4">Met Office doc.</a></td></tr>             
+<tr><td>WETB_TEMP</td><td>Wet-Bulb Temperature</td><td>degree celsius and <a href="../ukmo-midas/ukmo_guide.html#5.4">Met Office doc.</a></td></tr>	         
+<tr><td>RLT_HUM</td><td>Relative humidity</td><td>% - RH = 100.0*vapour pressure/saturated vapour pressure ; <FONT COLOR="#ff0000">only for data extracted from MIDAS from 31st January 2003</font></td></tr>	         
+<tr><td>STN_PRES</td><td>Station Level Pressure</td><td>hPa - Correction for altitude not applied.</td></tr>     
+<tr><td>ALT_PRES</td><td>Altimeter Pressure</td><td>hPa</td></tr>		                         
+<tr><td>SOG</td><td>State of Ground ID</td><td><a href="code.html#ground">WMO Code</a></td></tr>		                         
+<tr><td>Q10MNT_MXGST_SPD</td><td>10 min maximum gust speed</td><td>knots</td></tr>                                         
+</table>
+<a name="drain"></a><h3>MD.RAIN.DRNL file format</h3>
+<table border=1>
+<tr><td><b>Headers</b></td><td><b>Parameters</b></td><td><b>Units</b></td></tr>                                              
+<tr><td>OBSERVATION_DATE</td><td>Observation Date</td><td>YYYY-MM-DD HH24:MI</td></tr>   	                         
+<tr><td>ID_T</td><td>ID Type</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">DCNN, WMO, ICAO...</a></td></tr>   
+<tr><td>ID</td><td>ID number</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">Station number</a></td></tr>       
+<tr><td>MET_DOM</td><td>Met Domain</td><td><a href="met_domain.html">Met Domain</a></td></tr>           
+<tr><td>OB_END_CTIME</td><td>Observation End Time</td><td>&nbsp;</td></tr> 		       
+<tr><td>OB_DAY_CNT</td><td>Observation Day Count</td><td><a href="count.html">Count</a></td></tr>                
+<tr><td>PRECIP_AMT</td><td>Precipitation amount</td><td>millimetres (mm)</td></tr>     
+</table>
+<a name="hrain"></a><h3>MD.RAIN.HRLY file format</h3>
+<table border=1>
+<tr><td><b>Headers</b></td><td><b>Parameters</b></td><td><b>Units</b></td></tr>
+<tr><td>OB_END_TIME</td><td>Observation End Time</td><td>YYYY-MM-DD HH24:MI</td></tr>    	                         
+<tr><td>ID_T</td><td>ID Type</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">DCNN, WMO, ICAO...</a></td></tr>    
+<tr><td>ID</td><td>ID number</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">Station number</a></td></tr>        
+<tr><td>MET_DOM</td><td>Met Domain</td><td><a href="met_domain.html">Met Domain</a></td></tr>            
+<tr><td>OB_HOUR_COUNT</td><td>Observation Hour Count</td><td><a href="count.html">Count</a></td></tr>                 
+<tr><td>PRECIP_AMT</td><td>Precipitation Amount</td><td>millimetres (mm)</td></tr>    	  
+<tr><td>PRCP_DUR</td><td>Precipitation Duration</td><td>minutes</td></tr>      		
+</table>
+<a name="wind"></a><h3>MD.WIND.HRLY file format</h3>
+<table border=1>
+<tr><td><b>Headers</b></td><td><b>Parameters</b></td><td><b>Units</b></td></tr>
+<tr><td>OBS_END_TIME</td><td>Observation End Time</td><td>YYYY-MM-DD HH24:MI</td></tr>     	                         
+<tr><td>ID_T</td><td>ID Type</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">DCNN, WMO, ICAO...</a></td></tr>     
+<tr><td>ID</td><td>ID number</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">Station number</a></td></tr>         
+<tr><td>MET_DOM</td><td>Met Domain</td><td><a href="met_domain.html">Met Domain</a></td></tr>             
+<tr><td>OB_HOUR_COUNT</td><td>Observation Hour Count</td><td><a href="count.html">Count</a></td></tr>                 
+<tr><td>MEAN_WIND_DIR</td><td>Mean Wind Direction</td><td>Degree true</td></tr>		 
+<tr><td>MEAN_WIND_SPEED</td><td>Mean Wind Speed</td><td>Knots</td></tr>                  
+<tr><td>MAX_GUST_DIR</td><td>Max Gust Direction</td><td>Degree true</td></tr>		 
+<tr><td>MAX_GUST_SPEED</td><td>Max Gust Speed</td><td>Knots</td></tr>                 
+<tr><td>MAX_GUST_CTIME</td><td>Time of Max Gust</td><td>&nbsp;</td></tr>			 
+                      
+</table>
+<a name="temp"></a><h3>MD.TEMP.DRNL file format</h3>
+<table border=1>
+<tr><td><b>Headers</b></td><td><b>Parameters</b></td><td><b>Units</b></td></tr>
+<tr><td>OBS_END_TIME</td><td>Observation End Time</td><td>YYYY-MM-DD HH24:MI</td></tr>  	                         
+<tr><td>ID_T</td><td>ID Type</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">DCNN, WMO, ICAO...</a></td></tr>  
+<tr><td>ID</td><td>ID number</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">Station number</a></td></tr>      
+<tr><td>MET_DOM</td><td>Met Domain</td><td><a href="met_domain.html">Met Domain</a></td></tr>          
+<tr><td>OB_HOUR_COUNT</td><td>Observation Hour Count</td><td><a href="count.html">Count</a></td></tr>               
+<tr><td>MAX_AIR_TEMP</td><td>Max Dry-bulb Air temperature</td><td>Degree Celsius</td></tr>	
+<tr><td>MIN_AIR_TEMP</td><td>Min Dry-bulb Air temperature</td><td>Degree Celsius</td></tr>	
+<tr><td>MIN_GRSS_TEMP</td><td>Min Grass temperature</td><td>Degree Celsius</td></tr>	
+<tr><td>MIN_CONC_TEMP</td><td>Min concrete slab temperature</td><td>Degree Celsius</td></tr>	
+</table>
+
+<a name="soilt"></a><h3>MD.SOILT.DRNL file format</h3>
+<table border=1>
+<tr><td><b>Headers</b></td><td><b>Parameters</b></td><td><b>Units</b></td></tr>
+<tr><td>OBSERVATION_TIME</td><td>Observation End Time</td><td>YYYY-MM-DD HH24:MI</td></tr>    	                         
+<tr><td>ID_T</td><td>ID Type</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">DCNN, WMO, ICAO...</a></td></tr>    
+<tr><td>ID</td><td>ID number</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">Station number</a></td></tr>        
+<tr><td>MET_DOM</td><td>Met Domain</td><td><a href="met_domain.html">Met Domain</a></td></tr>            
+<tr><td>SOIL_TEMP_5CM</td><td>Soil temperature at 5cm</td><td>Degree Celsius</td></tr>	
+<tr><td>SOIL_TEMP_10CM</td><td>Soil temperature at 10cm</td><td>Degree Celsius</td></tr>	
+<tr><td>SOIL_TEMP_20CM</td><td>Soil temperature at 20cm</td><td>Degree Celsius</td></tr>	
+<tr><td>SOIL_TEMP_30CM</td><td>Soil temperature at 30cm</td><td>Degree Celsius</td></tr>	
+<tr><td>SOIL_TEMP_50CM</td><td>Soil temperature at 50cm</td><td>Degree Celsius</td></tr>	
+<tr><td>SOIL_TEMP_100CM</td><td>Soil temperature at 100cm</td><td>Degree Celsius</td></tr>	
+</table>
+
+<a name="radt"></a><h3>MD.RADT.HRLY file format</h3>
+<table border=1>
+<tr><td><b>Headers</b></td><td><b>Parameters</b></td><td><b>Units</b></td></tr>
+<tr><td>OBS_END_TIME</td><td>Observation End Time</td><td>YYYY-MM-DD HH24:MI</td></tr>                                 	                         
+<tr><td>ID_T</td><td>ID Type</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">DCNN, WMO, ICAO...</a></td></tr>                                 
+<tr><td>ID</td><td>ID number</td><td><a href="../ukmo-midas/ukmo_guide.html#3.6">Station number</a></td></tr>                                     
+<tr><td>MET_DOM</td><td>Met Domain</td><td><a href="met_domain.html">Met Domain</a></td></tr>                                         
+<tr><td>OB_HOUR_COUNT</td><td>Observation Hour Count</td><td><a href="count.html">Count</a></td></tr>                                              
+<tr><td>GLBL_IRAD_AMT</td><td>Global Solar Irradiation Amount</td><td>KJoules/m**2</td></tr>     
+<tr><td>DIFU_IRAD_AMT</td><td>Diffuse Solar Irradiation Amount</td><td>KJoules/m**2</td></tr>     
+<tr><td>DIRECT_IRAD</td><td>Direct Solar Irradiation Amount</td><td>KJoules/m**2</td></tr>     
+<tr><td>IRAD_BAL_AMT</td><td>&nbsp;</td><td>KJoules/m**2</td></tr>     
+<tr><td>GLBL_S_LAT_IRAD_AMT</td><td>&nbsp;</td><td>KJoules/m**2 </td></tr>    
+<tr><td>GLBL_HORZ_ILMN</td><td>&nbsp;</td><td>KJoules/m**2 </td></tr>     
+</table>
+
+
+<P>Note that in 2001, the Met Office changed the radiation units from Watt-hr/m**2 to KJoules/m**2 .
+<P>
+</BODY>
+</HTML>

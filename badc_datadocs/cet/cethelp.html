@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>HELP FILE: HadCET file format</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Met Office HadCET file format<BR CLEAR="ALL"></H1>
+
+<P><EM>This document contains information relative to the HadCET
+data file format. </EM><HR ALIGN=LEFT>
+
+<UL>
+<li><a href="#ssn">Seasonal Mean/Max/Min CET data </a> (/badc/ukmo-cet/data/seasonal/)
+<li><a href="#mthly">Monthly Mean/Max/Min CET data </a> (/badc/ukmo-cet/data/monthly/)
+<LI><a href="#dly">Daily Mean/Max/Min CET data</a> (/badc/ukmo-cet/data/daily)
+</ul>
+
+<P><HR ALIGN=LEFT><BR>
+
+<ul>
+
+<LI><H3><A NAME="ssn"></A>Seasonal Mean/Max/Min CET file format (/badc/ukmo-cet/data/seasonal/)</H3>
+
+<P>File format is self -explanatory. 
+<BR><BR>Units: Degrees Celsius
+<BR><br>Notes:
+<uL>
+ <LI>seasonal values are calculated from the monthly data by
+     averaging the three monthly values
+ <LI>Seasons are Dec-Feb, Mar-May, June-Aug, Sept-Nov.
+ <LI>Winter: year refers to January.
+ <LI>Seasonal data exist for Spring 1878 onwards for min/max data, from Spring 1659 onwards for mean data.
+</uL>
+
+
+<LI><H3><A NAME="mthly"></A>Monthly Mean/Max/Min CET file format (/badc/ukmo-cet/data/monthly/)</H3>
+
+<UL><BR>
+<LI>For the monthly max (cetmaxmly1878on_urbadj4.dat), monthly min (cetminmly1878on_urbadj4.dat) and monthly mean (cetml1659on.dat) temperature data, the file content is as follows:
+<P>
+<UL>
+  <LI>One row per year, each row containing fourteen columns. <BR>
+<BR>
+  <LI>The first column contains the year (from 1659) and from the
+  second to the thirteenth column correspond to the months where each
+  row contains the monthly values for the corresponding year. <BR>
+<BR>
+  <LI>The last columns contains the annual value. Annual values
+  are calculated from the monthly data by totalling the monthly
+  values and dividing by 12. <BR>
+<BR>
+  <LI>The units are degrees Celsius throughout. 
+<BR><BR>
+  <LI>Missing data are indicated by -99.9.
+<BR>
+</UL>
+<P>
+<LI>Also available for monthly mean/max/min data is a file containing <strong>monthly mean CET data ranked coldest to warmest</strong> from 1659 for monthly mean temperature and 1878 for monthly max/min temperature to date (mly_cet_mean_sort.txt, mly_cet_max_sort.txt. mly_cet_min_sort.txt). File format is self-explanatory. Units are degrees Celcius.
+</UL>
+<P>
+
+<LI><H3><A NAME="dly"></A>Daily Mean/Max/Min CET file format (/badc/ukmo-cet/data/daily/)</H3>
+
+
+<UL>
+<LI>Year to year data from 1998 onwards (e.g. dlycet_mean_2000.dat):
+<P>
+<UL>
+  <LI>Each year data are stored as thirty-three rows, each row containing
+  thirteen columns. Please note that there are 2 more rows above the data table for the header. <BR>
+<BR>
+  <LI>The first column contains the year (row 1 and 2) and day numbers (row 3 to 33). <BR>
+<BR>  
+<LI>The remaining twelve columns correspond to the months, where
+  rows 3 to 33 contain the daily values for each month.<BR>
+<BR>
+  <LI>Row 1 contains the year and twelve monthly average anomalies (with respect to 1961-1990 average (TBC)) in hundredths of a degree. i.e. 52 = 0.52 deg.C - <em>Please note that this row is only available from 2002 onwards</em>.
+<BR><BR>
+  <LI>Row 2 contains year and 12 monthly average temperatures in hundredths of a degree. i.e. 433 = 4.33 deg.C. Monthly mean is calculated from the daily mean data by totalling the daily values and dividing by the total number of days in that month. 
+<BR><BR>
+  <LI>The daily mean temperature values are expressed in tenths of degrees Celsius throughout 56 = 5.6 deg.C. <BR>
+<BR><BR>
+  <LI>Missing data are indicated by -999. This also occurs at the end of the shorter months.<P>
+</UL>
+
+<LI>All years data into one file (e.g. dlycet_min_1878_onwards.dat, dlycet_max_1878_onwards.dat, dlycet_mean_1772_onwards.dat):
+<P><ul>
+<LI>Column 1 contains the year
+<P><li>Column 2 contains the day of the month
+<P><li>Column 3-14 contain daily CET values expressed in tenths of a degree. There are 12 columns; one for each of the 12 months.
+</ul>
+</ul>
+
+
+
+
+
+
+
+<P><BR>
+<HR ALIGN=LEFT><BR>
+
+
+<P>
+</BODY>
+</HTML>

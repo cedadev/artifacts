@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050802T080000Z
+DTEND:20050811T170000Z
+LOCATION:Beijing, China
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:The ninth assembly of the International Association of Meteorology and Atmospheric Sciences (IAMAS)=0D=0A http://web.lasg.ac.cn/IAMAS2005/
+SUMMARY:The 9th assembly of the International Association of Meteorology and Atmospheric Sciences (IAMAS)
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

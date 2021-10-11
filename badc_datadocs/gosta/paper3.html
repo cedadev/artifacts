@@ -1,0 +1,1481 @@
+<HTML>
+<HEAD>
+   <TITLE>GOSTAplus - GOSTA 8, Paper 3</TITLE>
+</HEAD>
+
+<BODY TEXT="#000000" BGCOLOR="#F0F0F0" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<CENTER><P>This article has not been published but permission is given
+to quote this report by the Directory of the Hadley Centre, UK Met Office,
+Bracknell, Bershire, RG12 2SY, UK </CENTER>
+
+<CENTER><P>
+<HR WIDTH="100%"> </CENTER>
+
+<CENTER><P><B><FONT SIZE=+1>CLIMATE RESEARCH TECHNICAL NOTE NO. 63 </FONT></B> </CENTER>
+
+<CENTER><P><B><FONT SIZE=+1>THE 1961-1990 GISST2.2 SEA SURFACE TEMPERATURE
+AND SEA-ICE CLIMATOLOGY </FONT></B> </CENTER>
+
+<P><B>D. E. Parker, M. Jackson and E. B. Horton <BR>
+</B><I>(Hadley Centre for Climate Prediction and Research Meteorological
+Office <BR>
+London Road, Bracknell, Berkshire RG12 2SY)</I> 
+
+<P>NOTE: This paper has not been published. Permission to quote from it
+should be obtained from the Director of the Hadley Centre.  
+
+<P>December 1995  
+
+<P><B>ABSTRACT</B> 
+
+<P>We describe a new geographically complete climatology of sea surface
+temperature (SST) and sea-ice for 1961-1990, which was created along with
+version 2.2 of the Global sea Ice and Sea Surface Temperature data set
+(GISST2.2, Rayner <I>et al</I>., 1995). The climatology was developed using,
+as a starting point, a globally complete SST background field. This was
+created for each calendar month by averaging the relevant blended satellite
+and <I>in situ</I> SST fields for 1982 onwards contained in GISST1.1. <I>In
+situ</I> SSTs for each individual month in 1961-1990 were then collated
+with SSTs derived statistically for sea-ice margin regions from available
+SST data and the observed sea-ice concentrations. The collated data were
+then blended with the background field using a method in which the two-dimensional
+second derivative of the background field was preserved. The resulting
+individual monthly SSI fields were averaged into a monthly climatology
+on 10&deg; latitude x longitude resolution. Harmonic synthesis was used
+to create a pentad SST climatology, which was further resolved to a daily
+climatology using linear interpolation. The daily SST climatology was used
+in the quality-control of SST observations during the creation of version
+6 of the Meteorological Office Historical Sea Surface Temperature data
+set, MOHSST6 which in turn was used in the development of GISST2.2. Following
+improved treatment of sea-ice concentrations and ice-zone SSTs in GISST2.2,
+we averaged its monthly fields to form the GISST2.2 1961-1990 climatology.
+The SST component of this was used again to create pentad and daily climatologies.
+Climatological sea-ice concentrations were placed in a companion file.
+Comparisons with the older MOHSST4 SST climatology, which was referenced
+to 1951-1980, show substantial improvements in the Southern Ocean and an
+improved representation of strong climatological gradients, as well as
+real worldwide changes consequent on the change of reference period. 
+
+<P><B>1. INTRODUCTION</B> 
+
+<P>Reliable base climatologies are essential for the assessment of climatic
+anomalies and the detection of climatic changes, on both global and regional
+scales. They are also needed as a reference in the quality-control of observations.
+In this paper, we describe the development of a new climatology of sea
+surface temperature (SST). The reference period is 1961-1990, the period
+of most plentiful data, including satellite-based observations of SST,
+permitting very worthwhile improvements in data-sparse regions, in comparison
+with climatologies for 1951-1980, e.g. Bottomley <I>et al</I>. (1990).
+1961-1990 is also the new World Meteorological Organization standard reference
+period, for which land station climatologies have been constructed (Jones,
+1994).  
+
+<P>In parts of the midlatitude Southern Ocean, especially in the eastern
+Pacific sector, existing climatologies for 1951-1980, even those based
+on GISST1.1 (Parker <I>et al</I>., 1995), are substantially biased, by
+up to 1&deg;C or more (Parker <I>et al</I>., 1994). The evidence for this
+is the persistence of anomalies (i.e. deviations from climatology) of one
+sign and of this size in recent decades in data which were referenced to
+these climatologies. the biases arose because 1951-1980 <I>in situ</I>
+data were too sparse to permit Bottomley <I>et al</I>. (1990) to base their
+climatology on them: instead they made substantial use of the climatology
+of Alexander and Mobley (1976) who had used earlier data and, in the Southern
+Ocean, a bilinear interpolation. This interpolation was especially prone
+to error in regions of strong climatological SSI gradient near the oceanic
+convergence zones. The Laplacian (or Poisson's equation) bias-adjustment
+scheme (Reynolds, 1988) used by Bottomley <I>et al</I>. (1990) will have
+reduced the Alexander and Mobley biases somewhat in areas close to locations
+where 1951-1980 <I>in situ</I> data were sufficient to calculate a climatology,
+but will have had little effect further south where 'ground truth' was
+lacking. The GISST1.1 climatology for 1951-1980 had smaller biases than
+the climatology of Bottomley <I>et al</I>. (1990), because of the interpolation
+of 50 area <I>in situ</I> anomalies from the Meteorological Office Historical
+Sea Surface Temperature (MOHSST55) data set into some missing'areas, and
+because SSTs near ice-edges were modified in a manner consistent with anomalies
+of ice coverage (see Parker <I>et al</I>., 1995). However, some biases
+remained because the imperfect Bottomley <I>et al</I>. (1990) climatology
+was used as a background field in the creation of GISST1.1 (Parker <I>et
+al</I>., 1995).  
+
+<P><B>2. CONSTRUCTION OF NEW CLIMATOLOGY</B> 
+
+<P>We have now created new normals using the 1982-1994 average of GISST1.1
+(Parker <I>et al</I>., 1995) as an SST background field. We chose this
+background field because it includes satellite SST data; the biases of
+the satellite SSTs relative to <I>in situ</I> data had been reduced by
+Reynolds' (1988) Laplacian blending technique during the creation of GISST1.1(Parker
+<I>et al</I>.; 1995). Because of the satellite data, there are few areas
+in which the Bottomley <I>et al</I>. (1990) SST climatology dominates the
+new background field.  
+
+<P>We first combined worldwide <I>in situ</I> SST data with statistically-based
+estimates of SSTs in sea-ice zones in each individual month in 1961-1990.
+The <I>in situ</I> SST data were 1&deg; latitude x longitude monthly 'superobs'
+calculated by 'winsorising' (a form of trimmed averaging, in this case
+trimming at the outer quartiles, see Bottomley <I>et al</I>., 1990) 1&deg;
+latitude x longitude pentad (=5-day) superobs. If there were fewer than
+4 pentad superobs, a simple average was used. The pentad superobs had in
+turn been calculated by winsorising anomalies based on observations quality-controlled
+against the GISST1.1 1951-1980 climatology as described in Appendix 1.
+The sea-ice zone SSTs were also on monthly 1&deg; latitude x longitude
+resolution and had been specified statistically from observed sea-ice concentrations
+as in Section A2.1 of Appendix 2: statistical estimates were overridden
+by the <I>in situ</I> superobs wherever these were available.  
+
+<P>These SST data were blended with the SST background field for the relevant
+calendar month, by:  
+
+<P>i) conversion to deviations from the background field;  
+
+<P>ii) linear interpolation of these deviations;  
+
+<P>iii) smoothing of the resulting complete field of SST deviations;  
+
+<P>iv) adding back the background field.  
+
+<P>Details are given in Appendix 3 where it is shown that the process conserves
+the two-dimensional second derivative of the background field. It is thus
+similar to the use of Poisson's equation in interpolation by Bottomley
+<I>et al</I>. (1990). The result of the blending process was a set of complete
+1&deg; area resolution fields of SST for each month from January 1961 to
+December 1990. These fields were averaged to form a new monthly 1961-1990
+SST climatology. This climatology was then used as a background field in
+a second iteration of stages i) to iv), and the resulting fields were averaged
+into a further 'GISST2.0' SST climatology. This climatology was then interpolated
+to pentad resolution using harmonic synthesis (Appendix 4), and further
+interpolated linearly to give a daily climatology.  
+
+<P>The daily SST climatology for 1961-1990 was used to convert individual
+SST observations to anomalies for quality-control and compositing during
+the creation of MOHSST6, again using the scheme in Appendix 1. When normals
+for pentads (eg Jan 1-5, 6-10 etc) are used to calculate SST anomalies,
+as was done by Bottomley <I>et al</I>. (1990), the annual cycle causes
+some scatter, especially in transition seasons (Trenberth <I>et al</I>.
+(1992)). Our new procedure avoids this problem, as recommended by Trenberth
+<I>et al</I>.  
+
+<P>The MOHSST6 data set was the major SST input to GISST2.2 (Rayner et
+al., 1995). The monthly GISST2.2 SST fields from 1949 to 1981 are based
+mainly on reconstructions using eigenvectors of SST anomalies with 2&deg;
+x 2&deg; spatial resolution, with the GISST2.0 1&deg; x l&deg; spatial
+resolution climatology as a reference. The monthiy GISST2.2 fields for
+1982 onwards are based on a blend of <I>in situ</I> and satellite SST anomalies
+on 2&deg; x 2&deg; spatial resolution, again with the G1SST2.0 1&deg; x
+1&deg; spatial resolution climatology as a reference. During the creation
+of GISST2.2 we developed improvements in the treatment of sea-ice and of
+sea-ice zone SSTs, as described in Section A2.2 of Appendix 2.  
+
+<P>Following these improvements, we averaged the GISST2.2 monthly fields
+to form the GISST2.2 1961-1990 monthly climatology of SST and sea-ice.
+From the SST climatology, we derived pentad normals of SST as described
+in Appendix 4, and daily norrnals by linear interpolation.  
+
+<P>The new monthly, pentad and daily SST climatologies have values throughout
+the ice-zone areas (Appendix 2). A companion file contains the monthly
+climatological sea-ice concentrations in tenths. The ice indicators are
+zero wherever GISST2.2 has no ice in a 1&deg; area in the 30-year period,
+and 10 wherever GISST2.2 has complete ice cover throughout this period.
+A single occurrence of ice in GISST2.2 resulted in an indicator of 1, and
+a single occasion of incomplete ice cover in a record of otherwise unbroken
+ice in GISST2.2 yielded an indicator of 9.  
+
+<P><B>3. ASSESSMENT OF NEW CLIMATOLOGY</B> 
+
+<P>Figures la, b show the GISST2.2 SST climatology for January and July;
+differences from the Bottomley <I>et al</I>. climatology are shown in Figures
+1c, d and display changes exceeding 1 &deg;C over the Southern Ocean, as
+well as smaller but real worldwide differences owing to the change of reference
+period, e.g. a cooling in the northwest Atlantic (see Parker <I>et al</I>.,
+1994) and the midlatitude north Pacific (Trenberth and Hurrell, 1994).
+The improvement in the area 55&deg; - 65&deg; S, 90&deg; - 120&deg; W in
+the Southern Ocean is demonstrated by Figure 2. MOHSST5 anomalies from
+the Bottomley <I>et al</I>. (1990) 1951-1980 climatology are positive in
+almost evely season with data in the reference period, and throughout the
+historical record. MOHSST6 anomalies relative to both the GlSST 2.0 climatology
+(Figure 2a) and the GISST2.2 climatology (Figure 2b) are much less biased.
+They still show more frequent positive than negative SST anomalies in 1961-1990,
+but this is because there were more missing seasons (plotted as zero) in
+the earlier part of the reference period, when negative anomalies were
+more common in the available observations. Anomalies in a reference period
+are in general likely to have a non-zero average when they are based on
+intermittent, patchy data, but if <I>virtually all</I> the anomalies are
+of one sign, then the climatology must be biased. We conclude that the
+new climatology is the more reliable and will allow a better assessment
+of climatic variations in the Southern Ocean.  
+
+<P>The new climatology resolves sharp gradients of SST better than do our
+older climatologies. This is particularly evident in the Gulf Stream and
+Kuroshio regions, and in some coastal upwelling areas. To illustrate this,
+we compare in Figure 3 the GISST2.0 and GISST2.2 January climatologies
+with a provisional earlier version in which the input <I>in situ</I> SSTs
+were derived by adding 5&deg; resolution SST anomalies to the background
+field, and the blending was carried out by solving Laplace's equation on
+the sphere, much as was done by Bottomley <I>et al</I>. (1990). The GISST2.0
+climatology in particular has stronger gradients in the aforementioned
+areas than the provisional climatology. Changes between ihe GISST2.0 and
+GISST2.2 climatologies near the Gulf Stream, in data-sparse seas such as
+the Caspian, and in summer and autumn in the Arctic (Figure 4), are probably
+a result of the more explicit use of satellite SST data for 1982-1990 in
+GISST2.2, and the random exclusion of variance from the SST anomalies by
+the eigenvector reconstruction for the earlier years of GISST2.2. The main
+systematic change between the GISST2.0 and GISST2.2 climatologies was a
+warming of the order of 0.5&deg;C in parts of the Antarctic ice zones as
+a result of the revised treatment of sea-ice and marginal ice zone sea
+surface temperatures in GISST2.2 (Figure 4).  
+
+<P>Figures 5a to 5c show the GISST2.2 SST climatology for each calendar
+month. Figures 6a to 6d show the sea-ice climatology.  
+
+<P>A new optimum-interpolation-based climatology has been created by Reynolds
+and Smith (1995), and resolves sharp gradients very well. However, while
+its reference period is 1950-1979 between about 40&deg;S- and 60&deg;N,
+it is effectively 1982-1993 at higher latitudes, with sea-ice data limited
+to this period. So it is not exactly comparable with ours. In addition,
+Reynolds and Smith (1995) did not develop a scheme for estimating marginal
+ice zone SSTs from sea-ice concentrations, or include a climatology of
+sea-ice concentration. Figure 7 illustrates the substantial differences
+between the Reynolds and Smith (1995) and GISST2.2 climatologies for July
+in the Atlantic sector of the Arctic.  
+
+<P><B>4. CONCLUSIONS</B> 
+
+<P>The GISST2.2 SST climatology is expected to be a much improved basis
+for the assessment of climatic anomalies and the detection of climatic
+changes, as well as for quality control. Figures 8a to 8c show smoothed
+hemispheric and global SST anomalies derived from MOHSST6 relative to the
+GISST2.2 1961-1990 climatology, and from a version of MOHSST5 relative
+to the GlSSTl 1951-1980 climatology but with the <I>time series adjusted
+to have zero mean in 1961-1990.</I> The removal of the cold biases from
+the climatology for the Southern Ocean has significantly lowered the Southern
+Hemisphere and global anomalies for the earlier years when coverage of
+data at high southern latitudes was greater than in recent years (Figure
+2 and Bottomley <I>et al</I>., 1990).  
+
+<P>We have already used the GISST2.0 SST climatology as preliminary guidance
+in the development of an improved night marine air temperature climatology
+and a climatology of air sea temperature difference, both of which will
+be important in model validation.  
+
+<P><B>ACKNOWLEDGEMENTS</B> 
+
+<P>R Hackett contributed computer graphics for this paper.  
+
+<P><B>REFERENCES </B> 
+
+<P>Alexander, R.C. and Mobley, R.L.: 1976,'Monthly average sea-surface
+temperatures and icepack limits on a 1&deg; global grid',<I> Mon. Wea.
+Rev.</I> <B>104</B>, 143-148.  
+
+<P>Bottomley, M., Folland, C.K., Hsiung, J., Newell, R.E. and Parker, D.E.:
+1990, <I>Global Ocean Surface Temperature Atlas (GOSTA).</I> Joint Meteorological
+Office and Massachusetts Institute of Technology Project. Project supported
+by US Dept. of Energy, US National Science Foundation and US Office of
+Naval Research. Publication funded by UK Depts. of the Environment and
+Energy. HMSO, London. 20 + iv pp. and 313 Plates.  
+
+<P>Folland, C.K. and Parker, D.E.: 1995,'Correction of instrumental biases
+in historical sea surface temperature data', <I>Quart.J.Roy. Meteor.Soc.</I>
+<B>121,</B> 319-367.  
+
+<P>Folland, G.K., Reynolds, R.W., Gordon, M. and Parker, D.E.: 1993, 'A
+study of six operational sea surface temperature analyses', <I>J.Clim</I>.
+<B>6</B>, 96-113.  
+
+<P>Jones, P.D.: 1994, 'Hemispheric surface air temperature variations:
+a reanalysis and an update to 1993', <I>J.Clim</I>, <B>7</B>, 1794-1802.
+ 
+
+<P>Parker, D.E., Jones, P.D., Folland, C.K. and Bevan, A.: 1994,'lnterdecadal
+changes of surface temperature since the late nineteenth century', <I>J.Geophys.Res.</I>
+<B>99</B>, 14373-14399.  
+
+<P>Parker, D.E., Folland, C.K., Bevan, A., Ward, M.N., Jackson, M. and
+Maskell, K.: 1995,'Marine surface data for analysis of ciimatic fluctuations
+on interannuai to century time scales', in Martinson, D.G. <I>et al</I>.
+(eds), <I>Natural Climate Variability on Decade-to-Century Time Scales,</I>
+National Acad.Press, Washington, DCI in press.  
+
+<P>Rayner, N.A., Folland, C.K., Horton, B. and Parker, D.E.: 1995,'A new
+Global sea Ice and Sea Surface temperature (GISST) data set for 1903-1994'.
+Presented by C.K. Folland to the Wadati Conference on Global Change and
+the Polar Climate, Tsukuba, Japan, 7-10 November 1995. Available as Hadley
+Centre lnternal Note No. 69.  
+
+<P>Reynolds, R.W.: 1988,'A real-time global sea surface temperature analysis',
+<I>J.Clim.</I> <B>1</B>, 75-86.  
+
+<P>Reynolds, R.W.and and Smith, T.M.: 1995,'A high resolution global sea
+surface temperature climatology',<I> J. Clim.</I>,<B> 8</B>, 1571-1583.
+ 
+
+<P>Schluessel, P., Emery, W.J., Grassl, H. and Mammen, T.: 1990,'0n the
+bulk-skin temperature difference and its impact on satellite remote sensing
+of sea surface temperatures', <I>J.Geophys.Res.</I> <B>95</B>, 13341-13356.
+ 
+
+<P>Trenberth, K.E., Christy, J.R. and Hurrell, J.W.: 1992,'Monitoring global
+monthly mean surface temperatures', J.Clim. 5, 1405-1423.  
+
+<P>Trenberth, K.E.and Hurrell, J.W.: 1994,'Decadal atmosphere-ocean variations
+in the Pacific', <I>Clim. Dyn.</I> <B>9,</B> 303-319. 
+
+<P>Woodruff, S.D., Slutz, R.J., Jenne, R.L. and Steurer, P.M.: 1987, 'A
+Comprehensive Ocean Atmosphere Data Set', <I>Bull.Amer.Meteor.Soc.</I>
+<B>68</B>, 1239-1250.  
+
+<P><B>FlGURE CAPTIONS</B>  
+
+<P><A HREF="#Figure 1">Figure 1.</A> GISST2.2 SST climatology (&deg;C)
+for 1961-1990; a, January; b, July; c, January difference from Bottomley
+<I>et al</I>. (1990), with contours every 0.5&deg;C; d, as c but for July.
+ 
+
+<P><A HREF="#Figure 2a">Figure 2a.</A> Time series of seasonal MOHSST5
+anomalies &deg;C, relative to 1951-1980) (dashed) and MOHSST6 anomalies
+(&deg;C, relative to the 1961-1990 GISST2.0 climatology) (solid) in the
+area 55&deg; - 65&deg; S, 90&deg;-120&deg; W.  
+
+<P><A HREF="#Figure 2b">Figure 2b.</A> As Figure 2a but with the MOHSST6
+anomalies referenced to the 1961-1990 GISST2.2 climatology.  
+
+<P><A HREF="#Figure 3a">Figure 3a.</A> GISST2.0 climatology minus a provisional
+climatology derived using coarser resolution SST anomalies and solving
+Laplace's equation on the sphere. January. Contours every 0.5&deg;C with
+zero omitted.  
+
+<P><A HREF="#Figure 3b">Figure 3b.</A> GISST2.2 climatology minus the provisional
+climatology derived using coarser resolution SST anomalies and solving
+Laplace's equation on the sphere. January. Contours every 0.5&deg;C with
+zero omitted.  
+
+<P><A HREF="#Figure 4a">Figure 4a. </A>GISST2.2 SST climatology minus GISST2.0
+SST climatology. Contours every 0.5&deg;C with zero omitted. January, February,
+March and April.  
+
+<P><A HREF="#Figure 4b">Figure 4b. </A>GISST2.2 SST climatology minus GISST2.0
+SST climatology. Contours every 0.5&deg;C with zero omitted. May, June,
+July and August.  
+
+<P><A HREF="#Figure 4c">Figure 4c.</A> GISST2.2 SST climatology minus GISST2.0
+SST climatology. Contours every 0.5&deg;C with zero omitted. September,
+October, November and December.  
+
+<P><A HREF="#Figure 5a">Figure 5a.</A> GISST2.2 SST climatology. Contours
+at -1.8&deg;C and then every 2.5&deg;C from 0&deg;C to 30&deg;C. January,
+February, March and April.  
+
+<P><A HREF="#Figure 5b">Figure 5b.</A> GISST2.2 SST climatology. Contours
+at -1.8&deg;C and then every 2.5&deg;C from 0&deg;C to 30&deg;C. May, June,
+July and August.  
+
+<P><A HREF="#Figure 5c">Figure 5c.</A> GISST2.2 SST climatology. Contours
+at -1.8&deg;C and then every 2.5&deg;C from 0&deg;C to 30&deg;C. September,
+October, November and December.  
+
+<P><A HREF="#Figure 6a">Figure 6a.</A> GISST2.2 monthly sea-ice climatology.
+Sea-ice concentration shaded in gradations of 0.25. Arctic, January through
+June.  
+
+<P><A HREF="#Figure 6b">Figure 6b.</A> GISST2.2 monthly sea-ice climatology.
+Sea-ice concentration shaded in gradations of 0.25. Arctic, July through
+December.  
+
+<P><A HREF="#Figure 6c">Figure 6c. </A>GISST2.2 monthly sea-ice climatology.
+Sea-ice concentration shaded in gradations of 0.25. Antarctic, January
+through June.  
+
+<P><A HREF="#Figure 6d">Figure 6d.</A> GISST2.2 monthly sea-ice climatology.
+Sea-ice concentration shaded in gradations of 0.25. Antarctic, July through
+December.  
+
+<P><A HREF="#Figure 7">Figure 7.</A> Comparison of the Reynolds and Smith
+(1995) and GSSST2.2 SST and sea-ice climatologies for the Atlantic sector
+of the Arctic, July. In the Reynolds and Smith climatology (top), sea-ice
+is shaded black. In the GISST2.2 climatology (bottom) graded shading is
+used for sea-ice concentration as indicated by the bar.  
+
+<P><A HREF="#Figure 8a">Figure 8a.</A> Smoothed seasonal SST: anomalies
+for the Northern Hemisphere: solid, MOHSST6 relative to the GISST2.2 climatology
+for 1961-1990; dashed, MOHSST5 relative to the GISST1 climatology for 1951-1980,
+but with the time series adjusted to have zero mean in 1961-1990. 
+
+<P><A HREF="#Figure 8b">Figure 8b. </A>Smoothed seasonal SST anomalies
+for the Southern Hemisphere: solid, MOHSST6 relative to the G1SST2.2 climatology
+for 1961-1990; dashed, MOHSST5 relative to the GISST1 climatology for 1951-1980,
+but with the time series adjusted to have zero inedn in 1961-1990.  
+
+<P><A HREF="#Figure 8c">Figure 8c. </A>Smoothed seasonal SST anomalies
+for the globe: solid, MOHSST6 relative to the GISST2.2 climatology for
+1961-1990; dashed, MOHSST5 relative to the GISST1 climatology for 1951-1980,
+but with the time series adjusted to have zero mean in 1961-1990.  
+
+<P><A NAME="Figure 1"></A><IMG SRC="figures/fig01.gif" HEIGHT=382 WIDTH=595>
+<BR>
+<B>Figure 1.</B> GIST2.2 SST&nbsp;Climatology (&deg;C) for 1961-1990; a,
+January; b, July; c, January difference from Bottomley et al. (1990), with
+contours every 0.5&deg;C; d, as c but for July. 
+
+<P><BR>
+ 
+
+<P><A NAME="Figure 2a"></A><IMG SRC="figures/fig02a.gif" HEIGHT=450 WIDTH=640>
+<BR>
+<B>Figure 2a.</B> Time series of seasonal MOHSST5 anomalies (&deg;C, relative
+to 1951-1980) (dashed) and MOHSST6 anomalies (&deg;C, relative to the 1961-1990
+GISST2.0 climatology) (solid) in the area 55&deg; - 65&deg;, 90&deg; -
+120&deg; W. 
+
+<P><BR>
+ 
+
+<P><A NAME="Figure 2b"></A><IMG SRC="figures/fig02b.gif" HEIGHT=455 WIDTH=636>
+<BR>
+<B>Figure 2b</B>. As Figure 2a but with the MOHSST6 anomalies referenced
+to the 1961-1990 GISST2.2 climatology. 
+
+<P><BR>
+ 
+
+<P><A NAME="Figure 3a"></A><IMG SRC="figures/fig03a.gif" HEIGHT=283 WIDTH=501>
+<BR>
+<B>Figure 3a. </B>GISST2.0 climatology minus a provisional climatology
+derived using coarser resolution SST&nbsp;anomalies and solving Laplace's
+equation on the sphere. January. Contours every 0.5&deg;C with zero omitted. 
+
+<P><BR>
+ 
+
+<P><A NAME="Figure 3b"></A><IMG SRC="figures/fig03b.gif" HEIGHT=298 WIDTH=506>
+<BR>
+Figure 3b. GISST2.2 climatology minus the provisional climatology derived
+using coarser resolution SST anomalies and solving Laplace's equation on
+the sphere. January. Contours every 0.5&deg;C with zero omitted. 
+
+<CENTER><P><BR>
+<B><FONT SIZE=+1>GISST2.2 - GISST2.0 1961-90 Climatology<BR>
+</FONT>(Contours every 0.5&deg;C, zero contour omitted)</B> </CENTER>
+
+<P><A NAME="Figure 4a"></A><IMG SRC="figures/fig04a.gif" HEIGHT=313 WIDTH=512>
+<BR>
+Figure 4a. GISST2.2 SST climatology minus GISST2.0 SST climatology. Contours
+every 0.5&deg;C with zero omitted. January, February, March and April. 
+
+<P><BR>
+ 
+
+<P><A NAME="Figure 4b"></A><IMG SRC="figures/fig04b.gif" HEIGHT=313 WIDTH=495>
+<BR>
+<B>Figure 4b.</B> GISST2.2 SST&nbsp;climatology minus GISST2.0 SST climatology.
+Contours every 0.5&deg;C with zero omitted. May, June, July and August. 
+
+<CENTER><P><BR>
+<B><FONT SIZE=+1>GISST2.2 - GISST2.0 1961 - 90 Climatology<BR>
+</FONT>(Contours every 0.5&deg;C, zero contour omitted)</B> </CENTER>
+
+<P><A NAME="Figure 4c"></A><IMG SRC="figures/fig04c.gif" HEIGHT=313 WIDTH=508>
+<BR>
+<B>Figure 4c.</B> GISST2.2 SST climatology minus GISST2.0 SST climatology.
+Contours every 0.5&deg;C with zero omitte. September, October, November
+and December. 
+
+<CENTER><P><BR>
+<B><FONT SIZE=+1>GISST2.2 1960 - 90 Climatology</FONT></B> </CENTER>
+
+<P><A NAME="Figure 5a"></A><IMG SRC="figures/fig05a.gif" HEIGHT=279 WIDTH=503>
+<BR>
+<B>Figure 5a.</B> GISST2.2 climatology. Contours at -1.8&deg;C and then
+every 2.5&deg;C from 0&deg;C to 30&deg;C. January, February, March and
+April. 
+
+<P><BR>
+ 
+
+<P><A NAME="Figure 5b"></A><IMG SRC="figures/fig05b.gif" HEIGHT=293 WIDTH=492>
+<BR>
+<B>Figure 5b.</B> GISST2.2 climatology. Contours at -1.8&deg;C and then
+every 2.5&deg;C from 0&deg;C to 30&deg;C. May, June, July, August. 
+
+<P><BR>
+ 
+
+<P><A NAME="Figure 5c"></A><IMG SRC="figures/fig05c.gif" HEIGHT=272 WIDTH=482>
+<BR>
+<B>Figure 5c.</B> GISST2.2 climatology. Contours at -1.8&deg;C and then
+every 2.5&deg;C from 0&deg;C to 30&deg;C. September, October, November
+and December. 
+
+<P><BR>
+ 
+
+<P><A NAME="Figure 6a"></A><IMG SRC="figures/fig06a.gif" HEIGHT=550 WIDTH=390>
+<BR>
+<B>Figure 6a</B>. GISST2.2 monthly sea-ice climatology. Sea-ice concentration
+shaded in gradations of 0.25. Arctic, January-June. 
+
+<P><BR>
+ 
+
+<P><A NAME="Figure 6b"></A><IMG SRC="figures/fig06b.gif" HEIGHT=536 WIDTH=391>
+<BR>
+<B>Figure 6b</B>. GISST2.2 monthly sea-ice climatology. Sea-ice concentration
+shaded in gradations of 0.25. Arctic, July - December. 
+
+<P><BR>
+ 
+
+<P><A NAME="Figure 6c"></A><IMG SRC="figures/fig06c.gif" HEIGHT=556 WIDTH=417>
+<BR>
+<B>Figure 6c</B>. GISST2.2 monthly sea-ice climatology. Sea-ice concentration
+shaded in gradations of 0.25. Antarctic, January - June. 
+
+<P><BR>
+ 
+
+<P><A NAME="Figure 6d"></A><IMG SRC="figures/fig06d.gif" HEIGHT=536 WIDTH=416>
+<BR>
+<B>Figure 6d</B>. GISST2.2 monthly sea-ice climatology. Sea-ice concentration
+shaded in gradations of 0.25. Antarctic, July - December. 
+
+<P><BR>
+ 
+
+<P><A NAME="Figure 7"></A><IMG SRC="figures/fig07.gif" HEIGHT=450 WIDTH=356>
+<BR>
+<B>Figure 7.</B> Comparison of the Reynolds and Smith (1995) and GISST2.2
+SST and sea-ice climatologies for the Atlantic sector of the Arctic, July.
+In the Reynolds and Smith climatology (top), sea-ice is shaded in black.
+In the GISST2.2 climatology (bottom) graded shading is used for sea-ice
+concentration as indicated by the bar. 
+
+<P><BR>
+<B>Solid:</B> SST amonlay (MOHSST6) (deg C) w.r.t GISST2.2 1961-90. Folland
+and Parker (1995) corrections.<BR>
+<B>Dashed:</B> SST&nbsp;anomaly (MOHSST5) (deg C) w.r.t. 1961-90. Folland
+and Parker (1995) corrections.<BR>
+<B>Period:</B> 1856 - 1994. 12- season binomial smoothing. <BR>
+<B>Region:</B> Northern Hemisphere. 
+
+<P><A NAME="Figure 8a"></A><IMG SRC="figures/fig08a.gif" HEIGHT=318 WIDTH=506>
+<BR>
+<B>Figure 8a.</B> Smoothed seasonal SST anomalies for the Northern Hemisphere:
+solid, MOHSST6 relative to the GISST2.2 climatology for 1961-1990; dashed,
+MOHSST5 relative to the GISST1 climatology for 1951-1980, but with the
+time series adjusted to have zero mean in 1961-1990. 
+
+<P><BR>
+<B>Solid:</B> SST amonlay (MOHSST6) (deg C) w.r.t GISST2.2 1961-90. Folland
+and Parker (1995) corrections.<BR>
+<B>Dashed:</B> SST&nbsp;anomaly (MOHSST5) (deg C) w.r.t. 1961-90. Folland
+and Parker (1995) corrections.<BR>
+<B>Period:</B> 1856 - 1994. 12- season binomial smoothing. <BR>
+<B>Region:</B> Southern Hemisphere. 
+
+<P><A NAME="Figure 8b"></A><IMG SRC="figures/fig08b.gif" HEIGHT=262 WIDTH=402>
+<BR>
+<B>Figure 8b.</B> Smoothed seasonal SST anomalies for the Southern Hemisphere:
+solid, MOHSST6 relative to the GISST2.2 climatology for 1961-1990; dashed,
+MOHSST5 relative to the GISST1 climatology for 1951-1980, but with the
+time series adjusted to have zero mean in 1961-1990. 
+
+<P><BR>
+<B>Solid:</B> SST amonlay (MOHSST6) (deg C) w.r.t GISST2.2 1961-90. Folland
+and Parker (1995) corrections.<BR>
+<B>Dashed:</B> SST&nbsp;anomaly (MOHSST5) (deg C) w.r.t. 1961-90. Folland
+and Parker (1995) corrections.<BR>
+<B>Period:</B> 1856 - 1994. 12- season binomial smoothing. <BR>
+<B>Region:</B> Globe. 
+
+<P><A NAME="Figure 8c"></A><IMG SRC="figures/fig08c.gif" HEIGHT=323 WIDTH=507>
+<BR>
+<B>Figure 8c.</B> Smoothed seasonal SST anomalies for the Southern Hemisphere:
+solid, MOHSST6 relative to the GISST2.2 climatology for 1961-1990; dashed,
+MOHSST5 relative to the GISST1 climatology for 1951-1980, but with the
+time series adjusted to have zero mean in 1961-1990. 
+
+<P><BR>
+ 
+
+<P><B>APPENDlX 1 </B> 
+
+<P>Quality control limits for sea surface temperature data  
+
+<P><IMG SRC="figures/appx01.gif" HEIGHT=612 WIDTH=396>  
+
+<PRE>The longitude of the area is increased by |cos(lat)|^-1 to
+  allow equal areas to be compared.
+If the number of observations in the pentad 1 degree area is
+                                             1 - 5:   n = 4.0
+                                             6 - 15:  n = 3.5
+                                            16 - 100: n = 3.0
+                                               &gt; 101: n = 2.5</PRE>
+
+<P>Formation of l-degree-area pentad mean anomalies  
+
+<P><B>APPENDlX 2 </B> 
+
+<P>Specification of SST within the ice pack and in marginal ice zones in
+the GISST2.0 and GISST2.2 climatologies  
+
+<P><B>A2.1 GISST2.0 CLIMATOLOGY</B> 
+
+<P>Monthly <I>in situ</I> SST superobs for 1961-1990 in 1&deg; areas with
+non-zero sea-ice concentration were related statistically to monthly concentric
+5&deg; area sea-ice concentrations 1 using quadratic least-squares regressions
+of the form:  
+
+<P>SST = al<SUP>2</SUP> + bl + c (A2.1)  
+
+<P>with the constraint that when I = 1.0 (i.e. complete ice cover), SST
+= -1.8&deg;C.  
+
+<P>a) Northern Hemisphere.  
+
+<P>We used sea-ice concentration data from a new analysis by J.Walsh (pers.
+comm.) except for five peripheral regions (Caspian Sea, Sea of Japan, Sea
+of Okhotsk) where the data were the same as in GISST1.1 (Parker <I>et al</I>.,
+1995).  
+
+<P>For each season (January to March, etc.), separate relationships were
+developed for overlapping 300 longitude bands 0&deg; - 30&deg;E, 1&deg;
+- 31&deg;E,.... to avoid discontinuities in SSTs specified using them.
+Temperatures were then specified in all 1&deg; areas having non-zero sea-ice
+concentration using the relationship (A2.1) for the longitude band centred
+on the target 1&deg; area for the appropriate season and the sea-ice concentration
+in the same 1&deg; areas in the individual month, e.g. January 1949.  
+
+<P>b) Southern Hemisphere.  
+
+<P>We used the same sea-ice data as in GISST1.1, i.e. an ice/no ice classification,
+except that the data for 1984-1988 had been in error and were replaced
+by sea-ice concentrations obtained from NOAA. We did not use Advanced Very
+High Resolution Radiometer (AVHRR) satellite SSTs, or convert ice-edges
+into concentration gradients, as was done in the creation of GISST2.2 (Rayner
+<I>et al</I>., 1995) which was used to create the GISST2.2 climatology
+(see Section A2.2 below).  
+
+<P>Owing to sparsity of <I>in situ</I> SST data near the Antarctic sea-ice,
+relationships based on Arctic data were used to specify SSTs for 1984-1988.
+Four relationships were developed, using monthly data irrespective of longitude
+for January to March, April to June etc. The relationships were applied
+to the Antarctic sea-ice data for the corresponding season, e.g the January
+to March Arctic relationship was used in July to September in the Antarctic.
+Again, temperatures were specified in all 1&deg; areas having non-zero
+sea-ice concentration, using the sea-ice concentration in the same 1&deg;
+area.  
+
+<P>For 1961-1983 and 1989-1990, 1&deg; areas classified as sea-ice were
+accorded a temperature of -1.8&deg;C. A possible future improvement is
+to use relationships of the form of (A2.1) with NOAA sea ice concentrations
+for the entire period from 1978 (R.Grumbine, pers.comm.), if they are deemed
+to be homogeneous.  
+
+<P><B>A2.2 GISST2.2 CLIMATOLOGY</B> 
+
+<P>During the creation of GISST2.2 we developed improvements in the treatment
+of sea-ice and of sea-ice zone SSTs, over and above those described in
+Section A2.1. These improvements are described by Rayner <I>et al</I>.
+(1995). For the 1961-1990 period:  
+
+<P>i) We converted monthly Antarctic ice / no ice boundaries outside 1984-1988
+to concentration gradients. Using GISST1.1 ice edge positions, 1&deg; x
+1&deg; areas designated as purely sea-ice were assigned an initial concentration
+of 10/10: sea boxes were initially assigned 0/10. Then, for each 1&deg;
+x 1&deg; area, the average was calculated of the sea-ice concentration
+assigned to it and those of the surrounding 8 1&deg; x 1&deg; areas. This
+gave smooth gradients of sea-ice concentration, with concentrations of
+5/10 at the GISST1.1 ice-edge. These concentrations were then used to create
+the SST values in the marginal ice zones.  
+
+<P>ii) We used monthly Advanced Very High Resolution Radiometer (AVHRR)
+satellite SSTs for 1982-1994, along with observed sea-ice concentrations
+for 1984-1988 and concentrations derived as in i) otherwise, to develop
+the seasonal regressions for the Antarctic. The regressions were developed
+for the Antarctic as a whole. They were applied in the same season for
+which they were derived.  
+
+<P><B>APPENDlX 3 </B> 
+
+<P>Filling and smoothing the individual monthly temperature fields.  
+
+<P><B>A3.1 GENERAL PROCEDURE FOR FILLING AND SMOOTHING</B> 
+
+<P>i) 1&deg; areas at the edge of the Antarctic land mass were set to -1.8&deg;C
+in the background field to ensure that anomalies could be interpolated
+southwards whenever there was no sea-ice by which to ascribe a temperature
+(Appendix 2) at the southern edge of the analysis.  
+
+<P>ii) The background field was extended over land as described in Section
+A3.3 below. This was not strictly necessary, since it was the anomalies
+which were to undergo global interpolation (see iv) below). However, global
+fields of actual 'SST' were found to be useful for some checking purposes,
+and e.g. for contour plotting near islands and complex coastlines.  
+
+<P>iii) The collated 1&deg; area monthly SSTs (Section 2 of main text)
+were converted to anomalies relative to the background field.  
+
+<P>iv) Missing 1&deg; area anomalies were then filled by linear interpolation
+of the collated anomalies. The interpolation was done in four directions:
+and the results from the four directions averaged.  
+
+<P>v) The now complete field of anomalies was smoothed twice, each time
+by replacing each value by the mean of its 8 neighbours as input to the
+smoothing step.  
+
+<P>vi) The extended background field was added to the smoothed anomaly
+field, yielding a global field of SSTs.  
+
+<P>The basic procedure of linearly interpolating the SST anomalies, and
+then adding the background field to the result, preserves the second derivative
+of the background field in the final analysis, as shown in Section A3.2
+below.  
+
+<P><B>A3.2 Proof that linear interpolation of observed anomalies is equivalent
+to preserving the second derivative of the background field.</B>  
+
+<P>Let 'normal' or background field temperatures at linearly adjacent positions
+i, i+l,... be:  
+
+<P>N<SUB>i</SUB>&nbsp;&nbsp;&nbsp;N<SUB>i+1</SUB>&nbsp;&nbsp;&nbsp; N<SUB>i+2</SUB>&nbsp;&nbsp;&nbsp;N<SUB>i+3</SUB>&nbsp;&nbsp;&nbsp;.....
+ 
+
+<P>First differences are then:  
+
+<P>(N<SUB>i</SUB>-N<SUB>i+1</SUB>)&nbsp;&nbsp;&nbsp; (N<SUB>i+1</SUB>-N<SUB>i+2</SUB>)&nbsp;&nbsp;&nbsp;
+(N<SUB>i+2</SUB>-N<SUB>i+3</SUB>)&nbsp;&nbsp;&nbsp;.....  
+
+<P>and second differences are:  
+
+<P>(N<SUB>i</SUB>-N<SUB>i+1</SUB>)-(N<SUB>i+1</SUB>-N<SUB>i+2</SUB>) &nbsp;&nbsp;&nbsp;
+(N<SUB>i+1</SUB>-N<SUB>i+2</SUB>)-(N<SUB>i+2</SUB>-N<SUB>i+3</SUB>) &nbsp;&nbsp;&nbsp;
+ 
+
+<P>and second differences are:  
+
+<P>so that the second difference at location i+l is:  
+
+<P>N<SUB>i</SUB> - 2N<SUB>i+1</SUB> + N<SUB>i+2</SUB> 
+
+<P>For actual temperatures ('normals' or background field plus anomalies):
+ 
+
+<P>N<SUB>i</SUB>+<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i</SUB>&nbsp;&nbsp;&nbsp;
+N<SUB>i+1</SUB>+<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+1</SUB>&nbsp;&nbsp;&nbsp;
+N<SUB>i+2</SUB>+<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+2</SUB>&nbsp;&nbsp;&nbsp;
+..... 
+
+<P>First differences are:  
+
+<P>(N<SUB>i</SUB>+<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i</SUB>)
+- (N<SUB>i+1</SUB>+<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+1</SUB>)&nbsp;&nbsp;&nbsp;
+(N<SUB>i+1</SUB>+<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+1</SUB>)
+- (N<SUB>i+2</SUB>+<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+2</SUB>)&nbsp;&nbsp;&nbsp;
+..... 
+
+<P>Second differences are:  
+
+<P>(N<SUB>i</SUB>+<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i</SUB>)
+- (N<SUB>i+1</SUB>+<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+1</SUB>)
+- [(N<SUB>i+1</SUB>+<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+1</SUB>)
+- (N<SUB>i+2</SUB>+<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+2</SUB>)]&nbsp;&nbsp;&nbsp; 
+
+<P>So the second difference at location i+l is:  
+
+<P>N<SUB>i</SUB> - 2N<SUB>i+1</SUB>+<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+1</SUB>
++ N<SUB>i+2</SUB> + <IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i</SUB>
+- 2<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+1</SUB> + <IMG
+SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+2</SUB> 
+
+<P>If the second difference of the actual temperature at location i+l is
+constrained to equal the second difference of the 'normal' or background
+field at the same location:  
+
+<P>N<SUB>i</SUB> - 2N<SUB>i+1</SUB> + N<SUB>i+2</SUB> = N<SUB>i</SUB> -
+2N<SUB>i+1</SUB>+<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+1</SUB>
++ N<SUB>i+2</SUB> + <IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i</SUB>
+- 2<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+1</SUB> + <IMG
+SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+2</SUB>
+ 
+
+<P>so that 
+
+<P><IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+1</SUB> = (<IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i</SUB>
++ <IMG SRC="symbols/delta.gif" HEIGHT=11 WIDTH=5><SUB>i+2</SUB>)/2  
+
+<P>So, to map the second derivative of the 'normal' or background field
+onto the actual temperature field, the temperature anomaly should be the
+mean of the adjacent anomalies. In other words, linear interpolation should
+be used.  
+
+<P><B>A3.3 Extension of the background field over land and other missing
+areas. </B> 
+
+<P>1&deg; areas without values were filled with interpolated values. There
+were 5 steps: 
+
+<P>i) All 1&deg; areas without a background value and adjacent to at least
+one 1&deg; area with a value were allocated the mean of the adjacent (up
+to 8) 1&deg;0 area background values.  
+
+<P>ii) Step i) was repeated.  
+
+<P>iii) Rows of 1&deg; areas still without background values were assigned
+values by east-west linear interpolation.  
+
+<P>iv) Columns of 1&deg; areas without background values after step ii)
+were assigned values by northsouth linear interpolation.  
+
+<P>v) The results of interpolation in steps iii) and iv) were averaged
+and the results used to fill the array where steps i) and ii) had not supplied
+background values.  
+
+<P><B>APPENDlX 4 </B> 
+
+<P>Harmonic synthesis of monthly climatology.  
+
+<P>The monthly climatological SSTs (T<SUB>m</SUB> m=1,12) for each 1&deg;
+latitude x longitude area were subjected to a harmonic analysis which yielded
+the annual mean value and the coefficients of 5 pairs of sine and cosine
+curves of period 1, 1/2, 1/3, 1/4 and 1/5 year:  
+
+<P>(A4.1) <IMG SRC="figures/equa41.gif" HEIGHT=71 WIDTH=350 ALIGN=BOTTOM>  
+
+<P>where T, is the mean of the 12 monthly values  
+
+<P>t = time in months from 1 January. Note that t= m-0.5 because the T,
+are assumed to apply at mid-month.  
+
+<P>(A4.2) <IMG SRC="figures/equa42.gif" HEIGHT=69 WIDTH=247 ALIGN=BOTTOM>  
+
+<P>(A4.3) <IMG SRC="figures/equa43.gif" HEIGHT=75 WIDTH=250 ALIGN=BOTTOM>  
+
+<P>In the expressions for a, and b, the summations are divided by 6, not
+12, because <IMG SRC="symbols/theta.gif" HEIGHT=10 WIDTH=5><SUP>-1</SUP> <IMG
+SRC="symbols/integral.gif" HEIGHT=23 WIDTH=7>cos<SUP>2</SUP>
+<IMG SRC="symbols/theta.gif" HEIGHT=10 WIDTH=5>d<IMG SRC="symbols/theta.gif" HEIGHT=10 WIDTH=5>
+and , <IMG SRC="symbols/theta.gif" HEIGHT=10 WIDTH=5><SUP>-1</SUP> <IMG
+SRC="symbols/integral.gif" HEIGHT=23 WIDTH=7>sin<SUP>2</SUP>
+<IMG SRC="symbols/theta.gif" HEIGHT=10 WIDTH=5>d<IMG
+SRC="symbols/theta.gif" HEIGHT=10 WIDTH=5>,
+which effectively occur when (A4.2) and (A4.3) are substituted into (A4,1),
+are equal to 0.5.  
+
+<P>The coefficients, without spatial smoothing, were then used to reconstruct
+climatological SSTs T, for each calendar pentad, using:  
+
+<P>(A4.4) <IMG SRC="figures/equa44.gif" HEIGHT=64 WIDTH=346 ALIGN=BOTTOM>  
+
+<P>The dates of calendar Pentads were as defined by Bottomley <I>et al</I>.
+(1990). Synthesised values &lt;-1.80C were set to -1.80C.  
+
+<P><B>CLIMATE RESEARCH TECHNICAL NOTES </B> 
+
+<TABLE CELLSPACING=2 CELLPADDING=2 >
+<TR VALIGN=TOP>
+<TD>CRTN 1</TD>
+
+<TD>Oct 1990</TD>
+
+<TD>Estimates of the sensitivity of climate to vegetation changes using
+the Penman-Monteith equation.<BR>
+P R Rowntree</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 2</TD>
+
+<TD>Oct 1990</TD>
+
+<TD>An ocean general circulation model of the Indian Ocean for hindcasting
+studies.<BR>
+D J Carrington</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 3</TD>
+
+<TD>Oct 1990</TD>
+
+<TD>Simulation of the tropical diurnal cycle in a climate model. <BR>
+D P Rowell</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 4</TD>
+
+<TD>Oct 1990</TD>
+
+<TD>CRTN 4 Oct 1990 Low frequency variability of the oceans.<BR>
+C K Folland, A Colman, D E Parker and A Bevan</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 5</TD>
+
+<TD>Dec 1990</TD>
+
+<TD>A comparison of ll-level General Circulation Model Simulations with
+observations in the East Sahel. <BR>
+K Maskell</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 6</TD>
+
+<TD>Dec 1990</TD>
+
+<TD>Climate Change Prediction. <BR>
+J F B Mitchell and Qing-cun Zeng</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 7</TD>
+
+<TD>Jan 1991</TD>
+
+<TD>Deforestation of Amazonia - modelling the effects of albedo change.
+<BR>
+M F Mylne and P R Rowntree</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 8</TD>
+
+<TD>Jan 1991</TD>
+
+<TD>The role of observations in climate prediction and research. <BR>
+D J Carson</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 9</TD>
+
+<TD>Mar 1991</TD>
+
+<TD>The greenhouse effect and its likely consequences for climate change.
+<BR>
+D J Carson</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 10</TD>
+
+<TD WIDTH="15%">Apr 1991</TD>
+
+<TD>Use of wind stresses from operational N.W.P. models to force an O.G.C.M.
+of the Indian Ocean. <BR>
+D J Carrington</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 11</TD>
+
+<TD>Jun 1991</TD>
+
+<TD>A new daily Central England Temperature series, 1772-1991. <BR>
+D E Parker, T P Legg and C K Folland</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 12</TD>
+
+<TD>Jul 1991</TD>
+
+<TD>Causes and predictability of Sahel rainfall variability. <BR>
+D P Rowell, C K Folland, K Maskell, J A Owen, M N Ward</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 13</TD>
+
+<TD>Jul 1991</TD>
+
+<TD>Modelling changes in climate due to enhanced C02, the role of atmospheric
+dynamics, cloud and moisture. <BR>
+C A Senior, J F B Mitchell, H Le Treut and Z-X Li</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 14</TD>
+
+<TD>Sep 1991</TD>
+
+<TD>Sea temperature bucket models used to correct historical SST data in
+the Meteorological Office. <BR>
+C K Folland</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 15</TD>
+
+<TD>Aug 1991</TD>
+
+<TD>Modelling climate change, and some potential effects on agriculture
+in the U.H. <BR>
+P R Rowntree, B A Callander and J Cochrane</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 16</TD>
+
+<TD>Aug 1991</TD>
+
+<TD>The Boreal Forests and Climate <BR>
+G Thomas and P R Rowntree</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 17</TD>
+
+<TD>Aug 1991</TD>
+
+<TD>Development of a Stratosphere-Troposphere Data Assimilation System.
+<BR>
+R Swinbank</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 18</TD>
+
+<TD>Sep 1991</TD>
+
+<TD>A study of asynchronous coupling using a simple climate model. <BR>
+M K Davey</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 19</TD>
+
+<TD>Sep 1991</TD>
+
+<TD>The Oceanic Carbon Cycle<BR>
+N K Taylor</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 20</TD>
+
+<TD>Nov 1991</TD>
+
+<TD>Worldwide ocean-atmosphere surface fields in Sahel wet and dry years
+using provisionally corrected surface wind data. <BR>
+MN Ward</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 21</TD>
+
+<TD>Dec 1991</TD>
+
+<TD>Coupled tropical ocean global atmosphere models at the UKMO. <BR>
+M K Davey, C Gordon, S Ineson and S Lawrence</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 22</TD>
+
+<TD>Dec 1991</TD>
+
+<TD>Empirical parameterisation of tropical ocean-atmosphere coupling. <BR>
+M Allen, M K Davey, D L T Anderson and P D Killworth</TD>
+</TR>
+
+<TR>
+<TD>CRTN 23</TD>
+
+<TD VALIGN=TOP>Feb 1992</TD>
+
+<TD>The temporal evolution of Equatorial Currents in the Indian Ocean <BR>
+D L T Anderson, D J Carrington, R A Corry and C Goraon</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 24</TD>
+
+<TD>Feb 1992</TD>
+
+<TD>Stratospheric analyses provided by the U.K. Meteorological Office <BR>
+M J Bailey, A O'Neill and V D Pope</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 25</TD>
+
+<TD>Feb 1992</TD>
+
+<TD>Modelling interannual variability in the Indian Ocean using momentum
+fluxes from the UKMO and ECMWF operational weather analyses. <BR>
+D L T Anderson and D J Carrington</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 26</TD>
+
+<TD>Mar 1992 </TD>
+
+<TD>A GCM simulation of the impact of Amazonian deforestation on climate
+using an improved canopy representation <BR>
+J Lean and P R Rowntree</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 27</TD>
+
+<TD>Mar 1992 </TD>
+
+<TD>The parameterization of rainfall interception in GCMs <BR>
+A J Dolman and D Gregory</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 28</TD>
+
+<TD>Jun 1992</TD>
+
+<TD>Development of worldwide marine data eigenvectors since 1985 <BR>
+A W Colman</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 29</TD>
+
+<TD>Jun 1992</TD>
+
+<TD>A tropical ocean model with reduced physics <BR>
+MR Davey</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 30</TD>
+
+<TD>Jun 1992</TD>
+
+<TD>International Temperature Workshop, Boulder, Colorado, USA, 16 January
+1992 <BR>
+Edited by D E Parker</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 31</TD>
+
+<TD>Jul 1992</TD>
+
+<TD>Simulation of clear-sky outgoing longwave radiation over the oceans
+using operational analyses <BR>
+A Slingo and M J Webb</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 32</TD>
+
+<TD>Sep 1992</TD>
+
+<TD>A prediction of the transient response of climate <BR>
+JM Murphy</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 33</TD>
+
+<TD>Nov 1992</TD>
+
+<TD>LEPS scores for assessing climate model simulations and long-range
+forecasts. <BR>
+C K Folland</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 34</TD>
+
+<TD>Jan 1993</TD>
+
+<TD>Stratospheric Data Assimilation System Guide Editor: <BR>
+R Swinbank</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 35</TD>
+
+<TD>Mar 1993</TD>
+
+<TD>A Stratosphere-Troposphere Data Assimilation System<BR>
+R Swinbank and A O'Neill</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 36</TD>
+
+<TD>Mar 1993</TD>
+
+<TD>Validation of hydrological schemes for climate models against catchment
+data. <BR>
+P R Rowntree and J Lean</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 37</TD>
+
+<TD>Apr 1993</TD>
+
+<TD>Modelling of palaeoclimates: Examples from the recent past <BR>
+J F B Mitchell</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 38</TD>
+
+<TD>May 1993</TD>
+
+<TD>A simulation of seasonality in ENSO forecast skill <BR>
+M K Davey, D L T Anderson and S Lawrence</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 39</TD>
+
+<TD>Jul 1993</TD>
+
+<TD>ENSO Prediction experiments using a simple ocean-atmosphere model <BR>
+D-H Wu, D L T Anderson and M K Davey</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 40</TD>
+
+<TD>Sep 1993</TD>
+
+<TD>Diagnosis of dynamic sea-surface and sea level changes from the Cox
+ocean model <BR>
+JM Gregory</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 41</TD>
+
+<TD>Sep 1993</TD>
+
+<TD>Seasonal variations of the clear-sky greenhouse effect: the role of
+changes in atmospheric temperatures and humidities <BR>
+M J Webb, A Slingo and G L Stephens</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 42</TD>
+
+<TD>Nov 1993</TD>
+
+<TD>Sea-level changes under increasing atmospheric C02 in a transient coupled
+ocean atmosphere GCM experiment. <BR>
+JM Gregory</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 43</TD>
+
+<TD>Dec 1993</TD>
+
+<TD>Global and regional patterns of climate change: recent predictions
+for the Arctic <BR>
+P R Rowntree</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 44</TD>
+
+<TD>Feb 1994</TD>
+
+<TD>The effect of changing horizontal diffusion in the atmospheric version
+of the unified climate model <BR>
+C D Hall and R A Stratton</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 45</TD>
+
+<TD>Mar 1994</TD>
+
+<TD>Simulation of El-Ni&ntilde;o/Southern Oscillation like variability
+in a global AOGCM and its response to CO, increase. <BR>
+S F B Tett, CRTN 46 Apr 1994 Global data required for monitoring climate
+change. </TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 46</TD>
+
+<TD>Apr 1994</TD>
+
+<TD>Global data required for monitoring climate change. <BR>
+D E Parker and C K Folland</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 47</TD>
+
+<TD>May 1994</TD>
+
+<TD>Seasonal uptake of anthropogenic COz in an ocean general circulation
+model. <BR>
+N K Taylor</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 48</TD>
+
+<TD>Jun 1994</TD>
+
+<TD>A tropic-wide oscillation of boreal summer rainfall and patterns of
+sea-surface temperature. <BR>
+M N Ward, K Maskell, C K Folland, D P Rowell and R Washington</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 49</TD>
+
+<TD>Jun 1994</TD>
+
+<TD>Simulation of the tropical Pacific using a simplified ocean model <BR>
+M A Balmaseda, D L T Anderson and M K Davey</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 50</TD>
+
+<TD>Sep 1994</TD>
+
+<TD>Simulation of global mean temperature using a box-diffusion climate
+model <BR>
+P R Rowntree</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 51</TD>
+
+<TD>Sep 1994</TD>
+
+<TD>Seasonal dependence of ENSO prediction skill <BR>
+M A Balmaseda, M K Davey and D L T Anderson</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 52</TD>
+
+<TD>Nov 1994</TD>
+
+<TD>Simulation of the Indian Monsoon and Tropical Intraseasonal Variability
+by a General Circulation Model <BR>
+P M Inness and D Gregory</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 53</TD>
+
+<TD>Mar 1995</TD>
+
+<TD>A comparison of modelled surface fluxes with climatological estimates.
+<BR>
+C Gordon and D K Wright</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 54</TD>
+
+<TD>Mar 1995</TD>
+
+<TD>The representation of moist convection in atmospheric models. <BR>
+D Gregory</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 55</TD>
+
+<TD>Mar 1995</TD>
+
+<TD>A consistent treatment of the evaporation of rain and snow for use
+in large-scale models <BR>
+D Gregory</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 56</TD>
+
+<TD>Apr 1995</TD>
+
+<TD>Workshop on simulations of the Climate of the Twentieth Century using
+GISST, 28-30 November 1994, Hadley Centre, Bracknell, UK <BR>
+Edited by C K Folland and D P Rowell</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 57</TD>
+
+<TD>May 1995</TD>
+
+<TD>Enhanced shortwave cloud radiative forcing due to anthropogenic aerosols.
+<BR>
+S E Swartz and A Slingo</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 58</TD>
+
+<TD>May 1995 </TD>
+
+<TD>The simulation of the tropical oceans in models of different horizontal
+resolution. <BR>
+C Gordon, D K Wright and C M Roberts</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 59</TD>
+
+<TD>Sep 1995</TD>
+
+<TD>The water budget of middle latitude continental regicns - a modelling
+and observational study <BR>
+P R Rowntree</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 60</TD>
+
+<TD>Sep 1995</TD>
+
+<TD>Intraseasonal variability of the Indian summer monsoon simulated by
+the Hadley Centre climate model 
+<P>K Ashok, D Gregory and P M Inness  
+</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 61</TD>
+
+<TD>Sep 1995</TD>
+
+<TD>Climate simulations with the Unified Model: AMIP runs <BR>
+C D Hall, R A Stratton and M L Gallani </TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 62</TD>
+
+<TD>Nov 1995</TD>
+
+<TD>Validation of surface parameters over the oceans in climate simulations
+with the unified model. <BR>
+C D Hall </TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>CRTN 63</TD>
+
+<TD>Dec 1995 </TD>
+
+<TD>The GISST2.2 sea surface temperature and sea ice climatology <BR>
+D E Parker, M Jackson and E B Horton </TD>
+</TR>
+</TABLE>
+
+<P>
+</BODY>
+</HTML>

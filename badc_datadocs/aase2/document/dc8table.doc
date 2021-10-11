@@ -1,0 +1,68 @@
+DC8TABLE.DOC   (1992-07-27 - pgh)
+
+
+The following table indicates the DC-8 files, the P.I. (or P.I.'s) 
+responsible for generating the data, and the two-character file name
+prefix for each type of file that are contained on this final release
+of AASE II datasets.  The following letters are used to indicate the 
+status of each file:
+
+    'O' (for 'O'riginal) indicates those files which were contained on
+        the AASE II preliminary CD-ROM for which no revised datasets 
+        were submitted
+
+    'R' (for 'R'evised) indicates those files which have been resubmitted
+        by the P.I. ('s) for this edition of the CD-ROM
+
+    'N' (for 'N'ew) indicates those files which were NOT contained on 
+        the AASE II preliminary CD-ROM
+
+No distinction is made as to why a particular dataset is not available. Some 
+blanks are a result of a temporary instrument failure.  In other cases there 
+may be data available for a given flight, but for whatever reason the PI 
+could not assure its reliability and therefore did not include it in this 
+release.
+
+              1992
+              Jan               Feb       Mar
+              0 1 1 1 1 2 2 2 2 1 1 1 2 2 1 1 1 1 2
+              8 1 4 6 9 2 3 8 9 2 4 7 0 2 0 2 4 8 0
+              -------------------------------------
+D. Blake/F.S. Rowland
+          UC  N N R N N N N R R R N N R R R R R R R
+E. Browell
+          AD      R R R R R R R R R R R R R R R R R
+          AS      R R R R R R R R R R R R R R R R R
+          DO      R R R R R R R R R R R R R R R R R
+          MO      R R R R R R R R R R R R R R R R R
+B. Gary
+          MP                    R R R R R R R R R R
+P. Hathaway
+          DF  O O O O O O O O O O O O O O O O O O O
+          DP  O O O O O O O O O O O O O O O O O O O
+          DW  O O O O O O O O O O O O O O O O O O O
+L. Lait
+          FA  O O O O O O O O O O O O O O O O O O O
+B. Mankin/M. Coffey
+          IR  N N R R R R   R R R R R R R R R N R N
+P. Newman
+          XS  O O O O O O O O O O O O O O O O O O O
+R. Pueschel/G. Ferry
+          FS  R R R R R R R R R R R R R R N       R
+B. Ridley/J. Walega/A. Weinheimer
+          N2    N N N N N N N N N N N N N N N N N N
+          NO    N N N N N N N N N N N N N N N N N N
+          NY    R R R R R R R R R R R R R R R R R R
+          O3  R R R R R R R R R R R R R R R R R R R
+P. Russell/J. Goodman
+          SV  R R R R R R   R R R R R R R R R R R R
+          TS          N     N N               N   N
+G. Sachse
+          DA      N N N N N N N R R R N R R R R R R
+G. Toon
+          M4  O O O O O O   O O O O O O O O O O O O
+W. Traub
+          FT      R R R R R         R R R R R R R R
+F. Valero
+          NF      O O O O   O O O O O O O O O O O
+

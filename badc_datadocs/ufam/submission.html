@@ -1,0 +1,125 @@
+
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>UFAM Data Submission</title>
+ <meta name="keywords" content="UFAM, NERC, air pollution">
+</head>
+
+<body bgcolor="#ffffff">
+
+<h1>
+UFAM
+- Instructions to Data Providers
+</h1>
+<hr>
+
+<ul>
+
+<li><b>Preliminaries</b><br><br>
+Data from UFAM instruments is stored at the BADC in two ways:
+<ul> <li>Where UFAM instruments have been used during intensive measurement campaigns the data is 
+stored together with the rest of the data in the archive for that campaign, 
+for example, data measured during <a href="http://badc.nerc.ac.uk/data/namblex/">NAMBLEX</a> is kept 
+in the <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/namblex/">NAMBLEX archive</a>, data from 
+the <a href="http://badc.nerc.ac.uk/data/polluted-tropo/">TORCH</a> campaign can be found in the 
+<a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/polluted-tropo/data/torch/">
+Polluted Troposphere archive</a>.
+<li> UFAM instruments also collect data outside of these campaigns- either during 
+smaller projects or as background measurements in between assignments. This data
+is kept in the <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ufam/">
+UFAM archive</a>.
+</ul><br>
+These archives are, by their nature, inter-linked and the higher level directories 
+containing UFAM data are visible from within the individual archives. 
+Separate permission is required to access each individual archive. <br>
+<br>
+To upload your data files on to the BADC computer, you will need
+<ol>
+ <li>to have registered as a BADC user and got a password
+     &#151; if you are not a BADC registered user, please
+     <a href="/reg/user_register_info.html">register here</a>;
+     if you are a BADC registered user but have forgotten your user ID and/or
+     password, please ask help from the BADC support desk at
+     <a href="mailto:badc@rl.ac.uk">badc@rl.ac.uk</a>;
+ <li>to have been granted access to the appropriate archive <br>
+     &#151; for access to the 
+     <A HREF="/cgi-bin/data_browser/data_browser/badc/namblex/">NAMBLEX archive</a>, 
+     please <A HREF="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=namblex">
+     apply here</a>.<br>
+ &#151; for access to the  
+     <A HREF="/cgi-bin/data_browser/data_browser/badc/polltro/">Polluted Troposphere archive</a> 
+     (for TORCH data), please
+     <A HREF="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=polltro">
+     apply here</a> and see the 
+     <a href="http://badc.nerc.ac.uk/data/polluted-tropo/">polluted troposphere</a> web page.
+      <br>&#151; for access to the  
+     <A HREF="/cgi-bin/data_browser/data_browser/badc/ufam/">UFAM archive</a>, 
+     please
+     <A HREF="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=ufam">
+     apply here</a>.
+
+</li>
+</ol>
+<br>
+<li><b><a name="filename">File structure</a></b><br><br>
+<P>The BADC is encouraging all Polluted Troposphere projects and campaigns to deliver 
+data in either <a href="/help/formats/netcdf/">NetCDF</a> (binary) or 
+<a href="/help/formats/NASA-Ames/">NASA Ames</a> (ASCII) format. NetCDF data should 
+conform to the <a href="/help/formats/netcdf/index_cf.html">Climate and Forecasts 
+(CF) Metadata Convention</a>. Information on the inclusion of 
+<a href="/data/ufam/metadata.html">metadata</a> is also provided.
+
+<P>Advice on standardising filenames is provided on the 
+<a href="http://badc.nerc.ac.uk/help/file_naming.html">file-naming convention page</a> 
+along with a list of <a href="http://badc.nerc.ac.uk/filespec_doc?id=INSTRUMENTAL&hfile=1">common names</a> 
+used for instruments, locations etc. in filenames.<P>
+
+<br>
+
+<li><b><a name="uploading">Uploading data</a></b><br><br>
+Data providers can upload their data files directly from their home computer
+into the BADC <i>incoming</i> directory, <i>via</i> the BADC Web based
+<a href="../upload.html">file uploader</a>.
+This device can also be used to submit software and text files containing
+metadata or any relevant information on the project deliverables.
+Please have your BADC user ID and password handy.
+You will be asked to select the appropriate subdirectory (please refer to
+the list below).
+<br><br>
+
+<table cellpadding=4>
+<tr valign=middle bgcolor=#666666>
+ <th><font color=#ffffff>/ incoming directory ...</font></th>
+ <th colspan=2><font color=#ffffff>Campaign or Project name </font></th>
+</tr>
+<tr valign=top bgcolor=#dddddd>
+ <td><a href="/cgi-bin/fileuploader/POLLTRO_file_type_selection.cgi.pl?directory=%2Fincoming%2Fpolluted-tropo%2Ftorch">/incoming/polluted-tropo/torch/</a></td>
+ <td><a href="/data/polluted-tropo/projects/torch.html">
+     Tropospheric ORganic CHemistry expt (TORCH)</a>
+ </td>
+</tr>
+<tr valign=top bgcolor=#dddddd>
+ <td><a href="/cgi-bin/fileuploader/NAMBLEX_file_type_selection.cgi.pl?directory=%2Fincoming%2Fnamblex">/incoming/namblex/</a></td>
+ <td><a href="/data/namblex/index.html">
+     The North Atlantic Marine Boundary Layer EXperiment (NAMBLEX)</a>
+ </td>
+</tr>
+<tr valign=top bgcolor=#dddddd>
+ <td><a href="/cgi-bin/fileuploader/UFAM_file_type_selection.cgi.pl?directory=%2Fincoming%2Fufam%2Fintercomparison">/incoming/ufam/intercomparison</a></td>
+ <td><a href="/data/ufam/intercomparison.html">
+     UFAM intercomparison experiment</a>
+ </td>
+</tr>
+<tr valign=top bgcolor=#bbbbbb>
+</table>
+</ul>
+
+
+<P>Return to main <a href="/data/ufam/">UFAM page</a>.
+ 
+
+<p>
+</body>
+</html>

@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+<head>
+<!-- <link rel="StyleSheet" href="style.css" type="text/css"/> -->
+<title>
+climateprediction.net : Initial quality controlled subset release
+</title>
+</head>
+
+<body>
+
+<img src="cpdn_logo.jpg" width="60%">
+<h1>
+Initial quality controlled subset release
+</h1>
+
+<h2>Table of Contents</h2>
+<ol>
+<li><a href='#section-intro'>Introduction</a></li>
+<li><a href='#section-data'>Available data fields</a></li>
+<li><a href='#section-perts'>Perturbations</a></li>
+<!--
+<li><a href='#section-qc'>Quality control</a></li>
+-->
+<li><a href='#section-refs'>References</a></li>
+</ol>
+
+<h2 id="section-intro">Introduction</h2>
+
+<p>
+This document describes data from the <a
+href="http://www.climateprediction.net">climate<i>prediction</i>.net</a>
+project which was the basis for the analysis published in the paper [<a
+href='#ref-stainforth'>Stainforth <i>et al.</i></a>].  The data comprises a
+grand ensemble of 2578 simulations of the HadAM3 GCM exploring 6 independent
+physical perturbations and perturbed initial conditions. 
+</p>
+
+<p>
+A brief description of the format of the data, and associated metadata, is
+given below.  See [<a href='#ref-stainforth'>Stainforth <i>et al.</i></a>] 
+for a detailed discussion of the experiment.
+</p>
+
+<p>Further enquiries can be directed to <a
+href="mailto:Stephen.Pascoe@rl.ac.uk">Stephen Pascoe</a> at the
+Rutherford Appleton Laboratory, UK.
+
+<h2 id='section-data'>Available data fields</h2>
+
+<p>
+The GCM experiment is composed of phases of 15 years:
+<ol>
+<li>1811-1825.  Spin up.</li>
+<li>1826-1840.  Pre-industrial CO<sub>2</sub></li>
+<li>2051-2065.  Double CO<sub>2</sub></li>
+</ol>
+
+<p>
+The data fields available for each model simulation are described in <a
+href='#table-1'>Table 1</a>.  These fields are distributed amongst
+17 netCDF files depending on the experiment phase, UM ouput stream
+and field domain.  Each filename is of the form:
+</p>
+<p class="quote">
+<span class="path">
+<i>&lt;job_id&gt;.&lt;output_stream&gt;.&lt;domain&gt;</i>.x<i>&lt;phase&gt;</i>.nc
+</span>
+</p>
+<p>
+The filenaming convention is demonstrated in <a href='#table-2'>Table 2</a>.
+Note that when constructing filenames
+the UM job id is composed of the 4 character experiment id followed by
+either <span class="path">aa</span>, <span class="path">ba</span> or <span class="path">ca</span> according to the experiment phase.  Also
+note from <a href='#table-2'>Table 2</a> that some climatology
+fields are seasonal means and some are monthly means.
+The heat convergence field (UM output stream <span class="path">pc</span>) is also available in UM
+ancillary format with the file extension <span class="path">.anc</span>.
+</p>
+<div class="table" id="table-1">
+<div class="caption">Table 1: Fields available for each simulation</div>
+<table cellspacing="0">
+<tr>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">Field</td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">Description</td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">UM output stream</td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">Domain</td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">field3201</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">HEAT FLUX THROUGH SEA ICE (GBM) W/M2</td>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">pa</td>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">8yac</td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">hfbl</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">SURFACE &amp; B.LAYER HEAT FLUXES</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">tauxbl</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">X-COMP OF SURF &amp; BL WIND STRESS</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">tauybl</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">Y-COMP OF SURF &amp; BL WIND STRESS</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">field3223</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">SURF &amp; BL TOTL MOISTURE FLUX KG/M2/S</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">field3224</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">WIND MIXING EN\'GY FLUX INTO SEA W/M2</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">gm_field40201</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN ANOMALOUS HEAT CONVERGENCE(SLAB) W/M2</td>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">pc</td>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">gmts</td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">gm_ps</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN Surface pressure</td>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">pd</td>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">gmts</td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_clc</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN Convective Cloud amount</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_ts</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN Ground Surface Temperature</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_field31</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN SEA ICE FRACTION AFTER TIMESTEP</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field32</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN SEA ICE DEPTH (MEAN OVER ICE)</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_netrsds</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN NET DOWN SURFACE SW FLUX: SW TS ONLY</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_rsdt</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN SW radiation downward TOA</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_rsutcs</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN SW radiation upward TOA clear sky</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field1210</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN CLEAR-SKY (II) DOWN SURFACE SW FLUX</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_field1211</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN CLEAR-SKY (II) UP SURFACE SW FLUX</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field1235</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN TOTAL DOWNWARD SURFACE SW FLUX</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_rlnds</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN Net downward surface LW radiation</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_rlutcs</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN LW radiation TOA clear sky</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_rlds</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN LW radiation downward surface</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field2208</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN CLEAR-SKY (II) DOWN SURFACE LW FLUX</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_field3237</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN SPECIFIC HUMIDITY AT 1.5M</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field3245</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN RELATIVE HUMIDITY AT 1.5M</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_field3314</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN SURFACE NET RADIATION</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field4203</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN LARGE SCALE RAINFALL RATE    KG/M2/S</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_field4204</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN LARGE SCALE SNOWFALL RATE    KG/M2/S</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field5205</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN CONVECTIVE RAINFALL RATE     KG/M2/S</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_field5206</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN CONVECTIVE SNOWFALL RATE     KG/M2/S</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field5214</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN TOTAL RAINFALL RATE: LS+CONV KG/M2/S</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_field5215</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN TOTAL SNOWFALL RATE: LS+CONV KG/M2/S</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field12201</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN OMEGA ON MODEL LEVELS</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_field13201mlyr</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN QT SOURCE SINK IN QT POS     KG/M2/S</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field14201</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN ATMOS ENERGY CORR\'N IN COLUMN   W/M2</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">rsut</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">SW radiation upward TOA</td>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">pe</td>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">8yac</td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">field2204</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">TOTAL CLOUD AMOUNT IN LW RADIATION</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">rlut</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">LW radiation TOA (OLR)</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">field3228</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">SURFACE SH FLUX FROM SEA (GBM)  W/M2</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">hfls</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">Heat flux latent surface</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">tas</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">Surface (1.5m) air temperature</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">pr</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">Total precipitation rate</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">psl</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">Mean sea-level pressure</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">gm_rsut</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN SW radiation upward TOA</td>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">pe</td>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">gmts</td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field2204</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN TOTAL CLOUD AMOUNT IN LW RADIATION</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_rlut</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN LW radiation TOA (OLR)</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field3228</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN SURFACE SH FLUX FROM SEA (GBM)  W/M2</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_hfls</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN Heat flux latent surface</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_tas</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN Surface (1.5m) air temperature</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_pr</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN Total precipitation rate</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_psl</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN Mean sea-level pressure</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">gm_field210</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN FIELD 210</td>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">pf</td>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">gmts</td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field40023</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN SNOW AMOUNT AFTER SLAB     KG/M2</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_field40024</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN SURFACE TEMPERATURE AFTER SLAB     K</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field40031</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN SEA ICE FRACTION AFTER SLAB        K</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_field40178</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN REF. SEA SURF TEMP (SLAB MODEL) K  A</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field40203</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN SEAICE DEPTH(GRD BOX MN)AFTER SLAB M</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_field40220</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN SLAB CARRYHEAT      (W M-2)   SLAB</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000;">gm_field40221</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN SLAB HEATING RATE (ICE) K/S</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-bottom:thin solid #000000; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-bottom:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_field2max</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN U COMPNT OF WIND AFTER TIMESTEP</td>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-left:thin solid #000000;">pg</td>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">gmts</td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_field3max</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN V COMPNT OF WIND AFTER TIMESTEP</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gm_tasmin</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN Daily minimum surface (1.5m) temperature</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">gm_tasmax</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN Daily maximum surface (1.5m) temperature</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000;">gm_prmax</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">GLOBAL MEAN Total precipitation rate</td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-bottom:thin solid #000000; border-left:thin solid #000000;"></td>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-bottom:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+</tr>
+</table>
+</div>
+
+
+<div class="table" id="table-2">
+<div class="caption">Table 2: Example of mapping experiment phase, UM
+output stream and domain onto netCDF filenames</div>
+
+<table cellspacing="0">
+<tr>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">UM output unit</td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">Domain</td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">Spacial domain</td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">Time domain</td>
+<td colspan="3"  bgcolor="#C0C0C0" valign="bottom"  align="center"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000;">Phase availability</td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">Example filename</td>
+</tr>
+<tr>
+<td  bgcolor="#C0C0C0" style="background:#C0C0C0; border-bottom:thin solid #000000; border-left:thin solid #000000;"></td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000;">label</td>
+<td  bgcolor="#C0C0C0" style="background:#C0C0C0; border-bottom:thin solid #000000; border-left:thin solid #000000;"></td>
+<td  bgcolor="#C0C0C0" style="background:#C0C0C0; border-bottom:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;"></td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="center"  style="background:#C0C0C0; font-size:10pt; border-bottom:thin solid #000000;">1</td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="center"  style="background:#C0C0C0; font-size:10pt; border-bottom:thin solid #000000;">2</td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="center"  style="background:#C0C0C0; font-size:10pt; border-bottom:thin solid #000000;">3</td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">for UM experiment id 01lz</td>
+</tr>
+<tr>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-left:thin solid #000000;">pa</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-left:thin solid #000000;">8yac</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-left:thin solid #000000;">global 2.5x3.75 grid</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">monthly mean</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt;">yes</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt;">no</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-right:thin solid #000000;">no</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-right:thin solid #000000;">01lzaa.pa.8yac.x1.nc   (phase 1)</td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">pc</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gmts</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">global mean</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">monthly mean</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt;">yes</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt;">no</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-right:thin solid #000000;">no</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-right:thin solid #000000;">01lzaa.pc.gmts.x1.nc   (phase 1)</td>
+</tr>
+<tr>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-left:thin solid #000000;">pd</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-left:thin solid #000000;">gmts</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-left:thin solid #000000;">global mean</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">seasonal climatology</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt;">yes</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt;">yes</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-right:thin solid #000000;">yes</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-right:thin solid #000000;">01lzba.pd.gmts.x2.nc   (phase 2)</td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">pe</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">8yac</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">global 2.5x3.75 grid</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">seasonal climatology</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt;">yes</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt;">yes</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-right:thin solid #000000;">yes</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-right:thin solid #000000;">01lzce.pe.8yac.x3.nc   (phase 3)</td>
+</tr>
+<tr>
+<td  bgcolor="#FFFFFF" style="background:#FFFFFF; border-left:thin solid #000000;"></td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-left:thin solid #000000;">gmts</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-left:thin solid #000000;">global mean</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">seasonal climatology</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt;">yes</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt;">yes</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-right:thin solid #000000;">yes</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-right:thin solid #000000;">01lzba.pe.gmts.x2.nc   (phase 2)</td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">pf</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">gmts</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">global mean</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">seasonal climatology</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt;">yes</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt;">yes</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-right:thin solid #000000;">yes</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-right:thin solid #000000;">01lzce.pf.gmts.x3.nc   (phase 3)</td>
+</tr>
+<tr>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000;">pg</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000;">gmts</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000;">global mean</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">monthly mean</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-bottom:thin solid #000000;">yes</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-bottom:thin solid #000000;">yes</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-bottom:thin solid #000000; border-right:thin solid #000000;">yes</td>
+<td  bgcolor="#FFFFFF" valign="bottom"  align="left"  style="background:#FFFFFF; font-size:10pt; border-bottom:thin solid #000000; border-right:thin solid #000000;">01lzaa.pg.gmts.x1.nc   (phase 1)</td>
+</tr>
+</table>
+
+</div>
+
+<h2 id='section-perts'>Perturbations</h2>
+<p>
+The grand ensemble includes perturbations of 7 physical parameters and
+one initial condition parameter.  These parameters are listed in <a
+href='#table-3'>Table 3</a> and are also included as attributes within each
+netcdf file.  The physical parameters CW_LAND and
+CW_SEA are always varied together and therefore there are 6
+independent physical perturbations.  
+</p>
+<p>
+The actual parameter values for each simulation are stored as attributes in the
+netCDF file and are summarised in <a href="#table-4">Table 4</a>.
+</p>
+<p>
+The perturbations applied to each simulation are tabulated in the file <span
+class="path">perturbations.dat</span> which accompanies the dataset.  This is a text file which
+can be easily imported into a spreadsheet or parsed by scripts.  The format is
+two header lines, prefixed with the '#' character, followed by tab delimeted
+column data:
+<dl>
+<dt>Column 1</dt>
+<dd>
+lists the simulation directory.
+</dd>
+<dt>Column 2</dt>
+<dd>
+Perturbation id. This is a base 3
+integer uniquely identifying the physical perturbations applied.
+</dd>
+<dt>Columns 3-9</dt>
+<dd>
+describe the 7 physical parameters as being unperturbed (stnd), perturbed low
+(low) or perturbed high (high).
+</dd>
+<dt>Column 10</dt>
+<dd>
+lists the initial condition ensemble parameter DTHETA.
+</dd>
+</dl>  
+</p>
+<p>
+The perturbation id repeats the information in columns
+3-9 in a form that makes identifying duplicates easier.  Each digit in the
+perturbation id corresponds to the value of a physical parameter using the
+encoding 0=low, 1=stnd and 2=high.  The file has been sorted by perturbation id
+such that initial condition ensemble members occur together.
+</p>
+
+<div class="table" id='table-3'>
+<div class="caption">Table 3: Perturbed parameters.  (<span
+class="symbol">*</span> parameters perturbed together)</div>
+<table cellspacing="0">
+<tr>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-bottom:thin solid #000000; border-left:thin solid #000000;">Perturbation label</td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-bottom:thin solid #000000; border-left:thin solid #000000;">Description</td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-bottom:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">Sample size</td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin
+solid #000000;">CW_SEA <span class="symbol">*</span></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">Threshold for precipitable water</td>
+<td  valign="bottom"  align="right"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">3</td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"
+style="background:#CCFFFF; font-size:10pt; border-left:thin solid
+#000000;">CW_LAND <span class="symbol">*</span></td>
+<td  bgcolor="#CCFFFF" style="background:#CCFFFF; border-left:thin solid #000000;"></td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="right"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">3</td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">ENTCOEF</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">Entrainment coefficient</td>
+<td  valign="bottom"  align="right"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">3</td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">RHCRIT</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">Critical relative humidity</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="right"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">3</td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">CT</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">Accretion constant</td>
+<td  valign="bottom"  align="right"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">3</td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">EACF</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">Empirically adjusted cloud fraction</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="right"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">2</td>
+</tr>
+<tr>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">VF1</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">Ice speed fall</td>
+<td  valign="bottom"  align="right"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">3</td>
+</tr>
+<tr>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000;">DTHETA</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000;">Initial condition ensemble generator</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="right"  style="background:#CCFFFF; font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">10</td>
+</tr>
+</table>
+</div>
+
+<div class="table" id="#table-4">
+<div class="caption">Table 4: Parameter values</div>
+<table cellspacing="0">
+<tr>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">Parameter</td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">Perturbation</td>
+<td  bgcolor="#C0C0C0" valign="bottom"  align="left"  style="background:#C0C0C0; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">Value</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">VF1</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">low</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">0.5</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">stnd</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">1.0</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">high</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">2.0</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">CT</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">low</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">5.0e-5</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">stnd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">1.0e-4</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">high</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">4.0e-4</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">RHCRIT</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">low</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">0.95, 0.90, 0.85, 0.60, 0.60, 0.60, 0.60, 0.60, 0.60, 0.60, 0.60, 0.60, 0.60, 0.60, 0.60, 0.60, 0.60, 0.60, 0.60</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">stnd</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">0.95, 0.90, 0.85, 0.70, 0.70, 0.70, 0.70, 0.70, 0.70, 0.70, 0.70, 0.70, 0.70, 0.70, 0.70, 0.70, 0.70, 0.70, 0.70</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">high</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">0.95, 0.90, 0.90, 0.90, 0.90, 0.90, 0.90, 0.90, 0.90, 0.90, 0.90, 0.90, 0.90, 0.90, 0.90, 0.90, 0.90, 0.90, 0.90</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">CW_LAND</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">low</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">1.0e-5</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">stnd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">2.0e-4</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">high</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">2.0e-3</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">CW_SEA</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">low</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">2.0e-5</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">stnd</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">5.0e-5</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">high</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">5.0e-4</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">ENTCOEF</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">low</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">0.6</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000;">stnd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">3.0</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-left:thin solid #000000;"></td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000;">high</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-left:thin solid #000000; border-right:thin solid #000000;">9.0</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" valign="bottom"  align="left"  style="background:#E7E7E7; font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">EACF</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000;">stnd</td>
+<td  valign="bottom"  align="left"  style=" font-size:10pt; border-top:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5</td>
+</tr>
+<tr>
+<td  bgcolor="#E7E7E7" style="background:#E7E7E7; border-bottom:thin solid #000000; border-left:thin solid #000000;"></td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000;">high</td>
+<td  bgcolor="#CCFFFF" valign="bottom"  align="left"  style="background:#CCFFFF; font-size:10pt; border-bottom:thin solid #000000; border-left:thin solid #000000; border-right:thin solid #000000;">0.7, 0.7, 0.7, 0.7, 0.7, 0.666, 0.633, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6</td>
+</tr>
+</table>
+</div>
+
+<h2 id='section-refs'>References</h2>
+<dl>
+<dt id="ref-stainforth">Stainforth 2004</dt>
+<dd>Stainforth D.A. <i>et al.</i>
+Uncertainty in predictions of the climate response to rising levels of greenhouse gases, <i>Nature, January 27</i>.
+</dd>
+</dl>

@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20090418T230000Z
+DTEND:20090424T230000Z
+LOCATION:Vienna, Austria
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000A01708CE9A75C901000000000000000
+	0100000008AD7A229B9A62B44AF28337643B70D49
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+The EGU General Assembly 2009 will bring together geoscientists from all =
+over Europe and the rest of the world into one meeting covering all disci=
+plines of the Earth, Planetary and Space Sciences. Especially for young s=
+cientists the EGU appeals to provide a forum to present their work and di=
+scuss their ideas with experts in all fields of geosciences. The EGU is l=
+ooking forward to cordially welcome you in Vienna!=0D=0ADeadline for Abst=
+ract Submission Extended=0D=0AThe deadline for the Abstract Submission <h=
+ttp://meetingorganizer.copernicus.org/EGU2009/sessionprogramme>  was exte=
+nded until Wednesday, 14 January 2009, 24:00 CET due to two short server =
+breakdowns. We are sorry for any inconveniences and looking forward to re=
+ceiving your contributions. Thank you very much for your understanding!=
+=0D=0AMore details available at: http://meetings.copernicus.org/egu2009/i=
+ndex.html=0D=0A
+SUMMARY:European Geosciences Union (EGU) General Assembly 2009
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

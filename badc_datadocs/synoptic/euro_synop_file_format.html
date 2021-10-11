@@ -1,0 +1,416 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>European Synoptic Station Data - File Format</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>European Synoptic Stations (1990-1996) - Data File Format<BR
+CLEAR="ALL"></H1>
+
+<P><HR ALIGN=LEFT>The file name convention is (STATION_NAME).(YEAR).syn.</P>
+
+<BLOCKQUOTE>
+  <P>STATION_NAMES is the station name (see station_list for full
+  details).<BR>
+  YEAR is the year expressed in full, ie 1996. Details of the data
+  coverage are also given in station_list. <BR>
+  The .syn extension shows that the file contains synoptic data
+  as opposed to climate data which is denoted .cli.</P></BLOCKQUOTE>
+
+<P>The synoptic data in .syn files is in a simple ASCII format.<BR>
+<BR>
+<STRONG>* indicates a missing value. </STRONG><BR>
+<BR>
+The fields in each file are as follows ... <BR>
+<BR>
+<td><TABLE BORDER="1" CELLSPACING="2" CELLPADDING="0">
+  <TR>
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">PARAMETER</FONT></TH> 
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">FIELDS</FONT></TH> 
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">COLUMNS</FONT></TH> 
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">UNITS</FONT></TH> 
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">COMMENTS</FONT></TH> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Year</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">1</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">1-6</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">-</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">-</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Month</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">2</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">7-9</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">-</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">-</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Day</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">3</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">10-12</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">-</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">-</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Hour</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">4</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">13-15</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">-</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Hour of observation UTC (GMT)
+      0000, 0300 ... 2100</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">10 minute wind direction</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">5</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">16-19</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Deg.from true North</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">At stations with an anemograph,
+      the mean direction is for a period of 10 minutes ending at the
+      hour of observation. However, if there has been a significant
+      change in direction (30 degrees or more) and the mean value has
+      been maintained for at least 3 minutes then this value is used
+      instead. Where there are indicating instruments only, the means
+      of several 15 to 20 second readings taken over the period of
+      observation are used, but again, if there has been a significant
+      change, the means of several readings after the change are used
+      instead.</TD>
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">10 minute wind speed</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">6</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">20-21</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">knots</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Speeds are adjusted to a standard
+      height of 10 m. At stations with an anemograph, the mean speed
+      is for a period of 10 minutes ending at the hour of observation.
+      However, if there has been a significant change in speed (10
+      knots or more) and the mean value has been maintained for at
+      least 3 minutes then this value is used instead. Where there
+      are indicating instruments only, the means of several 15 to 20
+      second readings taken over the period of observation are used,
+      but again, if there has been a significant change, the means
+      of several readings after the change are used instead.</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Present weather</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">7</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">22-24</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff"><A HREF="/data/surface/code.html#presweath">WMO
+      Code</A></TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Weather observation is made
+      hourly at the observing station.</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Past weather</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">8</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">25-27</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP"><A HREF="/data/surface/code.html#pastweath">WMO
+      Code</A></TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Past weather is defined as
+      weather occurring in the past 6 hours at 00, 06, 12, 18 UTC, and
+      the past 3 hours at 03, 09, 15, 21 UTC.</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Total cloud amount</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">9</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">28-29</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">oktas</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">The unit used to indicate
+      the proportion of the sky covered by clouds is the 'okta' or
+      eighth of the sky. The scale runs from 0, which indicates a cloudless
+      sky, to 8, which is a completely overcast sky (see <A HREF="/data/surface/code.html#oktas">WMO
+      code</A>).</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Low cloud amount</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">10</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">30-31</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">oktas</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Cloud bases below 8000 ft.
+<BR>
+      If no low cloud, medium cloud amount.</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Base of lowest cloud</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">11</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">32-35</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">kft</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Height above ground of the
+      base of the lowest cloud seen.</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Low cloud type</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">12</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">36-37</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP"><A HREF="/data/surface/code.html#lowcl">WMO
+      Code</A></TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Form of Low cloud</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Medium cloud type</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">13</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">38-39</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff"><A HREF="/data/surface/code.html#medcl">WMO
+      Code</A></TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Form of Medium cloud</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">High cloud type</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">14</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">40-41</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP"><A HREF="/data/surface/code.html#highcl">WMO
+      Code</A></TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Form of High cloud</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Horizontal visibility</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">15</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">42-46</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">km</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">The greatest distance an observer
+      can see and identify prominent objects. Units for visibility
+      are kilometers</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Dry-bulb temperature</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">16</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">47-52</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">deg C</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">The measurements of air temperature
+      are obtained from thermometers exposed in white-painted louvred
+      screens supported over short grass in the open, the bulbs of
+      the thermometers being 1.25m above ground. The nearest object
+      should be at least twice its height away from the screen. The
+      louvres are arranged such that there is a free, but reduced,
+      flow of air past the thermometer, and that sunlight cannot penetrate
+      directly into the screen. Commercial Automatic Weather Stations
+      AWSs often use smaller circular 'Gill' screens which are mounted
+      on metal poles. The Dry thermometer gives the current air temperature
+      or dry-bulb temperature.</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Wet-bulb temperature</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">17</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">53-58</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">deg C</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">The web-bulb temperature is
+      the lowest temperature that can be obtained by evaporating water
+      into the air. It measures the humidity of the air.</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Dew-point temperature</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">18</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">59-64</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">deg C</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">The dew point temperature
+      is the temperature to which the air must be cooled to produce
+      saturation with respect to water at its existing atmospheric
+      pressure and humidity.</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Water vapour pressure</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">19</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">65-69</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">mb</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">The vapour pressure corresponds
+      to the pressure exerted by the water vapor molecules in a given
+      volume of air.</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Relative humidity</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">20</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">70-73</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">%</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">The relative humidity is the
+      ratio of the amount of water vapour in the air compared to the
+      amount required for saturation (at a particular temperature and
+      pressure). It is the ratio of the air's actual vapour pressure
+      to its saturation vapour pressure.</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Mean sea level pressure</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">21</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">74-80</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">mb</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Atmospheric pressure is expressed
+      in millibars (1 millibar = 100 pascals = 100 newtons per square
+      metre). Precision aneroid barometers are now in general use for
+      measuring pressure and a correction for altitude is applied to
+      obtain the value at mean sea level (MSL).</TD>
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Pressure change over last
+      3 hours</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">22</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">81-85</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">mb</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Pressure change is reported
+      in mb.</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Pressure characteristic over
+      last 3 hours</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">23</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">86-87</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff"><A HREF="/data/surface/code.html#preschar">WMO
+      Code</A></TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">The pressure characteristic
+      (e.g. lower, higher or the same at the time of observation than
+      three hours ago) is recorded following the Met Office <A HREF="/data/surface/code.html#preschar">WMO
+      code</A>.</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Cloud layer 1 - Amount</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">24</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">88-90</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">oktas</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">-</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Cloud layer 1 - Type</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">25</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">91-93</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Code</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">CI=Cirrus, CC=Cirricumulus,
+      CS=Cirrostratus, <BR>
+      AC=Altocumulus, AS=Altostratus,<BR>
+      NS=nimbostratus, SC=stratocumulus, ST=stratus,<BR>
+      CU=Cumulus, CB=cumulonimbus</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Cloud layer 1 - Base</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">26</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">94-97</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">kft</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Tops are not reported</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Cloud layer 2 - Amount</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">27</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">98-99</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">oktas</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">-</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Cloud layer 2 - Type</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">28</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">100-102</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Code</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">CI=Cirrus, CC=Cirricumulus,
+      CS=Cirrostratus, <BR>
+      AC=Altocumulus, AS=Altostratus,<BR>
+      NS=nimbostratus, SC=stratocumulus, ST=stratus,<BR>
+      CU=Cumulus, CB=cumulonimbus</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Cloud layer 2 - Base</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">29</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">103-106</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">kft</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Tops are not reported</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Cloud layer 3 - Amount</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">30</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">107-108</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">oktas</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">-</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Cloud layer 3 - Type</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">31</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">109-111</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Code</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">CI=Cirrus, CC=Cirricumulus,
+      CS=Cirrostratus, <BR>
+      AC=Altocumulus, AS=Altostratus,<BR>
+      NS=nimbostratus, SC=stratocumulus, ST=stratus,<BR>
+      CU=Cumulus, CB=cumulonimbus</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Cloud layer 3 - Base</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">32</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">112-115</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">kft</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Tops are not reported</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Gust speed</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">33</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">116-118</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">knots</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">-</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Maximum temperature</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">34</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">119-124</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">deg C</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">0600-2400</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Minimum temperature</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">35</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">125-130</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">deg C</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">0600-2400</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">12-hour rainfall</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">36</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">131-134</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">0.1 mm</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Rainfall amount is measured
+      for a period 0600-2400.</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Station level pressure</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">37</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">135-141</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">mb</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">0600-2400<BR>
+      For some european stations only. Atmospheric pressure as measured
+      at the station level. Correction for altitude is not applied.</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">State of ground</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">38</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">142-144</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP"><A HREF="/data/surface/code.html#ground">WMO
+      Code</A></TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP"><STRONG>Note</STRONG> that
+      the code range 10-19 corresponds to the WMO code range 0-9 (no
+      snow)<BR>
+      and the code range 20-29 corresponds to the WMO code range 0-9
+      (with snow)</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Snow depth</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">39</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">145-148</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">cm</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Snow depth in cm.</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">Quality control flag</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">40</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">149-153</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">bits</TD> 
+    <TD BGCOLOR="#ffffff" VALIGN="TOP">-</TD> 
+  </TR>
+  <TR>
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">Quality control flag</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">41</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">154-158</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">bits</TD> 
+    <TD VALIGN="TOP" BGCOLOR="#ffffff">-</TD> 
+  </TR>
+</TABLE>
+<P>
+</BODY>
+</HTML>

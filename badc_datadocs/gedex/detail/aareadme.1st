@@ -1,0 +1,30 @@
+This directory holds the detailed catalogs.  Within each catalog, fourteen
+items (with standardized subheadings) give information on the type of data,
+spatial and temporal characteristics, instrument description, data
+processing sequence, quality assessment, contacts for data production,
+output products and availability, data access, archive information,
+references, related data sets, summary/sample, and a final item for notes.
+Much of the information was provided by the data producers;  however, NCDS
+staff members supplemented this information and standarized its presentation.
+As a result, specific details can be readily located through the table of
+contents.
+
+In addition to the detailed catalogs directly linked with the data sets
+held on the CD-ROM, ancillary catalogs which are closely related to the
+resulting products are included.  These catalogs give descriptions of the
+Level I products from which many of the data sets are derived.  They may be
+read directly from this directory and include:
+
+ERB:       Nimbus-7 Earth Radiation Budget (see ERB_SOLI.DET)
+ERBE:      Earth Radiation Budget Experiment (see ERBE.DET)
+AVHRR:     Advanced Very High Resolution Radiometer (see AVHRR.DET)
+SAGEI:     Stratospheric Aerosol and Gas Experiment I (see AEM2SAG1.DET)
+SAGEII:    Stratospheric Aerosol and Gas Experiment II (see ERBSAGE2.DET)
+TOVSHIRS:  TIROS Operational Vertical Sounder High-resolution Infrared 
+           Radiometer (see TOVSHIRS.DET)
+TOVSMSU:   TIROS Operational Vertical Sounder Microwave Sounding Unit
+           (see TOVSMSU.DET)
+TOVSSSU:   TIROS Operational Vertical Sounder Stratospheric Sounding Unit
+           (see TOVSSSU.DET)
+VISSR:     Visible Infrared Spin Scan Radiometer (see VISSR.DET)
+VAS:       VISSR Atmospheric Sounder (see VAS.DET)

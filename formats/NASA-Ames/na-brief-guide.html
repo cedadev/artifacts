@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PRIVATE "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>NASA Ames Brief guide</TITLE>
+</HEAD>
+
+<!-- Created June 1997  -->
+<!-- Author: Chunkey Lepine BADC-->
+<!-- Author: Charles Kilburn June 2006 BADC-->
+
+<body bgcolor="#ffffff">
+
+<h1>Brief guide to NASA-Ames<br clear=all></h1>
+<BR><HR>
+</P>
+<h2>Introduction</h2>
+The NASA Ames format is a text-based, self-describing, portable format. File contents are 
+limited to the printable ASCII character set (ASCII codes 32 to 126).
+Each NASA Ames file is made up of a file header section and a data
+section.  The file header contains the information needed to make the file
+self describing, as well as giving information such as the origin of the data. 
+Once the form of a file for a particular instrument has been decided, the file
+header for that instrument changes little from file to file.  
+The data section lists the data, in a column-oriented format. 
+
+<P>
+<h2>The Header</h2>
+<P>
+The header of a NASA-Ames format file must contain the following descriptors
+in the order listed below:
+
+<OL>
+<LI><a href="#format">Overall Format description</a>
+<LI><a href="#source">Data Source Description and Storage Volume Information</a>
+<LI><a href="#independent">Description(s) of the Independent variable(s)</a>
+<LI><a href="#primary">Description(s) of the Primary variable(s)</a>
+<LI><a href="#auxiliary">Descriptions of the Auxiliary variable(s)</a>
+<LI><a href="#comments">Special and Normal Comments </a>
+</OL>
+</p>
+
+<H3><A NAME="format">1. Overall Format Description</A></H3>
+
+<P>
+The first line of a NASA-Ames file always contains two integers (e.g. 20 1001).
+The first integer represents the number of header lines in the file, 
+including the first line itself.
+
+The second integer is a four-digit number called the
+file format index (FFI). The first digit of the FFI indicates the number of independent variables 
+(dimensions). The next digit specifies the number of necessary auxiliary variables. The remaining differences cover 
+the way the independent variables increment and the nature (numeric or character) of
+the variables.
+</P>
+
+<H3><A NAME="source">2. The Data "Source" Description and Storage Volume
+Information</A></H3>
+
+<P>
+The data source description requires six lines:
+
+<UL>
+
+<LI>Lines 2 and 3 describe the name and affiliation of the originator(s) of the file.
+
+<LI>Lines 4 and 5 are the instrument name and campaign name.
+
+<LI>Line 6 gives the current volume and the number of volumes in
+the dataset. This information dates from the days when data were distributed
+on diskettes - for most files today the numbers are 1 and 1.
+
+<LI>Finally line 7 provides two dates. The
+first is the date on which the data starts
+while the second is the date when the file was created.
+All dates are given in in "YYYY MM DD" format.
+
+</UL>
+</P>
+
+<H3><A NAME="independent">3. Description of the Independent variable (or variables) </A></H3>
+
+<P>
+The independent variable(s) are used to define the dimensions (or 'axes') of the
+data, and must be <em>monotonic</em> meaning increasing but never decreasing or 
+decreasing but never increasing. The description of the independent variable(s) changes 
+based on whether they are what is called bounded or unbounded and whether they are numeric or character variables. 
+With bounded variables, the range of values in known in advance, and the range and interval must be specified
+either within the NASA-Ames file header or,
+as is the case with some formats, as auxiliary variables.
+Thus if an independent variable (e.g. time) interval is always the same, you can specify the interval between
+different points in the header. If the spacing between points can change
+then this interval should be set to zero. With an unbounded variable this range is unknown
+until after the file has been completely read.
+It is meaningless to have more than one unbounded variable in a NASA-Ames
+format file.
+</P>
+
+<H3><A NAME="primary">4. Description of the Primary variable (or
+variables) </A></H3>
+
+<p>Primary variables are the main variables that are in the file: they are the
+quantities that have been observed or derived e.g. temperature, winds or ozone.
+The primary variables are considered
+as functions of the independent variables.
+Three quantities are needed to describe each primary
+variable: the name, the value which has been substituted for missing data and the scaling factor by which one 
+multiples recorded values to produce the required values.
+The variable name should be chosen from the <a href="http://www.cfconventions.org"> 
+Climate and Forecast (CF) Metadata Conventions</a> 
+standard names list and must include the units. 
+</P>
+
+<P>
+The format stipulates that all scale factors
+for the different primary variables should be held on the same line,
+all missing data values should be held in the next line
+and each primary variable name should be written
+in separate subsequent lines. 
+</P>
+
+
+<H3><A NAME="auxiliary">5. Description of the Auxiliary variable (or variables) </A></H3>
+
+<P>
+<p>The auxiliary variables are used for ancillary information about the
+observations, if this is needed. Three quantities are needed to describe each auxiliary
+variable although these vary depending on whether the variable is
+numeric or a character string.
+Numeric auxiliary variables require a scaling factor,
+a default value to be substituted when data are missing and the CF name of the
+variable.
+Character auxiliary variables require the length of the string,
+a default string for missing data and the CF name of the variable(s).
+</P>
+
+
+<H3><A NAME="comments">6. The normal and special comments fields </A></H3>
+
+<P>
+The format makes provision for two comment fields
+structured in identical ways. The first line is the number of comment lines and 
+subsequent lines are the actual comments. These can include community preferred names for
+variables and/or a column headings line. Either one or
+both of these can be missing.
+</P>
+
+<P>
+<h2>The Data</h2>
+<P>
+The data section consists of columns of data with the structure of independent, auxiliary 
+and primary variables set for each file format index.
+<p>
+For simplified examples see
+<a href="http://badc.nerc.ac.uk/help/formats/NASA-Ames/na-for-dummies-1D.html">Dummies Guide to NASA Ames format with 1D data</a> and
+<a href="http://badc.nerc.ac.uk/help/formats/NASA-Ames/na-for-dummies-2D.html">Dummies Guide to NASA Ames format with 2D data</a><br>
+<p> Alternatively see <a href="http://badc.nerc.ac.uk/help/formats/NASA-Ames">The complete BADC documentation on NASA Ames with detailed examples</a>
+</p>
+</BODY>
+</HTML>

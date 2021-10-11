@@ -1,0 +1,181 @@
+README.DOC  (1992-08-03 - pgh)
+
+1.  Introduction
+
+    This CD-ROM contains the final data pertaining to the Airborne Arctic
+    Stratospheric Expedition II (AASE II) which was based in Bangor, Maine 
+    between October 1991 and March 1992, with ER-2 flights from Ames Research
+    Center, Fairbanks (Alaska), and Bangor; and DC-8 flights from Ames, Bangor,
+    Anchorage (Alaska), Stavanger (Norway), and Tahiti.
+ 
+    The data consist of measurements collected onboard the NASA ER-2 and DC-8 
+    aircraft, ozonesonde soundings from six Canadian stations, global grid
+    point values of Nimbus 7 TOMS ozone, and selected radiosonde soundings
+    from stations in the region of the experiment.
+ 
+    Theory teams provided calculations of potential vorticity, temperature,
+    geopotential, horizontal winds, parcel back trajectories, and 
+    concentrations of short lived species along the aircraft flight tracks; 
+    and northern hemispheric analyses of potential vorticity, temperature,
+    geopotential, horizontal winds, and radiative heating rates.
+ 
+    All files within this release are standard ASCII files with variable length 
+    records terminated by a carriage return/line feed pair (<CR><LF>, ASCII 
+    decimal values 13 and 10).  Therefore, MS-DOS users should be able to read 
+    them as they are, but UNIX and Mac users will have to strip off either the
+    <CR> or the <LF> from each line to convert them to standard UNIX or Mac 
+    files.  Commercially available software, such as dos2unix and Apple File
+    Exchange, exists to convert MS-DOS files to both UNIX and Mac files.  
+    VMS users can define the files to have STREAM record formats.
+ 
+    In general, the file naming convention uses a two-character prefix to 
+    identify the measurement, followed by a six digit number (yymmdd) giving 
+    the year, month, and day (UT) of the flight, balloon launch, or model
+    result.  To identify the measurement platform, a three character extension
+    of EA1, DA1, Bhh, or Ghh is used to denote the data is from the ER-2,
+    DC-8, balloon, or grid point model output (hh denotes the UT hour of
+    balloon launch or model result).  Exceptions to this convention are the
+    SFyymmdd.Enn files which use the extensions E00, E01, E05, E30 to denote
+    aerosol loading factors; the TOMS data files which have the extensions 
+    N7; and the chemical modelling result MA911006.H00.
+
+
+2.  Major changes from the preliminary AASE II CD-ROM
+
+    Many investigators submitted new and/or revised datasets for this edition.
+    The files DC8TABLE.DOC and ER2TABLE.DOC list the data files available for
+    each flight and indicate whether they are original (from the preliminary 
+    AASE II CD-ROM), revised, or new.  The variable RDATE on line seven of 
+    the file header specifies the revision date for the file.  Additionally,
+    the special comment lines, also in the file header, may provide
+    information on the revision history of the file.
+   
+    2.1  New Files - DC-8
+
+         2.1.1  NO - measurements of NO from the NCAR in-situ NO detectors
+       
+         2.1.2  N2 - measurements of NO2 from the NCAR in-situ NO detectors
+       
+         2.1.3  TS - optical depth calculations from the Ames Sun photometer
+
+    2.2  New Files - ER-2
+
+         2.2.1  BR - measurements of BrO from the Harvard ClO/BrO instrument
+
+    2.3  New Files - Documentation
+
+         The format specification files, FORSPEC1.PS and FORSPEC2.PS,
+         have been upgraded to Level 2 PostScript.
+
+    2.4  Corrections
+
+         Some Resolute ozonesonde files were incorrectly named and archived
+         as radiosondes on the preliminary AASE II CD-ROM.  A complete set
+         of revised Resolute ozonesonde files have been properly named (RL
+         instead of RS) and now reside in the O3SONDE subdirectory (and 
+         have been removed from the RAOB subdirectory).
+       
+
+3.  Directories
+
+    3.1  The DOCUMENT directory contains several files documenting the 
+         contents of this edition.
+
+         Files:
+
+         3.1.1  CONTACT.DOC contains an updated list of names, addresses, and
+                phone numbers of the principal investigators responsible for
+                generating the datasets in this release.
+
+         3.1.2  DC8TABLE.DOC contains a record of the available DC-8 datasets
+                in tabular format.  Please see the file header for help in 
+                discerning new/revised datasets versus those that are unchanged
+                from the first edition.
+  
+         3.1.3  ER2TABLE.DOC contains a record of the available ER-2 datasets
+                in tabular format.  Please see the file header for help in
+                discerning new/revised datasets versus those that are unchanged
+                from the first edition.
+
+         3.1.4  FORSPEC1.PS and FORSPEC2.PS are PostScript files of the
+                document entitled "Format Specification for Data Exchange"
+                which defines the standard file formats in which all data are
+                recorded.  These two PostScript files can be printed on any 
+                printer that understands PostScript.  FORSPEC1.PS contains the
+                title page and table of contents; FORSPEC2.PS contains the
+                bulk of the document.
+
+    3.2  The DATA directory has six subdirectories for the DC-8, ER-2, model
+         results, ozonesonde soundings, radiosonde soundings, and TOMS data 
+         files.
+
+         Subdirectories:
+
+         3.2.1  DC8 contains the available data collected onboard the DC-8 
+                aircraft, and calculations of potential vorticity, 
+                temperature, geopotential, and horizontal wind along the 
+                aircraft flight track.  Each file contains data for one 
+                flight which begins on the UT date indicated by the file name.
+
+         3.2.2  ER2 contains the available data collected onboard the ER-2
+                aircraft, calculations of potential vorticity, temperature, 
+                geopotential, horizontal wind, parcel back trajectories, 
+                and concentrations of short lived species along the aircraft 
+                flight track.  Each file contains data for one flight which 
+                begins on the UT date indicated by the file name.
+
+         3.2.3  MODEL contains 12 Z hemispheric analyses of potential 
+                vorticity, temperature, horizontal winds, and radiative 
+                heating rates; and one file named MA911006.H00 which 
+                contains gas-phase chemistry model reconstructions of several 
+                radicals as a function of latitude, altitude, and local time.
+
+         3.2.4  O3SONDE contains ozonesonde soundings from the six Canadian 
+                launch sites: Alert, Churchill, Goose Bay, Iqaluit, Resolute, 
+                and Stony Plain.  Each file contains one sounding.
+
+         3.2.5  RAOB contains selected radiosonde soundings near the aircraft 
+                flight tracks.  Each file contains several soundings for a 
+                particular time period.
+
+         3.2.6  TOMS contains files of global grid point values of total 
+                ozone data from the Nimbus 7 Total Ozone Mapping Spectrometer
+                (TOMS) with one file per day.
+
+
+4.  Directory Structure for this CD-ROM remains the same as for the initial
+    release, i.e.,
+
+    README.DOC in top level directory
+    DOCUMENT
+    DATA
+      |-- DC8
+      |-- ER2
+      |-- MODEL
+      |-- O3SONDE
+      |-- RAOB
+      |-- TOMS
+ 
+-------------------------------------------------------------------------------
+
+This documentation and the accompanying data files were compiled by:
+
+Steven Gaines                          Patti Hathaway
+NASA Ames Research Center              NASA Ames Research Center
+M/S 245-3                              M/S 245-5
+Moffett Field, CA 94035-1000           Moffett Field, CA 94035-1000
+415-604-4546                           415-604-3493
+gaines@cloud1.arc.nasa.gov             hathaway@cloud1.arc.nasa.gov
+
+Steve Hipskind
+NASA Ames Research Center
+M/S 245-5
+Moffett Field, CA 94035-1000
+415-604-5076
+hipskind@cloud1.arc.nasa.gov
+
+We have left the quality control of the data to the principal investigators 
+and have checked only the format of the data files.  Therefore, if problems 
+with the data are encountered, please inform us or the appropriate principal 
+investigator.
+

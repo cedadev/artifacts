@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20041216T090000Z
+DTEND:20041216T180000Z
+LOCATION:Cambridge, UK
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:One-day workshop on Adaptive Grid Methodologies for Environmental Modelling for large-scale atmosphere/ocean applications =0D=0Ahttp://www.damtp.cam.ac.uk/user/lcd/amr_atmos_2004/=0D=0A
+SUMMARY:Adaptive Grid Methodologies for Environmental Modelling
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

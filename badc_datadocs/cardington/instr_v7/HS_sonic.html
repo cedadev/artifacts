@@ -1,0 +1,110 @@
+<HTML>
+
+<HEAD>
+<TITLE>Gill sonic anemometer</TITLE>
+<STYLE>
+<!--
+  BODY{font: 11pt arial,sans-serif;}
+  H2  {font: 175% arial,sans-serif;}
+  H3   { font : bold 110% sans-serif,arial;}
+-->
+</STYLE>
+</HEAD>
+
+<BODY>
+<BR>
+<H2>Gill Horizontally Symmetrical Research  Ultrasonic Anemometer</H2>
+<HR>
+
+<TABLE HSPACE=10 VSPACE=10>
+<TR>
+  <TD>
+    <IMG SRC="HS_sonic.jpg" ALT="Gill HS ultrasonic anemometer">
+  </TD>
+</TR>
+</TABLE>
+
+<H3>Purpose of instrument:-</H3>
+
+The ultrasonic anemometer is used for making rapid response measurements of the 3-dimensional wind field.
+A fast response temperature measurement is also generated. Data obtained from the instruments allows
+a range of turbulence parameters and fluxes to be derived, using  eddy correlation methods, 
+in addition to obtaining the mean horizontal wind.
+
+<P>
+Currently, three <I>HS-50</I> model sonic anemometers are deployed on the site, (located at the tops of masts of 
+heights 10m, 25m and 50m), but a number of <I>HS</I> model anemometers are also available for use.
+These two instruments are essentially the same, except that the HS-50 measures at a raw sampling rate of 
+50Hz as opposed to 100Hz.
+<P>
+The anemometers are logged at a rate of 10Hz (block averages over the raw sampling rate).
+This rate is sufficient to resolve the small scale eddies in the atmosphere at the three measurement heights.
+
+<H3>Principles of operation:-</H3>
+
+The sensor head of the anemometer consists of an array of three pairs of transducers orientated at different angles
+across the measurement region. Each pair of transducers act alternately as transmitters and receivers, 
+sending pulses of ultrasound between them.
+By measuring the time of flight of the pulse in both directions, the velocity component of the air flow along 
+the line of the transducer pair can be determined using the equation:-
+<PRE>
+          v = 0.5L * ( 1/t1 - 1/t2 )
+</PRE>
+where <I>t1</I> and <I>t2</I> are the measured times for the pulses to travel in each direction,
+and <I>L</I> is the distance between the transducers. 
+ 
+<P>
+This measurement is carried out for each of the three transducer pairs in turn.
+A mathematical transformation is then performed, to convert the resulting  three wind vectors into U,V,W format, 
+where <I>U</I> and <I>V</I> are the horizontal wind components parallel and perpendicular to the instrument axis, 
+and <I>W</I> is the vertical wind component. A correction is then applied, to calibrate out the affects of 
+the transducers and instrument frame on the airflow.
+
+<P>
+In addition to computing the wind vectors, the sonic anemometer also uses the time-of-flight measurement to 
+calculate the speed of sound (<I>c</I>) along each axis. From this, the sonic temperature 
+(equivalent to the virtual temperature) of the air is derived, using relationship:-
+<PRE>
+          T<SUB>v</SUB> = c<SUP>2</SUP> /403 
+</PRE>
+The speed of sound value used in the above calculation is the mean quantity derived from each of the three 
+axes. A correction must then be applied to take into account the effect of the cross-wind 
+normal to the measurement axes. The resulting virtual temperature, can then be converted into a true temperature, 
+assuming that the pressure and humidity are known.
+
+<P>
+Note that the accuracy of the sonic derived temperature, is not generally good  enough to be relied on as a true 
+temperature measurement. (It can be up to 2-3<FONT SIZE=-1><SUP>o</SUP></FONT>C off.) 
+This is largely due to the fact that it is highly sensitive to very small errors in the speed of sound measurement. 
+However, this is not particularly important, beacause primary purpose of the sonic temperature is as a fast response
+measurement which can be combined with the <I>W</I> wind component in order to calculate heat fluxes. 
+A separate PRT sensor is normally used for absolute measurements of temperature. 
+ 
+<P>
+The electronics box of the anemometer is equipped with  6 analogue input channels, plus a dedicated PRT 
+temperature sensor input. This allows external sensors to be connected to the sonic and logged at the same time.
+
+<P>
+Each complete measurement cycle is carried out at a rate of 100Hz (or 50Hz for the HS50 anemometer).
+The wind and sonic temperature  data is then averaged over the desired number of cycles, and sent to the serial output 
+of the instrument, along with the digitised output from any external sensors connected to the anemometer. 
+The output from an inbuilt inclinometer is also included in the data stream. This information can be used 
+in subsequent data processing to correct for errors in alignment of the instrument. 
+
+
+<P>
+Further information on the Gill HS sonic anemometers  can be found at the Gill website:- 
+<A HREF="http://www.gill.co.uk" TARGET="manufacturer">www.gill.co.uk</A>
+
+<H3>Operational notes:-</H3>
+These instruments have an acceptance angle, relative to the instrument axis, of approximately +/- 120 degrees, 
+from where the uninterruped wind flow may be measured.  If the wind is outside this sector, then the airflow 
+becomes distorted, resulting in the turbulence measurements becoming unreliable. 
+To counter this possibility, the masts are rotated on a regular basis, so that the anemometers remain  
+pointing into the prevailing wind.
+
+<BR></BR>
+<HR>
+</BODY>
+
+</HTML>

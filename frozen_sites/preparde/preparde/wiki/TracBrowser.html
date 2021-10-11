@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracBrowser – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracBrowser?format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="TracBrowser.html" title="View TracBrowser">TracBrowser</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><a href="WikiStart.html">Start Page</a></li><li><a href="TitleIndex.html">Index</a></li><li class="last"><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracBrowser?action=history">History</a></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <div class="wikipage searchable">
+        
+          
+          <div class="trac-modifiedby"><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracBrowser?action=diff&amp;version=1" title="Version 1 by trac">Last modified</a> <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A00%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:00+01:00 in Timeline">6 years</a> ago</div>
+          <div id="wikipage"><h1 id="TheTracRepositoryBrowser">The Trac Repository Browser</h1>
+<p>
+</p><div class="wiki-toc"><h4>Table of Contents</h4><ul><li class="False"><a class="False" href="TracGuide.html">Index</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInstall">Installation</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization">Customization</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracPlugins">Plugins</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUpgrade">Upgrading</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">Configuration</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracAdmin">Administration</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracBackup">Backup</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLogging">Logging</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracPermissions">Permissions</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWiki">The Wiki</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">Wiki Formatting</a></li><li class="False"><a class="False" href="TracTimeline.html">Timeline</a></li><li class="active"><a class="False" href="TracBrowser.html">Repository Browser</a></li><li class="False"><a class="False" href="TracRevisionLog.html">Revision Log</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracChangeset">Changesets</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTickets">Tickets</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWorkflow">Workflow</a></li><li class="False"><a class="False" href="TracRoadmap.html">Roadmap</a></li><li class="False"><a class="False" href="TracQuery.html">Ticket Queries</a></li><li class="False"><a class="False" href="TracReports.html">Reports</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracRss">RSS Support</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracNotification">Notification</a></li></ul></div><p>
+</p>
+<p>
+The Trac repository browser can be used to browse specific revisions of directories 
+and files stored in the repositories associated with the Trac environment.
+</p>
+<p>
+<em>(since 0.12)</em>: 
+At the top-level of the repository browser is the <strong>Repository Index</strong>, 
+listing all the configured repositories. 
+Each repository has a name which is used as a path prefix in a 
+"virtual" file hierarchy encompassing all the available repositories.
+If a default repository has been configured, its top-level files and directories 
+are also listed, in a <strong>Default Repository</strong> section placed before the 
+repository index. If the default repository is the only repository associated 
+with the Trac environment the <strong>Repository Index</strong> will be omitted <sup><a class="wiki" href="TracBrowser.html#note-multirepos">(1)</a></sup>.
+</p>
+<p>
+Directory entries are displayed in a list with sortable columns. The list 
+entries can be sorted by <em>Name</em>, <em>Size</em>, <em>Age</em> or <em>Author</em> by clicking on the column
+headers. The sort order can be reversed by clicking on a given column
+header again.
+</p>
+<p>
+The browser can be used to navigate through the directory structure 
+by clicking on the directory names. 
+Clicking on a file name will show the contents of the file. 
+Clicking on the revision number of a file or directory will take 
+you to the <a class="wiki" href="TracRevisionLog.html">TracRevisionLog</a> for that file.
+Note that there's also a <em>Revision Log</em> navigation link that will do the 
+same for the path currently being examined.
+Clicking on the <em>diff</em> icon after revision number will display the changes made 
+to the files modified in that revision.
+Clicking on the <em>Age</em> of the file - will take you to that changeset in the timeline.
+</p>
+<p>
+It's also possible to browse directories or files as they were in history,
+at any given repository revision. The default behavior is to display the
+latest revision but another revision number can easily be selected using
+the <em>View revision</em> input field at the top of the page.
+</p>
+<p>
+The color bar next to the <em>Age</em> column gives a visual indication of the age
+of the last change to a file or directory, following the convention that
+<strong><span style="color:#88f">blue</span></strong> is oldest and <strong><span style="color:#f88">red</span></strong>
+is newest, but this can be <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni#browser-section">configured</a>.
+</p>
+<p>
+At the top of the browser page, there's a <em>Visit</em> drop-down menu which you can use 
+to select some interesting places in the repository, for example branches or tags. 
+This is sometimes referred to as the <em>browser quickjump</em> facility.
+The precise meaning and content of this menu depends on your repository backend.
+For Subversion, this list contains by default the top-level trunk directory 
+and sub-directories of the top-level branches and tags directories 
+(<tt>/trunk</tt>, <tt>/branches/*</tt>, and <tt>/tags/*</tt>).  This can be <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni#svn-section">configured</a> 
+for more advanced cases.
+</p>
+<p>
+If you're using a Javascript enabled browser, you'll be able to expand and 
+collapse directories in-place by clicking on the arrow head at the right side of a 
+directory. Alternatively, the <a class="ext-link" href="http://trac.edgewall.org/intertrac/TracKeys" title="TracKeys in Trac project trac"><span class="icon"> </span>keyboard</a> can also be used for this: 
+</p>
+<ul><li>use <tt>'j'</tt> and <tt>'k'</tt> to select the next or previous entry, starting with the first
+</li><li><tt>'o'</tt> (open) to toggle between expanded and collapsed state of the selected 
+directory or for visiting the selected file 
+</li><li><tt>'v'</tt> (view, visit) and <tt>'&lt;Enter&gt;'</tt>, same as above
+</li><li><tt>'r'</tt> can be used to force the reload of an already expanded directory
+</li><li><tt>'A'</tt> can be used to directly visit a file in annotate (blame) mode
+</li><li><tt>'L'</tt> to view the log for the selected entry
+</li></ul><p>
+If no row has been selected using <tt>'j'</tt> or <tt>'k'</tt> these keys will operate on the entry under the mouse .
+</p>
+<p>
+For the Subversion backend, some advanced additional features are available:
+</p>
+<ul><li>The <tt>svn:needs-lock</tt> property will be displayed
+</li><li>Support for the <tt>svn:mergeinfo</tt> property showing the merged and eligible information
+</li><li>Support for browsing the <tt>svn:externals</tt> property 
+(which can be <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni#svn:externals-section">configured</a>)
+</li><li>The <tt>svn:mime-type</tt> property is used to select the syntax highlighter for rendering 
+the file. For example, setting <tt>svn:mime-type</tt> to <tt>text/html</tt> will ensure the file is 
+highlighted as HTML, regardless of the file extension. It also allows selecting the character 
+encoding used in the file content. For example, if the file content is encoded in UTF-8, 
+set <tt>svn:mime-type</tt> to <tt>text/html;charset=utf-8</tt>. The <tt>charset=</tt> specification overrides the 
+default encoding defined in the <tt>default_charset</tt> option of the <tt>[trac]</tt> section 
+of <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni#trac-section">trac.ini</a>.
+</li></ul><hr />
+<div style="font-size:85%" class="wikipage"><p>
+<span class="wikianchor" id="note-multirepos">(1)</span> -  This means that after upgrading a single-repository Trac of version 
+0.11 (or below) to a multi-repository Trac (0.12), the repository browser will look and feel 
+the same, that single repository becoming automatically the "default" repository.
+</p>
+</div><p>
+See also: <a class="wiki" href="TracGuide.html">TracGuide</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracChangeset">TracChangeset</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracFineGrainedPermissions">TracFineGrainedPermissions</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracBrowser?format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

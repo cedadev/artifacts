@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050910T230000Z
+DTEND:20050916T230000Z
+TRANSP:1
+UID:040000008200E00074C5B7101A82E008000000009036A23CFB01C5010000000000000000100
+ 0000025C299B76A7A8646AC4048E0FD300432
+CATEGORIES;ENCODING=QUOTED-PRINTABLE:conference
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:RMetS Conference 2005=0D=0A=0D=0A11th=
+ - 16th September, 2005=0D=0AUniversity of Exeter, UK=0D=0A=0D=0ACALL FOR P=
+APERS=0D=0A=0D=0ASubmission Deadline 1 April 2005 =0D=0A=0D=0AFor more info=
+rmation and to submit an abstract see conference website: =0D=0Ahttp://www.=
+rmets.org/event/conference/conf2005/index.php=0D=0A=0D=0A=0D=0AProgramme Co=
+mmittee Chairs=0D=0AJohn Mitchell and Vicky Pope=0D=0A=0D=0A=0D=0ASymposium=
+ 1=0D=0AMeasurements, observations and analysis: =0D=0A  =0D=0ASymposium 2.=
+ =0D=0AWeather, air quality and forecasting: =0D=0A=0D=0AJoint Symposium 2/=
+3.=0D=0A=0D=0ASymposium 3. =0D=0AClimate, composition and change =0D=0A=0D=
+=0AAlso incorporating the 2005 UWERN, UGAMP, DIAC, COAPEC and CWVC science =
+meetings.=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:RMetS Conference 2005
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

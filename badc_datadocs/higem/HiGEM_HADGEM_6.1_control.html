@@ -1,0 +1,283 @@
+['../../renderNumSim_oldET.py', 'HiGEM_HADGEM_6.1_control.xml']
+<?xml version="1.0" encoding="UTF-8"?>
+		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+		<html xmlsns="http://www.w3.org/1999/xhtml" xml:lang="en">
+			<head>
+				<META http-equiv="Content-Type" content="text/xhtml; charset=iso-8859-1"/>
+				<title>Browse: NS Test</title>
+				<LINK media="all, screen" href="numsim.css" type="text/css" rel="stylesheet"/>
+			</head>
+<div id="Simulated"><h2>Simulated Data</h2><h3>CodeBase</h3><p>This is the HiGEM codebase</p>
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">HiGEM V6.1 Control (xbpjt)</span></td></tr><tr><td></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>http://www2.met-office.gov.uk/research/nwp/publications/papers/unified_model/umdp15_v6.0.pdf</li></ul></p></DIV></td></tr><tr><td><p><span class="emphatic">RelatedModel, <a href="http://www.higem.nerc.ac.uk/">HiGEM</a></span>: This is the first HiGEM climate run </p></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Atmosphere</span></td></tr><tr><td><p>
+                    The atmospheric component of HiGEM has 38 vertical levels 
+                    with a horizontal resolution of 1.25 degrees of latitude by 0.83 degrees of longitude, 
+                    which produces a global grid of 288 x 217 grid cells. This is equivalent to a surface
+                    resolution of about 139 km x 92 km at the Equator, reducing to 98 km x 92 km
+                    at 45 degrees of latitude (comparable to a spectral resolution of N144).
+                    The atmospheric timestep period is 20 minutes (72 timesteps per 1 days).
+                </p></td></tr><tr><td></td></tr><tr><td></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Radiation Scheme</span></td></tr><tr><td><p> 
+                        A general 2-stream radiation code including cloud microphysics.
+                        The radiation scheme uses 6 spectral bands in the solar (shortwave) wavelenths 
+                        and 9 bands in the terrestrial thermal (longwave) wavelengths. 
+                        The radiative effects of CO2 and ozone are explicitly represented as well as oxygen, methane, N2O, CFC-11 and CFC-12.
+                        The LW and SW radiative effects of climatological distributions of sulphate, seasalt, soot and biomass aerosols are included.
+                        A cloud area parameterisation produces an Area Cloud Fraction which replaces the bulk value used in the radiation code.
+                        Mixed phase clouds containing both ice and water are segregated into separate sub-clouds for radiation calculations.
+                    </p></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>
+                            JM Edwards, Slingo A, 1996: Studies with a flexible new radiation code. 1. Choosing a configuration for a large-scale model 
+		      QUARTERLY JOURNAL OF THE ROYAL METEOROLOGICAL SOCIETY, 122(531) 689-719
+                        </li></ul></p></DIV></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Land Surface Scheme</span></td></tr><tr><td><p>
+                        The surface albedo is a function of snow depth and the temperature of the snow over sea ice.
+                        The surface hydrology uses the MOSES-II (Met Office Surface Exchange Scheme).
+                        The vegetation distribution is fixed.
+                        Using coastal tiling allows both land and sea to co-exist in the same gridbox.
+                        There are 9 land surface tiles per grid cell.
+                    </p></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>
+                            JA. CURRY, SCHRAMM JL, EBERT EE: 1995: SEA-ICE ALBEDO CLIMATE FEEDBACK MECHANISM. 
+                            JOURNAL OF CLIMATE 8 (2): 240-247
+                        </li></ul></p></DIV></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Boundary Layer Scheme</span></td></tr><tr><td><p>
+                        The boundary layer scheme explicitly parameterises the top-of-mixed-layer entrainment.
+                        It uses a formulation of the surface exchange coefficients based directly on Monin-Obukhov stability functions.
+                        It uses a subgrid diagnosis of cloud-base height in order to improve the accuracy of the buoyancy flux integral 
+                        which is used to diagnose the depth of mixing in stratocumulus clouds.                                        
+                        The boundary layer scheme splits the radiative heating increments into separate LW and SW contributions.  
+                        It uses a Richardson number based mixing scheme and orographic roughness fields.
+                        The scheme accounts for the radiative coupling and the thermal capacity of the vegetation canopy.
+                    </p></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>Lock, A. P. 2001: The numerical representation of entrainment in parametrizations of boundary layer turbulent mixing. 
+                            MWR, 129, 1148-1163
+                        </li><li>Lock, A. P., A. R. Brown, M. R. Bush, G. M. Martin, R. N. B. Smith et al. 2000: 
+                            A new boundary layer mixing scheme. Part I: scheme description and SCM tests. MWR, 128, 3187-3199
+                        </li></ul></p></DIV></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Convection Scheme</span></td></tr><tr><td><p>
+                        Convection is able to transport momentum in the vertical.
+                        The inital convective plume mass flux is determined by a CAPE based clousure scheme.
+                        The radiative representation of anvils modifies the convective cloud amount (CCA) to vary with height during deep convection.
+                        Excluding precipitation from the water path means that the radiation scheme does not 'see' the convective rain and snow.
+                        The accurate treatment of precipitation phase change ensures that precipitation does not change phase if the associated latent
+                        cooling would take the temperature below the freezing point again.
+                    </p></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>None</li><li>None</li></ul></p></DIV></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Gravity Wave Scheme</span></td></tr><tr><td><p>
+                        The orographic gravitity wave scheme also includes flow blocking. 
+                        The gravity wave constant is 1.00e+05 and defines the magnitude of the parametrized response.
+                        The critical Froude number is 4.00 and determines the proportion of that drag attributed to flow blocking and gravity wave drag respectively.
+                        The spectral gravity wave scheme is not used.
+                    </p></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>Webster S., A.R. Brown, D.R. Cameron and C.P. Jones, 2003:
+                            Improvements to the Representation of Orography in the Met Office Unified Model.
+                            Quarterly Journal of the Royal Meteorological Society, 129 (591): 1989-2010 Part B.
+                        </li></ul></p></DIV></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Precipitation and Cloud Scheme</span></td></tr><tr><td><p> The large scale precipitation scheme contains a full microphysical calculation of the cloud phase and 
+                        generation of precipitation with water vapour, cloud liquid water and ice particle content as prognostic variables. 
+                        Microphysical processes are treated as transfer terms between water vapour, liquid, ice, and rain.
+                        The fraction of cloud ice content that is pristine ice crystals and snow aggregate particles are treated 
+                        seperately in the microphysical transfer terms.     
+                        Condensation can occur before grid scale supersaturation and the vapour is condensed to cloud water. 
+                        The conversion from vapour to liquid or frozen cloud water is reversible.
+                        A RHcrit parametrization causes the cloud scheme to use 3D diagnosed critical relative humidity.
+                        A cloud area parametrization produces an Area Cloud Fraction which replaces the Bulk value in much of the radiation code.
+                    </p></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>Wood et al. ,2002: Atmos. Res., 65, 109-128</li><li>http://cgam.nerc.ac.uk/dev/um/docs/UM45_sci/p026.pdf</li><li>http://cgam.nerc.ac.uk/dev/um/docs/UM45_sci/p029.pdf</li></ul></p></DIV></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Advection and Diffusion</span></td></tr><tr><td><p>
+                        A semi-lagrangian advection scheme is used.
+                        The advection of potential temperature, moisture, density and winds are treated separately. 
+                        Moisture is conserved using a non-hydrostatic scheme.
+                        A conservative horizontal diffusion scheme is used.
+                        Vertical diffusion is switched off.
+                    </p></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>
+                            http://www2.met-office.gov.uk/research/nwp/publications/papers/unified_model/umdp15_v6.0.pdf
+                        </li></ul></p></DIV></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Aerosols</span></td></tr><tr><td><p>
+                        The aerosol parameterisation includes a sulphur cycle, soot scheme and biomass aerosol scheme.
+                        The sulphur cycle includes SO2 emissions from the surface, chimneys and volcanoes.
+                        The sulphur cycle also uses an interactive dimethyl sulphide scheme.
+                        The biomass scheme includes emissions from the surface and from high levels.
+                    </p></td></tr><tr><td></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Rivers</span></td></tr><tr><td><p>
+                        All rivers flow with an effective velocity of 0.4 m/s and a meander ratio of 1.4.
+                        River outflow to the ocean is included.
+                    </p></td></tr><tr><td></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Ocean</span></td></tr><tr><td><p>
+                    The oceanic component of HiGEM has 40 vertical levels with 
+                    a horizontal resolution of 0.333 degrees of latitude by 0.333 degrees of longitude, 
+                    which produces a global grid of 1082 x 540 grid cells. This is equivalent to a surface
+                    resolution of about 37 km x 37 km at the Equator, reducing to 26 km x 37 km
+                    at 45 degrees of latitude (comparable to a spectral resolution of Nblah).
+                    The atmospheric timestep period is 20 minutes (72 timesteps per 1 days).   
+                    The ocean GCM includes a polar island as standard.
+                    The ocean GCM uses the McDougall equation of state.
+                </p></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>http://cgam.nerc.ac.uk/dev/um/docs/UM45_sci/p040.pdf</li></ul></p></DIV></td></tr><tr><td></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Tracer advection and diffusion</span></td></tr><tr><td><p>
+                        The advection of active tracers, temperature and salinity, uses a fourth order differencing scheme (Pacanowski and Griffies, 1998)
+                        which uses a fourth order estimate of the tracer gradients together with the second order advective fluxes.                      
+                        The option to use upwind advection in the bottom gridcell at each point avoids instabilities found in high resolution runs.
+                        The Griffies diffusion scheme orientates the mixing tensor to lie along isopycnal rather than horizontal sufarces (Griffies et al., 1998).
+                        Isopycnal diffusivity is 5.00e+02 (m*m/s) and is constant with depth.
+                        The Gent and McWilliams (GM) Scheme parametrises the effect of mesoscale eddies on tracer transports.
+                        The Visbeck scheme allows the diffusivity for the GM scheme to be spatially and temporally variable, 
+                        so that it can take large values in eddy-generation regions and small values elsewhere. 
+                        The HADCM4 version of the Visbeck scheme uses large-scale density gradients to pick out eddy-generation regions.
+                        The isopycnal diffusivity is tapered as the slope of the isopycnals increases using a hyperbolic tangent function.
+                        A scale-selective version of the Gent and McWilliams scheme (Roberts and Marshall 1998) removes small-scale noise from the tracer fields
+                        without affecting their large-scale distribution and without causing any mixing across isopycnal surfaces.
+                    </p></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>Pacanowski and Griffies, MOM 3.0 Manual, 1998</li><li>http://cgam.nerc.ac.uk/dev/um/docs/UM45_sci/p051.pdf</li><li>Griffies et al 1998</li><li>Roberts and Marshall, 1998</li></ul></p></DIV></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Filtering</span></td></tr><tr><td><p>
+                        Fourier filtering is used to decrease the effective resolution of the model at
+                        high latitudes, allowing a longer timestep to be used. See UMDP 40. Different
+                        filtered regions can be chosen for tracers and velocity and for the northern
+                        and southern hemispheres. In the northern hemisphere, filtering starts at
+                        'First tracer/velocity row in northern hemisphere to be filtered' and goes
+                        right up to the north pole. The filtering removes scales less than the grid
+                        scale on the row defined by 'Tracer/velocity row used to define basic zonal
+                        dimension'. The equator-most row to be filtered in each hemisphere determines
+                        the minimum effective gridlength retained by the filtering.
+                        The first tracer/velocity row in the northern hemisphere: 510/509
+                        Tracer/velocity row used to define basic zonal dimensions: 510/509
+                        The last tracer/velocity row in the southern hemisphere:34/34
+                    </p></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>http://cgam.nerc.ac.uk/dev/um/docs/UM45_sci/p040.pdf</li></ul></p></DIV></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Mixed Layer and vertical diffusion</span></td></tr><tr><td><p>
+                        A Kraus-Turner (1967) type mixed layer model is used to parameterise the effects of surface generated turbulence. 
+                        Vertical diffusion is dependent on the Ricardson Number (Peters et al, ?)
+                        The quadratic Large scheme calculates the vertical diffusion coefficient in the mixed layer (Large et al 1994)
+                        The quadratic Large scheme is applied where the Richardson number is less than 0.3 upto a maximum depth of 80 m.
+                    </p></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>Kraus Turner, 1967</li><li>http://cgam.nerc.ac.uk/dev/um/docs/UM45_sci/p041.pdf</li><li>Peters et al, ?</li><li>W.G.Large et al 1994, Oceanic Vertical Mixing : A review and a model
+                        with a nonlocal boundary layer parametrisation, Rev Geophys, 32, 363-403.</li></ul></p></DIV></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Barotropic Solution, Momentum Flux and Diffusion</span></td></tr><tr><td><p>  
+                        A free-surface barotropic solution is used with Delphus-Delcross smoothing for the surface height field.
+                        A modifed Cox scheme is used for calculating velocity fluxes.
+                        Horizontal momentum diffusion uses viscosity coeffiecients that are constant in latitude: 0.00.
+                        Biharmonic momentum diffusion allows scale-selective damping to be applied to the velocities
+                        without affecting the large-scale velocity field. It is useful in helping the removal of grid-scale noise in the velocity field. 
+                    </p></td></tr><tr><td></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Convection</span></td></tr><tr><td><p>
+                        A Rahmstorf's full convection scheme is used which
+                        is guaranteed to produce a profile having complete static stability.
+                    </p></td></tr><tr><td></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Salinity Control</span></td></tr><tr><td><p>
+                        There is no reference salinity, instead salinity limits are applied.
+                        Upper salinity limit: 4.50000e-02 (psu/1000).
+                        Lower salinity limit: 5.00000e-03 (psu/1000).
+                    </p></td></tr><tr><td></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Ocean Straits</span></td></tr><tr><td><p>
+                        A generalised strait exchange scheme is used that advects water from a marginal sea into the main                                   
+                        ocean, with a corresponding return flow.
+                        There is 1 strait in this set up with end coordinates (i,j) at (62, 378) and (65, 378).
+                    </p></td></tr><tr><td></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Sea Ice</span></td></tr><tr><td><p>
+                    The prognostic sea ice model contains ice thermodynamics based on 
+                    Semtner's "zero-layer" and calculates prognostic ice depth, ice concentration and snow depth.   
+                    The multiple ice categories model allows the sub-grid scale ice thickness distribution to be represented. 
+                    The EVP (elastic-viscous-plastic) dynamics based on Hibler's sea-ice rheology calculates velocities 
+                    that are used to advect sea-ice.
+                    A north polar island is included and sea ice can be advected over it.
+                </p></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>
+                        Semtner, A. J., 1976: 
+                        A model for the thermodynamic growth of sea ice in numerical investigations of climate. 
+                        J. Phys. Oceanogr., 6, 379-389. 
+                    </li><li>
+                        Hibler, W. D., 1979: Dynamic Thermodynamic Sea Ice Model.
+                        Journal of Physical Oceanography, 9(4), 815-846.
+                    </li></ul></p></DIV></td></tr><tr><td></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Sea Ice Thermodynamics</span></td></tr><tr><td><p>
+                        Ocean to ice heat flux parameterisation uses the 'McPhee scheme' 
+                        (McPhee, 1992), which uses both the ocean-ice temperature difference and
+                        the friction velocity in the flux parameterisation.  
+                        The 'McPhee scheme'  produces a flux proportional to the ice concentration
+                        above a marginal sea ice concentration of 0.05.  For lower concentrations,
+                        the heat flux is constant.
+
+                        Number of sea ice categories is 5.                       
+                        Minimum local ice depth is 0.1 m. 
+                        Min local snow thickness: 1.0E-5 m                       
+                        Min local thickness of new ice growing in leads: 0.05m
+                    </p></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>
+                            McPhee, M. G., 1992: Turbulent heat-flux in the upper ocean under sea ice.
+                            Journal of Geophysical Research-Oceans, 97(C4), 5365-5379.
+                        </li><li>
+                            Maykut G. A., M.G. McPhee, 1995: Solar heating of the Arctic mixed layer 
+                            Journal of Geophysical Research-Oceans, 100(C12), 24691-24703.
+                        </li></ul></p></DIV></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Sea Ice Dynamics</span></td></tr><tr><td><p>
+                        The sea ice velocity arises from a balance of windstress, ocean drag, coriolis and internal ice stresses.
+                        It is based on the viscous-plastic sea-ice rheology of Hibler (1979), and recommended for use in 
+                        climate modelling by the Sea Ice Model Intercomparison Project [Kreyscher et al, 2000].
+                        Convergence of ice is impeded or prevented when the ice is thick. 
+                        The ice ridging scheme converts thinner ice to thicker ice, and if the ice is converging, the scheme
+                        ensures that enough ice ridges to keep the ice concentration equal or below 1 (Hunke and Lipscomb).   
+
+                        Maximum compressive strength of ice per unit thickness is 2.00e+04 (N/m**2)
+                        Ice strength is smoothed to avoid instabilities at high northern latitudes polewards of 87.5 lat..
+                        Ice velocities are filtered at high northern latiitudes to prevent excessive ridging and buildup of ice.
+                        The Quadratic ice-ocean drag coefficient is 1.50e-02
+                    </p></td></tr><tr><td><DIV id="RefList"><p>References:<ul><li>
+                            Hibler, W. D., 1979: Dynamic Thermodynamic Sea Ice Model.
+                            Journal of Physical Oceanography, 9(4), 815-846.                            
+                        </li><li>
+                            Kreyscher M et al., 2000: Results of the Sea Ice Model Intercomparison Project:
+                            Evaluation of sea ice rheology schemes for use in climate simulations 
+                            Journal of Geophysical Research-Oceans, 105 (C5): 11299-11320.                             
+                        </li><li>
+                            Thorndike, A. S., D. A. Rothrock, G. A. Maykut et al., 1975:
+                            Thickness Distribution of Sea Ice.
+                            Journal fo Geophysical Research-Oceans and Atmosphereres, 80(33), 4501-4513.
+                        </li><li>
+                            Flato, G. M. and W. D. Hibler, 1995:
+                            Ridging and strength in modeling the thickness distribution of arctic sea-ice.
+                            Journal of Geophysical Research-Oceans, 100 (C9), 18611-18626.                        
+                        </li><li>
+                            Lipscomb, W.H. and E. C. Hunke, 2004: Modeling sea ice transport using incremental remapping. 
+                            Monthly Weather Review, 132 (6), 1341-1354.
+                        </li></ul></p></DIV></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr></tbody></table></DIV></td></tr><tr><td><DIV id="SubBlock">
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Atmos-Ocean Coupler</span></td></tr><tr><td><p> 
+                </p></td></tr><tr><td></td></tr><tr><td></td></tr></tbody></table></DIV></td></tr></tbody></table><h3>Experiment</h3><p></p>
+	<table cellspacing="0" cellpadding="3" border="0">
+	<tbody>
+	<tr><td class="lineHead" colspan="1"><span class="headingO">Constraints</span></td></tr><tr><td><div id="condition"><p class="emphatic">NS_Experiment</p><p></p></div></td></tr><tr><td><div id="condition"><p class="emphatic">NS_Experiment</p><p></p></div></td></tr></tbody></table></div>
+</html>

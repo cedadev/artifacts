@@ -1,0 +1,1294 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>PC-CORA Sounding Data File Structure</TITLE>
+  <META NAME="AUTHOR" CONTENT="Yvonne M Ackerman">
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<P><B><FONT COLOR="#000000">VAISALA Oy </FONT></B><FONT COLOR="#000000">PC-CORA
+File Structure</FONT> - Met Systems Division 1991-02-05</P>
+
+<H1><CENTER><FONT COLOR="#000000"><HR><BR>
+</FONT>PC-CORA SOUNDING DATA FILE STRUCTURE<BR>
+</CENTER></H1>
+
+<H2>1. GENERAL</H2>
+
+<BLOCKQUOTE>
+  <P>PC-CORA file format is designed to be used in PC-CORA sounding
+  data files. All raw data files and edited files have this format.</P>
+  <H3>1.1. PC-CORA File Structure</H3>
+  <BLOCKQUOTE>
+    <P>PC-CORA file has four sections:</P>
+    <BLOCKQUOTE>
+      <P>1. Header Section (50 bytes)</P>
+      <P>2. Identification Data Section (196 bytes)</P>
+      <P>3. SYSPAR Section (8087 bytes)</P>
+      <P>4. Sounding Data Records (record length * number of records)</P></BLOCKQUOTE>
+    <P>Sections 1, 2 and 3 have the same structure for all data files.
+    Section 4 is specific for each file type. Currently supported
+    file types are: Raw PTU, Edited data, Raw Radar data, Omega derivative
+    data, Omega local phase data, Omega remote phase data, Loran-C
+    derivative data, Loran-C phase data, Raw special sensor data.</P></BLOCKQUOTE>
+  <H3>1.2. Header Section</H3>
+  <BLOCKQUOTE>
+    <P>The header defines general details about the file like the
+    type of file, length of blocks, number of record.<TABLE BORDER="1"
+    CELLSPACING="1" CELLPADDING="0" WIDTH="680">
+       
+      <TR>
+        <TD VALIGN="TOP" WIDTH="45" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT FACE="Palatino">BYTE</FONT></B></CENTER></TD>
+        <TD VALIGN="TOP" WIDTH="292" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">DATA</FONT></B></CENTER></TD>
+        <TD VALIGN="TOP" WIDTH="73" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">TYPE</FONT></B></CENTER></TD>
+        <TD VALIGN="TOP" WIDTH="262" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">COMMENTS</FONT></B></CENTER></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" WIDTH="45">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">1-20</FONT></CENTER></TD>
+        <TD VALIGN="TOP" WIDTH="292"><FONT COLOR="#000000" FACE="Palatino">(C)
+          Valsala 1.01 left justified, null terminated</FONT></TD> 
+        <TD VALIGN="TOP" WIDTH="73"><FONT COLOR="#000000" FACE="Palatino">Char</FONT></TD> 
+        <TD VALIGN="TOP" WIDTH="262"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" WIDTH="45">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">21-22</FONT></CENTER></TD>
+        <TD VALIGN="TOP" WIDTH="292"><FONT COLOR="#000000" FACE="Palatino">Length
+          of Identification block in bytes</FONT></TD> 
+        <TD VALIGN="TOP" WIDTH="73"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP" WIDTH="262"><FONT COLOR="#000000" FACE="Palatino">196</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" WIDTH="45">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">23-24</FONT></CENTER></TD>
+        <TD VALIGN="TOP" WIDTH="292"><FONT COLOR="#000000" FACE="Palatino">Length
+          of SYSPAR in bytes</FONT></TD> 
+        <TD VALIGN="TOP" WIDTH="73"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP" WIDTH="262"><FONT COLOR="#000000" FACE="Palatino">8087</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" WIDTH="45">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">25-26</FONT></CENTER></TD>
+        <TD VALIGN="TOP" WIDTH="292"><FONT COLOR="#000000" FACE="Palatino">Number
+          of data records</FONT></TD> 
+        <TD VALIGN="TOP" WIDTH="73"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP" WIDTH="262"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" WIDTH="45">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">27-28</FONT></CENTER></TD>
+        <TD VALIGN="TOP" WIDTH="292"><FONT COLOR="#000000" FACE="Palatino">Number
+          of standard levels (Type EDT)</FONT></TD> 
+        <TD VALIGN="TOP" WIDTH="73"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP" WIDTH="262"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" HEIGHT="121" WIDTH="45">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">29-30</FONT></CENTER></TD>
+        <TD VALIGN="TOP" HEIGHT="121" WIDTH="292"><FONT COLOR="#000000"
+           FACE="Palatino">Type of Data</FONT></TD> 
+        <TD VALIGN="TOP" HEIGHT="121" WIDTH="73"><FONT COLOR="#000000"
+           FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP" HEIGHT="121" WIDTH="262"><FONT COLOR="#000000"
+           FACE="Palatino">1 = Raw PTU<BR CLEAR="ALL">2 = EDT<BR CLEAR="ALL"></FONT>3
+          = Raw radar<FONT COLOR="#000000" FACE="Palatino"><BR CLEAR="ALL"></FONT>4
+          = Omega derivative<FONT COLOR="#000000" FACE="Palatino"><BR 
+          CLEAR="ALL"></FONT>5 = Omega local<FONT COLOR="#000000" FACE="Palatino"><BR
+          CLEAR="ALL"></FONT>6 = Omega remote<FONT COLOR="#000000" FACE="Palatino"><BR
+          CLEAR="ALL"></FONT>7 = Loran C derivative<FONT COLOR="#000000"
+           FACE="Palatino"><BR CLEAR="ALL"></FONT>8 = Loran C phases<FONT
+           COLOR="#000000" FACE="Palatino"><BR CLEAR="ALL"></FONT>9 = Raw
+          special sensor<FONT COLOR="#000000" FACE="Palatino"><BR CLEAR="ALL"></FONT></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" WIDTH="45">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">31-32</FONT></CENTER></TD>
+        <TD VALIGN="TOP" WIDTH="292"><FONT COLOR="#000000" FACE="Palatino">Length
+          of data record in bytes</FONT></TD> 
+        <TD VALIGN="TOP" WIDTH="73"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP" WIDTH="262"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" HEIGHT="27" WIDTH="45">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">33</FONT></CENTER></TD>
+        <TD VALIGN="TOP" HEIGHT="27" WIDTH="292"><FONT COLOR="#000000"
+           FACE="Palatino">&quot;File ready&quot; flag</FONT></TD> 
+        <TD VALIGN="TOP" HEIGHT="27" WIDTH="73"><FONT COLOR="#000000"
+           FACE="Palatino">Byte</FONT></TD> 
+        <TD VALIGN="TOP" HEIGHT="27" WIDTH="262"><FONT COLOR="#000000"
+           FACE="Palatino">1 = Ready<BR CLEAR="ALL"><BR>
+          0 = Not Ready</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" WIDTH="45">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">34-50</FONT></CENTER></TD>
+        <TD VALIGN="TOP" WIDTH="292"><FONT COLOR="#000000" FACE="Palatino">Reserved</FONT></TD> 
+        <TD VALIGN="TOP" WIDTH="73"></TD>
+        <TD VALIGN="TOP" WIDTH="262"></TD>
+      </TR>
+    </TABLE></P>
+    <P><FONT COLOR="#000000">The length of header is constant for
+    all file types and is 50 bytes.</FONT></P></BLOCKQUOTE>
+  <H3>1.3. Identification Data Section</H3>
+  <BLOCKQUOTE>
+    <P><TABLE BORDER="1" CELLSPACING="1" CELLPADDING="0">
+      <TR>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">BYTE</FONT></B></CENTER></TD>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">DATA</FONT></B></CENTER></TD>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff"><B><FONT COLOR="#000000" FACE="Palatino">UNIT</FONT></B></TD> 
+        <TD VALIGN="TOP" BGCOLOR="#00ffff"><B><FONT COLOR="#000000" FACE="Palatino">TYPE</FONT></B></TD> 
+        <TD VALIGN="TOP" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">COMMENTS</FONT></B></CENTER></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">1-2</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Station
+          type</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0=Land,
+          1=Ship</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">3-4</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Region
+          number</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">5-6</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">WMO block
+          number</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">7-8</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">WMO station
+          number</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">9-10</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Station
+          latitude</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.01 deg</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">11-12</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Station
+          longitude</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.01 deg</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">13-14</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Station
+          altitude</FONT></TD> 
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">m</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">15-16</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Wind speed
+          unit in message</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0 = m/s,
+          1 = knots</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">17-18</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Use of
+          telecommunication headings</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0 = No,
+          1 = Yes</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">19-20</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Res</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" HEIGHT="40">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">21-22</FONT></CENTER></TD>
+        <TD VALIGN="TOP" HEIGHT="40"><FONT COLOR="#000000" FACE="Palatino">Sounding
+          type</FONT></TD> 
+        <TD VALIGN="TOP" HEIGHT="40"></TD>
+        <TD VALIGN="TOP" HEIGHT="40"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP" HEIGHT="40"><FONT COLOR="#000000" FACE="Palatino">0
+          = PTU<BR CLEAR="ALL"><BR>
+          1 = Only pressure<BR CLEAR="ALL"></FONT>2 = No PTU (Radar)</TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">23-24</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Start
+          mode</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0 = Auto,
+          1 =Manual</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">25-26</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Time elapsed
+          at the start of ascent</FONT></TD> 
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">s</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">27-28</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">PTU rate</FONT></TD> 
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">s</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">29-32</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">SPU card
+          serial number</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Long</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">33-34</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Year</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">35-36</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Month</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">37-38</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Day</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">39-40</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Julian
+          date</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">41-42</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Hour</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">43-44</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Minute</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">45-46</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Message
+          year</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">47-48</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Message
+          month</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">49-50</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Message
+          day</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">51-52</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Message
+          hour</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">53-58</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Cloud
+          group</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Char</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">59-64</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Weather
+          group</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Char</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">65-70</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Napp</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Char</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">71-72</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Surface
+          pressure</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.1 hPa</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">73-74</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Surface
+          temperature</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.1 K</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">75-76</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Surface
+          humidity</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">% RH</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">77-78</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Surface
+          wind direction</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Deg</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">79-80</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Surface
+          wind speed</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.1 m/s</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">81-90</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Radiosonde
+          number</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Char</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">91-100</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Sounding
+          number</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Char</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">101-102</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Pressure
+          correction</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">103-104</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Temperature
+          correction</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">105-106</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Humidity
+          correction</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">107-108</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Succ.
+          Of signal</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">109-110</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Pressure
+          accept level</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">111-112</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Pressure
+          replace level</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">113-114</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Pressure
+          reject level</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">115-116</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Temperature
+          accept level</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">117-118</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Temperature
+          replace level</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">119-120</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Temperature
+          reject level</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">121-122</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Humidity
+          accept level</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">123-124</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Humidity
+          replace level</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">125-126</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Humidity
+          reject level</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">127-128</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Total
+          omega count</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">129-130</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Reason
+          of termination</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">131-152</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Omega
+          count</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" HEIGHT="40">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">153-154</FONT></CENTER></TD>
+        <TD VALIGN="TOP" HEIGHT="40"><FONT COLOR="#000000" FACE="Palatino">Wind
+          computing mode</FONT></TD> 
+        <TD VALIGN="TOP" HEIGHT="40"></TD>
+        <TD VALIGN="TOP" HEIGHT="40"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP" HEIGHT="40"><FONT COLOR="#000000" FACE="Palatino">0
+          = Remote<BR CLEAR="ALL"><BR>
+          1 = Local<BR CLEAR="ALL"></FONT>2 = Differential</TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" HEIGHT="54">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">155-156</FONT></CENTER></TD>
+        <TD VALIGN="TOP" HEIGHT="54"><FONT COLOR="#000000" FACE="Palatino">Wind
+          mode</FONT></TD> 
+        <TD VALIGN="TOP" HEIGHT="54"></TD>
+        <TD VALIGN="TOP" HEIGHT="54"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP" HEIGHT="54"><FONT COLOR="#000000" FACE="Palatino">0
+          = Omega<BR CLEAR="ALL"><BR>
+          1 = Loran-C<BR CLEAR="ALL"></FONT>2 = Radar<FONT COLOR="#000000"
+           FACE="Palatino"><BR CLEAR="ALL"></FONT>255 = Only PTU</TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" HEIGHT="40">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">157-158</FONT></CENTER></TD>
+        <TD VALIGN="TOP" HEIGHT="40"><FONT COLOR="#000000" FACE="Palatino">Loran/Omega
+          stations used</FONT></TD> 
+        <TD VALIGN="TOP" HEIGHT="40"></TD>
+        <TD VALIGN="TOP" HEIGHT="40"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP" HEIGHT="40"><FONT COLOR="#000000" FACE="Palatino">One
+          bit for each station<BR CLEAR="ALL"><BR>
+          1 = Used, 0 = Not used</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">159</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Number
+          of Loran-C chains in use</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Byte</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">160-161</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">GRI of
+          chain 1</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">10 &micro;s</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">162-163</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">GRI of
+          chain 2</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">10 &micro;s</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">164-165</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Excluded
+          Loran-C transmitters</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">One bit
+          for each in the<BR CLEAR="ALL"><BR>
+          chain; and chain 2<BR CLEAR="ALL"></FONT>transmitted</TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">166</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Unit to
+          control change of phase<BR CLEAR="ALL"><BR>
+          integration time</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Byte</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0 = time
+          (s)<BR CLEAR="ALL">1 = Altitude (m/MSI)</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">167-168</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Phase
+          Integration time 1</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">s</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">169-170</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Phase
+          Integration time 2</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">s</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">171-172</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Phase
+          Integration time 3</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">s</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">173-174</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Phase
+          Integration time 4</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">s</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">175-176</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Phase
+          Integration time 5</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">s</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">177-178</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Phase
+          Integration time 6</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">s</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">179-180</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Phase
+          Integration change level 1</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">181-182</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Phase
+          Integration change level 2</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">183-184</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Phase
+          Integration change level 3</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">185-186</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Phase
+          Integration change level 4</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">187-188</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Phase
+          Integration change level 6</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">189-190</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Phase
+          Integration change level 6</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">191-192</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Reference
+          pressure</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">193-194</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Reference
+          temperature</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">195-196</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Reference
+          Humidity</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+    </TABLE></P></BLOCKQUOTE>
+  <H3><FONT COLOR="#000000">1.4. SYSPAR Data</FONT></H3>
+  <BLOCKQUOTE>
+    <P>Array of 8087 bytes. Contains the SYSPAR as specified by SYSGEN
+    data description. The data values as they were when sounding
+    was processed.</P></BLOCKQUOTE>
+</BLOCKQUOTE>
+
+<H2><FONT COLOR="#000000">2. Sounding Data Records</FONT></H2>
+
+<BLOCKQUOTE>
+  <P>All data records for one file type have the same format. The
+  records are repeated sequentially following the time elapsed
+  during the sounding. The missing data value for a parameter is
+  -32768 unless otherwise stated.</P>
+  <H3>2.1. Raw PTU Data</H3>
+  <BLOCKQUOTE>
+    <P><TABLE BORDER="1" CELLSPACING="1" CELLPADDING="0">
+      <TR>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">BYTE</FONT></B></CENTER></TD>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">DATA</FONT></B></CENTER></TD>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff"><B><FONT COLOR="#000000" FACE="Palatino">UNIT</FONT></B></TD> 
+        <TD VALIGN="TOP" BGCOLOR="#00ffff"><B><FONT COLOR="#000000" FACE="Palatino">TYPE</FONT></B></TD> 
+        <TD VALIGN="TOP" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">COMMENTS</FONT></B></CENTER></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">1-2</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Time</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Second</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">3-4</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Scaled
+          logarithmic pressure</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">4096*ln(P)hPa</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">5-6</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Temperature</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.1 K</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">7-8</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Humidity</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">% RH</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+    </TABLE></P></BLOCKQUOTE>
+  <H3><FONT COLOR="#000000">2.2. Edited Data</FONT></H3>
+  <BLOCKQUOTE>
+    <P><TABLE BORDER="1" CELLSPACING="1" CELLPADDING="0">
+      <TR>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">BYTE</FONT></B></CENTER></TD>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">DATA</FONT></B></CENTER></TD>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff"><B><FONT COLOR="#000000" FACE="Palatino">UNIT</FONT></B></TD> 
+        <TD VALIGN="TOP" BGCOLOR="#00ffff"><B><FONT COLOR="#000000" FACE="Palatino">TYPE</FONT></B></TD> 
+        <TD VALIGN="TOP" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">COMMENTS</FONT></B></CENTER></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">1-4</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Elapsed
+          time since sonde release</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Second</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Float</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">5-6</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Scaled
+          logarithmic pressure</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">4096*ln(P)hPa</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">7-8</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Temperature</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.1 K</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">9-10</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Humidity</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">% RH</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">11-12</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">North
+          component of wind</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.01 m/s</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">13-14</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">East component
+          of wind</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.01 m/s</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">15-16</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Altitude
+          above mean sea level</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">m</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">30000m
+          subtracted</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">17-18</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Pressure</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.1 hPa</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">19-20</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Dew point
+          temperature</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.1 K</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">21-22</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Mixing
+          ratio</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.1 g/Kg</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">23-24</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Wind direction</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">deg</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">25-26</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Wind speed</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.1 m/s</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">27-28</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Azimuth
+          to the sonde</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">deg</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">29-30</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Horizontal
+          distance to the sonde</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">100m</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">31-32</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Sonde
+          position longitude</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.01 deg</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">33-34</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Sonde
+          position latitude</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.01 deg</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">35-36</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">SOND calculated
+          significance key</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Bit pattern</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">37-38</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">User edited/recalculated
+          significance key</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Bit pattern</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">39-40</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Radar
+          height</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">m</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">30000m
+          subtracted</FONT></TD> 
+      </TR>
+    </TABLE><BR>
+    </P>
+    <P><FONT COLOR="#000000">Significance key bit pattern:</FONT></P>
+    <P><TABLE BORDER="1" CELLSPACING="1" CELLPADDING="0">
+      <TR>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff"><FONT COLOR="#000000" FACE="Palatino">Flag</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Ts</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Us</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Tr</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">ITr</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Pi</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Ti</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Ui</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">x</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">x</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">x</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">x</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">x</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Mw</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">V</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Ds</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Fs</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff"><FONT COLOR="#000000" FACE="Palatino">Bit</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">1</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">2</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">3</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">4</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">5</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">6</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">7</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">8</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">9</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">10</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">11</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">12</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">13</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">14</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">15</FONT></TD> 
+      </TR>
+    </TABLE></P>
+    <P>When bit is 1 the data level had the following level type:<BR>
+    <TABLE BORDER="1" CELLSPACING="1" CELLPADDING="0">
+      <TR>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff">
+          <UL>
+            <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">BIT</FONT></B></CENTER>
+          </UL>
+        </TD>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff"></TD>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">LEVEL TYPE
+          FLAG</FONT></B></CENTER></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">0</FONT></CENTER></TD>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">Ts</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Level
+          type flag</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">1</FONT></CENTER></TD>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">Us</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Significance
+          level of humidity</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">2</FONT></CENTER></TD>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">Tr</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Tropopause</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">3</FONT></CENTER></TD>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">ITr</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Incompletely
+          defined tropopause</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">4</FONT></CENTER></TD>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">Pi</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Pressure
+          Interpolated</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">5</FONT></CENTER></TD>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">Ti</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Temperature
+          Interpolated</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">6</FONT></CENTER></TD>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">Ui</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Humidity
+          Interpolated</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">7-11</FONT></CENTER></TD>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">x</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Don't
+          Care</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">12</FONT></CENTER></TD>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">Mw</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Maximum
+          wind</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">13</FONT></CENTER></TD>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">V</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Significance
+          level of wind using vector criteria</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">14</FONT></CENTER></TD>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">Ds</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Significance
+          level of wind direction</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">15</FONT></CENTER></TD>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">Fs</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Significance
+          level of wind speed</FONT></TD> 
+      </TR>
+    </TABLE><BR>
+    </P>
+    <P><FONT COLOR="#000000">The first 25 data records in an EDT
+    file are always reserved for standard level data. The standard
+    levels are sorted according to ascending height. The 26th data
+    record contains ground level data. The rest of the levels are
+    sorted according to ascending height.</FONT></P></BLOCKQUOTE>
+  <H3>2.3. Radar Raw Data</H3>
+  <BLOCKQUOTE>
+    <P><BR>
+    <TABLE BORDER="1" CELLSPACING="1" CELLPADDING="0">
+      <TR>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">BYTE</FONT></B></CENTER></TD>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">DATA</FONT></B></CENTER></TD>
+        <TD VALIGN="TOP" BGCOLOR="#00ffff"><B><FONT COLOR="#000000" FACE="Palatino">UNIT</FONT></B></TD> 
+        <TD VALIGN="TOP" BGCOLOR="#00ffff"><B><FONT COLOR="#000000" FACE="Palatino">TYPE</FONT></B></TD> 
+        <TD VALIGN="TOP" BGCOLOR="#00ffff">
+          <P><CENTER><B><FONT COLOR="#000000" FACE="Palatino">COMMENTS</FONT></B></CENTER></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">1-2</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Time</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Second</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">3-4</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Azimuth</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.01 deg</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">5-6</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Elevation</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0.01 deg</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Int</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">7-10</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Range</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">m</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Float</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">0 = Track
+          On</FONT></TD> 
+      </TR>
+      <TR>
+        <TD VALIGN="TOP">
+          <P><CENTER><FONT COLOR="#000000" FACE="Palatino">11</FONT></CENTER></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Radar
+          track flag</FONT></TD> 
+        <TD VALIGN="TOP"></TD>
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">Byte</FONT></TD> 
+        <TD VALIGN="TOP"><FONT COLOR="#000000" FACE="Palatino">1 = Track
+          Off</FONT></TD> 
+      </TR>
+    </TABLE><FONT COLOR="#000000"><BR>
+    Missing data for azimuth is given as 32768.</FONT><BR>
+    ____________________________________________________________________________</P></BLOCKQUOTE>
+</BLOCKQUOTE>
+
+<P>
+
+</BODY>
+</HTML>

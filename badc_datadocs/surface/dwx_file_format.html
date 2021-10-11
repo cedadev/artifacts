@@ -1,0 +1,219 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Daily Weather observations - File Format</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Daily Weather Observations data - .dwx (weather observations)
+file format<BR CLEAR="ALL"></H1>
+<hr>
+<blockquote>
+<strong><FONT COLOR="#FB0000"><Strong>PLEASE NOTE:</strong></FONT> The file format described below refers to the Met Office Land Surface data (1900-2000) dataset which has been superseded by the <a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__dataent_ukmo-midas">Met Office MIDAS dataset (1853-present)</a> at the BADC.
+</strong>
+</blockquote>
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<P>A <STRONG>list of UK stations</STRONG> for which the BADC holds
+.dwx files is available (<A HREF="/data/surface/station_lists/ukstation.dwx.html">.dwx
+stations</A>).</P>
+
+<P>The file name convention is (STATION_NAME)(YEAR).(MESSAGE_TYPE).(FILE_EXTENSION)</P>
+
+<UL>
+  <LI>STATION_NAMES is the complete station name.<BR>
+  <LI>YEAR is the year expressed in full, ie 1998. <BR>
+  <LI>Description of the <A HREF="met_domain.html">message types</A>
+  is available.<BR>
+  <LI>The file extension is <STRONG>.dwx</STRONG> meaning that
+  the file contains daily weather observations.<BR>
+</UL>
+
+<P>These .dwx files contain daily weather observations measured
+on a 24 hour time scale. The file headers <A HREF="count.html">END_HOUR
+and COUNT</A> define the observation period. <BR>
+Sunshine duration, snow day, hail day, thunder day and gale day
+are usually for the period 0000-2359Z (i.e. END_HOUR=2359 and
+COUNT=24). Concrete state, lying snow, snow depth, fresh snow
+depth and fresh mountain snowfall are &quot;spot&quot; values,
+usually at 0900Z, i.e. END_HOUR=0900 and COUNT=0.</P>
+
+<P><STRONG>-999</STRONG> indicates a missing value. <BR>
+<BR>
+The first line of the data file are the fields headers (which
+are detailed in the table below).<BR>
+<BR>
+The fields in the .dwx data files are : <BR>
+<BR>
+<td><!--SELECTION--><TABLE BORDER="1" CELLSPACING="2" CELLPADDING="0">
+  <TR>
+    <TH ALIGN="LEFT" BGCOLOR="#666666">
+      <P ALIGN=LEFT><FONT COLOR="#ffffff">HEADER</FONT></TH> 
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">PARAMETER</FONT></TH> 
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">FIELDS</FONT></TH> 
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">COLUMNS</FONT></TH> 
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">UNITS</FONT></TH> 
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">COMMENTS/DESCRIPTION</FONT></TH> 
+  </TR>
+  <TR>
+    <TD>ID</TD> 
+    <TD>Station Ref. Number</TD> 
+    <TD>1</TD> 
+    <TD>1-8</TD> 
+    <TD>-</TD> 
+    <TD><A HREF="../ukmo-midas/ukmo_guide.html#3.6">Station identification</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">IDTYPE</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">2</TD> 
+    <TD BGCOLOR="#d4d4d4">9-17</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas/ukmo_guide.html#3.6">Station identification</A></TD> 
+  </TR>
+  <TR>
+    <TD>MET_DOM</TD> 
+    <TD>Met. Domain</TD> 
+    <TD>3</TD> 
+    <TD>18-28</TD> 
+    <TD>-</TD> 
+    <TD><A HREF="met_domain.html">Message types</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">YEAR</TD> 
+    <TD BGCOLOR="#d4d4d4">Year</TD> 
+    <TD BGCOLOR="#d4d4d4">4</TD> 
+    <TD BGCOLOR="#d4d4d4">29-35</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">4 characters</TD> 
+  </TR>
+  <TR>
+    <TD>MONTH</TD> 
+    <TD>Month</TD> 
+    <TD>5</TD> 
+    <TD>36-43</TD> 
+    <TD>-</TD> 
+    <TD>1 or 2 characters (from 1 to 12)</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">DAY</TD> 
+    <TD BGCOLOR="#d4d4d4">Day</TD> 
+    <TD BGCOLOR="#d4d4d4">6</TD> 
+    <TD BGCOLOR="#d4d4d4">44-51</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">1 or 2 characters (from 1 to 31max)</TD> 
+  </TR>
+  <TR>
+    <TD>END_HOUR</TD> 
+    <TD>Hour</TD> 
+    <TD>7</TD> 
+    <TD>52-61</TD> 
+    <TD>-</TD> 
+    <TD>Observation end time</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">COUNT</TD> 
+    <TD BGCOLOR="#d4d4d4">Hour count</TD> 
+    <TD BGCOLOR="#d4d4d4">8</TD> 
+    <TD BGCOLOR="#d4d4d4">62-69</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="count.html">See COUNT definition</A></TD> 
+  </TR>
+  <TR>
+    <TD>SUN</TD> 
+    <TD>Sunshine duration</TD> 
+    <TD>9</TD> 
+    <TD>70-77</TD> 
+    <TD>0.1 hour</TD> 
+    <TD><A HREF="../ukmo-midas/ukmo_guide.html#5.8">See Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">CONC</TD> 
+    <TD BGCOLOR="#d4d4d4">State of concrete slab</TD> 
+    <TD BGCOLOR="#d4d4d4">10</TD> 
+    <TD BGCOLOR="#d4d4d4">78-83</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="code.html#slab">WMO Code</A></TD> 
+    <TD BGCOLOR="#d4d4d4">State of a concrete slab (e.g. dry, wet,
+      frozen, etc) of specified standard dimensions and composition
+      at the observing station.</TD> 
+  </TR>
+  <TR>
+    <TD>SNOW_L</TD> 
+    <TD>Snow lying</TD> 
+    <TD>11</TD> 
+    <TD>84-91</TD> 
+    <TD><A HREF="code.html#slying">WMO code</A></TD> 
+    <TD>Snow lying is counted, provided that the snow covers at least
+      one-half of the ground easily visible from the station and the
+      altitude of this ground does not differ by more than 30m from
+      that of the station. In judging if at least one-half of the ground
+      is snow covered no account is taken of bare patches under trees
+      or of aeras occupied by water.</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">SNOW_D</TD> 
+    <TD BGCOLOR="#d4d4d4">Snow depth</TD> 
+    <TD BGCOLOR="#d4d4d4">12</TD> 
+    <TD BGCOLOR="#d4d4d4">92-99</TD> 
+    <TD BGCOLOR="#d4d4d4">cm</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+  </TR>
+  <TR>
+    <TD>FRSH_SNOW</TD> 
+    <TD>Fresh snow amount</TD> 
+    <TD>13</TD> 
+    <TD>100-110</TD> 
+    <TD>cm</TD> 
+    <TD>-</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">SNOW_DAY</TD> 
+    <TD BGCOLOR="#d4d4d4">Day of snow</TD> 
+    <TD BGCOLOR="#d4d4d4">14</TD> 
+    <TD BGCOLOR="#d4d4d4">111-120</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="code.html#dsnow">WMO Code</A></TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+  </TR>
+  <TR>
+    <TD>HAIL_DAY</TD> 
+    <TD>Day of hail</TD> 
+    <TD>15</TD> 
+    <TD>121-130</TD> 
+    <TD><A HREF="code.html#dhail">WMO Code</A></TD> 
+    <TD>A day of hail is defined as one when pieces of ice, 5mm or
+      more in diameter are observed to fall. The hailstones can fall
+      separately or be agglomerated into irregular lumps.</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">THUN_DAY</TD> 
+    <TD BGCOLOR="#d4d4d4">Day of thunder</TD> 
+    <TD BGCOLOR="#d4d4d4">16</TD> 
+    <TD BGCOLOR="#d4d4d4">131-139</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="code.html#dthunder">WMO Code</A></TD> 
+    <TD BGCOLOR="#d4d4d4">A day of thunder is counted when thunder
+      is heard.</TD> 
+  </TR>
+  <TR>
+    <TD>GALE_DAY</TD> 
+    <TD>Day of gale</TD> 
+    <TD>17</TD> 
+    <TD>140-149</TD> 
+    <TD><A HREF="code.html#dgale">WMO code</A></TD> 
+    <TD>A day of gale is counted when a mean wind speed reaches or
+      exceeds or is estimated to have reached or exceeded, 34kn (force
+      8 on the Beaufort scale) over a period of at least several minutes
+      (10 mn in the case of a station equipped with an anemograph).</TD> 
+  </TR>
+</TABLE><!--/SELECTION--><BR>
+<BR>
+General information about the Climate Network is available in
+the <A HREF="../ukmo-midas/ukmo_guide.html#3.2">documentation provided by the
+Met Office</A>.
+<P>
+</BODY>
+</HTML>

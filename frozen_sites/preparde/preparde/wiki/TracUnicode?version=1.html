@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracUnicode – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUnicode?version=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUnicode" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUnicode" title="View TracUnicode">TracUnicode</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUnicode" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A01%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:01+01:00 in Timeline">6 years</a> ago)
+               (<a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUnicode?action=diff&amp;version=1">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="UnicodeSupportinTrac">Unicode Support in Trac</h1>
+<p>
+</p><div class="wiki-toc"><h4>Table of Contents</h4><ul><li class="False"><a class="False" href="TracGuide.html">Index</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInstall">Installation</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization">Customization</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracPlugins">Plugins</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUpgrade">Upgrading</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">Configuration</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracAdmin">Administration</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracBackup">Backup</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLogging">Logging</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracPermissions">Permissions</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWiki">The Wiki</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">Wiki Formatting</a></li><li class="False"><a class="False" href="TracTimeline.html">Timeline</a></li><li class="False"><a class="False" href="TracBrowser.html">Repository Browser</a></li><li class="False"><a class="False" href="TracRevisionLog.html">Revision Log</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracChangeset">Changesets</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTickets">Tickets</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWorkflow">Workflow</a></li><li class="False"><a class="False" href="TracRoadmap.html">Roadmap</a></li><li class="False"><a class="False" href="TracQuery.html">Ticket Queries</a></li><li class="False"><a class="False" href="TracReports.html">Reports</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracRss">RSS Support</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracNotification">Notification</a></li></ul></div><p>
+</p>
+<p>
+Trac stores all text using UTF-8 encoding, including text in tickets and wiki pages. Internal processing of text uses true Unicode representations.
+</p>
+<p>
+As such, it supports most (all?) commonly used character encodings.
+</p>
+<p>
+If your encoding is not UTF-8, you can use <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracModPython">mod_python</a> to handle it.  For example, if your local encoding is gbk, you can set 
+</p>
+<blockquote>
+<p>
+default_charset = gbk
+</p>
+</blockquote>
+<p>
+in trac.ini.
+</p>
+<p>
+You also must make sure that your <a class="ext-link" href="http://trac.edgewall.org/intertrac/DatabaseBackend" title="DatabaseBackend in Trac project trac"><span class="icon"> </span>database backend</a> stores its data in UTF-8; otherwise strange things will happen.
+</p>
+<p>
+To convert your database to UTF-8, the easiest way is to dump the database, convert the dump into UTF-8 and then import the converted dump back into the database.<br />
+You can use <a class="ext-link" href="http://www.gnu.org/software/libiconv/documentation/libiconv/iconv.1.html"><span class="icon"> </span>iconv</a> to convert the dump.
+</p>
+<h2 id="Examples">Examples</h2>
+<h3 id="Arabic">Arabic</h3>
+<p>
+تراك يقوم بحفظ كل الكلمات باستخدام صيغة UTF-8، بما في ذلك الكلمات المستخدمة في صفحات  التيكت والويكي.
+</p>
+<h3 id="Bulgarian">Bulgarian</h3>
+<p>
+Българският език работи ли?
+</p>
+<h3 id="Česky">Česky</h3>
+<p>
+Čeština v kódování UTF-8, žádný problém.
+</p>
+<h3 id="Chinese">Chinese</h3>
+<p>
+Traditional: 繁體中文, 漢字測試; Simplified: 简体中文，汉字测试
+</p>
+<h3 id="Croatian">Croatian</h3>
+<p>
+Ako podržava srpski i slovenski mora podržavati i Hrvatski - čćžšđ ČĆŽŠĐ 
+</p>
+<h3 id="English">English</h3>
+<p>
+Yes indeed, Trac supports English. Fully.
+</p>
+<h3 id="Français">Français</h3>
+<p>
+Il est possible d'écrire en Français : à, ç, û, ...
+</p>
+<h3 id="German">German</h3>
+<p>
+Trac-Wiki muß auch deutsche Umlaute richtig anzeigen: ö, ä, ü, Ä, Ö, Ü; und das scharfe ß
+</p>
+<h3 id="Greek">Greek</h3>
+<p>
+Τα Ελληνικά υποστηρίζονται επαρκώς επίσης.
+</p>
+<h3 id="Hebrew">Hebrew</h3>
+<p>
+אני יכול לאכול זכוכית וזה לא מזיק לי
+</p>
+<h3 id="Hindi">Hindi</h3>
+<p>
+अब हिन्दी में।
+</p>
+<h3 id="Hungarian">Hungarian</h3>
+<p>
+Árvíztűrő tükörfúrógép
+</p>
+<h3 id="Icelandic">Icelandic</h3>
+<p>
+Ævar sagði við ömmu sína: Sjáðu hvað ég er stór!
+</p>
+<h3 id="Japanese">Japanese</h3>
+<p>
+漢字 ひらがな カタカナ ﾊﾝｶｸｶﾅ 日本語試験
+</p>
+<h3 id="Korean">Korean</h3>
+<p>
+이번에는 한글로 써보겠습니다. 잘 보이나요? 한글
+</p>
+<h3 id="Latvian">Latvian</h3>
+<p>
+Latviešu valoda arī strādā!
+</p>
+<h3 id="Lithuanian">Lithuanian</h3>
+<p>
+Sudalyvaukime ir mes. Ar veikia lietuviškos raidės? ąčęėįšųūž ĄČĘĖĮŠŲŪŽ Žinoma, kad veikia :)
+Kas tie mes?
+</p>
+<h3 id="PersianFarsi">Persian (Farsi)</h3>
+<p>
+این یک متن فارسی است ولی امکان نوشتن مستقیم فارسی نیست چون حالت متن از راست به چپ و جود ندارد برای فارسی نوشتن باید از HTML استفاده کنید.
+</p>
+<div dir="rtl">
+</div><p>
+این نمونه یک متن از راست به چپ فارسی است که در HTML نوشته شده تا اعداد 12345 و حروف لاتین ABCDEF در محل خودشان نمایش داده شوند.
+</p>
+
+<h3 id="Polish">Polish</h3>
+<p>
+Pchnąć w tę łódź jeża lub osiem skrzyń fig; Nocna gżegżółka zawsze dzienną przekuka.
+</p>
+<h3 id="Portuguese">Portuguese</h3>
+<p>
+É possível guardar caracteres especias da língua portuguesa, incluindo o símbolo da moeda européia '€', trema 'ü', crase 'à', agudos 'áéíóú', circunflexos 'âêô', til 'ãõ', cedilha 'ç', ordinais 'ªº', grau '°¹²³'.
+</p>
+<h3 id="Russian">Russian</h3>
+<p>
+Проверка русского языка: кажется работает... И буква "ё" есть...
+</p>
+<h3 id="Serbian">Serbian</h3>
+<p>
+Podržan, uprkos činjenici da se za njegovo pisanje koriste чак два алфабета.
+</p>
+<h3 id="Slovenian">Slovenian</h3>
+<p>
+Ta suhi škafec pušča vodo že od nekdaj!
+</p>
+<h3 id="Spanish">Spanish</h3>
+<p>
+Esto es un pequeño texto en Español, donde el veloz murciélago hindú comía cardlllo y kiwi
+</p>
+<h3 id="Swedish">Swedish</h3>
+<p>
+Räven raskar över isen med luva på.
+</p>
+<h3 id="Thai">Thai</h3>
+<p>
+Trac แสดงภาษาไทยได้อย่างถูกต้อง!
+</p>
+<h3 id="Ukrainian">Ukrainian</h3>
+<p>
+Перевірка української мови...
+</p>
+<h3 id="Urdu">Urdu</h3>
+<p>
+ٹریک اردو بھی سپورٹ کرتا ہے۔
+</p>
+<h3 id="Vietnamese">Vietnamese</h3>
+<p>
+Viết tiếng Việt cũng được.
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUnicode?version=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

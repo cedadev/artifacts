@@ -1,0 +1,236 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>Chilbolton 355 nm UV Raman lidar data</TITLE>
+  <META CONTENT="text/html; charset=windows-1252" HTTP-EQUIV="Content-Type">
+</HEAD>
+<BODY ALINK="#ffa500" BGCOLOR="#ffffff" LINK="#ff0000" VLINK="#b00000">
+
+
+<h1>Chilbolton 355 nm UV Raman lidar data</h1>
+
+
+<p><img border="0" src="lidar_uv.jpg" width="300" height="400"></p>
+<p><i>The Chilbolton UV Raman lidar system</i></p>
+<hr>
+<h3>Introduction</h3>
+<P>The UV Raman lidar system at Chilbolton, England (51.1445°N, 358.563°E) is a high power, five channel Raman lidar system designed to make simultaneous measurements of attenuated lidar backscatter coefficient, humidity mixing ratio and temperature as a function of height. Two datasets are published on the BADC website: attenuated lidar backscatter coefficient and humidity mixing ratio. The attenuated backscatter coefficient is measured using the elastically scattered radiation. At this wavelength, elastically scattered light from both molecules and aerosols is detected. The humidity mixing ratio is measured using the much weaker Raman (inelastically) scattered light from water vapour and nitrogen molecules. Currently the temperature measurements are under development and data are not published.</P>
+
+<P>The system is vertically pointing. It is operated on a case-study basis. Since the most generally useful data are obtained in conditions of either clear skies or high cloud only, it is usually only operated under these conditions. The high power laser incorporated in the system makes low altitude Raman water vapour measurements possible during daylight hours, and many of the published data were collected under such conditions.</P>
+
+<h3>Parameters</h3>
+<table border="1" width="100%">
+  <tr>
+    <td width="33%"><b>Parameter</b></td>
+    <td width="33%"><b>Variable Name</b></td>
+    <td width="34%"><b>Value</b></td>
+  </tr>
+  <tr>
+    <td width="33%">Transmitted wavelength</td>
+    <td width="33%">transmit_wavelength</td>
+    <td width="34%">354.7 nm</td>
+  </tr>
+  <tr>
+    <td width="33%">Received wavelengths</td>
+    <td width="33%">receive_wavelength_1</td>
+    <td width="34%">354.7 nm (elastic)</td>
+  </tr>
+  <tr>
+    <td width="33%">&nbsp;</td>
+    <td width="33%">receive_wavelength_1</td>
+    <td width="34%">407.8 nm (water vapour vibrational Raman)</td>
+  </tr>
+  <tr>
+    <td width="33%">&nbsp;</td>
+    <td width="33%">receive_wavelength_2</td>
+    <td width="34%">386.7 nm (nitrogen vibrational Raman)</td>
+  </tr>
+  <tr>
+    <td width="33%">&nbsp;</td>
+    <td width="33%">&nbsp;</td>
+    <td width="34%">353.0 nm, 353.9 nm (nitrogen + oxygen rotation Raman for temperature)</td>
+  </tr>
+  <tr>
+    <td width="33%">Pulse energy</td>
+    <td width="33%">lidar_pulse_energy</td>
+    <td width="34%">0.2 J</td>
+  </tr>
+  <tr>
+    <td width="33%">Pulse repetition rate</td>
+    <td width="33%">lidar_pulse_frequency</td>
+    <td width="34%">50 Hz</td>
+  </tr>
+  <tr>
+    <td width="33%">Transmitted beam diameter</td>
+    <td width="33%">lidar_beam_diameter</td>
+    <td width="34%">0.1 m</td>
+  </tr>
+  <tr>
+    <td width="33%">Receiver mirror diameter</td>
+    <td width="33%">lidar_mirror_diameter</td>
+    <td width="34%">0.46 m</td>
+  </tr>
+  <tr>
+    <td width="33%">Transmitted beam divergence</td>
+    <td width="33%">lidar_beam_divergence</td>
+    <td width="34%">0.0055°</td>
+  </tr>
+  <tr>
+    <td width="33%">Receiver field of view</td>
+    <td width="33%">lidar_field_of_view</td>
+    <td width="34%">0.028°</td>
+  </tr>
+  <tr>
+    <td width="33%">Beam elevation</td>
+    <td width="33%">lidar_beam_elevation</td>
+    <td width="34%">90°</td>
+  </tr>
+  <tr>
+    <td width="33%">Latitude</td>
+    <td width="33%">latitude</td>
+    <td width="34%">51.4445°N</td>
+  </tr>
+  <tr>
+    <td width="33%">Longitude</td>
+    <td width="33%">longitude</td>
+    <td width="34%">358.5630°E</td>
+  </tr>
+  <tr>
+    <td width="33%">Height above mean sea level</td>
+    <td width="33%">lidar_height_amsl</td>
+    <td width="34%">84 m</td>
+  </tr>
+</table>
+<h3>Theory and calibration methods</h3>
+<h4>Raman scattering</h4>
+<P>Raman scattering is an inelastic quantum-mechanical scattering process, in which the frequency of scattered radiation is changed as a result of the interaction of the photon with the energy levels of the molecules. The frequency change is a characteristic of the scattering molecule, which makes it possible to separate scattering from different molecular species.</P>
+
+<h4>Lidar equation</h4>
+<P>The relationship between the measured lidar return and the lidar backscattering coefficient is given by</P>
+
+
+<P><IMG SRC="Image1.gif" WIDTH=129 HEIGHT=45>&#9;(1)</P>
+
+<P>where <I>h</I> is the height of the measurement, <font face="Symbol">b</font>(h) is the lidar backscattering coefficient, <I>C(h)</I> is the measured signal, <I>O(h)</I> is the fraction of the transmitted beam visible to the receiver (increases from zero at the lidar system to a maximum of 1), <I>T<SUB>1</SUB>(h)</I> is the transmittance of the atmosphere for outgoing radiation to height <I>h</I>, <I>T<SUB>2</SUB>(h)</I> is the transmittance of the atmosphere for returning radiation from height <I>h</I> and <I>K</I> is a calibration constant. The atmospheric transmittance is a function of wavelength. For elastic scattering <I>T<SUB>1</SUB>(h)</I> and <I>T<SUB>2</SUB>(h)</I> are equal, but for Raman scattering, where the outgoing and incoming radiation have different wavelengths, they are not.</P>
+
+<h4>Attenuated lidar backscatter coefficient</h4>
+<P>The calibration constant, <I>K</I>, is determined using the backscattering signal arising from molecular scattering. The backscattering coefficient due to molecular scattering can be calculated if the
+atmospheric density as a function of height is known, since at these wavelengths molecular scattering can be modelled using Rayleigh scattering theory. There is also an analytical relationship between the attenuation coefficient and the backscattering coefficient, hence <I>T<SUB>1</SUB>(h)</I> and <I>T<SUB>2</SUB>(h)</I> can be
+calculated for molecular scattering. The atmospheric density can be modelled using a standard atmosphere model or obtained from atmospheric measurements, such as those from a radiosonde, if available. We have used a standard atmosphere <SUP>2</SUP>, as the uncertainty introduced into the calibration as a result of differences from actual density will be small. The main source of uncertainty is the effect of aerosols present at altitudes below the height used for calibration. At these wavelengths aerosol scattering cannot be treated using Rayleigh scattering theory. This effect is partially overcome by monitoring the calibration coefficient from each day of measurement and noting the aerosol conditions as measured by the co-located Vaisala ceilometer, which is not sensitive to molecular scattering. Days with low aerosol content can then be identified. The calibration coefficient does not change greatly as a function of time, so a value can then be chosen to apply over a period.</P>
+
+<h4>Humidity mixing ratio</h4>
+<P>The humidity mixing ratio, <I>x<SUB>wv</SUB>(h)</I> or mass mixing ratio of water vapour, is given by <SUP>1</P>
+</SUP>
+
+<P><IMG SRC="Image2.gif" WIDTH=204 HEIGHT=42>&#9;(2)</P>
+
+<P>where the subscripts <I>wv</I> and <I>n</I> refer to water vapour and nitrogen respectively, <I>K</I> is a constant of the lidar system relating to the relative sensitivities of the two measurement channels, <I>T(h)</I> is the transmittance of the atmosphere for both the outgoing and returning radiation to height <I>h</I> and d<font face="Symbol">s</font>(<font face="Symbol">p</font>)/d<font face="Symbol">W</font> is the differential back-scattering cross section for Raman scattering of that species. <I>P(h)</I> is the ratio of the signal from Raman scattering from water vapour (at 408 nm) to that from nitrogen (at 387 nm) as a function of height.</P>
+
+<P>These measurements are calibrated by comparison with routine radiosonde releases from Larkhill, approximately 30 km to the west in order to obtain a combined value for all terms except <I>P(h)</I>. Although potential exists for differences in conditions between the two sites, monitoring of the calibration whenever lidar measurements are made reduces the effect of these and a calibration factor can be determined.</P>
+
+<P>A secondary method for monitoring the calibration is available. A tungsten halogen light source whose spectral irradiance is known is used to irradiate the detectors. The calibration can then be determined from their responses to this source. This method suffers from some limitations in reproducing the atmospheric measurement
+optical conditions and hence is more useful for monitoring changes in the calibration than for producing an absolute calibration factor.</P>
+
+<h3>Data processing</h3>
+<P>Elastic scattering data are presented in the form of <B>attenuated</B> backscattering coefficient (<I>T<SUB>1</SUB>(h)T<SUB>2</SUB>(h)</I><font face="Symbol">b</font><I>(h)</I> in equation 1) as no attempt is made to correct them for atmospheric attenuation, which will result from scattering and absorption by both molecules and aerosol particles. This quantity is commonly used for lidar backscattering data. Correcting for molecular (Rayleigh) scattering is relatively straightforward as it can be calculated from atmospheric density information. For 355 nm radiation, the measured returns from 12 km are approximately 40% of their value if no molecular scattering occurred. Correction for aerosol extinction is more difficult as an independent measure of aerosol attenuation is required. This can be obtained from one of the Raman scattering channels, such as nitrogen.</P>
+
+<P>The raw data are cleaned before further processing. As an analog data acquisition system is used, some interference is seen in the measurements from both the data acquisition cards and also from the laser power supply. This can be measured and subtracted, although in practice some small residual signals can remain. Elastic scattering data are corrected for changes in laser power during their acquisition and calibrated as shown by equation 1. The range normalisation process has the consequence of enhancing residual interference signals at the high altitude end of the profile. These can have a value of typically 1-2 x 10<SUP>-5</SUP> m<SUP>-1</SUP>sr<SUP>-1</SUP>. Humidity mixing ratio data are calculated from the ratio of the water vapour to nitrogen Raman scattering returns, as indicated by equation 2, so no range normalisation or laser power correction is required. Some uncertainties arise from the residual background signals, particularly at high altitudes where both the scattering signals are small. Care should be taken in interpreting humidity mixing ratio values from altitudes greater than approximately 4 km, especially by day, as small residual background signals can cause significant uncertainties in the measurements. If possible, they should be compared with nearby radiosonde data, such as from Larkhill, also available from BADC.</P>
+
+<P>When clouds are present they attenuate the lidar signals. If they are optically thin to the beam, some signal will be detected from above them. In the case of the attenuated backscattering coefficient they reduce the returns from above the clouds. In the case of the humidity mixing ratio the value derived is not affected, but the profile will be noisier than in the absence of the cloud due to the attenuation of both the water vapour and nitrogen Raman scattering returns. If the clouds are optically thick to the beam the attenuated backscattering coefficient will be measured as zero above them. The humidity mixing ratio will also be measured as zero, but with a large noise amplitude, as both the water vapour and nitrogen Raman scattering returns will be zero.</P>
+
+<P>Water vapour Raman scattering measurements contain a large, slowly varying background due to solar radiation during daylight hours. Nitrogen Raman scattering measurements by contrast contain a small but measurable solar background. The background in the water vapour measurements adds a substantial noise signal, which increases in proportion to the wanted signal when the humidity mixing ratio is small, when there is a larger sky background (such as occurs when the sky appears milky or light and/or intermittent cloud is present), when aerosol attenuation is large or when the laser beam power is low.</P>
+
+
+<h3>Data resolution and height range</h3>
+<P>Data are recorded at 6 m intervals from 0 to 12288 m and integrated over 20 s time periods (1000 laser pulses). They are not reported below 200 m in either dataset, due to the relatively small and rapidly changing overlap function at these altitudes. Attenuated lidar backscattering coefficient data are reported to the maximum height and the minimum time and height intervals. Humidity mixing ratio data are usually report to 6000 m height, with 24 m height resolution and 5 minute time resolution, due to the much smaller Raman scattering returns, especially from water vapour. </P>
+
+<h3>Data format</h3>
+<P>The data are provided as daily files in NetCDF format, together with quicklooks using Portable Network Graphics (PNG) format. In additional to the variables listed in the Parameters, global variables (giving general information about the data) and data variables are defined.</P>
+
+<h4>Global variables</h4>
+<P>Conventions, title, history, institution, source, comments, references, British_National_Grid_ Reference.</P>
+
+<h4>Data variables</h4>
+<TABLE BORDER="1" CELLSPACING=1 CELLPADDING=7 WIDTH=702>
+<TR><TD WIDTH="119" VALIGN="TOP">
+<B><P>Parameter</B></TD>
+<TD WIDTH="85" VALIGN="TOP">
+<B><P>Unit</B></TD>
+<TD WIDTH="192" VALIGN="TOP">
+<B><P>Variable Name</B></TD>
+<TD WIDTH="230" VALIGN="TOP">
+<B><P>Description</B></TD>
+</TR>
+<TR><TD WIDTH="119" VALIGN="TOP">
+<P>Time</TD>
+<TD WIDTH="85" VALIGN="TOP">
+<P>s</TD>
+<TD WIDTH="192" VALIGN="TOP">
+<P>time</TD>
+<TD WIDTH="230" VALIGN="TOP">
+<P>Time at end of measurement, measured from midnight at the start of the current day</TD>
+</TR>
+<TR><TD WIDTH="119" VALIGN="TOP">
+<P>Acquisition time</TD>
+<TD WIDTH="85" VALIGN="TOP">
+<P>s</TD>
+<TD WIDTH="192" VALIGN="TOP">
+<P>acquisition_time</TD>
+<TD WIDTH="230" VALIGN="TOP">
+<P>Integrated data acquisition time in each measurement</TD>
+</TR>
+<TR><TD WIDTH="119" VALIGN="TOP">
+<P>Height</TD>
+<TD WIDTH="85" VALIGN="TOP">
+<P>m</TD>
+<TD WIDTH="192" VALIGN="TOP">
+<P>height</TD>
+<TD WIDTH="230" VALIGN="TOP">
+<P>Height of measurement</TD>
+</TR>
+<TR><TD WIDTH="119" VALIGN="TOP">
+<P>Attenuated lidar back-scattering coefficient</TD>
+<TD WIDTH="85" VALIGN="TOP">
+<P>m<sup>-1</sup>sr<sup>-1</sup></TD>
+<TD WIDTH="192" VALIGN="TOP">
+<P>atten_lidar_backscatter_coeff</TD>
+<TD WIDTH="230" VALIGN="TOP">
+<P>Lidar backscattering coefficient, attenuated by molecular and aerosol scattering</TD>
+</TR>
+<TR><TD WIDTH="119" VALIGN="TOP">
+<P>Humidity mixing ratio</TD>
+<TD WIDTH="85" VALIGN="TOP">
+<P>Dimensionless</TD>
+<TD WIDTH="192" VALIGN="TOP">
+<P>humidity_mixing_ratio</TD>
+<TD WIDTH="230" VALIGN="TOP">
+<P>Mass mixing ratio of water vapour</TD>
+</TR>
+</TABLE>
+
+<h3>Conditions of use</h3>
+<P>If data from the Chilbolton UV Raman lidar are used in any publication or report then an acknowledgement must be given to the Radio Communications
+Research Unit at the CCLRC Rutherford Appleton Laboratory for providing the data.</P>
+
+<h3 ALIGN="JUSTIFY">Who to contact</h3>
+<P>If you have any problems obtaining the data, please contact the <a href="http://www.ceda.ac.uk/contact/">British Atmospheric Data Centre.</a></p>
+
+
+<h3>References</h3>
+<OL>
+
+<LI>G. Vaughan, D. P. Wareing, L. Thomas and V. Mitev, &quot;Humidity measurements in the free troposphere using Raman backscatter&quot;, Q. J. R. Meteorol. Soc., Vol. 114, pp. 1471-1484, 1988.</LI>
+<LI>U.S. Standard Atmosphere 1976, U.S. Government Printing Office, Washington, D.C., USA, 1976.</LI></OL>
+
+
+<P>&nbsp;</P>
+<P>Judith Agnew<br>
+UV Raman lidar Project Manager<br>
+Radio Communications Research Unit<br>
+CCLRC Rutherford Appleton Laboratory<br>
+April 2003</P>
+
+<P>
+
+</BODY>
+</HTML>

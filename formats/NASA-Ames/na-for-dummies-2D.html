@@ -1,0 +1,111 @@
+<html >
+<title>Dummies Guide to NASA Ames format with 2D data </title>
+<head>
+</head>
+<body>
+<h1>Dummies Guide to NASA Ames format with 2D data</h1>
+<hr>
+These guidelines assume a 2D file consisting of atmospheric profiles over time, but most 
+2D data files using different dimensions will fit into this structure.
+<p>
+Do not start with line 1, leave this for now. Start with line 2 onwards as follows,</p>
+<pre><blockquote><p style='font-family:Courier'>
+Your name
+Your institute
+Instrument name
+Project name
+1 1
+Date of observations Date file produced
+Size of intervals in height and time (use 0.0 if non-uniform)
+Name for height variable with units
+Name for time variable with units
+Number of variables for each data point
+Scaling factors for these variables
+Missing values for these variables
+Name of first variable
+Name of second variable
+1
+1.0
+9999
+0
+Number of lines of comments to be used
+Comment line 1
+Comment line 2
+Comment line 3
+Comment line 4
+</pre></blockquote></p>
+Thus your file will look something like this:
+
+<pre><blockquote><p style='font-family:Courier'>
+Kilburn, Charles
+British Atmospheric Data Centre, CCLRC Rutherford Appleton Laboratory
+Doppler Lidar
+2nd Tropical Ocean Observation (TOO2)
+1 1
+2006 06 01 2006 06 01
+50.0 0.0 
+Height above ground (m)
+Time (seconds since 2005-07-17 00:00:00 +00:00)
+2
+1.0 1.0
+9999.0 9999.0
+wind speed (m/s)
+wind direction (degrees)
+1
+1.0
+9999
+Number of altitudes in next data block
+0
+4
+#Start of NASA-Ames normal comments#
+File generated using: windgen_too2_v1.2
+Location: Max Taxter Observatory 1 deg 8.12 N, 92 deg 41.23 W, 80m 
+#End of NASA-Ames normal comments#
+</pre></p></blockquote>
+
+Now go back to the top of the file and fill in the first line with the total number of lines in the header including this top line, followed by 2110. i.e.:
+
+<pre><blockquote><p style='font-family:Courier'>
+25 2110
+</pre></blockquote></p>
+
+Now go back down to the end of the file and add in the data:
+
+<pre><blockquote><p style='font-family:Courier'>
+Time in seconds Number of heights
+Height 1, 1st variable and 2nd variable at this height 
+Height 2, 1st variable and 2nd variable at this height 
+Height 3, 1st variable and 2nd variable at this height 
+Height 4, 1st variable and 2nd variable at this height 
+Height 5, 1st variable and 2nd variable at this height 
+Height 6, 1st variable and 2nd variable at this height 
+Height 7, 1st variable and 2nd variable at this height 
+Height 8, 1st variable and 2nd variable at this height 
+Height 9, 1st variable and 2nd variable at this height 
+Next time in seconds Number of heights
+Height 1, 1st variable and 2nd variable at this height 
+etc.
+</pre></blockquote></p>
+to give data blocks that like this:
+
+<pre><blockquote><p>
+563 9
+  50.00    2.13   -1.00
+  100.00    3.06   -2.81
+  150.00    3.41   -4.07
+  200.00    2.55   -4.29
+  250.00    2.03   -3.65
+  300.00    1.41   -3.26
+  350.00    0.84   -2.82
+  400.00    0.39   -2.20
+  450.00    0.11   -1.41
+1241 9
+  50.00    2.22   -1.09
+  etc.
+</pre></blockquote></p>
+
+The file ends with the last data block.
+<p>
+<a href = "na-brief-guide.html"> What does it all mean?</a></p>
+</body>
+</html>

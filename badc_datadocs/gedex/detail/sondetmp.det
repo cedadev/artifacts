@@ -1,0 +1,520 @@
+Angell Global Temperature Deviations
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documenta
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Seasonal and yearly temperature deviations in
+the troposphere and low stratosphere are measured for the 34-year period
+from November 1957 - November 1991.
+
+1.2  Unit of Measurement.  Hundreths of degrees Centigrade (.01 deg C).
+
+1.3  Data Source.  Data consist of balloon radiosonde measurements from 63
+globally distributed radiosonde stations, as compiled in the "Monthly
+Climatic Data for the World" published by the National Climatic Data
+Center.  The data are updated regularly at the National Meteorological
+Center (NMC) in Suitland, Maryland.
+
+1.4  Data Set Identification.  This data set consists of Level-III data and
+exists in two forms: handwritten manuscript as provided by the producer,
+and a special NCDS disk format, called the Common Data Format (CDF),
+accessible through the Data Applications Subsystem of NCDS.  The latter
+format is accessed by specifying the name, NCDS$DATA:ANGELL-SONDE_TMP-DEV,
+as input to the previously mentioned NCDS subsystem.  The data set,
+received from Dr. James K. Angell, is referenced in NCDS as the "Angell
+Global Temperature Deviation" data set.
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  The 63 globally distributed radiosonde stations
+have been divided into 7 latitudinal zones, and data from within each zone
+are averaged.  For the version of the data set available through NCDS, each
+latitudinal zone has been assigned one value based on the median value for
+that zone.  From these zonal averages, four larger-scale latitudinal zones
+have been constructed and assigned a value of '1' through '4'.  Assignment
+of a value to each latitudinal zone allows filtering by latitude zone
+within the CDF Applications Subsystem of NCDS.  Tropical values are
+averages of subtropical and equatorial temperatures weighted equally.
+Northern and southern hemispheric values are averages of polar, temperate,
+subtropic, and equatorial temperatures weighted 1-2-2-1, respectively.
+Global values are averages of the two hemispheric temperatures. The zones,
+their actual latitude ranges and assigned values are listed in the LATITUDE
+TABLE.
+
+                           LATITUDE TABLE
+                           --------------
+
+        ZONES              ACTUAL LATITUDE              ASSIGNED VALUES
+     ---------------       ---------------              ---------------
+     North Polar              90N - 60N                      75
+     North Temperate          60N - 30N                      45
+     North Subtropic          30N - 10N                      20
+     Equatorial               10N - 10S                       0
+     South Subtropic          10S - 30S                     -20
+     South Temperate          30S - 60S                     -45
+     South Polar              60S - 90S                     -75
+     Tropical                 30S - 30N                       1
+     North Hemisphere          0  - 90N                       2
+     South Hemisphere          0  - 90S                       3
+     Global                   90S - 90N                       4
+     ----------------      ---------------              ---------------
+
+Data are stored as column mean temperatures within five pressure ranges
+plus a surface value.  For the CDF-formatted version, column mean values
+are assigned a value representing each pressure range. For example, the
+NCDS assigns a value of `2' for the Surface to 100 mb entry and `1' for the
+100 to 50 mb entry.  The assigned values may be used as filters in the CDF
+Applications Subsystem of the NCDS.  The pressure ranges and their
+corresponding values are listed in the LAYER TABLE.
+
+                          LAYER TABLE
+                          -----------
+
+          ACTUAL VALUES                        ASSIGNED VALUES
+          ----------------                     ---------------
+          Surface                                    1000
+          850   -   300 mb                            500
+          300   -   100 mb                            175
+          100   -   30  mb                             70
+          Surface - 100 mb                              2
+          100   -    50 mb                              1
+          ----------------                     ---------------
+
+2.2  Spatial Resolution.  The radiosonde stations chosen for the data set
+represent the most equal global distribution possible.  They are sparsely
+distributed in much of the south temperate latitudes, with the
+equal-spacing criterion allowing only six stations there.  All other
+regions are adequately represented.  Refer to the station maps published in
+Angell and Korshover, 1977 (see Item 11.2 below) for exact locations of the
+stations.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  Data are seasonally averaged from winter of
+1957-58 through fall of 1991. Several stations were not operating at the
+beginning of the study period, especially in the equatorial region (only
+two stations in 1958).  In the case of missing data, the average value over
+the entire period of record for the station in question was inserted.  Due
+to the small quantity and poor quality of data at higher levels, upper
+atmospheric conditions were not included during the following years in the
+regions listed:
+
+                REGION                               MISSING YEARS
+     ------------------------------                  -------------
+     Equatorial       (100 - 50 mb)                      1958
+     Equatorial       (100 - 30 mb)                   1958 - 1959
+     South Subtropics (100 - 50 mb)                   1958 - 1963
+     South Subtropics (100 - 30 mb)                   1958 - 1963
+     South Temperate  (100 - 50 mb)                   1958 - 1963
+     South Temperate  (100 - 30 mb)                   1958 - 1963
+     South Hemisphere (100 - 30 mb)                   1958 - 1963
+     South Hemisphere (100 - 30 mb)                   1958 - 1963
+     ------------------------------                  -------------
+
+3.2  Temporal Resolution.  Seasonal, from winter 1957-58 through fall 1991.
+Winter is defined as December through February, spring as March through
+May, summer as June through August, and fall as September through November.
+Yearly averages are also compiled from the seasonal values but are not
+included in the on-line version of the data set.
+
+
+4.  INSTRUMENT DESCRIPTION
+
+Data are measured using conventional radiosondes consisting of a
+baroswitch, thermistor thermometer, and carbon humidity element.
+Improvements in balloon construction or instrumentation over the years may
+have caused some inconsistency in readings, especially in the upper
+atmosphere.  Radiosondes are calibrated with a standard instrument prior to
+flight, but the complexity of natural conditions limits the accuracy of
+this procedure.  No attempt has been made to quantify or correct this
+inconsistency.
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  Most of the temperatures in this
+analysis are column-mean temperatures, obtained from differences in height
+(thickness) between constant-pressure levels at individual radiosonde
+stations.  This procedure has the advantage of giving the mean temperature
+through a layer.  Most of the pressure-height data have been obtained from
+"Monthly Climatic Data for the World (MCDW)," a publication of the National
+Climatic Center.  The data since the northern winter and spring of 1982 are
+based on teletype data assembled at the National Meteorological Center in
+Suitland, Maryland. The gridded point thicknesses determined from analyses
+by different meteorological agencies may be in considerable disagreement,
+particularly over the oceans and in the subtropics, implying that the
+derived temperature trends are unreliable.  The use of station data avoids
+the subjectivity of the analysis procedure and problems associated with
+changes in analysis procedures.
+
+The following table presents average values of "two standard deviations
+from the mean" of temperature for various pressure intervals and climatic
+zones, based on the period 1964-81.  It was decided not to include the
+values for 1958-63 in this table, because, at higher levels, they were
+anomalously large due to the small quantity and poor quality of that data.
+The smallest value in the table (0.13 deg C) is found for the world average
+of the surface to 100 mb layer (assigned layer '2' within NCDS).  In
+general, the values in the table increase with increasing height. One
+exception is the value for the 850 to 300 mb layer, which is always smaller
+than the surface value.  This suggests that tropospheric temperature
+readings are indeed more representative of true temperature than surface
+readings.
+
+                                                Surface-
+                    Surface  850-300  300-100     100     100-50   100-30
+                                mb       mb        mb        mb       mb
+                    -------  -------  -------   -------   ------   ------
+  North Polar       0.62      0.39     0.52      0.32      0.76     0.85
+  North Temperate   0.50      0.33     0.31      0.25      0.44     0.49
+  Tropics           0.21      0.19     0.33      0.18      0.41     0.52
+  South Temperate   0.46      0.39     0.47      0.31      0.66     0.71
+  South Polar       0.59      0.38     0.55      0.34      0.95     0.77
+  North Hemisphere  0.26      0.19     0.28      0.17      0.35     0.41
+  South Hemisphere  0.24      0.19     0.28      0.17      0.43     0.48
+  World             0.19      0.15     0.21      0.13      0.29     0.33
+                    -------  -------  -------   -------   ------   ------
+
+5.2  Derivation Techniques/Algorithms.  The 1000 mb heights are not given
+in the MCDW if the stations are much above sea level.  Examined separately
+are the 850 to 300 mb layers (which are within the troposphere at all
+latitudes), the 100 to 50 mb, and 100 to 30 mb layers (which are within the
+stratosphere at all latitudes), and 300 to 100 mb layers (which are within
+the troposphere in the tropics and within the stratosphere in polar
+regions).  The two stratospheric layers were included because of some
+recent decrease in the quantity of radiosonde data at 30 mb.  The surface
+to 100 mb layer, which is examined as a whole, makes up 90% of the
+atmospheric mass.  The average (mass weighted) temperature for this layer
+has been obtained by letting the surface temperature represent the mean
+temperature in the surface to 850 mb layer, and then weighting the
+layer-mean temperature deviations by the pressure difference through the
+respective layers (15, 55 and 20 mb).  With the exception of the south
+temperate and Southern Hemisphere stratosphere zones, the temperature data
+are evaluated as deviations from the mean, based on the 20-year interval
+1958 to 1977.  For the south temperate and Southern Hemisphere stratosphere
+the mean is based on the interval 1964 to 1977.  The mean value used to
+calculate temperature deviations has not been changed with the addition of
+new data each season.
+
+The temperature data are usually presented as zonal averages for five
+climatic zones; i.e., two polar zones (60 to 90), two temperate zones (30
+to 60) and a tropical zone (30S to 30N), as well as both hemispheres and
+the globe as a whole.  The tropical averages have been obtained from an
+equal weighting of north subtropical (10 to 30N), equatorial (10S to 10N)
+and south subtropical (10 to 30S) zones since, at the Earth's surface,
+these three areas are nearly equal.  The hemispheric average has been
+obtained from a 1-2-2-1 weighting of averages for polar, temperate,
+subtropical and equatorial zones (crudely representing their respective
+areas).  The global averages were obtained from an average of the two
+hemispheres.
+
+5.3  Special Corrections/Adjustments.  Radiosonde data have been zonally
+and seasonally averaged, and pressure height thicknesses have been
+converted to column mean temperatures, as described by Angell and
+Korshover, 1977 (see Item 11.2. below).
+
+5.4  Processing Changes.  Recent changes have been made in the data values
+as a result of corrective recalculations.  No further changes are
+anticipated.
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  The entry of data from publications was
+validated by the producer, Dr. James K. Angell, to ensure that there were
+no data entry mistakes.
+
+6.2  Confidence Level/Accuracy Judgment.  The mean annual values extend two
+standard deviations about the mean.  If the temperature deviations were
+normally distributed and the station values independent in space and time,
+there would be only about a 5% chance that the true value of the annual
+mean lies outside two standard deviations of the mean.  However, because
+the station spacing averages about 30 degrees longitude, there are
+correlations between the station data which extend these confidence limits
+beyond their indicated values.  It is estimated that the values for "two
+standard deviations of the mean" must be multiplied by approximately the
+square root of three (1.7) before they can be considered 95% confidence
+limits for the mean annual values.  Thus, if the departure from average of
+mean annual global temperature in the surface to 100 mb layer exceeds
+1.7*0.13 deg C = 0.22 deg C, then this departure from average would be
+considered significant at the 5% level.
+
+6.3  Usage Guidance.  Many stations were not in operation continuously. The
+distribution of stations in the middle latitudes of the Southern Hemisphere
+is especially sparse.  Early upper atmosphere data from the equatorial
+region are also sparse.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+    Dr. James K Angell
+    NOAA Air Resources Laboratory, R/E/AR
+    1325 East West Highway
+    Silver Spring, MD  20910
+    (301) 427-7684
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products.  None.
+
+8.2  Film Products.  None.
+
+8.3  Other Products.
+
+8.3.1  Angell (Global Temperature Deviations) Common Data Format (CDF)
+file.
+
+       Medium/Specification:  Magnetic disk
+
+       Format and Content:  These CDF files may be accessed within the Data
+       Applications Subsystem of NCDS.
+
+       Data Quantity/Rate:  One file, 44.5 Kbytes.
+
+       Status:  Available
+
+       Plans/Schedule:  Additional data will be integrated periodically as
+       they are received.
+
+8.3.2  Angell (Global Temperature Deviations) on-line disk file in ASCII
+format.
+
+       Medium/Specification:  Magnetic disk
+
+       Format and Content:  The data are stored in an 80-column ASCII file
+       in the same format as they are received from the producer, except
+       that the yearly averages are not included.  The data are arranged by
+       latitude group as described in Item 2.1 above.
+
+       Data Quantity/Rate:  One file, 58.9 Kbytes.
+
+       Status:  Available
+
+       Plans/Schedule:  Additional data will be integrated periodically as
+       they are received.
+
+8.3.3  The Greenhouse Effect Detection Experiment (GEDEX) CD-ROM
+
+       Medium/Specification:  CD-ROM in ISO 9660 standard.
+
+       Format and Content:  The data on this disk will be stored in a
+       special data-set-independent format, designated the Common Data
+       Format (CDF).  CDF was developed at the National Space Science Data
+       Center (NSSDC) as a uniform method of storing and retrieving data on
+       disk. The CDF consists of a file or set of files which contain data
+       and descriptions about the data.  A standard software package called
+       the "CDF Library" will be included with this CD-ROM allowing a user
+       to create and access these data and descriptive information.  The
+       CD-ROM will consist of many different data sets related to the study
+       of the Greenhouse Effect including the ANGELL-SONDE_TMP-DEV data
+       set, and the accompanying NCDS data set documentation.
+
+       Data Quantity/Rate:  One file, 44.5 Kbytes.
+
+       Status: Release date for this product is schedule for early 1992.
+
+       Plans/Schedule: Users interested in this product should contact NCDS
+       staff for more details.
+
+
+8.3.4  Dr. James K. Angell's handwritten values for Global Temperature
+Deviations.  Yearly averages are included with these handwritten values.
+
+9.  DATA ACCESS
+
+9.1  Archive Identification.  The data set is available to users of NASA's
+Climate Data System (NCDS).  For information on access to NCDS or this data
+set, contact:
+
+    NCDS User Support Office
+    NASA/Goddard Space Flight Center
+    Code 934 Data Management System Facility
+    Greenbelt, MD 20771
+    (301) 286-3209
+    FTS:  888-3209
+    TCP/IP:  NCDSUSO@NSSDCB.GSFC.NASA.GOV
+    NSI DECnet:  NCF::NCDSUSO
+
+9.2  Procedures for Obtaining Data.  The data are obtained by on-line
+access via NCDS.  Refer to Item 10 below for assistance in accessing the
+system.
+
+9.3  NCDS Status/Plans.  NCDS currently supports these data online. The
+data are stored in a special data-set-independent format, designated the
+Common Data Format (CDF).  CDF was developed at the National Space Science
+Data Center (NSSDC) as a uniform method for storing and retrieving data on
+disk.  This format is "self-describing" in that it converts data to a
+format that allows storage and retrieval regardless of the scaling or
+precision of the original data.  To access these data in CDF specify
+NCDS$DATA:ANGELL-SONDE_TMP-DEV when entering the CDF Applications
+Subsystems of the NCDS. This data set will be updated periodically as data
+are received.
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+For information on access to NCDS contact the NCDS User Support Office:
+
+    NCDS User Support Office
+    NASA/Goddard Space Flight Center
+    Code 934 Data Management System Facility
+    Greenbelt, MD 20771
+    (301) 286-3209
+    FTS:  888-3209
+    TCP/IP:  NCDSUSO@NSSDCB.GSFC.NASA.GOV
+    NSI DECnet:  NCF::NCDSUSO
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation.  None.
+
+11.2  Journal Articles and Study Reports
+
+    a. Angell, J.K.  and J. Korshover, 1977.  "Estimates of the Global
+       Change in Temperature, Surface to 100 mb, Between 1958 and 1975,"
+       Monthly Weather Review 105:375-385.
+
+    b. Angell, J.K.  and J. Korshover, 1983.  "Global Temperature
+       Variations in the Troposphere and Stratosphere, 1958-1982," Monthly
+       Weather Review 111:901-921.
+
+    c. Angell, J.K.  and J. Korshover, 1983.  "Comparison of Stratospheric
+       Warmings Following Agung and Chichon," Monthly Weather Review
+       111:2129-2135.
+
+    d. Angell, J.K.  and J. Korshover, 1984.  "Comparison of Tropospheric
+       Temperatures Following Agung and El Chichon Volcanic Eruptions,"
+       Monthly Weather Review 112:1457-1463.
+
+    e. Angell, J.K.  and J. Korshover, 1985.  "Surface Temperature Changes
+       Following the Six Major Volcanic Episodes between 1780 and 1980," J.
+       of Climate and Applied Meteorology 24:937-951.
+
+    f. Angell, J.K., 1986.  "The Close Relation between Antarctic
+       Total-Ozone Depletion and Cooling of the Antarctic Low
+       Stratosphere," Geophysical Research Letters 13:1240-1243.
+
+    g. Angell, J.K., 1986.  "Annual and Seasonal Global Temperature Changes
+       in the Troposphere and Low Stratosphere, 1960-85," Monthly Weather
+       Review 114:1922-1930.
+
+    h. Angell, J.K., 1988.  "Impact of El Nino on the Delineation of
+       Tropospheric Cooling Due to Volcanic Eruptions," J. of Geoph. Res.
+       93:3697-3704.
+
+    i. Angell, J.K., 1990.  "Variation in United States Cloudiness and
+       Sunshine Duration between 1950 and the Drought Year of 1988," J. of
+       Climate 3:296-308.
+
+11.3  Archive/DBMS Usage Documentation.
+
+    a. Olsen, L.M, Closs, J.W., and Corprew, F.E, November 1991. "NASA's
+       Climate Data System Primer: Version 4.0."  EOS DAAC, NASA Goddard
+       Space Flight Center, Greenbelt, Maryland.
+
+12.  RELATED DATA SETS
+
+Several related temperature anomaly data sets exist on-line through NCDS.
+The Climate Research Unit Temperature Deviations data set contains surface
+air temperature anomalies in degrees Celsius, derived from the World
+Weather Records (WWR).  These data are available on-line through the NCDS
+in Common Data Format (CDF).  To access these CDFs, specify the following
+as input within the the Data Applications Subsystem of the NCDS:
+
+               NCDS$DATA:CLIM-RSRCH-U_TMP-DEV
+
+The GISS Temperature Deviations data set contains monthly temperature
+deviations for the period 1880 through 1988 and is available online through
+NCDS in Common Data Format (CDF).  To access these CDFs, specify the
+following as input within the Data Applications Subsystem of the NCDS:
+
+                                            Spatial Scale of
+    Data Set Name                       Monthly Temperature Anomalies
+    -------------                       -----------------------------
+    NCDS$DATA:GISS-TMP-DEV_MON-GLB              Global
+    NCDS$DATA:GISS-TMP-DEV_MON-NH         Northern Hemisphere
+    NCDS$DATA:GISS-TMP-DEV_MON-SH         Southern Hemisphere
+    NCDS$DATA:GISS-TMP-DEV_MON-ZONE          Latitude Zones
+    NCDS$DATA:GISS-TMP-DEV_MON-BINS        80 equal area boxes
+    NCDS$DATA:GISS-TMP-DEV_MON-GRD       8000 equal area subboxes
+
+
+A data set containing brightness temperature anomalies is available. these
+data were obtained from the Microwave Sounding Unit aboard TIROS-N series
+of polar orbiting satellites (TIROS-N, NOAA-6, NOAA-7, NOAA-9, NOAA-10, and
+NOAA-11).  The data are available online through NCDS in Common Data Format
+(CDF).  To access these CDFs, specify the following as input within the
+Data Applications Subsystem of the NCDS:
+
+    NCDS$DATA:MSUTMP_MONTHLY
+    NCDS$DATA:MSUTMP_CLIMATOLOGY
+
+13.  SUMMARY/SAMPLE
+
+A sample plot is available for this data set.  It is accessible via the
+"Graph Data "option within the Data Applications Subsystem of NCDS.  To
+view this plot choose Graphics Hardcopy Menu and specify the plot file
+NCDS$DEMO:ANGELL as input.
+
+
+14.  NOTES
+
+None.
+
+*92/03/05

@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>ATSR-2 0.659um Spectral Response Function
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../../../../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../../../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../../../index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../../../../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <TT>*** SPECTRAL RESPONSE DATA ***</TT>
+<BR><TT>ATSR-2 Flight Model FPA 0.67um</TT><TT></TT>
+<P><TT>&nbsp; Wavelength&nbsp;&nbsp; Normalised</TT>
+<BR><TT><U>&nbsp; (um)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Response</U></TT>
+<BR><TT>&nbsp; 0.629000&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp; 0.629500&nbsp;&nbsp;&nbsp;&nbsp; 0.00007</TT>
+<BR><TT>&nbsp; 0.630000&nbsp;&nbsp;&nbsp;&nbsp; 0.00009</TT>
+<BR><TT>&nbsp; 0.630500&nbsp;&nbsp;&nbsp;&nbsp; 0.00009</TT>
+<BR><TT>&nbsp; 0.631000&nbsp;&nbsp;&nbsp;&nbsp; 0.00007</TT>
+<BR><TT>&nbsp; 0.631500&nbsp;&nbsp;&nbsp;&nbsp; 0.00009</TT>
+<BR><TT>&nbsp; 0.632000&nbsp;&nbsp;&nbsp;&nbsp; 0.00009</TT>
+<BR><TT>&nbsp; 0.632500&nbsp;&nbsp;&nbsp;&nbsp; 0.00007</TT>
+<BR><TT>&nbsp; 0.633000&nbsp;&nbsp;&nbsp;&nbsp; 0.00009</TT>
+<BR><TT>&nbsp; 0.633500&nbsp;&nbsp;&nbsp;&nbsp; 0.00009</TT>
+<BR><TT>&nbsp; 0.634000&nbsp;&nbsp;&nbsp;&nbsp; 0.00007</TT>
+<BR><TT>&nbsp; 0.634500&nbsp;&nbsp;&nbsp;&nbsp; 0.00002</TT>
+<BR><TT>&nbsp; 0.635000&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp; 0.635500&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp; 0.636000&nbsp;&nbsp;&nbsp;&nbsp; 0.00003</TT>
+<BR><TT>&nbsp; 0.636500&nbsp;&nbsp;&nbsp;&nbsp; 0.00005</TT>
+<BR><TT>&nbsp; 0.637000&nbsp;&nbsp;&nbsp;&nbsp; 0.00007</TT>
+<BR><TT>&nbsp; 0.637500&nbsp;&nbsp;&nbsp;&nbsp; 0.00014</TT>
+<BR><TT>&nbsp; 0.638000&nbsp;&nbsp;&nbsp;&nbsp; 0.00023</TT>
+<BR><TT>&nbsp; 0.638500&nbsp;&nbsp;&nbsp;&nbsp; 0.00032</TT>
+<BR><TT>&nbsp; 0.639000&nbsp;&nbsp;&nbsp;&nbsp; 0.00050</TT>
+<BR><TT>&nbsp; 0.639500&nbsp;&nbsp;&nbsp;&nbsp; 0.00075</TT>
+<BR><TT>&nbsp; 0.640000&nbsp;&nbsp;&nbsp;&nbsp; 0.00099</TT>
+<BR><TT>&nbsp; 0.640500&nbsp;&nbsp;&nbsp;&nbsp; 0.00126</TT>
+<BR><TT>&nbsp; 0.641000&nbsp;&nbsp;&nbsp;&nbsp; 0.00163</TT>
+<BR><TT>&nbsp; 0.641500&nbsp;&nbsp;&nbsp;&nbsp; 0.00203</TT>
+<BR><TT>&nbsp; 0.642000&nbsp;&nbsp;&nbsp;&nbsp; 0.00265</TT>
+<BR><TT>&nbsp; 0.642500&nbsp;&nbsp;&nbsp;&nbsp; 0.00355</TT>
+<BR><TT>&nbsp; 0.643000&nbsp;&nbsp;&nbsp;&nbsp; 0.00468</TT>
+<BR><TT>&nbsp; 0.643500&nbsp;&nbsp;&nbsp;&nbsp; 0.00675</TT>
+<BR><TT>&nbsp; 0.644000&nbsp;&nbsp;&nbsp;&nbsp; 0.01017</TT>
+<BR><TT>&nbsp; 0.644500&nbsp;&nbsp;&nbsp;&nbsp; 0.01514</TT>
+<BR><TT>&nbsp; 0.645000&nbsp;&nbsp;&nbsp;&nbsp; 0.02640</TT>
+<BR><TT>&nbsp; 0.645500&nbsp;&nbsp;&nbsp;&nbsp; 0.05023</TT>
+<BR><TT>&nbsp; 0.646000&nbsp;&nbsp;&nbsp;&nbsp; 0.09239</TT>
+<BR><TT>&nbsp; 0.646500&nbsp;&nbsp;&nbsp;&nbsp; 0.20568</TT>
+<BR><TT>&nbsp; 0.647000&nbsp;&nbsp;&nbsp;&nbsp; 0.42368</TT>
+<BR><TT>&nbsp; 0.647500&nbsp;&nbsp;&nbsp;&nbsp; 0.66553</TT>
+<BR><TT>&nbsp; 0.648000&nbsp;&nbsp;&nbsp;&nbsp; 0.86821</TT>
+<BR><TT>&nbsp; 0.648500&nbsp;&nbsp;&nbsp;&nbsp; 0.89984</TT>
+<BR><TT>&nbsp; 0.649000&nbsp;&nbsp;&nbsp;&nbsp; 0.87197</TT>
+<BR><TT>&nbsp; 0.649500&nbsp;&nbsp;&nbsp;&nbsp; 0.86989</TT>
+<BR><TT>&nbsp; 0.650000&nbsp;&nbsp;&nbsp;&nbsp; 0.90168</TT>
+<BR><TT>&nbsp; 0.650500&nbsp;&nbsp;&nbsp;&nbsp; 0.94077</TT>
+<BR><TT>&nbsp; 0.651000&nbsp;&nbsp;&nbsp;&nbsp; 0.97187</TT>
+<BR><TT>&nbsp; 0.651500&nbsp;&nbsp;&nbsp;&nbsp; 0.97826</TT>
+<BR><TT>&nbsp; 0.652000&nbsp;&nbsp;&nbsp;&nbsp; 0.96318</TT>
+<BR><TT>&nbsp; 0.652500&nbsp;&nbsp;&nbsp;&nbsp; 0.94523</TT>
+<BR><TT>&nbsp; 0.653000&nbsp;&nbsp;&nbsp;&nbsp; 0.93415</TT>
+<BR><TT>&nbsp; 0.653500&nbsp;&nbsp;&nbsp;&nbsp; 0.93986</TT>
+<BR><TT>&nbsp; 0.654000&nbsp;&nbsp;&nbsp;&nbsp; 0.95682</TT>
+<BR><TT>&nbsp; 0.654500&nbsp;&nbsp;&nbsp;&nbsp; 0.98174</TT>
+<BR><TT>&nbsp; 0.655000&nbsp;&nbsp;&nbsp;&nbsp; 0.99508</TT>
+<BR><TT>&nbsp; 0.655500&nbsp;&nbsp;&nbsp;&nbsp; 1.00000</TT>
+<BR><TT>&nbsp; 0.656000&nbsp;&nbsp;&nbsp;&nbsp; 0.98479</TT>
+<BR><TT>&nbsp; 0.656500&nbsp;&nbsp;&nbsp;&nbsp; 0.96445</TT>
+<BR><TT>&nbsp; 0.657000&nbsp;&nbsp;&nbsp;&nbsp; 0.93596</TT>
+<BR><TT>&nbsp; 0.657500&nbsp;&nbsp;&nbsp;&nbsp; 0.91750</TT>
+<BR><TT>&nbsp; 0.658000&nbsp;&nbsp;&nbsp;&nbsp; 0.91016</TT>
+<BR><TT>&nbsp; 0.658500&nbsp;&nbsp;&nbsp;&nbsp; 0.91800</TT>
+<BR><TT>&nbsp; 0.659000&nbsp;&nbsp;&nbsp;&nbsp; 0.93481</TT>
+<BR><TT>&nbsp; 0.659500&nbsp;&nbsp;&nbsp;&nbsp; 0.95399</TT>
+<BR><TT>&nbsp; 0.660000&nbsp;&nbsp;&nbsp;&nbsp; 0.97075</TT>
+<BR><TT>&nbsp; 0.660500&nbsp;&nbsp;&nbsp;&nbsp; 0.97592</TT>
+<BR><TT>&nbsp; 0.661000&nbsp;&nbsp;&nbsp;&nbsp; 0.96515</TT>
+<BR><TT>&nbsp; 0.661500&nbsp;&nbsp;&nbsp;&nbsp; 0.94329</TT>
+<BR><TT>&nbsp; 0.662000&nbsp;&nbsp;&nbsp;&nbsp; 0.91599</TT>
+<BR><TT>&nbsp; 0.662500&nbsp;&nbsp;&nbsp;&nbsp; 0.89854</TT>
+<BR><TT>&nbsp; 0.663000&nbsp;&nbsp;&nbsp;&nbsp; 0.88789</TT>
+<BR><TT>&nbsp; 0.663500&nbsp;&nbsp;&nbsp;&nbsp; 0.89450</TT>
+<BR><TT>&nbsp; 0.664000&nbsp;&nbsp;&nbsp;&nbsp; 0.90944</TT>
+<BR><TT>&nbsp; 0.664500&nbsp;&nbsp;&nbsp;&nbsp; 0.93587</TT>
+<BR><TT>&nbsp; 0.665000&nbsp;&nbsp;&nbsp;&nbsp; 0.95766</TT>
+<BR><TT>&nbsp; 0.665500&nbsp;&nbsp;&nbsp;&nbsp; 0.96764</TT>
+<BR><TT>&nbsp; 0.666000&nbsp;&nbsp;&nbsp;&nbsp; 0.96373</TT>
+<BR><TT>&nbsp; 0.666500&nbsp;&nbsp;&nbsp;&nbsp; 0.95085</TT>
+<BR><TT>&nbsp; 0.667000&nbsp;&nbsp;&nbsp;&nbsp; 0.93689</TT>
+<BR><TT>&nbsp; 0.667500&nbsp;&nbsp;&nbsp;&nbsp; 0.91439</TT>
+<BR><TT>&nbsp; 0.668000&nbsp;&nbsp;&nbsp;&nbsp; 0.85151</TT>
+<BR><TT>&nbsp; 0.668500&nbsp;&nbsp;&nbsp;&nbsp; 0.73929</TT>
+<BR><TT>&nbsp; 0.669000&nbsp;&nbsp;&nbsp;&nbsp; 0.53540</TT>
+<BR><TT>&nbsp; 0.669500&nbsp;&nbsp;&nbsp;&nbsp; 0.33176</TT>
+<BR><TT>&nbsp; 0.670000&nbsp;&nbsp;&nbsp;&nbsp; 0.20420</TT>
+<BR><TT>&nbsp; 0.670500&nbsp;&nbsp;&nbsp;&nbsp; 0.11223</TT>
+<BR><TT>&nbsp; 0.671000&nbsp;&nbsp;&nbsp;&nbsp; 0.06343</TT>
+<BR><TT>&nbsp; 0.671500&nbsp;&nbsp;&nbsp;&nbsp; 0.04074</TT>
+<BR><TT>&nbsp; 0.672000&nbsp;&nbsp;&nbsp;&nbsp; 0.02505</TT>
+<BR><TT>&nbsp; 0.672500&nbsp;&nbsp;&nbsp;&nbsp; 0.01639</TT>
+<BR><TT>&nbsp; 0.673000&nbsp;&nbsp;&nbsp;&nbsp; 0.01186</TT>
+<BR><TT>&nbsp; 0.673500&nbsp;&nbsp;&nbsp;&nbsp; 0.00843</TT>
+<BR><TT>&nbsp; 0.674000&nbsp;&nbsp;&nbsp;&nbsp; 0.00621</TT>
+<BR><TT>&nbsp; 0.674500&nbsp;&nbsp;&nbsp;&nbsp; 0.00492</TT>
+<BR><TT>&nbsp; 0.675000&nbsp;&nbsp;&nbsp;&nbsp; 0.00372</TT>
+<BR><TT>&nbsp; 0.675500&nbsp;&nbsp;&nbsp;&nbsp; 0.00284</TT>
+<BR><TT>&nbsp; 0.676000&nbsp;&nbsp;&nbsp;&nbsp; 0.00228</TT>
+<BR><TT>&nbsp; 0.676500&nbsp;&nbsp;&nbsp;&nbsp; 0.00173</TT>
+<BR><TT>&nbsp; 0.677000&nbsp;&nbsp;&nbsp;&nbsp; 0.00128</TT>
+<BR><TT>&nbsp; 0.677500&nbsp;&nbsp;&nbsp;&nbsp; 0.00101</TT>
+<BR><TT>&nbsp; 0.678000&nbsp;&nbsp;&nbsp;&nbsp; 0.00070</TT>
+<BR><TT>&nbsp; 0.678500&nbsp;&nbsp;&nbsp;&nbsp; 0.00051</TT>
+<BR><TT>&nbsp; 0.679000&nbsp;&nbsp;&nbsp;&nbsp; 0.00037</TT>
+<BR><TT>&nbsp; 0.679500&nbsp;&nbsp;&nbsp;&nbsp; 0.00024</TT>
+<BR><TT>&nbsp; 0.680000&nbsp;&nbsp;&nbsp;&nbsp; 0.00014</TT>
+<BR><TT>&nbsp; 0.680500&nbsp;&nbsp;&nbsp;&nbsp; 0.00014</TT>
+<BR><TT>&nbsp; 0.681000&nbsp;&nbsp;&nbsp;&nbsp; 0.00010</TT>
+<BR><TT>&nbsp; 0.681500&nbsp;&nbsp;&nbsp;&nbsp; 0.00006</TT>
+<BR><TT>&nbsp; 0.682000&nbsp;&nbsp;&nbsp;&nbsp; 0.00006</TT>
+<BR><TT>&nbsp; 0.682500&nbsp;&nbsp;&nbsp;&nbsp; 0.00006</TT>
+<BR><TT>&nbsp; 0.683000&nbsp;&nbsp;&nbsp;&nbsp; 0.00004</TT>
+<BR><TT>&nbsp; 0.683500&nbsp;&nbsp;&nbsp;&nbsp; 0.00004</TT>
+<BR><TT>&nbsp; 0.684000&nbsp;&nbsp;&nbsp;&nbsp; 0.00002</TT>
+<BR><TT>&nbsp; 0.684500&nbsp;&nbsp;&nbsp;&nbsp; 0.00004</TT>
+<BR><TT>&nbsp; 0.685000&nbsp;&nbsp;&nbsp;&nbsp; 0.00004</TT>
+<BR><TT></TT>&nbsp;
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Thursday, 06-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

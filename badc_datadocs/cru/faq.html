@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+  <TITLE>BADC Datasets: CRU TS3.0 - Knowledgebase</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#ffffff">
+
+<H1>CRU TS3.0 - Knowledgebase</H1>
+
+<em>This is a collection of questions and answers about the CRU TS3.0 dataset held at the BADC.</em>
+<HR ALIGN=LEFT>
+<ul>
+<li><strong>Q: Where is the daily CRU TS3.0 data?</strong>
+<p>
+The CRU TS3.0 data are monthly gridded fields based on daily values -hence the ASCII
+and netcdf files both contain monthly mean values for the various parameters.
+
+<li><strong>Q: About wet days in CRU TS3.0</strong><p>
+All CRU TS parameters are derived from, and produced as, monthly figures.
+<br>
+For WET (rain days per month), two different approaches are used.
+<br>
+Up until December 1989, WET is derived from station measurements of wet days, plus synthetic wet days derived from precipitation.
+<br>
+From January 1990 onwards, WET is fully derived synthetically from precipitation.
+<p>
+
+<li><strong>Q: About the major difference between CRU TS3.0 and TS2.1</strong>
+<p>The TS 3.0 dataset is produced in a similar way, though no
+homogenisation is performed. 
+<p>
+
+<li><strong>Q: About 0 values for North Africa in netCDF precipitation dataset of CRU TS3.0, between longitudes -6 to 36 and latitudes 27 to 32 for the timeperiod 61-90. Is this the actual observed data or is missing data?</strong>
+<p>Download the 'stn' and 'cstn' files to see how many stations were able to contribute to values in that zone. Where the result is zero, then the climatology will have been used.
+<p>
+
+<li><strong>Q: About the XML files (in metadata directory)</strong>
+<p>
+In these files,the time axis is listed as having a length of 0 to 1272, with "units of months since
+1870-1-1".
+<P>
+The first axis value (i.e. an index of 0) is 372 months, and "1870-1-1" +372/12
+="1870-1-1" + 31 =1901-1-1 which is the first date value.
+<p>
+Similarly, the last value (index 1272) is 1643 months, which gives "1870-1-1"
++1643/12 ="1870-1-1" + 136.9 =2006-9-1
+<p>
+So the range is 1901->2006, it's just that it is represented in an unusual way!
+<p
+
+<li><strong>Q: Is the an elevation file for CRU TS 3.0</strong>
+<p>yes, it is available under the CRU data directory under the name: cru_ts_3_00.halfdesg.elv.grid.data.gz 
+<p>
+<li><strong>Q: September 1998 and May 2005 anomalies in West Africa</strong>
+<p>CRU TS3.0 shows an anomalous maximum temperature of 93 deg. C in West Africa in May 2005 and too low temperatures in September 1998.<br> 
+The May 2005 value came from the following station:
+<blockquote>2005 266 271 343-9999 936-9999-9999-9999-9999-9999 330 311
+</blockquote>
+Note however that in the soon to be released new version of the CRU TS dataset, neither the spike of May 2005 nor the September 1998 low show (routines for detecting and excluding excessions appear to be working much better). So until the new CRU TS version is released, please disregard the two values indicated.
+<p>
+<li><strong>Q: What does "pet" mean in CRU TS3.1?</strong>
+<p>'PET' is Potential Evapotranspiration. It is calculated from a variant of the Penman-Montieth formula using gridded TMP, TMN, TMX, VAP and CLD. There is a scaling factor of 10 in the .dat files. Values in the NetCDF files are now FLOAT or DOUBLE and no scaling applies there.
+<br>PET is calculated using static values for wind, taken from the 1961-1990 climatology (CRU CL 1.0).
+</ul>
+</body>
+</html>

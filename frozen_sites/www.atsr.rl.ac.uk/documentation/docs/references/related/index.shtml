@@ -1,0 +1,387 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>Related publications
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../../../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../../index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../../../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <HTML>
+ 
+<P>Baran, A. J., Foot, J. S. and Dibben, P. C., 1993, Satellite detection of volcanic 
+  sulphuric acid aerosols, <I> Geophys. Res. Lett.,</I> </P>
+<P>Barton, I. J. and Cechet, R. P., 1989, Comparison and optimization of AVHRR 
+  sea surface temperatures algorithms, <I> J. Atmos. Oceanic Technology,</I> 6, 
+  1083-1089 </P>
+<P>Barton, I. J., 1991, Infrared continuum water vapour absorption coefficients 
+  derived from satellite data, <I> Applied Optics,</I> 30, 2929-2934 </P>
+<P>Barton, I. J., 1992, Satellite-derived sea surface temperatures - a comparison 
+  between operational, theoretical, and experimental algorithms, <I> Applied Meteorology,</I> 
+  31, 433-442 </P>
+<P>Bottomley, M., Folland, C. K., Hsiung, J., Newell, R. E. and Parker, D. E., 
+  1990, Global ocean surface temperature atlas "GOSTA"." <I> Joint project of 
+  the UK Meteorological Office and Massachusetts Institute of Technology,</I> 
+  20 pp., 313 plates, Published by HMSO. </P>
+<P>Bradshaw, T. W., Delderfield, J., Werrett, S. T. and Davey, G., 1985, Performance 
+  of the Oxford Miniature Stirling Cycle Cooler, <I> Advances in Cryogenic Engineering,</I> 
+  31, 801-809 </P>
+<P>Brasseur, g and Solomon, s, 1984, Aeronomy of The Middle Atmosphere, </P>
+<P>Burch, D. E. and Alt, R. L., 1984, Continuum absorption by H2O in the 700--1200 
+  cm^-1 and 2400-2800 cm^-1 windows, <I> AFGL-TR-84-0128,Air Force Geophysics 
+  Laboratory (OPI),</I> Hanscom AFB, MA01731 </P>
+<P>Delderfield, J., Llewellyn-Jones, D. T., Bernard, R., de Javel, Y., Williamson, 
+  E. J., Mason, I., Pick, D. R. and Barton, I. J., 1986, The Along Track Scanning 
+  Radiometer (ATSR) for ERS-1,<I> Proc. SPIE</I>, 589, 114-120 </P>
+<P>Deschamps, P. Y. and Phulpin, T., 1980, Atmospheric correction of infrared 
+  measurements of sea surface temperature using channels at 3.7, 11 and 12um, 
+  <I> Boundary-Layer Meteorology,</I> 18, 131-143 </P>
+<P>Edwards, D. P., 1987, Atmospheric transmittance and radiance calculations using 
+  line-by-line computer models, <I> SPIE Proc. 298 Modelling of the atmosphere,</I> 
+  94-116 </P>
+<P>Emery, W. J., Yu, Y, Wick, G. A., Schluessel, P. and Reynolds, R. W., 1994, 
+  Correcting infrared satellite estimates of sea surface temperature for atmospheric 
+  water vapour attenuation, <I> J. Geophys. Res.,</I> 99, 5219-5236 </P>
+<P>Gallegos, S. C., Hawkins, J. D. and Cheng, C. F., 1993, A new automated method 
+  for cloud masking for Advanced Very High Resolution Radiometer full-resolution 
+  data over the Ocean, <I> J. Geophys. Res.,</I> 98, 8505-8516 </P>
+<P>Goward, S. N., Markham, B., Dye, D. G., Dulaney, W., and Yang, J., 1991, Normalized 
+  difference vegetation index measurements from the Advanced Very High Resolution 
+  Radiometer, <I> Remote Sensing of the Environment,</I> 35, 257-277 </P>
+<P>Grant, W. B., 1990, Water vapour absorption coefficients in the 8 -- 13um spectral 
+  region: a critical review, <I> Applied Optics,</I> 29, 451-462 </P>
+<P>Gross, E. P., 1955, Shape of collision-broadened spectral lines, 1955, <I> 
+  Phys. Rev.,</I> 97, 395-403 </P>
+<P>Hagan, D. E., 1989, A basic limitation of the split window method for SST retrievals 
+  when applied to a wide range of water vapour conditions, <I> Geophys. Res. Lett.,</I> 
+  16, 815-817 </P>
+<P>Hale, G. M. and Querry, M. R., 1973, Optical constants of water in the 200 
+  nm to 200 um wavelength region, <I> Applied Optics,</I> 12, 555-563 </P>
+<P>Hanel, G., 1976, The properties of atmospheric aerosol particles as functions 
+  of the relative humidity at thermodynamic equilibrium with the surrounding moist 
+  air, Adv. Geophys., 19, 73-188 </P>
+<P>Harris, A. R., Brown, S. J. and Mason, I. M., 1994, The effect of windspeed 
+  on sea surface temperature retrieval from space, <I> Geophys. Res. Lett.,</I> 
+  21, 1715-1718 </P>
+<P>Harris, A. R. and Mason, I. M., 1992, An extension of the `split-window' technique 
+  giving improved atmospheric correction and total water vapour, 1992, <I> Int. 
+  J. Remote Sens.,</I> 13, 881-892 </P>
+<P>Houghton, J. T. and Farmer, C. B., 1966, Collision induced absorption in the 
+  Earth's atmosphere, <I> Nature,</I> 209, 1341-1342 </P>
+<P>Keeling, C. D., Carter, A. F. and Mook, W. G., 1984, Seasonal, latitudinal 
+  and secular variations in the abundance and isotopic ratios of atmospheric CO2, 
+  <I> J. Geophys. Res.,</I> 89, 4615-4628 </P>
+<P>Kilsby, C. G., Edwards, D. P., Saunders, R. W. and Foot, J. S., 1992, Water 
+  vapour continuum absorption in the tropics; aircraft measurements and model 
+  comparisons, <I> Quart. J. Roy. Meteorol. Soc.,</I> 118, 715-748 </P>
+<P>Kneizys, F. X., Chetwynd, J. H., Clough, S. A., Shettle, E. P., Abreu, L. W., 
+  Fenn, R. W., Gallery, W. O. and Selby, J. E. A., 1980, Atmospheric transmission/radiance: 
+  Computer code LOWTRAN 5, <I> Rep. AFGL-TR-80-0067, Air Force Geophysics Laboratory</I>, 
+  Hanscom AFB, Mass., USA </P>
+<P>Llewellyn-Jones, D. T., Minnett, P. J., Saunders, R. W. and A. M. Zavody, 1984, 
+  Satellite multichannel infrared measurements of the sea surface temperature 
+  of the N.E. Atlantic Ocean using AVHRR/2, <I> Quart. J. Roy. Meteorol. Soc.,</I> 
+  110, 613-631 </P>
+<P>Masuda, K., Takashima, T., and Takayama, Y., 1988, Emissivity of pure and sea 
+  waters for the model sea surface temperature in the infrared regions, <I> Remote 
+  Sensing of the Environment,</I> 24, 313-329 </P>
+<P>Maul, G. A. and Sidran, M., 1973, Atmospheric effects on ocean surface temperature 
+  sensing from the NOAA satellite scanning radiometer, <I> J. Geophys. Res.,</I> 
+  78, 1909-1916 </P>
+<P>May, D. A., Stowe, L. L., Hawkins, J. D. and McClain, E. P., 1992, A correction 
+  for Saharan dust effects on satellite sea surface temperature measurements, 
+  <I> J. Geophys. Res.,</I> 97, 3611-3619 </P>
+<P>McClain, E. P., 1989, Global sea-surface temperatures and cloud clearing for 
+  aerosol optical depth estimates, <I> Int. J. Remote Sens.,</I> 10, 763-769 </P>
+<P>McClain, E. P., Pichel, W. G. and Walton, C. G., 1985, Comparative Performance 
+  of AVHRR-based Multichannel Sea Surface Temperatures, <I> J. Geophys. Res.,</I> 
+  90, (C6), 11587-11601 </P>
+<P>McClatchey, R. A., Fenn, R. W., Selby, J. E. A., Volz, F. E. and Garing, J. 
+  S., 1972, Optical properties of the atmosphere, <I> Rep. AFCRL-72-0497,Air Force 
+  Cambridge Res. Lab.</I>, Bedford, Mass., USA </P>
+<P>McMillin, L., 1975, Estimation of sea-surface temperatures from two infrared 
+  window measurements with different absorption, <I> J. Geophys. Res.,</I> 80, 
+  5113-5117 </P>
+<P>Minnett, P. J., 1986, A numerical study of the effects of anomalous North Atlantic 
+  atmospheric conditions on the infrared measurements of sea surface temperature 
+  from space, <I> J. Geophys. Res.,</I> 91, 8509-8521 </P>
+<P>Minnett, P. J., 1990, The regional optimisation of infrared measurements of 
+  sea-surface temperature from space <I> J. Geophys. Res.,</I> 95, 13497-13510 
+</P>
+<P>Minnett, P. J., 1991, Consequences of sea surface temperature variability on 
+  the validation and applications of satellite measurements, <I> J. Geophys. Res.,</I> 
+  96, 18,475-18,489 </P>
+<P>Mutlow, C. T., Zavody, A. M and Llewellyn-Jones, D. T., 1994, The Along Track 
+  Scanning Radiometer (ATSR) - Global Validation Results, <I> Proc. of the 2nd 
+  ERS-1 Symposium, SPACE AT THE SERVICE OF OUR ENVIRONMENT,</I> Hamburg 11 - 14th 
+  October 1993, ESA SP-361, 1245-1249 </P>
+<P>Prata, A. J., 1989, Observations of volcanic ash clouds in the 10-12 um window 
+  using AVHRR/2 data, <I> Int. J. Remote Sensing,</I> 10, 751-761 </P>
+<P>Prabhakara, C., Dalu, G. and Kunde, V. D., 1974, Estimation of sea-surface 
+  temperature from remote sensing in 11 to 13 um window region, <I> J. Geophys. 
+  Res.,</I> 79, 5039-5044 </P>
+<P>Nagaraja Rao, C. R., Stowe, L. L. and McClain, E. P., 1989, Remote sensing 
+  of aerosols over the oceans using AVHRR data: Theory, practice and applications, 
+  <I> Int. J. Remote Sens.,</I> 10, 743-749 </P>
+<P>Reynolds, R. W., 1993, Impact of Mount Pinatubo aerosols on satellite derived 
+  sea-surface temperatures, <I> J. Climate,</I> 6, 768-774 </P>
+<P>Reynolds, R. W., Folland, C. K. and Parker, D. A., 1993, Biases in satellite-derived 
+  sea-surface temperature data, <I> Nature,</I> 358, 738-740 </P>
+<P>Robertson, J. E. and Watson, A. J., 1992, Thermal skin effect of the surface 
+  ocean and its implications for CO2 uptake, <I> Nature,</I> 358, 738-740 </P>
+<P>Robinson, I. S., Wells, N. C. and Charnock, H., 1984, The sea surface thermal 
+  boundary layer and its relevance to the measurement of sea surface temperature 
+  by airborne and spaceborne radiometers, <I> Int. J. Remote Sens.,</I> 5, 19-46 
+</P>
+<P>Rothman, L. S., Gamache, R. R., Goldman, A., Brown, L. R., Toth, R. A., Pickett, 
+  H. M., Poynter, R. L., Flaud, J.-M., Camy-Peyret, C., Barbe, A., Husson, N., 
+  Rinsland, C. P. and Smith, M. A. H., 1987, The HITRAN database : 1986 edition, 
+  <I> Applied Optics,</I> 26, 4058-4097 </P>
+<P>Sandalls, F. J. and Penkett, S. A., 1977, Measurements of carbonyl sulfide 
+  and carbon disulfide in the atmosphere, <I> Atmos. Environ.,</I> 11, 197-199 
+</P>
+<P>Saunders, P. M., 1967, Aerial measurements of sea-surface temperatures in the 
+  infrared, <I> J. Geophys. Res.,</I> 72, 4109-4117 </P>
+<P>Saunders, R. W. and Edwards, D. P., 1989, Atmospheric transmittance for the 
+  AVHRR channels, <I> Appl. Optics,</I> 28, 4154-4160 </P>
+<P>Saunders, R. W. and Kriebel, K. T., 1988, An improved method for detecting 
+  clear sky and cloudy radiances from AVHRR data, <I> Int. J. Remote Sens.,</I> 
+  9, 123-150. (Correction, 1988, <I> Int. J. remote Sens.,</I> 9, 1393-1394) </P>
+<P>Saunders, R. W., 1993, Radiative properties of Mount Pinatubo volcanic aerosols 
+  over the Tropical Atlantic, <I> Geophys. Res. Lett., </I> 20, 137-140 </P>
+<P>Schluessel, P., Shin, H-Y, Emery, W. J. and Grassl, H., 1987, Comparison of 
+  satellite-derived sea surface temperature with in-situ skin measurements, <I> 
+  J. Geophys. Res.,</I> 92, 2859-2874 %from emery et al 1990 </P>
+<P>Schluessel, P., Emery, W. J., Grassl, H. and Mammen, T., 1990, On the bulk-skin 
+  temperature difference and its impact on satellite remote sensing of sea surface 
+  temperature, <I> J. Geophys. Res.,</I> 95, 13341-13556 </P>
+<P>Schmeltekopf, A. L., Albritton, D. L., Crutzen, P. J., Goldan, P. D., Harrop, 
+  W. J., Henderson, W. R., McAfee, J. R., McFarland, M., Schiff, H. I., Thompson, 
+  T. L., Hofmann, D. L. and Kjome, N. T., 1977, Stratospheric nitrous oxide altitude 
+  profiles at various latitudes, <I> J. Atmos. Sci.,</I> 34, 729-736 </P>
+<P>Simpson, J. J. and Humphrey, C., 1990, An automated cloud screening algorithm 
+  for daytime Advanced Very High Resolution Radiometer imagery <I> J. Geophys. 
+  Res.,</I> 95, 13459-13481 </P>
+<P>Smith, A. H., Saunders, R. W. and Zavody, A. M., 1994, The validation of ATSR 
+  using aircraft radiometer data, <I> J. Atmos. Oceanic Technology,</I> 11, 789-800 
+</P>
+<P>SORG, 1993, Stratospheric Ozone 1993, <I> United Kingdom Stratospheric Ozone 
+  Review Group, Fifth Report,</I> HMSO, London, 1994 </P>
+<P>Stowe, L. L., Carey, R. M. and Pellegrino, P. P., 1992, Monitoring the Mt. 
+  Pinatubo aerosol layer with NOAA/11 AVHRR data, <I> Geophys. Res. Lett.,</I> 
+  19, 159-162 </P>
+<P>Strong, A. E., 1989, Greater global warming revealed by satellite-derived sea 
+  surface temperature trends, <I> Nature,</I> 338, 642-645 </P>
+<P>Thieman, V. and Ruprecht, E., 1992, A method for detection of clouds using 
+  AVHRR infrared observations, <I> Int. J. Remote Sens.,</I> 13, 1829-1841 </P>
+<P>Tucker, C. J., Newcomb, W. W., and Dregne, H. E., 1994, AVHRR data sets for 
+  determination of desert spatial extent, <I> Int. J. Remote Sens.,</I> 17, 3547-3566 
+</P>
+<P>Walton, C. C., 1985, Satellite measurement of sea surface temperature in the 
+  presence of volcanic aerosols, <I> J. Climate Appl. Meteor,</I> 24, 501-507 
+</P>
+<P>Walton, C. C., 1988, Nonlinear multichannel algorithms for estimating sea surface 
+  temperature with AVHRR satellite data, <I> J. Appl. Meteor,</I> 27, 115-124 
+</P>
+<P>Werrett, S.T., G.D. Peskett, G. Davey, G., Bradshaw, T. W. and Delderfield, 
+  J., 1985, Development of a small Stirling Cycle Cooler for Spaceflight Applications, 
+  <I> Advances in Cryogenic Engineering,</I> 31 </P>
+<P>Watson, R. T., Meira Filho, L. G., Sanhueza, E. and Janetos, A., 1992, <I> 
+  Greenhouse gases: Sources and sinks, in Climate Change 1992: The Supplementary 
+  Report to the IPCC Scientific Assessment,</I> Editors: J. T. Houghton, B. A. 
+  Collander and S. K. Varney </P>
+<P>Whitlock, H., Bartlett, D. S. and Gurganus, E. A., 1982, Sea foam reflectance 
+  and influence on optimum wavelength for remote sensing of ocean aerosols, <I> 
+  Geophys. Res. Lett., </I> 9, 719-722 </P>
+<P>Wick, G. A., Emery, W. J. and Schluessel, P., 1992, A comprehensive comparison 
+  between satellite-measured skin and multichannel sea surface temperature, <I> 
+  J. Geophys. Res.,</I> 97, 5569-5595 </P>
+<P>World Meteorological Organization, 1972, Comparative sea surface temperature 
+  measurements, <I> Marine Science Affairs,</I> Report No. 5, WMO NO 333, Geneva, 
+  Switzerland </P>
+<P>World Meteorological Organization, 1986, Atmospheric Ozone 1985, <I> WMO Global 
+  Ozone Research and Monitoring Project,</I> Report No. 16, Geneva, Switzerland 
+</P>
+<P>Yu, Y and Barton, I. J., 1994, A non-regession coefficients method of sea surface 
+  temperature retrieval from space, <I> Int. J. Remote Sens.,</I> 15, 1819-1206 
+</HTML> 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Thursday, 06-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

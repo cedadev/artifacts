@@ -1,0 +1,52 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20081014T230000Z
+DTEND:20081015T230000Z
+LOCATION:The Blackett Lecture Theatre, Imperial College
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000F0759073C023C901000000000000000
+	010000000619C5BEED1A27F408E867B83686CF7A7
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+SMALL SCALE WEATHER EXTREMES=0D=0A=0D=0ATo be held in The Blackett Lectur=
+e Theatre 1, Imperial College, South Kensington Campus, London SW7 2AZ =
+=0D=0AMaps are available from the Royal Meteorological Society or from it=
+s web site: www.rmets.org <http://www.rmets.org/> .  =0D=0A=0D=0AThe 'Bir=
+mingham tornado' and the 'Boscastle rainstorm' are examples of small scal=
+e weather extremes that will be familiar to many. Less well known in the =
+UK will be the ice storms of Portland, Oregon, aided by the close proximi=
+ty of the Columbia Gorge, and the phenomenal local variations in snow dep=
+th seen for lake-effect snowstorms in the north-eastern US. Whilst such e=
+vents are, reassuringly, relatively isolated, they can clearly cause mass=
+ive disruption to infrastructure and can pose a major threat to life and =
+property. Numerical weather prediction and computer power have now advanc=
+ed to the stage where we are beginning to see some predictive potential f=
+or these alarming phenomena, and so it is timely to have a look in more d=
+etail. This meeting will start out by providing examples of many differen=
+t types of small scale weather extremes, with an up to date run through o=
+f our understanding, and will end by looking at how computer-generated fo=
+recasts can assist in warning of the potential for an imminent event.=0D=
+=0A=0D=0A2.00	INTRODUCTION	Chairman: Dr Richard Forbes=0D=0A				Chair of =
+the Royal Meteorological				Meetings Committee=0D=0A			=0D=0A		Meeting Or=
+ganiser: =0D=0A         		Mr Tim Hewson, ECMWF=0D=0A	=0D=0A	=0D=0A2.10	RE=
+CENT OBSERVATIONS OF THE	Prof Alan Blyth, University of Leeds=0D=0A      =
+      	INITIATION AND DEVELOPMENT OF     	=0D=0A            	CONVECTIVE S=
+TORMS=0D=0A	                    	=0D=0A2.40      	TORNADOES IN THE UK	Mr =
+Nigel Bolton, Operations Centre=0D=0A            		Met Office, Exeter=0D=
+=0A		=0D=0A3.10       	LAKE-EFFECT SNOWSTORMS	Prof David Schultz, Univers=
+ity of=0D=0A		Helsinki, Finland=0D=0A                  	=0D=0A3.40       =
+	TEA	=0D=0A=0D=0A4.10      	TOPOGRAPHICALLY- INDUCED EXTREME	Dr Simon Vos=
+per, Met Office, =0D=0A	WEATHER	Exeter=0D=0A                  				=0D=0A4=
+.40     	FREAK WAVES - AN EXAMPLE OF A   	Dr Peter Janssen, ECMWF        =
+   =0D=0A	STATISTICAL METHOD FOR PREDICTING	=0D=0A	SMALL SCALE EXTREMES=
+=0D=0A	=0D=0A5.10	HIGH -  RESOLUTION MODELLING POTENTIAL	Peter Clark, Met=
+ Office=0D=0A	FOR SMALL SCALE WEATHER EXTREMES	JCMM, Reading         =0D=
+=0A       =0D=0A5.40	CLOSE=0D=0A=0D=0A=0D=0A=0D=0A=0D=0ANON-MEMBERS ARE W=
+ELCOME TO ATTEND THIS MEETING, FOR WHICH REGISTRATION IS NOT REQUIRED. FU=
+RTHER INFORMATION CONCERNING ALL MEETINGS AND MEMBERSHIP IS AVAILABLE FRO=
+M THE ADDRESS SHOWN BELOW=0D=0A=0D=0A
+SUMMARY:Royal Meteorological Society National Meeting
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

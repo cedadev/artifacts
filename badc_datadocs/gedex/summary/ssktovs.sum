@@ -1,0 +1,47 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SSKTOVS "
+"SUM_DATA_SET"       "SUSSKND-TOVS "
+"SUM_DATATYPE"       "MONTH-FIELDS "
+"ARCHIVE_NAME"       "NCDS         "
+"ARCHIVE_STATUS"     "Available    "
+"DS_DESCRIPTION"     "Susskind TOVS Gridded Fields "
+"DT_DESCRIPTION"     "Monthly Meteorological Fields"
+"SUM_BEGIN_DATE"     "01-Dec-1978"
+"SUM_END_DATE"       "01-Sep-1988"
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Global     "
+"SPATIAL2"           " "
+"SPATIAL3"           "4 x 5 degree latitude-longitude grid "
+"SPATIAL4"           " "
+"TEMPORAL1"          "December, 1978 - May, 1981; July, 1983; May, June,"
+"TEMPORAL2"          "September, 1978                                              "
+"TEMPORAL3"          "Monthly means "
+"TEMPORAL4"          " "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF)."
+"PRODUCT2"           "Available on GEDEX CD-ROM.           "
+"PRODUCT3"           " "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"CLOUDS"          "Cloud amount"                "Percent"
+"PRECIP-VAP"      "Precipitable H2O vapor"      "cm"
+"PRECIPITATION"   "Precipitation"               "mm/day"
+"PRESSURE"        "Pressure"                    "mb"
+"RADIANCE"        "Radiance"                    "W/m**2"
+"TEMPERATURE"     "Atmospheric temperature"     "Deg K"
+"PRESSURE"        "Cloud top pressure"          "mb"
+"PRESSURE"        "Surface pressure"            "mb"
+"RADIATION_BUDGT" "Outgoing longwave radiation" "W/m**2"
+EOF
+
+SOURCES
+"TIROS-N"  "TOVS/HIRS2"
+"NOAA-6"   "TOVS/MSU"
+"NOAA-7"   "TOVS/MSU"
+"NOAA-8"   "TOVS/MSU"
+"NOAA-9"   "TOVS/MSU"
+"NOAA-10"  "TOVS/MSU"
+"NOAA-11"  "TOVS/MSU"
+"NOAA-12"  "TOVS/MSU"
+EOF

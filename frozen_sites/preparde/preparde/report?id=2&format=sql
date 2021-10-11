@@ -1,0 +1,21 @@
+-- ## 2: Active Tickets by Version ## --
+
+-- 
+-- This report shows how to color results by priority,
+-- while grouping results by version.
+-- 
+-- Last modification time, description and reporter are included as hidden fields
+-- for useful RSS export.
+
+
+SELECT p.value AS __color__,
+   version AS __group__,
+   id AS ticket, summary, component, version, t.type AS type, 
+   owner, status,
+   time AS created,
+   changetime AS _changetime, description AS _description,
+   reporter AS _reporter
+  FROM ticket t
+  LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+  WHERE status <> 'closed'
+  ORDER BY (version IS NULL),version, CAST(p.value AS int), t.type, time

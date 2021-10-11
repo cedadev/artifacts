@@ -1,0 +1,157 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Hourly Rain measurements - File Format</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Hourly Rain data - .hrain (hourly rain observations) file
+format<BR CLEAR="ALL"></H1>
+
+<hr>
+<blockquote>
+<strong><FONT COLOR="#FB0000"><Strong>PLEASE NOTE:</strong></FONT> The file format described below refers to the Met Office Land Surface data (1900-2000) dataset which has been superseded by the <a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__dataent_ukmo-midas">Met Office MIDAS dataset (1853-present)</a> at the BADC.
+</strong>
+</blockquote>
+
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<P>A <STRONG>list of UK stations</STRONG> for which the BADC holds
+.hrain files is available (<A HREF="/data/surface/station_lists/ukstation.hrain.html">.hrain
+stations</A>).</P>
+
+<P>The file name convention is (STATION_NAME)(YEAR).(MESSAGE_TYPE).(FILE_EXTENSION)</P>
+
+<UL>
+  <LI>STATION_NAMES is the complete station name.<BR>
+  <LI>YEAR is the year expressed in full, ie 1998. <BR>
+  <LI>Description of the <A HREF="met_domain.html">message types</A>
+  is available.<BR>
+  <LI>The file extension is <STRONG>.hrain</STRONG> meaning that
+  the file contains hourly rain measurements.<BR>
+</UL>
+
+<P>These .hrain files contain rainfall amount and duration during
+the hour(s) ending at the specified time. <BR>
+<BR>
+<STRONG>-999</STRONG> indicates a missing value. <BR>
+<BR>
+The first line of the data file are the fields headers (which
+are detailed in the table below).<BR>
+<BR>
+The fields in the .hrain data files are : <BR>
+<BR>
+<td><TABLE BORDER="1" CELLSPACING="2" CELLPADDING="0">
+  <TR>
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">HEADER</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">PARAMETER</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">FIELDS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">COLUMNS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">UNITS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">COMMENTS</FONT></TH> 
+  </TR>
+  <TR>
+    <TD HEIGHT="30" BGCOLOR="#ffffff">ID</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">Raingauge Number</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">1</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">1-8</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">-</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#3.6">Rainfall
+      observing site identification</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">IDTYPE</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">-</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">2</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">9-17</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">-</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30"><A HREF="../ukmo-midas/ukmo_guide.html#3.6">Rainfall
+      observing site identification</A></TD> 
+  </TR>
+  <TR>
+    <TD HEIGHT="30" BGCOLOR="#ffffff">MET_DOM</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">Meteorological Domain</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">3</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">18-28</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">-</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff"><A HREF="met_domain.html">Message
+      types</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">YEAR</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">Year</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">4</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">29-35</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">-</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">4 characters</TD> 
+  </TR>
+  <TR>
+    <TD HEIGHT="30" BGCOLOR="#ffffff">MONTH</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">Month</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">5</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">36-43</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">-</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">1 or 2 characters (from 1 to
+      12)</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">DAY</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">Day</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">6</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">44-51</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">-</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">1 or 2 characters (from 1 to
+      31max)</TD> 
+  </TR>
+  <TR>
+    <TD HEIGHT="30" BGCOLOR="#ffffff">END_HOUR</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">Hour</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">7</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">52-61</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">-</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">Hour of observation from 0
+      to 2300</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">COUNT</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">Observation period</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">8</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">62-69</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">hours</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30"><A HREF="count.html">See COUNT
+      definition</A></TD> 
+  </TR>
+  <TR>
+    <TD HEIGHT="30" BGCOLOR="#ffffff">AMT</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">Precipitation Amount</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">9</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">70-77</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff">0.1 mm</TD> 
+    <TD HEIGHT="30" BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#5.6">See
+      Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">DUR</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">Precipitation duration</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">10</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">78-85</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30">minutes</TD> 
+    <TD BGCOLOR="#d4d4d4" HEIGHT="30"><A HREF="../ukmo-midas/ukmo_guide.html#5.6">See
+      Met Office documentation</A></TD> 
+  </TR>
+</TABLE><BR>
+<BR>
+Rain Observation Data is available from over 4000 raingauge stations.
+<BR>
+<BR>
+General information about the Rainfall Network is available in
+the <A HREF="../ukmo-midas/ukmo_guide.html#3.4">documentation provided by the
+Met Office</A>. <BR>
+
+</BODY>
+</HTML>

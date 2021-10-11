@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>Met Office Land Surface data file formats</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Met Office Land Surface data file formats<BR CLEAR="ALL"></H1>
+
+<P><HR ALIGN=LEFT>
+<blockquote>
+<strong><FONT COLOR="#FB0000"><Strong>PLEASE NOTE:</strong></FONT> The information provided below solely refers to the Met Office Land Surface data (1900-2000) dataset which has been superseded by the <a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__dataent_ukmo-midas">Met Office MIDAS dataset (1853-present)</a> at the BADC.
+</strong>
+</blockquote>
+<hr>
+<BR>
+The surface data file name convention is (STATION_NAME)(YEAR).(MESSAGE_TYPE).(FILE_EXTENSION)  where:
+<br>
+<ul>
+  <li>STATION_NAME is the complete station name.<BR>
+  <li>YEAR is the year expressed in full, ie 1998. <BR>
+  <li>Description of the <A HREF="met_domain.html">message types (MESSAGE_TYPE)</A>
+  is available.<BR>
+  <li>FILE_EXTENSION indicates the type of data a file contains. <br>To each file extension corresponds a different file format as follows:
+<ul>
+<li><a href="/data/surface/dwx_file_format.html">dwx file format</a> for <strong>daily
+weather</strong> measurements (sunshine amount, state of concrete slab, snow lying on the ground, snow depth, fresh snow amount, day of snow, hail, thunder and gale).
+<br><li><a href="/data/surface/temp_file_format.html">temp file format</a> for <strong>daily temperature extreme</strong> measurements (maximum and minimum air temperatures, minimum grass temperature and minimum concrete temperature).
+<br><li><a href="/data/surface/drain_file_format.html">drain file format</a> for <strong>daily rain</strong> measurements (precipitation amount only). 
+<br><li><a href="/data/surface/tsoil_file_format.html">tsoil file format</a> for <strong>daily soil temperature</strong> measurements (between depths from 5 to 100cm).
+<br><li><a href="/data/surface/hwx_file_format.html">hwx file format</a> for <strong>hourly weather</strong> measurements(10 minute wind speed and direction, present and past weather, cloud amount, type and base, visibility, MSL pressure, dry-bulb temperature, wet-bulb temperature, dew-point temperature, state of ground and 10 minute maximum gust speed).  
+<br><li><a href="/data/surface/radt_file_format.html">radt file format</a> for <strong>hourly and daily radiation</strong> measurements (global, diffuse and direct solar radiation)
+<br><li><a href="/data/surface/hsun_file_format.html">hsun file format</a> for <strong>hourly sunshine</strong> measurements.
+<br><li><a href="/data/surface/wind_file_format.html">wind file format</a> for <strong>hourly
+mean wind</strong> measurements (mean wind direction and speed, max gust direction
+and speed and time of maximum gust).
+<br><li><a href="/data/surface/hrain_file_format.html">hrain file format</a> for <strong>hourly rain </strong>measurements (precipitation amount and duration).
+</ul>
+</ul><br>
+For example:<Pre>
+<strong>oxford1999.dly3208.drain</strong> contains daily rain measurements for Oxford station 
+for the year 1999 as recorded using the dly3208 report.
+
+<strong>oxford1999.wahrain.hrain</strong> contains hourly rain measurements for Oxford station 
+for the year 1999 as recorded using the wahrain report.
+
+<strong>oxford1999.dly3208.hwx</strong> contains hourly weather measurements for Oxford station 
+for the year 1999 as recorded using the dly3208 report. 
+
+<strong>oxford1999.hsun3445.hsun</strong> contains hourly sunshine measurements for Oxford station 
+for the year 1999 as recorded using the hsun3445 report.
+
+<strong>oxford1999.hwnd6910.wind</strong> contains wind measurements for Oxford station 
+for the year 1999 as recorded using the hwnd6910 report.
+</pre>                                  
+<P>
+</BODY>
+</HTML>

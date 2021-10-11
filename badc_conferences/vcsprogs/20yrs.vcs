@@ -1,0 +1,41 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060610T230000Z
+DTEND:20060616T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Rhodes, Greece
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000050A5F3271512C6010000000000000000100
+ 000006FE513556163E549ACF5B0F20BDAD8B4
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0A=0D=0AThis is a reminder about =
+the conference "20 Years of Nonlinear Dynamics in Geosciences" June 11-16, =
+2006, Rhodes, Greece. The purpose of this conference is to bring together s=
+cientists from the atmospheric sciences, hydrology, geology, and other area=
+s of Geosciences to discuss the advances made and the future directions of =
+nonlinear dynamics. Topics will include predictability, ensemble prediction=
+, nonlinear prediction, nonlinear time series analysis, low-dimensional cha=
+os, error growth in the models, nonlinear modeling, fractals and multifract=
+als, bifurcation, and other aspects of nonlinear science. Submission of abs=
+tracts from all areas of Geosciences is welcome. For more information or to=
+ register and submit abstracts please visit http://www.aegeanconferences.or=
+g. We would like to invite you to participate in this exciting meeting. Ple=
+ase note that the cost of the accommodation package is 1290 Euro and includ=
+es registration, hotel accommodations at the Hilton resort in Rho=0D=0A des=
+, all meals (breakfast and lunches at the hotel, dinners at selected restau=
+rants in the island), and an island tour. We sincerely hope that you will b=
+e able to participate. If you need further information, or if you have any =
+comments or suggestions, please do not hesitate to contact us. The meeting =
+is endorsed by the American Meteorological Society (AMS) and the European G=
+eosciences Union (EGU).=0D=0A=0D=0AIf you intent to participate we urge you=
+ to pre-register. At this stage this is very important. Pre-registering gui=
+des us with the planning and the logistics of the conference. Pre-registrat=
+ion does not require paying now. Payment is due March 15. The number of par=
+ticipants is limited to 150.=0D=0A=0D=0ABest regards,=0D=0A=0D=0AThe organi=
+zing committee=0D=0AAnastasios Tsonis (aatsonis@uwm.edu) and James Elsner=
+=0D=0A(jelsner@garnet.acns.fsu.edu).=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:20 Years of Nonlinear Dynamics in Geoscie=
+nces
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

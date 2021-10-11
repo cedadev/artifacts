@@ -1,0 +1,106 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<META NAME="KEYWORDS" CONTENT="BADC, HDF,
+DATA FORMATS">
+
+<META NAME="DESCRIPTION" CONTENT="The BADC is happy for users to submit
+datasets to the archive in HDF format.">
+
+<HEAD>
+  <TITLE>BADC Datasets: HDF data</TITLE>
+</HEAD>
+
+<!-- Helen Walker, BADC - Dec 2003 -->
+
+<BODY BGCOLOR="#FFFFFF">
+<!-- possible font colour "#333399" -->
+
+<FONT FACE="ARIAL", "HELVETICA">
+
+<H1><img src="hdf_bluegreentxt_small.jpg" width="150" height="93"></H1>
+<H1>HDF: Hierarchical Data Format</H1>
+</FONT>
+<P>
+<font face="ARIAL" ,="," helvetica="HELVETICA"><EM>This is intended as a short introduction to the HDF data format.
+The complete HDF documentation can be found at <a href="http://www.hdfgroup.org/">http:/www.hdfgroup.org</a>. </EM></font><FONT FACE="ARIAL", "HELVETICA"></FONT></P>
+<FONT FACE="ARIAL", "HELVETICA"><HR ALIGN="LEFT">
+
+<H3>Background</H3>
+
+<P>
+HDF (Hierarchical Data Format) is a file format for sharing data in a 
+distributed environment. It is orientated towards scientific data. HDF
+was developed at the National Center for Supercomputing Applications
+<A HREF="http://www.ncsa.uiuc.edu/">NCSA</A> at the University of 
+Illinois at Urbana Champaign.  </P>
+</FONT>
+<P><font face="ARIAL" ,="," helvetica="HELVETICA">In 2006, the HDF Group (<a href="http://www.hdfgroup.org/">THG</a>)  was formed as a not-for-profit corporation whose   mission is to sustain the HDF technologies and to support worldwide HDF user   communities with <font face="Arial, Helvetica, sans-serif">production-level software and services. It is a spin-off from   the HDF group at NCSA. Their aim is to maintain the HDF libraries and tools.</font></font><font face="Arial, Helvetica, sans-serif"> The project is open source, meaning that the libraries and utilities are freely available. </font></P>
+<h3><FONT FACE="ARIAL", "HELVETICA"><strong>What is HDF?</strong>
+</FONT></h3>
+<FONT FACE="ARIAL", "HELVETICA">
+<P>At its lowest level, HDF is a physical file format for storing scientific data.   At its highest level, HDF is a collection of utilities and applications for   manipulating, viewing, and analyzing data in HDF files. Between these levels,   HDF is a software library that provides high-level APIs and a low-level data   interface. </P>
+</FONT>
+<P><font face="ARIAL" ,="," helvetica="HELVETICA">The HDF package provides utilities for  a non-sequential access to various records within that  data base. HDF files are completely portable across    computer architectures and operating systems. Integer and  floating point numbers are stored within HDF files   as binary streams of data, which shrinks the size of the  file very significantly and which speeds reading and writing  of such files. Also, the data are stored in an architecture  independent manner, while at the same time remaining fully  compliant with IEEE specifications, and HDF provides  its own facilities for data compression, allowing it to be  automatically compressed  if required (this compression is also architecture  and operating system independent).</font></P>
+<font face="Arial, Helvetica, sans-serif" ,="," helvetica="HELVETICA">The latest version (HDF5) had been developed to address the growing </font><font face="Arial, Helvetica, sans-serif">issues associated with storing, accessing and sharing complex and volumous data from a diverse range of backgrounds. In particular, it offers:</font>
+<ul>
+  <li>
+    <font face="Arial, Helvetica, sans-serif">Unlimited size, extensibility, and portability </font></li>
+  <li>
+    <font face="Arial, Helvetica, sans-serif">General data model  </font></li>
+  <li>
+    <font face="Arial, Helvetica, sans-serif">Flexible, efficient I/O</font></li>
+  <li>
+    <font face="Arial, Helvetica, sans-serif">Flexible data storage</font></li>
+  <li>
+    <font face="Arial, Helvetica, sans-serif">Unlimited variety of datatypes</font></li>
+  <li>
+    <font face="Arial, Helvetica, sans-serif">Data transformation and complex subsetting</font></li>
+  <li>
+    <font face="Arial, Helvetica, sans-serif">Supported on many platforms with API's for the most common languages.</font></li>
+</ul>
+<font face="Arial, Helvetica, sans-serif">HDF5 was created to address the data management needs of scientists and   engineers working in high performance, data intensive computing environments. As   a result, the HDF5 library and format emphasize storage and I/O efficiency. For   instance, the HDF5 format can accommodate data in a variety of ways, such as   compressed or chunked.</font><FONT FACE="ARIAL", "HELVETICA"> HDF5 has a number of advantages over other common data formats, and is widely used.
+<H3>Why use HDF?</H3>
+<UL>
+  <LI>To share data in heterogeneous computing environments</LI>
+  <LI>To share scientific data with other scientists</LI>
+  <LI>To use available software that understands HDF</LI>
+  <LI>To improve I/O performance, data can be read and written efficiently
+    on parallel computing systems</LI>
+  <LI>To improve storage efficiency, data can be compressed or chunked</LI>
+  <LI>HDF software is written in a number of languages including
+   C and FORTRAN, with high-level APIs using IDL, XML and Java.</LI>
+  <LI>NCSA maintains a suite of free, open source software.</LI>
+</UL>
+</P>
+
+<P>
+  The <A HREF="http://hdf.ncsa.uiuc.edu/hdfeos.html">HDF-EOS</A> project: 
+  In 1993 NASA chose HDF to be the standard file format for storing data
+  from the Earth Observing System (EOS), which is a data gathering system 
+  of sensors (mainly satellites) supporting the Global Change Research 
+Program. This is still supported and maintained by NCSA. </P>
+<H3>What's in the HDF file?</H3>
+<P>
+  There are several types of HDF object; rasters, palettes, tables, and 
+  multi-dimensional arrays. The latest version of HDF (HDF5) can store two
+  primary objects; datasets and groups. A dataset is essentially a 
+  multi-dimensional array of data elements, and a group is a structure
+for organising objects in an HDF5 file.</P>
+<H3>How to read HDF?</H3>
+
+<p>Some pointers to HDF tools are available from the HDF Group website at: 
+<blockquote><a href="http://www.hdfgroup.org/tools/">http://www.hdfgroup.org/tools/</a></blockquote>
+
+<p>
+The <a href="http://www.ncl.ucar.edu">NCAR Command Language</a> can read and write HDF4. More details available at:
+
+<blockquote><a href="http://www.ncl.ucar.edu/Document/Manuals/Ref_Manual/NclFormatSupport.shtml#HDF">http://www.ncl.ucar.edu/Document/Manuals/Ref_Manual/NclFormatSupport.shtml#HDF</a></blockquote>
+</p>
+
+</FONT>
+</BODY>
+
+</HTML>

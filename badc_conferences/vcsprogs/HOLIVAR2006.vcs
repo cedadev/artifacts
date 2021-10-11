@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050611T230000Z
+DTEND:20050615T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:University College London, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000A0EA02C56530C5010000000000000000100
+ 00000A7109B9ED6EB0846AF88970F20019120
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0A------------=0D=0AFrom:	Michael=
+ Hughes [m.hughes@ucl.ac.uk]=0D=0ASent:	19 March 2005 10:42=0D=0ATo:	badc@r=
+l.ac.uk=0D=0ASubject:	Conference Announcement=0D=0A=0D=0A=0D=0ADear BADC,=
+=0D=0A=0D=0Awe would be pleased if you could list the following conference =
+on your =0D=0ACommunity - Conferences page.=0D=0A=0D=0AHOLIVAR2006 Open Sci=
+ence Meeting=0D=0ANatural Climate Variability and Global Warming=0D=0A=0D=
+=0A12th - 15th June, 2006=0D=0A  Environmental Change Research Centre=0D=0A=
+  University College London, UK=0D=0A=0D=0Ahttp://www.holivar2006.org/=0D=
+=0A=0D=0ARegards,=0D=0AMike Hughes=0D=0AHOLIVAR2006 Local Organising Commit=
+tee=0D=0A=0D=0A-- =0D=0AEnvironmental Change Research Centre=0D=0AUniversit=
+y College London=0D=0A26 Bedford Way, London WC1H 0AP, UK.=0D=0ATel +44 (0)=
+20 7679 5522 Fax +44 (0)20 7679 7565=0D=0A=0D=0Ahttp://ecrc.geog.ucl.ac.uk=
+=0D=0Ahttp://www.geog.ucl.ac.uk/ecrc=0D=0A=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:HOLIVAR2006 Open Science Meeting
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

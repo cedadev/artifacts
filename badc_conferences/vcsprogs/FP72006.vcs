@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20061208T000000Z
+DTEND:20061209T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:London, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000020CD1B79B90FC7010000000000000000100
+ 0000059BC3E047202EC4681F84C6E85E8153A
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0A=0D=0AFP7 Energy and Environmen=
+t Information Day - 8 December 2006, London=0D=0A =0D=0AOn behalf of the DT=
+I, DEFRA and NERC, Enviros are organising an information day on the Europea=
+n Commission's new Framework Programme 7 for Research, which will=0D=0Arun =
+from 2007-13. The Information Day will focus on the Energy and Environment =
+areas of FP7, will be free to attend, and will take place on 8th December 2=
+006 at the DTI=0D=0Aconference centre in London. It will be an excellent op=
+portunity for organisations who are interested in gaining European funding =
+for R&D to find out more about FP7 before =0D=0Ait is launched next year.=
+=0D=0A =0D=0AFor more details (including details on how to register for the=
+ event), please see the attached Invitation, Agenda and Map.=0D=0A=0D=0A <<=
+FP7 event Agenda 08.12.06.doc>>   <<Location map.doc>> =0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:FP7 Energy and Environment Information Da=
+y
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

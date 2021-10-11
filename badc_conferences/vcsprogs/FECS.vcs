@@ -1,0 +1,34 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070911T230000Z
+DTEND:20070914T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:University of Nottingham, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000030C2B0539B40C7010000000000000000100
+ 00000B52AF086B8306344AFF05ABF0A041263
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Future Energy: Chemical Solutions =0D=
+=0A12 - 14 September 2007, University of Nottingham, UK=0D=0Awww.rsc.org/En=
+ergy07 =0D=0A=0D=0ACall for oral abstracts deadline - 26 January 2007=0D=0A=
+=0D=0AThis unique three-day conference recognises the importance of the che=
+mical sciences in the field of sustainable energy, one of the RSC's key pri=
+orities. The 2005 RSC report Chemical Science Priorities for Sustainable En=
+ergy Solutions in particular highlighted the vital role that chemical scien=
+ces will play in delivering sustainable energy technologies.=0D=0A=0D=0ATop=
+ics include:=0D=0A=B7	Energy Materials =0D=0A=B7	Climate Change=0D=0A=B7	En=
+ergy Policy=0D=0A=B7	Nuclear Waste Management =0D=0A=B7	Catalysts for Energ=
+y =0D=0A=B7	Chemical Manufacture and Fuel Chemistry =0D=0A=0D=0AInvited spe=
+akers: Professor Sir Richard Friend FRS (Cambridge), Professor Peter Edward=
+s FRS (Oxford), Dr Steven Koonin Chief Scientist (BP plc), Professor John G=
+riffiths (Leeds), Professor Keith Shine (Reading), Dr Bernard Boullis (CEA,=
+ France), Dr David Vincent (Carbon Trust) and Dr David Carslaw (Institute f=
+or Transport Studies, University of Leeds).=0D=0A=0D=0AAbstracts should be =
+sent to conferences@rsc.org by 26 January 2007 with 'Energy abstract' in th=
+e subject line. See the website for guidelines on submitting an abstract. =
+=0D=0A=0D=0AContact RSC Conferences for more information=0D=0A+44 (0) 1223 =
+432254, conferences@rsc.org =0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Future Energy Chemical Solutions
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

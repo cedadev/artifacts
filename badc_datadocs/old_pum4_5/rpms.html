@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>UM vn4.5 RPMs</title>
+</head>
+<body>
+<h1>Portable UM version 4.5 RPMs for RedHat Linux</h1>
+
+<p>This page documents RPM files produced for running the Unified Model (UM)
+version 4.5 under RedHat Linux.
+
+<p>The RPMs are designed to provide a quick start to running the UM and its
+User Interface (UMUI).  Both single-processor and parallel versions are
+included (the latter included primarily to take advantage of multi-processor
+PCs), and both 32-bit and 64-bit versions of the model are available.  The
+RPMs contain template jobs for running the UM in atmosphere (HadAM3), ocean
+(HadOM3) and coupled (HadCM3) configurations.  (To achieve this, the RPMs
+contain a number of code update files ("mods") and ancillary data files beyond
+those the Met Office distribution.)
+
+
+<h2>Supported platform</h2>
+
+<p>The RPMs were built for use on PCs running the following software:
+
+<ul>
+<li><a href="http://www.redhat.com">RedHat</a> Linux 
+<a href="http://www.mirror.ac.uk/sites/ftp.redhat.com/pub/redhat/linux/9/en/">version 9</a>.
+<li><a href="http://www.intel.com/software/products/compilers/flin/">Intel
+Fortran Compiler</a> version 8.
+</ul>
+
+<p>Use on other platforms may or may not work.  (See below.)
+
+<h2>Availability</h2>
+
+<p>The RPMs are available via the <a
+href="http://badc.nerc.ac.uk/data/pum/">Portable Unified model</a> page of the
+<a href="http://www.badc.rl.ac.uk/">BADC</a>.  Because of Met Office licensing
+condition, you will need to sign a registration form.  This will then give you
+access both to the RPMs and also to the UM package in the form originally
+distributed by the Met Office.
+
+<p><font size="-1">(Note that the need to sign the Met Office agreement does
+not imply that <b>every</b> package in that BADC directory is subject to that
+agreement.  Each RPM file clearly states in the header which licence is
+applicable, and in particular if a package is labelled as GPL then you have
+the full rights granted by the GPL, and the fact that it was distributed
+alongside the UM does not imply any further restriction.)</font>
+
+<h2>Installation</h2>
+
+<p>Use of RPM pacakages means that installation is straightforward, provided
+that your system is the target platform.
+
+<p>You should find the following files in the "binaries" directory on the BADC
+archive.  Download and install all these packages on your system (generally
+using the <tt>rpm&nbsp;-i</tt> command as root), except that you may omit the
+32-bit packages if only intending to run at 64-bit, and <i>vice versa</i>, and
+other packages described as optional.
+
+<ul>
+<p><li>Required helper packages:
+<p>
+<ul>
+<li><tt>pdksh-5.2.14-21.i386.rpm</tt>
+<li><tt>tclx-8.3-88.i386.rpm</tt>
+<li><tt>tk-8.3.5-88.i386.rpm</tt>
+    <br>These three packages are part of the standard RedHat 9
+       distribution, but are not installed by default.  Copies are provided
+       for convenience.
+
+<p>
+<li><tt>findutils-4.1.7-9_argmax.i386.rpm</tt> <br>This will replace your
+    existing findutils package, removing an arbitrarty restriction on
+    environment size in the "xargs" command.  Note that you should probably
+    use <tt>rpm -U</tt> ("upgrade") to install it.
+<p>
+<li><tt>mpich_ifc80-32bit-1.2.5.2-1.i386.rpm</tt>
+<li><tt>mpich_ifc80-64bit-1.2.5.2-1.i386.rpm</tt>
+    <br>These relate to the MPICH package needed for parallel processing.
+        Because of the way the UM has been built, you should include them 
+        even if you only intend to run on single-processor.
+
+<p>
+<li><tt>env2-2.0-1.i386.rpm</tt>
+    <br>Modified version of "env" program from GNU sh-utils; will be used
+        to ensure a correct run-time environment when launching parallel jobs.
+
+<p>
+<li><tt>rsh_enable-1-1.i386.rpm</tt>
+    <br>Installing this package will configure rsh access as is required.
+
+<p>
+<li><tt>l_fc_p_8.0.034.tar</tt>
+    <br>A mirror of the Intel Fortran Compiler is provided here just as a
+    convenience for faster download via JANET.  It will not work without a
+    licence key, and you will need to <a
+    href="http://www.intel.com/software/products/compilers/flin/">register
+    with Intel</a> for a full or a <a
+    href="http://www.intel.com/software/products/compilers/flin/noncom.htm">free
+    unsupported</a> licence.
+</ul>
+
+<p><li>UM:
+<p>
+<ul>
+<li><tt>um_ifort8-common-4.5-1.i386.rpm</tt>
+<li><tt>um_ifort8-32bit-program-4.5-1.i386.rpm</tt>
+<li><tt>um_ifort8-32bit-data-4.5-1.i386.rpm</tt>
+<li><tt>um_ifort8-64bit-program-4.5-1.i386.rpm</tt>
+<li><tt>um_ifort8-64bit-data-4.5-1.i386.rpm</tt>
+    <br>The above are fairly self-explanatory: install common 
+       and then 32bit and/or 64bit as required.
+</ul>
+
+
+<p><li>UMUI:
+<p>
+<ul>
+<li><tt>umui-2.0-1.i386.rpm</tt>
+<li><tt>umui-jobs-2.0-1.i386.rpm</tt>
+<li><tt>umui-serverctrl-2.0-1.i386.rpm</tt>
+    <br>For a fully self-contained installation, you will need to install 
+       these, to give you the UMUI client and server, and template jobs.
+</ul>
+<p><li>Optional packages:
+<p>
+<ul>
+<li><tt>um-doc-4.5-1.noarch.rpm</tt>
+    <br>The UM documentation system -- HTML and postscript files.  (Most of the
+    files can be viewed as local files, but the package includes a source code
+    search facility which is available if the files are viewed via http after
+    installing the <tt>httpd</tt> and <tt>perl-CGI</tt> RPMs from RedHat 9.)
+<p>
+<li><tt>mpich_ifc80-doc-1.2.5.2-1.i386.rpm</tt>
+    <br>Documentation for MPICH as above.  (See note below.)
+<p>
+<li><tt>xconv-1.90_ifc_dynamic-1.i386.rpm</tt>
+    <br>Jeff Cole's <a
+    href="http://badc.nerc.ac.uk/help/software/xconv/">xconv</a> visualisation
+    package.
+<p>
+<li><tt>um-utils-1.0-1.i386.rpm</tt>
+    <br>Miscellaneous <a
+    href="http://home.badc.rl.ac.uk/iwi/um/utils.html">file utilities</a>,
+    including tools to convert ancillary files between 32- and 64-bit.
+</ul>
+</ul>
+
+<p>
+<ul>
+</ul>
+
+<h3>Notes</h3>
+<ul>
+<li><b>MPICH:</b> If you have the "lam" package already installed, this
+    includes an MPICH build (but without Fortran 90 interface).  You still
+    need to install the customised MPICH packages above (32bit and/or 64bit),
+    which install into their own sub-directories where the UM will look for
+    them.  But do not install the MPICH doc package, because the manual pages
+    install into standard directories, conflicting with those from the "lam"
+    package.
+<p>
+<li><b>Sources:</b> Note that you do not need to download the source RPMs (in
+directory sources) simply in order to have the UM source files (program and
+script libraries).  These files are needed as a normal part of running the UM,
+and are therefore included in the binary RPMs.  The SRPMS are provided
+primarily so that you can rebuild the package (in case you wish to modify the
+build process, or are running on a slightly different platform from the
+supported one).
+</ul>
+
+
+<h2>Running the UM</h2>
+
+<ul>
+<li>
+First ensure that you have the following two files in the home-directory of
+your user account:
+
+<ul>
+<p>
+<li><tt>.rhosts</tt> (note the leading ".")
+    <p>This should contain the following line:
+	<pre>
+        localhost <i>username</i>
+	</pre>
+        Substitute for <i>username</i> as appropriate.  (Ensure that neither
+        the <code>.rhosts</code> file nor your home directory is either group-
+        or world-writable, else your <code>.rhosts</code> will not be honoured
+        by the system.)
+<p>
+<li><tt>setvars</tt>
+    <p>This should be a copy of (or a link to) the <tt>setvars</tt> file in
+    the <tt>UM_HOME</tt> directory which you will be using, i.e. either 
+    <tt>/usr/lib/um/um32/setvars</tt> or <tt>/usr/lib/um/um64/setvars</tt>
+    depending on 32- or 64-bit.
+</ul>
+
+<li>Submit a UMUI job based on one of the template jobs.
+<ul>
+<p>
+<li>Launch the UMUI client by typing <tt>umui</tt>.
+<p>
+<li>Experiment xaad (which you
+   will see if you uncheck the Owner experiment filter under Search-&gt;Filter)
+   contains template jobs.  Create a new experiment, and copy one or more of
+   these jobs into your new experiment.
+<p>
+<li>Open your copy of the job, and 
+   enter your username under "User information and Target Machine" -&gt;
+   "General Details" -&gt; "Target machine user ID".
+<p>
+<li>Submit the job by means of "Save", "Process", "Submit" buttons in sequence.
+</ul>
+</ul>
+
+<p>All being well, this should be all you need to do to get the UM running a
+sample job in your chosen configuration.  The hope is that these RPMs will
+have enabled you to get to this starting point relatively quickly.  Where you
+go from here is up to you...
+
+<h3>Notes</h3>
+<ul>
+<li><b>Examining/stopping jobs:</b> the job is submitted via the "at" command.
+In principle you can examine / stop jobs using "atq" / "atrm".  However,
+particularly in the case of parallel jobs, the "at" daemon does not always
+keep good track of which Unix processes form part of the UM job.
+You may need to examine / stop processes manually using standard Unix tools
+"ps" / "top" / "kill", although the "killjob" script installed at
+<tt>/usr/lib/um/local/bin/killjob</tt> may help.
+<p>
+<li><b>Selecting 32- or 64-bit:</b> the template jobs are each labelled
+"32-bit" or "64-bit".  But you must also have the "setvars" file pointing at
+the correct installation as above.  It is not enough simply to select an
+appropriately named template job.  Indeed, in many cases the template jobs are
+identical at 32- and 64-bit, and setvars makes all the difference.
+<p>
+<li><b>UMUI fonts/appearance:</b> depending on your screen resolution, you may
+find that the UMUI fonts are difficult to use.  If so, consider extracting the
+<tt>.umui_appearance</tt> and/or <tt>.ghui_appearance</tt> file from
+<tt>umui_appearance.tar.gz</tt> into your user home directory.
+<p>If you are using GNOME, you may find that the GNOME panel obstructs part of
+the UMUI windows.  Consider using the "auto-hide" option in the GNOME panel
+(right-click on a blank part of the panel to access the properties menu).
+</ul>
+
+
+<h2>Installation on other platforms</h2>
+
+<p>If you will be running the UM with a slightly different version of the
+Linux operating system or compiler than the supported platform, it is possible
+that the binary RPMs will not work but that you may have some success with
+downloading the source RPMs and rebuilding.
+
+<p>To rebuild from a source RPM, type:
+<tt>rpmbuild&nbsp;--rebuild&nbsp;<i>source_filename</i></tt>.  This will
+rebuild binary RPMs in <tt>/usr/src/redhat/RPMS/i386</tt>, which you can then
+install as normal (although note that for the main UM package rebuilding can
+be very slow).
+
+<p>If the build process does not complete cleanly, then you can modify the
+build process by installing the source package with
+<tt>rpm&nbsp;-i&nbsp;<i>source_filename</i></tt>, and then editing the "spec"
+file in <tt>/usr/src/redhat/RPMS/SPECS</tt> before building the binary package
+with <tt>rpmbuild&nbsp;-bb&nbsp;<i>spec_filename</i></tt>.  (Depending on the
+changes required, this may be more work than simply performing some
+post-installation tweaks on your system, but if you generate working RPMs for
+your platform and feed back the changes then you are providing a valuable
+contribution to the community -- address below.)
+
+<h2>Author</h2>
+
+<p>The Unified Model was written by the Met Office.  The xconv program was
+written by Jeff Cole.  The RPM packaging, including build scripts and patches
+to the original source code, was written by myself (Alan Iwi
+<tt>&lt;A.M.Iwi<!--
+
+ This HTML comment in my email address is an anti-spam
+ measure.  It will go away if  you look at the rendered version!
+
+-->@rl.ac.uk&gt;</tt>), and I would welcome any feedback or suggestions.
+
+</body>
+</html>

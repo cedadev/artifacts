@@ -1,0 +1,383 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC: help on HYREX Common Infrastructure data</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Common infrastructure data from the HYREX project<BR
+CLEAR="ALL"></H1>
+
+<P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="Contents"></A>Go
+to: [ Contents | <A HREF="#Introduction">Introduction</A> | <A
+HREF="#Data">Data</A> | <A HREF="#Transfer">Transfer</A> | <A
+HREF="#End">End</A> ] <HR ALIGN=LEFT></P>
+
+<H2>Contents</H2>
+
+<OL>
+  <LI><A HREF="#Introduction">Introduction</A>
+  <UL>
+    <LI><A HREF="#Catchment">1.1 The HYREX experimental catchment</A>
+    <LI><A HREF="#Infrastructure">1.2 Experimental infrastructure</A>
+    <LI><A HREF="#Research">1.3 Research using the data within HYREX</A>
+  </UL>
+  <LI><A HREF="#Data">Instruments and data</A>
+  <UL>
+    <LI><A HREF="#Weathrad">2.1 Weather radar</A>
+    <LI><A HREF="#DRN">2.2 Dense raingauge network</A>
+    <LI><A HREF="#AWS">2.3 Automatic weather and soil water stations</A>
+    <LI><A HREF="#Disdrometer">2.4 Disdrometer</A>
+    <LI><A HREF="#RGS">2.5 River gauging station</A>
+    <LI><A HREF="#Landuse">2.6 Land use data</A>
+  </UL>
+  <LI><A HREF="#Transfer">Transferring HYREX data from the BADC</A>
+  <UL>
+    <LI><A HREF="#Start">3.1 Before you start</A>
+    <LI><A HREF="#Files">3.2 Transferring and unpacking files</A>
+    <LI><A HREF="#Finding">3.3 Finding data, documentation and software
+    files</A>
+    <LI><A HREF="#Using">3.4 Using the data</A>
+  </UL>
+</OL>
+
+<P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="Introduction"></A>Go
+to: [ <A HREF="#Contents">Contents</A> | Introduction | <A HREF="#Data">Data</A>
+| <A HREF="#Transfer">Transfer</A> | <A HREF="#End">End</A> ]
+<HR ALIGN=LEFT></P>
+
+<H2>1. Introduction</H2>
+
+<P>This dataset comprises data gathered from instruments, located
+in and around the HYREX experimental catchment, that constitute
+a common infrastructure providing data for use by all HYREX projects.
+The data are made available to HYREX researchers via a central
+archive maintained by the CEH Wallingford (formerly the Institute of Hydrology (IH)). 
+
+<P>The <A HREF="umhelp.html">Unified Model</A> data, the <A HREF="salhelp.html">vertically
+pointing radar</A> and associated datasets supplied by the University
+of Salford, and <A HREF="chilhelp.html">Chilbolton radar</A> data
+are described in separate documents.</P>
+
+<H3><A NAME="Catchment"></A>1.1 The HYREX experimental catchment</H3>
+
+<P>The River Brue catchment in Somerset, south-west England, drains
+an area of 132 sq. km to its river gauging station at Lovington.
+The catchment is predominantly rural and of modest relief, with
+spring-fed headwaters rising in the Mendip Hills and Salisbury
+Plain. Clays, sands and oolites give rise to a responsive flow
+regime. The catchment is scanned continuously by two Met. Office
+network C-band radars, one at Wardon Hill and the other at Cobbacombe
+Cross (Doppler), located at ranges of circa 40 and 70 km from
+the centre of the catchment respectively. The radars record data
+from the lowest elevation scan at 5 minute intervals for a 2 km
+grid out to a range of 75 km. Data for a 5 km grid out to a range
+of 210 km are available for four scan elevations, including the
+lowest one. A third radar, at Chilbolton in Hampshire at a range
+of about 75 km, is deployed during special intense observing periods
+and provides a Doppler dual polarisation S-band capability.</P>
+
+<H3><A NAME="Infrastructure"></A>1.2 Experimental infrastructure</H3>
+
+<P>The common experimental infrastructure comprises the national
+network radars at Wardon Hill and Cobbacombe Cross, a purpose-built
+dense raingauge network, an automatic weather station (AWS), an
+automatic soil water station (ASWS) and a river gauging station.
+This part of the infrastructure was provided by the Meteorological
+Office, the Environment Agency, the Natural Environment Research
+Council, and the Ministry of Agriculture, Fisheries and Food (MAFF).
+These instruments have provided a continuous record throughout
+HYREX. A disdrometer, operated
+by CEH Wallingford, was deployed during selected Intense
+Observing Periods.</P>
+
+<H3><A NAME="Research"></A>1.3 Research using the data within
+HYREX</H3>
+
+<P>CEH Wallingford was responsible for the quality
+control of the dense raingauge network as part of its project
+concerned with the accuracy of radar/raingauge networks. It also
+made use of disdrometer data to better understand how the relation
+between radar reflectivity and rain-rate was affected by the raindrop
+size distribution.</P>
+
+<P>The University of London consortium were also major users of
+the dense raingauge network in the context of carrying out basic
+statistical analyses of both raingauge and radar data. Their primary
+interest lay in the use of the network weather radar data for
+modelling the space-time structure of rainfall field for hydrological
+design applications.</P>
+
+<P>The University of Newcastle employed both the dense raingauge
+data and network radar data for developing and evaluating a stochastic
+space-time rainfall forecasting system; they also used catchment
+flow data to develop a rainfall-runoff model for the catchment
+in order to convert forecasts of rain to flow.</P>
+
+<P>CEH Wallingford, in collaboration with JCMM, used
+multi-scan network radar data (along with Unified Model output
+data) in their development of a storm model for short-term rainfall
+forecasting.</P>
+
+<P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="Data"></A>Go
+to: [ <A HREF="#Contents">Contents</A> | <A HREF="#Introduction">Introduction</A>
+| Data | <A HREF="#Transfer">Transfer</A> | <A HREF="#End">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H2>2. Instruments and data</H2>
+
+<P>The HYREX instruments and the data they record are described
+below, along with comments on additional derived data and data
+quality information. The format and content of data files are
+summarised briefly, and full details of data records and fields
+may be found in the file <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/FORMATS">/badc/hyrex/data/Common/FORMATS</A>.
+The data files themselves are located in the various instrument
+subdirectories of <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/">/badc/hyrex/data/Common</A>.</P>
+
+<H3><A NAME="Weathrad"></A>2.1 Weather radar</H3>
+
+<P>The Wardon Hill and Cobbacombe Cross radars operate at the
+C-band wavelengths that are standard for the UK weather radar
+network. Each radar completes one azimuthal scan every minute,
+and cycles through 4 different scan elevations (0.5, 1.0, 1.5
+and 2.5 degrees) every 5 minutes. Software at the radar site converts
+measurements of reflectivity on a radial grid into measurements
+of rainfall intensity on two Cartesian grids: an 84x84 grid of
+5km square pixels covering a radius of 210km and a 76x76 grid
+of 2km square pixels covering a radius of 76km. Rainfall intensity
+is digitised into 208 levels ranging semi-logarithmically from
+1/32 to 126 mm/h. Only the Cartesian-grid rainfall intensity data
+are recorded, with data available for all scan elevations on the
+5km grid, but only for the lowest scan (&quot;beam 0&quot;) on
+the 2km grid. The Brue catchment lies within the 2km grid for
+both radars.</P>
+
+<P>There is one instrument directory for each radar (<A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/war/">war</A>
+and <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/cob/">cob</A>). The image data are stored in ASCII files, one
+file per radar per day, in the order in which they were observed.
+The data files have names constructed from the date and radar
+name, such as 19950425_war_ih or 19941105_cob_ih (the ih suffix
+indicates that the files are in the format used by CEH Wallingford, formerly the Institute
+of Hydrology), and are located in monthly directories within each
+instrument directory (e.g. <EM>war/9504</EM> or <EM>cob/9411</EM>).
+For each data file there is a corresponding log file (suffix <EM>lg</EM>)
+that lists the images and other data contained in the data file.
+A FORTRAN subroutine, <EM>readri.f</EM>, is provided that will
+read a specified image from a given data file into a FORTRAN array.</P>
+
+<P>Each instrument directory has a QUALITY subdirectory, containing
+text files of information related to data quality. In particular,
+the files named <EM>missing.txt</EM> summarise periods of missing
+data.</P>
+
+<P>The radar data have been used to calculate catchment-average
+rainfall over 15-minute and daily accumulation periods. These
+data are held in the directory <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/catch_avgs/radar/">catch_avgs/radar</A>.
+
+<!-- Navigation bar --><HR ALIGN=LEFT><A NAME="DRN"></A>Go to:
+[ <A HREF="#Contents">Contents</A> | <A HREF="#Introduction">Introduction</A>
+| Data | <A HREF="#Transfer">Transfer</A> | <A HREF="#End">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H3>2.2 Dense raingauge network</H3>
+
+<P>The dense raingauge network comprises 49 Cassella 0.2mm tipping
+bucket raingauges, each recording time of tip to a time resolution
+of 10 seconds. The network provides at least one raingauge in
+each of the 2km radar grid squares that lie entirely within the
+catchment. In addition, there are two parallel lines of greater
+gauge density extending SW to NE across the catchment, aligned
+with the prevailing wind direction and running from lowland to
+upland. Within each line there is one 2km grid square containing
+a super-dense sub-network of 8 raingauges arranged in a square-within-a-diamond
+configuration, with one sub-network in a lowland area and the
+other in an upland area.</P>
+
+<P>The raingauges are identified by four-letter abbreviations;
+details and locations of the raingauge sites may be found in the
+instrument directory <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/drn/">drn</A>.
+The data are held in monthly files with names such as <EM>9407_drn</EM>
+or <EM>9511_drn</EM>. Each file lists all tips from all gauges,
+listed in alphabetical order of raingauge abbreviation, and chronologically
+within each gauge.</P>
+
+<P>The <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/drn/QUALITY/">drn/QUALITY</A>
+directory contains two text files, one listing all the known or
+inferred faults with each raingauge, and the other summarising
+the periods for which each raingauge is considered to provide
+valid data. There is also a Microsoft Excel file, <EM>download.xls</EM>,
+containing summary totals and notes made on each occasion that
+data were downloaded from the raingauge loggers.</P>
+
+<P>The raingauge data and quality information have been used to
+calculate catchment-average rainfall over 15-minute and daily
+accumulation periods. These data are held in the directory
+<A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/catch_avgs/raingauge/">catch_avgs/raingauge</A>.</P>
+
+<H3><A NAME="AWS"></A>2.3 Automatic weather and soil water stations</H3>
+
+<P>An automatic weather station (AWS) and automatic soil water
+station (ASWS) are located close to the Bridge Farm raingauge
+in the lowland sub-network. The AWS records solar and net radiation,
+wet and dry bulb temperature, wind speed and direction, atmospheric
+pressure and rainfall (0.2mm tip) every 15 minutes, and also records
+daily totals or averages. The ASWS makes hourly capacitance probe,
+pressure transducer and temperature measurements at three depths,
+along with rainfall (0.5mm tip).</P>
+
+<P>The data are held in yearly files within each instrument directory
+<A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/aws/">aws</A> or <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/asws/">asws</A>).
+AWS and ASWS data file formats are very similar, differing only
+in the number and interpretation of the data fields on each line.
+The files of ASWS hourly data have names of the form <EM>95_brfm</EM>;
+the AWS 15-minute data files are of the form <EM>95_bfrm_min</EM>,
+with the corresponding daily data in <EM>95_bfrm_day</EM> (bfrm
+refers to the instrument location at Bridge Farm).</P>
+
+<P>The ASWS probes have not been calibrated at site, except for
+the one occasion listed in the <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/asws/CALIBRATION">asws/CALIBRATION</A>
+file.</P>
+
+<P>Very limited data quality information may be found in the <A
+HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/aws/QUALITY">QUALITY</A> text file
+in the AWS instrument directory, and in the <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/asws/QUALITY/">QUALITY</A>
+directory in the ASWS instrument directory.</P>
+
+<P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="Disdrometer"></A>Go
+to: [ <A HREF="#Contents">Contents</A> | <A HREF="#Introduction">Introduction</A>
+| Data | <A HREF="#Transfer">Transfer</A> | <A HREF="#End">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H3>2.4 Disdrometer</H3>
+
+<P>The disdrometer is located close to the AWS, but has been deployed
+only during certain HYREX <A HREF="IOP.html">Intense Observing
+Periods</A> (IOPs). It records the number and beam occupation
+time of raindrops in 16 drop-size 'bins', with a sampling interval
+of between 10 and 60 seconds.</P>
+
+<P>Each data file in the disdrometer instrument directory <A 
+HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/dis/">dis</A> contains one hour
+of disdrometer data, where the hour is identified by the file
+name (e.g. <EM>d95090805</EM>). The only quality note is that
+sample time stamps (and file name times) during the summer months
+are BST and not GMT.</P>
+
+<H3><A NAME="RGS"></A>2.5 River gauging station</H3>
+
+<P>The River Brue is gauged at the catchment outlet at Lovington
+(UK Surface Water Archive no. 52010). River level is recorded
+every 15 minutes and is converted to flow using a well-established
+rating equation. Both levels and flows are held in the dataset,
+and the record extends for nearly 8 years before the start of
+HYREX.</P>
+
+<P>The text file <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/rgs/RATING_lov">RATING_lov</A>
+in the river gauging station instrument directory <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/rgs/">rgs</A>)
+lists the rating equation coefficients. Each data file contains
+one year of data, and has a name of the form <EM>95_lov</EM>.
+The <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/rgs/QUALITY">QUALITY</A>
+text file contains a few notes on missing data.</P>
+
+<H3><A NAME="Landuse"></A>2.6 Land use data</H3>
+
+<P>LandSat data have been used to derive 5 classes of land use
+(urban, grass, arable, forest, water) on a 50m pixel grid covering
+the catchment. It is possible that other digitised geographic
+data for the HYREX experimental catchment may be made available
+at a later date.</P>
+
+<P>The data are held in the file <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/landuse/brueland.dat">landuse/brueland.dat</A>,
+whose format is described in the text file <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/landuse/brueland.txt">landuse/brueland.txt</A>.</P>
+
+<P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="Transfer"></A>Go
+to: [ <A HREF="#Contents">Contents</A> | <A HREF="#Introduction">Introduction</A>
+| <A HREF="#Data">Data</A> | Transfer | <A HREF="#End">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H2>3. Transferring HYREX data from the BADC</H2>
+
+<P>The common infrastructure dataset filenames, formats and directory
+structures have been maintained in adding the data to the BADC
+data directories. All of the datasets described here are supplied
+in ASCII files. Most files are compressed with the standard UNIX
+compress utility (adaptive Lempel-Ziv encoding) although some
+are plain ASCII text. UNIX compressed (.Z suffix) files can be
+uncompressed using the standard public domain program gzip.</P>
+
+<H3><A NAME="Start"></A>3.1 Before you start</H3>
+
+<P>You may need gzip installed on your local system to uncompress
+some of the data files - the source code is available from software
+archives. You will also need to know <A HREF="/help/howtogetdata_gzip_and_tar.html">how
+to use gzip</A> once you have the files on your system.</P>
+
+<H3><A NAME="Files"></A>3.2 Transferring and unpacking files</H3>
+
+<P>With the exception of the UKMO-suplied radar datasets, all
+files may be transferred either directly from these WWW pages,
+or via FTP <a href="/help/ftp_guide.html">FTP</a>. FTP is probably
+more efficient for downloading a large number of files. The UKMO
+files may only be FTP'd from a named BADC account (see under Restricted
+Data on the <A HREF="index.html">HYREX welcome page</A>).</P>
+
+
+<P>All the data are in ASCII files compressed using the standard
+UNIX compress utility. The documentation and software files are
+uncompressed ASCII files, with the exception of <EM>download.xls.Z</EM>,
+which is a compressed Microsoft Excel 6.0 file containing field
+reports on raingauge data. Use UNIX uncompress, GNU gzip, or an
+equivalent utility to unpack them.</P>
+
+<P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="Finding"></A>Go
+to: [ <A HREF="#Contents">Contents</A> | <A HREF="#Introduction">Introduction</A>
+| <A HREF="#Data">Data</A> | Transfer | <A HREF="#End">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H3>3.3 Finding data, documentation and software files</H3>
+
+<P>HYREX common infrastructure data, documentation and software
+files are located beneath the directory <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/">/badc/hyrex</A>.
+Here you will find a README file and the following subdirectories</P>
+
+<UL>
+  <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/">data/Common</A>
+  <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/doc/common/">doc/Common</A>
+  <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/software/common/">software/common</A>
+</UL>
+
+<P>The data directory contains a subdirectory for each of the
+instruments, along with several text files describing the organisation
+and format of the data files. Each instrument directory contains
+the appropriate data files (subdivided into monthly directories
+for the two radars) and additional text files relating to data
+quality.</P>
+
+<P>The doc directory structure mirrors the data directory tree,
+but it contains only documentation (text) files. Most of these
+files are simply links to the corresponding files in the data
+directory tree.</P>
+
+<P>The software directory contains software for reading the data
+files. The only such software is that used to read the radar data,
+located in the <EM>software/readrad</EM> directory.</P>
+
+<H3><A NAME="Using"></A>3.4 Using the data</H3>
+
+<P>Read the <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/NEWS">data/Common/NEWS</A> file for latest data news.
+<P>Read the <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/data/Common/FORMATS">data/Common/FORMATS</A>
+file for a detailed description of the data records and fields
+in each type of data file.</P>
+
+<P>The raingauge, catchment-average rainfall, AWS, ASWS, and river
+gauging station data are in simple tabular formats and should
+be straightforward to load into most spreadsheets or databases.</P>
+
+<P>Simple programs may need to be written to handle the radar,
+disdrometer and landuse data. A FORTRAN subroutine for reading
+the radar data can be found in <EM>software/common/readrad</EM>.</P>
+
+<P><A NAME="End"></A></P>
+
+</BODY>
+</HTML>

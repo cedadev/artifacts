@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050419T230000Z
+DTEND:20050421T230000Z
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000F018E6FB31FEC4010000000000000000100
+ 00000727B7E75981F4A4DB3C65000F40271DE
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0A------------=0D=0AFrom:	NERC Ma=
+rine Science distribution list [MARINE-L@cclrclsv.RL.AC.UK] on behalf of Ka=
+therine Branch [kabr@NERC.AC.UK]=0D=0ASent:	17 December 2004 10:50=0D=0ATo:=
+	MARINE-L@cclrclsv.RL.AC.UK=0D=0ASubject:	Marine listserver: MarProd/Challe=
+nger meeting (20-21 April 2005)=0D=0A=0D=0A"Biophysical Interactions in Hig=
+h Latitude Oceans"=0D=0A=0D=0AJoint meeting between NERC Marine Productivit=
+y programme and the=0D=0AChallenger Society for Marine Science, to be held =
+at British Antarctic=0D=0ASurvey, Cambridge 20-21 April 2005.=0D=0A=0D=0ATh=
+e focus of this meeting is marine ecosystem dynamics in the northern=0D=0AN=
+orth Atlantic, Southern Ocean and other colder waters.  Abstracts for=0D=0A=
+oral and poster papers are invited, to be submitted by 1 February 2005=0D=
+=0Ato p.williamson@uea.ac.uk. For information see=0D=0Awww.antarctica.ac.uk=
+/Meetings/2005/SIG=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Marine listserver: MarProd/Challenger mee=
+ting (20-21 April 2005)
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

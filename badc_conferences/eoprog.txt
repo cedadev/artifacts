@@ -1,0 +1,112 @@
+From: EOPROG [mailto:EOPROG@wpo.nerc.ac.uk]
+Sent: 22 August 2001 10:49
+Subject: UK Space Conference - 16th October at the Royal Society
+
+
+UK Space Conference - 16th October at the Royal Society
+
+Science and applications of the space environment:
+new results and interdisciplinary connections
+
+Discussion meeting at Royal Society, 16-18 October 2001
+First announcement: Abstract deadline 15 September 2001
+
+The 'space environment' is a multidisciplinary topic in science,
+applications and engineering, covering exciting areas of high current
+interest including observing the Earth and planets, the sun-Earth
+connection, Earth's environment in space, hazard warning and forecasting
+and the underlying space and spacecraft technologies. There are natural
+connections between these areas in terms of the scientific techniques
+and the space technology required. Some of the connections are only now
+being discovered and exploited, and this discussion meeting will provide
+a timely focus for pursuing these further and identifying others.
+
+The main goals of the meeting are to
+· Identify links between different areas of science and technology
+· Identify gaps in science, interpretation and applications
+· Identify underlying technology
+
+The meeting format will consist of 40 minutes talks by invited speakers
+(including discussion) for key topics, with poster presentation sessions
+(including short plenary presentations) and panel discussions to
+encourage wide participation.
+
+The main topics of the meeting will be:
+a. Observation of the Earth and other planets: climate change, ocean and
+sea bed studies, land use monitoring, Earth's atmosphere, lessons from
+other planets
+b. Sun-Earth connection and the space environment: understanding the
+Sun, impacts on the near-Earth environment, the magnetosphere, Sun and
+climate, space weather.
+c. Hazard warning and forecasting for Earth and space: storm and severe
+weather forecasting, space dust and debris, hydrology, air pollution
+d. Space and spacecraft technologies: communications, navigation,
+cryogenics in space, spacecraft technologies, technology benefits for
+science and applications, software, formation flying, miniaturization,
+enabling role of satellites
+
+Poster presentations are now invited for this meeting. academia,
+industry and research institutions. Please send a title, authors and
+abstract to rsspacemeeting@mssl.ucl.ac.uk by 15th September 2001. It is
+intended to publish a book based on the proceedings.
+
+A press conference will be held in conjunction with the start of the
+meeting.
+
+Organizers:
+Prof J.L.Culhane, Prof Julian Hunt
+
+Programme
+
+16 October 2001
+
+Topic A: Observations of Earth and other planets
+1400 Earth's radiation budget * Prof. John Harries, Imperial College
+1440 New perspectives of the ocean of planet Earth * Prof Ian Robinson,
+ Southampton Oceanography Centre
+1520 Poster presentations A
+1600 Tea, poster display
+1720 Stratosphere: Ozone, Global Cooling and Other Worlds * Prof Fred
+Taylor,
+ University of Oxford
+1800 End
+
+17 October 2001
+
+Topic B: Sun-Earth connections and the space environment
+0930 Short term solar effects * Prof. Richard Harrison, RAL
+1010 Long term solar effects * Dr Joanna Haigh, Imperial College
+1050 Coffee
+1120 Near Earth plasma environment * Prof Stan Cowley, University of
+Leicester
+1200 Panel discussion
+1240 Lunch
+Topic C: Hazard warning and forecasting for Earth and space
+1400 Space Weather * Dr Andrew Coates, Mullard Space Science Laboratory,
+UCL
+1440 Weather forecasting * Dr A. Hollingsworth, European Centre for
+Medium
+         Range Forecasts, Reading
+1520 Poster presentations B and C
+1600 Tea, poster display
+1720 Volcanoes * Professor Geoff Wadge, University of Reading
+1800 End
+
+18 October 2001
+
+0930 Space debris, dust and near-Earth objects * Dr Richard Crowther,
+QinetiQ
+Topic D: Space and spacecraft technologies
+1010 Autonomy, control, processing and dissemination: Present * Pat
+Norris, Logica
+ PLC
+1050 Coffee
+1120 Autonomy, control, processing and dissemination: Future * (TBA)
+1200 Panel discussion
+1240 Lunch
+1400 Spacecraft technology: What has been achieved * Prof. Martin
+Sweeting, Surrey
+ Satellite Technology
+1440 Rapporteur: Prof. Julian Hunt, Department of Space & Climate
+Physics, UCL
+1520 End

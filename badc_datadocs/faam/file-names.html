@@ -1,0 +1,121 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>FAAM Data File Names</title>
+ <meta name="keywords" content="FAAM, BAE-146, NERC, Met Office, NCAS">
+</head>
+
+<body bgcolor="#ffffff">
+
+<h1>
+FAAM Flight Data File Names
+</h1>
+<hr>
+
+<p>
+FAAM data file names follow the
+<a href="/help/file_naming.html">BADC File Name Convention</a>
+with a number of additional specific constraints listed below.
+</p>
+<p>
+The file name structure since June 2007 is as follows:
+<br><br><center><i>
+DataID _ Platform _ Date _ [ Version# ] _ Revision# _ Flight# [ _ Extra ] . extension
+</i></center></br>
+or, more precisely:
+<br><br><center><i>
+<b>dataID _ faam _ YYYYMMDD [ _ v# ] _ r# _ fxxx [ _ extra ].ext</b>
+</i></center></br>
+where elements in square brackets are optional.
+Note that the file name is made of 5 mandatory and 2 optional fields
+separated by underscore signs, plus a file extension separated from
+the file name body by a dot.
+Letters appearing in the various fields must be lower case characters.
+The different fields represent the following variables, with the
+following syntax.
+<ul>
+<li>
+
+
+<u>DataID</u> 
+identifies the data stored in the file. It can be the
+name of an instrument, of a group of instruments, of the physical
+quantity measured by an instrument.
+This field has the value <i><b>core</b></i> for files containing
+processed data issued from the set of core instruments flown on a
+particular flight.
+In some instances, non-core data can also be merged into single files,
+in which case <i>dataID</i> will have a value referring to all merged
+non-core data.
+Note that the <i>dataID</i> parameter is called <i>instrument</i> in
+the <a href="/help/file_naming.html">BADC File Name Convention</a>.
+Only values of <i>dataID</i> belonging to the
+<a href="/filespec_doc?id=INSTRUMENTAL&hfile=1#Instrument">BADC
+list of standard instrument names</a>
+will be accepted by the file uploader.
+If you are a data provider and can't find an adequate value in the list,
+please contact the
+<a href="mailto:badc@rl.ac.uk">BADC</a>.
+<li>
+<u>Platform</u>.
+The second field (the platform name) must be <i><b>faam</b></i>
+for data collected aboard the FAAM aircraft.
+<li>
+<u>Date</u>.
+The third field is the date, in the format
+<i>YYYYMMDD</i> (Year <i>YYYY</i>, Month <i>MM</i>, Day <i>DD</i>).
+If required, this can be completed by an indication of time, using 2-digit 
+numbers <i>hh</i> (hour), <i>mm</i> (minutes), <i>ss</i>
+(seconds). The additional [hhmmss] is currently used for dropsonde data.
+<li>
+*<u>Version</u>.
+<i><b>r</b>#</i> (lower case <i><b>v</b></i> followed by an 3-digit integer
+greater than or equal to 0) is version number of the processing software
+<i><b>v001</b></i> stands for the initial version. This was first introduced in June
+2007 when the processing software was transferred to a LINUX system. Not all file
+types include this number. 
+
+<li>
+*<u>Revision</u>.
+<i><b>r</b>#</i> (lower case <i><b>r</b></i> followed by an integer
+greater than or equal to 0) is the revision of the flight constants 
+(eg improved calibrations constants).
+<i><b>r0</b></i> stands for the initial version, <i><b>r1</b></i>
+for the first revision, etc.
+<li>
+<u>Flight</u>.
+<i>fxxx</i> is the flight number.
+It is made of a lower case letter followed by a 3-digit integer.
+For example, all FAAM flights from March to October 2004 are numbered
+<i><b>b001</b></i> to <i><b>b056</b></i>.
+<li>
+<u>Extra</u>.
+The <i>extra</i> field is optional and is provided to account for
+any useful piece of information not covered by the previous 5 fields.
+Raw data may be distinguished from processed data in this way, although
+the file name extension (see below) will usually provide a sufficient
+indication on whether the data is raw or processed.
+<i>extra</i> may include underscore signs (in other words, <i>extra</i>
+could be more than one subfield).
+<li>
+<u>Extension</u>.
+<i>ext</i> is an indication of the file format.
+A list of accepted
+<a href="/filespec_doc?id=INSTRUMENTAL&hfile=1#Extension">file
+name extensions</a> is provided.
+Please contact the <a mailto:"badc@rl.ac.uk">BADC</a> if the list must
+be updated to account for a new format (in particular, for raw data
+produced in an instrument-specific format).
+</ul>
+</p>
+
+<p>
+*Users are advised that more than one revision of the data may be present in
+any flight directory due to reprocessing using improved software or calibration
+coefficients.   In the absence of specialist advice, users are always  
+advised to use the latest revision of the highest version of data in the archive.
+
+<p>
+</body>
+</html>

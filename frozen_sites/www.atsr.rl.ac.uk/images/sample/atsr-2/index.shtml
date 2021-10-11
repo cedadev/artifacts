@@ -1,0 +1,914 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>Sample Images from the ATSR-2 Mission
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../../documentation/index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../documentation/docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/c19_c18_full.gif"><IMG SRC="thumb/c19_c18_thumb.gif" ALT="c19_c18_thumb.gif"></A></TD>
+    <TD valign="top"><p>This is a 3.7 micron images showing the latest calving of the Ross Ice Shelf.  The newly calved iceberg, C-19,
+can be clearly seen.</p>
+<p> Also note, its predecessor, C-18, which calved sometime earlier. </p> 
+
+
+
+
+
+
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/nadirblue.gif"><IMG SRC="thumb/nadirblue.gif" ALT="nadirblue.gif"></A></TD>
+    <TD valign="top"><p>             This striking image of eruption on Mount Etna was obtained on 24th 
+		July 2001.  The plume is clearly visible. </p>
+		
+		The Mount Etna volcano comes to life every few months, but the current
+		eruption started on 17th July. </p>
+		
+                
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/RossA_020401.gif"><IMG SRC="thumb/RossA_020401.gif" ALT="RossA_020401.gif"></A></TD>
+    <TD valign="top">
+<p> This is a 12 micron thermal image, showing the continued break-up of the
+B-15 iceberg with significant developments over the summer months.  Note how far
+apart B-15A and B-15B have become and how B-15A has swung out into the Ross Sea
+as it runs into Ross Island.  It is also interesting to see that B-15B has moved
+further out into the Ross Sea, making its way towards ice free waters of the
+Southern Ocean.  The question is - will it escape before the winter freeze sets 
+in? </p>
+<p>This image was taken on the 2nd April 2001. </p>
+
+<P><h5><IMG src="../../../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+   <A href="../ross/index.shtml">Keep track of the Ross Iceberg B-15</h5></A><BR>
+ </P>
+
+
+
+ 
+
+
+
+
+
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/RossD_050101.GIF"><IMG SRC="thumb/RossD_050101.GIF" ALT="RossD_050101.GIF"></A></TD>
+    <TD valign="top"><p> B-17 has recently broken in half and The National Ice Center reported this 
+as occurring on the 30th December 2000.  The image below is a visible day image 
+combining 1.6, 0.86 and 0.67 microns.  The different icebergs are annotated with
+B-17A and B-17B clearly labeled.  It is also interesting to note the growing
+distance between B-15F and B-15B in a relatively short space of time, with B-15B 
+drifting further away from the Ice Shelf.</p>
+<p>This image was taken on the 5th January 2001. </p>
+
+
+ 
+
+
+
+
+
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/UKD_Snow.gif"><IMG SRC="thumb/UKD_Snow.gif" ALT="UKD_Snow.gif"></A></TD>
+    <TD valign="top"><p>This is a visible day time image combining 1.6, 0.87 and 0.67 microns, 
+showing the recent extensive snow falls that covered much of the UK.  The image 
+has been histogram equalized to enhance the areas of snow fall which appear blue,
+whilst the green patches, such as south east Ireland indicate snow free areas.  
+The white and pink pathces are areas of cloud.</p>
+<p>This image was taken on the 29th December 2000</p>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/ross-21dec00.gif"><IMG SRC="thumb/ross-21dec00.gif" ALT="ross-21dec00.gif"></A></TD>
+    <TD valign="top"><p>The above image clearly shows cracks appearing in the eastern end of the 
+Ross Ice Shelf in the Antarctic, which are better known as 'rifts'.</p>
+<p>This image was taken on the 21st December 2000</p>
+
+
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/RossD071200.gif"><IMG SRC="thumb/RossD071200.gif" ALT="RossD071200.gif"></A></TD>
+    <TD valign="top">
+<p> This is a visible day time image combining 1.6, 0.87 and 0.67 microns, 
+ showing the continued break-up of the B-15 iceberg. </p>
+<p> It appears that there is perhaps a new iceberg (B-15F) that has
+broken from the B-15B iceberg.</p>
+<p>This image was taken on the 7th December 2000. </p>
+
+
+ 
+
+
+
+
+
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/UK_storm301000.gif"><IMG SRC="thumb/UK_storm301000.gif" ALT="UK_storm301000.gif"></A></TD>
+    <TD valign="top"><p>This is a day-time 12 micron thermal image, showing the storm over the
+North Sea, which passed over England and Wales causing widespread 
+disruption across the country, with more rain forecast during the next few 
+days.</>
+<p> This image was taken on 30th October 2000 </p>  
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/Ross15_10_00.gif"><IMG SRC="thumb/Ross15_10_00.gif" ALT="Ross15_10_00.gif"></A></TD>
+    <TD valign="top">
+<p> A visible day time image combining 1.6, 0.87 and 0.67 microns, showing the continued break-up of the B15 iceberg. </p>
+<p> This image was taken on the 15th October 2000. </p>
+
+
+
+ 
+
+
+
+
+
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/Saomai130900.gif"><IMG SRC="thumb/Saomai130900.gif" ALT="Saomai130900.gif"></A></TD>
+    <TD valign="top"><p>This is a night-time 11 micron false colour image, showing typhoon Saomai over
+the East China Sea, heading North towards the Korean Peninsular.</p>
+<p> This image was taken on 13th September 2000. </p> 
+
+
+
+
+
+
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/USfires230800_2.GIF"><IMG SRC="thumb/USfires230800_2.GIF" ALT="USfires230800_2.GIF"></A></TD>
+    <TD valign="top"><p>This is a colour composite image of the forest fires presently raging
+in numerous US states.</p>  
+<p>The image was obtained from ATSR-2's nadir view, during a day-time pass of the
+northwest States of Idaho and Montana. </p>
+<p>In this representation there is a clear distinction between the cloud (white)
+and the smoke from the fires (blue), whilst forested areas appear green. </p>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/samos09jul00.gif"><IMG SRC="thumb/samos09jul00.gif" ALT="samos09jul00.gif"></A></TD>
+    <TD valign="top"><p>This is a night-time 3.7 micron false colour image from 9th July 2000,
+    showing the coast of Turkey and some of the Greek Islands. </p>
+<p> A cloud of warm smoke is clearly visible over the island of Samos, scene 
+    of severe fires over the past few days. </p>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/ganges_delta.gif"><IMG SRC="thumb/ganges_delta.gif" ALT="ganges_delta.gif"></A></TD>
+    <TD valign="top"><p>This is an ATSR-2 image of the Ganges Delta, created by overlaying a visible
+ (land) image over a thermal (sea) image using the land flag as a mask.</p>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/mecca.gif"><IMG SRC="thumb/mecca.gif" ALT="mecca.gif"></A></TD>
+    <TD valign="top"><p>This image is a false colour composite, produced by combining uncalibrated detector counts from three of ATSR-2's detectors: </p>
+
+<BLOCKQUOTE>
+1.6um near-infrared channel (as red component)
+0.87um visible channel (as green component)
+0.67um visible channel (as blue component)
+</BLOCKQUOTE>
+
+<p>
+The strip of water in the middle of the image is the Red sea.  
+On the left of it are the north eastern countries of Africa.
+These include, Egypt, Sudan and Ethiopia.  On the right of the 
+Red sea is Saudia Arabia. </p>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/nzvolcano.gif"><IMG SRC="thumb/nzvolcano.gif" ALT="nzvolcano.gif"></A></TD>
+    <TD valign="top"><p>This image is a false colour composite, produced by uncalibrated detector counts from three of ATSR-2's detectors:</p>
+
+<BLOCKQUOTE>
+	1.6um near-infrared channel (as red component)
+	0.87um visible channel (as green component)
+	0.67um visible channel (as blue component)
+</BLOCKQUOTE>
+
+<p>The image was obtained from ATSR-2's nadir view, during a 
+day-time pass of New Zealand.  Volcanoe Ruapehu's plume can just
+still be identified. </p>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/alps.gif"><IMG SRC="thumb/alps.gif" ALT="alps.gif"></A></TD>
+    <TD valign="top"><p>
+This image is a false-colour composite, produced by combining 
+uncalibrated detector counts from three of ATSR-2's detectors:
+</p>
+<blockquote>
+	1.6um visible channel (as red component)<br>
+	0.87um visible channel (as green component)<br>
+	0.67um visible channel (as blue component)<br>
+</blockquote>
+
+<p>
+The image was obtained from ATSR-2's nadir view, during a
+day-time pass of the Alps and the Mediterranean Sea. To
+the north of the Alps, Lake Geneva and Lake Constance are
+clearly visible.
+</p>
+
+<p>
+In this representation, there is a clear distinction between
+those areas of the Alps which are cloud-free (blue: the 
+northern and western Alps) and those (white: the southern and
+eastern Alps) in which solar heating is creating convective 
+cloud. 
+</p>   
+    
+<p>         
+PRODUCT NAME:   <br>
+<blockquote>
+ALPS-9505230953-14841-950608-T002.GBT-TV<br>
+ALPS-9505230953-15341-950608-T002.GBT-TV<br>
+</blockquote>
+</p>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/borneo_bright.gif"><IMG SRC="thumb/borneo_bright.gif" ALT="borneo_bright.gif"></A></TD>
+    <TD valign="top"><p>
+This image was collected on the 24th September 1997 by the UK's Along Track Scanning 
+Radiometer-2 (ATSR-2) on board the European Space Agency's ERS-2 Satellite.
+</p>
+
+<p>
+The image is a false colour composite of visible channel data from the ATSR-2 processed by the 
+ATSR Project Team at the Rutherford Appleton Laboratory.
+</p>
+
+<p>
+The image is 512 by 1010 km at a spatial resolution of approx 1km.
+and covers Borneo and clearly shows the plume of smoke eminating 
+from fires in this area. In the bottom left of the image the SE tip of the
+island is visible ( the town Banjarmasin is in the visible green area of land). 
+</p>
+
+<p>
+borneo_bright.gif shows the smoke in yellow and low cloud associated with it in 
+creamy yellow, and the higher cloud as white and bluish-mauve. 
+</p>
+
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/larsen_iceberg.gif"><IMG SRC="thumb/larsen_iceberg.gif" ALT="larsen_iceberg.gif"></A></TD>
+    <TD valign="top"><p>IMAGE DATE:     30th April 1995</p>
+
+<br>This image is a false-colour composite, produced by combining 
+                uncalibrated detector counts from three of ATSR-2's detectors:</b>
+
+<blockquote>
+                   0.87um visible channel (as red component)<br>
+                   0.67um visible channel (as green component)<br>
+                   0.55um visible channel (as blue component)<br>
+</blockquote>
+
+<p>                The image was obtained from ATSR-2's nadir view, during a 
+                day-time pass of the area around the Larsen Ice Shelf, part
+                of the Antarctic Peninsula. The dividing line between the
+                ice shelf and the sea ice is clearly visible running from
+                the bottom right up through the centre of the image. The
+                oval-shaped piece of ice at the northern extremity of the 
+                ice shelf is a large iceberg formed from the disintegration
+                of part of the shelf. This iceberg, about the size of 
+                Oxfordshire, was first seen in February 1995 and has since 
+                moved approximately 50km further north.
+
+</p>
+<p>
+                This image has been enhanced to compensate for the low
+                levels of light in the Antarctic at this time of year.
+                The low sun angle can be seen from the long shadows cast by 
+                the areas of land onto the ice sheet. The area at the bottom 
+                left of the image is already in darkness.  
+</p>
+
+<p>
+PRODUCT NAME:   <br>
+<blockquote>LARSEN-9504301157-27537-950516-T002.GBT-V<br>
+                LARSEN-9504301157-28037-950518-T002.GBT-V</blockquote>
+</p>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/california.gif"><IMG SRC="thumb/california.gif" ALT="california.gif"></A></TD>
+    <TD valign="top">
+<p>This is a false colour image, produced using brightness
+                temperatures from one of ATSR-2's thermal infra-red 
+                detectors (11.0 micron).</p>
+
+<p>                The image was obtained from ATSR-2's nadir view, during a 
+                day-time pass of the Gulf of California. </p>
+
+<p>                The hottest areas (shown in grey) are mostly land. The
+                cooler sea-surface temperatures are shown using purple
+                (coolest) to red (warmest). The range of temperatures
+                shown in the image is approximately 280 Kelvin to 300
+                Kelvin.</p>
+
+<p>PRODUCT NAMES:  </p>
+<blockquote>
+CALIFORNIA-9505121721-17000-950523-T002.GBT-TV<br>
+CALIFORNIA-9505121721-17500-950523-T002.GBT-TV<br>
+</blockquote>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/canaries_ir.gif"><IMG SRC="thumb/canaries_ir.gif" ALT="canaries_ir.gif"></A></TD>
+    <TD valign="top">
+<p>This is a false colour image, produced using brightness
+                temperatures from one of ATSR-2's thermal infra-red 
+                detectors (11.0 micron).</p>
+
+<p>                The image was obtained from ATSR-2's nadir view, during a 
+                day-time pass of the Canary Islands. </p>
+
+<p>                The hottest areas (shown in black) are land, and the coolest
+                areas (shown in white and blue) are mostly cloud. The
+                sea-surface temperatures are shown using green (coolest) to 
+                red (warmest). The range of temperatures shown in the image 
+                is approximately 283 Kelvin to 315 Kelvin.</p>
+
+<p>                Of particular interest in this image are the clouds formed
+                by the turbulent flow of air across the Canaries. Note also 
+                the significant increase in sea-surface temperature on the
+                leeward sides of the islands.</p>
+
+<p>PRODUCT NAMES:</p>
+<blockquote>  CANARIES_D-9505271108-16627-950608-T002.GBT-TV<br>
+                CANARIES_D-9505271108-17127-950608-T002.GBT-TV<br></blockquote>
+
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/florida.gif"><IMG SRC="thumb/florida.gif" ALT="florida.gif"></A></TD>
+    <TD valign="top">
+<p>This image is constructed from two consecutive false colour 
+                composites, produced by combining uncalibrated detector counts 
+                from three of ATSR-2's detectors:</p>
+
+<blockquote>
+                   1.6um near-infrared channel (as red component)<br>
+                   0.87um near-infrared channel (as green component)<br>
+                   0.67um visible channel (as blue component)<br></blockquote>
+
+<p>
+                The image was obtained from ATSR-2's nadir view, during a 
+                day-time pass of Florida. 
+</p>
+<p>
+PRODUCT NAME: </p>
+<blockquote>  FLORIDA_D-9505061529-16400-950802-2T050.GBT-TV<br>
+                FLORIDA_D-9505061529-16900-950802-2T050.GBT-TV<br></blockquote>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/gulf.gif"><IMG SRC="thumb/gulf.gif" ALT="gulf.gif"></A></TD>
+    <TD valign="top">
+
+<p>This is a false colour image, produced using brightness
+                temperatures from one of ATSR-2's thermal infra-red 
+                detectors (11.0 micron).</p>
+
+<p>                The image was obtained from ATSR-2's nadir view, during a 
+                day-time pass of the United States Eastern Seaboard, from
+                New York (at the top of the image) to Pamlico Sound, North
+                Carolina (at the bottom of the image).</p>
+
+<p>                The colour scheme shows hottest areas as black (mostly land)
+                and red, and coolest areas as white (mostly cloud) and blue.
+                Significantly warmer than the surrounding water, the Gulf
+                Stream is clearly delineated.</p>
+
+<p>                The range of temperatures shown in the image is approximately
+                280 Kelvin to 300 Kelvin.</p>
+
+<p>PRODUCT NAMES:</p>
+<blockquote>  US-9505161515-15500-950517-T002.GBT-TV<br>
+                US-9505161515-16000-950517-T002.GBT-TV<br></blockquote>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/hawaii_vis.gif"><IMG SRC="thumb/hawaii_vis.gif" ALT="hawaii_vis.gif"></A></TD>
+    <TD valign="top">
+<p>
+                The hawaii_vis.gif image is a false colour composite, produced
+                by combining uncalibrated detector counts from ATSR-2's 1.6 
+                micron, 0.87 micron and 0.65 micron channel detectors.</p>
+
+<p>                The images were obtained from ATSR-2's nadir view, during a
+                day-time pass of the Hawaiian Islands.</p>
+
+<p>PRODUCT NAMES:<p><blockquote>  HAWAII-9505222028-17390-950524-T002.GBT-TV<br>
+                HAWAII-9505122028-17890-950524-T002.GBT-TV<br></blockquote>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/italy.gif"><IMG SRC="thumb/italy.gif" ALT="italy.gif"></A></TD>
+    <TD valign="top">
+
+<p>This image is a false colour composite, produced by combining
+                uncalibrated detector counts from three of ATSR-2's detectors:</p>
+
+<blockquote>                   1.6um near-infrared channel (as red component)<br>
+                   0.87um visible channel (as green component)<br>
+                   0.67um visible channel (as blue component)<br></blockquote
+
+<p>                The image was obtained from ATSR-2's nadir view, during a 
+                day-time pass of Italy and the Mediterranean Sea.</p>
+
+<p>PRODUCT NAMES:  </p>
+<blockquote>ITALY-9505080924-14699-950513-T002.GBT-NTV<br>
+                ITALY-9505080924-15199-950513-T002.GBT-NTV<br>
+                ITALY-9505080924-15699-950513-T002.GBT-NTV<br>
+</blockquote>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/mideast1.gif"><IMG SRC="thumb/mideast1.gif" ALT="mideast1.gif"></A></TD>
+    <TD valign="top">
+
+<p>This image is a false colour composite, produced by combining
+                uncalibrated detector counts from two of ATSR-2's visible
+                wave-length detectors and the near infrared detector.
+                The image was obtained from ATSR-2's nadir view, during a 
+                daytime pass of the Mediterranean Sea, and shows Cyprus, Israel
+                and the Sinai Peninsula.</p>
+
+<p>PRODUCT NAMES: </p>
+<blockquote> MIDEAST-9505110750-16037-950511-T002.GBT-TV<br>
+                MIDEAST-9505110750-16537-950511-T002.GBT-TV<br></blockquote>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/mideast2.gif"><IMG SRC="thumb/mideast2.gif" ALT="mideast2.gif"></A></TD>
+    <TD valign="top">
+
+<p>This image is a false colour composite, produced by combining
+                uncalibrated detector counts from two of ATSR-2's visible
+                wave-length detectors and the near infrared detector.
+                The image was obtained from ATSR-2's nadir view, during a 
+                daytime pass over Egypt.</p>
+
+<p>PRODUCT NAMES:</p>
+<blockquote>  MIDEAST-9505110750-17037-950511-T002.GBT-TV<br>
+                MIDEAST-9505110750-17537-950511-T002.GBT-TV<br></blockquote>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/nz_south.gif"><IMG SRC="thumb/nz_south.gif" ALT="nz_south.gif"></A></TD>
+    <TD valign="top"><p>This image is a false colour composite, produced by combining
+                uncalibrated detector counts from three of ATSR-2's detectors:</p>
+
+<blockquote>
+                   0.67um visible channel (as red component)<br>
+                   0.87um near-infrared channel (as green component)<br>
+                   0.55um visible channel (as blue component)<br>
+</blockquote>
+
+<p>                The image was obtained from ATSR-2's nadir view, during a 
+                day-time pass of New Zealand's South Island.</p>
+
+<p>PRODUCT NAMES:  </p>
+<blockquote>NZ-9505012129-24672-950802-2T050.GBT-TV<br>
+                NZ-9505012129-25172-950802-2T050.GBT-TV<br></blockquote>
+
+
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/rondonia.gif"><IMG SRC="thumb/rondonia.gif" ALT="rondonia.gif"></A></TD>
+    <TD valign="top"><p>This image is a false colour composite, produced by combining
+                uncalibrated detector counts from three of ATSR-2's detectors:</p>
+
+<blockquote>
+                   1.6um near-infrared channel (as red component)<br>
+                   0.67um visible channel (as green component)<br>
+                   0.55um visible channel (as blue component)<br>
+</blockquote>
+
+<p>
+                The image was obtained from ATSR-2's nadir view, during a 
+                day-time pass of Rondonia, in western Brazil. The pale, regular 
+                areas in what is otherwise tropical rain forest show the extent 
+                of human deforestation, which is considerable in this area.
+</p>
+
+<p>
+PRODUCT NAME: </p><blockquote>  RONDONIA-9505101323-22500-950511-T002.GBT-TV<br></blockquote>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+
+
+
+
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/spain.gif"><IMG SRC="thumb/spain.gif" ALT="spain.gif"></A></TD>
+    <TD valign="top"><p> This image is a false-colour composite, produced by combining 
+    uncalibrated detector counts from three of ATSR-2's detectors: </p>
+
+<blockquote>
+                   1.6um visible channel (as red component)<br>
+                   0.87um visible channel (as green component)<br>
+                   0.67um visible channel (as blue component)<br>
+</blockquote>
+
+<p>
+                The image was obtained from ATSR-2's nadir view, during a day-time 
+                pass of the Iberian Peninsula, including most of Spain and Portugal. </p>
+
+<p>
+                Note the increased intensity of the signal from the sea-surface towards 
+                the right-hand side of the image. This is caused by the reflection of 
+                the Sun directly into the instrument view; the Sun is always towards the 
+                East during day-time ERS-1 passes, since the satellite orbit is 
+                sun-synchronous, and the local time at the southward Equator-crossing
+                is approximately 10:30am.</p>
+
+<p>PRODUCT NAME:</p>
+
+		<blockquote>  
+		EUROPE-9505311042-15199-950607-T002.GBT-NTV<br>
+                EUROPE-9505311042-15699-950607-T002.GBT-NTV<br>
+                EUROPE-9505311042-16199-950607-T002.GBT-NTV<br></blockquote>
+
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/uk_mosaic.gif"><IMG SRC="thumb/uk_mosaic.gif" ALT="uk_mosaic.gif"></A></TD>
+    <TD valign="top"><p>This mosaic is a false colour composite, produced by combining
+                uncalibrated detector counts from three of ATSR-2's detectors:</p>
+
+<blockquote>
+                   1.6um near-infrared channel (as red component)<br>
+                   0.87um visible channel (as green component)<br>
+                   0.55um visible channel (as blue component)<br>
+</blockquote>
+
+<p>
+                The mosaic has been constructed using images from ATSR-2's nadir 
+                view, acquired during a sequence of day-time passes of the UK 
+                and northern Europe in July and August 1995.</p>
+
+<p>AREA:</p>
+
+<blockquote>48N to 61N latitude; 12W to 4E longitude</blockquote>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Thursday, 06-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

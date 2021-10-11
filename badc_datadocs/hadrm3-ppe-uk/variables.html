@@ -1,0 +1,845 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+<TITLE>HadRM3-PPE-UK Variables page</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<P><IMG SRC="/graphics/logos/metlogos.gif" ALIGN="BOTTOM"  NATURALSIZEFLAG="0"></P>
+
+<H1>Variable Listings for the HadRM3-PPE-UK Dataset</H1>
+
+<HR ALIGN=LEFT>
+
+<H2><IMG SRC="/graphics/blue/info.gif" BORDER="0" ALIGN="BOTTOM">Introduction</H2>
+
+<P>This page presents a table of variables that can be found in the HadRM3-PPE-UK dataset. This table has been derived from the NetCDF version of the dataset that was generated from the PP-format version originally provided by the Met Office Hadley Centre.</p>
+
+<p><B>Note:</B> The following table excludes the variable "SOIL MOISTURE CONTENT" (Stash code: m1s8i208) which is present in the PP-format data but is not recommended for usage due to it being incorrectly diagnosed. Please use "SOIL MOISTURE CONTENT IN A LAYER" (Stash code:  m1s8i223 and NetCDF Id: mrsos) instead.</p>
+
+<table border="1">
+    <tr>
+        <td><font size="-1"><strong>NetCDF Variable ID</strong></font></td>
+        <td><font size="-1"><strong>Stash Code (from Met Office PP-file)</strong></font></td>
+        <td><font size="-1"><strong>Long Name</strong></font></td>
+        <td><font size="-1"><strong>CF Standard Name</strong></font></td>
+        <td><font size="-1"><strong>Units</strong></font></td>
+        <td><font size="-1"><strong>Temporal Processing</strong></font></td>
+        <td><font size="-1"><strong>Temporal Frequency</strong></font></td>
+        <td><font size="-1"><strong>Start date</strong></font></td>
+        <td><font size="-1"><strong>End date</strong></font></td>
+        <td><font size="-1"><strong>Vertical Levels</strong></font></td>
+        <td><font size="-1"><strong>Rotated Grid (RG1 or RG2)</strong></font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">blht</font></td>
+        <td><font size="-1">m1s0i25</font></td>
+        <td><font size="-1">BOUNDARY LAYER DEPTH AFTER TIMESTEP</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">m</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">canopy_cond</font></td>
+        <td><font size="-1">m1s3i259</font></td>
+        <td><font size="-1">CANOPY CONDUCTANCE M/S</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">m s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">canopy_wc</font></td>
+        <td><font size="-1">m1s8i209</font></td>
+        <td><font size="-1">CANOPY WATER CONTENT</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">kg m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">hfls</font></td>
+        <td><font size="-1">m1s3i234</font></td>
+        <td><font size="-1">SURFACE LATENT HEAT FLUX  W/M2</font></td>
+        <td><font size="-1">surface_upward_latent_heat_flux</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">hfss</font></td>
+        <td><font size="-1">m1s3i217</font></td>
+        <td><font size="-1">SURFACE & B.LAYER HEAT FLUXES  W/M2</font></td>
+        <td><font size="-1">surface_upward_sensible_heat_flux</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">1.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">ht_flux_stdsl1</font></td>
+        <td><font size="-1">m1s3i202</font></td>
+        <td><font size="-1">HT FLUX FROM SURF TO DEEP SOIL LEV 1</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">hur_pc</font></td>
+        <td><font size="-1">m1s16i204</font></td>
+        <td><font size="-1">RELATIVE HUMIDITY ON PRESSURE LEVELS</font></td>
+        <td><font size="-1">relative_humidity</font></td>
+        <td><font size="-1">%</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">5000.0, 25000.0, 50000.0, 70000.0, 85000.0 Pa</font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">hurs_pc</font></td>
+        <td><font size="-1">m1s3i245</font></td>
+        <td><font size="-1">MEAN RELATIVE HUMIDITY AT 1.5M</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">%</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 m</font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">hursmax_pc</font></td>
+        <td><font size="-1">m1s3i245</font></td>
+        <td><font size="-1">MAX RELATIVE HUMIDITY AT 1.5M</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">%</font></td>
+        <td><font size="-1">time: maximum</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 m</font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">hus</font></td>
+        <td><font size="-1">m1s0i10</font></td>
+        <td><font size="-1">SPECIFIC HUMIDITY AFTER TIMESTEP</font></td>
+        <td><font size="-1">specific_humidity</font></td>
+        <td><font size="-1">kg kg-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.996998906136 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">huss</font></td>
+        <td><font size="-1">m1s3i237</font></td>
+        <td><font size="-1">SPECIFIC HUMIDITY  AT 1.5M</font></td>
+        <td><font size="-1">specific_humidity</font></td>
+        <td><font size="-1">kg kg-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 m</font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">longwave</font></td>
+        <td><font size="-1">m1s2i201</font></td>
+        <td><font size="-1">NET DOWN SURFACE LW RAD FLUX</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">mrsos</font></td>
+        <td><font size="-1">m1s8i223</font></td>
+        <td><font size="-1">SOIL MOISTURE CONTENT IN A LAYER</font></td>
+        <td><font size="-1">moisture_content_of_soil_layer</font></td>
+        <td><font size="-1">kg m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">1.0, 2.0, 3.0, 4.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">panof_peak_gust</font></td>
+        <td><font size="-1">m1s3i463</font></td>
+        <td><font size="-1">PANOFSKY PEAK GUST (M/S)</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">m s-1</font></td>
+        <td><font size="-1">time: maximum</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 m</font></td>
+        <td><font size="-1">RG2</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">pet_factor1</font></td>
+        <td><font size="-1">m1s3i510</font></td>
+        <td><font size="-1">POTENTIAL EVAPOTRANSPIRATION FACTOR1</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">pet_factor2</font></td>
+        <td><font size="-1">m1s3i511</font></td>
+        <td><font size="-1">POTENTIAL EVAPOTRANSPIRATION FACTOR2</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">pot_evap</font></td>
+        <td><font size="-1">m1s3i312</font></td>
+        <td><font size="-1">MEAN POTENTIAL EVAPORATION RATE  KG/M2/S</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">kg m-2 s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">pot_evap_max</font></td>
+        <td><font size="-1">m1s3i312</font></td>
+        <td><font size="-1">MAX POTENTIAL EVAPORATION RATE  KG/M2/S</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">kg m-2 s-1</font></td>
+        <td><font size="-1">time: maximum</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">pot_evap_min</font></td>
+        <td><font size="-1">m1s3i312</font></td>
+        <td><font size="-1">MIN POTENTIAL EVAPORATION RATE  KG/M2/S</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">kg m-2 s-1</font></td>
+        <td><font size="-1">time: minimum</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">pr</font></td>
+        <td><font size="-1">m1s5i216</font></td>
+        <td><font size="-1">TOTAL PRECIPITATION RATE  KG/M2/S</font></td>
+        <td><font size="-1">precipitation_flux</font></td>
+        <td><font size="-1">kg m-2 s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">prc</font></td>
+        <td><font size="-1">m1s5i205</font></td>
+        <td><font size="-1">CONVECTIVE RAINFALL RATE  KG/M2/S</font></td>
+        <td><font size="-1">convective_precipitation_flux</font></td>
+        <td><font size="-1">kg m-2 s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">prls</font></td>
+        <td><font size="-1">m1s4i203</font></td>
+        <td><font size="-1">LARGE SCALE RAINFALL RATE  KG/M2/S</font></td>
+        <td><font size="-1">large_scale_precipitation_flux</font></td>
+        <td><font size="-1">kg m-2 s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">prsn</font></td>
+        <td><font size="-1">m1s5i215</font></td>
+        <td><font size="-1">TOTAL SNOWFALL RATE: LS+CONV KG/M2/S</font></td>
+        <td><font size="-1">snowfall_flux</font></td>
+        <td><font size="-1">kg m-2 s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">prsnc</font></td>
+        <td><font size="-1">m1s5i206</font></td>
+        <td><font size="-1">CONVECTIVE SNOWFALL RATE  KG/M2/S</font></td>
+        <td><font size="-1">convective_snowfall_flux</font></td>
+        <td><font size="-1">kg m-2 s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">prsnls</font></td>
+        <td><font size="-1">m1s4i204</font></td>
+        <td><font size="-1">LARGE SCALE SNOWFALL RATE  KG/M2/S</font></td>
+        <td><font size="-1">large_scale_snowfall_flux</font></td>
+        <td><font size="-1">kg m-2 s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">ps</font></td>
+        <td><font size="-1">m1s0i1</font></td>
+        <td><font size="-1">PSTAR AFTER TIMESTEP</font></td>
+        <td><font size="-1">surface_air_pressure</font></td>
+        <td><font size="-1">Pa</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">psl</font></td>
+        <td><font size="-1">m1s16i222</font></td>
+        <td><font size="-1">PRESSURE AT MEAN SEA LEVEL</font></td>
+        <td><font size="-1">air_pressure_at_sea_level</font></td>
+        <td><font size="-1">Pa</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">q</font></td>
+        <td><font size="-1">m1s15i226</font></td>
+        <td><font size="-1">SPECIF HUM;P LEVS;U GRID.  USE MACRO</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">kg kg-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">5000.0, 25000.0, 50000.0, 70000.0, 85000.0 Pa</font></td>
+        <td><font size="-1">RG2</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">rlds</font></td>
+        <td><font size="-1">m1s2i207</font></td>
+        <td><font size="-1">DOWNWARD LW RAD FLUX: SURFACE</font></td>
+        <td><font size="-1">surface_downwelling_longwave_flux_in_air</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">rldscs</font></td>
+        <td><font size="-1">m1s2i208</font></td>
+        <td><font size="-1">CLEAR-SKY (II) DOWN SURFACE LW FLUX</font></td>
+        <td><font size="-1">surface_downwelling_longwave_flux_in_air_assuming_clear_sky</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">rlut</font></td>
+        <td><font size="-1">m1s2i205</font></td>
+        <td><font size="-1">OUTGOING LW RAD FLUX (TOA)</font></td>
+        <td><font size="-1">toa_outgoing_longwave_flux</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">rlutcs</font></td>
+        <td><font size="-1">m1s2i206</font></td>
+        <td><font size="-1">CLEAR-SKY (II) UPWARD LW FLUX (TOA)</font></td>
+        <td><font size="-1">toa_outgoing_longwave_flux_assuming_clear_sky</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">rsds</font></td>
+        <td><font size="-1">m1s1i235</font></td>
+        <td><font size="-1">TOTAL DOWNWARD SURFACE SW FLUX</font></td>
+        <td><font size="-1">surface_downwelling_shortwave_flux_in_air</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">rsdscs</font></td>
+        <td><font size="-1">m1s1i210</font></td>
+        <td><font size="-1">CLEAR-SKY (II) DOWN SURFACE SW FLUX</font></td>
+        <td><font size="-1">surface_downwelling_shortwave_flux_in_air_assuming_clear_sky</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">rsdt</font></td>
+        <td><font size="-1">m1s1i207</font></td>
+        <td><font size="-1">INCOMING SW RAD FLUX (TOA): ALL TSS</font></td>
+        <td><font size="-1">toa_incoming_shortwave_flux</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">rsuscs</font></td>
+        <td><font size="-1">m1s1i211</font></td>
+        <td><font size="-1">CLEAR-SKY (II) UP SURFACE SW FLUX</font></td>
+        <td><font size="-1">surface_upwelling_shortwave_flux_in_air_assuming_clear_sky</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">rsut</font></td>
+        <td><font size="-1">m1s1i208</font></td>
+        <td><font size="-1">OUTGOING SW RAD FLUX (TOA)</font></td>
+        <td><font size="-1">toa_outgoing_shortwave_flux</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">rsutcs</font></td>
+        <td><font size="-1">m1s1i209</font></td>
+        <td><font size="-1">CLEAR-SKY (II) UPWARD SW FLUX (TOA)</font></td>
+        <td><font size="-1">toa_outgoing_shortwave_flux_assuming_clear_sky</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">sbl_mois_flux</font></td>
+        <td><font size="-1">m1s3i223</font></td>
+        <td><font size="-1">SURF & BL TOTL MOISTURE FLUX KG/M2/S</font></td>
+        <td><font size="-1">water_evaporation_flux</font></td>
+        <td><font size="-1">kg m-2 s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">1.0, 0.994000017643, 0.955999970436, 0.90499997139, 0.834999978542 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">sh_1</font></td>
+        <td><font size="-1">m1s3i228</font></td>
+        <td><font size="-1">SURFACE SH FLUX FROM SEA (GBM)  W/M2</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">snw</font></td>
+        <td><font size="-1">m1s0i23</font></td>
+        <td><font size="-1">SNOW AMOUNT AFTER TIMESTEP  KG/M2</font></td>
+        <td><font size="-1">surface_snow_amount</font></td>
+        <td><font size="-1">kg m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">solar</font></td>
+        <td><font size="-1">m1s1i201</font></td>
+        <td><font size="-1">NET DOWN SURFACE SW FLUX: SW TS ONLY</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">t</font></td>
+        <td><font size="-1">m1s15i216</font></td>
+        <td><font size="-1">T ON PRESSURE LEVS U GRID. USE MACRO</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">K</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">5000.0, 25000.0, 50000.0, 70000.0, 85000.0 Pa</font></td>
+        <td><font size="-1">RG2</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">ta</font></td>
+        <td><font size="-1">m1s16i203</font></td>
+        <td><font size="-1">TEMPERATURE ON PRESSURE LEVELS</font></td>
+        <td><font size="-1">air_temperature</font></td>
+        <td><font size="-1">K</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">5000.0, 25000.0, 50000.0, 70000.0, 85000.0 Pa</font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">tas</font></td>
+        <td><font size="-1">m1s3i236</font></td>
+        <td><font size="-1">MEAN TEMPERATURE AT 1.5M</font></td>
+        <td><font size="-1">air_temperature</font></td>
+        <td><font size="-1">K</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 m</font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">tasmax</font></td>
+        <td><font size="-1">m1s3i236</font></td>
+        <td><font size="-1">MAX TEMPERATURE AT 1.5M</font></td>
+        <td><font size="-1">air_temperature</font></td>
+        <td><font size="-1">K</font></td>
+        <td><font size="-1">time: maximum</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 m</font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">tasmin</font></td>
+        <td><font size="-1">m1s3i236</font></td>
+        <td><font size="-1">MIN TEMPERATURE AT 1.5M</font></td>
+        <td><font size="-1">air_temperature</font></td>
+        <td><font size="-1">K</font></td>
+        <td><font size="-1">time: minimum</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 m</font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">tauu</font></td>
+        <td><font size="-1">m1s3i219</font></td>
+        <td><font size="-1">X-COMP OF SURF & BL WIND STRESS N/M2</font></td>
+        <td><font size="-1">surface_downward_eastward_stress</font></td>
+        <td><font size="-1">N m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">1.0 </font></td>
+        <td><font size="-1">RG2</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">tauv</font></td>
+        <td><font size="-1">m1s3i220</font></td>
+        <td><font size="-1">Y-COMP OF SURF & BL WIND STRESS N/M2</font></td>
+        <td><font size="-1">surface_downward_northward_stress</font></td>
+        <td><font size="-1">N m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">1.0 </font></td>
+        <td><font size="-1">RG2</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">total_cloud_lw_rad</font></td>
+        <td><font size="-1">m1s2i204</font></td>
+        <td><font size="-1">TOTAL CLOUD AMOUNT IN LW RADIATION</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">ts</font></td>
+        <td><font size="-1">m1s0i24</font></td>
+        <td><font size="-1">MEAN SURFACE TEMPERATURE AFTER TIMESTEP</font></td>
+        <td><font size="-1">surface_temperature</font></td>
+        <td><font size="-1">K</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">tsmax</font></td>
+        <td><font size="-1">m1s0i24</font></td>
+        <td><font size="-1">MAX SURFACE TEMPERATURE AFTER TIMESTEP</font></td>
+        <td><font size="-1">surface_temperature</font></td>
+        <td><font size="-1">K</font></td>
+        <td><font size="-1">time: maximum</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">tsmin</font></td>
+        <td><font size="-1">m1s0i24</font></td>
+        <td><font size="-1">MIN SURFACE TEMPERATURE AFTER TIMESTEP</font></td>
+        <td><font size="-1">surface_temperature</font></td>
+        <td><font size="-1">K</font></td>
+        <td><font size="-1">time: minimum</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">ua</font></td>
+        <td><font size="-1">m1s15i201</font></td>
+        <td><font size="-1">U COMPNT OF WIND ON PRESSURE LEVELS</font></td>
+        <td><font size="-1">eastward_wind</font></td>
+        <td><font size="-1">m s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">5000.0, 25000.0, 50000.0, 70000.0, 85000.0 Pa</font></td>
+        <td><font size="-1">RG2</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">uas</font></td>
+        <td><font size="-1">m1s3i225</font></td>
+        <td><font size="-1">10 METRE WIND U-COMP</font></td>
+        <td><font size="-1">eastward_wind</font></td>
+        <td><font size="-1">m s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 m</font></td>
+        <td><font size="-1">RG2</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">va</font></td>
+        <td><font size="-1">m1s15i202</font></td>
+        <td><font size="-1">V COMPNT OF WIND ON PRESSURE LEVELS</font></td>
+        <td><font size="-1">northward_wind</font></td>
+        <td><font size="-1">m s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">5000.0, 25000.0, 50000.0, 70000.0, 85000.0 Pa</font></td>
+        <td><font size="-1">RG2</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">vas</font></td>
+        <td><font size="-1">m1s3i226</font></td>
+        <td><font size="-1">10 METRE WIND V-COMP</font></td>
+        <td><font size="-1">northward_wind</font></td>
+        <td><font size="-1">m s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 m</font></td>
+        <td><font size="-1">RG2</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">wap</font></td>
+        <td><font size="-1">m1s15i222</font></td>
+        <td><font size="-1">OMEGA ON PRESS LEVS U GRID.USE MACRO</font></td>
+        <td><font size="-1">lagrangian_tendency_of_air_pressure</font></td>
+        <td><font size="-1">Pa s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">5000.0, 25000.0, 50000.0, 70000.0, 85000.0 Pa</font></td>
+        <td><font size="-1">RG2</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">wme</font></td>
+        <td><font size="-1">m1s3i224</font></td>
+        <td><font size="-1">WIND MIXING EN'GY FLUX INTO SEA W/M2</font></td>
+        <td><font size="-1">-</font></td>
+        <td><font size="-1">W m-2</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">0.0 </font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">wss</font></td>
+        <td><font size="-1">m1s3i249</font></td>
+        <td><font size="-1">MEAN 10 METRE WIND SPEED  M/S</font></td>
+        <td><font size="-1">wind_speed</font></td>
+        <td><font size="-1">m s-1</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 m</font></td>
+        <td><font size="-1">RG2</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">wssmax</font></td>
+        <td><font size="-1">m1s3i249</font></td>
+        <td><font size="-1">MAX 10 METRE WIND SPEED  M/S</font></td>
+        <td><font size="-1">wind_speed</font></td>
+        <td><font size="-1">m s-1</font></td>
+        <td><font size="-1">time: maximum</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">-1.0 m</font></td>
+        <td><font size="-1">RG2</font></td>
+    </tr>
+    <tr>
+        <td><font size="-1">zg</font></td>
+        <td><font size="-1">m1s16i202</font></td>
+        <td><font size="-1">GEOPOTENTIAL HEIGHT: PRESSURE LEVELS</font></td>
+        <td><font size="-1">geopotential_height</font></td>
+        <td><font size="-1">m</font></td>
+        <td><font size="-1">time: mean</font></td>
+        <td><font size="-1">daily</font></td>
+        <td><font size="-1">1949-12-1 12:0:0.0</font></td>
+        <td><font size="-1">2099-11-30 12:0:0.0</font></td>
+        <td><font size="-1">5000.0, 25000.0, 50000.0, 70000.0, 85000.0 Pa</font></td>
+        <td><font size="-1">RG1</font></td>
+    </tr>
+</table>
+	
+	
+<P>
+</BODY>
+</HTML>

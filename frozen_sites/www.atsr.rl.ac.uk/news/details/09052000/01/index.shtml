@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>Tuesday 9 May 2000 : Biggest iceberg tracked from space
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../../../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../../../documentation/index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../documentation/docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../../../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <HTML> 
+<TABLE align="center">
+  <TR> 
+    <TD><A href="ross_iceberg.gif" target="_blank"><IMG src="ross_iceberg_small.gif" width="250" height="313" alt="The Ross Iceberg. Click for larger image" border="0"></A></TD>
+  </TR>
+</TABLE>
+<P><B>STOP PRESS!</B></P>
+<P>This ATSR-2 image from May 10th 2000 shows that the B15 iceberg has broken 
+  into at least two pieces</P>
+<P> 
+<BLOCKQUOTE> 
+  <P><IMG src="../../../../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+    <A href="ross10may00.gif" target="_blank">ross10may00.gif</A></P>
+</BLOCKQUOTE>
+<P>The latest sample ATSR-2 images (including the latest B15 iceberg images) can be seen at: 
+</P>
+<BLOCKQUOTE>
+  <P><IMG src="../../../../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+    <A href="../../../../images/sample/atsr-2/index.html" target="_blank">http://www.atsr.rl.ac.uk/images/sample/atsr-2/</A></P>
+</BLOCKQUOTE>
+<H1>News Release</H1>
+<H2>Biggest iceberg tracked from space</H2>
+<P>Tuesday 9 May 2000</P>
+<P>Space technology is being used to track what is one of the largest icebergs 
+  ever seen and certainly the largest in modern times, which recently broke off 
+  from the Ross Ice Shelf in the Antarctic. The images, taken by the ATSR-2 instrument 
+  on the ERS-2 European remote-sensing satellite, show the ice shelf as it was 
+  before the break-up (bottom, on 16 September 1999) and as it was three weeks 
+  ago (top, 13 April 2000).</P>
+<P> The main iceberg, which has been named B15 by the US National Ice Centre, 
+  is about 300km from end to end (about the distance from London to York) and 
+  approximately 40km wide; it began to break off from the ice shelf in the last 
+  weeks of March 2000. In the top image, you can see a new iceberg breaking off 
+  to the East (right) of the main iceberg. This newly formed iceberg, named B17, 
+  although dwarfed by its big brother is in itself about 100km from end to end. 
+  To the west, a much smaller iceberg (approximately 40km long) has broken off 
+  the western tip of the largest iceberg and is making steady progress north-west. 
+</P>
+<P><I>"The calving of B15 is the consequence of a natural progression of events 
+  that occur in ice shelves, and is quite unrelated to 'Global warming' or 'Greenhouse' 
+  effects."</I>, commented Neal Young from the Antarctic Co-operative Research 
+  Centre, Australian Antarctic Division - one of the users of ATSR data. <I>"Previous 
+  to this calving, the northern edge of the Ross Ice shelf was the furthest north 
+  it has been this century." </I></P>
+<P>ATSR-2 is an instrument that measures the temperature of the surface of the 
+  Earth extremely accurately. It is on board the ERS-2 satellite which is in polar 
+  orbit around the Earth. Both images of the iceberg are 12-micron thermal images. 
+  <I>"The temperature of the water and the ice is obviously different, and this 
+  enables us to 'see' the ice shelf and the icebergs"</I>, explains Nigel Houghton 
+  of Space Science and Technology Department at Rutherford Appleton Laboratory, 
+  where data from the ATSR-2 instrument is processed. <I>"It is great to be able 
+  to see these icebergs from satellites and we will be tracking this one with 
+  great interest. Once an iceberg is free from the ice shelf, it often moves fairly 
+  quickly. Tracking the Larsen iceberg in 1995 we saw it move about 6km a day 
+  once it had broken free, although they can drift at up to 30km a day"</I>, he 
+  added.</P>
+<P>To see the images, click the following...</P>
+<BLOCKQUOTE> 
+  <P><IMG src="../../../../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+    <A href="ross_iceberg.gif" target="_blank">ross_iceberg.gif</A></P>
+</BLOCKQUOTE>
+<H2>Other related internet links: </H2>
+<P>Background information on the iceberg by Neal Young at the Glaciology and Remote 
+  Sensing Department, Antarctic CRC and Australian Antarctic Division </P>
+<BLOCKQUOTE>
+  <P><IMG src="../../../../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+    <A href="http://www.antcrc.utas.edu.au/antcrc/news/b15_information.html" target="_blank">http://www.antcrc.utas.edu.au/antcrc/news/b15_information.html</A><BR>
+  </P>
+</BLOCKQUOTE>
+<P>British National Space Centre, who co-ordinates space science research in the 
+  UK at </P>
+<BLOCKQUOTE> 
+  <P><IMG src="../../../../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+    <A href="http://www.bnsc.gov.uk/" target="_blank">http://www.bnsc.gov.uk/</A></P>
+</BLOCKQUOTE>
+<P>Natural Environment Research Council, who fund the ATSR project: </P>
+<BLOCKQUOTE> 
+  <P><IMG src="../../../../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+    <A href="http://www.nerc.ac.uk" target="_blank">http://www.nerc.ac.uk</A></P>
+</BLOCKQUOTE>
+<P>The ATSR instrument and ERS-2 satellite are operated by the European Space 
+  Agency. Further Information available from </P>
+<BLOCKQUOTE>
+  <P><IMG src="../../../../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+    <A href="http://earth.esa.int/" target="_blank">http://earth.esa.int/</A></P>
+</BLOCKQUOTE>
+<P>British Antarctic Survey: </P>
+<BLOCKQUOTE>
+  <P><IMG src="../../../../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+    <A href="http://www.antarctica.ac.uk/" target="_blank">http://www.antarctica.ac.uk/</A></P>
+</BLOCKQUOTE>
+<P>US National Ice Centre, who track and name large Antarctic icebergs: </P>
+<BLOCKQUOTE>
+  <P><IMG src="../../../../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+    <A href="http://www.natice.noaa.gov" target="_blank">http://www.natice.noaa.gov</A></P>
+</BLOCKQUOTE>
+<P>Information about the ATSR projects, and other ATSR images, can be seen at: 
+</P>
+<BLOCKQUOTE>
+  <P><IMG src="../../../../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+    <A href="../../../../index.html" target="_blank">http://www.atsr.rl.ac.uk/</A></P>
+</BLOCKQUOTE>
+
+<H2>Further information from:</H2>
+<P>Natalie Bealing, Press Officer, RAL, Tel: 01235 44 5484</P>
+</HTML>
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Thursday, 06-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

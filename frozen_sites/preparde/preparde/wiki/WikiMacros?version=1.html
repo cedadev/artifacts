@@ -1,0 +1,661 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      WikiMacros – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiMacros?version=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiMacros" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiMacros" title="View WikiMacros">WikiMacros</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiMacros" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A01%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:01+01:00 in Timeline">6 years</a> ago)
+               (<a href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiMacros?action=diff&amp;version=1">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="TracMacros">Trac Macros</h1>
+<p>
+</p><div class="wiki-toc">
+<ol>
+  <li>
+    <a href="WikiMacros%3Fversion=1.html#TracMacros">Trac Macros</a>
+    <ol>
+      <li>
+        <a href="WikiMacros%3Fversion=1.html#UsingMacros">Using Macros</a>
+        <ol>
+          <li>
+            <a href="WikiMacros%3Fversion=1.html#GettingDetailedHelp">Getting Detailed Help</a>
+          </li>
+          <li>
+            <a href="WikiMacros%3Fversion=1.html#Example">Example</a>
+          </li>
+        </ol>
+      </li>
+      <li>
+        <a href="WikiMacros%3Fversion=1.html#AvailableMacros">Available Macros</a>
+      </li>
+      <li>
+        <a href="WikiMacros%3Fversion=1.html#Macrosfromaroundtheworld">Macros from around the world</a>
+      </li>
+      <li>
+        <a href="WikiMacros%3Fversion=1.html#DevelopingCustomMacros">Developing Custom Macros</a>
+        <ol>
+          <li>
+            <a href="WikiMacros%3Fversion=1.html#Macrowithoutarguments">Macro without arguments</a>
+          </li>
+          <li>
+            <a href="WikiMacros%3Fversion=1.html#Macrowitharguments">Macro with arguments</a>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+</div><p>
+</p>
+<p>
+Trac macros are plugins to extend the Trac engine with custom 'functions' written in Python. A macro inserts dynamic HTML data in any context supporting <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">WikiFormatting</a>.
+</p>
+<p>
+Another kind of macros are <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors">WikiProcessors</a>. They typically deal with alternate markup formats and representation of larger blocks of information (like source code highlighting).
+</p>
+<h2 id="UsingMacros">Using Macros</h2>
+<p>
+Macro calls are enclosed in two <em>square brackets</em>. Like Python functions, macros can also have arguments, a comma separated list within parentheses.
+</p>
+<h3 id="GettingDetailedHelp">Getting Detailed Help</h3>
+<p>
+The list of available macros and the full help can be obtained using the MacroList macro, as seen <a class="wiki" href="WikiMacros%3Fversion=1.html#AvailableMacros">below</a>.
+</p>
+<p>
+A brief list can be obtained via [[MacroList(*)]] or [[?]].
+</p>
+<p>
+Detailed help on a specific macro can be obtained by passing it as an argument to MacroList, e.g. [[MacroList(MacroList)]], or, more conveniently, by appending a question mark (?) to the macro's name, like in [[MacroList?]].
+</p>
+<h3 id="Example">Example</h3>
+<p>
+A list of 3 most recently changed wiki pages starting with 'Trac':
+</p>
+<table class="wiki">
+<tr><th> Wiki Markup </th><th> Display 
+</th></tr><tr><td><pre class="wiki">[[RecentChanges(Trac,3)]]
+</pre></td><td style="padding-left: 2em"><p>
+</p><div><h3>12/07/12</h3><ul><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWorkflow">TracWorkflow</a> </li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWiki">TracWiki</a> </li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUpgrade">TracUpgrade</a> </li></ul></div><p>
+</p>
+</td></tr><tr>
+<td><pre class="wiki">[[RecentChanges?(Trac,3)]]
+</pre></td><td style="padding-left: 2em"><p>
+</p><div class="trac-macrolist"><h3 id="RecentChanges-macro"><code>[[RecentChanges]]</code></h3><p>
+List all pages that have recently been modified, grouping them by the
+day they were last modified.
+</p>
+<p>
+This macro accepts two parameters. The first is a prefix string: if
+provided, only pages with names that start with the prefix are included in
+the resulting list. If this parameter is omitted, all pages are listed.
+</p>
+<p>
+The second parameter is a number for limiting the number of pages returned.
+For example, specifying a limit of 5 will result in only the five most
+recently changed pages to be included in the list.
+</p>
+</div><p>
+</p>
+</td></tr><tr>
+<td><pre class="wiki">[[?]]
+</pre></td><td style="padding-left: 2em"><div style="font-size: 80%" class="trac-macrolist">
+<h3><code>[[Image]]</code></h3>Embed an image in wiki-formatted text.
+The first argument is the file …
+<h3><code>[[InterTrac]]</code></h3>Provide a list of known <a class="wiki" href="http://proj.badc.rl.ac.uk/wiki/InterTrac">InterTrac</a> prefixes.
+<h3><code>[[InterWiki]]</code></h3>Provide a description list for the known <a class="wiki" href="http://proj.badc.rl.ac.uk/wiki/InterWiki">InterWiki</a> prefixes.
+<h3><code>[[KnownMimeTypes]]</code></h3>List all known mime-types which can be used as <a class="wiki" href="http://proj.badc.rl.ac.uk/wiki/WikiProcessors">WikiProcessors</a>.
+Can be …</div>
+<p>
+etc.
+</p>
+</td></tr></table>
+<h2 id="AvailableMacros">Available Macros</h2>
+<p>
+<em>Note that the following list will only contain the macro documentation if you've not enabled <tt>-OO</tt> optimizations, or not set the <tt>PythonOptimize</tt> option for <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracModPython">mod_python</a>.</em>
+</p>
+<p>
+</p><div class="trac-macrolist"><h3 id="BlogList-macro"><code>[[BlogList]]</code></h3><p>
+A macro to display list of posts and extracts outside (or inside)
+the Blog module - most commonly Wiki pages.
+</p>
+<p>
+All arguments are optional:
+</p>
+<pre class="wiki">[[BlogList]]
+</pre><p>
+Available named arguments:
+</p>
+<ul><li><tt>recent=</tt> - max. number of posts
+</li><li><tt>category=</tt> - a category
+</li><li><tt>author=</tt> - an author
+</li><li><tt>period=</tt> - time period of the format YYYY/MM
+</li><li><tt>heading=</tt> - a heading for the list
+</li><li><tt>format=</tt> - type of display (see below for details)
+</li><li><tt>max_size=</tt> - max. number of characters to render for each post
+</li><li><tt>meta=</tt> - use <tt>=off</tt> to hide date, author and categories (default 'on')
+</li></ul><p>
+Example showing some available named arguments:
+</p>
+<pre class="wiki">[[BlogList(recent=5, max_size=250, period=2007/12, author=osimons, format=float, heading=Some Trac Posts)]]
+</pre><p>
+The arguments for criteria are 'AND'-based, so the above example will render
+at most 5 posts by 'osimons' in December 2007. 
+</p>
+<p>
+There is no heading unless specified.
+</p>
+<p>
+Without restriction on recent number of posts, it will use the number currently
+active in the Blog module as default for 'float' and 'full' rendering, but for rendering
+of 'inline' list it will render all found as default unless restricted. Additionally for
+'float' and 'full' it will truncate content if it is larger than a max_size (if set).
+</p>
+<p>
+The <tt>format=</tt> keyword argument supports rendering these formats:
+</p>
+<table class="wiki">
+<tr><td><tt>format=inline</tt></td><td>Renders an unordered list in the normal text flow (default).
+</td></tr><tr><td><tt>format=float</tt></td><td>A floating box out on the side of the page with slightly more detail.
+</td></tr><tr><td><tt>format=full</tt></td><td>Full rendering like on period, category and author listings inside blog.
+</td></tr></table>
+<p>
+The arguments can appear in any order.
+</p>
+<p>
+Posts are rendered sorted by newest first for all modes.
+</p>
+<h3 id="Image-macro"><code>[[Image]]</code></h3><p>
+Embed an image in wiki-formatted text.
+</p>
+<p>
+The first argument is the file specification. The file specification may
+reference attachments in three ways:
+</p>
+<ul><li><tt>module:id:file</tt>, where module can be either <strong>wiki</strong> or <strong>ticket</strong>,
+to refer to the attachment named <em>file</em> of the specified wiki page or
+ticket.
+</li><li><tt>id:file</tt>: same as above, but id is either a ticket shorthand or a Wiki
+page name.
+</li><li><tt>file</tt> to refer to a local attachment named 'file'. This only works from
+within that wiki page or a ticket.
+</li></ul><p>
+Also, the file specification may refer to repository files, using the
+<tt>source:file</tt> syntax (<tt>source:file@rev</tt> works also).
+</p>
+<p>
+Files can also be accessed with a direct URLs; <tt>/file</tt> for a
+project-relative, <tt>//file</tt> for a server-relative, or <tt>http://server/file</tt>
+for absolute location of the file.
+</p>
+<p>
+The remaining arguments are optional and allow configuring the attributes
+and style of the rendered <tt>&lt;img&gt;</tt> element:
+</p>
+<ul><li>digits and unit are interpreted as the size (ex. 120, 25%)
+for the image
+</li><li><tt>right</tt>, <tt>left</tt>, <tt>center</tt>, <tt>top</tt>, <tt>bottom</tt> and <tt>middle</tt> are interpreted 
+as the alignment for the image (alternatively, the first three can be
+specified using <tt>align=...</tt> and the last three using <tt>valign=...</tt>)
+</li><li><tt>link=some TracLinks...</tt> replaces the link to the image source by the
+one specified using a <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">TracLinks</a>. If no value is specified, the link is
+simply removed.
+</li><li><tt>nolink</tt> means without link to image source (deprecated, use <tt>link=</tt>)
+</li><li><tt>key=value</tt> style are interpreted as HTML attributes or CSS style
+indications for the image. Valid keys are:
+<ul><li>align, valign, border, width, height, alt, title, longdesc, class, 
+margin, margin-(left,right,top,bottom), id and usemap
+</li><li><tt>border</tt>, <tt>margin</tt>, and <tt>margin-</tt>* can only be a single number
+</li><li><tt>margin</tt> is superseded by <tt>center</tt> which uses auto margins 
+</li></ul></li></ul><p>
+Examples:
+</p>
+<pre class="wiki">    [[Image(photo.jpg)]]                           # simplest
+    [[Image(photo.jpg, 120px)]]                    # with image width size
+    [[Image(photo.jpg, right)]]                    # aligned by keyword
+    [[Image(photo.jpg, nolink)]]                   # without link to source
+    [[Image(photo.jpg, align=right)]]              # aligned by attribute
+</pre><p>
+You can use image from other page, other ticket or other module.
+</p>
+<pre class="wiki">    [[Image(OtherPage:foo.bmp)]]    # if current module is wiki
+    [[Image(base/sub:bar.bmp)]]     # from hierarchical wiki page
+    [[Image(#3:baz.bmp)]]           # if in a ticket, point to #3
+    [[Image(ticket:36:boo.jpg)]]
+    [[Image(source:/images/bee.jpg)]] # straight from the repository!
+    [[Image(htdocs:foo/bar.png)]]   # image file in project htdocs dir.
+</pre><p>
+<em>Adapted from the Image.py macro created by Shun-ichi Goto
+&lt;gotoh@…&gt;</em>
+</p>
+<h3 id="InterTrac-macro"><code>[[InterTrac]]</code></h3><p>
+Provide a list of known <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac">InterTrac</a> prefixes.
+</p>
+<h3 id="InterWiki-macro"><code>[[InterWiki]]</code></h3><p>
+Provide a description list for the known <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterWiki">InterWiki</a> prefixes.
+</p>
+<h3 id="KnownMimeTypes-macro"><code>[[KnownMimeTypes]]</code></h3><p>
+List all known mime-types which can be used as <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors">WikiProcessors</a>.
+</p>
+<p>
+Can be given an optional argument which is interpreted as mime-type filter.
+</p>
+<h3 id="MacroList-macro"><code>[[MacroList]]</code></h3><p>
+Display a list of all installed Wiki macros, including documentation if
+available.
+</p>
+<p>
+Optionally, the name of a specific macro can be provided as an argument. In
+that case, only the documentation for that macro will be rendered.
+</p>
+<p>
+Note that this macro will not be able to display the documentation of
+macros if the <tt>PythonOptimize</tt> option is enabled for mod_python!
+</p>
+<h3 id="PageOutline-macro"><code>[[PageOutline]]</code></h3><p>
+Display a structural outline of the current wiki page, each item in the
+outline being a link to the corresponding heading.
+</p>
+<p>
+This macro accepts three optional parameters:
+</p>
+<ul><li>The first is a number or range that allows configuring the minimum and
+maximum level of headings that should be included in the outline. For
+example, specifying "1" here will result in only the top-level headings
+being included in the outline. Specifying "2-3" will make the outline
+include all headings of level 2 and 3, as a nested list. The default is
+to include all heading levels.
+</li><li>The second parameter can be used to specify a custom title (the default
+is no title).
+</li><li>The third parameter selects the style of the outline. This can be
+either <tt>inline</tt> or <tt>pullout</tt> (the latter being the default). The <tt>inline</tt>
+style renders the outline as normal part of the content, while <tt>pullout</tt>
+causes the outline to be rendered in a box that is by default floated to
+the right side of the other content.
+</li></ul><h3 id="RecentChanges-macro"><code>[[RecentChanges]]</code></h3><p>
+List all pages that have recently been modified, grouping them by the
+day they were last modified.
+</p>
+<p>
+This macro accepts two parameters. The first is a prefix string: if
+provided, only pages with names that start with the prefix are included in
+the resulting list. If this parameter is omitted, all pages are listed.
+</p>
+<p>
+The second parameter is a number for limiting the number of pages returned.
+For example, specifying a limit of 5 will result in only the five most
+recently changed pages to be included in the list.
+</p>
+<h3 id="RepositoryIndex-macro"><code>[[RepositoryIndex]]</code></h3><blockquote>
+<p>
+Display the list of available repositories.
+</p>
+</blockquote>
+<blockquote>
+<p>
+Can be given a <em>format</em> argument (defaults to <em>compact</em>)
+</p>
+</blockquote>
+<ul><li><em>compact</em> will produce a comma-separated list of
+repository prefix names 
+</li><li><em>list</em> will produce a description list of
+repository prefix names 
+</li><li><em>table</em> will produce a table view, similar to the 
+one visible in the <em>Browse View</em> page
+</li></ul><p>
+        
+</p>
+<blockquote>
+<p>
+Can be given a <em>glob</em> argument, which will do a glob-style
+filtering on the repository names (defaults to '*')
+</p>
+</blockquote>
+<blockquote>
+<p>
+(since 0.12)
+</p>
+</blockquote>
+<p>
+        
+</p>
+<h3 id="TicketQuery-macro"><code>[[TicketQuery]]</code></h3><p>
+Wiki macro listing tickets that match certain criteria.
+</p>
+<p>
+This macro accepts a comma-separated list of keyed parameters,
+in the form "key=value".
+</p>
+<p>
+If the key is the name of a field, the value must use the syntax 
+of a filter specifier as defined in <a class="wiki" href="TracQuery.html#QueryLanguage">TracQuery#QueryLanguage</a>.
+Note that this is <em>not</em> the same as the simplified URL syntax 
+used for <tt>query:</tt> links starting with a <tt>?</tt> character. Commas (<tt>,</tt>)
+can be included in field values by escaping them with a backslash (<tt>\</tt>).
+</p>
+<p>
+Groups of field constraints to be OR-ed together can be separated by a
+litteral <tt>or</tt> argument.
+</p>
+<p>
+In addition to filters, several other named parameters can be used
+to control how the results are presented. All of them are optional.
+</p>
+<p>
+The <tt>format</tt> parameter determines how the list of tickets is
+presented: 
+</p>
+<ul><li><strong>list</strong> -- the default presentation is to list the ticket ID next
+to the summary, with each ticket on a separate line.
+</li><li><strong>compact</strong> -- the tickets are presented as a comma-separated
+list of ticket IDs. 
+</li><li><strong>count</strong> -- only the count of matching tickets is displayed
+</li><li><strong>table</strong>  -- a view similar to the custom query view (but without
+the controls)
+</li></ul><p>
+The <tt>max</tt> parameter can be used to limit the number of tickets shown
+(defaults to <strong>0</strong>, i.e. no maximum).
+</p>
+<p>
+The <tt>order</tt> parameter sets the field used for ordering tickets
+(defaults to <strong>id</strong>).
+</p>
+<p>
+The <tt>desc</tt> parameter indicates whether the order of the tickets
+should be reversed (defaults to <strong>false</strong>).
+</p>
+<p>
+The <tt>group</tt> parameter sets the field used for grouping tickets
+(defaults to not being set).
+</p>
+<p>
+The <tt>groupdesc</tt> parameter indicates whether the natural display
+order of the groups should be reversed (defaults to <strong>false</strong>).
+</p>
+<p>
+The <tt>verbose</tt> parameter can be set to a true value in order to
+get the description for the listed tickets. For <strong>table</strong> format only.
+<em>deprecated in favor of the <tt>rows</tt> parameter</em>
+</p>
+<p>
+The <tt>rows</tt> parameter can be used to specify which field(s) should 
+be viewed as a row, e.g. <tt>rows=description|summary</tt>
+</p>
+<p>
+For compatibility with Trac 0.10, if there's a last positional parameter
+given to the macro, it will be used to specify the <tt>format</tt>.
+Also, using "&amp;" as a field separator still works (except for <tt>order</tt>)
+but is deprecated.
+</p>
+<h3 id="TitleIndex-macro"><code>[[TitleIndex]]</code></h3><p>
+Insert an alphabetic list of all wiki pages into the output.
+</p>
+<p>
+Accepts a prefix string as parameter: if provided, only pages with names
+that start with the prefix are included in the resulting list. If this
+parameter is omitted, all pages are listed.
+If the prefix is specified, a second argument of value 'hideprefix'
+can be given as well, in order to remove that prefix from the output.
+</p>
+<p>
+Alternate <tt>format</tt> and <tt>depth</tt> named parameters can be specified:
+</p>
+<ul><li><tt>format=compact</tt>: The pages are displayed as comma-separated links.
+</li><li><tt>format=group</tt>: The list of pages will be structured in groups
+according to common prefix. This format also supports a <tt>min=n</tt>
+argument, where <tt>n</tt> is the minimal number of pages for a group.
+</li><li><tt>format=hierarchy</tt>: The list of pages will be structured according
+to the page name path hierarchy. This format also supports a <tt>min=n</tt>
+argument, where higher <tt>n</tt> flatten the display hierarchy
+</li><li><tt>depth=n</tt>: limit the depth of the pages to list. If set to 0,
+only toplevel pages will be shown, if set to 1, only immediate
+children pages will be shown, etc. If not set, or set to -1,
+all pages in the hierarchy will be shown.
+</li></ul><h3 id="TracAdminHelp-macro"><code>[[TracAdminHelp]]</code></h3><p>
+Display help for trac-admin commands.
+</p>
+<p>
+Examples:
+</p>
+<pre class="wiki">[[TracAdminHelp]]               # all commands
+[[TracAdminHelp(wiki)]]         # all wiki commands
+[[TracAdminHelp(wiki export)]]  # the "wiki export" command
+[[TracAdminHelp(upgrade)]]      # the upgrade command
+</pre><h3 id="TracGuideToc-macro"><code>[[TracGuideToc]]</code></h3><p>
+Display a table of content for the Trac guide.
+</p>
+<p>
+This macro shows a quick and dirty way to make a table-of-contents
+for the <a class="missing wiki">Help/Guide?</a>. The table of contents will contain the Trac* and 
+<a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">WikiFormatting</a> pages, and can't be customized. Search for <a class="missing wiki">TocMacro?</a> for a
+a more customizable table of contents.
+</p>
+<h3 id="TracIni-macro"><code>[[TracIni]]</code></h3><p>
+Produce documentation for the Trac configuration file.
+</p>
+<p>
+Typically, this will be used in the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">TracIni</a> page.
+Optional arguments are a configuration section filter,
+and a configuration option name filter: only the configuration
+options whose section and name start with the filters are output.
+</p>
+</div><p>
+</p>
+<h2 id="Macrosfromaroundtheworld">Macros from around the world</h2>
+<p>
+The <a class="ext-link" href="http://trac-hacks.org/"><span class="icon"> </span>Trac Hacks</a> site provides a wide collection of macros and other Trac <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracPlugins">plugins</a> contributed by the Trac community. If you're looking for new macros, or have written one that you'd like to share with the world, please don't hesitate to visit that site.
+</p>
+<h2 id="DevelopingCustomMacros">Developing Custom Macros</h2>
+<p>
+Macros, like Trac itself, are written in the <a class="ext-link" href="http://python.org/"><span class="icon"> </span>Python programming language</a> and are developed as part of <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracPlugins">TracPlugins</a>.
+</p>
+<p>
+For more information about developing macros, see the <a class="ext-link" href="http://trac.edgewall.org/intertrac/TracDev" title="TracDev in Trac project trac"><span class="icon"> </span>development resources</a> on the main project site.
+</p>
+<p>
+Here are 2 simple examples showing how to create a Macro with Trac 0.11. 
+</p>
+<p>
+Also, have a look at <a class="ext-link" href="http://trac.edgewall.org/intertrac/source%3Atags/trac-0.11/sample-plugins/Timestamp.py" title="source:tags/trac-0.11/sample-plugins/Timestamp.py in Trac project trac"><span class="icon"> </span>Timestamp.py</a> for an example that shows the difference between old style and new style macros and at the <a class="ext-link" href="http://trac.edgewall.org/intertrac/source%3Atags/trac-0.11/wiki-macros/README" title="source:tags/trac-0.11/wiki-macros/README in Trac project trac"><span class="icon"> </span>macros/README</a> which provides a little more insight about the transition.
+</p>
+<h3 id="Macrowithoutarguments">Macro without arguments</h3>
+<p>
+To test the following code, you should saved it in a <tt>timestamp_sample.py</tt> file located in the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracEnvironment">TracEnvironment</a>'s <tt>plugins/</tt> directory.
+</p>
+<div class="code"><pre><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> datetime
+<span class="c"># Note: since Trac 0.11, datetime objects are used internally</span>
+
+<span class="kn">from</span> <span class="nn">genshi.builder</span> <span class="kn">import</span> tag
+
+<span class="kn">from</span> <span class="nn">trac.util.datefmt</span> <span class="kn">import</span> format_datetime<span class="p">,</span> utc
+<span class="kn">from</span> <span class="nn">trac.wiki.macros</span> <span class="kn">import</span> WikiMacroBase
+
+<span class="k">class</span> <span class="nc">TimeStampMacro</span><span class="p">(</span>WikiMacroBase<span class="p">):</span>
+    <span class="sd">"""Inserts the current time (in seconds) into the wiki page."""</span>
+
+    revision <span class="o">=</span> <span class="s">"$Rev$"</span>
+    url <span class="o">=</span> <span class="s">"$URL$"</span>
+
+    <span class="k">def</span> <span class="nf">expand_macro</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> formatter<span class="p">,</span> name<span class="p">,</span> text<span class="p">):</span>
+        t <span class="o">=</span> datetime<span class="o">.</span>now<span class="p">(</span>utc<span class="p">)</span>
+        <span class="k">return</span> tag<span class="o">.</span>b<span class="p">(</span>format_datetime<span class="p">(</span>t<span class="p">,</span> <span class="s">'</span><span class="si">%c</span><span class="s">'</span><span class="p">))</span>
+</pre></div><h3 id="Macrowitharguments">Macro with arguments</h3>
+<p>
+To test the following code, you should saved it in a <tt>helloworld_sample.py</tt> file located in the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracEnvironment">TracEnvironment</a>'s <tt>plugins/</tt> directory.
+</p>
+<div class="code"><pre><span class="kn">from</span> <span class="nn">genshi.core</span> <span class="kn">import</span> Markup
+
+<span class="kn">from</span> <span class="nn">trac.wiki.macros</span> <span class="kn">import</span> WikiMacroBase
+
+<span class="k">class</span> <span class="nc">HelloWorldMacro</span><span class="p">(</span>WikiMacroBase<span class="p">):</span>
+    <span class="sd">"""Simple HelloWorld macro.
+
+    Note that the name of the class is meaningful:
+     - it must end with "Macro"
+     - what comes before "Macro" ends up being the macro name
+
+    The documentation of the class (i.e. what you're reading)
+    will become the documentation of the macro, as shown by
+    the !MacroList macro (usually used in the WikiMacros page).
+    """</span>
+
+    revision <span class="o">=</span> <span class="s">"$Rev$"</span>
+    url <span class="o">=</span> <span class="s">"$URL$"</span>
+
+    <span class="k">def</span> <span class="nf">expand_macro</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> formatter<span class="p">,</span> name<span class="p">,</span> text<span class="p">,</span> args<span class="p">):</span>
+        <span class="sd">"""Return some output that will be displayed in the Wiki content.
+
+        `name` is the actual name of the macro (no surprise, here it'll be
+        `'HelloWorld'`),
+        `text` is the text enclosed in parenthesis at the call of the macro.
+          Note that if there are ''no'' parenthesis (like in, e.g.
+          [[HelloWorld]]), then `text` is `None`.
+        `args` are the arguments passed when HelloWorld is called using a
+        `#!HelloWorld` code block.
+        """</span>
+        <span class="k">return</span> <span class="s">'Hello World, text = </span><span class="si">%s</span><span class="s">, args = </span><span class="si">%s</span><span class="s">'</span> <span class="o">%</span> \
+            <span class="p">(</span>Markup<span class="o">.</span>escape<span class="p">(</span>text<span class="p">),</span> Markup<span class="o">.</span>escape<span class="p">(</span><span class="nb">repr</span><span class="p">(</span>args<span class="p">)))</span>
+
+</pre></div><p>
+Note that <tt>expand_macro</tt> optionally takes a 4<sup>th</sup> parameter <em><tt>args</tt></em>. When the macro is called as a <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors">WikiProcessor</a>, it's also possible to pass <tt>key=value</tt> <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors#UsingProcessors">processor parameters</a>. If given, those are stored in a dictionary and passed in this extra <tt>args</tt> parameter. On the contrary, when called as a macro, <tt>args</tt> is  <tt>None</tt>. (<em>since 0.12</em>).
+</p>
+<p>
+For example, when writing:
+</p>
+<pre class="wiki">{{{#!HelloWorld style="polite"
+&lt;Hello World!&gt;
+}}}
+
+{{{#!HelloWorld
+&lt;Hello World!&gt;
+}}}
+
+[[HelloWorld(&lt;Hello World!&gt;)]]
+</pre><p>
+One should get:
+</p>
+<pre class="wiki">Hello World, text = &lt;Hello World!&gt; , args = {'style': u'polite'}
+Hello World, text = &lt;Hello World!&gt; , args = {}
+Hello World, text = &lt;Hello World!&gt; , args = None
+</pre><p>
+Note that the return value of <tt>expand_macro</tt> is <strong>not</strong> HTML escaped. Depending on the expected result, you should escape it by yourself (using <tt>return Markup.escape(result)</tt>) or, if this is indeed HTML, wrap it in a Markup object (<tt>return Markup(result)</tt>) with <tt>Markup</tt> coming from Genshi, (<tt>from genshi.core import Markup</tt>).  
+</p>
+<p>
+You can also recursively use a wiki Formatter (<tt>from trac.wiki import Formatter</tt>) to process the <tt>text</tt> as wiki markup, for example by doing:
+</p>
+<div class="code"><pre><span class="kn">from</span> <span class="nn">genshi.core</span> <span class="kn">import</span> Markup
+<span class="kn">from</span> <span class="nn">trac.wiki.macros</span> <span class="kn">import</span> WikiMacroBase
+<span class="kn">from</span> <span class="nn">trac.wiki</span> <span class="kn">import</span> Formatter
+<span class="kn">import</span> <span class="nn">StringIO</span>
+
+<span class="k">class</span> <span class="nc">HelloWorldMacro</span><span class="p">(</span>WikiMacroBase<span class="p">):</span>
+        <span class="k">def</span> <span class="nf">expand_macro</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> formatter<span class="p">,</span> name<span class="p">,</span> text<span class="p">,</span> args<span class="p">):</span>
+                text <span class="o">=</span> <span class="s">"whatever '''wiki''' markup you want, even containing other macros"</span>
+                <span class="c"># Convert Wiki markup to HTML, new style</span>
+                out <span class="o">=</span> StringIO<span class="o">.</span>StringIO<span class="p">()</span>
+                Formatter<span class="p">(</span><span class="bp">self</span><span class="o">.</span>env<span class="p">,</span> formatter<span class="o">.</span>context<span class="p">)</span><span class="o">.</span>format<span class="p">(</span>text<span class="p">,</span> out<span class="p">)</span>
+                <span class="k">return</span> Markup<span class="p">(</span>out<span class="o">.</span>getvalue<span class="p">())</span>
+</pre></div></div>
+        
+        
+      </div>
+      
+
+    </div>
+    <script type="text/javascript">
+        jQuery.loadStyleSheet("/preparde/pygments/trac.css", "text/css");
+    </script>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiMacros?version=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,369 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>NASA Ames File Format Indices (FFI)</title>
+</head>
+
+<body bgcolor="#ffffff">
+<h1><font color="#333399">NASA Ames File Format Indices (FFI): Summary</font></h1>
+<hr>
+
+<table>
+ <tr><td><b>Contents.</b></td><td width=12></td>
+     <td colspan=2>Notes</td>
+     </tr>
+ <tr><td></td><td></td>
+     <td colspan=2>Important general rules</td>
+     </tr>
+ <tr><td></td><td></td>
+     <td colspan=2>Remark</td>
+     </tr>
+ <tr><td></td><td></td>
+     <td><a href="#Tab1"><b>Table 1</b>.</a></td>
+     <td>File structure</td></tr>
+ <tr><td></td><td></td>
+     <td><a href="#Tab2"><b>Table 2</b>.</a></td>
+     <td>Definition of FFIs (including data &#038; header format)</td></tr>
+ <tr><td></td><td></td>
+     <td><a href="#Tab3"><b>Table 3</b>.</a></td>
+     <td>Summary of header format</td></tr>
+</table>
+<hr>
+
+<br>
+<b>Notes</b>
+
+<ul>
+ <li>Tables 1, 2 &#038; 3 below only display a summary of the different types
+     of FFIs.
+     Full instructions about the header and data formats for each FFI are given
+     in <a href="/help/formats/NASA-Ames/G-and-H-June-1998.html">Gaines &#038;
+     Hipskind, 1998</a>.
+     Data suppliers unfamiliar with NASA Ames Format are advised to refer to
+     this last document before starting to generate their data files.
+     The nomenclature and notation system used below are identical to the
+     conventions adopted by Gaines &#038; Hipskind, 1998.
+ <li>A <a href="/help/formats/NASA-Ames/makeheader.f">Fortran programme</a> to write
+     NASA Ames file headers is available from the BADC.
+</ul>
+
+<b>Important general rules</b>
+
+<ul>
+ <li>All independent variables must be <i>monotonic</i> (<i>i.e.</i> their
+     values must be ordered by strictly increasing or decreasing order).
+     The word <i>strictly</i> in the brackets ensures that dependent variables
+     are functions of the independent variable(s).
+     A particular implication of this requirement is that any independent
+     variable cannot be set to the same value more than once within a single
+     span of its domain.
+     This rule also applies when the variable is a character string (case of
+     X2 in FFI 2160), the order here being the alphanumeric order.
+ <li>For all FFIs, primary variables are real.
+</ul>
+
+<b>Remark</b>
+
+<ul>
+ <li>For all FFIs pertaining to data records including auxiliary variables
+     (<i>i.e.</i> all except 1001), the auxiliary variables solely depend on
+     the last (<i>i.e.</i> the most slowly varying) independent variable, which
+     is also the (only) unbounded** independent variable.
+</ul>
+
+<br>
+<p>
+<a name="Tab1"><b>Table 1.</b> NASA Ames data file structure.</a>
+<br><br>
+<table cellpadding=4>
+ <tr bgcolor=#666666>
+  <th colspan=2><font color=#ffffff>Section</font></th>
+  <th><font color=#ffffff>Content</font></th>
+  <th><font color=#ffffff>Format</font></th>
+ </tr>
+ <tr bgcolor=#dddddd>
+  <td rowspan=3>Metadata<br>(header)</td>
+  <td align=center><a href="firstlines.html">Top seven
+      lines</a></td>
+  <td>Information about the experiment</td>
+  <td>Common to all FFIs</td>
+ </tr>
+ <tr bgcolor=#dddddd>
+  <td align=center>Body</td>
+  <td>Information about the data</td>
+  <td>See <a href="#Meta">link in Table 2</a> below</td>
+ </tr>
+ <tr bgcolor=#dddddd>
+  <td align=center><a href="lastlines.html">Tail</a></td>
+  <td>Comments</td>
+  <td>Common to all FFIs</td>
+ </tr>
+ <tr bgcolor=#dddddd>
+  <td colspan=2>Data</td>
+  <td>Data</td>
+  <td>See <a href="#Data">link in Table 2</a> below</td>
+ </tr>
+</table>
+</p>
+
+<br><br>
+<p>
+<a name="Tab2"><b>Table 2.</b> Definition of File Format Indices.</a>
+<br>
+N.B.
+(1) Independent variable values must be ordered so as to be strictly increasing
+    or decreasing.
+(2) For all FFIs, primary variables are real.
+(3) For all FFIs pertaining to data records including auxiliary variables
+(<i>i.e.</i> all except 1001), the auxiliary variables solely depend on the last
+(<i>i.e.</i> the most slowly varying) independent variable, which is also the
+(only) unbounded** independent variable.
+<br><br>
+<center>
+<table>
+ <tr bgcolor=#666666>
+  <th><font color=#ffffff>Number of<br>independent<br>variables</font></th>
+  <th colspan=3><font color=#ffffff size=+2>1</font></th>
+  <th colspan=4><font color=#ffffff size=+2>2</font></th>
+  <th><font color=#ffffff size=+2>3</font></th>
+  <th><font color=#ffffff size=+2>4</font></th>
+ </tr>
+ <tr bgcolor=#666666>
+  <th><font color=#ffffff>FF Index</font></th>
+  <th><font color=#ffffff>1001</font></th>
+  <th><font color=#ffffff>1010</font></th>
+  <th><font color=#ffffff>1020</font></th>
+  <th><font color=#ffffff>2010</font></th>
+  <th><font color=#ffffff>2110</font></th>
+  <th><font color=#ffffff>2160</font></th>
+  <th><font color=#ffffff>2310</font></th>
+  <th><font color=#ffffff>3010</font></th>
+  <th><font color=#ffffff>4010</font></th>
+ </tr>
+ <tr valign=top>
+  <td bgcolor=#666666><br><font color=#ffffff><b>
+      Independent variables characteristics</b></font></td>
+  <td bgcolor=#dddddd><br>Unbounded**</td>
+  <td bgcolor=#dddddd><br>Unbounded**</td>
+  <td align=center bgcolor=#dddddd><br>Unbounded** with uniform increment
+      <br><br><br><br><br>
+      <i>Partly implicit*: only a subset of regularly spaced marks is
+      recorded.</i>
+      </td>
+  <td align=center bgcolor=#dddddd><br>1 real bounded** &#038; 1 real
+      unbounded**<br><br><br><br>
+      <i>Both variables are given on a fixed grid.</i></td>
+  <td align=center bgcolor=#dddddd><br>1 real bounded** &#038; 1 real
+      unbounded**<br><br><br><br>
+      <i>The set of values taken by the bounded variable depends on the
+      unbounded variable values.</i></td>
+  <td align=center bgcolor=#dddddd><br>1 real bounded** &#038; 1 unbounded**
+      character string<br><br>
+      <i>The set of values taken by the bounded variable depends on the
+      unbounded variable values.</i></td>
+  <td align=center bgcolor=#dddddd><br>1 real bounded** &#038; 1 real
+      unbounded**<br><br>
+      <i>At each unbounded variable mark, the values of the bounded variable are
+      regularly spaced, but they depend on the unbounded variable value.</i>
+      <br><br></td>
+  <td align=center bgcolor=#dddddd><br>2 bounded** &#038; 1 unbounded**</td>
+  <td align=center bgcolor=#dddddd><br>3 bounded** &#038; 1 unbounded**</td>
+ </tr>
+ <tr valign=top>
+  <td bgcolor=#666666><br><font color=#ffffff><b>
+      Auxiliary variables characteristics</b></font></td>
+  <td align=center bgcolor=#dddddd><br>No auxiliary variable</td>
+  <td align=center bgcolor=#dddddd><br>Real</td>
+  <td align=center bgcolor=#dddddd><br>Real</td>
+  <td align=center bgcolor=#dddddd><br>Real</td>
+  <td align=center bgcolor=#dddddd><br>The 1<sup>st</sup> auxiliary variable is
+      the number (integer) of values of the bounded** independent variable.
+      <br><br>
+      Other auxiliary variables are real.</td>
+  <td align=center bgcolor=#dddddd><br>The 1<sup>st</sup> auxiliary variable is
+      the number (integer) of values of the bounded** independent variable.
+      <br><br>
+      The next auxiliary variables are real.<br><br>
+      The last auxiliary variables may be character strings.<br><br></td>
+  <td align=center bgcolor=#dddddd><br>The first 3 auxiliary variables are the
+      number of values of the bounded variable (integer), its base value (real)
+      and the value of its (regular) increment (real).<br><br>
+      Other auxiliary variables are real.</td>
+  <td align=center bgcolor=#dddddd><br>Real</td>
+  <td align=center bgcolor=#dddddd><br>Real</td>
+ </tr>
+ <tr valign=middle>
+  <td bgcolor=#666666><br><a name="Data"><font color=#ffffff><b>
+      Data format</b></font></a><br><br></td>
+  <td bgcolor=#dddddd><a href="DF1001.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="DF1010.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="DF1020.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="DF2010.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="DF2110.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="DF2160.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="DF2310.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="DF3010.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="DF4010.html">Please click</a></td>
+ </tr>
+ <tr valign=middle>
+  <td bgcolor=#666666><br><a name="Meta"><font color=#ffffff><b>
+      Metadata format</b></font></a><br><br></td>
+  <td bgcolor=#dddddd><a href="MF1001.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="MF1010.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="MF1020.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="MF2010.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="MF2110.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="MF2160.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="MF2310.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="MF3010.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="MF4010.html">Please click</a></td>
+ </tr>
+ <tr valign=middle>
+  <td bgcolor=#666666><br><a name="Exam"><font color=#ffffff><b>
+      Examples</b></font></a><br><br></td>
+  <td bgcolor=#dddddd><a href="Ex1001.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="Ex1010.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="Ex1020.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="Ex2010.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="Ex2110.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="Ex2160.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="Ex2310.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="Ex3010.html">Please click</a></td>
+  <td bgcolor=#dddddd><a href="Ex4010.html">Please click</a></td>
+ </tr>
+ <tr bgcolor=#666666>
+  <th><font color=#ffffff>FF Index</font></th>
+  <th><font color=#ffffff>1001</font></th>
+  <th><font color=#ffffff>1010</font></th>
+  <th><font color=#ffffff>1020</font></th>
+  <th><font color=#ffffff>2010</font></th>
+  <th><font color=#ffffff>2110</font></th>
+  <th><font color=#ffffff>2160</font></th>
+  <th><font color=#ffffff>2310</font></th>
+  <th><font color=#ffffff>3010</font></th>
+  <th><font color=#ffffff>4010</font></th>
+ </tr>
+</table>
+</center>
+<p style="text-indent: -.7em; margin-left: .7em">
+* <i>Implicit</i> denotes a variable of which the values are
+   not recorded in the data file, but are deductible from the information
+   provided in the data file header.
+   <i>Explicit</i> applies to a variable of which all the values are explicitly
+   recorded in the data file.
+   A variable can be <i>partly implicit</i> (as in FFI 1020) if only a subset
+   of its values is recorded.
+</p>
+<p style="text-indent: -1.4em; margin-left: 1.4em">
+** In this particular context, a variable is said to be <i>bounded</i> if the
+number of its values is explicit*.
+If this number is implicit*, the variable is <i>unbounded</i>. 
+</p>
+
+<br>
+<p>
+<a name="Tab3"><b>Table 3.</b> Summary of metadata format (header) for
+all FFIs.</a>
+<br><br>
+<table>
+<tr bgcolor=#666666>
+ <td></td>
+ <th width=60><font color=#ffffff>1001</font></th>
+ <th width=60><font color=#ffffff>1010</font></th>
+ <th width=60><font color=#ffffff>1020</font></th>
+ <th><font color=#ffffff>2010</font></th>
+ <th><font color=#ffffff>3010</font></th>
+ <th><font color=#ffffff>4010</font></th>
+ <th width=60><font color=#ffffff>2110</font></th>
+ <th width=60><font color=#ffffff>2310</font></th>
+ <th><font color=#ffffff>2160</font></th>
+</tr>
+<tr bgcolor=#dddddd>
+ <td align=center valign=middle bgcolor=#666666><font color=#ffffff><b>
+     Top</b></font></td>
+ <td colspan=9 align=center>NLHEAD FFI<br>
+     ONAME<br>
+     ORG<br>
+     SNAME<br>
+     MNAME<br>
+     IVOL NVOL<br>
+     DATE RDATE
+ </td>
+</tr>
+<tr bgcolor=#dddddd>
+ <td rowspan=6 align=center valign=middle bgcolor=#666666><font color=#ffffff>
+     <b>Body</b></font></td>
+ <td colspan=7 align=center>[ DX<sup>s</sup> s=1,NIV ]</td>
+ <td align=center>DX<sup>NIV</sup></td>
+ <td align=center>DX<sup>1</sup></td>
+</tr>
+<tr bgcolor=#dddddd>
+ <td colspan=2 bgcolor=#888888></td>
+ <td align=center>NVPM</td>
+ <td colspan=3 align=center>[ NX<sup>s</sup> s=1,NIV-1 ]<br>
+     [ NXDEF<sup>s</sup> s=1,NIV-1 ]<br>
+     [ X<sup>s</sup>(i) i=1,NXDEF<sup>s</sup> ] s=1, NIV-1</td>
+ <td colspan=2 bgcolor=#888888></td>
+ <td align=center>LENX</td>
+</tr>
+<tr bgcolor=#dddddd>
+ <td colspan=9 align=center>
+     [ XNAME<sup>s</sup> ] s=1,NIV<br>
+     NV<br>
+     [ VSCAL<sub>n</sub> n=1,NV ]<br>
+     [ VMISS<sub>n</sub> n=1,NV ]<br>
+     [ VNAME<sub>n</sub> ] n=1,NV
+ </td>
+</tr>
+<tr bgcolor=#dddddd>
+ <td bgcolor=#888888></td>
+ <td colspan=8 align=center>NAUXV</td>
+</tr>
+<tr bgcolor=#dddddd>
+ <td bgcolor=#888888></td>
+ <td colspan=7 align=center valign=middle>
+     [ ASCAL<sub>a</sub> a=1,NAUXV ]<br>
+     [ AMISS<sub>a</sub> a=1,NAUXV ]<br>
+ </td>
+ <td align=center valign=middle>
+     NAUXC<br>
+     [ ASCAL<sub>a</sub> a=1,NAUXV-NAUXC ]<br>
+     [ AMISS<sub>a</sub> a=1,NAUXV-NAUXC ]<br>
+     [ LENA<sub>a</sub> a=NAUXV-NAUXC+1,NAUXV ]<br>
+     [ AMISS<sub>a</sub> ] a=NAUXV-NAUXC+1,NAUXV
+ </td>
+</tr>
+<tr bgcolor=#dddddd>
+ <td bgcolor=#888888></td>
+ <td colspan=8 align=center>[ ANAME<sub>a</sub> ] a=1,NAUXV
+ </td>
+</tr>
+<tr bgcolor=#dddddd>
+ <td align=center valign=middle bgcolor=#666666><font color=#ffffff><b>
+     Tail</b></font></td>
+ <td colspan=9 align=center bgcolor=#dddddd>
+     NSCOML<br>
+     [ SCOM<sub>k</sub> ] k=1,NSCOML<br>
+     NNCOML<br>
+     [ NCOM<sub>k</sub> ] k=1,NNCOML
+</tr>
+<tr bgcolor=#666666>
+ <td></td>
+ <th width=60><font color=#ffffff>1001</font></th>
+ <th width=60><font color=#ffffff>1010</font></th>
+ <th width=60><font color=#ffffff>1020</font></th>
+ <th><font color=#ffffff>2010</font></th>
+ <th><font color=#ffffff>3010</font></th>
+ <th><font color=#ffffff>4010</font></th>
+ <th width=60><font color=#ffffff>2110</font></th>
+ <th width=60><font color=#ffffff>2310</font></th>
+ <th><font color=#ffffff>2160</font></th>
+</tr>
+</table>
+</p>
+
+<p>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20090718T230000Z
+DTEND:20090729T230000Z
+LOCATION:Montreal. Quebec, Canada
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000B0395DE39E75C901000000000000000
+	01000000037E52FA601AEF440AAC7571BDF4C85A9
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+Welcome!=0D=0AIAMAS, IAPSO and IACS invite the international atmospheric,=
+ oceanographic and cryospheric research community to MOCA-09, their Joint=
+ Assembly, to be held in July 2009 in Montr=E9al, Qu=E9bec, Canada.=0D=0A=
+Dates:=0D=0AIAMAS	19 to 29 July 	=0D=0AIAPSO	19 to 24 July 	=0D=0AIACS	19=
+ to 24 July 	=0D=0AJOINT SYMPOSIA	19 to 24 July 	=0D=0A=0D=0AAll details =
+available at http://www.moca-09.org/e/99-home_e.shtml=0D=0A
+SUMMARY:The International Association of Meteorology and Atmospheric Scienc
+	es (IAMAS) Joint Assembly with IAPSO and IACS
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

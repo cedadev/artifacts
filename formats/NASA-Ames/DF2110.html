@@ -1,0 +1,187 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>NASA Ames FFI 2110 Data Format</title>
+</head>
+
+<body bgcolor="#ffffff">
+<h1><font color="#333399">NASA Ames Data Format: FFI 2110</font></h1>
+<hr>
+
+<h2>Symbols used</h2>
+
+<table>
+<tr valign=top>
+ <td>X<sup>s</sup></td>
+ <td width=6></td>
+ <td>s<sup>th</sup> independent variable (s = 1 or 2). Its values are real.<br>
+     X<sup>1</sup> is the bounded independent variable, X<sup>2</sup> the
+     unbounded independent variable.<br>
+     To each value of X<sup>2</sup> corresponds a different set of values taken
+     by X<sup>1</sup> (the grid is not orthogonal). 
+     </td></tr>
+<tr valign=top>
+ <td>NX</td>
+ <td></td>
+ <td>Number of values of X<sup>1</sup>. It is X<sup>2</sup>-dependent.<br>
+     If NX(m) = 0, there is no record of X<sup>1</sup> and V<sub>n</sub> at
+     the mark X<sup>2</sup>(m).</td>
+ </tr>
+<tr valign=top>
+ <td>NV</td>
+ <td></td>
+ <td>Number of primary dependent variables</td></tr>
+<tr valign=top>
+ <td>NAUXV</td>
+ <td></td>
+ <td>Number of auxiliary dependent variables</td></tr>
+<tr valign=top>
+ <td>V<sub>n</sub></td>
+ <td></td>
+ <td>n<sup>th</sup> primary variable</td></tr>
+<tr valign=top>
+ <td>A<sub>a</sub></td>
+ <td></td>
+ <td>a<sup>th</sup> auxiliary variable (depends on X<sup>2</sup> only
+     &#151; independent of X<sup>1</sup>).
+     <br>
+     A<sub>1</sub> = NX (integer).
+     <br>
+     For a > 1, A<sub>a</sub> is real.</td></tr>
+</table>
+
+<h2>Condensed notation</h2>
+
+<table><tr valign=top>
+ <td width=60>[ X<sup>2</sup>(m) </td>
+ <td width=60> NX(m) </td>
+ <td width=60>( A<sub>a</sub>(m), </td>
+ <td> a=2,NAUXV ) ]</td>
+</tr></table>
+<table><tr valign=top>
+ <td width=60>[ X<sup>1</sup>(i,m) </td>
+ <td width=70>( V<sub>n</sub>(i,m), </td>
+ <td width=80> n=1,NV ) ] </td>
+ <td> i=1,NX(m) </td>
+ <td width=12></td>
+ <td><i>Omitted if NX(m) = 0 or if NX(m) = AMISS<sub>1</sub>.</i></td>
+</tr></table>
+
+<h2>Expanded notation</h2>
+
+<table cellpadding=4>
+<tr>
+ <td>X<sup>2</sup>(1)</td>
+ <td>NX(1)</td>
+ <td>A<sub>2</sub>(1)</td>
+ <td>...</td>
+ <td>A<sub>NAUXV</sub>(1)</td>
+ <td width=8></td><td></td>
+ </tr>
+<tr valign=top>
+ <td></td>
+ <td>X<sup>1</sup>(1,1)</td>
+ <td>V<sub>1</sub>(1,1)</td>
+ <td>...</td>
+ <td>V<sub>NV</sub>(1,1)</td>
+ <td></td>
+ <td><i>Omitted if NX(1) = 0 or if NX(1) = AMISS<sub>1</sub>.</i></td>
+ </tr>
+<tr valign=top>
+ <td></td>
+ <td colspan=4>...</td>
+ <td></td>
+ <td><i>Omitted if NX(1) = 0 or if NX(1) = AMISS<sub>1</sub>.</i></td>
+ </tr>
+<tr valign=top>
+ <td></td>
+ <td>X<sup>1</sup>(NX(1),1)</td>
+ <td>V<sub>1</sub>(NX(1),1)</td>
+ <td>...</td>
+ <td>V<sub>NV</sub>(NX(1),1)</td>
+ <td></td>
+ <td><i>Omitted if NX(1) = 0 or if NX(1) = AMISS<sub>1</sub>.</i></td>
+ </tr>
+<tr valign=top>
+ <td>X<sup>2</sup>(2)</td>
+ <td>NX(2)</td>
+ <td>A<sub>2</sub>(2)</td>
+ <td>...</td>
+ <td>A<sub>NAUXV</sub>(2)</td>
+ <td colspan=2></td>
+ </tr>
+<tr valign=top>
+ <td></td>
+ <td>X<sup>1</sup>(1,2)</td>
+ <td>V<sub>1</sub>(1,2)</td>
+ <td>...</td>
+ <td>V<sub>NV</sub>(1,2)</td>
+ <td></td>
+ <td><i>Omitted if NX(2) = 0 or if NX(2) = AMISS<sub>1</sub>.</i></td>
+ </tr>
+<tr valign=top>
+ <td></td>
+ <td colspan=4>...</td>
+ <td></td>
+ <td><i>Omitted if NX(2) = 0 or if NX(2) = AMISS<sub>1</sub>.</i></td>
+ </tr>
+<tr valign=top>
+ <td></td>
+ <td>X<sup>1</sup>(NX(2),2)</td>
+ <td>V<sub>1</sub>(NX(2),2)</td>
+ <td>...</td>
+ <td>V<sub>NV</sub>(NX(2),2)</td>
+ <td></td>
+ <td><i>Omitted if NX(2) = 0 or if NX(2) = AMISS<sub>1</sub>.</i></td>
+ </tr>
+<tr valign=top>
+ <td colspan=5><b>...</b></td>
+ <td colspan=2></td>
+ </tr>
+<tr valign=top>
+ <td>X<sup>2</sup>(m)</td>
+ <td>NX(m)</td>
+ <td>A<sub>2</sub>(m)</td>
+ <td>...</td>
+ <td>A<sub>NAUXV</sub>(m)</td>
+ <td colspan=2></td>
+ </tr>
+<tr valign=top>
+ <td></td>
+ <td>X<sup>1</sup>(1,m)</td>
+ <td>V<sub>1</sub>(1,m)</td>
+ <td>...</td>
+ <td>V<sub>NV</sub>(1,m)</td>
+ <td></td>
+ <td><i>Omitted if NX(m) = 0 or if NX(m) = AMISS<sub>1</sub>.</i></td>
+ </tr>
+<tr valign=top>
+ <td></td>
+ <td colspan=4>...</td>
+ <td></td>
+ <td><i>Omitted if NX(m) = 0 or if NX(m) = AMISS<sub>1</sub>.</i></td>
+ </tr>
+<tr valign=top>
+ <td></td>
+ <td>X<sup>1</sup>(NX(m),m)</td>
+ <td>V<sub>1</sub>(NX(m),m)</td>
+ <td>...</td>
+ <td>V<sub>NV</sub>(NX(m),m)</td>
+ <td></td>
+ <td><i>Omitted if NX(m) = 0 or if NX(m) = AMISS<sub>1</sub>.</i></td>
+ </tr>
+<tr valign=top>
+ <td colspan=5><b>...</b></td>
+ <td colspan=2></td>
+ </tr>
+</table>
+
+<p>
+<a href="FFI-summary.html">Back to FFI Summary.</a>
+</p>
+
+<p>
+</body>
+
+</html>

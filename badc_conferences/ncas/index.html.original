@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+<TITLE>NCAS: Presentations</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="/styles/nercie.css">
+</HEAD>
+<BODY bgcolor="#669966">
+
+<TABLE cellpadding="5" CELLSPACING="5"> 
+<TR><TD valign="top">
+  <!--menu cell-->
+  <a href="/"><IMG SRC="/graphics/ncas250ext.gif" border="0"></a>
+  <H3> Presentations from the <BR>
+  NERC Centres for <BR>Atmospheric Science</H3>
+ <p>
+</TD>
+ <TD VALIGN="top"> 
+ <!--text cell-->
+  <TABLE WIDTH="350" CELLPADDING="3" CELLSPACING="0" BORDER="0" ALIGN="top">
+      <TR><TD CLASS="menuhead">&nbsp;&nbsp;Funding proposal to NERC STB - 7 November 2001<BR></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=ncas_stb" class="menu">
+	  NCAS presentation</a></TD></TR>
+  </TABLE>
+<p>
+  <TABLE WIDTH="350" CELLPADDING="3" CELLSPACING="0" BORDER="0" ALIGN="top">
+      <TR><TD CLASS="menuhead">&nbsp;&nbsp;Launch of NCAS in London - 29 May 2002<BR></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=launch_ajt" class="menu">
+	  Introduction:  Alan Thorpe</a></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=launch_jap" class="menu">
+	  Chemistry and climate:  John Pyle</a></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=launch_jms" class="menu">
+	  Understanding climate:  Julia Slingo</a></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=launch_kab" class="menu">
+	  Flood forecasting:  Keith Browning</a></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=launch_mjp" class="menu">
+	  Urban air quality:  Mike Pilling</a></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=launch_prj" class="menu">
+	  Observing facilities:  Peter Jonas</a></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=launch_lawrence" class="menu">
+	  Data curation and facilitation:  Bryan Lawrence</a></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=launch_king" class="menu">
+	  Science, environment and government:  David King</a></TD></TR>
+   </TABLE>
+<p>
+   <TABLE WIDTH="350" CELLPADDING="3" CELLSPACING="0" BORDER="0" ALIGN="top">
+      <TR><TD CLASS="menuhead">&nbsp;&nbsp;NCAS FP6 Discussion Meeting in London - 10 January 2003<BR></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=fp6_ruth_boumphrey" class="menu">
+	  Overview of Framework Programme 6:  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          funding and programme development opportunities: <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+          Ruth Boumphrey</a></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="fp6_ruth_boumphrey/fp6_ruth_boumphrey_info_sources.pdf" class="menu">
+	  Further sources of information on FP6:  Ruth Boumphrey</a></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=fp6_alan_thorpe" class="menu">
+	  FP6 thematic programmes:  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          specific opportunities for atmospheric science:  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          Alan Thorpe</a></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=fp6_tony_cox" class="menu">
+	  Atmospheric Composition network (for first call):  Tony Cox</a></TD></TR>
+
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=fp6_john_pyle" class="menu">
+	  Ozone and the stratosphere (for first call):  John Pyle</a></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=fp6_daniel_spagni" class="menu">
+	  Flooding network (for first call):  Daniel Spagni</a></TD></TR>
+      <TR><TD CLASS="menu">&nbsp;&nbsp;&nbsp;&nbsp;
+          <A HREF="/cgi-bin/ncas/pres.py?presname=fp6_robert_thorpe" class="menu">
+	  Climate change projections (for first call):  Robert Thorpe</a></TD></TR>
+   </TABLE>
+
+  </TD>
+ </TR>
+ <TR><TD COLSPAN="2" class="foot"><CENTER>Maintained by the <A HREF="mailto:badc@rl.ac.uk">BADC</A>. 
+ Last Modified:<SCRIPT>document.write(document.lastModified);</SCRIPT></CENTER></TD></TR>
+</TABLE>
+</BODY>
+</HTML>

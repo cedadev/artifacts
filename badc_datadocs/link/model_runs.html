@@ -1,0 +1,665 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC LINK Climate Impact  Data welcome page</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<P><IMG SRC="/graphics/logos/metlogos.gif" ALIGN="BOTTOM"></P>
+
+<H1>Climate Impacts LINK&nbsp;Project: Model Runs</H1>
+
+<HR ALIGN=LEFT>
+
+<H2><IMG SRC="/graphics/blue/info.gif" BORDER="0" ALIGN="BOTTOM">Introduction</H2>
+        <P>These pages describe some of  model runs in the Climate Impacts LINK&nbsp;dataset at the BADC. Originally, the archive was held at the Climate Research Unit at the University of East Anglia, but in 2002 the data were moved to the BADC&nbsp;as part of the current LINK contract with DEFRA. 
+        <p>The CRU data were extracted from the Hadley Centre on a per-request basis in binary PP format, and converted to an ascii format (if required by the user), with the extracted PP data then being deleted to reduce the disk space required. This meant that the resulting archive was a non-uniform mixture of ascii and binary data, for a varying number of parameters and time periods, for both global and regional model output. One of the aims of hosing the archive at the BADC&nbsp;was to recover raw PP&nbsp;data from the Met Office and to develop a consistent archive, which could then be accessed either directly or via on-line tools. </p>
+        <p>Unfortunately, the move of the Met Office to Exeter, and the loss of the dial-up connection severely restricted the amount of data the BADC&nbsp;were able to recover over the past 3 years, although we have finally been able to resume extractions (with an acceptable level of success) over the past 2 months (Sept 2005-present). We have attempted to recover those output most in demand from users (typically the SRES&nbsp;monthly/daily data), and have also extracted additional runs to assist with attribution studies. </p>
+        <p>The decision was made to rename the raw PP data from the &quot;unfriendly&quot; form to something more &quot;human readable&quot;. In order to do this, a lookup table has been developed, and this is described below. This can be used to locate the data from a particular model run. The sections below describe this in more detail.</p>
+        <p>The climate model data includes climate change runs from HadCM2, HadCM3 and HadRM2. Both HadCM2 and HadCM3 are global coupled atmosphere-ocean models. HadCM2 was used in the IPCC second assessment report, but has since been superseded by HadCM3, the model used in the IPCC third assessment report. HadCM3 has an improved representation of the atmosphere and ocean physics compared to HadCM2. In particular the improvement in physics mean that HadCM3 has a reasonable, stable climate without the use of a flux correction. HadRM3 is a high resolution atmosphere model that is run over the European domain. Details of the climate forcing scenarios used in the climate change runs can be found at the <a href="http://www.cru.uea.ac.uk/link/res_scens/index_files/res_scen_index.html">Link-CRU</a> web site.</p>
+        <h2>PP filename convention</h2>
+        <p>The file names are based on the original output Met Office file names, such as: </p>
+        <p>000001000000.01.16.202.000128.2848.12.01.00.00.pp . </p>
+        <p>At the BADC,  the files are renamed to make them more user-friendly, so that the above becomes<br>
+        </p>
+        <p>Hadcm3_SRESA2a_3.75x2.5_20481201_16202_daily_000128_ens1.pp.</p>
+        <p>This is interpreted as:</p>
+        <p>HadCM3 =model used </p>
+        <p>SRESA2a=run storyline</p>
+        <p>3.75x2.5 =grid size</p>
+        <p>20481201= date, in the form YYYYMMDD</p>
+        <p>16202 =stash code (see below)</p>
+        <p>Daily =daily mean file</p>
+        <p>000128= processing code (see below)</p>
+        <p>Ens1=ensemble member 1</p>
+        <p>.pp= binary pp format (see below)</p>
+        <p><b>STASH code:</b></p>
+        <p>The stash code is used to identify a particular variable from a lookup table (more information on the pp format itself is available at <a href="http://badc.nerc.ac.uk/help/formats/pp-format/" title="PP format">http://badc.nerc.ac.uk/help/formats/pp-format/</a> ) and the stashcodes themselves are listed at: <a href="http://badc.nerc.ac.uk/help/formats/pp-format/files/stash_field.txt" title="Stash-field code table">http://badc.nerc.ac.uk/help/formats/pp-format/files/stash_field.txt.</a></p>
+        <p>So 16202 corresponds to (stash code, field code, variable): <br>
+        </p>
+        <p>16202    1 GEOPOTENTIAL HEIGHT: PRESSURE LEVELS</p>
+        <p><b>Processing code:</b></p>
+        <p>The processing code indicates what the field actually represents:<br>
+        </p>
+        <p>E.g </p>
+        <p>000128   Time mean field.</p>
+        <p>004096   Minimum value of field during time period.</p>
+        <p>008192   Maximum value of field during time period.</p>
+        <p>(So 16202_daily_000128 is the mean daily value of the geopotential height on pressure levels).</p>
+        <p><b>PP format:</b></p>
+        <p>The files are stored in the Met Office binary &quot;pp&quot; format (<a href="http://badc.nerc.ac.uk/help/formats/pp-format/" title="PP format">http://badc.nerc.ac.uk/help/formats/pp-format/</a>); tools (such as xconv) to access these data in a more user friendly way are available here: <a href="http://badc.nerc.ac.uk/help/software/xconv/index.html" title="xconv">http://badc.nerc.ac.uk/help/software/xconv/index.html</a></p>
+        <h2>HadCM3 Output</h2>
+        <p>The Hadley Centre model output is  organised on the basis of the &quot;runid&quot; . The model is configured as required, and this is given a 5-letter identifier, which is used to ensure that the model output can be correctly identified. In some cases, the model was stopped and restarted for a given configuration, in which case the runid was incremented. Hence in the table below, the A1FI simulation is made up of 3 runs (acfxa,acjid,acjie), which are sequential. For some of the simulations, several runs were done for the same time period, but with slightly different initial conditions. This gives rise to an &quot;ensemble&quot; of runs, and these are labelled ens1, ens2...etc. All of the ensemble numbering conventions are taken from the Hadley Centre internal web pages.</p>
+        <p>The following table describes the HadCM3 data extracted by the BADC for the LINK&nbsp;project.</p>
+        <p></p>
+        <table border="1" cellpadding="0" cellspacing="2">
+                    <tr>
+                <td><b>runid</b></td>
+                <td><b>Model</b></td>
+                <td><b>Simulation</b></td>
+                <td><b>Type</b></td>
+                <td><b>Ensemble members</b></td>
+                <td><b>monthly/daily</b></td>
+                <td><b>Date Range</b></td>
+                <td><b>Description</b></td>
+            </tr>
+            <tr>
+                <td>acfxa</td>
+                <td>hadcm3</td>
+                <td>SRESA1FI</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td>1989-</td>
+                <td>SRES A1-fuel intensive</td>
+            </tr>
+            <tr>
+                <td>acjid</td>
+                <td>hadcm3</td>
+                <td>SRESA1FI</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td>SRES A1-fuel intensive</td>
+            </tr>
+            <tr>
+                <td>acjie</td>
+                <td>hadcm3</td>
+                <td>SRESA1FI</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td>SRES A1-fuel intensive</td>
+            </tr>
+            <tr>
+                <td>acfxc</td>
+                <td>hadcm3</td>
+                <td>SRESB1</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td>1989-2100</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acfxd</td>
+                <td>hadcm3</td>
+                <td>SRESA1B</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acfxg</td>
+                <td>hadcm3</td>
+                <td>SRESA1B-2000s</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acfxh</td>
+                <td>hadcm3</td>
+                <td>SRESA1B-2100s</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>aaxzi</td>
+                <td>hadcm3</td>
+                <td>SRESA2a</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td>1859-2100</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abwad</td>
+                <td>hadcm3</td>
+                <td>SRESA2b</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abwae</td>
+                <td>hadcm3</td>
+                <td>SRESA2c</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>aaxzz</td>
+                <td>hadcm3</td>
+                <td>SRESB2a</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abwaa</td>
+                <td>hadcm3</td>
+                <td>SRESB2b</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>aaxzx</td>
+                <td>hadcm3</td>
+                <td>SRESB2</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acfxf</td>
+                <td>hadcm3</td>
+                <td>SRESB1-2100s</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acfxi</td>
+                <td>hadcm3</td>
+                <td>SRESA1FI-2100</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>aaxzk</td>
+                <td>hadcm3</td>
+                <td>control</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td>The control run -ie no anthropogenic effects included.</td>
+            </tr>
+            <tr>
+                <td>abmba</td>
+                <td>hadcm3</td>
+                <td>AGGH</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td>1859-2000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abmbb</td>
+                <td>hadcm3</td>
+                <td>AGGH</td>
+                <td>sg</td>
+                <td>ens2</td>
+                <td></td>
+                <td>1859-2000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abmbc</td>
+                <td>hadcm3</td>
+                <td>AGGH</td>
+                <td>sg</td>
+                <td>ens3</td>
+                <td></td>
+                <td>1859-2000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abmbd</td>
+                <td>hadcm3</td>
+                <td>AGGH</td>
+                <td>sg</td>
+                <td>ens4</td>
+                <td></td>
+                <td>1859-2000</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abwea</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td>&quot;All bells and whistles&quot;</td>
+            </tr>
+            <tr>
+                <td>abweb</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td>&quot;All bells and whistles&quot;</td>
+            </tr>
+            <tr>
+                <td>abwec</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td>&quot;All bells and whistles&quot;</td>
+            </tr>
+            <tr>
+                <td>abwed</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td>&quot;All bells and whistles&quot;</td>
+            </tr>
+            <tr>
+                <td>abzxa</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td>&quot;All bells and whistles&quot;</td>
+            </tr>
+            <tr>
+                <td>acabc</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens2</td>
+                <td></td>
+                <td></td>
+                <td>&quot;All bells and whistles&quot;</td>
+            </tr>
+            <tr>
+                <td>acabd</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens2</td>
+                <td></td>
+                <td></td>
+                <td>&quot;All bells and whistles&quot;</td>
+            </tr>
+            <tr>
+                <td>acabe</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acabf</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acabg</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acabh</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acbnk</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acbna</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acbnc</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acbne</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acbni</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acbnb</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acbnd</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acbnf</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>acbnj</td>
+                <td>hadcm3</td>
+                <td>ALL</td>
+                <td>sg</td>
+                <td>ens4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>aaxze</td>
+                <td>hadcm3</td>
+                <td>AFH-a</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td>1859-2100</td>
+                <td>All forcings -historical, IS1992a</td>
+            </tr>
+            <tr>
+                <td>aaxzl</td>
+                <td>hadcm3</td>
+                <td>AFH-b</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td>1859-2100</td>
+                <td>All forcings -historical IS1992a+anthro sulphur+trop ozone</td>
+            </tr>
+            <tr>
+                <td>abvwa</td>
+                <td>hadcm3</td>
+                <td>NFVS-corr</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td>Natural forcing, volcanic + solar (corrected runs)</td>
+            </tr>
+            <tr>
+                <td>abvwb</td>
+                <td>hadcm3</td>
+                <td>NFVS-corr</td>
+                <td>sg</td>
+                <td>ens2</td>
+                <td></td>
+                <td></td>
+                <td>Natural forcing, volcanic + solar (corrected runs)</td>
+            </tr>
+            <tr>
+                <td>abvwc</td>
+                <td>hadcm3</td>
+                <td>NFVS-corr</td>
+                <td>sg</td>
+                <td>ens3</td>
+                <td></td>
+                <td></td>
+                <td>Natural forcing, volcanic + solar (corrected runs)</td>
+            </tr>
+            <tr>
+                <td>abvwd</td>
+                <td>hadcm3</td>
+                <td>NFVS-corr</td>
+                <td>sg</td>
+                <td>ens4</td>
+                <td></td>
+                <td></td>
+                <td>Natural forcing, volcanic + solar (corrected runs)</td>
+            </tr>
+            <tr>
+                <td>abicd</td>
+                <td>hadcm3</td>
+                <td>NFVS-orig</td>
+                <td>sg</td>
+                <td>ens1</td>
+                <td></td>
+                <td></td>
+                <td>Natural forcing, volcanic + solar (original runs)</td>
+            </tr>
+            <tr>
+                <td>abice</td>
+                <td>hadcm3</td>
+                <td>NFVS-orig</td>
+                <td>sg</td>
+                <td>ens2</td>
+                <td></td>
+                <td></td>
+                <td>Natural forcing, volcanic + solar (original runs)</td>
+            </tr>
+            <tr>
+                <td>abicf</td>
+                <td>hadcm3</td>
+                <td>NFVS-orig</td>
+                <td>sg</td>
+                <td>ens3</td>
+                <td></td>
+                <td></td>
+                <td>Natural forcing, volcanic + solar (original runs)</td>
+            </tr>
+            <tr>
+                <td>abicg</td>
+                <td>hadcm3</td>
+                <td>NFVS-orig</td>
+                <td>sg</td>
+                <td>ens4</td>
+                <td></td>
+                <td></td>
+                <td>Natural forcing, volcanic + solar (original runs)</td>
+            </tr>
+            <tr>
+                <td>abiaa</td>
+                <td>hadcm3</td>
+                <td>AFH-SRESA2B2</td>
+                <td>sg</td>
+                <td>ens2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abqza</td>
+                <td>hadcm3</td>
+                <td>AFH-SRESA2B2</td>
+                <td>sg</td>
+                <td>ens2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abqzd</td>
+                <td>hadcm3</td>
+                <td>AFH-SRESA2B2</td>
+                <td>sg</td>
+                <td>ens2</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abiab</td>
+                <td>hadcm3</td>
+                <td>AFH-SRESA2B2</td>
+                <td>sg</td>
+                <td>ens3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abqzb</td>
+                <td>hadcm3</td>
+                <td>AFH-SRESA2B2</td>
+                <td>sg</td>
+                <td>ens3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abqze</td>
+                <td>hadcm3</td>
+                <td>AFH-SRESA2B2</td>
+                <td>sg</td>
+                <td>ens3</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abiac</td>
+                <td>hadcm3</td>
+                <td>AFH-SRESA2B2</td>
+                <td>sg</td>
+                <td>ens4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abqzc</td>
+                <td>hadcm3</td>
+                <td>AFH-SRESA2B2</td>
+                <td>sg</td>
+                <td>ens4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>abqzf</td>
+                <td>hadcm3</td>
+                <td>AFH-SRESA2B2</td>
+                <td>sg</td>
+                <td>ens4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <p></p>
+        <p>Some mean data originally from the CRU are stored as gzipped ASCII&nbsp;files. Please follow this <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/link">link</a> to access the archive. 
+        <h2>Additional Information</h2>
+        <P>Detailed information regarding this dataset can be found at describing the model and outlining the coverage and resolution of the data is available at the LINK&nbsp;pages at CRU:</P>
+        <p><a href="http://www.cru.uea.ac.uk/link/" target="http://www.cru.uea.ac.uk/link/index.htm">http://www.cru.uea.ac.uk/link/</a></p>
+        <P>This site also contains information on technical aspects of using the data held at the BADC, including information about the different model runs, interpreation of results, and associated publications which have used LINK&nbsp;data .</P>
+        <p></p>
+    </BODY>
+</HTML> 

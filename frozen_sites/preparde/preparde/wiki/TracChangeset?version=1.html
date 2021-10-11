@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracChangeset – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracChangeset?version=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracChangeset" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracChangeset" title="View TracChangeset">TracChangeset</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracChangeset" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A00%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:00+01:00 in Timeline">6 years</a> ago)
+               (<a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracChangeset?action=diff&amp;version=1">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="TracChangesetModule">Trac Changeset Module</h1>
+<p>
+</p><div class="wiki-toc"><h4>Table of Contents</h4><ul><li class="False"><a class="False" href="TracGuide.html">Index</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInstall">Installation</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization">Customization</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracPlugins">Plugins</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUpgrade">Upgrading</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">Configuration</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracAdmin">Administration</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracBackup">Backup</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLogging">Logging</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracPermissions">Permissions</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWiki">The Wiki</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">Wiki Formatting</a></li><li class="False"><a class="False" href="TracTimeline.html">Timeline</a></li><li class="False"><a class="False" href="TracBrowser.html">Repository Browser</a></li><li class="False"><a class="False" href="TracRevisionLog.html">Revision Log</a></li><li class="active"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracChangeset">Changesets</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTickets">Tickets</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWorkflow">Workflow</a></li><li class="False"><a class="False" href="TracRoadmap.html">Roadmap</a></li><li class="False"><a class="False" href="TracQuery.html">Ticket Queries</a></li><li class="False"><a class="False" href="TracReports.html">Reports</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracRss">RSS Support</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracNotification">Notification</a></li></ul></div><p>
+</p>
+<p>
+Trac has a built-in functionality for visualizing “diffs” - changes to files.
+</p>
+<p>
+There are different kinds of <em>change sets</em>. 
+Some can correspond to revisions made in the repositories,
+others can aggregate changes made in several revisions, 
+but in the end, any kind of differences can be shown.
+</p>
+<p>
+The changeset view consists of two parts, the <em>header</em> 
+and the <em>diff views</em>.
+</p>
+<h2 id="ChangesetHeader">Changeset Header</h2>
+<p>
+The header shows an overview of the whole changeset.
+Here you will find information such as:
+</p>
+<ul><li>Timestamp — When the changeset was commited
+</li><li>Author — Who commited the changeset
+</li><li>Message — A brief description from the author (the commit log message)
+</li><li>Location — Parent directory of all files affected by this changeset
+</li><li>Files — A list of files affected by this changeset
+</li></ul><p>
+If more than one revision is involved in the set of changes being
+displayed, the <em>Timestamp</em>, <em>Author</em> and <em>Message</em> fields 
+won't be shown.
+</p>
+<p>
+In front of each listed file, you'll find  a colored rectangle. The color
+indicates how the file is affected by the changeset.
+ 
+</p>
+<ul><li>Green: Added
+</li><li>Red: Removed
+</li><li>Yellow: Modified
+</li><li>Blue: Copied
+</li><li>Gray: Moved
+</li></ul><p>
+The color legend is located below the header as a reminder.
+</p>
+<h2 id="DiffViews">Diff Views</h2>
+<p>
+Below the header is the main part of the changeset, the diff view. Each file is shown in a separate section, each of which will contain only the regions of the file that are affected by the changeset. There are two different styles of displaying the diffs: <em>inline</em> or <em>side-by-side</em> (you can switch between those styles using the preferences form):
+</p>
+<ul><li>The <em>inline</em> style shows the changed regions of a file underneath each other. A region removed from the file will be colored red, an added region will be colored green. If a region was modified, the old version is displayed above the new version. Line numbers on the left side indicate the exact position of the change in both the old and the new version of the file.
+</li><li>The <em>side-by-side</em> style shows the old version on the left and the new version on the right (this will typically require more screen width than the inline style.) Added and removed regions will be colored in the same way as with the inline style (green and red, respectively), but modified regions will have a yellow background.
+</li></ul><p>
+In addition, various advanced options are available in the preferences form for adjusting the display of the diffs:
+</p>
+<ul><li>You can set how many lines are displayed before and after every change
+(if the value <em>all</em> is used, then the full file will be shown)
+</li><li>You can toggle whether blank lines, case changes and white space changes are ignored, thereby letting you find the functional changes more quickly
+</li></ul><h2 id="TheDifferentWaystoGetaDiff">The Different Ways to Get a Diff</h2>
+<h3 id="ExaminingaChangeset">Examining a Changeset</h3>
+<p>
+When viewing a repository check-in, such as when following a
+changeset <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">link</a> or a changeset event in the 
+<a class="wiki" href="TracTimeline.html">timeline</a>, Trac will display the exact changes
+made by the check-in.
+</p>
+<p>
+There will be also navigation links to the <em>Previous Changeset</em>
+to and <em>Next Changeset</em>.
+</p>
+<h3 id="ExaminingDifferencesBetweenRevisions">Examining Differences Between Revisions</h3>
+<p>
+Often you'll want to look at changes made on a file 
+or on a directory spanning multiple revisions. The easiest way
+to get there is from the <a class="wiki" href="TracRevisionLog.html">TracRevisionLog</a>, where you can select
+the <em>old</em> and the <em>new</em> revisions of the file or directory, and
+then click the <em>View changes</em> button.
+</p>
+<h3 id="ExaminingDifferencesBetweenBranches">Examining Differences Between Branches</h3>
+<p>
+One of the core features of version control systems is the possibility
+to work simultaneously on different <em>Lines of Developments</em>, commonly
+called “branches”. Trac enables you to examine the exact differences
+between such branches.
+</p>
+<p>
+Using the <strong>View changes ...</strong> button in the <a class="wiki" href="TracBrowser.html">TracBrowser</a> allows you to enter
+<em>From:</em> and <em>To:</em> path/revision pairs. The resulting set of differences consist
+of the changes that should be applied to the <em>From:</em> content in order
+to get to the <em>To:</em> content.
+</p>
+<p>
+For convenience, it is possible to invert the roles of the <em>old</em> and the <em>new</em>
+path/revision pairs by clicking the <em>Reverse Diff</em> link on the changeset page.
+</p>
+<h3 id="CheckingtheLastChange">Checking the Last Change</h3>
+<p>
+The last possibility for examining changes is to use the <em>Last Change</em>
+link provided by the <a class="wiki" href="TracBrowser.html">TracBrowser</a>.
+</p>
+<p>
+This link will take you to the last change that was made on that path.
+From there, you can use the <em>Previous Change</em> and <em>Next Change</em> links
+to traverse the change history of the file or directory.
+</p>
+<hr />
+<p>
+See also: <a class="wiki" href="TracGuide.html">TracGuide</a>, <a class="wiki" href="TracBrowser.html">TracBrowser</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracChangeset?version=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

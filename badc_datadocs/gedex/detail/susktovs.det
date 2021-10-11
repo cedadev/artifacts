@@ -1,0 +1,521 @@
+Susskind TOVS Gridded Fields
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION                           
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation               
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC 
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  The Susskind data set includes atmospheric and
+temperature profiles and meteorological parameters such as, surface
+temperature, layer mean temperature, outgoing longwave radiation,
+fractional cloud cover and cloud top pressure, and precipitation estimates
+that have been derived from soundings of the High Resolution Infrared
+Radiation Sounder/2 (HIRS/2) and the Microwave Sounding Unit (MSU) that are
+flown aboard the TIROS-N series  satellites.
+
+1.2 Unit of Measurement. 
+           
+               Parameter                    Unit of Measurement
+               ---------                    -------------------
+
+               Cloud fraction               percent
+               Pressure                     mb
+               Precipitation                mm/day
+               Temperature                  degrees Kelvin
+               Outgoing Longwave Radiation  watts/(m**2)-steradian
+               Precipitable Water Vapor     cm
+
+1.3  Data Source.  High Resolution Infrared Radiation Sounder (HIRS/2) and
+Microwave Sounding Unit (MSU) flown on the TIROS-N, NOAA-6, -7, and
+NOAA-10.
+                                                                                
+1.4  Data Set Identification. The SUSSKND-TOVS data set consists of Level
+III geo-located geophysical data derived from the High Resolution Infrared
+Radiation Sounder/2 (HIRS/2) and the Microwave Sounding Unit (MSU) sounding
+data.
+
+
+2.  SPATIAL CHARACTERISTICS                                                  
+                                                                                
+2.1  Spatial Coverage.  Global coverage.
+                                                                                
+2.2  Spatial Resolution.  4 x 5 degree latitude-longitude grid.
+                                                 
+                               
+3.  TEMPORAL CHARACTERISTICS                                                 
+                                                                                
+3.1  Temporal Coverage.  2.5 years spanning December 1978 through May 1981
+and data from July 1983 and May, June and September 1988.
+                                                                               
+3.2  Temporal Resolution.  Monthly means.                                 
+                                            
+                                                                  
+4.  INSTRUMENT DESCRIPTION                                                   
+
+4.1  Mission Objectives.  TOVS sounding instruments, consisting of the High
+Resolution Infrared Radiation Sounder (HIRS/2) and the Microwave Sounding
+Unit (MSU) are designed to provide global coverage of atmospheric
+temperature and moisture profiles.
+
+4.2  Key Satellite Flight Parameters.  Nominal orbit parameters for the
+TIROS-N/NOAA satellite series are :
+(NOTE:  Only data from the TIROS-N, NOAA-6, NOAA-7 and NOAA-10 satellites 
+are used in the current data set.)  
+
+    o  Launch Date                      TIROS-N:  October 13, 1978
+                                        NOAA-6:   June 27, 1979
+                                        NOAA-7:   June 23, 1981
+                                        NOAA-8:   March 28, 1983
+                                        NOAA-9:   December 12, 1984
+                                        NOAA-10:  September 17, 1986
+                                        NOAA-11:  September 24, 1988
+                                        NOAA-12:  May 14, 1991
+
+    o  Duration, planned                At least two years
+
+    o  Duration, actual                 TIROS-N:  January 30, 1980
+                                        NOAA-6:   June 30, 1986
+                                        NOAA-7:   June 7, 1986
+                                        NOAA-8:   October 31, 1985
+                                        NOAA-9:   November 7, 1988
+                                        NOAA-10:  Presently operating
+                                        NOAA-11:  Presently operating
+                                        NOAA-12:  Presently operating
+
+    o  Orbit type                       Near polar, circular,
+                                        sun-synchronous
+
+    o  Semi-major axis                  7231.8 km
+
+    o  Nominal altitude                 853.7 km
+
+    o  Inclination angle                TIROS-N:  102.3 degrees
+                                        NOAA-6:    98.7
+                                        NOAA-7:    98.9
+                                        NOAA-8:    98.8
+                                        NOAA-9:    98.9
+                                        NOAA-10:   98.9 
+                                        NOAA-11:   98.9 
+                                        NOAA-12:   98.7 
+                                                                                
+    o  Equator crossing times
+       (ascending)*: 
+
+       Morning orbit:                   NOAA-6:   0730 
+                                        NOAA-8:   0730
+                                        NOAA-10:  0730
+                                        NOAA-12:  0730
+
+       Afternoon orbit**:               TIROS-N:  1500
+                                        NOAA-7:   1430
+                                        NOAA-9:   1420
+                                        NOAA-11:  1340
+
+       * Local mean solar time
+       **Afternoon orbits drift slowly with time
+
+
+Instrument Parameters for HIRS/2/MSU are:
+
+                               HIRS/2                   MSU
+                               ------                   ---
+
+    o Calibration         Stable blackbodies       Hot reference body
+                          and space background     and space background
+                                                   and scan cycle
+    o Cross-track scan       +/- 49.5                 +/- 47.35
+      angle (degrees
+      from nadir)
+    o Scan time (sec)             6.4                     25.6
+    o Number of steps            56.0                     11.0
+    o Angular FOV (deg)           1.25                     7.5
+    o Step angle (deg)            1.8                      9.47
+    o Step time (sec)             0.1                      1.84
+    o Ground IFOV at nadir       17.4                    109.3
+      (km diameter)                                       
+    o Ground IFOV at             58.5 km cross-          323.1 km cross-
+      end of scan                track x 29.9 km         track x 178.8 km
+                                 along-track             along-track
+    o Distance between           42.0                    168.1
+      IFOV centers 
+      (km along-track)
+    o Swath width (km)     +/- 1120.0              +/- 1174.0
+    o Data rate (bits          2880.0                   320.0
+      per second)
+    o Data precision             13.0                    12.0
+      (bits)
+    o Time between                6.4                    25.6
+      start of each
+      scan line (sec)
+    o Step and dwell              0.1                     1.81
+      time (sec)
+    o Time* (sec)                 0.5                     0.9
+
+    * The difference between the start of each scan and the center of the
+      first dwell period.
+
+4.3  Principles of Operation.  HIRS/2, a 20-channel infrared sounder,
+measures incident radiation primarily in the infrared region of the
+spectrum including both longwave and shortwave micrometer regions. MSU is a
+passive scanning microwave spectrometer with 4 channels in the 56 GHz
+oxygen region.
+
+4.4 Instrument Measurement Geometry.  The IFOVs of the HIRS/2 are stepped
+across the satellite track by use of a rotating mirror.  This cross-track
+scan combined with the satellite's motion in orbit, will provide coverage
+of a major portion of the Earth's surface.  The width of the cross-track
+scan is 99 degrees or 2240 km and consists of 56 steps.  The mirror is
+stepped from home position in 55 steps of 1.8 degrees.  At the end of the
+scan (at position 56) the mirror rapidly returns to the home position and
+repeats the scanning pattern.  Each scan takes 6.4 seconds to complete (100
+milliseconds per step), and there are 42 km between IFOVs along the
+sub-orbital track.  The optical FOV is 1.25 degrees which gives a ground
+IFOV of 17.4 km diameter at nadir.  At the end of the scan, the ground IFOV
+is 58.5 km cross-track by 29.9 km along-track. The MSU sensors consist of
+two four-inch antennae, each having an IFOV of 7.5 degrees. The antennae
+are step-scanned through eleven individual 1.84-second Earth- viewing steps
+and take a total of 25.6 seconds to complete.  The 124 km IFOV resolution
+at the subpoint creates an underlap of approximately 115 km between
+adjacent scan lines.
+
+
+5.  DATA PROCESSING SEQUENCE                                                 
+                                                                                
+5.1  Processing Steps and Data Sets.  A physically-based processing scheme
+enables many of the quantities usually obtained by dedicated infrared or
+microwave imagers to be retrieved as a byproduct by theoretically finding
+geophysical parameters such that expected radiances best match the
+observations.
+
+This method relies on the ability to account for the atmospheric physics
+giving rise to the observations, rather than on the statistical
+relationships of atmospheric properties to satellite observations.
+Statistical relationships are used, however, to formulate a constraint of
+solutions from the deviations of atmospheric temperature profiles from a
+global mean.  The basic premise of this approach involves the ability to
+accurately solve the forward problem: in other words, to accurately compute
+the corresponding observations as seen by satellite instruments given an
+estimate of atmospheric and surface parameters which can be obtained from a
+forecast, climatology or statistical regression.  This method involves
+iterative modification of the atmospheric parameters, starting from an
+initial estimate, until sufficient agreement between computed and observed
+radiances is reached.  A quality flag is attached, indicative of the
+agreement between observations and radiances computed from the solution.
+Retrievals are performed up to about 70% cloud cover, but cloud and
+precipitation parameters are always retrieved.
+
+5.2 Derivation Techniques/Algorithm.  This processing system consists of
+the following main steps:  1) preprocessing the raw sounding data; 2) the
+forward calculation of radiances as a function of atmospheric and surface
+conditions; 3) accounting for cloud and surface radiative effects on the
+observations; 4) determining atmospheric temperature profiles by the
+inverse solution of the radiative transfer equation; and 5) determination
+of auxiliary meteorological parameters.  Steps 2-4 are performed
+iteratively until convergence is reached.  The effects of clouds on the
+infrared observations must be accounted for before either ground or
+atmospheric temperatures can be determined.  The cloud filtering algorithm
+utilizes MSU channel 2, which sees about 10% of the surface and is
+sensitive to the surface emissivity.  After the calculation of the
+radiances, microwave surface emissivity is calculated, followed by the
+cloud corrections, the retrieval of ground temperature and, finally, the
+update of atmospheric temperature profile.  If sufficient agreement between
+observed and calculated radiances is found, the procedure is terminated and
+step 5 is performed.  Otherwise, the iterative procedure is continued with
+recalculation of the radiances, surface emissivity, etc.
+
+5.3  Special Corrections/Adjustments.  None. 
+                                                                                
+5.4  Processing Changes.  None.
+
+
+6.  QUALITY ASSESSMENT                                                       
+
+6.1  Data Validation by Producer.  
+
+6.2  Confidence Level/Accuracy Judgment.  The physically-based processing
+scheme discussed previously allows for the analysis of HIRS/2/MSU data by
+finding atmospheric and surface conditions which are solutions to the
+multispectral radiative transfer question.  As a result, highly accurate
+atmospheric temperature profiles and monthly mean fields of surface
+temperature and cloud properties are produced which show reasonable
+agreement with ground truth or other measures of the same quantities.
+
+6.3  Usage Guidance.  The retrieval method has the potential of improving
+the impact of HIRS/2/MSU data on mid-range forecasting, and the monthly
+mean fields of climate parameters derived from HIRS/2/MSU observations can
+form the basis for a long-term climatology data base.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION                                 
+                                                                                
+     Dr. Joel Susskind
+     Code 911
+     Goddard Space Flight Center
+     Greenbelt, Maryland  20771
+     (301) 286-7210
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY                                         
+                                                                                
+8.1  Tape Products.
+
+     Medium/Specification:  One 3480 bpi cartridge.  
+
+     Format and Content:  Gridded (4 x 5) global meteorological data
+     derived from the HIRS/2 and MSU sound data.
+
+     Data Quantity/Rate:  One tape, 2.5 years.    
+
+     Status:  Available
+
+     Plans/Schedule:  Additional data will be integrated periodically as
+     they are received.
+                                                                                
+8.2  Film Products.   None.                                    
+                                                                                
+8.3  Other products.    
+
+8.3.1  Susskind TOVS Gridded Fields in Common Data Format (CDF) 
+
+       Medium/Specifications:  Magnetic disk
+       
+       Format and Content:  The data are stored in a special data-set-
+       independent format, designated the Common Data Format (CDF). CDF was
+       developed as a uniform method of storing and retrieving data on
+       disk.  Each CDF contains data and descriptions about the data.  A
+       standard software package called the "CDF Library" allows a user
+       within an NCDS session to create and access these data and
+       descriptions.  These CDF files may be accessed within the DATA
+       APPLICATIONS Subsystem of NCDS.
+                                                                        
+       Data Quantity/Rate:  Susskind TOVS Monthly Fields; 1 file, 11 Mb
+                            Susskind TOVS Temp Profile; 1 file, 5.7 Mb
+                            Susskind TOVS H20 Vapor Profile; 1 file, 1.8 Mb
+
+       Status:  Available
+
+       Plans/Schedule:  Additional data will be integrated periodically as
+       the producer gives it to NCDS.
+
+8.3.2  The Greenhouse Effect Detection Experiment (GEDEX) CD-ROM
+
+       Medium/Specifications:  CD-ROM in ISO 9660 standard
+
+       Format and Content:  The data on this disk will be stored in a
+       special data-set-independent format, designated the Common Data
+       Format (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  The CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" will be included with this CD-ROM allowing a user to create
+       and access these data and descriptions.  The CD-ROM will consist of
+       many different data sets related to the study of the Greenhouse
+       Effect, including the some or all of the Susskind TOVS Gridded
+       Fields data sets, and the accompanying NCDS data set documentation.
+       
+       Data Quantity/Rate:  1 CD-ROM disk set.
+
+       Status:  Release date for this product is scheduled for early 1992.
+
+       Plans/Schedule:  Users interested in this product should contact
+       NCDS staff for more details.
+
+                                        
+9.  DATA ACCESS                                                              
+
+9.1  Archive Identification.  
+
+     Lena Iredell    
+     Code 911                             
+     Goddard Space Flight Center
+     Greenbelt, Maryland  20771   
+     (301) 286-9773
+
+     Paul Piraino    
+     Code 911                             
+     Goddard Space Flight Center
+     Greenbelt, Maryland  20771   
+     (301) 286-3147
+ 
+     Goddard DAAC User Support Office
+     NASA/Goddard Space Flight Center
+     Code 935
+     Greenbelt, Maryland  20771   
+     (301) 286-3209
+     FTS:  888-3209
+     INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+     NSI DECnet:  NSSDCA::NCDSUSO
+
+9.2  Procedures for Obtaining Data.  Users may request data by letter,
+telephone, personal visit, or through the NSI DECnet computer network. Data
+costs are dependent on affiliation and sponsorship of the user program Data
+are free to NASA personnel.  Communication with the producer is requested
+in order to obtain feedback on data quality.
+
+9.3  NCDS Status/Plans.  NCDS will continue to archive these data as they
+are released from the producer.
+                                                                    
+                 
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION                            
+                                                                                
+     Lena Iredell                         
+     Code 911                                                               
+     Goddard Space Flight Center     
+     Greenbelt, Maryland  20771
+     (301) 286-9773
+
+     Paul Piraino                         
+     Code 911                            
+     Goddard Space Flight Center     
+     Greenbelt, Maryland  20771
+     (301) 286-3147
+
+                                                       
+11.  REFERENCES                                                              
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      a.  Hussey, J.W., 1977. "The TIROS-N NOAA Operational Satellite
+          System."  U.S. Department of Commerce, NOAA/NESS.
+
+      b.  Kidwell, K., 1991. "NOAA Polar Orbiter Data Users Guide,"
+          NCDC/SDSD.  (Updated from original 1984 edition)
+
+      c.  Lauritson, et al., 1979. "Data Extraction and Calibration of
+          TIROS-N/NOAA Radiometers."  NOAA Technical Memorandum NESS 107,
+          U.S. Department of Commerce, NOAA/NESS.
+
+      d.  Werbowetzki, A., 1981.  "Atmospheric Sounding Users Guide," NOAA
+          Technical Report NESS 83, U.S. Department of Commerce, NOAA/NESS.
+                                                                                
+11.2  Journal Articles and Study Reports
+                                                                                
+      a.  Reuter, D., Susskind, J., and A. Pursch, 1988.  "First Guess
+          Dependence of a Physically Based Set of Temperature Humidity
+          Retrievals from HIRS2/MSU data", J. Atmos. Oceanic. Technol., 5:
+          70-83.
+
+      b.  Smith, W.L., H.M. Woolf, C.M. Hayden, D.Q. Wark, and L.M.
+          McMillan, 1979.  "The TIROS-N Operational Vertical Sounder",
+          Bull. Am. Meterol. Soc., 60:  1177-1187.
+
+      c.  Susskind, J., J. Rosenfield, and D. Reuter, 1983.  "An Accurate
+          Radiative Transfer Model for Use in the Direct Physical Inversion
+          of HIRS2 and MSU Temperature Sounding Data", J. Geophys. Res.,
+          88:  8550-8568.
+                      
+      d.  Susskind, J., J. Rosenfield, D. Reuter, and M.T. Chahine, 1984.
+          "Remote Sensing of Weather and Climate Parameters from HIRS2/MSU
+          on TIROS-N", J. Geophys. Res., 89:  4677-4697.
+
+      e.  Susskind, J., D. Reuter, and M.T. Chahine, 1987.  "Cloud Fields
+          Retrieved from HIRS2/MSU Data", J. Geophys. Res., 92: 4035-4050.
+
+      f.  Wu, Man-Li C., and J. Susskind, 1990.  "Outgoing Long-Wave
+          Radiation Computed from HIRS2/MSU Soundings", J. Geophys. Res.,
+          95: 7579-7602.
+
+11.3  Archive/DBMS Usage Documentation                                       
+                                                                                
+      a.  Kidwell, K., July 1991.  "NOAA Polar Orbiter Data Users Guide",
+          NCDC/SDSD.  (Updated from original 1984 edition)
+
+
+12.  RELATED DATA SETS                                                       
+                                                                                
+     1)  Information on three TOVS instrument data sets are available. To
+         access this information, specify the following data sets within
+         the search criteria screen of the Data Access subsystem of NCDS:
+
+         TOVSHIRS2  (TOVS High Resolution Infrared Radiation Sounder)
+         TOVSMSU    (TOVS Microwave Sounding Unit)
+         TOVSSSU    (TOVS Stratospheric Sounding Unit)
+
+     2)  The International Satellite Cloud Climatology Project (ISCCP) TOVS
+         data set contains information concerning the temperature structure
+         and water and ozone abundances in the atmosphere. This data set is
+         available offline through NCDS.  To access information about this
+         data set, specify the following data set within the search
+         criteria screen of the Data Access subsystem of NCDS:
+
+         ISCCPTOVS  (International Satellite Cloud Climatology Project)
+
+     3)  The "Lower Tropospheric Temperature Anomalies from MSU" data set
+         consists of gridded temperature anomalies derived from MSU channel
+         2 data.  To access thess CDFs, specify the following as input
+         within the Data Applications subsystem of the NCDS:
+                                                         
+                         NCDS$DATA:MSUTMP-CLIMATOLOGY
+                         NCDS$DATA:MSUTMP-MONTHLY
+
+
+13.  SUMMARY/SAMPLE.  None.
+
+
+14.  NOTES
+
+Additional TOVS tapes are scheduled for archiving at NCDS as Dr. Susskind
+produces them.
+
+
+*92/03/12

@@ -1,0 +1,36 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "ERBESC85 "
+"SUM_DATA_SET"       "ERBE-S4      "
+"SUM_DATATYPE"       "NFV-MNTH    "
+"ARCHIVE_NAME"       "NSSDC, NCDS  "
+"ARCHIVE_STATUS"     "Available    "
+"DS_DESCRIPTION"     "Earth Radiation Budget Experiment Gridded Product "
+"DT_DESCRIPTION"     "Scanner (NFOV) Monthly (Day)     "
+"SUM_BEGIN_DATE"     "01-Feb-1985                      "
+"SUM_END_DATE"       "31-Dec-1985                      "
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Global                           "
+"SPATIAL2"           " "
+"SPATIAL3"           "2.5 deg x 2.5 deg                "
+"SPATIAL4"           " "
+"TEMPORAL1"          "February 1985 - December 1985    "
+"TEMPORAL2"          " "
+"TEMPORAL3"          "Monthly                          "
+"TEMPORAL4"          " "
+"PRODUCT1"           "Regional averages (S-4): 1 tape/month.  "
+"PRODUCT2"           "Available on GEDEX CD-ROM. "
+"PRODUCT3"           " "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"ALBEDO"          "Daily Albedo for Month"              "None"
+"RADIATION_BUDGT" "Daily SW/LW Radiant Exitance"        "W/(m**2)"
+"SOLAR_FLUX"      "Integrated Solar Incidence for Day"  "W-hr/m**2"
+EOF
+
+SOURCES
+"ERBS"      "SCANNER"
+"NOAA-9"    "SCANNER"
+"NOAA-10"   "SCANNER"
+EOF

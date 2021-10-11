@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>PREPARDE: Available Reports</title>
+    <link>http://proj.badc.rl.ac.uk/preparde/report</link>
+    <description>List of available reports</description>
+    <language>en-us</language>
+    <image>
+      <title>PREPARDE</title>
+      <url>http://proj.badc.rl.ac.uk/preparde/chrome/common/trac_banner.png</url>
+      <link>http://proj.badc.rl.ac.uk/preparde/report</link>
+    </image>
+    <generator>Trac v0.12.2</generator>
+    <item>
+      <title>{7}: My Tickets</title>
+      <link>http://proj.badc.rl.ac.uk/preparde/report/7</link>
+      <guid isPermaLink="false">http://proj.badc.rl.ac.uk/preparde/report/7</guid>
+      <category>Report</category>
+    </item><item>
+      <title>{6}: All Tickets By Milestone  (Including closed)</title>
+      <link>http://proj.badc.rl.ac.uk/preparde/report/6</link>
+      <guid isPermaLink="false">http://proj.badc.rl.ac.uk/preparde/report/6</guid>
+      <category>Report</category>
+    </item><item>
+      <title>{8}: Active Tickets, Mine first</title>
+      <link>http://proj.badc.rl.ac.uk/preparde/report/8</link>
+      <guid isPermaLink="false">http://proj.badc.rl.ac.uk/preparde/report/8</guid>
+      <category>Report</category>
+    </item><item>
+      <title>{2}: Active Tickets by Version</title>
+      <link>http://proj.badc.rl.ac.uk/preparde/report/2</link>
+      <guid isPermaLink="false">http://proj.badc.rl.ac.uk/preparde/report/2</guid>
+      <category>Report</category>
+    </item><item>
+      <title>{3}: Active Tickets by Milestone</title>
+      <link>http://proj.badc.rl.ac.uk/preparde/report/3</link>
+      <guid isPermaLink="false">http://proj.badc.rl.ac.uk/preparde/report/3</guid>
+      <category>Report</category>
+    </item><item>
+      <title>{1}: Active Tickets</title>
+      <link>http://proj.badc.rl.ac.uk/preparde/report/1</link>
+      <guid isPermaLink="false">http://proj.badc.rl.ac.uk/preparde/report/1</guid>
+      <category>Report</category>
+    </item><item>
+      <title>{5}: Accepted, Active Tickets by Owner (Full Description)</title>
+      <link>http://proj.badc.rl.ac.uk/preparde/report/5</link>
+      <guid isPermaLink="false">http://proj.badc.rl.ac.uk/preparde/report/5</guid>
+      <category>Report</category>
+    </item><item>
+      <title>{4}: Accepted, Active Tickets by Owner</title>
+      <link>http://proj.badc.rl.ac.uk/preparde/report/4</link>
+      <guid isPermaLink="false">http://proj.badc.rl.ac.uk/preparde/report/4</guid>
+      <category>Report</category>
+    </item>
+  </channel>
+</rss>

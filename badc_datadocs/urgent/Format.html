@@ -1,0 +1,397 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>URGENT Data File Format</title>
+</head>
+
+<body bgcolor="#ffffff">
+<h1>URGENT Air Data Files: Structure and Format</h1>
+<hr>
+<p>
+<h2>Contents</h2>
+<ol>
+ <li><a href="#Fore">Foreword to data providers</a>
+ <li><a href="#Intr">Data and metadata</a>
+ <li><a href="#Stru">Storage and file structure</a>
+  <ul>
+   <li>3.1 Numbers
+   <li>3.2 Images
+   <li>3.3 Software
+  </ul>
+ <li><a href="#Form">Format</a>
+  <ul>
+   <li>4.1 <a href="#Numb">Numbers</a>
+    <ul>
+     <li>4.1.1 <a href="#Nasa">NASA Ames general rules</a>
+     <li>4.1.2 <a href="#Urge">URGENT specific rules</a>
+      <ul>
+       <li>A. <a href="#Ivar">Spatiotemporal independent variables</a>
+        <ul>
+         <li>a). <a href="#Unit">System of reference and units</a>
+         <li>b). <a href="#Cint">Remark on constant intervals</a>
+        </ul>
+       <li>B. <a href="#Comm">Mandatory comments</a>
+      </ul>
+    </ul>
+   <li>4.2 <a href="#Imag">Images</a>
+    <ul>
+     <li>4.2.1 Image file format
+     <li>4.2.2 Metadata file format
+    </ul>
+   <li>4.3 <a href="#Soft">Software</a>
+  </ul>
+</ol>
+</p>
+<hr>
+
+<p><h2><a name="Fore">1. Foreword to data providers</a></h2></p>
+
+Data providers, please note that, unless the nature of the data make it
+impossible, files submitted to BADC in the framework of the URGENT programme
+(Air Data) must fall into one of the three categories described in this note
+(<i>Numbers, Images</i> or <i>Software</i>) and that all data must be
+accompanied by relevant information
+(<a href="Metadata.html"><i>metadata</i></a>.).
+Data and metadata should meet the specifications formulated below, in terms of
+storage, file names and format.
+In particular,
+<b>
+data suppliers unfamiliar with NASA Ames Format should definitely consult
+<a href="/help/formats/NASA-Ames/G-and-H-June-1998.html">Gaines &#038; Hipskind,
+1998</a> BEFORE formatting their data (see also <a href="#Nasa">Section
+4.1.1</a> below).
+</b>
+
+</b>
+
+<p><h2><a name="Intr">2. Data and metadata</a></h2></p>
+
+URGENT air data held at the BADC, whether issued from observation or produced
+by a model, are of three types: 
+<ul>
+ <li>NASA Ames formatted fields of numbers (text data files), hereafter denoted
+     by <i>Numbers</i>.
+ <li>Images in a binary format (jpeg, gif), hereafter denoted by <i>Images</i>.
+ <li>Software.
+</ul>
+All forms of data are accompanied by relevant information (or
+<a href="Metadata.html"><i>metadata</i></a>) needed to understand or interpret
+the data.
+Metadata are stored as text.
+<p>
+Data may exist in the form of NASA Ames formatted fields and have an image
+representation as well.
+In such a case, there is a separate metadata set for each version of the data (numerical and graphical).
+</p>
+
+
+<p><h2><a name="Stru">3. Storage and file structure</a></h2></p>
+
+Please note that information on file names is provided in a separate document
+(see <a href="FileNames.html">URGENT File Names</a>).
+
+<p><b>3.1 Numbers</b></p>
+<p>
+Files including NASA Ames formatted fields are divided into a header containing
+the metadata and a body containing the data themselves.
+</p>
+<p><b>3.2 Images</b></p>
+<p>
+Pictures of the Earth surface are stored in binary files.
+Every image file is accompanied by a separate text file containing the
+corresponding metadata and located in the same directory.
+If the same images are stored in several formats, the image files share the
+same metadata file.
+</p>
+<p><b>3.3 Software</b></p>
+<p>
+Files containing software may include the metadata as a commented header.
+Alternatively, metadata can be supplied in a separate file.
+</p>
+
+<p><h2><a name="Form">4. Format</a></h2></p>
+
+<p><h3><a name="Numb">4.1 Numbers</a></h3></p>
+
+Fields of numbers are formatted according to the NASA Ames specifications.
+Several documents are available at BADC to assist data providers in formatting
+data and interpreting possible error messages returned by the format checking
+program.
+Users are also advised to refer to this documentation to fully
+understand the data.
+In addition to NASA Ames rules, metadata in the framework of the URGENT
+programme also obey a small number of specific rules.
+
+<p><h4><a name="Nasa">4.1.1 NASA Ames general rules</a></h4></p>
+
+Please refer to the BADC <a href="/help/formats/NASA-Ames/">NASA Ames Web page</a>.
+
+<p><h4><a name="Urge">4.1.2 URGENT specific rules</a></h4></p>
+
+<p>
+Specific rules apply to URGENT data presentation.
+They regard the spatiotemporal units and the comment fields in the metadata.
+</p>
+
+<p><b><a name="Ivar">A. <u>Spatiotemporal independent variables</u></a></b></p>
+
+<p><b><i><a name="Unit">a). System of reference and units</a></i></b></p>
+
+<p>
+For reasons of uniformity and compatibility with graphic software,
+participants to the URGENT Thematic Programme have agreed on a common
+convention regarding the expression of time and the three components of space,
+whether appearing among the independent or among the auxiliary variables, or
+in the comment fields.
+</p>
+
+<p>
+<b>Time</b> should be expressed as Universal Time elapsed from the
+1<sup>st</sup> of January 1901 at zero hour (<i>i.e.</i> the 31<sup>st</sup>
+of December 1900 at midnight), in days.
+<br>
+A spatial location is defined by its (longitude, latitude, altitude)
+coordinates.
+<br>
+<b>Longitude</b> is expressed in degrees (decimal value) from -360 to 360,
+starting from Greenwich Meridian eastwards.
+The overlap allows to avoid discontinuities when crossing the 0<sup>o</sup>
+meridian.
+<br>
+<b>Latitude</b> is expressed in degrees (decimal value) from -90 (South Pole)
+to 90 (North Pole).
+<br>
+<b>Altitude</b> is expressed in metres above sea level.
+</p>
+
+<table>
+ <tr>
+  <td><u>Examples</u>:</td>
+  <td width=5em></td><td>&#149;</td><td width=5em></td>
+  <td>the 15<sup>th</sup> of June 1999 at 3<sup>h</sup> 37<sup>min</sup> p.m.
+      (Greenwich time) is expressed as</td>
+ </tr><tr>
+  <td></td><td></td><td></td><td></td>
+  <td><i>(74 </i>x<i> 365 + 24 </i>x<i> 366 + 165) days + 15 hours
+      + 37 minutes = 35959.650694 days;</i></td>
+ </tr><tr>
+  <td></td><td></td><td>&#149;</td><td></td>
+  <td>35<sup>o</sup> 20' 46'' West can be expressed (in decimal degrees) as
+      <i>-35.3461</i> or <i>324.6539;</i></td>
+ </tr><tr>
+  <td></td><td></td><td>&#149;</td><td></td>
+  <td>20<sup>o</sup> 12' South is expressed (in decimal degrees) as
+      <i>&#150;20.2;</i></td>
+ </tr><tr>
+  <td></td><td></td><td>&#149;</td><td></td>
+  <td>the altitude of 5.6 km above sea level is expressed (in metres) as
+      <i>5600;</i></td>
+ </tr><tr>
+  <td></td><td></td><td>&#149;</td><td></td>
+  <td>the altitude of 10 m above Cambridge Botanical Garden (elevation: 12 m)
+      is expressed as <i>22</i>.</td>
+ </tr>
+</table>
+
+<p><b><i><a name="Cint">b). Remark on constant intervals</a></i></b><br></p>
+
+<p>
+The choice of a specific unit for any of the independent variables is
+restrictive, preventing the utilisation of the NASA Ames provision
+for a constant interval (non-zero DX) when the decimal equivalent of this interval
+in the selected unit is unlimited.
+</p>
+
+<table><tr><td width=10em></td><td>
+For example, if observations or calculations are performed at a regular time
+interval of 1 minute, since the time unit must be the day, DX cannot be set to
+a number with a limited decimal development (<i>Delta t = 0.000694444...
+day</i>).
+The only way to turn around this obstacle is to set the value of DX to 0
+(convention for a non-uniform interval)
+and include a line in one of the comment fields specifying the exact value
+of the (uniform) time interval.
+In the above example, this line could be
+<i>Regular time step of 1 minute (i.e., 0.000694444... days)</i>. 
+</td></tr></table>
+
+<p>
+When the interval is constant and its decimal writing is limited, DX can
+of course be set to the interval value.
+In this case, no comment is needed.
+</p>
+
+<table><tr><td width=10em></td><td>
+For example, if the considered independent variable is time,
+DX = 0.00625 for <i>Delta t = 9 minutes (= 0.00625 day)</i>,
+DX = 1.5 for <i>Delta t = 36 hours (= 1.5 day)</i>, etc.
+</td></tr></table>
+
+<p>
+When the interval is not constant, DX must be set to 0 (no comment needed).
+</p>
+
+<p><b><a name="Comm">B. <u>Mandatory comment fields</u></a></b></p>
+
+<p>
+NASA Ames format makes provision for two
+<a href="/help/formats/NASA-Ames/lastlines.html">comment fields</a> (<i>normal</i>
+and <i>special</i>) structured in identical ways (<i>i.e.</i>, 1st
+record: number of comment lines, including 1st record;
+subsequent records: actual comments).
+In the case of URGENT data files, some comments are mandatory.
+They may appear in either the normal or special comments, depending on whether
+they apply to the entire data set or only to the considered data file (see
+<a href="#Nasa">NASA Ames general rules</a> for the difference between the two
+sets of comments).
+These comments are: <P>
+<ul>
+ <li>THIS-FILE-ENDS = <i>[Date of last recorded data in the format
+     YYYY MM DD]</i>
+ <li>E-MAIL-CONTACT =
+ <li>SITE-NAME =
+</ul>
+and
+<ul>
+ <li>For static observation sites (ground based stations):
+  <ul>
+   <li>LATITUDE =
+   <li>LONGITUDE =
+  </ul>
+ <li>For mobile platforms (on board ships, balloons, aircrafts, satellites,
+     ...):
+  <ul>
+   <li>BOUNDING-BOX-NORTH =
+   <li>BOUNDING-BOX-SOUTH =
+   <li>BOUNDING-BOX-WEST =
+   <li>BOUNDING-BOX-EAST =
+  </ul>
+</ul>
+This geographical bounding box may of course be completed by the altitude
+range where relevant.
+Regarding longitude, latitude and altitude units, please refer to
+<a href="#Ivar">Spatiotemporal independent variables</a>.
+</p>
+
+<p><h3><a name="Imag">4.2 Images</a></h3></p>
+
+<p><h4>4.2.1 Image file format</h4></p>
+
+<p>
+Photographic images of the Earth surface are provided in usual digital formats
+used for pictures (JPEG, GIF, ...).
+</p>
+
+<p><h4>4.2.2 Metadata file format</h4></p>
+
+<p>
+The format adopted for metadata associated to images is inspired from the NASA
+Ames standard for fields of numbers.
+Each metadata file includes the following lines in the following order.
+(The nomenclature is borrowed from the NASA Ames Standard.)
+Each line must not be more than 132 characters long.
+</p>
+
+<table>
+<tr valign=top>
+ <td width=160em>NLHEAD</td>
+ <td><i>Total number of lines in metadata file (NLHEAD=NSCOML+NNCOML+9).</i>
+     </td>
+</tr>
+<tr valign=top>
+ <td>ONAME</td>
+ <td><i>List of authors (Lastname, Firstname) separated by an arbitrary
+     character (for example, a hyphen or a semi-colon).</i></td>
+</tr>
+<tr valign=top>
+ <td>ORG</td>
+ <td><i>Affiliation (university, institute, etc). May include address and
+     phone/fax number(s).</i></td>
+</tr>
+<tr valign=top>
+ <td>SNAME</td>
+ <td><i>Source of visual data (e.g. aircraft name, instrument name, name of
+     technique used, wavelength channel).</i></td>
+</tr>
+<tr valign=top>
+ <td>MNAME</td>
+ <td><i>Programme and project. <u>Example</u>:</i> URGENT Project
+     GST/02/2225.</td>
+</tr>
+<tr valign=top>
+ <td>IVOL NVOL FNAME</td>
+ <td><i>NVOL = Total number of files belonging to the considered set of images.
+     <br>IVOL = Number of the considered image file in the above series.
+     <br>FNAME = Name of the latter, including file name extension.
+     <br>See Note 1 below.</i></td>
+</tr>
+<tr valign=top>
+ <td>DATE RDATE</td>
+ <td><i>DATE = Date when picture was taken.
+     <br>RDATE = Date when picture was lastly updated.
+     <br>Dates obey the format YYYY MM DD (1 blank space between the
+     year, month and day fields).
+     If the first digit of MM or DD is 0, it may be replaced by a blank but its
+     space may not be deleted.
+     <br>See Note 1 below.</i></td>
+</tr>
+<tr valign=top>
+ <td>NSCOML</td>
+ <td><i>Number of special comment lines (can be 0).</i></td>
+</tr>
+<tr valign=top>
+ <td>SCOM(k)</td>
+ <td><i>Special comment lines, if any (k=1,...,NSCOML unless NSCOML=0).
+     Special comments are relative to the considered image only.
+     <br>See Notes 2 &#038; 3 below.</i></td>
+</tr>
+<tr valign=top>
+ <td>NNCOML</td>
+ <td><i>Number of normal comment lines (can be 0).</i></td>
+</tr>
+<tr valign=top>
+ <td>NCOM(k)</td>
+ <td><i>Normal comment lines, if any (k=1,...,NNCOML unless NNCOML=0).
+     Normal comments are relative to the entire set of images.
+     <br>See Notes 2 &#038; 3 below.</i></td>
+</tr>
+</table>
+
+<p><b><u>Notes</u></b></p>
+
+<p style="text-indent: -1em; margin-left: 1em">
+1. There may be any number of blank spaces between IVOL &#038; NVOL, NVOL &#038;
+FNAME and DATE &#038; RDATE.
+</p>
+<p style="text-indent: -1em; margin-left: 1em">
+2. Comments should include the following:<P>
+<ul>
+ <li>Longitude, latitude coordinates (in decimal degrees) of each of the 4
+     frame corners
+ <li>Orientation of the picture.
+ <li>Resolution of the picture.
+ <li>Image treatment.
+ <li>Any other relevant information.
+</ul>
+</p>
+<p style="text-indent: -1em; margin-left: 1em">
+3. The following comment lines are mandatory and may appear in either the
+normal or special comment fields depending on whether they apply to the entire
+set of images or only the considered image file.
+<ul>
+ <li>E-MAIL-CONTACT =
+ <li>SITE-NAME =
+</ul>
+</p>
+
+<p><h3><a name="Soft">4.3 Software</a></h3></p>
+
+Software may be provided in any format chosen by the data provider (e.g. source
+code, executable version).
+<a href="Metadata.html#Soft">Metadata</a> should be supplied as text.
+
+<p>
+</body>
+
+</html>

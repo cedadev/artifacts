@@ -1,0 +1,878 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>UGAMP Ozone Climatology Documentation</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>The UGAMP ozone climatology and
+associated software</H1>
+
+<P><EM>Information compiled by the BADC team. </EM><HR ALIGN=LEFT><A
+NAME="Top"></A>Go to: [ Contents | <A HREF="#Climatology">Climatology
+</A>| <A HREF="#Data">Data </A>| <A HREF="#Software">Software
+</A>| <A HREF="#Transfer">Transfer </A>| <A HREF="#Contacts">Contacts
+</A>| <A HREF="#Notes">Notes </A>| <A HREF="#Bottom">End </A>]
+<HR ALIGN=LEFT></P>
+
+<H2>Contents</H2>
+
+<OL>
+  <LI><A HREF="#Climatology">The UGAMP ozone climatology</A>
+  <UL>
+    <LI><A HREF="#Intro">1.1 Introduction</A>
+    <LI><A HREF="#Units">1.2 Nature of the data and units</A>
+    <LI><A HREF="#Cover">1.3 Coverage and resolution</A>
+    <UL>
+      <LI><A HREF="#Space">1.3.1 In space</A>
+      <LI><A HREF="#Time">1.3.2 In time</A>
+    </UL>
+    <LI><A HREF="#Descr">1.4 Description and comparison of the original
+    data sets</A>
+    <UL>
+      <LI><A HREF="#SBUV">1.4.1 Solar Backscatter Ultra Violet (SBUV)
+      Instrument</A>
+      <LI><A HREF="#SAGE">1.4.2 Stratospheric Aerosol and Gas Experiment
+      (SAGE) II</A>
+      <LI><A HREF="#Comp">1.4.3 Comparison between SBUV and SAGE II</A>
+      <LI><A HREF="#SME">1.4.4 Solar Mesosphere Explorer (SME)</A>
+      <LI><A HREF="#TOMS">1.4.5 Total Ozone Mapping Spectrometer (TOMS)
+      and comparison with SBUV</A>
+      <LI><A HREF="#AESC">1.4.6 Ozone-sondes from the Atmospheric Environment
+      Service of Canada (AESC)</A>
+    </UL>
+    <LI><A HREF="#Techn">1.5 Techniques involved in the construction
+    of the climatology</A>
+    <UL>
+      <LI><A HREF="#Interp">1.5.1 Interpolation onto the adopted grid</A>
+      <LI><A HREF="#Tropos">1.5.2 Derivation of the tropospheric data</A>
+      <LI><A HREF="#PolarN">1.5.3 Polar night interpolation scheme</A>
+      <LI><A HREF="#Combin">1.5.4 Combination of the data sets</A>
+      <LI><A HREF="#Smooth">1.5.5 Smoothing of SBUV data </UL></A>
+      <LI><A HREF="#Qulty">1.6 Quality check</A>
+      <LI><A HREF="#Exper">1.7 Experiments with the UGCM model</A>
+      <LI><A HREF="#Refer">1.8 References</A>
+    </UL>
+    <LI><A HREF="#Data">The data held at the BADC</A>
+    <UL>
+      <LI><A HREF="#Type">2.1 Data types</A>
+      <LI><A HREF="#Form">2.2 Format</A>
+    </UL>
+    <LI><A HREF="#Software">The associated software</A>
+    <LI><A HREF="#Transfer">Transferring the UGAMP ozone climatology
+    data and software from the BADC</A>
+    <UL>
+      <LI><A HREF="#Ditry">4.1 Finding the appropriate directory</A>
+      <UL>
+        <LI><A HREF="#DataDir">4.1.1 Data</A>
+        <LI><A HREF="#SoftDir">4.1.2 Software </UL></A>
+        <LI><A HREF="#Files">4.2 Files: name and size</A>
+        <UL>
+          <LI><A HREF="#DataFiles">4.2.1 Data</A>
+          <LI><A HREF="#SoftFiles">4.2.2 Software </UL></UL></A>
+          <LI><A HREF="#Contacts">Who to contact?</A>
+          <LI><A HREF="#Notes">Notes </A></OL>
+</UL>
+<HR ALIGN=LEFT><A NAME="Climatology"></A>Go
+          to: [ <A HREF="#Top">Contents </A>| Climatology | <A HREF="#Data">Data
+          </A>| <A HREF="#Software">Software </A>| <A HREF="#Transfer">Transfer
+          </A>| <A HREF="#Contacts">Contacts </A>| <A HREF="#Notes">Notes
+          </A>| <A HREF="#Bottom">End </A>] <HR ALIGN=LEFT><H2>1. The UGAMP
+          ozone climatology </H2><EM>Source: <A HREF="#LiShine">Dingmin
+          Li and K.P. Shine, 1995. </A></EM><H3><A NAME="Intro"></A>1.1
+          Introduction </H3>
+          <P>The UGAMP ozone climatology has been set up by Dingmin Li
+          and Keith P. Shine at the Department of Meteorology of the University
+          of Reading. It is a four-dimensional distribution of atmospheric
+          ozone that has been built up from the <A HREF="#Combin">combination</A>
+          of several <A HREF="#Descr">observational data sets</A>.
+          <P>The climatology was originally conceived to replace the old
+          ozone distributions used as an input in the UGAMP models, namely
+          the built in ECMWF parameterization, hereafter called the <EM>internal
+          climatology</EM>, and a two-dimensional climatology based on
+          satellite data (<A HREF="#Thuburn">Thuburn, 1992</A>), hereafter
+          called <EM>external climatology</EM>. The weakness of the ECMWF
+          parameterization was an overestimation of the low polar stratosphere
+          ozone content, leading in the UGAMP general circulation model
+          (UGCM) to a biased calculated zonal mean dynamics in polar regions,
+          while the 2-D climatology, although realistic, naturally missed
+          the longitudinal variation. Moreover, the new climatology would
+          ideally have to give account for the ozone interannual variability
+          (e.g. the QBO signal). Therefore, a multi-year three-dimensional
+          climatology was required, based on the most comprehensive observations
+          available. The approach that has been adopted in this endeavour
+          is summarized in the next sections. More details can be found
+          in <A HREF="#LiShine">Li and Shine, 1995</A>.
+          <P>The resulting climatology should be useful not only as a realistic
+          prescribed ozone distribution for global circulation models,
+          but also as a reference for validation of GCM that treat ozone
+          as a prognostic variable.
+          <P><HR ALIGN=LEFT><A NAME="Units"></A>Go to: [ <A HREF="#Top">Contents
+          </A>| Climatology | <A HREF="#Data">Data </A>| <A HREF="#Software">Software
+          </A>| <A HREF="#Transfer">Transfer </A>| <A HREF="#Contacts">Contacts
+          </A>| <A HREF="#Notes">Notes </A>| <A HREF="#Bottom">End </A>]
+          <HR ALIGN=LEFT><H3>1.2 Nature of the data and units </H3>
+          <P>The data consists in <A HREF="#DefCol">ozone column</A> <sup>(1)</sup>
+          monthly means above the grid levels, expressed in <A HREF="#DefCol">Dobson
+          Units</A> <sup>(1)</sup> (DU). A <A HREF="#Software">routine</A>
+          is provided that converts ozone columns into volume mixing ratios.
+          <P><HR ALIGN=LEFT><A NAME="Cover"></A>Go to: [ <A HREF="#Top">Contents
+          </A>| Climatology | <A HREF="#Data">Data </A>| <A HREF="#Software">Software
+          </A>| <A HREF="#Transfer">Transfer </A>| <A HREF="#Contacts">Contacts
+          </A>| <A HREF="#Notes">Notes </A>| <A HREF="#Bottom">End </A>]
+          <HR ALIGN=LEFT><H3>1.3 Coverage and resolution </H3><H4><A NAME="Space"></A>1.3.1
+          In space </H4>
+          <P>The geographical coverage of the climatology is global, in
+          spite of the existence of sparse observation areas in the original
+          data sets, that have been the object of a particular treatment
+          (<A HREF="#Tropos">troposphere</A> and <A HREF="#PolarN">polar
+          night</A>). The climatology horizontal resolution is of 2.5 by
+          2.5 degrees (144 points in longitude and 73 points in latitude
+          from pole to pole). Its vertical coverage extends over <A HREF="levels.html">47
+          levels</A> defined by isobaric surfaces, from the 0.0011 mb level
+          down to the standard pressure level. The <A HREF="levels.html">vertical
+          resolution</A> is irregular &#151; it is close to 2 km in the
+          stratosphere.
+          <P>These choices have been made according to the resolution adopted
+          in the UGCM. However, a <A HREF="#Software">routine</A> is provided
+          that converts the climatological data onto any other desired
+          grid and/or vertical scale. <H4><A NAME="Time"></A>1.3.2 In time
+          </H4>
+          <P>The present state of the climatology includes five years (1985
+          to 1989), with one 3-dimensional data set per month.
+          <P><HR ALIGN=LEFT><A NAME="Descr"></A>Go to: [ <A HREF="#Top">Contents
+          </A>| Climatology | <A HREF="#Data">Data </A>| <A HREF="#Software">Software
+          </A>| <A HREF="#Transfer">Transfer </A>| <A HREF="#Contacts">Contacts
+          </A>| <A HREF="#Notes">Notes </A>| <A HREF="#Bottom">End </A>]
+          <HR ALIGN=LEFT><H3>1.4 Description and comparison of the original
+          data sets </H3>
+          <P>At the time of its construction, the need of a multi-year
+          climatology put a constraint on the possible data sets to be
+          used. On the other hand, the latitude and height ranges of the
+          designed climatology made it necessary to combine different sources
+          of data, which would have to be homogenized in some way. As a
+          result, the climatology is based mainly on satellite data from
+          SBUV and SAGE II. Supporting data comes from ozone-sondes (Atmospheric
+          Environment Service of Canada) and other satellite instruments,
+          such as SME and TOMS. Data from the <A HREF="/data/uars/index.html">UARS</A>
+          were not included, as they were not available at the time when
+          the project began. <H4><A NAME="SBUV"></A>1.4.1 Solar Backscatter
+          UltraViolet (SBUV) Instrument </H4>
+          <P>SBUV (<A HREF="#Fleig">Fleig et al., 1990</A>; <A HREF="#WMO">WMO,
+          1988</A>) measures the solar irradiance and the radiance backscattered
+          by the Earth's atmosphere in 12 selected wavelength bands in
+          the ultraviolet. From these radiances and irradiances, <A HREF="#DefCol">ozone
+          columns</A> <sup>(1)</sup> and ozone profiles are obtained, using
+          retrieval algorithms. SBUV views the nadir with a field of view
+          of 200 x 200 kilometers. Every day, the observation covers 200
+          km wide strips, 26&deg; apart in longitude. There are 13 or 14
+          orbits per day. Data is available from November 1987 to June
+          1990. The SBUV data used in the current climatology is version
+          6. <H4><A NAME="SAGE"></A>1.4.2 Stratospheric Aerosol and Gas
+          Experiment (SAGE) II </H4>
+          <P><A HREF="/data/sage2/index.html">SAGE II</A> (<A HREF="#McCormick">McCormick,
+          1992</A>; <A HREF="#Zawodny">Zawodny and McCormick, 1991</A>)
+          is a seven-channel spectrometer covering selected wavelengths
+          in the near UV, visible and near IR portion of the spectrum.
+          The wavelengths were selected so that determination of aerosol
+          extinction, ozone, nitrogen dioxide and water vapour profiles
+          can be issued throughout the stratosphere and upper troposphere.
+          SAGE II measures the Earth's limb extinction via the solar occultation
+          technique during each spacecraft sunrise and sunset. This technique
+          is inherently self-calibrating in that the instrument makes a
+          direct measurement of the extraterrestrial solar irradiance before
+          and after each sunrise and sunset occultation event. The 15 orbits
+          per day yield 15 sunrise and 15 sunset profiles. The use of the
+          sun as an irradiance source allows for a small instrument field
+          of view and gives a very high vertical resolution. The data in
+          a given day is uniformly spaced in longitude and closely spaced
+          in latitude, which periodically ranges from 80&deg; South to
+          80&deg; North. Data is available for October 1984 to early 1990.
+          <H4><A NAME="Comp"></A>1.4.3 Comparison between SBUV and SAGE
+          II </H4>
+          <P>SBUV and SAGE II use very different spectral measurement techniques:
+          nadir-viewing backscattered ultraviolet versus limb-viewing solar
+          occultation. The vertical resolution of the two measurements
+          is accordingly quite different. SBUV has an approximately 8-km
+          resolution in the upper stratosphere but only 15-km resolution
+          at and below the ozone maximum, whereas SAGE II gives a near
+          1-km vertical resolution. By virtue of its limb-view self-calibration
+          for every profile, SAGE II may, in principle, be regarded as
+          a benchmark standard against which the coarse resolution SBUV
+          profiles may be judged (<A HREF="#McPeters">McPeters et al.,
+          1994</A>). The SAGE II data was used as the <EM>a priori</EM>
+          climatology in the SBUV retrieval in the low to middle stratosphere
+          layers, leading to retrieved SBUV profiles that follow the shape
+          of the SAGE II profiles in this region though they do not necessarily
+          agree with SAGE there. However, SAGE II measures ozone at a given
+          latitude only once every month, providing very poor spatial and
+          temporal coverage for the purpose of building a global climatology;
+          whereas SBUV provides daily measurements on a global basis. SBUV
+          has therefore been chosen as the main data set to establish the
+          present climatology, at pressures between 1 and 70 mb, with SAGE
+          II used as a supplement in the low stratosphere (at pressures
+          higher than 70 mb) and in the mesosphere (at pressures lower
+          than 1 mb). SAGE II is also used as a standard against which
+          the quality of the climatology is checked. The comparison of
+          profiles between SBUV and SAGE II by <A HREF="#McPeters">McPeters
+          et al. (1994)</A> shows that both observations agree well in
+          most stratospheric layers, with the exception of the high stratosphere
+          (between 40 and 50 km) and low stratosphere. <H4><A NAME="SME"></A>1.4.4
+          Solar Mesosphere Explorer (SME) </H4>
+          <P>The ozone in SME data (<A HREF="#Rusch83">Rusch et al., 1983</A>;
+          <A HREF="#Rusch84">1984</A>) is measured by both UV and near
+          infrared airglow instruments; the latter gives ozone measurement
+          from 50 to 90 km. Observation is made at the Earth's limb with
+          an altitude resolution of about 4 km. Only the near infrared
+          data has been used in the climatology as both the UV and near
+          IR techniques provide similar results and as UV ozone data is
+          available over a smaller vertical range. <H4><A NAME="TOMS"></A>1.4.5
+          Total Ozone Mapping Spectrometer (TOMS) and comparison with SBUV
+          </H4>
+          <P><A HREF="/data/toms/tomshelp.html#Nim7InstDes">TOMS</A> is
+          an ozone-mapping instrument that was mounted next to the SBUV
+          instrument on the Nimbus-7 satellite (<A HREF="#Heath">Heath
+          et al., 1975</A>). It provided continuous measurements of <A
+          HREF="#DefCol">total ozone</A> <sup>(1)</sup> on a longitude-latitude
+          grid. Like SBUV, TOMS uses a nadir-view spectral measurement
+          technique and works on the principle of backscattered ultraviolet
+          radiation. However, whereas SBUV observes solar radiation backscattered
+          only in the nadir, TOMS scans across the orbital track, sampling
+          radiation backscattered from swaths that pass from side to side
+          through the nadir. In principle, TOMS can obtain the signal due
+          to the presence of ozone in both the stratosphere and the troposphere,
+          but in practice it only measures the <A HREF="#DefCol">ozone
+          column</A> <sup>(1)</sup> above the cloud top, with a correction
+          from climatological ozone below the cloud during the retrieval.
+          The uncertainty induced by this correction is found to be small
+          (about 5 DU) in the monthly mean measurement (<A HREF="#Thompson">Thompson
+          et al., 1993</A>). The accuracy of the TOMS data is considered
+          very high in comparison to the ground based Dobson data (<A 
+          HREF="#WMO">WMO, 1988</A>), with errors in the monthly mean measurements
+          less than 1.5%. The <A HREF="/data/toms/tomshelp.html#Processing">TOMS
+          data version 6</A> used in this climatology is from the BADC.
+          It includes a correction of the long term drift (1978-1987) due
+          to the degradation of the diffuser plate in the instrument (<A
+          HREF="#Watson">Watson et al., 1988</A>). <H4><A NAME="AESC"></A>1.4.6
+          Ozone-sondes from the Atmospheric Environment Service of Canada
+          (AESC) </H4>
+          <P>The ozone-sonde data acquired from the Atmospheric Environment
+          Service of Canada (AESC) consists in a set of ozone profiles
+          at each station of the network, at times when the observation
+          was made. There is a total of 289 stations, some of which stopped
+          operations long ago or have been in operation during a few years
+          only, when not only a few months. These make the data discontinuous
+          in both time and space. Three-dimensional ozone values could
+          however be derived for the troposphere and part of the low stratosphere,
+          based on the 2-dimensional (latitude-height) AESC ozone-sonde
+          climatology carefully established by <A HREF="#London">London
+          and Liu (1992)</A>, and using a <A HREF="#Tropos">technique</A>
+          described in next section, that was developed for this purpose.
+          <P><HR ALIGN=LEFT><A NAME="Techn"></A>Go to: [ <A HREF="#Top">Contents
+          </A>| Climatology | <A HREF="#Data">Data </A>| <A HREF="#Software">Software
+          </A>| <A HREF="#Transfer">Transfer </A>| <A HREF="#Contacts">Contacts
+          </A>| <A HREF="#Notes">Notes </A>| <A HREF="#Bottom">End </A>]
+          <HR ALIGN=LEFT><H3>1.5 Techniques involved in the construction
+          of the climatology </H3><H4><A NAME="Interp"></A>1.5.1 Interpolation
+          onto the adopted grid </H4>
+          <P>As all data sets were supplied on different vertical grids
+          and had different vertical resolutions, an accurate interpolation
+          scheme had to be established in order to translate them onto
+          the climatology grid whilst conserving the total ozone amount.
+          As SAGE data have a high vertical resolution (of about 1 km),
+          the error is negligible when these data are degraded to lower
+          vertical resolution. However, for SBUV, which was chosen as the
+          main data set for this climatology, the vertical resolution is
+          poor, as mentioned in previous section. An interpolation scheme
+          was therefore needed which must ensure the interpolated vertical
+          profiles agree with the observed ones whatever the resolution
+          of the latter. It was also required that the interpolated profiles
+          should be smooth and agree with the observations both in terms
+          of local mixing ratio and of <A HREF="#DefCol">ozone column</A>
+          <sup>(1)</sup>. In this endeavour, SAGE II profiles were regarded
+          as a benchmark standard and were used to investigate the interpolation
+          scheme first. The SAGE II profiles were then degraded to the
+          12 levels of SBUV and the scheme was tested again to check its
+          meeting with the requirements listed above. After comparison
+          of various methods, the cubic spline interpolation of the ozone
+          column was found to be the best scheme (linear schemes, in particular,
+          all gave unrealistic wiggles in the mixing ratio profiles). <H4><A
+          NAME="Tropos"></A>1.5.2 Derivation of the tropospheric data </H4>As
+          developed in <A HREF="#AESC">former section</A>, direct use of
+          the ozone sondes proved difficult and unreliable. The strategy
+          adopted to derive tropospheric ozone from the data was to use
+          the 2-dimensional climatology based on the ozone sondes (<A 
+          HREF="#London">London and Liu, 1992</A>) to provide the shape
+          of the profile and use a combination of satellite data to define
+          the tropospheric column (<A HREF="#Fishman">Fishman et al., 1990</A>).
+          <P>Given the level of 100 mb as a boundary, the difference between
+          TOMS <A HREF="#DefCol">total ozone column</A> <sup>(1)</sup>
+          and the <A HREF="#DefCol">ozone column</A> <sup>(1)</sup> above
+          the 100 mb level as determined from the <A HREF="#Combin">combination</A>
+          of SME, SBUV and SAGE II provides a value for the remaining slab
+          S<sub>1</sub> between the surface and the 100 mb level at the
+          centre (&lambda;,&phi;) of every 2.5&deg; &times; 2.5&deg; grid
+          cell:
+          <P><CENTER>S<sub>1</sub>(&lambda;,&phi;) = TOMS &minus; [SME,
+          SBUV, SAGE II]<sub>100 mb</sub>.</CENTER>
+          <P>On the other hand, there are 6 layers between the surface
+          and 100 mb in the climatology of <A HREF="#London">London and
+          Liu, 1992</A>. Summing up the ozone amounts in these 6 layers
+          gives a value S<sub>2</sub>(&phi;) of the same surface-100 mb
+          slab, on a latitudinal grid from pole to pole.
+          <P>Each horizontal grid point is then attributed a value of the
+          ratio
+          <P><CENTER>&gamma;(&lambda;,&phi;) = S<sub>1</sub>(&lambda;,&phi;)
+          / S<sub>2</sub>(&phi;).</CENTER>
+          <P>Multiplying each ozone mixing ratio from the 2-D ozone sondes
+          climatology by its associated &gamma;s provides a 3-dimensional
+          tropospheric ozone field with profile shapes consistent with
+          the ozone sondes and vertically integrated amounts consistent
+          with TOMS. The adjustment performed in this way is generally
+          small (0.8&lt;&gamma;&lt;1.8) and the transition of the derived
+          ozone profiles from troposphere to low stratosphere is smooth.
+          <H4><A NAME="PolarN"></A>1.5.3 Polar night interpolation scheme
+          </H4>There were no data readily available for the polar night
+          area. The <A HREF="/data/mls/index.html">Microwave Limb Sounder
+          (MLS)</A> aboard <A HREF="/data/uars/index.html">UARS</A> has
+          observations near the poles but was not in operation during the
+          period of time covered by this climatology, and in any case its
+          results were not available at the time when the climatology was
+          initiated. A polar night interpolation scheme was therefore needed
+          to fill the gaps shown by all the selected data sets in the polar
+          night areas. Since changes with longitude are small within the
+          mesosphere, it was decided to interpolate the zonal mean of the
+          SME data from 0.24 mb upward. A simple cubic spline interpolation
+          was thus applied to the 2-dimensional field of the zonally averaged
+          ozone to extend the SME data into the polar night. In the case
+          of all the other data sets, however, since they were not zonally
+          symmetric, the simple cubic spline scheme could not be applied
+          and a triangular polar interpolation scheme was designed for
+          this purpose (see <A HREF="#LiShine">Li and Shine, 1995</A>,
+          appendix). When applied to a month of data without polar gap
+          (<EM>e.g.</EM> TOMS April Northern Hemisphere), from which the
+          polar cap has been removed, this scheme gives back most features
+          of the original data. <H4><A NAME="Combin"></A>1.5.4 Combination
+          of the data sets </H4>Once interpolated on the required grid,
+          the different data sets described in <A HREF="#Descr">section
+          1.4</A> have been combined into a single climatology, each set
+          corresponding to one or two specific vertical atmospheric regions,
+          according to the above considerations. Table 1 below gives the
+          boundaries of the vertical domains and the data sets used in
+          each of these domains. Weighing functions are applied in the
+          vicinity of the borders between two vertical regions, in order
+          to ensure a smooth transition from one data set to the next one
+          whilst retaining the trend of the profile. Examples of climatological
+          profiles compared with the original data, as well as latitude-heoght
+          cross-sections, are shown in <A HREF="#LiShine">Li and Shine,
+          1995</A>.
+          <P><CENTER><TABLE BORDER="1" CELLSPACING="1" CELLPADDING="8"
+          style="background-color: #DDFFFF">
+            <CAPTION ALIGN="TOP"><P ALIGN=LEFT><B>Table 1.</B> Data sets used in the climatology,
+
+as a function of height.</CAPTION>
+             
+            <TR>
+              <TD>above 0.24 mb</TD> 
+              <TD>SME near infrared airglow data</TD> 
+            </TR>
+            <TR>
+              <TD>0.24 - 1 mb</TD> 
+              <TD>SAGE II</TD> 
+            </TR>
+            <TR>
+              <TD>1 - 70 mb</TD> 
+              <TD>SBUV</TD> 
+            </TR>
+            <TR>
+              <TD>70 - 100 mb</TD> 
+              <TD>SAGE II</TD> 
+            </TR>
+            <TR>
+              <TD>below 100 mb</TD> 
+              <TD>AESC Ozone Sondes</TD> 
+            </TR>
+          </TABLE></CENTER>
+          <P><H4><A NAME="Smooth"></A>1.5.5 Smoothing of SBUV data </H4>None
+          of the data sets used presented any significant noise apart from
+          SBUV. In this last case the noise was so severe that the data
+          had to be smoothed in order to obtain a meaningful climatology.
+          This was achieved using a simple 5-point horizontal smooth and
+          a longitudinal 5-point running smooth. The field removed in this
+          way is of a very small scale and the smoothed data keep the main
+          structure of the original data set.
+          <P><HR ALIGN=LEFT><A NAME="Qulty"></A>Go to: [ <A HREF="#Top">Contents
+          </A>| Climatology | <A HREF="#Data">Data </A>| <A HREF="#Software">Software
+          </A>| <A HREF="#Transfer">Transfer </A>| <A HREF="#Contacts">Contacts
+          </A>| <A HREF="#Notes">Notes </A>| <A HREF="#Bottom">End </A>]
+          <HR ALIGN=LEFT><H3>1.6 Quality check </H3>As many manipulations
+          of the data have taken place in the process of building the climatology,
+          it was necessary to check the result against original observations.
+          A number of profiles were thus extracted from the climatology
+          and were compared to the corresponding SAGE II profiles, regarded
+          as a benchmark standard data set, due in particular to its high
+          vertical resolution (<A HREF="#McPeters">McPeters et al., 1994</A>).
+          The comparison is generally very satisfactory, except near the
+          equator, where the SAGE II ozone maximum is not fully reflected
+          in the climatology (<A HREF="#LiShine">Li and Shine, 1995</A>).
+          This is related to the fact that the main data set used is SBUV,
+          which has a lower vertical resolution and is expected not to
+          present such a sharp peak as SAGE II.
+          <P>The climatological ozone zonal mean has also been compared
+          with the existing UGAMP <EM>external climatology</EM>. The general
+          features in both fields agree very well (see <A HREF="#LiShine">Li
+          and Shine, 1995</A>).
+          <P><HR ALIGN=LEFT><A NAME="Exper"></A>Go to: [ <A HREF="#Top">Contents
+          </A>| Climatology | <A HREF="#Data">Data </A>| <A HREF="#Software">Software
+          </A>| <A HREF="#Transfer">Transfer </A>| <A HREF="#Contacts">Contacts
+          </A>| <A HREF="#Notes">Notes </A>| <A HREF="#Bottom">End </A>]
+          <HR ALIGN=LEFT><H3>1.7 Experiments with the UGCM model </H3>Two
+          experiments have been conducted with the 19-level version of
+          the UGCM to test the ozone climatology. In each experiment, a
+          control run was performed using the ECMWF parameterized ozone
+          (Runs 2 and 4). The results of an identical calculation but using
+          the constructed ozone climatology were then compared to the control.
+          <P>The first experiment (Run 1 versus Run 2) was a 240-day integration
+          of the model for perpetual January conditions : Run 1 used the
+          climatological ozone of January 1986. The second experiment (Run
+          3 versus Run 4) was a calculation performed in seasonal cycle
+          mode: Run 3 used the climatological ozone of Year 1986. The characteristics
+          of the performed calculations are summarised in Table 2.
+          <P><CENTER><TABLE BORDER="1" CELLSPACING="1" CELLPADDING="8">
+            <CAPTION ALIGN="TOP"><P ALIGN=LEFT><B>Table 2.</B> Characteristics of the calculations
+
+performed with the UGCM to test the climatology.</CAPTION>
+             
+            <TR ALIGN="CENTER">
+              <TD COLSPAN="2" ROWSPAN="2"></TD>
+              <TH COLSPAN="2" style="background-color: #BBDDFF">Ozone</TH>
+               
+            </TR>
+            <TR ALIGN="CENTER">
+               
+               
+              <TH style="background-color: #CCEEFF">3-D combined climatology</TH>
+              <TH style="background-color: #CCEEFF">Internal ECMWF parameterization<BR>
+                (Control run)</TH>
+            </TR>
+            <TR ALIGN="CENTER">
+              <TH ROWSPAN="2" style="background-color: #BBDDFF">Mode</TH> 
+              <TH style="background-color: #CCEEFF">Perpetual January</TH> 
+              <TD style="background-color: #DDFFFF">Run 1</TD> 
+              <TD style="background-color: #DDFFFF">Run 2</TD> 
+            </TR>
+            <TR ALIGN="CENTER">
+               
+              <TH style="background-color: #CCEEFF">Seasonal cycle</TH> 
+              <TD style="background-color: #DDFFFF">Run 3</TD> 
+              <TD style="background-color: #DDFFFF">Run 4</TD>
+            </TR>
+          </TABLE></CENTER>
+          <P>In the case of perpetual January, the two ozone climatologies
+          show significantly different values in the low stratosphere:
+          the ECMWF parameterized ozone is larger than its climatological
+          counterpart in both polar regions (by up to 3 ppmv in the summer
+          hemisphere), shows an unrealistically pronounced vertical gradient
+          in the tropical region and is lower at northern mid-latitudes.
+          As a result, by comparison to Run 1, the low stratosphere in
+          Run 2 is warmer by up to 10 K at summer high latitudes and cooler
+          above the tropical tropopause and at Northern mid-latitudes.
+          <P>The seasonal cycle experiment reveals strong discrepancies
+          between Run 3 and Run 4 in terms of zonal mean temperature: the
+          polar low stratosphere in Run 4 is warmer than in Run 3 by up
+          to 10 K, in both summer and winter. Since the internal variability
+          in the two runs is very similar both in distribution and in amplitude,
+          the difference in the calculated temperature fields must be entirely
+          attributed to the difference in the ozone amounts.
+          <P>These experiments underline the sensitivity of the calculated
+          temperature to the adopted ozone amount and emphasize the importance
+          of choosing a realistic ozone climatology as an output to GCM.
+          <P><HR ALIGN=LEFT><A NAME="Refer"></A>Go to: [ <A HREF="#Top">Contents
+          </A>| Climatology | <A HREF="#Data">Data </A>| <A HREF="#Software">Software
+          </A>| <A HREF="#Transfer">Transfer </A>| <A HREF="#Contacts">Contacts
+          </A>| <A HREF="#Notes">Notes </A>| <A HREF="#Bottom">End </A>]
+          <HR ALIGN=LEFT><H3>1.8 References </H3>
+          <P><A NAME="Fishman"></A>Fishman, J., E. C. Watson, J. C. Larsen
+          and J. A. Logan, Distribution of tropospheric ozone determined
+          from satellite data, <EM>J. Geophys. Res.</EM>, <B>95</B>, D4,
+          3599-3617, 1990.
+          <P><A NAME="Fleig"></A>Fleig, A. J., R. D. McPeters, P. K. Bhartia,
+          B. M. Schlesinger, R. P. Cebula, K. F. Klenk, S. L. Tayoy and
+          D. F. Heath, Nimbus 7 Solar Backscatter Ultraviolet (SBUV) ozone
+          products user's guide, NASA Reference Publication 1234, 1990.
+          <P><A NAME="Heath"></A>Heath, D. F., A. J. Krueger, H. A. Roeder
+          and B. D. Henderson, The solar backscatter ultraviolet and total
+          ozone spectrometer (SBUV/TOMS) for Nimbus G, <EM>Opt. Eng.</EM>,
+          <B>14</B>, 323-331, 1975.
+          <P><A NAME="London"></A>London, J. and S. C. Liu, Long-term tropospheric
+          and lower stratospheric ozone variations from ozonesonde observations,
+          <EM>J. Atmos. and Terres. Phys.</EM>, <B>54</B>, 5, 599-625,
+          1992.
+          <P><A NAME="LiShine"></A>Li, D. and K. P. Shine, A 4-Dimensional
+          Ozone Climatology for UGAMP Models, UGAMP Internal Report No.
+          35, April 1995.
+          <P><A NAME="McCormick"></A>McCormick, M. P., Stratospheric ozone
+          profile and total trends derived from the SAGE I and SAGE II
+          data, <EM>Geophys. Res. Lett.</EM>, <B>19</B>, 3, 269-272, 1992.
+          <P><A NAME="McPeters"></A>McPeters, R. D., T. Miles, L. E. Flynn,
+          C. G. Wellemeyer and J. M. Zawodny, Comparison of SBUV and SAGE
+          II ozone profiles: Implications for ozone trend, <EM>J. Geophys.
+          Res.</EM>, <B>99</B>, D10, 20513-20524, 1994.
+          <P><A NAME="Rusch83"></A>Rusch, D. W., G. H. Mount, C. A. Barth,
+          G. J. Rottman, R. J. Thomas, G. E. Thomas, R. W. Sanders, G.
+          M. Lawrence and R. S. Eckman, Ozone densities in the lower mesosphere
+          measured by a limb scanning ultraviolet spectrometer, <EM>Geophys.
+          Res. Lett.</EM>, <B>10</B>, 241-244, 1983.
+          <P><A NAME="Rusch84"></A>Rusch, D. W., G. H. Mount, C. A. Barth,
+          R. J. Thomas and M. T. Callan, Solar Mesosphere Explorer ultraviolet
+          spectrometer: Measurements of ozone in the 1.0 to 0.1 mb region,
+          <EM>J. Geophys. Res.</EM>, <B>89</B>, 11677-11687, 1984.
+          <P><A NAME="Thompson"></A>Thompson, A. M., D. P. McNamara, K.
+          E. Pickering and R. D. McPeters, Effect of marine stratocumulus
+          on TOMS ozone, <EM>J. Geophys. Res.</EM>, <B>98</B>, D12, 23051-23057,
+          1993.
+          <P><A NAME="Thuburn"></A>Thuburn, UGAMP Internal Report No. 16,
+          1992.
+          <P><A NAME="Watson"></A>Watson, R. T. and Ozone Trends Panel,
+          M. J. Prather and Ad Hoc Theory Panel, and M. J. Kurylo and NASA
+          Panel for Data Evaluation, Present state of knowledge of the
+          atmosphere 1988: an assessment report, <EM>NASA Ref. Publ. 1208</EM>,
+          201 pp, 1988.
+          <P><A NAME="WMO"></A>WMO: Report of the International Ozone Trends
+          Panel, 1988.
+          <P><A NAME="Zawodny"></A>Zawodny, J. M. and M. P. McCormick,
+          Stratospheric Aerosol and Gas Experiment II measurements of the
+          quasi-biennial oscillations in ozone and nitrogen dioxide, <EM>J.
+          Geophys. Res.</EM>, <B>96</B>, 9371-9377.
+          <P><HR ALIGN=LEFT><A NAME="Data"></A>Go to: [ <A HREF="#Top">Contents
+          </A>| <A HREF="#Climatology">Climatology </A>| Data | <A HREF="#Software">Software
+          </A>| <A HREF="#Transfer">Transfer </A>| <A HREF="#Contacts">Contacts
+          </A>| <A HREF="#Notes">Notes </A>| <A HREF="#Bottom">End </A>]
+          <HR ALIGN=LEFT><H2>2. The data held at the BADC </H2>For information
+          about the physical nature of the data and the adopted units,
+          please refer to <A HREF="#Units">Subsection 1.2</A> above. For
+          the data coverage and resolution, please refer to <A HREF="#Cover">Subsection
+          1.3</A>. Information about where to find the data is given in
+          <A HREF="#Transfer">Section 4</A> below. The total volume of
+          the data (in their compressed version) is of about 87 Mbytes
+          (435 Mb uncompressed). <H3><A NAME="Type"></A>2.1 Data types
+          </H3>The UGAMP ozone data held at the BADC are of three types:
+          <UL>
+            <LI><B>Yearly data.</B> 3-D ozone column monthly average for
+            each month of Years 1985 to 1989.
+            <LI><B>Five-year average.</B> The 3-D average of each monthly
+            mean over the five years of records.
+            <LI><B>Zonal means.</B> For each year and month of the climatology,
+            the data base also provides the zonally averaged ozone column
+            monthly mean as a function of latitude and height.
+          </UL>
+          <P><H3><A NAME="Form"></A>2.2 Format </H3>The UGAMP O<sub>3</sub>
+          files held at the BADC are <A HREF="#GZip">compressed ASCII files</A>
+          <sup>(2)</sup>. The file sizes are given in Section 4.2, <A 
+          HREF="#Table5">Table 5</A>.
+          <P>Each file contains a ligne of text followed by the variable
+          itself, in <EM>free format</EM>.
+          <P>Every single three-dimensional field <EM>var</EM> is stored
+          as <blockquote>(((var(i, j, k), i=1, 144), j=1, 73), k=1, 47)
+          </blockquote>where
+          <UL>
+            <LI><EM>i</EM> is the longitude index (from 0&deg;E to 357.5&deg;E
+            by 2.5&deg;);
+            <LI><EM>j</EM> is the latitude index (from South Pole to North
+            Pole by 2.5&deg;);
+            <LI><EM>k</EM> is the level index (from top to bottom).
+          </UL>
+          <P>If you are not familiar with this Fortran syntax, please see
+          the <A HREF="#Fortran">note</A> <sup>(3)</sup> below.
+          <P>Every two-dimensional field (zonal means) is stored as <blockquote>((var(j,
+          k), j=1, 73), k=1, 47) </blockquote>with the same conventions
+          as above.
+          <P><HR ALIGN=LEFT><A NAME="Software"></A>Go to: [ <A HREF="#Top">Contents
+          </A>| <A HREF="#Climatology">Climatology </A>| <A HREF="#Data">Data
+          </A>| Software | <A HREF="#Transfer">Transfer </A>| <A HREF="#Contacts">Contacts
+          </A>| <A HREF="#Notes">Notes </A>| <A HREF="#Bottom">End </A>]
+          <HR ALIGN=LEFT><H2>3. The associated software </H2>
+          <P>Two Fortran programs are provided by the authors of the climatology:
+          <UL>
+            <LI><EM>grid-trans.f</EM> interpolates the data onto any desired
+            grid different from the UGAMP grid;
+            <LI><EM>col-to-mxr.f</EM> converts ozone columns above the gid
+            levels into mean mixing ratios within the layers delimited by
+            two successive levels.
+          </UL>
+          <P>Information about where to find the available software is
+          given in <A HREF="#Transfer">Section 4</A> below. We invite you
+          to provide the BADC with any software that you would judge relevant.
+          A special <A HREF="#SoftDir">directory</A> is accessible for
+          this purpose.
+          <P><HR ALIGN=LEFT><A NAME="Transfer"></A>Go to: [ <A HREF="#Top">Contents
+          </A>| <A HREF="#Climatology">Climatology </A>| <A HREF="#Data">Data
+          </A>| <A HREF="#Software">Software </A>| Transfer | <A HREF="#Contacts">Contacts
+          </A>| <A HREF="#Notes">Notes </A>| <A HREF="#Bottom">End </A>]
+          <HR ALIGN=LEFT><H2>4. Transferring the UGAMP ozone climatology
+          data and software from the BADC </H2>You can obtain copies of
+          the UGAMP data and software via this <A HREF="/cgi-bin/data_browser/data_browser/badc/ugamp-o3-climatology">WWW</A>
+          server or alternatively via the CEDA FTP service on
+          <EM>ftp.ceda.ac.uk</EM>. For the unexperienced user, help
+          is available on <A HREF="/help/ftp_guide.html">how to use FTP (File
+          Transfer Protocol)</A>.
+          <P>In any case, please refer to the instructions below to find
+          the appropriate <A HREF="#Ditry">directories</A> and <A HREF="#Files">files</A>.
+          <P>After having transferred them to your home machine, you will
+          have to <A HREF="#GZip">uncompress the files</A> <sup>(2)</sup>
+          in order to be able to read the data. For information about the
+          size of compressed and uncompressed files, please refer to Subsection
+          4.2, <A HREF="#Table5">Table 5</A>. You will need a total of
+          about 87 Mbytes to store the whole climatology in its <EM>gzipped</EM>
+          version, including 5-year and zonal averages. When all files
+          are <EM>gunzipped</EM>, their total volume is of about 435 Mb.
+          <H3><A NAME="Ditry"></A>4.1 Finding the appropriate directory
+          </H3>
+          <UL>
+            <LI>If you use FTP : after logging in on
+            ftp.ceda.ac.uk, type <EM>cd /badc/ugamp-o3-climatology</EM> to reach
+            the top of the UGAMP ozone climatology directory tree, then type
+            <EM>ls</EM>. This will list the current directories below <EM>ugamp-o3-climatology</EM>,
+            namely <EM>data</EM>, <EM>doc</EM> and <EM>software</EM>. Type
+            <EM>cd [directory name]</EM> to enter the directory of your choice.
+            <LI>If you use this WWW server : you will be connected to the
+            index of <EM>ugamp-o3-climatology</EM>. Click once on the name
+            of the directory you want to enter (<EM>data</EM>, <EM>doc</EM>
+            or <EM>software</EM>).
+          </UL>
+          <P><H4><A NAME="DataDir"></A>4.1.1 Data </H4>
+          <P>The ASCII data files are in subdirectories below the <EM>data</EM>
+          directory. The names of these subdirectories and the nature of
+          the ozone data they contain are given in Table 3 below.
+          <P><CENTER><TABLE BORDER="1" CELLSPACING="1" CELLPADDING="8"
+          WIDTH="486" style="background-color: #DDFFFF">
+            <CAPTION ALIGN="TOP"><P ALIGN=LEFT><B>Table 3.</B> Subdirectories of the <EM>/badc/ugamp-o3-climatology/data</EM>
+
+directory.</CAPTION>
+             
+            <TR ALIGN="CENTER" style="background-color: #CCEEFF">
+              <TH>Subdirectory name</TH> 
+              <TH>Type of data</TH> 
+            </TR>
+            <TR ALIGN="CENTER">
+              <TD><EM>y85</EM></TD> 
+              <TD>Year 1985 monthly means</TD> 
+            </TR>
+            <TR ALIGN="CENTER">
+              <TD><EM>y86</EM></TD> 
+              <TD>Year 1986 monthly means</TD> 
+            </TR>
+            <TR ALIGN="CENTER">
+              <TD><EM>y87</EM></TD> 
+              <TD>Year 1987 monthly means</TD> 
+            </TR>
+            <TR ALIGN="CENTER">
+              <TD><EM>y88</EM></TD> 
+              <TD>Year 1988 monthly means</TD> 
+            </TR>
+            <TR ALIGN="CENTER">
+              <TD><EM>y89</EM></TD> 
+              <TD>Year 1989 monthly means</TD> 
+            </TR>
+            <TR ALIGN="CENTER">
+              <TD><EM>yr5</EM></TD> 
+              <TD>5-year average of the monthly means</TD> 
+            </TR>
+            <TR ALIGN="CENTER">
+              <TD><EM>zmn</EM></TD> 
+              <TD>zonal means</TD> 
+            </TR>
+          </TABLE></CENTER>
+          <P><H4><A NAME="SoftDir"></A>4.1.2 Software </H4>
+          <P>Programs to read and treat the data can be found in the <EM>software</EM>
+          directory. The three subdirectories below <EM>software</EM> correspond
+          to their respective providers and are listed in Table 4. For
+          details about the UGAMP software, please refer to <A HREF="#Software">Section
+          3</A> above. You are welcome to export any relevant software
+          into subdirectory <EM>3rdparty</EM>.
+          <P><CENTER><TABLE BORDER="1" CELLSPACING="1" CELLPADDING="8"
+          WIDTH="486" style="background-color: #DDFFFF">
+            <CAPTION ALIGN="TOP"><P ALIGN=LEFT><B>Table 4.</B> Subdirectories of the <EM>/badc/ugamp-o3-climatology/software</EM>
+
+directory.</CAPTION>
+             
+            <TR ALIGN="CENTER" style="background-color: #CCEEFF">
+              <TH>Subdirectory name</TH> 
+              <TH>Origin of software</TH> 
+            </TR>
+            <TR ALIGN="CENTER">
+              <TD><EM>ugamp</EM></TD> 
+              <TD>UGAMP</TD> 
+            </TR>
+            <TR ALIGN="CENTER">
+              <TD><EM>badc</EM></TD> 
+              <TD>BADC</TD> 
+            </TR>
+            <TR ALIGN="CENTER">
+              <TD><EM>3rdparty</EM></TD> 
+              <TD>Third party</TD> 
+            </TR>
+          </TABLE></CENTER>
+          <P><H3><A NAME="Files"></A>4.2 Files: name and size </H3><H4><A
+          NAME="DataFiles"></A>4.2.1 Data </H4>For the data, file name
+          conventions are summarised in Table 5, where
+          <UL>
+            <LI><EM><font style="color: navy">mmm</font></EM> stands for
+            the month name first three letters (<EM>jan, feb, ..., dec</EM>);
+            <LI><EM><font style="color: orangered">yy</font></EM> stands
+            for the year number last two digits (<EM>85</EM> to <EM>89</EM>).
+          </UL>
+          <P>Table 5 also gives the approximate size of the files, in their
+          <A HREF="#GZip">compressed</A> <sup>(2)</sup> and <A HREF="#GZip">uncompressed</A>
+          <sup>(2)</sup> versions.
+          <P><CENTER><A NAME="Table5"></A><TABLE BORDER="1" CELLSPACING="1"
+          CELLPADDING="8" style="background-color: #DDFFFF" WIDTH="500">
+            <CAPTION ALIGN="TOP"><P ALIGN=LEFT><B>Table 5.</B> Data file names and sizes. For the
+
+meaning of <EM><font style="color: navy">mmm</font></EM> and <EM><font style="color: orangered">yy</font></EM>,
+
+see text.</CAPTION>
+             
+            <TR ALIGN="CENTER" style="background-color: #BBDDFF">
+              <TH ROWSPAN="2">Type of data</TH> 
+              <TH ROWSPAN="2">File name<BR>
+                (compressed)</TH> 
+              <TH COLSPAN="2">Approximate file size (Kbytes)</TH>
+               
+            </TR>
+            <TR ALIGN="CENTER" style="background-color: #CCEEFF">
+               
+               
+              <TH>Compressed</TH>
+              <TH>Uncompressed</TH>
+            </TR>
+            <TR ALIGN="CENTER">
+              <TD>Yearly monthly means<BR>
+                (subdirectories <EM>y<font style="color: orangered">yy</font></EM>)</TD> 
+              <TD><EM><font style="color: navy">mmm</font><font style="color: orangered">yy</font>m.gz</EM></TD> 
+              <TD>1100 - 1200</TD> 
+              <TD>6000</TD> 
+            </TR>
+            <TR ALIGN="CENTER">
+              <TD>5-year averages<BR>
+                (subdirectory <EM>yr5</EM>)</TD> 
+              <TD><EM>mmm5ym.gz</EM></TD> 
+              <TD>1100 - 1200</TD> 
+              <TD>6000</TD> 
+            </TR>
+            <TR ALIGN="CENTER">
+              <TD>Zonal means<BR>
+                (subdirectory <EM>zmn</EM>)</TD> 
+              <TD><EM>mmmyyz.gz</EM></TD> 
+              <TD>14</TD> 
+              <TD>43</TD> 
+            </TR>
+          </TABLE></CENTER>
+          <P style="text-indent: -4.2em; margin-left: 4.2em"><B>Example:</B>
+          The August 1988 monthly mean of the ozone column is to be found
+          in the file<BR>
+          <EM>/badc/ugamp-o3-climatology/data/y88/<B>aug88m.gz</B></EM>.
+          <H4><A NAME="SoftFiles"></A>4.2.2 Software </H4>The names of
+          the files containing the Fortran programs provided by the authors
+          of the climatology (to be found in subdirectory <EM>/badc/ugamp-o3-climatology/software/ugamp</EM>)
+          are
+          <UL>
+            <LI><EM>grid-trans.f</EM> : interpolation onto user's grid.
+            <LI><EM>col-to-mxr.f</EM> : conversion of ozone columns into
+            mixing ratios.
+          </UL>
+          <P><HR ALIGN=LEFT><A NAME="Contacts"></A>Go to: [ <A HREF="#Top">Contents
+          </A>| <A HREF="#Climatology">Climatology </A>| <A HREF="#Data">Data
+          </A>| <A HREF="#Software">Software </A>| <A HREF="#Transfer">Transfer
+          </A>| Contacts | <A HREF="#Notes">Notes </A>| <A HREF="#Bottom">End
+          </A>] <HR ALIGN=LEFT><H2>5. Who to contact? </H2>
+          <UL>
+            <LI>For additional information about the UGAMP ozone climatology:
+            Prof. Keith P. Shine, Department of Meteorology, University of
+            Reading (<A HREF="mailto:%20K.P.Shine@reading.ac.uk">K.P.Shine@reading.ac.uk</A>).
+            <LI>To report any comment about this page or if you need help on
+            acquiring the data: the <A HREF="/help/contact.html">BADC
+            Support Line</A>.
+          </UL>
+          <P><HR ALIGN=LEFT><A NAME="Notes"></A>Go to: [ <A HREF="#Top">Contents
+          </A>| <A HREF="#Climatology">Climatology </A>| <A HREF="#Data">Data
+          </A>| <A HREF="#Software">Software </A>| <A HREF="#Transfer">Transfer
+          </A>| <A HREF="#Contacts">Contacts </A>| Notes | <A HREF="#Bottom">End
+          </A>] <HR ALIGN=LEFT><H2>6. Notes </H2>
+          <P style="text-indent: -1.2em; margin-left: 1.2em"><A NAME="DefCol"></A><sup>(1)
+          </sup><B>Ozone column. Dobson Units.</B> The <EM>ozone column</EM>
+          (above level <EM>l</EM>) is the number of ozone molecules in
+          a vertical column of unit section above <EM>l</EM>. It is expressed
+          in number of molecules per unit area or in <EM>Dobson Units</EM>
+          (height of the ozone-filled segment of the air column, in mm,
+          if this was brought back to standard pressure and temperature
+          and divided into its individual chemical components). The <EM>total
+          ozone column</EM> is the ozone column above the ground level.
+          <P style="text-indent: -1.2em; margin-left: 1.2em"><A NAME="GZip"></A><sup>(2)
+          </sup><B>GZip compressing package.</B> The UGAMP O<sub>3</sub>
+          data files held at the BADC have been compressed using the <EM>gzip</EM>
+          command (their names are of the form <EM>filename.gz</EM>). After
+          having transferred the files to your home machine, you will need
+          to use the reverse command in order to be able to read them.
+          If your local machine does not support <EM>GZip</EM>, it is possible
+          to retrieve this tool from a number of
+          public domain archives. Typing <EM>gunzip filename.gz </EM>will
+          issue an uncompressed ASCII file <EM>filename </EM>while deleting
+          <EM>filename.gz</EM>. To compress it again, type <EM>gzip filename</EM>.
+          <P style="text-indent: -1.2em; margin-left: 1.2em"><A NAME="Fortran"></A><sup>(3)
+          </sup><B>Embedded READ/WRITE loops.</B> According to Fortran
+          conventions, the components of a multi-dimensional variable written
+          as <BR>
+          <EM>(((var(i, j, k), i=1, imax), j=1, jmax), k=1, kmax) </EM>are
+          stored in the following order.
+          <P><CENTER><TABLE WIDTH="300" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+            <TR>
+              <TD>k = 1</TD> 
+              <TD>j = 1</TD> 
+              <TD>i = 1, ..., imax</TD> 
+            </TR>
+            <TR>
+              <TD></TD>
+              <TD><B>...</B></TD> 
+              <TD WIDTH="34%">&nbsp;</TD>
+            </TR>
+            <TR>
+              <TD></TD>
+              <TD>j = jmax</TD> 
+              <TD>i = 1, ..., imax</TD> 
+            </TR>
+            <TR>
+              <TD><B>...</B></TD> 
+              <TD WIDTH="33%">&nbsp;</TD>
+              <TD WIDTH="34%">&nbsp;</TD>
+            </TR>
+            <TR>
+              <TD>k = kmax</TD> 
+              <TD>j = 1</TD> 
+              <TD>i = 1, ..., imax</TD> 
+            </TR>
+            <TR>
+              <TD></TD>
+              <TD><B>...</B></TD> 
+              <TD WIDTH="34%">&nbsp;</TD>
+            </TR>
+            <TR>
+              <TD></TD>
+              <TD>j = jmax</TD> 
+              <TD>i = 1, ..., imax</TD> 
+            </TR>
+          </TABLE></CENTER>
+          <P><HR ALIGN=LEFT><A NAME="Bottom"></A>Go to: [ <A HREF="#Top">Contents
+          </A>| <A HREF="#Climatology">Climatology </A>| <A HREF="#Data">Data
+          </A>| <A HREF="#Software">Software </A>| <A HREF="#Transfer">Transfer
+          </A>| <A HREF="#Contacts">Contacts </A>| <A HREF="#Notes">Notes
+          </A>| End ] 
+<hr>
+</UL>
+      </UL>
+    </UL>
+  </UL>
+</OL>
+<p>
+</BODY>
+</HTML>

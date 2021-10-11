@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20071204T000000Z
+DTEND:20071208T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:The ARC, University of California
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000F058736DA3C3C7010000000000000000100
+ 000001E8ABBA02DB9DE41A9AAA9F0B7DB5D91
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Air quality models simulate the physi=
+cal and chemical mechanisms that transport and transform particulate matter=
+ in=0D=0AThe atmosphere. These models are used to explore scientific hypoth=
+eses and help establish regulatory frameworks. Accurate=0D=0Amodels define =
+air quality science which informs public policy debate on urban and regiona=
+l smog formation, global climate=0D=0Achange, stratospheric ozone depletion=
+ and the health effects of particulate matter inhalation. Currently there a=
+re no regularly=0D=0Ascheduled meetings that address the techniques and alg=
+orithms used to model atmospheric aerosol dynamics. This conference=0D=0Ais=
+ being held to meet this need.=0D=0A=0D=0ADecember 4-7 2007=0D=0AThe ARC=0D=
+=0AUniversity of California=0D=0ADavis, California =0D=0A=0D=0AFurther deta=
+ils can be found on the link below:=0D=0A=0D=0Ahttp://airquality.ucdavis.ed=
+u/pages/news/iama.html =0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:International Aerosol ModellingAlgorithms=
+ (IAMA) Conference
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

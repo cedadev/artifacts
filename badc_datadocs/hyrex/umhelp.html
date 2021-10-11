@@ -1,0 +1,511 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC: help on the HYREX Unified Model dataset</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Unified Model (UM) data from the HYREX project<BR
+CLEAR="ALL"></H1>
+
+<P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="Contents"></A>Go
+to: [ Contents | <A HREF="#Introduction">Introduction</A> | <A
+HREF="#Data">Data</A> | <A HREF="#UsingData">Using Data</A> | <A
+HREF="#End">End</A> ] <HR ALIGN=LEFT>
+
+<H2>Contents</H2>
+
+<OL>
+  <LI><A HREF="#Introduction">Introduction</A>
+  <UL>
+    <LI><A HREF="#Model">1.1 The UK Mesoscale Model</A>
+    <LI><A HREF="#JCMM">1.2 Research with the data at the JCMM</A>
+  </UL>
+  <LI><A HREF="#Data">The UM data</A>
+  <UL>
+    <LI><A HREF="#Fields">2.1 The model output data fields</A>
+    <LI><A HREF="#Spatial">2.2 Spatial coverage and resolution</A>
+    <UL>
+      <LI><A HREF="#Horizontal">2.2.1 Horizontal coverage</A>
+      <LI><A HREF="#Vertical">2.2.2 Vertical coverage</A>
+    </UL>
+    <LI><A HREF="#Temporal">2.3 Temporal coverage and resolution</A>
+  </UL>
+  <LI><A HREF="#UsingData">Obtaining and using UM data from the
+  BADC</A>
+  <UL>
+    <LI><A HREF="#UMfiles">3.1 The UM data files</A>
+    <LI><A HREF="#ReadSoft">3.2 Software to read the data</A>
+    <LI><A HREF="#Plot">3.3 Software to manipulate and plot the data</A>
+  </UL>
+</OL>
+
+<P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="Introduction"></A>Go
+to: [ <A HREF="#Contents">Contents</A> | Introduction | <A HREF="#Data">Data</A>
+| <A HREF="#UsingData">UsingData</A> | <A HREF="#End">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H2>1. Introduction</H2>
+
+<P>This document describes the UK Met. Office Unified Model data
+for the HYREX project. There are separate dataset descriptions
+for the <A HREF="comhelp.html">common infrastructure dataset</A>,
+the <A HREF="salhelp.html">vertically pointing radar</A> and associated
+datasets supplied by the University of Salford, and for the <A
+HREF="chilhelp.html">Chilbolton radar data</A>.</P>
+
+<P>This dataset comprises a set of Mesoscale Model forecast data
+outputs for some of the HYREX Intensive Observing Periods (IOP's),
+of which there have been 11 to date. The data have been generated
+by the Joint Centre for Mesoscale Meteorology (JCMM) at Reading
+University. </P>
+
+<H3><A NAME="Model"></A>1.1 The UK Mesoscale Model</H3>
+
+<P>The UK Meteorological Office Operational Numerical Weather
+Prediction (NWP) can be configured to run the Global Model, the
+Limited Area Model (LAM) or the Mesoscale Model (MM). The MM is
+designed to supply finer scale weather information for the UK
+up to one day forecast time. As the main aim of the MM is to predict
+weather elements rather than the large scale flow patterns, conditions
+near the surface and the moisture distribution are important.
+Surface observations of temperature, humidity and wind over land
+are at present assimilated only in the MM. In addition, Meteosat
+infrared imagery, radar rainfall imagery and surface cloud reports
+are combined with the latest 3 hour model forecast in MOPS, the
+Moisture Observation Pre-processing System. The output from MOPS
+(cloud fraction) is converted into a set of relative humidity
+soundings at each model grid-point, which are then assimilated
+in the MM.</P>
+
+<P>The UK operational Mesoscale model uses a rotated latitude
+and longitude coordinate system in which the computational north
+pole is shifted to an actual position of 37.5 deg. N, 177.5 E.
+This is done to obtain fairly uniform horizontal resolution over
+the area of interest. The corners of the computational area are
+approximately in actual latitude/longitude: (60.1N, 16.6W; 60.2N,
+10.7E; 46.6N, 12.7W; 46.7N, 7.1E). The grid-length is 0.15 deg.
+in each direction which is approximately 16.8 Km, giving 92x92
+grid points running from the north - west corner. In the vertical
+the MM uses hybrid sigma/pressure coordinates and has 31 levels
+with the first 28 of these being moist levels. The lower levels
+are based upon sigma levels, defined as pressure/surface pressure
+ratio implying that they closely follow the terrain and the upper
+levels are defined on pressure levels.</P>
+
+<P>The MM is hydrostatic (the basic equations assume that vertical
+accelerations are small enough to be ignored compared to gravity)
+and uses a B-grid staggering, i.e the variables are held on the
+Arakawa `B' grid. In the Arakawa B grid scheme, potential temperature
+(<EM>theta</EM>), surface pressure (<EM>p<SUP>*</SUP></EM>) and
+specific humidity (<EM>q</EM>) etc. are calculated on grid points
+but the two horizontal wind components (<EM>u,v</EM>) are calculated
+in the centre of the grid boxes. The variables <EM>u, v, theta,
+q </EM>and <EM>Z </EM>(Geopotential Height) are held at levels
+<EM>eta<SUB>k</SUB></EM>, where <EM>eta</EM> is the vertical height
+coordinate and <EM>k</EM> is the vertical grid index, while the
+time derivative <EM>eta dot</EM> is held at the intermediate levels
+<EM>eta<SUB>(k+1/2)</SUB></EM>.</P>
+
+<P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="JCMM"></A>Go
+to: [ <A HREF="#Contents">Contents</A> | Introduction | <A HREF="#Data">Data</A>
+| <A HREF="#UsingData">UsingData</A> | <A HREF="#End">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H3>1.2 Research with the data at the JCMM</H3>
+
+<P>The research effort at the Reading JCMM is to make detailed
+analyses of MM data obtained during Intensive Observation Periods
+(IOP's). The main tool used in this research is the UK Meteorological
+Office Mesoscale Model (MM), which is a particular configuration
+of the Unified Model (UM). For each IOP, the model is run with
+initial data identical to that used in the operational forecast
+model runs, obtained from the Met Office. The model runs consist
+of specific case studies of forecast durations between 6 and 24
+hours and correspond to the IOP periods. The model is run with
+and without Observational Data Assimilation to see how the inclusion
+of extra upper air sounding data affect the moisture budget calculations.
+</P>
+
+<P>One of the aims of the research at Reading with these data
+is to use the wind and humidity fields from the MM in the moisture
+budget equation. During the IOP's, estimates of the volume-averaged
+atmospheric moisture flux convergence affecting southern England
+are obtained. The area for which the moisture budget is estimated
+will be varied systematically in order to define the lower limits
+in space and time for which the moisture budget equation provides
+a realistic prediction of observed precipitation. In each case
+the relative importance of the different terms in the equation
+is being examined.</P>
+
+<P>In order to verify the moisture budget, areal averages of rainfall
+are obtained from analysis of rainguage data made by IOH and then
+compared with the results from the model.</P>
+
+<P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="Data"></A>Go
+to: [ <A HREF="#Contents">Contents</A> | <A HREF="#Introduction">Introduction</A>
+| Data | <A HREF="#UsingData">UsingData</A> | <A HREF="#End">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H2>2. The UM data</H2>
+
+<H3><A NAME="Fields"></A>2.1 Model output data fields</H3>
+
+<P>The output data from each model run include a variety of field
+types, which are written to 3 output files labelled .pp0, .pp1
+and .pp2 (referred to in the &quot;Usage Profile&quot; column
+in the table below). There are single level and multi-level fields:
+multi-level fields are written on both model and pressure levels.
+The following table shows the distribution of data fields between
+the three files. This table is also available as a plain-text
+file called <EM>FieldCodes.txt</EM> in the documentation directory
+<EM>/badc/hyrex/doc/um</EM>.</P>
+
+<PRE>
+FIELD     FIELD                                         TIME   DOMAIN  USAGE 
+CODE      NAME                                         PROFILE PROFILE PROFILE  
+______________________________________________________________________________
+
+     1   Pstar after timestep (ts)                        T15MR  DS   PP2 
+     2   U compnt of wind (wrt Model Grid)                T15MR  DM   PP2 
+     3   V compnt of wind (wrt Model Grid)                T15MR  DM   PP2 
+     4   Theta after timestep (ts)                        T15MR  DM   PP2 
+    10   Specific Humidity after timestep (ts)            T15MR  DMW  PP2 
+    24   Surface Temperature after timestep               T15MR  DS   PP0 
+  3225   10 metre wind U-comp (wrt Model Grid)            T15MR  DS   PP2 
+  3226   10 metre wind V-comp (wrt Model Grid)            T15MR  DS   PP2 
+  3229   Evap from soil surf -amount kg/m2/ts             T15MA  DS   PP2 
+  3230   Evap from canopy - amount   kg/m2/ts             T15MA  DS   PP2 
+  3232   Evaporation from sea (GBM)   kg/m2/s             T15MA  DS   PP2 
+  3234   Surface Latent Heat Flux        w/m2             T15MR  DS   PP2 
+  3236   Temperature at 1.5m                              T15MR  DS   PP0 
+  3237   Specific Humidity at 1.5m                        T15MR  DS   PP2 
+  4004   Temperature after large scale precip             T15MR  DM   PP1 
+  4201   large scale rain amount     kg/m2/ts             T15MA  DS   PP2 
+  4202   large scale snow amount     kg/m2/ts             T15MA  DS   PP2 
+  4203   large scale rainfall rate    kg/m2/s             T15MR  DS   PP2 
+  4204   large scale snowfall rate    kg/m2/s             T15MR  DS   PP2 
+  4205   cloud liquid water after ls precip               T15MR  DMW  PP1 
+  4206   cloud ice content after ls precip                T15MR  DMW  PP1 
+  5201   convective rain amount      kg/m2/ts             T15MA  DS   PP2 
+  5202   convective snow amount      kg/m2/ts             T15MA  DS   PP2 
+  5205   convective rainfall rate     kg/m2/s             T15MR  DS   PP2 
+  5206   convective snowfall rate     kg/m2/s             T15MR  DS   PP2 
+  5207   Pressure at convective cloud base                T15MR  DS   PP0 
+  5208   Pressure at convective cloud top                 T15MR  DS   PP0 
+  5209   Temperature after convection                     T15MR  DM   PP1 
+ 12201   Omega (In Advection) on model levels (U-Grid)    T15MR  DM   PP2 
+ 12202   Omega (In Advection) on pressure levels (U-Grid) T15MR  DP   PP0 
+ 15201   U comp (Westerly) of wind on P levs              T15MR  DP   PP0 
+ 15202   V comp (Southerly) of wind on P levs             T15MR  DP   PP0 
+ 15216   T on pressure levs (U grid).                     T15MR  DP   PP0 
+ 15222   Omega on press levs (U grid).                    T15MR  DP   PP0 
+ 15226   Specific Humidity, P levs; (U grid)              T15MR  DP   PP0 
+ 16202   Geopotential height: pressure levels             T15MR  DP   PP0 
+ 16203   Temperature on pressure levels                   T15MR  DP   PP0 
+ 16222   Pressure at mean sea levels                      T15MR  DS   PP2 
+ 16225   Geopotential ht of model levels                  T15MR  DM   PP1  *** 
+                                                  (see warning below)
+________________________________________________________________________ </PRE>
+
+<P>Note that all winds are held on the U-grid. The U and V winds
+on Pressure levels are true Westerly and Southerly wind components
+but all other winds are orientated with the model grid.</P>
+
+<P>The Time Profiles indicate the times at which the variables
+are written out:</P>
+
+<UL>
+  <LI>T15MA - Accumulated field. Accumulating interval: 1 Timestep,
+  Accumulating every: 1 Timestep. Data output at regular intervals
+  - Starting at 3, outputting every 3 Timesteps, ending at end
+  of run.
+  <LI>T15MR - Single time field. Data output at regular intervals.
+  Diagnostics output at Timesteps: 3, 6, 9, 12, 15, etc. in steps
+  of 3 until the end of the run.
+</UL>
+
+<P>All of the diagnostics are output from the model at the end
+of a time step unless explicitly stated, e.g. there are some temp
+fields at intermediate stages of the time step: temp after LS
+Precip or temp after convection, with the LS Precip and convection
+referring to stages during a time-step.</P>
+
+<P>The Domain Profiles indicate the spatial characteristics of
+the output variables:</P>
+
+<UL>
+  <LI>DS - Single level.
+  <LI>DM - Variables on atmospheric model levels/half levels. Variables
+  over a range of model levels from: 1 (bottom level), to: 31 (top
+  level).
+  <LI>DMW - Variables on atmospheric model levels/half levels.
+  Variables over a range of model levels from: 1 (bottom level),
+  to: 28 (top wet level).
+  <LI>DP - Variables on pressure levels (level values listed under
+  Vertical Coverage)
+</UL>
+
+<P>The Usage Profiles simply indicate to which PP file the particular
+output variable is written.</P>
+
+<P>*** WARNING! There is a problem with one of the UM diagnostics
+due to a bug in the then current version (V3.4) of the UM. This
+means that field 16225 &quot;Geopotential height of model levels&quot;
+is wrong. The orography was added to this field twice by mistake.
+Orography data is available from the directory <EM>/badc/hyrex/data/um</EM>
+to allow for correction of this problem.</P>
+
+<P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="Spatial"></A>Go
+to: [ <A HREF="#Contents">Contents</A> | <A HREF="#Introduction">Introduction</A>
+| Data | <A HREF="#UsingData">UsingData</A> | <A HREF="#End">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H2>2.2 Spatial coverage and resolution</H2>
+
+<H3><A NAME="Horizontal"></A>2.2.1 Horizontal coverage</H3>
+
+<P>The corners of the UM computational area are approximately:</P>
+
+<PRE>
+   60.1 deg. N,   16.6 deg. W
+   60.2 deg. N,   10.7 deg. E
+   46.6 deg. N,   12.7 deg. W
+   46.7 deg. N,    7.1 deg. E
+   </PRE>
+
+<P>The grid-length is 0.15 deg. in each direction, which is approximately
+16.8 Km, giving 92x92 grid points running from the north-west
+corner.</P>
+
+<H3><A NAME="Vertical"></A>2.2.2 Vertical coverage</H3>
+
+<P>In the vertical the MM uses hybrid sigma/pressure coordinates
+(see section 1.1) and has 31 levels with the first 28 of these
+being moist levels. The data fields are output both on model levels
+and the following pressure levels (in mBar):</P>
+
+<PRE>
+    1000,       950,       900,       850,      800,
+     750,       700,       650,       600,      550,
+     500,       450,       400,       350,      300,
+     250.</PRE>
+
+<H2><A NAME="Temporal"></A>2.3 Temporal coverage and resolution</H2>
+
+<P>There are 24 model runs covering various time ranges during
+the Intensive Observing Periods (IOP's) 1-4 and 6, plus 2 other
+dates. The UM was run for only a subset of each IOP, over a sufficient
+time period during the IOP to catch the precipitation events.
+The dates of the IOPs covered by UM runs are as follows:</P>
+
+<PRE>
+   IOP   Date
+   ______________
+
+   1     19/10/94
+   2     05/12/94
+   3     06/12/94
+   4     14/02/95
+   6     10/07/95
+   ______________</PRE>
+
+<P>There are two additional runs covering 16/07/95 and 07/06/96.
+The model runs consist of specific case studies of forecast durations
+between 6 and 24 hours, therefore on some dates there are several
+runs.</P>
+
+<P>The model has a time step of 5 min., but the data are output
+every 3 time steps, i.e. 15 mins.</P>
+
+<P>The full dates and times covered by each model run are shown
+below. The start time of the runs is constrained by the start
+data from the UKMO: it is only possible to start the model at
+0Z, 6Z, 12Z and 18Z if not using data assimilation and at 21Z,
+3Z, 9Z, 15Z if using assimilation. This table is also available
+in a plain-text version in the UM documentation directory <EM>/badc/hyrex/doc/um</EM>,
+filename Files.txt.</P>
+
+<PRE>
+File     START  END  IOP (Date)  ASSIM   
+mr5.pp0    06Z  14Z  1 (19/10/94)  NO 
+mr5.pp1    06Z  14Z  1 (19/10/94)  NO 
+mr5.pp2    06Z  14Z  1 (19/10/94)  NO  
+mr7.pp0    00Z  14Z  1 (19/10/94)  NO 
+mr7.pp1    00Z  14Z  1 (19/10/94)  NO 
+mr7.pp2    00Z  14Z  1 (19/10/94)  NO  
+mr8.pp0    00Z  12Z  3 (07/12/94)  NO 
+mr8.pp1    00Z  12Z  3 (07/12/94)  NO 
+mr8.pp2    00Z  12Z  3 (07/12/94)  NO  
+mr9.pp0    18Z  12Z  3 (06/12/94)  NO 
+mr9.pp1    18Z  12Z  3 (06/12/94)  NO 
+mr9.pp2    18Z  12Z  3 (06/12/94)  NO  
+mr10.pp0   12Z  11Z  3 (06/12/94)  NO 
+mr10.pp1   12Z  11Z  3 (06/12/94)  NO 
+mr10.pp2   12Z  11Z  3 (06/12/94)  NO  
+mr6.pp0    03Z  14Z  1 (19/10/94)  YES 
+mr6.pp1    03Z  14Z  1 (19/10/94)  YES 
+mr6.pp2    03Z  14Z  1 (19/10/94)  YES  
+mr11.pp0   21Z  12Z  3 (06/12/94)  YES 
+mr11.pp1   21Z  12Z  3 (06/12/94)  YES 
+mr11.pp2   21Z  12Z  3 (06/12/94)  YES  
+mr12.pp0   15Z  12Z  3 (06/12/94)  YES 
+mr12.pp1   15Z  12Z  3 (06/12/94)  YES 
+mr12.pp2   15Z  12Z  3 (06/12/94)  YES  
+mr13.pp0   06Z  18Z  2 (05/12/94)  YES 
+mr13.pp1   06Z  18Z  2 (05/12/94)  YES 
+mr13.pp2   06Z  18Z  2 (05/12/94)  YES  
+mr14.pp0   03Z  18Z  2 (05/12/94)  YES 
+mr14.pp1   03Z  18Z  2 (05/12/94)  YES 
+mr14.pp2   03Z  18Z  2 (05/12/94)  YES  
+mr15.pp0   12Z  18Z  2 (05/12/94)  NO  
+mr15.pp1   12Z  18Z  2 (05/12/94)  NO  
+mr15.pp2   12Z  18Z  2 (05/12/94)  NO   
+mr16.pp0   09Z  18Z  2 (05/12/94)  YES 
+mr16.pp1   09Z  18Z  2 (05/12/94)  YES 
+mr16.pp2   09Z  18Z  2 (05/12/94)  YES  
+mr17.pp0   06Z  20Z  4 (14/02/95)  NO  
+mr17.pp1   06Z  20Z  4 (14/02/95)  NO  
+mr17.pp2   06Z  20Z  4 (14/02/95)  NO   
+mr18.pp0   03Z  20Z  4 (14/02/95)  YES 
+mr18.pp1   03Z  20Z  4 (14/02/95)  YES 
+mr18.pp2   03Z  20Z  4 (14/02/95)  YES  
+mr19.pp0   12Z  20Z  4 (14/02/95)  NO  
+mr19.pp1   12Z  20Z  4 (14/02/95)  NO  
+mr19.pp2   12Z  20Z  4 (14/02/95)  NO   
+mr20.pp0   09Z  20Z  4 (14/02/95)  YES 
+mr20.pp1   09Z  20Z  4 (14/02/95)  YES 
+mr20.pp2   09Z  20Z  4 (14/02/95)  YES 
+mr21.pp0   00Z  21Z  6 (10/07/95)  NO  
+mr21.pp1   00Z  21Z  6 (10/07/95)  NO  
+mr21.pp2   00Z  21Z  6 (10/07/95)  NO   
+mr22.pp0   21Z  21Z  6 (10/07/95)  YES 
+mr22.pp1   21Z  21Z  6 (10/07/95)  YES 
+mr22.pp2   21Z  21Z  6 (10/07/95)  YES  
+mr23.pp0   06Z  21Z  6 (10/07/95)  NO  
+mr23.pp1   06Z  21Z  6 (10/07/95)  NO  
+mr23.pp2   06Z  21Z  6 (10/07/95)  NO   
+mr24.pp0   03Z  21Z  6 (10/07/95)  YES 
+mr24.pp1   03Z  21Z  6 (10/07/95)  YES 
+mr24.pp2   03Z  21Z  6 (10/07/95)  YES  
+mr25.pp0   12Z  21Z  6 (10/07/95)  NO  
+mr25.pp1   12Z  21Z  6 (10/07/95)  NO  
+mr25.pp2   12Z  21Z  6 (10/07/95)  NO   
+mr26.pp0   09Z  21Z  6 (10/07/95)  YES 
+mr26.pp1   09Z  21Z  6 (10/07/95)  YES 
+mr26.pp2   09Z  21Z  6 (10/07/95)  YES  
+mr27.pp0   09Z  24Z  - (16/07/95)  YES 
+mr27.pp1   09Z  24Z  - (16/07/95)  YES 
+mr27.pp2   09Z  24Z  - (16/07/95)  YES  
+mr28.pp0   09Z  24Z  - (07/06/96)  YES 
+mr28.pp1   09Z  24Z  - (07/06/96)  YES 
+mr28.pp2   09Z  24Z  - (07/06/96)  YES   
+</PRE>
+
+<P>N.B. Where the ending time is before the starting time, this
+means that the run ended the following day. Model runs 1-4 are
+not included as they were not part of the HYREX project. Further
+details about the <A HREF="IOP.html">Intense Observing Periods</A>
+are available, including the complete dates and times and descriptions
+of the weather conditions.</P>
+
+<P><HR ALIGN=LEFT><A NAME="UsingData"></A>Go to: [ <A HREF="#Contents">Contents</A>
+| <A HREF="#Introduction">Introduction</A> | <A HREF="#Data">Data</A>
+| UsingData | <A HREF="#End">End</A> ] <HR ALIGN=LEFT></P>
+
+<H2>3. Obtaining and using UM data from the BADC</H2>
+
+<H3><A NAME="UMfiles"></A>3.1 The UM data files</H3>
+
+<P>The UM data is output into 3 files per model run, which range
+in size between 80 and 480 Mbytes. (The filenames are tabulated
+under 'Temporal Coverage' above). These are IEEE binary files
+in Met. Office &quot;PP&quot; format, consisting of unpacked headers
+(mostly integer data) followed by floating point field data.</P>
+
+<P>Data are compressed using gzip to save disk space.
+
+<P><HR ALIGN=LEFT><A NAME="ReadSoft"></A>Go to: [ <A HREF="#Contents">Contents</A>
+| <A HREF="#Introduction">Introduction</A> | <A HREF="#Data">Data</A>
+| UsingData | <A HREF="#End">End</A> ] <HR ALIGN=LEFT></P>
+
+<H3>3.2 Software to read the data</H3>
+
+<P>Software to read and plot the um data is available at: <A HREF="/cgi-bin/data_browser/data_browser/badc/hyrex/software/um/">/badc/hyrex/software/um/</a>.
+
+<P>As mentioned above, the UM data are stored in very large binary
+files, so software is required to read the files and extract the
+fields of interest. JCMM have provided a UNIX shell script <EM>exfield</EM>,
+which runs a FORTRAN program to read the data and extract required
+fields. Both are available in the directory <EM>/badc/hyrex/software/um</EM>.
+There are versions of the software for Cray (<EM>sort_cray.f</EM>)
+and IEEE (Sun etc - <EM>sort_ieee.f</EM>) platforms. The software
+has also been run on the BADC's DEC UNIX machine login.badc.rl.ac.uk, by compiling
+with the -convert big_endian qualifier to the f77 compiler as
+follows:</P>
+
+<PRE>
+$ f77 -o sort.x -convert big_endian sort_ieee.f</PRE>
+
+<P>(Comparisons of sample data values on login.badc.rl.ac.uk and a Sun machine
+showed the same data values were output on both systems, so the
+floating point values are successfully &quot;byte-swapped&quot;
+on the DEC system.) You can use the exfield software to extract
+subsets of data on login.badc.rl.ac.uk, ready for FTP to your local system. Note 
+that you may need to ask <a href="/help/contact.html">BADC Support</a> for an account on login.badc.rl.ac.uk to 
+process the data files before transferring the data to your local machine.</P>
+
+<P>Using exfield you can select fields by their field code, select
+a sub-area from the model grid by specifying the latitude and
+longitude limits (as grid array indices), select specific pressure
+or model levels or ranges of levels, and specify the data output
+times or frequency (as dump time indices). The program produces
+an output file containing header information such as pressure
+levels and field codes contained in the model run data, and writes
+the selected data fields to a PP format file.</P>
+
+<P>If you want to use exfield to extract subsets of data on login.badc.rl.ac.uk,
+you need to copy the exfield shell script to your private filestore
+and edit it to select the data you require. However, there is
+no need to copy the sort executable - you can set up an alias
+to use the copy in the software directories.</P>
+
+<H3><A NAME="Plot"></A>3.3 Software to manipulate and plot the
+data</H3>
+
+<P>JCMM have provided a program called <EM>JPLOT</EM> to manipulate
+and plot the output data from the exfield read and subsetting
+software. JPLOT can be found in the software/um directory. JPLOT is a fully-interactive X-windows widget based
+IDL graphical display program, designed to run on IEEE UNIX systems.
+It is intended to handle data from a variety of sources including
+UM data extractions.</P>
+
+<P>JPLOT can display data in a number of ways:</P>
+
+<UL>
+  <LI>Any arbitrary 2D orthogonal section through a 3D field.
+  <LI>Oblique vertical sections from one cell to another.
+  <LI>Any arbitrary orthogonal &quot;column/row of points&quot;
+  producing an x-y line plot.
+  <LI>Velocity vector plots (which may be overplotted) assuming
+  U and V winds are present.
+  <LI>3D Iso-surface plots.
+</UL>
+
+<P>The user can then display the 2D sections in a number of ways,
+for example using images, contours or surface plots. Also various
+tool are available such as zoom utilities and other data field
+manipulation widgets. UM data may be displayed either on a rectangle
+corresponding to the equatorial grid (which the limited area models
+are run on) or with a standard cylindrical map projection. An
+overplotting facility also exists for plotting one field over
+another. The user can interactively alter various display parameters
+such as contouring parameters (values, linestyles, labelling, etc.)
+and axis values and titles etc. PostScript files can be created
+for hardcopies of graphical output.</P>
+<P>More information about <a href="http://www.met.rdg.ac.uk/~uwern/jplot/">JPLOT</a> is available from the JCMM website.
+
+<P><A NAME="End">
+
+</BODY>
+</HTML>

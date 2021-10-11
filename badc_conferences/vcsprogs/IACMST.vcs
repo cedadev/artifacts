@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20061109T000000Z
+DTEND:20061110T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Countryside Council for Wales offices, B=
+angor, Wales
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000E04955FD31FCC6010000000000000000100
+ 000006F18A363AF0EDD4C883BE4336E344F81
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=20=0D=0AInter-Agency Committee on Ma=
+rine Science and Technology (IACMST)=0D=0A=0D=0AFollowing previous successf=
+ul open discussion meetings, the IACMST has asked its GOOS Action Group to =
+organise a meeting=0D=0Aon the above theme.  Please see attached document f=
+or further information. =0D=0APlease can anyone interested in attending con=
+tact Anne Brazier in the first instance (details below). =0D=0A=0D=0AMany t=
+hanks in advance,  =0D=0A=0D=0AAnne Brazier=0D=0AIACMST Secretariat=0D=0ARo=
+om 256/17=0D=0ANational Oceanography Centre, Southampton=0D=0AEuropean Way=
+=0D=0ASOUTHAMPTON=0D=0ASO14 3ZH.=0D=0A=0D=0ATel: +44 (0)23 8059 6789=0D=0AF=
+ax: +44(0)23 8059 6204=0D=0AWeb: http://www.marine.gov.uk=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:IACMST Open Meeting on physical Measureme=
+nts for Ecosystem Requirements
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

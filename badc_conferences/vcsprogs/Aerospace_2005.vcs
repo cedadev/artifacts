@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050411T230000Z
+DTEND:20050414T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Royal Aeronautical Society, London, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000070DA0054DE1FC5010000000000000000100
+ 00000D0E739333FCB424FAE634252135651CC
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Aerospace 2005 - "Meeting the Challen=
+ges"=0D=0A=0D=0ADate: 12th-14th April 2005=0D=0AVenue:  Royal Aeronautical =
+Society, London=0D=0A=0D=0AThe aviation and aerospace community, both civil=
+ and military sectors, face tough challenges and critical decisions as we m=
+ove on from 9/11. The conference looks at the key issues of technology, aff=
+ordability, safety, security, infrastructure and support. The overarching t=
+heme throughout is sustainable development and how the sector can meet the =
+challenges posed by the environment. =0D=0A=0D=0AFor more information see: =
+http://www.aerosociety.com/annual05/=0D=0A=0D=0A___________________________=
+____________________=0D=0ANERC-Atmos mailing list=0D=0ANERC-Atmos@ncas.ac.u=
+k=0D=0Ahttp://www.ncas.ac.uk/mailman/listinfo/nerc-atmos=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Aerospace 2005 - "Meeting the Challenges"
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

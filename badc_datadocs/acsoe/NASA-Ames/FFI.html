@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PRIVATE "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>ACSOE NASA Ames File Format Index</TITLE>
+</HEAD>
+
+<!-- Created June 1997  -->
+<!-- Author: Chunkey Lepine BADC-->
+
+<body bgcolor="#ffffff">
+
+<h1>NASA-Ames files - Interpreting the File Format Index<br clear=all></h1>
+<BR><HR>
+
+<P>
+N.B. Almost all ACSOE files submitted to the BADC should fit into FFI 1001.<BR>
+Some balloon sonde data from previous programmes have used FFI 2160.
+</P>
+
+<H2>1000 series</H2>
+
+<UL>
+<LI>1001 - one real unbounded independent variable. <BR>
+No auxiliary variables.
+<LI>1010 - one real unbounded independent variable. <BR>
+Auxiliary variables are real.
+<LI>1020 - one real unbounded independent variable with implied values
+between the independent variable marks. <BR>
+Auxiliary variables are real.
+</UL>
+
+
+<H2>2000 series</H2>
+
+<UL>
+<LI>2010 - two real independent variables, one unbounded and one
+bounded with constant values. <BR>
+Auxiliary variables are real.
+<LI>2110 - two real independent variables, one unbounded and one
+bounded with its values recorded in the data records. <BR>
+The first auxiliary variable is the number of bounded independent variables, 
+the remainder are real.
+<li>2160 - 
+two independent variables: one unbounded character variable and one real 
+bounded one.<BR>
+The first auxiliary variable is the number of bounded independent variables.
+At least one of the auxiliary variables is a character string.
+<LI>2310 - two real independent variables, one unbounded and one
+bounded with its number of constant increment values, base value and increment
+defined in the auxiliary variable list.<BR>
+The first three auxiliary variables are the no. of const increments, base value
+and increment described above; the other auxiliary values are real.
+
+</UL>
+
+
+<H2>3000 series</H2>
+
+<UL>
+<LI>3010 - three real independent variables, one unbounded and two bounded 
+with constant values defined in the file header.<BR>
+Auxiliary variables are real.
+</UL>
+
+
+<H2>4000 series</H2>
+
+<UL>
+<LI>4010 - four real independent variables, one unbounded and three bounded 
+with constant values defined in the file header.<BR>
+Auxiliary variables are real.
+</UL>
+
+
+<HR>
+<P>
+Go to: 
+<A HREF="index.html">Index page</A> |
+<A HREF="ingest.html">Next doc. (Ingestion at BADC)</A>
+
+<P>
+</BODY>
+</HTML>

@@ -1,0 +1,69 @@
+div.code pre .hll { background-color: #ffffcc }
+div.code pre  { background: #ffffff; }
+div.code pre .c { color: #008000 } /* Comment */
+div.code pre .err { border: 1px solid #FF0000 } /* Error */
+div.code pre .k { color: #0000ff } /* Keyword */
+div.code pre .cm { color: #008000 } /* Comment.Multiline */
+div.code pre .cp { color: #0000ff } /* Comment.Preproc */
+div.code pre .c1 { color: #008000 } /* Comment.Single */
+div.code pre .cs { color: #008000 } /* Comment.Special */
+div.code pre .ge { font-style: italic } /* Generic.Emph */
+div.code pre .gh { font-weight: bold } /* Generic.Heading */
+div.code pre .gp { font-weight: bold } /* Generic.Prompt */
+div.code pre .gs { font-weight: bold } /* Generic.Strong */
+div.code pre .gu { font-weight: bold } /* Generic.Subheading */
+div.code pre .kc { color: #0000ff } /* Keyword.Constant */
+div.code pre .kd { color: #0000ff } /* Keyword.Declaration */
+div.code pre .kn { color: #0000ff } /* Keyword.Namespace */
+div.code pre .kp { color: #0000ff } /* Keyword.Pseudo */
+div.code pre .kr { color: #0000ff } /* Keyword.Reserved */
+div.code pre .kt { color: #2b91af } /* Keyword.Type */
+div.code pre .s { color: #a31515 } /* Literal.String */
+div.code pre .nc { color: #2b91af } /* Name.Class */
+div.code pre .ow { color: #0000ff } /* Operator.Word */
+div.code pre .sb { color: #a31515 } /* Literal.String.Backtick */
+div.code pre .sc { color: #a31515 } /* Literal.String.Char */
+div.code pre .sd { color: #a31515 } /* Literal.String.Doc */
+div.code pre .s2 { color: #a31515 } /* Literal.String.Double */
+div.code pre .se { color: #a31515 } /* Literal.String.Escape */
+div.code pre .sh { color: #a31515 } /* Literal.String.Heredoc */
+div.code pre .si { color: #a31515 } /* Literal.String.Interpol */
+div.code pre .sx { color: #a31515 } /* Literal.String.Other */
+div.code pre .sr { color: #a31515 } /* Literal.String.Regex */
+div.code pre .s1 { color: #a31515 } /* Literal.String.Single */
+div.code pre .ss { color: #a31515 } /* Literal.String.Symbol */
+
+table.code td .hll { background-color: #ffffcc }
+table.code td  { background: #ffffff; }
+table.code td .c { color: #008000 } /* Comment */
+table.code td .err { border: 1px solid #FF0000 } /* Error */
+table.code td .k { color: #0000ff } /* Keyword */
+table.code td .cm { color: #008000 } /* Comment.Multiline */
+table.code td .cp { color: #0000ff } /* Comment.Preproc */
+table.code td .c1 { color: #008000 } /* Comment.Single */
+table.code td .cs { color: #008000 } /* Comment.Special */
+table.code td .ge { font-style: italic } /* Generic.Emph */
+table.code td .gh { font-weight: bold } /* Generic.Heading */
+table.code td .gp { font-weight: bold } /* Generic.Prompt */
+table.code td .gs { font-weight: bold } /* Generic.Strong */
+table.code td .gu { font-weight: bold } /* Generic.Subheading */
+table.code td .kc { color: #0000ff } /* Keyword.Constant */
+table.code td .kd { color: #0000ff } /* Keyword.Declaration */
+table.code td .kn { color: #0000ff } /* Keyword.Namespace */
+table.code td .kp { color: #0000ff } /* Keyword.Pseudo */
+table.code td .kr { color: #0000ff } /* Keyword.Reserved */
+table.code td .kt { color: #2b91af } /* Keyword.Type */
+table.code td .s { color: #a31515 } /* Literal.String */
+table.code td .nc { color: #2b91af } /* Name.Class */
+table.code td .ow { color: #0000ff } /* Operator.Word */
+table.code td .sb { color: #a31515 } /* Literal.String.Backtick */
+table.code td .sc { color: #a31515 } /* Literal.String.Char */
+table.code td .sd { color: #a31515 } /* Literal.String.Doc */
+table.code td .s2 { color: #a31515 } /* Literal.String.Double */
+table.code td .se { color: #a31515 } /* Literal.String.Escape */
+table.code td .sh { color: #a31515 } /* Literal.String.Heredoc */
+table.code td .si { color: #a31515 } /* Literal.String.Interpol */
+table.code td .sx { color: #a31515 } /* Literal.String.Other */
+table.code td .sr { color: #a31515 } /* Literal.String.Regex */
+table.code td .s1 { color: #a31515 } /* Literal.String.Single */
+table.code td .ss { color: #a31515 } /* Literal.String.Symbol */

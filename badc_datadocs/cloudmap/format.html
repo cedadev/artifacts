@@ -1,0 +1,73 @@
+<html>
+<head><title>Cloudmap file format</title></head>
+<body>
+
+<h1>Cloudmap file format</h1>
+
+The data is in Hdf5 format
+
+date and time
+cost(nlat,nlon) real
+data(nlat,nlon,6) real
+error(nlat,nlon,6) real
+where the 6 variables in the data and error arrays are..
+1. optical depth
+2. particle size
+3. cloud top pressure
+4. cloud fraction
+5. skin temperature
+6. cloud top height
+iteration(nlat,nlon) integer
+phase(nlat,nlon) integer
+latlon(nlat,nlon,2) real
+
+for the structure of the  hdf5 data set is typically shown here using
+the unix command 'h5dump -H hdffile' 
+
+<pre>
+
+GROUP "/" {
+   GROUP "ECPOutput" {
+      ATTRIBUTE "datetime" {
+         DATATYPE  H5T_STRING {
+               STRSIZE 24;
+               STRPAD H5T_STR_SPACEPAD;
+               CSET H5T_CSET_ASCII;
+               CTYPE H5T_C_S1;
+            }           
+         DATASPACE  SIMPLE { ( 1 ) / ( 1 ) } 
+      } 
+      DATASET "cost" {
+         DATATYPE  H5T_IEEE_F32LE  
+         DATASPACE  SIMPLE { ( 170, 170 ) / ( 170, 170 ) } 
+      } 
+      DATASET "data" {
+         DATATYPE  H5T_IEEE_F32LE  
+         DATASPACE  SIMPLE { ( 6, 170, 170 ) / ( 6, 170, 170 ) } 
+      } 
+      DATASET "error" {
+         DATATYPE  H5T_IEEE_F32LE  
+         DATASPACE  SIMPLE { ( 6, 170, 170 ) / ( 6, 170, 170 ) } 
+      } 
+      DATASET "iteration" {
+         DATATYPE  H5T_IEEE_F32LE  
+         DATASPACE  SIMPLE { ( 170, 170 ) / ( 170, 170 ) } 
+      } 
+      DATASET "phase" {
+         DATATYPE  H5T_IEEE_F32LE  
+         DATASPACE  SIMPLE { ( 170, 170 ) / ( 170, 170 ) } 
+      } 
+   } 
+   GROUP "GEO" {
+      DATASET "LatLon" {
+         DATATYPE  H5T_IEEE_F32LE  
+         DATASPACE  SIMPLE { ( 2, 170, 170 ) / ( 2, 170, 170 ) } 
+      } 
+   } 
+} 
+}
+</pre>
+
+</body>
+
+</html>

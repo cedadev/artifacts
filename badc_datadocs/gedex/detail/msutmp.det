@@ -1,0 +1,540 @@
+Lower Tropospheric Temperature Anomalies from MSU
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Retrieved brightness temperature anomalies for
+the lower-to-mid troposphere (approximately surface to 400 mb), and the
+annual cycle for 1982-90, about which these anomalies were computed.
+
+1.2  Unit of Measurement. Hundreths of degree C (.01 deg C).
+
+1.3  Data Source.  The Microwave Sounding Unit aboard the TIROS-N series of
+NOAA polar orbiting satellites (TIROS-N, NOAA- 6, -7, -9, -10, -11, and
+-12).
+
+1.4  Data Set Identification.  The "Lower Tropospheric Temperature
+Anomalies from MSU" data set consists of calibrated MSU channel 2
+brightness temperatures along individual MSU scan lines.  These are
+combined in a simple multi-angular linear retrieval on MSU channel 2 to
+produce new brightness temperatures representing a weighting function
+peaking near 700 mb and having very little influence from above 300 mb.
+This weighting function describes the vertical sensitivity to thermal
+emission by molecular oxygen in the atmosphere and is very closely related
+to the thermometric temperature for that layer.
+
+The MSU temperature data set resides within NCDS as MSUTMP_MONTHLY and
+MSUTMP_CLIMATOLOGY.
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  Global coverage.
+
+2.2  Spatial Resolution.  Original spatial resolution of the instrument
+footprint ranges from 120 km to over 200 km, but the retrieval procedure
+requires a total of eight of these measurements, which span a 2000 km
+swath, to produce a single retrieval temperature.  Therefore, the original
+retrieval resolution is approximately 200 km north-south by 2000 km
+east-west near the equator, tilting to 200 km east-west by 2000 km
+north-south near the poles.  The vertical resolution is approximately from
+the surface to 400 mb, with peak weighting near 700 mb.  The resolution of
+the data set is a 2.5 x 2.5 degree latitude-longitude grid.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  January 1979 - December 1991.  At some times two
+satellites were operating, while at other times only one satellite was
+operating.
+
+3.2  Temporal Resolution.  Monthly.
+
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  TOVS sounding instruments, consisting of HIRS/2,
+Microwave Sounding Unit (MSU), and Stratospheric Sounding Unit (SSU), are
+designed to provide global coverage of atmospheric temperature and moisture
+profiles.
+
+4.2  Key Satellite Flight Parameters.  Nominal orbit parameters for the
+TIROS-N/NOAA series satellites are:
+
+         o  Launch date                     TIROS-N:  October 13, 1978
+                                            NOAA-6:   June 27, 1979
+                                            NOAA-7:   June 23, 1981
+                                            NOAA-8:   March 28, 1983
+                                            NOAA-9:   December 12, 1984
+                                            NOAA-10:  September 17, 1986
+                                            NOAA-11:  October 18, 1988 
+                                            NOAA-12:  May 14, 1991 
+                                            
+         o  Duration, planned               At least two years
+
+         o  Duration, actual                TIROS-N:  January 30, 1980
+                                            NOAA-6:   June 30, 1986
+                                            NOAA-7:   June 7, 1986
+                                            NOAA-8:   October 31, 1985
+                                            NOAA-9:   November 7, 1988
+                                            NOAA-10:  Presently operating
+                                            NOAA-11:  Presently operating
+                                            NOAA-12:  Presently operating
+                                            
+         o  Orbit type                      Near polar, circular,
+                                            sun-synchronous
+
+         o  Semi-major axis                 7231.8 km
+
+         o  Nominal altitude                853.7 km
+
+         o  Inclination angle               TIROS-N:  102.3 degrees
+                                            NOAA-6:    98.7
+                                            NOAA-7:    98.9
+                                            NOAA-8:    98.8
+                                            NOAA-9:    98.9
+                                            NOAA-10:   98.9
+                                            NOAA-11:   98.9
+                                            NOAA-12:   98.7
+                                            
+         o  Nodal period                    TIROS-N:  101.90 minutes
+                                            NOAA-6:   101.12
+                                            NOAA-7:   101.95
+                                            NOAA-8:   101.29
+                                            NOAA-9:   102.09
+                                            NOAA-10:  102.13
+                                            NOAA-11:  102.10
+                                            NOAA-12:  101.34
+                                            
+         o  Equator crossing times
+            (ascending)*:
+
+              Morning orbit:                NOAA-6:   0730
+                                            NOAA-8:   0730
+                                            NOAA-10:  0730
+                                            NOAA-12:  0730
+          
+              Afternoon orbit**:            TIROS-N:  1500
+                                            NOAA-7:   1430
+                                            NOAA-9:   1420
+                                            NOAA-11:  1340
+
+ * Local mean solar time
+ **Afternoon orbits drift slowly with time.
+
+Instrument Parameters for MSU are:
+
+
+     o  Calibration                         Hot reference body and
+                                            space background and
+                                            scan cycle
+     o  Cross-track scan angle (degrees
+        from nadir)                            +/- 47.35
+     o  Scan time (seconds)                        25.6
+     o  Number of steps                            11
+     o  Angular FOV (degrees)                       7.5
+     o  Step angle (degrees)                        9.47
+     o  Step time (seconds)                         1.84
+     o  Ground IFOV at nadir
+        (km diameter)                             109.3
+     o  Ground IFOV at end of scan                323.1  km cross-track
+                                                x 178.8  km along-track
+     o  Distance between IFOV centers
+        (km along-track)                          168.1
+     o  Swath width                          +/- 1174    km
+     o  Data rate (bits per second)               320
+     o  Data precision (bits)                      12
+     o  Time between start of each scan line       25.6  sec
+     o  Step and dwell time                         1.81 sec
+     o  Time*                                       0.9  sec
+
+*Time - the difference between the start of each scan and the center of the
+        first dwell period.
+
+4.3  Principles of Operation.  The MSU is a four-channel Dicke microwave
+radiometer operating in the 60 GHz oxygen absorption complex.  The four
+channels respond to the following respective spectral frequencies: 50.3,
+53.74, 54.96, and 57.95 GHz with a channel bandwidth of 200 MHz in each
+case and a typical NEdN of 0.3 degrees K. (NEdN is noise equivalent
+differential radiance (milliwatts/m**2-steradian-cm**-1).  MSU channel 2
+senses radiation centered at 53.74 GHz.  The instrument is externally
+calibrated once each scan with cold space (2.7 K) and a warm target whose
+temperature is monitored with redundant platinum resistance thermometers.
+The instrument scans across the satellite subtrack once every 25.4 seconds
+during which the satellite advances 170 km.  Within each scan the
+instrument samples eleven footprints, one every 9.5 degrees of scan angle,
+with a spatial resolution of 110 km (circular) at nadir to 180x320 km
+(elliptical) at the scan extremes.  The antenna half-power beam-width
+leading to these spatial resolutions is 7.5 degrees.
+
+The MSU data output represents an apparent brightness temperature after a
+1.84-second integration period per step.  The data are quantized to 12-bit
+precision and combined with telemetry and step position information to
+produce an effective output data rate of 320 bits per second.
+
+MSU has no special calibration sequence that interrupts normal scanning.
+The calibration data are included in a scan line of data.  From the last
+Earth view position, the reflector rapidly moves 4 steps to view space, 10
+additional steps to view the housing, and then returns to the home position
+to begin another scan line.  Since each scan line requires 25.6 seconds,
+synchronization of MSU within the other two TOVS instruments occurs every
+128 seconds (5 scan lines).
+
+4.4  Measurement Geometry.  The MSU sensors consist of two four-inch
+antennae, each having an IFOV of 7.5 degrees.  The antennae are
+step-scanned through eleven individual 1.84-second Earth viewing steps and
+take a total of 25.6 seconds to complete.  The 124 km IFOV resolution at
+the subpoint creates an underlap of approximately 115 km between adjacent
+scan lines.
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  Calibration of the MSU is described
+in Spencer, R.W. and J.R. Christy, 1990, and Spencer, R.W., J.R. Christy,
+and N.C. Grody, 1990, (see Item 11.2).  After calibration, any physically
+unrealistic brightness temperatures, TB, (outside of 180 K to 270 K) at
+scan positions #1,2,3,4,8,9,10,11 cause that scan line to be rejected. Also
+checked are unrealistic TB differences between adjacent footprints
+(horizontal temperature gradients). The scan line is rejected if any are
+found.
+
+5.2  Derivation Techniques/Algorithms.  After a single scan line is
+accepted, a simple linear retrieval is performed,
+
+Channel "2R" TB = 4(TB3+TB4+TB8+TB9)/4 - 3(TB1+TB2+TB10+TB11)/4,
+
+where 2R is the Channel 2 reference value, TB3 is the TB at the third
+footprint position, and so forth.  This produces a new weighting function
+(or, more properly, "averaging kernel") which has virtually no
+stratospheric influence and a peak near 700 mb.  The resulting channel 2R
+TB is assigned to the 2.5 degree grid squares containing the middle three
+footprint positions (#5,6,7), except above 81 degrees latitude where the
+data are to the poleward footprint positions as well.  This binning
+procedure is performed for each day separately. The daily average in every
+grid square is computed, and an east-west linear interpolation is performed
+for empty grid squares.  At the end of each calendar month, the monthly
+average at each gridpoint is computed.
+
+Satellites are intercalibrated at the gridpoint level with the months of
+overlap between successive satellites.  More information on the data set
+production is contained in Spencer, R.W and J.R. Christy, 1991, (see Item
+11.2).
+
+5.3  Special Corrections/Adjustments.  None
+
+5.4  Processing Changes.  None
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  The monthly gridpoint anomalies were
+validated with radiosonde-calculated channel 2R TB at all United States
+controlled radiosonde stations (mainly over the U.S., the Pacific Ocean,
+and Caribbean Sea) during the ten year period 1979-88.  Single station
+gridpoint errors (assuming the radiosonde as truth) ranged from 0.16
+degrees C over the tropical west Pacific to 0.50 degrees C at high latitude
+continental locations, with correlations of 0.74 to 0.97, respectively.
+Compositing of several adjacent stations resulted in 0.11 degrees C to 0.35
+degrees C, and correlations of 0.83 to 0.98, respectively. These are
+somewhat poorer than the results obtained with raw channel 2 averages,
+primarily due to the loss of daily synoptic scale temperature information
+in the retrieval procedure.  Zonal averages, as well as hemispheric and
+global averages should be much better.  Satellite intercomparisons reveal
+globally averaged channel 2R anomaly agreement to about 0.02 degrees C per
+month. Each MSU's channel 2 was found to be stable to about 0.01 degrees C
+over the lifetime of the instrument (up to five years). More information on
+radiosonde validation can be found in Spencer, R.W and J.R. Christy, 1990,
+(see Item 11.2).
+
+6.2  Confidence Level/Accuracy Judgment.
+
+6.3  Usage Guidance.  Because of the loss of synoptic scale temperature
+gradient information in the retrieval, some east-west "smearing" in the
+monthly anomaly patterns is evident in the imaging.  As a result,
+regionally averaged anomalies are probably much more accurate than single
+gridpoint anomalies.  Also, high altitude (above 2000 m) regions will
+experience degraded accuracy.  These include the Tibetan Plateau, portions
+of the Andes, eastern Antarctica, and northern Greenland.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+7.1  Dr. Roy W. Spencer
+     ES43 NASA Marshall Space Flight Center
+     Huntsville, Alabama  35812
+     (205)544-1686
+
+7.2  Dr. John R. Christy
+     Johnson Research Center
+     University of Alabama-Huntsville
+     Huntsville, Alabama  35899
+     (205)895-6257
+    
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products.  None
+
+8.2  Film Products.  A film of daily brightness temperatures from MSU was
+     made.  For more information, please contact the data producer.
+
+8.3  Other products.
+
+8.3.1  The Lower Tropospheric Temperature Anomalies from MSU in Common Data
+       Format (CDF)
+
+       Medium/Specification:  Magnetic disk
+
+       Format and Content:  The data are stored in a special
+       data-set-independent format, designated the Common Data Format
+       (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk. The CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" allows a user within an NCDS session to create and access
+       these data and descriptions.  These CDF files may be accessed within
+       the Data Applications subsystem of NCDS.
+
+       Data Quantity/Rate:  
+
+       Lower Tropospheric Monthly Temperature Anomalies; 1 file, 13 Mb
+       Lower Tropospheric Climatological Temp. Anomalies; 1 file, .51 Mb
+
+       Status: Available
+
+       Plans/Schedule: Additional data will be integrated periodically as
+       they are received.
+
+8.3.2  The Greenhouse Effect Detection Experiment (GEDEX) CD-ROM
+
+       Medium/Specifications:  CD-ROM in ISO 9660 standard
+
+       Format and Content:  The data on this disk will be stored in a
+       special data-set-independent format, designated the Common Data
+       Format (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  The CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" will be included with this CD-ROM allowing a user to create
+       and access these data and descriptions. The CD-ROM will consist of
+       many different data sets related to the study of the Greenhouse
+       Effect, including the Lower-to-Mid Tropospheric Temperature
+       Anomalies from MSU data sets, and the accompanying NCDS data set
+       documentation.
+
+       Data Quantity/Rate:  1 CD-ROM disk set.
+
+       Status:  Release date for this product is scheduled for early 1992.
+
+       Plans/Schedule:  Users interested in this product should contact
+       NCDS staff for more details.
+       
+
+9.  DATA ACCESS
+
+9.1  Archive Identification.
+
+9.1.1   Goddard DAAC User Support Office
+        NASA/Goddard Space Flight Center 
+        Code 935
+        Greenbelt, Maryland  20771
+        (301) 286-3209
+        FTS:  888-3209
+        INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+        NSI DECnet:  NSSDCA::NCDSUSO
+
+9.1.2   Data Support Section
+        National Center for Atmospheric Research (NCAR)
+        P.O. Box 3000
+        Boulder, Colorado  80307
+        (303) 497-1215
+
+9.2  Procedures for Obtaining Data.  Users can obtain these data online
+through the NASA Climate Data System (NCDS).
+
+9.3  NCDS Status/Plans.  NCDS currently supports this data set in the
+Common Data Format (CDF) and will continue to update the data set as new
+data are received.  These CDFs can be accessed by specifying the data set
+names within the Data Applications Subsystem of NCDS:
+
+                         NCDS$DATA:MSUTMP_MONTHLY
+                         NCDS$DATA:MSUTMP_CLIMATOLOGY
+
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+10.1    Goddard DAAC User Support Office
+        NASA/Goddard Space Flight Center 
+        Code 935
+        Greenbelt, Maryland  20771
+        (301) 286-3209
+        FTS:  888-3209
+        INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+        NSI DECnet:  NSSDCA::NCDSUSO
+
+10.2    Data Support Section
+        National Center for Atmospheric Research (NCAR)
+        P.O. Box 3000
+        Boulder, Colorado  80307
+        (303) 497-1215
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      a.  Kidwell, K.B. (ed.), 1991.  "NOAA Polar Orbiter Data Users
+          Guide."  NCDC/SDSD.  (Updated from original 1984 edition.)
+
+11.2  Journal Articles and Study Reports
+
+      a.  Spencer, R.W. and J.R. Christy, 1990.  "Precise Monitoring of
+          Global Temperature Trends from Satellites."  Science
+          247:1558-1562.
+
+      b.  Spencer, R.W., J.R. Christy, and N.C. Grody, 1990. "Global
+          Atmospheric Temperature Monitoring with Satellite Microwave
+          Measurements:  Method and Results 1979-84." Journal of Climate
+          3:1111-1128.
+
+      c.  Spencer, R.W. and J.R. Christy, 1991.  "Precision and Radiosonde
+          Validation of Satellite Gridpoint Temperature Anomalies, Part I:
+          MSU Channel 2."  Journal of Climate, submitted.
+
+      d.  Spencer, R.W. and J.R. Christy, 1991. "Precision and Radiosonde
+          Validation of Satellite Gridpoint Temperature Anomalies, Part II:
+          A Tropospheric Retrieval and Trends 1979-90."  Journal of
+          Climate, submitted.
+
+11.3  Archive/DBMS Usage Documentation
+
+      a.  Olsen, L.M, J.W. Closs, and F.E. Corprew, November 1991. "NASA's
+          Climate Data System Primer: Version 4.0."  EOS DAAC, NASA Goddard
+          Space Flight Center, Greenbelt, Maryland.
+
+
+12.  RELATED DATA SETS
+
+     Several related temperature anomaly data sets exist online through
+     NCDS as follows:
+
+     1) The GISS Temperature Deviations data set contains monthly
+        temperature deviations for the period 1880 through 1988 and is
+        available online through NCDS in Common Data Format (CDF). To
+        access these CDFs, specify the following as input within the Data
+        Applications Subsystem of the NCDS:
+
+                                                  Spatial Scale of
+        Data Set Name                       Monthly Temperature Anomalies
+        -------------                       -----------------------------
+        NCDS$DATA:GISS-TMP-DEV_MON-GLB              Global
+        NCDS$DATA:GISS-TMP-DEV_MON-NH         Northern Hemisphere
+        NCDS$DATA:GISS-TMP-DEV_MON-SH         Southern Hemisphere
+        NCDS$DATA:GISS-TMP-DEV_MON-ZONE          Latitude Zones
+        NCDS$DATA:GISS-TMP-DEV_MON-BOXES        80 equal area boxes
+        NCDS$DATA:GISS-TMP-DEV_MON-SUBBOXES  8000 equal area subboxes
+
+     2) The Climate Research Unit Temperature Deviations data set contains
+        surface air temperature anomalies in degrees Celsius, derived from
+        the World Weather Records (WWR).  These data are available online
+        through NCDS in Common Data Format (CDF).  To access this CDF,
+        specify the following as input within the Data Applications
+        subsystem in NCDS.
+
+                       NCDS$DATA:CLIM-RSRCH-U_TMP-DEV
+
+     3) The Angell Global Temperature Deviations data set contains zonal
+        temperature deviations derived from radiosonde measurements
+        compiled in Monthly Climatic Data for the World, published by the
+        National Climatic Data Center.  These data are available online
+        through NCDS in Common Data Format (CDF).  To access this CDF,
+        specify the following as input within the Data Applications
+        subsystem in NCDS.
+
+                       NCDS$DATA:ANGELL_TMP_DEV
+
+     4) The Vinnikov, Groisman and Lugina zonal and station temperature
+        data sets contain monthly, seasonal, and annual mean zonal
+        temperatures deviations and monthly mean station temperatures
+        deviations.  These data are available online through NCDS in Common
+        Data Format (CDF).  To access these CDFs, specify the following as
+        input within the Data Applications subsystem in NCDS:
+
+                     NCDS$DATA:VGL-TMP-DEV_MONTHLY
+                     NCDS$DATA:VGL-TMP-DEV_SEASONAL 
+                     NCDS$DATA:VGL-TMP-DEV_ANNUAL    
+                     NCDS$DATA:VGL-TMP-MON_NORTH-STATN
+                     NCDS$DATA:VGL-TMP-MON_SOUTH-STATN   
+
+
+13.  SUMMARY/SAMPLE
+
+     Unavailable as of this writing
+
+14.  NOTES
+
+     None
+
+*92/03/12

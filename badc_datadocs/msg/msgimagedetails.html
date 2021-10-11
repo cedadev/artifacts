@@ -1,0 +1,158 @@
+<html>
+
+<head>
+<title>MSG Product Descriptions</title>
+
+
+
+</head>
+
+<body lang=EN-GB>
+<h2>Documentation of Met Office MSG products </h2>
+<A name=HRV></A><B>High Resolution Visible 
+Imagery</B><BR><BR>This image shows the reflected solar radiation from the 
+Earths surface and cloud tops at a spatial resolution equivalent to 1km at the 
+sub-satellite point but increases for higher latitudes and longitudes away from 
+the meridian. The images have been normalised by the solar zenith angle to 
+remove changes in brightness during the day. They are available every 15 
+minutes. The reflectance is averaged over a broad wavelength range in the 
+visible part of the spectrum. Cloud shadows are clearly discernible at dawn and 
+dusk giving an idea of the cloud top height. Aircraft contrails and ship tracks 
+(in the cloud) can also be seen. <BR><BR>
+
+<A name=VIS></A><B>Visible 
+Imagery</B><BR><BR>This image shows the reflected solar radiation from the 
+Earths surface and cloud tops at a spatial resolution equivalent to 3km at the 
+sub-satellite point but increases for higher latitudes and longitudes away from 
+the meridian. The images have been normalised by the solar zenith angle to 
+remove changes in brightness during the day. They are available every 15 
+minutes. The reflectance is over a narrower spectral band (centred at 0.8 
+microns) than the high resolution visible channel and so the land surface will 
+look brighter in this channel over vegetation and land surfaces in general. 
+Cloud should look the same.<BR><BR>
+
+<A name=IR></A><B>Infra-Red 
+Imagery</B><BR><BR>This image shows emitted radiation from the Earths surface 
+and cloud tops at a spatial resolution equivalent to 3km at the sub-satellite 
+point but increases for higher latitudes and longitudes away from the meridian. 
+They are available every 15 minutes. White areas denote cold temperatures and 
+dark areas denote warm temperatures. Radiation from this channel is averaged 
+over a narrow spectral band centred at 10.8 microns. At mid-latitudes the 
+atmosphere is transparent at these wavelengths and so most of the radiation 
+originates from the surface or cloud tops. The sea surface will not vary in 
+temperature during the day but the land surface temperature can vary by many 
+degrees during the diurnal cycle and this can be seen in a movie loop of these 
+images.<BR><BR>
+
+<A name=WV></A><B>Water Vapour Imagery</B><BR><BR>This image 
+shows emitted radiation from the Earths atmosphere and cloud tops at a spatial 
+resolution equivalent to 3km at the sub-satellite point but increases for higher 
+latitudes and longitudes away from the meridian. They are available every 15 
+minutes. White areas denote cold temperatures (cloud tops or moist areas of the 
+upper troposphere) and dark areas denote warm temperatures (no high clouds and 
+drier regions of the upper-mid troposphere). Radiation from this channel is 
+averaged over a narrow spectral band centred at 6.2 microns. Most of the 
+radiation originates from the upper atmospheric water vapour and cloud tops. 
+Movie loops of these images can show areas of potential baroclinic development 
+by showing dry (dark) intrusions appearing in association with areas of ascent 
+(bright). They are also used as a proxy for potential vorticity of the upper 
+atmosphere. <BR>&nbsp; <BR>
+
+<A name=CTH></A><B>Cloud Top Height 
+Product</B><BR><BR>This product shows the height of the cloud tops in feet, and 
+is calculated using the infrared channels at wavelengths of 10.8, 12.0 and 13.4 
+microns. Three possible algorithms are available for each pixel. In the first, 
+the&nbsp; minimum residual method is employed to infer the cloud top height by 
+using data from NWP model profiles to perform radiative transfer calculations, 
+in order to simulate radiances in all three channels for different cloud top 
+heights and effective cloud amounts. The method then attempts to find the 
+solution which minimises the differences between the measured and simulated 
+radiances in all three channels. A check is also made so as not to place the 
+cloud top at the bottom of an unstable layer which would cause vigorous 
+convection if subsequently assimilated into the NWP model. If an acceptable 
+solution is found, i.e. if a well-defined minimisation is obtained, the value of 
+cloud top height is accepted. This is typically the case for most mid- and 
+high-level cloud. If a solution is not found, a single channel approach is used, 
+the so-called stable layers method, which attempts to match the measured 
+brightness temperature at 10.8 microns with the simulated value, reducing the 
+weighting of any solution which would put the cloud top at the base of an 
+unstable layer. The majority of low-level cloud is processed using this method. 
+Finally, if an acceptable solution is still not found, a third method is used, 
+which simply finds the best match between measured and simulated 10.8 microns 
+brightness temperatures, working from the surface upwards, with no account taken 
+of atmospheric stability.
+<BR><BR>
+
+<A name=CTT></A><B>Cloud Top Temperature Product</B><BR><BR>This product 
+shows the temperature of the cloud tops in degC, and is calculated using the 
+infrared channels at wavelengths of 10.8, 12.0 and 13.4 microns. Three possible 
+algorithms are available for each pixel. In the first, the&nbsp; minimum 
+residual method is employed to infer the cloud top height by using data from NWP 
+model profiles to perform radiative transfer calculations, in order to simulate 
+radiances in all three channels for different cloud top heights and effective 
+cloud amounts. The method then attempts to find the solution which minimises the 
+differences between the measured and simulated radiances in all three channels. 
+A check is also made so as not to place the cloud top at the bottom of an 
+unstable layer which would cause vigorous convection if subsequently assimilated 
+into the NWP model. If an acceptable solution is found, i.e. if a well-defined 
+minimisation is obtained, the value of cloud top temperature corresponding to 
+this height is accepted. This is typically the case for most mid- and high-level 
+cloud. If a solution is not found, a single channel approach is used, the 
+so-called stable layers method, which attempts to match the measured brightness 
+temperature at 10.8 microns with the simulated value, reducing the weighting of 
+any solution which would put the cloud top at the base of an unstable layer. The 
+majority of low-level cloud is processed using this method. Finally, if an 
+acceptable solution is still not found, a third method is used, which simply 
+finds the best match between measured and simulated 10.8 microns brightness 
+temperatures, working from the surface upwards, with no account taken of 
+atmospheric stability. 
+<BR><BR>
+
+<A name=ColouredFog></A><B>Coloured Fog Product (only available at 
+night)</B><BR><BR>Fog and/or low cloud at night can be detected from the 
+difference in emissivity of the fog/cloud tops and the underlying surface at 3.9 
+and 11 microns wavelength. This product uses both measured and simulated 
+radiances (the latter using an NWP profile) to determine if fog is present. The 
+magnitude of the difference in radiance between the 2 channels and from the 
+observed minus simulated radiances is a measure of the fog thickness. The fog 
+top temperature can also be inferred from the infrared channel radiance. The 
+intensity of the colour is a measure of the fog thickness and the colour 
+indicates if the fog top is above freezing (red), around freezing (green) and 
+below freezing (blue). Areas with no colour are free from fog or low cloud, and 
+correspond to the 10.8 microns brightness temperature, which is used as a 
+background for the coloured fog mask. 
+<BR>&nbsp;<BR>
+
+<A name=GreyscaleFog></A><B>Greyscale Fog Product (only available 
+at night)</B><BR><BR>Fog and/or low cloud at night can be detected from the 
+difference in emissivity of the fog/cloud tops and the underlying surface at 3.9 
+and 11 microns wavelength. This product uses both measured and simulated 
+radiances (the latter using an NWP profile) to determine if fog is present. The 
+magnitude of the difference in radiance between the 2 channels and from the 
+observed minus simulated radiances is a measure of the fog thickness. 
+Differences larger than around 3.5 K, represented by the white end of the colour 
+scale, correspond to fog or low cloud. Intermediate differences (in the 
+2.5&nbsp; 3.5 K range) correspond to clear pixels, and differences smaller than 
+around 2.5 K tend to correspond to mid- and upper-level cloud (and appear as 
+black).<BR>&nbsp;<BR>
+
+
+<A name=RGB></A><B>RGB 'False Colour' 321 Product (only available in the day)</B><BR><BR>RGB images are composite images 
+generated by combining two or more channels and displaying in colour. The naming 
+convention describes which channel is assigned to the red, green and blue 
+colours. For example RGB 321 means that channel 3 (1.6 micron) is on the red, 
+channel 2 (0.8 micron) is on the green and channel 1 (0.6 micron) is on the 
+blue. 
+
+This combination can then highlight different physical features through 
+the differing amounts of red, green and blue and hence give a unique colour to 
+that feature. In this case, turquoise clouds contain ice crystals, whilst white clouds are water 
+clouds (inc. fog). Vegetation creates a green signal and sandy areas are pink. 
+Snow covered ground is turquoise. 
+<p>
+
+<a href="index.html">Return to main MSG page</a>
+<br>
+<a href="msgtable.html">Return to products and coverage table</a><br>
+</body>
+</html>

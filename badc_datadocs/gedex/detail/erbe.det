@@ -1,0 +1,538 @@
+Earth Radiation Budget Experiment
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Earth radiances and solar irradiances in the
+ultraviolet, visible, and infrared spectral bands are measured by two
+instrument packages:  scanning and non-scanning, with characteristics
+listed in the following table:
+
+     Earth Radiation Budget Satellite (ERBS), NOAA-9, and NOAA-10 ERBE
+                     Instrument Characteristics
+_____________________________________________________________________
+                    Wavelength limits
+              Channel   (micrometers)         Measurement
+_____________________________________________________________________
+Fixed WFOV*      1      0.2 - 50.0            Total Radiance
+                 2      0.2 -  5.0            Shortwave (SW) Reflected
+Fixed MFOV**     3      0.2 - 50.0            Total Radiance
+                 4      0.2 -  5.0            SW Reflected
+Fixed Solar      5      0.2 - 50.0            Total Irradiance
+Monitor
+Scanning NFOV~   1      0.2 - 50.0            Calibrated Radiance
+                 2      0.2 -  5.0            SW Reflected
+                 3      5.0 - 50.0            Longwave (LW) Emitted
+______________________________________________________________________
+*   Wide Field-of-View
+**  Medium Field-of-View
+~   Narrow Field-of-View
+
+1.2  Unit of Measurement.  Nonscanner measurements are in counts and
+W/(m**2).  Scanner measurements are in counts and W/m**2-steradian.  Albedo
+measurements are unitless.
+
+1.3  Data Source.  The Earth Radiation Budget Experiment (ERBE) is
+currently being flown on the Earth Radiation Budget Satellite (ERBS), and
+NOAA-10.  ERBE was also flown on the NOAA-9 satellite.  The NOAA-9 scanner
+failed January 20, 1987 and the NOAA-9 nonscanner failed November 7, 1988.
+
+1.4  Data Set Identification.  Raw Archival Tape (RAT) images are archived
+on optical disks.  These disks contain located raw counts of all
+radiometric measurements, plus housekeeping data in counts and converted
+values, orbit data, and attitude data.
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  The spatial coverage differs with each channel and
+spacecraft, as described below.
+
+        Wide-angle Channels:  These two fixed channels continuously view
+        the Earth disc.  NOAA-9 and -10 measurements are continuous over
+        the entire globe.  ERBS, which precesses 4.95 degrees West per day,
+        has a latitudinal range between 57 degrees North and South.
+
+        Medium-angle Channels:  These two fixed channels continuously view
+        a circle of nominally 5 degrees radius at the top of the
+        atmosphere.  NOAA-9 and -10 measurements are continuous over the
+        entire globe.  ERBS, which precesses 4.95 degrees West per day, has
+        a latitudinal range between 57 degrees North and South.
+ 
+        Narrow-angle Channels:  These three scanning channels continuously
+        view small areas over the entire Earth.  The cross-track scan width
+        is approximately 40 kilometers (km) at nadir.  In addition, ERBS
+        has a 35% field-of-view (FOV) overlap along-track at nadir.
+
+2.2  Spatial Resolution.  The spatial resolution differs with each type of
+channel and spacecraft (ERBS and NOAA).  The ERBS and NOAA wide-angle
+channels view the Earth disc with a FOV of 136 and 126 degrees,
+respectively.  The medium-angle channels have footprints of approximately 5
+degrees radius, or 1000 km, at the top of the atmosphere.  The narrow-angle
+channels on ERBS have an instantaneous hexagonal FOV of about 3 x 4.5
+degrees, which is equivalent to a 31 km cross-track x 47 km track footprint
+at nadir.  The narrow-angle channels on NOAA have a 44 km cross-track x 65
+km track.  The solar channel has an unencumbered FOV which observes the
+entire solar disk.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  ERBS coverage began in October 1984 and is still
+continuing along with NOAA-10, which became operational in October 1986.
+NOAA-9 coverage began in January 1985 and ended in November 1988.  The
+NOAA-9 scanner failed on January 20, 1987, the NOAA-10 scanner failed on
+May 22, 1989, and the ERBS scanner failed on February 28, 1990.   The
+NOAA-9 nonscanner failed November 7, 1988.  ERBE nonscanner measurements
+from NOAA-10 and ERBS are continuing (please see Item 14 concerning the
+ERBS nonscanner).  The solar channel measures 20 minutes of usable data
+(about twice per month) during solar calibration periods.
+
+3.2  Temporal Resolution.  Five channels of the nonscanner provide 125
+samples per second.  The solar monitor's shutter cycles every 32 seconds
+during a solar calibration.  All of the channels of the scanner were
+sampled every 0.033 second.
+
+
+4.  Instrument Description
+
+4.1  Mission Objectives.
+
+     The objectives of the Earth Radiation Budget Experiment (ERBE) are:
+
+     (1)  to determine for a minimum of 1 year the monthly average
+          radiation budget on regional, zonal, and global scales,
+
+     (2)  to determine the equator-to-pole energy transport gradient, and
+
+     (3)  to determine the average diurnal variation of the radiation
+          budget on a regional and monthly scale.
+
+4.2  Key Satellite Flight Parameters.
+
+Nominal orbit parameters for ERBS are listed below:
+
+                .  Launch date                October 5, l984
+                .  Planned duration*          1 year
+                .  Actual duration            Scanner failed 2/28/90
+                .  Orbit                      Non-sun synchronous
+                .  Semi-major axis            6988 km
+                .  Normal Altitude            610 km
+                .  Inclination                57 deg
+                .  Nodal period               98 min
+                .  Equator Crossing time      Precesses
+
+Nominal orbit parameters for NOAA-9 are listed below:
+
+                .  Launch date                December 12, l984
+                .  Planned duration           1 year
+                .  Actual duration            Scanner failed 1/20/87
+                                              Nonscanner failed 11/7/88
+                .  Orbit                      Sun-synchronous
+                .  Semi-major axis            7248 km
+                .  Normal Altitude            872 km
+                .  Inclination                98 deg
+                .  Nodal period               102.08 min
+                .  Equator Crossing time      1430 Local Mean Solar Time, 
+                                              ascending
+
+Nominal orbit parameters for NOAA-10 are listed below:
+
+                .  Launch date                September 17, l986
+                .  Planned duration           1 year
+                .  Actual duration            Scanner failed 5/22/89
+                .  Orbit                      Sun-synchronous
+                .  Semi-major axis            7211 km
+                .  Normal Altitude            833 km
+                .  Inclination                98 deg
+                .  Nodal period               101.2 min
+                .  Equator Crossing time      0730 Local Mean Solar Time, 
+                                              descending
+
+*  The design life for all ERBE instruments is one year with a two-year 
+   goal.
+
+4.3  Principles of Operation.  The nonscanner package consists of four
+Earth-viewing channels, consisting of two MFOV channels and two WFOV
+channels, and a solar monitor.  All five instruments are active cavity
+radiometers, with an accuracy of approximately 1% for spectral flatness and
+electrical substitution radiation detection.  The Earth-viewing channels
+have two spectral ranges, one sensitive to all wavelengths and the other
+only to shortwaves by means of a high-priority, fused silica dome. Cavities
+are enclosed in modules which include filter domes and aperture limiters.
+The modules are mounted in an elevation beam, which can be rotated to point
+the detectors at the Earth, at the internal calibration sources, or at the
+Sun.
+
+The scanner package contains three NFOV radiometric channels, each of which
+consists of an F/1.84 Cassegrain telescope.  All are located within a
+single, rotating scan-head which scans the FOV across-track.  The scan head
+can also be rotated in azimuth at a slow rate.  Each channel makes 74
+measurements per scan.  One channel does not have a filter and therefore
+absorbs all wavelengths.  A second has a Suprasil-W1 filter which transmits
+only shortwave radiation.  The third has a multilayer filter on a diamond
+substrate to reject shortwave and accept longwave radiation.
+
+4.4  Instrument Measurement Geometry.  The nonscanner modules can be
+rotated to any of three positions:  launch/internal calibration position
+(180 degrees), the solar calibration position (78 degrees), and the
+Earth-viewing (nadir) position (0 degrees).  The WFOV channels view the
+Earth from limb-to-limb.  The MFOV channels are designed to include
+approximately an Earth view of 10 degrees within the unencumbered FOV.  The
+scanner package can rotate in azimuth between 0 and 180 degrees with an
+accuracy of 0.075 degrees.  (The normal scan mode is cross-track.)  The
+hexagonal IFOV of each channel has an an angular size of 3 x 4.5 degrees,
+the longer dimension being along the satellite ground track.
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  Telemetry, ephemeris, and altitude
+data are merged together by time per day and spacecraft, and put onto the
+Level I Raw Archival Tape (RAT) optical disk.  In addition to merging the
+telemetry and spacecraft ephemeris data streams, each instrument's FOV is
+located at the top of the atmosphere where their viewing angles are
+computed.  Radiometric counts are then converted to engineering units, and
+the results are stored on the Level-II Processed Archival Tape (PAT)
+optical disks.  (PAT processing is completed by an inversion subsystem
+which identifies scene type, computes shortwave and longwave radiances, and
+estimates the radiant exitance at the top of the atmosphere for each
+measurement.)
+
+5.2  Derivation Techniques/Algorithms.  In-flight calibration is performed
+to ensure high accuracy of radiometric measurements.  The design and
+calibrations of the ERBE instrument are based on the 1968 International
+Practical Temperature Scale and the World Radiometer Reference.  There is
+at least one on-board calibration device for each channel.  These devices,
+together with a space look which provides a near-zero radiance, give basic
+offset and gain information for periodic in-flight calibration of the
+instruments.  The scanner measurements are converted, pixel by pixel, to
+radiances by use of spectral factors, and to radiant exitance at the top of
+the atmosphere by use of angular directional models.  The nonscanner
+measurements are inverted by either a shape factor (SF) method or by a
+numerical filter (NF) technique.
+
+5.3  Special Corrections/Adjustments.  Concurrent development of a
+mathematical model for each instrument helps in the understanding of
+instrument response in ground and in-flight calibration conditions and in
+space operation.
+
+5.4  Processing Changes.  None.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  None.
+
+6.2  Confidence Level/Accuracy Judgment.  A confidence level has not been
+determined for the ERBE data and there are no immediate plans to do so.
+Some effort has been made to assess the accuracy of selected parameters
+(such as longwave and shortwave); however, a rigorous error analysis has
+not been undertaken.
+
+6.3  Usage Guidance.  RATs Monthly Product Summaries (MPS) are currently
+produced which include an explanation of the data coverage for the month.
+Each summary explains why an archival disk was not produced, and what
+caused major data dropouts.  Monthly Product Summaries will be produced for
+the other archival products.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+7.1  ERBE Experiment Scientist and Science Team Leader
+
+     Dr. Bruce R. Barkstrom
+     Atmospheric Sciences Division
+     Mail Stop 420
+     NASA/Langley Research Center
+     Hampton, Virginia  23665
+     FTS 928-5676
+     (804) 864-5676
+
+7.2  ERBE Data Management Team Leader
+
+     Mr. James F. Kibler
+     Atmospheric Sciences Division
+     Mail Stop 423
+     NASA/Langley Research Center
+     Hampton, Virginia  23665
+     FTS 928-5386
+     (804) 864-5386
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape/Disk Products  (The following data products are from ERBS,
+     NOAA-9, and NOAA-10.)
+
+8.1.1   Raw Archival Tape (RAT) Optical Disk (RAT or S-1), Level I
+
+          Medium/Specification:  12-in. write-once-read-many (WORM) optical
+          disks.  "Earth Radiation Budget Experiment (ERBE) Data Management
+          System Raw Archival Tape (S-1) RAT Users Guide".  July 1985.
+
+          Format and Content:  The optical disks were created on Optimem
+          drives in an Aquidneck system.  The data were first generated on
+          a CDC computer.  All records are written in multiples of 8-bit
+          bytes.  The first file contains a header record.  The second file
+          begins with a scale factor record, an integer-to-real offset
+          record, and a time adjustment record, followed by about 5400
+          16-second data records.  All data are arranged in chronological
+          order.
+
+          Data Quantity/Rate:  Each physical record contains 16 seconds
+          worth of raw instrument radiometric data, raw and converted
+          spacecraft and instrument housekeeping data, and locations of
+          each measurement on the Earth.  There is one tape per day per
+          spacecraft and one optical disk per month.
+
+          Status:  Raw Archival data on optical disk are available as
+          follows:
+                   ERBS:  October 25, 1984 through February 28, 1990
+                   NOAA-9: March 1, 1985 through July 31, 1987
+                   NOAA-10: November 1, 1986 through March 31, 1989
+
+          Plans/Schedule:  Data are being processed and will be archived 
+          chronologically.
+
+8.2  Film Products.  None.
+
+8.3  Other Products.  None.
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification.
+
+     Central Data Services Facility
+     Code 933
+     National Space Science Data Center
+     NASA/Goddard Space Flight Center
+     Greenbelt, Maryland  20771
+     FTS 888-6695
+     (301) 286-6695
+
+9.2  Procedures for Obtaining Data.  Users may submit requests for data by
+letter, telephone, personal visit or through the NSI DECnet computer
+network at NSSDC::REQUEST.  Data costs are dependent on affiliation and
+sponsorship of the user program.  Data are free to NASA personnel.
+Communication with the NSSDC Request Coordination Office is advised before
+ordering.
+
+Researchers who reside outside the USA should direct their requests to:
+     World Data Center A for Rockets and Satellites
+     Code 930.2
+     NASA/Goddard Space Flight Center
+     Greenbelt, Maryland  20771  USA
+     (301) 286-6695
+
+9.3   NCDS Status/Plans.  NCDS provides access to the ERBE-S2 and
+      ERBE-S4 data sets.
+  
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+      Request Coordination Office
+      Central Data Services Facility
+      Code 933
+      National Space Science Data Center
+      NASA/Goddard Space Flight Center
+      Greenbelt, Maryland  20771
+      (301) 286-6695
+
+      Goddard DAAC User Support Office
+      Code 935
+      NASA/Goddard Space Flight Center
+      Greenbelt, Maryland  20771
+      (301) 286-3209
+      FTS: 888-3209
+      NSI DECnet:  NSSDCA::NCDSUSO
+      INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation.
+
+      a.  NASA/LaRC. "Earth Radiation Budget Experiment (ERBE) Data
+          Management System Raw Archival Tape (S-1) Users Guide." Hampton,
+          Virginia.
+
+      b.  NASA/LaRC. "Earth Radiation Budget Experiment (ERBE) Data
+          Management System Processed Archival Tape (S-8) Users Guide."
+          Hampton, Virginia.
+
+11.2  Journal Articles and Study Reports.
+
+      a.  Avis, L.M., R.N. Green, J.T. Suttles, and S.K. Gupta, 1984. "A
+          Robust Pseudo-Inversion Spectral Filter Applied to the Earth
+          Radiation Budget Experiment (ERBE) Scanning Channels." NASA Tech.
+          Memorandum 85781, NASA Langley Research Center, Hampton,
+          Virginia.
+
+      b.  Barkstrom, B.R., l984.  "The Earth Radiation Budget Experiment
+          Experiment (ERBE)."  Bull. Amer. Meteor. Soc., 65:1170-1185.
+
+      c.  Barkstrom, B.R., and G.L. Smith, 1986.  "The Earth Radiation
+          Budget Experiment:  Science and Implementation." J. Geophys.
+          Res., 24:379-390.
+
+      d.  Barkstrom, B.R., et al., 1989.  "Earth Radiation Budget
+          Experiment (ERBE) Archival and April 1985 Results."  Bull. Amer.
+          Met. Soc., 70:1254-1262.
+
+      e.  Barkstrom, B.R., et al., 1990.  "Earth Radiation Budget
+          Experiment Preliminary Seasonal Results."  EOS, 71:297-312.
+
+      f.  ERBE Science Team, l986.  "First Data from the Earth Radiation
+          Budget Experiment (ERBE)." Bull. Amer. Meteor. Soc., 67:818-824.
+
+      g.  Green, R.N., and G.L. Smith, 1991.  "Shortwave Shape Factor
+          Inversion of Earth Radiation Budget Observations."  J. Atm. Sci.,
+          48:390-402.
+
+      h.  Green, R.N., et al., 1990.  "Intercomparison of Scanner and
+          Nonscanner Measurements for the Earth Radiation Budget Experiment
+          (ERBE)."  J. Geophys. Res., 95:11,785-11,798.
+
+      i.  Harrison, E.F., et al., 1983.  "Orbital and Cloud Cover Sampling
+          Analyses for Multisatellite Earth Radiation Budget Experiment
+          (ERBE)."  J. Spacecr. Rockets, 20:491-495.
+
+      j.  Harrison, E.F., et al., 1988.  "First Estimates of the Diurnal
+          Variation of Longwave Radiation from the Multiple-Satellite Earth
+          Radiation Budget Experiment (ERBE)."  Bull. Amer. Met. Soc.,
+          69:1144-1151.
+
+      k.  Harrison, E.F., P. Minnis, B.R. Barkstrom, V. Ramanathan, R.D.
+          Cess, G.G. Gibson, 1990.  "Seasonal Variation of Cloud Radiative
+          Forcing Derived from the Earth Radiation Budget Experiment."  J.
+          Geophys. Res., 95:18,687-18,703.
+
+      l.  Hartmann, D.L., and D. Doelling, 1991.  "On the Net Radiative
+          Effectiveness of Clouds."  J. Geophys. Res., 96:869-891.
+
+      m.  Kopia, L., 1986.  "Earth Radiation Budget Experiment Scanner
+          Instrument."  Rev. Geophys., 24:400-406.
+
+      n.  Luther, M.R., l986.  "The Earth Radiation Budget Experiment
+          Nonscanner Instrument." Rev. of Geophys., 24:391-399.
+
+      o.  Ramanathan, V., et al., 1989.  "Cloud-radiative Forcing and
+          Climate:  Results from the Earth Radiation Budget Experiment."
+          Science, 243:57-63.
+
+      p.  Smith, G.L., R.N. Green, E. Raschke, L.M. Avis, B.A. Wielicki,
+          and R. Davies, l986.  "Inversion Methods for Satellite Studies of
+          the Earth's Radiation Budget: Development of Algorithms for the
+          ERBE Missions." Rev. of Geophys., 24:407-421.
+
+      q.  Wielicki, B.A., and R.N. Green, 1989.  "Cloud Identification for
+          ERBE Radiation Flux Retrieval."  J. Appl. Met., 28:1133-1146.
+
+11.3  Archive/DBMS Usage Documentation.  None.
+
+      a.  Olsen, L.M., J.W. Closs, and F.E. Corprew, November 1991. "NASA's
+          Climate Data System Primer:  Version 4.0."  EOS DAAC, NASA
+          Goddard Space Flight Center, Greenbelt, Maryland.
+
+
+12.  RELATED DATA SETS
+
+     Information about related data sets may be accessed by specifying one
+     of the following data set names within the search criteria screen of
+     the Data Access subsystem of the NCDS:
+
+     N6-ERB   (Nimbus-6 Earth Radiation Budget, Level-1 data)    
+     N7-ERB   (Nimbus-7 Earth Radiation Budget, Level-1 data)    
+     AVHRR-1B (NOAA Polar Orbiter Advanced Very High Resolution Radiometer)
+     NOAA-HB  (NOAA Heat Budget)
+
+
+13.  SUMMARY/SAMPLE
+
+Level I hardcopy data products are not available.
+
+
+14.  NOTES
+
+NOAA-9 was used as a test bed for software modifications after NOAA-11
+developed gyroscope problems.  While testing the software, a command error
+resulted in a complete shutdown of all instruments on-board the NOAA-9
+spacecraft on May 21, 1991.  The ERBE nonscanner instrument on-board NOAA-9
+was powered up on May 22, 1991, followed by the detector heaters on May 23,
+1991.  The nonscanner elevation beam was undefined once the nonscanner was
+powered up, and attempts to command the elevation beam to its correct
+position were unsuccessful.  Although the telemetry data showed that the
+ERBE instrument was in no physical danger, further command testing of
+NOAA-9 was discontinued because of NOAA operational conflicts.  These
+operational conflicts came to an end July 16, 1991 and command testing was
+resumed in order to recover normal operation of NOAA-9.  NOAA-9 resumed
+operation (without sensors) on July 25, 1991.  Further testing of NOAA-11
+software modifications occurred in late August to correct continuing
+gyroscope problems.
+
+*92/03/16

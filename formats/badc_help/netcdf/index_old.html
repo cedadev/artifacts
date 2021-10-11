@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Datasets: NetCDF data</TITLE>
+</HEAD>
+<!-- Author: Jamie Kettleborough BADC -->
+<BODY BGCOLOR="#ffffff">
+
+<H1><font color="#333399">NetCDF datafiles</font></H1>
+
+<P><EM>This is intended as a short introduction to netCDF data.
+The complete netCDF documentation can be found at the <A HREF="http://www.unidata.ucar.edu/packages/netcdf/index.html"
+TARGET="_top">UNIDATA</A> web site </EM><HR ALIGN=LEFT>
+
+<H3>Why use netCDF?</H3>
+
+<UL>
+  <LI>NetCDF is used extensively in the atmospheric and oceanic
+  science communities.
+  <LI>NetCDF is a portable self-describing binary data format.
+  <LI>NetCDF is network-transparent, meaning that it can be accessed by computers 
+that store integers, characters and floating-point numbers in different ways.
+  <LI>NetCDF provides direct-access: a small subset of a large dataset may be 
+accessed efficiently, without first reading through all the preceding data.
+  <LI>NetCDF is appendable: data can be appended to a NetCDF dataset along one 
+dimension without copying the dataset or redefining its structure.
+  <LI>NetCDF datasets can be read and written in a number of languages,
+  these include C, C++, FORTRAN, idl, Python, Perl, and Java.
+  <LI>The different language implementations are <A HREF="http://www.unidata.ucar.edu/packages/netcdf/copyright.html"
+  TARGET="_top">freely</A> available from <A HREF="ftp://ftp.unidata.ucar.edu/pub/netcdf/">UNIDATA</A>
+  or from other <A HREF="./" http://www.unidata.ucar.edu/packages/netcdf/mirrors.html">mirror
+  sites</A>.
+  <LI>Several graphics packages support netCDF input, making it
+  very easy to display and analyse netCDF datasets. For instance
+  <A HREF="http://ferret.wrc.noaa.gov/Ferret/" TARGET="_top">FERRET</A>
+  provides both command line and graphical user interfaces for
+  displaying and analysing gridded data.
+<li>NetCDF is completely and methodically documented in UNIDATA's
+<a href="http://www.unidata.ucar.edu/packages/netcdf/guide.txn_toc.html">NetCDF
+User's Guide</a>
+  <LI>Several groups have defined <A HREF="http://www.unidata.ucar.edu/packages/netcdf/conventions.html"
+  TARGET="_top">conventions</A> for netCDF files, to enable the
+  exchange of data.
+</UL>
+
+<H3>Reading and writing NetCDF</H3>
+
+<P>The popularity of netCDF stems from its portability and relative
+ease of use. Although it is a binary data format the netCDF distribution
+comes complete with the <B>ncdump</B> utility which produces
+an ascii dump of the dataset and thereby provides a quick-look
+facility. You can also generate NetCDF files from ASCII data files using the 
+<B>ncgen</B> utility. 
+
+<P>The datasets are commonly written and read using library routines.
+The library routines are sensibly named and relatively consistently
+named across the different language implementations.
+
+<H3>What's in a NetCDF file</H3>
+
+<P>A netCDF dataset is made up of three basic components:
+
+<UL>
+  <LI>attributes
+  <LI>dimensions
+  <LI>variables.
+</UL>
+
+<P>The variables store the actual data, the dimensions give the
+relevant dimension information for the variables, and the attributes
+provide auxiliary information about the variables or the dataset
+itself. For instance a dataset containing three dimensionally
+gridded temperature data would have a variable for temperature,
+with three dimensions, longitude, latitude and level. The attributes
+might contain information such as the units of temperature. This
+is obviously a simple example; in principle there is no limit
+to the number of variables, or dimensions in a NetCDF dataset.
+
+<H3>Further information</H3>
+
+For a more extensive description you are urged to read the 
+<A HREF="http://www.unidata.ucar.edu/packages/netcdf/index.html"
+TARGET="_top">UNIDATA documentation on NetCDF</A>.
+
+<P>The UNIDATA documentation also provides the 
+<a href="http://www.unidata.ucar.edu/packages/netcdf/guide_15.html">File Format Specification</a> 
+for NetCDF and <a href="http://www.unidata.ucar.edu/packages/netcdf/BestPractices.html">Best Practice recommendations on writing NetCDF files</a>.
+<P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070325T230000Z
+DTEND:20070329T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Paramount Hotel, Oxford, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000040A9C4457D39C7010000000000000000100
+ 00000179A2EA120791B4A9B66574F2D355B38
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:QUEST, NERC's directed programme for =
+Earth system science, is pleased to announce its first Open Science Confere=
+nce to be held on 26 - 29 March 2007 in Oxford, UK. Information about the p=
+rogramme and how to register is available on http://quest.bris.ac.uk/worksh=
+ops/OSC/index.html =0D=0A=0D=0AThis conference is intended to showcase a br=
+oad cross-section of Earth system science research including some of the on=
+going activities within QUEST. Abstracts are invited for posters and presen=
+tations that address the "big questions" being pursued by QUEST:=0D=0A1. Ho=
+w important are biotic feedbacks for 21st century climate change?=0D=0A2. H=
+ow are climate and atmospheric composition regulated on time scales up to a=
+ million years?=0D=0A3. (a) How much climate (change) is dangerous? (b) How=
+ much climate change can be avoided by managing the biosphere?=0D=0A=0D=0AT=
+he deadline for abstract submissions is 13th February 2007. For further enq=
+uiries please contact the QUEST office on quest-info@bris.ac.uk.=0D=0A=0D=
+=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:QUEST Open Science Conference (OSC)
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

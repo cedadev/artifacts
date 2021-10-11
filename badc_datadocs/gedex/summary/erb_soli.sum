@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "ERB_SOLI "
+"SUM_DATA_SET"       "N7-ERB       "
+"SUM_DATATYPE"       "SOLIRR       "
+"ARCHIVE_NAME"       "NSSDC/NCDS           "
+"ARCHIVE_STATUS"     "Available.  Updated periodically. "
+"DS_DESCRIPTION"     "Nimbus-7 Earth Radiation Budget   "
+"DT_DESCRIPTION"     "Total Solar Irradiance            "
+"SUM_BEGIN_DATE"     "16-Nov-1978                       "
+"SUM_END_DATE"       "31-Dec-1991                       "
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "Full Solar disk.                  "
+"SPATIAL2"           "                                  "
+"SPATIAL3"           "No resolution within the disk.    "
+"SPATIAL4"           "                                  "
+"TEMPORAL1"          "Solar disk viewed 14 times daily. "
+"TEMPORAL2"          "                                  "
+"TEMPORAL3"          "One reading/second for 48 seconds, averaged for one day."
+"TEMPORAL4"          "                                  "
+"PRODUCT1"           "IBM-format floppy disk containing daily averaged solar "
+"PRODUCT2"           "irradiance and standard deviation.                     "
+"PRODUCT3"           "Available through NCDS in Common Data Format (CDF).    "
+"PRODUCT4"           "Available on GEDEX CD-ROM "
+EOF
+                                                                                                                                    
+PARAMETERS
+"SOLAR_FLUX"  "Solar Irradiance"    "W/m**2"
+EOF
+
+SOURCES
+"NIMBUS-7" "ERB"
+EOF

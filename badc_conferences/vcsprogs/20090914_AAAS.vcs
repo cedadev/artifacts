@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20090913T230000Z
+DTEND:20090916T230000Z
+LOCATION:Juneau, Alaska, USA
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000E048B02200C5C901000000000000000
+	010000000DBF00CF2ADC2D048B09A46E420E88B43
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+The Arctic AAAS Division annual meeting being held September 14th to 16th=
+, 2009 in Juneau, Alaska. This year's conference theme is "Impact of Envi=
+ronment on Human Health =95 Interdisciplinary Science and Education."=0D=
+=0A=0D=0AMore details available at http://www.arcticaaas.org/meetings/200=
+9/index.html=0D=0A=0D=0A
+SUMMARY:2009 Arctic Science Conference
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

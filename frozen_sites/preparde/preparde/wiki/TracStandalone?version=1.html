@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracStandalone – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracStandalone?version=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracStandalone" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracStandalone" title="View TracStandalone">TracStandalone</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracStandalone" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A01%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:01+01:00 in Timeline">6 years</a> ago)
+               (<a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracStandalone?action=diff&amp;version=1">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="Tracd">Tracd</h1>
+<p>
+Tracd is a lightweight standalone Trac web server.
+It can be used in a variety of situations, from a test or development server to a multiprocess setup behind another web server used as a load balancer.
+</p>
+<h2 id="Pros">Pros</h2>
+<ul><li>Fewer dependencies: You don't need to install apache or any other web-server.
+</li><li>Fast: Should be almost as fast as the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracModPython">mod_python</a> version (and much faster than the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracCgi">CGI</a>), even more so since version 0.12 where the HTTP/1.1 version of the protocol is enabled by default
+</li><li>Automatic reloading: For development, Tracd can be used in <em>auto_reload</em> mode, which will automatically restart the server whenever you make a change to the code (in Trac itself or in a plugin).
+</li></ul><h2 id="Cons">Cons</h2>
+<ul><li>Fewer features: Tracd implements a very simple web-server and is not as configurable or as scalable as Apache httpd.
+</li><li>No native HTTPS support: <a class="ext-link" href="http://www.rickk.com/sslwrap/"><span class="icon"> </span>sslwrap</a> can be used instead,
+or <a class="ext-link" href="http://trac.edgewall.org/wiki/STunnelTracd"><span class="icon"> </span>stunnel -- a tutorial on how to use stunnel with tracd</a> or Apache with mod_proxy.
+</li></ul><h2 id="Usageexamples">Usage examples</h2>
+<p>
+A single project on port 8080. (<a class="ext-link" href="http://localhost:8080/"><span class="icon"> </span>http://localhost:8080/</a>)
+</p>
+<pre class="wiki"> $ tracd -p 8080 /path/to/project
+</pre><p>
+Stricly speaking this will make your Trac accessible to everybody from your network rather than <em>localhost only</em>. To truly limit it use <em>--hostname</em> option.
+</p>
+<pre class="wiki"> $ tracd --hostname=localhost -p 8080 /path/to/project
+</pre><p>
+With more than one project. (<a class="ext-link" href="http://localhost:8080/project1/"><span class="icon"> </span>http://localhost:8080/project1/</a> and <a class="ext-link" href="http://localhost:8080/project2/"><span class="icon"> </span>http://localhost:8080/project2/</a>)
+</p>
+<pre class="wiki"> $ tracd -p 8080 /path/to/project1 /path/to/project2
+</pre><p>
+You can't have the last portion of the path identical between the projects since Trac uses that name to keep the URLs of the
+different projects unique. So if you use <tt>/project1/path/to</tt> and <tt>/project2/path/to</tt>, you will only see the second project.
+</p>
+<p>
+An alternative way to serve multiple projects is to specify a parent directory in which each subdirectory is a Trac project, using the <tt>-e</tt> option. The example above could be rewritten:
+</p>
+<pre class="wiki"> $ tracd -p 8080 -e /path/to
+</pre><p>
+To exit the server on Windows, be sure to use <tt>CTRL-BREAK</tt> -- using <tt>CTRL-C</tt> will leave a Python process running in the background.
+</p>
+<h2 id="InstallingasaWindowsService">Installing as a Windows Service</h2>
+<h3 id="Option1">Option 1</h3>
+<p>
+To install as a Windows service, get the <a class="ext-link" href="http://www.google.com/search?q=srvany.exe"><span class="icon"> </span>SRVANY</a> utility and run:
+</p>
+<pre class="wiki"> C:\path\to\instsrv.exe tracd C:\path\to\srvany.exe
+ reg add HKLM\SYSTEM\CurrentControlSet\Services\tracd\Parameters /v Application /d "\"C:\path\to\python.exe\" \"C:\path\to\python\scripts\tracd-script.py\" &lt;your tracd parameters&gt;"
+ net start tracd
+</pre><p>
+<strong>DO NOT</strong> use <tt>tracd.exe</tt>.  Instead register <tt>python.exe</tt> directly with <tt>tracd-script.py</tt> as a parameter.  If you use <tt>tracd.exe</tt>, it will spawn the python process without SRVANY's knowledge.  This python process will survive a <tt>net stop tracd</tt>.
+</p>
+<p>
+If you want tracd to start automatically when you boot Windows, do:
+</p>
+<pre class="wiki"> sc config tracd start= auto
+</pre><p>
+The spacing here is important.
+</p>
+<div class="wikipage"><p>
+Once the service is installed, it might be simpler to run the Registry Editor rather than use the <tt>reg add</tt> command documented above.  Navigate to:<br />
+<tt>HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\tracd\Parameters</tt>
+</p>
+<p>
+Three (string) parameters are provided:
+</p>
+<table class="wiki">
+<tr><td style="text-align: left">AppDirectory </td><td style="text-align: left">C:\Python26\ 
+</td></tr><tr><td style="text-align: left">Application </td><td style="text-align: left">python.exe 
+</td></tr><tr><td style="text-align: left">AppParameters </td><td style="text-align: left">scripts\tracd-script.py -p 8080 ... 
+</td></tr></table>
+<p>
+Note that, if the AppDirectory is set as above, the paths of the executable <em>and</em> of the script name and parameter values are relative to the directory.  This makes updating Python a little simpler because the change can be limited, here, to a single point.
+(This is true for the path to the .htpasswd file, as well, despite the documentation calling out the /full/path/to/htpasswd; however, you may not wish to store that file under the Python directory.)
+</p>
+</div><p>
+For Windows 7 User, srvany.exe may not be an option, so you can use <a class="ext-link" href="http://www.google.com/search?q=winserv.exe"><span class="icon"> </span>WINSERV</a> utility and run:
+</p>
+<pre class="wiki">"C:\path\to\winserv.exe" install tracd -displayname "tracd" -start auto "C:\path\to\python.exe" c:\path\to\python\scripts\tracd-script.py &lt;your tracd parameters&gt;"
+
+net start tracd
+</pre><h3 id="Option2">Option 2</h3>
+<p>
+Use <a class="ext-link" href="http://trac-hacks.org/wiki/WindowsServiceScript"><span class="icon"> </span>WindowsServiceScript</a>, available at <a class="ext-link" href="http://trac-hacks.org/"><span class="icon"> </span>Trac Hacks</a>. Installs, removes, starts, stops, etc. your Trac service.
+</p>
+<h2 id="UsingAuthentication">Using Authentication</h2>
+<p>
+Tracd provides support for both Basic and Digest authentication. Digest is considered more secure. The examples below use Digest; to use Basic authentication, replace <tt>--auth</tt> with <tt>--basic-auth</tt> in the command line.
+</p>
+<p>
+The general format for using authentication is:
+</p>
+<pre class="wiki"> $ tracd -p port --auth="base_project_dir,password_file_path,realm" project_path
+</pre><p>
+where:
+</p>
+<ul><li><strong>base_project_dir</strong>: the base directory of the project specified as follows:
+<ul><li>when serving multiple projects: <em>relative</em> to the <tt>project_path</tt>
+</li><li>when serving only a single project (<tt>-s</tt>): the name of the project directory
+</li></ul></li></ul><blockquote>
+<p>
+Don't use an absolute path here as this won't work. <em>Note:</em> This parameter is case-sensitive even for environments on Windows.
+</p>
+</blockquote>
+<ul><li><strong>password_file_path</strong>: path to the password file
+</li><li><strong>realm</strong>: the realm name (can be anything)
+</li><li><strong>project_path</strong>: path of the project
+</li></ul><ul><li><strong><tt>--auth</tt></strong> in the above means use Digest authentication, replace <tt>--auth</tt> with <tt>--basic-auth</tt> if you want to use Basic auth.  Although Basic authentication does not require a "realm", the command parser does, so the second comma is required, followed directly by the closing quote for an empty realm name.
+</li></ul><p>
+Examples:
+</p>
+<pre class="wiki"> $ tracd -p 8080 \
+   --auth="project1,/path/to/passwordfile,mycompany.com" /path/to/project1
+</pre><p>
+Of course, the password file can be be shared so that it is used for more than one project:
+</p>
+<pre class="wiki"> $ tracd -p 8080 \
+   --auth="project1,/path/to/passwordfile,mycompany.com" \
+   --auth="project2,/path/to/passwordfile,mycompany.com" \
+   /path/to/project1 /path/to/project2
+</pre><p>
+Another way to share the password file is to specify "*" for the project name:
+</p>
+<pre class="wiki"> $ tracd -p 8080 \
+   --auth="*,/path/to/users.htdigest,mycompany.com" \
+   /path/to/project1 /path/to/project2
+</pre><h3 id="BasicAuthorization:Usingahtpasswdpasswordfile">Basic Authorization: Using a htpasswd password file</h3>
+<p>
+This section describes how to use <tt>tracd</tt> with Apache .htpasswd files.
+</p>
+<p>
+To create a .htpasswd file use Apache's <tt>htpasswd</tt> command (see <a class="wiki" href="TracStandalone%3Fversion=1.html#GeneratingPasswordsWithoutApache">below</a> for a method to create these files without using Apache):
+</p>
+<pre class="wiki"> $ sudo htpasswd -c /path/to/env/.htpasswd username
+</pre><p>
+then for additional users:
+</p>
+<pre class="wiki"> $ sudo htpasswd /path/to/env/.htpasswd username2
+</pre><p>
+Then to start <tt>tracd</tt> run something like this:
+</p>
+<pre class="wiki"> $ tracd -p 8080 --basic-auth="projectdirname,/fullpath/environmentname/.htpasswd,realmname" /fullpath/environmentname
+</pre><p>
+For example:
+</p>
+<pre class="wiki"> $ tracd -p 8080 --basic-auth="testenv,/srv/tracenv/testenv/.htpasswd,My Test Env" /srv/tracenv/testenv
+</pre><p>
+<em>Note:</em> You might need to pass "-m" as a parameter to htpasswd on some platforms (OpenBSD).
+</p>
+<h3 id="Digestauthentication:Usingahtdigestpasswordfile">Digest authentication: Using a htdigest password file</h3>
+<p>
+If you have Apache available, you can use the htdigest command to generate the password file. Type 'htdigest' to get some usage instructions, or read <a class="ext-link" href="http://httpd.apache.org/docs/2.0/programs/htdigest.html"><span class="icon"> </span>this page</a> from the Apache manual to get precise instructions.  You'll be prompted for a password to enter for each user that you create.  For the name of the password file, you can use whatever you like, but if you use something like <tt>users.htdigest</tt> it will remind you what the file contains. As a suggestion, put it in your &lt;projectname&gt;/conf folder along with the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">trac.ini</a> file.
+</p>
+<p>
+Note that you can start tracd without the --auth argument, but if you click on the <em>Login</em> link you will get an error.
+</p>
+<h3 id="GeneratingPasswordsWithoutApache">Generating Passwords Without Apache</h3>
+<p>
+Basic Authorization can be accomplished via this <a class="ext-link" href="http://www.4webhelp.net/us/password.php"><span class="icon"> </span>online HTTP Password generator</a>.  Copy the generated password-hash line to the .htpasswd file on your system.
+</p>
+<p>
+You can use this simple Python script to generate a <strong>digest</strong> password file:
+</p>
+<div class="code"><pre><span class="kn">from</span> <span class="nn">optparse</span> <span class="kn">import</span> OptionParser
+<span class="c"># The md5 module is deprecated in Python 2.5</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">hashlib</span> <span class="kn">import</span> md5
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">md5</span> <span class="kn">import</span> md5
+realm <span class="o">=</span> <span class="s">'trac'</span>
+
+<span class="c"># build the options</span>
+usage <span class="o">=</span> <span class="s">"usage: %prog [options]"</span>
+parser <span class="o">=</span> OptionParser<span class="p">(</span>usage<span class="o">=</span>usage<span class="p">)</span>
+parser<span class="o">.</span>add_option<span class="p">(</span><span class="s">"-u"</span><span class="p">,</span> <span class="s">"--username"</span><span class="p">,</span>action<span class="o">=</span><span class="s">"store"</span><span class="p">,</span> dest<span class="o">=</span><span class="s">"username"</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="s">"string"</span><span class="p">,</span>
+                  help<span class="o">=</span><span class="s">"the username for whom to generate a password"</span><span class="p">)</span>
+parser<span class="o">.</span>add_option<span class="p">(</span><span class="s">"-p"</span><span class="p">,</span> <span class="s">"--password"</span><span class="p">,</span>action<span class="o">=</span><span class="s">"store"</span><span class="p">,</span> dest<span class="o">=</span><span class="s">"password"</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="s">"string"</span><span class="p">,</span>
+                  help<span class="o">=</span><span class="s">"the password to use"</span><span class="p">)</span>
+parser<span class="o">.</span>add_option<span class="p">(</span><span class="s">"-r"</span><span class="p">,</span> <span class="s">"--realm"</span><span class="p">,</span>action<span class="o">=</span><span class="s">"store"</span><span class="p">,</span> dest<span class="o">=</span><span class="s">"realm"</span><span class="p">,</span> <span class="nb">type</span> <span class="o">=</span> <span class="s">"string"</span><span class="p">,</span>
+                  help<span class="o">=</span><span class="s">"the realm in which to create the digest"</span><span class="p">)</span>
+<span class="p">(</span>options<span class="p">,</span> args<span class="p">)</span> <span class="o">=</span> parser<span class="o">.</span>parse_args<span class="p">()</span>
+
+<span class="c"># check options</span>
+<span class="k">if</span> <span class="p">(</span>options<span class="o">.</span>username <span class="ow">is</span> <span class="bp">None</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span>options<span class="o">.</span>password <span class="ow">is</span> <span class="bp">None</span><span class="p">):</span>
+   parser<span class="o">.</span>error<span class="p">(</span><span class="s">"You must supply both the username and password"</span><span class="p">)</span>
+<span class="k">if</span> <span class="p">(</span>options<span class="o">.</span>realm <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">):</span>
+   realm <span class="o">=</span> options<span class="o">.</span>realm
+   
+<span class="c"># Generate the string to enter into the htdigest file</span>
+kd <span class="o">=</span> <span class="k">lambda</span> x<span class="p">:</span> md5<span class="p">(</span><span class="s">':'</span><span class="o">.</span>join<span class="p">(</span>x<span class="p">))</span><span class="o">.</span>hexdigest<span class="p">()</span>
+<span class="k">print</span> <span class="s">':'</span><span class="o">.</span>join<span class="p">((</span>options<span class="o">.</span>username<span class="p">,</span> realm<span class="p">,</span> kd<span class="p">([</span>options<span class="o">.</span>username<span class="p">,</span> realm<span class="p">,</span> options<span class="o">.</span>password<span class="p">])))</span>
+</pre></div><p>
+Note: If you use the above script you must set the realm in the <tt>--auth</tt> argument to <strong><tt>trac</tt></strong>. Example usage (assuming you saved the script as trac-digest.py):
+</p>
+<pre class="wiki"> $ python trac-digest.py -u username -p password &gt;&gt; c:\digest.txt
+ $ tracd --port 8000 --auth=proj_name,c:\digest.txt,trac c:\path\to\proj_name
+</pre><h4 id="Usingmd5sum">Using <tt>md5sum</tt></h4>
+<p>
+It is possible to use <tt>md5sum</tt> utility to generate digest-password file:
+</p>
+<pre class="wiki"> $ printf "${user}:trac:${password}" | md5sum - &gt;&gt;user.htdigest
+</pre><p>
+and manually delete " -" from the end and add "${user}:trac:" to the start of line from 'to-file'.
+</p>
+<h2 id="Reference">Reference</h2>
+<p>
+Here's the online help, as a reminder (<tt>tracd --help</tt>):
+</p>
+<pre class="wiki">Usage: tracd [options] [projenv] ...
+
+Options:
+  --version             show program's version number and exit
+  -h, --help            show this help message and exit
+  -a DIGESTAUTH, --auth=DIGESTAUTH
+                        [projectdir],[htdigest_file],[realm]
+  --basic-auth=BASICAUTH
+                        [projectdir],[htpasswd_file],[realm]
+  -p PORT, --port=PORT  the port number to bind to
+  -b HOSTNAME, --hostname=HOSTNAME
+                        the host name or IP address to bind to
+  --protocol=PROTOCOL   http|scgi|ajp
+  -q, --unquote         unquote PATH_INFO (may be needed when using ajp)
+  --http10              use HTTP/1.0 protocol version (default)
+  --http11              use HTTP/1.1 protocol version instead of HTTP/1.0
+  -e PARENTDIR, --env-parent-dir=PARENTDIR
+                        parent directory of the project environments
+  --base-path=BASE_PATH
+                        the initial portion of the request URL's "path"
+  -r, --auto-reload     restart automatically when sources are modified
+  -s, --single-env      only serve a single project without the project list
+</pre><h2 id="Tips">Tips</h2>
+<h3 id="Servingstaticcontent">Serving static content</h3>
+<p>
+If <tt>tracd</tt> is the only web server used for the project, 
+it can also be used to distribute static content 
+(tarballs, Doxygen documentation, etc.)
+</p>
+<p>
+This static content should be put in the <tt>$TRAC_ENV/htdocs</tt> folder,
+and is accessed by URLs like <tt>&lt;project_URL&gt;/chrome/site/...</tt>.
+</p>
+<p>
+Example: given a <tt>$TRAC_ENV/htdocs/software-0.1.tar.gz</tt> file,
+the corresponding relative URL would be <tt>/&lt;project_name&gt;/chrome/site/software-0.1.tar.gz</tt>, 
+which in turn can be written as <tt>htdocs:software-0.1.tar.gz</tt> (<a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">TracLinks</a> syntax) or <tt>[/&lt;project_name&gt;/chrome/site/software-0.1.tar.gz]</tt> (relative link syntax). 
+</p>
+<blockquote>
+<p>
+<em>Support for <tt>htdocs:</tt> <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">TracLinks</a> syntax was added in version 0.10</em>
+</p>
+</blockquote>
+<h3 id="Usingtracdbehindaproxy">Using tracd behind a proxy</h3>
+<p>
+In some situations when you choose to use tracd behind Apache or another web server.
+</p>
+<p>
+In this situation, you might experience issues with redirects, like being redirected to URLs with the wrong host or protocol. In this case (and only in this case), setting the <tt>[trac] use_base_url_for_redirect</tt> to <tt>true</tt> can help, as this will force Trac to use the value of <tt>[trac] base_url</tt> for doing the redirects.
+</p>
+<p>
+If you're using the AJP protocol to connect with <tt>tracd</tt> (which is possible if you have flup installed), then you might experience problems with double quoting. Consider adding the <tt>--unquote</tt> parameter.
+</p>
+<p>
+See also <a class="ext-link" href="http://trac.edgewall.org/intertrac/TracOnWindowsIisAjp" title="TracOnWindowsIisAjp in Trac project trac"><span class="icon"> </span>TracOnWindowsIisAjp</a>, <a class="ext-link" href="http://trac.edgewall.org/intertrac/TracNginxRecipe" title="TracNginxRecipe in Trac project trac"><span class="icon"> </span>TracNginxRecipe</a>.
+</p>
+<h3 id="Servingadifferentbasepaththan">Serving a different base path than /</h3>
+<p>
+Tracd supports serving projects with different base urls than /&lt;project&gt;. The parameter name to change this is
+</p>
+<pre class="wiki"> $ tracd --base-path=/some/path
+</pre><hr />
+<p>
+See also: <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInstall">TracInstall</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracCgi">TracCgi</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracModPython">TracModPython</a>, <a class="wiki" href="TracGuide.html">TracGuide</a>, <a class="ext-link" href="http://trac.edgewall.org/intertrac/TracOnWindowsStandalone%23RunningTracdasservice" title="TracOnWindowsStandalone#RunningTracdasservice in Trac project trac"><span class="icon"> </span>Running tracd.exe as a Windows service</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <script type="text/javascript">
+        jQuery.loadStyleSheet("/preparde/pygments/trac.css", "text/css");
+    </script>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracStandalone?version=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

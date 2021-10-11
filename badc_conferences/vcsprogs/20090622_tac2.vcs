@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20090621T230000Z
+DTEND:20090625T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Aachen, Germany and Maastricht, Netherla=
+nds
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000D0BD6EC2BE57C9010000000000000000100
+ 00000E683933DCFD8E6499CB703CFF59E8E96
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:2nd Conference on Transport, Atmosphe=
+re and Climate=0D=0AAachen, Germany and Maastricht, The Netherlands=0D=0A22=
+-25 June 2009=0D=0A=0D=0AThe TAC-2 international scientific conference will=
+ be held at Eurogress conference=0D=0Acentre in Aachen, with a one-day sess=
+ion for policy makers and the media in=0D=0AMaastricht on 24 June. The TAC-=
+2 is a follow-on of TAC 2006. It is jointly organised=0D=0Aby the Institute=
+ of Atmospheric Physics at the German Aerospace Center (DLR) and=0D=0Athe R=
+oyal Netherlands Meteorological Institute (KNMI).=0D=0A=0D=0AThe scope of t=
+he conference covers all aspects of the impact of the different modes=0D=0A=
+of transport (aviation, road transport, shipping etc.) on atmospheric chemi=
+stry, microphysics,=0D=0Aradiation and climate. In light of the global rele=
+vance of the conference=0D=0Athemes, participants from all over the world a=
+re welcome to attend. =0D=0A=0D=0AFurther information and pre-registration =
+will be made available on the TAC website=0D=0Ahttp://www.pa.op.dlr.de/tac/=
+. After registration, you will automatically receive updated=0D=0Ainformati=
+on, e.g., instructions for abstracts.=0D=0A=0D=0A <<TAC-2-first-announcemen=
+t.pdf>> =0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:International Conference "Transport, Atmo=
+sphere and Climate (TAC-2)
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

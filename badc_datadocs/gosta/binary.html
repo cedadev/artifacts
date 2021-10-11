@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>GOSTAplus Format - Raw Binary</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>What is the format raw binary ?</H1>
+
+<BR CLEAR="ALL"><HR ALIGN=LEFT>
+
+<P><B><I>A GOSTAplus Raw Binary Data File</I></B> contains a header
+and N scientific data points. Whereas the header is recorded as
+ASCII type, the N scientific data points are in a UNIX binary
+integer (2 bytes) type.
+
+<P><CENTER><TABLE BORDER="1" CELLPADDING="4" CELLSPACING="2">
+  <TR>
+    <TD><B>FILENAME:</B></TD> 
+    <TD>xxxxxxxx.RAW</TD> 
+  </TR>
+  <TR>
+    <TD><B>ACCESS:</B></TD> 
+    <TD>Sequential direct</TD> 
+  </TR>
+  <TR VALIGN="TOP">
+    <TD><B>TYPE:</B></TD> 
+    <TD><U>Header</U>: <I>ASCII<BR>
+      </I><U>Data:</U> <I>Binary 16 bit Integers (2 bytes per data
+      number)</I></TD> 
+  </TR>
+  <TR VALIGN="TOP">
+    <TD><B>SIZE:</B></TD> 
+    <TD>
+      <P><U>Header:</U> <I>512 bytes containing values which represent
+      the dimension of the binary data grid. (plane, row, column)<BR>
+<BR>
+      </I><U>Binary Data Grid Size (bytes):</U> <I>plane * row * column
+      *&nbsp;2 bytes</I>
+
+      <P><U>Total Size of File (bytes):</U> <I>512 bytes+ (plane *
+      row * column *&nbsp;2 bytes)</I>
+    </TD>
+  </TR>
+</TABLE></CENTER>
+
+<P>Utility programs included here are:
+
+<BLOCKQUOTE>
+  <P><B>raw2asci<BR>
+  readraw</B></BLOCKQUOTE>
+
+<P>They are made available in two formats:
+
+<BLOCKQUOTE>
+  <P>1) <B>Source</B> - which can be modified by the user (e.g. to add scientific
+  calculations).<BR>
+  2) <B>Executable</B> - ready to use programs.</BLOCKQUOTE>
+
+<P></BODY>
+</HTML>

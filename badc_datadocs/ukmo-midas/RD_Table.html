@@ -1,0 +1,151 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Rain Data Table</TITLE>
+  <!-- Created 14th June 2006 -->
+  <!-- Author: Belinda Robinson BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Daily Rain data - Columns in the RD table <BR CLEAR="ALL"></H1>
+<HR ALIGN=LEFT>
+<a href="RD_Table.html#description">Table Description</a> - 
+<a href="RD_Table.html#table">Columns in the RD table</a> - 
+<a href="RD_Table.html#filter">How to start filtering the rows of data out</a>
+
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<a name="description"></a>
+<h3>Table Description: </h3>This entity contains rainfall amounts measured over one or more 24 hour 
+	  periods, ending on the stated day. Attributes <font face="Courier New">ob_end_day</font> and 
+	  <font face="Courier New">ob_day_count</font> define the observation period. It does NOT 
+	  contain 09-21Z and 21-09Z rainfall; they are attributes of the 
+	  <font face="Courier New">rain_hrly_ob</font> entity. The entity can contain rainfall of two 
+	  types:
+	  <ul>
+	    <li>Daily rainfall over a 24 hour period -  usually 09-09Z.<br>In this case 
+		<font face="Courier New">ob_day_count</font> = 1, the default value</li>
+	    <li>Daily rainfall from irregular sources - those which report monthly or weekly.<br>In 
+		this case <font face="Courier New">ob_day_count</font> = the number of days over which 
+		the rainfall is measured.</li>
+      </ul>
+      Some stations report rainfall at 10Z, so time is included as an attribute, although there is 
+	  no time field on the rainfall postcard. To prevent multiple observations for a station for a 
+	  day, attribute <font face="Courier New">ob_day_count</font> is not in the primary key. The 
+	  identifier is a rainfall station number. Some stations report daily rainfall via F3208 using 
+	  their DCNN. MIDAS will store them as rows in this table using their rainfall number, i.e. 
+	  <font face="Courier New">id_type</font> = 'rain' and <font face="Courier New">id</font> = 
+	  rainfall_number.
+
+<a name="table"></a>
+<h3>Columns in the RD table:</h3>
+For the convenience of users, the RD file column headers are available for download in <a href="Headers/RD_Column_Headers.xlsx    ">Excel</a> or as a <a href="Headers/RD_Column_Headers.csv">comma separated text file</a>
+<P>
+
+      <table border="1" cellspacing="0" width="95%">
+      <tr> 
+        <td valign="TOP" width="5%" align="center"><b>PK</b></td>
+        <td valign="TOP" width="40%"><b>Attribute</b></td> 
+        <td valign="TOP" width="35%"><b>Description / Units / Precision</b></td>
+      </tr>
+  <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id</font></td>
+        <td valign="TOP" width="35%">raingauge number</td>
+      </tr>
+ <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id_type</font></td>
+        <td valign="TOP" width="35%"><A HREF="ukmo_guide.html#3.6">Identifier type</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_date</font></td>
+        <td valign="TOP" width="35%">Date of observation</td>
+      </tr>
+            <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">version_num</font></td>
+        <td valign="TOP" width="35%">Observation version number. <strong>Use the row with '1'</strong>, as this has been quality checked by the Met Office
+</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_domain_name</font></td>
+        <td valign="TOP" width="35%"><A HREF="met_domain.html">Message type</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_end_ctime</font></td>
+        <td valign="TOP" width="35%">Clock-time at end of observation</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_day_cnt</font></td>
+        <td valign="TOP" width="35%">Observation day count</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_id</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#wind">Unique source identifier</a> or station site number</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rec_st_ind</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/state_indicators.html">State indicator for the record**</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prcp_amt</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.6">Precipitation amount</a><br>Units=1mm, reported to the nearest 0.1 mm</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_day_cnt_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - day count**</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prcp_amt_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - precipitation amount**</a></td>
+      </tr>
+ <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">meto_stmp_time</font></td>
+        <td valign="TOP" width="35%">Met Office receipt stamp time</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">midas_stmp_etime</font></td>
+        <td valign="TOP" width="35%">Elapsed time to storage in MIDAS<br>minutes</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prcp_amt_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - precipitation amount**</a></td>
+      </tr>
+     
+      </table><BR>
+<BR>
+** Details available to registered users only.<p>
+More information about the Met Office surface data is available
+in the <A HREF="ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+<a name="filter"></a>
+<h3>How to start filtering the rows of data out:</h3>
+<ol>
+<li>As the data arrive at the Met Office it undergoes quality control to check that the data are correct and consistent with the surrounding data points. Whether the process has occured or not is indicated by the <strong>version number</strong> (1 is the one to use as indicated in the table above).
+<p>
+<li>To show the progress of the data through the quality control the various variables will have an associated <strong>_q value</strong> (e.g. prcp_amt_q). This _q value will have different values for each record (see details in table above).
+<p>
+<li> While the Met Office MIDAS system overwrites the existing entry in their database the BADC's MIDAS entries do not as the BADC takes snapshots of the the MIDAS database from time to time leading to duplicate entries occuring in our archive. If duplicate records are found, check the associated meto_stmp_time to determine which record is the most recent one - this is the one to use and the other(s) can be ignored. 
+</ol>
+<p>
+
+
+</BODY>
+</HTML>

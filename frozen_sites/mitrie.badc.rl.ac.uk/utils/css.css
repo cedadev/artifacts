@@ -1,0 +1,158 @@
+body {
+  color            : #333;
+  background-color : #FFF;
+  font-family      : verdana, arial, helvetica, sans-serif;
+  font-size        : 0.8em;
+  margin           : 0px;
+}
+
+div#top {
+  margin           : 0px;
+  padding-top      : 5px;
+  padding-bottom   : 5px;
+  background-color : #ca0;
+  color            : #00d;
+}
+
+div#top h1 {
+  font             : 2.56em "trebuchet ms", verdana, arial, helvetica, sans-serif;
+  padding-left     : 15px;
+  margin-top       : 8px;
+  margin-bottom    : 8px;
+  text-shadow: 8px 8px 8px #000;
+}
+
+div#top h2 {
+  font             : 1.6em "trebuchet ms", verdana, arial, helvetica, sans-serif;
+  padding-left     : 20px;
+  margin-bottom    : 8px;
+  margin-top       : 0px;
+  font-style       : italic;
+  text-shadow: 3px 3px 3px #000;
+}
+
+div#main {
+  margin-left      : 18%;
+  margin-right     : 7%;
+  margin-top       : 0px;
+  padding-top      : 20px;
+  padding-left     : 10px;
+  padding-bottom   : 20px;
+}
+
+div#main h2  {
+  margin-top       : 0px;
+  margin-bottom    : 5px;
+  padding          : 0px;
+  font             : 1.92em "trebuchet ms", verdana, arial, helvetica, sans-serif;
+}
+ 
+div#main h3  {
+  margin-top       : 0px;
+  margin-bottom    : 5px;
+  padding          : 0px;
+  font             : 1.5em arial, helvetica, sans-serif;
+}
+
+div#main h4  {
+  margin-top       : 20px;
+  margin-bottom    : 0px;
+  padding          : 0px;
+  border-bottom    : 1px solid #444;
+  font             : bold 1.2em arial, helvetica, sans-serif;
+}
+ 
+div#main p {
+  margin-top       : 0px;
+  margin-bottom    : 10px;
+  padding          : 0px;
+}
+
+div#menu {
+  float            : left;
+  width            : 15%;
+  margin-top       : 0px;
+  margin-right     : 0px;
+  padding-left     : 15px;
+  padding-top      : 20px;
+  padding-right    : 10px;
+  padding-bottom   : 20px;
+  background-color : #afa;
+  border-right     : 1px solid #ddd;
+}
+
+div#menu h3 {
+  margin-bottom    : 3px;
+  padding-top      : 0px;
+  margin-top       : 5px;
+  border-bottom    : 1px solid #ccc;
+  font             : bold 1em verdana, arial, helvetica, sans-serif;
+}
+
+div#menu p {
+  margin-top       : 0px;
+  margin-bottom    : 0px;
+  font             : 0.9em "trebuchet ms", verdana, arial, helvetica, sans-serif;
+  line-height      : 1.1em;
+}
+
+a:link, a:visited, a:active {
+  color            : #996;
+  text-decoration  : none;
+  background-color : transparent;
+}
+
+a:hover {
+  text-decoration  : underline;
+  background-color : transparent;
+}  
+
+a.external {
+  font-style       : italic;
+}
+
+img {
+  border           : 0px;
+}
+
+div#bottom {
+  clear            : left;
+  font-size        : 0.8em;
+  border-top       : 1px solid #DDD;
+  margin-top       : 0px;
+  padding-bottom   : 5px;
+  text-align       : right;
+  padding-right    : 15px;
+  color            : #AAA;
+}  
+
+.debug {
+  font-size        : 0.8em;
+  color            : #AAA;
+}
+
+tt {
+  font-size        : 1.21em;
+}
+
+p.blog_date {
+  font-size        : 0.8em;
+  color            : #666;
+}
+
+div.comment, div.trackback {
+  border-top: 1px solid #999;
+  margin: 10px 5px 5px 5px;
+  padding: 3px;
+}
+
+p.comment_citation, p.trackback_citation {
+  font-size : 0.8em;
+  font-style: italic;
+}
+
+.footnotes {
+  font-size        : smaller;
+  border-top       : 1px solid #DDD;
+  padding-top       : 10px;
+}

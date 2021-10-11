@@ -1,0 +1,190 @@
+    FORMAT.DOC     Format Specification for STEP Data Exchange Files
+
+    1. File Organization
+
+    1.1 Single file per flight.  If file exceeds disk size, the flight data 
+        should be continued on subsequent disks, repeating the header 
+        information, with incremented disk count.  The file names in such 
+        cases should reflect that they are segments of the same flight file.
+
+        Note: If the flight data must extend over more than one disk, 
+              it will not be a single file in the PC or MS DOS sense, 
+              but the subsequent file names should be the same with an 
+              incremented file extension number.
+
+    1.2 The file naming convention will consist of a two character identifier 
+        (this could be initials of the measured quantity, or of the 
+        experimenter, the latter being best when there are duplicate 
+        instruments) and then the flight date.  The extension should have a 
+        letter indicating the flight number for that day allowing for the 
+        possibility of multiple flights in a day.  Finally there should be a 
+        number indicating the sequence number for that flight's data, to allow
+        for multiple disks required for a single flight.  In any event the 
+        extension should be added to each file; if there is only one flight 
+        and one disk the extension would be .A1.  Examples:
+
+           SS870127.A1.........1st flight on Jan 27, disk no. 1
+           SS870129.B1.........2nd flight on Jan 29, disk no. 1
+           SS870205.A1.........1st flight on Feb  5, disk no. 1
+           SS870205.A2.........1st flight on Feb  5, disk no. 2
+
+    1.3 Required header info at the beginning of each file in specified format.
+
+
+    2. Header Format
+
+    2.1 Header should supply minimum required information in the format and 
+        order specified in section 2.4.
+
+    2.2 Additional information concerning the data may be added at the end of 
+        the header segment, after the required information.
+
+        Note: It has been requested that a note concerning the number 
+              of significant figures which are reliable( since we are 
+              recording scaled integers) be added. This note should be 
+              contained in the header segment,  after the required
+              information.
+
+    2.3 The number of lines specified in the header should include any blank 
+        lines up to the beginning of data.
+
+    2.4 Required header information should appear in the order outlined below.
+
+        Note: The line numbers are really record numbers since for a 
+              large number of variables the scale factors and/or 
+              missing values may require more than one line but are 
+              read as one record.
+
+        Line  1.  Number of lines in the header (including any blank lines).
+        Line  2.  Experimenter name (last name first).
+        Line  3.  Disk number; total disks for this flight (separated by a 
+                  blank).
+        Line  4.  Mission name.
+        Line  5.  Date, entered as: YY MM DD (separated by a blank).
+        Line  6.  Mission flight number; Lockheed sortie number (separated by 
+                  a blank).
+        Line  7.  Number of variables (Nv).
+        Line  8.  Data sample interval, delta t, in seconds.
+        Line  9.  Number of samples per time hack.
+        Line 10.  Number of samples per line.
+        Line 11.  Nv scale factor(s) for converting to engineering units (on 
+                  one line separated by blanks).  The scale factor is the 
+                  number by which one multiplies the integers on the disk file
+                  to obtain actual engineering units.
+        Line 12.  Nv missing value(s) for each recorded variable; this should 
+                  be a number made up of as many 9's as it takes to fill the 
+                  data field (on one line separated by blanks).  The missing
+                  values should be larger than any good data values.
+        Line 13.  Name var(1); eng units var(1).
+        Line 13+1 Name var(2); eng units var(2).
+        Line 13+2 Name var(3); eng units var(3).
+                      .
+                      .
+                      .
+        Line 13+(Nv-1). Name var(Nv); eng units var(Nv).
+
+        Total number of required lines in the header = 13+(Nv-1).  Additional
+        comments may follow the required lines.
+
+
+    3. Data Format
+
+    3.1 All data recorded as integer; the time hack can be written as integer 
+        or real, depending on the experimenter's need for specifying the exact
+        time of the measurement.
+
+    3.2 Time in GMT elapsed time, cumulative across midnight.
+
+    3.3 All data or data blocks are time tagged.
+
+    3.4 Time gaps have data field filled with 9's.
+
+    3.5 Data organization options.
+
+        3.5.1 Time hack on each line (record) followed by data values at that 
+              time, as follows: 
+
+              time(1) A(1) [ B(1) C(1) ]
+              time(2) A(2) [ B(2) C(2) ]
+              time(3) A(3) [ B(3) C(3) ]
+
+        3.5.2 Time hack on separate line followed by block of samples whose 
+              first value pertains to time hack.  If multiple variables in 
+              this option, the blocks are ordered by variable. 
+
+              For single variable:
+
+              time(1)
+              A(1) A(2) A(3) A(4)
+              A(5) A(6) A(7) A(8)
+              time(9)
+              A(9)  A(10) A(11) A(12)
+              A(13) A(14) A(15) A(16)
+
+              For multiple variables:
+
+              time(1)
+              A(1) A(2) A(3) A(4)
+              A(5) A(6) A(7) A(8)
+              B(1) B(2) B(3) B(4)
+              B(5) B(6) B(7) B(8)
+              time(9)
+              A(9)  A(10) A(11) A(12)
+              A(13) A(14) A(15) A(16)
+              B(9)  B(10) B(11) B(12)
+              B(13) B(14) B(15) B(16)
+
+
+    4. Examples For File Headers
+
+    4.1 Two examples of file headers are given below.  The line numbers 
+        enclosed by square brackets are only for comparison with the header
+        specifications given in section 2.4 and should not be included in the
+        exchange files.  The second example shows that comments may be 
+        included, if desired, after the required information.
+
+        Header example 1:
+
+        [ 1]  14
+        [ 2]  Proffitt, Mike
+        [ 3]  1 1
+        [ 4]  STEP Cloud 9
+        [ 5]  87 01 31
+        [ 6]  9 101
+        [ 7]  1
+        [ 8]  1.0
+        [ 9]  100
+        [10]  10
+        [11]  1.0
+        [12]  999999
+        [13]  Ozone ppbv
+        [14]  This data is perfect.
+                    .
+                    .
+                    DATA
+                    .
+                    .
+
+
+        Header example 2:
+
+        [ 1]  15 lines in the header 
+        [ 2]  Scott, Stan  NASA Ames Research Center 
+        [ 3]  1 2  (disk 1 of 2)
+        [ 4]  STEP Cloud 9
+        [ 5]  87 01 31  (year month day)
+        [ 6]  9 101 (STEP flt no./Lockheed sortie no.)
+        [ 7]  3 variables per sample
+        [ 8]  1.0 sec data sample interval
+        [ 9]  1 sample per time hack
+        [10]  1 sample per line  
+        [11]  0.1 0.1 0.1  (scale factors)
+        [12]  99999 9999 9999 (missing values)
+        [13]  Pressure mb 
+        [14]  Temperature K 
+        [15]  True Airspeed m/s 
+                    .
+                    .
+                    DATA
+                    .
+                    .

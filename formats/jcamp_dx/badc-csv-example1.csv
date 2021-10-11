@@ -1,0 +1,190 @@
+Conventions,G,BADC-CSV,1,
+title,G,UK Met Office MetDB AMDARS message
+creator,G,G A Parton,British Atmospheric Data Centre,
+location,G,global
+reference,G,"UK Meteorological Office. MetDB AMDARS data, [Internet]. British Atmospheric Data Centre, 2008, Date of citation. Available from http://badc.nerc.ac.uk/data/ukmo-metdb"
+valid_min,G,-9999999
+feature_type,G,point collection
+observation_station,G,Global Synoptic station network 
+activity,G,Met Office forcasting system
+source,G,UK Met Office metDB
+date_valid,G,2009-05-06
+last_revised_date,G,2009-05-11 15:40
+history,G,2009-05-11 15:40:41 : File created. 64278 data lines written to file.
+comments,G,AMDARS messages from the UK Met Office metDB. Archived at the BADC using the BADC-CSV format. The metdb_short_name field indicates the 
+comments,G,"data entity name used within the Met Office's metDB system and documentation, while the metdb_code_table field is the corresponding metDB code table reference"
+comments,G,code table comments have been taken from UK Met Office metDB documentation
+comments,G,"metdb_header_tag gives version number for header information, date this header version came into use and metDB message type to which it applies"
+metdb_header_tag,G,2,2009-05-06,amdars
+long_name,1,YEAR,year,
+standard_name,1,time,s,CF
+type,1,int
+metdb_short_name,1,YEAR
+long_name,2,MONTH,month,
+standard_name,2,time,s,CF
+type,2,int
+metdb_short_name,2,MNTH
+long_name,3,DAY,day,
+standard_name,3,time,s,CF
+type,3,int
+metdb_short_name,3,DAY
+long_name,4,HOUR,hour,
+standard_name,4,time,s,CF
+type,4,int
+metdb_short_name,4,HOUR
+long_name,5,MINUTE,minute,
+standard_name,5,time,s,CF
+type,5,int
+metdb_short_name,5,MINT
+long_name,6,Second,second,
+standard_name,6,time,s,CF
+type,6,int
+metdb_short_name,6,SCND
+long_name,7,TIME OF RECEIPT YEAR,year,
+type,7,int
+metdb_short_name,7,RCPT_YEAR
+long_name,8,TIME OF RECEIPT MONTH,month,
+type,8,int
+metdb_short_name,8,RCPT_MNTH
+long_name,9,TIME OF RECEIPT DAY,day,
+type,9,int
+metdb_short_name,9,RCPT_DAY
+long_name,10,TIME OF RECEIPT HOUR,hour,
+type,10,int
+metdb_short_name,10,RCPT_HOUR
+long_name,11,TIME OF RECEIPT MINUTE,minute,
+type,11,int
+metdb_short_name,11,RCPT_MINT
+long_name,12,Aircraft registration number,1,
+type,12,char
+metdb_short_name,12,RGSRN_NMBR
+long_name,13,Aircraft identifier,1,
+type,13,char
+metdb_short_name,13,CALL_SIGN
+long_name,14,LATITUDE,degrees,
+standard_name,14,latitude,degrees,CF
+type,14,int
+metdb_short_name,14,LTTD
+coordintate_variable,14,y
+long_name,15,LONGITUDE,degrees,
+standard_name,15,longitude,degrees,CF
+type,15,int
+metdb_short_name,15,LNGD
+coordintate_variable,15,x
+long_name,16,Altitude,m,
+type,16,float
+metdb_short_name,16,ALTD
+long_name,17,Original specification of lat/long,1,
+type,17,int
+metdb_short_name,17,CRDT_ORGL_SPFCN
+metdb_code_table,17,CODE TBL 002070,Original specification of latitude/longitude,
+flag_values,17,0,1,2,3,4,5,6,7,8,9,10,11,15
+flag_meanings,17,Actual location in seconds,Actual location in minutes,Actual location in degrees,Actual location in decidegrees,Actual location in centidegrees,Referenced to checkpoint in seconds,Referenced to checkpoint in minutes,Referenced to checkpoint in degrees,Referenced to checkpoint in decidegrees,Referenced to checkpoint in centidegrees,Actual Location in tenths of a minute,Referenced to checkpoint in tenths of a minute,Missing value
+comments,17, 12-14 Reserved
+long_name,18,Collecting centre,1,
+type,18,int
+metdb_short_name,18,COLTN_CNTR_CODE
+metdb_code_table,18,CODE TBL 001031, ORIGINATING/GENERATING CENTRE,
+flag_values,18,1,2,4,5,7,8,10,11,12,13,14,15,16,17,18,19
+flag_meanings,18,AMMC MELBOURNE,MELBOURNE,RUMS MOSCOW,MOSCOW,KWBC WASHINGTON (NCEP),KWXX US W/SERVICE (NWSTG),HECA CAIRO  RMC,CAIRO  RMC,GOOY DAKAR  RMC,DAKAR  RMC,HKNA NAIROBI RMC,NAIROBI RMC,FMMD ANTANANARIVO       (not in Manual),ANTANANARIVO       (not in Manual),DTTV TUNIS-CASABLANCA,TUNIS-CASABLANCA
+flag_values,18,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,
+flag_meanings,18,SPLP LAS PALMAS,DAMM ALGIERS,LPLG LAGOS  RMS         (not in Manual),LAGOS  RMS         (not in Manual),FAPR PRETORIA,FME  LA REUNION,RUKH KHABAROVSK,KHABAROVSK,DEMS NEW DELHI,NEW DELHI,UNNN NOVOSIBIRSK,NOVOSIBIRSK,RUTK TASHKENT,JEDDAH,RJTD TOKYO,TOKYO RMC,VTBB BANGKOK,MNUB ULAN BATOR,BABJ BEIJING,BEIJING,
+flag_values,18,40,41,42,43,44,45,46,51,52,53,54,55,57,58,59,60,61,62,64,65,
+flag_meanings,18,RKSL SEOUL,SABM BUENOS AIRES,BUENOS AIRES,SBBR BRASILIA,BRASILIA,SCSC SANTIAGO,BRAZILIAN SA - INPE,KMIA MIAMI,MIAMI  HURRICANE CENTRE,CWAO MONTREAL RMC,MONTREAL RMC,KSFO SANFRANCISCO,"KARS US AIR FORCE (ARGOS COMMUNICATIONS CENTRE, LANDOVER, MD)","KMRY US NAVY, MONTEREY",KBOU BOULDER (NOAA FORECAST LAB),NCAR,Service ARGOS (Landover),US Naval Oceanographic Office,PHNL HONOLULU,ADRM DARWIN,
+flag_values,18,66,67,69,70,71,74,75,76,78,79,80,81,82,83,84,85,86,87,88,89,
+flag_meanings,18,DARWIN,AMMC MELBOURNE,NZKL WELLINGTON,WELLINGTON,NFFN NADI (FIJI),EGRR UK MET OFFICE,UK MET OFFICE,MOSCOW,EDZW OFFENBACH,OFFENBACH,LIIB ROME   RMC,ROME   RMC,BGSF SONDRE/STROMFJORD GREENLAND ? (Manual says Norrkoping),ESWI NORRKOPING RMC,Toulouse,LFPW TOULOUSE,EFKL HELSINKI,LYMB BELGRADE,ENMI OSLO,LKPR PRAGUE,
+flag_values,18,90,91,92,93,94,95,96,97,98,99,110,160,210,211,212,213,214,215,216,217,
+flag_meanings,18,LCRO EPISKOPI,LTAA ANKARA,EDDZ FRANKFURT/MAIN,EGRB LONDON WAFC,EKMI COPENHAGEN,LERT ROTA,LGAT ATHENS,EESA ESA,ECMF ECMWF,EHDB DE BILT,VHHH HONG KONG,NOAA/NESDIS ,FRASCATI (ESA/ESRIN) ,LFRO LANNION ,LPPT LISBOA,BIRK REYKJAVIK,MADRID,LSZH ZURICH,ARGOS (Toulouse),LZIB BRATISLAVA,
+flag_values,18,218,219,220,221,254,
+flag_meanings,18,LHBP BUDAPEST,LJLJ LJUBLJANA,EPWA WARSAW,LDZA ZAGREB,EUMETSAT,
+long_name,19,Aircraft navigational system,1,
+type,19,int
+metdb_short_name,19,NVGTN_SYTM
+metdb_code_table,19,CODE TBL 002061,Aircraft navigational system,
+flag_values,19,0,1,7
+flag_meanings,19,Inertial navigation system,OMEGA,Missing value
+comments,19,   2-6 Reserved
+long_name,20, Type of aircraft data relay system,1,
+type,20,int
+metdb_short_name,20,DATA_RELY_SYTM
+metdb_code_table,20,CODE TBL 002062, Type of aircraft data relay system,
+flag_values,20,0,1,2,3,4,5,15
+flag_meanings,20,ASDAR,ASDAR (ACARS also available but not operative),ASDAR (ACARS also available and operative),ACARS,ACARS (ASDAR also available but not operative),ACARS (ASDAR also available and operative),Missing value
+comments,20,  6-14 Reserved
+long_name,21,Aircraft roll angle,degrees,
+type,21,float
+metdb_short_name,21,ARCT_ROLL_ANGL
+long_name,22,Pressure,Pa,
+type,22,float
+metdb_short_name,22,LEVL_PESR
+long_name,23,Phase of flight,1,
+type,23,int
+metdb_short_name,23,FLGT_PHAS
+metdb_code_table,23,CODE TBL 008004,Phase of aircraft flight,
+flag_values,23,0,1,2,3,4,5,6,7,63
+flag_meanings,23,Surface,Base of satellite sounding,Cloud top,Tropopause,Precipitable water,Sounding radiances,Mean temperatures,Ozone,Missing value
+comments,23,  8-62 Reserved
+long_name,24,Wind measurement instrument type,1,
+type,24,int
+metdb_short_name,24,WIND_INST_TYPE
+metdb_code_table,24,CODE TBL 002002,Type of instrumentation for wind measurement,
+flag_values,24,1,2,3
+flag_meanings,24,Certified instruments,Originally measured in knots,Originally measured in km h–1
+comments,24,Type of instrumentation and original units for wind measurement (measured in m/s unless otherwise indicated)
+comments,24,Code table 002002 is a 4 bit BUFR flag (bit). Bit 1 is the high order bit.
+comments,24,example uses: 0 means no bits set - i.e. none of the flag values are valid or not known
+comments,24,4 means bit 2 only is set  - i.e. originally meansured in knots
+comments,24,12 means bits 1 and 2 set - i.e. originally measured in knots by a certified instrument
+comments,24,8 means bit 1 is set - i.e. measured by certified instrument in m/s
+comments,24,A value of -9999999.0 means that the Met Office haven't been informed what the type of instrument was/is used for measurements.
+comments,24,In these cases they make judgement based on the WMO block number whether to convert from knots to m/s or not
+long_name,25,Wind direction,degrees,
+type,25,float
+metdb_short_name,25,LEVL_WIND_DRCTN
+long_name,26,Wind speed,ms-1,
+type,26,float
+metdb_short_name,26,LEVL_WIND_SPED
+long_name,27,Vertical gust velocity,ms-1,
+type,27,float
+metdb_short_name,27,VRTL_GUST_VLCY
+long_name,28,Vertical gust acceleration,ms-2,
+type,28,float
+metdb_short_name,28,VRTL_GUST_ACLTN,1,
+long_name,29,Degree of turbulence
+type,29,int
+metdb_short_name,29,TRBC_DEGR
+metdb_code_table,29,CODE TBL TRBC_DEGR,Degree Of Turbulence,
+flag_values,29,0,1,2,3
+flag_meanings,29,Nil      (Cloud/Clear),Slight   (Cloud/Clear),Moderate (Cloud/Clear),Severe   (Cloud/Clear)
+long_name,30,Precision of temperture observation,K,
+type,30,float
+metdb_short_name,30,TMPR_OBSVN_PRCSN
+long_name,31,Air temperature,K,
+type,31,float
+metdb_short_name,31,LEVL_AIR_TMPR
+long_name,32,Dew point temperature,K,
+type,32,float
+metdb_short_name,32,LEVL_DEW_PONT_TMPR
+long_name,33,Relative humidity, %,
+type,33,float
+metdb_short_name,33,LEVL_RLTV_HUMDY
+long_name,34,Mixing ration (from 18/06/07),kg/kg,
+type,34,float
+metdb_short_name,34,LEVL_MXNG_RATO
+long_name,35,Degree of airgframe icing,1,
+type,35,int
+metdb_short_name,35,ICE_DEGR
+metdb_code_table,35,CODE TBL 02041,Airframe icing,
+flag_values,35,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+flag_meanings,35,No icing,Light icing,Light icing in cloud,Light icing in precipitation,Moderate icing,Moderate icing in cloud,Moderate icing in precipitation,Severe icing,Severe icing in cloud,Severe icing in precipitation,Trace of icing,Trace of icing in cloud,Trace of icing in precipitation,Reserved,Reserved,Missing value
+data,
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35
+2009,5,6,12,0,-9999999,2009,5,6,12,2,AIRCRAFT,EU6349,59.5,5.73,4480,-9999999,-9999999,0,3,-9999999,-9999999,5,-9999999,293,18,-9999999,-9999999,-9999999,1,252.6,-9999999,-9999999,-9999999,-9999999
+2009,5,6,12,0,-9999999,2009,5,6,12,2,AIRCRAFT,EU6349,59.52,5.85,5060,-9999999,-9999999,0,3,-9999999,-9999999,5,-9999999,295,20.1,-9999999,-9999999,-9999999,1,248.5,-9999999,-9999999,-9999999,-9999999
+2009,5,6,12,0,-9999999,2009,5,6,12,4,AIRCRAFT,CNJCA314,45.42,-73.8,240,-9999999,-9999999,0,3,-9999999,-9999999,6,-9999999,102,3.1,-9999999,-9999999,-9999999,-9999999,281.2,-9999999,-9999999,-9999999,-9999999
+2009,5,6,12,0,-9999999,2009,5,6,12,4,AIRCRAFT,CNJCA317,43.9,-79.92,2550,-9999999,-9999999,0,3,-9999999,-9999999,6,-9999999,235,4.1,-9999999,-9999999,-9999999,-9999999,272.2,-9999999,-9999999,-9999999,-9999999
+2009,5,6,12,0,-9999999,2009,5,6,12,4,AIRCRAFT,JP9Z58UZ,33.95,133.98,5000,-9999999,-9999999,0,3,-9999999,-9999999,3,-9999999,173,5.1,-9999999,-9999999,-9999999,1,261.1,-9999999,-9999999,-9999999,-9999999
+2009,5,6,12,0,-9999999,2009,5,6,12,4,AIRCRAFT,JP9Z5Y6Z,31.28,129.97,12190,-9999999,-9999999,0,3,-9999999,-9999999,3,-9999999,245,28.8,-9999999,-9999999,-9999999,1,226.1,-9999999,-9999999,-9999999,-9999999
+2009,5,6,12,0,-9999999,2009,5,6,12,4,LH048,EU0583,52.9,10.72,4780,-9999999,-9999999,0,3,-9999999,-9999999,3,-9999999,299,24.7,-9999999,-9999999,-9999999,-9999999,259.3,-9999999,-9999999,0,-9999999
+2009,5,6,12,0,-9999999,2009,5,6,12,4,LH1852,EU0362,41.29,16.52,1500,-9999999,-9999999,0,3,-9999999,-9999999,6,-9999999,293,2.1,-9999999,-9999999,-9999999,-9999999,279.7,-9999999,-9999999,0,-9999999
+end data,

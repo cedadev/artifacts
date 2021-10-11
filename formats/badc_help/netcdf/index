@@ -1,0 +1,318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML LANG="EN">
+
+<HEAD>
+
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<META NAME="KEYWORDS" CONTENT="BADC, netCDF, CF CONVENTIONS, CF METADATA,
+CLIMATE AND FORECASTING METADATA CONVENTIONS, netCDF data, netCDF datafiles">
+
+<META NAME="DESCRIPTION" CONTENT="The BADC ecourages users to submit
+datasets to the archive in netCDF format. It has adopted the Climate
+and Forecasting metadata conventions for its netCDF files, to provide
+for future cataloguing and searching systems in the data archive.">
+  
+<TITLE>BADC Datasets: netCDF data</TITLE>
+
+</HEAD>
+
+<!-- Author: Jamie Kettleborough BADC -->
+<!-- Rewritten by Helen Walker, BADC - Feb 2003 -->
+<!-- Table of contents, links to CF Convention and to software packages
+     added by Anne De Rudder - December 2006 -->
+
+<BODY BGCOLOR="#FFFFFF">
+
+<H1>NetCDF data and datafiles</H1>
+
+<P>
+<EM>This is intended as a short introduction to netCDF data.
+The complete netCDF documentation can be found at 
+the <A HREF="http://www.unidata.ucar.edu/packages/netcdf/index.html"
+TARGET="_top">UNIDATA</A> web site. </EM>
+</P>
+
+<HR ALIGN="LEFT">
+
+<center>
+<font size=-1>Quick links to</font>
+<table cellpadding=8><tr><td align=center bgcolor=#0055aa>
+<a href="/help/formats/netcdf/index_cf.html"><b><font color=#ffffff>Climate
+and Forecast (CF) Metadata Convention Page from the BADC</font></b></a>
+</td></tr></table>
+<table cellpadding=8><tr><td align=center bgcolor=#0055aa>
+<a href="#Reading"><b><font color=#ffffff>List of downloadable software to
+write, read and handle NetCDF files</font></b></a>
+</td></tr></table>
+</center>
+
+<h2>Contents</h2>
+
+<ul>
+<li><a href="#What">What is NetCDF?</a>
+<li><a href="#Why">Why use NetCDF?</a>
+<li><a href="#CF">NetCDF and the <i>Climate and Forecast</i> (CF) Metadata
+    Convention</a>
+<li><a href="#Example">What's in a NetCDF file?</a>
+    &#150; Example.
+<li><a href="#Reading">Reading and writing NetCDF files</a>
+    &#150;
+    Including links to downloadable software packages.
+<li><a href="#Further">Further information</a>
+    &#150; On NetCDF and the Climate Forecast (CF) Metadata Convention.
+</ul>
+
+<a name="What">
+<H2>What is netCDF?</H2>
+</a>
+
+<P>
+NetCDF (network Common Data Form) is an interface for array-orientated 
+data access and a library that provides an implementation of that
+interface. Many groups have adopted netCDF as a standard way to
+represent their scientific data. The netCDF software was developed
+at the Unidata Program Center in Boulder Colorado USA.
+</P>
+
+<a name="Why">
+<H2>Why use netCDF?</H2>
+</a>
+
+<UL>
+<P>
+  <LI>NetCDF is used extensively in the atmospheric and oceanic
+  science communities.</LI>
+  <LI>NetCDF is a portable self-describing binary data format.</LI>
+  <LI>NetCDF is network-transparent, meaning that it can be accessed by computers 
+  that store integers, characters and floating-point numbers in different ways.</LI>
+  <LI>NetCDF provides direct-access: a small subset of a large dataset may be 
+  accessed efficiently, without first reading through all the preceding data.</LI>
+  <LI>NetCDF is appendable: data can be appended to a netCDF dataset along one 
+  dimension without copying the dataset or redefining its structure.</LI>
+  <LI>NetCDF datasets can be read and written in a number of languages,
+  these include C, C++, FORTRAN, IDL, Python, Perl, and Java.</LI>
+  <LI>The different language implementations 
+  are <A HREF="http://www.unidata.ucar.edu/packages/netcdf/copyright.html"
+  TARGET="_top">freely</A> available 
+  from <A HREF="ftp://ftp.unidata.ucar.edu/pub/netcdf/">the UNIDATA ftp area</A>
+  or from 
+  other <A HREF="http://www.unidata.ucar.edu/packages/netcdf/mirrors.html">mirror
+  sites</A>.</LI>
+  <LI>Several graphics packages support netCDF input, making it
+  very easy to display and analyse netCDF datasets. For instance
+  <A HREF="http://ferret.wrc.noaa.gov/Ferret/" TARGET="_top">FERRET</A> and
+ <A HREF="http://esg.llnl.gov/cdat/">CDAT</A>
+  provide both command line and graphical user interfaces for
+  displaying and analysing gridded data.</LI>
+  <LI>NetCDF is completely and methodically documented in UNIDATA's
+  <A HREF="http://www.unidata.ucar.edu/packages/netcdf/guide.txn_toc.html">NetCDF
+  User's Guide</A>.</LI>
+  <LI>Several groups have 
+  defined <A HREF="http://www.unidata.ucar.edu/packages/netcdf/conventions.html"
+  TARGET="_top">conventions</A> for netCDF files, to enable the
+  exchange of data. BADC has adopted the
+  <A HREF="/help/formats/netcdf/index_cf.html">Climate and Forecasting (CF) conventions</A> for
+  netCDF data. </LI>
+</P>
+</UL>
+
+<a name="CF">
+<H2>NetCDF and CF conventions</H2>
+</a>
+
+<p>
+The BADC supports and strongly recommends the compliance with the
+<a href="http://www.cfconventions.org/">Climate
+and Forecast (CF) Metadata Convention</a>.
+</p>
+
+<P>
+CF conventions are guidelines and recommendations as to where to put information
+within a netCDF file, and they provide advice as to what type of information you 
+might want to include.
+CF conventions allow the creator of the dataset to include information
+about the data and the dataset itself (metadata) in a structured way, which makes
+it easier for other users to retrieve the information.
+<i>Global attributes</i> 
+describe the general properties and origins of the dataset
+while <i>local attributes</i> are used to characterise the recorded variables.
+<p>
+
+</p>
+The BADC provides <a href="index_cf.html">Information on the CF Convention</a>,
+illustrated by some examples.
+</P>
+
+<a name="Example">
+<H2>What's in a netCDF file?</H2>
+</a>
+
+<P>
+We have available <A HREF="nc_example.html">a very simple example</A> of a
+netCDF file with CF conventions applied. A netCDF dataset (the filename 
+ends in <strong>.nc</strong>) is made up of three basic components:
+</P>
+<UL>
+<P>
+  <LI>variables</LI>
+  <LI>dimensions</LI>
+  <LI>attributes</LI>
+</P>
+</UL>
+
+<P>
+The variables store the actual data, the dimensions give the
+relevant dimension information for the variables, and the attributes
+provide auxiliary information about the variables or the dataset
+itself. You can study <A HREF="nc_example.html">an example of a netCDF file</A>
+and see more details of the components in a netCDF dataset. The 
+global attributes can also be added to the netCDF file, following
+<A HREF="index_cf.html">CF conventions</A>. 
+</P>
+
+
+<a name="Reading">
+<H2>Reading and writing netCDF</H2>
+</a>
+
+<P>
+The popularity of netCDF stems from its portability and relative
+ease of use. Although it is a binary data format the netCDF distribution
+comes complete with the <strong>ncdump</strong> utility which produces
+an ASCII dump of the dataset and thereby provides a quick-look
+facility. You can also generate netCDF files from ASCII data files using the 
+<strong>ncgen</strong> utility. 
+</P>
+
+<P>
+The datasets are commonly written and read using library routines.
+The library routines are sensibly named and relatively consistently
+named across the different language implementations.
+</P>
+
+<b>Help and tools</b>
+
+<ol>
+<li><b>Guidance and tools provided by the BADC:</b><br><br>
+<ul>
+<li><A HREF="nc_utilities.html">Installing the netCDF package</A> provided by
+    Unidata and 
+    <A HREF="nc_utilities.html#ncgen">trying out <strong>ncgen</strong>
+    and <strong>ncdump</strong></A>.
+    &#150;
+    Converting NetCDF to ASCII.
+    <br><br>
+<li><a href="/help/software/xconv">XCONV/CONVSH</a>
+    &#150; Allows visualisation, conversion and subsetting of NetCDF data on
+    Unix/Linux systems. 
+    <br><br>
+<li><a href="http://titania.badc.rl.ac.uk/cgi-bin/cf-checker.pl">NetCDF format
+    checker</a>
+    &#150;
+    If you wish to check that files are correctly formatted before uploading
+    them to the BADC, please use this online tool.
+    <br><br>
+</ul>
+<li><b>Selected links to available online software packages to write, read and
+    handle NetCDF files:</b><br><br>
+<ul>
+<li><a href="http://www.unidata.ucar.edu/software/netcdf/software.html">Software
+    for Manipulating or Displaying NetCDF Data</a>
+    &#150; An near-exhaustive list of links to a variety of freely available
+    and commercial or licensed software packages to create or handle NetCDF
+    files, provided by
+    <a href="http://www.unidata.ucar.edu/">Unidata</a> at UCAR (USA).
+    Most links below appear in this list.
+    <br><br>
+<li><a href="http://www.atd.ucar.edu/raf/Software/aeros_dnld.html">AEROS</a>
+    &#150; Available from UCAR (USA), in two versions:
+    one for Linux, one for Windows.
+    <br><br>
+<li><a href="http://science.arm.gov/~cflynn/ANTS/">ANTS</a>
+    &#150;
+    Provided by the Atmospheric Radiation Measurement (ARM) Program (USA),
+    the <i>ARM NetCDF Tool Suite</i> (ANTS) is a collection
+    of netcdf tools and utilities providing various means of
+    creating and modifying netcdf files.
+    ANTS is based on NCTOOLS written by Chuck Denham. 
+    <br><br>
+<li><a href="http://www-pcmdi.llnl.gov/software-portal/cdat">CDAT</a>
+    &#150; <i>Climate Data Analysis Tools</i> available from the
+    <a href="http://www-pcmdi.llnl.gov/">Program for Climate Model Diagnosis
+    and Intercomparison (PCMDI)</a> (USA).
+    <br><br>
+<li><a href="http://www.marine.csiro.au/sw/matlab-netcdf.html">CSIRO
+    NetCDF interface to matlab</a>
+    &#150; Available from the Marine and Atmospheric Research Department of the
+    Commonwealth Scientific and Industrial Research Organisation (Australia).
+    The interface has options for automatically handling missing values,
+    scalefactors, and the permutation of hyperslabs.
+    It also has a simple syntax.
+    <br><br>
+<li><a href="http://ferret.wrc.noaa.gov/Ferret/">FERRET</a>
+    &#150; Interactive computer visualization and analysis environment designed
+    to meet the needs of oceanographers and meteorologists.
+    It takes NetCDF files as input and runs on most Unix systems, and on
+    Windows XP/NT/9x using X windows for display.
+    The FERRET site includes
+    <a href="http://ferret.wrc.noaa.gov/Ferret/FAQ/ferret_FAQ.html#netcdf">FAQs
+    on NetCDF</a>.
+    <br><br>
+<li><a href="http://iacweb.ethz.ch/staff/dominik/hiphop/">HIPHOP</a>
+    &#150; Initially developed by Dominik Brunner (Switzerland) for HDF files,
+    the <i>Handy IDL Program for HDF Output Plotting</i> (HIPHOP)
+    has been expanded to accept <b>NetCDF</b> and GRIB files.
+    <br><br>
+<li><a href="http://www.ppl.eng.osaka-u.ac.jp/igor/">IGOR</a>
+    &#150; Available from the University of Osaka (Japan), in two versions:
+    one for MacIntosh, one for Windows.
+    <br>
+    The BADC also holds routines provided by Jonathan Crosier
+    (University of Manchester) to assist users of
+    <a href="/data/faam/">FAAM</a>
+    data in reading the FAAM core data files with the Igor software.
+    These are freely available from the
+    <a href="/cgi-bin/data_browser/data_browser/badc/faam/software/">FAAM
+    software</a> archive.
+    <br><br>
+<li><a href="http://mexcdf.sourceforge.net/">MEXNC, SNCTOOLS and NetCDF
+    Toolbox</a>
+    &#150;
+    Created by Chuck Denham to read and write NetCDF files.
+    Provided through <i>SourceForge</i>.
+    Will cease to be supported (but will still be available) from January
+    1<sup>st</sup>, 2007 onwards.
+</ul>
+</ol>
+
+<a name="Further">
+<H2>Further information</H2>
+</a>
+
+<P>
+For a more extensive description you are urged to read the 
+<A HREF="http://www.unidata.ucar.edu/packages/netcdf/index.html"
+TARGET="_top">UNIDATA documentation on netCDF</A>.
+</P>
+
+<P>The UNIDATA documentation also provides the 
+<A HREF="http://www.unidata.ucar.edu/packages/netcdf/guide_15.html">File 
+Format Specification</A> 
+for netCDF and <A HREF="http://www.unidata.ucar.edu/packages/netcdf/BestPractices.html">Best 
+Practice recommendations on writing netCDF files</A>.
+</P>
+
+<p>
+The <a href="http://www.cfconventions.org/">NetCDF
+Climate and Forecast (CF) Metadata Convention</a>
+defines metadata that provide a definitive description of what the data in each variable represents, and of the spatial and temporal properties of the data.
+The CF conventions generalize and extend the
+<a href="http://ferret.wrc.noaa.gov/noaa_coop/coop_cdf_profile.html">COARDS
+conventions</a> developed under the sponsoring of NOAA.
+</p>
+
+</BODY>
+
+</HTML>

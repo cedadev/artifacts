@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050619T230000Z
+DTEND:20050620T230000Z
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000202156B3CD70C5010000000000000000100
+ 000005EA7AC12FCCE2A4485D37225CCA56E3C
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:"London's Air -  Planning for a Bette=
+r Future"=0D=0AConference at City Hall  -20th June, 2005=0D=0A=0D=0AConvene=
+d by APRIL -   Air Pollution Research in London Group=0D=0A=0D=0APdf file a=
+ttached with details of agenda.=0D=0A=0D=0ATo register please email: Jennif=
+er Eastwood at Imperial College London=0D=0A=0D=0Aby Wednesday 15 June 2005=
+: j.eastwood@imperial.ac.uk=0D=0A=0D=0AOnly pre-registered delegates will b=
+e admitted.=0D=0A=0D=0APlease allow sufficient time for security clearance.=
+=0D=0A=0D=0APoster space available=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:"London's Air" conference
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,143 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Hourly Rainfall Data Table</TITLE>
+  <!-- Created 16th June 2006 -->
+  <!-- Author: Belinda Robinson BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Hourly Rainfall data - Columns in the RH table <BR CLEAR="ALL"></H1>
+<HR ALIGN=LEFT>
+<a href="RH_Table.html#description">Table Description</a> - 
+<a href="RH_Table.html#table">Columns in the RH table</a> - 
+<a href="RH_Table.html#filter">How to start filtering the rows of data out</a>
+
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<a name="description"></a>
+<h3>Table Description: </h3>This entity contains rainfall amount (and duration from tilting syphon 
+	  gauges) during the hour (or hours) ending at the specified time. Normally it will NOT be used 
+	  to store precipitation measured over 24 hours or more - that will use the 
+	  Daily Rain (RD) table. However, where a station normally 
+	  reports 09-21Z and 21-09Z values, an original value which is deemed to be erroneous can be 
+	  replaced by a 24-hour value. <font face="Courier New">ob_hour_count</font> will be set to the 
+	  number of hours (always less than 24).  The data in this table are of the following types: 
+      <ul>
+	    <li>Hourly rainfall (<font face="Courier New">ob_hour_count</font> = 1)</li>
+        <li>09-21Z or 21-09Z rainfall from NCM and F7113 (<font face="Courier New">ob_hour_count</font> = 12)</li>
+        <li>Rainfall amounts measured over a number of hours (e.g. 06-18Z from SYNOPS - not stored at present)</li>
+      </ul>
+      The identifier is a rainfall station number. 
+
+<a name="table"></a>
+<h3>Columns in the RH table:</h3>
+For the convenience of users, the RH file column headers are available for download in <a href="Headers/RH_Column_Headers.xlsx    ">Excel</a> or as a <a href="Headers/RH_Column_Headers.csv">comma separated text file</a>
+<P>
+      <table border="1" cellspacing="0" width="95%">
+      <tr> 
+        <td valign="TOP" width="5%" align="center"><b>PK</b></td>
+        <td valign="TOP" width="40%"><b>Attribute</b></td> 
+        <td valign="TOP" width="35%"><b>Description / Units / Precision</b></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_end_time</font></td>
+        <td valign="TOP" width="35%">Date and time at end of observation</td>
+      </tr>
+ <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id</font></td>
+        <td valign="TOP" width="35%">Raingauge number</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id_type</font></td>
+        <td valign="TOP" width="35%"><A HREF="ukmo_guide.html#3.6">Identifier type</a></td>
+      </tr>
+     
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_hour_count</font></td>
+        <td valign="TOP" width="35%">Observation hour count</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">version_num</font></td>
+        <td valign="TOP" width="35%">Observation version number - <strong>Use the row with '1'</strong>, as this has been quality checked by the Met Office</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_domain_name</font></td>
+        <td valign="TOP" width="35%"><A HREF="met_domain.html">Message type</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_id</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#wind">Unique source identifier</a> or station site number</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rec_st_ind</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/state_indicators.html">State indicator for the record</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prcp_amt</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.6">Precipitation amount</a><br>Units = 1mm, reported to the nearest 0.1 mm</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prcp_dur</font></td>
+        <td valign="TOP" width="35%">Precipitation duration (&lt;24 hr)<br>minutes</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prcp_amt_q</font></td>
+	<td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - precipitation amount</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prcp_dur_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - precipitation duration</a>**</td>
+      </tr>
+           <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">meto_stmp_time</font></td>
+        <td valign="TOP" width="35%">Met Office receipt stamp time</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">midas_stmp_etime</font></td>
+        <td valign="TOP" width="35%">Elapsed time to storage in MIDAS<br>minutes</td>
+      </tr>
+ <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prcp_amt_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - precipitation amount</a>**</td>
+      </tr>
+      </table><BR>
+<BR>
+** Details available to registered users only.
+<p>
+More information about the Met Office surface data is available
+in the <A HREF="ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+<a name="filter"></a>
+<h3>How to start filtering the rows of data out:</h3>
+<ol>
+<li>As the data arrive at the Met Office it undergoes quality control to check that the data are correct and consistent with the surrounding data points. Whether the process has occured or not is indicated by the <strong>version number</strong> (1 is the one to use as indicated in the table above).
+<p>
+<li>To show the progress of the data through the quality control the various variables will have an associated <strong>_q value</strong> (e.g. prcp_amt_q). This _q value will have different values for each record (see details in table above).
+<p>
+<li> While the Met Office MIDAS system overwrites the existing entry in their database the BADC's MIDAS entries do not as the BADC takes snapshots of the the MIDAS database from time to time leading to duplicate entries occuring in our archive. If duplicate records are found, check the associated meto_stmp_time to determine which record is the most recent one - this is the one to use and the other(s) can be ignored. 
+</ol>
+<p>
+
+
+</BODY>
+</HTML>

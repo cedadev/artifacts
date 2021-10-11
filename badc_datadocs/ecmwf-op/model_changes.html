@@ -1,0 +1,560 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>ECMWF Operational model changes</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<A NAME=top></A>
+<H1>Changes to the ECMWF Operational Forecasting System</H1>
+
+<I>A summary of changes made to the ECMWF Operational model.</I>
+
+<HR ALIGN=LEFT>
+
+<H2>Contents</H2>
+
+<UL>
+<LI><A HREF=#intro>Introduction</A><P>
+<LI><A HREF=#no65>No. 65 - Spring 1994</A>
+<LI><A HREF=#no66>No. 66 - Summer 1994</A>
+<LI><A HREF=#no67>No. 67 – Autumn 1994</A>
+<LI><A HREF=#no68>No. 68 - Winter 1994/95</A>
+<LI><A HREF=#no69>No. 69 – Spring 1995</A>
+<LI><A HREF=#no70>No. 70 - Summer 1995</A>
+<LI><A HREF=#no71>No. 71 - Autumn/Winter 1995</A>
+<LI><A HREF=#no72>No. 72 - Spring/Summer 1996</A>
+<LI><A HREF=#no73>No. 73 Autumn 1996</A>
+<LI><A HREF=#no74>No. 74 - Winter 1996/97</A>
+<LI><A HREF=#no75>No. 75 - Spring 1997</A>
+<LI><A HREF=#no77>No. 77 - Autumn 1997</A>
+<LI><A HREF=#no78>No. 78 - Winter 1997/98</A>
+<LI><A HREF=#no79>No. 79 - Spring 1998</A>
+<LI><A HREF=#no80>No. 80 – Summer 1998</A>
+<LI><A HREF=#no81>No. 81 – Autumn 1998</A>
+<LI><A HREF=#no82>No. 82 – Winter 1998/1999</A>
+<LI><A HREF=#no83>No. 83 – Spring 1999</A>
+<LI><A HREF=#no84>No. 84 – Summer 1999</A>
+<LI><A HREF=#no85>No. 85 – Autumn 1999</A>
+<LI><A HREF=#no86>No. 86 – Winter 1999/2000</A>
+<LI><A HREF=#no87>No. 87 – Spring 2000</A>
+<LI><A HREF=#no88>No. 88 – Summer/Autumn 2000</A>
+<LI><A HREF=#no89>No. 89 – Winter 2000/2001</A>
+<LI><A HREF=#no90>No. 90 - Spring 2001</A>
+<LI><A HREF=#no91>No. 91 - Summer 2001</A>
+<LI><A HREF=#no92>No. 92 - Autumn 2001</A>
+<LI><A HREF=#no93>No. 93 - Spring 2002</A>
+<LI><A HREF=#no94>No. 94 - Summer 2002</A>
+<LI><A HREF=#no95>No. 95 - Autumn 2002</A>
+<LI><A HREF=#no96>No. 96 - Winter 2002/03</A>
+<LI><A HREF=#no97>No. 97 - Spring 2003</A>
+<LI><A HREF="http://www.ecmwf.int/products/data/operational_system/index.html">ECMWF Model Evolution pages</A>.
+</UL><P><HR>
+
+<H2><A NAME="#intro">Introduction</A></H2>
+
+The ECMWF Newsletter includes a summary of changes to the Operational Forecasting System. These summaries are reproduced below to allow users to follow the modifications that are made.<P>
+
+Please note that these changes only apply to the ECMWF <A HREF="/data/ecmwf-op">Operational datasets</A> (not the <A HREF="/data/ecmwf-era">Re-analysis data</A>).<P>
+
+The information provided here is also available from the ECMWF <a href="http://www.ecmwf.int/products/data/operational_system/index.html">evolution of the forecasting system</a> page.<P>
+
+<P>From Summer 2003 onwards we have stopped adding to this page as all the information 
+is available from the <A HREF="http://www.ecmwf.int/products/data/operational_system/index.html"</A>ECMWF web pages</A>.
+<HR>
+
+<BR><H2><A NAME="#no65">No. 65 - Spring 1994</A></H2>
+
+The Integrated Forecast System (IFS) was implemented on 2 March 1994. The IFS is a major re-write of the forecast model which prepares the way for the planned later introduction of a variational analysis system. The model identification field in the GRIB headers of products was changed to 111.<P>
+
+Several meteorological changes were implemented at the same time:<P>
+
+<UL><LI>introduction of the 2 metre dewpoint SYNOP observations in the humidity analysis;
+<LI>use of the sensible heat flux in addition to the latent heat flux to determine the cloud base mass flux in the shallow convection scheme;
+<LI>inclusion of the latent heat release due to freezing of condensate in convective updraughts.</UL><P>
+
+These modifications addressed certain problems which were noted in the Tropics over the last few months, in particular with precipitation and 2m temperature. No significant meteorological impact was expected over Europe.<P>
+
+<B>Planned Changes</B><P>The 3-d variational analysis is planned for implementation in the 2nd half of 94.<P>
+
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no66">No. 66 - Summer 1994</A></H2>
+
+A change was made to the fields of soil humidity used in the operational system, starting from the analysis for 4 July 1994 at 00 UTC. In order to compensate for a drying out of the model boundary layer which has been noticed over the last few weeks, particularly over Europe and East Asia, the humidity of the soil was reset to field capacity.<P>
+
+It resulted in a noticeable impact on the temperature in the daytime boundary layer over continental areas. There was a reduction in the warm bias by several degrees in places, and the positive impact was also to be seen at 850 and 700 hPa. There was also a significant reduction in the bias of the dewpoint temperature at 2 metres.<P>
+
+<B>Planned Changes</B><P>
+A change to the pre-selection of cloud motion wind (SATOB) data for the analysis will be implemented shortly.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no67">No. 67 – Autumn 1994</A></H2>
+
+On 4 July 1994 the model soil humidity was reset to field capacity to correct for an excessive drying of the soil over parts of Europe and Asia.<P>
+
+On 12 July two data types were introduced into the data assimilation: temperature observations from aircraft, and winds derived from the METEOSAT water vapour channel.<P>
+
+The post-processing of 10m winds over land was changed on 23 August, resulting in a more realistic representation of model winds at observing sites. The negative bias of the wind speed has been significantly reduced, in particular during daytime.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no68">No. 68 - Winter 1994/95</A></H2>
+
+Since 6 December 1994, the 1D-VAR system for the processing of cloud cleared infra-red radiance data received from the NOAA satellites has been used in the Southern Hemisphere and the Tropics in addition to the Northern Hemisphere, to derive temperature and humidity data for the analysis using a variational inversion technique.<P>
+
+<B>Planned Changes</B><P>
+Pre-operational trials are in progress on a 3-d variational analysis system.<P>
+
+Changes to the model physics are under test. They include a new cloud scheme with prognostic equations for liquid water vapour content, use of mean orography and new subgrid orography parametrisation.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no69">No. 69 – Spring 1995</A></H2>
+
+<B>Recent Changes</B><P>
+
+A revision to the definition of the tropopause for the humidity analysis was introduced on 28 March 1995.<P>
+A new version of the forecast model was implemented on 4 April, including:<P>
+
+<UL><LI>New prognostic cloud scheme;
+<LI>Smoothed mean orography and new subgrid orography parametrisation;
+<LI>Modified quasi-regular (reduced) Gaussian grid.</UL><P>
+
+Specific humidity on model levels and pressure levels was changed from spherical harmonic to quasi-regular Gaussian grid field.  In addition, three new quasi-regular Gaussian grid fields on model levels were introduced:  cloud liquid water content, cloud ice water content and cloud cover.  Fields of low, medium, high and total cloud cover continue to be produced, but convective cloud cover is no longer produced.<P>
+
+This set of changes leads to a much improved representation of cloud cover, with large reductions from the previous systematic negative biases, especially during the day.  A significant reduction in summertime warm bias of two-metre temperature is expected.  The change should also improve the precipitation forecast, with smoother precipitation patterns and reduced spin-up problems in the early range of the forecast.<P>
+
+An improvement of the RMS and anomaly correlation scores in the medium-range over Europe, reflected in the overall synoptic pattern, was noted during the experimentation, particularly in Summer.<P>
+
+In addition, the parametrisation of the ocean surface albedo has been changed to better represent the variation of reflectivity with solar zenith angle.<P>
+
+<B>Planned Changes</B><P>
+
+A 3-D variational analysis system and high resolution wave prediction  model for the Mediterranean and Baltic Sea will be implemented.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no70">No. 70 - Summer 1995</A></H2>
+
+No recent changes which would have a significant impact on the performance of the ECMWF analysis and forecast system have been introduced within the last 3 months.<P>
+
+<B>Planned Changes</B><P>
+A 3-d variational analysis system will be implemented.<P>
+
+This issue features an article "A major operational forecast model change" which I can photocopy and send. Topics include discussion of a semi-Lagrangian treatment of advection, change to humidity fields (no longer transformed to spectral space), a prognostic cloud scheme and orographic effects.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no71">No. 71 - Autumn/Winter 1995</A></H2>
+
+<B>Recent Changes</B><P>
+
+On 28 November 1995, a revised form of the continuity equation was implemented in the forecast model, resulting in a reduction of noise in all lower tropospheric fields previously experienced near mountains.  In particular, the fields of mean sea level pressure, geopotential height and temperature are smoother, and the near surface wind is better represented.<P>
+
+On 30 January 1996 ECMWF introduced a 3-dimensional variation (3D-Var) analysis scheme.  3D-Var is a new code for the analysis of model-level values of temperature, vorticity, divergence and specific humidity, and surface pressure.  Minor changes to the forecast model were implemented at the same time.<P>
+
+On average, forecasts from 3D-Var for the Northern Hemisphere are of similar quality as forecasts from the previous Optimum Interpolation system, while forecasts for the Southern hemisphere tend to exhibit higher skill.  In addition, 3D-Var gives generally better temperature verification results, especially at low levels and in the stratosphere, and better wind scores at 200 hPa and above.<P>
+
+The analysis and prediction of tropical cyclones appear to have improved with 3D-Var.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no72">No. 72 - Spring/Summer 1996</A></H2>
+
+<B>Recent Changes</B><P>
+On 4 March 1996 the generation of initial perturbations for the Ensemble Prediction System (EPS) was changed to be based on singular vectors in the southern hemisphere as well as in the northern hemisphere.<P>
+On 25 March 1996 the amplitude of the initial perturbations for the EPS was increased by approximately 15%.<P>
+On 23 April 1996 a new definition of the sea surface temperature and sea ice was introduced. The input to the scheme is the 1 degree SST analysis from NCEP Washington and the gridded ice fields derived from SMM/I data from NESDIS.<P>
+
+<B>Planned Changes</B><P>
+A comprehensive observation screening and quality control will be implemented in the 3D-Var assimilation system.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no73">No. 73 Autumn 1996</A></H2>
+
+<B>Recent Changes</B><P>
+A technical error affecting the computation of sub-grid orography processes in the forecast model which was introduced with the change to sea surface temperature and sea ice on 23 April 1996 was corrected on 31 May.<P>
+
+The complete operational suite was implemented on the Fujitsu VPP700 on 18 September.<P>
+<OL><LI>Main T213 ten-day forecast suite.
+<LI>Operational project wave forecast suite.
+<LI>00 UTC optional project forecast suite.
+<LI>Ensemble prediction suite.</OL>
+
+Together with the move to the VPP700 a new model cycle (CY15R5) and changes to the 3D-Var code were introduced:<P>
+
+Model cycle CY15R5, introduced on 18 September, had the following changes:<P>
+<OL><LI>Revision of boundary layer diffusion and introduction of soil moisture freezing.  The effect is a reduction of the near-surface temperature errors in stable situations.  It implies a reduction of the night time temperature errors over land in summer and a significant reduction of the winter cold bias of day and night time forecasts.
+<LI>A revised semi-Lagrangian treatment of the thermodynamic equation leading to smoother meteorological fields over steep orography. This cycle also contained changes necessary for the migration to the Fujitsu, none of which have any detectable meteorological impact, at the same time, the 3D-Var code has been generalised to allow it to be run on parallel, distributed-memory computers using message passing.  A new parallel code is used for observation pre-processing and screening.</OL><P>
+ 
+Quality control and the calculation of background error variances are now based on the variational analysis rather than the earlier 01 approach.  Objective verification indicates little overall sensitivity of forecast performance to these changes.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no74">No. 74 - Winter 1996/97</A></H2>
+
+<B>Recent Changes</B><P>
+A high resolution version of the optional project global wave forecast model was introduced on 5 December 1996.  The new model has a resolution of approximately 50km using a quasi-regular latitude/longitude grid with 0.5 degree intervals between latitude rows and varying numbers of points along latitudes.<P>
+
+Model cycle 15R7 was introduced on 10 December 1996 in both the T213 L31 10-day forecast and the EPS.  The main features of the new cycle are:<P>
+<OL><LI>A two-time level semi-Lagrangian scheme.
+<LI>Advection of cloud variables.
+<LI>Changes in the snow albedo, expected to reduce the cold bias in 2m   temperature in spring.
+<LI>Change to the humidity analysis to eliminate unrealistic drying of the extra-tropical lower stratosphere.
+<LI>Change to the use of SMM/I sea ice data to eliminate erroneous sea points over  permanent ice.
+<LI>Minor change to the model orography and slight adjustments to other fixed surface fields.</OL><P>
+
+On the same date, the EPS was enhanced to run at TL159 resolution (linear grid) with 50 ensemble members and the control.  The model physics are computed on the quasi-regular Gaussian N80 grid.
+Model cycle 15R8 was introduced on 21 January 1997.  This cycle corrects an error affecting the degree of balance between the mass and wind analyses.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no75">No. 75 - Spring 1997</A></H2>
+
+<B>Recent Changes</B><P>
+A new version of the optional project wave models was implemented on the 13 May 1997.  It consisted of a change in the representation of the wave spectrum to solve the excessive shadowing effect behind islands that was experienced before.  This allowed the re-introduction of islands that were deliberately omitted in the previous version.<P>
+
+Several modifications to the 3D-var data assimilation system were implemented on the 14 May 1997 (model cycle 16r2):<P>
+<OL><LI>Two modifications of the forecast error penalty function (Jb).  One allows the use of a refined balance constraint, with most impact in the tropics (better fit of the analysis to the observations). The result is also slightly positive in terms of forecast scores.  The other modification is in the formulation of the representativeness error growth used for the assimilation of asynoptic data.  The errors are now supposed to saturate at levels that are fully varying with space, and this was shown to have a positive impact both on the analysis increments and on the data quality control.
+<LI>Several modifications in the way the TOVS data are used (quality control, modification of the tropical bias correction in line with the Jb re-formulation).
+<LI>A restriction of the dynamic initialisation to the small scales.</OL><P>
+
+<B>Planned Changes</B><P>
+Changes in the use of satellite data and a revision in the computation of water vapour saturation pressure in the analysis and forecast will be implemented soon.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no77">No. 77 - Autumn 1997</A></H2>
+
+<B>Recent Changes</B><P>
+A number of modifications were made on 27 August 1997, mostly concerning the use of satellite date (model cycle 16r3):<P>
+
+<OL><LI>A revision of the use of TOVS radiances including the simplification and improvement of bias corrections.  SATEM retrievals were replaced by the use of radiances above 100 hPa while HIRS12 were introduced both over sea and land.
+<LI>Some quality control modifications with most impact on the way ERS-2 wind retrievals are handled.
+Revisions were also made to the ocean albedo and to the momentum transport representation in the convection scheme.  A correction was applied to computations of saturation vapour pressure with effect mainly in very cold conditions.</OL>
+
+On 11 November 1997, a modification was made to allow the assimilation of the new RTOVS format for NOAA-14 radiances (model cycle 18rl).  NOAA-11 RTOVS have been assimilated since 1 December.<P>
+
+On 25 November 1997, the first version of a four-dimensional variational data assimilation system (4D-Var) was introduced.  It is based on an evolution of the previous 3D-Var system with a 6-hour cycling. Details will be given in a forthcoming newsletter article.<P>
+
+A number of changes to the physical parametrisation scheme were introduced on 16 December 1997 (model cycle 18r3).<P>
+<OL><LI>A modification in the treatment of the water vapour absorption in the long-wave part of the radiation scheme.
+<LI>A new method of moisture convergence closure.
+<LI>A new treatment in the ice fall-out in the cloud scheme.</OL><P>
+
+<B>Planned Changes</B><P>
+<UL><LI>An improved formulation of the two-time-level semi-Lagrangian scheme.
+<LI>A new, more accurate resolved model orography.
+<LI>Coupling of the atmospheric and ocean-wave model.
+<LI>Revised initial perturbations for the EPS, to increase spread, particularly in the early part of the forecast range.</UL><P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no78">No. 78 - Winter 1997/98</A></H2>
+
+<B>Recent Changes</B><P>
+A number of changes to the physical parametrisation scheme were introduced on 16 December 1997 (model cycle 18r3):<P>
+<OL><LI>A modification in the treatment of the water vapour absorption in the long-wave part of the radiation scheme.
+<LI>A new method of moisture convergence closure.
+<LI>A new treatment in the ice fall-out in the cloud scheme.</OL>
+
+<B>Planned Changes</B><P>
+<UL><LI>An improved formulation of the two-time-level semi-Lagrangian scheme.
+<LI>A new, more accurate resolved model orography.
+<LI>Coupling of the atmospheric and ocean-wave model.
+<LI>Revised initial perturbations for the EPS, to increase spread, particularly in the early part of the forecast range.</UL><P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no79">No. 79 - Spring 1998</A></H2>
+
+<B>Recent Changes</B><P>
+The method used for the computation of initial perturbations of the Ensemble Prediction System (EPS) has been changed on 24 March 1998. From this date, initial perturbations are a combination for day D of fastest growing modes between D-2 and D (‘Evolved Singular Vectors’) and fastest growing modes between D and D+2; the meteorological impact of this change is minor (slightly increased spread in the early medium range).<P>
+
+The reference model spectral resolution was increased from T213 to TL319 on 1 April 1998 (improved orography, reduced diffusion, but Gaussian grid unchanged). The other modifications introduced on this occasion (Cy18r5) were:<P>
+<OL><LI>A new 2-time level semi-Lagrangian numerical scheme; this made possible the use of Linear Gaussian Grid reflected by the TL notation already introduced for the EPS configuration in December 1996;
+<LI>Use of a new 2’30” orography reference dataset; as a result, some large errors over Antarctica have been corrected, and spurious noise in other areas suppressed;
+<LI>Improved sea-ice limits determination.</OL>
+
+<B>Planned Changes</B><P>
+<UL><LI>Coupling of the atmosphere and ocean-wave model for data assimilation and forecasting;
+<LI>Use of both significant- and standard level winds, temperatures and humidities from radiosondes (geopotential will no longer be used);
+<LI>Use of extra off-time data, mostly SYNOPs and DRIBUs (hourly data will be accepted, which is now only the case for mobile platforms such as aircraft);
+<LI>Use of 1D-Var SSM/I total column water-vapour; 
+<LI>Extension of the use of GOES winds to the northern extratropics.
+</UL><P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no80">No. 80 – Summer 1998</A></H2>
+
+<B>Recent Changes</B><P>
+An hourly, two-way coupling of the atmospheric and ocean-wave model was introduced on 29 June 1998. Predicted ocean waves now provide information to the atmospheric boundary layer.<P>
+
+Other modifications introduced at the same time (Cy18r6) were:<P>
+<OL><LI> the use of both significant and standard level winds, temperatures and humidities from radiosondes (geopotential is no longer used);
+<LI> the use of extra off-time data, mostly SYNOPs and DRIBUs;
+<LI> the use 1D-Var SSM/I total column water vapour;
+<LI> extension of the use of GOES high-resolution winds to the northern extratropics;
+<LI> the use of more TOVS channels over land;
+<LI> the observation operator for 10m winds is now unified for scatterometer, DRIBU and SYNOP observations.
+</OL><P>
+
+<B>Planned Changes</B><P>
+
+Increase in the number of model levels from 31 to 50, with the majority of the extra levels occurring in the stratosphere, the top of the model will be moved from 10 to 0.1 hPa;<P>
+
+Use of TOVS and ATOVS level Ib radiance data from the NOAA satellites.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no81">No. 81 – Autumn 1998</A></H2>
+
+<B>Recent Changes</B><P>
+METEOSAT5/INDOEX SATOB products have been introduced in the data assimilation with effect from 12 August 1998. 
+A formulation of uncertainties associated to physical processes (stochastic physics) was introduced on 21 October 1998 in the ECMWF Ensemble Prediction System.<P>
+
+<B>Planned Changes</B><P>
+A version of the reference model with extended vertical domain and possibly increased planetary boundary layer resolution should also be tested soon.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no82">No. 82 – Winter 1998/1999</A></H2>
+
+No changes listed in this edition.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no83">No. 83 – Spring 1999</A></H2>
+
+<B>Recent Changes</B><P>
+On 9 March 1999, the reference model’s vertical resolution was increased from 31 to 50 levels (model cycle version 19r2) (a description of the changes was published in ECMWF Newsletter Number 82, ‘Increased stratospheric resolution in the ECMWF forecasting model’ by A.Untch <I>et al</I>.).<P>
+
+On 5 May 1999, processing and assimilation of raw TOVS/ATOVS radiance data from the NOAA-14/ NOAA-15 polar orbiting spacecraft became operational (model cycle version 21r1) (see article in this issue on page 2). The move to assimilating raw-radiance data (as opposed to the NESDIS pre-processed radiances that were previously used) has required a significant revision of the errors assigned to radiance observations in the analysis, and of the quality-control procedures; other modifications introduced at the same time were mainly technical changes (re-coding of the sea and lakes temperature prescription software, and modifications of the oceanic waves code). The meteorological impact is a moderate, but consistent, improvement in forecast skill at all ranges, the largest being observed in the southern hemisphere and lower stratosphere.<P>
+
+<B>Planned Changes</B><P>
+A new soil moisture and temperature analysis scheme is expected to become operational this summer. An increase from 50 to 60 levels (more resolution in the planetary boundary layer) is planned for the autumn.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2>N<A NAME="no84">o. 84 – Summer 1999</A></H2>
+
+<B>Recent Changes</B><P>
+<UL><LI> On 13 July 1999, the following changes were introduced (Cy21r2):
+<LI> a new coupling of the physics and dynamics components of the numerical scheme;
+<LI> the use of a new screen-level humidity and temperature analysis for the optimum interpolation analysis of soil temperature and humidity;
+<LI> a slight relaxation of the quality control of the TOVS/ATOVS radiance data, and the use of Meteosat AMV (winds) at 90-minute frequency using EUMETSAT quality control information;
+<LI> US profilers’ hourly data are now active;
+<LI> ship wind data make use of WNO tables for height assignment, while ship humidity data are blacklisted;
+<LI> the bias correction of radiosonde mass information is re-introduced in a revised form to apply temperature correction using the sonde-type information provided in the TEMP message;
+<LI> a modified wave energy balance equation.
+</UL><P>
+
+<B>Planned Changes</B><P>
+The next change (Cy21r4) is planned for 12 October; it includes an increase in the number of vertical levels to 60 (most of the extra resolution being near the surface), with modifications to the cloud and convection scheme, and revised mean and subgrid–scale orography fields.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no85">No. 85 – Autumn 1999</A></H2>
+
+<B>Recent Changes</B><P>
+
+On 22 October 1999 the reference model’s vertical resolution was increased from 50 to 60 levels, most of the extra resolution being in the planetary boundary layer. The EPS vertical resolution has been increased in a consistent way from 30 to 40 levels.<P>
+
+These resolution changes have been coupled with several modifications to the atmospheric model (Cycle 21r4):<P>
+<UL><LI> extensive changes in the cloud and convection schemes (mainly a new parametrisation of the effects of cloud overlap on precipitation/evaporation);
+<LI> a new post-processing of the 10m winds aimed at a better representation of weather-station environments;
+<LI> a revised evaluation of the background-error cost function used in 4D-Var (Jb);
+<LI> a revised scheme for the correction of satellite (A)MSU radiance biases;
+<LI> an active assimilation of SSM/I wind speed through a 1D-Var assimilation of SMM/I radiances;
+<LI> a bugfix of the humidity computation from SYNOP and TEMP observations below 0 degrees celsius.
+</UL><P>
+
+<P>New global orography and subgrid orography fields have been introduced, based on a new high resolution dataset. The changes are mostly isolated ones except for the Greenland massif and Australia, where more substantial changes in the basic orography are evident.<P>
+The changes have been proved to have had a positive impact of the error scores (Z500 in the extratropics, the upper-level winds and temperature in the tropics). The frequency of occurrence of moderated to strong 10m winds and precipitation were also improved.<P>
+
+<B>Planned Changes</B><P>
+
+The next upgrade in 2000 will be related to the data assimilation system, i.e. 12-hour cycling of 4D-Var, possibly with increased resolution of the minimised increments.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no86">No. 86 – Winter 1999/2000</A></H2>
+
+No changes were made to the operational forecasting system before the new year period because of possible difficulties relating to the Y2K problem.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no87">No. 87 – Spring 2000</A></H2>
+
+<B>Recent Changes</B><P>
+
+On 11 April 2000, a new version of the operational model was implemented (cycle 22r1). This is a minor scientific upgrade that includes:<P>
+<UL><LI> a revised use of SSM/I radiances including a bias correction and preventing the assimilation of radiances where precipitation occurs; both satellites (DMSP-13 and 14) are now used;
+<LI> a modification to the assimilation of humidity in the stratosphere to avoid the unrealistic moistening that has been occurring since the last model change (12 October 1999).
+</UL><P>
+
+A technical change has also been brought in through the use of new post-processing software (Full-Pos) developed in collaboration with Meteo-France. This change will allow the introduction of new parameters in the dissemination and MARS archive, details of which will be announced later.<P>
+This new version of the model is running on the new Fujitsu VPP5000 computer.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no88">No. 88 – Summer/Autumn 2000</A></H2>
+
+An upgraded version of the model (Cycle CY22r3, atmospheric model identification number 196 in the GRIB headers) was introduced operationally on 27 June 2000. This version includes important changes to the parametrisation schemes for the land surface, lying snow and sea-ice.<P>
+
+Other change included in this model version are:<P>
+<UL><LI> New (RRTM) long-wave radiation scheme;
+<LI> Improved ozone model;
+<LI> Improved treatment of precipitation processes in the first time-step;
+<LI> Use of more TOVS/ATOVS data (HIRS-12, AMSU-12; less constraint on AMSU-8; more off-nadir data);
+<LI> Use of actual buoy heights;
+<LI> Revised snow analysis;
+<LI> Revised observation and background error variances in 4D-Var.
+<LI> Use of digital filter for the gravity-wave constraint Jc in 4D-Var.
+</UL><P>
+
+In addition, enhancements have been made to the post-processing partly related to the new surface scheme and partly developed for application within the ERA-40 project. A major technical change has been made to the 4D-Var data handling through the implementation of purpose-built ‘ODB’ database software to deal with observations, replacing the old CMAFOC file format.<P>
+
+CY22r3 gives an overall improvement of upper-air scores. The cold bias in the screen temperature over spring snow conditions, in particular over Fenno-Scandia, has been removed but a moderate warm bias has been noticed in places.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no89">No. 89 – Winter 2000/2001</A></H2>
+
+On 12 September 2000, the data assimilation procedure moved from 6-hour to 12-hour cycling. 4D-Var now processes the observations in 12-hour sets, spanning 03-15 UTC for the 12 UTC analysis, and 15-03 UTC for the 00 UTC analysis. Surface analyses still run every six hours. Analysis fields are still archived every six hours. Other changes included in this model version are:<P>
+<UL><LI> use of more accurate background trajectory in 4D-Var, thanks to an improved interpolation procedure, the use of the prognostic cloud scheme and first-guess cloud fields;
+<LI> change to the 4D-Var incremental formulation by which the low-resolution increment is added to the high-resolution trajectory at analysis time (00 UTC and 12 UTC), instead of at the start of the 4D-Var window;
+<LI> new quality-control step that prevents the use of observations that the incremental formulation of 4D-Var cannot handle correctly;
+<LI> resetting of the stratospheric ozone and switching off of the multivariate coupling between ozone and vorticity;
+<LI> monitoring of TOVS radiances in cloudy areas.
+</UL><P>
+
+On 21 November, the model resolution was upgraded from TL319 to TL511 resolution in the deterministic mode, and from TL159 to TL255 in the ensemble mode (EPS). This is roughly a reduction in grid size from 60 to 40 km (deterministic) and from 120 to 80 km (EPS). Vertical resolution remains unchanged in all model configurations. Other changes included in this model version are:<P>
+<UL><LI> the data assimilation now runs its minimisation (inner loop) at TL159 (was T63 previously) using new semi-Lagrangian tangent linear and adjoint codes.
+<LI> the wave model in the TL511 deterministic model continues to run at approximately 55 km horizontal resolution with an increase in spectral information from 12 to 24 directions and 25 to 30 frequencies. The wave model in the EPS will run in shallow-water mode with an increased horizontal resolution of approximately 110 km with 12 directions and 25 frequencies (no change). The European-waters model continues to run at approximately 28 km with an increase in spectral information from 25 to 30 frequencies, while the number of directions remains at 24.
+</UL><P>
+
+The T511 and T255 pre-operational suites have demonstrated their positive impact during the testing period on the mean scores for upper-level fields and precipitation, both in deterministic and probabalistic mode. Meteorological evaluation on individual cases has also shown an overall improvement.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no90">No. 90 - Spring 2001</A></H2>
+
+<B>Recent Changes</B><P>
+The computation of the EPS stochastic  physics tendencies was corrected on 15 December 2000. This removed a feature introduced with Cycle 21r2 (July 1999) which has occasionally produced non-realistic values for some EPS members (notably for near-surface temperature and humidity).<P>
+
+Due to the failure of the ERS-2 navigation instruments, both the ambiguous surface winds and the altimeter data became unavailable on 17 January 2001.<P>
+
+The amplitude of the EPS initial perturbations was upscaled by a factor of two on 5 February 2001. This rescaling was  linked to the data assimilation changes introduced with cycle 22r3 in June 2000 which resulted in a lack of spread.<P>
+
+The ERS-2 altimeter data were switched on again in the oceanic-waves data assimilation on 6 March 2001. The ERS-2 winds remain unavailable.<P>
+
+<B>Future Changes</B><P>
+Testing of cycle 23r4 is going on. This new cycle allows more and better uses of satellite data over land and sea ice. It also contains a minor change to the horizontal diffusion and provides more frequent calls to the radiation code in the data assimilation.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no91">No. 91 - Summer 2001</A></H2>
+
+Cycle 23r4 was implemented on 12 June 2001. This version includes several changes in the use of satellite data over land and sea ice (more AMSU data and the use of skin temperature rather than upper-layer soil temperature in processing radiances). In addition, the radiation parametrization routines are called on an hourly (instead of three-hourly) basis during the data assimilation. The time integration of the surface skin temperature over land has been improved. The horizontal diffusion of vorticity has been increased to bring it into line with that applied to the divergence and temperature, but without any noticeable impact on the forecast fields. Finally, an improved ozone model developed by M&eacute;t&eacute;o-France has been introduced with a new parametrization of the destruction of ozone by heterogeneous chemical processes. No meteorological impact (other than on the ozone fields themselves) is expected from this change.<P>
+
+Verification has shown a noticeable reduction in cold biases of the 2m temperature around sunset; this is linked to the improved time integration of land-surface temperature. The scores for the free atmosphere show a very minor, and overall neutral, impact of the changes on the performance during the three months of testing currently available.<P>
+
+<B>Future Changes</B><P>
+Pre-operational testing will start over the summer for an important set of changes both to the data assimilation (T255 inner loops, new <i>J</i><sub>b</sub> statistics, new humidity structure functions, the use of water-vapour radiances from Meteosat and of sea winds from QuikSCAT, an upgrade of the radiative-transfer code, upgraded quality control for mobile platforms, the use of extra channels from AMSU-A for an extended application of the data over land), and to the forecast model (finite elements in the vertical, a revised precipitation scheme, improvements in the oceanic wave model).<P>
+
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no92">No. 92 - Autumn 2001</A></H2>
+
+No change has been made to the operational system since 12 June 2001.<P>
+
+<B>Future Changes</B><P>
+Pre-operational testing of an important set of changes for the operational system has started in October. All components of the system are affected:
+<UL>
+	<LI>More data are activated (QuikSCAT data for sea winds, less thinning of aircraft observations, more intelligent thinning and better scan correction of ATOVS radiances);
+	<LI>Pre-processing (bias correction) of SSMI data and redundancy checks for SYNOP, SHIP, DRIBU, AIREP, TEMP and PILOT observations are refined.
+	<LI>4D-Var analysis algorithms are upgraded: pre-conditioning is added to the minimisation, resulting in a 40% reduction of the number of adiabatic iterations; correlation functions slightly revised (compacted); the radiative transfer model used to assimilate satellite radiances had been completely re-written; the observation time slot has been reduced from 1 hour to 30 minutes.
+	<LI>Model changes include a new finite-element vertical discretization, small changes in the convective precipitation scheme and supersaturation checks, and an improved temporal scheme for oceanic wave generation;
+	<LI>Initial EPS perturbations in the tropics are included. The perturbations are generated for a maximum of four target areas by Gaussian sampling of the five leading diabatic singular vectors for each area. The Carribbean (0-25&deg;N and 100-60&deg;W) is always a target area, as is every tropical storm of category larger than 1 between 25&deg;N and 25&deg;S. (In the event that these criteria produce more than four target areas, the closest areas are merged.)
+</UL><P>
+More on the impact of these changes on the model performance will be reported in the next newsletter.
+<P>
+
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no93">No. 93 - Spring 2002</A></H2>
+On 4 December 2001 a bug fix was introduced into the snow-depth analysis scheme. Since the introduction of CY22r3 (June 2000), snow-depth observations were converted to equivalent liquid water using a erroneous scaling factor; this had little effect on the snow cover but resulted in a significant underestimation of the snow depth where observations were available.<P>
+
+On 22 January 2002, an upgraded version of the model, CY24r3, was implemented. This version includes several important changes that together affect all components of the system (data assimilation, atmospheric and oceanic wave forecasts, EPS):
+<UL>
+	<LI>More data are now activated (SeaWinds data from QUIKSCAT, less thinning of aircraft observations, more intelligent thinning and better scan correction of ATOVS radiances);
+	<LI>Pre-processing (bias correction) of SSMI data and redundancy checks for SYNOP, SHIP, DRIBU, AIREP, TEMP and PILOT observation have been refined;
+	<LI>4D-Var analysis algorithms has been upgraded: pre-conditioning has been added to the minimization, resulting in a 40% reduction of the number of adiabatic iterations; correlation functions have been slightly revised (compacted);the radiative-transfer model used to assimilate satellite radiances has been completely rewritten; the observation time-slot has been reduced from 1 hour to 30 minutes;
+	<LI>Model changes include a new finite-element vertical discretization, small changes in the convective precipitation scheme and supersaturation checks, and an improved temporal scheme for oceanic wave generation;
+	<LI>Initial EPS perturbations in the tropics are now included. The perturbations are generated for a maximum of four target areas by Gaussian sampling of the five leading diabatic singular vectors for each area. The Caribbean (0-25&deg;N and 100-60&deg;W) is always a target area, as is every tropical storm of category larger than 1 between 25&deg;N and 25&deg;S. (In the event that these criteria produce more than four target areas, the closest areas are merged.)</UL><P>
+
+Following thorough testing and evaluation of the new model cycle, verification has shown a robust improvement of upper-air scores for all domains and forecast ranges, most notably over the southern hemisphere and at higher levels. Preliminary verification of tropical-cyclone tracks in September and October has also shown significant improvements, both in deterministic and probabilistic modes. Case studies have demonstrated a reduction in the number of occasionally spurious developments of small-scale cyclones over sea.<P>
+
+On 4 March 2002, a new blacklisting procedure was introduced to avoid using AMV (ex-SATOB) winds during time-slots likely to be affected by solar-eclipse problems.<P>
+
+On Mach 5 2002, a bug fix was introduced into the post-processing of gust winds in the EPS; prior to that date, the maximum was over the last 6 hours, not 12 as it should have been.<P>
+
+On 9 April, an upgraded version of the model, CY25r1, was implemented. This version includes a revised short-wave radiation scheme with variable effective radius of liquid cloud water, retuning of the land-surface parametrization (TESSEL) to reduce winter/spring warm biases in low-level temperatures, improved wind-gust post-processing, and the activation of new data streams in the assimilation (water-vapour radiances from Meteosat-7, SBUV and GOME ozone data, European wind profilers). A bug in the convective momentum transfer was also fixed. Verification has shown a small improvement in the upper-air scores, most notably at high levels and over warm continental land masses.<P>
+  
+
+
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no94">No. 94 - Summer 2002</A></H2>
+There were no changes to the operational forecasting system during this period.<P>
+<P>
+  
+
+
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<BR><H2><A NAME="no95">No. 95 - Autumn 2002</A></H2>
+There were no changes to the operational forecasting system during this period.<P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<P>
+
+<BR><H2><A NAME="no96">No. 96 - Winter 2002/03</A></H2>
+On 29 October 2002, radiances from the new NOAA-17 satellite were activated in the data assimilation. As a result, radiances from three polar orbiting sounders (ATOVS from NOAA-15, 16 and 17) are currently assimilated for the first time.
+<P>
+A new cycle of ECMWF model, Cy25r4, has been implemented on 14 January 2003.This version includes changes to many aspects of the data assimilation and forecasting system:
+<P>
+
+<UL>
+<LI>Revised multi-incremental (T95/T159) 4D-Var algorithm, including interpolation of high to low-resolution trajectory.
+
+<LI>Omega-equation and non-linear balance, and statistics from ensemble of 4D-Var assimilations, in the Jb (background error cost function).
+
+<LI>Revised, more selective to gravity waves Jc (digital filter cost function).
+
+<LI>Assimilation of GOES WV radiances, MODIS winds, more HIRS channels and SAR ocean-wave data.
+
+<LI>Direct assimilation of SSM/I radiances in 4D-Var.
+
+<LI>Improved cloud-scheme numerics, cleaner code, and bug fixes; Revised cloud physics.
+
+<LI>Revised convection scheme with new type and cloud top/base algorithms; checks all levels up to 700hPa for initiation of deep convection
+</UL>
+<P>
+In addition the RNORM parameter scaling EPS initial perturbations was reduced from 2.0 to 1.6 as a consequence of the data assimilation statistics retuning.This has the effect of keeping the EPS spread at the same level as in the current operational version.
+
+<P>
+The impact of these changes has been found to be meteorologically positive during the test period over a wide range of areas and parameters.Tests conducted during the summer have shown a clear reduction of forecast errors generated over North America and advected towards Europe at this time of the year. The new model version removes convective instability more effectively and realistically, as was found in several case studies. Stratosphere forecasts have also been improved.
+
+<P>
+This version is being run in parallel on the Fujitsu VPP5000 and IBM HPCF, and is planned to be the one to be migrated to the new computer later this year. 
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<P>
+
+
+<BR><H2><A NAME="no97">No. 97 - Spring 2003</A></H2>
+<P>
+AIRS radiances have been passively monitored since 19 February 2003.
+
+<P>
+On 4 March 2003 all the operational forecast suites were switched to run on the new IBM high-performance computing system using cycle CY25r5; this major technical upgrade went smoothly, both from the internal and external users? points of view. See also, the articles on pages 12 and 20 in
+this issue of the Newsletter, the article on page 11 of Newsletter 93 (Spring 2002) and:
+
+<P>
+<a href="http://www.ecmwf.int/services/computing/overview/ibm_cluster.html">http://www.ecmwf.int/services/computing/overview/ibm_cluster.html</a>.
+
+<P>
+Since 25 March 2003, the ECMWF medium-range operational forecasts (T511L60 deterministic and T255L40 EPS) have been run twice per day from base times 00 and 12 UTC. However, the data-assimilation cycle has remained unchanged. The 00 UTC products are archived in MARS and are available for dissemination
+
+<P>
+On 31 March 2003, the Fujitsu computers were decommissioned. As a result (and according to plans) the old version of the seasonal-forecast suite (System 1) has also been discontinued.
+<P>
+<A HREF="#top"><I>Return to top of page</I></A>
+<P>
+
+
+
+</DIV>
+</BODY>
+</HTML>

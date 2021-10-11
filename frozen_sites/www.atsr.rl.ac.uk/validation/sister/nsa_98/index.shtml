@@ -1,0 +1,1057 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>North and South Atlantic 1998
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../../documentation/index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../documentation/docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <!-- North and South Atlantic 98 pages -->
+
+<H2>The AMT-7/ROSSA98 Experiment</H2>
+
+ <p>From the 13th September to the 16th October 1998, the Rutherford Appleton Laboratory, 
+  in collaboration with the Colorado Center for Astrodynamics Research
+  (<A href="http://www-ccar.colorado.edu/"><U>CCAR</U></A>, USA), the Southampton 
+  Oceanography Centre (<A href="http://www.soc.soton.ac.uk/"><U>SOC</U></A>, UK), and
+  the European Joint Reserach Centre (<A href="http://www.jrc.it/"><U>JRC</A></U>, Italy),
+  made a series of atmospheric and oceanic measurements from the RRS James Clark Ross,
+  along a transect from Grimsby in UK to the Falkland Islands. These measurements were 
+  made as a part of the Atlantic Meridional Transect/Radiometric Observations of the Sea
+  Surface and Atmosphere (AMT-7/ROSSA98) joint experiment, operated by the Plymouth 
+  Marine Laboratory (<A href="http://www.pml.ac.uk/"><U>PML</U></A>, UK) and the British
+  Antarctic Survey (<A href="http://www.antarctica.ac.uk/".<U>BAS</U></A>, UK).
+<p>The SISTeR radiometer was deployed at the port forward corner of the JCR's 
+  foremast platform (Figure 1, below) and looked down to the sea at an angle of 40° from 
+  nadir. Sky radiance measurements were taken at 60°, 40° and 0° from zenith. 
+  Each measurement was sampled for 0.8s with a 10.8µm filter.</p>
+
+<center>
+  <table cellpadding="5">
+    <tr> 
+      <td>
+        <img src="../../images/SISTeR.jpg"
+        alt="SISTeR on JCR" width="252" height="300">
+      </a></td>
+
+      <td width="10"></td>
+
+      <td>
+        <img src="../../images/Data.jpg"
+        alt="AMT-7 data" width="230" height="300">
+      </a></td>
+    </tr>
+
+     <tr> 
+      <td width="252">
+        <p><B>Figure 1</B> The SISTeR radiometer on the foremast
+        platform of the RSS James Clark Ross for the AMT-7/ROSSA98
+        experiment.</p>
+      </td>
+
+      <td></td>
+
+      <td width="230" valign="top">
+        <p><B>Figure 2</B> Availability of SISTeR data from the 
+        AMT-7/ ROSSA98 experiment.</p>
+      </td>
+    </tr>
+  </table>
+</center>
+
+<p>Supporting measurements included SOAP trailing thermistor temperatures at ~10cm 
+  depth, intake and hull temperatures, meterological data and balloon sonde profiles. 
+  Figure 2, above, shows the availability of SISTeR data over the cruise period.</p>
+
+
+
+<h3>SISTeR/ATSR-2 Coincidences</h3>
+<p>Twelve overpasses were identified. One ATSR-2 GSST overpass pixel was passed 
+  as clear by both the forward and nadir GSST cloud masks. A further two were 
+  "near misses", that is, adjacent pixels were flagged as clear by both cloud masks. 
+  One of these was rejected due to the large difference between local measured 
+  bulk and skin temperatures and the very large rate of change of SST with both time and 
+  position at the overpass point. Statistics on SISTeR samples which fell within 1, 2, 5, 10 
+  and 20 minutes of the overpass time, the overpass ATSR-2 pixel, and the ATSR-2 pixels whose 
+  centres fell within 1, 2, 3, 4 and 5km of the overpass position are given below for the
+  remaining two points. ATSR-2 data was processed with two versions of the SADIST-2 
+  data processor. Version 302 contained the launch GSST coefficients [1] and Version 321,
+  aerosol-robust GSST coefficients [2, 3].</p>
+
+
+<h3>First Overpass</h3>
+
+<center>
+
+<table cellpadding="5">
+  <tr>
+    <td>
+      <table border="1">
+        <tr> 
+          <td width="130">Time</td>
+          <td width="153">12:02:49 UTC</td>
+        </tr>
+        <tr> 
+          <td>Date</td>
+          <td>23rd September 1998</td>
+        </tr>
+        <tr> 
+          <td>Pass</td>
+          <td>Descending</td>
+        </tr>
+        <tr> 
+          <td>Latitude</td>
+          <td>36.14° N</td>
+        </tr>
+        <tr> 
+          <td>Longitude</td>
+          <td>17.49° W</td>
+        </tr>
+        <tr> 
+          <td>Ship speed</td>
+          <td>11.7 Knots</td>
+        </tr>
+        <tr> 
+          <td>Bulk SST (10 cm)</td>
+          <td>296.560 K</td>
+        </tr>
+      </table>
+    </td>
+
+    <td width="10"></td>
+
+    <td>
+      <table border="1">
+        <tr>
+          <td width="55">Period (± mins)</td>
+          <td width="65">SST (K)</td>
+          <td width="50">SD (K)</td>
+          <td width="50">SE (K)</td>
+          <td width="45">n</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>296.435</td>
+          <td>0.068</td>
+          <td>0.008</td>
+          <td>74</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>296.451</td>
+          <td>0.068</td>
+          <td>0.006</td>
+          <td>136</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>296.448</td>
+          <td>0.063</td>
+          <td>0.004</td>
+          <td>255</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>296.442</td>
+          <td>0.066</td>
+          <td>0.003</td>
+          <td>652</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>296.436</td>
+          <td>0.070</td>
+          <td>0.002</td>
+          <td>1448</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr> 
+    <td><p><B>Table 1.1</B> Overpass summary.</p></td>
+    <td></td>
+    <td><p><B>Table 1.2</B> SISTeR SSTs.</p></td>
+  </tr>
+</table>
+
+
+
+<table cellpadding="5">
+  <tr>
+    <td>
+      <table border="1">
+        <tr>
+          <td width="55">Radius (km)</td>
+          <td width="65">SST (K)</td>
+          <td width="50">SD (K)</td>
+          <td width="50">SE (K)</td>
+          <td width="45">n</td>
+        </tr>
+         <tr>
+          <td>OP</td>
+          <td>296.70</td>
+          <td>-</td>
+          <td>-</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>296.63</td>
+          <td>0.06</td>
+          <td>0.03</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>296.66</td>
+          <td>0.04</td>
+          <td>0.01</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>296.67</td>
+          <td>0.07</td>
+          <td>0.01</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>296.65</td>
+          <td>0.07</td>
+          <td>0.01</td>
+          <td>31</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>296.66</td>
+          <td>0.07</td>
+          <td>0.01</td>
+          <td>49</td>
+        </tr>
+      </table>
+    </td>
+
+    <td width="10"></td>
+
+    <td>
+      <table border="1">
+        <tr>
+          <td width="55">Radius (km)</td>
+          <td width="65">SST (K)</td>
+          <td width="50">SD (K)</td>
+          <td width="50">SE (K)</td>
+          <td width="45">n</td>
+        </tr>
+        <tr>
+          <td>OP</td>
+          <td>296.43</td>
+          <td>-</td>
+          <td>-</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>296.48</td>
+          <td>0.05</td>
+          <td>0.03</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>296.51</td>
+          <td>0.09</td>
+          <td>0.03</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>3</td> 
+          <td>296.53</td>
+          <td>0.11</td>
+          <td>0.02</td>
+          <td>21</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>296.50</td>
+          <td>0.12</td>
+          <td>0.02</td>
+          <td>31</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>296.47</td>
+          <td>0.15</td>
+          <td>0.02</td>
+          <td>49</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="301"><p><B>Table 1.3</B> ATSR-2 Three channel nadir-only SSTs (SADIST-2 V302).</p></td>
+    <td></td>
+    <td width="301"><p><B>Table 1.4</B> ATSR-2 Three channel dual view SSTs (SADIST-2 V302).</p></td>
+  </tr>
+</table>
+
+
+
+<table cellpadding="5">
+  <tr>
+    <td>
+      <table border="1">
+        <tr>
+          <td width="55">Radius (km)</td>
+          <td width="65">SST (K)</td>
+          <td width="50">SD (K)</td>
+          <td width="50">SE (K)</td>
+          <td width="45">n</td>
+        </tr>
+        <tr>
+          <td>OP</td>
+          <td>296.93</td>
+          <td>-</td>
+          <td>-</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>296.86</td>
+          <td>0.06</td>
+          <td>0.04</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>296.88</td>
+          <td>0.05</td>
+          <td>0.02</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>296.89</td>
+          <td>0.07</td>
+          <td>0.02</td>
+          <td>19</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>296.88</td>
+          <td>0.07</td>
+          <td>0.01</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>296.88</td>
+          <td>0.07</td>
+          <td>0.01</td>
+          <td>46</td>
+        </tr>
+      </table>
+    </td>
+
+    <td width="10"></td>
+
+    <td>
+      <table border="1">
+        <tr>
+          <td width="55">Radius (km)</td>
+          <td width="65">SST (K)</td>
+          <td width="50">SD (K)</td>
+          <td width="50">SE (K)</td>
+          <td width="45">n</td>
+        </tr>
+        <tr>
+          <td>OP</td>
+          <td>296.80</td>
+          <td>-</td>
+          <td>-</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>296.85</td>
+          <td>0.05</td>
+          <td>0.03</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>296.88</td>
+          <td>0.08</td>
+          <td>0.03</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>296.93</td>
+          <td>0.10</td>
+          <td>0.02</td>
+          <td>19</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>296.90</td>
+          <td>0.11</td>
+          <td>0.02</td>
+          <td>29</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>296.87</td>
+          <td>0.14</td>
+          <td>0.02</td>
+          <td>46</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="301"><p><b>Table 1.5</b> ATSR-2 Three channel nadir-only SSTs (SADIST-2 V321).</p></td>
+    <td></td>
+    <td width="301"><p><b>Table 1.6</b> ATSR-2 Three channel dual view SSTs (SADIST-2 V321).</p></td>
+  </tr>
+</table>
+
+</center>
+
+<h3>Second Overpass</h3>
+
+<center>
+
+<table cellpadding="5">
+  <tr>
+    <td>
+      <table border="1">
+        <tr> 
+          <td width="130">Time</td>
+          <td width="153">12:10:17 UTC</td>
+        </tr>
+        <tr> 
+          <td>Date</td>
+          <td>26th September 1998</td>
+        </tr>
+        <tr> 
+          <td>Pass</td>
+          <td>Descending</td>
+        </tr>
+        <tr> 
+          <td>Latitude</td>
+          <td>30.02° N</td>
+        </tr>
+        <tr> 
+          <td>Longitude</td>
+          <td height="21">19.97° W</td>
+        </tr>
+        <tr> 
+          <td>Ship speed</td>
+          <td>10.9 Knots</td>
+        </tr>
+        <tr> 
+          <td>Bulk SST (10 cm)</td>
+          <td>297.445 K</td>
+        </tr>
+      </table>
+    </td>
+
+    <td width="10"></td>
+
+    <td>
+      <table border="1">
+        <tr>
+          <td width="55">Period (± mins)</td>
+          <td width="65">SST (K)</td>
+          <td width="50">SD (K)</td>
+          <td width="50">SE (K)</td>
+          <td width="45">n</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>297.377</td>
+          <td>0.066</td>
+          <td>0.007</td>
+          <td>88</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>297.381</td>
+          <td>0.060</td>
+          <td>0.005</td>
+          <td>136</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>297.371</td>
+          <td>0.058</td>
+          <td>0.003</td>
+          <td>408</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>297.362</td>
+          <td>0.053</td>
+          <td>0.002</td>
+          <td>809</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>297.308</td>
+          <td>0.099</td>
+          <td>0.002</td>
+          <td>1575</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr> 
+    <td><p><b>Table 2.1</b> Overpass summary.</p></td>
+    <td></td>
+    <td><p><b>Table 2.2</b> SISTeR SSTs.</p></td>
+  </tr>
+</table>
+
+
+
+<table cellpadding="5">
+  <tr>
+    <td>
+      <table border="1">
+        <tr>
+          <td width="55">Radius (km)</td>
+          <td width="65">SST (K)</td>
+          <td width="50">SD (K)</td>
+          <td width="50">SE (K)</td>
+          <td width="45">n</td>
+        </tr>
+        <tr>
+          <td>OP</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>297.73</td>
+          <td>0.02</td>
+          <td>0.01</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>297.73</td>
+          <td>0.03</td>
+          <td>0.01</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>297.75</td>
+          <td>0.05</td>
+          <td>0.01</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>297.76</td>
+          <td>0.05</td>
+          <td>0.01</td>
+          <td>26</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>297.73</td>
+          <td>0.10</td>
+          <td>0.02</td>
+          <td>47</td>
+        </tr>
+      </table>
+    </td>
+
+    <td width="10"></td>
+
+    <td>
+      <table border="1">
+        <tr>
+          <td width="55">Radius (km)</td>
+          <td width="65">SST (K)</td>
+          <td width="50">SD (K)</td>
+          <td width="50">SE (K)</td>
+          <td width="45">n</td>
+        </tr>
+        <tr>
+          <td>OP</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>297.38</td>
+          <td>0.02</td>
+          <td>0.01</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>297.33</td>
+          <td>0.07</td>
+          <td>0.02</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>297.34</td>
+          <td>0.11</td>
+          <td>0.03</td>
+          <td>15</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>297.35</td>
+          <td>0.12</td>
+          <td>0.02</td>
+          <td>26</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>297.31</td>
+          <td>0.14</td>
+          <td>0.02</td>
+          <td>47</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="301"><p><B>Table 2.3</B> ATSR-2 Three channel nadir-only SSTs (SADIST-2 V302).</p></td>
+    <td></td>
+    <td width="301"><p><B>Table 2.4</B> ATSR-2 Three channel dual view SSTs (SADIST-2 V302).</p></td>
+  </tr>
+</table>
+
+
+
+<table cellpadding="5">
+  <tr>
+    <td>
+      <table border="1">
+        <tr>
+          <td width="55">Radius (km)</td>
+          <td width="65">SST (K)</td>
+          <td width="50">SD (K)</td>
+          <td width="50">SE (K)</td>
+          <td width="45">n</td>
+        </tr>
+        <tr>
+          <td>OP</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>298.11</td>
+          <td>0.02</td>
+          <td>0.01</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>298.13</td>
+          <td>0.06</td>
+          <td>0.02</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>298.15</td>
+          <td>0.06</td>
+          <td>0.01</td>
+          <td>18</td>
+        </tr>
+        <tr> 
+          <td>4</td>
+          <td>298.15</td>
+          <td>0.05</td>
+          <td>0.01</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>298.12</td>
+          <td>0.10</td>
+          <td>0.01</td>
+          <td>52</td>
+        </tr>
+      </table>
+    </td>
+
+    <td width="10"></td>
+
+    <td>
+      <table border="1">
+        <tr>
+          <td width="55">Radius (km)</td>
+          <td width="65">SST (K)</td>
+          <td width="50">SD (K)</td>
+          <td width="50">SE (K)</td>
+          <td width="45">n</td>
+        </tr>
+        <tr>
+          <td>OP</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>297.67</td>
+          <td>0.03</td>
+          <td>0.02</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>297.68</td>
+          <td>0.09</td>
+          <td>0.03</td>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>297.68</td>
+          <td>0.09</td>
+          <td>0.02</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>297.68</td>
+          <td>0.09</td>
+          <td>0.02</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>297.64</td>
+          <td>0.13</td>
+          <td>0.02</td>
+          <td>52</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="301"><p><b>Table 2.5</b> ATSR-2 Three channel nadir-only SSTs (SADIST-2 V321).</p></td>
+    <td></td>
+    <td width="301"><p><b>Table 2.6</b> ATSR-2 Three channel dual view SSTs (SADIST-2 V321).</p></td>
+  </tr>
+</table>
+
+</center>
+
+
+
+<H3> Overpass Plots </H3>
+
+<p>Each ATSR-2 overpass <a href="plots/index.shtml"><u>plot</u></a> contains a masked GSST image
+ either for the nadir-only or the dual view GSST product. A map shows the location of
+ the image. An expanded view of the sea area immediately surrounding the overpass
+ point shows the nearest overpass pixel and the course of the RRS James Clark Ross.
+ Overpass data are summarised at the base of the image. The left-hand column contains
+ the overpass location and processing details. The right-hand column gives the temperature
+ of the nearest overpass pixel (0km) and statistics on those pixels with centres within
+ 1, 2, 3, 4 and 5km of the overpass point.</p>
+
+<p>Further plots summarise the SISTeR measurements for the UTC day containing the overpass.
+ Each plot contains three graphs. These show the SISTeR SSTs, binned into 2-minute intervals,
+ the standard deviation of these SSTs from the bin average and the brightness temperature
+ of the sky at 0°, 40° and 60° from zenith. The measurements at 40° are used to correct the
+ upwelling sea radiance measurements.</p>
+
+<p>The standard deviations contain information from the noise floor of the SISTeR
+ detector, the variability of the local SST and sometimes, under broken skies, from
+ incomplete correction of the reflected sky radiance contribution to the upwelling
+ sea radiance.</p>
+
+<H3> Summary </H3>
+
+<p>The Version 302 three-channel dual view GSSTs agree very well indeed with the SISTeR
+ in-situ SST measurements. The differences between the measurements are always less than
+ 0.1K regardless of the averaging period or area. This is well within the specified accuracy
+ of the ATSR-2 SST product. All other derivations of GSST are significantly warm compared with
+ the in-situ measurements. In particular, the two Version 321 three-channel dual view GSSTs
+ are 0.3K and more than 0.4K warmer than the in-situ measurements.</p>
+
+<H3> Contacts </H3>
+
+<table>
+  <tr>
+    <td>British Antarctic Survey</td>
+    <td><a href="http://www.antarctica.ac.uk">http://www.antarctica.ac.uk/</a></td>
+  </tr>
+  <tr>
+    <td width="300">Colorado Center for Astrodynamics Research</td>
+    <td><a href="http://www-ccar.colorado.edu/">http://www-ccar.colorado.edu/</a></td>
+  </tr>
+  <tr>
+    <td>European Joint Research Centre</td>
+    <td><a href="http://www.jrc.it/">http://www.jrc.it/</a></td>
+  </tr>
+  <tr>
+    <td>Plymouth Marine Laboratory</td>
+    <td><a href="http://www.pml.ac.uk">http://www.pml.ac.uk/</a></td>
+  </tr>
+  <tr>
+    <td>Southampton Oceanography Centre</td>
+    <td><a href="http://www.soc.soton.ac.uk/">http://www.soc.soton.ac.uk/</a></td>
+  </tr>
+</table> 
+
+<H3> References </H3>
+
+<table>
+  <tr>
+    <td valign="top" width="27">[1]</td>  
+
+    <td width="500"><p>
+      A.M. Zavody, C.T. Mutlow and D.T. LLewellyn-Jones 1995: A radiative
+      transfer model for sea surface temperature retrieval for the along-
+      track scanning radiometer, <i>J. Geophys. Res.</i>, <b>100</b>,
+      937-952.</p>
+    </td>
+  </tr>  
+</table>
+
+<p></p>
+
+<table>
+  <tr>
+    <td valign="top" width="27">[2]</td>  
+  
+    <td width="500"><p>
+      C.J. Merchant, A.R. Harris, M.J. Murray and A.M. Zavody 1999: Toward the
+      elimination of bias in satellite retrievals of sea surface temperature.
+      1. Theory, modeling and interalgorithm comparison, <i>J. Geophys. Res.</i>,
+      <b>104</b>, 23,565-23,578.</p>
+    </td>
+  </tr>  
+</table>
+
+<p></p>
+
+<table>
+  <tr>
+    <td valign="top" width="27">[3]</td>  
+  
+    <td width="500"><p>
+      C.J. Merchant and A.R. Harris 1999: Toward the elimination of bias in satellite
+      retrievals of sea surface temperature. 2. Comparison with in situ measurements,
+      <i>J. Geophys. Res.</i>, <b>104</b>, 23,579-23,590.</p>
+    </td>
+  </tr>  
+</table>
+
+ 
+
+
+
+<BR>
+<BR>
+<H3> Overpass Plots </H3>
+ <A HREF="plots/index.shtml"><B><U>Plots...</U></B></A>
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Thursday, 06-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

@@ -1,0 +1,45 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050821T230000Z
+DTEND:20050826T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Cairns, Australia=20
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000080BE7AE5CE39C5010000000000000000100
+ 00000FC7328B46C8D164D9AEBF8B60F45AC67
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0ADynamic Planet 2005 'Monitoring=
+ and Understanding a Dynamic Planet=0D=0Awith Geodetic and Oceanographic To=
+ols'.=0D=0A=0D=0ACairns, Australia August 22- 26 2005.=0D=0A=0D=0APlease ca=
+n we remind you of the session PB2 at the joint=0D=0AIAG/IAPSO/IABO=0D=0Aas=
+sembly in Cairns http://www.dynamicplanet2005.com=0D=0A=0D=0AAbstract deadl=
+ine is 6 May and we would welcome your input.=0D=0A=0D=0APB2 - Chemical and=
+ physical controls and impacts on marine biota=0D=0AConveners:D. Smythe-Wri=
+ght, J. Hall, C. Roy=0D=0A=0D=0AThis session aims to address the complex ph=
+ysical (e.g. temperature,=0D=0Alight,=0D=0Amixing, turbulence and currents)=
+, chemical (e.g. element=0D=0Aconcentration,=0D=0Adistribution and bioavail=
+ability) and biological processes (e.g.=0D=0Agrazing and=0D=0Apredation) th=
+at control organisms at the lower end of the food web and=0D=0Aencourage th=
+e development of further interdisciplinary collaborative=0D=0Astudies. Unde=
+rstanding how biogeochemical cycles and fluxes integrate=0D=0Awith=0D=0Afoo=
+d web dynamics is a major challenge in marine science today. We=0D=0Aencour=
+age=0D=0Apapers on all aspects of this wide-ranging topic including nutrien=
+t=0D=0Aavailability and limitation, molecular processes, impact of physical=
+=0D=0Aprocesses on biological populations, the impacts of biogeochemical=0D=
+=0Acycles on=0D=0Amarine food webs etc.=0D=0A=0D=0A=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=0D=0A=3D=3D=3D=3D=0D=
+=0ADr. Denise Smythe-Wright,=0D=0AGeorge Deacon Division=0D=0ASouthampton O=
+ceanography Centre,=0D=0AEmpress Dock, European Way,=0D=0ASouthampton SO14 =
+3ZH, United Kingdom=0D=0A=0D=0ATel: ++ 44 (0) 23 80 596439=0D=0AFax: ++ 44 =
+(0) 23 80 596204=0D=0AEmail: dsw@soc.soton.ac.uk=0D=0A=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=0D=0A=0D=0A=0D=0A=
+=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:=20Dynamic Planet 2005 'Monitoring and Un=
+derstanding a Dynamic Planet with Geodetic and Oceanographic Tools'.
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

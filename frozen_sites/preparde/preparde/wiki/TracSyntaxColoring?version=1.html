@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracSyntaxColoring – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracSyntaxColoring?version=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracSyntaxColoring" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracSyntaxColoring" title="View TracSyntaxColoring">TracSyntaxColoring</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracSyntaxColoring" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A01%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:01+01:00 in Timeline">6 years</a> ago)
+               (<a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracSyntaxColoring?action=diff&amp;version=1">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="SyntaxColoringofSourceCode">Syntax Coloring of Source Code</h1>
+<p>
+Trac supports language-specific syntax highlighting of source code within wiki formatted text in <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors#CodeHighlightingSupport">wiki processors</a> blocks and in the <a class="wiki" href="TracBrowser.html">repository browser</a>.
+</p>
+<p>
+To do this, Trac uses external libraries with support for a great number of programming languages.
+</p>
+<p>
+Currently Trac supports syntax coloring using one or more of the following packages:
+</p>
+<ul><li><a class="ext-link" href="http://pygments.pocoo.org/"><span class="icon"> </span>Pygments</a>, by far the preferred system, as it covers a wide range of programming languages and other structured texts and is actively supported
+</li><li><a class="ext-link" href="http://www.codento.com/people/mtr/genscript/"><span class="icon"> </span>GNU Enscript</a>, commonly available on Unix but somewhat unsupported on Windows
+</li><li><a class="ext-link" href="http://silvercity.sourceforge.net/"><span class="icon"> </span>SilverCity</a>, legacy system, some versions can be <a class="ext-link" href="http://trac.edgewall.org/wiki/TracFaq#why-is-my-css-code-not-being-highlighted-even-though-i-have-silvercity-installed"><span class="icon"> </span>problematic</a>
+</li></ul><p>
+To activate syntax coloring, simply install either one (or more) of these packages (see <a class="wiki" href="TracSyntaxColoring%3Fversion=1.html#ExtraSoftware">#ExtraSoftware</a> section below).
+If none of these packages is available, Trac will display the data as plain text. 
+</p>
+<h3 id="AboutPygments">About Pygments</h3>
+<p>
+Starting with trac 0.11 <a class="ext-link" href="http://pygments.org/"><span class="icon"> </span>pygments</a> will be the new default highlighter. It's a highlighting library implemented in pure python, very fast, easy to extend and <a class="ext-link" href="http://pygments.org/docs/"><span class="icon"> </span>well documented</a>.
+</p>
+<p>
+The Pygments default style can specified in the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni#mimeviewer-section">mime-viewer</a> section of trac.ini. The default style can be overridden by setting a Style preference on the <a href="../prefs/pygments.html">preferences page</a>. 
+</p>
+<p>
+It's very likely that the list below is outdated because the list of supported pygments lexers is growing weekly. Just have a look at the page of <a class="ext-link" href="http://pygments.org/docs/lexers/"><span class="icon"> </span>supported lexers</a> on the pygments webpage.
+</p>
+<h2 id="SyntaxColoringSupport">Syntax Coloring Support</h2>
+<h3 id="KnownMIMETypes">Known MIME Types</h3>
+<p>
+</p><div class="mimetypes"><table class="wiki"><thead><tr><th>MIME Types</th><th><a href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors">WikiProcessors</a></th></tr></thead><tbody><tr><th style="text-align: left"><tt>application/javascript</tt></th><td><code>js</code></td></tr><tr><th style="text-align: left"><tt>application/msword</tt></th><td><code>doc dot</code></td></tr><tr><th style="text-align: left"><tt>application/pdf</tt></th><td><code>pdf</code></td></tr><tr><th style="text-align: left"><tt>application/postscript</tt></th><td><code>ps</code></td></tr><tr><th style="text-align: left"><tt>application/rss+xml</tt></th><td><code>rss</code></td></tr><tr><th style="text-align: left"><tt>application/rtf</tt></th><td><code>rtf</code></td></tr><tr><th style="text-align: left"><tt>application/x-csh</tt></th><td><code>csh</code></td></tr><tr><th style="text-align: left"><tt>application/x-sh</tt></th><td><code>sh</code></td></tr><tr><th style="text-align: left"><tt>application/x-troff</tt></th><td><code>nroff roff troff</code></td></tr><tr><th style="text-align: left"><tt>application/x-yaml</tt></th><td><code>yaml yml</code></td></tr><tr><th style="text-align: left"><tt>application/xsl+xml</tt></th><td><code>xsl</code></td></tr><tr><th style="text-align: left"><tt>application/xslt+xml</tt></th><td><code>xslt</code></td></tr><tr><th style="text-align: left"><tt>image/svg+xml</tt></th><td><code>svg</code></td></tr><tr><th style="text-align: left"><tt>image/x-icon</tt></th><td><code>ico</code></td></tr><tr><th style="text-align: left"><tt>model/vrml</tt></th><td><code>vrml wrl</code></td></tr><tr><th style="text-align: left"><tt>text/css</tt></th><td><code>css</code></td></tr><tr><th style="text-align: left"><tt>text/html</tt></th><td><code>htm html</code></td></tr><tr><th style="text-align: left"><tt>text/plain</tt></th><td><code>AUTHORS COPYING ChangeLog INSTALL README RELEASE TXT text txt</code></td></tr><tr><th style="text-align: left"><tt>text/x-ada</tt></th><td><code>ada adb ads</code></td></tr><tr><th style="text-align: left"><tt>text/x-asm</tt></th><td><code>asm</code></td></tr><tr><th style="text-align: left"><tt>text/x-asp</tt></th><td><code>asp</code></td></tr><tr><th style="text-align: left"><tt>text/x-awk</tt></th><td><code>awk</code></td></tr><tr><th style="text-align: left"><tt>text/x-c++hdr</tt></th><td><code>H HH c++hdr hh hpp</code></td></tr><tr><th style="text-align: left"><tt>text/x-c++src</tt></th><td><code>C C++ CC c++ c++src cc cpp</code></td></tr><tr><th style="text-align: left"><tt>text/x-chdr</tt></th><td><code>chdr h</code></td></tr><tr><th style="text-align: left"><tt>text/x-csharp</tt></th><td><code>C# c# cs csharp</code></td></tr><tr><th style="text-align: left"><tt>text/x-csrc</tt></th><td><code>c csrc xs</code></td></tr><tr><th style="text-align: left"><tt>text/x-diff</tt></th><td><code>diff patch</code></td></tr><tr><th style="text-align: left"><tt>text/x-dylan</tt></th><td><code>dylan</code></td></tr><tr><th style="text-align: left"><tt>text/x-eiffel</tt></th><td><code>e eiffel</code></td></tr><tr><th style="text-align: left"><tt>text/x-elisp</tt></th><td><code>el elisp</code></td></tr><tr><th style="text-align: left"><tt>text/x-fortran</tt></th><td><code>f fortran</code></td></tr><tr><th style="text-align: left"><tt>text/x-haskell</tt></th><td><code>haskell hs</code></td></tr><tr><th style="text-align: left"><tt>text/x-idl</tt></th><td><code>ice idl</code></td></tr><tr><th style="text-align: left"><tt>text/x-inf</tt></th><td><code>inf</code></td></tr><tr><th style="text-align: left"><tt>text/x-ini</tt></th><td><code>cfg ini</code></td></tr><tr><th style="text-align: left"><tt>text/x-java</tt></th><td><code>java</code></td></tr><tr><th style="text-align: left"><tt>text/x-ksh</tt></th><td><code>ksh</code></td></tr><tr><th style="text-align: left"><tt>text/x-lua</tt></th><td><code>lua</code></td></tr><tr><th style="text-align: left"><tt>text/x-m4</tt></th><td><code>m4</code></td></tr><tr><th style="text-align: left"><tt>text/x-mail</tt></th><td><code>mail</code></td></tr><tr><th style="text-align: left"><tt>text/x-makefile</tt></th><td><code>GNUMakefile Makefile make makefile mk</code></td></tr><tr><th style="text-align: left"><tt>text/x-objc</tt></th><td><code>m mm objc</code></td></tr><tr><th style="text-align: left"><tt>text/x-ocaml</tt></th><td><code>ml mli ocaml</code></td></tr><tr><th style="text-align: left"><tt>text/x-pascal</tt></th><td><code>pas pascal</code></td></tr><tr><th style="text-align: left"><tt>text/x-perl</tt></th><td><code>PL perl pl pm</code></td></tr><tr><th style="text-align: left"><tt>text/x-php</tt></th><td><code>php php3 php4</code></td></tr><tr><th style="text-align: left"><tt>text/x-psp</tt></th><td><code>psp</code></td></tr><tr><th style="text-align: left"><tt>text/x-pyrex</tt></th><td><code>pyrex pyx</code></td></tr><tr><th style="text-align: left"><tt>text/x-python</tt></th><td><code>py python</code></td></tr><tr><th style="text-align: left"><tt>text/x-rfc</tt></th><td><code>rfc</code></td></tr><tr><th style="text-align: left"><tt>text/x-rst</tt></th><td><code>rst</code></td></tr><tr><th style="text-align: left"><tt>text/x-ruby</tt></th><td><code>rb ruby</code></td></tr><tr><th style="text-align: left"><tt>text/x-scheme</tt></th><td><code>scheme scm</code></td></tr><tr><th style="text-align: left"><tt>text/x-sql</tt></th><td><code>sql</code></td></tr><tr><th style="text-align: left"><tt>text/x-tcl</tt></th><td><code>tcl</code></td></tr><tr><th style="text-align: left"><tt>text/x-tex</tt></th><td><code>tex</code></td></tr><tr><th style="text-align: left"><tt>text/x-textile</tt></th><td><code>textile txtl</code></td></tr><tr><th style="text-align: left"><tt>text/x-vba</tt></th><td><code>bas vb vba</code></td></tr><tr><th style="text-align: left"><tt>text/x-verilog</tt></th><td><code>v verilog</code></td></tr><tr><th style="text-align: left"><tt>text/x-vhdl</tt></th><td><code>vhd vhdl</code></td></tr><tr><th style="text-align: left"><tt>text/x-zsh</tt></th><td><code>zsh</code></td></tr><tr><th style="text-align: left"><tt>text/xml</tt></th><td><code>xml</code></td></tr></tbody></table></div><p>
+</p>
+<h3 id="language-supported">List of Languages Supported, by Highlighter</h3>
+<p>
+This list is only indicative.
+</p>
+<table class="wiki">
+<tr><td style="text-align: center">                 </td><th> SilverCity   </th><th> Enscript      </th><th> Pygments 
+</th></tr><tr><td> Ada             </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">     
+</td></tr><tr><td> Asm             </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">     
+</td></tr><tr><td> Apache Conf     </td><td style="text-align: center">                 </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> ASP             </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓              </td><td style="text-align: center">     
+</td></tr><tr><td> C               </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> C#              </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓ <sup><a class="wiki" href="TracSyntaxColoring%3Fversion=1.html#a1">(1)</a></sup>  </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> C++             </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Java            </td><td style="text-align: center">  ✓ <sup><a class="wiki" href="TracSyntaxColoring%3Fversion=1.html#a2">(2)</a></sup>  </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Awk             </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">     
+</td></tr><tr><td> Boo             </td><td style="text-align: center">                 </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> CSS             </td><td style="text-align: center">  ✓              </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Python Doctests </td><td style="text-align: center">                 </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Diff            </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Eiffel          </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">     
+</td></tr><tr><td> Elisp           </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">     
+</td></tr><tr><td> Fortran         </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓ <sup><a class="wiki" href="TracSyntaxColoring%3Fversion=1.html#a1">(1)</a></sup>  </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Haskell         </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Genshi          </td><td style="text-align: center">                 </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> HTML            </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> IDL             </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">     
+</td></tr><tr><td> INI             </td><td style="text-align: center">                 </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Javascript      </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Lua             </td><td style="text-align: center">                 </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> m4              </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">     
+</td></tr><tr><td> Makefile        </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Mako            </td><td style="text-align: center">                 </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Matlab <sup><a class="wiki" href="TracSyntaxColoring%3Fversion=1.html#a3">(3)</a></sup>  </td><td style="text-align: center">             </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Mygthy          </td><td style="text-align: center">                 </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Objective-C     </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> OCaml           </td><td style="text-align: center">                 </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Pascal          </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Perl            </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> PHP             </td><td style="text-align: center">  ✓              </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> PSP             </td><td style="text-align: center">  ✓              </td><td style="text-align: center">                 </td><td style="text-align: center">     
+</td></tr><tr><td> Pyrex           </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">     
+</td></tr><tr><td> Python          </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Ruby            </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓ <sup><a class="wiki" href="TracSyntaxColoring%3Fversion=1.html#a1">(1)</a></sup>  </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Scheme          </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Shell           </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Smarty          </td><td style="text-align: center">                 </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> SQL             </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Troff           </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> TCL             </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">     
+</td></tr><tr><td> Tex             </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> Verilog         </td><td style="text-align: center">  ✓ <sup><a class="wiki" href="TracSyntaxColoring%3Fversion=1.html#a2">(2)</a></sup>  </td><td style="text-align: center">  ✓              </td><td style="text-align: center">     
+</td></tr><tr><td> VHDL            </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">     
+</td></tr><tr><td> Visual Basic    </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">  ✓  
+</td></tr><tr><td> VRML            </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓              </td><td style="text-align: center">     
+</td></tr><tr><td> XML             </td><td style="text-align: center">  ✓              </td><td style="text-align: center">                 </td><td style="text-align: center">  ✓  
+</td></tr></table>
+<p>
+<em><span class="wikianchor" id="a1">(1)</span> Not included in the Enscript distribution.  Additional highlighting rules can be obtained for
+<a class="ext-link" href="http://neugierig.org/software/ruby/"><span class="icon"> </span>Ruby</a>,
+<a class="ext-link" href="http://wiki.hasno.info/index.php/Csharp.st"><span class="icon"> </span>C#</a>,
+<a class="ext-link" href="http://wiki.hasno.info/index.php/F90.st"><span class="icon"> </span>Fortran 90x/2003</a>
+</em></p>
+<p>
+<em><span class="wikianchor" id="a2">(2)</span> since Silvercity 0.9.7 released on 2006-11-23
+</em></p>
+<p>
+<em><span class="wikianchor" id="a3">(3)</span> By default <tt>.m</tt> files are considered Objective-C files. In order to treat <tt>.m</tt> files as MATLAB files, add "text/matlab:m" to the "mime_map" setting in the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni#mimeviewer-section">[mimeviewer] section of trac.ini</a>.
+</em></p>
+<h2 id="ExtraSoftware">Extra Software</h2>
+<ul><li>GNU Enscript -- <a class="ext-link" href="http://directory.fsf.org/GNU/enscript.html"><span class="icon"> </span>http://directory.fsf.org/GNU/enscript.html</a>
+</li><li>GNU Enscript for Windows -- <a class="ext-link" href="http://gnuwin32.sourceforge.net/packages/enscript.htm"><span class="icon"> </span>http://gnuwin32.sourceforge.net/packages/enscript.htm</a>
+</li><li>SilverCity -- <a class="ext-link" href="http://silvercity.sf.net/"><span class="icon"> </span>http://silvercity.sf.net/</a>
+</li><li>Pygments -- <a class="ext-link" href="http://pygments.org/"><span class="icon"> </span>http://pygments.org/</a>
+</li></ul><hr />
+<p>
+See also: <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors">WikiProcessors</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">WikiFormatting</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWiki">TracWiki</a>, <a class="wiki" href="TracBrowser.html">TracBrowser</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracSyntaxColoring?version=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

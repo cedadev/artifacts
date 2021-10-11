@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>PREPARDE: {3} Active Tickets by Milestone</title>
+    <link>http://proj.badc.rl.ac.uk/preparde/report/3</link>
+    <description>Trac Report -
+This report shows how to color results by priority,
+while grouping results by milestone.
+Last modification time, description and reporter are included as hidden fields
+for useful RSS export.
+</description>
+    <language>en-us</language>
+    <image>
+      <title>PREPARDE</title>
+      <url>http://proj.badc.rl.ac.uk/preparde/chrome/common/trac_banner.png</url>
+      <link>http://proj.badc.rl.ac.uk/preparde/report/3</link>
+    </image>
+    <generator>Trac v0.12.2</generator>
+  </channel>
+</rss>

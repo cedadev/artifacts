@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20090324T000000Z
+DTEND:20090328T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Istanbul, Turkey
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000B08A9D65F0B1C8010000000000000000100
+ 00000DB7E6BD8BDEA364E89CB87FC94C3CA70
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:7th International Conference on Air Q=
+uality - Science and Application (Air Quality 2009)=0D=0A=0D=0AOn behalf of=
+ the Organising Committee you are invited to participate in the next Intern=
+ational Conference on Air Quality - Science and Application (formerly known=
+ as Urban Air Quality Conference). The conference will be held in Istanbul =
+and is being organised by the University of Hertfordshire <http://perseus.h=
+erts.ac.uk/index.html>  and the Istanbul Technical University <http://www.i=
+tu.edu.tr/>  with support from a number of international organizations incl=
+uding World Meteorological Organization <http://www.wmo.ch/pages/index_en.h=
+tml>  (WMO), American Meteorological Society <http://www.ametsoc.org/>  (AM=
+S), Air & Waste Management Association <http://www.awma.org/>  (A&WMA), COS=
+T 728 <http://www.cost728.org/> , TUBITEK and SHELL <http://www.shell.com> =
+. =0D=0A=0D=0AImportant deadlines=0D=0AAbstract submission: Friday 26 Septe=
+mber 2008=0D=0AShort paper submission: Friday 9 January 2009=0D=0AEarly bir=
+d rate for registration: Friday 6 February 2009 =0D=0A=0D=0AFor more Inform=
+ation please see the conference website or contact us on email or fax=0D=0A=
+Website: www.airqualityconference.org=0D=0AEmail: airquality@herts.ac.uk=0D=
+=0AFax: +44(0)1707284208=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:7th International Conference on Air Quali=
+ty - Science and Application (Air Quality 2009)
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

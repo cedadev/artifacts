@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070621T230000Z
+DTEND:20070622T230000Z
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000010B7C76F9F98C7010000000000000000100
+ 000005B09A119B8EFA845AA3BB2CBD251AE9B
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:The European Commission's EurOCEAN 20=
+07 conference will be held on June 22nd in Aberdeen.  =0D=0A=0D=0AThis even=
+t will focus on marine science aspects supporting the development of the Eu=
+ropean Maritime Policy and should result in the Aberdeen =0D=0ADeclaration,=
+ an evolution from the Galway 2004 Declaration. The Aberdeen Declaration wi=
+ll synthesise the voice of European marine scientists and express their pri=
+orities in the context of the development of the European Maritime Policy. =
+=0D=0A=0D=0AThe ESF Marine Board is coordinating the Programme Committee, C=
+haired by Lars Horn; a preliminary version of the programme is attached. Fo=
+r more information and details on registration, please go to the EurOCEAN 2=
+007 website (http://www.eurocean2007.com/).=0D=0A=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:The European Commission's EurOCEAN 2007 c=
+onference
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

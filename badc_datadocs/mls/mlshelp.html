@@ -1,0 +1,435 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC: help on the MLS instrument and data</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>The MLS instrument and data products<BR
+CLEAR="ALL"></H1>
+
+<P><I>Information compiled by the BADC team</I> <HR ALIGN=LEFT><A
+NAME="top"></A>Go to: [ Contents | <A HREF="#Instrument">Instrument</A>
+| <A HREF="#Data">Data</A> | <A HREF="#Quality">Quality</A> |
+<A HREF="#Transfer">Transfer</A> | <A HREF="#bottom">End</A> ]
+<HR ALIGN=LEFT></P>
+
+<H2>Contents</H2>
+
+<OL>
+  <LI><A HREF="#Instrument">The instrument</A>
+  <UL>
+    <LI><A HREF="#InstDes">1.1 Instrument Description</A>
+    <LI><A HREF="#MeasTech">1.2 Measurement Techniques</A>
+    <LI><A HREF="#Processing">1.3 Data Processing</A>
+  </UL>
+  <LI><A HREF="#Data">MLS data</A>
+  <UL>
+    <LI><A HREF="#Available">2.1 What is available from the BADC?</A>
+    <LI><A HREF="#Units">2.2 Units</A>
+    <LI><A HREF="#Vertical">2.3 Vertical Coverage</A>
+    <LI><A HREF="#Horizontal">2.4 Horizontal Coverage</A>
+    <LI><A HREF="#Temporal">2.5 Temporal Coverage</A>
+    <LI><A HREF="#VertRes">2.6 Vertical Resolution</A>
+    <LI><A HREF="#HoriRes">2.7 Horizontal Resolution</A>
+  </UL>
+  <LI><A HREF="#Quality">Data quality overview</A>
+  <LI><A HREF="#Transfer">Transferring MLS data from the BADC</A>
+  <UL>
+    <LI><A HREF="#Start">4.1 Before you start</A>
+    <LI><A HREF="#Files">4.2 Transferring the files</A>
+    <UL>
+      <LI><A HREF="#Finding">4.2.1 Finding data and software files</A>
+    </UL>
+    <LI><A HREF="#Software">4.3 Using the read software on your local
+    machine</A>
+  </UL>
+</OL>
+
+<P><HR ALIGN=LEFT><A NAME="Instrument"></A>Go to: [ <A HREF="#top">Contents</A>
+| Instrument | <A HREF="#Data">Data</A> | <A HREF="#Quality">Quality</A>
+| <A HREF="#Transfer">Transfer</A> | <A HREF="#bottom">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H2>1. The instrument</H2>
+
+<P>This section contains a brief, simplified outline of the MLS
+instrument and the measurement techniques which are employed.
+Users requiring a more detailed description of the design and
+operation of the instrument should consult the paper by Barath
+et al. (1993).</P>
+
+<H3><A NAME="InstDes"></A>1.1 Instrument Description</H3>
+
+<P>MLS is a microwave radiometer which measures thermal emission
+from the Earth's limb. Measurements of the emission spectra are
+made in three channels at frequencies of 63 GHz, 183 GHz and 205
+GHz, from which vertical profiles of mixing ratios, temperature
+and pressure are derived.</P>
+
+<P>The instrument observes the Earth's limb in a direction normal
+to the orbital track. The tangent point (at the limb) is a great
+circle distance of 23 deg. (approx. 2500km) away from the sub-satellite
+track.</P>
+
+<P>A 1.6m antenna receives radiation from the limb and is mechanically
+scanned in the vertical every 65 seconds. The optics are diffraction
+limited, giving a field of view of 3.5km (vertically) at the limb
+in the 205 GHz channel. A switching mirror in the optical path
+allows the instrument to accept radiation from the antenna, from
+an internal calibration source or from cold space. This combination
+allows an optimal calibration of the detectors.</P>
+
+<P>A dichroic plate separates the signal to the 63 GHz channel
+and this is followed by a polarization grid which isolates the
+signals to the 183 GHz radiometer and to the 205 GHz radiometer.</P>
+
+<P>In each channel, the incoming radiation is converted to intermediate
+frequency bands in the 0-3 GHz range using local oscillators.
+After amplification the intermediate-frequency signals are divided
+into six spectral bands, each of which is further divided into
+15 contiguous spectral channels by a bank of filters. The spectral
+resolution of these channels is high enough to resolve emission
+lines throughout the stratosphere.</P>
+
+<H3><A NAME="MeasTech"></A>1.2 Measurement Techniques</H3>
+
+<P>The six intermediate frequency bands are used to derive atmospheric
+parameters from the atmospheric emission lines detailed below:</P>
+
+<DL>
+  <P>&nbsp;
+  <DT><B>The 63 GHz channel</B>
+  <DD>62.998 GHz and 63.569 GHz lines of O2. These lines are relatively
+  temperature-insensitive, and by measuring the intensity and the
+  line-width, the atmospheric pressure is derived. Differentiation
+  with respect to the measured height differential also gives an
+  indication of the temperature via the hydrostatic equation.
+  <DT><B>The 183 GHz channel</B>
+  <DD>183.310 GHz H2O and 184.378 GHz O3 lines. The intensity of
+  these lines gives a measure of the abundance of the emitting
+  gas
+  <DT><B>The 205 GHz channel</B>
+  <DD>204.352 GHz ClO, 206.132 GHz O3 and 204.575 GHz H3O2 lines
+  in addition to a number of weak HNO3 lines. The intensity of
+  these lines gives a measure of the abundance of the emitting
+  gas.
+</DL>
+
+<H3><A NAME="Processing"></A>1.3 Data Processing</H3>
+
+<P>The UARS data processing is carried out at the Central Data
+Handling Facility at the Goddard Space Flight Center using software
+supplied by the instrument's Principal Investigator group. The
+data processing for UARS instruments consists of a progression
+through a sequence of `levels' from the raw telemetry at level
+0 to geophysical quantities interpolated onto standard grids at
+level 3. The processing steps for MLS are outlined below:</P>
+
+<DL>
+  <P>&nbsp;
+  <DT><B>Level 0-1</B>
+  <DD>At the level 0-1 processing step, instrument-specific effects
+  are removed and a set of calibrated data are derived in physical
+  units (eg. voltages and radiances) tagged with their locations.
+  <DT><B>Level 1-2</B>
+  <DD>The level 1 data are then processed further to produce the
+  level 2 product which contains vertical profiles of temperature,
+  pressure and mixing ratios of chemical constituents at the measurement
+  positions. The retrieval is based on the sequential estimation
+  algorithm with an a priori estimate containing both the NMC daily
+  analysis (when available) and a month-dependent, latitude-dependent
+  climatology developed by the UARS science team.
+  <DT><B>Level 2-3A</B>
+  <DD>The level 2 data are profiles located at the measurement
+  positions which are determined by the scan pattern and by the
+  track of the tangent point. The level 2-3A processing step takes
+  these data and interpolates them onto a standard set of vertical
+  levels - evenly spaced in log pressure, and onto standard times
+  (level 3AT) and standard latitudes (level 3AL). In the case of
+  MLS, daily parameter files are also produced, containing data
+  on the operation of the instrument which is not allowed by the
+  standard level 3A file definition.
+</DL>
+
+<P><HR ALIGN=LEFT><A NAME="Data"></A>Go to: [ <A HREF="#top">Contents</A>
+| <A HREF="#Instrument">Instrument</A> | Data | <A HREF="#Quality">Quality</A>
+| <A HREF="#Transfer">Transfer</A> | <A HREF="#bottom">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H2>2. MLS data</H2>
+
+<H3><A NAME="Available"></A>2.1 What is available from the BADC?</H3>
+
+<P>The public MLS data held at the BADC is at level 3A version
+4. The version refers to the processing algorithm used to create
+the level 3 files. The species, with the equivalent names used
+in the UARS filenames and headers, are tabulated below:</P>
+
+<PRE>Measured species                   UARS species
+_______________________________________________
+
+Chlorine monoxide                  CLO
+Nitric acid                        HNO3
+Ozone (183GHz channel)             O3_183
+Ozone (205GHz channel)             O3_205
+Temperature                        TEMP
+Water vapour                       H3O
+Sulphur dioxide                    SO2
+Parameter file for 3AL data        PARAM_L3LP
+Parameter file for 3AT data        PARAM_L3TP
+_______________________________________________</PRE>
+
+<H3><A NAME="Units"></A>2.2 Units</H3>
+
+<P>The units for the parameters present in the MLS data files
+are as follows:</P>
+
+<P>&nbsp;</P>
+
+<PRE>Parameter               Units   
+__________________________________________
+
+Temperature              K        
+Pressure                 mb       
+Gas Mixing Ratios        by volume
+Aerosol Extinction       km-1
+__________________________________________</PRE>
+
+<H3><A NAME="Vertical"></A>2.3 Vertical Coverage</H3>
+
+<P>The vertical ranges for the parameters contained in the MLS
+L3A files are tabulated below:</P>
+
+<PRE>Parameter               Useful pressure range (hPa)
+__________________________________________________ 
+                                                
+Chlorine Monoxide (ClO)           46 - 1.0                 
+Nitric acid (HNO3)               100 - 22
+Ozone (O3)                        46 - 0.46                 
+Sulphur dioxide (SO2)             46 - 0.46
+Water Vapour (H2O)                46 - 0.2                 
+Temperature                       46 - 0.46                                                            
+__________________________________________________</PRE>
+
+<H3><A NAME="Horizontal"></A>2.4 Horizontal Coverage</H3>
+
+<P>The latitude coverage of the instrument alternates with the
+yaw cycle of the satellite, which lasts approximately 36 days.
+The coverage switches between 80 deg. S to 34 deg. N and 80 deg.
+N to 34 deg. S at each yaw. The instrument observes the full range
+of longitudes.</P>
+
+<H3><A NAME="Temporal"></A>2.5 Temporal Coverage</H3>
+
+<P>MLS began operations on the 11th October 1991 (UARS day 30)
+and, at the time of writing, is still producing data. Since launch
+there have been a number of periods during which data collection
+has ceased, as tabulated below:</P>
+
+<PRE>Dates                   UARS days     
+__________________________________
+
+14 Jan 1992             125
+14 Feb 1992             156
+ 9 - 14 Jun 1992        272 - 277
+16 - 20 Apr 1993        583 - 587
+March-May 1994   (sparse data)       
+July 1994 (sparse data)
+Oct 1994 - Jan 1995
+Feb - July 1995 (sparse data)
+__________________________________</PRE>
+
+<P>Note that the 183 GHz radiometer stopped operating on the 20th
+of April 1993 (UARS day 587), and consequently there are no water
+vapour (H3O) or Ozone (O3) data after this date.</P>
+
+<P>After 2.3 years in orbit (in late December 1993), the antenna-scanning
+mechanism began to exhibit signs of wear. March 1994 through May
+1994, and July 1994 were periods of testing and significantly
+reduced data gathering; these months have from one third of the
+days with bad data to almost all bad days (days with no profiles
+retrieved) October 1994 through January 1995 again have very few
+days of useful atmospheric profile data. Very little limb data
+gathering (typically only a few days per month) occurred from
+February through July 1995, which was a period during which instrument
+power sharing began for UARS (in May 1995). Since June 1995, MLS
+has been in a mode of operation characterized by off periods for
+power savings and on periods during which typically 2 days of
+full (reverse) scans are obtained followed by one day of limb
+tracking at altitudes near 18 km. The August 1995 through September
+1996 time period generally contains about one half to one third
+catalogued good days for atmospheric profiles, and this mode of
+operation is expected to continue.</P>
+
+<P>JPL's MLS instrument web pages include a complete set of <A
+HREF="http://mls.jpl.nasa.gov/lay/um_calendars.html" TARGET="_top">MLS
+calendars</A> showing the instrument's operational status on daily
+basis for the entire mission.</P>
+
+<P>Documents detailing the UARS satellite roll, yaw and orbit
+adjustment manouevres are held in the <A HREF="/cgi-bin/data_browser/data_browser/badc/mlsl3/doc/">BADC
+documentation directory</A>.</P>
+
+<H3><A NAME="VertRes"></A>2.6 Vertical Resolution</H3>
+
+<P>The UARS level 3A data are interpolated onto a standard set
+of pressure levels which are evenly spaced in log pressure. There
+are 6 levels per decade in pressure given by the following relation:</P>
+
+<PRE>    p = 1000x10(-i/6)   [i=0, 1, 2, ...]</PRE>
+
+<P>The retrieved vertical resolution is two UARS pressure surfaces
+(delta log10(P) = 0.33, or about 6 km). The retrieved profiles
+are represented as a piecewise-linear function with breakpoints
+at alternate (even-numbered) UARS pressure surfaces (e.g. 10,
+4.6, 2.2, 1 hPa). The data points on the even-numbered surfaces
+(level 3AT files only) are the retrieved breakpoint values, while
+those on the odd-numbered surfaces (e.g 6.8, 3.2, 1.5 hPa) are
+averages of the temperatures on adjacent even-numbered surfaces.
+The level 3AL profiles have an additional linear interpolation
+with respect to latitude to generate an evenly spaced latitude
+grid.</P>
+
+<H3><A NAME="HoriRes"></A>2.7 Horizontal Resolution</H3>
+
+<P>The level 3AT and level 3AL products differ in their horizontal
+gridding. The 3AT products are interpolated along the tangent-point
+track at standard output times corresponding to intervals of one
+UARS Engineering MAjor Frame (1 EMAF = 65.536 s). This period
+represents an along- track displacement of approximately 400 km
+between measurements. The profiles are constructed by linear interpolation
+in observation time from the level 2 profiles. The 3AL products
+are interpolated onto positions defined by the intersection of
+the tangent track with a latitude circle at standard 4 deg. latitude
+intervals. <HR ALIGN=LEFT><A NAME="Quality"></A>Go to: [ <A HREF="#top">Contents</A>
+| <A HREF="#Instrument">Instrument</A> | <A HREF="#Data">Data</A>
+| Quality | <A HREF="#Transfer">Transfer</A> | <A HREF="#bottom">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H2>3. Data Quality - General Considerations</H2>
+
+<P>The information in this section was taken from the product
+quality summary produced by the MLS team at JPL. The summary document
+is available online from the <A HREF="/cgi-bin/data_browser/data_browser/badc/mlsl3/doc/">MLS documentation
+directory</A> at the BADC. The `quality' field in the level 3A
+files is the retrieval's estimated uncertainty, includes random
+and systematic components, and is obtained by propagating precisions
+of the radiance measurements, estimates of constrained parameter
+uncertainties, forward model inaccuracies, and some calibration
+uncertainties through the retrieval software. The quality should
+be interpreted as a lower bound on the accuracy. At the conclusion
+of the retrieval, the estimated uncertainty is compared with the
+<I>a priori</I> uncertainty. When the ratio is greater than 0.5,
+or the temperature is more than 25% climatology, the quality is
+set negative to flag the dependence of the retrieved temperature
+on the <I>a priori</I>.</P>
+
+<P>Values will appear in the profile vector in the data file whether
+or not data were received from the instrument. These values are
+a combination of <I>a priori</I> values (obtained from climatology
+and contemporary NMC data) and instrument measurements. If no
+instrument data are received, the retrieval relaxes to the <I>a
+priori</I> and the estimated uncertainty values will all be negative.</P>
+
+<P>In general, only data having <I>positive</I> quality values
+should be used for scientific purposes. The level 3 parameter
+files contain a diagnostic flag ` MMAF_STAT' which gives information
+on whether each major frame has good data, no data, or bad data.
+For optimal use of the data, the parameter files should be examined
+and profiles with `MMAF_STAT' <I>not</I> set to `G', `T', or `t'
+should be disregarded.</P>
+
+<P>For a full description of data quality for individual species,
+see the <A HREF="/cgi-bin/data_browser/data_browser/badc/mlsl3/doc/mls_quality_l3_v4.doc">MLS Version
+4 data quality document</A>. <HR ALIGN=LEFT><A NAME="Transfer"></A>Go
+to: [ <A HREF="#top">Contents</A> | <A HREF="#Instrument">Instrument</A>
+| <A HREF="#Data">Data</A> | <A HREF="#Quality">Quality</A> |
+Transfer | <A HREF="#bottom">End</A> ] <HR ALIGN=LEFT></P>
+
+<H2>4. Transferring MLS data from the BADC</H2>
+
+<P>MLS data is held online in IEEE binary files, exactly as supplied
+by the Goddard DAAC. Software from Goddard to read UARS binary
+data is also supplied, as is 3rd party software written by other
+users of the data.</P>
+
+<H3><A NAME="Start"></A>4.1 Before you start</H3>
+
+<P>You will need gzip installed on your local system to uncompress
+the software packages - the source code is available from software
+archives. You will also need to know <A HREF="/help/howtogetdata_gzip_and_tar.html">how
+to use gzip and tar</A> once you have the files on your system
+and <A HREF="/help/ftp_guide.html">how to transfer files via FTP (File
+Transfer Protocol)</A> if you don't use the WWW interface for
+transfers.</P>
+
+<H3><A NAME="Files"></A>4.2 Transferring the files</H3>
+
+<P>MLS data can be transferred via FTP (File Transfer Protocol)
+or directly from these WWW pages. To use anonymous FTP, connect
+to <I>ftp.ceda.ac.uk</I>. After logging in, <I>cd</I>
+to <I>badc</I> to find the dataset directories, or <I>cd /badc/mlsl3</I>
+to go directly to the MLS level 3 directory.</P>
+
+<H4><A NAME="Finding"></A>4.2.1 Finding data and software files</H4>
+
+<P>All MLS data and software is located beneath the directory
+<I>mlsl3</I> Here you will find a README file and the following
+subdirectories</P>
+
+<UL>
+  <P>&nbsp;
+  <LI>data - contains the binary data files in subdirectories for
+  constituent and year
+  <LI>doc - contains MLS scientific documentation
+  <LI>software - contains the read software and any 3rd party software
+  available
+</UL>
+
+<P>The <A HREF="/data/uars/filenames.html">UARS file name convention</A>
+will help you to work out which data files you need.</P>
+
+<P>There are 2 level 3A data products for each MLS species per
+day - one level 3AL and one level 3AT. Each version 4 product
+file is accompanied by a &quot;meta&quot; file containing information
+on the record length, which is required by the read software.
+<STRONG>Make sure you pick up both the PROD and META files when
+you transfer your data.</STRONG></P>
+
+<UL>
+  <P>&nbsp;
+  <LI>The level 3AT files are a time ordered sequence of records
+  each containing one profile, together with information on the
+  position of the profile.
+  <LI>The 3AL products are interpolated onto standard 4 degree
+  latitude intervals at positions defined by the intersection of
+  the tangent track with a latitude circle.
+</UL>
+
+<P>For each day there are two parameter files containing data
+on the operation conditions of MLS which are not allowed by the
+level 3AT/3AL file definition. There is a one-to-one correspondence
+between records in the 3AT/3TP and 3AL/3LP files. For more detailed
+information refer to the <A HREF="documents.html#inst_team_docs">level
+3A file format documents</A>.</P>
+
+<H3><A NAME="Software"></A>4.3 Using the read software on your
+local machine</H3>
+
+<P>The Goddard read software allows you to read the binary files
+on a variety of UNIX systems using either C or FORTRAN (depending
+on the patform - on SGI, HP and Sun machines both languages are
+supported, on DEC only FORTRAN is supported).</P>
+
+<P>Goddard supply the software in a tar archive compressed with
+the UNIX compress facility. At the BADC we also hold a gzipped
+version and the individual source files online. Unzip the software
+files using the gzip -d command. Un-tar in a suitable directory
+using the tar -xvf command. A makefile and README file are supplied
+to help you build the code. The README file explains how to build
+the code to suit your local operating system.</P>
+
+<P>
+</BODY>
+</HTML>

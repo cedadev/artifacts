@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML LANG="EN">
+
+<HEAD>
+
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<TITLE>BADC Datasets: the ncgen and ncdump utilities</TITLE>
+
+</HEAD>
+
+<!-- Written by Helen Walker, BADC RAL CCLRC Feb 2003 -->
+
+
+<BODY BGCOLOR="#FFFFFF">
+
+<H1>The netCDF <EM>ncgen</EM> and <EM>ncdump</EM> utilities</H1>
+
+<P>
+<EM>The ncgen and nc dump utilities allow the user to convert between
+netCDF binary and ASCII text files.</EM>
+</P>
+
+<HR ALIGN="LEFT">
+
+<H2>Introduction</H2>
+
+<P>
+Although netCDF is a binary data format, there are utilities such as ncdump
+which will produce an ASCII text file of the dataset, and ncgen which will
+produce a netCDF file from an ASCII file. 
+</P>
+<P>
+There are several sections following:
+<UL>
+<LI> <A HREF="nc_utilities.html#unix">Installing netCDF in Unix</A>
+<LI> <A HREF="nc_utilities.html#windows">Installing netCDF in Windows</A>
+<LI> <A HREF="nc_utilities.html#ncgen">Using ncgen and ncdump</A>
+<LI> <A HREF="nc_utilities.html#next">The next stage - importing files</A>
+</UL>
+
+<H2>1. Installing the netCDF package</H2>
+
+<P>
+Firstly, you should check if the netCDF package is 
+installed on your computer. Either 
+ask your system manager or hunt for the package yourself. 
+</P>
+
+<A NAME="unix">
+<H2>1.1 Unix/Linux Operating System</H2>
+
+<P> 
+You should be able to just type <EM>'which ncdump'</EM> and if the software 
+is installed the display will show the directory location of the utility.
+<BR><BR>
+However, if the system is not yet installed please follow the instructions here.
+<BR><BR>
+<OL>
+<LI>You should visit 
+<A HREF="http://www.unidata.ucar.edu/packages/netcdf/">http://www.unidata.ucar.edu/packages/netcdf/</A> 
+and click on one of the download options  
+(e.g. a compressed tar file and/or zip file).</LI> 
+<LI>Unzip and extract the contents of the tar file (using 
+whatever decompression-utility you have handy, such as gunzip 
+and tar).</LI>
+<LI>You should now have uncompressed the filedata to reveal a directory 
+full of files such as 'Makefile', 'Readme', 'Release_notes' etc. 
+Locate the file named 'INSTALL.html' and open it in a web-browser. 
+This file will instruct how to install the software on the computing 
+platform that you are using. (If you do not know which platform you 
+are using then ask your system manager.) The INSTALL.html document is 
+also available at: 
+<A HREF="http://www.unidata.ucar.edu/packages/netcdf/INSTALL.html">http://www.unidata.ucar.edu/packages/netcdf/INSTALL.html</A> 
+if you have problems locating it.</LI>
+<LI>Follow the instructions in the INSTALL.html document for your 
+relevant platform.</LI> 
+<LI>To test that the software has been correctly installed you should 
+be able to type <EM>'ncdump -help'</EM> which displays a message of how to use 
+the utility. Depending on your set-up you may have to include the full 
+directory path such as <EM>'/usr/local/bin/ncdump -help'</EM>.</LI> 
+</OL>
+</P>
+
+<A NAME="windows">
+<H2>1.2 Windows Operation System</H2>
+
+<P>
+The package might have been installed in one of several places,
+so using the Search facility and looking for 'ncdump.exe' is probably
+the best way to look (i.e. Start -> Search -> for files or folders).
+<BR><BR>
+However, if the system is not yet installed please follow the instructions here.
+<BR><BR>
+<OL>
+<LI>Visit 
+<A HREF="http://www.unidata.ucar.edu/packages/netcdf/faq.html#win">http://www.unidata.ucar.edu/packages/netcdf/faq.html#win</A> 
+and click on one of the download options. At the time of writing 
+there are two options given:
+<UL>
+<LI>"We have pre-built netCDF 3.5.0 libraries for Win32 systems 
+(Windows 95, 98, NT, Millennium, XP), available here": 
+<A HREF="ftp://ftp.unidata.ucar.edu/pub/netcdf/contrib/win32/netcdf-3.5.0.win32bin.ZIP">ftp://ftp.unidata.ucar.edu/pub/netcdf/contrib/win32/netcdf-3.5.0.win32bin.ZIP</A> 
+  - this is probably the easiest way if this sort of thing is new to you.</LI>
+<LI>"To do your own source build, get this zip file" -  only use this 
+if you know what you are doing.</LI>
+</UL>
+</LI>
+<LI>Assuming you have downloaded via the first option, you 
+will need to unzip the file using whatever decompression-utility you 
+have handy. This is usually Winzip which is freely available from 
+<A HREF="http://www.winzip.com/">http://www.winzip.com/</A>, if it is
+not already available on your machine. Winzip will give you the 
+option of extracting the files to whatever directory you wish, for
+example, in a folder called 'C:\Program Files\netCDF\' 
+On Winzip you just click 
+'Extract' and then specify where you want the data to be placed.</LI>
+<LI>The folder you chose to extract the data to should now contain 
+the folders 'lib', 'include', 'bin' and 'src'. Inside the 'bin' 
+folder you will find the ncdump.exe and ncgen.exe utilities that 
+you need.</LI>
+</OL>
+</P>
+
+<A NAME="ncgen">
+<H2>2. Using ncgen and ncdump</H2>
+<P>
+In order to test the ncdump and ncgen utilities you need some data. 
+The beauty of the utilities is that they allow conversion between binary 
+netCDF (file extension .nc) code and the ASCII (text) representation 
+of that code in the network Common data form Description Language 
+(CDL - file extension .cdl). For a thorough understanding of the 
+CDL language and the utilities mentioned here you should consult 
+<A HREF="http://www.unidata.ucar.edu/packages/netcdf/guide_12.html">http://www.unidata.ucar.edu/packages/netcdf/guide_12.html</A>. 
+</P>
+
+<P>
+However, we can start with <A HREF="nc_example.html">a very simple example</A>. 
+The description of the file gives a brief overview of the basic 
+concepts of netCDF and CF conventions.
+</P>
+
+<H3>Preparation</H3>
+<P>
+Check you know where the netCDF utilities are stored.
+Now you are ready to play with the <EM>simple.cdl</EM> file. Note that if you 
+have saved the file to a Unix/Linux file system you should remove the 
+<EM>Carriage Return</EM> characters at the end of each line in the file.  
+If you are using Windows then you 
+will need to open a Command Prompt window or an MS-DOS window.  
+If you are using this type of system for the 
+first time you can find out about commands by simply typing <EM>'help'</EM>  
+and pressing Return.  (e.g. ncgen -help)
+</P>
+
+<H3>Accessing the utilities</H3>
+<P>
+With the file <EM>simple.cdl</EM>, ncgen will create a new netCDF file called
+<EM>simple.nc</EM>. To test this has worked, you can then use ncdump to create
+another text file, <EM>simple2.cdl</EM>, via the commands:
+
+<BR><BR>
+<strong>[netcdf_bin_directory]ncgen -o [your_directory]simple.nc [your_directory]simple.cdl
+<BR><BR>
+[netcdf_bin_directory]ncdump [your_directory]simple.nc > [your_directory]simple2.cdl</strong>
+<BR><BR>
+
+Where [netcdf_bin_directory] and [your_directory] are the locations of 
+the netCDF utilities and your samples files respectively.
+</P>
+<P>
+Here is a list of commands for ncdump and their interpretation:
+<BR><BR>
+ncdump [-c|-h] [-v ...] [[-b|-f] [c|f]] [-l len] [-n name] [-p n[,n]] file
+<BR><BR>
+<TABLE>
+ <TR><TD> [-c]           </TD><TD>  Coordinate variable data and header information</TD></TR>
+ <TR><TD> [-h]           </TD><TD>  Header information only, no data</TD></TR>
+ <TR><TD> [-v var1[,...]]</TD><TD>  Data for variable(s) <var1>,... only</TD></TR>
+ <TR><TD> [-b [c|f]]     </TD><TD>  Brief annotations for C or Fortran indices in data</TD></TR>
+ <TR><TD> [-f [c|f]]     </TD><TD>  Full annotations for C or Fortran indices in data</TD></TR>
+ <TR><TD> [-l len]       </TD><TD>  Line length maximum in data section (default 80)</TD></TR>
+ <TR><TD> [-n name]      </TD><TD>  Name for netCDF (default derived from file name)</TD></TR>
+ <TR><TD> [-p n[,n]]     </TD><TD>  Display floating-point values with less precision</TD></TR>
+ <TR><TD> file           </TD><TD>  File name of input netCDF file</TD></TR>
+</TABLE>
+
+<P>
+The ncdump utility has now written out another text file called <EM>'simple2.cdl'</EM>. You can 
+now compare this with <EM>'simple.cdl'</EM> to check that everything is working correctly.  
+Now you have generated and re-generated a netCDF file. You might now like to make 
+some changes to your .cdl file and check that they are acceptable. If ncgen 
+locates a syntax error in the .cdl file it will report where the error has been 
+found so that you can trace it.
+</P>
+ 
+<A NAME="next">
+<H2>3. The next stage</H2>
+
+<P>
+Once you feel comfortable with ncgen and ncdump you can branch out by 
+importing netCDF files from elsewhere and looking at their .cdl 
+representations. It is also useful to open the files in software package
+packages that are available to read netCDF. Packages we use at the 
+BADC include <A HREF="http://www.badc.rl.ac.uk/help/software/xconv">XCONV/CONVSH</A> 
+and <A HREF="http://esg.llnl.gov/cdat/">CDAT</A>. There is 
+also a long list of other packages available on the 
+<A HREF="http://www.unidata.ucar.edu/packages/netcdf/software.html">netCDF software pages</A>.
+</P>
+
+<P>
+Many researchers install the C, Fortran and Perl libraries so that they 
+can write netCDF files directly from their programmes. More information 
+about these libraries is available on the 
+<A HREF="http://www.unidata.ucar.edu/packages/netcdf/">Unidata netCDF pages</A>.
+</P>
+
+<P>
+Some scientists have also developed their own independent software for 
+reading and writing netCDF, it would be very useful for this software to be 
+shared within the community so the BADC welcomes any code that you would 
+like to offer so that it can be passed on to others. You can contact us
+via <A HREF="mailto:badc@rl.ac.uk">BADC@rl.ac.uk</A>
+</P>
+
+<P>
+<A HREF="index.html">The BADC netCDF homepage</A>
+</P>
+
+<P>
+<A HREF="index_cf.html">The BADC CF conventions homepage</A>
+</P>
+
+</BODY>
+
+</HTML>

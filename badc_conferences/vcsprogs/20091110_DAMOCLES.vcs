@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20091110T000000Z
+DTEND:20091113T000000Z
+LOCATION:Brussels, Belgium
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000203B9E77353DCA01000000000000000
+	010000000D517C9519D1FCB4AB3968D2607CAAACF
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+All details available at =0D=0A=0D=0Ahttp//www.damocles-eu.org/Meetings_a=
+nd_events_40/Invitation_to_symposium_The_Arctic_Climate_system_its_presen=
+t_status_future_evolution_and_potential_impacts.shtml=0D=0A
+SUMMARY:Symposium on the Arctic Climate system, its present status, future 
+	evolution and potential impacts
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,36 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "ERBEWF84 "
+"SUM_DATA_SET"       "ERBE-S4  "
+"SUM_DATATYPE"       "WFVSF-MN "
+"ARCHIVE_NAME"       "NSSDC, NCDS "
+"ARCHIVE_STATUS"     "Available   "
+"DS_DESCRIPTION"     "Earth Radiation Budget Experiment Gridded Product            "
+"DT_DESCRIPTION"     "WFOV Monthly (Day)/Shape Factor                               "
+"SUM_BEGIN_DATE"     "01-Nov-1984 "
+"SUM_END_DATE"       "30-Nov-1984 "
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Global      "
+"SPATIAL2"           "            "
+"SPATIAL3"           "10 deg X 10 deg using Shape Factor Algorithm "
+"SPATIAL4"           "                                    "
+"TEMPORAL1"          "November 1984 "
+"TEMPORAL2"          "                                         "
+"TEMPORAL3"          "Monthly                                  "
+"TEMPORAL4"          "                                         "
+"PRODUCT1"           "Regional averages (S-4): 1 tape/month.   "
+"PRODUCT2"           "Available on GEDEX CD-ROM. "
+"PRODUCT3"           "                                         "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"RADIATION_BUDGT" "Mon Mn SW/LW & Mon Net Radiant Exitance"  "W/(m**2)"
+"ALBEDO"          "Monthly Mean Albedo from Daily Values"    "None"
+"SOLAR_FLUX"      "Monthly Total Integrated Solar Incidence" "W-hr/m**2"                                                            
+EOF
+
+SOURCES
+"ERBS"    "NONSCANNER"
+"NOAA-9"  "NONSCANNER"
+"NOAA-10" "NONSCANNER"
+EOF

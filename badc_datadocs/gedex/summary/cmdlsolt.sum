@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "CMDLSOLT "
+"SUM_DATA_SET"       "CMDL-MLOA    "
+"SUM_DATATYPE"       "SOLTRN-DAILY "
+"ARCHIVE_NAME"       "NCDS                 "
+"ARCHIVE_STATUS"     "Available                                                    "
+"DS_DESCRIPTION"     "NOAA Climate Monitoring/Diagnostic Lab Solar Transmission    "
+"DT_DESCRIPTION"     "Daily Solar Transmission Index from NOAA Mauna Loa Observ.   "
+"SUM_BEGIN_DATE"     "01-Jan-1958                                                                 "
+"SUM_END_DATE"       "31-Dec-1990                                                                 "
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "Mauna Loa Observatory                              "
+"SPATIAL2"           "                                                   "
+"SPATIAL3"           "Station                                            "
+"SPATIAL4"           "                                                   "
+"TEMPORAL1"          "January 1, 1958 - December 31, 1990; discontinuous "
+"TEMPORAL2"          "                                                   "
+"TEMPORAL3"          "Daily                                              "
+"TEMPORAL4"          "                                                   "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF). "
+"PRODUCT2"           "Available on GEDEX CD-ROM.             "
+"PRODUCT3"           " "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"RADIATION_BUDGT" "Solar transmission index"  "None"
+EOF
+
+SOURCES
+"STATION"  "PYRHELIOMETER"
+EOF

@@ -1,0 +1,44 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20091011T230000Z
+DTEND:20091016T230000Z
+LOCATION:Landhust, Germany
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000708483BEBF57C901000000000000000
+	0100000000C754B1692CAE14CB7B9E05E75E81AC5
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+ECSS 2009=0D=0A5th European Conference on Severe Storms=0D=0ALandshut, Ge=
+rmany=0D=0A12-16 October 2009=0D=0A=0D=0AThe ECSS will be held in Landshu=
+t, situated close to Munich international airport. The=0D=0AECSS is joint=
+ly organised by the European Severe Storms Laboratory (ESSL) and=0D=0Athe=
+ Institute of Atmospheric Physics at the German Aerospace Center (DLR).=
+=0D=0A=0D=0AThe scope of the conference covers all aspects of severe conv=
+ective weather. All=0D=0Aresearchers, operational forecasters and risk or=
+ emergency managers interested in=0D=0Athe following topics are invited t=
+o submit contributions. In light of the global relevance=0D=0Aof the conf=
+erence themes, participants from all over the world are welcome to attend=
+.=0D=0A=0D=0AThe ECSS 2009 will deal with the following session topics. D=
+epending on the scope=0D=0Aof abstracts received, additional topics may b=
+e included later on:=0D=0A=95 Theory of convection, atmospheric instabili=
+ty, and synoptic or orographic forcing=0D=0A=95 Dynamics, microphysics an=
+d electrification of severe storms=0D=0A=95 Severe weather climatology an=
+d hazard assessment=0D=0A=95 Climate change impacts on severe storms, dev=
+elopment of adaptation concepts=0D=0A=95 Forecasting, nowcasting and warn=
+ing of severe storms=0D=0A=95 Numerical studies, e.g. of convective initi=
+ation, storm life cycles and phenomena=0D=0A=95 Remote sensing of severe =
+storms, e.g. by satellite, radar, and lightning detection=0D=0A=95 Extrat=
+ropical cyclones: embedded thunderstorms and large-scale wind fields=0D=
+=0A=95 Severe storm case studies & field campaigns, e.g. COPS, THORPEX, V=
+ORTEX2=0D=0A=95 Severe weather reporting and databases, e.g. applied to f=
+orecast evaluation=0D=0A=95 Socio-economic aspects, e.g. damage analysis,=
+ wind speed vs. damage relation,=0D=0Aemergency response and risk managem=
+ent, security of critical infrastructures=0D=0A=95 Evening session: Video=
+s and pictures of severe convective weather=0D=0A=0D=0ADeadline for abstr=
+act submission: 30 April 2009=0D=0A=0D=0AFurther information will become =
+available at http://www.essl.org/ECSS/2009/=0D=0A
+SUMMARY:5th European Conference on Severe Storms (ECSS 2009)
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

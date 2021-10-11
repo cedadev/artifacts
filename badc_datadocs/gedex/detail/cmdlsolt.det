@@ -1,0 +1,360 @@
+Atmospheric Solar Transmission Index at Mauna Loa
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.   Relative transmission derived from
+consecutive direct solar irradiance measurements.
+
+1.2  Unit of Measurement.  Nondimensional.
+
+1.3  Data Source.  Ground-based tracking pyrheliometer
+
+1.4  Data Set Identification.  Data were acquired from a single fixed
+location at the NOAA Mauna Loa Observatory.  The data provide information
+on the long-term relative transmission of direct sunlight through the
+cloud-free atmosphere above the site.  Because the site is so remote and
+efforts are made to eliminate the influence of local contamination sources,
+the data can be considered representative of a larger region.
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  Mauna Loa, Hawaii:  19.533 deg N, 155.578 deg W.
+Station elevation at Mauna Loa, Hawaii is 3.4 km.
+
+2.2  Spatial Resolution.  Point data.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  The data set began in January of 1958 and extends
+to December, 1990.
+
+3.2  Temporal Resolution.  One value per day from early morning hours when
+the sun is unobscured by water clouds.  Over 33 years, data have been
+obtained on 49% of the days each year on the average.
+
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  The objective of this data set is to monitor
+long-term atmospheric solar transmission in support of climate studies and
+provide satellite ground truth data.
+
+4.2  Key Satellite Flight Parameters.  N/A
+
+4.3  Principles of Operation.  Radiant heating of blackened thermophile is
+measured relative to a cold junction with controlled exposure.
+
+4.4  Instrument Measurement Geometry.  The instrument is sun-tracking with
+a 5.8 deg field-of-view.  The electromagnetic spectral band covered by the
+instrument is approximately 0.30 to 2.8 micrometers.
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  Instrument output, recorded as an
+analog voltage, is recorded on stripcharts only prior to 1976 and
+subsequently by digital computer since 1976.  Continuous trace is manually
+examined for variability indicative of clouds during critical times of air
+masses 2 to 5 times each day.  If the morning is determined to be cloud
+free, voltage values are extracted for specific times.  Tentative
+calibration is applied and transmission index calculated from the formula
+in section 5.2 below.  (note:  Calibration is a linear multiplier of the
+voltage and cancels in the ratio).  Tentative irradiance values and
+transmission index results are examined for reasonable and representative
+values.  Data are then included in the long-term records.
+
+5.2  Derivation Techniques/Algorithms.  The derived transmission index is
+calculated from the following formula:
+
+         4
+ATI= 1/3     I (sub i +1)/ I (sub i)
+         i=2
+
+where i = relative air mass (approximately 1/COSINE (solar zenith
+          angle))
+      I = direct beam solar irradiance measured at the time
+          corresponding to a solar position, i.
+
+Data are only obtained when the sun is unobstructed by any identifiable
+water or ice cloud.  Also, the data are for only the morning hours because
+local air circulations potentially contaminate the site later each day.
+Variability in the index is caused primarily by total column aerosols,
+water vapor, and ozone.  The major dips in the record lasting several years
+are due to volcanic aerosols in the stratosphere.  Although the calculated
+transmission number is called an "index", the value does have an actual
+physical explanation, but one that is different from the usual rigorous
+application of the word "transmission".
+
+5.3  Special Corrections/Adjustments.  None.
+
+5.4  Processing Changes.  The data processing procedure switched to
+computer data acquisition in 1976 and computer-assisted data reduction in
+1979.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  No specific comparison available. An
+empirical Low Resolution Transmittance (LOWTRAN) method has been used to
+model the transmission index for certain conditions, and agreement to the
+third decimal place is typical.  The LOWTRAN code is available from the
+National Climatic Data Center in Ashville, North Carolina.
+
+6.2  Confidence Level/Accuracy Judgment.  Daily values are potentially
+accurate (and precise) to 0.001 assuming that the atmosphere remained
+constant over the approximately 2 hours during which the data were
+obtained.
+
+6.3  Usage Guidance.  See assumption in section 6.2 above.  Areal
+representativeness can not be substantiated but is often assumed to be
+zonally representative of background conditions.  A physical understanding
+of the calculation of the index and its inherent stability is recommended.
+Most published analyses of the record use smoothed monthly averages. There
+is a decrease in the day to day variance following 1979 when computer aided
+processing began.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+     Ellsworth G. Dutton
+     NOAA/Climate Monitoring and Diagnostics Lab.
+     Mail Code R/E/CG1
+     325 Broadway
+     Boulder, CO  80303
+     303-497-6660 (voice)
+     303-497-6290 (Fax)
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products.  None.
+
+8.2  Film Products.  None.
+
+8.3  Other products.
+
+8.3.1  "Atmospheric Solar Transmission Index at Mauna Loa" on floppy disk.
+
+       Medium/Specifications:  IBM PC-compatible floppy disk in ASCII
+       format.
+
+       Format and Content:  The data are stored as ASCII characters in one
+       file for the entire time period.  Year, month, day of month, and
+       transmission index are recorded for each record.
+
+       Data Quantity/Rate:  1 file, 100 kb
+
+       Status:  Available.
+
+       Plans/Schedule:  Measurements ongoing.  Data updates yearly or on
+                        request.
+
+8.3.2  "Atmospheric Solar Transmission at Mauna Loa", Hardcopy Listing
+
+       Medium/Specifications:  Data are available as a computer printout
+       with one line containing year, month, day of month, and transmission
+       index.
+
+       Format and Content:  ASCII listing.
+
+       Data Quantity/Rate:  One hardcopy listing, about 10 pages.
+
+       Status:  Available.
+
+       Plans/Schedule:  Measurements ongoing.  Data updates yearly or
+                        on request.
+
+8.3.3  "Atmospheric Solar Transmission at Mauna Loa" in Common Data Format.
+
+       Medium/specifications:  The data are stored online in a special
+       data-set-independent format, designated the Common Data Format
+       (CDF).  This format is self-describing in that all information
+       required to analyze these data are contained in the data file
+       itself.  The format is supported by the NASA Climate Data System
+       (NCDS) for data retrieval and manipulation.
+
+       Format and Content:  Data are stored as a single binary data file in
+       Common Data Format (CDF).
+
+       Data Quantity/Rate:  One binary file of approximately 101 kilobytes.
+
+       Status:  Available.
+
+       Plans and Schedules:  Data acquisition is ongoing.  Data updates
+       will be made as new data become available.
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification.  The data set is available to users of NASA's
+Climate Data System (NCDS) and is distributed on the Greenhouse Effect
+Detection Experiment (GEDEX) CD-ROM.  The disk will utilize the ISO 9660
+standard.  For information on access to NCDS or this data set, contact:
+
+     NCDS User Support Office
+     NASA/Goddard Space Flight Center
+     Code 934 Data Management System Facility
+     Greenbelt, MD 20771
+     (301) 286-3209
+     FTS:  888-3209
+     TCP/IP:  NCDSUSO@NSSDCB.GSFC.NASA.GOV
+     NSI DECnet:  NCF::NCDSUSO
+
+
+9.2  Procedures for Obtaining Data.  The data are obtained through online
+access via NCDS.  Interested NASA-sponsored and university researchers
+should contact the NCDS User Support Office to obtain a computer account.
+
+9.3  NCDS Status/Plans.  NCDS will continue to support these data online.
+The data are stored in a special data-set-independent format, designated
+the Common Data Format (CDF) and are accessible through the NCDS data
+system.  The data are referenced by the data set name
+CMDL-MLOA_SOLTRN-DAILY.
+
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+      Current investigator
+      Ellsworth G. Dutton
+      NOAA/Climate Monitoring and Diagnostics Lab.
+      Mail Code R/E/CG1
+      325 Broadway
+      Boulder, CO  80303
+      USA
+      303-497-6660 (voice)
+      303-497-6290 (Fax)
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      a. "Geophysical Monitoring for Climatic Change Annual Summary."
+         Reports 1 through 18 (1973-1989), NOAA/ERL Boulder, CO  80303.
+
+11.2  Journal Articles and Study Reports
+
+     a. DeLuisi, J.J., E.G. Dutton, K. L. Coulson, T.E. DeFoor and B.G.
+        Mendonca, 1983.  "On Some Radiative Features of the El Chichon
+        Volcanic Stratospheric Dust Cloud as Cloud of Unknown Origin
+        Observed at Mauna Loa." J. Geophys Res., 88: 6769-6772.
+
+     b. Dutton, E.G., and J.J. DeLuisi, 1983.  "Spectral Extension of
+        Direct Solar Radiation by the El Chichon Cloud During December,"
+        Geophys. Res. Lett., 10: 1013-1016.
+
+     c. Dutton, E.G., DeLuisi, J.J. and Austring, A. P. 1985.
+        "Interpretation of Mauna Loa Atmospheric Transmission Relative to
+        Aerosols, Using Photometric Precipitable Water Amounts," J. Atmos.
+        Chem., 3: 53-68.
+
+     d. Dutton, E.G., 1989, Comments on "Major Volcanic Eruptions and
+        Climate: A Critical Evaluation", Journal of Climate., 3: 587-588.
+
+     e. Ellis, H.T. and Pueschel, R.F. 1971.  "Solar Radiation:  Absence of
+        Air Pollution Trends at Mauna Loa,"  Science, 172: 845-846.
+
+     f. Hoyt, D.V. 1979a.  "Apparent Atmospheric Transmission Using the
+        Pyrheliometric Ratioing Technique,' Appl. Opt., 18: 2530-2531.
+
+     g. Mendonca, B.G., Hanson, K.J. and DeLuisi, J.J. 1978. "Volcanically
+        Related Secular Trends in Atmospheric Transmission at Mauna Loa
+        Observatory, Hawaii," Science, 202: 513-515.
+
+
+11.3  Archive/DBMS Usage Documentation
+
+      a. Olsen, L.M., Closs, J.W., Vanderpool, J.R. and Humberson, W.,
+         November 1991.  "NASA's Climate Data System Primer:  Version 4.0."
+         National Space Science Data Center, NASA Goddard Space Flight
+         Center, Greenbelt, Maryland.
+
+
+12.  RELATED DATA SETS
+
+12.1  Hourly Surface Solar Irradiance at NOAA/CMDL Baseline Sites,
+including Mauna Loa, Barrow, Alaska, American Samoa, and the South Pole.
+This data set is available through NCDS or from NOAA/CMDL in Boulder,
+Colorado.
+
+
+13.  SUMMARY/SAMPLE
+
+The NCDS system provides a sample X-Y plot of solar transmission in the
+Data Applications subsystem.  The name of the plot is
+CMDL-MLOA_SOLTRN-DAILY.
+
+
+14.  NOTES
+
+Mauna Loa Observatory is currently operated by NOAA/Climate Monitoring and
+Diagnostics Laboratory of Boulder, Colorado; Director, Eldon Ferguson. On
+site observatory staff of 8; Director, Russell Schnell.
+
+*92/03/02

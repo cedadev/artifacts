@@ -1,0 +1,324 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Datasets: SAGE III File Format Page</TITLE>
+</HEAD>
+<!-- Created 20/05/96 17:59:13  -->
+<!-- Author: Anabelle Menochet BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1>SAGE&nbsp;III File Format</H1>
+
+<HR ALIGN=LEFT>
+<ol>
+<li><a href="file_format.html#L1_solar">Level 1B Solar Transmission Product</a>
+<li><a href="file_format.html#L2_solar">Level 2 Solar Species Product</a>
+<li><a href="file_format.html#L2_cloud">Level 2 Cloud Product (from solar data)</a>
+<li><a href="file_format.html#L2_lunar">Level 2 Lunar Species Product</a>
+<li><a href="file_format.html#file_naming">File Naming Convention</a>
+<li><a href="file_format.html#loc">Dataset location</a>
+
+</ol>
+
+<HR ALIGN=LEFT>
+<a name="L1_solar"></a>
+<H2>1 - Level 1B Solar Transmission Product</H2>
+
+The Level 1B Transmission product contains the SAGE III atmospheric slant path transmission 
+profiles at 85 spectral channels. The profiles are skewed vertically and extend from sea level 
+to an altitude of 100 km in 0.5 km intervals. These data have been geolocated and normalized 
+against exoatmospheric solar measurements to produce slant path transmission profiles. 
+The Level 1B product is only available for solar measurements.
+
+<a name="L2_solar"></a>
+<H2>2 - Level 2 Solar Species Product</H2>
+The Level 2 Solar Species products are produced from the Level 1B Transmission profiles. 
+The content of the Level 2 Solar Species organized by species, each including information 
+on its relative uncertainty. Species are reported in profiles on a geometric altitude 
+coordinate system with a vertical resolution of 0.5 km.
+<P>
+<b>Aerosol</b>
+Profiles of aerosol extinction are provided at 9 different wavelengths (385, 448, 521, 596, 676, 
+754, 868, 1019, and ~1550 nm) from the surface or opaque cloud top to an altitude of 40 km, where 
+the contribution due to aerosols becomes negligible at all wavelengths.
+<p>
+In addition, two aerosol products are provided in this list: (1) Stratospheric aerosol optical 
+depth and (2) the ratio of aerosol extinction to the contribution due to molecular scattering 
+at a wavelength of 1019 nm.
+<p>
+<b>Water Vapor</b>
+Profiles of water vapor are provided in units of concentration from the surface to an altitude 
+of 50 km. A temperature profile retrieved from SAGE III measurements or from a gridded analysis 
+will facilitate computation of relative humidity. The water vapor products are retrieved using 
+a nonlinear least squares approach from the solar occultation measurements of slant path 
+absorption.
+<P>
+<b>Nitrogen Dioxide</b>
+Profiles of nitrogen dioxide are provided in units of concentration from the tropopause to an 
+altitude of 50 km.
+<P>
+<b>Ozone</b>
+Three different profiles of ozone are provided in units of concentration over the altitude 
+range 6 to 85 km. One profile is based upon measurements made at short wavelengths in the 
+Hartley-Huggins band and a second profile is based upon measurements made at visible wavelengths 
+in the Chappius band. The third product consists of a composite profile constructed of data from 
+the Chappius band at lower altitudes (below about 55 km) and from the Hartley-Huggins band at 
+higher altitudes (above approximately 55 km). For each of the 3 different ozone products, slant 
+path column density profiles are also included.
+<p>
+<b>Temperature and Pressure</b>
+The retrieved profiles of temperature and pressure are new products provided by the SAGE III 
+mission. Besides providing a valuable scientific measurement, this data will permit a 
+self-consistent determination of molecular scattering along the limb view which is needed for 
+accurate retrievals of ozone and other species.
+<P>
+<a name="L2_cloud"></a>
+<H2>3 - Level 2 Cloud Product (from solar data)</H2>
+The SAGE III instrument detects subvisible and opaque clouds by using measurements of aerosol 
+extinction and their uncertainties at wavelengths of 525, 1020, and 1550 nm. The basic product 
+consists of 3 vertical profiles extending from 0 to 30 km that contain information on the 
+presence of clouds at 0.5 km intervals. Unlike all other Level 2 products, a granule of this 
+product contains a collection of cloud data for one calendar month.
+<P>
+<a name="L2_lunar"></a>
+<H2>4 - Level 2 Lunar Species Product</H2>
+The retrieval of constituent profiles from irradiance measurements acquired during lunar 
+occultation events is a new capability for the SAGE III experiment. These retrievals are 
+more complex than those employed for solar events because they account for the spatial and 
+spectral non-uniformity of the surface albedo of the moon and the much lower measurement signal. 
+One important difference between the solar and lunar retrieval techniques is the absence of a 
+Level 1B slant path transmission profile product for lunar occultation retrievals. This is a 
+consequence of not being able to determine limbdarkening curves with sufficient accuracy to 
+calibrate each SAGE III lunar occultation event.
+<p>
+A single scan vertical resolution of the lunar Level 2 products is 1 km. The chemical species 
+concentration data from multiple scans are bin-averaged and reported on a geometric coordinate 
+system with a vertical resolution of 0.5 km to maintain grid spacing compatibility with the 
+solar Level 2 products.
+<p>
+<b>Chlorine Dioxide</b>
+Profiles of chlorine dioxide are provided in units of concentration for an altitude range of 
+15 - 25 km.
+<p>
+<b>Nitrogen Dioxide</b>
+Profiles of nitrogen dioxide are provided in units of concentration from 20 to 50 km.
+<p>
+<b>Nitrogen Trioxide</b>
+Profiles of nitrogen trioxide are provided in units of concentration for the altitude range 
+of 20 - 55 km.
+<p>
+<b>Ozone</b>
+Profiles of ozone based upon measurements made at visible wavelengths in the Chappius band 
+are provided in units of concentration from 16 to 35 km.
+
+<a name="file_naming"></a>
+<H2>5 - File Naming Convention</H2>
+Following is a list of products and the file naming convention for each product that shall 
+be generated by SAGE III SCF processing:
+
+<P><center>
+
+<TABLE BORDER="1" CELLSPACING="2" CELLPADDING="0">
+<tr BGCOLOR="#DCDCDC">
+<td><strong>Product</strong>
+</td>
+<td><strong>Filename Format</strong>
+</td>
+</tr>
+
+<tr>
+<td>L1B Solar Transmission Binary Products
+</td>
+<td>g3a.tb.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;
+</td>
+<td>g3a.tbm.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>L1B Solar Transmission HDF Products
+</td>
+<td>g3a.t.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;
+</td>
+<td>g3a.tm.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>Level 2 Solar Binary Products
+</td>
+<td>g3a.sspb.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;
+</td>
+<td>g3a.sspbm.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>Level 2 Solar HDF Products
+</td>
+<td>g3a.ssp.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;
+</td>
+<td>g3a.sspm.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>Level 2 Lunar Binary Products
+</td>
+<td>g3a.lspb.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;
+</td>
+<td>g3a.lspbm.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>Level 2 Lunar HDF Products
+</td>
+<td>g3a.lsp.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;
+</td>
+<td>g3a.lspm.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>Level 2 Cloud Binary Products
+</td>
+<td>g3a.cldb.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;
+</td>
+<td>g3a.cldbm.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>Level 2 Cloud HDF Products
+</td>
+<td>g3a.cld.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;
+</td>
+<td>g3a.cldm.{xxxxxxXXvzz.zz}
+</td>
+</tr>
+
+</table>
+</center>
+<P>
+Where
+<P>
+<center>
+<TABLE BORDER="1" CELLSPACING="2" CELLPADDING="0">
+<tr BGCOLOR="#DCDCDC">
+<td><strong>Tag</strong>
+</td>
+<td><strong>Description</strong>
+</td>
+</tr>
+
+<tr>
+<td>t
+</td>
+<td>Level 1B transmission profiles
+</td>
+</tr>
+
+<tr>
+<td>ssp
+</td>
+<td>Level 2 Solar species profiles
+</td>
+</tr>
+
+<tr>
+<td>lsp
+</td>
+<td>Level 2 Lunar species profiles
+</td>
+</tr>
+
+<tr>
+<td>cld
+</td>
+<td>Level 2 Cloud product
+</td>
+</tr>
+
+<tr>
+<td>{xxxxxxXX}
+</td>
+<td>Event ID (6 digit orbit number, 2 digit event type)
+</td>
+</tr>
+
+<tr>
+<td>{vzz.zz}
+</td>
+<td>Software version number
+</td>
+</tr>
+</Table>
+</center>
+<P>
+
+<a name="loc"></a>
+<H2>6 - Dataset location</H2>
+
+The SAGE III data are mirrored from NASA Langley DAAC in a predefined directory structure as follows:
+<P> 
+<blockquote> [shortname.versionid] / [acquisitiondate], where:
+</blockquote>
+[shortname.versionid] is the collection identifier. (e.g., g3alsp.002).
+<br>[acquisitiondate] is the date the measurement was taken. (e.g., 2002.06.22).
+<P> 
+Data files in HDF-EOS format are stored in the appropriate directory
+based on collection and acquisition date. Corresponding metadata files
+in Extensible Markup Language (XML) format are also
+stored in the appropriate directory. 
+<P>
+<b>NOTE:</b>  The SAGE III data was downloadded from the EOS Data Gateway, Langley
+DAAC Data Pool and it should be noted that the version number on
+that system represents the Earth Science Data Type version rather
+than the SAGE III Data version. Accordingly, the newly-released V3
+data is stored as version '002'.
+
+<P>
+
+</BODY>
+</HTML>

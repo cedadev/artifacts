@@ -1,0 +1,177 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Soil Temperature measurements - File Format</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Soil Temperature data - .tsoil (Soil temperature data)
+file format<BR CLEAR="ALL"></H1>
+
+<hr>
+<blockquote>
+<strong><FONT COLOR="#FB0000"><Strong>PLEASE NOTE:</strong></FONT> The file format described below refers to the Met Office Land Surface data (1900-2000) dataset which has been superseded by the <a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__dataent_ukmo-midas">Met Office MIDAS dataset (1853-present)</a> at the BADC.
+</strong>
+</blockquote>
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<P>A <STRONG>list of UK stations</STRONG> for which the BADC holds
+.tsoil files is available (<A HREF="/data/surface/station_lists/ukstation.tsoil.html">.tsoil
+stations</A>).</P>
+
+<P>The file name convention is (STATION_NAME)(YEAR).(MESSAGE_TYPE).(FILE_EXTENSION)</P>
+
+<UL>
+  <LI>STATION_NAMES is the complete station name.<BR>
+  <LI>YEAR is the year expressed in full, ie 1998. <BR>
+  <LI>Description of the <A HREF="met_domain.html">message types</A>
+  is available.<BR>
+  <LI>The file extension is <STRONG>.tsoil</STRONG> meaning that
+  the file contains soil temperature measurements.<BR>
+</UL>
+
+<P>These <I>.tsoil</I> files contain soil temperatures reported
+daily and hourly. Daily soil temperatures are usually measured
+at depths of 30 cm and 100 cm, at 0900Z. Hourly soil temperatures
+are usually measured at a 10 cm depth. The soil temperature data
+begins in 1908. <BR>
+<BR>
+<STRONG>-999</STRONG> indicates a missing value. <BR>
+<BR>
+The first line of the data file are the fields headers (which
+are detailed in the table below).<BR>
+<BR>
+The fields in the .tsoil data files are : <BR>
+<BR>
+<td><TABLE BORDER="1" CELLSPACING="2" CELLPADDING="0">
+  <TR>
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">HEADER</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">PARAMETER</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">FIELDS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">COLUMNS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">UNITS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">COMMENTS</FONT></TH> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">ID</TD> 
+    <TD BGCOLOR="#ffffff">Station Number</TD> 
+    <TD BGCOLOR="#ffffff">1</TD> 
+    <TD BGCOLOR="#ffffff">1-8</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#3.6">Station identification</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">IDTYPE</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">2</TD> 
+    <TD BGCOLOR="#d4d4d4">9-17</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas/ukmo_guide.html#3.6">Station identification</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">MET_DOM</TD> 
+    <TD BGCOLOR="#ffffff">Meteorological Domain</TD> 
+    <TD BGCOLOR="#ffffff">3</TD> 
+    <TD BGCOLOR="#ffffff">18-28</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="met_domain.html">Message types</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">YEAR</TD> 
+    <TD BGCOLOR="#d4d4d4">Year</TD> 
+    <TD BGCOLOR="#d4d4d4">4</TD> 
+    <TD BGCOLOR="#d4d4d4">29-35</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">4 characters</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">MON</TD> 
+    <TD BGCOLOR="#ffffff">Month</TD> 
+    <TD BGCOLOR="#ffffff">5</TD> 
+    <TD BGCOLOR="#ffffff">36-43</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff">1 or 2 characters (from 1 to 12)</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">DAY</TD> 
+    <TD BGCOLOR="#d4d4d4">Day</TD> 
+    <TD BGCOLOR="#d4d4d4">6</TD> 
+    <TD BGCOLOR="#d4d4d4">44-51</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">1 or 2 characters (from 1 to 31max)</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">TIME</TD> 
+    <TD BGCOLOR="#ffffff">Hour</TD> 
+    <TD BGCOLOR="#ffffff">7</TD> 
+    <TD BGCOLOR="#ffffff">52-59</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff">Hour of observation from 0 to 2300</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">SL_T_5CM</TD> 
+    <TD BGCOLOR="#d4d4d4">Soil temperature at 5cm</TD> 
+    <TD BGCOLOR="#d4d4d4">8</TD> 
+    <TD BGCOLOR="#d4d4d4">60-69</TD> 
+    <TD BGCOLOR="#d4d4d4">0.1 degree Celsius</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas/ukmo_guide.html#5.2">See Met Office
+      documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">SL_T_10CM</TD> 
+    <TD BGCOLOR="#ffffff">Soil temperature at 10cm</TD> 
+    <TD BGCOLOR="#ffffff">9</TD> 
+    <TD BGCOLOR="#ffffff">70-80</TD> 
+    <TD BGCOLOR="#ffffff">0.1 degree Celsius</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#5.2">See Met Office
+      documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">SL_T_20CM</TD> 
+    <TD BGCOLOR="#d4d4d4">Soil temperature at 20cm</TD> 
+    <TD BGCOLOR="#d4d4d4">10</TD> 
+    <TD BGCOLOR="#d4d4d4">81-91</TD> 
+    <TD BGCOLOR="#d4d4d4">0.1 degree Celsius</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas/ukmo_guide.html#5.2">See Met Office
+      documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">SL_T_30CM</TD> 
+    <TD BGCOLOR="#ffffff">Soil temperature at 30cm</TD> 
+    <TD BGCOLOR="#ffffff">11</TD> 
+    <TD BGCOLOR="#ffffff">92-102</TD> 
+    <TD BGCOLOR="#ffffff">0.1 degree Celsius</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#5.2">See Met Office
+      documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">SL_T_50CM</TD> 
+    <TD BGCOLOR="#d4d4d4">Soil temperature at 50cm</TD> 
+    <TD BGCOLOR="#d4d4d4">12</TD> 
+    <TD BGCOLOR="#d4d4d4">103-113</TD> 
+    <TD BGCOLOR="#d4d4d4">0.1 degree Celsius</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas/ukmo_guide.html#5.2">See Met Office
+      documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">SL_T_100CM</TD> 
+    <TD BGCOLOR="#ffffff">Soil temperature at 100cm</TD> 
+    <TD BGCOLOR="#ffffff">13</TD> 
+    <TD BGCOLOR="#ffffff">114-125</TD> 
+    <TD BGCOLOR="#ffffff">0.1 degree Celsius</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#5.2">See Met Office
+      documentation</A></TD> 
+  </TR>
+</TABLE><!--SELECTION--><!--/SELECTION--><BR>
+<BR>
+More information about the Met Office surface data is available
+in the <A HREF="../ukmo-midas/ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+</BODY>
+</HTML>

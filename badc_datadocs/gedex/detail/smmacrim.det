@@ -1,0 +1,426 @@
+SMM ACRIM Solar Irradiance
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Total solar irradiance at one Astronomical
+Unit (1 A.U.), integrated over .2 to 50 micrometer wavelengths.  Standard
+error is also calculated for each solar flux value.
+
+1.2  Unit of Measurement.  Watts per meter squared (Watts/m**2).
+
+1.3  Data Source.  Solar Maximum Mission's Active Cavity Radiometer
+Irradiance Monitor (ACRIM I).
+
+1.4  Data Set Identification.  The SMM/ACRIM data set contains averaged
+daily solar irradiance values identified by the number of days into the
+mission and the calendar date.
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  Full solar disk (Photosphere).
+
+2.2  Spatial Resolution.  No resolution within the disk.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  February 19, 1980, to July 14, 1989.
+
+3.2  Temporal Resolution.  Solar irradiances were measured every two
+minutes (except between 1981 and 1983 when measurements were made once
+about every 14 minutes).  Irradiances have been integrated over the orbital
+period (96 minutes) and are available as daily mean values for this data
+set.
+
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  The objective of the Solar Maximum Mission was to
+obtain measurements for the peak of solar cycle 21.  Solar cycles are
+eleven-year cycles during which the number of sunspots increase to a
+maximum.  The maximum for cycle 21 occurred in 1980.  Several experiments
+are focused on the study of the impulsive phase of large flares.
+Specifically, the ACRIM sensor was designed to begin a program of long-term
+total solar irradiance monitoring.  For both long- and short- term solar
+variations of significance to climate and solar physics, maximum precision
+and accuracy were primary goals.
+
+4.2  Key Satellite Flight Parameters.   For the Solar Maximum Mission:
+     o  Launch Date         February 14, 1980
+     o  Planned Duration    2  years
+     o  Actual Duration     November 17, 1989
+     o  Orbit Altitude      574 km.
+     o  Nodal Period        96 minutes
+     o  Instruments on
+        board:              l.  Gamma Ray Spectrometer
+                            2.  Hard X-ray Burst Spectrometer
+                            3.  Hard X-ray Imaging Spectrometer
+                            4.  X-ray Polychromator (failed)
+                            5.  Ultraviolet Spectrometer & Polarimeter
+                            6.  Coronagraph/Polarimeter
+                            7.  Active Cavity Radiometer
+
+4.3  Principles of Operation.  The ACRIM I is a pyrheliometer with a
+conical-cavity detector, a shutter that can block solar radiation, and a
+reference cavity that permanently views a surface at the temperature of a
+heat sink.  A servo system maintains the observing cavity at a temperature
+slightly above that of the reference cavity.  Measurements consist of
+voltage determinations for the heater circuit in this servo loop.  A
+difference between shutter-open and shutter-closed readings, normally
+obtained in a two-minute cycle, then provides a measurement of solar
+irradiance.
+
+4.4  Instrument Measurement Geometry.  The self-calibrating pyrheliometer
+views the sun through a five degree full angle field-of-view.  This angle
+does not provide resolution within the solar disk.
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  The data are corrected for solar
+distance (normalized to 1 A.U.), orbital displacement of the satellite, and
+the shift in irradiance due to satellite motion. Temperature corrections
+are also applied, and the data are integrated over a 96-minute orbital
+period.  Daily mean values are calculated from orbital means.
+
+Woodward and Hudson (1983) searched for the effects of a ("5 minute") solar
+global oscillation phenomena in the original unintegrated total irradiance
+data.  They found detectable irradiance variations with amplitudes for low
+degree modes of up to a few parts per million in solar irradiance.
+
+5.2  Derivation Techniques/Algorithms.  Daily mean values for this data set
+are calculated from a variable number of daily input values, dependent on
+the operating mode of the ACRIM.
+
+A model to correct for background effects, which are dependent on the phase
+of the satellite orbit, are applied to the data.  The model is composed of
+two terms.  First, orbital motion causes a variable solar distance that
+causes signal variations via the inverse-square law. Second, the motion of
+the satellite produces a relativistic modulation of the detected signal.
+The two effects together are described by:
+
+                            2V
+                              x      2X
+               S = S ( 1 +  ----  + ---- )
+                             C        R
+
+where V (sub x) represents the satellite velocity component towards the sun
+and the X represents the corresponding displacement from the Earth's
+center.  The sum of these effects produces a sinusoidal modulation of the
+apparent solar irradiance, with the peak shifted about 0.1 phase units past
+the subsolar point of the orbit.
+
+5.3  Special Corrections/Adjustments.  The ACRIM experiment operated in the
+electrically self-calibrated mode to realize maximum accuracy and
+precision.  During normal SMM operations, its shutters alternated every 64
+seconds between collecting solar data and reference data.  In this mode,
+more than 800 independent samples of total solar irradiance were acquired
+during the 55-sunlit minutes of each 96-minute SMM orbit.
+
+The solar pointing system of the Solar Maximum Mission failed in December
+1980, and the satellite was placed into a spin stabilized mode with its
+spin axis nominally directed at the sun.  Since SMM was not designed for
+spin stabilization, this axis wobbled slowly about the solar direction with
+a maximum pointing error of about 10 degrees.
+
+The ACRIM I experiment was placed into a new operating mode to take
+advantage of the limited solar pointing provided by the spin stabilized
+spacecraft.  Instead of the normal opening and closing of ACRIM I's
+shutters every minute, the shutters were opened only at orbit sunrise and
+were closed at sunset.  This procedure produced an average of 100 solar
+observations per day during the spin stabilized operation of the SMM.
+
+Shuttle astronauts repaired the solar pointing system in April of 1984.
+Normal operations were resumed shortly thereafter.
+
+5.4  Processing Changes.  The effects of the decreased quantity and quality
+of ACRIM I data in the spin mode are apparent.  Processing of the data was
+affected when the solar pointing system failed -- with changes in effect
+during the time of spin mode operation.  Orbit degradation during the last
+months of satellite operation has resulted in unreliable solar flux values.
+The data are actively being re- calibrated, but official release of data
+beyond July of 1989 may not occur.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  The three ACRIM I sensors agree within
++/-0.04% of their average result.  (Two of ACRIM I's sensors, kept
+shuttered most of the time, were used sparingly to calibrate degradation of
+the continuously monitoring sensor.)  A measurement precision better than
++/-0.002% was sustained while operating in the self-calibrated mode during
+the first 300 days of (normal) SMM operation.  The standard error of single
+orbit averages of solar flux during this period was frequently as small as
++/-0.001%.
+
+A sounding rocket solar irradiance experiment in May, 1980, compared two
+Active Cavity Radiometers (ACRs) on the rocket with ACRIM I and found
+agreement among all five ACR type IV sensors to within +/- 0.05% of their
+combined average result.
+
+6.2  Confidence Level/Accuracy Judgment.  Irradiance fluctuations smaller
+than 0.01% can be measured with a precision of +/-0.02%. The average
+standard error of daily mean results increased from 0.002% during the
+normal operation of SMM to 0.02% in the spin mode.  Normal operations
+resumed in April 1984 after repairs by the shuttle crew.
+
+In the first 44 days of operation, the total amplitude of solar variation
+was .10%.  The largest decrease in irradiance on time scales of several
+days can be up to .25%.  In an entire solar cycle (11 years), the
+variations can be as much as .40%.
+
+6.3  Usage Guidance.  It is essential to recognize that data accuracy was
+affected when the solar pointing system failed in December 1980.  The data
+obtained between 1981 and 1983 are considered to be of lower quality. After
+shuttle astronauts repaired the precision solar pointing capability of the
+SMM satellite in April 1984, the data accuracy improved to earlier levels.
+Orbit degradation during the last months of satellite operation may have
+affected the data values from July 15, 1989 on.
+
+Solar irradiance values from the SMM ACRIM and Nimbus-7 ERB instruments
+have been compared by Foukal (1987).
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+    Dr. Richard C. Willson
+    Jet Propulsion Laboratory
+    Mail Stop 171-400
+    California Institute of Technology
+    Pasadena, CA  91109
+    818-354-3529
+    FTS 792-3529
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products.   None.
+
+8.2  Film Products.   None.
+
+8.3  Other Products.
+
+8.3.1.  SMM/ACRIM Daily Averages,  Level II.
+
+      Medium/Specifications:  The SMM/ACRIM Daily Averages are available on
+      JPL's Hewlett-Packard system disk (running UNIX) from the producer.
+
+      Format/Content:  The daily averages of solar irradiance and the
+      standard error calculations are contained in one ASCII file with the
+      corresponding mission day.
+
+      Data Quantity/Rate:  Approximately 79 kilo-bytes.  There is one solar
+      irradiance value and standard error calculation per day.
+
+      Status:  The data are available through July 14, 1989.
+
+      Plans/Schedule:  The release of additional data through the end of
+      the mission is uncertain.  Orbit degradation during the last months
+      of operation may have affected the solar flux values.
+
+8.3.2  SMM/ACRIM Daily Averages,  Level II
+
+      Medium/Specifications:  The data are also available on-line through
+      NASA's Climate Data System.  Data are stored in a data structure
+      called the Common Data Format (CDF) and are available without NCDS
+      staff assistance.
+
+      Format/Content:  The data are available in Common Data Format (CDF).
+      This format allows all attributes describing the data to be stored
+      internally in the data file itself.  The data set name used to access
+      the data in NCDS is "SMM-ACRIM".  The data consist of daily averaged
+      total solar irradiance and standard error calculations with the
+      corresponding mission day and date.
+
+      Data Quantity/Rate:  Approximately 108 kilo-bytes.  There is one
+      solar irradiance value and standard error calculation per day.
+
+      Status:  These data are currently available through NCDS from
+      February 1980 through July 14, 1989.  Official release of additional
+      data through the end of the data set are uncertain due to orbit
+      degradation of the satellite.
+
+      Plans/Schedule:  NCDS archives all available data and will update the
+      CDF data file if and when new data are received.
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification
+
+    Dr. Richard Willson
+    Jet Propulsion Laboratory
+    Mail Stop 171-400
+    4800 Oak Grove Drive
+    Pasadena, CA  91109
+    818-354-3529
+    FTS 792-3529
+
+9.2  Procedures for Obtaining Data.  Data are available from the producer
+electronically through a guest computer account at JPL.  Prospective users
+should contact the data producer for computer access instructions.
+
+Access through NASA's Climate Data System requires an account on the NSSDC
+computer system.  Contact the NCDS User Support Office for information and
+instructions.  The data set is referenced by the name "SMM-ACRIM" via the
+Data Access subsystem of NCDS.
+
+9.3  NCDS Status/Plans.  The data are available from February 1980 to July
+14, 1989.  NCDS archives all available data and will update the CDF data
+file if and when new data are received.
+
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+      Dr. Richard Willson
+      Jet Propulsion Laboratory
+      Mail Stop 171-400
+      4800 Oak Grove Drive
+      Pasadena, CA  91109
+      818-354-3529
+      FTS 792-3529
+
+      NCDS User Support Office
+      Code 934
+      Goddard Space Flight Center
+      Greenbelt, MD 20771
+      (301) 286-3209
+      FTS 888-3209
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      a.  Willson, R.C., 1984.  "Measurements of Solar Total Irradiance and
+          Its Variability." Space Science Reviews, 38:203-241.
+
+11.2  Journal Articles and Study Reports
+
+      a.  Foukal, P., and J. Lean, 1986.  "The Influence of Faculae on
+          Total Solar Irradiance and Luminosity."  Astrophys. J.  302:
+          826-835.
+
+      b.  Foukal, P., 1987.  "Physical Interpretation of Variations in
+          Total Solar Irradiance."  J. Geophys. Res.  92:801-807.
+
+      c.  Frohlich, C.,  1984.  "Solar Variability for Periods of Days to
+          Months."  Adv. Space Res. 4:117.
+
+      d.  Frohlich, C.,  1987.  "Variability of the Solar 'Constant' on
+          Time Scales of Minutes to Years."  J. Geophys. Res. 92: 796-800.
+
+      e.  Pap, J., 1986.  "Variation of the Solar Constant During 1978-79
+          and 1981."  Bull. Astron. Inst. Czechosl. 37:210-218.
+
+      f.  Willson, R.C. and H.S. Hudson, 1981.  "Solar Maximum Mission
+          Experiment:  Initial Observations by the Active Cavity
+          Radiometer."  Adv. Space Res. 1:285-288.
+
+      g.  Willson, R.C., 1984.  "Measurements of Solar Total Irradiance and
+          Its Variability."  Space Science Reviews, 38:203-241.
+
+      h.  Willson, R.C., H.S. Hudson, C. Frohlich, R.W. Brusa, 1986.
+          "Long-Term Downward Trend in Total Solar Irradiance."  Science,
+          234:1114-1117.
+
+      i.  Wolff, C.L., 1987.  "Solar Irradiance Change and Special
+          Longitudes Due to r-Modes."  Science, 235:1631-1633.
+
+      j.  Woodward, M. and H.S. Hudson, 1983.  Nature, 305:589.
+
+
+11.3  Archive/DBMS Usage Documentation
+
+      a.  Olsen, L.M., J.W. Closs, J.R. Vanderpool, November, 1991. "NASA's
+          Climate Data System Primer: Version 1.2."  National Space Science
+          Data Center, NASA Goddard Space Flight Center, Greenbelt,
+          Maryland.
+
+
+12.  RELATED DATA SETS
+
+Solar irradiance values are available from the Hickey-Frieden (HF)
+radiometer on the Nimbus-7 Earth Radiation Budget (ERB) experiment since
+December 1978.  For additional information see the detailed data set
+description for the N7-ERB data set in NCDS.  Solar irradiance values from
+December 1978 to the present are also available from the Solar Backscatter
+Ultraviolet sensor on Nimbus-7 as part of the Continuous Scan Solar Flux
+Tape (SUNC).
+
+
+13.  SUMMARY/SAMPLE
+
+A sample plot showing solar irradiance values over the entire data set
+range is available through the Data Applications Subsystem of NCDS. Specify
+"SMM-ACRIM" as input to the "Display Sample of Data Set" option in the NCDS
+graphics subsystem.
+
+14.  NOTES
+
+The next solar monitoring experiment, ACRIM II, is aboard the Upper
+Atmosphere Research Satellite (UARS), which was launched in September,
+1991.
+
+
+*92/03/06

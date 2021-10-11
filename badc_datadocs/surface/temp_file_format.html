@@ -1,0 +1,170 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Max and Min Temperature Observations - File Format</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Max and Min Temperature data - .temp file format<BR CLEAR="ALL"></H1>
+
+<hr>
+<blockquote>
+<strong><FONT COLOR="#FB0000"><Strong>PLEASE NOTE:</strong></FONT> The file format described below refers to the Met Office Land Surface data (1900-2000) dataset which has been superseded by the <a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__dataent_ukmo-midas">Met Office MIDAS dataset (1853-present)</a> at the BADC.
+</strong>
+</blockquote>
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<P>A <STRONG>list of UK stations</STRONG> for which the BADC holds
+.temp files is available (<A HREF="/data/surface/station_lists/ukstation.temp.html">.temp
+stations</A>).</P>
+
+<P>The file name convention is (STATION_NAME)(YEAR).(MESSAGE_TYPE).(FILE_EXTENSION)</P>
+
+<UL>
+  <LI>STATION_NAMES is the complete station name.<BR>
+  <LI>YEAR is the year expressed in full, ie 1998. <BR>
+  <LI>Description of the <A HREF="met_domain.html">message types</A>
+  is available.<BR>
+  <LI>The file extension is <STRONG>.temp</STRONG> meaning that
+  the file contains temperature observations.<BR>
+</UL>
+
+<P>These .temp files contain maximum and minimum temperatures
+measured over a period of up to 24 hours. The file headers <A
+HREF="count.html">TIME and COUNT</A> define the observation period.
+For air temperatures, the observation period will usually be one
+of the following: 09-09, 09-21, 21-09. For minimum grass temperature
+and minimum concrete temperature, the time of measurement is usually
+0900Z. When the period of exposure is known to be 21-09, then
+COUNT = 12.</P>
+
+<P><STRONG>-999</STRONG> indicates a missing value. <BR>
+<BR>
+The first line of the data file is the fields headers (which are
+detailed in the table below).<BR>
+<BR>
+The fields in the .temp data files are : <BR>
+<!--SELECTION--><!--/SELECTION--><BR>
+<td><TABLE BORDER="1" CELLSPACING="2" CELLPADDING="0" WIDTH="93%">
+  <TR>
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">HEADER</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">PARAMETER</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">FIELDS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">COLUMNS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">UNITS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">COMMENTS</FONT></TH> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">ID</TD> 
+    <TD BGCOLOR="#ffffff">Station Ref. Number</TD> 
+    <TD BGCOLOR="#ffffff">1</TD> 
+    <TD BGCOLOR="#ffffff">1-8</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#3.6">Station identification</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">IDTYPE</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">2</TD> 
+    <TD BGCOLOR="#d4d4d4">9-17</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas/ukmo_guide.html#3.6">Station identification</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">MET_DOM</TD> 
+    <TD BGCOLOR="#ffffff">Meteorological Domain</TD> 
+    <TD BGCOLOR="#ffffff">3</TD> 
+    <TD BGCOLOR="#ffffff">18-28</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="met_domain.html">Message types</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">YEAR</TD> 
+    <TD BGCOLOR="#d4d4d4">Year</TD> 
+    <TD BGCOLOR="#d4d4d4">3</TD> 
+    <TD BGCOLOR="#d4d4d4">29-35</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">4 characters</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">MON</TD> 
+    <TD BGCOLOR="#ffffff">Month</TD> 
+    <TD BGCOLOR="#ffffff">4</TD> 
+    <TD BGCOLOR="#ffffff">36-43</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff">1 or 2 characters (from 1 to 12)</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">DAY</TD> 
+    <TD BGCOLOR="#d4d4d4">Day</TD> 
+    <TD BGCOLOR="#d4d4d4">5</TD> 
+    <TD BGCOLOR="#d4d4d4">44-51</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">1 or 2 characters (from 1 to 31max)</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">TIME</TD> 
+    <TD BGCOLOR="#ffffff">Time</TD> 
+    <TD BGCOLOR="#ffffff">6</TD> 
+    <TD BGCOLOR="#ffffff">52-59</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff">Hour of observation from 0 to 2300</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">COUNT</TD> 
+    <TD BGCOLOR="#d4d4d4">Hour count</TD> 
+    <TD BGCOLOR="#d4d4d4">7</TD> 
+    <TD BGCOLOR="#d4d4d4">60-67</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="count.html">See COUNT definition</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">MAX_T</TD> 
+    <TD BGCOLOR="#ffffff">Maximum Air Temperature</TD> 
+    <TD BGCOLOR="#ffffff">8</TD> 
+    <TD BGCOLOR="#ffffff">68-75</TD> 
+    <TD BGCOLOR="#ffffff">0.1 degree Celsius</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#5.2">See Met Office
+      documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">MIN_T</TD> 
+    <TD BGCOLOR="#d4d4d4">Minimum Air Temperature</TD> 
+    <TD BGCOLOR="#d4d4d4">9</TD> 
+    <TD BGCOLOR="#d4d4d4">76-83</TD> 
+    <TD BGCOLOR="#d4d4d4">0.1 degree Celsius</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas/ukmo_guide.html#5.2">See Met Office
+      documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">MIN_GRASS_T</TD> 
+    <TD BGCOLOR="#ffffff">Minimum Grass Temperature</TD> 
+    <TD BGCOLOR="#ffffff">10</TD> 
+    <TD BGCOLOR="#ffffff">84-96</TD> 
+    <TD BGCOLOR="#ffffff">0.1 degree Celsius</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#5.2">See Met Office
+      documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">MIN_CONC_T</TD> 
+    <TD BGCOLOR="#d4d4d4">Minimum Concrete Temperature</TD> 
+    <TD BGCOLOR="#d4d4d4">11</TD> 
+    <TD BGCOLOR="#d4d4d4">97-108</TD> 
+    <TD BGCOLOR="#d4d4d4">0.1 degree Celsius</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas/ukmo_guide.html#5.2">See Met Office
+      documentation</A></TD> 
+  </TR>
+</TABLE><BR>
+<BR>
+<BR>
+More information about the Met Office surface data is available
+in the <A HREF="../ukmo-midas/ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+</BODY>
+</HTML>

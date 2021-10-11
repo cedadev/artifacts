@@ -1,0 +1,472 @@
+Text taken from http://cloud1.arc.nasa.gov/aaoe/project/statement.html
+6/12/05
+--------------------------------------------
+
+Antarctic Ozone
+
+INITIAL FINDINGS FROM PUNTA ARENAS CHILE
+
+This statement has been prepared by the scientists who went to Punta 
+Arenas, Chile to study the Antarctic ozone hole. This summary 
+represents the views of the scientists themselves and not necessarily 
+those of the cosponsoring organizations. The findings that will be 
+presented are preliminary. Under normal circumstances, scientists 
+studying such a complex scientific issue would take many months to 
+years to disclose their initial findings. However, the issue of ozone 
+perturbation is one of justifiable public concern, and hence the public 
+should be kept abreast of the current scientific thinking. It is in 
+this spirit that we would like to share our provisional picture of the 
+Antarctic springtime ozone hole. Furthermore, this will help to 
+stimulate the scientific inquiry and debate that can only lead to an 
+improved and timely understanding of the phenomenon. A much more 
+complete and final interpretation of our findings will be forthcoming 
+after a planned intensive series of scientific meetings and the 
+submittal of a group of scientific papers to the peer review process. 
+This procedure will occur within the next six months. 
+
+Description of Goals and Objectives of the Mission 
+
+Three basic theories have been proposed to explain the observed decrease in spring-time 
+Antarctic ozone that has been occurring since the late-1970's. One class of theories 
+suggest that the hole is caused by the human activity of loading the atmosphere with 
+chlorinated and brominated chemicals. Chlorofluorocarbons (CFC's) and Halons are 
+contributing increasing levels of chlorine and bromine to the atmosphere. These 
+compounds could then efficiently destroy stratospheric ozone in the Antarctic 
+environment because of the special geophysical conditions that exist in this region of the 
+atmosphere, i.e. a contained polar vortex (an isolated air mass), cold temperatures, and 
+the presence of polar stratospheric clouds. A second class of theories suggests that there 
+have been changes in the circulation of the atmosphere, which now transports ozone-poor 
+air into Antarctica. A third theory postulates solar and cosmic ray induced, periodically 
+enhanced abundances of oxides of nitrogen, which can cyclically destroy ozone.
+
+The NSF-coordinated expedition to the McMurdo station in Antarctica 
+last year was exceptionally successful in increasing our understanding 
+of the Antarctic ozone hole. In conjunction with other experiments, 
+this ground based effort demonstrated the recurrence of the ozone hole, 
+the altitude over which ozone was depleted, that chlorine and nitrogen 
+chemistry was highly perturbed relative to that observed at mid-
+latitudes, and that the solar cycle theory is an unlikely explanation. 
+However, the McMurdo data were insufficient to distinguish adequately 
+between the relative contributions of the first two classes of 
+theories. Therefore, the goal of the present airborne campaign is to 
+improve our understanding of the relative contributions of these, and 
+possibly other, mechanisms to the formation of the Antarctic ozone 
+hole.
+
+One of the key environmental issues is whether the ozone depletion 
+observed in Antarctica will always be localized in and around 
+Antarctica, or whether it is a precursor of future global changes. A 
+longer term objective of this campaign is to be able to provide 
+information relevant to answering this question.
+
+Participants, Sponsors, and Foreign Government Support 
+
+The campaign was coordinated by the National Aeronautics and Space 
+Administration (NASA) and cosponsored by NASA, the National Oceanic and 
+Atmospheric Administration (NOAA), the National Science Foundation 
+(NSF), and the Chemical Manufacturers Association (CMA). In addition, 
+the British Meteorological Office (BMO) provided a significant 
+contribution to the project.
+
+Scientists, engineers, and other personnel from Harvard University, 
+University of Denver, University of Washington, University of Colorado, 
+National Center for Atmospheric Research, Jet Propulsion Laboratory, 
+NASA Ames Research Center, NASA Langley Research Center, NASA Goddard 
+Space Flight Center, NOAA Aeronomy Laboratory, the British 
+Meteorological Office, the European Center for Medium Range Weather 
+Forecasts (ECMWF), Centre Nationale Recherches Meteorologiques, and 
+Atmospheric and Environmental Research, Inc. participated in this 
+campaign. Dr. J. C Farman of the British Antarctic Survey kindly made 
+available Halley Bay ozonesonde data. Scientists from both Chile and 
+Argentina were also involved.
+
+Key participants in this campaign were also the flight and ground crews 
+of NASA, Lockheed, and Northrop, who flew and maintained the ER-2 and 
+DC-8 research aircraft under very challenging conditions. Research and 
+Data Systems provided the necessary telecommunication links and 
+support.
+
+The Chilean government hosted the airborne campaign, which was based 
+out of Punta Arenas. The Chilean Air Force supplied the facilities and 
+logistical support. The Chilean Antarctic Institute provided advice 
+regarding the study area. In addition. invaluable assistance was 
+provided by the Direccion General De Aeronautica Civil, and the 
+National Meteorologic Service of Chile.
+
+Other countries also helped: Panama, Costa Rica, Peru, and Ecuador 
+cooperated with the overflights necessary for the transit from the 
+United States to Chile. The government of Argentina offered alternate 
+landing fields for the aircraft as they returned from their Antarctic 
+missions. The National Meteorological Service of Argentina furnished 
+data from Marambio. Lastly, the government of New Zealand assisted with 
+the transcontinental Antarctic flight by the DC-8 that was part of the 
+return to the United States.
+
+Description of Campaign 
+
+The Airborne Antarctic Ozone Campaign succeeded in making 12 flights of 
+the high altitude ER-2 aircraft, and 13 flights of the DC-8 medium 
+altitude aircraft over Antarctica. The ER-2 typically operated at 
+geometric altitudes relative to sea level between 12.0 and 18.7 km and 
+flew to 72 degrees South along the Palmer Peninsula. The DC-8 operated 
+at pressure altitudes up to 11.1 km and with its long range capability 
+was able to reach the South Pole on several occasions, and is currently 
+returning to the United States via New Zealand after crossing the 
+Antarctic continent. The project had available to it Total Ozone 
+Mapping Spectrometer (TOMS) images of the total ozone column of the 
+southern hemisphere within a day of observation and of the orbits 
+passing over the region of the Antarctic peninsula within 2 to 4 hours 
+of observation. Aerosol and cloud extinction data were also available 
+from the Stratospheric Aerosol Measurement (SAM II) and Stratospheric 
+Aerosol and Gas Experiment (SAGE II), with the latter providing ozone 
+measurements as well. Twice daily analyses and forecasts of winds and 
+temperatures up to 30 mb, 22 km, for three days ahead, were provided by 
+the BMO in chart form, plus forecasts of the trajectories of air 
+parcels on surfaces along which air masses move. Photochemical 
+modelling along these trajectories was done using the aircraft 
+observations. The ECMWF provided once a day analyses and forecasts up 
+to 30 mb for 10 days ahead. A small theory team assisted the 
+experimental scientists with the interpretation on a day to day basis. 
+This approach was possible because of the availability of rapid data 
+reduction facilities and an extensive, dedicated international 
+telecommunications network.
+
+Detailed lists of the participants, a discussion of the theories being 
+addressed, the approach taken in the tests of these theories, and a 
+description of the apparatus involved are given in the Airborne 
+Antarctic Ozone Experiment Plan (NASA and NOAA, July 1987). Copies are 
+available on request from NASA Ames Research Center or NASA 
+Headquarters.
+
+Data Obtained from the ER-2 and DC-8 Instrumentation 
+
+The spatial and temporal distribution of a large number of relatively 
+short-lived chemical constituents that participate in chemical 
+reactions that affect the abundance of ozone were measured from both 
+the ER-2 and DC-8. Instruments aboard the ER-2 resulted in measurements 
+of the distributions of ozone (03), chlorine monoxide radical (ClO), 
+bromine monoxide radical (BrO), total odd nitrogen (NOy), nitric oxide 
+(NO), and water (H2O) in the vicinity of the aircraft at altitudes 
+ranging from 12 to 18 km above the Earth's surface, well into the 
+altitude region where ozone is undergoing depletion. Instruments aboard 
+the DC-8 measured the abundances of H2O and O3 in the vicinity of the 
+aircraft, the vertical distribution of O3 for approximately 10 km above 
+the aircraft, and the total column amounts of O3, hydrochloric acid 
+(HCl), chlorine nitrate (ClONO2), chlorine dioxide (OClO), BrO, 
+hydrofluoric acid (HF), NO, nitrogen dioxide (NO2), nitric acid (HNO3), 
+as well as a number of other constituents, above the aircraft altitude.
+
+Additionally, the temporal and spatial distributions of long-lived 
+chemical tracers and dynamical variables were measured in order to 
+understand atmospheric motions. These included measurements of nitrous 
+oxide (N2O), methane (CH4), chlorofluorocarbons 11 (CFC13) and 12 
+(CF2Cl2), carbon tetrachloride (CCl4), and methyl chloroform (CH3CCl3). 
+In-situ measurements of all of these species were made from both the 
+ER-2 and DC-8, and column measurements of most from the DC-8. The size 
+distribution, abundance, and composition of particles was determined by 
+instrumentation aboard the ER-2, as well as the vertical distribution 
+of aerosols from 12 to 28 km by the DC-8 lidar, in an effort to 
+understand the role of heterogeneous processes. Additionally, 
+atmospheric pressure, temperature, lapse rate, and winds were measured 
+aboard the ER-2 to determine the state variables and dynamical 
+structure of the atmosphere.
+
+The project had regular ozone sonde data available from the Palmer 
+station, the Halley Bay station, the South Pole station, and McMurdo. 
+These define the vertical distribution of ozone at points not routinely 
+covered by the flight tracks. Ozonesondes were launched at special 
+times from Palmer and the South Pole to coincide with aircraft 
+overflights of those locations.
+
+The analyses of some of these data sets have not yet been completed, 
+either because of the lengthy data reduction procedures required or 
+because of the sheer volume of raw data acquired. An example of the 
+latter is the meteorological data set, whose initial analyses had the 
+primary goal of forecasting the flight conditions. Furthermore, many of 
+the analyses of the chemical data sets are clearly only preliminary, to 
+be refined by recalibration checks and more sophisticated re-analyses 
+available at the home laboratories. As a consequence, the initial 
+picture summarized below cannot be a balanced, complete, and final one.
+
+Results and their Relationship to Theories 
+
+The processes controlling the abundance and distribution of ozone in 
+Antarctica are complex and intertwined. However, given the successful 
+nature of this campaign, we are now in a position to start to more 
+fully appreciate the exquisite balance between the meteorological 
+motions and the photochemistry. We will present our preliminary 
+scientific findings as answers to a series of posed scientific 
+questions that are relevant to public policy.
+
+1) Did the springtime ozone hole occur over Antarctica in 1987?
+
+Yes. TOMS satellite, balloon ozonesonde, and both ER-2 and DC-8 
+aircraft measurements of ozone showed that the springtime ozone 
+decrease occurred again this year. TOMS showed the spatial extent of 
+the phenomenon is continental or greater in scale and revealed the 
+temporal change in the total column of ozone. The abundance of ozone in 
+August and September of 1987 was lower than any previous year at all 
+latitudes south of 60 degrees. In mid-September of this year column 
+ozone was approximately 15% lower at both 70 and 80 degrees south than 
+the values observed in the lowest previous year of 1985. The balloon-
+sonde data demonstrated that ozone was depleted in the altitude region 
+between approximately 13 and 24 km at Halley Bay, and 15 and 24 km at 
+Palmer. Ozone trends observed at Halley Bay and at Palmer are quite 
+similar, with an approximate 50% decrease observed from mid-August to 
+mid-September near 18 km. The upward looking lidar aboard the DC-8 
+observed more than a 50% decrease in O3 at 77 to 90 degrees south 
+between 14 and 19 km, during September, but no discernible trend 
+between 12 and 14 km. There was also evidence from the lidar data of a 
+decrease in O3 up to 23 km. The in-situ ER-2 instruments observed 
+changes consistent with this picture.
+
+The TOMS data showed that ozone did not simply change monotonically 
+with time, but in some instances changed dramatically over large 
+spatial scales in the matter of only a day or so. One example of such a 
+rapid change in ozone is demonstrated by the TOMS data for September 4-
+6 over the Palmer Peninsula and Weddell Sea. Changes of greater than 25 
+Dobson units (DU) in one day were observed over large regions (3 
+million square km).
+
+2) Does the evidence indicate that both chemical and meteorological 
+processes are responsible for the ozone hole?
+
+The weight of observational evidence strongly suggests that both 
+chemical and meteorological mechanisms perturbed the ozone. 
+Additionally, it is clear that meteorology sets up the special 
+conditions required for the perturbed chemistry.
+
+3) Was the chemical composition of the Antarctic stratosphere observed 
+to be perturbed?
+
+Yes. It is quite evident that the chemical composition of the Antarctic 
+stratosphere is highly perturbed compared to predictions based on 
+currently accepted chemical and dynamical theories. The present 
+findings are consistent with the observations made last year from 
+McMurdo. The distribution of chlorine species is significantly 
+different from that observed at mid-latitudes, as is the abundance and 
+distribution of nitrogen species. The amount of total water within some 
+regions of the vortex is significantly lower than anticipated.
+
+Since late August the abundance of the chlorine monoxide radical within 
+the polar chemically perturbed region has been elevated by a factor of 
+more than 100 relative to that measured at mid-latitudes at the highest 
+altitude at which the ER-2 was flown, about 18.5 km. However, the 
+abundance of ClO was observed to decrease rapidly towards lower 
+altitudes. At the highest flight levels, the abundance of ClO at local 
+solar noon ranged between 0.5 and l ppbv for the last month of the 
+campaign. While we have no data at higher altitudes, the observed 
+increase in the abundance of ClO from lower altitudes, coupled with the 
+observed low column abundances of HCl, suggests that the ClO abundance 
+may increase somewhat at altitudes above 18 km. In addition to the 
+steep decrease in ClO abundance at lower altitude, the abundance of ClO 
+was also observed to decrease dramatically outside of the chemically 
+perturbed region.
+
+Chlorine dioxide, OClO, which is most likely formed in a reaction 
+sequence involving the ClO radical, was observed both day and night at 
+highly elevated concentrations compared to those at mid-latitude. The 
+preliminary analyses of these observations are consistent with 
+measurements made from McMurdo last year. The column content of 
+hydrochloric acid, HCl, which is one of the major chlorine reservoirs 
+at mid-latitudes, is very low within the chemically perturbed region 
+reaching column contents below 1 x 10 (15) molecules per cm2. In 
+addition, the column amount ratio of HCl/HF within the chemically 
+perturbed region decreased significantly from a normal mid-latitude 
+value of 4 to a value less than unity. While chlorine nitrate was 
+observed, the data have yet to be fully analyzed thus precluding a 
+statement at this time about its abundance.
+
+The bromine monoxide radical has been observed at concentrations of a 
+few pptv within the chemically perturbed region of the vortex at the 
+flight levels of the ER-2. The abundance of BrO decreases at lower 
+altitudes. However, because the observed concentrations are close to 
+the detection limit of the instrument, little more can be said about 
+the altitude dependence. The low measured abundances of BrO, coupled 
+with our current lack of understanding of the ClO + BrO reaction means 
+that we cannot currently assess the significance of this mechanism for 
+ozone reductions at the ER-2 flight levels.
+
+The ER-2 observations of the abundance of odd nitrogen, which is the 
+sum of all nitrogen-containing reservoir and radical species, show, 
+like total water, very low values within the chemically perturbed 
+region of the vortex, indicating that the atmosphere has been 
+denitrified, as well as dehydrated. Abundances of NOy of 8 - 12 ppbv 
+were observed outside the chemically perturbed region, while abundances 
+of 0.5 to 4 ppbv were observed inside the chemically perturbed region. 
+A similar large change was observed for one of the nitrogen components, 
+i.e. nitric oxide, NO. In addition, some of the NOy observations 
+suggest that NOy component species are incorporated into polar 
+stratospheric cloud (PSC) particles and nitrate was observed in the 
+particle phase on some of the filter samples and on some of the wire 
+impactor samples taken in the chemically perturbed region of the 
+vortex. The column measurements of nitric oxide, nitrogen dioxide, and 
+nitric acid, made from the DC-8 exhibit a strong decrease in the 
+abundance of these species towards the center of the vortex. These low 
+values of nitrogen species are contrary to all theories requiring 
+elevated levels of nitrogen oxides, such as the proposed solar cycle 
+theory.
+
+4) How do the observed elevated ClO abundances support a chemical role 
+in the formation of the ozone hole?
+
+There is no longer debate as to whether ClO exists within the 
+chemically perturbed region near 18 km at abundances sufficient to 
+destroy ozone if our current understanding of the chlorine-ozone 
+catalytic cycle is correct. The rate of decrease in ozone during the 
+month of September at the highest altitudes at which the ER-2 was 
+operated during this campaign is consistent with simultaneously 
+observed concentrations of ClO. However, our present understanding of 
+key chemical reaction rates and photodissociation products within the 
+catalytic process is incomplete. Thus, laboratory studies are urgently 
+needed. It is essential to define the rate of ClO dimer (Cl2O2) 
+formation and the photolysis products of dimer decomposition because 
+only one of several possible routes leads to ozone destruction. Once 
+the results of ongoing laboratory studies become available, these in-
+situ ClO data will allow the chemical mechanism to be quantitatively 
+defined and its consequences better understood.
+
+There is another line of observational evidence consistent with ozone 
+destruction by chlorine catalysis: in the month of August, a consistent 
+positive correlation between ClO and O3 was observed. By the middle of 
+September, as the ozone concentration was dropping at ER-2 altitudes, a 
+strong anti-correlation developed between ClO and O3. The anti-
+correlation was usually present on both large and small scales within 
+the chemically perturbed region.
+
+There are observations that are not entirely consistent with these 
+chemical arguments. For example, based on preliminary data from this 
+year and data from last year from McMurdo, the observed diurnal 
+behavior of OClO, is difficult to rationalize with the present chemical 
+mechanisms, particularly in light of the new observations that the 
+abundances of BrO are low at ER-2 flight altitudes.
+
+5) Can the elevated abundances of ClO inside the chemically perturbed 
+region of the chemically perturbed region be explained?
+
+Significant progress was made. Observational data that air within the 
+chemically perturbed region of the vortex is dehydrated and that the 
+NOy abundances are very low are consistent with theories that have been 
+invoked whereby the chlorine reservoir species, ClONO2 and HCl, can 
+react on the surfaces of polar stratospheric clouds to enhance the 
+abundance of active chlorine species, i.e. ClO. The observations also 
+support the picture that the abundance of NOy is low because odd 
+nitrogen can be removed from the atmosphere by being tied up in ice 
+crystals, which can then gravitationally settle to much lower 
+altitudes. Low abundances of NOy are needed to prevent the rapid 
+reconversion of ClO to ClONO2. This picture is further supported by the 
+observations of low column abundances of HCl, by occasional 
+observations of high levels of nitrate found in the ice particles, and 
+by the visual and lidar observations of high cirrus and polar 
+stratospheric clouds.
+
+One observation which is currently difficult to understand is the sharp 
+decrease in the abundance of ClO at lower altitudes. This could be due 
+to a lack of understanding of either the abundance or partitioning of 
+ClOy, or to dynamical effects. Lack of observations of reactive 
+hydrogen containing radicals, hydroxyl (OH) and hydroperoxy (HO2) 
+currently prevents an assessment of their role in the conversion of 
+chlorine reservoir species to ClO.
+
+6) How do the observations support a meteorological role in the 
+formation of the ozone hole?
+
+There were instances of rapid large scale changes in total ozone where 
+meteorology appears to have been the controlling factor. One such event 
+occurred over the Palmer Peninsula on September 5. Over a period of 24 
+hours total ozone as observed by TOMS decreased by 25 DU to below 200 
+DU over an area of about 3 million square km. Such a rapid decrease is 
+difficult to explain chemically. The origin of that air is not known. 
+It could be either air naturally low in ozone, tropospheric/lower 
+stratospheric, or air in which ozone had been chemically depleted. The 
+feature moved over the Weddell Sea and persisted until September 16, 
+when it merged with two other regions of low total ozone. Lidar 
+measurements from the DC-8 showed low ozone values and extensive 
+aerosol layers between 14 and 19 km in the region of the TOMS minimum 
+of ozone. This and other similar events evident in the TOMS ozone data 
+and the SAM II PSC data between September 5 and 14 were spatially 
+correlated with deepening surface pressure lows with marked meridional 
+flow from middle to high latitudes at lower stratospheric levels. The 
+detailed meteorological mechanism by which the surface lows produce the 
+low column ozone remains unclear and further analysis is required.
+
+The data offer no support for sustained large scale upwelling. In the 
+restricted region covered by the ER-2, 54 to 72 degrees south latitude 
+and from altitudes of l2.5 to 18.5 km, measurements of CFC-11 and N2O 
+which act as tracers of air motions show no evidence of a general 
+increase in abundances above about 14 km during the mission, although 
+there were instances of structure and elevated values.
+
+The meteorology must play a role in the dehydration and denitrification 
+processes. It is crucial to understand whether the necessary low 
+temperatures are maintained radiatively or by ascent, or some 
+combination of both.
+
+7) Does the complexity of the situation suggest that we need to 
+understand the interplay between meteorology and chemistry?
+
+Yes. It is clear from our ER-2 flights that the region of dehydrated 
+and denitrified air maintained a sharply defined latitude gradient 
+throughout most of the campaign. On a purely meteorological definition, 
+the vortex edge would be well outside the dehydrated, denitrified 
+region. The meteorological flow must therefore have been such as to 
+maintain a kind of "containment vessel", in which the perturbed 
+chemistry could proceed without being influenced by mixing in more 
+normal stratospheric air from outside or below.
+
+Very low values of CFC- 11, CFC- 12, CH3CCl3, and N2O were observed at 
+the upper levels of the ER-2 flight track within the "containment 
+vessel". A key question is how these low values are produced and 
+maintained in the chemically perturbed region.
+
+The concept of mixing at the region of sharp latitudinal gradient is 
+important, since it has the potential to supply nitrogen oxides which 
+would tend to decelerate the chlorine chemistry. The meteorology is 
+thus important in the termination phase as well as in the initiation 
+phase.
+
+8) Can you quantitatively separate the contributions of chemistry and 
+meteorology to the formation of the ozone hole?
+
+No. The September 5 event illustrates the complexity of the ozone hole, 
+and the difficulty of deriving unambiguous dynamical or chemical 
+signatures. The magnitude and rapidity of the decrease are difficult to 
+ascribe to a chemical cause. Air of low ozone content appears to have 
+been transported into the region. The origin of that air is not known. 
+It could be either air naturally low in ozone, tropospheric/lower 
+stratospheric, or air in which ozone had been chemically depleted.
+
+Another illustration of the difficulty of clearly establishing chemical 
+or dynamical mechanisms is the decreasing trends in ozone in regions of 
+low ClO outside of the vortex whose magnitudes are comparable to those 
+within the vortex. This is evident from an examination of the 
+ozonesonde data from the Palmer station at 64 degrees south and 
+comparing it to the Halley Bay data at 78 degrees south, and the DC-8 
+lidar data. In addition, downward trends of ozone were observed in the 
+lower altitude region where ClO concentrations were substantially lower 
+than at 18 km.
+
+9) What are the global implications?
+
+Until we understand the cause or causes of the spring-time Antarctic 
+hole, we will not be able to address this key question in a responsible 
+manner. Thus, at this time, it is premature for us to speculate on this 
+important topic. However, as we continue to analyze the data that we 
+have acquired and further test and expand the pictures that we have 
+developed, we will be in a better position to address this important 
+question.
+
+10) When will the data be in a form suitable for use in formulating 
+national and international regulatory policies?
+
+As noted in the opening paragraph, the schedule for the assimilation 
+and publication of the results is brisk. Peer reviewed publications 
+will appear in 1988. The results from the 1987 ground-based McMurdo 
+campaign will likely appear on about the same schedule. Both sets of 
+these completed conclusions would be the best basis for any possible 
+policy re-evaluations. The major international scientific review 
+scheduled for 1989, which will serve as input to the 1990 policy review 
+of the Montreal Protocol, will have these conclusions available.
+
+ 
+

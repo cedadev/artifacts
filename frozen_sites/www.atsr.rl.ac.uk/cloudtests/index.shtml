@@ -1,0 +1,634 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>Cloud Tests Guide
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../documentation/index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../documentation/docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      
+<H1>A brief explanation of the ATSR cloud screening process</H1>
+
+<h2>1. Introduction</h1>
+<p>This is a brief explanation of the basic methods used to
+screen the ATSR data for cloudy pixels and identify clear sea pixels: for a
+complete description of the ATSR-1/2 clearing process the user is referred to
+Závody et al. (2000)</p>
+
+<p>Also as the ATSR Cloud Clearing Scheme is based on the
+APOLLO algorithms originally developed by Saunders (1986)
+and Saunders and Kriebel (1989)
+the user may find these papers useful background to the whole process.</p>
+
+<p>It should be noted that the scheme has been optimised for
+use over the ocean and as only certain of the tests are/or can be used over
+land, some improvements in the scheme are necessary before the scheme will work
+as well as it does over the ocean. The ATSR SST processing software implements
+the following sequence of cloud tests to identify the clear pixels in any given
+ATSR image.</p>
+
+<BR>
+
+<h2>2. The Cloud Tests</h2>
+<h3>2.1 The Gross Cloud Test</h3>
+
+<p> This test is the simplest of the cloud tests and rejects
+pixels that are obviously cloudy because they have lower than expected
+brightness temperatures (BT). It uses that basic assumption that “clouds are
+cold”. The 12µm channel is used in this test in preference to the 11µm channel
+because of the larger cloud optical depth at 12µm.</p>
+
+<p>The thresholds for the “expected” BTs are derived for the
+case over the ocean from the UKMO Global Ocean and Surface Temperature Atlas
+(GOSTA) data set with an allowance for likely atmospheric deficits. The
+thresholds for required for ATSR-2 are different to those for ATSR-1 because of
+the increased water vapour absorption in the slightly modified ATSR-2 12µm
+channel.</p>
+<HR>
+<p>  Závody, A.M,
+C.T. Mutlow and D.T.Llewellyn-Jones, Cloud Clearing over the Ocean in the
+Processing of Data from the Along-Track Scanning Radiometer (ATSR), Journal of
+Atmospheric and Oceanic Technology, 17, 595-615, 2000.</p>
+
+<p> Saunders,
+R.W., An automated scheme for the removal of cloud contamination from AVHRR
+radiances over western Europe, Int. J. Remote Sens., 7, 867-888, 1986.</p>
+
+<p> Saunders,
+R.W, and K.T. Kriebel, An improved method for detecting clear sky radiances
+from AVHRR data, Int. J. Remote Sens., 9, 123-150, 1988; Correction 9,
+1393-1394, 1989.</p>
+
+
+
+<h3>2.2 The Thin Cirrus Test</h3>
+
+<p> Large differences between the 11 and 12 µm BTs are
+indicators of the presence of medium- and high-level clouds, and especially
+thin cirrus. The thresholds on this BT difference test are determined using
+radiative transfer calculations based on radiosonde data. The scheme includes 5
+different across track threshold bands to allow for the across swath air-mass increase,
+and, in addition, separate thresholds are used of the forward and nadir view
+cases. The test is formulated with the threshold as a function of the 11µm BT,
+and a typical set of thresholds for pixels within ±50km of the satellite track
+is shown below.</p>
+
+
+<TABLE cellpadding="1" width=450 height=280>
+ <TR>
+ <TD><left><a href="gifs/clip_image001.jpg" target="_blank"><img src="gifs/clip_image001.jpg"
+  alt="Figure 1" width="400" height="280"></a> 
+ </left></TD>
+ </TR>
+  <TR>  
+  <TD valign="top"><b>Figure 1 </b>Threshold for the 11-12µm test as a function
+of the 11µm BT. Curve a) is for the nadir view within ±50km of the
+sub-satellite track, and curve b) the same for the corresponding forward view</TD>
+   </TR>
+  </TABLE>
+</left>
+
+ 
+
+
+<h3>2.3 The Fog/Low Stratus Test</h3>
+
+<p> This test relies on the fact that stratus and fog have a
+higher emissivity at 11µm than at 3.7µm, and hence the 11-3.7µm BT difference
+can be used for detecting these types of cloud. This is a well-established test
+and is already used by many other researchers, including Saunders and Kriebel.
+In our scheme the nadir view threshold is set to 0.9K and the forward view
+threshold to 1.1K. This test is one of the key ATSR cloud tests particularly
+over land where spatial coherence tests cannot be used because of surface
+structure.</p>
+
+<h3>2.4 The Medium/High level Test </h3>
+<p> This test is another of those that has been modified from
+those developed by Saunders and Kriebel, and uses the 3.7-12µm BT difference as
+a means of identifying semi-transparent and most medium and high level clouds.
+In the APOLLO scheme pixels were flagged as cloudy when this difference
+exceeded 1.5K. However, this simple single value approach was found too
+simplistic for global use so to improve on this ATSR processing uses a variable
+threshold scheme based on the 3.7-12µm BT differences tabulated as a function
+of the 12µm BT. An example of these computed threshold values is shown in the
+figure below.</p>
+<TABLE cellpadding="1" width=450 height=280>
+ <TR>
+ <TD><left><a href="gifs/clip_image002.jpg" target="_blank"><img src="gifs/clip_image002.jpg"
+  alt="Figure 2" width="400" height="280"></a> 
+ </left></TD>
+ </TR>
+  <TR>  
+  <TD valign="top"><b>Figure 2 </b>Threshold for the 3.7-12µm test as a function
+of the 12µm BT for ATSR-1. Curve a) is for the nadir view within ±50km of the
+sub-satellite track, and curve b) the same for the corresponding forward view
+case.</TD>
+   </TR>
+  </TABLE>
+</left>
+
+ <p> The threshold functions are different for ATSR-1 and 2
+because of the differences between each of the two instrument’s 12µm channel
+spectral responses; the ATSR-2 filter is shifted to longer wavelengths.</p>
+
+<h3>2.5 The 11µm spatial coherence cloud test</h3>
+
+<p>This test investigates the spatial coherence of the 11µm
+BTs, and operates in two parts: 1) spatial scale of a 3km square sub-image, and
+2) on the much larger scale of 128km square sub-image. </p>
+
+<p>These two parts of the test are described in the following
+sub-sections. </p>
+
+<h4>2.5.1 Small-scale spatial coherence</h4>
+<p>This test relies on that fact that, apart from in active
+coastal or frontal regions, the sea surface temperature is relatively unifor
+over areas of a few kilometres square and temperature gradients rarely exceed
+0.3Kkm<sup>-1</sup>. The same is not true of clouds, however, and cloud top
+temperatures can vary by several, or even tens of, Kelvin in a few kilometres
+mainly due to variations in cloud top height.</p>
+
+<p> This difference between the “texture” or “spatial-coherence”
+of the ocean and clouds forms the basis of this very powerful cloud test that
+can be used both in day- and night-time. The threshold value used for groups of
+9 (i.e. 3 x 3 sub-sections) ATSR-1 and 2 pixels is 0.2K for the ATSR-1/2 11µm
+channels.</p>
+<p>The scheme implemented actually employs a further
+enhancement of this method to try to avoid the erroneous flagging of cloud-free
+ocean data in the region of temperature gradients. This enhancement relies on
+the fact that: a) the 11-12µm BT difference is largely independent of SST, and
+b) the atmospheric correction is stable over spatial scales of less that 10km.
+In this improved test two passes are made over the data. In the first pass
+nine-pixel groups are classified as either clear or cloudy, according to their
+standard deviation. On the second pass, those “cloudy” groups that have at
+least four of their eight neighbours “clear”, and which are over the ocean, are
+checked again. These groups are compared against their “clear” neighbours, and
+if the average 11-12µm BT difference is less than 0.1K from the value for its “clear”
+neighbours the “cloudy” group is unflagged and marked as “clear”.
+</p>
+
+<h4>2.5.2 Large-scale spatial coherence test</h4>
+<p>The small-scale spatial coherence test works well for some
+types of cloud but is pretty much useless at detecting uniform stratus, and
+clouds whose effective temperature is close to that of the sea surface can also
+evade detection. This large-scale spatial coherence test was designed to cope
+with this by establishing dynamic thresholds for areas greater that 100km by
+100km in size and rejecting any pixels colder than this value as cloudy.</p>
+
+<p> For further details
+of this test the reader is referred to Závody et al. (2000).
+</p>
+<h3>2.6 The 1.6µm reflectance test</h3>
+
+<p> Away from sun-glint areas where specular reflection of the
+sun can occur (depending on the local wind speed), the visible and
+near-infrared reflectivity of water is very low, whereas in contrast clouds scatter
+radiation these wavelengths very strongly. Thus, clouds are detected by the
+strong scattering signal they return. This test is extremely effective at
+detecting most types of clouds and is the reason why all SST sensors include at
+least one visible or near-infrared channel specifically for cloud
+discrimination (– this, and the fact it is better for discrimination of water
+clouds over ice, is why the ATSR instruments all carry a 1.6µm channel). </p>
+
+<p>Over the ocean the test will only work for reliably for identifying
+clouds in those regions where the sun-glint signal is relatively small. For
+this reason this cloud test is split into 3 separate regions based on the
+effect of sun-glint:, there regions are: 1) the glint-free region, 2) the
+near-glint region, and 3) the glint region. </p>
+
+<p> These regions are defined by first calculating the angle at
+which the ocean surface would have to be tilted at the point considered in
+order to produce specular reflection. If <b>v</b><sub>sun</sub> and <b>v</b><sub>sat</sub>
+denote the vectors pointing from a pixel to the Sun and the satellite,
+respectively, and the unit vector to the local vertical direction is k then the
+tilt angle &#964; is given by</p>
+
+<left>
+
+<table cellpadding="0">
+  <tr>
+    <td>
+      
+  <table border="0">
+        <tr> 
+         <td width="70">J=arccos (</td>
+        </tr>
+ </table>
+    
+
+ <td>
+      <table border="0">
+        <tr>
+          <td width="100">k*(Vsun+Vsat)</td> </tr>
+	   <tr>
+          <td width="100"><HR></td> </tr> 
+         <tr> <td width="100">  |Vsun+Vsat|</td>
+	
+    </tr>
+      </table>
+   
+<td>
+      <table border="0">
+        <tr>
+          <td width="50">)</td> </tr>
+         </td>
+    
+      </table>
+   
+
+
+
+
+</td>
+</table>  
+
+<p> The 1.6µm reflectance test is split according to sun-glint
+regime as determined from the tilt angle above, and ach of these regions is
+treated differently in the test as follows, because of the markedly different
+effects of sun-glint in each of these parts of the image.</p>
+
+<p><b>Glint-free region (tilt angle &gt; 23&#730;).</b> In the
+glint-free region the threshold used in the cloud test is determined
+dynamically from the bright peak in histograms of the measured 1.6µm
+top-of-atmosphere reflectances for 32km x 32km areas.
+</p>
+
+<p> <b>Near-glint region (tilt angles between 15&#730; to
+23&#730;).</b> This test works similarly to the test described above in (a) for
+the glint-free case, except that the across-track gradient caused by the
+variation in sun-glint needs to be removed before the histograms are formed. If
+this de-trending step is omitted then the test can erroneously flag as cloudy
+the clear pixels along the east side of the image</p>
+
+<p> <b>Glint
+region (tilt angles &lt; 15). </b>In these regions of strong sun-glint a
+spatial coherence test is performed such that the standard deviation in
+reflectance is estimated for 2 x 4 pixel areas (with its short-side across
+track to minimise the effect of the glint gradient) and compared to a
+dynamically determined threshold value. When the calculated value exceeds the
+dynamic threshold value the area is flagged as cloudy. The determination of the
+dynamic threshold value is quite complex and the reader is referred to Závody
+et al. However, it should be noted that in the glint region one further test is
+performed to mitigate against the theoretical possibility that sun-glint in the
+11 and 12µm could contaminate the SST retrievals. Thus, if the 1.6µm
+reflectance is greater than 90% the data are flagged as cloudy so any
+potentially sun-glint contaminated 11 and 12µm data are not used to derive SST.</p>
+
+<p> There is a further wrinkle in the way tests (a) and
+(b) operate which is that if no valid threshold can be determined from the
+reflectance histogram, the test reverts to the spatial coherence method
+described under item (c) for the glint region. </p>
+
+
+<h3>2.7 Nadir-view/forward-view
+tests</h3>
+
+<p> These tests are unique to ATSR because there is no analogue
+for the forward view in the AVHRR instrument. Each of these tests relies on the
+fairly clear relationship that exists, at least for clear pixels over an ocean
+surface, between the BTs measured in the two views.</p>
+
+<h4>2.7.1 Dual-view test using the 11 and 12µm
+BTs</h4>
+<p> This test works by using the
+nadir view 11 and 12µm BTs to “predict” the expected 11µm nadir and forward
+view BT difference. The pixel is flagged as cloudy if the absolute value of the
+difference between the measured and “predicted” quantities is greater than a
+fixed threshold value. These thresholds vary across track to account for the
+effects of the increased air-mass with off-nadir viewing.</p>
+
+<h4>2.7.2 Dual-view test using the 3.7 and 11µm
+BT</h4>
+<p>This is performed as an
+additional test at night when the 3.7µm channel data is available, and is
+similar to the previous test except that the 3.7µm BTs are used instead of the
+12µm BTs. In this test the nadir view 3.7µm minus forward view 3.7µm BT differences
+and the nadir-view 3.7µm and 11µm BT differences are compared, and pixels
+flagged as cloudy if they deviate significantly from the expected relationship.
+</p>
+<h3>2.8 The infrared
+histogram test</h3>
+<p>This test uses the 11 minus 12µm differences and is only
+performed on those pixels that have not been flagged as cloudy by any of the
+previous tests. </p>
+<p> The test relies on the following.</p>
+
+<p>1. The 11 minus 12µm difference results almost entirely from the
+effect of the atmosphere.</p>
+
+<p>2. That over distances of a few 100km in cloud free conditions
+over oceans the atmospheric state is similar.</p>
+
+<p>3. That the residual low stratus clouds that have escaped
+detection in previous tests affect the BTs differently to the atmospheric
+effects produced by the clear atmosphere.</p>
+
+<p>4. If the atmospheric water vapour loading is not uniform over
+the image, and the SST is constant then the lowest BTs correspond to the pixels
+having the highest water vapour content, and, therefore, the largest 11µm minus
+12µm BT differences. This means that the BTs and BT differences are negatively
+correlated for clear pixels and positively correlated for the cloudy ones.</p>
+
+<p> The test works
+on the principle that the 11µm minus 12µm BT differences are largest for
+the clear pixelsan image because of
+the effects of the atmosphere, and is qualified by the condition described in
+item (4) above. It is only performed on pixels that have been passed as “clear”
+by the previous tests. The threshold used is established using a histogram
+method.</p>
+<BR>
+<h2>3. Which Cloud tests are used when?</h2>
+<p> Each of the cloud tests used in the ATSR cloud screening
+processing is discussed in the above sections, however it should be noted that
+not all of theses tests are used in every situation for a number of practical
+reasons. </p>
+<p> The following table summarises the ATSR cloud tests and the
+situations where they are used; the tests highlighted in green are the only
+tests that operate over land.</p>
+  
+
+[an error occurred while processing this directive]        
+
+
+
+
+
+<table width="97%" border="1">
+  <tr> 
+    <td width="31%"><strong>Test</strong></td>
+    <td width="14%"><strong>Channel(s)</strong></td>
+    <td width="14%"><strong>Day</strong></td>
+    <td width="14%"><strong>Night</strong></td>
+    <td width="13%"><strong>Ocean</strong></td>
+    <td width="14%"><strong>Land</strong></td>
+  </tr>
+  <tr> 
+    <td><strong><font color="#0080FF">Gross cloud</font></strong></td>
+    <td>12um</td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#FF0000">no</font></div></td>
+  </tr>
+  <tr> 
+    <td><strong><font color="#80FF00">Thin cirrus</font></strong></td>
+    <td>11/12</td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+  </tr>
+  <tr> 
+    <td><strong><font color="#80FF00">Medium/high level</font></strong></td>
+    <td>3.7/12um</td>
+    <td><div align="center"><font color="#FF0000">no</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+  </tr>
+  <tr> 
+    <td><strong><font color="#80FF00">Fog/low status</font></strong></td>
+    <td>3.7/11um</td>
+    <td><div align="center"><font color="#FF0000">no</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+  </tr>
+  <tr> 
+    <td><strong><font color="#80FF00">11um spatial coherence</font></strong></td>
+    <td>11um</td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+  </tr>
+  <tr> 
+    <td><strong><font color="#0080FF">1.6um histogram</font></strong></td>
+    <td>1.6um</td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#FF0000">no</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#FF0000">no</font></div></td>
+  </tr>
+  <tr> 
+    <td><strong><font color="#0080FF">11/12um nadir/forward</font></strong></td>
+    <td>11/12um</td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#FF0000">no</font></div></td>
+  </tr>
+  <tr> 
+    <td><strong><font color="#0080FF">3.7/12um nadir/foward</font></strong></td>
+    <td>3.7/12um</td>
+    <td><div align="center"><font color="#FF0000">no</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#FF0000">no</font></div></td>
+  </tr>
+  <tr> 
+    <td><strong><font color="#0080FF">IR histogram test</font></strong></td>
+    <td>11/12 um</td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#80FF00">yes</font></div></td>
+    <td><div align="center"><font color="#FF0000">no</font></div></td>
+  </tr>
+</table>
+  
+<p> 
+Tests involving the 1.6µm channel can only be used during daylight because the
+channel detects scattered sunlight, whereas conversely any tests using the
+thermal signals from the 3.7µm channel cannot be used during daylight because
+of the risk of them being contaminated by solar scattering.
+Also, all of the time for ATSR-1 and most of
+the time for ATSR-2, the 3.7µm channel data are not available during the
+daytime anyway because of telemetry rate limitations. </p>
+
+<p> Furthermore, while spatial coherence tests work very
+effectively over the relatively uniform ocean surfaces they are not at all
+reliable over the land surfaces where there is more much more inherent spatial
+structure and variance.</p>
+
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Tuesday, 04-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

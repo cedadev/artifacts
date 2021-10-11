@@ -1,0 +1,41 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20061001T230000Z
+DTEND:20061002T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Reading University, Meteorology Departme=
+nt
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000050868D4265D6C6010000000000000000100
+ 000001DA5E74BDB4ABD42A32696AB5F2E846D
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Royal Meteorological Society Meeting =
+- The Joint UK Land Environment Simulator (JULES): A new community land sur=
+face model - 2nd October 2006, University of Reading =0D=0ADate: Monday 2nd=
+ October=0D=0ALocation: Reading University Meteorology Department. =0D=0ATi=
+me: 11:00 - 16:00=0D=0AProgramme: =0D=0A=0D=0A=0D=0AIntroduction:=0D=0A=0D=
+=0AIntroduction to meeting - Martin Best (Met Office) =0D=0AJULES overview =
+-Eleanor Blyth (CEH, Wallingford) =0D=0A=0D=0ACurrent users of JULES: =0D=
+=0A=0D=0AThe validation of JULES against observational data - Martin Best (=
+Met Office)=0D=0ARadiation penetration through plant canopies - Lina Macard=
+o (CEH, Wallingford)=0D=0ASnow processes in JULES - Andrew Wiltshire (Unive=
+rsity of Durham) =0D=0AGlobal impact of seasonal to inter-annual LAI - Rich=
+ie Ellis (CEH, Wallingford)=0D=0AThe European carbon balance of the 20th Ce=
+ntury - Chris Jones (Met Office)=0D=0A=0D=0AFuture plans for JULES: =0D=0A=
+=0D=0AAn overview of QUEST and the QUEST-ESM - Colin Prentice (University o=
+f Bristol)=0D=0AQUERCC and JULES - Ian Woodward (University of Sheffield) =
+=0D=0AThe CLASSIC use of JULES - Peter Cox (University of Exeter) =0D=0AAn =
+overview of JULES within CEH - Richard Harding (CEH, Wallingford) =0D=0AJUL=
+ES and the Met Office- Olivier Boucher (Met Office) =0D=0AJULES down under?=
+ - Yin-Pin Wang (CSIRO, Australia) =0D=0AThe impact of JULES - Richard Bett=
+s (Met Office) =0D=0A=0D=0AGeneral discussion=0D=0A=0D=0A=0D=0AMeeting cont=
+act: Martin Best Manager, Land Surface Processes =0D=0AMet Office Joint Cen=
+tre for Hydro-Meteorological Research =0D=0AMaclean Building Crowmarsh Giff=
+ord Wallingford Oxfordshire OX10=0D=0A8BB United Kingdom =0D=0ATel: +44 (0)=
+1491 692230 Fax: +44 (0)1491 692424 E-mail:=0D=0Amartin.best@metoffice.gov.=
+uk http://www.metoffice.gov.uk =0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:The Joint UK Land Environment Simulator (=
+JULES): A new community land surface model=20
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

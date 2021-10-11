@@ -1,0 +1,362 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>SISTeR Instrument
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../../documentation/index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../documentation/docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <!-- The SISTeR page starts here -->
+
+<!-- Insert a status message, edit status.html to change -->
+<CENTER>
+</CENTER>
+ 
+<h2>The SISTeR Validation Radiometer</h2>
+<p>The SISTeR (Scanning Infrared Sea Surface Temperature Radiometer) is a compact 
+  and robust chopped self-calibrating filter radiometer. It measures approximately 
+  20 × 20 × 40cm and weighs about 20kg. The instrument is divided into three compartments 
+  containing the foreoptics, scan mirror and reference black bodies, and a small-format 
+  PC with signal processing and control electronics. The SISTeR has been designed 
+  to survive and maintain its calibration over extended periods in a maritime 
+  environment. The foreoptics and electronics compartments are waterproof and 
+  the scan mirror and black bodies are carefully protected with interleaved baffles.</p>
+
+
+  <center>
+  <table cellpadding="5">
+    <tr>
+      <td><a href="index.shtml">
+        <img src="../../images/SISTeR2.jpg"
+        alt="SISTeR Instrument" width="560" height="256">
+      </a></td>
+    </tr>
+    <tr>  
+      <td>
+        <p><b>Figure 1</b> The SISTeR radiometer and supporting equipment.</p>
+      </td>
+    </tr>
+  </table>
+</center>
+
+
+ 
+<p>The foreoptics compartment contains a DLATGS pyroelectric detector and preamplifier, 
+  mounted onto assembly containing a concentric 6-position filter wheel and a 
+  black rotating chopper. The filter wheel presently contains three narrow-band 
+  filters centred at 3.7µm, 10.8µm and 12.0µm, matching those in the ATSR instruments. 
+  The beam is chopped at 100Hz, a compromise between the optimum noise performance 
+  of the detector and a fast filter response in the signal processing chain. The 
+  main optical element is an ellipsoid mirror, by which the detector can view 
+  a 45° scan mirror through a anti-reflection coated ZnSe window.</p>
+<p>The scan mirror can direct the detector's view to either of two internal black 
+  bodies or to the external scene at any point about an arc spanning 180° from 
+  nadir to zenith. Two concentric baffles surround the scan mirror. A field plane 
+  is centred in an exit aperture in the outer baffle, so that the aperture can 
+  be made as small as possible and provide the maximum internal protection. The 
+  full cone angle of the instrumental field of view is approximately 13°.</p>
+<p>The self-calibrating design of SISTeR is intrinsically tolerant of contamination 
+  to its optics. The entire optical system is referred to two highly accurate 
+  reference black bodies. One floats near to ambient temperature and the other 
+  at approximately 10K above ambient temperature. Embedded in each black body 
+  is a 27<font face="Symbol">W</font>. RhFe thermometer. The entire black body 
+  cavity can be installed in a specially-constructed calibration block maintained 
+  by Oxford University, and the thermometer calibrated to an absolute accuracy 
+  of better than 14mK relative to ITS90. As the ambient temperature on a boat 
+  or ship is generally very near to the sea surface temperature, the cooler black 
+  body temperature always tracks that of the sea.</p>
+
+<h3>SISTeR Operation</h3>
+<p>All aspects of the SISTeR instrument, from the scan mirror position to the 
+  detector signal are accessible through variables defined in a C library. Control 
+  programs of arbitrary complexity can be written, but generally just a few lines 
+  of code are needed to define a scan sequence. When a control program is running, 
+  the complete instrument state is transmitted over a serial link to a laptop 
+  ground station after every measurement.</p>
+<p>All SISTeR measurement sequences contain repeated measurements of its two internal 
+  black bodies. In addition, to calculate the skin SST, the SISTeR is programmed 
+  to make measurements both of upwelling radiances from the sea surface and complementary 
+  downwelling sky radiances.</p>
+<p>In the SISTeR longwave channels, the measured noise temperature for a 1 second 
+  sample at typical SSTs is less than 30mK. Measurements of an external CASOTS 
+  black body [1] before, during and after a typical one-month validation campaign 
+  showed that the SISTeR calibration remained repeatable to better than 20mK, 
+  even though the scan mirror finish had deteriorated noticeably over the same 
+  period. The SISTeR has taken part in seven campaigns so far, in Mutsu Wan, the 
+  English Channel and in the Atlantic and Pacific oceans.</p>
+<h3>Skin SST Measurements</h3>
+<p>Typically, SISTeR radiances are sampled every 0.8s with the 10.8µm filter. 
+  Skin SSTs are calculated from the upwelling ocean radiance samples, corrected 
+  for a small reflected sky radiance term with the complementary sky samples. 
+  Over a flat sea surface and for a narrow filter function, the upwelling radiance 
+  can be approximated closely as</p>
+<p align="center"> R_<i>up</i> = B(SST) + (1 - <font face="Symbol">e</font>) R_<i>down</i></p>
+<p>where R_<i>up</i> and R_<i>down</i> are the upwelling sea and complimentary 
+  downwelling sky radiances, <font face="Symbol">e</font> is the emissivity of the
+  sea surface and B(T) is the Planck function, each integrated over the instrumental
+  filter function and field of view. R_<i>up </i>and R_<i>down</i> are measured directly
+  by the SISTeR,  and so the term B(SST) and hence the skin SST can be retrieved from
+  these.</p>
+<h3>SISTeR Mounting and Support</h3>
+<p>The SISTeR is generally mounted as far forward and as high as possible on the 
+  host ship, so that it is clear of "green water" and spray, and can view undisturbed 
+  water forward of the bow wave. Where possible, the viewing angle to the sea 
+  is kept within the range 15° - 40° from nadir [2]. The instrument also requires 
+  a clear view to the sky at the complementary angle from zenith.</p>
+<p>The SISTeR is equipped with a quick release mount and is provided with a small 
+  turret, to which a mating bracket is attached. The turret should be mounted 
+  on a horizontal surface with a pattern of eight holes (see diagrams, dimensions 
+  in millimetres). A small horizontal platform, with the pattern pre-drilled, 
+  is also available and can be attached to handrails with U-bolts (see photo).</p>
+<p>The SISTeR requires 24V DC power and serial data connections. Instrument data 
+  is logged remotely on a laptop PC. Waterproof power supplies, serial modems 
+  and cable sets are available for runs of 100m or more with terminations for 
+  a variety of mains outlets.</p>
+<P>&nbsp;</P>
+
+<H3>References</H3>
+
+<table>
+  <tr>
+    <td valign="top" width="27">[1]</td>  
+  
+    <td width="500"><p>
+      C.J. Donlon, T. Nightingale, L. Fielder, G. Fisher, D. Baldwin
+      and I.S. Robinson 1999: The calibration and intercalibration of sea-going infrared
+      radiometer systems using a low cost blackbody cavity, <i>J. Atmos. Oceanic Technol</i>.,
+      <b>16</b>, 1183-1197.</p>
+    </td>
+
+    <td width="10"></td>
+
+    <td valign="bottom">
+      <a href="http://ams.allenpress.com/amsonline/?request=get-abstract&issn=1520-0426&volume=016&issue=09&page=1183">
+      <img SRC="../../images/abstract.gif" alt="Abstract"></a>
+    </td>
+   
+    <td valign="bottom">
+      <a href="http://ams.allenpress.com/amsonline/?request=get-document&issn=1520-0426&volume=016&issue=09&page=1183"">
+      <img src="../../images/full_text.gif" alt="Document"></a>
+    </td>
+   
+    <td valign="bottom">
+      <a href="http://ams.allenpress.com/amsonline/?request=get-pdf&issn=1520-0426&volume=016&issue=09&page=1183">
+      <img src="../../images/pdf.gif" alt="PDF"></a>
+    </td>
+  </tr>  
+</table>
+
+<p></p>
+
+<table>
+  <tr>
+    <td valign="top" width="27">[2]</td>
+ 
+    <td width="500">
+      <p>C.J. Donlon and T.J. Nightingale, 2000: Effect of atmospheric radiance errors
+      in radiometric sea-surface skin temperature measurements. <i>Applied Optics</i>,
+      <b>39</b>, 2387-2392. </td>
+    </td>
+
+    <td width="10"></td>
+
+    <td valign="bottom"> 
+      <a href="https://epubs.osa.org/plweb-cgi/fastweb.exe?getdoc+ip+lp+1433+0++%28nightingale%20%">
+      <img src="../../images/abstract.gif" alt="Abstract"></a>
+    </td>
+   
+    <td valign="bottom"
+      <a href="https://epubs.osa.org/cgi-cntrl/confirmed.cfm?billme=/lp/pdf/0039015/2387.pdf&DB=lp%20target=">
+      <img SRC="../../images/pdf.gif" alt="PDF"></a>
+    </td>
+  </tr>  
+</table>
+
+ 
+ 
+<p>&nbsp; </p>
+</body>
+</html>
+
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Thursday, 06-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

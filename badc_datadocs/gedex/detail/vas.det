@@ -1,0 +1,745 @@
+VISSR Atmospheric Sounder
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Visible and infrared radiances are measured in
+13 calibrated channels between 0.650 and 14.73 micrometers by the Visible
+Infrared Spin-Scan Radiometer (VISSR) Atmospheric Sounder (VAS) on the
+Geostationary Operational Environmental Satellites (GOES-4, -5, -6 and -7).
+The data are useful for cloud mapping, surface and atmospheric temperature
+determination and weather forecasting.  The following table lists the
+general design features of the VAS channels.
+
+Channel     Spectral Filters         Purpose      Main     Other
+Number                                 for        Abs.     Significant
+               Center       Width    Sounding     Gas      Effects
+          (um)   (cm**-1) (cm**-1)
+------  --------------------------  -----------  -------  -----------
+ 1 **    14.73     679.      10.       temp        CO2        O3
+ 2 **    14.48     691.      16.       temp        CO2        O3
+ 3 *     14.25     702.      16.       temp        CO2        O3
+ 4 *     14.01     714.      20.       temp        CO2        O3
+ 5 *     13.33     750.      20.       temp      CO2,H2O      O3
+ 6 **     4.53    2210.      45.    temp+cloud     N2O        Sun
+ 7 *     12.66     790.      20.     moisture      H2O      CO2+dust
+ 8 *     11.17     895.     140.      surface    WINDOW     CO2+dust
+ 9 *      7.26    1377.      40.     moisture      H2O        CO2
+10 *      6.73    1487.     150.     moisture      H2O        -
+11 **     4.44    2250.      40.    temp+cloud   N2O,CO2      Sun
+12 **     3.95    2535.     140.      surface    WINDOW     Sun+dust
+13 ***    0.65   15500.    4800.       cloud        -          -
+-------  --------------------------  -----------  -------  -----------
+*   Available at 6.9 km as well as 13.8 km instantaneous geometrical 
+    field-of-view (IGFOV).
+**  Available only at 13.8 km IGFOV.
+*** This visible channel (0.9 km IGFOV) was created as a dwell sounding
+    add-on and is not a normal part of the GOES series payload.
+
+
+1.2  Unit of Measurement.  Radiance in mW/m**2-steradian
+
+1.3  Data Source.  The Visible Infrared Spin-Scan Radiometer (VISSR)
+Atmospheric Sounder (VAS) has flown on-board the GOES-4, -5, -6 and -7
+satellites.  GOES-4 and -5 failed on November 25, 1982 and July 29, 1984,
+respectively.  GOES-6 operated only in the VISSR mode of one visible (0.65
+micrometers) channel and one IR channel (11.17 micrometers) for over a year
+before it failed on January 21, 1989.  GOES-7 became operational in April
+1987 and is functioning normally.  Additional satellites in the GOES series
+with the VAS instrument are planned.
+
+1.4  Data Set Identification.  The VISSR Atmospheric Sounder (VAS) provides
+visible and infrared data of the Earth's surface, atmosphere and cloud
+cover. It also provides data for deriving atmospheric temperature profiles
+and the movement, amount and distribution of water vapor at various levels
+in the atmosphere.
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.   GOES-4 (West) and GOES-5 (East) were programmed to
+cover the Americas and much of the Pacific and Atlantic Oceans. The GOES-5
+spacecraft was stationary over 75 degrees west longitude, while GOES-4 was
+stationed over 135 degrees west longitude.  From this geostationary
+equatorial orbit, the VAS is capable of determining atmospheric parameters
+for a circular area of 60 degrees about the suborbital point.  GOES-6 was
+launched on April 28, 1983 as a replacement for GOES-4 which had failed on
+November 25, 1982.  After GOES-5 failed (July 29, 1984), GOES-6 was moved
+to 98 degrees west, where it remained between July and November (considered
+hurricane season). After hurricane season, it was moved to 108 degrees
+west.  GOES-6 was moved regularly after that time to provide better
+coverage of local weather events until its failure on January 21, 1989.
+GOES-7 was launched on February 26, 1987, and became operational at its 75
+degrees west position in late April.  After the failure of GOES-6, GOES-7
+was moved to 98 degrees west on March 1 for the convective season.  It will
+be moved to a location between 98 and 108 degrees west until after
+GOES-NEXT is launched and becomes operational.
+
+2.2  Spatial Resolution.  VAS is capable of operating in three different
+modes: the operational VISSR mode, the Multispectral Imaging (MSI) mode,
+and the Dwell Sounding (DS) mode.  The Dwell Sounding mode also produces
+images.  In all three modes, the visible channel has 0.9 km resolution, and
+the infrared channels have 6.9 or 13.8 km resolution depending on the
+operating mode selected.  See the table in Item 1.1 for the spatial
+resolution of each channel.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  The VAS provides daily coverage from 8:48 GMT to
+00:48 GMT.  Data are available from each satellite during the following
+times:
+
+                      Satellite     Start        End
+                      ---------    --------    --------
+                       GOES-4      03/05/81    11/25/82
+
+                       GOES-5      07/09/81    07/30/84
+
+                       GOES-6      06/01/83    01/21/89
+
+                       GOES-7      04/26/87    present
+                      ---------    --------    --------
+
+The VAS data base contains data from July 1981 through the present.  The
+1981 data include Dwell Sounding (DS) mode data, hurricane research support
+and VAS moisture channel data.  During the month of July 1981, DS and
+Multispectral Imaging (MSI) mode data sets were collected for the VAS
+demonstration project (on weekdays between 9 and 5 p.m. EST).  VAS data are
+available for the 1982 Atmospheric Variability Experiment (AVE)/VAS Special
+Network Days of February 6, March 6, March 27, April 24, and May 1.  On
+these days special radiosonde observations were taken at three hourly
+intervals over an area in Texas.
+
+MSI VAS data (half-hourly, 7 hours per weekday) were collected from
+February 8 through March 22, 1982.  A seven hour Transparent VAS (TVAS-7)
+data collection schedule was in effect from March 23 until May 7.  This
+TVAS mode was necessary to allow NESDIS to fulfill its operational
+commitments for providing VISSR data, but also allowing MSI and DS data to
+be collected simultaneously.  A sixteen hour TVAS schedule (TVAS-16) was
+put into effect May 21, 1982 and was maintained until November 25, 1982,
+when GOES-4 failed.  This schedule was resumed on July 11, 1983, after the
+launch of GOES-6. During the interruption in the TVAS-16 operation, some DS
+data were collected several times per day on selected days from April 12,
+1983, through May 11, 1983.
+
+3.2  Temporal Resolution.  The resolution of VAS data varies with the
+operating mode.  The following table lists the coverage and frequency of
+each of the VAS operating modes.
+
+        VAS Mode               Coverage           Frequency
+                                                  (Minutes)
+        --------------         ---------          ---------
+        VISSR                  Full Disk             30
+        MSI                    Full Disk             30
+        Dwell Sounding         U.S.                  90
+        --------------         ---------          ---------
+
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  The VAS, with more capabilities, has replaced the
+Visible Infrared Spin-Scan Radiometer (VISSR) instrument originally flown
+on the Synchronous Meteorological Satellite (SMS) series and GOES-1, -2,
+and -3 satellites.  Whereas the original VISSR had only one IR spectral
+band, the VAS has 12.  The infrared (IR) spatial resolution is selectable
+on the VAS.  The added capabilities and flexibility of the VAS was to
+provide measurements which best meet the needs of the research scientist.
+The VISSR data from the VAS instrument are used operationally by
+NOAA/NESDIS.  GSFC and the University of Wisconsin (UW) conducted a VAS
+Demonstration Project in order to demonstrate operational capabilities of
+the VAS.  This VAS demonstration project spanned nine years, ending in
+October 1983, and had four specific objectives:
+
+  o  The development of research-oriented and prototype/operational VAS
+     data processing systems at GSFC and UW.
+
+  o  The evaluation of the performance of VAS instruments on GOES-4, -5,
+     and -6.
+
+  o  The validation of temperature and moisture soundings derived from VAS
+     and conventional ancillary data.
+
+  o  The assessment of the utility of VAS-derived information in analyzing
+     severe weather situations.
+
+The VAS met all of these objectives, and serves today as an operational
+system making continuous measurements of the Earth's surface and
+atmosphere.
+
+4.2  Key Satellite Flight Parameters.  GOES-East and GOES-West satellites
+are in a geostationary circular orbit over the equator at 75 and 135
+degrees west longitude, respectively, with approximately a 0 degree
+inclination and a 0 degree eccentricity at an altitude of approximately
+36,000 km.  When only one satellite is operational over the U.S., it is
+regularly moved between 98 and 135 degrees west longitude.
+
+The positions of the GOES satellite(s) are changed from time to time to
+meet specific objectives.  For instance, a given satellite may be moved
+backward or forward in its orbit to replace one that is failing or to
+supplement the data collection effort of a given program.  Because these
+satellites can be moved in this fashion, the terms GOES-East and GOES-West
+have been commonly used for the satellites at 75 and 135 degrees west,
+respectively, rather than the name of a specific satellite.  The following
+table lists the nominal orbit parameters for the GOES/VAS satellites.
+
+     Satellite       Date       Date       Period     Perigee     Apogee
+                   Launched    Retired                  (km)       (km)
+     ---------     --------    --------    -------    -------     ------
+     GOES-4        9/09/80     11/25/82    24 hrs.    35,782      36,200
+
+     GOES-5        5/15/81     11/29/84    24 hrs.    35,600      35,600
+
+     GOES-6        4/28/83     01/21/89    24 hrs.    35,600      35,600
+
+     GOES-7        2/26/87     operating   24 hrs.    35,600      35,600
+     ---------     --------    ---------   -------    ------      ------
+
+Although the GOES-4 imager failed in 1982, it continued to provide data
+relay service to western users from its position at 135 degrees west until
+it was turned off in May 1983.  GOES-5 was operational as GOES-East (75
+degrees west) from August 8, 1981 until its failure in 1984.   When GOES-5
+failed, GOES-4 was reactivated as a relay service.  GOES-4 was finally
+deactivated in November 1988.  GOES-6 was operational at 135 degrees west
+as GOES-West from June 1, 1983 until July 30, 1984 when it was moved to 98
+degrees west to observe the formation of weather over the Atlantic after
+the GOES-5 failure.  It was moved again to 108 degrees west on November 22,
+1984, back to 98 degrees west on July 28, 1986 and to 135 degrees west on
+April 28, 1987.  GOES-6 has now failed, and GOES-7 has been moved into a
+more central location at 98 degrees west.
+
+4.3   Principles of Operation.  The VISSR Atmospheric Sounder (VAS) is an
+extension of the original VISSR.  It has additional thermal bands for the
+determination of atmospheric and dew point temperatures at various altitude
+layers.  This is accomplished by precise measurement of carbon dioxide and
+water vapor absorption.  In addition, cloud cover and Earth surface
+temperatures are measured in the 3.7 micrometer band for improved
+temperature estimates.  These added capabilities of VAS provide the
+additional atmospheric measurements that enable extensive research in
+atmospheric science from the geostationary vantage point.
+
+The VAS has 3 distinct modes of operation which accomplish both the
+operational and research missions:  1) the operational VISSR mode, 2) the
+Multi-Spectral Imaging mode (MSI), and 3) the Dwell Sounding mode (DS). The
+arrangement of the detectors facilitates the different modes of VAS.
+Imaging modes are determined by selection of the detector signals to be
+transmitted.  Only two detector signals can be connected simultaneously.
+
+The VISSR operating mode is routinely used by NOAA/NESDIS for its
+operational products.  It provides day and night cloud mapping with a
+visible image (0.55 to 0.75 um) of 0.9 km resolution and an 11 micrometer
+infrared image of 6.9 km resolution.  The visible detector consists of
+eight photomultiplier tubes (PMT) arranged in a linear array.  These data
+are encoded to 6 bits.  The two infrared detectors are located along the
+same line and are encoded to 8 bits.
+
+The MSI mode can provide the operational VISSR capability plus imaging in
+two additional IR bands.  This mode can provide 6.9 km resolution for the
+infrared window, plus data in any two selected spectral bands having a
+spatial resolution of 13.8 km.  The infrared data are encoded to 10 bits.
+Data from the small detectors produce a complete infrared map when
+operating on every other scan line.  This allows the larger detectors to be
+used for obtaining additional spectral information.
+
+In the DS mode, up to 12 spectral filters in a filter wheel covering the
+range 3.94 through 14.73 micrometers can be positioned into the optical
+train while the scanner is dwelling on a single scan line.  The filter
+wheel can be programmed so that each spectral band filter can dwell on a
+single scan line for 0 to 255 spacecraft spins.  The purpose of this dwell
+is to remove noise from the data through multiple imaging.  Either the 6.9
+km or 13.8 km resolution detectors can be selected for the seven filter
+positions in the spectral region between 6.725 micrometers and 14.25
+micrometers.  For the remaining five spectral bands only the 13.8 km
+resolution detectors are used. Selectable frame size, position and step
+direction are also programmable from the ground.  In this mode, 6-bit
+visible and 10-bit infrared data are provided.
+
+In some of the spectral regions, multiple-line data are required to enhance
+the signal to noise ratio.  Typically, 60 satellite spins at the same scan
+line position are required to obtain the desired sounding data.  This
+number of spins is adequate to obtain soundings with a 30 x 30 km
+resolution.  It requires approximately 0.6 minutes to make these
+measurements.
+
+4.4  Instrument Measurement Geometry.  The optical axis of VAS is parallel
+to the spacecraft spin axis, which in turn is parallel to the Earth's axis.
+The VAS optical axis is thus perpendicular to the direction of the Earth
+scene. The optically flat scan mirrors of the VAS, placed at a 45 degree
+angle to the optical axis, direct the Earth scene into the VAS.  The
+spinning motion of the satellite scans the Earth from west to east.  North
+to south scanning is accomplished by stepping the scan mirror from north to
+south.  An angle position encoder integral with the mirror stepping
+mechanism converts the position information to electrical signals, which
+are sent to the Command and Data Acquisition (CDA) station to aid in
+reassembly of the Earth scene.  The 10 degrees of mirror motion (resulting
+in 20 degrees of optical angle due to doubling of the optical angle at the
+mirror) is divided into 1820 steps, each 192 mrad.
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  The NOAA Command and Data Acquisition
+(CDA) station at Wallops Island, Virginia, is the terrestrial interface
+with GOES satellites.  The satellite transmits data to the CDA station at
+28 Mbps. The VAS data stream is routed to a VAS Image Processor (VIP)
+within the CDA station.  The VIP reformats, quality checks, calibrates, and
+adds navigational parameters to the data and then retransmits it to the
+GOES satellites at 1.75 Mpbs, which in turn broadcasts the stretched VAS
+(SVAS) data to receiving stations at UW.  The spatial and temporal
+information is provided by the VISSR Image Registration and Gridding System
+(VIRGS) computing facility at NOAA and inserted into the stretched VAS
+format by the VIP.  Prior to February 1987 a Synchronizer/Data Buffer
+(S/DB) computer was used to perform the data processing functions.  The
+processing of VAS data was changed slightly as a result of this change.
+(See Item 5.4 below for detailed information.)
+
+5.2  Derivation Techniques/Algorithms.  Prior to distribution to users, VAS
+data (VISSR mode) are processed by the Processor/Distribution Unit (P/DU)
+at the CDA for increased usefulness.  The S/DB performs the key functions,
+separating the digital bit stream into visible, IR, and format
+identification channels.  The VIP performs the same functions in a more
+streamlined manner. These reduced rate VAS data are also referred to as
+Mode AAA data.
+
+The motion induced by scan stepping, filter wheel stepping, variances on
+satellite spin speed, and tolerance on line scan-start in the satellite may
+cause the number of pixels to vary slightly from line to line.  To
+standardize the bit content and start time of stretched VISSR data scans,
+data are resampled in the VIP, using interpolation between bits to minimize
+degradation of original data.  The resampling scheme provides for a
+definite number of pixels and a uniform start time for each scan, greatly
+simplifying subsequent processing of the data.
+
+After resampling, visible data are stored in the visible data buffer and
+are processed into four resolution grades for transmission to NESDIS by
+land lines where it can be distributed to various users.  IR and low
+resolution visible data are fed to the computer for resampling and merging
+with gridding data. Although both the visible and IR sensors scan the
+entire Earth scene, data are sampled at separate times due to the physical
+arrangement of the detectors. The time sequence of these data are
+rearranged so that, in the VISSR transmissions, IR and visible images of a
+terrestrial point occur at identical locations in the two formats.  The
+visible, IR, and identification data are reassembled for transmission to
+the satellite at a lower bit rate, between VAS scans of the Earth.  The
+satellite then broadcasts the data to primary users.
+
+5.3  Special Corrections/Adjustments.  Some adjustments described in Item
+5.2 above are made to standardize the bit content and start-time of
+stretched VISSR data scans.
+
+5.4  Processing Changes.  In November 1986, NOAA began testing new hardware
+to replace the Synchronizer/Data Buffer used for satellite data
+manipulation.  In February 1987 this new machine became operational as the
+VAS Image Processor (VIP).  It utilizes the GOES Monitoring and Control
+System (GMACS) as a central controller for format, calibration, resampling,
+frame synchronization and gain offset calculation.  These processing
+changes offer a more user-friendly atmosphere for data usage but are
+otherwise transparent to the user.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  The VISSR data produced from VAS are
+considered valid and are now used operationally by NOAA.  A sixteen bit
+error checking field in the header of the data tape is used to validate
+transmission accuracy.  These data are also validated by visual examination
+of selected images.
+
+6.2  Confidence Level/Accuracy Judgment.  The sounding data from the VAS
+are used to compare the temperature profiles with other sources such as
+radiosondes and special network experiments.
+
+6.3  Usage Guidance.  Although the MSI and DS data were determined as valid
+by the VAS Demonstration, they are still considered as experimental and,
+therefore, should be used for experimental studies only.  The last of four
+optical encoder lamps on GOES-6 failed on January 21, 1989.  There are some
+gaps in the data for times when the bulbs did not function properly,
+resulting in the use of the GOES-6 for collection of VISSR data only during
+those times.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+7.1  Data Products from VAS
+
+       Ms. Kay Metcalf
+       NOAA/NESDIS/NCDC
+       Satellite Data Services Division
+       Room 100, Princeton Executive Square
+       Washington, DC  20233
+       (301) 763-8400
+       FTS 763-8400
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products.
+
+8.1.1  VAS Computer Compatible Tapes (CCT)
+
+          Medium/Specification:  Unlabelled, multi-file, 6250-bpi, 9-track
+          computer compatible tapes.
+
+          Format and Content:  VAS CCTs were created from selected VAS data
+          retrieved from HDDTs (High Density Digital Tapes) on the VAS
+          Preprocessor and processed to radiance values on the VAS
+          processor computer systems at GSFC.  The HDDTs for these data
+          have been discarded.
+
+          The data records in any file are all of the same length with a
+          minimum block size of 2048 and a maximum blocksize of 7676 bytes.
+          Each file contains a header record specifying:
+
+          o  Data set size (number of pixels, lines, and channels)
+          o  List of data channels as they occur in the files
+          o  Navigation label data
+          o  Storage format of the scaled data in the data records
+             (depending on the storage format, the 2-byte scaled data words
+             are written with either the first or second byte being the
+             most significant part of the word).
+
+          The header records are followed by data records each of which
+          contains a 16-word prefix and the pixel values for one line and
+          one channel.  The prefix words specify the line number, channel
+          number, quality control flag, and scale and bias factors for
+          converting the scaled data words on the tape to radiance units.
+
+          Data Quantity/Rate:  A sounding frame typically had a north-south
+          extent of 134 scan mirror steps (each step is 6.9 km) or 67 lines
+          of data for each of 12 spectral bands at 13.6 km resolution.
+          Therefore, 2 tapes per day were required to accommodate a typical
+          16-hour Transparent VAS Mode (TVM) Dwell Sounding data volume.
+
+          Status:  Since the HDDTs were susceptible to damage, a limited
+          number of the data sets on these tapes were copied to CCTs.
+          Several of these data sets were archived.  The CCTs have since
+          been discarded.
+
+          Plans/Schedule:  VAS CCTs are no longer available from GSFC. The
+          University of Wisconsin at Madison holds a complete list of
+          available data for the period January 1981 through September
+          1983.
+
+8.1.2. VAS Data archived at the University of Wisconsin
+
+         Medium/Specification:  These data are archived on video cassette
+         at the University of Wisconsin but are copied onto tapes for
+         users.
+
+         Format and Content:  "A" format until March 1987; "AAA" thereafter
+         until GOES-NEXT.
+
+         Data Quantity/Rate:  Information available from Satellite Data
+         Services Division (SDSD).
+
+         Status:  Data collection is ongoing with GOES-7.
+
+         Plans/Schedule:  Continue archival of products.
+
+
+8.2  Film Products.  None.
+
+8.3  Other Products.  None.  
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification
+
+        Donald Wylie
+        Space Science and Engineering Center (SSEC)
+        University of Wisconsin-Madison
+        1225 West Dayton Street
+        Madison, Wisconsin  53706
+        (608) 262-7458
+
+9.2  Procedures for Obtaining Data.  Data may be ordered through personnel
+at SDSD.  The request is then forwarded to SSEC.  Users are encouraged to
+consult with SDSD to obtain specific information concerning the VAS data
+available.  The minimum information required in an order is as follows:
+
+a.  Time, Date and Geographic Area of Interest:  GOES-East records an image
+every half hour, on the hour and half hour.  GOES-West also records an
+image every half hour, at 15 and 45 minutes after the hour.  Time should be
+specified in GMT.  GOES-6 operated on the hour and half hour.  The
+geographic area must be specified by the latitudes and longitudes of the
+four corners of a rectangle. The West-East extent is restricted to a
+maximum of about half the Earth disk along the equator.  The North-South
+extent is limited by the data available.
+
+b.  Resolution:  Either 3.5 km or 14 km resolution is produced by selecting
+every fourth 3.5 km sample along every fourth line.
+
+c.  Desired Tape Density:  1600- or 6250-bpi.  At least one month will be
+required for delivery of VAS data, longer for large orders.  Information
+concerning the price is available from SDSD.  Detailed tape documentation
+will be provided with data.
+
+VAS CCTs are no longer available from GSFC.
+
+9.3  NCDS Status/Plans.  NCDS has no plans to support VAS data as an
+individual data set.  However, VAS data for the First ISCCP Regional
+Experiment (FIRE) will be supported (186 tapes in "A" format from April 5,
+1986 to October 31, 1986; July 1987 in "AAA" format).   NCDS holds reduced
+resolution digital imagery from both GOES-E and GOES-W satellites as
+ISCCP-B3.  NCDS plans to archive GOES data on tape in support of Phase II
+of the First ISCCP Regional Experiment (FIRE).
+
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+        Ms. Kay Metcalf
+        NOAA/NESDIS/NCDC
+        Satellite Data Services Division
+        Room 100, Princeton Executive Square
+        Washington, DC  20233
+        (301) 763-8400
+        FTS 763-8400
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      a.  Chesters, D., and W.D. Robinson, December 1983.  "Performance
+          Appraisal of VAS Radiometry for GOES-4, -5, and -6."  NASA TM
+          85125.  NASA/GSFC.  Greenbelt, Maryland.
+
+      b.  Clark, J.D., 1983.  "The GOES Users Guide."  NOAA/NESDIS.
+
+      c.  GSFC, March 1980.  "Execution Phase Project Plan for Operational
+          Satellite Improvement Program Plan - VAS Demonstration."
+
+      d.  GSFC, 1980.  "VAS Demonstration Workshop:  Proceedings of a
+          Satellite Sounding Workshop held July 15, 1980 at the NASA/
+          Goddard Space Flight Center."  Greenbelt, Maryland.  81 pp.
+
+      e.  GSFC, 1983.  "VISSR Atmospheric Sounder (VAS) Research Review: A
+          Summary of a Research Review help at NASA/Goddard Space Flight
+          Center, June 16-17, 1982."  Greenbelt, Maryland.  53 pp.
+        
+      f.  Montgomery, H.E. and L.W. Uccellini, ed., 1985.  "VAS
+          Demonstration:  (VISSR Atmospheric Sounder) Description and Final
+          Report."  NASA Reference Publication 1151.  Goddard Space Flight
+          Center, Greenbelt, Maryland.
+
+      g.  NOAA-NESDIS/NASA, August 1980. "GOES-D, E, F Data Book."
+
+      h.  NOAA-NESDIS/NASA, March 1986. "GOES-G, H Data Book."
+
+      i.  Rao, P.K., S.J. Holmes, R.K. Anderson, J.S. Winston, and P.E.
+          Lehr, 1990.  "Weather Satellites:  Systems, Data and
+          Environmental Applications."  American Meteorological Society.
+          Boston, Massachusetts.
+
+11.2  Journal Articles and Study Reports
+
+      a.  Chesters, D., 1982.  "Low Cloud Water Vapor Fields from the VISSR
+          Atmospheric Sounder (VAS) Split Window Channels at 11 and 12
+          Microns."  Goddard Space Flight Center, Greenbelt, Maryland. 33
+          pp.
+
+      b.  Chesters, D., L.W. Uccellini, H.E. Montgomery, A. Mostek, and
+          W.D. Robinson, 1981.  "Assessment of the First Radiances Received
+          from the VISSR Atmospheric Sounder (VAS) Instrument." NASA TM
+          83827.  NASA/GSFC, Greenbelt, Maryland.
+
+      c.  Dean, K.R. and G.G. Campbell, March 1988.  "CSU SPC Format
+          Specification for F.I.R.E. AAA Data Collection", CIRA/CSU, Ft.
+          Collins, CO 80523
+
+      d.  Fuelberg, H.E., and P.J. Meyer, 1986.  "An Analysis of Mesoscale
+          VAS Retrievals Using Statistical Structure Functions."  Journal
+          of Climate and Applied Meteorology 25:60-75.
+
+      e.  Fuelberg, H.E., and S.R. Olson, 1991.  "An Assessment of VAS-
+          Derived Retrievals and Parameters Used in Thunderstorm
+          Forecasting."  Monthly Weather Review 119:795-814.
+
+      f.  Fuelberg, H.E., R.L. Schudulla, and A.R. Guillory, 1991.
+          "Analysis of Sudden Mesoscale Drying at the Surface." Monthly
+          Weather Review 119:1391-1406.
+
+      g.  Greaves, J.R. (ed.), 1983.  "VISSR Atmospheric Sound (VAS)
+          Research Review."  NASA CP-2253 (NTIS-83N24028).  NASA/GSFC.
+          Greenbelt, Maryland.
+
+      h.  Hayden, C.M., 1988.  "GOES-VAS Simultaneous Temperature-Moisture
+          Retrieval Algorithm."  J. Appl. Meteor.  27:705-733.
+
+      i.  Jedlovec, G.J., 1985.  "An Evaluation and Comparison of Vertical
+          Profile Data from the VISSR Atmospheric Sounder (VAS)." J. Atmos.
+          Ocean. Tech. 2:559-581.
+
+      j.  Kitzmiller, D.H., and W.E. McGovern, 1989.  "VAS Retrievals As a
+          Source of Information for Convective Weather Forecasts:  An
+          Objective Assessment and Comparison with Other Sources of Upper-
+          Air Observations."  Monthly Weather Review 117:2095-2109.
+
+      k.  Lee, T.H., D. Chesters, and A. Mostek, 1983.  "The Impact of
+          Conventional Surface Data upon VAS Regression Retrievals in the
+          Lower Troposphere."  J. of Climate and Appl. Meteor.,
+          22:1853-1874.
+
+      l.  LeMarshall, J.F., W.L. Smith, and G.M. Callan, 1985.  "Hurricane
+          Debby--An Illustration of the Complementary Nature of VAS
+          Soundings and Cloud and Water Vapor Motion Winds."  Bull. Amer.
+          Meteor. Soc., 66:258-263.
+
+      m.  McMillin, L.M., D.G. Gray, H.F. Drahos, M.W. Chalfont, and C.S.
+          Novak, 1983. "Improvements in the Accuracy of Operational
+          Satellite Soundings."  J. of Climate and Applied Meteorology
+          22:1948-1955.
+
+      n.  Menzel, W.P., 1992.  Personal Communication.
+
+      o.  Menzel, W.P., W.L. Smith, and L.D. Herman, 1981.  "Visible
+          Infrared Spin-Scan Radiometer Atmospheric Sounder Radiometric
+          Calibration:  An Inflight Evaluation from Intercomparisons with
+          HIRS and Radiosonde Measurements."  Appl. Opt. 20:3641-3644
+
+      p.  Menzel, W.P., W.L. Smith, and T.R. Stewart, 1981.  "Visible
+          Infrared Spin-scan Radiometer Atmospheric Sounder Radiometric
+          Calibration:  An Inflight Evaluation from Intercomparisons with
+          HIRS and Radiosonde Measurements."  Appl. Optics, 20:3641-3644.
+
+      q.  Menzel, W.P., W.L. Smith, and T.R. Stewart, 1983.  "Improved
+          Cloud Motion Wind Vector and Altitude Assignment Using VAS." J.
+          of Climate and Applied Meteorology 22:377-384.
+
+      r.  Mosher, F.R., and T. Schoeni, 1989.  "Assessment of the Utility
+          of VAS Data Products for Severe Local Storms Forecasting."
+          Preprints.  Fifteenth Conference Severe Local Storms.  Baltimore,
+          Maryland.  American Meteorological Society, 182-185.
+
+      s.  Petersen, R.A., L.W. Uccellini, A. Mostek, and D.A. Keyser, 1984.
+          "Delineating Mid- and Low-Level Water Vapor Patterns in
+          Pre-Convective Environments Using VAS Moisture Channels." Monthly
+          Weather Review 112:2178-2198.
+
+      t.  Rodgers, E.B., 1983.  "The Inference of Tropical Cyclone Dynamics
+          Using GOES VISSR/VAS Data."  VAS Research Review. J.R Greaves,
+          Editor.  NASA Conf. Publications 2253.  GSFC, Greenbelt, Maryland
+          20771.
+
+      u.  Smith, W.L., 1983.  "The Retrieval of Atmospheric Profiles from
+          VAS Geostationary Radiance Observations."  J. Atmos. Sci.
+          40:2025-2035.
+
+      v.  Smith, W.L., V.E. Suomi, W.P. Menzel, H.M. Woolf, L.A. Sromovsky,
+          H.E. Revercomb, C.M. Hayden, D.N. Dickson, and F.R. Mosher, 1981.
+          "First Sounding Results from VAS-D."  Bull. Amer. Meteor. Soc.,
+          62:232-236.
+
+      w.  Stewart, T.R., C.M. Hayden, and W.L. Smith, 1985.  "A Note on
+          Water-Vapor Wind Tracking Using VAS Data on McIDAS."  Bull. Amer.
+          Meteor. Soc., 66:1111-1115.
+
+      x.  Velden, C.S., 1987.  "Satellite Observations of Hurricane Elena
+          (1985) Using the VAS 6.7-um 'Water Vapor' Channel."  Bull. Amer.
+          Meteor. Soc., 68:210-215.
+
+      y.  Velden, C.S., W.L. Smith, and M. Mayfield, 1984.  "Applications
+          of VAS and TOVS to Tropical Cyclones."  Bull. Amer. Meteor. Soc.,
+          65:1059-1067.
+
+      z.  Wylie, D.P., and W.P. Menzel, 1989.  "Two Years of Cloud Cover
+          Statistics Using VAS."  Journal of Climate 2:380-392.
+
+     aa.  Zehr, R.A., J.F.W. Purdom, J.F. Weaver, and R.N. Green, 1988.
+          "Use of VAS Data to Diagnose the Mesoscale Environment of
+          Convective Storms." Weather and Forecasting 3:33-49.
+
+11.3  Archive/DBMS Usage Documentation.  Will be supplied with tape
+products.
+
+
+12.  RELATED DATA SETS
+
+     Related VISSR data sets include those from the Synchronous
+     Meteorological Satellite (SMS-1 and -2) series, the Geostationary
+     Operational Environmental Satellite series (GOES-1 through GOES-7),
+     and the ISCCP-B3 from GOES.
+      
+
+13.  SUMMARY/SAMPLE
+
+None Available.
+
+
+14.  NOTES
+
+GOES-NEXT (Serial #2) has been undergoing testing since October 1991.
+Several design flaws have been found as a result.  The most serious of
+these flaws is the existence of very long nickel wires which cause
+fluctuations in sensor response.  As a result of these flaws #2 will be
+scratched and the deadline for launch will be removed.  Currently, Serial
+#3 has been built with the initial instrument design in mind.  With the
+flaws from #2 removed, testing of #3 is planned for the Spring and Summer
+of 1992.  The planned launch date of GOES-NEXT (#3) is scheduled for early
+1994 (Menzel,1992).
+
+*92/03/04

@@ -1,0 +1,969 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>ATSR User Guide
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+       
+<P><B>IMPORTANT! Read the following :</B> We are using a PDF to HTML converter to generate this online document. Because of this, some of the images were lost.</P>
+<P>As well as this, some people's browsers do not support the way the converter represents the Greek alphabet. Because of this you may see "µm" represented as "mm" or "<u>m</u>m". This is obviously confusing.</P>
+<P>We are looking for alternatives to this converter, but in the mean time you can download and view the original PDF file by clicking on the following link.</P>
+<P><IMG src="../../../std_template/std_images/files/std_binary.gif" align="middle" alt="Binary file : "> 
+  <A href="atsr_user_guide_rev_3.pdf">Download a printable version in pdf format</A><BR>
+</P>
+
+
+<DIV CLASS=WM-DIV-BODY>
+<A NAME=HEADING1></A>
+
+<DIV CLASS=WM-DIV-HEADERS>
+<P CLASS=HEADER></P>
+
+</DIV>
+<A NAME=LINK-REV3-firstpage></A><A NAME=HEADING1-0></A>
+<H4 CLASS=ReportTitle> ATSR-1/2 User Guide </H4>
+<HR CLASS=ReportTitle>
+<A NAME=HEADING1-1></A>
+<H4 CLASS=ReportAuthor> Edited by Chris Mutlow<BR>from contributions by J. Murray, P. Bailey, A. Birks and D. Smith</H4>
+<P CLASS=ReportPurpose> A short guide to the ATSR-1 and -2 instruments and their data products</P>
+<P CLASS=Body> The Along Track Scanning Radiometer (ATSR) instruments are imaging radiometers that provide images of the Earth's surface from space. ATSR-1 was launched in July 1991 and operated until June 1996. ATSR-2 is the current operational instrument and went into operation in 1995. AATSR will be launched in the year 2000. </P>
+<P CLASS=Body> Data from these instruments are useful for scientific studies of the land surface, atmosphere, clouds, oceans, and the cryosphere.</P>
+<P CLASS=Body> The purpose of this guide is inform potential data users about the capabilities of the Along Track Scanning Radiometers (ATSR-1 and -2) and their data products. </P>
+<P CLASS=Body> If you already know about ATSR-1/2 and want find out how to order data please turn straight to <A HREF="index.shtml#MARKER-9-13" CLASS=Body>Section&nbsp;2.0, "Getting ATSR-1 and 2 Data Products," on page&nbsp;4</A> of this document. </P>
+<A NAME=HEADING1-7></A>
+<H1 CLASS=Heading1> 1.0  Introduction</H1>
+<HR CLASS=Heading1>
+<P CLASS=Body> Each ATSR instrument has been designed for exceptional sensitivity and stability of calibration which are achieved through the incorporation of several innovative features in the instrument design:</P>
+<UL CLASS=Bulleted>
+<LI CLASS=Bulleted>use of low-noise infrared detectors, cooled to near-optimum temperatures (i.e., less than 95 K) by a Stirling cycle mechanical cooler; 
+<LI CLASS=Bulleted>continuous on-board radiometric calibration of the infrared channels against two stable, high-accuracy blackbody calibration targets and, in the case of ATSR-2 and AATSR, calibration of the visible and near infrared channels with an on-board visible calibration system;
+<LI CLASS=Bulleted> use of the multichannel approach to SST retrieval previously demonstrated by the AVHRR instruments;
+<LI CLASS=Bulleted>use of the "along-track scanning" technique to provide two views of the surface and thus an improved correction for atmospheric effects. 
+</UL>
+<P CLASS=Body> ATSR's field of view comprises two 500 km-wide curved swaths, with 555 pixels across the nadir swath and 371 pixels across the forward swath. The nominal instantaneous field of view (IFOV) pixel size is 1 km2 at the centre of the nadir swath and 1.5µm processing.</P>
+<A NAME=HEADING1-15></A>
+<H2 CLASS=Heading2> 1.1   Along Track Scanning</H2>
+<P CLASS=Body> Application of the along track scanning technique is the ATSR instrument's most innovative development. This works by making two observations of the same point on the Earth's surface through differing amounts of atmosphere; the "along track" view passes through a longer atmospheric path and so is more affected by the atmosphere than the nadir view (see <A HREF="index.shtml#MARKER-9-11" CLASS=Body>Figure&nbsp;1, "ATSR-1/2 Viewing Geometry," on page&nbsp;2</A>). </P>
+<P CLASS=Body> First, the ATSR views the surface along the direction of the orbit track at an incidence angle of 55<U CLASS="Greekletters Body">&times;</U> as it flies toward the scene. Then, some 150s later, ATSR records a second observation of the scene at an angle close to the nadir.</P>
+<P CLASS=Body> By combining the data from these two views a direct measurement of the effect of the atmosphere is obtained, which yields an atmospheric correction for the surface data set which is an improvement on that obtained from a single measurement.</P>
+  <P CLASS=Figure>FIGURE 1. <A NAME=MARKER-9-11></A>ATSR-1/2 Viewing Geometry</P>
+  <P CLASS=Figure><IMG ALIGN=TOP SRC="rev1ima1.gif"></P>
+<A NAME=HEADING1-20></A>
+<H2 CLASS=Heading2> 1.2  ATSR-1</H2>
+<P CLASS=Body> ATSR-1 was launched as part of the payload of ESA's ERS-1 satellite on 17th July 1991, and was the test-bed for the along track scanning concept. It carries infrared channels at 1.6µm, 3.7µm, 10.8µm and 12.0µm, and has no visible channels. Routine ATSR-1 operations stopped when ERS-1 was put into hibernation in June 1996, but the instrument is still capable of operation as, even after nearly 7 years of use, the signal to noise performance of the detectors is higher than for a typical AVHRR at launch.</P>
+<A NAME=HEADING1-22></A>
+<H2 CLASS=Heading2> 1.3  ATSR-2 and AATSR</H2>
+<P CLASS=Body> The ATSR-2 and Advanced ATSR (AATSR) instruments are developments from the original experimental ATSR-1 instrument which, in addition to the ATSR-1's infrared channels, carry extra visible channels at 0.55µm, 0.67µm and 0.87µm for vegetation remote sensing. The evolution of ATSR-2 was constrained by the requirement to maintain the ATSR-1 precision measurement of global SST. </P>
+<P CLASS=Body> The ATSR-2 instrument, launched in April 1995, is currently flying as part of the payload of the ESA ERS-2 satellite, and AATSR has been launched on 1st March 2002 on ESA's Envisat platform. The AATSR instrument represents an orderly development of the ATSR series of instruments. The ATSR channels are given in <A HREF="index.shtml#MARKER-9-2" CLASS=Body>Table&nbsp;1, "ATSR-1, ATSR-2 and AATSR Spectral Channels," on page&nbsp;3</A></P>
+<TABLE BORDER=1><CAPTION><DL CLASS=TableTitle>
+<DT CLASS=TableTitle><DD CLASS=TableTitle>TABLE 1.  <A NAME=MARKER-9-2></A>ATSR-1, ATSR-2 and AATSR Spectral Channels
+</CAPTION><TR VALIGN=TOP><TH></DL>
+<P CLASS=CellHeading> <B CLASS=CellHeading>Feature</B></P>
+<P CLASS=CellHeading> <B CLASS=CellHeading></B></P>
+<TH><P CLASS=CellHeading> <B CLASS=CellHeading>Wavelength</B></P>
+<P CLASS=CellHeading> <B CLASS=CellHeading></B></P>
+</TH><TH><P CLASS=CellHeading> <B CLASS=CellHeading>Bandwidth</B></P>
+<P CLASS=CellHeading> <B CLASS=CellHeading></B></P>
+</TH><TH><P CLASS=CellHeading> <B CLASS=CellHeading>ATSR-1</B></P>
+<P CLASS=CellHeading> <B CLASS=CellHeading></B></P>
+</TH><TH><P CLASS=CellHeading> <B CLASS=CellHeading>ATSR-2<BR>AATSR</B></P>
+</TH><TH><P CLASS=CellHeading> <B CLASS=CellHeading>Detector type</B></P>
+<P CLASS=CellHeading> <B CLASS=CellHeading></B></P>
+</TH></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> Chlorophyll</P>
+</TD><TD><p> 0.55<font face="Symbol">µm</font></P>
+</TD><TD><P CLASS=CellBody> 20nm</P>
+</TD><TD><P CLASS=CellBody> N</P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD><TD><P CLASS=CellBody> Si</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> Vegetation Index</P>
+</TD><TD><P CLASS=CellBody> 0.67µm</P>
+</TD><TD><P CLASS=CellBody> 20nm</P>
+</TD><TD><P CLASS=CellBody> N</P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD><TD><P CLASS=CellBody> Si</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> Vegetation Index</P>
+</TD><TD><P CLASS=CellBody> 0.87µm</P>
+</TD><TD><P CLASS=CellBody> 20nm</P>
+</TD><TD><P CLASS=CellBody> N</P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD><TD><P CLASS=CellBody> Si</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> Cloud Clearing</P>
+</TD><TD><P CLASS=CellBody> 1.6µm</P>
+</TD><TD><P CLASS=CellBody> 0.3µm</P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD><TD><P CLASS=CellBody> PV InSb</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> SST retrieval</P>
+</TD><TD><P CLASS=CellBody> 3.7µm</P>
+</TD><TD><P CLASS=CellBody> 0.3µm</P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD><TD><P CLASS=CellBody> PV InSb</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> SST retrieval</P>
+</TD><TD><P CLASS=CellBody> 10.8µm</P>
+</TD><TD><P CLASS=CellBody> 1.0µm</P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD><TD><P CLASS=CellBody> PC CMT</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> SST retrieval</P>
+</TD><TD><P CLASS=CellBody> 12.0µm</P>
+</TD><TD><P CLASS=CellBody> 1.0µm</P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD><TD><P CLASS=CellBody> PC CMT</P>
+</TD></TR></TABLE><P CLASS=Body> The ATSR-2 instrument for ERS-2 is largely the same as ATSR-1 except for:</P>
+<UL CLASS=Bulleted>
+<LI CLASS=Bulleted>the inclusion of 3 extra spectral bands in the visible, mainly for vegetation monitoring; 
+<LI CLASS=Bulleted>an on-board visible calibration system. 
+</UL>
+<P CLASS=Body> The <U CLASS="Symb Body">AATSR</U> instrument is functionally the same as the ATSR-2, but the structure and some of the other components have been re-worked to match the environment of the Envisat platform, which is somewhat different to the ERS satellites.</P>
+<P CLASS=Body> The major purpose of AATSR is to provide continuity of the crucial sea surface temperature data sets which have been produced by ATSR-1 and ATSR-2. Therefore, the key scientific parameters which were optimised for ATSR, are retained for AATSR. Thus details of the scan, the optical system, the basic spectral bands, thermal calibration system, spatial resolution and swath have been kept as close as possible to those of the original instrument to ensure continuity. </P>
+<P CLASS=Body> The major advantage AATSR has over ATSR-2 is in the telemetry bandwidth available on Envisat. For ATSR-2, the limited telemetry available on ERS-2 imposed severe limitations on the collection of visible channel data; on Envisat there are no such restrictions, so AATSR can telemeter all the visible channel data it can collect. This significantly simplifies the ground processing required for AATSR data, as the processor does not need to cope with the wide range of data formats that are possible from ATSR-2. <A NAME=MARKER-9-12></A></P>
+<A NAME=HEADING1-201></A>
+<H1 CLASS=Heading1> 2.0  <A NAME=MARKER-9-13></A>Getting ATSR-1 and 2 Data Products</H1>
+<HR CLASS=Heading1>
+<A NAME=HEADING1-202></A>
+  <P CLASS=BodyAfterHead> The following sub-sections describe how the various sections 
+    of the user community can order ATSR data sets and the services that are available 
+    to support browsing and selection prior to placing an order.</P>
+<HR CLASS=BodyAfterHead>
+<A NAME=HEADING1-203></A>
+<H2 CLASS=Heading2> 2.1  How do I find out what ATSR-1/2 data are available?</H2>
+<A NAME=HEADING1-204></A>
+  <P CLASS=BodyAfterHead> In addition to the information provided on the ATSR Project 
+    web pages there are now new services that allow potential ATSR data users 
+    to view quick-looks of the image data available through the various processing 
+    facilities prior to placing an order for the full-resolution data sets.</P>
+<HR CLASS=BodyAfterHead>
+<A NAME=HEADING1-205></A>
+<H3 CLASS=Heading3> 2.1.1  NERC ATSR Browse Facility</H3>
+<A NAME=HEADING1-206></A>
+  <P CLASS=BodyAfterHead> To provide easy access to ATSR data the UK NERC has established 
+    a Browse Facility at RAL which provides on-line access to quick-looks of the 
+    entire ATSR-2 image data set, and is starting to be populated with ATSR-1 
+    data set as well. Users are strongly encouraged to make use of this facility 
+    to establish their data needs before requesting data from either RAL or ESA.</P>
+<HR CLASS=BodyAfterHead>
+<P CLASS=Body> Access to the facility can be gained directly via a link from the ATSR Project's home page at URL <U CLASS="Blue Body">http://www.atsr.rl.ac.uk</U>.</P>
+<A NAME=HEADING1-208></A>
+<H3 CLASS=Heading3> 2.1.2  ESA Multi-Mission Browse Facility</H3>
+<P CLASS=Body> ESA also has an ATSR browse service that can be reached at URL<U CLASS="Blue Body"> http://earthnet.esrin.esa.it</U>.</P>
+<A NAME=HEADING1-210></A>
+<H2 CLASS=Heading2> 2.2  Where do I order ATSR-1/2 data?</H2>
+<A NAME=HEADING1-211></A>
+  <P CLASS=BodyAfterHead> The following sub-sections describe where the various 
+    sections of the user community can place their order for ATSR-1/2 data products.</P>
+<HR CLASS=BodyAfterHead>
+<A NAME=HEADING1-212></A>
+<H3 CLASS=Heading3> 2.2.1  New Users</H3>
+<A NAME=HEADING1-213></A>
+  <P CLASS=BodyAfterHead> The ATSR Project Team at RAL are able to supply any "new 
+    user" with samples of ATSR-1/2 data to get them started quickly with an ATSR 
+    data set appropriate to their needs - this service is available through the 
+    ATSR Project at RAL at the address in <A HREF="index.shtml#MARKER-9-14" CLASS=BodyAfterHead>Section 
+    2.2.2</A>.</P>
+<HR CLASS=BodyAfterHead>
+<P CLASS=Body> Following such an initial data grant the user will be referred to the appropriate data centre as described below for any future requests.</P>
+<A NAME=HEADING1-215></A>
+<H3 CLASS=Heading3> 2.2.2  <A NAME=MARKER-9-14></A>NERC-funded UK Scientists and Validation Scientists</H3>
+<A NAME=HEADING1-216></A>
+  <P CLASS=BodyAfterHead> This category includes NERC Staff, holders of NERC-funded 
+    research grants or thematic programme awards, and scientists providing validation 
+    data. These users can obtain their data by submitting 
+    a NERC AT1 form. Further information on the procedure and the actual form 
+    can be found on the ATSR project web pages at <U CLASS="Blue BodyAfterHead">http://www.atsr.rl.ac.uk</U>.
+  </P>
+<HR CLASS=BodyAfterHead>
+<A NAME=HEADING1-217></A>
+<H3 CLASS=Heading3> 2.2.3  Other Scientists and Commercial users</H3>
+<A NAME=HEADING1-218></A>
+  <P CLASS=BodyAfterHead> This category of users must obtain their data from ESA 
+    through the ERS Help Desk at Esrin, in Frascati near Rome.</P>
+<HR CLASS=BodyAfterHead>
+<P CLASS=Body> The contact details for ATSR data through ESA are:-</P>
+<P CLASS=Body> ERS Help Desk, via Galileo Galilei, CP. 64, 0044 Frascati, Italy<BR>Phone:+39-06-94180-666 Fax.: +39-06-94180-272<BR>E-mail: eohelp@esrin.esa.it<BR>ESA Browse Service: <U CLASS="Blue Body">http://earthnet.esrin.esa.it</U></P>
+<P CLASS=Body> These data are processed on behalf of ESA by NRSC Ltd. at Farnborough who are the official ESA processing and archiving facility for the ATSR instrument. </P>
+<A NAME=HEADING1-222></A>
+<H3 CLASS=Heading3> 2.2.4  Near-Real-Time Users</H3>
+<A NAME=HEADING1-223></A>
+  <P CLASS=BodyAfterHead> A new near-real-time service for ATSR-2 
+    data products has come into operation at the Troms&oslash; Satellite Station. 
+    The web address for accessing this service is <U CLASS="Blue BodyAfterHead">http://192.111.33.173/ATSRNRT/</U>. 
+    There is direct access the quick-look images archives, but users have to register 
+    with ESA to if they wish to access the full-resolution data sets.</P>
+<HR CLASS=BodyAfterHead>
+<A NAME=HEADING1-224></A>
+<H1 CLASS=Heading1> 3.0  Data Products</H1>
+<HR CLASS=Heading1>
+<P CLASS=Body> All ATSR-1 and -2 data from whatever source are processed using SADIST (Synthesis of ATSR Data Into Sea-surface Temperatures), the Rutherford Appleton Laboratory's ATSR data-processing scheme (Z&aacute;vody <I CLASS=Body>et al.,</I> 1994). </P>
+<P CLASS=Body> Currently, two distinct versions of SADIST exist; ATSR-1 data were processed with SADIST-1, and ATSR-2 data with SADIST-2. However, a unified version of the software has become available, so in future ATSR-1 data will be re-processed using SADIST-2 and be in a common format. Major enhancements in the second version of the software include the capability to provide additional the visible channel data, and more robust cloud identification and additional product confidence data.</P>
+<P CLASS=Body> Full details of the ATSR product set are described in the ATSR product format guides available from the ATSR Project Web Site (<U CLASS="Blue Body">http://www.atsr.rl.ac.uk</U>); separate guides cover the SADIST-1 and 2 product sets. </P>
+<P CLASS=Body> The set of SADIST-2 ATSR-1/2 products comprises  three logical groups</P>
+<P CLASS=Body> <B CLASS=Body>Ungridded products</B> contain pixels in the ATSR scan geometry (i.e., in the instrument frame of reference where the curved scans appear as straight lines and the surface scene is distorted). There is a direct correspondence between the contents of a product record and the contents of an ATSR instrument scan. Nadir- and forward-view pixels in a record correspond to the same scan and are, therefore, not co-located.</P>
+<P CLASS=Body> <B CLASS=Body>Gridded products </B>contain 512&nbsp;<U CLASS="Greekletters Body">&yen;</U>&nbsp;512 pixel images. The correspondence between a pixel and the ATSR instrument scan from which it came has been lost. Nadir- and forward-view pixels are collocated, and have been regridded (mapped) onto a 1 km grid.</P>
+<P CLASS=Body> <B CLASS=Body>Spatially-averaged products</B> have contents (derived from up to a whole orbit of raw data) which have been spatially-averaged to a ten-arcminute and half-degree resolutions.</P>
+<A NAME=HEADING1-232></A>
+<H2 CLASS=Heading2> 3.1  Ungridded products</H2>
+<P CLASS=Body> There are two ungridded products:</P>
+<P CLASS=Body> <B CLASS=Body>UCOUNTS</B> is an ungridded detector count product. The product contains ungridded, uncalibrated detector counts from all or some of the ATSR-1/ATSR-2 detectors. Although the product remains ungridded, it may optionally contain pixel latitude/longitude positions, and/or pixel X/Y (across-track/along-track) coordinates.</P>
+<P CLASS=Body> <B CLASS=Body>UBT</B> is an ungridded brightness temperature/reflectance product (a new product for SADIST-2). The product contains ungridded, calibrated brightness temperatures or reflectances from all or some of the ATSR-1/ATSR-2 detectors. Although the product remains ungridded, it may optionally contain pixel latitude/longitude positions, and/or pixel X/Y (across-track/along-track) coordinates.</P>
+<A NAME=HEADING1-236></A>
+<H2 CLASS=Heading2> 3.2  Gridded products</H2>
+<P CLASS=Body> There are three gridded products:</P>
+<P CLASS=Body> <B CLASS=Body>GBT</B> is a gridded brightness temperature/reflectance product (an extension of the SADIST-1 BT product). The product contains gridded, calibrated brightness temperature or reflectance images from all or some of the ATSR-1/ATSR-2 detectors. The product optionally includes pixel latitude/longitude positions, X/Y offsets (sub-pixel across-track/along-track coordinates), and the results of cloud-clearing/land-flagging.</P>
+<P CLASS=Body> <B CLASS=Body>GBROWSE</B> is a gridded browse product (an extension of the SADIST-1 BROWSE product). The product contains gridded, sub-sampled, calibrated brightness temperature or reflectance images from all or some of the ATSR-1/ATSR-2 detectors. The product optionally includes the results of cloud-clearing/land-flagging.</P>
+<P CLASS=Body> <B CLASS=Body>GSST</B> is a gridded sea-surface temperature product (an extension of the SADIST-1 SST product). The product contains gridded sea-surface temperature images using both nadir-only and dual-view retrieval algorithms. The product optionally includes pixel latitude/longitude positions, X/Y offsets (sub-pixel across-track/along-track coordinates), and the results of cloud-clearing/land-flagging.</P>
+<A NAME=HEADING1-241></A>
+<H3 CLASS=Heading3> 3.2.1  Spatially-averaged products</H3>
+<P CLASS=Body> There are three spatially-averaged products:</P>
+<P CLASS=Body> <B CLASS=Body>ABT</B> is a spatially-averaged brightness temperature/reflectance product (a new product for SADIST-2). The product contains spatially-averaged brightness temperatures/reflectances from all or some of the ATSR-1/ATSR-2 detectors, categorised by view, channel, surface type and cloud-presence.</P>
+<P CLASS=Body> <B CLASS=Body>ACLOUD</B> is a spatially-averaged cloud temperature/coverage product (unchanged from the SADIST-1 ACLOUD product). The product contains spatially-averaged measures of cloud temperature and abundance.</P>
+<P CLASS=Body> <B CLASS=Body>ASST</B> is a spatially-averaged sea-surface temperature product (an extension of the SADIST-1 ASST product). The product contains spatially-averaged sea-surface temperatures, at ten-arcminute and half-degree resolution, using nadir-only and dual-view retrieval algorithms. </P>
+<P CLASS=Body> In the spatially-averaged products generated by SADIST-2 the pixels which contribute to such products are taken from gridded (and therefore collocated) pixel data.</P>
+<A NAME=HEADING1-247></A>
+<H2 CLASS=Heading2> 3.3  <A NAME=MARKER-9-15></A>Optional product contents</H2>
+<P CLASS=Body> The approach adopted by SADIST-2, to strike a balance between flexibility and simplicity, is to split product contents into several significant categories. Each category is represented by a single letter code in product requests, and in product file-names. The combination of codes defines in a concise way the actual product contents. The product content categories are: </P>
+<P CLASS=Body> <B CLASS=Body>Nadir-view only (N):</B> only those records containing nadir-view ATSR data. (Note that this option is rather different from the others in that its presence indicates the absence of product records: those containing ATSR forward-view data.)</P>
+<P CLASS=Body> <B CLASS=Body>Thermal infrared detectors (T):</B> records containing the thermal infra-red/near-infra-red (12.0µm, 11.0µm, 3.7µm 1.6µm) channels, which are available from both ATSR-1 and ATSR-2 instruments.</P>
+<P CLASS=Body> <B CLASS=Body>Visible detectors (V):</B> records containing the visible/near-infra-red 1.6µm, 0.87µm, 0.65µm, 0.55µmchannels, which are available from only the ATSR-2 instrument.</P>
+<P CLASS=Body> <B CLASS=Body>Pixel latitude/longitude positions (L):</B> records containing precise Earth-locations for ATSR instrument pixels.</P>
+<P CLASS=Body> <B CLASS=Body>Pixel X/Y coordinate positions (X): </B>records containing precise pixel-locations (for ungridded products), or sub-pixel offsets (for gridded products), in the across-track/along-track coordinate system defined by the ERS platform trajectory.</P>
+<P CLASS=Body> <B CLASS=Body>Cloud-clearing/land-flagging results (C):</B> records containing the detailed results of cloud-clearing tests and pixel land-flagging.</P>
+<P CLASS=Body> It should be noted that not every category is available for each product type, so not all product options are always available. For each product, and for each instrument type (ATSR-1, ATSR-2) there is a default product; such default products have been chosen to satisfy most product users, whilst minimising product size.</P>
+<P CLASS=Body> Note also that the ACLOUD and ASST products have no optional contents. Since their product sizes are relatively small, and the contents are valid for both ATSR-1 and ATSR-2 instruments, flexibility provides no benefit.</P>
+<A NAME=HEADING1-257></A>
+<H2 CLASS=Heading2> 3.4  Portability, byte-ordering and the byte-order word</H2>
+<P CLASS=Body> In designing the ATSR products, it has been attempted to keep the products as portable as possible between operating systems and languages. To this end: </P>
+<UL CLASS=Bulleted>
+<LI CLASS=Bulleted>The products contain no floating-point numbers. Only ASCII text (within product headers), and one-, two-, and four-byte integers are used throughout the products.
+<LI CLASS=Bulleted>The products contain fixed-length records. This provides portability between record-based operating systems, such as OpenVMS, and stream-based operating systems, such as UNIX.
+</UL>
+<P CLASS=Body> However, an intrinsic difference between systems remains. Some systems interpret the bytes within integers such that the bytes are given increasing significance, whilst others interpret the bytes within integers such that the bytes are given decreasing significance. SADIST-2 is a VMS application. Since VMS is a little-endian system, the bytes within two-byte words and four-byte words are stored in increasing order of significance. If SADIST-2 products are to be read on big-endian systems, the byte-ordering must be reversed. That is, the internal representation must be changed so that the intended value will be retrieved.</P>
+<P CLASS=Body> To provide a mechanism whereby the process of byte-swapping might be automated, the first two bytes within each SADIST-2 product header are fixed, and can be used to test the byte-ordering on the local system.</P>
+<A NAME=HEADING1-263></A>
+<H2 CLASS=Heading2> 3.5  Visible channel normalisation</H2>
+<P CLASS=Body> No routine calibration is performed on the visible and near-infrared image data supplied to users from SADIST-2, instead this must be done explicitly by the user with the calibration tables provided on the ATSR Project Web site (<U CLASS="Blue Body">http://www.atsr.rl.ac.uk</U>). The visible and near-infrared data provided in the SADIST product are in the form of raw uncalibrated telemetry but they have been normalised to lie within a given range.</P>
+<P CLASS=Body> The normalisation procedure applied to each of the visible channels, including the 1.6µm near-infrared channel, to achieve this is: </P>
+<DL CLASS=Numbered1>
+<DL CLASS=Numbered1>
+<DT CLASS=Numbered1><DD CLASS=Numbered1>1.  The channel offset has been removed.
+<DT CLASS=Numbered><DD CLASS=Numbered>2.  The channel gains have been normalised to account for variations in the signal channel processor (SCP) gain setting<I CLASS=Numbered>.</I> 
+</DL>
+</DL>
+<P CLASS=Body> Thus, in SADIST-2 products which contain visible channel signals (UBT, GBT, GBROWSE, ABT), the visible channels have been normalised to SCP gains of 20. That is, the signals are those which would have been generated by the instrument if SCP gains of 20 were being used. <A HREF="index.shtml#MARKER-9-10" CLASS=Body>Table&nbsp;2 on page&nbsp;9</A> shows the actual nominal SCP gains used (for ATSR-2), and the effective increase in signal due to the normalisation procedure. Note that since the gains have been commanded to give a full-scale uncalibrated count (4095) during the day-time peak, the approximate normalised maximum in each case represents the signal during the day-time peak, and not 100% reflectance.</P>
+<TABLE BORDER=1><CAPTION><DL CLASS=TableTitle>
+<DT CLASS=TableTitle><DD CLASS=TableTitle>TABLE 2.  <A NAME=MARKER-9-10></A>ATSR-2 normalised visible channel signals
+</CAPTION><TR VALIGN=TOP><TH></DL>
+<P CLASS=CellHeading>  Channel</P>
+<TH><P CLASS=CellHeading> Nominal SCP gain</P>
+</TH><TH><P CLASS=CellHeading> Normalised gain </P>
+</TH><TH><P CLASS=CellHeading>  Approx. normalised range </P>
+</TH></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 1.6mm </P>
+</TD><TD><P CLASS=CellBody>  3.79 </P>
+</TD><TD><P CLASS=CellBody>  20.0 </P>
+</TD><TD><P CLASS=CellBody>  0 - 21108 </P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 0.87mm </P>
+</TD><TD><P CLASS=CellBody>  3.73 </P>
+</TD><TD><P CLASS=CellBody>  20.0 </P>
+</TD><TD><P CLASS=CellBody>  0 - 21447</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 0.67mm </P>
+</TD><TD><P CLASS=CellBody>  3.10 </P>
+</TD><TD><P CLASS=CellBody>  20.0 </P>
+</TD><TD><P CLASS=CellBody>  0 - 25806</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 0.56mm </P>
+</TD><TD><P CLASS=CellBody>  4.38 </P>
+</TD><TD><P CLASS=CellBody>  20.0 </P>
+</TD><TD><P CLASS=CellBody>  0 - 18264</P>
+</TD></TR></TABLE><P CLASS=Body> Once, as here, the offsets and gains have been removed and normalised respectively, the only part of the calibration of the visible channels which remains is applying 100% reflectance scaling factors to convert normalised counts into true top-of-atmosphere reflectances. Such scaling factors are the product of RAL's characterisation of ATSR-2's VISCAL unit; see <A HREF="index.shtml#MARKER-9-19" CLASS=Body>"Visible and near-infrared channels" on page&nbsp;12</A> for details their derivation and application. The calibration tables themselves can be found at the following URL<U CLASS="Blue Body">&nbsp;http://www.atsr.rl.ac.uk/calibration.html</U>.</P>
+<A NAME=HEADING1-345></A>
+<H1 CLASS=Heading1> 4.0  Ground segment data processing</H1>
+<HR CLASS=Heading1>
+<A NAME=HEADING1-346></A>
+<H2 CLASS=Heading2> 4.1  Introduction</H2>
+<P CLASS=Body> ATSR-1 and -2 data cannot be received directly from the satellites by users because there is no continuous direct broadcast of data from either ERS-1 or -2. Instead, the ATSR data collected each orbit, together with the low bit rate data from the other sensors on the platform, are stored on an on-board tape recorder for subsequent transmission to the ground. These stored data are then transmitted to the ground during each orbit when the satellite is within the reception range of one of the designated ESA ground stations which are at Kiruna, Sweden; Maspalomas, Canary Islands; Gatineau and Prince Albert, Canada. (Kiruna is the main station receiving 10 out of the 14 orbits of data collected each day.)</P>
+<P CLASS=Body> No real-time data is lost during the tape recorder playback because the satellite operates two simultaneous data links, meaning that the current payload data can be transmitted as it is collected without affecting the tape recorder dump. The real-time data and the tape recorder dump are merged together duringprocessing at the ground stations. It should be noted that the combination of tape recorder capacity and acquisition time at the ground station is a limitation during some ERS orbits, this is explained further in <A HREF="index.shtml#MARKER-9-25" CLASS=Body>"Descoping" on page&nbsp;23</A>. The data received at the ESA stations are then subsequently supplied to the various processing facilities on Exabyte tapes. </P>
+<P CLASS=Body> The two centres which process the ATSR-1 and 2 data in UK are: the UK Processing and Archiving Facility (UK-PAF) at the National Remote Sensing Centre (NRSC) in Farnborough, UK, and the ATSR Project Team at the Rutherford Appleton Laboratory, UK. Each of these facilities serves a different set of ATSR data users:- </P>
+<DL CLASS=Numbered1>
+<DL CLASS=Numbered1>
+<DT CLASS=Numbered1><DD CLASS=Numbered1>1.  The UK-PAF at NRSC is the official ESA Processing and Archiving Facility (PAF) for ATSR and, therefore, supplies image data to the international science community, non-NERC funded UK scientists, and commercial users. 
+<DT CLASS=Numbered><DD CLASS=Numbered>2.  The ATSR Project Team at RAL generates the spatially-averaged climate products from ATSR-1 and -2, and also provides a comprehensive ATSR image data service to NERC-funded UK scientists. It also has a mandate to provide low volumes of sample products to any new user of ATSR data who applies, and to provide data for validation purposes. 
+</DL>
+</DL>
+<P CLASS=Body> <A HREF="index.shtml#MARKER-9-16" CLASS=Body>Figure 2</A> shows the flow of ATSR-1 and 2 data from the satellite to the user community. </P>
+<P CLASS=Figure>FIGURE 2.  <A NAME=MARKER-9-16></A>Schematic showing the distribution chain for ATSR-1 and 2 data<IMG ALIGN=TOP SRC="rev1ima2.gif"></P>
+<P CLASS=Body> The limitation of both of these facilities is that they can only offer off-line ATSR-1/2 product generation services and supply data to the community 7-14 days after its original collection at the earliest. Such a delay is too long for many users. Therefore, ESA have developed a pilot ATSR near-real-time processing system which is now in operation at the Troms&oslash; Satellite Station (TSS). By agreement (and because of its geographic proximity), this station can eavesdrop on the 10 orbits of satellite data downlinked to the Kiruna station each day, and processes this data in near-real-time to deliver ATSR-2 products to real-time users. The spatially-averaged products from this system are now being supplied to the meteorological community, and other customers get access to this data and can also order image products from TSS.</P>
+<A NAME=HEADING1-355></A>
+<H2 CLASS=Heading2> 4.2  Data Processing Algorithms</H2>
+<A NAME=HEADING1-356></A>
+<H3 CLASS=Heading3> 4.2.1  Calibration</H3>
+<A NAME=HEADING1-357></A>
+<H4 CLASS=Heading4> 4.2.1.1  Infrared channels</H4>
+<P CLASS=Body> The signal in counts from a radiometer channel observing a blackbody target at temperature <I CLASS=Body>Tbb </I>is</P>
+<P CLASS=Equation>(EQ 1) <A NAME=MARKER-9-17></A><IMG ALIGN=TOP SRC="rev1ima3.gif"></P>
+<P CLASS=Body> where <I CLASS=Body>G</I> is the radiometric gain, <I CLASS=Body>L(Tbb)</I> is the radiance from a target (i.e. the Planck function integrated over the filter passband), and <I CLASS=Body>S0</I> is the radiometric offset of the channel. </P>
+<P CLASS=Body> Radiometric calibration of the instrument consists of determining the linear relationship between the radiance and detector counts from each channel. The conventional way of doing this is to allow the instrument to view a zero radiance target, such as a cold space view, to determine the radiometric offset <I CLASS=Body>S0</I> (i.e., <I CLASS=Body>L(Tbb</I>) =<I CLASS=Body> </I>0). Then having determined <I CLASS=Body>S0</I>, the radiometer views a hot calibration target to determine the radiometric gain of the channel. Then the gain of the system is given by<IMG ALIGN=TOP SRC="rev1ima4.gif"></P>
+<P CLASS=Equation>(EQ 2) </P>
+<P CLASS=Body> In "real" radiometers there is always some degree of non-linearity which, if not treated properly in the ground processing algorithms, results in errors in calibration. This is a particular problem if the non-linearity changes with time. </P>
+<P CLASS=Body> To avoid these problems as far as possible, the approach adopted in the ATSR instruments has been to minimise the sensitivity of the calibration to any non-linearity in the radiometer's characteristics. This has partly been done by careful design of the signal processing electronics and by careful pre-flight determination of the non-linearity for "beginning-of-life" and "end-of-life" conditions on the satellite, but mainly through designing the calibration system in such a way that the instrument's on-board calibration is optimised over the limited range of temperatures that span the expected range of SST observations. </P>
+<P CLASS=Body> ATSR uses two blackbody calibration targets, rather than the more usual single hot target and a space view. In ATSR one of these targets operates at a temperature cooler than the coldest expected SST, and the other one warmer than the hottest expected SST.</P>
+<P CLASS=Body> With this arrangement the calibration is most precise over the temperature range covering the normal range of SST. The effects of any non-linearity in the system are minimised because linearity is only assumed over a small range of measurement space. Outside this range, the calibration is no worse than using the space view and single calibrator approach, but using the ATSR method the precision is concentrated into the portion of the measurement space where the most accurate measurements are required. At temperatures outside this range the precision of the observations are not so critical, and the larger calibration errors resulting from extrapolation can be tolerated.</P>
+<P CLASS=Body> The scheme used for determining the ATSR instrument's calibration parameters from the hot and cold blackbody signals is given below. </P>
+<P CLASS=Equation>(EQ 3) The signal from ATSR's cold blackbody is given by<A NAME=MARKER-9-18></A><IMG ALIGN=TOP SRC="rev1ima5.gif"><BR></P>
+<P CLASS=Body> and the signal from the hot blackbody is given by<IMG ALIGN=TOP SRC="rev1ima6.gif"></P>
+<P CLASS=Equation>(EQ 4) </P>
+<P CLASS=Equation>(EQ 5) Hence, by subtracting the above equations to eliminate <I CLASS=Equation>S</I>0, the radiometric gain <I CLASS=Equation>G</I> is,<IMG ALIGN=TOP SRC="rev1ima7.gif"><BR></P>
+<P CLASS=Equation>(EQ 6) and by substituting <I CLASS=Equation>G</I> back into the equations the offset<I CLASS=Equation> S0</I> is,<IMG ALIGN=TOP SRC="rev1ima8.gif"> <BR></P>
+<P CLASS=Body> The infrared focal planes of the ATSR instruments use two different types of infrared detectors; </P>
+<DL CLASS=Numbered1>
+<DL CLASS=Numbered1>
+<DT CLASS=Numbered1><DD CLASS=Numbered1>1.  the 1.6 and 3.7<U CLASS="Symb Numbered1">m</U>m channels employ photovoltaic indium antimonide (InSb); 
+<DT CLASS=Numbered><DD CLASS=Numbered>2.  the 10.8 and 12.0<U CLASS="Symb Numbered">m</U>m channels use photoconductive cadmium mercury teluride (CdHgTe or CMT) detectors. 
+</DL>
+</DL>
+<P CLASS=Body> The response of the InSb detectors is fairly well behaved and linear over the range of temperatures from liquid nitrogen to 310 K. </P>
+<P CLASS=Body> The same is not true of the CMT detectors, which show a marked non-linear behaviour because of "Auger recombination". This causes a reduction in the measured detector signal at high photon fluxes compared to that predicted assuming a linear detector response. The size of this reduction depends on the temperature and decreases as the detector temperature increases.</P>
+<P CLASS=Body> The non-linear detector responses are corrected using the measured radiances from the pre-flight calibration and characterisation.</P>
+<A NAME=HEADING1-379></A>
+<H4 CLASS=Heading4> 4.2.1.2  <A NAME=MARKER-9-19></A>Visible and near-infrared channels</H4>
+<P CLASS=Body> Visible channel calibration is achieved in a similar way to the infrared channels. Careful pre-flight calibration and characterisation of the visible channels was performed, and this is supplemented by continuous in-flight calibration of the channels with an on-board visible calibration system.</P>
+<P CLASS=Body> The radiometric offset for the visible channels is determined by viewing the ATSR-2 cold blackbody. The signal measured while viewing this target is assumed to be the "dark signal" for the channels (i.e., the signal observed by a blinded detector).</P>
+<P CLASS=Body> The radiometric gain is determined once each orbit when the instrument's visible calibrator is illuminated by the Sun as the satellite moves away from the South pole. At this point sunlight enters the VISCAL baffle through a protective window and is directed onto a Russian opal diffusing plate. This plate is seen by the instrument scan mirror as a bright patch at the edge of the hot blackbody during each scan. The VISCAL provides a radiance equivalent to a 25% signal from a Lambertian scatterer. The performance and degradation of the VISCAL is monitored by a photodiode.</P>
+<P CLASS=Body>  The gain <IMG ALIGN=TOP SRC="rev1ima9.gif"> of the visible channels is therefore given thus,<IMG ALIGN=TOP SRC="re1ima10.gif"></P>
+<P CLASS=Equation>(EQ 7)  </P>
+<P CLASS=Body> where <IMG ALIGN=TOP SRC="re1ima11.gif"> is the radiometric offset derived from the internal blackbody views, <IMG ALIGN=TOP SRC="re1ima12.gif"> is the signal from the ATSR-2 VISCAL unit, and <IMG ALIGN=TOP SRC="re1ima13.gif"> is the solar radiance from the VISCAL.</P>
+<P CLASS=Body> These calibration data are not used directly within SADIST-2 to calibrate the data from the visible and near-infrared channels; it is left to the user to do this using the calibration tables provided at the URL<U CLASS="Blue Body">&nbsp;http://www.atsr.rl.ac.uk/calibration.html</U>. These tables are updated on a regular basis using the method described above.</P>
+<P CLASS=Body> Users are reminded that some care is required to ensure that up-to-date calibration information is used as trend plots reveal oscillations in short wavelength signal intensity caused by a build up of condensation on a relay lens mounted on the cold focal plane assembly (FPA). This is accounted for by the calibration procedure, and has a negligible effect on accuracy if the correct set of calibration coefficients are used. Care must also be exercised if data from an outgassing period is used as the calibration becomes undefined while an outgassing is underway owing to rapid changes in the condensate film thickness as it evaporates.</P>
+<P CLASS=Body> If you are in any doubt over the use of the calibration data please contact the ATSR Project Team at RAL who will be able to advise on the correct procedure, and also on the status of the instrument.</P>
+<A NAME=HEADING1-389></A>
+<H4 CLASS=Heading4> 4.2.1.3  General Points on Calibration</H4>
+<A NAME=HEADING1-390></A>
+  <P CLASS=BodyAfterHead> It should be noted that, although it is not explicitly 
+    mentioned elsewhere, odd and even pixels from the sensor are calibrated separately 
+    as they are obtained from different integrators. In the current version of 
+    the ATSR software this may not always be done correctly in "jittered" scans 
+    (see <A HREF="index.shtml#MARKER-9-28" CLASS=BodyAfterHead>Section&nbsp;6.2.4 on page&nbsp;27</A>); 
+    a fix is available and will be included in a later update.</P>
+<HR CLASS=BodyAfterHead>
+<A NAME=HEADING1-391></A>
+<H2 CLASS=Heading2> 4.3  Geolocation and regridding</H2>
+<P CLASS=Body> ATSR SADIST image products betray no sign of the fact that the ATSR instruments possess a conical scan mechanism, which results in the acquisition of nadir- and forward-view pixels many hundreds of kilometres apart, and which possess a curved geometry. It is an important part of the data-processing within SADIST-2 to remove such spatial view-differences and scan geometry by performing pixel geolocation (the derivation of the Earth-locations of the acquired pixels) and view collocation (the process by which, assuming the geolocation is sound, the nadir and forward views are spatially matched). </P>
+<P CLASS=Body> The geolocation proceeds by mapping the acquired pixels onto a 1&nbsp;km grid whose axes are the ERS satellite ground-track and great circles orthogonal to the ground-track. The resampling is done using a nearest neighbour method, and the actual X/Y co-ordinates of a given pixel are retained in the gridded products. This regridding has two effects. Pixels which are small, and whose Earth-locations are therefore very small, may be placed within the same 1&nbsp;&yen;&nbsp;1&nbsp;km box (in which case the first is overwritten). Also, some pixels in the regridded image may remain unfilled. This unfilling occurs when pixels are large, and consequently further apart than 1&nbsp;km.</P>
+<P CLASS=Body> All latitudes provided within SADIST-2 products are geodetic; that is, they show the angle formed by the intersection between the equatorial plane and the local normal at the Earth's surface. </P>
+<A NAME=HEADING1-395></A>
+<H3 CLASS=Heading3> 4.3.1  Cosmetic fill</H3>
+<P CLASS=Body> Grid pixels which remain unfilled by the regridding process are filled by copying the nearest ("real") neighbour. It can be seen that this process of cosmetic-filling has the effect of (approximately) reconstituting original pixel sizes. Filling occurs only where actual pixels are large, and therefore widely-spaced, but have been squeezed into 1&nbsp;&yen;&nbsp;1&nbsp;km boxes. Nearest-neighbour copying reverses the pixel squeezing, and allows pixels to expand to a more representative size.</P>
+<A NAME=HEADING1-397></A>
+<H3 CLASS=Heading3> 4.3.2  Cloud Clearing</H3>
+<P CLASS=Body> The process of cloud-clearing, or the identification of "clear" pixels, is accomplished by applying in turn a series of tests to the brightness temperature data in the 12, 11 and 3.7&micro;m channels, and to the reflectance data in the 1.6&micro;m channel. </P>
+<P CLASS=Body> The pixel is flagged as cloudy if any one of the tests indicates the presence of cloud. Considered in detail, the physics involved is complicated; however, broadly speaking the detection of cloudy pixels is based upon identifying deviations caused by the presence of cloud from the properties of and relationships between measured brightness temperatures expected for clear conditions. (See Z&aacute;vody <I CLASS=Body>et al. </I>(1999) for more details of the ATSR cloud clearing scheme.) <I CLASS=Body></I></P>
+<P CLASS=Body> <A HREF="index.shtml#MARKER-9-1" CLASS=Body>Table 3</A> below summarises the cloud clearing tests implemented in SADIST. All of the tests are of course conditional on the appropriate infrared or 1.6&micro;m data being available. The 1.6&micro;m test operates on daytime data only. The tests involving the 3.7&micro;m channel, on the other hand, are only applied to night-time data, because reflected solar radiation may be significant in this channel during the day. Those tests that involve the 11 and 12&micro;m channels are applicable to both daytime and night-time data. Not all of the tests are implemented over land so cloud clearing over land is not as effective as over the ocean.</P>
+<TABLE BORDER=1><CAPTION><DL CLASS=TableTitle>
+<DT CLASS=TableTitle><DD CLASS=TableTitle>TABLE 3.  <A NAME=MARKER-9-1></A>ATSR cloud clearing tests
+</CAPTION><TR VALIGN=TOP><TH></DL>
+<P CLASS=CellHeading> Cloud Test</P>
+<TH><P CLASS=CellHeading> Views used</P>
+</TH></TR><TR VALIGN=TOP><TH><P CLASS=CellBody> 1.6&micro;m histogram test</P>
+</TH><TH><P CLASS=CellBody> nadir and forward views</P>
+</TH></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 11&micro;m spatial coherence test</P>
+</TD><TD><P CLASS=CellBody> nadir and forward views</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> Gross cloud test</P>
+</TD><TD><P CLASS=CellBody> applied to nadir and forward views separately</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> Thin cirrus test</P>
+</TD><TD><P CLASS=CellBody> applied to nadir and forward views separately</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> Medium/high level cloud test</P>
+</TD><TD><P CLASS=CellBody> applied to nadir and forward views separately</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> fog/low stratus test</P>
+</TD><TD><P CLASS=CellBody> applied to nadir and forward views separately</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 11/12&micro;m nadir/forward test</P>
+</TD><TD><P CLASS=CellBody> uses both views</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 11/3.7&micro;m nadir/forward test</P>
+</TD><TD><P CLASS=CellBody> uses both views</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> Infrared histogram test</P>
+</TD><TD><P CLASS=CellBody> applied to nadir and forward views separately</P>
+</TD></TR></TABLE><P CLASS=Body> A series of cloud state flags is defined within the SADIST code for each pixel and for the forward and nadir view separately. These are listed in <A HREF="index.shtml#MARKER-9-6" CLASS=Body>Table 4</A>.</P>
+<TABLE BORDER=1><CAPTION><DL CLASS=TableTitle>
+<DT CLASS=TableTitle><DD CLASS=TableTitle>TABLE 4.  <A NAME=MARKER-9-6></A>Cloud-clearing/land flagging flag bit settings (nadir or forward view)
+</CAPTION><TR VALIGN=TOP><TH></DL>
+<P CLASS=CellHeading> bit #</P>
+<TH><P CLASS=CellHeading> Meaning if set</P>
+</TH></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 0</P>
+</TD><TD><P CLASS=CellBody> Pixel is over land</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 1</P>
+</TD><TD><P CLASS=CellBody> Pixel is cloudy (result of all cloud tests)</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 2</P>
+</TD><TD><P CLASS=CellBody> Sunglint detected in pixel</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 3</P>
+</TD><TD><P CLASS=CellBody> 1.6&micro;m reflectance histogram test shows pixel cloudy (day-time only)</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 4</P>
+</TD><TD><P CLASS=CellBody> 1.6&micro;m spatial coherence test shows pixel cloudy (day-time only)</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 5</P>
+</TD><TD><P CLASS=CellBody> 11&micro;m spatial coherence test shows pixel cloudy</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 6</P>
+</TD><TD><P CLASS=CellBody> 12 &micro;m gross cloud test shows pixel cloudy</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 7</P>
+</TD><TD><P CLASS=CellBody> 11/12&micro;m thin cirrus test shows pixel cloudy</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 8</P>
+</TD><TD><P CLASS=CellBody> 3.7/12&micro;m medium/high level test shows pixel cloudy (night-time only)</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 9</P>
+</TD><TD><P CLASS=CellBody> 11/3.7&micro;m fog/low stratus test shows pixel cloudy (night-time only)</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 10</P>
+</TD><TD><P CLASS=CellBody> 11/12&micro;m view-difference test shows pixel cloudy</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 11</P>
+</TD><TD><P CLASS=CellBody> 3.7/11&micro;m view-difference test shows pixel cloudy(night-time only)</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 12</P>
+</TD><TD><P CLASS=CellBody> 11/12&micro;m thermal histogram test shows pixel cloudy</P>
+</TD></TR></TABLE><P CLASS=Body> These flags are set according to the results of the tests. Thus if one of the flags numbered 3 to 12 is set, this means that the corresponding test has indicated the presence of cloud. If on completion of the cloud-clearing sequence any of these flags is not set, it may mean either that the test did not indicate the presence of cloud, or that the test was not applied because suitable data was lacking.</P>
+<A NAME=HEADING1-605></A>
+<H3 CLASS=Heading3> 4.3.3  SST retrieval</H3>
+<P CLASS=Body> The objective of this procedure is to use the measured infrared brightness temperature values to determine, for each cloud-free pixel over sea, the best estimate of the Sea Surface Temperature (SST) of the pixel, to form an SST image at 1&nbsp;km resolution.</P>
+<P CLASS=Body> The SST is calculated using predetermined coefficients. In the current version the coefficients are given for three geographical regions: tropical, midlatitude and polar. (A new version is under test which use a global set of coefficients.) The values of the coefficients also depend to some extent on the viewing angle, and so the across-track distance of the pixel expressed in terms of band number determines the set of coefficients to be used for a given pixel. In the current version five different sets of coefficients are defined for each geographical region, to represent the 5&nbsp;different across-track distances (and therefore air masses) corresponding to the across-track bands. There are thus 15 sets of coefficients for each case.</P>
+<P CLASS=Body> Whenever possible, both the nadir view and forward view pixels are used. Cloud contamination for the forward view pixels is more likely than for the nadir view due to the larger sampling area in the former, hence the possibility of using the brightness temperatures from the nadir view only is also catered for. (It would be possible in theory to derive retrieval coefficients for the case of a forward view image only, but this is not done in practice.)</P>
+<P CLASS=Body> The algorithms using the nadir view only are given by</P>
+<P CLASS=Equation>(EQ 8) <IMG ALIGN=TOP SRC="re1ima14.gif"></P>
+<P CLASS=Body> or</P>
+<P CLASS=Equation>(EQ 9) <A NAME=MARKER-9-20></A><IMG ALIGN=TOP SRC="re1ima15.gif"></P>
+<P CLASS=Body> When both views are used, the corresponding equations are</P>
+<P CLASS=Equation>(EQ 10) <IMG ALIGN=TOP SRC="re1ima16.gif"></P>
+<P CLASS=Body> or</P>
+<P CLASS=Body> <IMG ALIGN=TOP SRC="re1ima17.gif"></P>
+<P CLASS=Equation>(EQ 11) </P>
+<P CLASS=Body> respectively.</P>
+<P CLASS=Body> If the pixel is over land an SST retrieval is clearly not appropriate. In order to provide a precision estimate of the land surface temperature it would be necessary to have detailed information about the emissivity of the land surface in the various channels. This would present some difficulty given the large spatial variability in the physical characteristics of land surfaces. In this case therefore, SADIST supplies the 11&micro;m nadir-view brightness temperature as the best available estimate of the land surface temperature in the absence of such detailed information.</P>
+<P CLASS=Body> The logic of the procedure used within SADIST for deriving a retrieved SST is therefore as follows in <A HREF="index.shtml#MARKER-9-21" CLASS=Body>Figure&nbsp;3 on page&nbsp;17</A>. </P>
+<P CLASS=Body> When a dual view retrieval is required, the procedure is similar except that the 11 and 12&micro;m brightness temperatures for both nadir-view and forward view must be checked for validity. If all four are valid, the solar elevation and 3.7&micro;m brightness temperatures for the image pixel in both views are inspected. If both brightness temperatures are valid and the solar elevation is negative for both views, a 3-channel retrieval is made, otherwise a two-channel retrieval is performed. As before if one of the 11 or 12&micro;m brightness temperatures is invalid, the "forward view SST valid" flag is set to false (again it is initialized to this value) and the retrieved temperature is set to the 11&micro;m nadir-view brightness temperature.</P>
+<P CLASS=Body> In theory SSTs should not be calculated for cloudy pixels. If both views (forward and nadir) are cloud-free, then clearly a valid dual-view retrieval is possible, and if the nadir view is cloud-free a valid nadir-view retrieval is possible. However, if the nadir view pixel is cloudy, or if both views are cloudy, a valid retrieval is not possible for either the nadir view or dual view cases. Nevertheless, in SADIST both nadir and dual view retrievals are derived in all cases where the pixel is over the sea, and the interpretation is left to the user, who of course has available the cloud identification flags in the confidence word.</P>
+  <P CLASS=Figure>FIGURE 3. <A NAME=MARKER-9-21></A>Schematic of the decision flow 
+    in the ATSR SST retrieval algorithm</P>
+  <P CLASS=Figure><IMG ALIGN=TOP SRC="re1ima18.gif"> </P>
+<P CLASS=Body> This approach has the merit of simplifying the logic of the algorithm slightly. A further justification is that if the cloud identification algorithms have flagged a pixel as cloudy in error, then this approach ensures that the best available SST is still provided notwithstanding the error in cloud identification.</P>
+<TABLE BORDER=1><CAPTION><DL CLASS=TableTitle>
+<DT CLASS=TableTitle><DD CLASS=TableTitle>TABLE 5.  <A NAME=MARKER-9-8></A>Definition of the across-track band selection scheme
+</CAPTION><TR VALIGN=TOP><TD></DL>
+<P CLASS=CellHeading> Band Number</P>
+<TD><P CLASS=CellHeading> Band Limits (km)</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 0</P>
+</TD><TD><P CLASS=CellBody> -256 to -200</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 1</P>
+</TD><TD><P CLASS=CellBody> -200 to -150</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 2</P>
+</TD><TD><P CLASS=CellBody> -150 to -100</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 3</P>
+</TD><TD><P CLASS=CellBody> -100 to -50</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 4</P>
+</TD><TD><P CLASS=CellBody> -50 to 0</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 5</P>
+</TD><TD><P CLASS=CellBody> 0 to 50</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 6</P>
+</TD><TD><P CLASS=CellBody> 50 to 100</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 7</P>
+</TD><TD><P CLASS=CellBody> 100 to 150</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 8</P>
+</TD><TD><P CLASS=CellBody> 150 to 200</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 9</P>
+</TD><TD><P CLASS=CellBody> 200 to 256</P>
+</TD></TR></TABLE><P CLASS=Body> The across-track band is identified from the across track co-ordinate of the pixel. The across-track bands are the same as those defined for the cloud-clearing algorithms. The bands are numbered form 0 to 9 inclusive, and each is 50km wide except for the two extreme bands, which are each 56 km wide (see <A HREF="index.shtml#MARKER-9-8" CLASS=Body>Table&nbsp;5 on page&nbsp;18</A>). It will be noted that the bands are symmetrical about the ground track. The path lengths to pixels in band 4, are for example, are identical to those in band 5, and similarly for the other symmetrical pairs, so that only 5 sets of coefficients are required.</P>
+<P CLASS=Body> The latitude of the pixel is also determined. This governs whether the coefficients for the tropical, temperate, or polar regions are to be used. Three zonal limits are defined, TROPICAL_INDEX, TEMPERATE_INDEX, and POLAR_INDEX. Numerical values are given in <A HREF="index.shtml#MARKER-9-9" CLASS=Body>Table 6</A>..</P>
+<TABLE BORDER=1><CAPTION><DL CLASS=TableTitle>
+<DT CLASS=TableTitle><DD CLASS=TableTitle>TABLE 6.  <A NAME=MARKER-9-9></A>Latitude Limits
+</CAPTION><TR VALIGN=TOP><TH></DL>
+<P CLASS=CellHeading> Latitude Index</P>
+<TH><P CLASS=CellHeading> Latitude Limits</P>
+</TH></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> Tropical</P>
+</TD><TD><P CLASS=CellBody> 12.5&deg;</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> Temperate</P>
+</TD><TD><P CLASS=CellBody> 37&deg;</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> Polar</P>
+</TD><TD><P CLASS=CellBody> 70&deg;</P>
+</TD></TR></TABLE><P CLASS=Body> The latitude and across-track band number of the pixel determine the usage of the retrieval coefficients as shown in <A HREF="index.shtml#MARKER-9-22" CLASS=Body>Figure&nbsp;4 on page&nbsp;19</A>.</P>
+  <P CLASS=Figure>FIGURE 4. <A NAME=MARKER-9-22></A> SADIST scheme for selecting 
+    appropriate SST retrieval coefficients based on pixel latitude<IMG align=TOP src="re1ima19.gif"></P>
+<P CLASS=Body> The approach used ensures that the retrievals do not show discontinuities at latitudes equal to one of the values TROPICAL_INDEX, TEMPERATE_INDEX, or POLAR_INDEX, and varies smoothly at points in between as the air-mass type changes</P>
+<A NAME=HEADING1-760></A>
+<H3 CLASS=Heading3> 4.3.4  SST Smoothing</H3>
+<P CLASS=Body> The final step in generating the SST images, but not the spatially averaged products, is to smooth the derived temperature images. This step is necessary because, although the derived temperatures are estimates of the true SST, they are affected by noise to a greater degree than the measured brightness temperatures themselves. This follows because the coefficients multiplying the brightness temperatures in equations may exceed unity, or combine to yield a net increase in variance.</P>
+<P CLASS=Body> The smoothing technique adopted is not to filter the images directly, but to work with the difference between the derived SST image and the nadir-view 11&micro;m brightness temperature image. If there were no atmosphere, the 11&micro;m brightness temperature at near normal incidence would be a very good approximation to the SST (differing only because the emissivity of the sea surface viewed at normal incidence differs slightly from unity). Thus the difference between the retrieved SST and the nadir-view 11&micro;m brightness temperature is a good measure of the atmospheric attenuation in the 11&micro;m channel, and might be expected to show only small spatial variations over distances of a few kilometres. Thus if this difference is smoothed, the result may be regarded as the correction to be added to the nadir-view 11&micro;m brightness temperature to give the true SST.</P>
+<P CLASS=Body> In practice the difference is averaged over blocks of 3<U CLASS="Symb Body">&nbsp;&yen;</U>&nbsp;3 pixels, the pixels corresponding to valid retrievals being included in the average with equal weight. Thus up to 9 pixels contribute to each average. The smoothed difference is then added to the nadir-view 11 &micro;m brightness temperature to give the final retrieved SST value. If no valid pixels contribute to the average, or if there is no valid nadir view SST, a corrected SST is not calculated and the smoothed SST value is set to -1. The smoothing is carried out separately for the nadir and dual view images.</P>
+<P CLASS=Body> The smoothing takes account of cloud flagging; that is, pixels flagged as cloudy are not included in the average, otherwise an increased variance of the smoothed SST in cloudy areas would result. </P>
+<A NAME=HEADING1-765></A>
+<H1 CLASS=Heading1> 5.0  Data Characteristics</H1>
+<HR CLASS=Heading1>
+<A NAME=HEADING1-766></A>
+  <P CLASS=BodyAfterHead> The following sub-sections describe the characteristics 
+    of the ATSR-1 and 2 data, and the mission constraints that affect this data 
+    and its availability. </P>
+<HR CLASS=BodyAfterHead>
+<A NAME=HEADING1-767></A>
+<H2 CLASS=Heading2> 5.1  ERS Orbit, repeat cycles and global coverage</H2>
+<P CLASS=Body> Both ERS-1 and ERS-2 are in a near-circular, retrograde, sun-synchronous orbit at a mean height of approximately 780 km. This orbit results in a sub-satellite velocity of 6.7 kms-1 across the Earth's surface and an orbital period of about 100 minutes. Usually the ERS spacecraft are in "Yaw Steering Mode", in which the satellite is continually rotated about the yaw axis to compensate for the Earth's rotation. </P>
+<P CLASS=Body> Both spacecraft have been positioned to operate with a south-bound equator crossing (descending node) of around 1030 local solar time and a north-bound equator crossing (ascending node) of 2230 local solar time. As the satellite performs a non-integer number of orbits per day, the orbital tracks do not repeat on a daily basis, although local solar time for passing any latitude is essentially invariant. The ERS-2 orbit has been established with a 1-day lag over ERS-1, so ATSR-2 views the location that was observed by ATSR-1 on the same orbit the previous day. </P>
+<P CLASS=Body> Both platforms have orbit manoeuvring capability and can alter the phasing of the successive ground tracks by making slight adjustments to the spacecraft's altitude. Various repeat cycles can be achieved, and 3, 35 and 168-day repeats have been employed during the two missions. Only occasional orbit correction manoeuvres are required to maintain subsatellite-track repeatability to within &plusmn;1km from nominal.</P>
+<P CLASS=Body> The repeat-cycle history of both spacecraft is given in <A HREF="index.shtml#MARKER-9-7" CLASS=Body>Table&nbsp;7 on page&nbsp;21</A>. Note that the 512 km-wide swath of ATSR does not result in complete global coverage when the parent satellite is in a 3-day repeat cycle.</P>
+<P CLASS=Body> </P>
+<TABLE BORDER=1><CAPTION><DL CLASS=TableTitle>
+<DT CLASS=TableTitle><DD CLASS=TableTitle>TABLE 7.  <A NAME=MARKER-9-7></A> ERS-1/2 orbit repeat cycles
+</CAPTION><TR VALIGN=TOP><TH></DL>
+<P CLASS=CellHeading> Satellite</P>
+<TH><P CLASS=CellHeading> Date range</P>
+</TH><TH><P CLASS=CellHeading>  Repeat cycle </P>
+</TH><TH><P CLASS=CellHeading> Orbit phase name</P>
+</TH><TH><P CLASS=CellHeading> Global ATSR </P>
+</TH></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> <B CLASS=CellBody>ERS-1</B></P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 31 July 1991 - 10 December 1991</P>
+</TD><TD><P CLASS=CellBody>  3-day </P>
+</TD><TD><P CLASS=CellBody> Commissioning Phase</P>
+</TD><TD><P CLASS=CellBody> N</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 10-26 December 1991</P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> ERS-1 orbit manoeuvres </P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 26 December 1991 - 30 March 1992</P>
+</TD><TD><P CLASS=CellBody>  3-day </P>
+</TD><TD><P CLASS=CellBody> Ice Phase</P>
+</TD><TD><P CLASS=CellBody> N</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 30 March 1992 - 14 April 1992</P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> ERS-1 orbit manoeuvres </P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 14 April 1992 - 17 December 1993</P>
+</TD><TD><P CLASS=CellBody>  35-day </P>
+</TD><TD><P CLASS=CellBody> Global Phase</P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 17-21 December 1993</P>
+</TD><TD><P CLASS=CellBody>  </P>
+</TD><TD><P CLASS=CellBody> ERS-1 orbit manoeuvres </P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 21 December 1993 - 10 April 1994</P>
+</TD><TD><P CLASS=CellBody>  3-day </P>
+</TD><TD><P CLASS=CellBody> Second Ice Phase</P>
+</TD><TD><P CLASS=CellBody> N</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 10 April 1994 - 19 March 1995</P>
+</TD><TD><P CLASS=CellBody>  168-day </P>
+</TD><TD><P CLASS=CellBody> Geodetic Phase</P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 19-21 March 1995</P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> ERS-1 orbit manoeuvres </P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 21 March 1995 - present</P>
+</TD><TD><P CLASS=CellBody>  35-day</P>
+</TD><TD><P CLASS=CellBody> Global Phase/Tandem Phase</P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> <B CLASS=CellBody>ERS-2</B></P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 22nd April 1995 - present</P>
+</TD><TD><P CLASS=CellBody> 35-day</P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> Y</P>
+</TD></TR></TABLE><P CLASS=Body> In June 1996, ESA chose to cease data collection from ERS-1. At this time the satellite had exceeded its design lifetime by almost two years. The platform was commanded into hibernation mode, but remains functional, and was re-activated to acquire three days of data once every 70 days until December 1997, until an anomaly with the solar array occurred. After this ATSR-1 was put into a hibernation mode, but has been operated successfully for a 3 day period in May 1999. </P>
+<A NAME=HEADING1-1017></A>
+<H2 CLASS=Heading2> 5.2  ATSR-1</H2>
+<P CLASS=Body> For the ATSR-1 mission, with only four channels and 958 useful pixels per scan, data rate was not a major issue. The four channels were transmitted as shown in <A HREF="index.shtml#MARKER-9-4" CLASS=Body>Table&nbsp;8, "Summary of data transmission for ATSR-1," on page&nbsp;21</A>. </P>
+<TABLE BORDER=1><CAPTION><DL CLASS=TableTitle>
+<DT CLASS=TableTitle><DD CLASS=TableTitle>TABLE 8.  <A NAME=MARKER-9-4></A>Summary of data transmission for ATSR-1
+</CAPTION><TR VALIGN=TOP><TH></DL>
+<P CLASS=CellHeading> Channel   </P>
+<TH><P CLASS=CellHeading>  Digital resolution </P>
+</TH><TH><P CLASS=CellHeading>  Transmitted </P>
+</TH><TH><P CLASS=CellHeading>  Notes</P>
+</TH></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 10.8<U CLASS="Symb CellBody">m</U>m </P>
+</TD><TD><P CLASS=CellBody>  12-bit              </P>
+</TD><TD><P CLASS=CellBody>  Always     </P>
+</TD><TD><P CLASS=CellBody>  </P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 12.0<U CLASS="Symb CellBody">m</U>m </P>
+</TD><TD><P CLASS=CellBody>  8-bit              </P>
+</TD><TD><P CLASS=CellBody>  Always     </P>
+</TD><TD><P CLASS=CellBody>  Transmitted as 11<U CLASS="Symb CellBody">m</U>m -12<U CLASS="Symb CellBody">m</U>m difference</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody>                                           </P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody>  (11-bit accuracy recoverable)</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 1.6<U CLASS="Symb CellBody">m</U>m </P>
+</TD><TD><P CLASS=CellBody>  10-bit              </P>
+</TD><TD><P CLASS=CellBody>  Day-time </P>
+</TD><TD><P CLASS=CellBody>  Blanking pulse also transmitted</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> 3.7<U CLASS="Symb CellBody">m</U>m </P>
+</TD><TD><P CLASS=CellBody>  10-bit              </P>
+</TD><TD><P CLASS=CellBody>  Night-time </P>
+</TD><TD><P CLASS=CellBody>  Blanking pulse also transmitted </P>
+</TD></TR></TABLE><P CLASS=Body> Data from the 1.6 and 3.7<U CLASS="Symb Body">m</U>m channels is encoded using an exponential method, see Z&aacute;vody <I CLASS=Body>et al.</I> (1994) for further details. The criterion for selecting which of the 1.6 or 3.7mm channels is placed in the telemetry is based on the 1.6&micro;m reflectance. Usually this is above a certain threshold value only in day-time, however lightning and other bright events can cause 1.6&micro;m data to be preferred to 3.7&micro;m at night. During the ATSR-1 mission, the 1.6&micro;m threshold was maintained at 110 counts until, following the failure of the ATSR-1 3.7&micro;m channel, then the threshold value was lowered in order to keep all the 1.6&micro;m data. </P>
+<P CLASS=Body> A higher threshold of 150 counts in 1.6&micro;m channel was chosen for ATSR-2 operation as it was considered that 3.7&micro;m data, usually discarded in day-time, remain useful at low levels of sunlight.<I CLASS=Body> </I></P>
+<P CLASS=Body> Different threshold settings have been used at different times during the ATSR-2 mission, so please contact the ATSR Project Team if more information is required.</P>
+<A NAME=HEADING1-1111></A>
+<H2 CLASS=Heading2> 5.3  ATSR-2 data rates and flexible formats (pixel maps)</H2>
+<P CLASS=Body> For ATSR-2 there is a guaranteed 320kbs data rate, but dependant on the disposition of the Active Microwave instrument (AMI), 683kbps can be available to ATSR-2 at some times. The guaranteed data rate is known as low rate (L-rate), and the higher rate is known as high rate (H-rate).</P>
+<P CLASS=Body> Over sea, the AMI is in wind/wave mode and acquires substantially more data than when in the wind mode employed over land. Thus ATSR usually gets H-rate over land, which is fortunate, as that is where the visible data are most useful. The ATSR-2 H-rate is only used in day-time (i.e., when the sub-satellite solar zenith angle &gt; 10 degrees) and when a minimum of 60&nbsp;seconds of H-rate format is available. <A HREF="index.shtml#MARKER-9-24" CLASS=Body>Figure&nbsp;5 on page&nbsp;22</A> shows the global coverage for high-rate data during the 35-day repeat cycle 33 from 8th June to 13 July 1998.<A NAME=MARKER-9-23></A></P>
+<P CLASS=Figure>FIGURE 5.  <A NAME=MARKER-9-24></A>ATSR-2 H-rate coverage for ERS-2 cycle 33 from 8th June to 13 July 1998 <IMG ALIGN=TOP SRC="re1ima20.gif"></P>
+<A NAME=HEADING1-1115></A>
+<H2 CLASS=BodyAfterHead> Generally, the data bit rate per second required by ATSR-2 is given by:-</H2>
+<HR CLASS=BodyAfterHead>
+<P CLASS=Body>  <I CLASS=Body>no. pixels/scan</I> &yen; <I CLASS=Body>bits/pixel</I> &yen; <I CLASS=Body>no. channels</I> &yen; <I CLASS=Body>scan rate (6.7 Hz)</I></P>
+<P CLASS=Body> At night-time, data from the visible channels are not considered useful, and the <B CLASS=Body>Night</B> format is employed. This completely omits the visible channels, and returns 12-bit data for the thermal channels and 11-bit data for the 1.6&micro;m channel. </P>
+<P CLASS=Body> In day-time, <B CLASS=Body>Flexible</B> format is employed by default. This entails the use of pixel maps in which only some of the various possible elements of the visible data are selected to squeeze the data rate into the available bandwidth. The operational pixel maps are summarised in <A HREF="index.shtml#MARKER-9-5" CLASS=Body>Table&nbsp;9, "Summary of pixel maps used for routine ATSR-2 operations," on page&nbsp;23</A>. Note that one choice involves selecting only alternate pixels from the forward view. </P>
+<P CLASS=Body> Pixel map 12 is only used during outgassings when no useful infrared data are available. In general for the early part of the mission, pixel map&nbsp;14 is used for the first nine days of every month, and pixel map 13 for the remainder. To be precise, pixel map&nbsp;14 is enabled for the first orbit after 1100UTC on the first of the month, with the switch to map&nbsp;13 taking place at the first appearance of daylight on the 10th day. However, recently the cycle of changes has been modified to fit in with special data acquisitions from GOME; see the new pages at the ATSR WWW site or contact the ATSR Project Team at RAL for more information on this.</P>
+<TABLE BORDER=1><CAPTION><DL CLASS=TableTitle>
+<DT CLASS=TableTitle><DD CLASS=TableTitle>TABLE 9.  <A NAME=MARKER-9-5></A> Summary of pixel maps used for routine ATSR-2 operations
+</CAPTION><TR VALIGN=TOP><TH></DL>
+<P CLASS=CellHeading> Pixel Map</P>
+<TH><P CLASS=CellHeading>  IR data</P>
+</TH><TH COLSPAN=2><P CLASS=CellHeading>  Visible data</P>
+</TH></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> H-Rate</P>
+</TD><TD><P CLASS=CellBody> All 12-bit</P>
+</TD><TD><P CLASS=CellBody> 0.55, 0.67 &amp; 0.87&micro;m</P>
+</TD><TD><P CLASS=CellBody> All channels for full 500km swath &amp; 12-bit digitisation</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> Map 12 </P>
+</TD><TD><P CLASS=CellBody>  Not sent</P>
+</TD><TD><P CLASS=CellBody> 0.55, 0.67 &amp; 0.87&micro;m</P>
+</TD><TD><P CLASS=CellBody> Full 500 km swath width with 12-bit digitisation</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> Map 13 </P>
+</TD><TD><P CLASS=CellBody>  As ATSR-1 </P>
+</TD><TD><P CLASS=CellBody> 0.55, 0.67 &amp; 0.87&micro;m</P>
+</TD><TD><P CLASS=CellBody> Reduced 180 km swath width with 12-bit digitisation</P>
+</TD></TR><TR VALIGN=TOP><TD ROWSPAN=2><P CLASS=CellBody> Map 14 </P>
+</TD><TD ROWSPAN=2><P CLASS=CellBody>  As ATSR-1 </P>
+</TD><TD><P CLASS=CellBody>  0.55&micro;m</P>
+</TD><TD><P CLASS=CellBody> Reduced 300 km swath with 8-bits digitisation in nadir</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody>  0.67 &amp; 0.87&micro;m</P>
+</TD><TD><P CLASS=CellBody> Full 500 km swath with 8-bits digitisation in nadir<BR>&amp; alternate (interlaced) pixels in forward with 8-bits digitisation</P>
+</TD></TR></TABLE><P CLASS=Body> Headers supplied with each data product include information on which pixel maps were used during data acquisition.</P>
+<A NAME=HEADING1-1201></A>
+<H2 CLASS=Heading2> 5.4  <A NAME=MARKER-9-25></A>Descoping</H2>
+<P CLASS=Body>  For certain orbits, the tape recorder capacity and the contact time with the ground station is insufficient to download all the data that could be acquired. This problem is resolved by "descoping", such that data from certain parts of the orbit are not transmitted. ESA have a document known as the High level Operations Plan (HLOP) that defines the rules (as agreed with the ESA National Delegates) that govern the way the descoping operates. <A HREF="index.shtml#MARKER-9-26" CLASS=Body>Figure&nbsp;6 on page&nbsp;24</A> shows the regions selected for descoping during the ERS-2 35-day repeat which took place from 15th May 1995 until 19th June 1995.</P>
+<P CLASS=Figure>FIGURE 6.  <A NAME=MARKER-9-26></A>ERS-2 Descoping regions during cycle 33 from 8th June to 13 July 1998.<IMG ALIGN=TOP SRC="re1ima21.gif"> </P>
+<P CLASS=Body> In general, day-time data acquired over land or ice are selected for omission, although considerable amounts of sea data are also lost. A full set of maps indicating the range of descoping for the ERS-2 mission is available on the ATSR web site (<U CLASS="Blue Body">http://www.atsr.rl.ac.uk</U>). Although a region is subject to descoping during a certain period, this does not mean it has no coverage; for example, even if all the day-time overpasses are lost, there will be night-time overpasses</P>
+<A NAME=HEADING1-1205></A>
+<H2 CLASS=Heading2> 5.5  Outgassing</H2>
+<A NAME=HEADING1-1206></A>
+  <P CLASS=BodyAfterHead> Contaminants from the satellite continually condense onto 
+    the cold surfaces of the focal plane (FPA) and its detectors. This degrades 
+    instrument operation both due to signal attenuation, and because the changed 
+    surface emissivities increase the radiative load on the cooler. Calibration 
+    is not affected by this as the calibration reference sources are forward of 
+    the field stop, and thus subject to the same modification as the Earth view 
+    signal. Occasionally the focal plane assembly is allowed to warm to vaporise 
+    these contaminants.</P>
+<HR CLASS=BodyAfterHead>
+<P CLASS=Body> These outgassings are conducted several times a year. No useful infrared data can be acquired during these times. Although continuity of data is maintained for the visible channels, as the operation of the visible detectors is unaffected by the increased temperature, considerable care must be taken in using visible data collected during an outgassing. This is because the condensation also affects the throughput of the visible channels, and the sudden loss of the condensation film invalidates the calibration data collected during the previous orbits. Hence, when outgassings are occurring, the calibration of the visible channels is undefined.</P>
+<P CLASS=Body> It should be noted that during outgassings the unavailability of infrared data permits more telemetry bandwidth for the visible data, and these can be transmitted in full at 12-bit digital resolution. </P>
+<A NAME=HEADING1-1209></A>
+<H1 CLASS=Heading1> 6.0  Instrument Performance</H1>
+<HR CLASS=Heading1>
+<A NAME=HEADING1-1210></A>
+<H2 CLASS=Heading2> 6.1  ATSR-1 Performance</H2>
+<P CLASS=Body> ATSR-1 performance was generally good and met the pre-flight specification, although the loss of the 3.7&micro;m channel in May&nbsp;1992 was a major disappointment. The performance of the cooler deteriorated several years into the mission; nevertheless ATSR-1 succeeded in delivering high-quality data for almost five years. The instrument is still viable, although the power constraints on ERS-1 prevent its routine operation. </P>
+<A NAME=HEADING1-1212></A>
+<H3 CLASS=Heading3> 6.1.1  ATSR-1 cooler performance</H3>
+<P CLASS=Body> After initial cooldown, the ATSR-1 cooler reached a cold block temperature of 89&nbsp;&plusmn;&nbsp;1K. From early 1994, it became increasingly difficult for ATSR's on-board cooler to maintain the detector temperatures below 95K. To reduce mechanical wear and maximise the life of the cooler, temperatures were allowed to rise gradually, reaching 110K in early 1996. </P>
+<P CLASS=Body> The step discontinuities in the cooler cold tip temperature seen in <A HREF="index.shtml#MARKER-9-27" CLASS=Body>Figure 7</A> occur either after an instrument outgassing, where the heat load on the cooler has been reduced following warming of the FPA to liberate the condensed material trapped on its cold surfaces, or due to changes in cooler performance following a modification of the cooler amplitude setting (i.e., and increase of decrease in the cooler power). </P>
+<P CLASS=Body> After Day 800 in the figure there are only short bursts of data, this period corresponds to the so called "hibernation phase" of ERS-1. During this period satellite, and ATSR-1, are only active for 3 days in every 70.</P>
+<P CLASS=Figure>FIGURE 7.  <A NAME=MARKER-9-27></A>Variation in ATSR-1 Detector Temperatures during the mission (showing daily maximum minimum and mean values).<IMG ALIGN=TOP SRC="re1ima22.gif">,</P>
+<P CLASS=Body> Until ERS-1 entered this "hibernation phase" the overall trend in the temperature of the ATSR-1 cooler cold tip and detectors has been a gradual warming. This warming affects the response of all the detectors, but the main difficulty is in the case of the 12&micro;m channel, where the shift in response is sufficient to modify the ATSR long-wavelength filter cutoff. Generally, the result of this effective change in spectral response is to depress retrieved SSTs, particularly in humid tropical conditions. This is being addressed in the reprocessing of the ATSR-1 data.</P>
+<A NAME=HEADING1-1218></A>
+<H3 CLASS=Heading3> 6.1.2  ATSR-1 radiometric accuracy and noise characteristics</H3>
+<P CLASS=Body> Inevitably, the noise associated with the ATSR-1 channels increased with the detector temperature. The mission requirements specified noise equivalent temperatures (NEDT) better than 0.05K for a 300K scene for each channel. Pre-flight testing of ATSR-1 with the detectors at 80K produced NEDT's for the 11 and 12&micro;m channels of 44mK and 37mK, respectively. By March 1995, the NEDTs for the 11 and 12&micro;m channels were around 60mK and 130mK, respectively. </P>
+<A NAME=HEADING1-1220></A>
+<H3 CLASS=Heading3> 6.1.3  ATSR-1 black bodies/calibration stability</H3>
+<P CLASS=Body> Pre-flight testing checked for drift in platinum resistance thermometer (PRT) calibrations and variations in target emissivity caused by a degradation in the black surface finish. Measurements showed residual temperature gradients across the blackbody base to be less than 25mK at conditions of equilibrium. </P>
+<A NAME=HEADING1-1222></A>
+<H3 CLASS=Heading3> 6.1.4  ATSR-1 3.7&micro;m failure</H3>
+<P CLASS=Body> On May 27th, 1992 the 3.7&micro;m channel failed, and SST retrievals from that point on only used the 10.8 and 12&micro;m channels. (See Murray<I CLASS=Body> et al. </I>(1998) for more information on the effects of this failure).</P>
+<A NAME=HEADING1-1224></A>
+<H2 CLASS=Heading2> 6.2  ATSR-2 performance summary</H2>
+<P CLASS=Body> ATSR-2 performance has been good and within specification, with the exception of some rough running of the scan mechanism. </P>
+<P CLASS=Body> Unfortunately, this problem precipitated a shutdown of the instrument for the period December 1995 to July 1996. Instrument operations were recovered on the 1st July 1996, and apart from a few short shutdowns of a few days the instrument has remained operational ever since. </P>
+<P CLASS=Body> Irregularities in scan mirror lock can be seen as slipped lines of data in some forward view scenes. These are rarely observed in nadir data. It is estimated that less than 1% of the ATSR-2 data set is affected by this problem, and statistically it has no discernable impact on the climate SST products from the instrument.</P>
+<A NAME=HEADING1-1228></A>
+<H3 CLASS=Heading3> 6.2.1  ATSR-2 cooler performance</H3>
+<A NAME=HEADING1-1229></A>
+  <P CLASS=BodyAfterHead> The cooler has maintained a cold tip temperature of 81&nbsp;&plusmn;&nbsp;1K, 
+    and with orbital variation of only &plusmn;0.1K - much better than ATSR-1 
+    and with a lower cooler drive power. </P>
+<HR CLASS=BodyAfterHead>
+<A NAME=HEADING1-1230></A>
+<H3 CLASS=Heading3> 6.2.2  ATSR-2 radiometric accuracy and noise characteristics</H3>
+<P CLASS=Body> Pre-launch calibration showed that the on-board targets agreed to within 10mK of the external reference targets (i.e., at the limit of sensitivity of the system). The radiometric noise (NEDT) for a scene at 270K were found to be 50mK, 21mK and 25mk, for the 3.7, 11.0, 12.0 respectively. Signal gain/offset control loops, threshold settings, compression modes and pixel maps have all been optimised to deliver the instrument's best performance. </P>
+<A NAME=HEADING1-1232></A>
+<H3 CLASS=Heading3> 6.2.3  Visible channels </H3>
+<P CLASS=Body> The visible channel signal-to-noise is well within the design specification. However, long term trend plots reveal oscillations in short wavelength signal intensity. This effect is caused by a build up of condensation on a relay lens mounted on the cold focal plane assembly (FPA). This is accounted for in calibration, and has a negligible effect on accuracy. Degradation of VISCAL optics has been less than 2.0% per year. This subject is covered in more detail by Smith<I CLASS=Body> et al</I>. (1997) and in <A HREF="index.shtml#MARKER-9-19" CLASS=Body>Section&nbsp;4.2.1.2, "Visible and near-infrared channels," on page&nbsp;12</A>. </P>
+<A NAME=HEADING1-1234></A>
+<H3 CLASS=Heading3> 6.2.4  <A NAME=MARKER-9-28></A>ATSR-2 scan jitter problem</H3>
+<P CLASS=Body> Correct positional registration of the 2000 pixels around a scan relies on a steady scan rotation rate (6.7Hz). A scan jitter arises when the rotation speed of the scan mirror deviates from this, as can happen if the rotation is obstructed by debris. </P>
+<P CLASS=Body> Pre-flight testing showed that the ATSR-2 scan mirror rotation produced more debris than that of ATSR-1, and this is likely to be the cause of the "scan jitter" which has been an intermittent feature of ATSR-2 operation. However, it is not clear whether this is the direct effect of this debris on the bearing stiffness, or whether the debris is causing obscuration of the optical sensor that controls the drive to the mechanism.</P>
+<P CLASS=Body> Irregular rotation results in a misalignment of data from successive scans. In some rare cases the infrared calibration may be compromised if the blackbodies are not viewed at the expected positions in the scan. However, the effect on data quality can be mitigated by suitable processing, and the RAL ATSR data processing system detects and flags the worst occurrences of this condition. </P>
+<P CLASS=Body> In-flight monitoring of these jitters revealed a decreasing but persistent problem in 1995. The extra power dissipated in maintaining the scan mirror rotation results in a warming of the scan mechanism. At 06:20&nbsp;UTC on 22nd&nbsp;December&nbsp;1995, the scan encoder temperature exceeded its switchdown limit causing ATSR-2 to switch into STANDBY mode. Prior to this, several orbits had been characterised by a high jitter rate, although the problem appeared to have been resolved before the switch-off. </P>
+<P CLASS=Body> Various attempts were made to restart the mechanism. It was realised that the scan encoder temperature limit was unduly conservative and this was raised in a software patch which was loaded on 26th&nbsp;June&nbsp;1996. </P>
+<P CLASS=Body> Continuous operation resumed on 1st&nbsp;July&nbsp;1996. Subsequent performance has been generally good, although a few periods of difficult running have occurred. </P>
+<A NAME=HEADING1-1241></A>
+<H2 CLASS=Heading2> 6.3  ATSR-1/ATSR-2 comparative performance</H2>
+<P CLASS=Body> Performance parameters from the two instruments are summarised in <A HREF="index.shtml#MARKER-9-3" CLASS=Body>Table&nbsp;10, "ATSR-1/ATSR-2 comparative performance (will be expanded in next version)," on page&nbsp;28</A>.</P>
+<TABLE BORDER=1><CAPTION><DL CLASS=TableTitle>
+<DT CLASS=TableTitle><DD CLASS=TableTitle>TABLE 10.  <A NAME=MARKER-9-3></A>ATSR-1/ATSR-2 comparative performance <I CLASS=TableTitle>(will be expanded in next version)</I>
+</CAPTION><TR VALIGN=TOP><TH></DL>
+<P CLASS=CellHeading> Parameter </P>
+<TH><P CLASS=CellHeading> </P>
+</TH><TH><P CLASS=CellHeading> ATSR-1 </P>
+</TH><TH><P CLASS=CellHeading> ATSR-2 </P>
+</TH></TR><TR VALIGN=TOP><TD COLSPAN=2><P CLASS=CellBody> <B CLASS=CellBody>Cooler temperature </B></P>
+</TD><TD><P CLASS=CellBody>  </P>
+</TD><TD><P CLASS=CellBody>  </P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> Long-term variation </P>
+</TD><TD><P CLASS=CellBody> 90-110K (1991-1995) </P>
+</TD><TD><P CLASS=CellBody>  81&plusmn;1 K (1995-1999)</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> Orbital variation</P>
+</TD><TD><P CLASS=CellBody>  &plusmn;1 K </P>
+</TD><TD><P CLASS=CellBody>  &plusmn;0.1 K </P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> <B CLASS=CellBody>NEDT (at 300K) </B></P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody>  </P>
+</TD><TD><P CLASS=CellBody>  </P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 11.0&micro;m</P>
+</TD><TD><P CLASS=CellBody> 60mK - (March 1995)</P>
+</TD><TD><P CLASS=CellBody> 46mK - (1995)</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 12.0&micro;m </P>
+</TD><TD><P CLASS=CellBody> 130mK - (March 1995)</P>
+</TD><TD><P CLASS=CellBody> 36mK - ((1995)</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> <B CLASS=CellBody>FOV</B></P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> </P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 11.0 &amp; 12.0&micro;m</P>
+</TD><TD><P CLASS=CellBody> Some non-uniformity for CMT</P>
+</TD><TD><P CLASS=CellBody> Some non -uniformity but better than ATSR-1</P>
+<P CLASS=CellBody> Better co-aligned than ATSR-1</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 1.6 &amp; 3.7&micro;m</P>
+</TD><TD><P CLASS=CellBody> Fairly uniform</P>
+</TD><TD><P CLASS=CellBody> All very uniform</P>
+<P CLASS=CellBody> Better co-aligned than ATSR-1</P>
+</TD></TR><TR VALIGN=TOP><TD><P CLASS=CellBody> </P>
+</TD><TD><P CLASS=CellBody> 0.55, 0.67 &amp; 0.87&micro;m</P>
+</TD><TD><P CLASS=CellBody> N/A</P>
+</TD><TD><P CLASS=CellBody> Very uniform</P>
+</TD></TR></TABLE><A NAME=HEADING1-1401></A>
+<H1 CLASS=Heading1> 7.0  References</H1>
+<HR CLASS=Heading1>
+<BLOCKQUOTE CLASS=References>
+<P CLASS=References>Edwards, T., <EM CLASS="Emphasis References">et al</EM>., The along track scanning radiometer measurement of sea surface temperature from ERS-1,<I CLASS=References> J. Br. Interplanet. Soc., </I>43, 160-180, 1990.</P>
+<P CLASS=References>Gray, P.F. <EM CLASS="Emphasis References">et</EM> <EM CLASS="Emphasis References">al</EM>., The optical system of the along track scanning radiometer MK II (ATSR-2), <I CLASS=References>Proc. of ICSO '91</I>, Toulouse, 1991. </P>
+<P CLASS=References>Murray, M.J, M.R. Allen, C.T, Mutlow, A.M. Zavody, T.S. Jones, and T.N. Forrester, Actual and Potential information in dual-view radiometric observations of sea surface temperature from ATSR, <EM CLASS="Emphasis References">J. Geophys. Res.</EM>, <EM CLASS=References>103</EM>, 8153-8165, 1998.</P>
+<P CLASS=References>Mutlow, C.T., A.M. Zavody, I.J. Barton, and D.T. Llewellyn-Jones, Sea surface temperature measurements by the along track scanning radiometer on the ERS-1 satellite: Early results, <EM CLASS="Emphasis References">J. Geophys. Res</EM>., <EM CLASS=References>99</EM>, 575-588, 1994.</P>
+<P CLASS=References>Smith D.L., Read P.D. and Mutlow C.T., The Calibration of the Visible/Near Infra-Red Channels of the Along-Track Scanning Radiometer-2 (ATSR-2) in Sensors, Systems and Next-Generation Satellites, Hiroyuki Fujisadsa, Editor, <I CLASS=References>Proceedings of SPIE, </I>3221, 53-62, 1997.</P>
+<P CLASS=References>Zavody, A.M, M.R. Gorman, D.J. Lee, D. Eccles, C.T. Mutlow and D.T. Llewellyn-Jones, The ATSR data processing scheme developed fro the EODC, <I CLASS=References>Int. J. Remote Sensing, </I>15, 827-843, 1994.</P>
+<P CLASS=References>Zavody, A.M., C.T. Mutlow, and D.T. Llewellyn-Jones A radiative transfer scheme for SST retrieval for the ATSR, <EM CLASS="Emphasis References">J. Geophys. Res</EM>., <EM CLASS=References>100</EM>, 937-952, 1995.</P>
+<P CLASS=References>Zavody, A.M., C.T. Mutlow, and D.T. Llewellyn-Jones<EM CLASS="Emphasis References">, </EM>ATSR Cloud clearing over ocean in the processing of data from the along-track scanning radiometer (ATSR), <I CLASS=References>Accepted for publication by the J. of Atmos. Ocean. Technol.</I>, 1999.</P>
+</BLOCKQUOTE>
+<P CLASS=Body> </P>
+<A NAME=LINK-REV3-lastpage></A><A NAME=LINK-REV3-lastpage></A>
+</DIV>
+
+<DIV CLASS=WM-DIV-FOOTERS>
+
+</DIV>
+
+
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Tuesday, 04-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

@@ -1,0 +1,224 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC ECMWF Seasonal Forecasts (Hindcasts)</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<IMG SRC="/graphics/logos/ecmwflogo.gif" ALT="ECMWF logo" ALIGN="BOTTOM">
+
+<H1>ECMWF Seasonal Forecast (Hindcast) Ensemble data</H1>
+
+<HR ALIGN=LEFT>
+
+<H2>Introduction</H2>
+
+<P>In support of the <a href="/data/coapec">COAPEC Thematic Programme</a> the BADC has extracted seasonal forecast ensemble data from the ECMWF MARS (Meteorological Archive and Retrieval System) archive. These data are also known as "Hindcasts" as they are forecasts run retrospectively. Since the data is part of the ECMWF Operational system BADC users must successfully apply for access to this dataset before they can obtain the data.
+
+<P>The ECMWF produced two sets of runs, System 1 and System 2. The data archived at the BADC are the System 2 runs which use the atmospheric component Cy23r4 of the IFS (Integrated Forecasting System) with a horizontal resolution of TL95 at 40 levels in the vertical. This is the same cycle of the IFS used for the ERA-40 re-analysis. 
+
+<P>A <a href="http://www.ecmwf.int/products/forecasts/seasonal/documentation/index.html">detailed description of the ECMWF Seasonal Forecasting system</a> can be found on the ECMWF web site.
+
+<P><H2>Products</H2>
+<P>The BADC has extracted monthly means, maxima, minima and standard deviations for the available surface variables from 1987 to 6 months before the present date. Atmospheric variables are only currently available as monthly means. The data is held as part of the main BADC Operational ECMWF archive.
+
+<P>For each month there are six forecast months archived, with 5 ensemble members for 10 months of the year, and 40 ensemble members in May and November of each year from 1987-2001. From 2002 onwards there are 40 ensemble members per month. There are 33 parameters held on surface or single levels and 6 parameters available on pressure levels.
+
+<P>The data is held on a regular 1.875 x 1.875 degree grid in GRIB format.
+
+<H2>Parameters</H2>
+
+<P>Table 1 shows the available parameters, dates and levels for the surface data.
+
+<small><B>Table 1.</a>&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the
+Seasonal Forecast Monthly surface data.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+  </tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters
+    (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td ><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+  </tr>
+<TR align=center>
+<TD>January 1987</TD><TD>6 months ago</TD><TD>Volumetric soil water layer 1</TD><TD>39</TD><TD>SWVL1</TD><TD>m<sup>3</sup>/m<sup>3</sup></TD><TD>Surface/single</TD><TD>1</TR>
+
+<TR align=center>
+<TD>"</TD><TD>"</TD><TD>Volumetric soil water layer 2</TD><TD>40</TD><TD>SWVL2</TD><TD>m<sup>3</sup>/m<sup>3</sup></TD><TD>Surface/single</TD><TD>1</TR>
+
+<TR align=center>
+<TD>"</TD><TD>"</TD><TD>Volumetric soil water layer 3</TD><TD>41</TD><TD>SWVL3</TD><TD>m<sup>3</sup>/m<sup>3</sup></TD><TD>Surface/single</TD><TD>1</TR>
+
+<TR align=center>
+<TD>"</TD><TD>"</TD><TD>Volumetric soil water layer 4</TD><TD>42</TD><TD>SWVL4</TD><TD>m<sup>3</sup>/m<sup>3</sup></TD><TD>Surface/single</TD><TD>1</TR>
+
+<TR align=center>
+<TD>"</TD><TD>"</TD><TD>Wind gust at 10 metres </TD><TD>49</td><td>10FG</td><td>m s<sup>-1</sup><TD>Surface/single</TD><TD>1</TR>
+
+<tr align=center><td>"</td><td>"</td><td>Soil temperature level 1</td><td>139</td><td>STL1</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Snow Depth</td><td>141</td><td>SD</td><td>m (of water equivalent)</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Large scale precipitation</td><td>142</td><td>LSP</td><td>m</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Convective precipitation</td><td>143</td><td>CP</td><td>m</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Snow fall</td><td>144</td><td>SF</td><td>m (of water equivalent)</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Surface sensible heat flux (accum.)</td><td>146</td><td>SSHF</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Surface latent heat flux (accum.)</td><td>147</td><td>SLHF</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Mean sea level pressure</td><td>151</td><td>MSL</td><td>Pa</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Total cloud cover</td><td>164</td><td>TCC</td><td>(0-1)</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>10 metre u-wind component</td><td>165</td><td>10U</td><td>m s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>10 metre v-wind component</td><td>166</td><td>10V</td><td>m s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>2 metre temperature</td><td>167</td><td>2T</td><td>K</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>2 metre dewpoint temperature</td><td>168</td><td>2D</td><td>K</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Surface solar radiation (accum.)</td><td>169</td><td>SSRD</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Soil temperature level 2</td><td>170</td><td>STL2</td><td>K</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Surface thermal radiation downward </td><td>175</td><td>STRD</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Surface solar radiation</td><td>176</td><td>SSR</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Surface thermal radiation</td><td>177</td><td>STR</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Top solar radiation</td><td>178</td><td>TSR</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Top thermal radiation</td><td>179</td><td>TTR</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>East/West surface stress</td><td>180</td><td>EWSS</td><td>N m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>North/South surface stress</td><td>181</td><td>NSSS</td><td>N m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Evaporation</td><td>182</td><td>E</td><td>m (of water)</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>"</td><td>"</td><td>Sunshine duration since last post-processing step</td><td>189</td><td>SUND</td><td>s</td><td>"</td><td>"</td></tr>
+
+
+<TR align=center>
+<TD>"</TD><TD>"</TD><TD>Maximum temp. at 2m since previous post-processing </TD><TD>201</TD><TD>MX2T</TD><TD>K</TD><TD>Surface/single</TD><TD>1</TR>
+
+<TR align=center>
+<TD>"</TD><TD>"</TD><TD>Minimum temp. at 2m since previous post-processing </TD><TD>202</TD><TD>MN2T</TD><TD>K</TD><TD>Surface/single</TD><TD>1</TR>
+
+<TR align=center>
+<TD>"</TD><TD>"</TD><TD>10 metre Scalar Wind Speed</TD><TD>207</TD><TD>10WSPD</TD><TD>ms<sup>-1</sup></TD><TD>Surface/single</TD><TD>1</TR>
+
+<TR align=center>
+<TD>"</TD><TD>"</TD><TD>Total Precipitation</TD><TD>228</TD><TD>TP</TD><TD>m</TD><TD>Surface/single</TD><TD>1</TR>
+
+
+</table>
+
+<P>
+
+<P>Table 2 shows the available parameters, dates and levels for the pressure level data.
+
+<P><small><B>Table 2.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Seasonal Forecast Monthly upper air fields on pressure levels.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+  </tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters
+    (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td   width="100"><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+  </tr>
+<TR align=center>
+<TD>01/1987</TD><TD>Present</TD><TD>Temperature</TD><TD>130</TD><TD>T</TD><TD>K</TD><TD>1000, 925, 850, 700, 500, 400, 300, 200</TD><TD>8</TR>
+
+<TR align=center>
+<TD>"</TD><TD>"</TD><TD>Geopotential</TD><TD>129</TD><TD>Z</TD><TD>m<sup>2</sup> s<sup>-2</sup></TD><TD>1000, 925, 850, 700, 500, 200</TD><TD>6</TR>
+
+<TR align=center><TD>"</TD><TD>"</TD><TD>Vorticity 
+(relative)</TD><TD>138</TD><TD>VO</TD><TD>s<sup>-1</sup></TD><TD>"</TD><TD>"</TR>
+
+<TR align=center><TD>"</TD><TD>"</TD><TD>Divergence</TD><TD>155</TD><TD>D</TD><TD>s<sup>-1</sup></TD><TD>"</TD><TD>"</TR>
+
+<TR align=center><TD>"</TD><TD>"</TD><TD>Specific 
+Humidity</TD><TD>133</TD><TD>Q</TD><TD>kg/kg</TD><TD>"</TD><TD>"</TR>
+
+</TABLE>
+<p>
+
+<H2>Note about Ensemble numbers</H2>
+
+<P>Note that for all months except May and November there are only 5 members of the ensemble available from 1987-2001. For May and November of each year from 1987-2001 there are 40 ensemble members available. From 2002 onwards there are 40 ensemble members for all months.
+
+<H2>Location of the archive</H2>
+
+<P>The complete file and directory structure of the Seasonal Forecast Monthly data is located under the directory (available via FTP):<P>
+
+<KBD>/badc/ecmwf-op/data/seasonal_fcs/monthly/</KBD><P>
+
+They can also be accessed via the BADC web site (by registered BADC users) at: <P>
+
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/seasonal_fcs/monthly/">http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/seasonal_fcs/monthly/</A>    
+
+<P>Beneath the monthly directory there are sub-directories for mean, minimum (min), maximum (max) and standard deviations (stdev). There is then a year and month directory. An example directory for the monthly maxima data for January 1989 is:<P>
+
+<KBD>/badc/ecmwf-op/data/seasonal_fcs/monthly/max/1989/01/</KBD><P>
+
+<P>
+  
+<H2>Filenames</H2>
+
+<P>The file-names used for the data complies with the <a href="/help/file_naming.html">BADC File-Naming Convention</a> as follows:<P>
+
+<B><KBD>ecm-sfmm_&lt;location&gt;-&lt;type&gt;_&lt;YYYYMMDD&gt;-&lt;F&gt;m_ens&lt;EE&gt;.grb</KBD></B><P>
+
+Where:
+<BR><B><KBD>&lt;location&gt;</KBD></B> is either 'surface' or 'plevs' (pressure levels),
+<BR><B><KBD>&lt;type&gt;</KBD></B> is the diagnostic type ('mean', 'min', 'max' or 'stdev'),
+<BR><B><KBD>&lt;YYYYMMDD&gt;</KBD></B> is the date (year, month, day),
+<BR><B><KBD>&lt;F&gtm;</KBD></B> is the lead time (forecast time) in months ('m'), and
+<BR><B><KBD>&lt;EE&gt;</KBD></B> is the ensemble number.<P>
+
+<H2>Further Documentation</H2>
+
+<P>Further documentation on this dataset can be found at:
+
+<UL>
+  <LI>The <a href="http://www.ecmwf.int/products/forecasts/seasonal/documentation/index.html">ECMWF Seasonal Forecast User Guide</a>.
+  <LI>An <a href="http://www.ecmwf.int/publications/newsletters/pdf/98.pdf">ECMWF newsletter article about the Seasonal Forecasts</a>.
+</UL>
+
+<P>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+</BODY>
+</HTML>

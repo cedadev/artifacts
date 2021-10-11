@@ -1,0 +1,221 @@
+README.DOC  (1990-03-13)
+
+1. Introduction
+
+This CDROM contains data pertaining to the Airborne Arctic Stratospheric
+Expedition (AASE) which was based in Stavanger, Norway during January and
+February, 1989.
+
+The data consists of measurements collected onboard the NASA ER-2 and DC-8 
+aircraft, ozonesonde soundings from three stations (Angmagssalik and 
+Scoresbysund, Greenland, and Lerwick, U.K.), aerosol and temperature profiles
+from the SAM II satellite, global grid point values of Nimbus 7 TOMS ozone, 
+and selected radiosonde soundings from stations in the region of the 
+experiment.
+
+Theory teams provided calculations of: potential vorticity along the ER-2 
+flight path; cross-sections of potential vorticity, temperature, and 
+geopotential heights along the DC-8 flight path; cross-sections of Clx, Fx, HCl,
+HNO3, and NOy along the DC-8 flight path; global grid point values of 
+temperature, geopotential heights, and horizontal winds on selected pressure
+surfaces; northern hemispheric grid point values of potential vorticity and
+pressure on selected potential temperature surfaces.
+
+And to whet the appetite of those seeking turbulence, two files of 5 Hz data
+from the ER-2 Meteorological Measurement System (MMS) have been included for 
+flights during which mesoscale disturbances were observed.  A separate
+CDROM containing all of the 5 Hz MMS data during the 1989 AASE (including
+the two files on this CDROM) is available as an appendix to this CDROM
+volume.
+
+All files within this release are standard ASCII files with variable length 
+records terminated by <CR><LF> (ASCII decimal values 13 and 10).  In general, 
+the file naming convention uses a two character prefix to identify the 
+measurement, followed by a six digit number giving the year, month, and day 
+(GMT) of the flight (or balloon launch).  To identify the measurement platform,
+a three character extension of ER2, DC8, or Bhh is used to denote the data is 
+from the ER-2, DC-8, or balloon (hh denotes the GMT hour of launch).  
+Exceptions to this convention are the data files for the DC-8 Mark IV 
+interferometer (M489AASE.DC8) and the SAM II measurements (SAM2ARSL.DAT, 
+SAM2TEMP.DAT) which contain all available data within a single file.  The 
+names of the files containing hemispheric and global grid point analyses are 
+also exceptions in that the extensions are used to denote the potential 
+temperature or pressure surface values of the analyses, and the TOMS data 
+files have the extension of .DAT.
+
+2. Directories
+
+2.1  The DOCUMENT directory contains several files documenting the contents of
+this release.
+
+2.1.1  CATALOG.DOC contains tables showing the available aircraft data and 
+appropriate file name prefixes, the locations of the radiosonde stations, and
+brief descriptions of the available data.
+
+2.1.2  CONTACT.DOC contains a list of names, addresses, and phone numbers of
+the principal investigators.
+
+2.1.3  FORMAT.DOC gives the format specifications which all experimenters were
+encouraged to use when writing time series data files for data exchange.  The 
+standard format includes header information which describes the data, and the 
+data in the form of time series.  Some of the measurements (ie. balloon and
+lidar soundings, and those with nonuniform sampling intervals), and the grid
+data, are not easily cast as time series with constant sampling intervals so 
+some of the data files have unique formats.  But most of the ER-2 data files 
+and many of the DC-8 files follow this standard format (with the exception 
+that we have changed the file name extensions from A1 to ER2 or DC8).  This 
+document may serve as a guide for reading the data files.
+
+2.2  The DATA directory has eight subdirectories for the ER-2, DC-8, SAM II,
+TOMS, 3-D analyses, 5 Hz MMS, ozonesonde, and radiosonde data files.  
+
+2.2.1 The ER2 subdirectory contains the available data collected onboard the
+ER-2 aircraft, and calculations of potential vorticity along the ER-2 flight
+path.  Each file contains data for one flight so the data is organized
+by flight date.
+
+2.2.2 The DC8 subdirectory contains the available data collected onboard the
+DC-8 aircraft, and calculated vertical cross-sections of potential vorticity,
+temperature, geopotential height, Clx, Fx, HCl, HNO3, and NOy along the DC-8
+flight path.  In general, each file contains data for only one flight so the
+data is organized by flight date.  However, the file for the Mark IV
+Interferometer contains data for several flights in a single file.  This 
+exception has been placed in the DC8MISC subdirectory.  
+
+2.2.3 The SAM2 subdirectory contains the aerosol and temperature data from the
+SAM II satellite measurements.  All available aerosol extinction data and
+temperature data each occupy a single file.
+
+2.2.4 The TOMS subdirectory contains the total ozone data files from the 
+Nimbus 7 Total Ozone Mapping Spectrometer (TOMS) - one file per day.
+
+2.2.5 The O3SONDE subdirectory contains the ozonesonde data organized by launch
+site with one file for each ozonesonde sounding.
+
+2.2.6 The RAOB subdirectory contains the radiosonde sounding data collected in
+Stavanger, Norway during the deployment.  Each file contains all available
+soundings for a particular time period.
+
+2.2.7 The ANALYSES subdirectory contains 12 Z analyses of meteorological
+parameters organized by the type of surface on which the analyses were done
+(isentropic and isobaric).
+
+2.2.8 The MMS5HZ subdirectory contains two files of 5 Hz ER-2 MMS data.
+
+3. Directory Structure for 1989 AASE CDROM
+
+README.DOC
+DOCUMENT.dir
+   CATALOG.DOC
+   CONTACT.DOC
+   FORMAT.DOC
+DATA.dir
+   ER2.dir
+      ER881229.dir
+         ER-2 data for 88-12-29
+      ER881231.dir
+         ER-2 data for 88-12-31
+      ER890103.dir
+         ER-2 data for 89-01-03
+      ER890106.dir
+         ER-2 data for 89-01-06
+      ER890107.dir
+         ER-2 data for 89-01-07
+      ER890112.dir
+         ER-2 data for 89-01-12
+      ER890116.dir
+         ER-2 data for 89-01-16
+      ER890119.dir
+         ER-2 data for 89-01-19
+      ER890120.dir
+         ER-2 data for 89-01-20
+      ER890124.dir
+         ER-2 data for 89-01-24
+      ER890125.dir
+         ER-2 data for 89-01-25
+      ER890130.dir
+         ER-2 data for 89-01-30
+      ER890207.dir
+         ER-2 data for 89-02-07
+      ER890208.dir
+         ER-2 data for 89-02-08
+      ER890209.dir
+         ER-2 data for 89-02-09
+      ER890210.dir
+         ER-2 data for 89-02-10
+      ER890220.dir
+         ER-2 data for 89-02-20
+      ER890221.dir
+         ER-2 data for 89-02-21
+   DC8.dir
+      DC890102.dir
+         DC-8 data for 89-01-02
+      DC890106.dir
+         DC-8 data for 89-01-06
+      DC890109.dir
+         DC-8 data for 89-01-09
+      DC890111.dir
+         DC-8 data for 89-01-11
+      DC890114.dir
+         DC-8 data for 89-01-14
+      DC890117.dir
+         DC-8 data for 89-01-17
+      DC890119.dir
+         DC-8 data for 89-01-19
+      DC890124.dir
+         DC-8 data for 89-01-24
+      DC890126.dir
+         DC-8 data for 89-01-26
+      DC890129.dir
+         DC-8 data for 89-01-29
+      DC890131.dir
+         DC-8 data for 89-01-31
+      DC890202.dir
+         DC-8 data for 89-02-02
+      DC890205.dir
+         DC-8 data for 89-02-05
+      DC890207.dir
+         DC-8 data for 89-02-07
+      DC890209.dir
+         DC-8 data for 89-02-09
+      DC890215.dir
+         DC-8 data for 89-02-15
+      DC8MISC.dir
+         M489AASE.DC8 (Mark IV Interferometer)
+   SAM2.dir
+      SAM II aerosol and temperature data
+   TOMS.dir
+      TOMS ozone data files
+   O3SONDE.dir
+      ANGMAG.dir
+         Angmagssalik ozonesondes
+      LERWICK.dir
+         Lerwick ozonesondes
+      SCORES.dir
+         Scoresbysund ozonesondes
+   RAOB.dir
+      radiosonde data
+   ANALYSES.dir
+      ISENTROP.dir
+         Potential vorticity and pressure analyses on isentropic surfaces
+      ISOBARIC.dir
+         Temperature, geopotential, horizontal wind on isobaric surfaces
+   MMS5HZ.dir
+      5 Hz ER-2 MMS data for selected flights
+
+-------------------------------------------------------------------------------
+
+This documentation and the accompanying data files were compiled by:
+
+Steven Gaines                          Steve Hipskind
+NASA Ames Research Center              NASA Ames Research Center
+M/S 245-3                              M/S 245-5
+Moffett Field, CA 94035-1000           Moffett Field, CA 94035-1000
+415-604-4546                           415-604-5076
+FTS 464-4546                           FTS 464-5076
+
+We have left the quality control of the data to the principal investigators and
+have only checked the data files for extraneous control characters, and the
+correctness of the file headers values defining the number of lines in the 
+file header and the date.  Therefore, if problems with the data are encountered
+please inform us or the appropriate principal investigator.

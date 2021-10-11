@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>HadRM3-PPE-UK Structure page</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<P><IMG SRC="/graphics/logos/metlogos.gif" ALIGN="BOTTOM"  NATURALSIZEFLAG="0"></P>
+
+<H1>Structure of the HadRM3-PPE-UK Dataset</H1>
+
+<HR ALIGN=LEFT>
+
+<H2><IMG SRC="/graphics/blue/info.gif" BORDER="0" ALIGN="BOTTOM">Introduction</H2>
+
+<P>The HadRM3-PPE-UK dataset is available in a directory structure within the BADC archive. The archive structure is detailed below. Most users will be interested in the <a href="#informative">NetCDF version of the archive with informative file names.</a> Note that each file contains one month of daily data. All months contain 30 days as the HadRM3 model uses a 360-day calendar.</P>
+
+<p>The top-level directory is located at:</p>
+
+<p><kbd>/badc/hadrm3/data/hadrm3-ppe-uk/</kbd></p>
+
+<p><b>Note:</b> All the paths listed on this page are available by the BADC Data Browser by adding the prefix <kbd>http://badc.nerc.ac.uk/browse/</kbd>. For example:</p>
+
+<p><kbd><a href="http://badc.nerc.ac.uk/browse/badc/hadrm3/data/hadrm3-ppe-uk/">http://badc.nerc.ac.uk/browse/badc/hadrm3/data/hadrm3-ppe-uk/</a></kbd></p>
+
+<h3>PP-format Version</h3>
+
+<p>The original PP-files are located under:</p>
+
+<p><kbd>/badc/hadrm3/data/hadrm3-ppe-uk/um_pp/</kbd></p>
+
+<p>The converted NetCDF with the original Met Office Unified Model file names are located under:</p>
+
+<p><kbd>/badc/hadrm3/data/hadrm3-ppe-uk/um_nc/</kbd></p>
+
+<p>The sub-directories use the Met Office Unified Model <i>run id</i> names that are listed on the <a href="ensemble_members.html">ensemble members page</a>. Beneath each run id directory is an <kbd>ape</kbd> directory, representing the daily Unified Model <i>stream</i>.</p>
+
+<p>File names follow the Met Office <a href="/data/um/UM_Naming_Convention.html">Unified Model Naming Convention document</a>. For example:</p>
+
+<p><kbd>/badc/hadrm3/data/hadrm3-ppe-uk/um_pp/afixq/ape/afixqa.peh0jun.pp</kbd></p>
+
+<H3>NetCDF version</H3>
+
+<p>The converted NetCDF version of the archive mirrors the PP-format archive except for the directory <kdb>um_nc</p> replacing <kbd>um_pp</kbd> and the file extension changing from <i>.pp</i> to <i>.nc</i>. For example:</p>
+
+<p><kbd>/badc/hadrm3/data/hadrm3-ppe-uk/um_nc/afixq/ape/afixqa.peh0jun.nc</kbd></p>
+
+<h3><a name="informative">NetCDF version - links with informative names</a></h3>
+
+<p>A set of directories and symbolic links have been set up with more informative names. These are located under the directory:</p>
+
+<p><kbd>/badc/hadrm3/data/hadrm3-ppe-uk/renamed/</kbd></p>
+
+<p>The full file paths follow the naming convention below:</p>
+
+<p><kbd>/badc/hadrm3/data/hadrm3-ppe-uk/renamed/&lt;rcm_member&gt;/&lt;time_processing&gt;/&lt;informative_file_name.nc&gt;</kbd></p>
+
+<p>For example:</p>
+
+<p><kbd>/badc/hadrm3/data/hadrm3-ppe-uk/renamed/hadrm3q16/daily/hadrm3-ppe-uk_hadrm3q16_daily_19700601-19700630.nc</kbd></p>
+
+<p> With the following mappings: </p>
+<ul>
+  <li><kbd>&lt;rcm_member&gt;</kbd> is the id used for the HadRM3 ensemble member</li>
+  <li><kbd>&lt;time_processing&gt;</kbd> = &quot;daily&quot; </li>
+  <li><kbd>&lt;informative_file_name.nc&gt;</kbd> is defined as follows: <kbd>&lt;model&gt;_&lt;rcm_member&gt;_&lt;time_processing&gt;_&lt;YYYYMMDD&gt;-&lt;YYYYMMDD&gt;.nc</kbd> </li>
+    <ul>
+        <li><kbd>&lt;model&gt; = &quot;hadrm3-ppe-uk&quot;</kbd></li>
+		<li><kbd>&lt;YYYYMMDD&gt;-&lt;YYYYMMDD&gt;</kbd> is the start date to end date</li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>

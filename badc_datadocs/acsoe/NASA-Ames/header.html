@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PRIVATE "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>ACSOE NASA Ames File Header</TITLE>
+</HEAD>
+
+<!-- Created June 1997  -->
+<!-- Author: Chunkey Lepine BADC-->
+
+<body bgcolor="#ffffff">
+
+<h1>NASA-Ames files - Header<br clear=all></h1>
+<BR><HR>
+<P>
+The header of a NASA-Ames format file must contain the following descriptors
+in the order listed below:
+
+<OL>
+<LI><a href="#format">Overall Format description</a>
+<LI><a href="#source">Data Source Description and Storage Volume Information</a>
+<LI><a href="#independent">Description(s) of the Independent variable(s)</a>
+<LI><a href="#primary">Description(s) of the Primary variable(s)</a>
+<LI><a href="#auxilliary">Descriptions of the Auxiliary variable(s) </a>-
+note this could be a single zero indicating no auxiliary variables  <BR>
+<LI><a href="#comments">Special and normal Comments </a> - 
+note that either one or
+both of these could be a single zero indicating no comments  <BR>
+
+</OL>
+<hr>
+</P>
+
+<H3><A NAME="format">1. Overall Format Description</A></H3>
+
+<P>
+The first record of a NASA-Ames file always contains two integers.
+The first integer represents the number of header records in the file
+(NHEADER). This should include the first record itself.
+
+The second integer is a four-digit number called the
+file format index (FFI).
+
+The first digit of FFI indicates the number of independent variables.
+</P>
+
+
+
+<H3><A NAME="source">2. The Data "Dource" Description and Storage Volume
+Information</A></H3>
+
+<P>
+The data source description requires six records:
+
+<UL>
+
+<LI>Records 2,3 and 4 are generally used to describe the name, address
+and affiliation of the originator(s) of the file.
+
+<LI>Record 5 is generally reserved for the name of the associated campaign.
+
+<LI>Record 6 details the current volume and the number of volumes in
+the dataset. This information dates from the days when data were distributed
+on diskettes - for most files today the numbers are 1 and 1.
+
+<LI>Finally record 7 provides two important dates,
+The first is the date on which the data starts
+while the second is the date when the file was created.
+All dates are given in in "YYYY MM DD" format.
+
+</UL>
+</P>
+
+
+<H3><A NAME="independent">3. Description of the Independent variable (or variables) </A></H3>
+
+
+
+<P>
+The description of the independent variable changes significantly
+depending on the number of variables and the variable type.
+The possible options for variable type are numeric or character and
+bounded or unbounded.
+With bounded variables the range and interval must be specified
+either within the NASA-Ames file header or
+as in the case of some formats as an auxiliary variable.
+With an unbounded variable this range is unknown
+until after the file has been completely read.
+It is meaningless to have more than one unbounded variable in a NASA-Ames
+format file.
+</P>
+
+<P>
+Since a large proportion of ACSOE data comprise straightforward,
+in many cases unbounded, time series, it is worthwhile examining this
+example more closely. 
+In this case it is only necessary to specify the interval between
+independent variable marks and the name of the independent variable.
+Note that if the spacing between independent variable marks can change
+then this interval should be set to zero.
+<P>
+ 
+<H3><A NAME="primary">4. Description of the Primary variable (or
+variables) </A></H3>
+
+
+<P>
+Three quantities are needed to describe each primary
+variable: the scaling factor, the value which has been substituted
+for missing data and the name of the variable;
+the latter must include the units. 
+</P>
+
+<P>
+The NASA-Ames format stipulates that all scale factors
+for the different primary variables should be held in the same record,
+all "missing-data" values should be held in the next record
+and each primary-variable description should be written
+in separate subsequent records. 
+</P>
+
+
+<H3><A NAME="auxiliary">5. Description of the Auxiliary variable (or variables) </A></H3>
+
+
+<P>
+Three quantities are needed to describe each auxiliary
+variable although these vary depending on whether the variable is
+numeric or a character string.
+Numeric auxiliary variables require a scaling factor,
+a default value to be substituted when data are missing and the name of the
+variable.
+Character auxiliary variables require the length of the string,
+a default string for missing data and the name of the variable(s).
+Character auxiliary variables are used to record quantities such as the
+name of the filling gas used to inflate a balloon.
+</P>
+
+
+<H3><A NAME="comments">6. The normal and special comments fields </A></H3>
+
+<P>
+The format makes provision for two comment fields
+structured in identical ways -
+first record number of comments,
+subsequent records actual comments.  
+</P>
+
+<P>
+For <STRONG>ACSOE data files only</STRONG>, four comment fields are mandatory.
+These are THIS-FILE-NAME, THIS-FILE-VERSION, THIS-FILE-ENDS and E-MAIL-CONTACT.
+These fields may appear in either the special or normal comments, but the
+keywords must be given exactly. The contents should be formatted as follows:
+<BR>
+THIS-FILE-NAME=mh960708.an<BR>
+THIS-FILE-VERSION=1<BR>
+THIS-FILE-ENDS=1996 08 09<BR>
+E-MAIL-CONTACT=j.jones@somewhere.ac.uk<BR>
+
+Version numbers start at 1 and increment by 1.
+Dates should be formatted as YYYY MM DD.
+
+</P>
+
+<HR>
+<P>
+Go to: 
+<A HREF="index.html">Index page</A> |
+<A HREF="FFI.html">Next doc. (FFI)</A>
+<p>
+
+</BODY>
+</HTML>

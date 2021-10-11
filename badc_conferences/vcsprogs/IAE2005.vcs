@@ -1,0 +1,46 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050920T230000Z
+DTEND:20050921T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Cambridge
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000090B9AA9286B7C5010000000000000000100
+ 00000F7A02F3F138B744AA511A53795E588AF
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0AMeeting on 'Environmental impac=
+ts of future supersonic aircraft'=0D=0A=0D=0AUniversity of Cambridge Instit=
+ute for Aviation and Environment (IAE) =0D=0A=0D=0AWednesday 21 September 2=
+005, Cambridge.=0D=0A=0D=0AFurther details of the IAE are  available on the=
+ IAE website: =0D=0Awww.iae.damtp.ac.uk.  =0D=0A=0D=0ADEADLINE FOR FREE REG=
+ISTRATION: Monday 12 September.=0D=0A=0D=0A=0D=0AThis meeting is intended t=
+o be of broad interest to relevant sectors of governments and industry, as =
+well as environmental organisations and those undertaking environmental res=
+earch in universities and elsewhere.  =0D=0A=0D=0ASpeakers at the meeting w=
+ill review the results from the EU-funded SCENIC project, which investigate=
+d chemical-climate implications of future supersonic passenger jets.  SCENI=
+C involved collaboration between Airbus and several different European univ=
+ersities and research institutes.=0D=0A=0D=0ATopics to be covered include i=
+ndustry projections for supersonic passenger travel, the implications for t=
+he chemistry of the atmosphere and the implications for climate.  Additiona=
+l speakers will review prospects for=0D=0Asupersonic flight (and the enviro=
+nmental implications) more generally, including supersonic business jets, t=
+echnological and noise issues.  =0D=0A=0D=0AConfirmed speakers include Volk=
+er Grewe (DLR), Paul Madden (Rolls-Royce), Corinne Marizy (Airbus), Ian Pol=
+l (Cranfield) and John Pyle (Cambridge).=0D=0A=0D=0ATo register potential i=
+nterest in this meeting please email Marguerite=0D=0AFarmer (m.farmer@damtp=
+.cam.ac.uk).=0D=0A=0D=0AFull details of the meeting are available on the IA=
+E website: www.iae.damtp.ac.uk.=0D=0A=0D=0AThe meeting is supported by the =
+UK Natural Environment Research Council through a Knowledge Transfer Award =
+to the IAE.  =0D=0A=0D=0A=0D=0AContacts: =0D=0ADr Helen L. Rogers=0D=0ARese=
+arch Liaison=0D=0AInstitute for Aviation & the Environment, Department of C=
+hemistry, =0D=0AUniversity of Cambridge,=0D=0ALensfield Road, Cambridge, U.=
+K. Tel.:+44 1223 763825=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A________________=
+_______________________________=0D=0ANERC-Atmos mailing list=0D=0ANERC-Atmo=
+s@ncas.ac.uk=0D=0Ahttp://www.ncas.ac.uk/mailman/listinfo/nerc-atmos=0D=0A=
+=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Meeting on 'Environmental impacts of futu=
+re supersonicaircraft'
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

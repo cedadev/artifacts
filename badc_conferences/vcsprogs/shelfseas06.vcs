@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060409T230000Z
+DTEND:20060412T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:. University of Wales, Bangor=20
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000D072D3766126C6010000000000000000100
+ 0000065F03039C5D1034881380517E731531A
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:The Shelf Seas - Present Understandin=
+g and Future Challenges=0D=0AUniversity of Wales, Bangor 10-12 April 2006=
+=0D=0A=0D=0AThe conference is to celebrate the scientific career and achiev=
+ements of Prof. John H. Simpson, pioneer of shelf and frontal dynamics=0D=
+=0A=0D=0AThemes:=0D=0A1. Physical processes and biological responses in the=
+ seasonal shelf sea thermocline.=0D=0A2. Shelf Sea Fronts.=0D=0A3. ROFIs & =
+Estuaries: The role of freshwater in coastal systems.=0D=0A4. Linking large=
+ scale circulation to small scale mixing processes: Observing and modelling=
+ Turbulence in the Marine Environment.=0D=0A5. Towards observing and foreca=
+sting systems=0D=0A6. Polar Shelves.=0D=0A=0D=0AKeynote speakers include:=
+=0D=0ARocky Geyer (WHOI, USA)=0D=0AKath Richardson (AARHUS University, Denm=
+ark)=0D=0APaul Linden (UCSD, USA)=0D=0AJohn Howarth (POL, UK)=0D=0AIlker Fe=
+r (U Bergen, Norway).=0D=0A=0D=0AMore information at: www.sos.bangor.ac.uk/=
+coastal2006 or=0D=0AE-mail: coastal06@bangor.ac..uk =0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:The Shelf Seas - Present Understanding an=
+d Future Challenges
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

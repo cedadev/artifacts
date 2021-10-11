@@ -1,0 +1,42 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060721T230000Z
+DTEND:20060727T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Orl=E9ans, France
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000A0EF04AD7747C6010000000000000000100
+ 0000039BA629CEA12194D8FE119C31CA8A956
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:The 19th meeting of this biennial int=
+ernational symposium will be held at  the University of Orleans, France, Ju=
+ly 22-27, 2006. Topics to be covered  include Reaction Dynamics, Combustion=
+ and Plasmas, Atmospheric chemistry,  Heterogeneous Atmospheric Chemistry, =
+Astrochemistry and Extreme Environments, Elementary Processes and Energy Tr=
+ansfer. Contributions on any subject related to these topics are welcome. T=
+he meeting will consist of invited lectures, contributed talks and poster s=
+essions. The invited speakers are: Horst Hippler (Karlsruhe, Polanyi Lectur=
+er), Antonio d'Alessio (Naples), Dave Chandler (Sandia), Gustav Gerber (Wue=
+rzburg), Georges Le Bras (Orl=E9ans), Mike Pilling (Leeds), Bertrand Rowe (=
+Rennes), Jonathan Reid (Bristol), Craig Taatjes (Sandia) and Eric Villenave=
+ (Bordeaux).=0D=0A=0D=0AOne page abstracts of contributed papers should be =
+submitted by March 26th, 2006. Further detailed information on the location=
+, abstract submission, registration, accommodation and other aspects of the=
+ meeting (for example student bursaries) can be found on the website:=0D=0A=
+=0D=0Ahttp://www.gk2006.org/ =0D=0A=0D=0APlease do not hesitate to forward =
+this message to colleagues who may be interested in submitting an abstract =
+or attending the meeting. Further information can also be obtained from the=
+ local organisers, Wahid Mellouki and Philippe Dagaut, using info@gk2006.or=
+g=0D=0A=0D=0A=0D=0A-- =0D=0AThis message (and any attachments) is for the r=
+ecipient only. NERC=0D=0Ais subject to the Freedom of Information Act 2000 =
+and the contents=0D=0Aof this email and any reply you make may be disclosed=
+ by NERC unless=0D=0Ait is exempt from release under the Act. Any material =
+supplied to=0D=0ANERC may be stored in an electronic records management sys=
+tem.=0D=0A=0D=0A=0D=0A_______________________________________________=0D=0A=
+NERC-Atmos mailing list=0D=0ANERC-Atmos@ncas.ac.uk=0D=0Ahttp://www.ncas.ac.=
+uk/mailman/listinfo/nerc-atmos=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Meeting: 19th International Symposium on =
+Gas Kinetics (GK2006)=20
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

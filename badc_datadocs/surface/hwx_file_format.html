@@ -1,0 +1,444 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Hourly Weather Observations - File Format</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Hourly Weather Observations data - .hwx (weather observations)
+file format<BR CLEAR="ALL"></H1>
+
+<hr>
+<blockquote>
+<strong><FONT COLOR="#FB0000"><Strong>PLEASE NOTE:</strong></FONT> The file format described below refers to the Met Office Land Surface data (1900-2000) dataset which has been superseded by the <a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__dataent_ukmo-midas">Met Office MIDAS dataset (1853-present)</a> at the BADC.
+</strong>
+</blockquote>
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<P>A <STRONG>list of UK stations</STRONG> for which the BADC holds
+.hwx files is available (<A HREF="/data/surface/station_lists/ukstation.hwx.html">.hwx
+stations</A>).</P>
+
+<P>The file name convention is (STATION_NAME)(YEAR).(MESSAGE_TYPE).(FILE_EXTENSION)</P>
+
+<UL>
+  <LI>STATION_NAMES is the complete station name.<BR>
+  <LI>YEAR is the year expressed in full, ie 1998. <BR>
+  <LI>Description of the <A HREF="met_domain.html">message types</A>
+  is available.<BR>
+  <LI>The file extension is <STRONG>.hwx</STRONG> meaning that
+  the file contains hourly weather observations.<BR>
+</UL>
+
+<P><STRONG>-999</STRONG> indicates a missing value. <BR>
+<BR>
+The first line of the data file is the fields headers (which are
+detailed in the table below).<BR>
+<BR>
+The fields in the .hwx data files are : <BR>
+<BR>
+<td><TABLE BORDER="1" WIDTH="100%" CELLSPACING="2" CELLPADDING="0">
+  <TR>
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">HEADER</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">PARAMETER</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">FIELDS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">COLUMNS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">UNITS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">COMMENTS</FONT></TH> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">ID</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Station Ref. Number</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">1</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">1-8</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">-</TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#3.6">Station
+      identification</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" WIDTH="81">IDTYPE</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="110">-</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">2</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="84">9-17</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">-</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="495"><A HREF="../ukmo-midas/ukmo_guide.html#3.6">Station
+      identification</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">MET_DOM</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Meteorological Domain</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">3</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">18-28</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">-</TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff"><A HREF="met_domain.html">Message
+      types</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" WIDTH="81">YEAR</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="110">Year</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">3</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="84">29-35</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">-</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="495">4 characters</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">MON</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Month</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">4</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">36-43</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">-</TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff">1 or 2 characters (from 1 to
+      12)</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" WIDTH="81">DAY</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="110">Day</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">5</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="84">44-51</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">-</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="495">1 or 2 characters (from 1 to
+      31max)</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">HOUR</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Hour</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">6</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">52-59</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">-</TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff">Hour of observation from 0
+      to 2300</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" WIDTH="81">DIR</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="110">10 minutes wind direction</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">7</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="84">60-67</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">Degree true</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="495">From 0 to 360 degrees, clockwise. Note that zero values in both wind speed and wind direction fields indicate that there was no wind blowing at the time of observation.<BR>
+      <A HREF="../ukmo-midas/ukmo_guide.html#5.5">See Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">SPEED</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">10 minutes wind speed</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">8</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">68-75</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">Knots</TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff">NB. A mean wind for the hour up until the reporting time. Note that zero values in both wind speed and wind direction fields indicate that there was no wind blowing at the time of observation. <BR><A HREF="../ukmo-midas/ukmo_guide.html#5.5">See
+      Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" WIDTH="81">PRST</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="110">Present weather</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">9</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="84">76-81</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59"><A HREF="code.html#presweath">WMO
+      Code</A></TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="495"><A HREF="../ukmo-midas/ukmo_guide.html#5.10">See
+      Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">PAS1</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Most significant Past weather</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">10</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">82-87</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff"><A HREF="code.html#pastweath">WMO
+      code</A></TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#5.10">See
+      Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" WIDTH="81">PAS2</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="110">Least significant Past weather</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">11</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="84">88-93</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59"><A HREF="code.html#pastweath">WMO
+      code</A></TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="495"><A HREF="../ukmo-midas/ukmo_guide.html#5.10">See
+      Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">TCA</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Total cloud amount</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">12</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">94-98</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff"><A HREF="code.html#oktas">WMO
+      code</A></TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#5.11">See
+      Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" WIDTH="81">LCT</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="110">Low cloud type</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">13</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="84">99-103</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59"><A HREF="code.html#lowcl">WMO
+      Code</A></TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="495"><A HREF="../ukmo-midas/ukmo_guide.html#5.11">See
+      Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">MCT</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Medium cloud type</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">14</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">104-108</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff"><A HREF="code.html#medcl">WMO
+      Code</A></TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#5.11">See
+      Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#d4d4d4">HCT</TD> 
+    <TD WIDTH="110" BGCOLOR="#d4d4d4">High cloud type</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">15</TD> 
+    <TD WIDTH="84" BGCOLOR="#d4d4d4">109-113</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4"><A HREF="code.html#highcl">WMO
+      Code</A></TD> 
+    <TD WIDTH="495" BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas/ukmo_guide.html#5.11">See
+      Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">CBA</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Cloud base amount</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">16</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">114-118</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff"><A HREF="code.html#oktas">WMO
+      code</A></TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#5.11">See
+      Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" WIDTH="81">CBH</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="110">Cloud base height</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">17</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="84">119-126</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">DAM</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="495">DAM = Decameters<BR>
+      <A HREF="../ukmo-midas/ukmo_guide.html#5.11">See Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">VIS</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Horizontal visibility</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">18</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">127-133</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">DAM</TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff">DAM = Decameters <BR>
+      <A HREF="../ukmo-midas/ukmo_guide.html#5.9">See Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" WIDTH="81">MSLP</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="110">Mean Sea Level Pressure</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">19</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="84">134-146</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">0.1 mb</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="495">Atmospheric pressure is expressed
+      in millibars (1 millibar = 100 pascals = 100 newtons per square
+      metre). Precision aneroid barometers are now in general use for
+      measuring pressure and a correction for altitude is applied to
+      obtain the value at mean sea level (MSL).</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">CA1</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Cloud amount - level 1</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">20</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">147-151</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff"><A HREF="code.html#levela">WMO
+      code</A></TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff"><A HREF="cloud_layer.html">See
+      WMO documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" WIDTH="81">CT1</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="110">Cloud type - level 1</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59">21</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="84">152-156</TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="59"><A HREF="code.html#levelt">WMO
+      code</A></TD> 
+    <TD BGCOLOR="#d4d4d4" WIDTH="495"><A HREF="cloud_layer.html">See
+      WMO documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">CB1</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Cloud base - level 1</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">22</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">157-164</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">DAM</TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff">DAM = decameters<BR>
+      <A HREF="cloud_layer.html">See WMO documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#d4d4d4">CA2</TD> 
+    <TD WIDTH="110" BGCOLOR="#d4d4d4">Cloud amount - level 2</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">23</TD> 
+    <TD WIDTH="84" BGCOLOR="#d4d4d4">165-169</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4"><A HREF="code.html#levela">WMO
+      code</A></TD> 
+    <TD WIDTH="495" BGCOLOR="#d4d4d4"><A HREF="cloud_layer.html">See
+      WMO documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">CT2</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Cloud type - level 2</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">24</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">170-174</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff"><A HREF="code.html#levelt">WMO
+      code</A></TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff"><A HREF="cloud_layer.html">See
+      WMO documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#d4d4d4">CB2</TD> 
+    <TD WIDTH="110" BGCOLOR="#d4d4d4">Cloud base - level 2</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">25</TD> 
+    <TD WIDTH="84" BGCOLOR="#d4d4d4">175-182</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">DAM</TD> 
+    <TD WIDTH="495" BGCOLOR="#d4d4d4">DAM = Decameters<BR>
+      <A HREF="cloud_layer.html">See WMO documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">CA3</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Cloud amount - level 3</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">26</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">183-187</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff"><A HREF="code.html#levela">WMO
+      code</A></TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff"><A HREF="cloud_layer.html">See
+      WMO documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#d4d4d4">CT3</TD> 
+    <TD WIDTH="110" BGCOLOR="#d4d4d4">Cloud type - level 3</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">27</TD> 
+    <TD WIDTH="84" BGCOLOR="#d4d4d4">188-192</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4"><A HREF="code.html#levelt">WMO
+      code</A></TD> 
+    <TD WIDTH="495" BGCOLOR="#d4d4d4"><A HREF="cloud_layer.html">See
+      WMO documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">CB3</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Cloud base - level 3</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">28</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">193-200</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">DAM</TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff">DAM = Decameters<BR>
+      <A HREF="cloud_layer.html">See WMO documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#d4d4d4">CA4</TD> 
+    <TD WIDTH="110" BGCOLOR="#d4d4d4">Cloud amount - level 4</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">29</TD> 
+    <TD WIDTH="84" BGCOLOR="#d4d4d4">201-205</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4"><A HREF="code.html#levela">WMO
+      code</A></TD> 
+    <TD WIDTH="495" BGCOLOR="#d4d4d4"><A HREF="cloud_layer.html">See
+      WMO documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">CT4</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Cloud type - level 4</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">30</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">206-210</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff"><A HREF="code.html#levelt">WMO
+      code</A></TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff"><A HREF="cloud_layer.html">See
+      WMO documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#d4d4d4">CB4</TD> 
+    <TD WIDTH="110" BGCOLOR="#d4d4d4">Cloud base - level 4</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">31</TD> 
+    <TD WIDTH="84" BGCOLOR="#d4d4d4">211-218</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">DAM</TD> 
+    <TD WIDTH="495" BGCOLOR="#d4d4d4">DAM = Decameters<BR>
+      <A HREF="cloud_layer.html">See WMO documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">VVIS</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Vertical visibility</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">32</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">219-226</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">DAM</TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff">DAM = Decameters<BR>
+      <A HREF="../ukmo-midas/ukmo_guide.html#5.9">See Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#d4d4d4">TEMP</TD> 
+    <TD WIDTH="110" BGCOLOR="#d4d4d4">Dry-bulb air temperature</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">33</TD> 
+    <TD WIDTH="84" BGCOLOR="#d4d4d4">227-234</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">0.1 Degrees Celsius</TD> 
+    <TD WIDTH="495" BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas/ukmo_guide.html#5.2">See
+      Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">DEW</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Dew-point temperature</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">34</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">235-242</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">0.1 Degrees Celsius</TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff">The dew point temperature (in
+      degrees Celsius) is the temperature to which the air must be
+      cooled to produce saturation with respect to water at its existing
+      atmospheric pressure and humidity.<A HREF="../ukmo-midas/ukmo_guide.html#5.4">See
+      Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#d4d4d4">WETB</TD> 
+    <TD WIDTH="110" BGCOLOR="#d4d4d4">Wet-bulb temperature</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">35</TD> 
+    <TD WIDTH="84" BGCOLOR="#d4d4d4">243-250</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">0.1 Degrees Celsius</TD> 
+    <TD WIDTH="495" BGCOLOR="#d4d4d4">The web-bulb temperature is
+      the lowest temperature (in degrees Celsius) that can be obtained
+      by evaporating water into the air. It measures the humidity of
+      the air.<A HREF="../ukmo-midas/ukmo_guide.html#5.4">See Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">STNP</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">Station level pressure</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">36</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">251-262</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">0.1 mb</TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff">Atmospheric pressure (in mb)
+      as measured at the station level. Correction for altitude is
+      not applied.</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#d4d4d4">ALTP</TD> 
+    <TD WIDTH="110" BGCOLOR="#d4d4d4">Altimeter pressure</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">37</TD> 
+    <TD WIDTH="84" BGCOLOR="#d4d4d4">263-270</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">mb</TD> 
+    <TD WIDTH="495" BGCOLOR="#d4d4d4">-</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#ffffff">SOG</TD> 
+    <TD WIDTH="110" BGCOLOR="#ffffff">State of ground</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff">38</TD> 
+    <TD WIDTH="84" BGCOLOR="#ffffff">271-275</TD> 
+    <TD WIDTH="59" BGCOLOR="#ffffff"><A HREF="code.html#ground">WMO
+      Code</A></TD> 
+    <TD WIDTH="495" BGCOLOR="#ffffff">-</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="81" BGCOLOR="#d4d4d4">MGS</TD> 
+    <TD WIDTH="110" BGCOLOR="#d4d4d4">10 minutes maximum gust speed</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">39</TD> 
+    <TD WIDTH="84" BGCOLOR="#d4d4d4">276-283</TD> 
+    <TD WIDTH="59" BGCOLOR="#d4d4d4">knots</TD> 
+    <TD WIDTH="495" BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas/ukmo_guide.html#5.5">See
+      Met Office documentation</A></TD> 
+  </TR>
+</TABLE><BR>
+<BR>
+More information about the Met Office surface data is available
+in the <A HREF="../ukmo-midas/ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+</BODY>
+</HTML>

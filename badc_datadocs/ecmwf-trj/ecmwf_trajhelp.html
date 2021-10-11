@@ -1,0 +1,67 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Helpfile on the ECMWF Trajectories</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>BADC Helpfile on the ECMWF Trajectories <BR CLEAR="ALL"></H1>
+
+<P><HR ALIGN=LEFT> 
+
+<P>These data are produced at the ECMWF as part of a special
+project run by Prof. Brian Hoskins and Dr. Paul Berrisford of
+Reading University. The project is part of the Joint Diagnostics
+Project (JDP) between Reading University, The UK Meteorological
+Office and ECMWF (European Centre for Medium Range Weather Forecasts). 
+
+<P>The aim of the project is to provide a database of routine
+back trajectories. During 1995, 252 5-day back trajectories were
+computed on a regular basis from a time of 12z. The arrival points
+were chosen to be on three regular latitude / longitude grids
+centred over the U.K., the mid-Atlantic storm track region and
+the eastern U.S.A. and were all located at 900 hPa. 
+
+<P>The computations were performed using the ECMWF trajectory
+package and the 6 hourly spectral T106 uninitialised operational
+analyses of the three components of the wind and ln(surface pressure).
+These data are interpolated to a 1.5 x 1.5 degree regular latitude
+/ longitude grid. The package uses a simple mid-point type of
+algorithm with linear interpolations in both time and space and
+a timestep of 15 minutes. The output gzipped ASCII files contain
+information giving latitude, longitude and pressure at each timestep.
+The dataset is available both at ECMWF and the BADC. 
+
+<P>For 1996 several changes were made to the basic system. Firstly
+the algorithm was changed : a 4th order Runge-Kutta scheme was
+introduced and the vertical interpolations were made to be cubic.
+When a timestep of 30 minutes is used this scheme consumes the
+same amount of computer resources as the mid-point type scheme
+mentioned above. The difference in horizontal position between
+calculations performed with the old and the new algorithm are
+usually quite small, though sometimes they can differ markedly.
+The pressure difference, however, is typically a few hPa, sometimes
+20 - 30 hPa and occasionally as large as 200 hPa. 
+
+<P>In addition to the arrival points used in 1995 112 extra points
+were added in order to provide data for the ACSOE community (Atmospheric
+Chemistry Studies in the Oceanic Environment - a NERC thematic
+programme, PI is Stuart Penkett of University of East Anglia).
+These points are located in the vicinity of the U.K. and the eastern
+Atlantic and their pressures range between 1000 and 700 hPa. The
+trajectories are computed for clusters of arrival points in order
+to estimate how sensitive the results are to small changes in
+the arrival position. This knowledge is useful for determining
+how accurate the results are likely to be. The package has been
+run four times daily (from 00z, 06z, 12z and 18z) starting from
+1st March 1996. 
+
+<P>On 30th January 1996 the ECMWF analysis system was changed
+to 3D variational analysis. Hence, there are no separate uninitialised
+/ initialised analyses from this time. The data gap of January
+and February 1996 (caused when making the changes to the system)
+has been filled in using initialised analyses. 
+
+<P>
+</BODY>
+</HTML>

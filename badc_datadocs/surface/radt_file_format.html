@@ -1,0 +1,180 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Hourly Radiation Measurements - File Format</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Hourly Solar Radiation data - .radt (radiation) file format<BR
+CLEAR="ALL"></H1>
+
+<hr>
+<blockquote>
+<strong><FONT COLOR="#FB0000"><Strong>PLEASE NOTE:</strong></FONT> The file format described below refers to the Met Office Land Surface data (1900-2000) dataset which has been superseded by the <a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__dataent_ukmo-midas">Met Office MIDAS dataset (1853-present)</a> at the BADC.
+</strong>
+</blockquote>
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<P>A <STRONG>list of UK stations</STRONG> for which the BADC holds
+.radt files is available (<A HREF="/data/surface/station_lists/ukstation.radt.html">.radt
+stations</A>).</P>
+
+<P>The file name convention is (STATION_NAME)(YEAR).(MESSAGE_TYPE).(FILE_EXTENSION)</P>
+
+<UL>
+  <LI>STATION_NAMES is the complete station name.<BR>
+  <LI>YEAR is the year expressed in full, ie 1998. <BR>
+  <LI>Description of the <A HREF="met_domain.html">message types</A>
+  i<!--SELECTION--><!--/SELECTION-->s available.<BR>
+  <LI>The file extension is <STRONG>.radt</STRONG> meaning that
+  the file contains hourly radiation measurements.
+</UL>
+
+<P>These .radt files contain radiation amounts currently being
+reported. <BR>
+In all cases, the file headers <A HREF="count.html">END_HOUR and
+COUNT</A> define the observation period. Values are either for
+an hour or for 24 hours. <BR>
+<BR>
+Approximately <A HREF="station_lists/ukstation.radt.html">103
+UK stations</A> report radiation, but almost all only report hourly
+global solar radiation and hourly diffuse solar radiation. Only
+three stations report direct irradiation.</P>
+
+<P>24 hour values are usually for 0000-2359 on the stated day.
+Occasionally the period may be 09-09Z. An 09-09 period ends at
+0900 on the stated day. There should only be one 24 hour report
+per station per day.<BR>
+<BR>
+<STRONG>-999</STRONG> indicates a missing value. <BR>
+<BR>
+</ul>The first line of the data file are the fields headers (which
+are detailed in the table below).<BR>
+<BR>
+The fields in the .radt data files are : <BR>
+<BR>
+<td><TABLE BORDER="1" CELLSPACING="2" CELLPADDING="0" HEIGHT="359"
+WIDTH="97%">
+  <TR>
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">HEADER</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">PARAMETER</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">FIELDS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">COLUMNS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">UNITS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">COMMENTS</FONT></TH> 
+  </TR>
+  <TR>
+    <TD HEIGHT="23" WIDTH="88" BGCOLOR="#ffffff">ID</TD> 
+    <TD HEIGHT="23" WIDTH="135" BGCOLOR="#ffffff">Station Ref. Number</TD> 
+    <TD HEIGHT="23" WIDTH="63" BGCOLOR="#ffffff">1</TD> 
+    <TD HEIGHT="23" WIDTH="83" BGCOLOR="#ffffff">1-8</TD> 
+    <TD HEIGHT="23" WIDTH="92" BGCOLOR="#ffffff">-</TD> 
+    <TD HEIGHT="23" WIDTH="347" BGCOLOR="#ffffff">-</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" HEIGHT="23" WIDTH="88">IDTYPE</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="135">-</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="63">2</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="83">9-17</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="92">-</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="347">-</TD> 
+  </TR>
+  <TR>
+    <TD HEIGHT="23" WIDTH="88" BGCOLOR="#ffffff">MET_DOM</TD> 
+    <TD HEIGHT="23" WIDTH="135" BGCOLOR="#ffffff">Meteorological
+      Domain</TD> 
+    <TD HEIGHT="23" WIDTH="63" BGCOLOR="#ffffff">3</TD> 
+    <TD HEIGHT="23" WIDTH="83" BGCOLOR="#ffffff">18-28</TD> 
+    <TD HEIGHT="23" WIDTH="92" BGCOLOR="#ffffff">-</TD> 
+    <TD HEIGHT="23" WIDTH="347" BGCOLOR="#ffffff"><A HREF="met_domain.html">Message
+      types</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" HEIGHT="22" WIDTH="88">YEAR</TD> 
+    <TD HEIGHT="22" BGCOLOR="#d4d4d4" WIDTH="135">Year</TD> 
+    <TD HEIGHT="22" BGCOLOR="#d4d4d4" WIDTH="63">3</TD> 
+    <TD HEIGHT="22" BGCOLOR="#d4d4d4" WIDTH="83">29-35</TD> 
+    <TD HEIGHT="22" BGCOLOR="#d4d4d4" WIDTH="92">-</TD> 
+    <TD HEIGHT="22" BGCOLOR="#d4d4d4" WIDTH="347">4 characters</TD> 
+  </TR>
+  <TR>
+    <TD HEIGHT="23" WIDTH="88" BGCOLOR="#ffffff">MON</TD> 
+    <TD HEIGHT="23" WIDTH="135" BGCOLOR="#ffffff">Month</TD> 
+    <TD HEIGHT="23" WIDTH="63" BGCOLOR="#ffffff">4</TD> 
+    <TD HEIGHT="23" WIDTH="83" BGCOLOR="#ffffff">36-43</TD> 
+    <TD HEIGHT="23" WIDTH="92" BGCOLOR="#ffffff">-</TD> 
+    <TD HEIGHT="23" WIDTH="347" BGCOLOR="#ffffff">1 or 2 characters
+      (from 1 to 12)</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" HEIGHT="23" WIDTH="88">DAY</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="135">Day</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="63">5</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="83">44-51</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="92">-</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="347">1 or 2 characters
+      (from 1 to 31max)</TD> 
+  </TR>
+  <TR>
+    <TD HEIGHT="23" WIDTH="88" BGCOLOR="#ffffff">END_HOUR</TD> 
+    <TD HEIGHT="23" WIDTH="135" BGCOLOR="#ffffff">Hour</TD> 
+    <TD HEIGHT="23" WIDTH="63" BGCOLOR="#ffffff">6</TD> 
+    <TD HEIGHT="23" WIDTH="83" BGCOLOR="#ffffff">52-61</TD> 
+    <TD HEIGHT="23" WIDTH="92" BGCOLOR="#ffffff">-</TD> 
+    <TD HEIGHT="23" WIDTH="347" BGCOLOR="#ffffff">Hour of observation
+      from 0 to 2300</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" HEIGHT="23" WIDTH="88">COUNT</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="135">Hour count</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="63">7</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="83">62-69</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="92">-</TD> 
+    <TD HEIGHT="23" BGCOLOR="#d4d4d4" WIDTH="347"><A HREF="count.html">See
+      COUNT definition</A></TD> 
+  </TR>
+  <TR>
+    <TD HEIGHT="42" WIDTH="88" BGCOLOR="#ffffff">GLOBAL</TD> 
+    <TD HEIGHT="42" WIDTH="135" BGCOLOR="#ffffff">Global Solar irradiation
+      amount</TD> 
+    <TD HEIGHT="42" WIDTH="63" BGCOLOR="#ffffff">8</TD> 
+    <TD HEIGHT="42" WIDTH="83" BGCOLOR="#ffffff">70-77</TD> 
+    <TD HEIGHT="42" WIDTH="92" BGCOLOR="#ffffff">W.hour/sq.m</TD> 
+    <TD HEIGHT="42" WIDTH="347" BGCOLOR="#ffffff">'Global' radiation
+      is that received from both the sun and the surrounding environment.</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4" HEIGHT="42" WIDTH="88">DIFFUSE</TD> 
+    <TD HEIGHT="42" BGCOLOR="#d4d4d4" WIDTH="135">Diffuse Solar irradiation
+      amount</TD> 
+    <TD HEIGHT="42" BGCOLOR="#d4d4d4" WIDTH="63">9</TD> 
+    <TD HEIGHT="42" BGCOLOR="#d4d4d4" WIDTH="83">78-86</TD> 
+    <TD HEIGHT="42" BGCOLOR="#d4d4d4" WIDTH="92">W.hour/sq.m</TD> 
+    <TD HEIGHT="42" BGCOLOR="#d4d4d4" WIDTH="347">'Diffuse' radiation
+      is that obtained when a shade ring is used to block out the sun's
+      direct radiation.</TD> 
+  </TR>
+  <TR>
+    <TD HEIGHT="42" WIDTH="88" BGCOLOR="#ffffff">DIRECT</TD> 
+    <TD HEIGHT="42" WIDTH="135" BGCOLOR="#ffffff">Direct Solar irradiation
+      amount</TD> 
+    <TD HEIGHT="42" WIDTH="63" BGCOLOR="#ffffff">10</TD> 
+    <TD HEIGHT="42" WIDTH="83" BGCOLOR="#ffffff">87-94</TD> 
+    <TD HEIGHT="42" WIDTH="92" BGCOLOR="#ffffff">W.hour/sq.m</TD> 
+    <TD HEIGHT="42" WIDTH="347" BGCOLOR="#ffffff">Global radiation
+      is the amount of Direct and diffuse radiation which reaches the
+      Earth's surface at a given location.</TD> 
+  </TR>
+</TABLE><BR>
+<BR>
+More information about the sunshine and radiation network is available
+in the <A HREF="../ukmo-midas/ukmo_guide.html#3.5">documentation provided by
+the Met Office</A>.
+<P>
+</BODY>
+</HTML>

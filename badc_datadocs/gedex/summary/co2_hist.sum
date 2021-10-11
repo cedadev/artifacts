@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "CO2_HIST "
+"SUM_DATA_SET"       "GRNHS-GASES  "
+"SUM_DATATYPE"       "CO2-HISTORY  "
+"ARCHIVE_NAME"       "NCDS                 "
+"ARCHIVE_STATUS"     "Available                                              "
+"DS_DESCRIPTION"     "Concentrations of atmospheric greenhouse effect gases  "
+"DT_DESCRIPTION"     "Atmospheric concentrations of carbon dioxide from ice cores"
+"SUM_BEGIN_DATE"     "  "
+"SUM_END_DATE"       "  "
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Single station at Vostok                             "
+"SPATIAL2"           "                                                       "
+"SPATIAL3"           "Point data                                             "
+"SPATIAL4"           "                                                       "
+"TEMPORAL1"          "Mean age of air ranging from 1700 years BP to          "
+"TEMPORAL2"          "159,690 years BP.                                      "
+"TEMPORAL3"          "                                                       "
+"TEMPORAL4"          "                                                       "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF).    "
+"PRODUCT2"           "One ASCII file on MS-DOS floppy disk.                  "
+"PRODUCT3"           "Available on GEDEX CD-ROM.                  "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"CO2"             "Carbon Dioxide Concentration"             "ppmv"
+EOF
+
+SOURCES
+"FIELD-OBS"       "IN SITU"
+EOF

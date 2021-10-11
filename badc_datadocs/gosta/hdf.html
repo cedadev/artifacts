@@ -1,0 +1,82 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>GOSTAplus Format - HDF</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>What is HDF ?</H1>
+
+<BR CLEAR="ALL"><HR ALIGN=LEFT>
+
+<P>The <B><I>Hierarchical Data Format,</I></B> or <B>HDF</B>,
+is a multi-object file format for sharing scientific data in a
+distributed environment. HDF was created at the National Center
+for Supercomputing Applications (<A HREF="http://hdf.ncsa.uiuc.edu/"
+TARGET="_top">NCSA</A>) to serve the needs of diverse groups of
+scientists working on projects in many fields. HDF was designed
+to address many requirements for storing scientific data, including:
+<P>
+<UL>
+  <LI>Support for the types of data and metadata commonly used
+  by scientists.
+  <LI>Efficient storage of and access to large datasets.
+  <LI>Platform independence.
+  <LI>Extensibility for future enhancements and compatibility with
+  other standard formats.
+</UL>
+
+<P>HDF files are <B>self-describing</B>. For each data object
+in an HDF file, there is information about the type of data, the
+amount of data, its dimensions, and its location in the file.
+&quot;Self-description&quot; means that many types of data can
+be included within an HDF file. For example, it is possible to
+have symbolic, numerical, and graphical data within one HDF file.<BR>
+
+
+<H3>What are GOSTAplus HDF Data Files?</H3>
+
+<P>The <B><I>GOSTAplus HDF Data Files</I></B> are a variation
+of one or many Scientific Datasets and Attributes per HDF file.
+The scientific datasets are stored in a 16-bit integer data type and
+a GOSTAplus HDF&nbsp;data file can contain from 1 to 5 
+datasets in 2 or 3 dimensions per dataset. The 29
+global attributes contain header information about the particular
+dataset such as the complete title of the dataset, conversion
+time, data dimension etc,.
+
+<P><B>HDF Library version 4.0r2</B> was used to convert the original
+ASCII data to HDF.
+
+<P>Typically, the NCSA HDF libraries are first installed in a
+computer, then <I>read programs</I> (in Fortran, C, or other languages)
+ call the datasets from the HDF libraries. The programs included with the data, <B>hdf2ascii</B>
+and <B>readhdf</B>, come in two formats:
+
+<BLOCKQUOTE>
+  <P>1) <B>source</B> - allow you to change them but require
+  that you install the HDF libraries first.<BR>
+  2) <B>executable</B> - ready to use, which include the HDF libraries
+  in the executable.</BLOCKQUOTE>
+
+<P>In addition to readhdf and hdf2ascii, the CD also includes
+'<B>jhv</B>', a Java HDF viewer, also developed by NCSA. It allows
+you to look inside an HDF file, find the variables and their types,
+and to plot certain types of data (some images). The JHV included
+here are for the following platforms:
+
+<BLOCKQUOTE>
+  <P><B>JHV for MacOS<BR>
+  JHV for Windows 95/NT</B></BLOCKQUOTE>
+
+<P>JHV for other platforms can be downloaded and are available
+via NCSA ftp or http sites:
+
+<BLOCKQUOTE>
+  <P><A HREF="ftp://hdf.ncsa.uiuc.edu/pub/outgoing/hdf-java/jhv/"><B>ftp://hdf.ncsa.uiuc.edu/pub/outgoing/hdf-java/jhv/<BR>
+  </B></A><B><A HREF="http://hdf.ncsa.uiuc.edu/hdf/java/jhv/" 
+  TARGET="_top">http://hdf.ncsa.uiuc.edu/hdf/java/jhv/</A></B></BLOCKQUOTE>
+
+<P>
+</BODY>
+</HTML>

@@ -1,0 +1,245 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>NASA Ames FFI 4010 Data Format</title>
+</head>
+
+<body bgcolor="#ffffff">
+<h1><font color="#333399">NASA Ames Data Format: FFI 4010</font></h1>
+<hr>
+
+<h2>Symbols used</h2>
+
+<table>
+<tr valign=top>
+ <td>X<sup>s</sup></td>
+ <td width=6></td>
+ <td>s<sup>th</sup> independent variable (s from 1 to 4).
+     Its values are real.<br>
+     X<sup>1</sup>, X<sup>2</sup> and X<sup>3</sup> are the bounded independent
+     variables, X<sup>4</sup> is the unbounded independent variable.<br>
+     Only X<sup>4</sup> is recorded in the data section of the file.
+     X<sup>1</sup>, X<sup>2</sup> and X<sup>3</sup> are recorded in the file
+     header (see <a href="MF4010.html">Metadata Format 4010</a>).
+     </td></tr>
+<tr valign=top>
+ <td>NX<sup>s</sup></td>
+ <td></td>
+ <td>Number of values of X<sup>s</sup> for s < 4 </td>
+ </tr>
+<tr valign=top>
+ <td>NV</td>
+ <td></td>
+ <td>Number of primary dependent variables</td></tr>
+<tr valign=top>
+ <td>NAUXV</td>
+ <td></td>
+ <td>Number of auxiliary dependent variables</td></tr>
+<tr valign=top>
+ <td>V<sub>n</sub></td>
+ <td></td>
+ <td>n<sup>th</sup> primary variable</td></tr>
+<tr valign=top>
+ <td>A<sub>a</sub></td>
+ <td></td>
+ <td>a<sup>th</sup> auxiliary variable (depends on X<sup>4</sup> only &#151;
+     independent of X<sup>1</sup>, X<sup>2</sup> and X<sup>3</sup>). Its values are real.
+     </td></tr>
+</table>
+
+<h2>Condensed notation</h2>
+
+[ X<sup>4</sup>(m) ( A<sub>a</sub>(m), a=1,NAUXV ) ]
+<br>
+[ V<sub>n</sub>(i,j,k,m), i=1,NX<sup>1</sup> ] j=1,NX<sup>2</sup>
+k=1,NX<sup>3</sup> n=1,NV
+
+<h2>Expanded notation</h2>
+
+<table cellpadding=4>
+<tr>
+ <td>X<sup>4</sup>(1)</td>
+ <td>A<sub>1</sub>(1)</td>
+ <td>...</td>
+ <td>A<sub>NAUXV</sub>(1)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>1</sub>(1,1,1,1)</td>
+ <td>...</td>
+ <td>V<sub>1</sub>(NX<sup>1</sup>,1,1,1)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td colspan=3>...</td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>1</sub>(1,NX<sup>2</sup>,1,1)</td>
+ <td>...</td>
+ <td>V<sub>1</sub>(NX<sup>1</sup>,NX<sup>2</sup>,1,1)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td colspan=3><b>...</b></td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>1</sub>(1,1,NX<sup>3</sup>,1)</td>
+ <td>...</td>
+ <td>V<sub>1</sub>(NX<sup>1</sup>,1,NX<sup>3</sup>,1)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td colspan=3>...</td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>1</sub>(1,NX<sup>2</sup>,NX<sup>3</sup>,1)</td>
+ <td>...</td>
+ <td>V<sub>1</sub>(NX<sup>1</sup>,NX<sup>2</sup>,NX<sup>3</sup>,1)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td colspan=3>...</td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>NV</sub>(1,1,1,1)</td>
+ <td>...</td>
+ <td>V<sub>NV</sub>(NX<sup>1</sup>,1,1,1)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td colspan=3>...</td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>NV</sub>(1,NX<sup>2</sup>,1,1)</td>
+ <td>...</td>
+ <td>V<sub>NV</sub>(NX<sup>1</sup>,NX<sup>2</sup>,1,1)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td colspan=3><b>...</b></td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>NV</sub>(1,1,NX<sup>3</sup>,1)</td>
+ <td>...</td>
+ <td>V<sub>NV</sub>(NX<sup>1</sup>,1,NX<sup>3</sup>,1)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td colspan=3>...</td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>NV</sub>(1,NX<sup>2</sup>,NX<sup>3</sup>,1)</td>
+ <td>...</td>
+ <td>V<sub>NV</sub>(NX<sup>1</sup>,NX<sup>2</sup>,NX<sup>3</sup>,1)</td>
+ </tr>
+<tr>
+ <td colspan=4><b>...</b></td>
+ </tr>
+<tr>
+ <td>X<sup>4</sup>(m)</td>
+ <td>A<sub>1</sub>(m)</td>
+ <td>...</td>
+ <td>A<sub>NAUXV</sub>(m)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>1</sub>(1,1,1,m)</td>
+ <td>...</td>
+ <td>V<sub>1</sub>(NX<sup>1</sup>,1,1,m)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td colspan=3>...</td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>1</sub>(1,NX<sup>2</sup>,1,m)</td>
+ <td>...</td>
+ <td>V<sub>1</sub>(NX<sup>1</sup>,NX<sup>2</sup>,1,m)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td colspan=3><b>...</b></td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>1</sub>(1,1,NX<sup>3</sup>,m)</td>
+ <td>...</td>
+ <td>V<sub>1</sub>(NX<sup>1</sup>,1,NX<sup>3</sup>,m)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td colspan=3>...</td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>1</sub>(1,NX<sup>2</sup>,NX<sup>3</sup>,m)</td>
+ <td>...</td>
+ <td>V<sub>1</sub>(NX<sup>1</sup>,NX<sup>2</sup>,NX<sup>3</sup>,m)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td colspan=3>...</td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>NV</sub>(1,1,1,m)</td>
+ <td>...</td>
+ <td>V<sub>NV</sub>(NX<sup>1</sup>,1,1,m)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td colspan=3>...</td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>NV</sub>(1,NX<sup>2</sup>,1,m)</td>
+ <td>...</td>
+ <td>V<sub>NV</sub>(NX<sup>1</sup>,NX<sup>2</sup>,1,m)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td colspan=3><b>...</b></td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>NV</sub>(1,1,NX<sup>3</sup>,m)</td>
+ <td>...</td>
+ <td>V<sub>NV</sub>(NX<sup>1</sup>,1,NX<sup>3</sup>,m)</td>
+ </tr>
+<tr>
+ <td></td>
+ <td colspan=3>...</td>
+ </tr>
+<tr>
+ <td></td>
+ <td>V<sub>NV</sub>(1,NX<sup>2</sup>,NX<sup>3</sup>,m)</td>
+ <td>...</td>
+ <td>V<sub>NV</sub>(NX<sup>1</sup>,NX<sup>2</sup>,NX<sup>3</sup>,m)</td>
+ </tr>
+<tr>
+ <td colspan=4><b>...</b></td>
+ </tr>
+
+
+
+
+
+</table>
+
+<p>
+<a href="FFI-summary.html">Back to FFI Summary.</a>
+</p>
+
+<p>
+</body>
+
+</html>

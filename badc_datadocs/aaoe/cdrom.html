@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>AAOE CDROM info</title>
+</head>
+
+<body>
+
+<h3>Documentation copied from http://cloud1.arc.nasa.gov/aaoe/ 6/12/05</h3>
+
+            <h1>AIRBORNE ANTARCTIC OZONE EXPERIMENT</h1>
+<table>
+    <tr>  <td>  <p><center>
+        <a href="http://cloud1.arc.nasa.gov/aaoe/project/overview.html" >Overview</a> | 
+        <a href="cdrom.html">CdRom</a> |
+        <a href="http://cloud1.arc.nasa.gov/aaoe/project/statement.html">Statement</a> |
+        <a href="http://cloud1.arc.nasa.gov/aaoe/index.html"> Home</a> |
+        <a href="http://www.espo.nasa.gov">Espo</a>
+        </center></p></td>
+   </tr>  
+
+   <tr><td> 
+      <h2 align="center">AAOE April 26, 1989</h2>
+      <BR>
+          <h3>Introduction</h3> 
+      <p>
+          This CDROM contains data pertaining to the Airborne Antarctic Ozone 
+          Experiment (AAOE) which was based in Punta Arenas, Chile during August 
+          and September 1987. The data is primarily that collected onboard the 
+          NASA ER-2 and DC-8 aircraft, along with ozonesonde data collected at 
+          four Antarctic stations--Halley Bay, McMurdo, Palmer Station, and the 
+          South Pole.</p>
+        <p>
+          All files within this release are standard ASCII files 
+          with variable length records. The file naming convention uses a two 
+          character prefix to identify the instrument followed by a six digit 
+          number giving the year, month, and day (GMT) of the flight (or balloon 
+          launch). A three character extension of ER2, DC8, or OZn is used to 
+          denote the data is from the ER-2, DC-8, or ozonesonde (OZ1 for the first 
+          launch, OZ2 for the second launch on a particular day).</p>
+
+       <h3>Directories</h3>
+            
+            <UL>
+              <LI>The DOCUMENT directory contains several files documenting 
+                the contents of this release. </LI>
+              <LI>CATALOG.DOC contains a list of the principal investigators, 
+                their instruments, measurements, and their addresses. Tables showing 
+                the available aircraft data and appropriate file name prefix's 
+                are also given.</LI>
+              <LI>HALLEY.DOC contains additional information about the 
+                ozonesondes launched at Halley Bay, Antarctica.</LI>
+              <LI>FORMAT.DOC gives the format specifications which all 
+                experimenters were encouraged to use when writing time series 
+                data files for data exchange. The standard format includes header 
+                information which describes the data, and the data in the form 
+                of time series. Some of the measurements (ie. balloon and lidar 
+                soundings, and those with nonuniform sampling intervals) are not 
+                easily cast as time series with constant sampling intervals so 
+                some of the data files have unique formats. But most of the ER-2 
+                data files and some of the DC-8 files follow this standard format 
+                (with the exception that we have changed the file name extensions 
+                from A1 to ER2 or DC8). At least, this document may serve as a 
+                guide for reading the data files.</LI>
+              <LI>SOFTWARE.DOC contains documentation on Fortran subroutines 
+                included in the SOFTWARE directory which can be used to read those 
+                files which are in the standard format described in FORMAT.DOC.</Li>
+            </UL>
+         
+        <UL>
+          <LI> 2.2 The SOFTWARE directory contains several Fortran subroutines 
+            which can be used to read those data files which are in the standard 
+            format described in FORMAT.DOC.</LI>
+          <BR>
+          <BR>
+          <LI> 2.3 The DATA directory has three subdirectories for the ER-2, DC-8, 
+            and ozonesonde data files. In general, each file contains data for 
+            only one flight so the aircraft data is organized by flight date. 
+            However, files for the ER-2 Multi Filter Sampler and the DC-8 Fourier 
+            Transform Spectrometer and Mark IV Interferometer contain data for 
+            all flights in a single file. These exceptions have been placed in 
+            MISC subdirectories. The ozonesonde data has been organized by launch 
+            site.</LI>
+        </UL>
+        
+        <OL>
+		  <LI value =3><b> References</b></LI>
+          <BR>
+		   <UL>  
+             <LI> Airborne Antarctic Ozone Experiment, 1987. AAOE Project Office, NASA Ames
+                  Research Center, MS 245-5, Moffett Field, CA 94035, U.S.A.
+                  An overview of the 1987 AAOE. </LI>
+
+              <LI> Ardanuy, P., J. Victorine, F. Sechrist, A. Feiner, L. Penn, and the RDS
+                   Airborne Antarctic Ozone Experiment Team, 1988: Final Report on the Near-Real-
+                   Time TOMS, Telecommunications, and Meteorological Support for the 1987 Airborne
+                   Antarctic Ozone Experiment. NASA Contractor Report 4133. </LI>
+
+           <LI>Gardiner, B.G., J.C. Farmen, 1988: Results of the 1987 Ozonesonde Programme
+            at Halley Bay, Antarctica. British Antarctic Survey, Natural Environment
+            Research Council, High Cross, Madingley Road, Cambridge, CB3 OET, U.K.
+            This document contains tabulations of the Halley Bay soundings, along with
+            vertical profile plots of ozone partial pressure, ozone mixing ratio, potential
+            temperature, and temperature from each ozonesonde. </LI>
+
+           <LI> Krueger, A.J., P. Ardanuy, F. Sechrist, L. Penn, D. Larko, S. Doiron,
+            R. Galimore, 1988: The 1987 Airborne Antarctic Ozone Experiment--The Nimbus-7
+            TOMS Data Atlas. NASA Reference Publication 1201. </LI>
+
+          </UL>
+		 </OL>
+		 <HR>
+		 This documentation and the accompanying data files were compiled by:
+		 <HR>
+		 Steven Gaines/Steve Hipskind<BR>
+NASA Ames Research Center<BR>
+M/S 245-3<BR>
+Moffett Field, CA 94035<BR><BR>
+
+Richard Winkler<BR>
+NOAA Aeronomy Laboratory<BR>
+325 Broadway<BR>
+Boulder, CO 80303 <BR><BR>
+
+<P>We have left the quality control of the data to the principal investigators and have only checked the data files for 
+readability. Therefore, if problems with the data are encountered please inform either us or the appropriate
+principal investigator. </P>
+        
+        <p>&nbsp;</p>
+		<HR>
+      </div>
+	  <p>&nbsp;</p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

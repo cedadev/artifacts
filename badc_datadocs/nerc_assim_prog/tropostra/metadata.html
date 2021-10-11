@@ -1,0 +1,226 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>Reading Assimilated Atmospheric Satellite Data Metadata</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<h1>The Reading Assimilated Atmospheric Satellite Data - Version 1</h1>
+<i>Also available as a Word or as a PDF file from the BADC
+<a href="/cgi-bin/data_browser/data_browser/badc/nerc-assim-prog/doc/tropostra/">ARDAAOS archive</a>.
+</i>
+<hr>
+
+<table cellpadding=4>
+
+<tr bgcolor=#666666>
+ <th colspan=2 align=left>
+ <font color=#ffffff size=+2><b>BADC Metadata</b></font></th>
+ </tr>
+
+<tr valign=top bgcolor=#dddddd>
+ <td>Data set name</td>
+ <td>Reading Assimilated Atmospheric Satellite Data</td>
+ </tr>
+
+<tr valign=top bgcolor=#dddddd>
+ <td>Data set location</td>
+ <td><a href="/">BADC</a> archive<br>
+     <a href="/cgi-bin/data_browser/data_browser/badc/nerc-assim-prog/data/tropostra/Version_1/">/badc/nerc-assim-prog/data/tropostra/Version_1/</a></td>
+ </tr>
+
+<tr valign=top bgcolor=#dddddd>
+ <td>NERC Thematic Programme</td>
+ <td><a href="/data/nerc_assim_prog/">Assimilation of Remote-sensed Data for
+     Applications in the Atmospheric and Oceanographic Sciences (ARDAAOS)</a>
+     </td>
+ </tr>
+
+<tr valign=top bgcolor=#dddddd>
+ <td>Project</td>
+ <td><a href="/data/nerc_assim_prog/tropostra/">Assimilation of research
+     satellite data using a general circulation model of the troposphere and
+     stratosphere</a></td>
+ </tr>
+
+<tr valign=top bgcolor=#dddddd>
+ <td>Principal investigators</td>
+ <td><a href="mailto:alan@met.reading.ac.uk">Prof Alan O'Neill</a><br>
+     <a href="mailto:wal@met.reading.ac.uk">Dr William Lahoz</a></td>
+ </tr>
+
+<tr valign=top bgcolor=#dddddd>
+ <td>Data set version</td>
+ <td>Version 1</td>
+ </tr>
+
+<tr valign=top bgcolor=#dddddd>
+ <td>Compiled by</td>
+ <td><a href="mailto:stefano@met.reading.ac.uk">Dr Stefano Migliorini</a></td>
+ </tr>
+
+<tr valign=top bgcolor=#dddddd>
+ <td>Date</td>
+ <td>5 March 2002</td>
+ </tr>
+
+</table>
+
+<ul>
+<li><b>Brief model description</b>
+    <p>
+    The numerical forecast model which is the basis of the assimilation system
+    is the HADAM3 version of the stratospheric configuration of the Unified
+    Model (UM) [Cullen and Davies, 1991].
+    The tracer advection scheme used for the advection of ozone is a positive
+    definite scheme based on the flux redistribution method of Roe [1985] with
+    a superbee limiter [Cullen and Barnes, 1997].
+    <br>
+    To approximate the atmospheric ozone photochemistry, the Cariolle [Cariolle
+    and Deque, 1986] ozone photochemistry parameterisation was included in the
+    UM.
+    <br>
+    The radiation scheme in the HADAM3 configuration of the UM has been
+    modified so the ozone used to calculate the radiative forcings are the
+    assimilated ozone rather than climatology.
+    </p>
+<li><b>Assimilation method</b>
+    <p>
+    The scheme used for the assimilation of the ozone data is the Analysis
+    Correction (AC) method, which is described by Lorenc et al. [1991].
+    This scheme was used for real time meteorological analysis of the
+    stratosphere at the Met Office from 1991 to 2000 as described by Swinbank
+    and O'Neill [1994].
+    The analysis is performed by repeated insertion using a modified
+    successive-correction scheme.
+    </p>
+<li><b>Assimilated observational data sets</b>
+    <p>
+    UARS MLS profiles of ozone mixing ratios along track (version 4 'level 3AT'
+    retrieved product) and UARS MLS temperature profiles.
+    <br>
+    GOME Data Processor (GDP) version 2.7 operational level 2 total ozone
+    column values, derived at the Deutschen Zentrum f&#252;r Luft- und
+    Raumfahrt (DLR).
+    <br>
+    A full range of operational meteorological observational data was used in
+    the assimilation in addition to the MLS and GOME observations.
+    These are National Environmental Satellite Data and Information Service
+    (NESDIS) temperature retrievals from the NOAA polar orbiters, radiosonde
+    temperature, winds and relative humidity, aircraft temperature and winds,
+    geostationary satellite cloud track winds and surface pressure observations.
+    </p>
+<li><b>Recorded computed data (nature, unit)</b>
+    <p>Ozone mass mixing ration (kg/kg).</p>
+<li><b>Spatial and temporal coverage of recorded data</b>
+    <p>
+    Global spatial coverage with lowermost model level at 1000 hPa and
+    uppermost at 0.316 hPa.
+    <br>
+    Temporal coverage from 10<sup>th</sup> April to 30<sup>th</sup> April 1997.
+    </p>
+<li><b>Spatial and temporal resolution</b>
+    <p>
+    Arakawa B grid (nx = 96, ny = 73) with 2.5 deg resolution in latitude and
+    3.75 deg resolution in longitude.
+    <br>
+    22 levels in the vertical corresponding to UARS vertical levels (approx. 6
+    UARS levels for every decade of pressure change) with approximately 1.6 km
+    resolution in the stratosphere.
+    <br>
+    Six-hourly temporal resolution.
+    </p>
+<li><b>Validation procedure</b>
+    <p>
+    Analyses have been compared against independent observations (UARS HALOE
+    profiles and TOMS total ozone measurements).
+    <br><u>Results</u>:<br>
+    rms(HALOE - analysis) from 7% to 10% depending on the pressure level (lowest
+    values are in the stratosphere)
+    <br>
+    rms(TOMS - vertically integrated analysis) from 5% to 15% depending on
+    latitude (highest values for latitudes South of 30 deg S, where there is a
+    bias between GOME and TOMS).
+    <br>
+    Quoted errors in HALOE and TOMS instruments: 5%.
+    </p>
+<li><b>Data file format</b>
+    <p><a href="/formats/netcdf/">NetCDF</a> (binary)</p>
+<li><b>Data volume, number of files</b>
+    <p>83 files, 618 560 bytes each</p>
+<li><b>File names</b>
+    <p><table>
+    <tr><td>o3_qtgs<i>yymmddhh</i>.netcdf</td><td width=8></td><td>where</td>
+        <td width=8></td><td><i>yy</i> = 97</td></tr>
+    <tr><td></td><td></td><td></td><td></td><td><i>mm</i> = 04
+        </td></tr>
+    <tr><td></td><td></td><td></td><td></td><td><i>dd</i> = 10, 11, 12, ..., 29,
+        30</td></tr>
+    <tr><td></td><td></td><td></td><td></td><td><i>hh</i> = 00, 06, 12, 18</td>
+        </tr>
+    <tr><td></td><td></td><td>from</td><td></td><td><i>yymmddhh</i> = 97041006
+        </td></tr>
+    <tr><td></td><td></td><td>to</td><td></td><td><i>yymmddhh</i> = 97043018
+        </td></tr>
+    </table></p>
+<li><b>File contents</b>
+    <p>
+    3D ozone mass mixing ratio analysis at a given date and time (UTC).
+    Date and time coding is given as o3_qtgs_yymmddhh.netcdf.
+    <br><br><u>Example</u>: o3_qtgs_97042812.netcdf is O<sub>3</sub> analysis
+    at 12 on 28 April 1997.
+    </p>
+<li><b>References</b>
+    <p>
+    <i>For a complete description of the work see:</i>
+    <br><br>
+    <ul>
+    <li>Struthers, H., Brugge, R., Lahoz, W. A., O'Neill, A. and Swinbank, R.,
+        Assimilation of ozone profiles and total column measurements into a
+        global general circulation model,
+        submitted to <i>J. Geoph. Res.</i>, 2002.
+    </ul>
+    <br>
+    <i>Cited references:</i>
+    <br><br>
+    <ul>
+    <li>Cariolle, D. and Deque, M.,
+        Southern Hemisphere Medium-Scale Waves and Total Ozone Disturbances in
+        a Spectral General Circulation Model,
+        <i>J. Geophys. Res.</i>, <b>91</b>, 10825-10846, 1986.
+        <br><br>
+    <li>Cullen, M. J. P. and Barnes, R. T. H.,
+        A positive definite advection scheme,
+        UM documentation paper N<sup>o</sup> 11, Met Office, London Road,
+        Bracknell, Berkshire, RG12 2SZ, UK, 1997.
+        <br><br>
+    <li>Cullen, M. J. P. and Davies, T.,
+        Conservative split-explicit integration scheme with fourth-order
+        horizontal advection,
+        <i>Q. J. R. Meteorol. Soc.</i>, <b>117</b>, 993-1002, 1991.
+        <br><br>
+    <li>Lorenc, A. C., Ballard, S. P., Bell, R. S., Ingleby, N. B., Andrews, P.
+        L. F., Barker, D. M., Bray, J. R., Clayton, A. M., Dalby, T., Li, D.,
+        Payne, T. J. and Saunders, F. W.,
+        The Met Office Global 3-Dimensional Variational Data Assimilation
+        Scheme,
+        <i>Q. J. R. Meteorol. Soc.</i>, <b>126</b>, 2991-3011, 2000.
+        <br><br>
+    <li>Roe, P. L.,
+        Large Scale Computations in Fluid Mechanics,
+        Lectures in Applied Maths,
+        <b>22</b>, 162, 1985.
+        <br><br>
+    <li>Swinbank, R. and O'Neill, A.,
+        A stratosphere-troposphere data assimilation system,
+        <i>Mon. Wea. Rev.</i>, <b>122</b>, 686-702, 1994.
+        <br><br>
+    </ul>
+    </p>
+</ul>
+
+<p>
+</body>
+</html>

@@ -1,0 +1,70 @@
+ER2TABLE.DOC   (1992-07-27 - pgh)
+
+
+The following table indicates the ER-2 files, the P.I. (or P.I.'s) 
+responsible for generating the data, and the two-character file name
+prefix for each type of file that are contained on this final release
+of AASE II datasets.  The following letters are used to indicate the 
+status of each file:
+
+    'O' (for 'O'riginal) indicates those files which were contained on
+        the AASE II preliminary CD-ROM for which no revised datasets 
+        were submitted
+
+    'R' (for 'R'evised) indicates those files which have been resubmitted
+        by the P.I. ('s) for this edition of the CD-ROM
+
+    'N' (for 'N'ew) indicates those files which were NOT contained on 
+        the AASE II preliminary CD-ROM
+
+No distinction is made as to why a particular dataset is not available. Some 
+blanks are a result of a temporary instrument failure.  In other cases there 
+may be data available for a given flight, but for whatever reason the PI 
+could not assure its reliability and therefore did not include it in this 
+release.
+
+
+             1991                              1992
+             Aug   Sep Oct         Nov Dec     Jan           Feb     Mar
+             2 2 2 1 1 0 0 0 1 1 1 0 0 0 1 1 1 0 0 0 1 1 1 2 1 1 1 2 1 1 2 2 2
+             0 2 3 7 9 4 6 8 0 2 4 2 4 8 0 2 4 4 6 8 1 2 6 0 3 5 7 2 5 8 0 2 6
+             -----------------------------------------------------------------
+D. Baumgardner/J. Dye/G. Ferry
+        FS     O   O   R O R O O R R O O O O O O O O   O O O O O O O O O O O O
+R. Chan/L. Pfister
+        FP   O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
+        MM   O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
+J. Elkins
+        GC       R R   R R R R R R R   R   R R   R R   R R R R R R R R R R R N
+D. Fahey
+        NO   O     N N R R R R R N N   R   R N   R R   R N O R O R R R R R R R
+        NY   O     N N R R R R R R R   R     N   R R   R R R R O R R R R R R 
+B. Gary
+        MP             O O O O O O O   O   O O O O O   O O O O O O O O O O O O
+P. Hathaway
+        NM                                 O                             O
+        NP                                 O                             O
+L. Heidt/J. Vedder
+        WA             R R R   R R R   R   R R R R R   R R R R   R R R R R R R
+K. Kelly
+        WV             R R R R R R R   R   R R R R R   R R   R R R R R R R R R
+L. Lait
+        FA             O O O O O O O O O O O O O O O O O O O O O O O O O O O O
+M. Loewenstein/J. Podolske
+        N2   O O O O O O O O O O O     O   O O O   O   O O O O O O O O O   O O
+P. Newman
+        XS             O O O O O O O O O O O O O O O O O O O O O O O O O O O O
+M. Proffitt/J. Margitan
+        O3   O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
+M. Schoeberl
+        BT             O O O O O O O   O   O O O O O   O O O     O O N N O O N
+D. Toohey
+        BR         N N N N     N N N       N N N N N   N N N N   N N N N N N N 
+        CL   N R R R R R R   R R R R   R   R R R R R   R R R R R R R R R R R R
+C. Webster/R. May
+        AL             O O O O O O O   O   O O O O O   O   O O   O O O O O O
+C. Wilson
+        CN   O R   O O O O O O O O O   O   R O O O O   O O O O O O O O O   O O
+S. Wofsy
+        SF         O   O O O O O O O   O   O O O O O   O O O O O O O O O O O O
+

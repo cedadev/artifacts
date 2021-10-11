@@ -1,0 +1,159 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+  <TITLE>BADC Datasets: HadAT uncertainty estimates</TITLE>
+</HEAD>
+<!-- Created 10th August 2005 -->
+<!-- Author: Anabelle Menochet BADC-->
+<BODY BGCOLOR="#ffffff">
+
+
+
+<H1>HadAT uncertainty estimates</H1>
+
+<em>This is a Met Office documentation. The BADC is not responsible for its content. "we" refers to Met Office.</em>
+<HR ALIGN=LEFT>
+<P>
+<blockquote>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="uncertainty.html#intro">Introduction</a><br>
+1 - <a href="uncertainty.html#no">Sources of uncertainty which we DO NOT consider</a><br>
+2 - <a href="uncertainty.html#yes">Sources of uncertainty which we do consider</a><br>
+3 - <a href="uncertainty.html#estimates">Gaining uncertainty estimates over a range of space and time scales</a><br>
+</blockquote>
+<HR align=left>
+<P>
+<name="intro"></a>
+<H3>Introduction</h3>
+Users are strongly advised that uncertainties come in all shapes, sizes, and flavours. You should be 
+extremely careful in comparing one group's estimate of uncertainties with another group's: Does it 
+include the same factors? Are they calculated in the same manner? Are there other sources of 
+uncertainty that they haven't considered? To our knowledge no-one has come up with an agreed 
+protocol for assigning total uncertainty estimates to climate records - if you have we'd be 
+absolutely delighted if you'd let us know. So, please be incredibly careful in how you interpret 
+our uncertainty estimates and compare them with those of others. If you aren't and you 
+over-interpret then you can't say that we didn't give you fair warning.
+<P>
+At present uncertainty estimates are only available on seasonal products and up until the end of 
+2001. In future we may extend our analyses and consider uncertainty on monthly timescales. More 
+details on the approach we use and its justification are available in Thorne et al., 2005. 
+<P>
+<name="no"></a>
+<h3>1 - Sources of uncertainty which we DO NOT consider</h3>
+Caution: this list is not necessarilly exhaustive. 
+<P>
+<ul>
+<li>We do not consider the structural uncertainty which would result from another individual or group 
+of experts having come in been given the same array of raw data and chosen to homogenise it in a 
+different, but equally (im)plausible way. This uncertainty can begin to be understood by comparing 
+the alternative datasets. Note that some (all?) of these, including HadAT, might be incorrect 
+(defining "correct" as being statistically indistinguishable from the true climate system evolution, 
+which is, of course, unknown). Equally we might not be truly sampling the full range of plausible 
+results. So comparing existing datasets is a weak constraint - we may be over or under-estimating 
+the true uncertainty through such a simple approach. 
+<P>
+<li>We have not considered the effects of incomplete spatial sampling upon our large-scale average 
+measures. HadAT2 is primarily a continental dataset - we poorly sample the oceans, and the Southern 
+Hemisphere. At this stage we have decided against trying to account for this incomplete sampling 
+effect, but it is sure to add uncertainty to our estimates of large scale means. 
+<P>
+<li>In some of our estimates, temporal completeness of the record may be important, and we have not 
+explicitly fully accounted for all its effects here. In particular we have not considered the 
+effects of sub-monthly and sub-seasonal timescale sampling changes over time unless they caused a 
+significant discontinuity in which case they will have been adjusted for. 
+</ul>
+<P>
+<name="yes"></a>
+<h3>2 - Sources of uncertainty which we do consider</h3>
+
+In contrast these lists are comprehensive.
+<P>
+For the individual stations we consider the effects of: 
+<P>
+<ul>
+<li>Uncertainty in the seasonal climatology values which results from the effects of incomplete 
+temporal sampling over 1966-95. These were estimated from those stations and levels with temporally 
+complete coverage using a boot-strap approach. This effect would add a constant offset bias to all 
+values for a given station for a given season. 
+<P>
+<li>Uncertainty in the representativeness of the individual seasonal anomaly as we are sampling in 
+most cases twice daily only and with instruments that are used only once (fire and forget) so are 
+not recalibrated subsequent to their use. We assume that the difference series from the neighbour 
+composite estimate provides a good parameterisation of this effect following the completion of the 
+homogenisation process. The difference series is subjectively assumed to be indistinguishable from 
+white noise (random normally distributed around zero) when a given station is accepted as having 
+been homogenised. In reality this term will be a combination of sampling error and a true physical 
+difference that results because our finite neighbour field will not be a perfect predictor of the 
+station series. 
+<P>
+<li>Uncertainty in the adjustments that were applied during the homogenisation process. Our 
+adjustment calculation involved the calculation of 1,000 plausible adjustment factors at each 
+suspected breakpoint which we identified. We saved from this distribution various percentiles 
+of which we apply the 5th and 95th percentile range to yield an uncertainty in each adjustment 
+applied. Of course, each adjustment will in reality have a unique absolute error (climate evolved 
+in one way), but our best guess is a random error. If we actually knew the true sign and magnitude 
+then we wouldn't have any uncertainty at all as we'd simply adjust for it. 
+</ul>
+<P>
+We assumed that the sources of uncertainty (and the uncertainty in each adjustment) are independent 
+of one another and therefore we summed them quadratically to gain an overall estimate of the 
+uncertainty in each station record on each level for each timestep. The bounds for total 
+uncertainty are 5th-95th percentile equivalent measures such that we would expect the true anomaly 
+to fall within the reported anomaly +/- the given bounds on 90% of occasions.
+<P>
+Station uncertainty timeseries (total uncertainties as well as the three components) include:
+<ul>
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/Uncertainty/hadat2_stations_uncertainty.nc">Stations uncertainty.nc NetCDF (compressed, 8.8 Mb)</a>
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/Uncertainty/hadat2_total_uncertainty.txt.gz">Total uncertainty ASCII file (compressed, 2.3 Mb)</a>
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/Uncertainty/hadat2_climatological_uncertainty.txt.gz">Climatological uncertainty ASCII file (compressed, 0.02 Mb)</a>
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/Uncertainty/hadat2_observational_uncertainty.txt.gz">Observational uncertainty ASCII file (compressed, 0.01 Mb)</a>
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/Uncertainty/hadat2_adjustment_uncertainty.txt.gz">Adjustment uncertainty ASCII file (compressed, 2.0 Mb) </a>
+</ul>
+<P>
+<name="estimates"></a>
+<h3>3 - Gaining uncertainty estimates over a range of space and time scales</h3>
+
+To gain estimates of the uncertainty in the gridded product on a range of space and timescales we 
+could have attempted to aggregate up our station timeseries uncertainty estimates to the required 
+spatial and temporal resolution. However, there remains considerable debate within the scientific 
+community as to the validity of such approaches. Hence we chose to calculate a population of 
+"equi-probable" HadAT2 timeseries and use this to calculate our uncertainty estimates.
+<P>
+We started by calculating 100 realisations of each station timeseries. To do this for each 
+realisation we took a randomised version of the scaled neighbour difference series and added 
+it on to the original station timeseries. Then at each point that an adjustment was applied 
+to the original station timeseries we created a small systematic increment to all earlier 
+values by sampling from a random normal distribution with 1.64sigma derived from the 5th to 
+95th percentile range previously calculated from our 1000 adjustment estimates. No attempt 
+was made to parameterise the effects of uncertainty in the climatology. The obvious way to 
+do this would be to renormalise over the 1966-95 period but this makes the timeseries 
+artificially similar over the climatology period and increasingly divergent away from this. 
+We believe that our true uncertainty relative to the present day increases the further back 
+in time we go.
+<P>
+Having gained a population of plausible station timeseries for each station we then created 1,000 
+realisations of the true gridded timeseries by randomly picking for each station a version of its 
+timeseries and then combining these. These gridded realisations are available upon request 
+(they would fill up the webserver). We proceeded to zonally average these gridded products. 
+Every realisation of the zonal mean is available below in a tar file of netcdf files. 
+Having created zonally averaged timeseries we then created global and tropical (defined as 20N to 
+20S) averages by cos(lat) weighting the zonal mean fields. Median of pairwise slopes trends were 
+subsequently calculated for 1958-2002 (full period), 1958-1978 (pre-satellite period), and 
+1979-2002 (satellite period).
+<P>
+Trends files are denoted by pressure level followed by the HadAT2 trend over the period and then 
+the trend for each of the 1,000 realisations in order. Timeseries files give the global (tropical) 
+mean timeseries for HadAT2 and then each of the 1,000 realisations on each line in pressure level 
+order. These are large files containing 177 values on each line! 
+<P>
+<ul>
+<li>Zonally averaged timeseries - gzipped tar file of every realisation 
+<li>Area averaged timeseries - <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/Uncertainty/global_timeseries.txt">
+global (ASCII)</a> & <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/Uncertainty/tropical_timeseries.txt">tropical (ASCII)</a> 
+<li>Area averaged full period trends - <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/Uncertainty/global_full_trends.txt">global (ASCII)</a> & <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/Uncertainty/tropical_full_trends.txt">tropical (ASCII)</a> 
+<li>Area averaged pre-satellite era trends - <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/Uncertainty/global_presat_only_trends.txt">global (ASCII)</a> & <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/Uncertainty/tropical_presat_only_trends.txt">tropical (ASCII)</a> 
+<li>Area averaged satellite era trends - <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/Uncertainty/global_sat_only_trends.txt">global (ASCII)</a> & <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/Uncertainty/tropical_sat_only_trends.txt">tropical (ASCII)</a> 
+</ul>
+
+<P>
+</BODY>
+</HTML>

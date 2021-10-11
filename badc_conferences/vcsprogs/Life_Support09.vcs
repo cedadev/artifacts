@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20090428T230000Z
+DTEND:20090501T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Savoy Place, London, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000B045A2F018A7C9010000000000000000100
+ 00000C4E550AE5DA99543994A1D04250E07AE
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=20=0D=0AValuing our Life Support Sys=
+tems=0D=0ASavoy Place, London=0D=0A29 April - 1 May 2009=0D=0A =0D=0AThe li=
+nk between the health of our environment and the health of our economy is b=
+ecoming clearer. There is no doubt that a sustainable approach to developme=
+nt needs to be adopted, but gaps in research, policy and its implementation=
+ need to be filled.=0D=0A =0D=0AThis three-day symposium for representative=
+s from government departments and agencies, parliament, academia and resear=
+ch, businesses and NGOs aims to identify these gaps and recommend solutions=
+. The event is part of the Natural Capital Initiative, which is run by the =
+Institute of Biology, Centre for Ecology & Hydrology and British Ecological=
+ Society.=0D=0A =0D=0AWhy participate?=0D=0A=0D=0A=0D=0A*	Hear influential =
+speakers from a wide variety of sectors =0D=0A*	Improve policy and research=
+ =0D=0A*	Meet the decision makers =0D=0A*	Forge new networks and collaborat=
+ions =0D=0A*	Get involved and make a difference=0D=0A=0D=0A =0D=0AMore deta=
+ils can be found here: www.naturalcapitalinitiative.org.uk=0D=0A =0D=0A=0D=
+=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Valuing our Life Support Systems
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

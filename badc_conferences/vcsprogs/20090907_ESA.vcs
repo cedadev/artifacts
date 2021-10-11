@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20090906T230000Z
+DTEND:20090911T230000Z
+LOCATION:Barcelona, Spain
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000506CE8AF1791C901000000000000000
+	010000000F706F232EFE27B4F93F37B26203723AA
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+ESA Atmospheric Science Conference =96 7-11 September 2009 - Barcelona, S=
+pain.=0D=0A=0D=0AThe European Space Agency is organising a Scientific Con=
+ference on the topical theme atmosphere to provide scientists and data us=
+ers with the opportunity to present first-hand and up-to-date results fro=
+m their ongoing research activities on the atmospheric payload of the sat=
+ellites ERS-2 and ENVISAT as well as ESA Third Party Missions on board th=
+e EOS-AURA, ACE, Odin, OCO and GOSAT satellites. The conference will also=
+ include discussions on applications, data quality, the development of ne=
+w algorithms/data products, and studies on future atmospheric missions.=
+=0D=0A=0D=0AMore information about this conference will be published on t=
+he ESA webpage shortly. The planned deadline for abstract submission is t=
+he end of April and the preliminary programme will be published by mid Ju=
+ne.=0D=0A=0D=0A
+SUMMARY:ESA Atmospheric Science Conference
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

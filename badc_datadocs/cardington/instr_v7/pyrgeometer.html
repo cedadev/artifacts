@@ -1,0 +1,119 @@
+<HTML>
+
+<HEAD>
+<TITLE>CG4 Pyrgeometer</TITLE>
+<STYLE>
+<!--
+  BODY { font: 11pt sans-serif,arial;}
+  H2   { font: 175% sans-serif,arial;}
+  H3   { font: bold 110% sans-serif,arial;}
+  TD.caption { font : italic 80% sans-serif,arial;}
+-->
+</STYLE>
+</HEAD>
+
+<BODY>
+<BR>
+<H2>Kipp & Zonen CG4 Pyrgeometer</H2>
+<HR>
+<BR>
+
+<TABLE HSPACE=10>
+<TR><TD>
+  <IMG SRC="CG4.jpg" WIDTH=350 ALT="Kipp & Zonen CG4 pyrgeometer">
+</TD></TR></TABLE>
+
+<H3>Purpose of instrument:-</H3>
+The CG4 pyrgeometers are used for the measurement of upwelling and downwelling components of LW irradiance 
+(in W m<FONT SIZE=-1><SUP>-2</SUP></FONT>).
+The instruments are sensitive to infrared radiation in a wavelength range of 4.5 to approx. 
+40<FONT FACE="symbol">m</FONT>m, and have a field of view of 180<FONT SIZE=-1><SUP>o</SUP></FONT>, with
+a cosine response.
+
+<H3>Principles of operation:-</H3>
+
+The CG4 pyrgeometer uses a thermopile to detect thermal gradients caused by incoming radiant energy.
+The detecting element is a black painted disk, which absorbs the incoming radiation, and the heat flows
+through to the heatsink, which is the instrument body.
+The thermal gradient across the thermopile  produces a voltage which is proportional to the net radiation.
+(ie the difference between the radiation received  at the detector, and the radiation emitted 
+by the pyrgeometer itself). 
+The nominal sensitivity of the thermopile is 10<FONT FACE="symbol">m</FONT>V/W/m<FONT SIZE=-2><SUP>2</SUP></FONT>
+
+<P>
+The spectral range of the incoming radiation is restricted by a specially coated silicon window, which
+filters out unwanted solar radiation below wavelengths of 4.5<FONT FACE="symbol">m</FONT>m. 
+The silicon window is also required to protect the instrument from environmental effects, such as wind and rain. 
+The curve below  shows the transmittance characteristics of the silicon window:- 
+
+
+
+<TABLE HSPACE=50 VSPACE=25 CELLSPACING=10>
+<TR>
+  <TD COLSPAN=2><IMG SRC="CG4_spectral.gif"></TD>
+</TR>
+<TR>
+  <TD WIDTH=20%></TD>
+  <TD class=caption>
+    NB: Source - Kipp & Zonen CG4 manual
+  </TD>
+</TR>
+</TABLE>
+
+
+
+In order to calculate the incoming LW irradiance at the detector,  the temperature of the
+pyrgeometer body must be known. This is measured using a thermistor (type YSI44031), which is located 
+beside the cold junctions of the thermopile. The downward (or upward) longwave radiation is then 
+calculated using the following formula :-
+<PRE>
+      LW = U<SUB>emf</SUB>/S   +  ( 5.67*10<SUP>-8</SUP> * T<SUB>b</SUB><SUP>4</SUP> )
+</PRE>
+
+where <I>U<SUB>emf</SUB></I> is the output voltage from the thermopile,  <I>S</I>
+is the calibration constant of the instrument, and <I>T<SUB>b</SUB></I> is the pyrgeometer body 
+temperature, measured by the thermistor, in degrees kelvin. 
+
+Note that for an upward facing pyrgeometer, the thermopile output voltage will in most instances be negative. 
+This is beacause the upwelling irradiance from the pyrgeometer is likely to be greater then the incoming 
+irradiance from the sky.
+ 
+<P>
+Window heating affects (caused by solar radiation creating a thermal gradient between the window and
+the thermopile detector) are very small in the CG4. The manufacturer has estimated that in full sunlight, 
+the heating offset is less than 4 W/m<FONT SIZE=-2><SUP>2</SUP></FONT>. However, to minimise this effect,
+the direct beam of the sun can be obscured by use of a solar track. (see section on instrument setup).
+
+<P>
+Futher information on the CG4 pyrgeometer can be obtained from the manufacturer's website:-
+<A HREF="http://www.kippzonen.com" TARGET="manufacturer">www.kippzonen.com</A>
+
+<H3>Instrument setup:-</H3>
+
+The CG4 pyrgeometer measuring the downwelling LW irradiance, is mounted on a <I>Kipp & Zonen 2AP</I> solar tracker.
+This tracks the sun through the sky, such  that the dome is continuously shaded from the direct beam of the sun 
+by a small black sphere. This reason for this is to eliminate any window heating affects as described above.
+<P>
+For measuring the upwelling LW irradiance from the ground, the CG4 pyrgeometer is mounted, facing downwards, 
+at the end of a boom, clamped onto a mast at a height of 2m. The boom extends out about 1.5m in a southerly 
+direction. The ground beneath the instrument, is short grass, and is representative of the whole of the
+site.
+
+<P>
+Both the instruments are ventilated by a fan which blows air across the domes. This prevents dew and rain
+droplets etc from collecting.
+
+<H3>Calibration:-</H3>
+The sensitivity of each instrument is determined initially, by the manufacturer by comparison against a standard 
+instrument, traceable back to the World Radiation Centre in Davos. A spare, reference CG4 is held at Cardington
+for intercomparisons.
+
+<H3>Maintenance:-</H3>
+The following tasks are carried out on a weekly basis :- checking the operation of the ventilators,
+checking for dirt on the domes and checking the condition of the dessicant. The domes are cleaned when required.
+
+
+<BR><BR><HR>
+</BODY>
+
+</HTML>

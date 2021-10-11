@@ -1,0 +1,145 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Daily Rain measurements - File Format</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Daily Rain data - .drain (daily rain observations) file
+format<BR CLEAR="ALL"></H1>
+<hr>
+<blockquote>
+<strong><FONT COLOR="#FB0000"><Strong>PLEASE NOTE:</strong></FONT> The file format described below refers to the Met Office Land Surface data (1900-2000) dataset which has been superseded by the <a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__dataent_ukmo-midas">Met Office MIDAS dataset (1853-present)</a> at the BADC.
+</strong>
+</blockquote>
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<P>A <STRONG>list of UK stations</STRONG> for which the BADC holds
+.drain files is available (<A HREF="/data/surface/station_lists/ukstation.drain.html">.drain
+stations</A>).</P>
+
+<P>The surface data file name convention is (STATION_NAME)(YEAR).(MESSAGE_TYPE).(FILE_EXTENSION)</P>
+
+<UL>
+  <LI>STATION_NAMES is the complete station name.<BR>
+  <LI>YEAR is the year expressed in full, ie 1998. <BR>
+  <LI>Description of the <A HREF="met_domain.html">message types</A>
+  is available.<BR>
+  <LI>The daily rain data file extension is <STRONG>.drain</STRONG>
+  meaning that the file contains daily rain measurements.<BR>
+</UL>
+
+<P>These .drain files contain rainfall amounts measured during
+one or more 24 hour period. The file headers <A HREF="count.html">END_HOUR
+and DAY_CNT</A> define the observation period. <BR>
+For daily rainfall, i.e. rainfall over a 24 hour period, usually
+09-09, DAY_CNT=1. The 24 hour period ends on the stated date and
+time. For daily rainfall from irregular sources, i.e. those which
+report monthly or weekly, DAY_CNT is then the number of days over
+which the rainfall is measured. Again the period ends on the stated
+day.</P>
+
+<P><STRONG>-999</STRONG> indicates a missing value. <BR>
+<BR>
+The first line of the data file are the fields headers (which
+are detailed in the table below).<BR>
+<BR>
+The fields in the .drain data files are : <BR>
+<BR>
+<td><TABLE BORDER="1" CELLSPACING="2" CELLPADDING="0">
+  <TR>
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">HEADER</FONT></TH> 
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">PARAMETER</FONT></TH> 
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">FIELDS</FONT></TH> 
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">COLUMNS</FONT></TH> 
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">UNITS</FONT></TH> 
+    <TH BGCOLOR="#666666"><FONT COLOR="#ffffff">COMMENTS</FONT></TH> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">ID</TD> 
+    <TD BGCOLOR="#ffffff">Raingauge Number</TD> 
+    <TD BGCOLOR="#ffffff">1</TD> 
+    <TD BGCOLOR="#ffffff">1-8</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#3.6">Rainfall
+      observation site identification</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">IDTYPE</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">2</TD> 
+    <TD BGCOLOR="#d4d4d4">9-17</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas/ukmo_guide.html#3.6">Rainfall
+      observation site identification</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">MET_DOM</TD> 
+    <TD BGCOLOR="#ffffff">Meteorological Domain</TD> 
+    <TD BGCOLOR="#ffffff">3</TD> 
+    <TD BGCOLOR="#ffffff">18-28</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="met_domain.html">Message types</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">YEAR</TD> 
+    <TD BGCOLOR="#d4d4d4">Year</TD> 
+    <TD BGCOLOR="#d4d4d4">4</TD> 
+    <TD BGCOLOR="#d4d4d4">29-35</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">4 characters</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">MONTH</TD> 
+    <TD BGCOLOR="#ffffff">Month</TD> 
+    <TD BGCOLOR="#ffffff">5</TD> 
+    <TD BGCOLOR="#ffffff">36-43</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff">1 or 2 characters (from 1 to 12)</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">DAY</TD> 
+    <TD BGCOLOR="#d4d4d4">Day</TD> 
+    <TD BGCOLOR="#d4d4d4">6</TD> 
+    <TD BGCOLOR="#d4d4d4">44-51</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">1 or 2 characters (from 1 to 31max)</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">END_HOUR</TD> 
+    <TD BGCOLOR="#ffffff">Hour</TD> 
+    <TD BGCOLOR="#ffffff">7</TD> 
+    <TD BGCOLOR="#ffffff">52-61</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff">Hour of observation from 0 to 2300</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">DAY_CNT</TD> 
+    <TD BGCOLOR="#d4d4d4">Observation period</TD> 
+    <TD BGCOLOR="#d4d4d4">8</TD> 
+    <TD BGCOLOR="#d4d4d4">62-70</TD> 
+    <TD BGCOLOR="#d4d4d4">hours</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="count.html">See COUNT definition</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">AMT</TD> 
+    <TD BGCOLOR="#ffffff">Precipitation Amount</TD> 
+    <TD BGCOLOR="#ffffff">9</TD> 
+    <TD BGCOLOR="#ffffff">71-78</TD> 
+    <TD BGCOLOR="#ffffff">0.1 mm</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#5.6">See Met Office
+      documentation</A></TD> 
+  </TR>
+</TABLE><BR>
+<BR>
+General information about the Rainfall Network is available in
+the <A HREF="../ukmo-midas/ukmo_guide.html#3.4">documentation provided by the
+Met Office</A>.
+
+</BODY>
+</HTML>

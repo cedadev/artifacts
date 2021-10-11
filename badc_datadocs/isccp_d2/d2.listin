@@ -1,0 +1,75 @@
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean cloud amount                                                          
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean IR-marginal cloud amount                                              
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Frequency of mean cloud amount  0-10%                                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Frequency of mean cloud amount 10-20%                                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Frequency of mean cloud amount 20-30%                                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Frequency of mean cloud amount 30-40%                                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Frequency of mean cloud amount 40-50%                                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Frequency of mean cloud amount 50-60%                                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Frequency of mean cloud amount 60-70%                                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Frequency of mean cloud amount 70-80%                                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Frequency of mean cloud amount 80-90%                                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Frequency of mean cloud amount 90-100%    
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean cloud pressure                                                        
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Standard deviation over time                                               
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean standard deviation over space               
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean cloud temperature                                                     
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Standard deviation over time                                               
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean standard deviation over space        
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean                                                             
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Standard deviation over time                                               
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean standard deviation over space                                         
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean cloud water path                                           
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean low cloud amount                                                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for low clouds                                                     
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for low clouds                                                     
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean middle cloud amount                                                   
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for middle clouds                                                  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for middle clouds                                                  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean high cloud amount                                                     
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for high clouds                                                    
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Temperature|Mean for high clouds                                                    
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 1 = Cumulus,liquid                       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Optical Thickness|Mean water path for cloud type 1 = Cumulus,liquid                                                  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 2 = Stratocumulus,liquid                            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloud type 2 = Stratocumulus,liquid                                                                            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 3 = Stratus,liquid                                  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloud type 3 = Stratus,liquid                                                          
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 4 = Cumulus,ice                                     
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloud type 4 = Cumulus,ice                                                                  
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 5 = Stratocumulus,ice                               
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloud type 5 = Stratocumulus,ice                                                              
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 6 = Stratus,ice                                     
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloud type 6 = Stratus,ice                                                       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 7 = Altocumulus,liquid                              
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloud type 7 = Altocumulus,liquid                                            
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 8 = Altostratus,liquid                              
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloud type 8 = Altostratus,liquid                                          
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 9 = Nimbostratus,liquid                             
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloud type 9 = Nimbostratus,liquid                                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 10 = Altocumulus,ice                                
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloud type 10 = Altocumulus,ice                                      
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 11 = Altostratus,ice                                
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloud type 11 = Altostratus,ice                                
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 12 = Nimbostratus,ice                               
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloud type 12 = Nimbostratus,ice                                          
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 13 = Cirrus                                         
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloud type 13 = Cirrus                              
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 14 = Cirrostratus                                   
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloud type 14 = Cirrostratus                                       
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Amount|Mean for cloud type 15 = Deep convective                                
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Top Pressure|Mean for cloud type 15 = Deep convective                
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Surface Air Temperature|Mean from clear sky composite                                           
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Surface Air Temperature|Standard deviation over space                                                                    
+EARTH SCIENCE|CRYOSPHERE|Snow/Ice|Snow Cover|Mean snow/ice amount                                                        
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Pressure|Surface Pressure|Mean Surface pressure                                                      
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Surface Air Temperature|Mean Near-surface air temperature                                          
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Mean Temperature at 740 mb                                                 
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Mean Temperature at 500 mb                                                 
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Mean Temperature at 375 mb                                                 
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Mean Tropopause pressure                                                   
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Mean Tropopause temperature                                                
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Temperature|Air Temperature|Mean Stratosphere temperature at 50 mb                                     
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Precipitable Water|Mean Precipitable water for 1000-680 mb                                    
+EARTH SCIENCE|ATMOSPHERE|Clouds|Cloud Precipitable Water|Mean Precipitable water for 680-310 mb                                     
+EARTH SCIENCE|ATMOSPHERE|Atmospheric Chemistry|Ozone|Mean Ozone abundance

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060510T230000Z
+DTEND:20060511T230000Z
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000F06F061AA76AC6010000000000000000100
+ 0000086FCEEB3AD112041B8ABF9F053B00BC2
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0ANew Directions for Environment =
+& Health Research in Scotland - a Research Information and Discussion Day=
+=0D=0AThursday 11 May 2006=0D=0A=0D=0ATo discuss a strategic framework for =
+Scotland; research opportunities; and new funding streams =0D=0A=0D=0APleas=
+e find details attached (as pdf file) of the above research information and=
+ discussion day hosted by Scottish Executive and supported by SNIFFER and S=
+cottish Executive Office of Chief Researcher Knowledge Transfer Team.=0D=0A=
+=0D=0A=0D=0A <<NEWDIRECTIONSFORENVIRONMENTANDHEALTHPagetoViewFly._1.pdf>> =
+=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:New Directions for Environment & Health R=
+esearch in Scotland=20
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

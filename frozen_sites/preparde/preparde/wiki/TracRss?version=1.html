@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracRss – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracRss?version=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracRss" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracRss" title="View TracRss">TracRss</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracRss" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A01%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:01+01:00 in Timeline">6 years</a> ago)
+               (<a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracRss?action=diff&amp;version=1">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="UsingRSSwithTrac">Using RSS with Trac</h1>
+<p>
+</p><div class="wiki-toc"><h4>Table of Contents</h4><ul><li class="False"><a class="False" href="TracGuide.html">Index</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInstall">Installation</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization">Customization</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracPlugins">Plugins</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUpgrade">Upgrading</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">Configuration</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracAdmin">Administration</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracBackup">Backup</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLogging">Logging</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracPermissions">Permissions</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWiki">The Wiki</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">Wiki Formatting</a></li><li class="False"><a class="False" href="TracTimeline.html">Timeline</a></li><li class="False"><a class="False" href="TracBrowser.html">Repository Browser</a></li><li class="False"><a class="False" href="TracRevisionLog.html">Revision Log</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracChangeset">Changesets</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTickets">Tickets</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWorkflow">Workflow</a></li><li class="False"><a class="False" href="TracRoadmap.html">Roadmap</a></li><li class="False"><a class="False" href="TracQuery.html">Ticket Queries</a></li><li class="False"><a class="False" href="TracReports.html">Reports</a></li><li class="active"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracRss">RSS Support</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracNotification">Notification</a></li></ul></div><p>
+</p>
+<p>
+Several of the Trac modules support content syndication using the RSS (Really Simple Syndication) XML format.
+Using the RSS subscription feature in Trac, you can easily monitor progress of the project, a set of issues or even changes to a single file.
+</p>
+<p>
+Trac supports RSS feeds in:
+</p>
+<ul><li><a class="wiki" href="TracTimeline.html">TracTimeline</a> —  Use the RSS feed to <strong>subscribe to project events</strong>.<br />Monitor overall project progress in your favorite RSS reader.
+</li><li><a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTickets">TracTickets</a>, <a class="wiki" href="TracReports.html">TracReports</a>, and <a class="wiki" href="TracQuery.html">TracQuery</a> — Allows syndication of report and ticket query results.<br />Be notified about important and relevant issue tickets.
+</li><li><a class="wiki" href="TracBrowser.html">TracBrowser</a> and <a class="wiki" href="TracRevisionLog.html">TracRevisionLog</a> — Syndication of file changes.<br />Stay up to date with changes to a specific file or directory.
+</li></ul><h2 id="HowtoaccessRSSdata">How to access RSS data</h2>
+<p>
+Anywhere in Trac where RSS is available, you should find a small orange <strong>XML</strong> icon, typically placed at the bottom of the page. Clicking the icon will access the RSS feed for that specific resource.
+</p>
+<p>
+<strong>Note:</strong> Different modules provide different data in their RSS feeds. Usually, the syndicated information corresponds to the current view. For example, if you click the RSS link on a report page, the feed will be based on that report. It might be explained by thinking of the RSS feeds as an <em>alternate view of the data currently displayed</em>.
+</p>
+<h2 id="Links">Links</h2>
+<ul><li><em>Specifications:</em>
+<ul><li><a class="ext-link" href="http://blogs.law.harvard.edu/tech/rss"><span class="icon"> </span>http://blogs.law.harvard.edu/tech/rss</a> — RSS 2.0 Specification
+</li></ul></li></ul><ul><li><em>Multi-platform RSS readers:</em>
+<ul><li><a class="ext-link" href="http://www.rssowl.org/"><span class="icon"> </span>http://www.rssowl.org/</a> — Open source, Eclipse-based, RSS reader for Linux, Mac and Windows systems that supports https and authenticated feeds.
+</li></ul></li></ul><ul><li><em>Linux/BSD/*n*x systems:</em>
+<ul><li><a class="ext-link" href="http://pim.kde.org/users.php"><span class="icon"> </span>http://pim.kde.org/users.php</a> — <a class="ext-link" href="http://kde.org"><span class="icon"> </span>KDE</a> RSS Reader for Linux/BSD/*n*x systems
+</li><li><a class="ext-link" href="http://liferea.sourceforge.net/"><span class="icon"> </span>http://liferea.sourceforge.net/</a> — Open source GTK2 RSS Reader for Linux
+</li><li><a class="ext-link" href="http://akregator.sourceforge.net/"><span class="icon"> </span>http://akregator.sourceforge.net/</a> — Open source KDE RSS Reader (part of KDE-PIM)
+</li></ul></li></ul><ul><li><em>Mac OS X systems:</em>
+<ul><li><a class="ext-link" href="http://ranchero.com/netnewswire/"><span class="icon"> </span>http://ranchero.com/netnewswire/</a> — An excellent RSS reader for Mac OS X (has both free and pay versions)
+</li><li><a class="ext-link" href="http://www.utsire.com/shrook/"><span class="icon"> </span>http://www.utsire.com/shrook/</a> — An RSS reader for Max OS X that supports https (even with self signed certificates) and authenticated feeds.
+</li><li><a class="ext-link" href="http://vienna-rss.sourceforge.net/"><span class="icon"> </span>http://vienna-rss.sourceforge.net/</a> — Open source Feed Reader for Mac OS X with smart folders support
+</li><li><a class="ext-link" href="http://www.mesadynamics.com/Tickershock.html"><span class="icon"> </span>http://www.mesadynamics.com/Tickershock.html</a> — Non-intrusive "news ticker" style RSS reader for Mac OS X
+</li></ul></li></ul><ul><li><em>Windows systems:</em>
+<ul><li><a class="ext-link" href="http://www.rssreader.com/"><span class="icon"> </span>http://www.rssreader.com/</a> — Free and powerful RSS Reader for Windows
+</li><li><a class="ext-link" href="http://www.sharpreader.net/"><span class="icon"> </span>http://www.sharpreader.net/</a> — A free RSS Reader written in .NET for Windows
+</li></ul></li></ul><ul><li><em>Firefox:</em>
+<ul><li><a class="ext-link" href="http://www.mozilla.org/products/firefox/"><span class="icon"> </span>http://www.mozilla.org/products/firefox/</a> — Mozilla Firefox supports <a class="ext-link" href="http://www.mozilla.org/products/firefox/live-bookmarks.html"><span class="icon"> </span>live bookmarks</a> using RSS
+</li><li><a class="ext-link" href="http://sage.mozdev.org"><span class="icon"> </span>http://sage.mozdev.org</a> — Sage RSS and Atom feed aggregator for Mozilla Firefox
+</li><li><a class="ext-link" href="http://www.wizzrss.com/Welcome.php"><span class="icon"> </span>http://www.wizzrss.com/Welcome.php</a> — WizzRSS Feed Reader for Firefox
+</li></ul></li></ul><hr />
+<p>
+See also: <a class="wiki" href="TracGuide.html">TracGuide</a>, <a class="wiki" href="TracTimeline.html">TracTimeline</a>, <a class="wiki" href="TracReports.html">TracReports</a>, <a class="wiki" href="TracBrowser.html">TracBrowser</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracRss?version=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

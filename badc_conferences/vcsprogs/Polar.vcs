@@ -1,0 +1,41 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070305T000000Z
+DTEND:20070307T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:=20Brussels
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000000D332A2A71EC7010000000000000000100
+ 000003D8D23914244C54483FC6DF52EA7F57D
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=20<<first announcement.doc>> =0D=0A=
+=0D=0AFIRST ANNOUNCEMENT=0D=0A=0D=0A        =0D=0A=0D=0AThe European Commis=
+sion is organising a Symposium on Polar research entitled:=0D=0A=0D=0A"Pola=
+r Environment and Climate: The Challenges =96=0D=0A=0D=0AEuropean Research =
+in the Context of the International Polar Year"=0D=0A=0D=0A5th and 6th Marc=
+h 2007, Brussels=0D=0A=0D=0ABy bringing together key polar scientists at th=
+e start of both the International Polar Year and the Seventh Framework Prog=
+ramme, this symposium will provide a unique occasion to review the European=
+ research activities in the Polar Regions and to discuss future research ch=
+allenges. The sessions of the symposium will be organised around the follow=
+ing themes: past, present and future climate; natural, health, and socio-ec=
+onomic impacts; research infrastructures and public outreach.=0D=0A=0D=0AIt=
+ is my pleasure to invite you to attend this symposium. The announcement ha=
+s been published on the Cordis website (http://cordis.europa.eu/sustdev/env=
+ironment/ev20061023.htm) and information will be updated on this website.=
+=0D=0A=0D=0AAs the number of attendees is limited to less than 150 we would=
+ appreciate you register at our secretariat by 20th December (Immaculada.Me=
+nendez-Garcia@ec.europa.eu Fax 32 2 299 57 55). =0D=0A=0D=0AFor additional =
+information, please contact my colleague Damien Cardinal (Damien.Cardinal@e=
+c.europa.eu) =0D=0A=0D=0AI thank you for your co-operation and look forward=
+ to an interesting and fruitful meeting. =0D=0A=0D=0A=0D=0AElisabeth Lipiat=
+ou=0D=0A=0D=0AHead of Unit Environment-Climate=0D=0A=0D=0ADG Research=0D=0A=
+=0D=0AEuropean Commission=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0ACo=
+nchita Menendez =0D=0AEuropean Commission =0D=0ADG RTD - Unit I.5 =0D=0ACDM=
+A 3/108 =0D=0AB - 1049 Brussels =0D=0A=0D=0ATel:  +32-2-2963234 =0D=0AFax: =
++32-2-2995755 =0D=0Ae-mail: immaculada.menendez-garcia@ec.europa.eu =0D=0A=
+=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:International Symposium on Polar Research
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

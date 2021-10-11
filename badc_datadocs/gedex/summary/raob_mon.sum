@@ -1,0 +1,37 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "RAOB_MON "
+"SUM_DATA_SET"       "RAOB-STATION "
+"SUM_DATATYPE"       "MONTHLY      "
+"ARCHIVE_NAME"       "NCDS       "
+"ARCHIVE_STATUS"     "Available  "
+"DS_DESCRIPTION"     "Rawinsonde Station Observations"
+"DT_DESCRIPTION"     "Monthly    "
+"SUM_BEGIN_DATE"     "01-Jan-1950"
+"SUM_END_DATE"       "31-Dec-1990"
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "Global                                                       "
+"SPATIAL2"           " "
+"SPATIAL3"           "34 Stations                                                  "
+"SPATIAL4"           " "
+"TEMPORAL1"          "January, 1950 - December, 1990 "
+"TEMPORAL2"          " "
+"TEMPORAL3"          "Monthly                                                      "
+"TEMPORAL4"          " "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF)."
+"PRODUCT2"           "Available on GEDEX CD-ROM"
+"PRODUCT3"           " "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"HEIGHT"       "Geopotential height"    "m"
+"PRESSURE"     "Pressure"               "mb"
+"TEMPERATURE"  "Temperature"            "Deg C"
+"HUMIDITY"     "Dew point temperature"  "Deg C"
+"WIND"         "Wind direction"         "Deg"
+"WIND"         "Wind speed"             "m/sec"
+EOF
+
+SOURCES
+"BALLOON"         "RADIOSONDE"
+EOF

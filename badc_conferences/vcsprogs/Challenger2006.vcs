@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060910T230000Z
+DTEND:20070915T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Oban
+TRANSP:1
+UID:040000008200E00074C5B7101A82E008000000005037B51A87CDC5010000000000000000100
+ 00000C022C857C03FE948AA48E6C755CD568B
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0A------------=0D=0AFrom:	NERC Ma=
+rine Science distribution list [MARINE-L@LISTSERV.CCLRC.AC.UK] on behalf of=
+ Katherine Branch [kabr@NERC.AC.UK]=0D=0ASent:	06 October 2005 16:03=0D=0AT=
+o:	MARINE-L@LISTSERV.CCLRC.AC.UK=0D=0ASubject:	Marine listserver: Deploymen=
+t of OFEG Research Ships in 2007/08, Challenger Society Conference 2006=0D=
+=0A=0D=0AThe Challenger Society for Marine Science Conference 2006=0D=0A=0D=
+=0AThe Challenger Society for Marine Science Conference will be held at the=
+ Scottish Association for Marine Science, Oban, 11th to 15th September 2006=
+ (flyer attached). We apologise if you have already received this informati=
+on via an alternate route.=0D=0A=0D=0AConference website: http://www.sams.a=
+c.uk/challenger =0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Challenger Society for Marine Science Con=
+ference 2006
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

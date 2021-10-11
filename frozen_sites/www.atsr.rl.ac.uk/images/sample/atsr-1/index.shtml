@@ -1,0 +1,398 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>Sample Images from the ATSR-1 Mission
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../../documentation/index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../documentation/docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/lastatsr1.gif"><IMG SRC="thumb/lastatsr1.gif" ALT="lastatsr1.gif"></A></TD>
+    <TD valign="top"><p>Two images taken on Jan 25th 2000 from the last dataset received by ATSR-1 before the ERS-1 failure</p>
+
+<p>The image on the left depicts Greenland and is the last image from the ATSR-1 mission.</p>
+<p>The image on the right is of the UK / France and preceeds the last image by about 1/4 of an orbit</p>
+
+<p>The coast flag has been set so you can see them clearly.</p>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/deforestation.gif"><IMG SRC="thumb/deforestation.gif" ALT="deforestation.gif"></A></TD>
+    <TD valign="top"><p>A striking image showing the destruction of the Brazilian rainforest.</p>
+
+<p>This is an 11 micron day-time image acquired on 28th August 1991 covering an area of 512x512 square km.</p>
+
+<p>The cleared areas show up brighter than the surrounding vegetation because they have different thermal properties and can be up to 4K warmer during the day.</p>
+
+
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/balearics.gif"><IMG SRC="thumb/balearics.gif" ALT="balearics.gif"></A></TD>
+    <TD valign="top"><p>In this night-time image, the coldest areas - which include all the land - are shown in purple and blue, whilst yellow and orange are used to represent successively warmer temperatures over a total range of 280-295K. The three blue-purple islands in the top half of the image are the Balearics, (from left) Ibiza, Mallorca and Menorca; the land at the bottom of the picture is the north coast of Algeria. Other more tenuous blue regions are cooler sea except for the extreme north-west corner of the image which is the Spanish coast. However the most striking feature of this image is the intricate pattern apparent in the Mediterranean Sea temperature. Eddy structures ranging in size from less than 10km to nearly 100km decorate the entire sea area. Note that the warmest water appears to originate from the Gulf de Bougie on the Algerian coast.<p>
+<p>(This is an 11 micron night-time image acquired on 9th May 1992; the area covered is 512 x 512 square km.) </p>
+
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/crater.gif"><IMG SRC="thumb/crater.gif" ALT="crater.gif"></A></TD>
+    <TD valign="top"><p>This image shows a stretch of Western Africa known as the Grain Coast. The orange-red region in the south-west corner of the image is the Atlantic Ocean. Most of the land area is Senegal, although the Gambia, Guinea Bissau and Guinea are also represented. As this is a night-time image, the land at around 290K is several Kelvin cooler than the sea. The white areas in the south-east region of the image are clouds. </p>
+<p>This picture has been scaled to highlight the circular feature slightly north-west from the centre. Almost 40km in diameter, its appearance is suggestive of a meteorite impact crater, but confirmation of this theory would require a detailed analysis of the material in the `crater'. A further striking aspect of this image is the fractal appearance of much of the land surface and several coastal inlets. </p>
+<p>(This is a 3.7 micron night-time image acquired on 23rd January 1992; the area covered is 512 x 512 square km.) </p></TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/english_channel.gif"><IMG SRC="thumb/english_channel.gif" ALT="english_channel.gif"></A></TD>
+    <TD valign="top"><p>London and many other English cities can be seen as bright thermal `footprints' in this night-time image of England, France and the English Channel. In the false-colour representation used here, temperature increases through blue and yellow to orange over a temperature range of 278-288K. </p>
+<p>The River Seine is the most prominent feature on the French landscape, but Paris is just beyond the lower extent of this image. The temperature gradients seen in the North Sea are characteristic of that region ranging from 290K in coastal waters to about 280K mid-channel. </p>
+<p>The clouds in the image are about as warm as the land and are thus indistinguishable by their colour. However they are immediately apparent to those familar with the local geography or indeed no Channel Tunnel would be required! </p>
+<p>(This is a 12 micron night-time image acquired on 7th September 1991; the area covered is 512 x 512 square km.) </p>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/fish_lanes.gif"><IMG SRC="thumb/fish_lanes.gif" ALT="fish_lanes.gif"></A></TD>
+    <TD valign="top"><p>This image shows a warm core ring from the Kuro Shio current just east of Japan's main Honshu Island. Note the intricate patterns described in the sea-surface temperature. In addition to their usefulness in studying ocean dynamics, such data have more immediate applications; fish favour the fronts between warm and cold water and sea-surface temperature images can be used to locate these fronts, a fact exploited by the fishing industries in several countries! </p>
+<p>(This is an 11 micron day-time image acquired on 28th August 1991; the area covered is 512 x 512 square km.) </p></TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/forest_fires.gif"><IMG SRC="thumb/forest_fires.gif" ALT="forest_fires.gif"></A></TD>
+    <TD valign="top"><p>A useful application of ATSR data is the detection of forest fires and other hotspots on the Earth's surface. Numerous bush fires are visible as tiny yellow spots in this night-time image of the West African Coast. Most are in the south-east of the image which is Sierra Leone. In this false-colour representation the coldest areas (clouds) are blue, with purple and yellow representing increasingly warmer temperatures. </p>
+<p>In this night-time image, the large yellow area is the Atlantic Ocean with the cooler land appearing red. The average temperature of the fire pixels is about 300K, but this is not representative of the fire temperature as only a small fraction of the 1 square kilometre pixel is actually on fire. </p>
+<p>With the current instrument, the maximum measurable temperature is only 320K. However ATSR-2 (due to be launched in 1995) will have the facility to measure temperatures above 500K. </p>
+<p>(This is a 3.7 micron night-time image acquired on 26th January 1992; the area covered is 512 x 512 square km.) </p>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/von_karman.gif"><IMG SRC="thumb/von_karman.gif" ALT="von_karman.gif"></A></TD>
+    <TD valign="top"><p>Cloud studies form a major part of the ATSR research effort. This striking picture shows unusual cloud formation around the South Sandwich Islands in the South Atlantic. Most of the image is sea and the islands themselves are discernible only as the points of origin of several sets of cloud formation. Most striking is the stable and regular pattern of crescent-shaped clouds (shown in white) which are shed alternately from the east and west sides of the northern-most island. Such a pattern is known as a Von Karman vortex street, and this particular manifestation is the subject of a detailed study at RAL. </p>
+<p>(This is an 11 micron day-time image acquired on 4th March 1992; the area covered is 512 x 512 square kilometres.)</p>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/amazon.gif"><IMG SRC="thumb/amazon.gif" ALT="amazon.gif"></A></TD>
+    <TD valign="top"> 
+<P>On this image the mighty Amazon River is shown spilling into the Atlantic Ocean. 
+  The simple colour scheme used shows clouds as white, the land as green and the 
+  sea and rivers as blue. </P>
+<P>The other images in this directory are single-wavelength views which have had 
+  no atmospheric correction applied. However in the tropics the effect of the 
+  Earth's atmosphere can depress the temperature as measured by a satellite-borne 
+  instrument by as much as 10K. </P>
+<P>This image is a result of processing data from three of ATSR's channels and 
+  using both the instrument's views to make the appropriate atmospheric correction. 
+</P>
+<P>The large width of the Amazon enables an accurate determination of the river's 
+  temperature to be made, (300K in this image). In the case of rivers narrower 
+  than ATSR's 1km resolution, temperature measurements are inevitably an average 
+  of both land and water temperature.</P>
+<P> (This is a multi-channel, dual-view, day-time image acquired on 11th August 
+  1991; the area covered is 512 x 512 square km.)</P>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/bering.gif"><IMG SRC="thumb/bering.gif" ALT="bering.gif"></A></TD>
+    <TD valign="top">
+<P>East meets West in this picture of the Bering Strait which was acquired using 
+  ATSR's 1.6 micron channel. Radiation measured at this wavelength is essentially 
+  reflected `sunlight' rather than thermal emission. In the colour representation 
+  used above, the brightest areas are the most highly reflecting. </P>
+<P>Verging on the Arctic Circle, the sea in this image is packed with ice floes. 
+  In the cracks and gaps between the ice, the much less-reflective water surface 
+  appears almost black. The brightest area is the finger of cloud on the western 
+  side of the image. Also brighter than the icy sea, are the three land areas 
+  in the picture. From the western side of the image, the eastern extremity of 
+  the Russian Federation reaches out towards the tip of Alaska. The International 
+  Date Line bisects the inter-continental gap and then veers south-west keeping 
+  St. Lawrence Island with Alaska a day behind the Russian Federation. ATSR data 
+  have proved very useful in the detection of sea ice and the location of icebergs. 
+</P>
+<P>(This is a 1.6 micron day-time image acquired on 5th February 1992; the area 
+  covered is 512 x 512 square km.)</P>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/canaries.gif"><IMG SRC="thumb/canaries.gif" ALT="canaries.gif"></A></TD>
+    <TD valign="top">
+<P>The region extending from the Canary Islands to the coast of Western Sahara 
+  is shown in this night-time thermal image. The most dramatic feature of this 
+  picture is the giant warm eddy structure in the Atlantic which is at a temperature 
+  of around 295 K. Formed as a result of the turbulent mixing of the cold African 
+  coastal waters with the warmer central Atlantic water, this structure is around 
+  200 km in diameter. </P>
+<P>Across the top of the image are several of the Canary Islands, from left, Gomera, 
+  Tenerife, Gran~Canaria and Fuerteventura. Although small, the islands exhibit 
+  large variations in altitude and therefore temperature, as can clearly be seen 
+  in the image, with the more-elevated central parts of each island appearing 
+  colder (darker) than the coastal areas. </P>
+<P>Note what appears to be a fine-structured warm emission (shown in yellow) spreading 
+  out from the North-Eastern extremity of Gran Canaria. This matter is at a temperature 
+  of around 290K and is probably an example of orographic cloud formation. </P>
+<P>(This is a 3.7 micron night-time image acquired on 19th October 1991; the area 
+  covered is 512 x 512 square km.) </P>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+<TABLE border="0">
+  <TR>
+    <TD valign="top"><A HREF="fullsize/nile.gif"><IMG SRC="thumb/nile.gif" ALT="nile.gif"></A></TD>
+    <TD valign="top">
+<P>This image shows the Nile Delta, Egypt, and the Mediterranean Sea. The temperature 
+  range in the image is 280-292K. In the colour scheme used, dark brown and blue 
+  are the coldest, through to green mid-range, with yellow and orange in the warmest 
+  areas. Looking at the bottom centre of the image, the Nile is clearly visible 
+  as a blue line meandering northwards. A little further along its course the 
+  river goes through Cairo which is the large orange region. A short distance 
+  after Cairo the Nile branches into two rivers -- the Rosetta Nile to the west 
+  and the Damietta Nile to the east. The bright blue spots within the delta are 
+  towns. </P>
+<P>The orange-red blush around the coast is warm shallow water at a temperature 
+  of around 290K. Lake Qarun, the bright red area to the south west of Cairo is 
+  the warmest feature of the image. Further west is desert and a number of long 
+  sand dunes are discernible as dark-brown strips running approximately north-south. 
+  The only clouds in the image are the brown filamentary structures in the north-east 
+  corner. </P>
+<P>(This is a 3.7 micron night-time image acquired on 9th May 1992; the area covered 
+  is 512 x 512 square km.) </P>
+</TD>
+  </TR>
+</TABLE>
+<HR><BR>
+
+
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Thursday, 06-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

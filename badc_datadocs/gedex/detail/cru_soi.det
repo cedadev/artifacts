@@ -1,0 +1,458 @@
+Climate Research Unit Southern Oscillation Index
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  This dataset consists of the Tahiti/Darwin
+Southern Oscillation Index (SOI), and the mean sea level pressure for both
+Tahiti and Darwin.
+
+1.2  Unit of Measurement.  The mean sea level pressure for both Tahiti and
+Darwin is measured in millibars x 10, and the SOI is dimensionless.
+
+1.3  Data Source.  This dataset was compiled from a variety of sources.
+Data for Tahiti covering the period 1875 to 1933 were taken at the hospital
+in Papeete and obtained from manuscript records held at the French
+Meteorological Service.  Additional data for Tahiti covering the period
+between 1932 to 1934 were obtained from Reseau Mondial. Data for Darwin for
+the period after 1908 were obtained from the Commonwealth Bureau of
+Meteorology in Australia.  Data for Darwin for the period 1876 to 1907 were
+obtained from reports by the Adelaide Observatory in South Australia, with
+overlapping data from the Smithsonian Institution and the Australian Bureau
+of Meteorology. Recently, additional data obtained from publications of the
+Adelaide Observatory held in the Northern Territory Branch of the
+Australian Archives were found that extends the coverage to the period 1865
+to 1881.  Data from Tahiti and Darwin were obtained from World Weather
+Records publications for the period after 1935.
+
+1.4  Data Set Identification.  The Southern Oscillation Index (SOI) data
+set consists of level III data and is referred to as the Climate Research
+Unit Southern Oscillation Index (CRU-SOI).
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  The CRU-SOI data cover the region of the South
+Pacific between Darwin, Australia (131 deg W., 12 deg S.) and Papeete,
+Tahiti (149 deg W, 17 deg S).
+
+2.2  Spatial Resolution.  Station.
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  These data cover the period January 1866 through
+June 1991.
+
+3.2  Temporal Resolution.  These data consist of monthly means for the sea
+level pressure values at both Tahiti and Darwin, and monthly means for the
+SOI.
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  Concerns have grown over recent years about the
+low-frequency fluctuations in the El Nino-Southern Oscillation (ENSO) and
+its possible modulation by the greenhouse effect.  In order to gain a
+greater understanding in the longer term variability and influence of this
+near global, ocean-atmosphere phenomenon, attempts have been made to
+distinguish between wider ranging ENSO phases based on related eastern
+hemisphere events and more localized El Nino events, which influence only
+the immediate South American region.  The Southern Oscillation Index SOI
+based on the Tahiti-Darwin mean sea level pressure is an important
+indicator in the study of these events.
+
+4.2  Key Satellite Flight Parameters.  None
+
+4.3  Principles of Operation.  None
+
+4.4  Instrument Measurement Geometry.  None
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.
+
+5.2  Derivation Techniques/Algorithms.  The SOI was computed in the
+following manner.  The first step was to make bias corrections to both the
+Tahitian and Darwin pressure data.  The annual cycle of pressure at each
+station is removed by forming anomalies, or differences, from the long-term
+monthly averages (see Item 14.1 for these values). These monthly anomalies
+are then normalized by the appropriate monthly standard deviations to
+produce standardized values.  The difference in these values - standardized
+Tahiti minus standardized Darwin - is itself standardized (see Item 14.2
+for mean and standard deviation of normalized Tahiti/Darwin difference.)
+The period 1951 - 80 is used as the base period for the computation of
+means and standard deviations.
+
+5.3  Special Corrections/Adjustments.  Bias corrections were made to the
+surface pressures as follows:
+
+       Years             Location        Bias correction
+       -----             --------        ---------------
+       1896              Tahiti          + 1.0
+       1909-16           Tahiti          + 0.5
+       1917-25           Tahiti          + 2.0
+       1927-34           Tahiti          - 1.6
+       1882-July 1898    Darwin          + 1.0
+
+It is believed that the + 1.0 bias correction made to the Darwin pressure
+data prior to August 1898 could be due in part to changes made to the type
+of barometer used and in part to changes in the barometer cistern height.
+In fact documentation exist that suggest this possibility, (Todd, 1910 and
+Griffiths, 1910).
+
+5.4  Processing Changes.  None
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  The bias-corrected pressure data for
+Papeete, Tahiti, as the base station, were compared to Santiago, Chile;
+Apia, Samoa; Suva, Fiji; and Darwin, Australia through the computation of
+monthly correlation coefficients for the 1890-1934 and the 1935-85 time
+period.  Differences were found between the two time periods but were no
+greater than differences found when comparisons were made between other
+station pairs.  It is therefore believed that there are no unique
+inconsistencies in the early Tahiti pressure data.
+
+Comparisons have been made with various other methods of SOI computation.
+The early CRU Tahiti/Darwin SOI is in broad agreement with a Seasonal
+Southern Oscillation index (Wright, 1989).  There are similarities in
+temporal structure but a slightly weaker index magnitude.  The CRU-SOI was
+in almost complete agreement with the index computed by Troup (1965).
+Comparison of the CRU-SOI with another form of the Southern Oscillation
+Index by Trenberth (1976) shows that the Trenberth form of the index had
+considerably more amplitude but did reflect the same positive and negative
+trends in most cases.
+
+6.2  Confidence Level/Accuracy Judgment.  The quality of the early Tahiti
+data is considered to be sufficiently good for use as a Southern
+Oscillation Index.  It is probable that the pre-1935 data are slightly less
+reliable than the later data.  It is believed that the monthly mean
+pressure values for Tahiti for all months are based on a full complement of
+daily observations and that no monthly means are based on only a few
+values.
+
+6.3  Usage Guidance.  A very similar method of Southern Oscillation Index
+has been utilised by the Climate Analysis Center.  Users may wish to
+consider this alternative method of SOI calculation.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+7.1  Dr. Robert J. Allan
+     CSIRO, Division of Atmospheric Research
+     Station Street, Aspendale
+     Vic Postal Address:
+     Private Bag No. 1, Mordialloc, Vic 3195
+     Melbourne, Australia
+
+7.2  Dr. Phil D. Jones
+     Climatic Research Unit
+     University of East Anglia
+     Norwich, England   N84 7TJ
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products
+
+       None
+
+8.2  Film Products
+
+       None
+
+8.3  Other products
+
+8.3.1  Climate Research Unit Southern Oscillation Index (CRU-SOI) in Common
+       Data Format (CDF).
+
+       Medium/Specification:  Magnetic disk
+
+       Format and Content:  The data are stored in a special
+       data-set-independent format, designated the Common Data Format
+       (CDF).  CDF was developed at the National Space Science Data Center
+       (NSSDC) as a uniform method of storing and retrieving data on disk.
+       The CDF consists of a file or set of files which contain data and
+       descriptions about the data.  A standard software package called the
+       "CDF Library" allows a user within an NCDS session to create and
+       access these data and descriptive information.  These CDF files may
+       be accessed within the DATA APPLICATIONS Subsystem of NCDS.  These
+       data contain the Southern Oscillation Index, the mean sea level
+       pressures for Tahiti, and the mean sea level pressures for Darwin.
+       The climatological means and standard deviations for pressure for
+       Darwin and Tahiti, as well as the climatological means and standard
+       deviations for the normalized Tahiti/Darwin pressure difference are
+       included in section 14 of this catalog.
+
+       Data Quantity/Rate: 76 kbytes in one file
+
+       Status: Data are currently available online in the NASA Climate Data
+       System (NCDS).
+
+       Plans/Schedule: NCDS will continue to support these data and will
+       continue to update this data set as new data are received.
+
+8.3.2  The Greenhouse Effect Detection Experiment (GEDEX) CD-ROM
+
+       Medium/Specification:  CD-ROM in ISO 9660 standard.
+
+       Format and Content:  The data on this disk will be stored in a
+       special data-set-independent format, designated the Common Data
+       Format (CDF).  CDF was developed at the National Space Science Data
+       Center (NSSDC) as a uniform method of storing and retrieving data on
+       disk. The CDF consists of a file or set of files which contain data
+       and descriptions about the data.  A standard software package called
+       the "CDF Library" will be included with this CD-ROM allowing a user
+       to create and access these data and descriptive information.  The
+       CD-ROM will consist of many different data sets related to the study
+       of the Greenhouse Effect including the CRU-SOI data set, and the
+       accompanying NCDS data set documentation.
+
+       Data Quantity/Rate: One file, 76 kbytes.
+
+       Status: Release date for this product is scheduled for the near
+       future.
+
+       Plans/Schedule: Users interested in this product should contact NCDS
+       staff for more details.
+
+9.  DATA ACCESS
+
+9.1  Archive Identification.
+
+     NCDS User Support Office
+     Goddard Space Flight Center Code 934
+     Greenbelt, Maryland  20771
+     (301) 286-3209
+     FTS:  888-3209
+     TCP/IP:  NCDSUSO@NSSDCB.GSFC.NASA.GOV
+     NSI DECnet:  NCF::NCDSUSO
+
+9.2  Procedures for Obtaining Data.  Users can obtain these data online
+through the NASA Climate Data System (NCDS).  To use NCDS, you must be able
+to access the National Space Science Data Center (NSSDC) Computer Facility
+(NCF) and obtain an NCF/VAX user account on the VAX 9410.  These data are
+available through the NASA Climate Data System (NCDS) in Common Data Format
+(CDF).  The CDF is accessible through the Data Applications subsystem of
+NCDS by specifying the following name:
+
+      CRU-SOI_S-OSCIL-IND
+
+To obtain more information on accessing online data or for more information
+on the GEDEX CD-ROM, contact the NCDS User Support Office. (See item 10).
+
+9.3  NCDS Status/Plans.  NCDS will continue to archive and make these data
+available to researchers and continue to update as additional data are
+received.
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+     NCDS User Support Office
+     Goddard Space Flight Center Code 934
+     Greenbelt, Maryland  20771
+     (301) 286-3209
+     FTS:  888-3209
+     TCP/IP:  NCDSUSO@NSSDCB.GSFC.NASA.GOV
+     NSI DECnet:  NCF::NCDSUSO
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      a.  Ropelewski, C.F., and P.D. Jones, 1987: "An Extension of the
+          Tahiti-Darwin Southern Oscillation Index,"  Mon. Wea. Rev.,
+          115:2161-2165.
+
+      b.  Allan, R.J., N. Nicholls, P.D. Jones, and I.J. Butterworth, 1991:
+          "A Further Extension of the Tahiti-Darwin SOI, Early ENSO and
+          Darwin Pressure,"  J. Climate, 4:743-749.
+
+11.2  Journal Articles and Study Reports
+
+      a.  Chen, W.Y., 1982: "Assessment of Southern Oscillation Sea Level
+          Pressure Indices,"  Mon. Wea. Rev., 110:800-807.
+
+      b.  Deser, C., and J.M. Wallace, 1987: "El Nino Events and their
+          Relation to the Southern Oscillation," J. Geophys. Res.,
+          92:14,189-14,196.
+
+      c.  Elliot, W.P., and J.K. Angell, 1988: "Evidence for Changes in
+          Southern Oscillation Relationships During the Last 100 Years," J.
+          Climate, 1:729-737.
+
+      d.  Griffiths, R.F., 1910: "Meteorological Observations Made at the
+          Adelaide Observatory During the Year 1907," Government Printer,
+          Adelaide, South Australia, 250 pp.
+
+      e.  Kiladis, G.N., and H.F. Diaz, 1986: "An Analysis of the 1877-78
+          ENSO Episode and Comparison with 1982-83," Mon. Wea. Rev.,
+          114:1035-1047.
+
+      f.  Trenberth, K.E., 1984: "Signal versus Noise in the Southern
+          Oscillation," Mon. Wea. Rev. 112:326-332.
+
+      g.  Trenberth, K.E., 1976: "Spatial and Temporal Variations of the
+          Southern Oscillation," Quart. J. Roy. Meteor. Soc., 102:639-653.
+
+      h.  Troup, A.J., 1965: "The Southern Oscillation," Quart. J. Roy.
+          Meteor. Soc., 91:490-506.
+
+      i.  van Loon, H., and R.A. Madden, 1981: "The Southern Oscillation.
+          Part I: Global Associations with Pressure and Temperature in
+          Northern Winter,"  Mon. Wea. Rev., 109:1150-1168.
+
+      j.  Wright, P.B., 1975: "An Index of the Southern Oscillation,"
+          Climatic Research Unit, School of Environmental Sciences,
+          University of East Anglia, CRU RP4, 22 pp.
+
+      k.  Wright, P.B., 1984: "Relationships Between Indices of the
+          Southern Oscillation," Mon. Wea. Rev., 112:1913-1919.
+
+      l.  Wright, P.B., 1989: "Homogenized Long-Period Southern Oscillation
+          Indices," Int. J. Climatol., 9:33-54.
+
+11.3  Archive/DBMS Usage Documentation
+
+      a.  Anonymous, 1879-1914: Annals du Bureau Meteorologie de France."
+          Ministry de l'Instruction Publique, Gauthier-Villars, Paris,
+          France.
+
+      b.  Griffiths, R.F., 1910: "Meteorological Observations made at the
+          Adelaide Observatory during the Year 1907," Government Printer,
+          Adelaide, South Australia, 250 pp.
+
+      c.  Olsen, L.M, Closs, J.W., and Corprew, F.E, November 1991. "NASA's
+          Climate Data System Primer: Version 4.0."  EOS DAAC, NASA Goddard
+          Space Flight Center, Greenbelt, Maryland.
+
+      d.  Peel R., 1881: "Meteorological Journal, Port Darwin, 1869-1881,"
+          South Australian Surveyor-General.
+
+      e.  Reseau Mondial, 1910-1934.  [Copies archived at the Royal
+          Meteorological Office Library, London Road, Bracknell, Berkshire,
+          RG12, 2SZ, England.]
+
+      f.  Todd, C., 1879-1910: "Meteorological Observations made at the
+          Adelaide Observatory for the Years 1879 to 1906," Government
+          Printer, Adelaide, South Australia.
+
+      g.  Todd, C., 1881: "Meteorological Observations made at the Adelaide
+          Observatory during the Year 1879," Government Printer, Adelaide,
+          South Australia, 250 pp.
+
+      h.  U.S. Department of Commerce, 1981: "Islands of the World," World
+          Weather Records 1961-1970, Vol. 6, 490pp. [NOAA, National Climate
+          Data Center, Federal Building, Asheville, NC 28801.]
+
+12.  RELATED DATA SETS
+
+Various other methods of calculating the Southern Oscillation Index have
+been utilised.  Two such methods are used by the Climate Analysis Center
+and Dr. K.E. Trenberth at the National Center for Atmospheric Research.
+
+13.  SUMMARY/SAMPLE
+
+      None
+
+14.  NOTES
+
+14.1 Monthly means and standard deviations for Darwin and Tahiti (mb x 10)
+
+  Month    Mean       Standard Deviation    Mean       Standard Deviation
+  -----    --------   ------------------    --------   ------------------
+     1     10108.40        13.723           10062.60        12.652
+     2     10112.43        12.274           10064.17        12.274
+     3     10116.83        10.177           10074.50         9.704
+     4     10117.97         6.862           10093.97         9.704
+     5     10126.00         6.862           10109.03        10.630
+     6     10137.17         6.137           10123.23         8.679
+     7     10139.40         8.679           10128.70        10.630
+     8     10145.67         9.704           10126.47         8.119
+     9     10143.53        10.630           10119.27         9.704
+    10     10136.87         7.516           10105.73        10.177
+    11     10119.20         8.119           10087.37        11.885
+    12     10110.07        11.064           10072.63        11.885
+
+
+14.2 Monthly mean and standard deviation of normalized Tahiti/Darwin
+     difference.
+
+        Month    Mean       Standard Deviation
+        -----    --------     ------------------
+           1         0.00         1.523
+           2         0.00         1.749
+           3         0.00         1.666
+           4         0.00         1.268
+           5         0.00         1.568
+           6         0.00         1.425
+           7         0.00         1.636
+           8         0.00         1.656
+           9         0.00         1.663
+          10         0.00         1.747
+          11         0.00         1.685
+          12         0.00         1.591
+
+
+*92/03/13

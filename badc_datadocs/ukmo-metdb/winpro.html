@@ -1,0 +1,151 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>BADC Datasets: metDB - UK Met Office metDB WINPRO page</TITLE>
+  <!-- Created 21st Janurary  2011 -->
+  <!-- Author: Graham Parton BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><IMG SRC="/graphics/logos/metlogos.gif" ALT="Met Office Logo"></h1><h1>
+Met Office - metDB Data: WINPRO data</H1>
+
+<HR ALIGN=LEFT>
+
+<H2>Brief description</H2>
+<p>Observations from wind profiling systems. </p>
+
+<h2>Observation frequency</h2>
+<p>Hourly observations from around 400 Wind profiler stations distributed globally resulting in around 10,000 records daily</p>
+
+
+<h2>Delivery and ingest schedule</h2>
+<p>
+Data are extracted daily at around 00 UT for the previous day's coverage and delivered to the BADC at around 0200 UT.
+
+<p>Ingest scripts run at the BADC every 20 minutes, converting the incoming files to the self describing BADC-CSV format, but neither the processed or raw data are placed into archive until the following day.</p>
+
+<h2>Known problems</h2>
+<p> There are no known problems with these data.
+</p>
+<h2>Additional information</h2>
+<p>
+</p>
+<h2>Parameter list</h2>
+<p>Each station report is a separate record in the file consisting of header information about the station and data section. The header section contains the following information:</p>
+
+
+<table cellspacing="2" cellpadding="1" border="1" align="center">
+<tr><th>Header Elements</th><th>Description</th></tr>
+<tr><td>location</td><td>Latitude and longitude of the station</td></tr> 
+<tr><td>height</td><td>Station height above mean sea level (m)</td></tr> 
+<tr><td>observation_station</td><td>WMO station ID</td></tr> 
+<tr><td>station_type</td><td>Station type according to WMO code table 002001</td></tr> 
+<tr><td>type_of_measuring_equipment</td><td>Measuring equipment type from WMO code table 002003</td></tr>
+<tr><td>type_of_antenna</td><td>Type of antenna according to WMO code table 002101</td></tr>
+<tr><td>beamwidth</td><td>Beamwidth (degrees)</tr> 
+<tr><td>mean_frequency</td><td>Mean Frequency (Hz)</td></tr> 
+<tr><td>range_gate_length</td><td>Range gate length (m)</td></tr> 
+<tr><td>mean_speed_estimation</td><td>Method for mean speed estimation according to WMO code table 025020 (see below)</td></tr>
+<tr><td>wind_computation_enhancement</td><td> Wind computational enhancement method according to WMO code table 025021 (see below)</td></tr>
+<tr><td>averaging_time_period</td><td> Averaging Time Period (minutes)</td></tr> 
+<tr><td>pressure_at_mean_sea_level</td><td>Mean sea level pressure at station (Pa)</td></tr> 
+<tr><td>air_temperature</td><td>Air Temperature (K)</td></tr> 
+<tr><td>precipitation_amount</td><td>Precipitation Amount (Kg/m2) at station </td></tr> 
+<tr><td>relative_humidity</td><td>Relative Humidity (%) at station</td></tr> 
+</table>
+
+
+
+<p>The table below provides the list of available parameters in the column order that they appear in the BADC-CSV files in the archive.
+</p>
+
+<table cellspacing="2" cellpadding="1" border="1" align="center">
+<tr><th>Column number</th><th>Parameter</th<th>Unit</th></tr>
+<tr><td>1</td><td>Height</td><td>m</td></tr> 
+<tr><td>2</td><td>Wind profiler mode information</td><td>1</td></tr> 
+<tr><td>3</td><td>US Wind profiler QC information</td><td>1</td></tr> 
+<tr><td>4</td><td>European u,v Wind profiler QC info</td><td>1</td></tr> 
+<tr><td>5</td><td>European W Wind profiler QC info</td><td>1</td></tr> 
+<tr><td>6</td><td>Wind u-component</td><td>m/s</td></tr> 
+<tr><td>7</td><td>Wind v-component</td><td>m/s</td></tr> 
+<tr><td>8</td><td>Wind w-component</td><td>m/s</td></tr> 
+<tr><td>9</td><td>hrzl wind speed Standard deviation</td><td>1</td></tr> 
+<tr><td>10</td><td>vrtl wind speed Standard deviation</td><td>1</td></tr> 
+<tr><td>11</td><td>Signa to noise ratio</td><td>Db</td></tr>
+</table>
+
+<br />
+<br />
+
+<h2>WMO Code Table 002001: Station type </h2>
+<table cellspacing="2" cellpadding="1" border="1" align="center">
+  <tr><td>code figure</td><td></td></tr>
+  <tr><td>0</td><td>Automatic station</td></tr>
+  <tr><td>1</td><td>Manned station</td></tr>
+  <tr><td>2</td><td>Hybrid: Both manned and automatic</td></tr>
+  <tr><td>3</td><td>Missing value</td></tr>
+</table>
+
+<h2>WMO Code Table 002003: Type of measuring equipment used </h2>
+<table cellspacing="2" cellpadding="1" border="1" align="center">
+  <tr><td>code figure</td><td></td></tr>
+  <tr><td>0</td><td>Pressure instrument associatiated with wind measuring equipment</td></tr>
+  <tr><td>1</td><td>Optical theodolite</td></tr>
+  <tr><td>2</td><td>Radio theodolite</td></tr>
+  <tr><td>3</td><td>Radar</td></tr>
+  <tr><td>4</td><td>VLF-Omega</td></tr>
+  <tr><td>5</td><td>Loran-C</td></tr>
+  <tr><td>6</td><td>Wind profiler</td></tr>
+  <tr><td>7</td><td>Satellite navigation</td></tr>
+  <tr><td>8</td><td>Radio-Acoustic Sounding System (RASS)</td></tr>
+  <tr><td>9</td><td>Sodar</td></tr>
+  <tr><td>10-13</td>Reserved<td></td></tr>
+  <tr><td>14</td><td>Pressure instrument associated with wind measuring equipment but pressure element failed during ascent</td></tr>
+  <tr><td>15</td><td>Missing value</td></tr>
+</table>
+
+
+<h2>WMO Code Table 02101: Type of antenna</h2>
+<table cellspacing="2" cellpadding="1" border="1" align="center">
+  <tr><td>code figure</td><td></td></tr>
+  <tr><td>0</td><td>Centre front-fed paraboloid</td></tr>
+  <tr><td>1</td><td>Offset front-fed paraboloid</td></tr>
+  <tr><td>2</td><td>Centre Cassegrain paraboloid</td></tr>
+  <tr><td>3</td><td>Offset Cassegrain paraboloid</td></tr>
+  <tr><td>4</td><td>Planar array</td></tr>
+  <tr><td>5</td><td>Coaxial-collinear array</td></tr>
+  <tr><td>6</td><td>Yagi elements array</td></tr>
+  <tr><td>7</td><td>Microstrip</td></tr>
+  <tr><td>8-13</td><td>Reserved</td></tr>
+  <tr><td>14</td><td>Other</td></tr>
+  <tr><td>15</td><td>Missing value</td></tr>
+</table>
+
+
+<h2>WMO Code Table 025020: Mean speed estimation</h2>
+<table cellspacing="2" cellpadding="1" border="1" align="center">
+  <tr><td>code figure</td><td></td></tr>
+  <tr><td>0</td><td>FFT (fast Fourier transform)</td></tr>
+  <tr><td>1</td><td>PPP (pulse-pair processing)</td></tr>
+  <tr><td>2</td><td>VPC (vector-phase change)</td></tr>
+  <tr><td>3</td><td>Missing value</td></tr>
+</table>
+
+<h2>WMO Code Table 025021: Wind computation enhancement</h2>
+<table cellspacing="2" cellpadding="1" border="1" align="center">
+  <tr><td>Bit no.</td><td></td></tr>
+  <tr><td>1</td><td>Simple average</td></tr>
+  <tr><td>2</td><td>Consensus average</td></tr>
+  <tr><td>3</td><td>Median check</td></tr>
+  <tr><td>4</td><td>Vertical consistency check</td></tr>
+  <tr><td>5</td><td>Other</td></tr>
+  <tr><td>6-7</td><td>Reserved</td></tr>
+  <tr><td>All 8</td><td>Missing value</td></tr>
+</table>
+
+
+
+</BODY>
+</HTML>

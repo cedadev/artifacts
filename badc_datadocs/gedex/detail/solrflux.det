@@ -1,0 +1,334 @@
+Penticton 2800MHz Solar Radio Flux
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Solar radio flux is measured from the
+undisturbed solar surface, developing active regions on the sun and from
+short-lived enhancements above the daily level.  Values are recorded for
+the actual observed, absolute and adjusted solar flux.
+
+1.2  Unit of Measurement.  Radio flux is measured in 10 to the -22 Joules/
+second/square meter/Hertz.
+
+1.3  Data Source.  Data prior to July, 1991 are collected from the radio
+telescope at the Canada Institute for Scientific and Technical Information
+near Ottawa, Ontario.  Data after July, 1991 are from the Dominion Radio
+Astrophysical Observatory in Penticton, British Columbia.
+
+1.4  Data Set Identification.  Solar radio flux from the entire solar disk
+is measured at a frequency of 2800 megahertz.  The original data values
+have been multiplied by 10 to suppress the decimal point.  The data are
+available from the National Research Council of Canada or the National
+Geophysical Data Center in Boulder, Colorado.  The NASA Climate Data System
+(NCDS) also supports this data set online in Common Data Format.
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  The data set covers the entire solar disk.  Solar
+flux values represent the undisturbed solar surface, developing active
+regions on the sun and short-lived flux anomalies above the daily level.
+
+2.2  Spatial Resolution.  There is no resolution within the disk.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  The data set covers the period from February 14,
+1947 to the present.  The NASA Climate Data System currently supports the
+data set through May 31, 1991.  Coverage is continuous from beginning to
+end.
+
+3.2  Temporal Resolution.  Solar flux values are measured daily.  Emitted
+radio flux level measured at the Ottawa, Ontario telescope was determined
+daily at local noon (1700  GMT).  The values measured at the Penticton,
+British Columbia telescope are determined daily at 1900 GMT.  Monthly mean
+values have also been calculated and are available through the NCDS.
+
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  The sun emits radio energy with a slowly varying
+intensity.  This varying intensity of solar flux values can be related to
+the natural solar cycle and thus corresponding climate on Earth.  Long term
+study of solar irradiance can be used to predict total solar irradiance on
+Earth and thus associated climate impact.
+
+4.2  Key Satellite Flight Parameters.  N/A
+
+4.3  Principles of Operation.  Each day, radio flux levels at 2800 MHz are
+determined at local noon (1700 GMT) at Ottawa or 1900 GMT at Penticton.
+Three sets of fluxes are summarized; the observed, the adjusted, and the
+absolute.  The final flux values represent the energy flux received by a
+detector located at the mean distance between the sun and Earth.
+
+4.4  Instrument Measurement Geometry.  The Ottawa radio telescope measured
+solar radio flux at the sun angle at local noon in Ottawa, Canada (1700
+GMT) prior to July, 1991.  Data collected after July, 1991 from the
+Dominion Radio Astrophysical Observatory telescope are measured at 1900
+GMT.  Both telescopes have identical measurement geometry.  The geometry of
+the Penticton telescope varies by season.
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  Radio flux originates from the
+atmospheric layers high in the sun's chromosphere and low in its corona.
+This radio flux varies in response to the number of sun spot groups on the
+solar disk.  These emissions come from the undisturbed solar surface, from
+developing active regions and from short-lived enhancements above the daily
+level.  Daily levels of radio flux are determined at 1700 or 1900 GMT from
+a conventional radio telescope.  The values are then corrected to within a
+few percentage points for factors such as antenna gain, atmospheric
+absorption, solar bursts in progress and background sky temperature.
+
+5.2  Derivation Techniques/Algorithms.  Three sets of fluxes are
+summarized; the observed, the adjusted, and the absolute.  Of these three,
+the observed numbers are the least refined since they contain fluctuations
+as large as 7% that arise from the changing Sun-Earth distance.  The
+adjusted flux values have the Sun-Earth variation removed.  The absolute
+values carry the error reduction one step further by multiplying each value
+0.90 to compensate for uncertainties in antenna gain and in waves reflected
+from the ground.
+
+5.3  Special Corrections/Adjustments.  Corrections are made to account for
+the changing Sun-Earth distance and for uncertainties in antenna gain and
+in waves reflected from ground.
+
+5.4  Processing Changes.  None.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.
+
+6.2  Confidence Level/Accuracy Judgment.  The final solar radio flux values
+are accurate to within a few percent of actual values due to such factors
+as antenna gain, solar bursts in progress during observation time and
+background sky temperature.
+
+6.3  Usage Guidance.  The Penticton Solar Flux data set is used in
+conjunction with other solar activity data sets derived from total solar
+irradiance instruments on Nimbus-7 and the Solar Maximum Mission.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+     Dr. Ken Tapping
+     Dominion Radio Astrophysical Observatory
+     P.O. Box 248
+     Penticton, British Columbia, Canada, V2A 6K3
+     (604) 493-2277
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products.  None.
+
+8.2  Film Products   None.
+
+8.3  Other products
+
+8.3.1  2800 MHz Radio Flux Data on Floppy Disk.
+
+       Medium/Specification:  Double sided, high density 5.25 inch floppy
+       diskette.  Daily values are stored in separate ASCII files by year
+       and consist of observed, absolute or adjusted flux values. Monthly
+       and yearly values are stored in separate files.
+
+       Data Quantity/Rate:  One diskette.
+
+       Status:  Available from the Canada Institute for Scientific and
+       Technical Information or the National Geophysical Data Center
+       (NGDC).
+
+       Plans/Schedule:  Additional diskettes will be released as new data
+       become available.
+
+8.3.2  2800 MHz Radio Flux Data Online in Common Data Format (CDF).
+
+       Medium/Specification:  Online data file in NSSDC's Common Data
+       Format (CDF).  This format is used to store all data sets supported
+       by the NASA Climate Data System (NCDS) and contains all descriptive
+       elements necessary for listing or plotting.
+
+       Data Quantity/Rate:  Data file is approximately 3.3 megabytes in
+       volume.
+
+       Status:  Accessible through the NASA Climate Data System (NCDS).
+
+       Plans/Schedule:  This data set will be updated as new data become
+       available.
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification.
+
+     Dominion Radio Astrophysical Observatory
+     P.O. Box 248
+     Penticton, British Columbia, Canada, V2A 6K3
+     (604) 493-7505
+
+     Canada Institute for Scientific and Technical Information
+     National Research Council Canada
+     Montreal Road
+     Ottawa, Ontario, Canada  K1A OS2
+     (613) 993-1600
+
+     National Geophysical Data Center
+     Mail Code E/GC2
+     325 Broadway
+     Boulder, CO  80303
+     (303) 497-6346
+
+     NASA Climate Data System
+     NASA/Goddard Space Flight Center
+     Code 934
+     Greenbelt, MD  20771
+     (301) 286-3209
+
+9.2  Procedures for Obtaining Data.  Data can be obtained by contacting the
+NRCC of Canada or NGDC.  Cost is $60.00 for the entire data set on
+diskette, or $20.00 for an annual subscription to monthly Solar Indices
+Bulletin (2 pages).
+
+9.3  NCDS Status/Plans.  NCDS supports the Penticton 2800 MHz Solar Flux
+data set online in Common Data Format (CDF).  The data are only accessible
+through the NCDS system.  The data set will be updated periodically as new
+data are received.  The data set is also be distributed on CD-ROM in
+support of the NASA Greenhouse Enhancement Detection Experiment (GEDEX).
+
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+     Helen E. Coffey
+     National Geophysical Data Center
+     Mail Code E/GC2
+     325 Broadway
+     Boulder, CO  80303
+     (303) 497-6223
+
+     Ken Tapping
+     Dominion Radio Astrophysical Observatory
+     P.O. Box 248
+     Penticton, British Columbia, Canada, V2A 6K3
+     (604) 493-2277
+
+     Lola M. Olsen
+     NASA Climate Data System
+     NASA/GSFC Code 934
+     Greenbelt, MD  20771
+     (301) 286-3209
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      None
+
+11.2  Journal Articles and Study Reports
+
+      None
+
+11.3  Archive/DBMS Usage Documentation
+
+      a. Olsen, L.M, Closs, J.W., Vanderpool, J.R. and Humberson, W., Nov
+         1991.  "NASA's Climate Data System Primer: Version 4.0." National
+         Space Science Data Center, NASA Goddard Space Flight Center,
+         Greenbelt, Maryland.
+
+      b. "Solar-Geophysical Data Reports", Published quarterly by the
+         National Geophysical Data Center.
+
+      c. "Solar Indices Bulletin", Published quarterly by the National
+         Geophysical Data Center.
+
+12.  RELATED DATA SETS
+
+      Several data sets measuring solar irradiance at daily intervals are
+      available.  These vary from ground-based telescope observations to
+      solar-viewing satellite instruments.  The Nimbus-7 Earth Radiation
+      Budget Solar Irradiance data set covers the time period from November
+      16, 1978 to October 31, 1990.  The Solar Maximum Mission (SMM) Active
+      Cavity Radiometer Irradiance Monitor (ACRIM) data set also collects
+      daily values of solar flux.  The data set extends from February 16,
+      1980 to December 31, 1988.  Detailed information on these data sets
+      can be found in the NCDS data set descriptions for N-7-ERB and
+      SMM_ACRIM respectively.
+
+
+13.  SUMMARY/SAMPLE
+
+     NCDS maintains a summary X-Y panel plot file in its Graphics package.
+     Specify the DATA_SET name "PENTICTON" as the input parameter.
+
+14.  NOTES
+
+
+*92/01/14

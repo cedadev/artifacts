@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  
+
+  <channel>
+    <title>PREPARDE - Blog</title>
+    <link>http://proj.badc.rl.ac.uk/preparde/blog</link>
+    <description></description>
+    <language>en-US</language>
+    <generator>Trac 0.12.2</generator>
+    <image>
+      <title>PREPARDE</title>
+      <url>http://proj.badc.rl.ac.uk/preparde/chrome/common/trac_banner.png</url>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog</link>
+    </image>
+    <item>
+      <title>New DATA-PUBLICATION JISCMail list</title>
+      <dc:creator>jtedds</dc:creator>
+      <pubDate>Sat, 23 Feb 2013 22:14:14 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/data-pub-list</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/data-pub-list</guid>
+      <description>&lt;p&gt;
+The JISC Managing Research Data Programme funded PREPARDE project invites anyone with an interest to sign up to the new Research DATA-PUBLICATION announce and discuss &lt;a class="ext-link" href="http://www.jiscmail.ac.uk/DATA-PUBLICATION"&gt;&lt;span class="icon"&gt; &lt;/span&gt;mailing list&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+This list will be used to make announcements and promote discussion to Higher Education and the international research community about research data publication. Topics include technical and scientific peer review, trusted repository accreditation and the challenges for researchers, institutions, funders and publishers.
+&lt;/p&gt;
+&lt;p&gt;
+Creation of this list is a recommended outcome from the recent PREPARDE project workshop which included representatives from many key stakeholders from research, funders, institutions and publishers, and was held in January 2013 at the International Digital Curation Conference in Amsterdam. There will be a write up of this event soon.
+&lt;/p&gt;
+&lt;p&gt;
+And it’s a good idea we hope…!
+&lt;/p&gt;
+&lt;p&gt;
+Thanks,
+Jonathan Tedds
+&lt;/p&gt;
+</description>
+    </item>
+   </channel>
+</rss>

@@ -1,0 +1,158 @@
+<html>
+<head>
+<Title>UTLS-Ozone: NASA-Ames format for data exchange</Title>
+</head>
+<body BGCOLOR=#ffffff>
+<h1>NASA-Ames format for data exchange</h1>
+<HR ALIGN=LEFT>
+<p>UTLS-OZONE has adopted NASA-Ames Format for Data Exchange as the file format for
+field observation data.  NASA-Ames format is a text based format, that is self
+describing and portable, but at the same time flexible.  The definition of the
+format is given in the document 
+<a href="./forspec.txt">Format Specification for Data Exchange</a> by
+Gaines and Hipskind.  This document is intended as a short introduction to the
+NASA-Ames format for use by the UTLS-OZONE thematic program.</p>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#intro">Introduction</a>
+<li><a href="#File names">File names</a>
+<li><a href="#variables">Variables</a>
+<li><a href="#ffi">File Format Index</a>
+<li><a href="#header">File Header</a>
+<li><a href="#data">Data Section</a>
+</ul>
+
+<h2><a name="intro">Introduction<a></h2>
+<p>The NASA Ames Format for Data Exchange, often referred to as simply NASA Ames
+format, grew out of NASA Aircraft campaigns.  The format was developed taking
+into account the following considerations:</p>
+<ul>
+<li>The files should be portable across all platforms.  This means that a text
+based format has been chosen.  This has the added advantage of being human
+readable.
+<li>The file should be self describing.  This means that the files contain all
+the information needed to describe the file contents.
+<li>By adopting a standard file format the amount of software needed to analyse
+and display different data sets should be minimised.
+</ul>
+
+<p>Each NASA Ames file is made up of the first line which contains information
+on the file type, a file header section, and a data
+section.  The file header contains the information needed to make the file
+self describing, as well as giving information such as the origin of the data. 
+Once the form of a file for a particular instrument has been decided on the file
+header for that instrument has only a few changes from file to file.  
+More information is given in on the
+file header in the section <a href="#header">The file header</a>.  
+The data section lists the data, in a
+column oriented format.  More information on the data section is given in the
+section <a href="#data">The Data Section</a>.
+</p>
+
+<h2><a name="File names">File names</a></h2>
+The requirement that NASA Ames files are portable puts some constraints on the
+File names since some operating systems, e.g. DOS, limit the length of allowed
+File names.  The agreed convention for NASA Ames files is
+<kbd>ppyymmdd.ext</kbd>, where <kbd>pp</kbd> is a two letter prefix,
+<kbd>yymmdd</kbd> is a date, and <kbd>ext</kbd> is an extension.  The prefix and
+extension can be used to identify site, platform, instrument and constituent. 
+The way in which the prefix and extensions are used is left to the individual
+experimental campaigns, and is not specified as part of the NASA Ames standard.
+
+<h2><a name="variables">Variables</a></h2>
+<p>The observed data can be represented in NASA Ames files as numeric or
+character data.  Clearly the most commonly used is numeric data, though
+character data can be used for site names etc.  The allowed characters in
+numeric fields are 0-9, +, -, ., and E.  The character data can use any
+printable ASCII character (ASCII codes 32 to 126).</p>
+
+<p>NASA Ames uses three kinds of variables: INDEPENDENT, PRIMARY and
+AUXILIARY.  The INDEPENDENT variable(s) are used to define the dimensions of the
+data, and so must be <em>monotonic</em>.  There may be more than one primary variable,
+and so NASA Ames format can accommodate multi-dimensional data.  For most
+UTLS-OZONE field campaign data, however there will be only one 
+INDEPENDENT variable in
+the file, and for most of the files this will be time.  For each NASA Ames files
+there can be one, and only one, unbounded INDEPENDENT variable.</p>
+
+<p>PRIMARY variables are the main variables that are in the file: they are the
+quantities that have been observed or derived e.g. temperature, winds, ozone.
+There can be more than one
+PRIMARY variable in each NASA Ames file.  This allows for the inclusion of more
+than one observed field in each file.  The PRIMARY variables are considered
+as functions of the INDEPENDENT variables.</p>
+
+<p>The AUXILIARY variables are used for ancillary information about the
+observations.  They may, for instance, be used to represent additional dimension
+information: the INDEPENDENT variable is time but AUXILIARY variables are used
+to represent geographical position and height.  For most files produced as part
+of UTLS-OZONE there will be no AUXILIARY variables.</p>
+
+<p>The PRIMARY and AUXILIARY variables have scale factors and missing value
+flags associated with them.  The scale factor can, of course, be 1.0.  The
+missing value should be larger than any good data value within the file.  The
+scale factors and missing values are defined in the File Header.</p>
+ 
+<h2><a name="ffi">File Format Index</a></h2>
+The first line of every NASA Ames file records the length of the file header
+(including the first line) and
+a File Format Index.  The File Format Index identifies the type of
+NASA Ames file: it specifies the number of INDEPENDENT variables (dimensions),
+the increment of the INDEPENDENT variables, the nature (numeric or character) of
+the variables, and whether there are AUXILIARY
+variables present.  The File Format Index is a four digit integer, the most
+significant digit gives the number of INDEPENDENT variables in the file.  For
+most UTLS-OZONE files the File Format Index is <kbd>1001</kbd>.  This File
+Format Index defines files with one unbounded real independent variable with
+real primary variables and no AUXILIARY variables.  If other File
+Format Indices are needed, please contact the <a href="/help/contact.html">BADC</a>.
+
+<h2><a name="header">The file header</a></h2>
+The file header contains the information which defines the contents of the file.
+It consists of several pieces of information or subsections.  The details of the
+file header are determined by the File Format Index.  But all file headers
+contain the following information:</p>
+<ul>
+<li>Data Originator: name, institute, instrument, campaign
+<li>Storage information (largely obsolete with todays storage media)
+<li>Date of the measurements and date of data reduction
+<li>Description of the INDEPENDENT variables
+<li>Description of the PRIMARY variables
+<li>Description of the AUXILIARY variables
+<li>Special Comments
+<li>Normal Comments
+</ul>
+
+The first line of the file, as well as giving the File Format Index, gives the
+number of lines in the header.  This allows a quick skip of the header
+when reading files.</p>
+
+<p>The order and format of the Data Originator, Storage information, and Date
+information is identical for all File Format Indices.  The variable descriptions
+are File Format Index specific.  The special comments and normal comments are
+simple text sections reserved for adding comments to the files.  Each of the
+comment sections begins with a line indicating the number of lines in
+the text section.  Suggested contents of the comments sections are give in 
+<a href="./metadata.html">UTLS-OZONE Suggested Metadata Standards</a>.</p>
+
+<p>The description of the INDEPENDENT variables includes the interval between
+successive values, the name, and the number of values in the independent variable. 
+The descriptions of the PRIMARY and AUXILIARY variables include the variable
+names, the scaling factors and any missing values.</p>
+
+The description of the file header given here is best fleshed out with examples.
+It should be noted that any line in the file header can have in-line comments. 
+These are used to annotate the <a href="header1001.html">example</a> files.
+
+<h2><a name="data">The Data Section</a></h2>
+The format of the data section is determined by the File Format Index.  For the
+details applied to File Format Indices other than 1001 it is best to refer to 
+<a href="./forspec.txt">Gaines and Hipskind</a>.  For File Format Index 1001 the
+data section is simply columns of figures.  Each column representing a different
+variable.  The first column giving the values of the INDEPENDENT variables. 
+The other columns list the values of the PRIMARY variables.
+
+<P>
+</BODY>
+</HTML>

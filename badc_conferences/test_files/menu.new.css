@@ -1,0 +1,36 @@
+BODY {
+	FONT-SIZE: small; FONT-FAMILY: Arial, Clean, Helvetica, sans-serif, "MS sans serif"; BACKGROUND-COLOR: rgb(255,255,255)
+}
+.indent {
+	MARGIN-TOP: 60px; MARGIN-LEFT: 20px; MARGIN-RIGHT: 20px
+}
+H1 {
+	COLOR: #333399
+}
+A.menu {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: white; FONT-FAMILY: Verdana, Clean, Arial, Helvetica, sans-serif, "MS sans serif"; TEXT-DECORATION: none
+}
+A.menu:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: white; FONT-FAMILY: Verdana, Clean, Arial, Helvetica, sans-serif, "MS sans serif"; TEXT-DECORATION: none
+}
+A.menu:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: white; FONT-FAMILY: Verdana, Clean, Arial, Helvetica, sans-serif, "MS sans serif"; TEXT-DECORATION: none
+}
+A.menu:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: white; FONT-FAMILY: Verdana, Clean, Arial, Helvetica, sans-serif, "MS sans serif"; TEXT-DECORATION: none
+}
+A.menu:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: white; FONT-FAMILY: Verdana, Clean, Arial, Helvetica, sans-serif, "MS sans serif"; TEXT-DECORATION: underline
+}
+A.menu:active {
+	FONT-WEIGHT: bold; FONT-SIZE: 9pt; COLOR: white; FONT-FAMILY: Verdana, Clean, Arial, Helvetica, sans-serif, "MS sans serif"; TEXT-DECORATION: underline
+}
+DIV.lastm {
+	FONT-WEIGHT: normal; FONT-SIZE: 8pt; COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Clean, Helvetica, sans-serif, "MS sans serif"; TEXT-DECORATION: none
+}
+DIV.quote {
+	FONT-WEIGHT: normal; FONT-SIZE: 12pt; COLOR: #000000; FONT-FAMILY: Courier, monospace; TEXT-DECORATION: none
+}
+.highlight {
+	BACKGROUND-COLOR: #5f99ff
+}

@@ -1,0 +1,213 @@
+<HTML>
+<HEAD>
+  <TITLE>BADC GRIB Documentation</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><font color="#333399">BADC GRIB Documentation</font></H1>
+<I>A brief introduction to the GRIB data format.</I>
+<HR ALIGN=LEFT>
+
+<H3>Introduction</H3>
+
+<P>This page gives a brief introduction to GRIB (GRIdded Binary) data with particular
+emphasis on the GRIB files held at the BADC. The aim is to give
+an indication of what to expect when faced with a GRIB file. More
+detailed documentation is available, for example at 
+<A HREF="http://dss.ucar.edu/docs/formats/grib/gribdoc">NCAR</A> 
+and the <A HREF="http://www-imk.fzk.de:8080/imk2/kasima/aktuelles/grib/">IMK</A>.
+<P>GRIB is a WMO (World Meteorological Organisation) standard format for archiving and exchanging gridded
+data. GRIB is a binary format, and the data is packed to increase storage efficiency. GRIB data is also self-describing,
+meaning that the information needed to read the file is present within the file.
+This page outlines how the data and information needed to interpret
+the data is stored in a GRIB file.
+
+<H3>GRIB Structure</H3>
+
+<P>Each GRIB file is composed of a series of <b>GRIB records</b>. One
+GRIB record holds the gridded data for one parameter at one time
+and at one level. Each GRIB record is composed of <b>6 GRIB sections</b>.
+Section 4 contains the data itself. The other sections give the
+information required to read the GRIB record, and information
+on the meteorological parameter contained in the record, the level
+the record refers to and the type of grid the parameter is on. The 
+sections are as follows:
+
+<P>
+<B>Section 0:</B> Indicator Section.<BR>
+<B>Section 1:</B> Product Definition Section.<BR>
+<B>Section 2:</B> Grid Description Section - Optional.<BR>
+<B>Section 3:</B> Bit Map Section - Optional.<BR>
+<B>Section 4:</B> Binary Data Section.<BR>
+<B>Section 5:</B> '7777' - ASCII Characters indicating end of GRID record.<P>
+
+Section 1, known as the Product Definition Section (PDS), and section
+2, known as the Grid Definition Section (GDS), are the information sections
+most frequently referred to by users of GRIB data. The PDS 
+(section 1) contains information about the
+parameter, level type, level and date of the record. The GDS 
+(section 2) contains information on the grid type (such as 
+whether the grid is regular or gaussian), and the resolution of
+the grid. 
+
+<H3>GRIB codes</H3>
+
+<P>Some of the information in the GRIB record information sections
+are represented by integer codes. For instance, the name of the
+parameter in the GRIB record is indicated using an integer known
+as the GRIB parameter code, or parameter identifier. Code tables,
+which are not part of the GRIB file but are held separately for each 
+dataset using data in GRIB format.
+
+<H3>Reading GRIB</H3>
+
+<P>Being coded binary files, GRIB files are not readable 
+without the use of suitable software. 
+There are utilities held at the BADC which can be used to decode GRIB files. An example 
+is the <a href="/help/software/xconv/">XCONV/CONVSH</a> package that can be obtained from the BADC.
+
+<p>The <a href="http://www.ncl.ucar.edu/">NCAR Command Language</a> readily reads all GRIB-1 and GRIB-2 files.
+
+<P>Other freely available software packages that can read GRIB via the 
+<a href="/help/software/grads/grads-grib.html">GrADS/GRIB</a> interface 
+are:
+<ul>
+<li><a href="/help/software/cdat/">CDAT (Climate Data Analysis Tools)</a> 
+<li><a href="/help/software/grads/">GrADS (Grid Analysis and Display  System)</a>.
+</ul>
+<P>On the BADC computer, <I>login.badc.rl.ac.uk</I>, you can list the 
+information sections of the GRIB records in the file use by using the
+<KBD>grib2brief</KBD> utility (by typing "grib2brief filename" at
+ the command line prompt). This utility prints out the
+Product Definition Section, Grid Definition Section, and first
+20 data values of each GRIB record in the GRIB file. (<KBD>grib2brief</KBD>
+also outputs a third information section, the Bit Map Section, which is usually 
+absent on files held at the BADC). 
+
+<P>If you would prefer to write your own routines for reading GRIB data, a complete 
+description of the format is given in the <a href="gribdoc.txt">Guide to GRIB</a>.
+
+<H3>Example</H3>
+Using
+<KBD>grib2brief</KBD> on one of the ECMWF 2.5&deg; gridded data files held at the BADC
+will produce an output similar to that displayed below. The <EM>[emphasised]</EM>
+text at the line ends has been added here to highlight the most
+useful pieces of information in the GRIB information sections.
+It is worth noting that in the Grid definition section latitudes
+and longitudes are given in millidegrees. 
+
+<PRE>
+<KBD>Section 0 - Indicator Section. 
+-------------------------------------
+Length of GRIB message (octets). 21132
+GRIB Edition Number. 1
+
+Section 1 - Product Definition Section.
+---------------------------------------
+Code Table 2 Version Number. 128
+Originating centre identifier. 98 <EM>[98=ECMWF]</EM>
+Model identification. 190
+Grid definition. 255
+Flag.  10000000
+Parameter identifier . 129 <EM>[129=geopotential]</EM>
+Type of level. 100 <EM>[100=pressure levels]</EM>
+Value 1 of level. 1000 <EM>[Data on 1000 hPa]</EM>
+Value 2 of level. 0 <EM>[used for layer mean data]</EM>
+Year of reference time of data. 1999 <EM>[Date information]</EM>
+Month of reference time of data. 1 <EM>[Date information]</EM>
+Day of reference time of data. 1 <EM>[Date information]</EM>
+Hour of reference time of data. 0 <EM>[Date information]</EM>
+Minute of reference time of data. 0 <EM>[Date information]</EM>
+Time unit. 1 <EM>[Time unit used for Time ranges]</EM>
+Time range one. 0 <EM>[Data is at hour specified above]</EM></KBD>
+<KBD>Time range two. 0 <EM>[used for time average or accumulated fields]</EM>
+Time range indicator. 0
+Number averaged. 0
+Number missing from average. 0
+Century of reference time of data. 20
+Sub-centre identifier. 0
+Units decimal scaling factor. 0
+ECMWF local usage identifier. 1
+(Mars labelling or ensemble forecast)
+Class. 1
+Type. 2
+Stream. 1025
+Version number or Experiment identifier. 1000
+Forecast number. 0
+Total number of forecasts. 0
+
+Section 2 - Grid Description Section.
+-------------------------------------
+(Southern latitudes and Western longitudes are negative.)
+Data represent type = lat/long  0 <EM>[0=lat/lon grid]</EM>
+Number of points along a parallel. 144
+Number of points along a meridian. 73
+Latitude of first grid point. 90000 <EM>[in milli degrees]</EM>
+Longitude of first grid point. 0 <EM>[in milli degrees]</EM>
+Resolution and components flag. 10000000 
+Latitude of last grid point. -90000 <EM>[in milli degrees]</EM>
+Longitude of last grid point. 357500 <EM>[in milli degrees]</EM>
+i direction (East-West) increment. 2500 <EM>[in milli degrees]</EM>
+j direction (North-South) increment. 2500 <EM>[in milli degrees]</EM>
+Scanning mode flags  00000000
+Number of vertical coordinate parameters. 0
+
+Section 4 - Binary Data Section.
+-------------------------------------
+Number of data values coded/decoded. 10512
+Number of bits per data value. 16
+Type of data (0=grid pt, 128=spectral). 0
+Type of packing (0=simple, 64=complex). 0
+Type of data (0=float, 32=integer). 0
+Additional flags (0=none, 16=present). 0
+Reserved. 0
+Number of values (0=single, 64=matrix). 0
+Secondary bit-maps (0=none, 32=present). 0
+Values width (0=constant, 16=variable). 0
+
+First 20 data values. <EM>[for scanning mode 00000000 longitudes</EM> 
+924.8220               <EM>vary most rapidly and scan from West to East</EM>
+924.8220               <EM>latitudes vary least rapidly and scan from</EM> 
+924.8220               <EM>North to South.  So the data opposite is</EM>
+924.8220               <EM>the first 20 longitudes for the north pole]</EM>
+924.8220 
+924.8220 
+924.8220 
+924.8220 
+924.8220 
+924.8220 
+924.8220 
+924.8220 
+924.8220 
+924.8220 
+924.8220 
+924.8220 
+924.8220 
+924.8220 
+924.8220 
+924.8220</KBD></PRE>
+
+<H3><KBD><BR>
+</KBD>Decoding Software</H3>
+
+<P>The BADC has several GRIB decoding <A HREF="/data/ecmwf-era/software.html">
+utilities</A>. One which is particularly popular as it will run on
+a wide range of platforms is <a href="/help/software/xconv">XCONV</a>
+ (and its command line counterpart CONVSH). Other freely available software packages that can read GRIB via the 
+<a href="/help/software/grads/grads-grib.html">GrADS/GRIB</a> interface 
+are <a href="/help/software/cdat/">CDAT (Climate Data Analysis Tools)</a> 
+and <a href="/help/software/grads/">GrADS (Grid Analysis and Display  System)</a>.
+
+<P>The ECMWF provides it own Fortran library for decoding GRIB data for free on 
+the <A HREF="http://www.ecmwf.int/products/data/software/grib.html">ECMWF Software
+pages</A>. Documentation is also provided for the latest versions.
+
+<P>Another commonly used GRIB decoder, that also runs on PCs, is 
+<A HREF="http://www.cpc.ncep.noaa.gov/products/wesley/wgrib.html">wgrib</A>.
+A copy of wgrib and related documentation is available for users of ECMWF 
+data held at the BADC (in the 
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-era/software/decoder/wgrib?action=login">
+software</A> directory - registered users only). 
+
+<P></BODY>
+</HTML>

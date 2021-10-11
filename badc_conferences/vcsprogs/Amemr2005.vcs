@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050627T080000Z
+DTEND:20050629T180000Z
+LOCATION:Plymouth UK
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:International Symposium on Advances in Marine Ecosystem Modelling Research (AMEMR 2005)=0D=0Awww.amemr.info=0D=0A
+SUMMARY:International Symposium on Advances in Marine Ecosystem Modelling Research (AMEMR 2005)
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

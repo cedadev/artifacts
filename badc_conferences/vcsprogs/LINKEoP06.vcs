@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20061115T000000Z
+DTEND:20061117T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:The Geological Society, London
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000E09CFD2967D6C6010000000000000000100
+ 000004AF7C6381F1A5D4C8C06FFF076664101
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:NERC Ocean Margins (LINK) Programme =
+=0D=0AThe OML End of Programme Conference will take place on the 15th & 16t=
+h November 2006 at The Geological Society, London. =0D=0ARegistration is no=
+w open & further information about the event, including draft programme & o=
+n-line registration can be found at : http://www.nerc.ac.uk/funding/themati=
+cs/oceanmargins/final/ =0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:NERC Ocean Margins (LINK) Programme=20
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

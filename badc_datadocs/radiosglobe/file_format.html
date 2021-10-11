@@ -1,0 +1,56 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>Radiosonde - File Format</TITLE>
+  <!-- Created 15 September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>Global Radiosonde (1997 - 2006)-
+Simple ASCII Data File Format<BR CLEAR="ALL"></H1>
+
+<P><HR ALIGN=LEFT>The radiosonde data is in a simple ASCII format.<BR>
+<BR>
+<STRONG>-9999999. indicates a missing value. </STRONG><BR>
+<BR>
+The first line of the data file contains the following information:
+<p>
+
+<Table border=1>
+<tr><td><b>PARAMETER</b></td><td><b>FIELDS</b></td></tr>
+<tr><td>WMO Number</td><td>1</td></tr>
+<tr><td>Date (YYYYMMDD)</td><td>2</td></tr>
+<tr><td>Hour (HH)</td><td>3</td></tr>
+<tr><td>Latitude</td><td>4</td></tr>
+<tr><td>Longitude</td><td>5</td></tr>
+<tr><td>Station Height (metres)</td><td>6</td></tr>
+</table>
+
+<P>Headers are indicated on the second line of the data file as
+follows:<BR>
+<BR>
+</P>
+
+<BLOCKQUOTE>
+  <P>PP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FF</P></BLOCKQUOTE>
+
+<P>The fields in each file are as indicated below ...</P>
+
+<table border=1>
+
+<tr><td><b>PARAMETER</b></td><td><b>FIELDS</b></td><td><b>COLUMNS</b></td><td><b>S.I UNITS</b></td></tr>
+<tr><td>PP  = Pressure</td><td>1</td><td>1- 9</td><td>Pa</td></tr> 
+<tr><td>HT  = Height above sea level</td><td>2</td><td>10-18</td><td>metres</td></tr>
+<tr><td>TT  = Dry-bulb temperature</td><td>3</td><td>19-28</td><td>deg K</td></tr>                
+<tr><td>TD  = Dew-point temperature</td><td>4</td><td>29-38</td><td>deg K</td></tr>
+<tr><td>DD  = Wind direction</td><td>7</td><td>39-47</td><td>degree true</td></tr>
+<tr><td>FF  = Wind speed</td><td>8</td><td>48-57</td><td>m/s</td></tr>
+</table>
+
+<P>The data starts on the third line.</P>
+
+<P>
+</BODY>
+</HTML>

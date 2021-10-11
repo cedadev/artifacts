@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "VGL_STMP "
+"SUM_DATA_SET"       "VGL-TMP-DEV  "
+"SUM_DATATYPE"       "SEASONAL     "
+"ARCHIVE_NAME"       "NCDS     "
+"ARCHIVE_STATUS"     "Available"
+"DS_DESCRIPTION"     "Vinnikov, Groisman, Lugina Temperature Deviations"
+"DT_DESCRIPTION"     "Seasonal Temperature Deviations                  "
+"SUM_BEGIN_DATE"     "01-Jan-1881"
+"SUM_END_DATE"       "31-Oct-1991"
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Global"
+"SPATIAL2"           " "
+"SPATIAL3"           "30 deg latitudinal zones"
+"SPATIAL4"           " "
+"TEMPORAL1"          "January, 1881 - October, 1991"
+"TEMPORAL2"          " "
+"TEMPORAL3"          "Seasonal temperature deviations"
+"TEMPORAL4"          " "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF)."
+"PRODUCT2"           "Available on GEDEX CD-ROM."
+"PRODUCT3"           " "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"TEMPERATURE"     "Seasonal Temperature Deviation"  "Deg C"
+EOF
+
+SOURCES
+"MODEL"           "ANALYSES"
+EOF

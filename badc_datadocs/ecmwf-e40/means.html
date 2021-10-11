@@ -1,0 +1,116 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC ECMWF ERA-40 Re-Analysis Monthly Means</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<IMG SRC="/graphics/logos/ecmwflogo.gif" ALT="ECMWF logo:" ALIGN="BOTTOM">
+<IMG SRC="/graphics/logos/ecmwf_era_logo.gif" ALIGN="BOTTOM" ALT="ERA logo">
+
+<H1>ECMWF ERA-40 Re-Analysis Monthly mean data</H1>
+
+<HR ALIGN=LEFT>
+
+<H2><IMG SRC="/graphics/blue/info.gif" ALIGN="BOTTOM" ALT="Intro icon:">
+Introduction</H2>
+
+<P>As part of the ERA-40 Re-Analysis Project the ECMWF has produced two types of monthly mean data. The BADC archives these in the same format as the <a href="index.html">6-hourly data</a>.
+
+<P>The two monthly mean types are:
+<UL>
+ <LI><a href="#moda">Monthly diurnal means (moda)</a> - monthly means of all 6-hourly time-steps throughout any given month.
+ <LI><a href="#mm">Monthly synoptic (6-hourly) means (mm)</a> - monthly means of for each synoptic (6-hourly) time-step (00, 06, 12 and 18hr).
+</UL>
+
+<H2><a name="av_params">Available Parameters</a></H2>
+
+<P>The <a href="/data/ecmwf-e40/params.html">parameters page</a> describes almost all parameters available in the 6-hourly dataset. Only <b>three of these are NOT available</b> in the monthly means, they are:
+<UL>
+ <LI>Wind gusts at 10 m (10FG, 49) - NOT in the Gaussian gridded surface forecast data (ggfs).
+ <LI>Maximum temp. at 2m since previous post-processing (MX2T, 201) - NOT in the Gaussian gridded surface forecast data (ggfs).
+ <LI>Minimum temp. at 2m since previous post-processing (MN2T, 202) - NOT in the Gaussian gridded surface forecast data (ggfs).
+</UL>
+
+<P><b>Additional parameters in the 6-hourly monthly means</b> are:
+<UL>
+ <LI>10 metre wind speed (10wspd, 207, units=ms<sup>-1</sup>) - in the Gaussian gridded surface analysis data (ggas).
+ <LI>Magnitude of surface stress (mags, 48, units=N m<sup>-2</sup>s) - in the Gaussian gridded surface forecasts (ggfs).
+</UL>
+
+<H2><a name="moda">Monthly diurnal means (moda)</a></H2>
+
+<P>The monthly diurnal means (moda) 
+
+Monthly diurnal means combining the 00, 06, 12, and 18 UTC fields are archived at the BADC. The +6 hour forecast step has been used for calculating these means.
+
+<P>The monthly diurnal mean analysis includes the 00UTC analysis from the 1st day of the month. Hence, in view of the 3D-Var `FGAT' configuration for ERA-40, observations from 2101UTC on the last day of the previous month up to 2100UTC on the last day of the present month are actually used in producing the analyses on which the means are based. 
+
+<P>The monthly diurnal means adhere to the BADC's <a href="/data/ecmwf-e40/file_naming.html">ERA-40 file-naming convention</a> and are located at:
+
+<P><KBD>/badc/ecmwf-e40/data/moda/AA/BC/YYYY/MM/AABCYYYYMMmoda[PARAM].grb</KBD><P>
+
+They can also be accessed via the web-interface (by registered BADC users) at: <BR>
+
+<P><A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-e40/data/moda/"> 
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-e40/data/moda/AA/BC/YYYY/MM/AABCYYYYMMmoda[PARAM].grb</A> 
+
+<P>Where:
+<br>AA is the grid type
+<br>B is either 'a' (analysis) or 'b' (forecast)
+<br>C is the level type ('m','p','s','t' or 'v')
+<br>YYYY, MM and DD are the year, month and day
+<br>moda stands for monthly diurnal mean
+<br>[PARAM] is the parameter code.
+
+<H2><a name="mm">Monthly synoptic (6-hourly) means (mm)</a></H2>
+Monthly means of the analysed and forecast fields are archived for each synoptic hour (00, 06, 12, and 18 UTC). These are available on all level types for the same <a href="/data/ecmwf-e40/params.html">analysis and forecast parameters</a> as the 6-hourly data. The new parameters of <i>Magnitude of surface stress</i> and <i>10 metre wind speed</i> are mentioned <a href="#av_params">above</a>.
+
+<P>The monthly mean +06 hour forecasts are averaged over all forecasts valid within the calendar month, thus the 00UTC synoptic mean and the diurnal mean each contain a +06 hour forecast initiated at 18UTC on the last day of the previous month. The rationale for this choice is that the mean of the +06 hour forecasts coincides with the mean analysis, i.e. it is the mean of the +06 hour background forecasts used in the 3D-Var data assimilation. 
+
+<P>The synoptic monthly mean analysis at 00UTC includes the 00UTC analysis from the 1st day of the month. Hence, as with the monthly diurnal means, observations from 2101UTC on the last day of the previous month up to 2100UTC on the last day of the present month are actually used in producing the analyses on which the means are based. The synoptic monthly mean analyses at 06UTC, 12UTC and 18UTC are based on observations taken strictly within the month.
+
+<P>The monthly 6-hourly <b>analysis</b> means adhere to the BADC's <a href="/data/ecmwf-e40/file_naming.html">ERA-40 file-naming convention</a> and are located at:
+
+<P><KBD>/badc/ecmwf-e40/data/mm/AA/aC/YYYY/MM/AAaCYYYYMMmmHH[PARAM].grb</KBD><P>
+
+They can also be accessed via the web-interface (by registered BADC users) at: <BR>
+
+<P><A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-e40/data/mm/"> 
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-e40/data/mm/AA/aC/YYYY/MM/AAaCYYYYMMmmHH[PARAM].grb</A> 
+
+<P>Where:
+<br>AA is the grid type
+<br>a is stands for analysis
+<br>C is the level type ('m','p','s','t' or 'v')
+<br>YYYY, MM and DD are the year, month and day
+<br>mm stands for monthly mean (6-hourly)
+<br>HH is the hour
+<br>[PARAM] is the parameter code.
+
+<P>The monthly 6-hourly <b>forecast</b> means adhere to the BADC's <a href="/data/ecmwf-e40/file_naming.html">ERA-40 file-naming convention</a> and are located at:
+
+<P><KBD>/badc/ecmwf-e40/data/mm/AA/fC/YYYY/MM/AAfCYYYYMMmmHHFF[PARAM].grb</KBD><P>
+
+They can also be accessed via the web-interface (by registered BADC users) at: <BR>
+
+<P><A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-e40/data/mm/"> 
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-e40/data/mm/AA/fC/YYYY/MM/AAfCYYYYMMmmHHFF[PARAM].grb</A> 
+
+<P>Where:
+<br>AA is the grid type
+<br>f is stands for forecast
+<br>C is the level type ('m','p','s','t' or 'v')
+<br>YYYY, MM and DD are the year, month and day
+<br>mm stands for monthly mean (6-hourly)
+<br>HH is the hour
+<br>FF is the forecast step (i.e. hours from the analysis)
+<br>[PARAM] is the parameter code.
+
+<H2>Further details on the ERA-40 monthly means</H2>
+
+The <a href="http://www.ecmwf.int/research/era/Products/Archive_Plan/Archive_plan_4.html">ECMWF web pages</a> include more detailed discussion on the monthly means available from the ERA-40 Re-analysis project.
+<P>
+
+</BODY>
+</HTML>

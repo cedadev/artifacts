@@ -1,0 +1,138 @@
+README.DOC  (1994-01-12 - pgh)
+
+1.  Introduction
+
+    This CD-ROM contains the data pertaining to the Stratospheric 
+    Photochemistry, Aerosols and Dynamics Expedition (SPADE) which was 
+    based at Ames Research Center in California during portions of 1992
+    and 1993.  Most of the data are in essentially final form, however
+    additional calibration work is being done for some of the instruments.
+    None of the instrument data is expected to change significantly from
+    the values reported here.  A second edition incorporating updates
+    and/or changes to the data is anticipated in late 1994 or early 1995.
+ 
+    The data consist of measurements collected onboard the NASA ER-2
+    aircraft, and selected radiosonde soundings from stations in the 
+    region of the experiment.  Flights were conducted during October 
+    and November of 1992, April and May of 1993, and October of 1993.
+ 
+    Theory team products come in two forms -- as quantities evaluated 
+    along flight tracks and as global or hemispheric fields.
+    Meteorological quantities, such as temperature, geopotential, and 
+    potential vorticity are available in both forms.  They are based
+    on analyses from both the U.S. National Meteorological Center and
+    from the Assimilation Model of NASA's Goddard Space Flight Center.
+    Other quantities, available along flight tracks only, include visible
+    reflectivity, cloud height, UV reflectivity, and total ozone.  The 
+    first two are derived from GOES imagery, the last two from the Meteor
+    TOMS sensor.  Finally, calculations of mixing ratios of selected 
+    chemical species using a photochemical steady state model are 
+    available along the flight track.
+
+    All files within this release are standard ASCII files with variable 
+    length records terminated by a carriage return/line feed pair (<CR><LF>,
+    ASCII decimal values 13 and 10).  Therefore, MS-DOS users should be able 
+    to read them as they are, but UNIX and Mac users will have to strip off 
+    either the <CR> or the <LF> from each line to convert them to standard 
+    UNIX or Mac files.  Commercially available software, such as dos2unix 
+    and Apple File Exchange, exists to convert MS-DOS files to both UNIX 
+    and Mac files.  VMS users can define the files to have STREAM record 
+    formats.
+ 
+    The file naming convention uses a two-character prefix to identify the 
+    measurement, followed by a six digit number (yymmdd) giving the year, 
+    month, and day (UT) of the flight, balloon launch, or model result.  
+    To identify the measurement platform, a three character extension of 
+    EA1, Bhh, or Ghh is used to denote the data is from the ER-2, balloon,
+    or grid point model output (hh denotes the UT hour of balloon launch or 
+    model result).
+
+
+2.  Directories
+
+    2.1  The DOCUMENT directory contains several files documenting the 
+         contents of this edition.
+
+         Files:
+
+         2.1.1  CONTACT.DOC contains an updated list of names, addresses,
+                and phone numbers of the principal investigators responsible
+                for generating the datasets in this release.
+
+         2.1.2  ER2TABLE.DOC contains a record of the available ER-2 datasets
+                in tabular format.
+
+         2.1.3  FORSPEC1.PS and FORSPEC2.PS are PostScript files of the
+                document entitled "Format Specification for Data Exchange"
+                which defines the standard file formats in which all data are
+                recorded.  These two PostScript files can be printed on any 
+                printer that understands PostScript.  FORSPEC1.PS contains the
+                title page and table of contents; FORSPEC2.PS contains the
+                bulk of the document.
+
+         2.1.4  UV_VIS.DOC contains a detailed description of the UV-Vis
+                experiment, also known as the Composition and 
+                Photodissociative Flux Measurement (CPFM).  Note that the
+                file name contains an underscore, not a hyphen, to conform
+                to the ISO 9660 file naming standards.
+
+    2.2  The DATA directory has three subdirectories for the ER-2, model
+         results, and radiosonde soundings data files.
+
+         Subdirectories:
+
+         2.2.1  ER2 contains the available data collected onboard the ER-2
+                aircraft.  It also contains several derived quantities.
+                These include (1) "string files" (values along the flight
+                track) and "curtain files" (values in a vertical curtain
+                along the flight track) of potential vorticity, temperature,
+                geopotential, and horizontal wind (derived from analyses
+                of U.S. National Meteorological Center data and the 
+                Assimilation Model of NASA's Goddard Space Flight Center);
+                (2) "string files" of underlying visible and UV 
+                reflectivity, underlying cloud height, and total ozone;
+                and (3) "string files" of selected species mixing ratios
+                from a photochemical steady state model.  Each file 
+                contains data for one flight which begins on the UT date
+                indicated by the file name.
+
+         2.2.2  MODEL contains 12 Z hemispheric analyses of potential 
+                vorticity, temperature, horizontal winds, and geopotential.
+
+         2.2.3  RAOB contains selected radiosonde soundings near the aircraft 
+                flight tracks.  Each file contains one or more soundings 
+                for a particular time period.
+ 
+
+3.  Directory Structure for this CD-ROM is as follows:
+
+    README.DOC in top level directory
+    DOCUMENT
+    DATA
+      |-- ER2
+      |-- MODEL
+      |-- RAOB
+ 
+
+-------------------------------------------------------------------------------
+
+This documentation and the accompanying data files were compiled by:
+
+Steven Gaines                          Patti Hathaway
+NASA Ames Research Center              NASA Ames Research Center
+M/S 245-3                              M/S 245-5
+Moffett Field, CA 94035-1000           Moffett Field, CA 94035-1000
+415-604-4546                           415-604-3493
+gaines@cloud1.arc.nasa.gov             hathaway@cloud1.arc.nasa.gov
+
+Steve Hipskind
+NASA Ames Research Center
+M/S 245-5
+Moffett Field, CA 94035-1000
+415-604-5076
+hipskind@cloud1.arc.nasa.gov
+
+We have left the quality control of the data to the principal investigators 
+and have checked only the format of the data files.  Therefore, if problems 
+with the data are encountered, please inform us or the appropriate principal 
+investigator.

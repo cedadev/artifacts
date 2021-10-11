@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20090523T230000Z
+DTEND:20090527T230000Z
+LOCATION:Toronto, Canada
+TRANSP:1
+UID:040000008200E00074C5B7101A82E008000000003062E71F9E75C901000000000000000
+	01000000098AFC9F741D4404BA45CB25BFE247454
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+2009 Joint Assembly=0D=0AThe Meeting of the Americas=0D=0A24=9627 May 200=
+9=0D=0AToronto, Ontario, Canada=0D=0AWelcome!=0D=0AThe 2009 Joint Assembl=
+y is being held 24=9627 May 2009 at the Toronto Convention Centre, locate=
+d at 255 Front Street West, Toronto, Ontario, Canada. The Program Committ=
+ee is developing a Union-wide science program that will cover topics in a=
+ll areas of geophysical sciences. With its diverse attractions, character=
+, and international spirit, Toronto is the perfect setting for a producti=
+ve meeting!=0D=0AAbstract Submissions=0D=0AAbstract submissions are now o=
+pen for the 2009 Joint Assembly. Review the list of session and submissio=
+n instructions <http://www.agu.org/meetings/ja09/program/abstract_submiss=
+ions.php>  before preparing your abstract. =0D=0AFurther details availabl=
+e at http://www.agu.org/meetings/ja09/index.php=0D=0A
+SUMMARY:2009 AGU Joint Assembly
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

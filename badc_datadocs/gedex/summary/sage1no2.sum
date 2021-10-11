@@ -1,0 +1,33 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SAGE1NO2 "
+"SUM_DATA_SET"       "SAGEI-PROF   "
+"SUM_DATATYPE"       "NO2          "
+"ARCHIVE_NAME"       "NSSDC, NCDS  "
+"ARCHIVE_STATUS"     "Available.  Recently reprocessed - February, 1991.           "
+"DS_DESCRIPTION"     "AEM-2 Stratospheric Aerosol and Gas Experiment I Profiles    "
+"DT_DESCRIPTION"     "Nitrogen Dioxide"
+"SUM_BEGIN_DATE"     "21-Feb-1979     "
+"SUM_END_DATE"       "18-Nov-1981     "
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "72 deg N to 72 deg S (above 5 km or cloud top)               "
+"SPATIAL2"           "                                                             "
+"SPATIAL3"           "250 km X 250 km   Vertical resolution is 1 km below 25km     "
+"SPATIAL4"           "and 5 km above. "
+"TEMPORAL1"          "February 21,1979 - November 18,1981                          "
+"TEMPORAL2"          "Sunsets only after June 1979                                 "
+"TEMPORAL3"          "Full coverage is obtained in about 3 weeks but latitude      "
+"TEMPORAL4"          "coverage varies with season.                                 "
+"PRODUCT1"           "NO2 number density and volume mixing ratio profiles          "
+"PRODUCT2"           "One 6250 tape per year.                                      "
+"PRODUCT3"           "Available on GEDEX CD-ROM.                     "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"NO2"        "NO2 Mixing Ratio"       "None"
+"NO2"        "NO2 Number Density"     "No./cm**3"
+EOF
+
+SOURCES
+"AEM-2"      "SAGEI"
+EOF

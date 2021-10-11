@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070306T000000Z
+DTEND:20070310T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Xiamen, China
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000A0C3D77064D6C6010000000000000000100
+ 00000F0FFA1B23E073640BE4DF743F6418579
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:The second international SOLAS (Surfa=
+ce Ocean Lower Atmosphere Study) Open Science Conference will take place in=
+ Xiamen, China, 6-9 March 2007.=0D=0AThe conference is structured around in=
+vited talks, together with poster and discussion sessions.  =0D=0A=0D=0AUK =
+SOLAS is assisting national participation in this meeting through awards of=
+ up to =A3600 per person for un-established researchers (PhD students will =
+be=0D=0Agiven priority, post-doctoral research assistants within 5 yr of co=
+mpleting a PhD may also apply).  A total of =A36,000 is available for such =
+support. =0D=0A=0D=0AReference will be given to individuals whose research =
+is highly relevant to SOLAS and who are submitting poster abstracts, either=
+ as the lead author or as=0D=0Athe only author attending the meeting.=0D=0A=
+=0D=0AFor further details and how to apply see:=0D=0Ahttp://www.nerc.ac.uk/=
+funding/thematics/solas/conference07.asp =0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:UK SOLAS Conference Fund 2007
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

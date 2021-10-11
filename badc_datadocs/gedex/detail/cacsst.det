@@ -1,0 +1,479 @@
+Climate Analysis Center Sea Surface Temperatures
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACT FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Sea Surface Temperature (SST) derived from
+from in situ (ship-of-opportunity and fixed buoy) data and radiance data
+collected from the Advanced Very High Resolution Radiometer (AVHRR). The
+AVHRR retrievals were derived by the multichannel technique referred to in
+Reynolds, 1984.
+
+1.2  Unit of Measurement.  Degrees Centigrade.
+
+1.3  Data Source.  Data are derived from ship/buoy measurements and
+observations by the AVHRR instrument.  Additional information can be found
+in the "SST/A" and "AVHRR" detailed catalog, describing the AVHRR derived
+SSTs and the AVHRR instrument, respectively.   To view these detailed
+catalogs specify the data set "MCSST" and "AVHRR" within the Data Access
+Subsystem of NCDS.
+
+1.4  Data Set Identification.  The Climate Analysis Center's Sea Surface
+Temperature Data Set, referred to as "CAC SSTs", contains gridded sea
+surface temperatures (SSTs) and corresponding quality flags listed below:
+
+ o in situ SSTs
+ o blended SSTs (in situ SSTs blended with AVHRR derived SSTs)
+ o blended anomalies (available in NCDS CDF only)
+ o blended derivation flag
+ o COADS/Ice SST Climatology
+ o COADS/Ice SST Climatology derivation flag
+ o Land/Sea Mask
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  All products are global, except for the in situ
+product which covers 40 deg S to 60 deg N.
+
+2.2  Spatial Resolution.  All products are available on a 2 deg X 2 deg
+latitude/longitude grid, except for the Land/Sea mask product which is on a
+0.5 deg X 0.5 deg latitude/longitude grid.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  The blended analyses grids, derived from in situ
+SSTs and AVHRR derived SSTs, are available from January, 1982, to present.
+The in situ grids are available from January, 1970, through December, 1981.
+
+3.2  Temporal Resolution.  All gridded values are monthly means, with the
+exception of the Land Mask.
+
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  A detailed description of the AVHRR instruments
+on NOAA satellites can be found in the "AVHRR" detailed catalog.  To view
+this catalog specify the data set "AVHRR" within the Data Access Subsystem
+of NCDS.
+
+4.2  Key Satellite Flight Parameters.  N/A
+
+4.3  Principles of Operation.  N/A
+
+4.4  Measurement Geometry.  N/A
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  The in situ SST fields are analyzed
+from ship and buoy data only.  The blended SST fields are analyzed from a
+blend of in situ and AVHRR satellite data.  The SSTs are obtained by
+solving Poisson's equation forced by a satellite analyzed field with
+internal and external boundary values anchored by an in situ analysis.  The
+anomaly fields for both the in situ and blended SSTs were obtained by
+subtracting the monthly climatology (see Reynolds and Roberts, 1987) from
+the monthly mean analyzed SST.
+
+The following description is a summary of the climatology processing from
+Reynolds, 1988:
+
+An initial climatological monthly analysis was completed using the in situ
+data from the Comprehensive Ocean-Atmosphere Data Set (COADS) of Woodruff,
+et al (1985) for the period 1950-79.  This was done by first combining all
+data for the same month, without regard to year, on a 2 degree grid.  Then
+following a median filter procedure similar to that of the in situ
+analysis, monthly climatological fields were obtained. However, because of
+the lack of data in the Southern Hemisphere, the climatological fields were
+extended using ice and satellite data. The ice data (obtained from a ten
+year dataset from the Glaciological Data Center, Boulder, Colorado) were
+used to produce monthly fields which indicate the percentage of time that
+each grid point was covered by ice during the ten years.   If sea ice was
+present at least 50% of the time, the monthly climatological SST at that
+point was set equal to -1.8 degrees C, the freezing point of seawater at a
+salinity of 35 parts per thousand.  (A similar procedure was used by
+Alexander and Mobley, 1976.)  At the non-ice grid points, the monthly SST
+climatology was set equal to the preliminary COADS in situ analysis if at
+least ten observations had been available there.  In the remaining interior
+regions, the grid points were found by solving Poisson's equation where the
+forcing term was determined by a monthly satellite climatology.  The
+satellite climatology was computed by averaging 4 years (1982-85) of the
+monthly satellite analyses previously described.  The effect of satellite
+SST biases was minimal in the climatology since the satellite analysis was
+only used to determine the shape of the solution in internal regions of the
+field and was not used to define external boundary conditions as in the
+operational procedure previously described.
+
+5.2  Derivation Techniques/Algorithms.  For detailed information, please
+see Reynolds, 1987 and 1988.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.   All data were subjected to objective
+quality controls as described in Reynolds, 1988.
+
+6.2  Confidence Level/Accuracy Judgment.  The global monthly average bias
+error is less than 0.1 deg C.  The global monthly average RMS error is less
+than 0.8 deg C.  However, errors at individual grid points could be larger.
+
+6.3  Usage Guidance.  For computational convenience, the blended analysis
+is also computed for grid points on land.  None of these values should be
+interpreted as land surface temperatures. (Note: NCDS CDFs for the CAC SSTs
+have the Land Mask applied.)
+
+
+7.  CONTACT FOR DATA PRODUCTION INFORMATION
+
+    Dr. Richard Reynolds
+    Climate Analysis Center
+    NOAA / NMC  (W/NMC52)
+    Washington, D.C.  20233
+    (301) 763-8227
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products
+
+8.1.1  Sea Surface Temperature Monthly Mean Tapes, Level III
+
+     Medium/Specification:  One 1600-bpi 9-track tape with four ASCII
+     formatted files.
+
+     Format and Content:
+     File 1: The Land/Sea Mask file is a 0.5 degree grid consisting of
+     zeros (for sea or coastal interface) and ones (for land). The mask is
+     derived from a NESDIS low resolution land/sea tag data set
+
+     File 2: The monthly COADS/Ice SST Climatology fields are available on
+     a 2 degree grid.  These fields were computed using the two-degree
+     resolution COADS data for the period 1950 to 1979.  To improve the
+     coverage, SSTs were inferred from monthly climatological ice limits
+     and obtained from monthly satellite SST fields.  This file also
+     contains a flag array (see notes, item 14) with information on the
+     analysis.
+
+     File 3: The monthly in-situ SST analysis contains fields based on
+     in-situ observations only.  The file consists of monthly fields from
+     January 1970 through December 1981.  The SST has been divided into two
+     regions called Atlantic and Pacific.  The two regions overlap and have
+     interpolated values over land.
+
+     File 4: The monthly blended SST analysis fields are available from
+     January 1982 to present on a two-degree latitude/longitude grid. These
+     fields are analyzed from a blend of in-situ data, AVHRR satellite data
+     and ice data.  This file also contains a flag array (see Notes, item
+     14) that gives information on the blending derivation of each analyzed
+     grid point.
+
+     Data Quantity/Rate:  One global map of blended monthly means is
+     calculated each month and added to the tape.
+
+8.2  Film Products.  None.
+
+8.3  Other Products.
+
+8.3.1  Monthly blended SST analysis Common Data Format (CDF) file
+
+     Medium/Specification:  Magnetic disk
+
+     Format and Content: Contains the monthly blended SST analysis fields
+     and the blended SST anomalies for the period January 1982 to present
+     on a two degree latitude/longitude grid.  These fields are analyzed
+     from a blend of in-situ data, AVHRR satellite data and ice data.  This
+     file also contains a flag array (see notes, item 14) that gives
+     information on the blending derivation of each analyzed grid point.
+
+     Data Quantity/Rate: 65,520 bytes/month
+
+     Status: Available online within NCDS.
+
+     Plans/Schedule: NCDS will continue to support this data set
+
+8.3.2 Monthly In-Situ SST analysis Common Data Format (CDF) file.
+
+     Medium/Specification: Magnetic disk
+
+     Format and Content: Contains the monthly in-situ SST analysis based on
+     in-situ observations only.  The file consists of monthly fields from
+     January 1970 through December 1981 for the Atlantic and Pacific ocean,
+     with interpolated values over land.
+
+     Data Quantity/Rate: 10,340 512 byte blocks
+
+     Status: Available online within NCDS.
+
+     Plans/Schedule: NCDS will continue to support this data set.
+
+8.3.3 Land/Sea Mask Common Data Format (CDF) file.
+
+     Medium/Specification:  Magnetic disk
+
+     Format and Content: Contains the Land/Sea Mask file in a 0.5 degree
+     grid consisting of zeros (for sea or coastal interface) and ones (for
+     land).  The mask is derived from a NESDIS low resolution land/sea tag
+     data set.
+
+     Data Quantity/Rate: 525 512 byte blocks
+
+     Status: Available online within NCDS.
+
+     Plans/Schedule: NCDS will continue to support this data set.
+
+8.3.4 COADS/Ice SST Climatology Common Data Format (CDF) file.
+
+     Medium/Specifications: Magnetic disk
+
+     Format and Content: Contains the monthly COADS/Ice SST Climatology
+     fields on a 2 degree grid.  These fields were computed using the
+     two-degree resolution COADS data for the period (1950-1979).  To
+     improve the coverage, SSTs were inferred from monthly climatological
+     ice limits and obtained from monthly satellite SST fields.  This file
+     also contains a flag array (see notes, item 14) with information on
+     the analysis.
+
+     Data Quantity/Rate: 1933 512 byte blocks
+
+     Status: Available online within NCDS.
+
+     Plans/Schedule: NCDS will continue to support this data set.
+
+9.  DATA ACCESS
+
+9.1  Archive Identification
+
+     Diane Marsico
+     Diagnostics Branch
+     Climate Analysis Center
+     NOAA/ NMC  (W/NMC52)
+     Washington D.C. 20233
+     (301) 763-8227
+
+9.2  Procedures for Obtaining Data.  Users can obtain these data online
+through the NASA Climate Data System (NCDS).  To use NCDS, you must be able
+to access the National Space Science Data Center (NSSDC) Computer Facility
+(NCF) and obtain an NCF/VAX user account on the VAX 6410.  To obtain more
+information on accessing online data contact the NCDS User Support Office.
+(See item 10.1, archive/data access information.)  Tape requests can be
+directed to the NSSDC Request Coordination Office. (See item 10.2.)
+
+9.3   NCDS Status/Plans.  The NASA Climate Data System (NCDS) supports the
+entire data set online in Common Data Format (CDF).  The Common Data Format
+is data-set-independent, which allows the application of a single set of
+analysis tools regardless of the original data format. To access the data,
+specify the following CDFs within the DATA MANIPULATION and GRAPHICS
+Subsystem of the NCDS:
+
+     NCDS$DATA:CAC_SST_BLENDED
+     NCDS$DATA:CAC_SST_IN-SITU
+     NCDS$DATA:CAC_SST_LANDMASK
+     NCDS$DATA:CAC_SST_CLIMATOLOGY
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+10.1  NCDS User Support Office
+      Goddard Space Flight Center
+      Code 934
+      Greenbelt, Maryland  20771
+      (301) 286-3209
+      TCP/IP:  NCDSUSO@NSSDCB.GSFC.NASA.GOV
+      NSI DECnet: NCF::NCDSUSO
+
+10.2  Request Coordination Office
+      National Space Science Data Center
+      Code 933-Central Data Services Facility
+      NASA/Goddard Space Flight Center
+      Greenbelt, MD 20771
+      PHONE:  (301) 286-6695
+      TELEX:  89675 NASCOM GBLT
+      TWX No: 7108289716
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      a.  McClain E.P., W.G. Pichel and C.C. Walton, 1985. "Comparative
+          Performance of AVHRR-based Multichannel Sea Surface Temperature."
+          J. Geophys. Res., 90:11585-11601.
+
+11.2  Journal Articles and Study Reports
+
+      a.  Reynolds, R.W. and L. Roberts, 1987.  "Global Sea-Surface
+          Temperature Climatology from in-situ, Satellite, and Ice Data."
+          Tropical Ocean-Atmosphere Newsletter (CIMAS), 37:15-17.
+
+      b.  Reynolds, R.W., D.C. Marsico and W. Newell, 1988. "Progress
+          Report for the TOGA SST Data Center."  Tropical Ocean-Atmosphere
+          Newsletter  (CIMAS),  45:10-12.
+
+      c.  Reynolds, R.W. and D.C. Marsico, 1988. "Progress Report for the
+          TOGA SST Data Center." Tropical Ocean-Atmosphere Newsletter
+          (CIMAS), 50:7-9.
+
+      d.  Reynolds, R.W., 1988.  "A Real-time Global Sea Surface
+          Temperature Analysis."  J. Climate, 1:75-86.
+
+      e.  Shea, D.J., K.E. Trenberth and R.W. Reynolds, November 1990.  A
+          Global Monthly Sea Surface Temperature Climatology,
+          NCAR/TN-345+STR.  Climate and Global Dynamics Division, Boulder,
+          Colorado.
+
+      f.  Slutz, R.J., S.J. Lubker, J.D. Hiscox, S.D. Woodruff, R.L. Jenne,
+          D.H. Joseph, P.M. Steurer, J.D. Elms, 1985.  "COADS Comprehensive
+          Ocean-Atmosphere Data Set."  Release 1, Climate Research Program,
+          ERL, Boulder, CO.
+
+      g.  Woodruff, S.D., S.J. Lubker, R.G. Quayle, U. Radok, and E. D.
+          Doggett, October 1991.  Differences Within and Among Surface
+          Marine Datasets, NOAA Environmental Research Laboratories,
+          Climate Monitoring and Diagnostics Laboratory, Climate Research
+          Division, Boulder, Colorado.
+
+11.3  Archive/DBMS Usage Documentation
+
+      a.  Olsen, L.M., J.W. Closs, and F.E. Corprew, November 1991. "NASA's
+          Climate Data System Primer:  Version 4.0."  EOS DAAC, NASA
+          Goddard Space Flight Center, Greenbelt, Maryland.
+
+      b.  Reynolds, R.W., 1988.  "A Real-time Global Sea Surface
+          Temperature Analysis."  J. Climate, 1:75-86.
+
+
+12.  RELATED DATA SETS
+
+     A monthly mean sea surface temperature data product "MCSST", produced
+from the AVHRR instrument aboard the TIROS-N and NOAA 6 - 11 satellite
+series, is available for the period 1979-1987 at 2.5 degree resolution. In
+situ measurements were not used in producing this product.  The MCSSTs are
+available through NOAA's Satellite Data Services Division (SDSD) and as an
+on-line CDF through NCDS in NCDS$DATA:NOAA_MCSST_MONTHLY.
+
+     Another data product, produced by the University of Miami, containing
+data derived from the AVHRR instrument aboard the TIROS-N and NOAA 6 - 11
+satellite series will soon be available.  These data will contain weekly
+composites of multi-channel sea surface temperature covering the period
+October 1981 to March 1990 at 18 km resolution.
+
+13.  SUMMARY/SAMPLE
+
+A sample plot is available for this data set.  It is accessible via the the
+Post Processor of the NCDS Graphics Subsystem.  Specify the plot file
+NCDS$DEMO:CAC_SST to view this sample plot.
+
+14.  NOTES
+
+Derivation flag meanings for the blended analyses are as follows:
+
+-1 : The SST value is set to -1.e9. The grid cell is defined as a land
+point (for NCDS CDF only).
+
+0 : Unused
+
+1 : The blended value is anchored by the in situ analysis; there are at
+least 5 in situ observations per month.  This is an internal or external
+boundary condition.
+
+2 : Unused
+
+3 : Pole values; the SST mean is set to -1.8 deg C; the SST anomaly is set
+to 0.
+
+4 : The blended value is anchored by the freezing point of sea water (-1.8
+deg C).  These data points are ice covered as defined from information
+given by the University of Maryland (1982-1987) and NESDIS and the
+Navy/NOAA Joint Ice Center (1988-present).  The sea ice data are used as an
+external boundary condition.
+
+5 : The blended value is determined by relaxation of the in situ analysis
+with satellite forcing; the number of satellite observations is at least 10
+per month.
+
+6 : The blended value is determined by relaxation of the in situ analysis
+with the satellite forcing set to zero; the number of satellite
+observations is less than 10 per month.
+
+
+Derivation flag meanings for the COADS/Ice SST Climatology analysis are as
+follows:
+
+-1 : The SST value is set to -1.e9. The grid cell is defined as a land
+point (for NCDS CDF only).
+
+0 : Unused
+
+1 : Value based on sufficient in-situ data (10 or more ship or buoy
+observations in the grid square) from COADS 1950-1979.
+
+2 : Value based on climatological ice and set to -1.8 degrees C.
+
+3 : Unused
+
+4 : Unused
+
+5 : Value based on satellite data; the field was forced by the Laplacian of
+the monthly average of the satellite analyses for the period 1982-1985.
+
+
+*92/03/13

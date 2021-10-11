@@ -1,0 +1,389 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>Global Weather Observation Data Table</TITLE>
+  <!-- Created 14th June 2006 -->
+  <!-- Author: Belinda Robinson BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Global Weather Observation data - Columns in the GL table <BR CLEAR="ALL"></H1>
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<b>Description: </b>This entity contains meteorological values observed at 3-hrly intervals 
+	  by non-UK stations, as reported in SYNOP and METAR codes. The primary use of the entity 
+	  requires the data in climatological sequence, i.e. all times for a station. New observations
+	  are added daily.<br><br>The attributes of this entity are similar to 
+	  those of the <font face="Courier New">UK Hourly Weather</font> table, but with significant 
+	  differences. Some of the attributes refer to 24hr values, but the primary user has requested 
+	  that the data are not normalised. The period of maximum and minimum temperatures are defined 
+	  by WMO Regional Reporting Practices. Where there is a 'WMO commitment', data will be retained 
+	  permanently, but oldest data for other stations will be deleted annually. No QC is performed 
+	  on the attribute values listed below, but QC flags may have been set. The flags themselves are
+	  held in attributes <font face="Courier New">qc_flag_list_1</font> and 
+	  <font face="Courier New">qc_flag_list_2</font>, each 1-bit flag in it corresponding to an 
+	  attribute with a QC-flag. For software to interpret the flag lists please contact the MIDAS 
+	  Team.<br><br>The table has two-dimensional partitioning, using 
+	  <font face="Courier New">wmo_region_code</font> and <font face="Courier New">ob_time</font>.
+      <br><br>
+For the convenience of users, the GL file column headers are available for download in <a href="Headers/GL_Column_Headers.xlsx    ">Excel</a> or as a <a href="Headers/GL_Column_Headers.csv">comma separated text file</a>
+<P>
+
+<table border="1" cellspacing="0" width="95%">
+      <tr> 
+        <td valign="TOP" width="5%" align="center"><b>PK</b></td>
+        <td valign="TOP" width="40%"><b>Attribute</b></td>
+        <td valign="TOP" width="35%"><b>Description / Units</b></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id_type</font></td>
+        <td valign="TOP" width="35%">Identifier type</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_time</font></td>
+        <td valign="TOP" width="35%">Date and time of observation</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_domain_name</font></td>
+        <td valign="TOP" width="35%"><A HREF="met_domain.html">Message type</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_id</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#wind">Unique source identifier</a> or station site number</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wmo_region_code</font></td>
+        <td valign="TOP" width="35%">'1' - '7'<BR>'1' Africa; '2' Asia; '3' South America; '4' North and Central America; '5' South-west Pacific; '6' Europe; '7' Antarctic </td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rec_st_ind</font></td>
+        <td valign="TOP" width="35%"><a href="http://badc.nerc.ac.ukhttp://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/state_indicators.html">State Indicator for the record**</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wind_direction</font></td>
+        <td valign="TOP" width="35%">Degs true</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wind_speed</font></td>
+        <td valign="TOP" width="35%">Knots</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prst_wx_id</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#presweath">Present weather code</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">past_wx_id_1</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#pastweath">Past weather code #1</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">past_wx_id_2</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#pastweath">Past weather code #2</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_ttl_amt_id</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#oktas">Total cloud amount code</a><br>oktas</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_amt_id</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#oktas">Cloud base amount code</a></font></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_ht</font></td>
+        <td valign="TOP" width="35%">Cloud base height code<br>decametres</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">low_cld_type_id</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#lowcl">Low cloud type code</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">med_cld_type_id</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#medcl">Medium cloud type code</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">hi_cld_type_id</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#highcl">High cloud type code</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wind_speed_unit_id</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#wnd_spd_unit">Wind speed unit code</a> describes how the wind reading was made and what units it was stored in (before converted to knots in MIDAS).</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">visibility</font></td>
+        <td valign="TOP" width="35%"><a href="http://artefacts.ceda.ac.uk/badc_datadocs/ukmo-midas/ukmo_guide.html#5.9">Decametres (Visibility unit information in the MIDAS User guide</a>)</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">air_temperature</font></td>
+        <td valign="TOP" width="35%">Surface air temperature<br>0.1 deg C</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wetb_temp</font></td>
+        <td valign="TOP" width="35%">Wet bulb temperature<br>0.1 deg C</td>     </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">dewpoint</font></td>
+        <td valign="TOP" width="35%">Dewpoint temperature<br>0.1 deg C</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">stn_pres</font></td>
+        <td valign="TOP" width="35%">Station air pressure<br>0.1 hpa</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">pres_sfc</font></td>
+        <td valign="TOP" width="35%">Pressure surface</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">pres_sfc_ht</font></td>
+        <td valign="TOP" width="35%">Height of pressure surface</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">msl_pressure</font></td>
+        <td valign="TOP" width="35%">Mean sea level air pressure<br>0.1 hpa</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">pres_tdcy_amt</font></td>
+        <td valign="TOP" width="35%">Air pressure tendency</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prcp_ob_hr_cnt</font></td>
+        <td valign="TOP" width="35%">Precipitation hour count</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prcp_amt</font></td>
+        <td valign="TOP" width="35%">Precipitation amount<br>millimetres</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_amt_id_1</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#levela">Layer cloud amount code #1</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cloud_type_id_1</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#levelt">Cloud type code #1</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_ht_id_1</font></td>
+        <td valign="TOP" width="35%">Cloud base height code #1<br>decametres</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_amt_id_2</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#levela">Layer cloud amount code #2</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cloud_type_id_2</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#levelt">Cloud type code #2</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_ht_it_2</font></td>
+        <td valign="TOP" width="35%">Cloud base height code #2<br>decametres</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_amt_id_3</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#levela">Layer cloud amount code #3</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cloud_type_id_3</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#levelt">Cloud type code #3</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_ht_id_3</font></td>
+        <td valign="TOP" width="35%">Cloud base height code #3<br>decametres</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">max_air_temp</font></td>
+        <td valign="TOP" width="35%">Maximum air temperature. The period of maximum and minimum temperatures are defined by WMO Regional Reporting Practices.</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">min_air_temp</font></td>
+        <td valign="TOP" width="35%">Minimum air temperature. The period of maximum and minimum temperatures are defined by WMO Regional Reporting Practices.</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ground_state_id</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#ground">Ground state id</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">min_grss_temp</font></td>
+        <td valign="TOP" width="35%">Grass temperature</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">snow_depth</font></td>
+        <td valign="TOP" width="35%">Snow depth</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">sun_ob_hr_cnt</font></td>
+        <td valign="TOP" width="35%">Sunshine observation hour count</td>
+      </tr>              
+	  <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">sun_dur</font></td>
+        <td valign="TOP" width="35%">Sunshine duration</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q24hr_prcp_amt</font></td>
+        <td valign="TOP" width="35%">24hr precipitation amount<br>millimetres</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q24hr_pres_tdcy_amt</font></td>
+        <td valign="TOP" width="35%">24hr air pressure tendency</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">vert_vsby</font></td>
+        <td valign="TOP" width="35%">Vertical visibility<br>decametres</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_opr_type</font></td>
+        <td valign="TOP" width="35%">Source operation type code - refers to whether the observation is manual or automatic<br>
+        1 = Manned Observation, 7 group included in observation<br>
+        2 = Manned Observation, 7 group omitted (no significant weather)<br>
+        3 = Manned Observation, 7 group omitted (not observed, not available) <br>
+        4 = Automatic Observation, 7 group included (code taken from WMO table 4677)<br>
+        5 = Automatic Observation, 7 group omitted (no significant weather)<br>
+        6 = Automatic Observation, 7 group omitted (not observed, not available)<br>
+        7 = Automatic Observation, 7 group included (code taken from WMO table 4677) <br>
+        Code 2 shoudl be used when present weather code is 00,01,02,03 AND past weather code is 00,11,22.
+
+
+        </td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">gust_spd_type_code</font></td>
+        <td valign="TOP" width="35%">Gust speed type code<br>0 = 10 minute gust<br>1 = As past weather, etc.<br>See 910 - 914 of code 3778 in <a href="http://www.wmo.int/pages/prog/www/WMOCodes.html">WMO documentation</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">max_gust_speed</font></td>
+        <td valign="TOP" width="35%">Maximum gust speed</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">runway_name</font></td>
+        <td valign="TOP" width="35%">Runway name</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rnwy_vis_rnge</font></td>
+        <td valign="TOP" width="35%">Runway visual range</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">alt_pres</font></td>
+        <td valign="TOP" width="35%">Altimeter  pressure<br>0.1 hpa</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">qc_flag_list_1</font></td>
+        <td valign="TOP" width="35%">QC bit flags for 9 specified items - please see note below for details.</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">qc_flag_list_2</font></td>
+        <td valign="TOP" width="35%">Please see note below for details.</td>
+      </tr>
+      </table>
+     <BR>
+<BR>
+More information about the Met Office surface data is available
+in the <A HREF="ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+<STRONG>NOTES:</STRONG>
+<P>
+The Met Office MIDAS Team is not responsible for the quality of the global weather data. This data is not flagged in the same way that data from the weather hrly and temp drnl tables etc would be flagged. In these tables the data is flagged by element but in the global weather table it is not as simple. 
+<P>
+<strong>QC flag list 1</strong> gives a bit flag for the following 15 values listed:
+<P>
+pres_tdcy, prcp_amt, cld_amt_id_1, cloud_type_id_1, cld_base_ht_id_1, cld_amt_id_2, cloud_type_id_2, cld_base_ht_id_2, cld_amt_id_3, cloud_type_id_3, cld_base_ht_id_3, max_air_temp, min_air_temp, q24hr_prcp_amt, q24hr_pres_tdcy_amt 
+<P>
+<strong>QC flag list 2</strong> gives a bit flag for the following 16 values listed:
+<P>wind_speed_unit_id, wind_speed, wind_direction, prst_wx_id, past_wx_id_1, past_wx_id_2, cld_ttl_amt_id, cld_base_amt_id,
+cld_base_ht, low_cld_type_id, med_cld_type_id, hi_cld_type_id, visibility, air_temperature, dewpoint, msl_pressure
+<P>
+The bit flag is based on a binary number generated from the 16 different bit sets shown below:
+<P>
+Bit set Description
+<P>
+0 (0) MetDB quality control performed<BR>
+1 (1) Data correction performed 1 = performed<BR>
+2 (2) MetDB suspect flag. MetDB flag=tendency flag)<BR>
+3 (4) Spare<BR>
+4 (8) MetDB hydrostatic check performed<BR>
+5 (16) MetDB interpolation check performed<BR>
+6 (32) MetDB substitution/correction applied<BR>
+7 (64) spare<BR>
+8 (128) rejected by forecasters (1=rejected)<BR>
+9 (256) spare <BR>
+10 (512) used in assimilation<BR>
+11 (1024) checked by model quality control (at least
+background check)(1=not checked)<BR>
+12 (2048) A priori rejection (rejected prior to knowledge of observed value; i.e. permanent rejection or deactivation)<BR> 
+13 (4096) model mode 1 quality control flag (background check)<BR> 
+14 (8192) model mode 2 quality control flag ('buddy' check)<BR>
+15 (16384) model final quality control flag<BR>
+<P>
+*binary number in brackets
+<P>
+The QC flag number found in MIDAS could just correspond to one flag or
+multiple flags (ie bit set 5 (16) and bit set 6 (32)) which would equal
+48. However this is just for the whole observation and does not specify
+which of the elements have caused these flags to be set. If any of bits
+13 to 15 have flags set then this indicates that the observation has
+failed the quality control check.
+
+
+<p>
+</BODY>
+</HTML>

@@ -1,0 +1,40 @@
+Abstracts of Awards  February 2002 
+Dr AC Lewis,Leeds 
+
+Tropospheric ORganic CHemistry experiment (TORCH). 
+
+Organic compounds are found throughout the atmosphere and contribute to the generation of both fine aerosol and photochemical oxidants such as ozone. We propose a comprehensive and integrated programme of modelling and measurements to address three inter-linked areas of current uncertainty: 1) To increased understanding of the role played by primary and partially oxidised organics in gas phase photochemistry. 2) To develop thermodynamic and microphysical descriptions of organic aerosol and use them in improved models of behaviour in the atmosphere. 3) To investigate the production, composition and evolution of organic aerosol and its links with gas phase organic oxidation. The goals are to provide both a detailed data set on organic composition in the polluted atmosphere, and to develop theoretical and modelling tools which may be used in defining future air quality policy. The Tropospheric Organic Chemistry experiment would form a multi-institution consortium project with the Polluted Troposphere programme. 
+
+Prof TW Choularton, UMIST
+
+CLOud Processing of regional Air Pollution advecting over land and sea (CLOPAP). 
+
+Measurements will be made using the new UK community aircraft of the ageing of the London plume in the cloudy boundary layer. Measurements will be made of the evolution of trace gases, aerosol and cloud properties. These will be supported by modelling studies. 
+
+Dr SL Gray, Reading 
+
+Transport and mixing in fronts. 
+
+The aim of this research is to provide improved quantitative estimates of the rate at which frontal regions in weather systems transport polluted air from the boundary layer to the free troposphere. Modelling studies performed using typical mesoscale to regional-scale resolution cannot resolve certain frontal mixing processes which are clearly visible in high resolution radar observations; namely multiple shear layers and large-amplitude Kelvin-Helmholtz billows. We propose to perform very high-resolution (of order 2 km by 90 vertical levels) model simulations of frontal cases using the new dynamics (nonhydrostatic) Met Office model. The dynamical representation of these mixing processes and the transport and mixing of passive tracers in the model will be evaluated using observations. The climatological impact of these individual fronts will be determined using a climatological frontal database. 
+
+Dr RG Harrison, Reading 
+
+Ionisation as a precursor to aerosol formation. 
+
+Formation of ultrafine particles from molecular cluster ions in the atmosphere has recently been shown to occur in urban air, from both experimental findings and theoretical considerations. Ion-induced (or mediated) aerosol formation is currently neglected, despite the considerable variability known in atmospheric ions. Ionisation in the atmosphere is ubiquitous, arising from cosmic rays and natural radioactivity, with a further contribution from nuclear reprocessing. The efficiency of ion to particle conversion is sensitive to gas composition and condensable vapour supply. The work will measure ion- induced ultrafine particle production in surface air, combining ion and aerosol data. Existing ion-aerosol theory will be extended to include particle production from ions, to assess the significance for clouds of additional condensation nuclei. 
+
+Dr RG Shallcross, Bristol 
+
+Advanced GC-MS technology for observing OVOCs and NMHCs in the polluted troposphere.
+
+i) to develop new methods for routine observations of the oxygenated VOCs concentrations in air based on advanced GC-MS technology. ii) Specifically targeted OVOCs will include methanol, ethanol, propanol, butanol, methyl butenol (MBO), acetone, butanone, 3-methyl furan, acrolein, mathacrolein, methyl vinyl ketone and the C2 to C6 aldehydes. iii) Survey for new OVOCs in the VOCs sample matrix. iv) In collaboration with Leeds, participate in their TORCH 2004 field campaign. v) Obtain parallel measurements for as many NMHCs as can be resolved and deconvoluted by GC-MS techniques. Key species to include isoprene, 1,3-butadiene, benzene and toluene together with the n- and iso- C2 to C6 alkanes. vi) From the resolved OVOCs and NMHC measurements investigate hydrocarbon degradation products in air of different photochemical age and origin. 
+
+Prof D Fowler, CEH Edinburgh 
+
+Aircraft Measurement of Chemical Processing and Export fluxes of Pollutants over the UK (AMPEP). 
+
+This proposal is focussed on direct measurement of the atmospheric mass budget of a range of pollutants in the gas and aerosol phase in the boundary layer over the UK. New, state of the art equipment is applied to measure the atmospheric mass budget and in particular, the net export from the downwind coast over the UK. For the majority of the pollutants this is the dominant term and its measurement provides a very powerful test of current understanding of the processes and the current generation of long range transport models. The approach is applied to sulphur compounds, oxidized and reduced nitrogen, ozone and related photochemical oxidant precursors, mercury, a range of heavy metals and the main radiatively active gases. The analysis and interpretation of the data is completed using a range of current long range transport, transformation and deposition models. 
+
+ 
+ 
+

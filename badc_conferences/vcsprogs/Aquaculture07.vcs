@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070322T000000Z
+DTEND:20070323T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Paleis der Academi=EBn in Brussels.
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000E0D75CDC1846C7010000000000000000100
+ 00000AF1D554C1658DB4AB12A7B717BBE514C
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0AThe first stake-holders meeting=
+  for the European Aquaculture Technology Platform will be held on March 22=
+, 2007 =0D=0Aat Paleis der Academi=EBn in Brussels.=0D=0A=0D=0APlease visit=
+ the EATP web (www.EATPnet.eu <http://www.eatpnet.eu/> ) for more informati=
+on and registration.=0D=0A=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:European Aquaculture Technology Platform
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

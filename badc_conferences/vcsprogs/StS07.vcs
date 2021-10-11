@@ -1,0 +1,59 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070429T230000Z
+DTEND:20070501T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Royal Society, London=20
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000903095F79459C7010000000000000000100
+ 000007A6FB01D675DDE4399A8F2C3E7A1E9C6
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0AA NERC/NSF sponsored discussion=
+ meeting =0D=0A=0D=0AVenue : the Royal Society, London 30 April - 1 May 200=
+7=0D=0A=0D=0ABackground=0D=0ALife in the oceans is dominated by microorgani=
+sms. In contrast to terrestrial systems, which have conspicuous long-lived =
+plants,=0D=0Aprimary production in the oceans is due to unicellular phytopl=
+ankton with generation times of a few hours. All biogeochemical =0D=0Acycle=
+s in the seas are driven by microbes. The importance of marine microbes has=
+ recently received more recognition, coincident=0D=0Awith the investment of=
+ resources to sequence marine microbes and the environmental microbial meta=
+genome.=0D=0A=0D=0AThis is an opportune time to review this information. Th=
+is meeting will review the current state of knowledge about marine =0D=0AMi=
+crobes and how this new knowledge has deepened understanding of the fluxes =
+and processes that are driven by microbes in =0D=0Athe seas. =0D=0A=0D=0ASp=
+eakers=0D=0A=0D=0ARudolf Amann, (MPI for Marine Microbiology, Bremen, Germa=
+ny)=0D=0AVirginia Armbrust (University of Washington)=0D=0AChris Bowler (Ec=
+ole Normale Sup=E9rieure, Paris, France))=0D=0ALudmila Chistoserdova, (Univ=
+ersity of Washington, USA)=0D=0AThomas Curtis (University of Newcastle, UK)=
+=0D=0AJed Fuhrman (University of Southern California USA)=0D=0APaul Gilna (=
+The Community Cyberinfrastructure for Advanced Marine Microbial Ecology Res=
+earch and Analysis(CAMERA), USA)=0D=0AIan Joint (Plymouth Marine Laboratory=
+, UK)=0D=0ARicardo Letelier (Oregon State University, USA)=0D=0AColin Murre=
+ll (University of Warwick, UK)=0D=0AKevin Purdy (University of Warwick)=0D=
+=0AJohn Raven FRS (University of Dundee, UK)=0D=0ACarol Robinson (Plymouth =
+Marine Laboratory, UK)=0D=0AFrancisco Rodr=EDguez-Valera, (Universidad Migu=
+el Hern=E1ndez, Alicante, Spain) =0D=0ADavid Scanlan (University of Warwick=
+, UK)=0D=0ABess Ward (Princeton University, USA)=0D=0AAndrew Weightman (Car=
+diff University, UK) =0D=0AAndrew Whiteley (Centre for Ecology and Hydrolog=
+y, Oxford, UK)=0D=0AWillie Wilson (Plymouth Marine Laboratory, UK / Bigelow=
+ Laboratory, USA)=0D=0AJon Zehr (University of California, Santa Cruz, USA)=
+=0D=0A=0D=0APosters=0D=0AThere will be a poster session from 1730 to 2000 o=
+n Monday 30 April. To submit a poster presentation, complete the on-line re=
+gistration form before 1 April 2007. Applicants will be informed by 6 April=
+ if they have been selected to present a poster.=0D=0A=0D=0ARegistration=0D=
+=0A=0D=0APre-registration is essential because numbers are limited. The reg=
+istration fee of =A350 ($100 =8080) includes lunch and coffee. The on-line =
+registration fee is available at www.pml.ac.uk/sequencingtheseas/ =0D=0A=0D=
+=0ASponsors=0D=0AThe meeting is sponsored by the Natural Environment Resear=
+ch Council (UK) and the National Science Foundation (USA) and organised by =
+the Plymouth Marine Laboratory. If you have any queries regarding this meet=
+ing, contact sequencingtheseas@pml.ac.uk  =0D=0A=0D=0AOrganisers=0D=0AThis =
+meeting is organised by Dr Ian Joint (Plymouth Marine Laboratory) and Dr Ma=
+tthew D. Kane (National Science Foundation).=0D=0A=0D=0A*******************=
+*********************************************************************=0D=0A=
+=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Sequencing the seas - accessing unknown m=
+arine microbial function - discussion meeting
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

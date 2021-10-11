@@ -1,0 +1,170 @@
+    CATALOG.DOC
+
+    1. The following is a list of STEP '87 Principal Investigators, their
+    instruments, principal measurements, and data sample intervals in seconds.
+    Their current addresses are also included.
+
+    K. Roland Chan                  Meteorological Measurement System (MMS):
+    NASA Ames Research Center         pressure, temperature, wind, longitude,
+    M/S 245-5                         latitude, pressure altitude,
+    Moffett Field, CA 94035           true airspeed.
+    USA                               1.0 s
+    415-694-6263
+    FTS 464-6263
+
+    David Fahey                     NOy Detector:
+    NOAA Aeronomy Laboratory          NOy
+    325 Broadway                      1.0 s
+    Boulder, CO 80303
+    USA
+    303-497-5277
+    FTS 320-5277
+
+    Bruce Gary                      Microwave Temperature Profiler:
+    Jet Propulsion Laboratory         temperature, lapse rate
+    M/S T1182-3                       13.7 s
+    4800 Oak Grove Drive
+    Pasadena, CA 91109
+    USA
+    818-354-3198
+    FTS 792-3198
+
+    Ken Kelly                       Lyman Alpha Hygrometer:
+    NOAA Aeronomy Laboratory          total water, water vapor
+    325 Broadway                      1.0 s
+    Boulder, CO 80303
+    USA
+    303-497-3355
+    FTS 320-3355
+
+    Robert Knollenberg              Aerosol and Cloud Spectrometers:
+    Partical Measuring Systems, Inc.  aerosols, cloud particles
+    1855 South 57th Court             10.0 s
+    Boulder, CO 80301
+    USA
+    303-497-5277
+
+    Mark Kritz
+    Atmospheric Sciences Research   Radon Concentration Measurement:
+      Center                          Radon
+    State University of New York    Cosmogenic Radionuclide Measurement:
+    1400 Washington Avenue            Be-7, P-32
+    Albany, NY 12222                  10.0 s 
+    USA
+    415-694-5493  (Ames Field Office)
+    FTS 464-5493
+
+    Max Lowenstein                  Airborne Tunable Laser Absorption
+    NASA Ames Research Center       Spectrometer:
+    M/S 245-5                         CO
+    Moffett Field, CA 94035           1.0 s
+    USA
+    415-694-5504
+    FTS 464-5504
+
+    Michael Proffitt                Dual-Beam UV Absorption Ozone Photometer:
+    NOAA Aeronomy Laboratory          Ozone
+    325 Broadway                      1.0 s
+    Boulder, CO 80303
+    USA
+    303-497-3345
+    FTS 320-3345
+
+    Walter Starr                    Ames UV Ozone Photometer:
+    NASA Ames Research Center         Ozone
+    M/S 245-5                         1.0 s
+    Moffett Field, CA 94035
+    USA
+    Retired
+
+    Francisco Valero                Radiometers and Cloud Camera:
+    NASA Ames Research Center         IR measurements
+    M/S 245-6                         2.0 s
+    Moffett Field, CA 94035
+    USA
+    415-694-5510
+    FTS 464-5510
+
+    James C. Wilson                 Condensation Nucleus Counter:
+    Department of Engineering         CN
+    University of Denver              1.0 s
+    2390 South York
+    Denver, CO 80208
+    USA
+    303-871-3002
+
+
+    2. The following table indicates which files are contained in this release
+    and the two character file prefix for each measurement (MM for MMS, NO for
+    NOy, etc.).  An X indicates available data, although not necessarily for
+    an entire flight.
+
+
+                              Inventory of Data Files
+
+                                  October 28, 1988
+
+                            JAN                        FEB
+        FLIGHT DATE (GMT)    8 10 13 16 18 22 23 29 31  2  3  8 10 12 16 17 19
+            FLIGHT NUMBER    1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17
+       ------------------------------------------------------------------------|
+       ROLAND CHAN                                                             |
+           MMS         MM    X  X  X  X  X  X     X  X  X  X  X  X  X  X  X  X |
+                                                                               |
+       DAVID FAHEY                                                             |
+           NOy         NO    X  X  X  X  X  X  X  X  X  X  X  X  X  X     X  X |
+                                                                               |
+       BRUCE GARY                                                              |
+           MTP         BG    X  X  X  X  X  X  X  X  X  X  X  X  X  X          |
+                                                                               |
+       KEN KELLEY                                                              |
+           TOT.H2O     TW             X     X  X  X  X  X  X     X  X  X  X  X |
+           H2O VAPOR   WV    X  X  X     X  X  X  X  X  X  X  X     X  X  X  X |
+                                                                               |
+       BOB KNOLLENBERG                                                         |
+           PMS         BK                   X  X  X  X  X  X  X  X  X          |
+                                                                               |
+       MARK KRITZ                                                              |
+           RADON       RN             X  X  X  X  X  X  X  X  X  X  X          |
+           BE-7,P-32   CR                   X        X     X  X  X  X          |
+                                                                               |
+       MAX LOWENSTEIN                                                          |
+           CO          CO       X  X  X  X  X  X  X  X  X  X  X  X  X          |
+                                                                               |
+       MIKE PROFFITT                                                           |
+           OZONE       O3    X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+                                                                               |
+       WALT STARR                                                              |
+           OZONE       OZ    X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X  X |
+           ALT, T      AT                      X                               |
+                                                                               |
+       FRANCISCO VALERO                                                        |
+           IR          FV             X  X  X  X  X  X  X  X  X  X  X          |
+                                                                               |
+       CHUCK WILSON                                                            |
+           CNC         CN    X  X  X  X  X  X  X  X  X  X  X  X  X  X          |
+
+
+    3. Points of interest
+
+    3.1 All files conform to the standard STEP exchange data format (as 
+        specified in FORMAT.DOC) except for the following:
+
+        The Aerosol and Cloud Spectrometer data has a unique format and 
+        PMS Inc. should be consulted on the proper interpretation of their 
+        data.
+
+        The Microwave Temperature Profiler files have a nonstandard header
+        format but are still readable using the routines in the SOFTWARE
+        directory.  The differences are that some of the header lines which
+        describe the variables have been omitted.
+
+    3.2 Data times in each file are the experimenter's best estimate of the
+        actual time.  No attempt has been made to rectify the sample times for
+        clock errors, instrument time lags, etc.  This exercise is left to
+        the analysts.
+
+    3.3 There is no MMS data for flight #7.  However, Walt Starr's file 
+        (AT870123.A1) contains low resolution pressure altitudes (feet) and 
+        temperatures (C) which, using the U.S. Standard Atmosphere model, can be
+        used to calculate pressures. 

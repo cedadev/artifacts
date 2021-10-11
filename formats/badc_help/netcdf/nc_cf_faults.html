@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+
+<!-- Written by Helen Walker, BADC RAL CCLRC Feb 2003 -->
+
+<HEAD>
+
+<TITLE>BADC Datasets: The netCDF simple file - CF faults</TITLE>
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+
+<FONT FACE="ARIAL","HELVETICA">
+<H1>The netCDF <EM>simple</EM> file and its CF conventions faults</H1>
+
+<P>
+The simple example of a netCDF file we gave does have a few faults, if
+we were adhering strictly to the CF conventions.
+</P>
+
+<H3>Faults in the declaration of the variables</H3>
+<P>
+<UL>
+  <LI>No <B>standard_name</B> given; this is desirable</LI>
+  <LI>No <B>long_name</B> given</LI>
+  <LI>Time would usually be <B>double</B> not <B>float</B></LI>
+</UL>
+</P>
+
+<H3>Faults in the declaration of global attributes</H3>
+<P>
+<UL>
+  <LI>No <B>Conventions: "CF-1.0"</B> statement</LI>
+  <LI><B>title</B> and <B>source</B> are missing; these are desirable</LI>
+</UL>
+</P>
+
+<P>
+<IMG SRC="netcdf_fig2.gif" ALT="Figure 2 showing a simple netCDF ASCII File">
+</P>
+
+</FONT>
+
+</BODY>
+
+</HTML>

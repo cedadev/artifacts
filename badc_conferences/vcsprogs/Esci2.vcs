@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20051103T000000Z
+DTEND:20051104T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:e-Science Institute 15, South College St=
+reet, Edinburgh
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000A01C404DBAD4C5010000000000000000100
+ 000007E8E85979D5D864D9046EB900AF75596
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:> In the second, on 3 November 2005 a=
+nd in conjunction with=0D=0A> Oracle, Chris Date will be presenting his sem=
+inar on the =0D=0A> topic 'Temporal Database in=0D=0A> Depth: Time and the =
+Data Warehouse', with a further talk by =0D=0A> Rob Squire from Oracle.  Fo=
+r further information see the =0D=0A> attached notice and http://www.nesc.a=
+c.uk/esi/events/601/=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:'Temporal Database in Depth: Time and the=
+ Data Warehouse'
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

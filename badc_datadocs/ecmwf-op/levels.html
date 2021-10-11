@@ -1,0 +1,430 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC ECMWF Model Levels</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<IMG SRC="/graphics/logos/ecmwflogo.gif" ALT="ECMWF logo" ALIGN="BOTTOM">
+
+<H1>ECMWF Atmospheric Level Types</H1>
+
+<HR ALIGN=LEFT>
+
+<H2>Introduction</H2>
+The ECMWF <a href="http://www.ecmwf.int/research/ifsdocs">Integrated Forecasting System (IFS)
+</a> divides the atmosphere into layers defined as <i>model levels</i>. However, the ECMWF also
+produces output on other level types.
+ECMWF atmospheric data held at the BADC is archived on four level types:
+
+<UL>
+   <LI><a href="#model">Model levels</a> (Operational, ERA-15 and ERA-40 data).
+   <LI><a href="#pressure">Pressure levels</a> (held for Operational, ERA-15 and ERA-40 data).
+   <LI><a href="#pot_temp">Potential Temperature levels</a> (Operational and ERA-40 data).
+   <LI><a href="#pot_vort">Potential Vorticity levels</a> (Operational and ERA-40 data).
+</UL>
+<P>This page gives a description of each atmospheric level type.<P>
+
+<HR ALIGN=LEFT>
+<H2><a name="model">Model levels</a></H2>
+
+Atmospheric models generally divide the atmosphere into a number of distinct layers that are defined in terms of pressure as opposed to altitude. This is largely because the equations of motion, which form the basis for all NWP models, have their simplest form in pressure coordinates. However, there are limitations to using constant pressure surfaces, because like constant height surfaces, they can be "broken" by surface features such as mountains (i.e. parts of the surface intersect with the ground causing problems in the model).<P>
+
+The use of <i>model levels</i> (also often called &sigma;-levels) instead of standard <a href="#pressure">pressure levels</a> addresses the problem of discontinuities by creating atmospheric levels that follow the contours of the Earth's surface in the lower and mid-troposphere. As the altitude increases (i.e. in the upper stratosphere and mesosphere), the effect of the surface orography lessens until the vertical layers in the upper atmosphere are the same as pressure levels.<P>
+
+The ECMWF web pages contain more <a href="http://www.ecmwf.int/products/data/technical/model_levels">documentation on model levels</a>.<P>
+
+The current Operational model divides the atmosphere into 91 layers up to 0.1 hPa (about 64 km). The vertical resolution is highest in the planetary boundary layer and lowest in the stratosphere and lower mesosphere. The Operational dataset includes data archived at 31, 60 and 91 model levels. The ERA-40 datasets includes data archived on 60 model levels only.<P>
+
+The BADC archives model level data for the following ECMWF data sets:<P>
+
+<UL><LI><a href="/data/ecmwf-op/">Operational data</a> on a <a href="/data/ecmwf-op/grids.html#lat-long">regular 1.125&deg; x 1.125&deg; grid</a> from October 1998 - present (see the <a href="/data/ecmwf-op/params.html#siua">parameters page</a> for more details).
+<LI><a href="/data/ecmwf-op/">Operational data</a> at a <a href="/data/ecmwf-op/grids.html#T106">T106 Spectral resolution </a> from March 1994 - October 2000 (see the <a href="/data/ecmwf-op/params.html#siua">parameters page</a> for more details).
+
+<LI><a href="/data/ecmwf-op/">Operational data</a> at a
+<a href="/data/ecmwf-op/grids.html#t159">T159 Spectral resolution</a>
+ from September 2002 - present (see the <a href="/data/ecmwf-op/params.html#spam">parameters page</a> for more details).
+
+<LI><a href="/data/ecmwf-op/">Operational data</a> on a
+<a href="/data/ecmwf-op/grids.html#n80_reduced">Reduced N80 Gaussian grid</a> from September 2002 - present (see the <a href="/data/ecmwf-op/params.html#ggam">parameters page</a> for more details).
+<P>
+
+
+
+<LI><a href="/data/ecmwf-era/">ERA-15 Re-analysis</a> at a <a href="/data/ecmwf-op/grids.html#T106">T106 Spectral resolution</a> from January 1979 - February 1994 (see the <a href="/data/ecmwf-era/params.html#siua">parameters page</a> for more details).
+<LI><a href="/data/ecmwf-era/">ERA-15 Re-analysis</a> on a
+<a href="/data/ecmwf-op/grids.html#n80_reduced">Reduced N80 Gaussian grid</a>
+ January 1979 - February 1994 (see the <a href="/data/ecmwf-era/params.html#giua">
+parameters page</a> for more details).
+
+<P>
+
+<LI><a href="/data/ecmwf-e40/">ERA-40 Re-analysis</a> at a
+<a href="/data/ecmwf-op/grids.html#t159">T159 Spectral resolution</a>
+ (see <a href="/data/ecmwf-e40/status.html">status page</a> for details of what years are
+available and the <a href="/data/ecmwf-e40/params.html#spam">
+parameters page</a> for details of the data).
+
+
+<LI><a href="/data/ecmwf-e40/">ERA-40 Re-analysis</a> on a
+<a href="/data/ecmwf-op/grids.html#n80_reduced">Reduced N80 Gaussian grid</a>
+ (see <a href="/data/ecmwf-e40/status.html">status page</a> for details of what years are
+available and the <a href="/data/ecmwf-e40/params.html#ggam">
+parameters page</a> for details of the data).
+
+</UL>
+
+<P>Model levels are calculated in relation to the surface pressure using a method detailed in the <a href="http://www.ecmwf.int/research/ifsdocs/DYNAMICS/index.html">Dynamics and numerical procedures</a> section of the <a href="http://www.ecmwf.int/research/ifsdocs">Integrated Forecasting System (IFS)</a> documentation.<P>
+
+
+Table 1 provides an example of the pressure of the 91 model levels (as used in the current Operational model) when the surface pressure is 1013.250 hPa.<P>
+
+<B><small>Table 1.</B>&nbsp;&nbsp;&nbsp; Pressure of model levels when the surface pressure is 1013.250 hPa.</small><br>
+<table style="font-size: smaller" border=1>
+<tr><td><b>Level Number</b></td><td width="80"><b>hPa</td><td><b>Level Number</b></td>
+<td width="80"><b>hPa</b><td><b>Level Number</b></td><td width="80"><b>hPa</td><td><b>Level Number</b></td>
+<td width="80"><b>hPa</b>
+<td><b>Level Number</b></td><td width="80"><b>hPa</b></td></tr>
+<tr><td>1</td><td>0.0100</td><td>21</td><td>15.8844</td><td>41</td><td>117.5942</td><td>61</td><td>417.7338</td><td>81</td><td>925.2226</td></tr>
+<tr><td>2</td><td>0.0299</td><td>22</td><td>18.5179</td><td>42</td><td>125.7453</td><td>62</td><td>443.3441</td><td>82</td><td>940.4416</td></tr>
+<tr><td>3</td><td>0.0568</td><td>23</td><td>21.4101</td><td>43</td><td>134.3981</td><td>63</td><td>470.1659</td><td>83</td><td>954.0914</td></tr>
+<tr><td>4</td><td>0.1015</td><td>24</td><td>24.5653</td><td>44</td><td>143.5909</td><td>64</td><td>497.9584</td><td>84</td><td>966.1707</td></tr>
+<tr><td>5</td><td>0.1716</td><td>25</td><td>27.9860</td><td>45</td><td>153.3538</td><td>65</td><td>526.4620</td><td>85</td><td>976.6735</td></tr>
+<tr><td>6</td><td>0.2768</td><td>26</td><td>31.6736</td><td>46</td><td>163.7180</td><td>66</td><td>555.3989</td><td>86</td><td>985.6311</td></tr>
+<tr><td>7</td><td>0.4285</td><td>27</td><td>35.6281</td><td>47</td><td>174.7166</td><td>67</td><td>584.4855</td><td>87</td><td>993.3027</td></tr>
+<tr><td>8</td><td>0.6396</td><td>28</td><td>39.8481</td><td>48</td><td>186.3837</td><td>68</td><td>613.4989</td><td>88</td><td>999.8373</td></tr>
+<tr><td>9</td><td>0.9244</td><td>29</td><td>44.3310</td><td>49</td><td>198.7556</td><td>69</td><td>642.2899</td><td>89</td><td>1005.1222</td></tr>
+<tr><td>10</td><td>1.2985</td><td>30</td><td>49.0732</td><td>50</td><td>211.8697</td><td>70</td><td>670.7310</td><td>90</td><td>1009.1459</td></tr>
+<tr><td>11</td><td>1.7781</td><td>31</td><td>54.0701</td><td>51</td><td>225.7656</td><td>71</td><td>698.7032</td><td>91</td><td>1012.0494</td></tr>
+<tr><td>12</td><td>2.3800</td><td>32</td><td>59.3150</td><td>52</td><td>240.4844</td><td>72</td><td>726.0656</td></tr>
+<tr><td>13</td><td>3.1209</td><td>33</td><td>64.7978</td><td>53</td><td>256.0690</td><td>73</td><td>752.6718</td></tr>
+<tr><td>14</td><td>4.0176</td><td>34</td><td>370.5061</td><td>54</td><td>272.5644</td><td>74</td><td>778.4036</td></tr>
+<tr><td>15</td><td>5.0860</td><td>35</td><td>76.4292</td><td>55</td><td>290.0175</td><td>75</td><td>803.1575</td></tr>
+<tr><td>16</td><td>6.3417</td><td>36</td><td>82.5725</td><td>56</td><td>308.4774</td><td>76</td><td>826.8141</td></tr>
+<tr><td>17</td><td>7.7988</td><td>37</td><td>88.9589</td><td>57</td><td>327.9948</td><td>77</td><td>849.2512</td></tr>
+<tr><td>18</td><td>9.4706</td><td>38</td><td>95.6172</td><td>58</td><td>348.6233</td><td>78</td><td>870.3798</td></tr>
+<tr><td>19</td><td>11.3688</td><td>39</td><td>102.5813</td><td>59</td><td>370.4182</td><td>79</td><td>890.1340</td></tr>
+<tr><td>20</td><td>13.5037</td><td>40</td><td>109.8913</td><td>60</td><td>393.4375</td><td>80</td><td>908.4403</td></tr>
+</table><P>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+<H2><a name="pressure">Pressure levels</a></H2>
+
+Pressure levels are defined as atmospheric levels at constant pressure. Although model levels are more convenient from a modelling perspective, many scientists prefer to use pressure levels in their analyses.<P>
+
+The ECMWF converts model level data to pressure levels with a loss of vertical resolution. For example, when the Operational model included 31 model levels, these were available on 15 pressure levels, in the current Operational model 60 model levels are converted to 21 pressure levels.<P>
+
+The BADC archives the following data sets on pressure levels:<P>
+<UL>
+<LI><a href="/data/ecmwf-op/">Operational data</a> on a <a href="/data/ecmwf-op/grids.html#2.5_deg">regular 2.5&deg; grid</a> from March 1994 - present (see the <a href="/data/ecmwf-op/params.html#lipr">parameters page</a> for more details).
+<LI><a href="/data/ecmwf-op/">Operational data</a> at a <a href="/data/ecmwf-op/grids.html#T106">T106 Spectral resolution </a> from March 1994 - February 1999 (see the <a href="/data/ecmwf-op/params.html#sipr">parameters page</a> for more details).
+<LI><a href="/data/ecmwf-op/">Operational data</a> at a
+<a href="/data/ecmwf-op/grids.html#t159">T159 Spectral resolution</a>
+ from September 2002 - present (see the <a href="/data/ecmwf-op/params.html#spap">parameters page</a> for more details).
+<LI><a href="/data/ecmwf-op/">Operational data</a> on a
+<a href="/data/ecmwf-op/grids.html#n80_reduced">Reduced N80 Gaussian grid</a> from September 2002 - present (see the <a href="/data/ecmwf-op/params.html#ggap">parameters page</a> for more details).
+<P>
+
+<LI><a href="/data/ecmwf-era/">ERA-15 Re-analysis</a> at a
+<a href="/data/ecmwf-op/grids.html#T106">T106 Spectral resolution</a>
+ January 1979 - February 1994 (see the <a href="/data/ecmwf-era/params.html#siua">
+parameters page</a> for more details).
+<P>
+<LI><a href="/data/ecmwf-e40/">ERA-40 Re-analysis</a> at a
+<a href="/data/ecmwf-op/grids.html#t159">T159 Spectral resolution</a>
+ (see <a href="/data/ecmwf-e40/status.html">status page</a> for details of what years are
+available and the <a href="/data/ecmwf-e40/params.html#spap">
+parameters page</a> for details of the data).
+
+<LI><a href="/data/ecmwf-e40/">ERA-40 Re-analysis</a> on a
+<a href="/data/ecmwf-op/grids.html#n80_reduced">Reduced N80 Gaussian grid</a>
+ (see <a href="/data/ecmwf-e40/status.html">status page</a> for details of what years are
+available and the <a href="/data/ecmwf-e40/params.html#ggap">
+parameters page</a> for details of the data).
+
+</UL>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<H2><a name="pot_temp">Potential Temperature levels</a></H2>
+The ECMWF Operational and ERA-40 datasets also provide data on 15 isentropic (constant potential temperature surfaces).Table 2 shows
+the potential temperature of each surface and the corresponding pressures and heights for a 250K dry
+isothermal atmosphere.
+
+<P>The BADC archives the following data sets on potential temperature levels:<P>
+<UL>
+<LI><a href="/data/ecmwf-op/">Operational data</a> at a
+<a href="/data/ecmwf-op/grids.html#t159">T159 Spectral resolution</a>
+ from September 2002 - present (see the <a href="/data/ecmwf-op/params.html#spat">parameters page</a> for more details).
+
+<LI><a href="/data/ecmwf-op/">Operational data</a> on a
+<a href="/data/ecmwf-op/grids.html#n80_reduced">Reduced N80 Gaussian grid</a> from September 2002 - present (see the <a href="/data/ecmwf-op/params.html#ggat">parameters page</a> for more details).
+<P>
+<LI><a href="/data/ecmwf-e40/">ERA-40 Re-analysis</a> at a
+<a href="/data/ecmwf-op/grids.html#t159">T159 Spectral resolution</a>
+ (see <a href="/data/ecmwf-e40/status.html">status page</a> for details of what years are
+available and the <a href="/data/ecmwf-e40/params.html#spat">
+parameters page</a> for details of the data).
+
+<LI><a href="/data/ecmwf-e40/">ERA-40 Re-analysis</a> on a
+<a href="/data/ecmwf-op/grids.html#n80_reduced">Reduced N80 Gaussian grid</a>
+ (see <a href="/data/ecmwf-e40/status.html">status page</a> for details of what years are
+available and the <a href="/data/ecmwf-e40/params.html#ggat">
+parameters page</a> for details of the data).
+
+</UL>
+
+<P>
+<B><small>Table 2.</B>&nbsp;&nbsp;&nbsp; Isentropic levels and corresponding pressures and heights.</small><br>
+<table style="font-size: smaller" border=1>
+<TR ALIGN="center">
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+Potential Temperature (K)</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+Pressure (hPa)</P>
+</TH>
+<TH ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellHeading">
+Height (km)</P>
+</TH>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1" width="150">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459079"></A>265</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1" width="150">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459081"></A>815</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1" width="150">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459083"></A>1.5</P>
+</TD>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459085"></A>275</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459087"></A>716</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459089"></A>2.4</P>
+</TD>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459091"></A>285</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459093"></A>632</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459095"></A>3.4</P>
+</TD>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459097"></A>300</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459099"></A>528</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459101"></A>4.7</P>
+</TD>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459103"></A>315</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459105"></A>445</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459107"></A>5.9</P>
+</TD>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459109"></A>330</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459111"></A>378</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459113"></A>7.1</P>
+</TD>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459115"></A>350</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459117"></A>308</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459119"></A>8.6</P>
+</TD>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459121"></A>370</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459123"></A>254</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459125"></A>10.0</P>
+</TD>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459127"></A>395</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459129"></A>202</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459131"></A>11.7</P>
+</TD>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459133"></A>430</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459135"></A>150</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459137"></A>13.9</P>
+</TD>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459139"></A>475</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459141"></A>106</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459143"></A>16.4</P>
+</TD>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459145"></A>530</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459147"></A>72</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459149"></A>19.2</P>
+</TD>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459151"></A>600</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459153"></A>47</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459155"></A>22.4</P>
+</TD>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459157"></A>700</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459159"></A>27</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459161"></A>26.4</P>
+</TD>
+</TR>
+<TR ALIGN="center">
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459163"></A>850</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459165"></A>14</P>
+</TD>
+<TD ROWSPAN="1" COLSPAN="1">
+<P CLASS="CellBodyCen">
+<A NAME="pgfId-459167"></A>31.3</P>
+</TD>
+</TR>
+</TABLE>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<H2><a name="pot_vort">Potential Vorticity levels</a></H2>
+The ECMWF Operational and ERA-40 datasets also provide data on a &quot;PV=+/-2&quot;
+surface on which the potential vorticity takes the value 2PVU in the northern hemisphere and -2PVU in the southern hemisphere (1PVU = 10<sup>-6</sup> m<sup>2</sup> s<sup>-1</sup> K kg<sup>-1</sup>), provided such a surface can be found searching downwards from the Model level close to 96hPa. Values at this model level are used where the search is unsuccessful.
+
+<P>The BADC archives the following data sets on potential vorticity levels:<P>
+<UL>
+<LI><a href="/data/ecmwf-op/">Operational data</a> on a
+<a href="/data/ecmwf-op/grids.html#n80_reduced">Reduced N80 Gaussian grid</a> from September 2002 - present (see the <a href="/data/ecmwf-op/params.html#ggav">parameters page</a> for more details).
+<P>
+<LI><a href="/data/ecmwf-e40/">ERA-40 Re-analysis</a> on a
+<a href="/data/ecmwf-op/grids.html#n80_reduced">Reduced N80 Gaussian grid</a>
+ (see <a href="/data/ecmwf-e40/status.html">status page</a> for details of what years are
+available and the <a href="/data/ecmwf-e40/params.html#ggav">
+parameters page</a> for details of the data).
+</UL>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+</BODY>
+</HTML>

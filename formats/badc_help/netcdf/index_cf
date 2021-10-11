@@ -1,0 +1,215 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML LANG="EN">
+
+<HEAD>
+
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<META NAME="KEYWORDS" CONTENT="BADC, CF CONVENTIONS, CF METADATA,
+CLIMATE AND FORECASTING METADATA CONVENTIONS">
+
+<META NAME="DESCRIPTION" CONTENT="The BADC has adopted the Climate
+and Forecasting metadata conventions for its netCDF files, to provide
+for future cataloguing and searching systems in the data archive.">
+
+<!-- Written by Helen Walker, BADC RAL CCLRC Feb 2003 -->
+
+<TITLE>BADC Datasets: CF conventions</TITLE>
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+
+<H1>The CF Metadata Convention</H1>
+
+<P>
+<EM>This is intended as a brief introduction to the
+<a href="http://www.cfconventions.org/">Climate and Forecast
+(CF) Metadata Convention</a>
+as it is used in datasets at BADC.</EM>
+</P>
+
+<HR ALIGN="LEFT">
+
+<H2>Introduction</H2>
+
+<P>
+In addition to the basic data in a netCDF file, the creator of the
+dataset needs to include information about the data themselves (e.g. type, units),
+and the creator may want to include information about
+how the data were collected, and/or warn future users of pitfalls; these
+items of information are metadata.
+Several groups have defined conventions for netCDF files, to enable
+the exchange of data. Since future cataloguing and searching systems 
+will rely on standards in metadata, the BADC has decided to adopt the
+<a href="http://www.cfconventions.org/">NetCDF Climate and
+Forecast (CF) Metadata Convention</a>.
+The
+<A HREF="http://www.unidata.ucar.edu/packages/netcdf/conventions.html">Unidata website</A> gives 
+more information about other possible conventions for NetCDF 
+files (and also about the
+<A HREF="http://www.cfconventions.org/">CF Convention</A>).
+The conventions define metadata which provide a description of what 
+the data in each variable represents. 
+This enables the users of data from different sources to decide
+which quantities are comparable. The BADC receives data from many sources, for
+example station data, satellite data, model data, and we aim to describe all 
+netCDF datasets with the CF conventions. 
+</P>
+
+<P>
+Whereas netCDF is a binary file format used to order and store data and metadata,
+with strict rules (so that software will fail to read your files unless the data
+are correctly structured), the CF conventions are guidelines and recommendations
+as to where to put metadata within a netCDF file. The CF conventions also advise
+on what type of information you may want to include.
+</P>
+
+<P>
+Variables should (ideally) have associated with them a name, units, possibly
+information about the direction of increasing value (e.g. degrees_east). The
+CF conventions have a list of <strong>standard_name</strong> names for variables. 
+These are held in the most recent version of the
+<A HREF="http://www.cfconventions.org/">CF Standard Name Table</A>. The 
+list includes the units recommended for each standard name (most common 
+prefixes can be used with the units, e.g. kilo (k), hecto (h), Mega (M), etc). 
+Some parameters do not have a standard name defined. Whether the variable 
+has a standard name or not, CF conventions recommend that a 
+<strong>long_name</strong> be used to describe the variable more
+fully (and perhaps provide a handy graph-axis label).
+</P>
+
+<P>
+The guidelines given here are not exhaustive, and some sections of the CF 
+conventions are not covered. Please consult the 
+<A HREF="http://www.cfconventions.org/">CF web pages</A> for 
+further information.
+</P>
+
+
+<H2>CF conventions and the netCDF file</H2>
+
+<P>
+Figure 1 shows the structure of a netCDF file. The file has several basic
+components: dimensions, variables, data, and global attributes.  
+</P>
+
+<P>
+<IMG SRC="netcdf_fig1.gif" ALT="Figure 1 showing netCDF file">
+</P>
+
+<H2>Dimensions</H2>
+<P>
+Dimensions can be spatial, temporal, or any other quantity (even an index). 
+Typical dimensions for gridded model data are latitude, longitude and altitude,
+typical dimensions for radar data are range and time. The dimensions 
+can contain regularly or irregularly spaced steps, and there is no limit on the
+number of dimensions (even <EM>'UNLIMITED'</EM> is allowed for one dimension). 
+The 'unlimited' dimension occurs when the dimension is, for example, 'time' and 
+data are still being taken. Dimensions are also defined for each of the variables.
+</P>
+
+<H2>Variables</H2>
+<P>
+The variables section contains information on the actual variables as well as
+on each dimension. The variables can include scalar quantities with only a single
+value, for example radar frequency. The variables should be named using the
+<A HREF="http://www.cfconventions.org/">CF Standard Names</A> where 
+possible, otherwise <EM>'long_name'</EM> should be used to describe the variable. 
+</P>
+
+<H2>Data</H2>
+<P>
+It is often very useful to include a dummy value for missing data in the file.
+The CF conventions suggest that the <EM>'_FillValue'</EM> attribute be used,
+and defined as the same type of variable as the one it replaces.
+</P>
+<P>
+If the dataset is stored with reference values to a given constant and/or
+multiplier, the <EM>'scale_factor'</EM> and <EM>'add_offset'</EM> attributes
+should be used.
+</P>
+
+<H2>Global attributes</H2>
+<P>
+These relate to the dataset at the more general level. They might include
+such information as instrument name and description, institution name,
+processing history, references. One aspect of the CF conventions is that 
+extra attributes are not outlawed, so you can include further information
+in the global attributes, if you think it would be useful for future users.
+The BADC recommends you include as much information as possible.
+</P>
+
+<P> 
+CF conventions make one global attribute mandatory:
+<BR><BR>
+<strong>Conventions</strong> "CF-1.0"
+<BR><BR>
+CF conventions recommend the following global attributes:
+</P>
+<P>
+<TABLE>
+   <TR>
+      <TD VALIGN="TOP"><strong>title</strong></TD>
+      <TD WIDTH="35"></TD>
+      <TD>A succinct description of what is in the dataset.</TD>
+   </TR>
+   <TR>
+      <TD VALIGN="TOP"><strong>institution</strong></TD>
+      <TD WIDTH="35"></TD>
+      <TD>Specifies where the original data were produced.</TD>
+   </TR>
+   <TR>
+      <TD VALIGN="TOP"><strong>source</strong></TD>
+      <TD WIDTH="35"></TD>
+      <TD>The method of production 
+           of the original data. If the data are
+           model generated, source should name the model and the version
+           number. If the data are observational, source should characterize
+           them, e.g. surface observation, radiosonde, satellite.</TD>
+   </TR>
+   <TR>
+       <TD VALIGN="TOP"><strong>history</strong></TD>
+      <TD WIDTH="35"></TD>
+       <TD>Provides an audit trail for 
+            modifications to the original data.
+            Well-behaved generic software will automatically append their
+            name, input parameters, and a timestamp.</TD>
+   </TR>
+   <TR>
+       <TD VALIGN="TOP"><strong>references</strong></TD>
+      <TD WIDTH="35"></TD>
+       <TD>Published or web-based 
+            references which describe the data, or the
+            methods used to produce them.</TD>
+   </TR>
+   <TR>
+       <TD VALIGN="TOP"><strong>comment</strong></TD>
+      <TD WIDTH="35"></TD>
+       <TD>Miscellaneous information 
+            about the data or the methods used
+            to produce them.</TD>
+   </TR>
+</TABLE>
+</P>
+
+<P>
+We have generated <A HREF="cf_examples.html">some examples</A> of the types of
+information that could be put into the global attributes for three datasets.
+</P>
+
+<H2>The CF-checker</H2>
+<P>
+The BADC also runs a web-based CF-checker that allows you to upload a file to 
+test for compliance with the CF Convention. Visit the 
+<a href="http://titania.badc.rl.ac.uk/cgi-bin/cf-checker.pl">CF-checker page</a>
+ to use this service.
+
+<P>
+<A HREF="index.html">Back to the BADC netCDF homepage</A>
+</P>
+
+</BODY>
+
+</HTML>

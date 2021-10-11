@@ -1,0 +1,577 @@
+World Monthly Surface Station Climatology
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement
+
+             Parameter                                Units
+            -----------                           --------------
+             Pressure                             .1 mb
+             Elevation                               m
+             Temperature                          .1 deg C
+             Precipitation                        .1 mm
+             Relative Humidity                       percent (%)
+             Vapor Pressure                       .1 mb
+             Sunshine % of Average                   percent (%)
+             Sunshine Duration                       hours
+             Sea Temperature (from ships          .1 deg C
+              and some coastal nations)
+
+(Includes annual means, 10- and 30-year monthly means, and 10- and 30-year
+annual means in packed binary format.)
+
+1.2  Unit of Measurement.  Units are as stated for the parameter (see item
+1.1 above).
+
+1.3  Data Source.  Over 3900 stations worldwide have reported measurements
+to the National Climatic Data Center (NCDC), which provides most of the
+data making up this data set.  Much of the data prior to 1961 came from the
+Smithsonian miscellaneous collections and the World Weather Records of the
+U.S. Weather Bureau and the Environmental Data Services. African
+precipitation data for 250 stations from 1900 through 1973 were provided by
+Sharon Nicholson of Clark University, and data from various other countries
+were supplied by Dennis Shea of NCAR.
+
+1.4  Data Set Identification.  World Monthly Surface Station Climatology
+data set (Level II).  The data are available in binary packed format or
+character format on tape.  Annual and monthly averages are available in
+binary format only.  NCDS offers these data as the SSCLIMATE data set in
+several temporal resolutions and geographic subsets.
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  Currently (1980-1989), there are approximately 2500
+stations scattered around the world providing global coverage. From 1731 to
+1860, the number of stations increased from 1 to 103, and from 1870 to 1900
+the number increased from 187 to 679.  From 1961 to 1970 there were 2875
+stations, of which 1089 stations were in the southern hemisphere. Please
+note, however, that a number of the stations no longer operate in the same
+site.  A separate data set of long period African rainfall data has about
+250 stations.
+
+2.2  Spatial Resolution.  The weather stations are usually 100 to 200 km
+apart.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  The data set contains world monthly surface
+climatological data through 1989.  These are updated around August of each
+year for the previous year.  The data for some stations extend to the
+mid-1700's.  (See the references in Item 11 below for more detailed
+statistics on coverage.)
+
+There are gaps in the data, some of which could be filled from published
+sources in the USA; however, funds are needed to locate and enter these
+data.
+
+3.2  Temporal Resolution.  The binary data set contains monthly means,
+annual means, 10-year monthly means, 10-year annual means, 30-year monthly
+means and 30-year annual means of temperature, pressure, precipitation,
+sunshine (% and duration), and sea surface temperature (where available)
+for each station.  The character data set only contains monthly means.  The
+data are based on daily measurements of maximum/minimum temperature and
+other quantities.
+
+
+4.  INSTRUMENT DESCRIPTION
+
+The parameters are measured using conventional instruments.
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  The National Center for Atmospheric
+Research (NCAR) consolidated data from several sources, scanning for gross
+format errors and correcting where possible.  The resulting data set
+includes the World Weather Records and Clayton's (Smithsonian) Weather
+Records.  NCAR obtained most of the World Weather Records directly from
+NCDC in digitized form, but the first 6 months of 1961 were digitized at
+NCAR. NCAR obtained the Smithsonian records (data before 1951) directly
+from John Wolback of Harvard College Observatory, who contracted with NCDC
+to have these data digitized.  NCAR has also included data from Dennis Shea
+(NCAR) and African precipitation data from Sharon Nicholson (Clark
+University).
+
+The data have been reformatted and are available in either a packed binary
+or a character format.  The missing codes and the biases put on the data
+are the same in either format.  After unpacking (or decoding), the true
+data value is obtained as follows:
+
+              True Value=Unpacked (or Decoded) Value - Bias.
+
+Missing codes which are unique with respect to actual data values have been
+chosen for missing parameters.
+
+5.2  Derivation Techniques/Algorithms.  Not applicable.
+
+5.3  Special Corrections/Adjustments.  At NCAR, the data through 1973 were
+scanned for gross format errors in card-punching, and several hundred such
+errors were corrected.  Extreme values were inspected on the basis of being
+4 or 5 standard deviations from the long period monthly mean. Card-punching
+or publication errors were corrected, and extreme values were set to
+missing.  Some of the data received on tape from NCDC overlapped that
+received on earlier tapes.  These overlaps were considered to be updates
+and were merged with or replaced the data previously received. NCAR makes
+available a list of all changes and corrections made.
+
+5.4  Processing Changes.  Not applicable.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  See Item 5.3 above.
+
+6.2  Confidence Level/Accuracy Judgment.  Variable.
+
+6.3  Usage Guidance.  The data records that give height of instruments
+prior to 1961 contain some cases in which 6 height values are given for
+each of 4 parameters.  This is because it was discovered that the values
+given for a particular height were different for the different parameters.
+For example, the height of a barometer above mean sea level associated with
+standard pressure is 17.7 m, but the height of a barometer above mean sea
+level associated with temperature is 78.9 m.  This discrepancy has not
+currently been resolved, and all heights are carried along.
+
+The station number in the data set is a 6-digit number.  The left-most 5
+digits, in most cases, make up the normal World Meteorological Organization
+(WMO) number with the unit's digit a zero.  For the stations for which
+there is no WMO number currently in use, one was created from a non-zero
+unit's digit (usually 7) along with the actual WMO number of a nearby
+station.  This number was checked for uniqueness.
+
+SSCLIMATE data should be accessed via station number.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+      Roy L. Jenne or Wilbur Spangler
+      Data Support Section
+      National Center for Atmospheric Research
+      P.O. Box 3000
+      Boulder, CO  80307
+      (303) 497-1215
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products
+
+8.1.1  World Monthly Surface Station Climatology, available from NCAR, in
+       packed, binary format.
+
+       Medium/Specification:  9-track, 1600- or 6250-bpi computer
+       compatible tape.
+
+       Format and Content:  Each logical binary record contains one year of
+       data for one station.  Logical record lengths vary from 21 to 42
+       64-bit words and are blocked together into longer physical records.
+       The right-most 60 bits of the first word of each physical record
+       contains the number of words in the physical record.  The last word
+       in the physical record is a checksum of the previous words.  The
+       logical records are sorted in ascending order by World
+       Meteorological Organization (WMO) number (see note under Usage
+       Guidance in Item 6.3 above) and year.  However, the 10- and 30-year
+       mean records for all stations follow the yearly records for all
+       stations.  The records include an indication of data source (NCDC,
+       Wolbach, other individual).
+
+       Quantity/Rate:  3 1600-bpi tapes or 1 6250-bpi tape.
+
+       Plans/Schedule:  NCAR incorporates NCDC and other updates about once
+       a year.
+
+8.1.2  World Monthly Surface Station Climatology available from NCAR or
+       World Monthly Weather Record--Surface available from NCDC in
+       character format.
+
+       Medium/Specification:  9-track, 1600- or 6250-bpi magnetic tape
+
+       Format and Content:  Each logical record contains one month of data
+       for one station.  Logical records consist of 50 characters. The
+       logical records are sorted in ascending order by WMO number, year,
+       month, and record type.  The annual means, 10-year, and 30-year
+       means have been dropped from this data set because of volume
+       considerations.
+
+       Quantity/Rate:  3 1600-bpi tapes for 1738-1989, or 1 6250-bpi tape.
+
+       Status:  Available from NCAR and NCDC
+
+       Plans/Schedule:  NCAR incorporates NCDC and other updates about once
+       a year.
+
+8.1.3  World Monthly Weather Record--Upper Air available from NCDC and NCAR
+       in character format.
+
+       Medium/Specification:  9-track, 1600-bpi computer compatible tape
+
+       Format and Content:  Each logical record contains one month of data
+       for one station.  Logical records consist of 280 characters. The
+       logical records are sorted in ascending order by WMO number, year,
+       and month.
+
+       Quantity/Rate:  1 1600-bpi tape or 1 6250-bpi tape.
+
+       Plans/Schedule:  NCAR incorporates NCDC updates about once a year.
+
+8.2  Film Products
+
+8.2.1  World Monthly Surface Seasonal Means, Long Term Means, and Standard
+       Deviations.
+
+       Medium/Specification:  Microfilm or microfiche
+
+       Format and Content:  One film contains a print of the data including
+       seasonal means, long term means, and standard deviations.  Another
+       provides station plots for selected stations.
+
+       Quantity/Rate.  2 sets as indicated above
+
+       Status:  Available from NCAR.
+
+       Plans/schedule:  Future schedule is unclear.
+
+8.3  Other Products.
+
+8.3.1  The entire time range and all variables for this data set are stored
+       in CDF on disk.  There is one CDF file for each continent.  The
+       following list describes the location of each CDF file and its
+       contents:
+
+       SSCLIMATE_10YR_GLOBAL
+          Contains 10-year temperature/precipitation means for all global
+          stations.
+          Temporal coverage is 1750 - 1970.
+
+       SSCLIMATE_30YR_GLOBAL
+          Contains 30-year means for all global stations.
+          Temporal coverage is 1955 - 1970.
+
+       SSCLIMATE_GLB_ANNUAL
+          Contains annual means for temperature/precipitation for all
+          global stations.
+          Temporal coverage is 1739 - 1989.
+
+       SSCLIMATE_GLB_YR_PST61
+          Contains annual means for some stations with many meteorological
+          variables since 1961.
+          Temporal coverage is 1962 - 1989.
+
+       SSCLIMATE_AFRICA_MONTH
+          Contains monthly means for Africa.  Exact coverage is from 60
+          degrees South to 40 degrees North latitude, and 30 degrees West
+          to 60 degrees East longitude.
+          Temporal coverage is 1837 - 1989.
+
+       SSCLIMATE_ANTARC_MONTH
+          Contains monthly temperature/precipitation means for Antarctica.
+          Exact coverage is from 90 degrees to 60 degrees South latitude,
+          and all longitudes.
+          Temporal coverage is 1903 - 1989.
+
+       SSCLIMATE_ARCTIC_MONTH
+          Contains monthly temperature/precipitation means for the Arctic.
+          Exact coverage is from 60 degrees to 90 degrees North latitude,
+          and all longitudes.
+          Temporal coverage is 1816 - 1989.
+
+       SSCLIMATE_ASIA_MONTH 
+          Contains monthly temperature/precipitation means for Asia. Exact
+          coverage is from 10 degrees South to 90 degrees North latitude,
+          and 60 degrees to 180 degrees East longitude.
+          Temporal coverage is 1813 - 1989.
+
+       SSCLIMATE_AUSTRL_MONTH
+          Contains monthly temperature/precipitation means for Australia.
+          Exact coverage is from 60 degrees to 10 degrees South latitude,
+          and 60 degrees to 180 degrees East longitude.
+          Temporal coverage is 1839 - 1989
+
+       SSCLIMATE_EUROPE_MONTH
+          Contains monthly temperature/precipitation means for Europe.
+          Exact coverage is from 30 degrees to 90 degrees North latitude,
+          and 30 degrees West to 60 degrees East longitude.
+          Temporal coverage is 1752 - 1989.
+
+       SSCLIMATE_NAMERICA_MONTH
+          Contains monthly means for North America.  Exact coverage is from
+          15 degrees to 90 degrees North latitude, and 180 degrees to 30
+          degrees West longitude.
+          Temporal coverage is 1738 - 1989.
+          
+       SSCLIMATE_SAMERICA_MONTH 
+          Contains monthly means for South America.  Exact coverage is from
+          60 degrees South to 15 degrees North latitude, and 180 degrees to
+          30 degrees West longitude.
+          Temporal coverage is 1850 - 1989.
+
+
+8.3.2  The Greenhouse Detection Experiment (GEDEX) CD-ROM
+        
+       Medium/Specifications:  CD-ROM in ISO 9660 standard
+    
+       Format and Content:  The data on this disk will be stored in a
+       special data-set-independent format, designated the Common Data
+       Format (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  The CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" will be included with this CD-ROM allowing a user to create
+       and access these data and descriptions. The CD-ROM will consist of
+       many different data sets related to the study of the Greenhouse
+       Effect, including the CAC_SST blended and climatology data, with the
+       accompanying NCDS data set documentation.
+    
+       The above listed SSCLIMATE datayptes in Common Data Format (CDF) are
+       contained on the GEDEX CD_ROM.
+
+       Data Quantity/Rate:  1 CD-ROM disk set.
+      
+       Status:  Release date for this product is scheduled for early 1992.
+     
+       Plans/Schedule:  Users interested in this product should contact
+       NCDS staff for more details.
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification
+
+        Data Support Section
+        National Center for Atmospheric Research
+        P.O. Box 3000
+        Boulder, CO  80307
+        (303) 497-1215
+
+        National Climatic Data Center (NCDC)
+        Federal Building
+        Asheville, NC 28801
+        704-259-0682
+
+        Goddard DAAC User Support Office
+        NASA Goddard Space Flight Center
+        Greenbelt, MD 20771
+        (301) 286-3209
+
+9.2  Procedures for Obtaining Data.  Contact one of the archives above.
+
+9.3  NCDS Status/Plans.  NCDS provides access to the World Monthly Surface
+Station Climatology Data Set. The data reside online.  As updates are made
+available by NCDC and NCAR, NCDS will incorporate them into its online data
+sets.
+
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+       Wilbur M.L. Spangler and Roy L. Jenne
+       Data Support Section
+       National Center for Atmospheric Research
+       P.O. Box 3000
+       Boulder, CO  80307
+       (303) 497-1215
+
+       World Data Center-A for Meteorology
+       National Climatic Data Center
+       Federal Building
+       Asheville, NC 28801
+       (704) 259-0370
+
+  NASA funded scientists can obtain information and data from
+
+       Goddard DAAC User Support Office
+       NASA Goddard Space Flight Center
+       Greenbelt, MD 20771
+       (301) 286-3209
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      a.  Jenne, R.L., July 1975.  Data Sets for Meteorological Research,
+          NCAR TN/IA-111.  Boulder, Colorado.
+
+      b.  Shea, D.J., K.E. Trenberth and R.W. Reynolds, November 1990.  A
+          Global Monthly Sea Surface Temperature Climatology,
+          NCAR/TN-345+STR.  Climate and Global Dynamics Division, Boulder,
+          Colorado.
+
+      c.  Spangler, W., and R.L. Jenne, February 1990.  World Monthly
+          Surface Station Climatology.  NCAR Computing Facility,  Boulder,
+          Colorado.
+
+      d.  Woodruff, S.D., S.J. Lubker, R.G. Quayle, U. Radok, and E. D.
+          Doggett, October 1991.  Differences Within and Among Surface
+          Marine Datasets, NOAA Environmental Research Laboratories,
+          Climate Monitoring and Diagnostics Laboratory, Climate Research
+          Division, Boulder, Colorado.
+
+11.2  Journal Articles and Study Reports
+
+      a.  Bradley, R.S., P.M. Kelly, P.D. Jones, H.F. Diaz and C. Goodess,
+          January 1985.  A Climatic Data Bank for the Northern Hemisphere
+          Land Areas, 1851-1980.  DOE Technical Report TR017.  U.S.
+          Department of Energy, Carbon Dioxide Research Division,
+          Washington, D.C.
+
+      b.  Jones, P.D., S.C.B. Raper, B. Santer, B.S.G. Cherry, C. Goodess,
+          P.M. Kelly, T.M.L. Wigley, R.S. Bradley, H.F. Diaz, July 1985. A
+          Grid Point Surface Air Temperature Data Set for the Northern
+          Hemisphere.  DOE Technical Report TR022.  U.S. Department of
+          Energy, Carbon Dioxide Research Division,  Washington, D.C.
+
+11.3  Archive/DBMS Usage Documentation
+
+      a.  Boden, T.A., 1987.  "United States Historical Climatology Network
+          (HCN) Serial Temperature and Precipitation Data."  Carbon Dioxide
+          Information Analysis Center, Oak Ridge, Tennessee.  U.S. Dept. of
+          Energy Contract No. DE-AC05-84OR21400.
+
+      b.  Boden, T.A.,  1986.  "A Global Grid Point Surface Air Temperature
+          Data Set:  1851-1984."  U.S. Dept. of Energy Contract No.
+          DE-AC05-84OR21400.
+
+      c.  Carbon Dioxide Information Analysis Center, 1987.  "U.S.
+          Department of Energy Carbon Dioxide Research Division
+          Publications and Other Documents."  Oak Ridge National
+          Laboratory,  Oak Ridge, Tennessee.
+
+      d.  Environmental Data Services, 1966.  "1951-1960, World Weather
+          Records."  6 vols, U.S. Department of Commerce, Washington, D.C.
+
+      e.  Environmental Data and Information Service, 1983.  "1961-1970,
+          World Weather Records."  4 vols, U.S. Department of Commerce,
+          Washington, D.C.
+
+      f.  National Climatic Data Center, (monthly publications).  Monthly
+          Climatic Data for the World, 1961-current.  U.S. Department of
+          Commerce.  (Available from the National Climatic Data Center,
+          Federal Building, Asheville, N.C. 28801.  Attn: Publications).
+
+      g.  Olsen, L.M., Closs, J.W., Corprew, F.E., November 1991. NASA's
+          Climate Data System Primer:  Version 4.0." EOS DAAC, NASA Goddard
+          Space Flight Center, Greenbelt, Maryland.
+
+      h.  Smithsonian Institution, 1927.  " --1920, World Weather Records,"
+          Smithsonian Miscellaneous Collections 79.  Washington, D.C
+          (prepared for publication by H.H. Clayton and F.L. Clayton).
+
+      i.  Smithsonian Institution, 1934.  "`1921-1930,' World Weather
+          Records," Smithsonian Miscellaneous Collections 90.  Washington,
+          D.C. (prepared for publication by H.H. Clayton and F.L. Clayton).
+
+      j.  Smithsonian Institution, 1947.  "`1931-1940,' World Weather
+          Records," Smithsonian Miscellaneous Collections 105. Washington,
+          D.C. (prepared for publication by H.H. Clayton and F.L. Clayton).
+
+      k.  Spangler, Wilbur M.L., and Roy L. Jenne, October 1988.  "World
+          Monthly Surface Station Climatology."   National Center for
+          Atmospheric Research Scientific Computing Division, Boulder,
+          Colorado.
+
+      l.  U.S. Weather Bureau, 1959.  "`1941-1950,' World Weather Records,"
+          U.S. Department of Commerce, Washington, D.C.
+
+
+12.  RELATED DATA SETS
+
+     1)  The Climate Research Unit Temperature Deviations data set contains
+         departures of 1854-1990 surface air temperatures from the
+         1950-1979 reference period.  These data are available online
+         through NCDS in Common Data Format (CDF).  To access this CDF,
+         specify the following as input within the Data Applications
+         subsystem of the NCDS.
+
+                     NCDS$DATA:CLIM-RSRCH-U_TMP-DEV.
+     
+     2)  The Vinnikov, Groisman and Lugina Temperature Deviations data sets
+         contain mean monthly, seasonal and yearly temperature deviations
+         and mean monthly station temperatures for the Southern and
+         Northern Hemispheres.  These data are available online through
+         NCDS in Common Data Format (CDF).  To access this CDF, specify the
+         following as input within the Data Applications subsystem of the
+         NCDS.
+                                                  
+                     NCDS$DATA:VGL-TMP-DEV_MONTHLY
+                     NCDS$DATA:VGL-TMP-DEV_SEASONAL
+                     NCDS$DATA:VGL-TMP-DEV_ANNUAL     
+                     NCDS$DATA:VGL-TMP-MON_NORTH-STATN
+                     NCDS$DATA:VGL-TMP-MON_SOUTH-STATN
+
+
+13.  SUMMARY/SAMPLE
+
+This data set has been stored online in NCDS's Common Data Format (CDF).
+This format is "data-independent" in that data from any source can be put
+in this format and accessed through the NCDS subsystems.  These CDFs can be
+found listed in Item 8.3 of this catalog.  A sample plot is available for
+this data set.  It is accessible via the Display Demonstration Plot option
+of the Data Applications subsystem.  To view this sample plot, specify the
+plot SSCLIMATE.
+
+
+14.  NOTES
+
+None.
+
+*92/03/14

@@ -1,0 +1,138 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Datasets: ISAMS L3A Data</TITLE>
+</HEAD>
+<!-- Created 6th December 1998 12:25:17  -->
+<!-- Author: Simon Williams BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>Acquiring the ISAMS L3A data held at the BADC<BR
+CLEAR="ALL"></H1>
+<br>
+<P><EM>This file contains background information to help you get
+the ISAMS L3A data held at the BADC.</EM> <HR ALIGN=LEFT>
+
+<OL>
+  <LI><A HREF="#intro">ISAMS L3A Data held at the BADC</A>
+  <LI><A HREF="#transfer">Checking and Transferring Data from the BADC</A>
+  <LI><A HREF="#convert">Converting the data to binary on your machine</A>
+  <LI><A HREF="#files">Reading the files</A>
+</OL>
+<HR ALIGN=LEFT>
+<H3><A NAME="intro"></A>1. ISAMS L3A Data held at the BADC</H3>
+<BLOCKQUOTE>
+<P>The ISAMS data was supplied to the BADC in VMS binary files.
+To enable transfer of the data to a wide variety of machines we
+have converted it into ASCII (plain text). To speed up transfer
+of the ASCII files, we have compressed them using the GNU gzip
+program.
+<P>Therefore, you will need gzip installed on your local system to uncompress
+the data files and software packages - the source code is available
+from software archives. You will also need to know <A HREF="/help/howtogetdata_gzip_and_tar.html">how
+to use gzip and tar</A> once you have the files on your system
+and <A HREF="/help/ftp_guide.html">how to transfer files via FTP (File
+Transfer Protocol)</A>
+
+<P>The ASCII files are purely an intermediate form for data transfer.
+We supply software to convert the ASCII files back into binaries
+on your local machine, enabling you to use software that reads
+the data files as binary. We also supply an example read program
+to read the binary data, and 3rd party software written by other
+users of the data, which we do not support.</P>
+
+<P>Since the dataset is public, it is available anonymously by
+FTP and can also be acquired through the WWW.</P>
+
+</BLOCKQUOTE>
+
+<H3><A NAME="transfer"></A>2. Checking and Transferring Data from the BADC</H3>
+
+<BLOCKQUOTE>
+  
+<P>All data and software is located beneath the directory <EM><A
+  HREF="/cgi-bin/data_browser/data_browser/badc/isamsl3/">/badc/isamsl3</A></EM>. 
+  Here you will find a README file and the following subdirectories 
+  <UL>
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/isamsl3/data/">data</A>
+    - contains the gzipped ASCII data files.
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/isamsl3/doc/">doc</A>
+    - contains ISAMS documentation.
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/isamsl3/software/">software</A>
+    - contains the ASCII conversion, example read and any 3rd party software available.
+  </UL>
+<P>Check whether the data you require is available by browsing the <A HREF="/cgi-bin/data_browser/data_browser/badc/isamsl3/data/">ISAMS L3 
+data</A> directories.
+
+</BLOCKQUOTE>
+
+<H3><A NAME="convert"></A>3. Converting the data to binary on your machine</H3>
+<BLOCKQUOTE>
+<H4>3.1 Unzipping the files</H4>
+
+<P>Unzipping the compressed ASCII files (using the <EM>gzip -d</EM>
+command) will typically change the size from about 2-2.5 Mbytes
+per file to around 10-15 Mbytes. Make sure you have sufficient
+disk space before unzipping the files. Note that when you convert
+the ascii file to a binary on your machine it will be substantially reduced in size.</P>
+
+<H4>3.2 Building the software</H4>
+
+<P>The ASCII to binary <a href="/cgi-bin/data_browser/data_browser/badc/isamsl3/software/">conversion program - asc2bin</a> (and
+the read example) is supplied in a gzipped tar archive, or as
+individual source files. A makefile and README file are supplied
+to help you build the code. The README file explains the small
+changes required to adapt the code to suit your local operating
+system.</P>
+
+<H4>3.3 Running the software</H4>
+
+<P>The <a href="/cgi-bin/data_browser/data_browser/badc/isamsl3/software/">conversion program</a> will produce binary data files for your
+machine. If you have problems, refer to the README file or contact
+the BADC team. The resulting binary files are considerably smaller
+than the intermediate ASCII files. Once the conversion is successfully
+completed you can remove the ASCII files.</P>
+
+</BLOCKQUOTE>
+
+<H3><A NAME="files"></A>4. Reading the data files</H3>
+<BLOCKQUOTE>
+<H4>4.1 The file structure</H4>
+
+<P>There are 4 level 3A files for each ISAMS species per day -
+one for each of the file classes 3AT, 3AL, 3TP, 3LP. The structure
+of the files is outlined below, but users should refer to the
+<A HREF="/cgi-bin/data_browser/data_browser/badc/isamsl3/doc/isams_l3a.sfdu">level 3A file format</A>
+document for more detailed information.</P>
+
+<P>The level 3AT files are a time ordered sequence of records
+each containing one profile, together with information on the
+position of the profile. The associated parameter file contains
+data on the operation conditions of ISAMS which are not allowed
+by the level 3AT file definition. There is a one-to-one correspondence
+between records in the 3AT and 3TP files.</P>
+
+<P>The 3AL products have a similar structure, but in this case,
+each record corresponds to a profile interpolated onto standard
+4 deg. latitude intervals at positions defined by the intersection
+of the tangent track with a latitude circle.</P>
+
+<H4>4.2 The Access Routines</H4>
+
+<P>A set of user-callable FORTRAN subroutines is available from
+the BADC to read the original data files. These should compile
+on most platforms with minor changes to the open statements.</P>
+
+<H4>4.3 Third Party Software</H4>
+
+<P>In the <a href="/cgi-bin/data_browser/data_browser/badc/isamsl3/software/">software directories</a> for the ISAMS data, there is a
+subdirectory for 3rd Party software. If you develop software to
+use with the ISAMS data, then we encourage you to let us have
+a copy so that we can make it available to other researchers.
+</BLOCKQUOTE>
+
+<P>
+</BODY>
+</HTML>
+
+

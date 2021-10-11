@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20080830T230000Z
+DTEND:20080905T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:CNR Conference Center, Bologna, Italy
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000C0D55D6D1673C8010000000000000000100
+ 000003E618170F0BF2545A3355E7AFCBFA7CC
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:4th SPARC (Stratospheric Processes an=
+d their Role in Climate) General Assembly=0D=0A=0D=0AAugust 31 - September =
+5, 2008=0D=0A=0D=0ACNR Conference Center, Bologna, Italy=0D=0A=0D=0ATopics =
+will include:=0D=0A=0D=0AStratosphere-Troposphere Dynamical Coupling=0D=0AS=
+tratospheric Variability and Climate Change=0D=0AExtra-tropical Upper Tropo=
+sphere/Lower Stratosphere=0D=0ADetection, Attribution and Prediction of Str=
+atospheric Change=0D=0ATropical Tropopause Layer=0D=0AAtmospheric Chemistry=
+ and Climate=0D=0AStratospheric data assimilation=0D=0AGravity-wave process=
+es and their parameterization=0D=0AStratospheric and upper tropospheric wat=
+er vapour=0D=0A=0D=0AAll information will be available on the conference we=
+b site: http://www.cmcc.it:8080/web/public/sparc-ga2008 =0D=0A=0D=0AAbstrac=
+t submission deadline: 29 February, 2008=0D=0A=0D=0AElisa Manzini (Local Or=
+ganizing Committee Chair)=0D=0APeter Haynes and Thomas Peter (Scientific Or=
+ganizing Committee Co-Chairs)=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:4th SPARC General Assembly
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

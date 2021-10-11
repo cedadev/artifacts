@@ -1,0 +1,88 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>AAM data access</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>BADC Help File: Acquiring and Reading
+AAM data <BR CLEAR="ALL"></H1>
+
+<P><EM>You can obtain copies of AAM ASCII data files directly
+from these pages using your WWW browser, or via the BADC 
+FTP service (you will need to register as a BADC user to use the FTP service). </EM><HR ALIGN=LEFT>
+
+<OL>
+  <LI><A HREF="#transfer">Transferring the AAM data via the web or FTP</A>
+  <LI><A HREF="#name">File names and Data File Format</A>
+  <LI><A HREF="#read">Reading the AAM data files</A>
+  <LI><A HREF="#access">Access to the AAM data and Software</A>
+</OL>
+
+<HR ALIGN=LEFT>
+
+<H3><A NAME="transfer"></A>Transferring the AAM data via the web or FTP</li></H3>
+
+<BLOCKQUOTE>
+  
+<ul>
+<li>The AAM data can be downloaded directly over the BADC website from the
+<a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ukmo-aam/"> BADC data archive</a>
+<P><li>To use FTP from a UNIX machine, please look at our
+  <A HREF="/help/ftp_guide.html">FTP Guide</A>.
+</ul>
+<H3><A NAME="name"></A>File names </li></H3>
+
+<BLOCKQUOTE>
+  <P>There are two data subdirectories containing data from different
+  sources: The Met Office and <STRONG>ECMWF</STRONG> is the European Centre for
+  Medium Range Weather Forecasting.
+  <P><STRONG>ECMWF</STRONG> data file names include either a two-digit
+  figure for the year, or two such values representing the start
+  and end year, e.g. ANGM79.DAT or ANGM8688.DAT .
+  <P><STRONG>UKMO</STRONG> data file names are of the form UKyyyy.DAT
+  for the old format data and WASHyy.DAT for the Washington coded
+  data, where yyyy and yy denote a 4-digit or 2-digit year value,
+  respectively.
+  <P>The data <A HREF="file_format.html">file format</A> is documented.</BLOCKQUOTE>
+
+<P><BR>
+<BR>
+
+
+<H3><A NAME="read"></A>Reading the AAM data files</li></H3>
+
+<BLOCKQUOTE>
+  <P>Example FORTRAN code or format statements to read all of the
+  available data formats is held online in the software directory
+  (FTP users should change directory to <I>/badc/ukmo-aam/software</I>).
+  Additional software is available to convert between Washington
+  and UKMO format and vice-versa.
+  <P><STRONG>Note</STRONG> that the software examples are supplied
+  exactly as they were received and may need to be changed to work
+  on your computer. Some of the read examples are simply FORTRAN
+  read and format statements rather than complete programs. Some
+  of the code includes integer*2 data types which are not portable
+  and should be changed to integer. Other sections of code include
+  IBM job control statements which should be removed.</BLOCKQUOTE>
+
+
+<H3><A NAME="access"></A>Access to the AAM data and Software</li></H3>
+
+<BLOCKQUOTE>
+  <P>Data:
+  <UL>
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-aam/data/ecmwf/">ECMWF data directory</A>
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-aam/data/ukmo/">UKMO data directory</A>
+  </UL><br>
+  Software:
+  <UL>
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-aam/software">AAM software directory</A>
+  </UL>
+</BLOCKQUOTE>
+
+</ol>
+
+<P>
+</BODY>
+</HTML>

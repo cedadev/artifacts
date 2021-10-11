@@ -1,0 +1,247 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>URGENT Metadata</title>
+</head>
+
+<body bgcolor="#ffffff">
+<h1>URGENT Air Metadata</h1>
+<hr>
+<p>
+<h2>Contents</h2>
+<ol>
+ <li><a href="#What">What are metadata? Why are they essential?</a>
+ <P><li><a href="#Urge">Metadata for URGENT Air Projects</a>
+  <ul>
+   <li><a href="#NASA">2.1 Metadata for tables of numbers (observations or
+       model output)</a>
+   <li><a href="#Pict">2.2 Metadata for photographic images (JPEG, GIF, ...)</a>
+   <li><a href="#Soft">2.3 Metadata for software</a>
+  </ul>
+ <P><li><a href="#Addi">Additional documentation</a>
+</ol>
+
+<hr>
+
+<p><h2><a name="What">1. What are metadata? Why are they essential?</a></h2>
+
+<p>
+The term <i>metadata</i> encompasses all the information necessary to interpret,
+understand and use a given dataset.
+<i>Discovery metadata</i> more particularly apply to information (keywords)
+that can be used to identify and locate the data that meet the user's
+requirements (<i>via</i> a Web browser, a Web based catalogue, etc).
+<i>Detailed metadata</i> include the additional information necessary for a
+user to work with the data without reference back to the data provider.
+The metadata required by the NASA Ames Standard Format include both discovery
+and detailed metadata.
+</p><p>
+Metadata pertaining to observational data, for example, include details about
+how (with which instrument or technique), when and where the data have been
+collected, by whom (including affiliation and contact address or telephone
+number) and in the framework of which research project.
+In the case of processed data, the nature of the initial raw data and the
+derivation process must be stated.
+The nature and units of the recorded variables are of course essential, as well
+as the grid or the reference system.
+Metadata pertaining to model output should include the name of the model, the
+conditions of the calculation, the nature of its output, the geographical
+domain over which the output is defined (when applicable), etc.
+Specific conditions applying to the model or the experiment may be mentioned.
+Metadata also obviously include information on the format in which the data are
+stored, the order of the variables, etc, to allow potential users to read them.
+Metadata pertaining to software models include the key points of the theory on
+which the model is based, the techniques and computational language used,
+references, etc.
+</p><p>
+Since the evaluation of information relevance may widely vary with individuals,
+some metadata standards have been &#150; and are still currently being &#150;
+developed with the aim of uniformising metadata presentation.
+The other advantage of metadata standards is that they ensure the transmission
+of the information contained in the metadata (and hence the ability to use the
+data), in some predefined generic way, to remote and future users, provided
+that the latter will know the adopted conventions.
+Which in turn requires the existence, maintenance and transmission of manuals
+describing the set of conventions relevant to a particular metadata standard
+&#150; some kind of <i>metametadata</i>.
+</p><p>
+Since a crucial section of the metadata pertains to the data format, different
+metadata standards have been developed in conjunction with the various data
+formats.
+Existing data format standards, and metadata standards alike, are based both on
+the specific needs of confined scientific communities and on habits already in
+use within these communities.
+All of them regularly undergo updates and are susceptible of further evolution.
+In geosciences and among disciplines where 2-dimensional Earth surface reference
+systems play an important role (like arch&aelig;ology), the most popular
+data formats seem to belong to the
+<a href="http://www.gistandards.org.uk/">GIS</a>
+family (<i>Geographic Information Systems</i>).
+In the atmospheric research community, however, the <i>NASA Ames Format for
+Data Exchange</i> has been widely adopted since it is both simpler and more
+generic (in particular, it is better adapted to 3-D and 4-D fields).
+In addition, it makes provision of simplified cases fitted to data
+collected onboard balloons or aircrafts.
+It also includes rules applying to the formulation of metadata.
+</p>
+<p>
+The <i>metametadata</i> bible for NASA Ames format is 
+<a href="/help/formats/NASA-Ames/G-and-H-June-1998.html">Gaines and Hipskind,
+1998</a>.
+An <a href="/help/formats/NASA-Ames/FFI-summary.html">online summary</a> of this
+manual is available from the BADC.
+
+
+<p><h2><a name="Urge">2. Metadata for URGENT Air Projects</a></h2>
+<p><h3><a name="NASA">2.1 Metadata for tables of numbers (observations or model
+   output)</h3>
+</p>
+
+<p><b>2.1.1 <u>Content</u></b></p>
+
+Metadata include the following overall information.
+Some information in this list may be applicable in specific cases only.
+For accurate instructions about metadata formulation, see <a href="#2.1.3">Section 2.1.3</a>
+(Format) below.
+<ul>
+ <li><b>Information about the experiment.</b><br>
+     Date when experiment or model simulation started.<br>
+     Site or trajectory bounding box or domain limits.<br>
+     Platform, instrumentation.<br>
+     Model name.<br>
+ <li><b>Information about the experimenter(s).</b><br>
+     Names, affiliation, contact address including e-mail, telephone number.<br>
+     Programme name (URGENT), research project number.
+ <li><b>Information about the independent variables (spatio-temporal grid).
+     </b><br>
+     Names, units, domain of definition of independent variables.<br>
+     Interval values when appropriate.
+ <li><b>Information about the data, including processing level.</b><br>
+     Version number.<br>
+     Date of last revision.<br>
+     Processing level (nature of raw data, derivation method).<br>
+     Nature, name, units, scaling factors of dependent variables.<br>
+     (Note that the adopted NASA Ames format makes a distinction between
+     <i>primary</i> and <i>auxiliary</i> dependent variables).
+ <li><b>Information about data storage.</b><br>
+     Number of files of the entire dataset.<br>
+     File number of current file.
+ <li><b>Information about data format.</b> (Following NASA Ames rules).<br>
+     Number of lines in header.<br>
+     File format index (FFI). Each FFI defines a data format.
+ <li><b>Additional information.</b><br>
+     May include particular conditions of experiment or model run, model
+     boundary conditions, article reference, source of further information, ...
+</ul>
+
+<p><b>2.1.2 <u>Storage</u></b></p>
+
+<u>Each</u> data file includes a header containing the metadata.
+
+<p><b><a name="2.1.3">2.1.3</a> <u>Format</u></b></p>
+
+Fields of numbers and their associated metadata are supplied in NASA Ames
+format.
+The exact content and format of the metadata pertaining to NASA Ames formatted
+data depend on the File Format Index (FFI) adopted.
+For details, please refer to the
+<a href="/help/formats/NASA-Ames/FFI-summary.html">FFI summary</a>
+and to the <a href="Format.html#Urge">specific requirements</a> for URGENT
+data files.
+
+<p><h3><a name="Pict">2.2 Metadata for photographic images (JPEG, GIF, ...)</a>
+</h3>
+
+<p><b>2.2.1 <u>Content</u></b></p>
+
+Metadata of photographic images of the Earth surface include the following.
+For accurate instructions about metadata formulation, see <a href="#2.2.3">Section 2.2.3</a>
+(Format) below.
+<ul>
+ <li><b>Information about the picture.</b><br>
+     Date when picture was taken.<br>
+     Date of last revision, if any.<br>
+     Site or domain limits.<br>
+     Platform, technique used, wavelength channel.
+ <li><b>Information about the experimenter(s).</b><br>
+     Names, affiliation, contact address including e-mail, telephone number.<br>
+     Programme name (URGENT), research project number.
+ <li><b>Information about picture storage.</b><br>
+     Number of files of the entire images set.<br>
+     File number and name of image file.
+ <li><b>Information about metadata format.</b><br>
+     Number of lines in header.
+ <li><b>Additional information.</b><br>
+     Orientation.<br>
+     Resolution.<br>
+     Photographic treatment.<br>
+     Experiment associated with current image.<br>
+     Any relevant information regarding the conditions when the picture was
+     taken.
+</ul>
+<p><b>2.2.2 <u>Storage</u></b></p>
+
+Metadata are stored in separate text files &#150; one metadata file per image
+file.
+The metadata file has the same name as the image file except for the file
+extension, which is <i>.txt</i> (see <a href="FileNames.html">URGENT File
+Names</a>).
+
+<p><b><a name="2.2.3">2.2.3</a> <u>Format</u></b></p>
+
+Please refer to Section <a href="Format.html#Imag">4.2 Images</a> of the
+<i>"URGENT Data Files: Structure and Format"</i> document.
+
+<p><h3><a name="Soft">2.3 Metadata for software</a>
+</h3>
+
+<p><b>2.3.1 <u>Content</u>
+</b></p> 
+
+Metadata pertaining to a model should include the following.
+<ul>
+ <li><b>Information on the model</b><br>
+     Brief description of model general aim.<br>
+     Model structure.<br>
+     Physical processes involved, including equation set.<br>
+     Algorithmic implementation techniques used.<br>
+     Spatio-temporal coverage when applying.<br>
+     Boundary conditions, including reference(s).<br>
+     Initial conditions, including reference(s).<br>
+     Program language.<br>
+     Input nature and format.<br>
+     Output nature and format.<br>
+     Summary of model validation, or appropriate reference(s).<br>
+     Summary of results from former studies conducted with the model,
+     or appropriate reference(s).<br>
+ <li><b>Information on the author(s)</b><br>
+     Names, affiliation, contact address including e-mail, telephone number.<br>
+     Programme name (URGENT), research project number.
+</ul>
+
+<p><b>2.3.2 <u>Storage</u></b></p>
+
+Metadata relative to software can be included as comments in the top section of
+the source file or can alternatively be provided as a separate text file.
+
+<p><b>2.3.3 <u>Format</u></b></p>
+
+Text.
+There is no particular requirement regarding software metadata formatting.
+
+<p><h2><a name="Addi">3. Additional documentation</a>
+</h2>
+
+Any additional documentation on recorded data or images, whether pertaining to
+a single data file or a whole dataset, that would not find its place into the
+structures described above (because it does not fall into any described category
+or because it is too voluminous) may be submitted to BADC in the form of a text
+file that will be stored in the URGENT archive documentation directory.
+These documents may for example include technique description, possible use of
+the data, study conclusions, etc.
+
+<p>
+</body>
+
+</html>

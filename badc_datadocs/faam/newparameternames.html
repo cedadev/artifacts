@@ -1,0 +1,1303 @@
+
+    
+<HTML>
+ <head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+<TITLE>FAAM Parameter names.</TITLE> <meta name="keywords" content="FAAM, BAE-146, NERC, Met Office, NCAS">
+<link rel="stylesheet" type="text/css" href="/styles/menu.new.css">
+</head>
+
+
+<BODY>
+<h1>New Parameter names</h1>
+The change in data processing method to a linux-based system in summer 2007 also 
+included a change in the names given to the parameters from the old style "PARA####"
+names to more descriptive names. The table below shows the mapping from the 
+old names to the new names and also contains the units, CF standard name (where
+available) and the long name.
+
+<a name=core><h3>Table of Old/New names for core parameters</h3>
+See also table for <a href="#cloud-phys">core-cloud-physics<a/> names
+<table border =1>
+<tr>
+    <td><strong>Old Name</strong></td>
+    <td><strong>New name</strong></td>
+    <td><strong>Unit</strong></td>
+    <td><strong><a href="http://badc.nerc.ac.uk/help/formats/netcdf/index_cf.html">CF standard name</a></strong></td>
+    <td><strong>Long name</strong></td>
+</tr>
+<tr>
+    <td>PARA0516</td>
+    <td>IAS_RVSM</td>
+    <td>m s-1</td>
+    <td>*</td>
+    <td>Indicated air speed from the aircraft RVSM (air data) system.</td>
+</tr>
+<tr>
+    <td>PARA0517</td>
+    <td>TAS_RVSM</td>
+    <td>m s-1</td>
+    <td>platform_speed_wrt_air</td>
+    <td>True air speed from the aircraft RVSM (air data) system and deiced temperature.</td>
+</tr>
+<tr>
+    <td>PARA0520</td>
+    <td>TAT_DI_R</td>
+    <td>degK</td>
+    <td>air_temperature</td>
+    <td>True air temperature from the Rosemount deiced temperature sensor.</td>
+</tr>
+<tr>
+    <td>PARA0525</td>
+    <td>TAT_ND_R</td>
+    <td>degK</td>
+    <td>air_temperature</td>
+    <td>True air temperature from the Rosemeount non-deiced temperature sensor.</td>
+</tr>
+<tr>
+    <td>PARA0529</td>
+    <td>TDEW_GE</td>
+    <td>degK</td>
+    <td>dew_point_temperature</td>
+    <td>Dew point from the General Eastern instrument.</td>
+</tr>
+<tr>
+    <td>PARA0535</td>
+    <td>LWC_JW_U</td>
+    <td>gram kg-1</td>
+    <td>*</td>
+    <td>Uncorrected liquid water content from the Johnson Williams instrument.</td>
+</tr>
+<tr>
+    <td>PARA0538</td>
+    <td>INU_ACLF</td>
+    <td>m s-2</td>
+    <td>*</td>
+    <td>Acceleration along the aircraft longitudinal axis from the INU</td>
+</tr>
+<tr>
+    <td>PARA0539</td>
+    <td>INU_ACLS</td>
+    <td>m s-2</td>
+    <td>*</td>
+    <td>Acceleration along the aircraft starboard axis from the INU</td>
+</tr>
+<tr>
+    <td>PARA0540</td>
+    <td>INU_ACLU</td>
+    <td>m s-2</td>
+    <td>*</td>
+    <td>Acceleration along the aircraft vertical axis from the INU</td>
+</tr>
+<tr>
+    <td>PARA0537</td>
+    <td>BTHEIM_U</td>
+    <td>degK</td>
+    <td>brightness_temperature</td>
+    <td>Uncorrected brightness temperature from the Heimann radiometer</td>
+</tr>
+<tr>
+    <td>PARA0548</td>
+    <td>AOA</td>
+    <td>degree</td>
+    <td>*</td>
+    <td>Angle of attack from the turbulence probe system (positive, flow upwards wrt a/c axes)</td>
+</tr>
+<tr>
+    <td>PARA0549</td>
+    <td>AOSS</td>
+    <td>degree</td>
+    <td>*</td>
+    <td>Angle of sideslip from the turbulence probe system (positive, flow from </td>
+</tr>
+<tr>
+    <td>PARA0557</td>
+    <td>INU_VZ</td>
+    <td>m s-1</td>
+    <td>*</td>
+    <td>Aircraft vertical velocity from the INU</td>
+</tr>
+<tr>
+    <td>PARA0560</td>
+    <td>INU_ROLL</td>
+    <td>degree</td>
+    <td>platform_roll_angle</td>
+    <td>Roll angle from Honeywell H423 INU (positive for left wing up / right wing down)</td>
+</tr>
+<tr>
+    <td>PARA0561</td>
+    <td>INU_PTCH</td>
+    <td>degree</td>
+    <td>platform_pitch_angle</td>
+    <td>Pitch angle from Honeywell H423 INU (positive for nose up)</td>
+</tr>
+<tr>
+    <td>PARA0562</td>
+    <td>INU_HDG</td>
+    <td>degree</td>
+    <td>platform_yaw_angle</td>
+    <td>Heading from Honeywell H423 INU</td>
+</tr>
+<tr>
+    <td>PARA0563</td>
+    <td>INU_GSPD</td>
+    <td>m s-1</td>
+    <td>platform_speed_wrt_ground</td>
+    <td>Groundspeed from Honeywell H423 INU</td>
+</tr>
+<tr>
+    <td>PARA0564</td>
+    <td>INU_DRFT</td>
+    <td>degree</td>
+    <td>*</td>
+    <td>Drift angle from Honeywell H423 INU</td>
+</tr>
+<tr>
+    <td>PARA0565</td>
+    <td>INU_PITR</td>
+    <td>degree s-1</td>
+    <td>platform_pitch_rate</td>
+    <td>rate-of-change of INS pitch angle</td>
+</tr>
+<tr>
+    <td>PARA0566</td>
+    <td>INU_HDGR</td>
+    <td>degree s-1</td>
+    <td>platform_yaw_rate</td>
+    <td>rate-of-change of INS heading</td>
+</tr>
+<tr>
+    <td>PARA0567</td>
+    <td>INU_ROLR</td>
+    <td>degree s-1</td>
+    <td>platform_roll_rate</td>
+    <td>rate-of-change of INS roll angle</td>
+</tr>
+<tr>
+    <td>PARA0568</td>
+    <td>CPC_CONC</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>Total condensation particle concentration from TSI 3025A</td>
+</tr>
+<tr>
+    <td>PARA0572</td>
+    <td>TWC_EVAP</td>
+    <td>gram kg-1</td>
+    <td>*</td>
+    <td>Total water specific humidity from the TWC avaporator instrument</td>
+</tr>
+<tr>
+    <td>PARA0574</td>
+    <td>O3_TECO</td>
+    <td>ppb</td>
+    <td>mole_fraction_of_ozone_in_air</td>
+    <td>Mole fraction of ozone in air from the TECO 49 instrument</td>
+</tr>
+<tr>
+    <td>PARA0575</td>
+    <td>HGT_RADR</td>
+    <td>m</td>
+    <td>height</td>
+    <td>Radar height from the aircraft radar altimeter.</td>
+</tr>
+<tr>
+    <td>PARA0576</td>
+    <td>PS_RVSM</td>
+    <td>hPa</td>
+    <td>air_pressure</td>
+    <td>Static pressure from the aircraft RVSM (air data) system</td>
+</tr>
+<tr>
+    <td>PARA0577</td>
+    <td>Q_RVSM</td>
+    <td>hPa</td>
+    <td>*</td>
+    <td>Pitot static pressure inverted from RVSM (air data) system indicated airspeed</td>
+</tr>
+<tr>
+    <td>PARA0578</td>
+    <td>PALT_RVS</td>
+    <td>m</td>
+    <td>altitude</td>
+    <td>Pressure altitude from the aircraft RVSM (air data) system</td>
+</tr>
+<tr>
+    <td>PARA0579</td>
+    <td>CAB_PRES</td>
+    <td>hPa</td>
+    <td>*</td>
+    <td>Cabin pressure</td>
+</tr>
+<tr>
+    <td>PARA0580</td>
+    <td>LAT_GPS</td>
+    <td>degree_north</td>
+    <td>latitude</td>
+    <td>Latitude from the XR5 GPS system.</td>
+</tr>
+<tr>
+    <td>PARA0581</td>
+    <td>LON_GPS</td>
+    <td>degree_east</td>
+    <td>longitude</td>
+    <td>Longitude from the XR5 GPS system.</td>
+</tr>
+<tr>
+    <td>PARA0582</td>
+    <td>GPS_ALT</td>
+    <td>m</td>
+    <td>altitude</td>
+    <td>Altitude from the XR5 GPS system.</td>
+</tr>
+<tr>
+    <td>PARA0583</td>
+    <td>GPS_VELN</td>
+    <td>m s-1</td>
+    <td>*</td>
+    <td>Northwards velocity from the XR5 GPS system.</td>
+</tr>
+<tr>
+    <td>PARA0584</td>
+    <td>GPS_VELE</td>
+    <td>m s-1</td>
+    <td>*</td>
+    <td>Eastwards velocity from the XR5 GPS system.</td>
+</tr>
+<tr>
+    <td>PARA0585</td>
+    <td>GPS_VELZ</td>
+    <td>m s-1</td>
+    <td>*</td>
+    <td>Upwards velocitiy from the XR5 GPS system.</td>
+</tr>
+<tr>
+    <td>PARA0602</td>
+    <td>NV_LWC_U</td>
+    <td>gram m-3</td>
+    <td>*</td>
+    <td>Uncorrected liquid water content from the Nevzorov probe</td>
+</tr>
+<tr>
+    <td>PARA0605</td>
+    <td>NV_TCW_U</td>
+    <td>gram m-3</td>
+    <td>*</td>
+    <td>Uncorrected total condensed water content from the Nevzorov probe.</td>
+</tr>
+<tr>
+    <td>PARA0642</td>
+    <td>SOL_AZIM</td>
+    <td>degree</td>
+    <td>*</td>
+    <td>Solar azimuth derived from aircraft position and time.</td>
+</tr>
+<tr>
+    <td>PARA0643</td>
+    <td>SOL_ZEN</td>
+    <td>degree</td>
+    <td>*</td>
+    <td>Solar zenith derived from aircraft position and time.</td>
+</tr>
+<tr>
+    <td>PARA0648</td>
+    <td>PSAP_LIN</td>
+    <td>m-1</td>
+    <td>*</td>
+    <td>Uncorrected absorption coefficient at 565nm, linear, from PSAP.</td>
+</tr>
+<tr>
+    <td>PARA0649</td>
+    <td>PSAP_LOG</td>
+    <td>*</td>
+    <td>*</td>
+    <td>Uncorrected absorption coefficient at 565nm, log, from PSAP.</td>
+</tr>
+<tr>
+    <td>PARA0660</td>
+    <td>CAB_TEMP</td>
+    <td>degC</td>
+    <td>*</td>
+    <td>Cabin temperature at the core consoles</td>
+</tr>
+<tr>
+    <td>PARA0664</td>
+    <td>TWC_DET</td>
+    <td>bits</td>
+    <td>*</td>
+    <td>Raw data from the TWC probe Lyman alpha detector</td>
+</tr>
+<tr>
+    <td>PARA0666</td>
+    <td>TWC_TSAM</td>
+    <td>K</td>
+    <td>*</td>
+    <td>Sample temperature in Kelvin from the TWC evaporator probe</td>
+</tr>
+<tr>
+    <td>PARA0714</td>
+    <td>V_C</td>
+    <td>m s-1</td>
+    <td>northward_wind</td>
+    <td>Northward wind component from turbulence probe and Kalman-filtered INU</td>
+</tr>
+<tr>
+    <td>PARA0715</td>
+    <td>U_C</td>
+    <td>m s-1</td>
+    <td>eastward_wind</td>
+    <td>Eastward wind component from turbulence probe and Kalman-filtered INU</td>
+</tr>
+<tr>
+    <td>PARA0716</td>
+    <td>W_C</td>
+    <td>m s-1</td>
+    <td>upward_air_velocity</td>
+    <td>Vertical wind component from turbulence probe and Kalman-filtered INU</td>
+</tr>
+<tr>
+    <td>PARA0723</td>
+    <td>BTHEIM_C</td>
+    <td>degK</td>
+    <td>brightness_temperature</td>
+    <td>Upwelling infrared brightness temperature from the Heimann radiometer.</td>
+</tr>
+<tr>
+    <td>PARA0725</td>
+    <td>TWC_TDEW</td>
+    <td>K</td>
+    <td>dew_point_temperature</td>
+    <td>Dew-point derived from TWC probe specific humidity (valid in cloud-free air)</td>
+</tr>
+<tr>
+    <td>PARA0730</td>
+    <td>LAT_INUC</td>
+    <td>degree_north</td>
+    <td>latitude</td>
+    <td>Corrected latitude derived from XR5 GPS and Honeywell INU data</td>
+</tr>
+<tr>
+    <td>PARA0731</td>
+    <td>LON_INUC</td>
+    <td>degree_east</td>
+    <td>longitude</td>
+    <td>Corrected longitude derived from XR5 GPS and Honeywell INU data</td>
+</tr>
+<tr>
+    <td>PARA0735</td>
+    <td>VN_INUC</td>
+    <td>m s-1</td>
+    <td>*</td>
+    <td>Corrected aircraft velocity north derived from XR5 GPS and Honeywell INU data</td>
+</tr>
+<tr>
+    <td>PARA0736</td>
+    <td>VE_INUC</td>
+    <td>m s-1</td>
+    <td>*</td>
+    <td>Corrected aircraft velocity east derived from XR5 GPS and Honeywell INU data</td>
+</tr>
+<tr>
+    <td>PARA0760</td>
+    <td>NEPH_PR</td>
+    <td>hPa</td>
+    <td>*</td>
+    <td>Internal sample pressure of the Nephelometer</td>
+</tr>
+<tr>
+    <td>PARA0761</td>
+    <td>NEPH_T</td>
+    <td>K</td>
+    <td>*</td>
+    <td>Internal sample temperature of the Nephelometer</td>
+</tr>
+<tr>
+    <td>PARA0762</td>
+    <td>TSC_BLUU</td>
+    <td>m-1</td>
+    <td>*</td>
+    <td>Uncorrected blue total scattering coefficient from TSI 3563 nephelometer.</td>
+</tr>
+<tr>
+    <td>PARA0763</td>
+    <td>TSC_GRNU</td>
+    <td>m-1</td>
+    <td>*</td>
+    <td>Uncorrected green total scattering coefficient from TSI 3563 nephelometer.</td>
+</tr>
+<tr>
+    <td>PARA0764</td>
+    <td>TSC_REDU</td>
+    <td>m-1</td>
+    <td>*</td>
+    <td>Uncorrected red total scattering coefficient from TSI 3563 nephelometer.</td>
+</tr>
+<tr>
+    <td>PARA0765</td>
+    <td>BSC_BLUU</td>
+    <td>m-1</td>
+    <td>*</td>
+    <td>Uncorrected blue back scattering coefficient from TSI 3563 nephelometer.</td>
+</tr>
+<tr>
+    <td>PARA0766</td>
+    <td>BSC_GRNU</td>
+    <td>m-1</td>
+    <td>*</td>
+    <td>Uncorrected green back scattering coefficient from TSI 3563 nephelometer.</td>
+</tr>
+<tr>
+    <td>PARA0767</td>
+    <td>BSC_REDU</td>
+    <td>m-1</td>
+    <td>*</td>
+    <td>Uncorrected red back scattering coefficient from TSI 3563 nephelometer.</td>
+</tr>
+<tr>
+    <td>PARA0770</td>
+    <td>NO_TECO</td>
+    <td>ppb</td>
+    <td>mole_fraction_of_nitrogen_monoxide_in_air</td>
+    <td>Mole fraction of Nitrogen Monoxide (NO) in air from the TECO 42 instrument</td>
+</tr>
+<tr>
+    <td>PARA0771</td>
+    <td>NO2_TECO</td>
+    <td>ppb</td>
+    <td>mole_fraction_of_nitrogen_dioxide_in_air</td>
+    <td>Mole fraction of Nitrogen Dioxide (NO2) in air from the TECO 42 instrument</td>
+</tr>
+<tr>
+    <td>PARA0772</td>
+    <td>NOX_TECO</td>
+    <td>ppb</td>
+    <td>*</td>
+    <td>Mole fraction of NOx in air from the TECO 42 instrument</td>
+</tr>
+<tr>
+    <td>PARA0773</td>
+    <td>P0-S10</td>
+    <td>hPa</td>
+    <td>*</td>
+    <td>Calibrated differential pressure between centre(P0) port and S10 static</td>
+</tr>
+<tr>
+    <td>PARA0774</td>
+    <td>PA_TURB</td>
+    <td>hPa</td>
+    <td>*</td>
+    <td>Calibrated differential pressure between turbulence probe vertical ports</td>
+</tr>
+<tr>
+    <td>PARA0775</td>
+    <td>PB_TURB</td>
+    <td>hPa</td>
+    <td>*</td>
+    <td>Calibrated differential pressure between turbulence probe horizontal ports</td>
+</tr>
+<tr>
+    <td>PARA0778</td>
+    <td>P9_STAT</td>
+    <td>hPa</td>
+    <td>*</td>
+    <td>Static pressure from S9 fuselage ports</td>
+</tr>
+<tr>
+    <td>PARA0779</td>
+    <td>TAS</td>
+    <td>m s-1</td>
+    <td>*</td>
+    <td>True airspeed (dry-air) from turbulence probe</td>
+</tr>
+<tr>
+    <td>PARA0781</td>
+    <td>PSP_TURB</td>
+    <td>hPa</td>
+    <td>*</td>
+    <td>Pitot-static pressure from centre-port measurements corrrected for AoA and AoSS</td>
+</tr>
+<tr>
+    <td>PARA0782</td>
+    <td>CO_AERO</td>
+    <td>ppb</td>
+    <td>*</td>
+    <td>Mole fraction of Carbon Monoxide in air from the AERO AL5002 instrument</td>
+</tr>
+<tr>
+    <td>PARA1019</td>
+    <td>SW_DN_C</td>
+    <td>W m-2</td>
+    <td>downwelling_shortwave_flux_in_air</td>
+    <td>Corrected downward short wave irradiance, clear dome</td>
+</tr>
+<tr>
+    <td>PARA1020</td>
+    <td>RED_DN_C</td>
+    <td>W m-2</td>
+    <td>*</td>
+    <td>Corrected downward short wave irradiance, red dome</td>
+</tr>
+<tr>
+    <td>PARA1021</td>
+    <td>IR_DN_C</td>
+    <td>W m-2</td>
+    <td>downwelling_longwave_flux_in_air</td>
+    <td>Corrected downward long wave irradiance.</td>
+</tr>
+<tr>
+    <td>PARA1022</td>
+    <td>SW_UP_C</td>
+    <td>W m-2</td>
+    <td>upwelling_shortwave_flux_in_air</td>
+    <td>Corrected upward short wave irradiance, clear dome</td>
+</tr>
+<tr>
+    <td>PARA1023</td>
+    <td>RED_UP_C</td>
+    <td>W m-2</td>
+    <td>*</td>
+    <td>Corrected upward short wave irradiance, red dome</td>
+</tr>
+<tr>
+    <td>PARA1024</td>
+    <td>IR_UP_C</td>
+    <td>W m-2</td>
+    <td>upwelling_longwave_flux_in_air</td>
+    <td>Corrected upward long wave irradiance</td>
+</tr>
+</table>
+<p>
+<a name=cloud-phys><h3>Table of Old/New names for core-cloud-physics parameters</h3>
+<table border =1>
+<tr>
+    <td><strong>Old Name</strong></td>
+    <td><strong>New name</strong></td>
+    <td><strong>Unit</strong></td>
+    <td><strong><a href="http://badc.nerc.ac.uk/help/formats/netcdf/index_cf.html">CF standard name</a></strong></td>
+    <td><strong>Long name</strong></td>
+</tr>
+<tr>
+    <td>PARA1201</td>
+    <td>FSSPCONC</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>droplet concentration from the FFSSP</td>
+</tr>
+<tr>
+    <td>PARA1202</td>
+    <td>FSSP_LWC</td>
+    <td>gram m-3</td>
+    <td>*</td>
+    <td>Liquid water content from FFSSP</td>
+</tr>
+<tr>
+    <td>PARA1203</td>
+    <td>FSSP_RAD</td>
+    <td>micron</td>
+    <td>*</td>
+    <td>Mean volume radius from FFSSP</td>
+</tr>
+<tr>
+    <td>PARA1221</td>
+    <td>FSSPCH00</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 0</td>
+</tr>
+<tr>
+    <td>PARA1222</td>
+    <td>FSSPCH01</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 1</td>
+</tr>
+<tr>
+    <td>PARA1223</td>
+    <td>FSSPCH02</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 2</td>
+</tr>
+<tr>
+    <td>PARA1224</td>
+    <td>FSSPCH03</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 3</td>
+</tr>
+<tr>
+    <td>PARA1225</td>
+    <td>FSSPCH04</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 4</td>
+</tr>
+<tr>
+    <td>PARA1226</td>
+    <td>FSSPCH05</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 5</td>
+</tr>
+<tr>
+    <td>PARA1227</td>
+    <td>FSSPCH06</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 6</td>
+</tr>
+<tr>
+    <td>PARA1228</td>
+    <td>FSSPCH07</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 7</td>
+</tr>
+<tr>
+    <td>PARA1229</td>
+    <td>FSSPCH08</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 8</td>
+</tr>
+<tr>
+    <td>PARA1230</td>
+    <td>FSSPCH09</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 9</td>
+</tr>
+<tr>
+    <td>PARA1231</td>
+    <td>FSSPCH10</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 10</td>
+</tr>
+<tr>
+    <td>PARA1232</td>
+    <td>FSSPCH11</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 11</td>
+</tr>
+<tr>
+    <td>PARA1233</td>
+    <td>FSSPCH12</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 12</td>
+</tr>
+<tr>
+    <td>PARA1234</td>
+    <td>FSSPCH13</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 13</td>
+</tr>
+<tr>
+    <td>PARA1235</td>
+    <td>FSSPCH14</td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>FFSSP Concentration in size channel 14</td>
+</tr>
+<tr>
+    <td>PARA1301</td>
+    <td>2DC_CONC</td>
+    <td>m-3</td>
+    <td>*</td>
+    <td>Particle concentration from the 2DC</td>
+</tr>
+<tr>
+    <td>PARA1302</td>
+    <td>2DC_LWC </td>
+    <td>gram m-3</td>
+    <td>*</td>
+    <td>Liquid water content from 2DC</td>
+</tr>
+<tr>
+    <td>PARA1311</td>
+    <td>2DP_CONC</td>
+    <td>m-3</td>
+    <td>*</td>
+    <td>Particle concentration from the 2DP</td>
+</tr>
+<tr>
+    <td>PARA1312</td>
+    <td>2DP_LWC </td>
+    <td>gram m-3</td>
+    <td>*</td>
+    <td>Liquid water content from 2DP</td>
+</tr>
+<tr>
+    <td>PARA1401</td>
+    <td>2DC_CH00 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 0</td>
+</tr>
+<tr>
+    <td>PARA1402</td>
+    <td>2DC_CH01 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 1</td>
+</tr>
+<tr>
+    <td>PARA1403</td>
+    <td>2DC_CH02 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 2</td>
+</tr>
+<tr>
+    <td>PARA1404</td>
+    <td>2DC_CH03 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 3</td>
+</tr>
+<tr>
+    <td>PARA1405</td>
+    <td>2DC_CH04 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 4</td>
+</tr>
+<tr>
+    <td>PARA1406</td>
+    <td>2DC_CH05 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 5</td>
+</tr>
+<tr>
+    <td>PARA1407</td>
+    <td>2DC_CH06 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 6</td>
+</tr>
+<tr>
+    <td>PARA1408</td>
+    <td>2DC_CH07 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 7</td>
+</tr>
+<tr>
+    <td>PARA1409</td>
+    <td>2DC_CH08 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 8</td>
+</tr>
+<tr>
+    <td>PARA1410</td>
+    <td>2DC_CH09 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 9</td>
+</tr>
+<tr>
+    <td>PARA1411</td>
+    <td>2DC_CH10 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 10</td>
+</tr>
+<tr>
+    <td>PARA1412</td>
+    <td>2DC_CH11 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 11</td>
+</tr>
+<tr>
+    <td>PARA1413</td>
+    <td>2DC_CH12 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 12</td>
+</tr>
+<tr>
+    <td>PARA1414</td>
+    <td>2DC_CH13 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 13</td>
+</tr>
+<tr>
+    <td>PARA1415</td>
+    <td>2DC_CH14 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 14</td>
+</tr>
+<tr>
+    <td>PARA1416</td>
+    <td>2DC_CH15 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 15</td>
+</tr>
+<tr>
+    <td>PARA1417</td>
+    <td>2DC_CH16 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 16</td>
+</tr>
+<tr>
+    <td>PARA1418</td>
+    <td>2DC_CH17 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 17</td>
+</tr>
+<tr>
+    <td>PARA1419</td>
+    <td>2DC_CH18 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 18</td>
+</tr>
+<tr>
+    <td>PARA1420</td>
+    <td>2DC_CH19 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 19</td>
+</tr>
+<tr>
+    <td>PARA1421</td>
+    <td>2DC_CH20 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 20</td>
+</tr>
+<tr>
+    <td>PARA1422</td>
+    <td>2DC_CH21 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 21</td>
+</tr>
+<tr>
+    <td>PARA1423</td>
+    <td>2DC_CH22 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 22</td>
+</tr>
+<tr>
+    <td>PARA1424</td>
+    <td>2DC_CH23 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 23</td>
+</tr>
+<tr>
+    <td>PARA1425</td>
+    <td>2DC_CH24 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 24</td>
+</tr>
+<tr>
+    <td>PARA1426</td>
+    <td>2DC_CH25 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 25</td>
+</tr>
+<tr>
+    <td>PARA1427</td>
+    <td>2DC_CH26 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 26</td>
+</tr>
+<tr>
+    <td>PARA1428</td>
+    <td>2DC_CH27 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 27</td>
+</tr>
+<tr>
+    <td>PARA1429</td>
+    <td>2DC_CH28 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 28</td>
+</tr>
+<tr>
+    <td>PARA1430</td>
+    <td>2DC_CH29 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 29</td>
+</tr>
+<tr>
+    <td>PARA1431</td>
+    <td>2DC_CH30 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 30</td>
+</tr>
+<tr>
+    <td>PARA1432</td>
+    <td>2DC_CH31 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DC Concentration in size channel 31</td>
+</tr>
+<tr>
+    <td>PARA1501</td>
+    <td>2DP_CH00 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 0</td>
+</tr>
+<tr>
+    <td>PARA1502</td>
+    <td>2DP_CH01 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 1</td>
+</tr>
+<tr>
+    <td>PARA1503</td>
+    <td>2DP_CH02 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 2</td>
+</tr>
+<tr>
+    <td>PARA1504</td>
+    <td>2DP_CH03 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 3</td>
+</tr>
+<tr>
+    <td>PARA1505</td>
+    <td>2DP_CH04 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 4</td>
+</tr>
+<tr>
+    <td>PARA1506</td>
+    <td>2DP_CH05 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 5</td>
+</tr>
+<tr>
+    <td>PARA1507</td>
+    <td>2DP_CH06 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 6</td>
+</tr>
+<tr>
+    <td>PARA1508</td>
+    <td>2DP_CH07 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 7</td>
+</tr>
+<tr>
+    <td>PARA1509</td>
+    <td>2DP_CH08 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 8</td>
+</tr>
+<tr>
+    <td>PARA1510</td>
+    <td>2DP_CH09 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 9</td>
+</tr>
+<tr>
+    <td>PARA1511</td>
+    <td>2DP_CH10 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 10</td>
+</tr>
+<tr>
+    <td>PARA1512</td>
+    <td>2DP_CH11 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 11</td>
+</tr>
+<tr>
+    <td>PARA1513</td>
+    <td>2DP_CH12 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 12</td>
+</tr>
+<tr>
+    <td>PARA1514</td>
+    <td>2DP_CH13 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 13</td>
+</tr>
+<tr>
+    <td>PARA1515</td>
+    <td>2DP_CH14 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 14</td>
+</tr>
+<tr>
+    <td>PARA1516</td>
+    <td>2DP_CH15 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 15</td>
+</tr>
+<tr>
+    <td>PARA1517</td>
+    <td>2DP_CH16 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 16</td>
+</tr>
+<tr>
+    <td>PARA1518</td>
+    <td>2DP_CH17 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 17</td>
+</tr>
+<tr>
+    <td>PARA1519</td>
+    <td>2DP_CH18 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 18</td>
+</tr>
+<tr>
+    <td>PARA1520</td>
+    <td>2DP_CH19 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 19</td>
+</tr>
+<tr>
+    <td>PARA1521</td>
+    <td>2DP_CH20 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 20</td>
+</tr>
+<tr>
+    <td>PARA1522</td>
+    <td>2DP_CH21 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 21</td>
+</tr>
+<tr>
+    <td>PARA1523</td>
+    <td>2DP_CH22 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 22</td>
+</tr>
+<tr>
+    <td>PARA1524</td>
+    <td>2DP_CH23 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 23</td>
+</tr>
+<tr>
+    <td>PARA1525</td>
+    <td>2DP_CH24 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 24</td>
+</tr>
+<tr>
+    <td>PARA1526</td>
+    <td>2DP_CH25 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 25</td>
+</tr>
+<tr>
+    <td>PARA1527</td>
+    <td>2DP_CH26 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 26</td>
+</tr>
+<tr>
+    <td>PARA1528</td>
+    <td>2DP_CH27 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 27</td>
+</tr>
+<tr>
+    <td>PARA1529</td>
+    <td>2DP_CH28 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 28</td>
+</tr>
+<tr>
+    <td>PARA1530</td>
+    <td>2DP_CH29 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 29</td>
+</tr>
+<tr>
+    <td>PARA1531</td>
+    <td>2DP_CH30 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 30</td>
+</tr>
+<tr>
+    <td>PARA1532</td>
+    <td>2DP_CH31 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>2DP Concentration in size channel 31</td>
+</tr>
+<tr>
+    <td>PARA1550</td>
+    <td>PCASPCON </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>droplet concentration from the PCASP (channels 2-14 only)</td>
+</tr>
+<tr>
+    <td>PARA1551</td>
+    <td>PCASPMAS </td>
+    <td>milligram m-3</td>
+    <td>*</td>
+    <td>Mass content from PCASP (channels 2-14 only)</td>
+</tr>
+<tr>
+    <td>PARA1560</td>
+    <td>PCASP_00 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 0</td>
+</tr>
+<tr>
+    <td>PARA1561</td>
+    <td>PCASP_01 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 1</td>
+</tr>
+<tr>
+    <td>PARA1562</td>
+    <td>PCASP_02 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 2</td>
+</tr>
+<tr>
+    <td>PARA1563</td>
+    <td>PCASP_03 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 3</td>
+</tr>
+<tr>
+    <td>PARA1564</td>
+    <td>PCASP_04 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 4</td>
+</tr>
+<tr>
+    <td>PARA1565</td>
+    <td>PCASP_05 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 5</td>
+</tr>
+<tr>
+    <td>PARA1566</td>
+    <td>PCASP_06 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 6</td>
+</tr>
+<tr>
+    <td>PARA1567</td>
+    <td>PCASP_07 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 7</td>
+</tr>
+<tr>
+    <td>PARA1568</td>
+    <td>PCASP_08 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 8</td>
+</tr>
+<tr>
+    <td>PARA1569</td>
+    <td>PCASP_09 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 9</td>
+</tr>
+<tr>
+    <td>PARA1570</td>
+    <td>PCASP_10 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 10</td>
+</tr>
+<tr>
+    <td>PARA1571</td>
+    <td>PCASP_11 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 11</td>
+</tr>
+<tr>
+    <td>PARA1572</td>
+    <td>PCASP_12 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 12</td>
+</tr>
+<tr>
+    <td>PARA1573</td>
+    <td>PCASP_13 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 13</td>
+</tr>
+<tr>
+    <td>PARA1574</td>
+    <td>PCASP_14 </td>
+    <td>cm-3</td>
+    <td>*</td>
+    <td>PCASP Concentration in size channel 14</td>
+</tr>
+</table>
+
+</body>
+</html>

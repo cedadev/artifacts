@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20080915T230000Z
+DTEND:20080920T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Lingotto Conference Center, Torino, Ital=
+y
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000F0840B5ACDA6C8010000000000000000100
+ 00000E6A775F771E9CD48B271AEB6F9444808
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:There will be a special one-day sessi=
+on on "Environment" at the 2nd Chemistry Congress of the European Associati=
+on for Chemical and Molecular Sciences (EuCheMS) in Torino, Italy, 16-20th =
+September, 2008.=0D=0A=0D=0AThe "Environment" session takes place throughou=
+t the day on Wednesday 17th September. It comprises three themes; "Greening=
+ Chemistry", "Greenhouse Gases", and "Water Pollution". Topic speakers incl=
+ude Carl Brenninkmeijer (Max Plank Institute, Germany), Stefan Reimann (EMP=
+A, Switzerland), James Orr (IAEA, Monaco), and Bill Sturges (University of =
+East Anglia, UK).=0D=0A=0D=0AYou are cordially invited to submit abstracts =
+for oral and poster presentations.=0D=0A=0D=0AThe deadline for abstracts ha=
+s now been EXTENDED to 25th April 2008.=0D=0A=0D=0APlease see http://www.eu=
+chems-torino2008.it/site/home.asp for further details and Abstract Submissi=
+on.=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:EuCheMS Congress
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070301T000000Z
+DTEND:20070303T000000Z
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000906051477939C7010000000000000000100
+ 00000089AE8C91351514A87247B9CF15E6A27
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=20<<Royal Society IPCC showcasing me=
+eting.pdf>> =0D=0AThe Royal Society is holding a meeting to discuss the IPC=
+C Working Group 1 report on the physical basis of climate change on 1-2 Mar=
+ch 2007.  Please see the attached flyer for further details.=0D=0A=0D=0AIf =
+you are interested in attending please visit the Royal Society=92s website =
+for registration details. =0D=0A=0D=0Ahttp://www.royalsoc.ac.uk/event.asp?i=
+d=3D5464=0D=0A=0D=0A The meeting is booking up very quickly so we would urg=
+e you to register early.=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:FW: UK Royal Society event: the IPCC Work=
+ing Group 1 report - the physical basis of climate change 1-2 March 2007
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

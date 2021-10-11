@@ -1,0 +1,97 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Datasets: ISAMS L2 Data</TITLE>
+</HEAD>
+<!-- Created 6th December 1998 12:25:17  -->
+<!-- Author: Simon Williams BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>Acquiring the ISAMS L2 data held at the BADC<BR
+CLEAR="ALL"></H1>
+<br><br>
+<P><EM>This file contains background information to help you get
+the ISAMS L2 data held at the BADC.</EM> <HR ALIGN=LEFT>
+
+<OL>
+  <LI><A HREF="#intro">ISAMS L2 Data held at the BADC</A>
+  <LI><A HREF="#transfer">Checking and Transferring Data from the BADC</A>
+  <LI><A HREF="#files">Reading the data files</A>
+</OL>
+<HR ALIGN=LEFT>
+<H3><A NAME="intro"></A>1. ISAMS L2 Data held at the BADC</H3>
+<BLOCKQUOTE>
+<P>The ISAMS data was supplied to the BADC in VMS binary files.
+To enable transfer of the data to a wide variety of machines we
+have converted it into ASCII (plain text). To speed up transfer
+of the ASCII files, we have compressed them using the GNU gzip
+program.
+<P>Therefore, you will need gzip installed on your local system to uncompress
+the data files and software packages - the source code is available
+from software archives. You will also need to know <A HREF="/help/howtogetdata_gzip_and_tar.html">how
+to use gzip and tar</A> once you have the files on your system.
+<P>The ASCII files are purely an intermediate form for data transfer.
+We supply software to convert the ASCII files back into binaries
+on your local machine, enabling you to use software that reads
+the data files as binary. We also supply an example read program
+to read the binary data, and 3rd party software written by other
+users of the data, which we do not support.
+<P>
+<ALIGN=LEFT>
+<H3>2. Checking and Transferring Data from the BADC</H3>
+
+<BLOCKQUOTE>
+  
+<P>All data and software is located beneath the directory <EM><A
+  HREF="/cgi-bin/data_browser/data_browser/badc/isamsl2/">/badc/isamsl2</A></EM>. 
+  Here you will find a README file and the following subdirectories:<P> 
+  <UL>
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/isamsl2/data/">data</A>
+    - contains the gzipped ASCII data files.
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/isamsl2/doc/">doc</A>
+    - contains ISAMS documentation.
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/isamsl2/software/">software</A>
+    - contains the ASCII conversion, example read and any 3rd party software available.
+  </UL>
+<P>Check whether the data you require is available by browsing the <A HREF="/cgi-bin/data_browser/data_browser/badc/isamsl2/data/">ISAMS L2 
+data</A> directories.
+
+</BLOCKQUOTE>
+
+<ALIGN=LEFT>
+<H3><A NAME="files"></A>3. Reading the data files</h3>
+<Blockquote>
+ <h4>3.1. Converting the data to binary on your machine</H4>
+<ul>
+<li><strong>Unzipping the files:</strong>
+<br>Unzipping the compressed ASCII files (using the <EM>gzip -d</EM>
+command) will typically change the size from about 2-2.5 Mbytes
+per file to around 10-15 Mbytes. Make sure you have sufficient
+disk space before unzipping the files. Note that when you convert
+the ascii file to a binary on your machine 
+it will be substantially reduced in size.
+<br><br>
+<li><strong>Building the software:</strong>
+<br>The ASCII to binary conversion program <a href="/cgi-bin/data_browser/data_browser/badc/isamsl2/software/">atobin.f</a> is supplied 
+in the software directory. These FORTRAN subroutines should compile
+on most platforms with minor changes to the open statements.
+<br><br>
+<li><strong>Running the software</strong>
+<br>The conversion program will produce binary data files for your
+machine. The resulting binary files are considerably smaller
+than the intermediate ASCII files. Once the conversion is successfully
+completed you can remove the ASCII files.
+</ul>
+<H4>3.2 Third Party Software</H4>
+
+<P>In the software directories for the ISAMS data, there is a
+subdirectory for 3rd Party software. If you develop software to
+use with the ISAMS data, then we encourage you to let us have
+a copy so that we can make it available to other researchers.
+</Blockquote>
+
+<P>
+</BODY>
+</HTML>
+
+

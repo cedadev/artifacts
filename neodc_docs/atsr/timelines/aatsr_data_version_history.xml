@@ -1,0 +1,16 @@
+<!--Created with XMLSPY2008 by Anabelle Guillory) -->
+<data>
+	<event start="March 10 2004" title="IPF version 5.58 introduced">This IPF version included baseline AATSR processing, plus the first version of the AATSR Land Surface Temperature (LST) retrieval in the ATS_NR__2P product.
+    </event>
+	<event start="July 01 2004" title="IPF version 5.59 introduced">This update involved a change to the facility responsible for setting the REF_DOC field in the MPH of the data (from PFHS to IPF) and a change to the internal handling of CFI warning messages. Neither of these changes had any impact on the format or content of the products.
+    </event>
+	<event start="Aug 01 2004" title="New ATS_PC1_AX file introduced">New ATS_PC1_AX file introduced with revised solar irradiance data (which were then carried through into the VISCAL GADS in the output L1b data).
+    </event>
+	<event start="Dec 01 2004" title="Revised ATS_GC1_AX file introduced">Revised ATS_GC1_AX file introduced, to correct a problem in the application of the 1.6 micron non-linearity correction
+    </event>
+	<event start="Nov 29 2005" title="Daily ATS_VC1_AX files modified">Daily ATS_VC1_AX files were modified to account for long-term visible channel drift.
+    </event>
+	<event start="Dec 07 2005" title="Revised SST retrieval coefficients introduced">Revised SST retrieval coefficients were introduced in ATS_SST_AX.
+The retrieval coefficients previously in use were based on the same atmospheric spectroscopy as was originally used for ATSR-1 and ATSR-2, which pre-dated more recent releases of the HITRAN molecular spectroscopy database. The new set of retrieval coefficients were based on the HITRAN 2000 database.
+    </event>
+</data>

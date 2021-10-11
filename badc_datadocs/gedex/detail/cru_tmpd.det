@@ -1,0 +1,471 @@
+Climate Research Unit Global Temperature Anomalies
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.   Land-based and sea surface temperature
+anomalies.
+
+1.2  Unit of Measurement.  Temperatures in degrees Celsius.
+
+1.3  Data Source.  The basis of the data set is derived from the World
+Weather Records (WWR), published by the Smithsonian Institution (1927,
+1935, 1947) and the U.S. Weather Bureau (1959-1982).  Additional data were
+added, using material collected in published and manuscript form from
+meteorological archives.  Sea surface temperature data are derived from the
+Comprehensive Ocean Atmosphere Data Set and the Monthly Summaries Trimmed
+Groups.
+
+1.4  Data Set Identification.  These data consist of the departures of
+1854-1990 surface air temperatures from the 1950-1979 reference period,
+expressed on a global 5 degrees latitude by 5 degrees longitude grid.
+Incorporated into this data set are sea surface temperature anomalies over
+oceanic areas of the world.
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  Global.  Coverage is not complete, particularly
+over the equatorial and southern latitudes, but the data used represent the
+most extensive compilation of marine and land data (Jones et al., 1991).
+
+2.2  Spatial Resolution.  The resolution for the data set is 5 degrees
+latitude x 5 degrees longitude.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.   Data are from 1854 to 1990.
+
+3.2  Temporal Resolution.  Monthly.
+
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  The main purpose for creating this data set was
+to plot the surface air temperature onto a regular spatial network and to
+form a large area average air temperature series that encompasses both land
+and ocean surfaces.
+
+4.2  Key Satellite Flight Parameters.   Not Applicable.
+
+4.3  Principles of Operation.   The WWR data was enhanced using material
+available in published and manuscript form in meteorological archives,
+particularly those of the U.K. Meteorological Office.
+
+4.4  Instrument Measurement Geometry.   Not Applicable.
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.   This data set represents a dramatic
+improvement over previous collections of surface air temperature.  It
+includes many data records that were previously unavailable; they were
+collected by the authors from unpublished sources and included in the data
+bank used for analysis.  Extensive quality checks and corrections have been
+applied to the data to ensure, as well as possible, that the resulting data
+set is homogenous.  Corrections have been applied for the following
+problems:  changes in instrumentation, changes in station location, changes
+in observation times, changes in the methods of calculation of monthly
+means, and urbanization effects.  And finally, sea surface temperature
+anomalies have been included to create as near a complete analysis as
+possible.  All data are presented as anomalies from the mean for the
+1950-1979 period. This reference period was selected because global
+temperature data was quite extensive during these years.
+
+The station data were gridded to a regular 5 degrees of latitude by 5
+degrees of longitude grid, by weighting the station data by the inverse of
+their distance to the grid points.
+
+5.2  Derivation Techniques/Algorithms.   The data were originally collected
+as temperatures using thermometers.  Except for the corrections applied
+above, the only further processing was to grid the data.
+
+5.3  Special Corrections/Adjustments.   See Item 5.1 above.
+
+5.4  Processing Changes.  None.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.   The resulting annual mean temperatures
+were compared to other data sets, such as those from Russia (Vinnikov et
+al., 1987, 1989) and the United States (Hansen et al., 1988). Although all
+the averages were highly correlated, the producers of this set believe this
+data set is superior because of its inclusion of marine data which
+represent 71% of the Earth's surface.  Hansen's data set did not correct
+for urban warming and is thus considered to contain a warming bias of
+greater than 0.1 degrees Celsius per century.
+
+To assess the effects of incomplete coverage during the early years, the
+producers used a frozen grid approach to analyze the changing network. They
+found that although the interannual variability decreased over time as more
+stations were used, there was no bias introduced by the sparse grid in the
+early part of the record.
+
+6.2  Confidence Level/Accuracy Judgment.   Although the data are
+calculated, stored, and presented in this data set to an accuracy of 0.01
+degrees Celsius, the individual monthly grid point anomalies are probably
+only accurate to +/- 0.2 degrees Celsius, given the accuracy of the
+original data.
+
+6.3  Usage Guidance.  These data may be used as presented, provided the
+processing steps involved in their derivation are taken into account.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+     Dr. Phil D. Jones
+     Climatic Research Unit
+     School of Environmental Sciences
+     University of East Anglia
+     Norwich NR4 7TJ
+     UNITED KINGDOM
+     Telephone: (0603) 592090
+     INTERNET: f028@cpc865.uea.ac.uk
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products
+
+8.1.1  Global Gridded Surface Air Temperature Anomalies (1854-1990)
+
+       Medium/Specification: 
+
+       Format and Contents:  Gridded (5 x 5 degrees) global surface air
+       temperature anomalies.
+
+       Data Quantity/Rate:  1 tape, 21.5 Mb
+
+       Status: The tape is also available at the Carbon Dioxide Information
+       Analysis Center (CDIAC).
+
+8.2  Film Products.   None.
+
+8.3  Other products.
+
+8.3.1  Climate Research Unit Temperature Anomalies in Common Data Format
+       (CDF) file.
+
+       Medium/Specifications:  Magnetic disk
+
+       Format and Content:  The data are stored in a special
+       data-set-independent format, designated the Common Data Format
+       (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  The CDF consists of a file which contain
+       the data and descriptions about the data.  A standard software
+       package called the "CDF Library" allows a user within an NCDS
+       session to create and access these data and descriptive information.
+       These CDF files may be accessed within the Data Applications
+       Subsystem of NCDS.
+
+       Data Quantity/Rate:  Climate Research Unit Temperature Anomalies, 1
+       file, 17 Mb
+
+       Status:  Available
+
+       Plans/Schedule:  Additional data will be integrated periodically at
+       approximately yearly (annual) intervals.
+
+8.3.2  The Greenhouse Effect Detection Experiment (GEDEX) CD-ROM
+
+       Medium/Specifications:  CD-ROM in ISO 9660 standard
+
+       Format and Content:  The data on this disk will be stored in a
+       special data-set-independent format, designated the Common Data
+       Format (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  The CDF consists of data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" will be included with this CD-ROM allowing a user to create
+       and access these data and descriptions. The CD-ROM will consist of
+       many different data sets related to the study of the Greenhouse
+       Effect, including the Climate Research Unit Temperature Anomalies
+       data set, and the accompanying NCDS data set documentation.
+
+       Data Quantity/Rate:  1 CD-ROM disk set.
+
+       Status: Release date for this product is scheduled for early 1992.
+
+       Plans/Schedule:  Users interested in this product should contact the
+       Goddard DAAC User Support Office for more details.
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification.
+                                               
+     Mr. Tom Boden
+     Carbon Dioxide Information Analysis Center (CDIAC)
+     Oak Ridge National Laboratory
+     Post Office 2008
+     Oak Ridge, Tennessee   37831-6050
+     U.S.A.
+     Telephone (615) 574-0390
+                FTS  624-0390
+
+9.2  Procedures for Obtaining Data.  Requests for magnetic tapes should
+include any specific instructions for transmitting the data required by the
+user and be submitted by phone, or mail to the Carbon Dioxide Information
+Analysis Center (CDIAC) (See Item 10.2).
+
+Users can obtain these data online through the NASA Climate Data System
+(NCDS).  To obtain more information on accessing online data contact the
+Goddard DAAC User Support Office.
+
+9.3  NCDS Status/Plans.  The data are available online in Common Data
+Format (CDF).  Specify the following CDFs as input to the Data Applications
+Subsystem:
+
+                      NCDS$DATA:CLIM-RSRCH-U_TMP-DEV
+
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+10.1  Carbon Dioxide Information Analysis Center (CDIAC)
+      Oak Ridge National Laboratory
+      Post Office 2008
+      Oak Ridge, Tennessee   37831-6050
+      U.S.A.
+      (615) 574-0390
+      FTS  624-0390
+
+10.2  Goddard DAAC User Support Office
+      NASA/Goddard Space Flight Center
+      Code 935
+      Greenbelt, Maryland  20771
+      (301) 286-3209
+      FTS:  888-3209
+      INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+      NSI DECnet:  NSSDCA::NCDSUSO
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      a.  Boden, T.A. and R.M. Cushman, 1986, "A Global Grid Point Surface
+          Air Temperature Data Set: 1851-1984."  Environmental Sciences
+          Division.  Oak Ridge National Laboratory.  Oak Ridge, Tennessee.
+          Contract No. DE-AC05-84OR21400
+
+11.2  Journal Articles and Study Reports
+
+      a.  Bradley, R.S., P.D. Jones, C.M. Goodess, and H.F. Diaz. 1985. "A
+          Climatic Data Bank for Northern Hemisphere Land Areas,
+          1851-1980".  DOE Technical Report No.TR017. U.S. Department of
+          Energy, Carbon Dioxide Research Division, Washington, D.C.
+
+      b.  Hansen, James and Sergej Lebedeff. 1988.  "Global Surface Air
+          Temperatures: Update through 1987.  Geophys. Res. Let.
+          15:323-326.
+
+      c.  Jones, P.D., R.S. Bradley, H.F. Diaz, P.M. Kelly, and T.M.L.
+          Wigley. 1986a. "Northern Hemisphere Surface Air Temperature
+          Variations :  1851-1984". Journal of Climate and Applied
+          Meteorology, 25:161-179.
+
+      d.  Jones, P.D., S.C.B. Raper, B.S.G. Cherry, C.M. Goodess, and
+          T.M.L. Wigley. 1986a.  "A Grid Point Surface Air Temperature Data
+          Set for the Southern Hemisphere, 1851-1984."  DOE Technical
+          Report No. TR027.  U.S. Department of Energy, Carbon Dioxide
+          Research Division, Washington, D.C.
+
+      e.  Jones, P.D., S.C.B. Raper, B. Santer, B.S.G. Cherry, C.M.
+          Goodess, P.M. Kelly, T.M.L. Wigley, R.S. Bradley, and H.F. Diaz.
+          1985.  "A Grid Point Surface Air Temperature Data Set for the
+          Northern Hemisphere".  DOE Technical Report No. TR022. U.S.
+          Department of Energy, Carbon Dioxide Research Division,
+          Washington, D.C.
+
+      f.  Jones, P.D., S.C.B. Raper, and T. M. L. Wigley.  1986c. "Southern
+          Hemisphere Surface Air Temperature Variations: 1851-1984".
+          Journal of Climate and Applied Meteorology, 25:1213-1230.
+
+      g.  Jones, P.D., and Wigley, T.M.L., 1990.  "Global Warming Trends."
+          Scientific American, 263:84-91.
+
+      h.  Jones, P.D., T.M.L. Wigley, and G. Farmer, 1991.  "Marine and
+          Lane Temperature Data Sets:  A Comparison and A Look at Recent
+          Trends."  In, Greenhouse-Gas-Induced Climatic Change: A Critical
+          Appraisal of Simulations and Observations.  Elsevier Scientific
+          Publishers, 153-172.
+
+      i.  Karl, T.R., and C.N. Williams, Jr.  1988. "Time Series Suitable
+          for the Detection of Climate Change in the United States".
+          Journal of Climate.
+
+      j.  Smithsonian Institution.  1927, 1935, 1947. "World Weather
+          Records".  Miscellaneous Collections, Volumes 79, 90, 104.
+          Washington, D.C.
+
+      k.  U.S. Weather Bureau.  1959-1982.  "World Weather Records".
+          1941-1950 (1361 pp.), 1951-1960 (Volumes 1-6), 1961-1970 (Volumes
+          1-6).  U.S. Department of Commerce, Washington, D.C.
+
+      l.  Vinnikov, K. Ya., P. Ya. Groisman, K. M. Lugina, and A. A.
+          Golubev, 1987.  "Variations in Northern Hemisphere Mean Surface
+          Air Temperature over 1841-1985."  Meteorology and Hydrology, 1:
+          45-55.  [In Russian]
+
+      m. Vinnikov, K. Ya., P. Ya. Groisman, and K. M. Lugina, 1989.
+         "Empirical Data on Contemporary Global Climate Changes
+         (temperature and precipitation). J. Climate, in press.
+
+11.3  Archive/DBMS Usage Documentation.
+
+      a.  Olsen, L.M, J.W. Closs, and F.E. Corprew, November 1991. "NASA's
+          Climate Data System Primer:  Version 4.0."  EOS DAAC, NASA
+          Goddard Space Flight Center, Greenbelt, Maryland.
+
+      b.  Jones, P.D., R.S. Bradley, H.F. Diaz, P.M. Kelly, and T.M.L.
+          Wigley. 1986a. "Northern Hemisphere Surface Air Temperature
+          Variations :  1851-1984". Journal of Climate and Applied
+          Meteorology, 25:161-179.
+
+      c.  Jones, P.D., S.C.B. Raper, C.M. Goodess, B.S.G. Cherry, and
+          T.M.L. Wigley. 1986b.  "A Grid Point Surface Air Temperature Data
+          Set for the Southern Hemisphere". DOE Technical Report No. TR027.
+          U.S. Department of Energy, Carbon Dioxide Research Division,
+          Washington, D.C.
+
+      d.  Jones, P.D., S.C.B. Raper, B. Santer, B.S.G. Cherry, C.M.
+          Goodess, P.M. Kelly, T.M.L. Wigley, R.S. Bradley, and H.F. Diaz.
+          1985.  "A Grid Point Surface Air Temperature Data Set for the
+          Northern Hemisphere".  DOE Technical Report No. TR022. U.S.
+          Department of Energy, Carbon Dioxide Research Division,
+          Washington, D.C.
+
+      e.  Jones, P.D., S.C.B. Raper, and T. M. L. Wigley.  1986c. "Southern
+          Hemisphere Surface Air Temperature Variations: 1851-1984".
+          Journal of Climate and Applied Meteorology, 25:1213-1230.
+
+
+12.  RELATED DATA SETS.
+
+     1) The GISS Temperature Deviations data sets contain monthly
+        temperature deviations for the period 1880 through 1990 and is
+        available online through NCDS in Common Data Format (CDF).  To
+        access these CDFs, specify the following as input within the Data
+        Applications subsystem of the NCDS:
+
+                                                 Spatial Scale of
+        Data Set Name                       Monthly Temperature Anomalies
+        -------------                       -----------------------------
+        NCDS$DATA:GISS-TMP-DEV_MON-GLB              Global
+        NCDS$DATA:GISS-TMP-DEV_MON-NH         Northern Hemisphere
+        NCDS$DATA:GISS-TMP-DEV_MON-SH         Southern Hemisphere
+        NCDS$DATA:GISS-TMP-DEV_MON-ZONE          Latitude Zones
+        NCDS$DATA:GISS-TMP-DEV_MON-BOXES        80 equal area boxes
+        NCDS$DATA:GISS-TMP-DEV_MON-SUBBOXES  8000 equal area subboxes
+
+     2) The Angell Global Temperature Deviations data set contains zonal
+        temperature deviations derived from radiosonde measurements
+        compiled in Monthly Climatic Data for the World, published by the
+        National Climatic Data Center. These data are available online
+        through NCDS in Common Data Format (CDF). To access this CDF,
+        specify the following as input within the Data Applications
+        subsystem of the NCDS.
+
+                       NCDS$DATA:ANGELL_TMP_DEV
+
+     3) The Lower Tropospheric Temperature Anomalies from the Microwave
+        Sounding Unit (MSU) data sets contain calibrated MSU channel 2
+        brightness temperatures along individual scan MSU scan lines. The
+        Microwave Sounding Unit is aboard the TIROS-N series of polar
+        orbiting satellites (TIROS-N, NOAA-6, -7, -9, -10, -11, and -12).
+        These data are available online through NCDS in Common Data Format
+        (CDF).  To access these CDFs, specify the following as input within
+        the Data Applications Subsystem of the NCDS.
+
+                       NCDS$DATA:MSUTMP_MONTHLY
+                       NCDS$DATA:MSUTMP_CLIMATOLOGY
+
+     4) The Vinnikov, Groisman and Lugina Temperature Deviations data sets
+        contain mean monthly, seasonal and yearly temperature deviations
+        and mean monthly station temperatures for the Southern and Northern
+        Hemispheres.  These data are available online through NCDS in
+        Common Data Format (CDF).  To access these CDFs, specify the
+        following as input within the Data Applications subsystem of the
+        NCDS.
+
+                       NCDS$DATA:VGL-TMP-DEV_MONTHLY
+                       NCDS$DATA:VGL-TMP-DEV_SEASONAL
+                       NCDS$DATA:VGL-TMP-DEV_ANNUAL
+                       NCDS$DATA:VGL-TMP-MON_NORTH-STATN
+                       NCDS$DATA:VGL-TMP-MON_SOUTH-STATN
+
+
+13.  SUMMARY/SAMPLE
+
+      None available at this time.
+
+
+14.  NOTES
+
+      None.
+
+*92/03/13

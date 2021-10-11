@@ -1,0 +1,252 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>Radiation Observation Data Table</TITLE>
+  <!-- Created 16th June 2006 -->
+  <!-- Author: Belinda Robinson BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Radiation Observation data - Columns in the RO table <BR CLEAR="ALL"></H1>
+
+<HR ALIGN=LEFT>
+<a href="RO_Table.html#description">Table Description</a> - 
+<a href="RO_Table.html#table">Columns in the RO table</a> - 
+<a href="RO_Table.html#definition">Definition of Radiation terms</a> -
+<a href="RO_Table.html#filter">How to start filtering the rows of data out</a> 
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<a name="description"></a>
+<h3>Table Description: </h3>
+This entity contains hourly and daily radiation amounts, including those
+	  no longer being reported. In all cases, <font face="Courier New">ob_end_time</font> and
+	  <font face="Courier New">ob_hour_count</font> define the observation period. Values are
+	  either for an hour or for 24 hours.
+      <ul>
+        <li>Hourly - approximately 50 UK stations <!--and 100 overseas stations--> report hourly radiation,
+		but only 3 have reported direct irradiation (<a href="http://archive.ceda.ac.uk/cgi-bin/midas_stations/station_details.cgi.py?idstring=9+838+1023">see list here</a>).</li>
+        <li>Daily - 24 hour values are usually for 0000-2359Z on the stated day. Occasionally the
+		period may be 09-09Z, ending at 0900Z on the stated day. There should only be one 24 hour
+		report per station per day. MIDAS will not store daily values derived from the sum of hourly
+		values.</li>
+      </ul>
+<a name="table"></a>
+<h3>Columns in the RO table:</h3>
+For the convenience of users, the RO file column headers are available for download in <a href="Headers/RO_Column_Headers.xlsx    ">Excel</a> or as a <a href="Headers/RO_Column_Headers.csv">comma separated text file</a>
+<P>
+<table border="1" cellspacing="0" width="95%">
+      <tr>
+        <td valign="TOP" width="5%" align="center"><b>PK</b></td>
+        <td valign="TOP" width="40%"><b>Attribute</b></td>
+        <td valign="TOP" width="35%"><b>Description / Units</b></td>
+      </tr>
+
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+   <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id_type</font></td>
+        <td valign="TOP" width="35%"><A HREF="ukmo_guide.html#3.6">Identifier type</a></td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_end_time</font></td>
+        <td valign="TOP" width="35%">Date and time at end of observation</td>
+      </tr>
+
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_hour_count</font></td>
+        <td valign="TOP" width="35%">Observation hour count</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">version_num</font></td>
+        <td valign="TOP" width="35%">Observation version number - <strong>Use the row with '1'</strong>, as this has been quality checked by the Met Office </td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_domain_name</font></td>
+        <td valign="TOP" width="35%"><A HREF="met_domain.html">Message type</a></td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_id</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#wind">Unique source identifier</a> or station site number</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rec_st_ind</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/state_indicators.html">State indicator for the record</a>**</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">glbl_irad_amt</font></td>
+        <td valign="TOP" width="35%"><a href="RO_Table.html#definition">Global solar irradiation amount</a><br>Kjoules/ sq metre over the observation period</td>
+      </tr>
+ <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">difu_irad_amt</font></td>
+        <td valign="TOP" width="35%"><a href="RO_Table.html#definition">Diffuse solar irradiation amount</a><br>Kjoules/ sq metre over the observation period</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">glbl_irad_amt_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - global irradiation amt</a></td>
+      </tr>
+
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">difu_irad_amt_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - diffuse irradiation amt</a></td>
+      </tr>
+  <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">meto_stmp_time</font></td>
+        <td valign="TOP" width="35%">Met Office receipt stamp time</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">midas_stmp_etime</font></td>
+        <td valign="TOP" width="35%">Elapsed time to storage in MIDAS<br>minutes</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">direct_irad</font></td>
+        <td valign="TOP" width="35%"><a href="RO_Table.html#definition">Direct irradiation amount</a><br>Kjoules/ sq metre over the observation period</td>
+      </tr>
+           <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">irad_bal_amt</font></td>
+        <td valign="TOP" width="35%"><a href="RO_Table.html#definition">Irradiation balance amount</a><br>Kjoules/ sq metre over the observation period</td>
+      </tr>
+          <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">glbl_s_lat_irad_amt</font></td>
+        <td valign="TOP" width="35%"><a href="RO_Table.html#definition">Mean global S latitude radiation</a><br>Kjoules/ sq metre over the observation period</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">glbl_horz_ilmn</font></td>
+        <td valign="TOP" width="35%"><a href="RO_Table.html#definition">Global horizontal illumination</a><br>Kjoules/ sq metre over the observation period</td>
+      </tr>
+ <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">direct_irad_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - direct irradiation</a></td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">irad_bal_amt_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - irradiation balance amt</a></td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">glbl_s_lat_irad_amt_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - global S lat irad amt</a></td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">glbl_horz_ilmn_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - global horizontal illumination</a></td>
+      </tr>
+
+      </table><BR>
+<BR>
+** Details available to registered users only.
+<P>
+More information about the Met Office surface data is available
+in the <A HREF="ukmo_guide.html">documentation provided by the
+Met Office</A>.
+</P>
+
+
+<a name="definition"></a>
+<h3>Definition of radiation terms: </h3>
+<P><blockquote>
+The global irradiance is the total received on a horizontal surface direct from the whole sky including the sun. The diffuse irr     adiance is the radiation on a horizontal surface from the sky other than that direct from the sun. The direct irradiance figure (to      complicate things) is however the value coming directly from the sun itself but measured at normal incidence.</blockquote>
+<blockquote>Direct and diffuse radiation are measured using a horizontally-mounted pyranometer, essentially thermopile with a black-     coated upper surface. For diffuse radiation the sun needs to be obscured using a shading ring or a tracked (i.e. mechanically driven      to follow the sun) shading ball or disc. The direct irradiance is measured using a pyrheliometer, in essence a pyranometer with a t     ube on it blocking out the diffuse radiation. This does naturally require to be pointed at the sun and is normally mounted on a trac     ker.</blockquote>
+   
+     <blockquote>Specifically in MIDAS, the various radiation observation terms are defined as follows:
+    <p><ul>
+    <li><strong>Global solar irradiation amount</strong>: The total solar radiation flux from
+    the whole sky (from UV to near infra-red) - measured using a pyranometer
+    mounted horizontally, facing upwards.
+    <p>
+    <li><strong>Diffuse solar irradiation amount</strong>: The solar radiation from the whole
+    sky other than that coming directly from the sun - measured using a
+    horizontally-mounted pyranometer shaded from the direct radiation from
+    the sun but otherwise open to the sky
+    <p>
+    <li><strong>Direct irradiation amount</strong>: The solar radiation coming directly from
+    the sun but not from the rest of the sky. Measured using a
+    pyrheliometer, which is like a pyranometer but with a tube attached to
+    the front of the sensing element so that it is shaded from the sky and
+    is exposed only to the direct radiation from the sun. As this needs to
+    be pointed at the sun it requires mounting on a tracker to follow the
+    sun's changing position during the day. Please note that there is <strong>no direct radiation data past Dec 1997 in MIDAS</strong>.
+    <p>
+    <li><strong>The irradiation balance amount</strong> is the difference between the global
+    radiation and the reflected radiation from the Earth's surface. We have
+    measured this at some stations in the past, but no more, for example it
+    ceased at Eskdalemuir in 1991. This is not the net radiation, which
+    would need to include the infra-red radiation from the atmosphere and
+    the ground
+    <p>
+    <li><strong>The "mean Global S latitude irradiation"</strong> is a legacy definition
+    which has not been documented and for which MIDAS does not hold data.
+    This has been configured in the past but not further developed.
+    <p>
+    <li><strong>The global horizontal illumination amount</strong> was measured in the past
+    at 4 stations only - Lerwick, Eskdalemuir, Jersey Airport and another
+    non-Met Office site. This is the radiation received by a
+    vertically-mounted pyranometer mounted to face due south. Readings
+    ceased in 1969 at Lerwick and the latest data are from Jersey in 1994.
+    </ul>
+     <p>
+     <strong>NOTE about Diffuse radiation:</strong>
+     <Blockquote>Diffuse radiation measurements have largely been discontinued as a
+     result of automation, which meant that staff were no longer available to
+     adjust the diffuse radiation shading ring. However prior to around
+     2001/2002 a number of stations did record hourly diffuse radiation,
+     nameley Aberport, Aviremore, Aldergrove, Beaufort Park, Camborne,
+     Eskdalemuir, Hemsby, Hillsborough, Leeds Weather Centre, Lerwick and
+     Stornoway. These data are available in MIDAS.
+     <P> Diffuse radiation data only goes up to Jul 2006 in MIDAS.
+     <p>
+     It is possible to calculate diffuse radiation from a combination of
+     direct and global measurements but this cannot be done accurately with
+     hourly average figures as the sun changes position too much during this
+     time period. It is recommended to use the diffuse data where these are
+     available.
+     <p>
+     Note that the Met Office do still record diffuse radiation data at Camborne and
+     Lerwick but these are not recorded in MIDAS; they do however get
+     submitted to the <a href="http://wrdc-mgo.nrel.gov/">World Radiation Data Centre</a> in St Petersburg.
+     Minute resolution values are also provided to the <a href="http://www.bsrn.awi.de/">Baseline Surface Radiation Network</a>.
+    
+     </blockquote>
+
+
+<a name="filter"></a>
+<h3>How to start filtering the rows of data out:</h3>
+<ol>
+<li>As the data arrive at the Met Office it undergoes quality control to check that the data are correct and consistent with the surrounding data points. Whether the process has occured or not is indicated by the <strong>version number</strong> (1 is the one to use as indicated in the table above).
+<p>
+<li>To show the progress of the data through the quality control the various variables will have an associated <strong>_q value</strong> (e.g. direct_irad_q). This _q value will have different values for each record (see details in table above).
+<p>
+<li> While the Met Office MIDAS system overwrites the existing entry in their database the BADC's MIDAS entries do not as the BADC takes snapshots of the the MIDAS database from time to time leading to duplicate entries occuring in our archive. If duplicate records are found, check the associated meto_stmp_time to determine which record is the most recent one - this is the one to use and the other(s) can be ignored. 
+</ol>
+<p>
+
+
+
+
+</BODY>
+</HTML>

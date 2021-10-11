@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20061001T230000Z
+DTEND:20061003T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Edinburgh
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000802F0B8166D6C6010000000000000000100
+ 000008A55DE5EB6020D4EAFF057F0FB7D2252
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:The Scottish Environment Protection A=
+gency is having a conference on the State of Scotland's Environment in Edin=
+burgh on the 2nd and 3rd October in=0D=0AEdinburgh. All aspects of Scotland=
+'s environment will be discussed including the carbon budget, biodiversity =
+and the link between environment and human=0D=0Ahealth. Climate change will=
+ be a major topic, and the programme features presentations and workshops o=
+n climate change predictions and the =0D=0Aimplications for the environment=
+. For further information, including the agenda and registration form, plea=
+se visit the conference website via the attached=0D=0Alink:=0D=0A=0D=0Ahttp=
+://www.sepa.org.uk/changetomorrowtoday/conference/index.html=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:State of Scotland's Environment Conferenc=
+e
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

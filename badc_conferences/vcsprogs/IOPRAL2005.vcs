@@ -1,0 +1,46 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050629T230000Z
+DTEND:20050630T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Rutherford Appleton Laboratory, Didcot, =
+Oxon =20
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000030D530C86930C5010000000000000000100
+ 000007168AF95F1C2FA4DAABCE5059D34EA03
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Half-day Institute of Physics Optical=
+ Group meeting on Fourier Transform Infrared Spectroscopy=0D=0Afollowed by =
+the NERC Molecular Spectroscopy Facility Users' Meeting=0D=0A=0D=0ADate:  T=
+hursday, 30th June 2005=0D=0AVenue: Rutherford Appleton Laboratory, Didcot,=
+ Oxon  =0D=0ADeadline for abstract submission: 30th April 2005=0D=0A=0D=0A =
+The meeting is intended as a forum for presentation and discussion of curre=
+nt developments in Fourier Transform Infrared (FTIR) Spectroscopy.  The=0D=
+=0Ameeting will encompass a wide scope including developments in FTIR instr=
+umentation, detectors, sources, analytical procedures and applications.=0D=
+=0AThe half day meeting will be held at the Rutherford Appleton Laboratory =
+immediately before the NERC Molecular Spectroscopy Facility's (MSF) annual=
+=0D=0AUser Group meeting to facilitate technical exchanges between particip=
+ants in these two events.  A tour of the Molecular Spectroscopy Facility wi=
+ll be=0D=0Aoffered at midday highlighting the MSF's own FTIR spectrometers.=
+  Lunch for participants at either the IoP half day and/or the MSF User gro=
+up meeting=0D=0Awill be sponsored by Bruker Optics. =0D=0A=0D=0A Oral and p=
+oster presentations are solicited on a broad range of topics=0D=0Arelated t=
+o Fourier Transform Infrared Spectroscopy.  Written papers are not=0D=0Areq=
+uired. Suggested topics include:=0D=0A=0D=0A*             Developments in F=
+TIR instrumentation=0D=0A*             Characterisation of FTIR performance=
+=0D=0A*             Analytical procedures=0D=0A*             Developments i=
+n absorption, reflectance and emission spectroscopy=0D=0A*             Indu=
+strial FTIR applications=0D=0A*             Atmospheric remote sensing by F=
+TIR=0D=0A*             Open path measurements=0D=0A*             QA/QC proc=
+edures=0D=0A=0D=0ADeadline for submission of 200 word abstracts is 30th Apr=
+il 2005.  This meeting is organised by Moira Hilton (University of Reading)=
+ from whom more=0D=0Adetails can be obtained.  Dr Moira Hilton, J J Thomson=
+ Physical Laboratory,=0D=0AUniversity of Reading, Whiteknights, Reading, RG=
+6 6AF, Tel +44 (0)118 378=0D=0A8539, Fax +44 (0) 118 975 0203, email m.hilt=
+on@reading.ac.uk =0D=0A=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Institute of Physics Optical Group meetin=
+g on Fourier Transform Infrared Spectroscopy
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

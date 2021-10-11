@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracInterfaceCustomization – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization?version=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization" title="View TracInterfaceCustomization">TracInterfaceCustomization</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A00%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:00+01:00 in Timeline">6 years</a> ago)
+               (<a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization?action=diff&amp;version=1">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="CustomizingtheTracInterface">Customizing the Trac Interface</h1>
+<p>
+</p><div class="wiki-toc"><h4>Table of Contents</h4><ul><li class="False"><a class="False" href="TracGuide.html">Index</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInstall">Installation</a></li><li class="active"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization">Customization</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracPlugins">Plugins</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracUpgrade">Upgrading</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">Configuration</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracAdmin">Administration</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracBackup">Backup</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLogging">Logging</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracPermissions">Permissions</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWiki">The Wiki</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">Wiki Formatting</a></li><li class="False"><a class="False" href="TracTimeline.html">Timeline</a></li><li class="False"><a class="False" href="TracBrowser.html">Repository Browser</a></li><li class="False"><a class="False" href="TracRevisionLog.html">Revision Log</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracChangeset">Changesets</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTickets">Tickets</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWorkflow">Workflow</a></li><li class="False"><a class="False" href="TracRoadmap.html">Roadmap</a></li><li class="False"><a class="False" href="TracQuery.html">Ticket Queries</a></li><li class="False"><a class="False" href="TracReports.html">Reports</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracRss">RSS Support</a></li><li class="False"><a class="False" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracNotification">Notification</a></li></ul></div><p>
+</p>
+<h2 id="Introduction">Introduction</h2>
+<p>
+This page is meant to give users suggestions on how they can customize the look of Trac.  Topics on this page cover editing the HTML templates and CSS files, but not the program code itself.  The topics are intended to show users how they can modify the look of Trac to meet their specific needs.  Suggestions for changes to Trac's interface applicable to all users should be filed as tickets, not listed on this page.
+</p>
+<h2 id="ProjectLogoandIcon">Project Logo and Icon</h2>
+<p>
+The easiest parts of the Trac interface to customize are the logo and the site icon.  Both of these can be configured with settings in <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">trac.ini</a>.
+</p>
+<p>
+The logo or icon image should be put in a folder named "htdocs" in your project's environment folder.  (<em>Note: in projects created with a Trac version prior to 0.9 you will need to create this folder</em>)
+</p>
+<blockquote>
+<p>
+<em>Note: you can actually put the logo and icon anywhere on your server (as long as it's accessible through the web server), and use their absolute or server-relative URLs in the configuration.</em>
+</p>
+</blockquote>
+<p>
+Now configure the appropriate section of your <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">trac.ini</a>:
+</p>
+<h3 id="Logo">Logo</h3>
+<p>
+Change the <tt>src</tt> setting to <tt>site/</tt> followed by the name of your image file.  The <tt>width</tt> and <tt>height</tt> settings should be modified to match your image's dimensions (the Trac chrome handler uses "<tt>site/</tt>" for files within the project directory <tt>htdocs</tt> and "<tt>common/</tt>" for the common ones). Note that 'site/' is not a placeholder for your project name, it is the actual prefix that should be used (literally). For example, if your project is named 'sandbox', and the image file is 'red_logo.gif' then the 'src' setting would be 'site/red_logo.gif', not 'sandbox/red_logo.gif'.
+</p>
+<pre class="wiki">[header_logo]
+src = site/my_logo.gif
+alt = My Project
+width = 300
+height = 100
+</pre><h3 id="Icon">Icon</h3>
+<p>
+Icons should be a 16x16 image in <tt>.gif</tt> or <tt>.ico</tt> format.  Change the <tt>icon</tt> setting to <tt>site/</tt> followed by the name of your icon file.  Icons will typically be displayed by your web browser next to the site's URL and in the <tt>Bookmarks</tt> menu.
+</p>
+<pre class="wiki">[project]
+icon = site/my_icon.ico
+</pre><p>
+Note though that this icon is ignored by Internet Explorer, which only accepts a file named <tt></tt>favicon.ico<tt></tt> at the root of the host. To make the project icon work in both IE and other browsers, you can store the icon in the document root of the host, and reference it from <tt></tt>trac.ini<tt></tt> as follows:
+</p>
+<pre class="wiki">[project]
+icon = /favicon.ico
+</pre><p>
+Should your browser have issues with your favicon showing up in the address bar, you may put a "?" (less the quotation marks) after your favicon file extension. 
+</p>
+<pre class="wiki">[project]
+icon = /favicon.ico?
+</pre><h2 id="CustomNavigationEntries">Custom Navigation Entries</h2>
+<p>
+The new [mainnav] and [metanav] can now be used to customize the text and link used for the navigation items, or even to disable them (but not for adding new ones).
+</p>
+<p>
+In the following example, we rename the link to the Wiki start "Home", and hide the "<a class="missing wiki">Help/Guide?</a>". We also make the "View Tickets" entry link to a specific report .
+</p>
+<pre class="wiki">[mainnav]
+wiki.label = Home
+tickets.href = /report/24
+
+[metanav]
+help = disabled
+</pre><p>
+See also <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracNavigation">TracNavigation</a> for a more detailed explanation of the mainnav and metanav terms.
+</p>
+<h2 id="SiteAppearance">Site Appearance</h2>
+<p>
+Trac is using <a class="ext-link" href="http://genshi.edgewall.org"><span class="icon"> </span>Genshi</a> as the templating engine. Documentation is yet to be written, in the meantime the following tip should work.
+</p>
+<p>
+Say you want to add a link to a custom stylesheet, and then your own
+header and footer. Save the following content as 'site.html' inside your projects templates directory (each Trac project can have their own site.html), e.g. <tt>/path/to/env/templates/site.html</tt>:
+</p>
+<div class="code"><pre><span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/1999/xhtml"</span>
+      <span class="na">xmlns:py=</span><span class="s">"http://genshi.edgewall.org/"</span>
+      <span class="na">py:strip=</span><span class="s">""</span><span class="nt">&gt;</span>
+
+  <span class="c">&lt;!--! Add site-specific style sheet --&gt;</span>
+  <span class="nt">&lt;head</span> <span class="na">py:match=</span><span class="s">"head"</span> <span class="na">py:attrs=</span><span class="s">"select('@*')"</span><span class="nt">&gt;</span>
+    ${select('*|comment()|text()')}
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span>
+          <span class="na">href=</span><span class="s">"${href.chrome('site/style.css')}"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+
+  <span class="nt">&lt;body</span> <span class="na">py:match=</span><span class="s">"body"</span> <span class="na">py:attrs=</span><span class="s">"select('@*')"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!--! Add site-specific header --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"siteheader"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--! Place your header content here... --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+    ${select('*|text()')}
+
+    <span class="c">&lt;!--! Add site-specific footer --&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"sitefooter"</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--! Place your footer content here... --&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div><p>
+Those who are familiar with XSLT may notice that Genshi templates bear some similarities. However, there are some Trac specific features - for example <strong>${href.chrome('site/style.css')}</strong> attribute references template placed into environment's <em>htdocs/</em>  In a similar fashion <strong>${chrome.htdocs_location}</strong> is used to specify common <em>htdocs/</em> directory from Trac installation.
+</p>
+<p>
+<tt>site.html</tt> is one file to contain all your modifications. It usually works by the py:match (element or attribute), and it allows you to modify the page as it renders - the matches hook onto specific sections depending on what it tries to find
+and modify them.
+See <a class="ext-link" href="http://groups.google.com/group/trac-users/browse_thread/thread/70487fb2c406c937/"><span class="icon"> </span>this thread</a> for a detailed explanation of the above example <tt>site.html</tt>.
+A site.html can contain any number of such py:match sections for whatever you need to modify. This is all <a class="ext-link" href="http://genshi.edgewall.org/"><span class="icon"> </span>Genshi</a>, so the docs on the exact syntax can be found there.
+</p>
+<p>
+Example snippet of adding introduction text to the new ticket form (hide when preview):
+</p>
+<div class="code"><pre><span class="nt">&lt;form</span> <span class="na">py:match=</span><span class="s">"div[@id='content' and @class='ticket']/form"</span> <span class="na">py:attrs=</span><span class="s">"select('@*')"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;py:if</span> <span class="na">test=</span><span class="s">"req.environ['PATH_INFO'] == '/newticket' and (not 'preview' in req.args)"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Please make sure to search for existing tickets before reporting a new one!<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/py:if&gt;</span>
+  ${select('*')} 
+<span class="nt">&lt;/form&gt;</span>
+</pre></div><p>
+This example illustrates a technique of using <strong><tt>req.environ['PATH_INFO']</tt></strong> to limit scope of changes to one view only. For instance, to make changes in site.html only for timeline and avoid modifying other sections - use  <em><tt>req.environ['PATH_INFO'] == '/timeline'</tt></em> condition in &lt;py:if&gt; test.
+</p>
+<p>
+More examples snippets for <tt>site.html</tt> can be found at <a class="ext-link" href="http://trac.edgewall.org/intertrac/wiki%3ACookBook/SiteHtml" title="wiki:CookBook/SiteHtml in Trac project trac"><span class="icon"> </span>CookBook/SiteHtml</a>.
+</p>
+<p>
+Example snippets for <tt>style.css</tt> can be found at <a class="ext-link" href="http://trac.edgewall.org/intertrac/wiki%3ACookBook/SiteStyleCss" title="wiki:CookBook/SiteStyleCss in Trac project trac"><span class="icon"> </span>CookBook/SiteStyleCss</a>.
+</p>
+<p>
+If the environment is upgraded from 0.10 and a <tt>site_newticket.cs</tt> file already exists, it can actually be loaded by using a workaround - providing it contains no <a class="missing wiki">ClearSilver?</a> processing. In addition, as only one element can be imported, the content needs some sort of wrapper such as a <tt>&lt;div&gt;</tt> block or other similar parent container. The XInclude namespace must be specified to allow includes, but that can be moved to document root along with the others:
+</p>
+<div class="code"><pre><span class="nt">&lt;form</span> <span class="na">py:match=</span><span class="s">"div[@id='content' and @class='ticket']/form"</span> <span class="na">py:attrs=</span><span class="s">"select('@*')"</span>
+        <span class="na">xmlns:xi=</span><span class="s">"http://www.w3.org/2001/XInclude"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;py:if</span> <span class="na">test=</span><span class="s">"req.environ['PATH_INFO'] == '/newticket' and (not 'preview' in req.args)"</span><span class="nt">&gt;</span> 
+    <span class="nt">&lt;xi:include</span> <span class="na">href=</span><span class="s">"site_newticket.cs"</span><span class="nt">&gt;&lt;xi:fallback</span> <span class="nt">/&gt;&lt;/xi:include&gt;</span>
+  <span class="nt">&lt;/py:if&gt;</span>
+  ${select('*')} 
+<span class="nt">&lt;/form&gt;</span>
+</pre></div><p>
+Also note that the <tt>site.html</tt> (despite its name) can be put in a common templates directory - see the <tt>[inherit] templates_dir</tt> option. This could provide easier maintainence (and a migration path from 0.10 for larger installations) as one new global <tt>site.html</tt> file can be made to include any existing header, footer and newticket snippets.
+</p>
+<h2 id="ProjectList">Project List</h2>
+<p>
+You can use a custom Genshi template to display the list of projects if you are using Trac with multiple projects.  
+</p>
+<p>
+The following is the basic template used by Trac to display a list of links to the projects.  For projects that could not be loaded it displays an error message. You can use this as a starting point for your own index template.
+</p>
+<div class="code"><pre><span class="cp">&lt;!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/1999/xhtml"</span>
+      <span class="na">xmlns:py=</span><span class="s">"http://genshi.edgewall.org/"</span>
+      <span class="na">xmlns:xi=</span><span class="s">"http://www.w3.org/2001/XInclude"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Available Projects<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Available Projects<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">py:for=</span><span class="s">"project in projects"</span> <span class="na">py:choose=</span><span class="s">""</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">py:when=</span><span class="s">"project.href"</span> <span class="na">href=</span><span class="s">"$project.href"</span>
+           <span class="na">title=</span><span class="s">"$project.description"</span><span class="nt">&gt;</span>$project.name<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;py:otherwise&gt;</span>
+          <span class="nt">&lt;small&gt;</span>$project.name: <span class="nt">&lt;em&gt;</span>Error<span class="nt">&lt;/em&gt;</span> <span class="nt">&lt;br</span> <span class="nt">/&gt;</span> ($project.description)<span class="nt">&lt;/small&gt;</span>
+        <span class="nt">&lt;/py:otherwise&gt;</span>
+      <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div><p>
+Once you've created your custom template you will need to configure the webserver to tell Trac where the template is located (pls verify ... not yet changed to 0.11):
+</p>
+<p>
+For <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracModWSGI">mod_wsgi</a>:
+</p>
+<pre class="wiki">os.environ['TRAC_ENV_INDEX_TEMPLATE'] = '/path/to/template'
+</pre><p>
+For <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracFastCgi">FastCGI</a>:
+</p>
+<pre class="wiki">FastCgiConfig -initial-env TRAC_ENV_PARENT_DIR=/parent/dir/of/projects \
+              -initial-env TRAC_ENV_INDEX_TEMPLATE=/path/to/template
+</pre><p>
+For <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracModPython">mod_python</a>:
+</p>
+<pre class="wiki">PythonOption TracEnvParentDir /parent/dir/of/projects
+PythonOption TracEnvIndexTemplate /path/to/template
+</pre><p>
+For <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracCgi">CGI</a>:
+</p>
+<pre class="wiki">SetEnv TRAC_ENV_INDEX_TEMPLATE /path/to/template
+</pre><p>
+For <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracStandalone">TracStandalone</a>, you'll need to set up the <tt>TRAC_ENV_INDEX_TEMPLATE</tt> environment variable in the shell used to launch tracd:
+</p>
+<ul><li>Unix
+<div class="code"><pre><span class="nv">$ </span><span class="nb">export </span><span class="nv">TRAC_ENV_INDEX_TEMPLATE</span><span class="o">=</span>/path/to/template
+</pre></div></li><li>Windows
+<div class="code"><pre><span class="nv">$ </span><span class="nb">set </span><span class="nv">TRAC_ENV_INDEX_TEMPLATE</span><span class="o">=</span>/path/to/template
+</pre></div></li></ul><h2 id="ProjectTemplates">Project Templates</h2>
+<p>
+The appearance of each individual Trac environment (that is, instance of a project) can be customized independently of other projects, even those hosted by the same server. The recommended way is to use a <tt>site.html</tt> template (see <a class="wiki" href="TracInterfaceCustomization%3Fversion=1.html#SiteAppearance">#SiteAppearance</a>) whenever possible. Using <tt>site.html</tt> means changes are made to the original templates as they are rendered, and you should not normally need to redo modifications whenever Trac is upgraded. If you do make a copy of <tt>theme.html</tt> or any other Trac template, you need to migrate your modifiations to the newer version - if not, new Trac features or bug fixes may not work as expected.
+</p>
+<p>
+With that word of caution, any Trac template may be copied and customized. The default Trac templates are located inside the installed Trac egg (<tt>/usr/lib/pythonVERSION/site-packages/Trac-VERSION.egg/trac/templates, .../trac/ticket/templates, .../trac/wiki/templates, ++</tt>). The <a class="wiki" href="TracInterfaceCustomization%3Fversion=1.html#ProjectList">#ProjectList</a> template file is called <tt>index.html</tt>, while the template responsible for main layout is called <tt>theme.html</tt>. Page assets such as images and CSS style sheets are located in the egg's <tt>trac/htdocs</tt> directory.
+</p>
+<p>
+However, do not edit templates or site resources inside the Trac egg - installing Trac again can completely delete your modifications. Instead use one of two alternatives:
+</p>
+<ul><li>For a modification to one project only, copy the template to project <tt>templates</tt> directory.
+</li><li>For a modification shared by several projects, copy the template to a shared location and have each project point to this location using the <tt>[inherit] templates_dir =</tt> trac.ini option.
+</li></ul><p>
+Trac resolves requests for a template by first looking inside the project, then in any inherited templates location, and finally inside the Trac egg.
+</p>
+<p>
+Trac caches templates in memory by default to improve performance. To apply a template you need to restart the server.
+</p>
+<hr />
+<p>
+See also <a class="wiki" href="TracGuide.html">TracGuide</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">TracIni</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <script type="text/javascript">
+        jQuery.loadStyleSheet("/preparde/pygments/trac.css", "text/css");
+    </script>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization?version=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

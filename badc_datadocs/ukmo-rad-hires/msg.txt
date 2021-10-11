@@ -1,0 +1,16 @@
+
+A new batch of high resolution radiosonde data is now available from the BADC.
+==============================================================================
+
+The dataset now includes more recent data and data from extra stations. 
+In particular 2 years of data from the Mount Pleasant (Falklands) site 
+is included. Data from the Met Office autosonde sites will be made available 
+as soon we have software to read it.
+
+
+(See http://badc.nerc.ac.uk/data/rad-highres/ and http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ukmo-rad-hires)
+
+ 
+BADC Support
+05th December 2002
+

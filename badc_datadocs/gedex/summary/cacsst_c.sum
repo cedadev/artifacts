@@ -1,0 +1,38 @@
+SUMMARY
+"SUM_DATA_PRODUCT"  "CACSST_C"
+"SUM_DATA_SET"		"CAC_SST"
+"SUM_DATATYPE"		"CLIMATOLOGY"
+"SUM_BEGIN_DATE"	"01-Jan-1950"
+"SUM_END_DATE"		"31-Dec-1979"
+"SUM_PROCESS_LEVEL"	"3"
+"CONTRIBUTOR"		"Reynolds"
+"ARCHIVE_NAME"		"NOAA, NCDS"
+"ARCHIVE_STATUS"	"Updated every month"
+"SUM_DATA_SET2"		"CAC_SST"
+"DS_DESCRIPTION"	"Climate Analysis Center Sea Surface Temperature"
+"SUM_DATATYPE2"		"CLIMATOLOGY"
+"DT_DESCRIPTION"    "COADS / Ice Limit Climatology"
+"SPATIAL1"        "Global"   
+"SPATIAL2"        " "
+"SPATIAL3"        "2 X 2 deg"
+"SPATIAL4"        " "
+"TEMPORAL1"       "January 1950 to December 1979""
+"TEMPORAL2"       " "
+"TEMPORAL3"       "Monthly climatology"
+"TEMPORAL4"       " "
+"PRODUCT1"        "Available through NCDS in Common Data Format (CDF)"
+"PRODUCT2"        "One 1600-bpi ASCII tape (file four)"
+"PRODUCT3"        "Available on GEDEX CD-ROM "
+"PRODUCT4"        " "
+EOF
+
+PARAMETERS
+"SST"       "Monthly Mean SST"  "Deg C"
+EOF
+
+SOURCES
+"NOAA-7"          "AVHRR"
+"NOAA-11"         "AVHRR"
+"BUOYS"           "IN-SITU"
+"SHIPS"           "IN-SITU"
+EOF

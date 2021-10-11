@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070925T230000Z
+DTEND:20070927T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:British Antarctic Survey, Cambridge, UK.
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000070F1FAB6B5E0C7010000000000000000100
+ 0000022D1CC01A3473D41953E6D0B50568350
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:UK Sea ice meeting in BAS on the 26th=
+ and 27th Sept=0D=0A=0D=0ARegistration for the UK Sea ice meeting in BAS on=
+ the 26th and 27th Sept =0D=0Ais now open at:=0D=0A=0D=0Ahttp://www.bas.ac.=
+uk/about_bas/events/UK-SIG2007/index.php =0D=0A=0D=0AWe have arranged to ma=
+ke a block booking of accommodation in New Hall (a =0D=0ACambridge Universi=
+ty college fairly close to BAS), which costs =A364.50 =0D=0Aincluding break=
+fast. (Unless you actually live in Cambridge, you will =0D=0Afind it hard t=
+o find cheaper and/or more convenient accommodation than =0D=0Athis.)=0D=0A=
+=0D=0AAlso, we propose to have a meal in New Hall on the night of the 26th =
+=0D=0ASept which costs =A330 (this includes some wine and soft drinks).=0D=
+=0A=0D=0AYou can make a secure payment for the accommodation and/or meal us=
+ing =0D=0Athe web site.=0D=0A=0D=0ANote: There is no cost to attend the mee=
+ting itself, but you need to =0D=0Aregister by the 3rd Sept, particularly i=
+f you want to stay in New Hall =0D=0Aor attend the meal.=0D=0A=0D=0AIf you =
+would like to give a talk or poster, please upload your =0D=0Apresentation =
+details at the web site by 10th Sept *at the latest*. If =0D=0Ayou particul=
+arly want to give a poster, rather than a talk, please make =0D=0Athis clea=
+r on the form.=0D=0A=0D=0Ahttp://www.bas.ac.uk/about_bas/events/UK-SIG2007/=
+index.php =0D=0A=0D=0APlease pass this email on to anybody you think might =
+be interested in =0D=0Athe meeting.=0D=0A=0D=0ADr. Daniel Feltham=0D=0ABAS =
+Reader in Polar Oceanography=0D=0ACentre for Polar Observation & Modelling,=
+=0D=0AUniversity College London, UK=0D=0Atel: 020 7679 3017; fax: 020 7679 =
+7883;=0D=0Ae-mail: dlf@cpom.ucl.ac.uk (UCL) or=0D=0A         dlfel@bas.ac.u=
+k (BAS)=0D=0Aweb: http://www.cpom.org and=0D=0A      http://www.cpom.org/uk=
+seaicegroup =0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:UK Sea ice meeting=20
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

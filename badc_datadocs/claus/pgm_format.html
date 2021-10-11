@@ -1,0 +1,108 @@
+<HTML>
+<!--This file created 22/08/02 11:40 pm by Claris Home Page version 3.0-->
+<HEAD>
+   <TITLE>BADC Cloud Archive User Service (CLAUS) PGM Format</TITLE>
+   <META NAME=GENERATOR CONTENT="Claris Home Page 3.0">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<P><IMG SRC="clauss.gif" ALT="CLAUS" WIDTH=118 HEIGHT=43 ALIGN=bottom></P>
+
+<H1>Cloud Archive User Service (CLAUS)</H1>
+
+<P>
+
+<HR ALIGN=left>
+
+</P>
+
+<H2>PGM (Portable Grey Map) Format</H2>
+
+<H3>DESCRIPTION</H3>
+
+<P>The Portable Greymap Format is a lowest common denominator
+greyscale file format. The file consists of an ASCII header followed
+by binary data values held as unsigned binary bytes.</P>
+
+<P>The header may optionally contain comment lines interspersed
+anywhere between the "magic number" line and the line containing the
+maximum grey value. Comments lines are preceeded by the hash '#'
+character, which must appear as the first character. The maximum
+length of a comment line (including the hash) is 70 characters.</P>
+
+<P>The format of the header is:</P>
+
+<BLOCKQUOTE>- a "magic number" for identifying the file type as
+   binary greyscale, "P5".
+   
+   <P>- whitespace (blanks, TABs, CRs, LFs).</P>
+   
+   <P>- <B>width</B> value, in ASCII decimal.</P>
+   
+   <P>- whitespace.</P>
+   
+   <P>- <B>height</B> value , in ASCII decimal.</P>
+   
+   <P>- whitespace.</P>
+   
+   <P>- maximum grey value, in ASCII decimal. Normally 255 (the
+   maximum value for a byte).</P>
+   
+   <P>- whitespace (normally a single CR character).</P></BLOCKQUOTE>
+
+<P>The data consists of <B>width</B> * <B>height</B> grey values, in
+binary unsigned bytes, arranged in row-wise order.</P>
+
+<P>&nbsp;</P>
+
+<P>A PGM file with a minimal header may therefore consist of:</P>
+
+<BLOCKQUOTE><FONT COLOR="#990066">P5 100 200 255 {data}</FONT></BLOCKQUOTE>
+
+<P>&nbsp;</P>
+
+<H3>SAMPLE CLAUS PGM DAILY FILE HEADER&nbsp;</H3>
+
+<P>Data files in the CLAUS archive have headers containing
+CLAUS-specific information held within comment lines:</P>
+
+<BLOCKQUOTE><PRE>P5
+# Type: BT (CLAUS Brightness Temperature Image Data)
+# Resolution: 0.5 (Half degree)
+# Synoptic Date: 1994061315
+# Source Channel: 2 (TIR)
+# Satellites: 13 63 54 32 43 44 00 00
+# Creation Date: 2001/10/03 13:41:26
+# Revision: 4.50 (ESSC)
+720 359
+255
+   <FONT COLOR="#CC3300">{ &#133; &lt;width&gt; X &lt;height&gt; unsigned byte data values in sequence,<BR>  starting at the top left corner of image and proceeding row-wise&#133; }
+   </FONT></PRE></BLOCKQUOTE>
+
+<P>For a full explanation of the information contained in the header
+refer to the <A HREF="/cgi-bin/data_browser/data_browser/badc/claus/doc/userguide.pdf">CLAUS
+User Guide</A>.</P>
+
+<H3>MANIPULATING PGM FILES</H3>
+
+<P>PGM files are relatively easy to handle using user-written 'C'
+programs.</P>
+
+<UL>
+   <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/claus/software/example.c">A C example for manipulating CLAUS
+   files.</A></LI>
+</UL>
+
+<P>Utilities:</P>
+
+<UL>
+   <LI><A HREF="http://www.acme.com/software/pbmplus/">PBMPLUS</A> is
+   a toolkit for converting various image formats to and from PGM and
+   other related portable formats.</LI>
+   
+   <LI><A HREF="http://www.imagemagick.org/">ImageMagick</A>
+   is a suite of Unix tools that can be used to display and
+   manipulate PGM (and other) files.</LI>
+</UL>
+<p></p>
+</BODY>
+</HTML>

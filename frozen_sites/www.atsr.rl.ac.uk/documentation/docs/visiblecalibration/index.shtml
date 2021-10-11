@@ -1,0 +1,321 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>Visible Calibration Tables
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <!-- ATSR-2 Visible Calibration tables                                    -->
+
+
+<!-- Important information -->
+<H2>Data Tables</H2>
+
+   
+      <P>Processing of the ATSR-2 visible calibration tables has been transferred
+      from a Vax station 4000 to an Alpha running VMS.  To reflect this change
+      the file versions have been revised to V1.4 for the uncorrected table and V2.1 
+      for the corrected table.  The calibration algorithms are unaffected.
+      All users should check and update any relevant 
+      bookmarks so that they get the correct files. </P>
+      
+<P> <IMG src="../../../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+  <A href="tables/corrected/index.shtml">Corrected Calibration table</A><BR>
+  <IMG src="../../../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+  <A href="tables/uncorrected/index.shtml">Uncorrected Calibration table</A></P>
+<P><A NAME="important"></A></P>
+<H2>Important Information</H2>
+<P>Users must note that as from July 1999 the calibration table has been corrected for long-term drift and a bias in the 1.6µm calibration level.  For those who have already included these corrections or do not wish to reprocess their data, an uncorrected version of the table will still be maintained at this site.</P>
+
+
+<!-- Calibration -->
+
+<H2>How to calibrate ATSR-2 Reflectance Images</H2>
+
+<P>Data from the reflectance channels of ATSR-2 are un-calibrated in SADIST-2 products created by the current version of the software.  The data in such products have the unit "normalized count" as described in ref. [<A HREF="index.shtml#ref1">1</A>]. </P>
+<P>To convert these data to top-of-atmosphere fractional-reflectance units requires only linear scaling by a single conversion factor (one-per-channel).  These conversion factors have been derived using data from the on-board visible calibration system (VISCAL) which is described in detail in ref. [<A HREF="index.shtml#ref2">2</A>].  Users can convert their data from counts to reflectance using a calibration Look-Up-Table. The LUT consists of a time series of conversion factors; each record in the table consists of (from left-to-right):</P>
+
+<UL>
+	<LI>A simple entry number<BR>
+	<LI>The mission time in "SADIST time"<BR>
+	<LI>The mission time in UTC days since 1st January 1995 (1.00000 days)<BR>
+	<LI>The 1.6 micron conversion factor<BR>
+	<LI>The 0.87 micron conversion factor<BR>
+	<LI>The 0.67 micron conversion factor<BR>
+	<LI>The 0.56 micron conversion factor<BR>
+</UL>
+
+<P>The "SADIST time" is the "acquisition time" in the product name - as explained 
+  on page 58 of ref. [<A HREF="index.shtml#ref1">1</A>], and is in the form YYMMDDhhmm. E.g. 
+  9506010652 means the calibration refers to a measurement made at 0652h on June 
+  1st, 1995. The simplest way to use the table is to locate the SADIST acquisition 
+  time closest to that in the name of any product in question and then select 
+  the conversion factor, F, for the appropriate channel. The conversion from counts, 
+  C, to top-of-atmosphere reflectance, r, is then </P>
+<BLOCKQUOTE>
+  <P><I>R*µ0 = F x C = pi*L/I0</I></P>
+</BLOCKQUOTE>
+<P>where, <I>µ0</I> is the cosine of the solar zenith angle, and can be derived from the information in the SADIST-2 product header. <I>L</I> is the detected radiance and <I>I0</I> is the solar irradiance.  Because the calibration system uses the Sun as its source, no correction factor is required for sun earth distance.</P>
+<P>Note: If the conversion factor for any channel is 0.00000000, this indicates that no valid measurement is available for this point in time.  The next nearest time record must be used instead.</P>
+
+
+<!-- Drift Correction -->
+
+<H2>Drift Correction</H2>
+<P>As with any optical system, there will be degradation of the optical surfaces 
+  due to high energy particles and UV radiation, resulting in a gradual drift 
+  of the calibration level. Using data from a number of large, spatially uniform 
+  and temporally stable sites, we have been able to determine the calibration 
+  drifts (see ref. [<A HREF="index.shtml#ref2">2</A>]). The analysis yielded a drift function 
+  of the form</P>
+<BLOCKQUOTE>
+  <P><I>D = exp(-kt/365)</I> </P>
+</BLOCKQUOTE>
+<P>where t is the number of days since launch on 28th Apr 1995. The drift rates per year, k, for each channel are given in the table below.</P>
+
+<TABLE BORDER WIDTH="25%" >
+	<CAPTION ALIGN=BOTTOM>Calibration Drift Rates</CAPTION>
+	<TR> <TD>Wavelengh</TD> <TD>Drift Rate</TD> </TR>
+	<TR> <TD>1.6&micro;m</TD> <TD>0.004</TD> </TR>
+	<TR> <TD>0.87&micro;m&nbsp;</TD> <TD>0.017</TD> </TR>
+	<TR> <TD>0.66&micro;m</TD> <TD>0.013</TD> </TR>
+	<TR> <TD>0.56&micro;m</TD> <TD>0.016</TD> </TR>
+</TABLE>
+
+
+<P>The corrected calibration factor for each channel is</P>
+<BLOCKQUOTE>
+  <P><I>F' = F x D </I></P>
+</BLOCKQUOTE>
+<!-- 1.6µm Calibration -->
+
+<H2>1.6µm Calibration</H2>
+
+<P>Various in-situ campaigns and vicarious analysis methods have been employed 
+  to verify the accuracy of the ATSR-2 visible channels. Comparisons between the 
+  ATSR-2 measurements and the expected reflectances show that the calibrations 
+  of the 0.87µm, 0.66µm and 0.56µm channels are within the stated accuracy (±3%). 
+  However, there is a consistent bias at 1.6µm that showed significantly higher 
+  than expected reflectances. The average bias factor from all of the validation 
+  methods was 1.06. The corrected 1.6µm calibration (including drift) is therefore</P>
+<BLOCKQUOTE>
+  <P><I>F' = (F x D)/1.06</I></P>
+</BLOCKQUOTE>
+<!-- References -->
+
+<H2>References</H2>
+
+<P><A NAME="ref1"></A>[1] SADIST-2 v100 Products" ER-TN-RAL-AT-2164; Space Science Dept, RAL, September, 1995</P>
+<P><A NAME="ref2"></A>[2] Smith D.L., Read P.D. and Mutlow C.T., 1997, 'The Calibration 
+  of the Visible/Near Infra-Red Channels of the Along-Track Scanning Radiometer-2 
+  (ATSR-2)' in Sensors, Systems and Next-Generation Satellites, Hiroyuki Fujisadsa, 
+  Editor, Proceedings of SPIE Vol. 3221, 53-62</P>
+
+
+<!-- Links Related to this page --> 
+<p><FORM method="get" action="http://www.badc.nerc.ac.uk/cgi-bin/mailit.cgi.pl">
+  <TABLE border="0">
+    <TR> 
+      <TD> 
+        <INPUT type=hidden name="subject" value="/documentation/docs/visiblecalibration/index.shtml ( Visible Calibration Tables
+ )"> 
+        <INPUT type=hidden name="recipient" value="wwwadmin@www.atsr.rl.ac.uk">
+        <INPUT type=hidden name="env_report" value="REMOTE_HOST, REMOTE_ADDR, HTTP_USER_AGENT">
+	<FONT size="-2"><B>Did you find this information helpful?</B></FONT><FONT size="-2"> 
+        Yes 
+        <INPUT type="radio" value="Yes" name="radiobutton">
+        No 
+        <INPUT type="radio" name="radiobutton" value="No"><BR>
+        <INPUT type="submit" name="Submit" value="Submit">
+        <INPUT type="reset" name="Reset" value="Reset"> 
+	 &nbsp<a href = "../../../feedback/index.shtml">Give details...</a></FONT>
+      </TD>
+ 
+    </TR>
+  </TABLE>
+</FORM>
+
+</p>
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Tuesday, 04-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  
+
+  <channel>
+    <title>PREPARDE - Blog</title>
+    <link>http://proj.badc.rl.ac.uk/preparde/blog</link>
+    <description></description>
+    <language>en-US</language>
+    <generator>Trac 0.12.2</generator>
+    <image>
+      <title>PREPARDE</title>
+      <url>http://proj.badc.rl.ac.uk/preparde/chrome/common/trac_banner.png</url>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog</link>
+    </image>
+    <item>
+      <title>Running a project, or tips, tricks and tools for the project manager</title>
+      <dc:creator>Sarah Callaghan</dc:creator>
+      <pubDate>Thu, 27 Sep 2012 13:00:07 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/ToolsForProjects</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/ToolsForProjects</guid>
+      <description>&lt;p&gt;
+As the project manager, I've spent a lot of my time recently sorting out things which will (hopefully) help the project to run smoothly. So, besides the usual project and workpackage plan, I've got this site and blog set up and have introduced the team to a few other things I've found useful.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Every project needs good communications, and having a project-specific mailing list is definitely the way to go, as it's one convenient place to send emails to all the partners, without having to make sure everyone's name is in the "To:" field. I use JISCmail (&lt;a class="ext-link" href="http://www.jiscmail.ac.uk/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.jiscmail.ac.uk/&lt;/a&gt;) which is free for members of the academic and research communities, and has never given me any problems.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Trying to find a good date and time for meetings/teleconferences is always tricky. I use Doodle (&lt;a class="ext-link" href="http://doodle.com/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://doodle.com/&lt;/a&gt;) to set up sets of dates that people can then express a preference on. Yes, it's a commercial service, but it's free for basic use. I also like their yes/no/maybe options for responses to the poll.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;At the moment, we're mainly passing documents around via email, which isn't ideal because of lack of version control etc. (though with only a few people working on the documents at any time, it's manageable). Later on, I'm expecting to make a bit more use of Google Docs (now Google Drive &lt;a class="ext-link" href="https://drive.google.com"&gt;&lt;span class="icon"&gt; &lt;/span&gt;https://drive.google.com&lt;/a&gt;) to share and edit documents on-line.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;We've got partners spread out across the UK and also in the USA as well, so a key part of our interactions are through the monthly teleconference. We've used skype (and use it for the weekly project management chat) though the sound quality can be variable, so we've also used a commercial teleconference system. Jury's still out for this particular tool!
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;For keeping track of my "things to do", I use a combination of pen and paper (no need to worry about batteries) and flags and appointments in my Outlook. I have had Remember the Milk (&lt;a class="ext-link" href="http://www.rememberthemilk.com/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.rememberthemilk.com/&lt;/a&gt;) recommended as a good tool for managing the to-do list.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Finally, this site is itself is a wiki, and all the project partners are encouraged to create and edit pages as needed. We still need to sort out a proper, secure, project document repository for all our working documents, but in the meantime, we'll keep building this site as a first stop for information about the project.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+So, that's my tools and tips for running a project. If anyone knows of any others, I'd love to hear about them!
+&lt;/p&gt;
+</description>
+      <category>ProjectManagement</category>
+    </item>
+   </channel>
+</rss>

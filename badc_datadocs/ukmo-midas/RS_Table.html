@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Sub-hourly Rainfall Data Table</TITLE>
+  <!-- Created 16th June 2006 -->
+  <!-- Author: Belinda Robinson BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Sub-hourly Rainfall data - Columns in the RS table <BR CLEAR="ALL"></H1>
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+      <b>Description: </b>This entity contains rainfall tip amounts with a time resolution of one 
+	  minute, from SSER. The identifier is DCNN or rainfall station number. Non-key attributes are 
+	  taken from mp.srain. There are no QC attributes because, in May 1995, OPR confirmed that 
+	  there would not be any quality control performed on sub-hourly rainfall.<br><br>
+<P>
+For the convenience of users, the RS file column headers are available for download in <a href="Headers/RS_Column_Headers.xlsx    ">Excel</a> or as a <a href="Headers/RS_Column_Headers.csv">comma separated text file</a>
+<P>
+<table border="1" cellspacing="0" width="95%">
+      <tr> 
+        <td valign="TOP" width="5%" align="center"><b>PK</b></td>
+        <td valign="TOP" width="40%"><b>Attribute</b></td> 
+        <td valign="TOP" width="35%"><b>Description / Units</b></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_time</font></td>
+        <td valign="TOP" width="35%">Date and time of observation</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id_type</font></td>
+        <td valign="TOP" width="35%">Identifier type</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_domain_name</font></td>
+        <td valign="TOP" width="35%"><a href="met_domain.html">Message type</a></td>              
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_id</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#wind">Unique source identifier</a> or station site number</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prcp_tip_amt</font></td>
+        <td valign="TOP" width="35%">Precipitation tip amount<br>0.001 mm</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rec_st_ind</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/state_indicators.html">State indicator for the record</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">meto_stmp_time</font></td>
+        <td valign="TOP" width="35%">Met Office receipt stamp time</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">midas_stmp_etime</font></td>
+        <td valign="TOP" width="35%">Elapsed time to storage in MIDAS<br>minutes</td>
+      </tr>
+      </table><BR>
+<BR>
+** Details available to registered users only.
+<P>
+More information about the Met Office surface data is available
+in the <A HREF="ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+</BODY>
+</HTML>

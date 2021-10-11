@@ -1,0 +1,294 @@
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>BADC: HITRAN</title>
+</head>
+
+<body bgcolor="#ffffff">
+<h1><font color="#333399">HITRAN Format</font></h1>
+<hr>
+
+<p>
+The HITRAN format is the format defined by the
+<a href="http://www.hitran.com/">High-resolution Transmission Molecular
+Absorption (HITRAN) database</a>.
+It has been widely adopted by the community of spectroscopists and modellers
+using spectrospcopic data.
+<br><br>
+Data are stored in a standardized way in formatted ASCII text files.
+HITRAN conventions are described on the
+<a href="http://www.hitran.com/">HITRAN Database Web Site</a> under Section
+<i>&#034;HITRAN Facts&#034;</i>.
+<br><br>
+We reproduce below some of the tables available at the HITRAN site.
+Tables 1 & 2 display all fields included in one record (one line) of a HITRAN
+data file.
+Each table corresponds to a version of the HITRAN database (prior to or after
+2000).
+Table 3 lists molecule numbers and formul&#230;.
+Isotope numbers can be found on the HITRAN Web site.
+Table 4 displays the error codes and their meanings.
+</p>
+
+<center>
+<table border=1 cellpadding=1>
+<tr>
+ <th colspan=17 bgcolor=#666666><font color=#ffffff>Table 1. Format for HITRAN
+     Parameters, Editions 1986 through 2000 &#150; One record includes 16
+     parameters and is 100 characters long</font></th>
+</tr>
+<tr>
+ <th align=left><font size=-1>Parameter</font></th>
+ <td align=center><font size=-1>Molecule<br>number</font></td>
+ <td align=center><font size=-1>Isotope<br>number</font></td>
+ <td align=center><font size=-1>Transition<br>frequency<br>
+     &#091;cm<sup>-1</sup>&#093;</font></td>
+ <td align=center><font size=-1>Line<br>intensity</font></td>
+ <td align=center><font size=-1>&#124;R&#124;<sup>2</sup></td>
+ <td align=center><font size=-1>Air-<br>broadened<br>width</font></td>
+ <td align=center><font size=-1>Self-<br>broadened<br>width</font></td>
+ <td align=center><font size=-1>Lower-<br>state<br>energy</font></td>
+ <td align=center><font size=-1>Temperature<br>dependence<br>(of air<br>width)
+     </font></td>
+ <td align=center><font size=-1>Pressure<br>shift</font></td>
+ <td align=center><font size=-1>Upper<br>vibrational<br>quanta</font></td>
+ <td align=center><font size=-1>Lower<br>vibrational<br>quanta</font></td>
+ <td align=center><font size=-1>Upper<br>local<br>quanta</font></td>
+ <td align=center><font size=-1>Lower<br>local<br>quanta</font></td>
+ <td align=center><font size=-1>Error<br>code</font></td>
+ <td align=center><font size=-1>Reference<br>code</font></td>
+</tr>
+<tr>
+ <th align=left><font size=-1>Field length</font></th>
+ <td align=center>2</td>
+ <td align=center>1</td>
+ <td align=center>12</td>
+ <td align=center>10</td>
+ <td align=center>10</td>
+ <td align=center>5</td>
+ <td align=center>5</td>
+ <td align=center>10</td>
+ <td align=center>4</td>
+ <td align=center>8</td>
+ <td align=center>3</td>
+ <td align=center>3</td>
+ <td align=center>9</td>
+ <td align=center>9</td>
+ <td align=center>3</td>
+ <td align=center>6</td>
+</tr>
+</table>
+
+<br>
+<table border=1 cellpadding=1>
+<tr>
+ <th colspan=20 bgcolor=#666666><font color=#ffffff>Table 2. New Format for
+     HITRAN Parameters, Editions after 2000 &#150; One record includes 19
+     parameters and is 160 characters long</font></th>
+</tr>
+<tr>
+ <th align=left><font size=-1>Parameter</font></th>
+ <td align=center><font size=-1>Molecule<br>number</font></td>
+ <td align=center><font size=-1>Isotope<br>number</font></td>
+ <td align=center><font size=-1>Transition<br>frequency<br>
+     &#091;cm<sup>-1</sup>&#093;</font></td>
+ <td align=center><font size=-1>Line<br>intensity</font></td>
+ <td align=center><font size=-1>Einstein-A<br>coefficient</font></td>
+ <td align=center><font size=-1>Air-<br>broadened<br>width</font></td>
+ <td align=center><font size=-1>Self-<br>broadened<br>width</font></td>
+ <td align=center><font size=-1>Lower-<br>state<br>energy</font></td>
+ <td align=center><font size=-1>Temperature<br>dependence<br>(of air<br>width)
+     </font></td>
+ <td align=center><font size=-1>Pressure<br>shift</font></td>
+ <td align=center><font size=-1>Upper<br>vibrational<br>quanta</font></td>
+ <td align=center><font size=-1>Lower<br>vibrational<br>quanta</font></td>
+ <td align=center><font size=-1>Upper<br>local<br>quanta</font></td>
+ <td align=center><font size=-1>Lower<br>local<br>quanta</font></td>
+ <td align=center><font size=-1>Error<br>code</font></td>
+ <td align=center><font size=-1>Reference<br>code</font></td>
+ <td align=center><font size=-1>Flag<br>for<br>line<br>mixing</font></td>
+ <td align=center><font size=-1>Upper<br>statistical<br>weight</font></td>
+ <td align=center><font size=-1>Lower<br>statistical<br>weight</font></td>
+</tr>
+<tr>
+ <th align=left><font size=-1>Field length</font></th>
+ <td align=center>2</td>
+ <td align=center>1</td>
+ <td align=center>12</td>
+ <td align=center>10</td>
+ <td align=center>10</td>
+ <td align=center>5</td>
+ <td align=center>5</td>
+ <td align=center>10</td>
+ <td align=center>4</td>
+ <td align=center>8</td>
+ <td align=center>15</td>
+ <td align=center>15</td>
+ <td align=center>15</td>
+ <td align=center>15</td>
+ <td align=center>6</td>
+ <td align=center>12</td>
+ <td align=center>1</td>
+ <td align=center>7</td>
+ <td align=center>7</td>
+</tr>
+<tr>
+ <th align=left><font size=-1>FORTRAN<br>descriptor</font></th>
+ <td align=center>i2</td>
+ <td align=center>i1</td>
+ <td align=center>f12.6</td>
+ <td align=center>1pe10.3</td>
+ <td align=center>e10.3</td>
+ <td align=center>0pf5.4</td>
+ <td align=center>f5.4</td>
+ <td align=center>1pf10.4</td>
+ <td align=center>0pf4.2</td>
+ <td align=center>f8.6</td>
+ <td align=center>a15</td>
+ <td align=center>a15</td>
+ <td align=center>a15</td>
+ <td align=center>a15</td>
+ <td align=center>6i1</td>
+ <td align=center>6i2</td>
+ <td align=center>a1</td>
+ <td align=center>i7</td>
+ <td align=center>i7</td>
+</tr>
+</table>
+
+<br>
+<table border=1 cellpadding=1>
+<tr>
+ <th colspan=14 bgcolor=#666666><font color=#ffffff>Table 3. HITRAN molecule
+     numbers</font></th>
+</tr>
+<tr>
+ <th>&#035;</th><th>Molecule</th><td width=10></td>
+ <th>&#035;</th><th>Molecule</th><td width=10></td>
+ <th>&#035;</th><th>Molecule</th><td width=10></td>
+ <th>&#035;</th><th>Molecule</th><td width=10></td>
+ <th>&#035;</th><th>Molecule</th>
+</tr>
+<tr>
+ <td align=right>1</td><td align=center>H<sub>2</sub>O</td><td></td>
+ <td align=right>9</td><td align=center>SO<sub>2</sub></td><td></td>
+ <td align=right>17</td><td align=center>HI</td><td></td>
+ <td align=right>25</td><td align=center>H<sub>2</sub>O<sub>2</sub></td><td>
+     </td>
+ <td align=right>33</td><td align=center>HO<sub>2</sub></td>
+</tr>
+<tr>
+ <td align=right>2</td><td align=center>CO<sub>2</sub></td><td></td>
+ <td align=right>10</td><td align=center>NO<sub>2</sub></td><td></td>
+ <td align=right>18</td><td align=center>ClO</td><td></td>
+ <td align=right>26</td><td align=center>C<sub>2</sub>H<sub>2</sub></td><td>
+     </td>
+ <td align=right>34</td><td align=center>O</td><td></td>
+</tr>
+<tr>
+ <td align=right>3</td><td align=center>O<sub>3</sub></td><td></td>
+ <td align=right>11</td><td align=center>NH<sub>3</sub></td><td></td>
+ <td align=right>19</td><td align=center>OCS</td><td></td>
+ <td align=right>27</td><td align=center>C<sub>2</sub>H<sub>6</sub></td><td>
+     </td>
+ <td align=right>35</td><td align=center>ClONO<sub>2</sub></td><td></td>
+</tr>
+<tr>
+ <td align=right>4</td><td align=center>N<sub>2</sub>O</td><td></td>
+ <td align=right>12</td><td align=center>HNO<sub>3</sub></td><td></td>
+ <td align=right>20</td><td align=center>H<sub>2</sub>CO</td><td></td>
+ <td align=right>28</td><td align=center>PH<sub>3</sub></td><td></td>
+ <td align=right>36</td><td align=center>NO<sup>+</sup></td><td></td>
+</tr>
+<tr>
+ <td align=right>5</td><td align=center>CO</td><td></td>
+ <td align=right>13</td><td align=center>OH</td><td></td>
+ <td align=right>21</td><td align=center>HOCl</td><td></td>
+ <td align=right>29</td><td align=center>COF<sub>2</sub></td><td></td>
+ <td align=right>37</td><td align=center>HOBr</td><td></td>
+</tr>
+<tr>
+ <td align=right>6</td><td align=center>CH<sub>4</sub></td><td></td>
+ <td align=right>14</td><td align=center>HF</td><td></td>
+ <td align=right>22</td><td align=center>N<sub>2</sub></td><td></td>
+ <td align=right>30</td><td align=center>SF<sub>6</sub></td><td></td>
+ <td align=right>38</td><td align=center>C<sub>2</sub>H<sub>4</sub></td><td>
+     </td>
+</tr>
+<tr>
+ <td align=right>7</td><td align=center>O<sub>2</sub></td><td></td>
+ <td align=right>15</td><td align=center>HCl</td><td></td>
+ <td align=right>23</td><td align=center>HCN</td><td></td>
+ <td align=right>31</td><td align=center>H<sub>2</sub>S</td><td></td>
+</tr>
+<tr>
+ <td align=right>8</td><td align=center>NO</td><td></td>
+ <td align=right>16</td><td align=center>HBr</td><td></td>
+ <td align=right>24</td><td align=center>CH<sub>3</sub>Cl</td><td></td>
+ <td align=right>32</td><td align=center>HCOOH</td><td></td>
+</tr>
+</table>
+
+<br>
+<table border=1 cellpadding=1>
+<tr>
+ <th colspan=5 bgcolor=#666666><font color=#ffffff>Table 4. HITRAN one-digit
+     error codes</font></th>
+</tr>
+<tr>
+ <th colspan=2>Wavenumber &#091;cm<sup>-1</sup>&#093;</th>
+ <td width=20></td>
+ <th colspan=2>Intensity, Halfwidths,<br>Temperature dependence,
+     <br>Pressure shift</th>
+</tr>
+<tr>
+ <th>Code</th><th>Error range</th><td></td><th>Code</th><th>Error range</th>
+</tr>
+<tr>
+ <td align=center>0</td><td>&#062; 1 cm<sup>-1</sup> or unreported</td>
+ <td></td>
+ <td align=center>0</td><td>Unreported or unavailable</td>
+</tr>
+<tr>
+ <td align=center>1</td><td>Between 1 and 0.1 cm<sup>-1</sup></td>
+ <td></td>
+ <td align=center>1</td><td>Default or constant</td>
+</tr>
+<tr>
+ <td align=center>2</td><td>Between 0.1 and 0.01 cm<sup>-1</sup></td>
+ <td></td>
+ <td align=center>2</td><td>Average or estimate</td>
+</tr>
+<tr>
+ <td align=center>3</td><td>Between 0.01 and 0.001 cm<sup>-1</sup></td>
+ <td></td>
+ <td align=center>3</td><td>&#062; 20&#037;</td>
+</tr>
+<tr>
+ <td align=center>4</td><td>Between 0.001 and 0.0001 cm<sup>-1</sup></td>
+ <td></td>
+ <td align=center>4</td><td>Between 10&#037; and 20&#037;</td>
+</tr>
+<tr>
+ <td align=center>5</td><td>Between 0.0001 and 0.00001 cm<sup>-1</sup></td>
+ <td></td>
+ <td align=center>5</td><td>Between 5&#037; and 10&#037;</td>
+</tr>
+<tr>
+ <td align=center>6</td><td>Better than 0.00001 cm<sup>-1</sup></td>
+ <td></td>
+ <td align=center>6</td><td>Between 2&#037; and 5&#037;</td>
+</tr>
+<tr>
+ <td></td><td></td><td></td>
+ <td align=center>7</td><td>Between 1&#037; and 2&#037;</td>
+</tr>
+<tr>
+ <td></td><td></td><td></td>
+ <td align=center>8</td><td>&#060; 1&#037;</td>
+</tr>
+</tr>
+</table>
+</center>
+<P>
+</body>
+</html>

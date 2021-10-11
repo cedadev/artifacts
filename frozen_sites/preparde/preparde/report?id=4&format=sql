@@ -1,0 +1,16 @@
+-- ## 4: Accepted, Active Tickets by Owner ## --
+
+-- 
+-- List accepted tickets, group by ticket owner, sorted by priority.
+
+
+
+SELECT p.value AS __color__,
+   owner AS __group__,
+   id AS ticket, summary, component, milestone, t.type AS type, time AS created,
+   changetime AS _changetime, description AS _description,
+   reporter AS _reporter
+  FROM ticket t
+  LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+  WHERE status = 'accepted'
+  ORDER BY owner, CAST(p.value AS int), t.type, time

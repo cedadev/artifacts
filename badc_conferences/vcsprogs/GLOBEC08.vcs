@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20080707T230000Z
+DTEND:20080710T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:FAO, Rome, Italy
+TRANSP:1
+UID:040000008200E00074C5B7101A82E008000000006018374E2838C8010000000000000000100
+ 00000E71AC07C09ED4845AAADEC2DC6DCDA30
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:GLOBEC-EUROCEANS-FAO Symposium "Copin=
+g with global change in marine social-ecological systems"=0D=0AFAO,   Rome,=
+ Italy, 8-10 July 2008.=0D=0A=0D=0AMarine ecosystem changes have impacts on=
+, and consequences for, the human communities that depend on these systems,=
+ and how these human=0D=0Acommunities respond to these changes can have rec=
+iprocal impacts on marine ecosystems. These two highly inter-connected and =
+interactive "ecological"=0D=0A(including physical-biological sub-systems) a=
+nd "human" (including cultural, management, economic, and socio-political s=
+ub-systems) components are,=0D=0Ahowever, usually studied independently fro=
+m each other, and by different scientific disciplines with largely differen=
+t scientific traditions ("natural" scientists;=0D=0A"social"` scientists an=
+d humanists). This symposium is designed to share experiences across discip=
+lines and to identify key next steps and common=0D=0Aelements and approache=
+s that promote resilience of marine social-ecological systems in the face o=
+f global changes. It is co-convened by Dr. Ian Perry=0D=0A(Fisheries & Ocea=
+ns Canada, Nanaimo, Canada), Dr. Rosemary Ommer (University of Victoria, Vi=
+ctoria, Canada) and Dr. Philippe Cury (IRD/CRH, S=E8te,=0D=0AFrance). =0D=
+=0A=0D=0ADetail information is available at the website  www.peopleandthese=
+a.org. The registration is open and Abstracts will be accepted until Januar=
+y 1 2008. For=0D=0Aspecific querries please contact globec@pml.ac.uk.  =0D=
+=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:GLOBEC-EUROCEANS-FAO Symposium "Coping wi=
+th global change in marine social-ecological systems
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

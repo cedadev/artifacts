@@ -1,0 +1,572 @@
+Monthly Mean Rawinsonde Observation Data
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+    
+
+5.  DATA PROCESSING SEQUENCE
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Document
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Monthly mean rawinsonde station observations
+are available for the 40-year period from 1950-1989.
+
+1.2  Unit of Measurement.
+
+                Parameter             Unit of Measurement
+                ---------             -------------------
+                Pressure              mb
+                Height                m
+                Temperature           deg C
+                Dew Point             deg C
+                Wind Direction        deg
+                Wind Speed            m/sec
+
+Data were collected at ten pressure levels:
+
+                Level 1               Surface
+                Level 2               850 mb
+                Level 3               700 mb
+                Level 4               500 mb
+                Level 5               300 mb
+                Level 6               200 mb
+                Level 7               150 mb
+                Level 8               100 mb
+                Level 9                50 mb
+                Level 10               30 mb
+
+1.3  Data Source.  The monthly mean observations used in this study were
+obtained from "Monthly Climatic Data for the World", archived on tape at
+the National Center for Atmospheric Research (NCAR) (Jenne and Crutcher,
+1976).  Station data were chosen for this study rather than an analysis
+product to maximize data reliability and increase the length of time
+series.  Wind data were not available prior to 1956.
+
+1.4  Data Set Identification.  The monthly mean rawinsonde observations
+reside within NCDS as RAOB-STATION_MONTHLY.
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  Global.
+
+2.2  Spatial Resolution.  
+
+Data were collected from the following 34 stations:
+
+
+      Station Name        WMO Number      Latitude        Longitude
+      ------------        ----------     ----------      -----------
+      Abidjan               65578         5.3 deg N        3.9 deg W
+      Antofagasta           85442        23.5 deg S       70.4 deg W
+      Atuona                91925         9.8 deg S      139.0 deg W
+      Bangkok               48455        13.7 deg N      100.5 deg E
+      Belem                 82193         1.4 deg S       48.5 deg W
+      Bogota                80222         4.6 deg N       74.1 deg W
+      Calcutta              42809        22.5 deg N       88.4 deg E
+      Canton                91700         2.8 deg S      171.7 deg W
+      Cocos                 96996        12.1 deg S       96.9 deg E
+      Dakar                 61642        14.7 deg N       17.5 deg W
+      Dar es Salaam         63894         6.9 deg S       39.2 deg E
+      Darwin                94120        12.4 deg S      130.9 deg E
+      Fort Lamy             64700        12.1 deg N       15.0 deg E
+      Hilo                  91285        19.7 deg N      155.1 deg W
+      Johnston              91275        17.0 deg N      169.5 deg W
+      Khartoum              62721        15.6 deg N       32.6 deg E
+      Koror                 91400         7.3 deg N      134.5 deg E
+      Kota Kinabalu         96471         6.0 deg N      116.1 deg E
+      Lae                   94027         6.7 deg S      147.0 deg E
+      Lima                  84628        12.0 deg S       77.1 deg W
+      Majuro                91376         7.1 deg N      171.4 deg E
+      Miami                 72202        25.8 deg N       80.3 deg W
+      Nairobi               63741         1.3 deg S       36.8 deg E
+      Natal                 82599         5.9 deg S       35.3 deg W
+      Noumea                91592        22.3 deg S      166.5 deg E
+      Pago Pago             91765        14.3 deg S      170.6 deg E
+      Port Sudan            62641        19.6 deg N       37.2 deg E
+      San Andres            80001        12.8 deg N       81.7 deg E
+      Singapore             48694         1.3 deg N      103.9 deg E
+      Tahiti                91938        17.6 deg S      149.6 deg E
+      Trinidad              78970        10.7 deg N       61.5 deg E
+      Trivandrum            43371         8.5 deg N       77.0 deg E
+      Truk                  91334         7.5 deg N      151.9 deg E
+      Veracruz              76692        19.2 deg N       96.1 deg W
+
+
+Data were collected at ten pressure levels:
+
+             Level 1              Surface
+             Level 2              850 mb
+             Level 3              700 mb
+             Level 4              500 mb
+             Level 5              300 mb
+             Level 6              200 mb
+             Level 7              150 mb
+             Level 8              100 mb
+             Level 9               50 mb
+             Level 10              30 mb
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.   1950-1989
+
+3.2  Temporal Resolution.   Monthly.
+
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  Retrieval of vertical temperature, humidity, and
+wind profiles of the atmosphere.
+
+4.2  Key Satellite Flight Parameters.  N/A
+
+4.3  Principles of Operation.  Data are measured using conventional
+radiosondes consisting of a baroswitch, thermistor thermometer, and carbon
+humidity element.  Radiosondes are calibrated with a standard instrument
+prior to flight; however, the complexity of natural conditions limits the
+accuracy of this procedure.  No attempt has been made to quantify or
+correct this inconsistency.
+
+4.4  Instrument Measurement Geometry.  N/A
+    
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  The monthly mean radiosonde
+observations (RAOB) reports were first put into a packed binary format.
+Station location and elevation data were then added to the monthly reports.
+These two elements were necessary to accomplish a hydrostatic check that
+included the surface level; in other words, station location and elevation
+were needed to derive the atmospheric pressure levels.  As part of the
+hydrostatic check, mean virtual temperatures were calculated from the
+altitude and from the temperature and humidity data at each pressure level.
+If these temperatures agreed to within 2 degrees Celsius, the entire
+sounding passed the hydrostatic check without any need for corrections.
+However, if these two temperatures were not in agreement to within 2
+degrees Celsius the program proceeded to search for a single level with an
+incorrect temperature or height, but not both.  The incorrect temperature
+or altitude was set to be equal to the average of the values computed by
+working up from the lower levels and down from above levels.
+
+As the program worked its way from the surrounding levels to the level with
+the incorrect value, it determined whether the temperature and/or altitude
+needed correction.  It did this by first checking the temperature.  If the
+temperature was within 3.2 degrees Celsius of the normal temperature, the
+value was accepted as correct.  The normal temperature was calculated from
+the data that passed the original hydrostatic check.  In addition, the
+reported temperature was accepted as correct if it was within 3.6 degrees
+Celsius (5.6 degrees Celsius if the top level) of a temperature averaged
+from lower level temperatures and within 3.6 degrees Celsius of the normal
+lapse rate.  Temperatures found to be outside the accepted range were
+replaced with the averaged values.  If the averaged temperature and the
+temperature calculated from the two heights were within 2 degrees Celsius,
+then an average of the two was used.  An expected height value was then
+calculated from the temperatures and the lower height.  The reported height
+was accepted if it was within 24 meters of the expected height at the lower
+levels, within 28 meters and the 200 millibar level or above, or within 50
+meters at the upper levels.  If several levels were missing in a sounding,
+a straight-line temperature assumption was not used to calculate the
+expected heights; instead, the normal thickness as adjusted by the
+deviation from the normal temperatures was used.
+
+5.2  Derivation Techniques/Algorithms.
+
+Since station elevation is an important part of the hydrostatic check of
+the surface level, it is important that the data are accurate.  For every
+RAOB report that indicated surface data, a surface elevation was calculated
+by integrating from the closest mandatory level and using the reported
+surface temperature and pressure (assuming a linear temperature change in
+ln P).  As a result, a table was created for each station that showed the
+calculated elevation for every available month and year.  In addition,
+another table listed deviations from the assumed elevation.
+
+If surface level data are present, the closest mandatory level, usually 800
+meters or 90 millibars above the surface, in which there are no missing
+data is determined.  The reported surface temperature is accepted if it is
+within 3 degrees Celsius of the mean climatological temperature for the
+month, if it is within 4.5 degrees Celsius of a temperature obtained by
+adjusting the climatological surface temperature by the observed
+temperature anomaly at the mandatory level (called TX), and if it is within
+5 degrees Celsius of a temperature calculated from the thickness
+temperature and the temperature above (called TY).  If the temperature is
+not accepted it is either set equal to TX or the average of the two if the
+difference between TX and TY is less than 3.5 degrees Celsius.
+
+The surface temperature and elevation, plus data at the mandatory level are
+used to calculate surface pressure.  The reported surface pressure is used
+if it is within 4.2 millibars of the calculated surface pressure or within
+4 millibars of the surface pressure calculated from climatological and
+current data such as to allow for inversion effects.
+
+Wind vector changes are also checked for accuracy.  If the magnitude of the
+vector change between two levels is under 8 m/sec (under 13 m/sec for
+directions within 40 degrees), then both levels are assumed to be correct.
+Also, the wind speed is assumed to be correct if it is within 9 m/sec of a
+wind linearly interpolated from the winds below and above the level in
+question.  The wind speed was also found to be correct if it was within 9
+m/sec of the observed wind speed for the same station, level, and month of
+the previous year.
+
+5.3  Special Corrections/Adjustments.  Problems were found at the upper
+levels during the hydrostatic check.  Some of these problems were due to
+the proximity of the tropopause, the fact that only a few of the balloons
+for a particular month reached the uppermost level, and normal errors. It
+is for these reasons that the acceptance range is set fairly wide (50
+meters) in the uppermost levels.
+
+The dew point data appears low for some locations because the values on dry
+days were "motorboating", treated as missing, and thus not averaged in.
+
+It was found in some cases, e.g. several years of Spanish and Italian
+observations, that units of Knots were used rather that m/sec.  In these
+cases the units were converted to the correct ones.  In general, changes
+were made to the data or units when it was apparent that they were in
+error.
+
+5.4  Processing Changes.  None
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  Data quality was checked carefully.  For
+each station, the following steps were taken in the course of calculating
+seasonal means.  First, duplicate records, and records with one or more of
+the ten levels of interest missing, were removed from the time series.
+Then, the mean and variance at each level for each calendar month were
+computed.  These statistics were used to calculate time series of monthly
+anomalies and anomalies normalized by standard deviation.  The time series
+were examined for suspicious data, with special attention paid to
+observations departing from the calendar monthly mean by more than three
+standard deviations.  A similar technique was employed by Trenberth and
+Paolino (1981) to identify suspicious values in time series of monthly mean
+sea level pressure.
+
+Attempts were made to check suspicious data against two independent
+sources:  the monthly-averaged National Meteorological Center (NMC)
+Tropical Analysis of 200 mb winds for the period 1968-1974 (obtained from
+the NMC Climate Analysis Center by R. Newell and H. Selkirk, 1982) and an
+atlas of monthly-averaged 200 mb and 850 mb streamfunction fields for the
+period 1965-1974 (Krishnamurti, et al., 1983).  Contemporaneous reports
+from nearby stations were also considered in some cases.
+
+A conservative approach to data rejection was maintained.  Only values
+which appeared to be extremely outlandish were eliminated from the time
+series.  In some cases, the source of error was obvious (e.g., unit digit
+dropped from the reported wind direction) and corrected values substituted
+into the time series.  Erroneous records without readily identifiable
+corrections were eliminated from the time series without substitution.
+
+This process of error identification and removal or correction was
+subjective, but it produced reliable time series of maximum duration.  Some
+of the errors encountered did not represent anomalies of greater than three
+standard deviations but were clearly incorrect nevertheless.  For example,
+the three standard deviation criterion did not satisfactorily flag
+anomalous data for cases in which two anomalous reports existed in the
+series for a single level and calendar month, which simply caused the
+variance to be so large that all data represented "acceptable" normalized
+anomalies.  The corrected time series probably still contain some errors.
+However, the producers firmly believe that the results presented here are
+statistically reliable and represent real signals.
+
+6.2  Confidence Level/Accuracy Judgment.  Although gridded data offer
+obvious advantages of computational ease and spatial resolution (spurious
+though it may be), this study is based on station data directly.
+
+6.3  Usage Guidance.  Caution should be used with the findings because of
+the trouble that occurred in the hydrostatic check of the height at the top
+level.  In addition, wind data are not available prior to 1956.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+    Goddard DAAC User Support Office
+    NASA/Goddard Space Flight Center
+    Code 935 
+    Greenbelt, Maryland  20771
+    (301) 286-3209
+    FTS:  888-3209
+    INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV.
+    NSI DECNET:  NSSDCA::NCDSUSO
+
+    Data Support Section
+    National Center for Atmospheric Research (NCAR)
+    P.O. Box 3000
+    Boulder, Colorado  80307-3000
+    303-497-1215
+
+    Bert Eskridge or Rob Quayle
+    National Climatic Data Center
+    Federal Building
+    Asheville, North Carolina  28801-2696
+    704-259-0675 or 704-259-0733
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products.
+
+8.1.1   ASCII RAOB-STATION Archival Tape, Level II
+
+        Medium/Specifications: 9-track, 6250-bpi computer tape
+
+        Format and Content: Data at ten levels (surface, 850, 700, 500,
+        200, 150, 100, 50 and 30 mb) for five parameters are found in one
+        ASCII file.
+
+        Data Quantity:  One tape contains data from 1950 - 1989
+
+        Status:  Available.
+
+        Plans/Schedule:   NCDS will continue to support these data online.
+
+8.2  Film Products.   Microfilm available through NCDC.
+
+8.3  Other products.
+
+8.3.1  Rawinsonde Monthly Mean Station Common Data Format (CDF) File
+
+       Medium/Specifications:  Magnetic disk.
+
+       Format and Content:  The data are stored in a special data-
+       set-independent format, designated the Common Data Format (CDF). CDF
+       was developed as a uniform method of storing and retrieving data on
+       disk.  The CDF contains data and descriptions about the data.  A
+       standard software package called the "CDF Library" allows a user
+       within an NCDS session to create and access these data and
+       descriptions.  This CDF file may be accessed within the Data
+       Applications Subsystem of NCDS.
+
+       Data Quantity/Rate:  Rawinsonde Monthly Mean Station Observations; 1
+                            file, 48 Mb
+
+       Status:  Available.
+
+       Plans/Schedule:  Additional data will be integrated periodically as
+       NCDS receives it.
+
+8.3.2  The Greenhouse Effect Detection Experiment (GEDEX) CD-ROM
+
+       Medium/Specifications:  CD-ROM in ISO 9660 standard.
+
+       Format and Content:  The data on this disk will be stored in a
+       special data-set-independent format, designated the Common Data
+       Format (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  A standard software package called the
+       "CDF Library" will be included with this CD-ROM allowing a user to
+       create and access these data and descriptions.  The CD-ROM will
+       consist of many different data sets related to the study of the
+       Greenhouse Effect, including the rawinsonde monthly mean station
+       data set, and the accompanying NCDS data set documentation.
+
+       Data Quantity/Rate:  1 CD-ROM disk set.
+
+       Status:  Release date for this product is scheduled for early 1992.
+
+       Plans/Schedule:  Users interested in this product should contact
+       NCDS staff for more details.
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification.
+
+     Goddard DAAC User Support Office
+     NASA/Goddard Space Flight Center
+     Code 935 
+     Greenbelt, Maryland  20771
+     (301) 286-3209
+     FTS:  888-3209
+     INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV.
+     NSI DECNET:  NSSDCA::NCDSUSO
+
+9.2  Procedures for Obtaining Data.  Users may request data by letter or
+phone.  Communication with NCAR or NCDC personnel is advised before
+ordering.
+
+     Roy Jenne
+     Data Support Section
+     National Center for Atmospheric Research (NCAR)
+     P.O. Box 3000
+     Boulder, Colorado  80307-3000
+     303-497-1215
+
+     World Data Center-A for Meteorology
+     National Climatic Data Center (NCDC)
+     Federal Building
+     Asheville, North Carolina  28801
+     704-259-0370
+
+9.3  NCDS Status/Plans.  NCDS will continue to archive these data as data
+as they become available.
+
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+     Goddard DAAC User Support Office
+     NASA/Goddard Space Flight Center
+     Code 935 
+     Greenbelt, Maryland  20771
+     (301) 286-3209
+     FTS:  888-3209
+     INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV.
+     NSI DECNET:  NSSDCA::NCDSUSO
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      Jenne, Roy L., and Crutcher, H., 1976.  "Monthly Climate Data for the
+      World," on tape, National Center for Atmospheric Research.
+
+11.2  Journal Articles and Study Reports
+
+     Arkin, P.A., 1982.  "The Relationship Between Interannual Variability
+     in the 200 mb Tropical Wind Field and the Southern Oscillation."
+     Monthly Weather Review, 110:1393-1404.
+
+     Barnett, T.P., 1983.  "Long-Term Changes in Dynamic Height." Journal
+     of Geophysical Research, 88:9547-9552.
+
+     Jenne, Roy L., 1975.  "Data Sets for Meteorological Research." NCAR
+     TN/IA-111.  Boulder, Colorado.
+
+     Jenne, Roy L., and D.H. Joseph, 1974.  "Techniques for the Processing,
+     Storage, and Exchange of Data."  NCAR-TN/IA-93. National Center for
+     Atmospheric Research.  Boulder, Colorado, 46 pp.
+
+     Jenne, Roy L., and D.H. Joseph, 1978.  "Management of Atmospheric
+     Data."  From NASA Conference Publication, 2055: Engineering and
+     Scientific Data Management.  261 pp.
+
+     Krishnamurti, T.N., et al., 1983.  Atlas of monthly-averages, 200 mb
+     and stream function fields for the period 1965-1974.
+
+     Newell, R.E., R. Selkirk, and W. Ebisuzaki, 1982.  "The Southern
+     Oscillation:  Sea Surface Temperature and Wind Relationships in a
+     100-Year Data Set."  Journal of Climatology. 2:357-373.
+
+     Rasmusson, E.M., and T.H. Carpenter, 1982.  "Variations in Tropical
+     Sea Surface Temperature and Surface Wind Fields Associated with the
+     Southern Oscillation/El Nino."  Monthly Weather Review 110:354-384.
+
+     Selkirk, H., 1984.  "Seasonally Stratified Correlations of the 200 mb
+     Tropical Wind Field to the Southern Oscillation."  Journal of
+     Climatology, 4:365-382.
+
+     Spangler, Wilbur M.L., and Roy L. Jenne, 1990.  "World Monthly Surface
+     Station Climatology."  Computer Data Tape Document. National Center
+     for Atmospheric Research Scientific Computing Facility.  Boulder,
+     Colorado. 74 pp.
+
+     Trenberth, K.E., and D.A. Paolino, 1981.  "Characteristic Patterns of
+     Variability of Sea Level Pressure in the Northern Hemisphere." Monthly
+     Weather Review 109:1169-1189.
+
+11.3  Archive/DBMS Usage Documentation
+
+      Olsen, L.M., J.W. Closs, and F.E. Corprew, November 1991. "NASA's
+      Climate Data System Primer:  Version 4.0.", EOS DAAC, NASA Goddard
+      Space Flight Center, Greenbelt, Maryland.
+
+
+12.  RELATED DATA SETS
+
+      Several related data sets exist online through NCDS as follows:
+
+      1) The Angell Global Temperature Deviations data set consists of
+         balloon radiosonde measurements from 63 globally distributed
+         radiosonde stations.  This data set is available online through
+         NCDS in Common Data Format (CDF). To access this CDF, specify the
+         following as input within the Data Applications Subsystem of the
+         NCDS.
+
+                          NCDS$DATA:ANGELL-TMP-DEV
+
+      2) The National Meteorological Center (NMC) meteorological data
+         profiles were collected as part of the Stratospheric Aerosol and
+         Gas Experiment (SAGE II) flown aboard the Earth Radiation Budget
+         Satellite.  This data set is available online through NCDS in
+         Common Data Format (CDF).  To access this CDF, specify the
+         following as input within the Data Applications Subsystem of the
+         NCDS.
+
+                          NCDS$DATA:SAGEII-PROF_MET-DATA
+
+      3) The Berlin Stratospheric Monthly Mean Temperature data set
+         contains stratospheric temperatures obtained from radiosonde
+         observations.  This data set is available online through NCDS in
+         Common Data Format (CDF).  To access this CDF, specify the
+         following as input within the Data Applications Subsystem of the
+         NCDS.
+
+                       NCDS$DATA:BERLIN-STRAT_MONTH_TMP
+
+13.  SUMMARY/SAMPLE
+
+Demonstration plots are available and can be accessed through the NCDS
+Graphics Subsystem.
+
+14.  NOTES
+
+
+*92/03/14

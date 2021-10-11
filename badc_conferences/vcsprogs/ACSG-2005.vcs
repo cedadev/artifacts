@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050317T000000Z
+DTEND:20050318T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:University of Leicester, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000900912A0DC1FC5010000000000000000100
+ 00000C950F6A53EDF6543B46190D7D4701021
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:ACSG-2005:   Atmospheric Chemistry an=
+d Policy  - Meeting=0D=0A=0D=0AA meeting of the Atmospheric Chemistry Speci=
+al Interest Group of the Royal=0D=0AMeteorological Society =0D=0A=0D=0ADate=
+: Thursday 17 March 2005 starting at 10.30am=0D=0AVenue: Cityside Suite, Fl=
+oor 2, Charles Wilson Building, University of Leicester=0D=0A=0D=0A=0D=0ASp=
+eakers include =0D=0A=0D=0ADr Martin Williams (DEFRA) "Atmospheric Chemistr=
+y and Environmental Policy"=0D=0A=0D=0AProf Mike Pilling (University of Lee=
+ds) "Air Quality and Climate Change - meeting air quality standards in the =
+future"=0D=0A=0D=0AProf David Fowler FRS (CEH Edinburgh) "Non linearities i=
+n the atmospheric budget for oxidised nitrogen over the UK"=0D=0A=0D=0AProf=
+ Roy Harrison (University of Birmingham) "PM10 sources and composition and =
+their implications for human health". =0D=0A=0D=0AProf John Pyle (Universit=
+y of Cambridge) "Chemistry/climate interactions: regulation in the age of M=
+ontreal and Kyoto"=0D=0A=0D=0ADr. Bill Collins (Met Office) "Title tbc"=0D=
+=0A=0D=0AThe cost of the meeting is =C2=A310 in advance or =C2=A312 on the =
+day=0D=0A=0D=0AHoward Roscoe and Paul Monks=0D=0A=0D=0A=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=0D=0ADr. Paul S. Monks=0D=0ADepartm=
+ent of Chemistry=0D=0AUniversity of Leicester=0D=0ALeicester LE1 7RH, UK=0D=
+=0A=0D=0ATelephone +44-116-252-2141 (Direct)=0D=0ATelephone +44-116-252-214=
+2 (Secretary)=0D=0AFax: +44-116-252-3789=0D=0AMobile: 0794 4603-941=0D=0AE-=
+mail: P.S.Monks@le.ac.uk=0D=0A=0D=0A=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D =0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:A meeting of the Atmospheric Chemistry Sp=
+ecial Interest Group of the Royal=0D=0AMeteorological Society=20
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,92 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>BADC Datasets: metDB - UK Met Office metDB AMDARS page</TITLE>
+  <!-- Created 19th May 2009 -->
+  <!-- Author: Graham Parton BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><IMG SRC="/graphics/logos/metlogos.gif" ALT="Met Office Logo"></h1><h1>
+Met Office - metDB Data: AMDARS data</H1>
+
+<HR ALIGN=LEFT>
+
+<H2>Brief desciption</H2>
+<p>WMO code FM 42-IX (Aircraft Meteorological <span
+  class=SpellE>DAta</span> Relay). Reports from selected aircraft carrying ASDAR
+  or ACARS automatic data-collection systems. (The AMDAR code replaced the
+  ASDAR code in March 1992.) Some of the reports are received in BUFR and
+  others in character code.</p>
+
+<h2>Observation frequency</h2>
+<p>Hourly observations from aircraft during all stages of flight giving globally coverage in around 160,000 reports a day.
+
+</p>
+
+
+<h2>Delivery and ingest schedule</h2>
+<p>
+Data are extracted for the 4 principal synoptic periods (00-06, 06-12, 12-18 and 18-00 UT) and delivered to the BADC at the following times (all in GMT):
+</p>
+
+<table cellspacing="2" cellpadding="1" border="1" align="center">
+                               <tr> <td>Synoptic period</td> <td>Delivery to BADC</td> </tr>
+                               <tr> <td>0000-0559</td> <td>1330</td> </tr>
+                               <tr> <td>0600-1159</td> <td>1930</td> </tr>
+                               <tr> <td>1200-1759</td> <td>0130</td> </tr>
+                               <tr> <td>1800-2359</td> <td>0730</td> </tr>
+                             </table>
+<p>Ingest scripts run at the BADC every 20 minutes, converting the incoming files to the self describing BADC-CSV format, but neither the processed or raw data are placed into archive until the following day.</p>
+
+<h2>Known problems</h2>
+<p>
+</p>
+<h2>Additional information</h2>
+<p>
+</p>
+<h2>Parameter list</h2>
+<p>The table below provides the list of available parameters in the column order that they appear in the BADC-CSV files in the archive.
+</p>
+<table>
+<tr><th>Column number</th><th>Parameter</th<th>Unit</th></tr>
+<tr><td>1</td><td>YEAR</td><td>year</td></tr>
+<tr><td>2</td><td>MONTH</td><td>month</td></tr>
+ <tr><td>3</td><td>DAY</td><td>day</td></tr>
+ <tr><td>4</td><td>HOUR</td><td>hour</td></tr>
+ <tr><td>5</td><td>MINUTE</td><td>minute</td></tr>
+ <tr><td>6</td><td>Second</td><td>second</td></tr>
+ <tr><td>7</td><td>TIME OF RECEIPT YEAR</td><td>year</td></tr>
+ <tr><td>8</td><td>TIME OF RECEIPT MONTH</td><td>month</td></tr>
+ <tr><td>9</td><td>TIME OF RECEIPT DAY</td><td>day</td></tr>
+ <tr><td>10</td><td>TIME OF RECEIPT HOUR</td><td>hour</td></tr>
+ <tr><td>11</td><td>TIME OF RECEIPT MINUTE</td><td>minute</td></tr>
+ <tr><td>12</td><td>Aircraft registration number</td><td>1</td></tr>
+ <tr><td>13</td><td>Aircraft identifier</td><td>1</td></tr>
+ <tr><td>14</td><td>LATITUDE</td><td>degrees</td></tr>
+ <tr><td>15</td><td>LONGITUDE</td><td>degrees</td></tr>
+ <tr><td>16</td><td>Altitude</td><td>m</td></tr>
+ <tr><td>17</td><td>Original specification of lat/long</td><td>1</td></tr>
+ <tr><td>18</td><td>Collecting centre</td><td>1</td></tr>
+ <tr><td>19</td><td>Aircraft navigational system</td><td>1</td></tr>
+ <tr><td>20</td><td> Type of aircraft data relay system</td><td>1</td></tr>
+ <tr><td>21</td><td>Aircraft roll angle</td><td>degrees</td></tr>
+ <tr><td>22</td><td>Pressure</td><td>Pa</td></tr>
+ <tr><td>23</td><td>Phase of flight</td><td>1</td></tr>
+ <tr><td>24</td><td>Wind measurement instrument type</td><td>1</td></tr>
+ <tr><td>25</td><td>Wind direction</td><td>degrees</td></tr>
+ <tr><td>26</td><td>Wind speed</td><td>ms-1</td></tr>
+ <tr><td>27</td><td>Vertical gust velocity</td><td>ms-1</td></tr>
+ <tr><td>28</td><td>Vertical gust acceleration</td><td>ms-2</td></tr>
+ <tr><td>29</td><td>Degree of turbulence</td><td>&nbsp;</td></tr>
+ <tr><td>30</td><td>Precision of temperature observation</td><td>K</td></tr>
+ <tr><td>31</td><td>Air temperature</td><td>K</td></tr>
+ <tr><td>32</td><td>Dew point temperature</td><td>K</td></tr>
+ <tr><td>33</td><td>Relative humidity</td><td> %</td></tr>
+ <tr><td>34</td><td>Mixing ratio (from 18/06/07)</td><td>kg/kg</td></tr>
+ <tr><td>35</td><td>Degree of air frame icing</td><td>1</td></tr>
+ </table>
+
+</BODY>
+</HTML>

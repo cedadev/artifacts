@@ -1,0 +1,522 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC: Met. Office Operational NWP Data Products Help</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><IMG SRC="/graphics/logos/metlogos.gif" ALIGN="BOTTOM"></H1>
+
+<H1>Met. Office Operational NWP Products -Background Information</H1>
+
+<P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="Contents"></A>Go
+to: [ Contents | <A HREF="#Introduction">Introduction</A> | <A
+HREF="#Data">Data</A> | <A HREF="#UsingData">Using Data</A> | <A
+HREF="#End">End</A> ] <HR ALIGN=LEFT></P>
+
+<H2>Contents</H2>
+
+<OL>
+  <LI><A HREF="#Introduction">Introduction</A>
+  <UL>
+    <LI><A HREF="#Model">1.1 The UK Unified Model</A>
+  </UL>
+  <LI><A HREF="#Data">The UM data</A>
+  <UL>
+    <LI><A HREF="#Fields">2.1 The model output data fields</A>
+    <LI><A HREF="#Spatial">2.2 Spatial coverage and resolution</A>
+    <UL>
+      <LI><A HREF="#Horizontal">2.2.1 Horizontal coverage</A>
+      <LI><A HREF="#Vertical">2.2.2 Vertical coverage</A>
+    </UL>
+    <LI><A HREF="#Temporal">2.3 Temporal coverage and resolution</A>
+  </UL>
+  <LI><A HREF="#UsingData">Obtaining and using UM data from the
+  BADC</A>
+  <UL>
+    <LI><A HREF="#UMfiles">3.1 The UM data files</A>
+    <LI><A HREF="#ReadSoft">3.2 Software to read the data</A>
+    <LI><A HREF="#Plot">3.3 Software to manipulate and plot the data</A>
+  </UL>
+</OL>
+
+<P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="Introduction"></A>Go
+to: [ <A HREF="#Contents">Contents</A> | Introduction | <A HREF="#Data">Data</A>
+| <A HREF="#UsingData">Using Data</A> | <A HREF="#End">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H2><u>IMPORTANT</u>: byte swapping of these data files may be required before they can be read on your systems. Utilities are available to perform the byte-swapping and convert these files into several other formats such as NetCDF.</H2>
+        <h2>Byte swapping software has been available for some time from the BADC and is described at <a href="http://cms.ncas.ac.uk/documents/xconv/">http://cms.ncas.ac.uk/documents/xconv/</a> . </h2>
+        <h2>1. Introduction</h2>
+        <P>This document describes the UK Met. Office Operational NWP
+data products (based on the Unified Model (UM))  which have been
+retrieved from the Met. Office since 23 October 2000. Data files
+are recovered every 6 hours, which contain analysis fields and
+forecast fields out to 6 days. These files are processed by the
+BADC to convert then into a format more suited to the UM community
+(binary PP), with the analysis fields and forecasts out to 12
+hours being archived at the BADC.</P>
+
+<H3><A NAME="Model"></A>1.1 The UK Unified Model</H3>
+
+<P>The UK operational Mesoscale model uses a rotated latitude
+and longitude coordinate system in which the computational north
+pole is shifted to an actual position of 37.5 deg. N, 177.5 E.
+This is done to obtain fairly uniform horizontal resolution over
+the area of interest. The corners of the computational area are
+approximately in actual latitude/longitude: (60.1N, 16.6W; 60.2N,
+10.7E; 46.6N, 12.7W; 46.7N, 7.1E). The grid-length is 0.15 deg.
+in each direction which is approximately 16.8 Km, giving 92x92
+grid points running from the north - west corner.</P>
+
+<P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="JCMM"></A>Go
+to: [ <A HREF="#Contents">Contents</A> | Introduction | <A HREF="#Data">Data</A>
+| <A HREF="#UsingData">Using Data</A> | <A HREF="#End">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H2>2. The UM data</H2>
+
+<H3><A NAME="Fields"></A>2.1 Model output data fields</H3>
+
+<P>Model dumps are retrieved from the UKMO twice each day. These
+consist of global and mesoscale data (on model and standard levels)
+generated at 0, 6, 12, and 18 Z. The output data from each model
+run include a variety of field types and have forecasts out to
+6 days. This gives a data rate of almost 10Gb per day. These files
+are processed to extract all analysis fileds and forecasts out
+to 12 hours. As a result of this processing, the final data are
+around 1Gb per day in size. The format of the saved filenames
+is described in <A HREF="#UMfiles">section 3</A>.</P>
+
+<P>The following table shows the most common stash codes.</P>
+
+<P>&nbsp;</P>
+
+<P><CENTER><TABLE WIDTH="360" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+  <CAPTION ALIGN="BOTTOM"><I>Table of common pp stash codes.</I></CAPTION>
+   
+  <TR>
+    <TD WIDTH="45%">
+      <P><CENTER>1</CENTER></TD>
+    <TD WIDTH="55%">&nbsp;Height</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="45%">
+      <P><CENTER>8</CENTER></TD>
+    <TD WIDTH="55%">Pressure, p</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="45%">
+      <P><CENTER>16</CENTER></TD>
+    <TD WIDTH="55%">&nbsp;Temperature, T</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="45%">
+      <P><CENTER>28</CENTER></TD>
+    <TD WIDTH="55%">&nbsp;d(p*)/dt p*=surface pressure</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="45%">
+      <P><CENTER>39</CENTER></TD>
+    <TD WIDTH="55%">&nbsp;Coriolis parameter</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="45%">
+      <P><CENTER>40</CENTER></TD>
+    <TD WIDTH="55%">&nbsp;Omega (=dp/dt)</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="45%">
+      <P><CENTER>43</CENTER></TD>
+    <TD WIDTH="55%">&nbsp;Eta dot</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="45%">
+      <P><CENTER>56</CENTER></TD>
+    <TD WIDTH="55%">&nbsp;Westerly cpt of wind, u</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="45%">
+      <P><CENTER>57</CENTER></TD>
+    <TD WIDTH="55%">&nbsp;Southerly cpt of wind, v</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="45%">
+      <P><CENTER>61</CENTER></TD>
+    <TD WIDTH="55%">&nbsp;'x' cpt of wind stress</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="45%">
+      <P><CENTER>62</CENTER></TD>
+    <TD WIDTH="55%">&nbsp;'y' cpt of wind stress</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="45%">
+      <P><CENTER>79</CENTER></TD>
+    <TD WIDTH="55%">&nbsp;QCL- liquid cloud water</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="45%">
+      <P><CENTER>95</CENTER></TD>
+    <TD WIDTH="55%">&nbsp;Specific Humidity, q</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="45%"></TD>
+    <TD WIDTH="55%"></TD>
+  </TR>
+</TABLE></CENTER></P>
+
+<P>Note that all winds are held on the U-grid. The U and V winds
+on Pressure levels are true Westerly and Southerly wind components
+but all other winds are orientated with the model grid.</P>
+        <p>A text file describing the Met Office full list of  <a href="/help/formats/pp-format/files/fcodes.txt">stash codes</a> for the UM&nbsp;model is also available.</p>
+        <P><!-- Navigation bar --><HR ALIGN=LEFT><A NAME="Spatial"></A>Go
+to: [ <A HREF="#Contents">Contents</A> | <A HREF="#Introduction">Introduction</A>
+| Data | <A HREF="#UsingData">Using Data</A> | <A HREF="#End">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H2>2.2 Spatial coverage and resolution</H2>
+
+<H3><A NAME="Horizontal"></A>2.2.1 Horizontal coverage</H3>
+
+<P>Global Data: The data points are given on a global (432 x 324)
+longitude-latitude grid, giving a resolution of 0.83 and 0.56
+deg.respectively.</P>
+
+<P>Mesoscale Data: The data points are given on a (146 x 181)
+longitude-latitude grid, giving a resolution of 0.11 deg, which
+is approximately 12.3 Km.</P>
+
+<P>The corners of this grid are located at (353.00 368.96 11.44
+-8.36), on a non-standard polar axis system (polar lat,lonitude=
+37.5,177.0).</P>
+
+<H3>&nbsp;</H3>
+
+<H3><A NAME="Vertical"></A>2.2.2 Vertical coverage</H3>
+
+<P>The data fields are output on standard pressure levels and
+model (hybrid) levels, for global and mesoscale runs.</P>
+
+<P>There are 21 standard pressure levels in the output global
+datafiles, and 13 pressure levels for the mesoscale data.</P>
+
+<P><CENTER><TABLE WIDTH="450" BORDER="1" CELLSPACING="2" CELLPADDING="0">
+  <CAPTION ALIGN="BOTTOM"><P>&nbsp;</P>
+
+<P>UM Data Standard Pressure levels
+</CAPTION>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<B>Pressure (mbar)</B></CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER><B>&nbsp;Global</B></CENTER></TD>
+    <TD WIDTH="34%">
+      <P><CENTER><B>Mesoscale</B></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>1000</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>950</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>925</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">&nbsp;</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>900</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">&nbsp;</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>850</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>700</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>600</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">&nbsp;</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>500</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>400</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>300</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>250</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>200</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>150</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>100</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>70</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>50</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">&nbsp;</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>30</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>25</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">&nbsp;</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>20</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">&nbsp;</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>15</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">&nbsp;</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="33%">
+      <P><CENTER>10</CENTER></TD>
+    <TD WIDTH="33%">
+      <P><CENTER>&nbsp;<FONT FACE="StarMath">&#136;</FONT></CENTER></TD>
+    <TD WIDTH="34%">&nbsp;</TD> 
+  </TR>
+</TABLE></CENTER></P>
+
+<P>&nbsp;</P>
+
+<P>&nbsp;</P>
+
+<H2><A NAME="Temporal"></A>2.3 Temporal coverage and resolution</H2>
+
+<P>The datafiles available at the BADC are extracted from raw
+UM dump files, which contain both analyses and forecasts out to
+6 days.</P>
+
+<P>Analyses are available every 6 hours for most of the fields,
+and corresponding forecasts up to 12 hours are current archived
+at the BADC. These forecasts are at 1 or 3 hour intervals.</P>
+
+<P>It may be possible to retrieve UM data for dates prior to 23 October 2000, if required -please contact the BADC for further information.</P>
+
+<P><HR ALIGN=LEFT><A NAME="Using Data"></A>Go to: [ <A HREF="#Contents">Contents</A>
+| <A HREF="#Introduction">Introduction</A> | <A HREF="#Data">Data</A>
+| Using Data | <A HREF="#End">End</A> ] <HR ALIGN=LEFT></P>
+
+<H2>3. Obtaining and using UM data from the BADC</H2>
+
+<H3><A NAME="UMfiles"></A>3.1 The UM data files</H3>
+
+<P>The filenaming convention for the archive is in the process of being redesigned in order to allow bring it in line with other model datasets helpd by the BADC (especially ECMWF).</P>
+        <p>&quot;New conventions&quot;</p>
+        <p>The raw data are held in binary pp data as before, although due to problems with the extraction of historical NWP&nbsp;data from MASS, soem of the data are WGDOS packed, and some are unpacked.</p>
+        <p>The new directory structure is of the form </p>
+        <p>Global:</p>
+        <p>/badc/ukmo-um/data/global/ag/[am|ap|fm|fp]</p>
+        <p></p>
+        <p>Mesoscale:</p>
+        <p>/badc/ukmo-um/data/meso/lb/[]</p>
+        <p></p>
+        <p>The filenames reflect the path structure:</p>
+        <p></p>
+        <p></p>
+        <p>&quot;Old Filenames&quot;</p>
+        <p>These data are IEEE binary files in Met. Office &quot;PP&quot; format, consisting of unpacked headers (mostly integer data) followed by floating point field data. There are text files available descibing the Met Office format for the <a href="/help/formats/pp-format/files/header.txt">PP file header</a>, and a full list of the <a href="/help/formats/pp-format/files/fcodes.txt">stash codes</a> used.</p>
+        <P>The directory structure is of the form <I>year, month, day,
+creation time, um-type, filename, </I>where <I>creation time</I>
+is 00, 06, 12, 18 and <I>um-type file</I> is : mg (model levels/global),
+mm (model levels/mesoscale), sg (standard levels/global), sm (standard
+levels/mesoscale).</P>
+
+<P>The individual datafiles are in pp format, with a separate file for each paramter and timestep. They have filenames of the form:</P>
+
+<P><TABLE WIDTH="450" BORDER="0" CELLSPACING="2" CELLPADDING="0">
+  <TR>
+    <TD WIDTH="8%">&nbsp;<FONT FACE="Courier New">m</FONT></TD> 
+    <TD WIDTH="8%">&nbsp;g</TD> 
+    <TD WIDTH="8%">2000</TD> 
+    <TD WIDTH="8%">11</TD> 
+    <TD WIDTH="8%">13</TD> 
+    <TD WIDTH="8%">00</TD> 
+    <TD WIDTH="8%">&nbsp;p8</TD> 
+    <TD WIDTH="8%">s00</TD> 
+    <TD WIDTH="9%">.pp</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="8%">&nbsp;1</TD> 
+    <TD WIDTH="8%">&nbsp;2</TD> 
+    <TD WIDTH="8%">3</TD> 
+    <TD WIDTH="8%">4</TD> 
+    <TD WIDTH="8%">5</TD> 
+    <TD WIDTH="8%">6</TD> 
+    <TD WIDTH="8%">7</TD> 
+    <TD WIDTH="8%">8</TD> 
+    <TD WIDTH="9%">&nbsp;</TD> 
+  </TR>
+</TABLE></P>
+
+<P>1: m/s (model/standard) levels<BR>
+2: g/m (global/mesoscale) data<BR>
+3: year<BR>
+4: month<BR>
+5: day<BR>
+6: time of file (00,06,12,18)<BR>7: parameter stash code (pp)<BR>
+8: step(hr from time of file (6))</P>
+
+<P>for example:</P>
+
+<P>mg2000111300p8s00.pp : <I>model levels, global, yr=2000, m=11,
+d=13, run at 00hrs, parameter=1 (pressure), step=0 (analysis).</I></P>
+
+<P>mm2000111300p8s00.pp : <I>model levels, mesoscale ..(as above).</I></P>
+
+<P>sg2000111300p8s00.pp : <I>standard levels, global ..(as above).</I></P>
+
+<P>sm2000111300p8s00.pp : <I>standard levels, mesoscale ..(as
+above).</I></P>
+
+<P>The parameter codes are as given in the UM model documentation,
+and the forecast steps are up to 12 hrs only.</P>
+
+<P><HR ALIGN=LEFT><A NAME="ReadSoft"></A>Go to: [ <A HREF="#Contents">Contents</A>
+| <A HREF="#Introduction">Introduction</A> | <A HREF="#Data">Data</A>
+| Using Data | <A HREF="#End">End</A> ] <HR ALIGN=LEFT></P>
+
+<H3>3.2 Software to read the data</H3>
+
+<P>As mentioned above, the UM data are stored in very large binary
+files, so software is required to read the files and extract the
+fields of interest.</P>
+
+<P><B>Xconv/convsh</B>:</P>
+
+<P>Xconv is a program designed to convert model output into a
+format suitable for use in various plotting packages (such as
+NetCDF). The package is simple to use, and has a X-windows based
+interface. It can be used to see what fields are contained within
+a data file, and to look at the data values, either directly or
+via a graphical plot of the data. Xconv can also be used to manipulate
+the input data before it is converted into chosen output format.</P>
+
+<P>Convsh is a command line package which allows scripts to be
+written to automate various xconv tasks. Convsh uses the Tcl scripting
+language, plus various extensions for reading, writing and manipulating
+data files. <BR>
+</P>
+
+<P><a href="http://www.ugamp.rdg.ac.uk/~jeff/xconv/">http://www.ugamp.rdg.ac.uk/~jeff/xconv/</a></P>
+        <p>These utilities are now  <A HREF="http://cms.ncas.ac.uk/documents/xconv/">available
+from the BADC</A> . These also allow the user to  convert these
+files into several other formats such as NetCDF. A <a href="/help/software/xconv/subset.html">subsetting utility</a> 
+based 
+on Xconv/convsh is also provided.</p>
+        <H3><A NAME="Plot"></A>3.3 Software to manipulate and plot the
+data</H3>
+
+<P><B>Ferret</B>: <a href="http://ferret.wrc.noaa.gov/Ferret">http://ferret.wrc.noaa.gov/Ferret</a></P>
+
+<P><B>Xconv/convsh</B>: <a href="http://www.ugamp.rdg.ac.uk/~jeff/xconv/">http://www.ugamp.rdg.ac.uk/~jeff/xconv/</a></P>
+
+<P>Software to rotate the co-ordinates to allow for the offset
+pole position of the mesoscale data may also be required.<BR>
+</P>
+
+
+Please report any problems with this page to: <A HREF="/help/contact.html">BADC
+support</A>.
+<P>
+</BODY>
+</HTML>

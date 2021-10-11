@@ -1,0 +1,309 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Microsoft FrontPage 4.0">
+  <TITLE>BADC Datasets: Audit Page</TITLE>
+</HEAD>
+<!-- Created 10th August 2005 -->
+<!-- Author: Anabelle Menochet BADC-->
+<BODY BGCOLOR="#ffffff">
+
+
+
+<H1>Summary of HadAT development</H1>
+
+<em>This is a Met Office documentation. The BADC is not responsible for its content. "we" refers to Met Office.</em>
+<HR ALIGN=LEFT>
+<P>
+<blockquote>
+&nbsp&nbsp&nbsp&nbsp&nbsp<a href="audit.html#intro">Introduction</a><br>
+1 - <a href="audit.html#network">Deriving our initial station network</a><br>
+2 - <a href="audit.html#raw">HadAT0 - raw station and gridded products</a><br>
+3 - <a href="audit.html#quality">Quality control on HadAT0 station timeseries</a><br>
+4 - <a href="audit.html#hadat1">HadAT1 - homogenised station and gridded timeseries</a><br>
+5 - <a href="audit.html#hadat2">Expanding the station network to create HadAT2</a><br>
+6 - <a href="audit.html#monthly">Updating HadAT2 as a monthly product</a><br>
+7 - <a href="audit.html#realtime">HadAT2 near real time updates</a><br>
+8 - <a href="audit.html#source">Small change in source data</a><br>
+</blockquote>
+<P>
+<HR align=left>
+<P><a name="intro"></a>
+<h3>Introduction</h3>
+<P>This page provides a full audit trail of all the decisions made in 
+constructing and updating HadAT. Most users will not require all this 
+information.
+<P>
+This audit trail is designed to be complete and accessible but we always 
+welcome feedback that can improve the information presented. An editorial 
+decision was made to present this audit trail description as a single long 
+page to avoid endless clicking through links. This ensures that all information 
+is available in the one place. Large data files are always presented as a choice
+ of either ASCII (compressed) or netcdf files. In the netcdf files we have 
+attempted to strictly adhere to the <a href="http://www.cfconventions.org">CF 1.0 conventions</a>. Where files are large 
+we have always tried to indicate the file size.
+<P>
+Please note that this webpage should be read in conjunction with the HadAT dataset paper, 
+which provides further detail and justification of a number of the technical decisions we 
+made. If there are any conflicts then the description in the paper takes precedence unless 
+specifically noted otherwise (we may have made mistakes here and as it hasn't been strictly 
+peer reviewed they are less likely to have been spotted and rectified).
+<P>
+Timeseries and information up until HadAT2 data are limited to a seasonal or annual temporal 
+resolution and to the beginning of 2002 (when the HadAT homogenisation analysis commenced). 
+Only HadAT2 is available on a monthly resolution and updated in near real-time as outlined 
+in Section 6.
+<a name="network"></a>
+<h3>1 - Deriving our initial station network</h3>
+There are a wealth of digital radiosonde data sources available now. In this project we limited 
+ourselves to what we consider to be the four principal sources. These were: 
+<ol>
+<li>CLIMAT TEMP - monthly archives on 9 pressure levels held at the Hadley Centre. 
+<li>LKS - dataset of 87 quality controlled stations globally distributed courtesy of John Lanzante and 
+co-authors, available on 15 levels and at launch resolution (scientific references on front page). 
+<li><a href="http://www.guanweb.com/">GUAN</a> - median fit selection of all available station records 
+for the GCOS Upper Air Network (GUAN) of 151 stations along with some gross Quality Control checks, 
+courtesy of Mark McCarthy, Hadley Centre. Available on 9 pressure levels. 
+<li>MONADS - Monthly summary of the Comprehensive Aerological Reference Dataset 
+(<a href="http://lwf.ncdc.noaa.gov/oa/climate/igra/index.php">CARDS</a>) from the NOAA, USA. As for LKS these are available on 15 levels and at launch resolution. Please 
+note this dataset has recently been replaced with a new dataset, IGRA - see section on real-time updating 
+of the HadAT dataset later on. 
+</ol>
+<p>
+We subsampled all datasets to the 9 common levels (850, 700, 500, 300, 200, 150, 100, 50, and 30hPa). 
+Only data recorded since 1958, the International Geophysical Year, was used. The reasons are two-fold: 
+firstly, coverage dramatically degrades prior to this date and secondly there was a global 3 hour 
+shift in observation times (from 0300/1500 UTC to 0000/1200 UTC) in 1957. 
+<p>
+To date we have limited our analyses to those stations for which it was possible to create a 1966-1995 
+climatology for at least one level and one of the digital sources considered. To create a climatology 
+required a monthly value for a given month (e.g. December) to exist for at least 5 years of each decade 
+over the climatology period. A full listing of these stations is given as part of the file 
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/doc/hadat_station_information.txt">hadat_station_information.txt</a> 
+which is supplementary table 1 in Thorne et al., 2005. For a description of the file contents please read the 
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/doc/JGR_readme.doc">JGR readme file</a>. 
+
+
+<p>
+We used annual layer thickness anomaly timeseries for the troposphere (700 to 300hPa) and the 
+stratosphere (300 to 100hPa) to define a set of station series that were grossly consistent with 
+a core network of LKS (87 station network) and GUAN stations that had been previously analysed and 
+quality controlled. A small subset of these LKS and GUAN stations were found to be dubious in 
+comparison to their "neighbours" and were deleted completely or in part - details are given in 
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT0/hadat_supplementary2.txt">supplementary information Table 2</a> (again see the <A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/doc/JGR_readme.doc">JGR readme file</a>).  
+<p>
+Decisions as to inclusion in our first station set were based upon the similarity 
+of the station series to the resulting modified neighbour thickness composites in 
+the troposphere and the stratosphere (see section 3.1 in Thorne et al., 2005). The 
+decisions are given in the microsoft excel file <A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/doc/newerdecisions.xls">
+decisions.xls</a>. Please note that this 
+file contains a suite of visual basic macros. These do not need to be enabled for 
+the file to be viewed. Please see the README sheet in this file for further explanation 
+of how to interpret the results.
+<p><a name="raw"></a>
+<h3>2. HadAT0 - raw station and gridded products</h3>
+The raw data that result from the decisions outlined in Section 1 were converted to seasonal 
+mean anomaly timeseries on our nine pressure levels relative to a 1966-95 climatology. 
+These series were gridded onto a 10 degree longitude by 5 degree latitude grid to form HadAT0. 
+These are the "raw" station level data used as input to our QC procedure. In reality they are 
+all post-processed to some extent. For CLIMAT TEMP and MONADS this post-processing is whatever 
+was performed at the station plus gross QC checks. For GUAN there has been a median fit selection 
+applied to all stations between data from CLIMAT TEMP and MONADS and some National Met Service 
+archives, along with gross QC checks. LKS has had a much more thorough examination of the raw data 
+to produce a high quality dataset which is available from John Lanzante at NOAA GFDL. The station 
+sources used for each station are listed as part of <A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/doc/hadat_station_information.txt">hadat_station_information.txt</a> 
+.
+<P>
+<a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT0/">HadAT0 Data files</a> are available in the ukmo-hadat archive.
+<P><a name="quality"></a>
+<h3>3. Quality Control on HadAT0 station timeseries</h3>
+A weighted average neighbour series was constructed on each pressure level for each of the HadAT0 
+stations (see Thorne et al., 2005 for more details) based upon all surrounding neighbour stations, 
+with our stratospheric neighbours consisting only of those stations which had not failed the 
+stratospheric similarity tests in our initial assessment (<A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT0/stratospheric_ids.txt">listing</a> of stratospheric neighbour 
+stations). The <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT0/">neighbour coefficients</a> 
+used to calculate the average neighbour series can be found 
+in the BADC archive (Note: these files contain neighbour coefficients for additional stations as well as the HadAT0 
+stations - see section 5)
+<P>
+We analysed the station minus neighbour average difference series with the aid of a Kolomogorov-Smirnov 
+test applied over a moving 30-season window to make our assessments as to break-point locations and the 
+adjustments to be applied. We also used available <a href="http://www.ncdc.noaa.gov/oa/climate/igra/index.php?name=metadata">metadata</a> to help us in our decisions as well as our 
+knowledge of events such as volcanoes, ENSO etc. Further details are given in Thorne et al. 2005 
+description of the dataset construction. This step inevitably involved subjective decisions being made 
+as to the timing and existence of breakpoints within the individual station series.
+<P>
+We used an iterative approach whereby the adjustments were calculated and deletions for gross errors 
+identified. These were then applied; the station, neighbours, and neighbour difference series 
+recalculated; and the procedure repeated until all stations were deemed to be sufficiently similar to 
+their neighbour based estimates. Again, more details are available in Thorne et al., 2005. Adjustments 
+were calculated using a bootstrap-type approach and were only assigned if a number of tests were passed, 
+as described in Thorne et al., 2005.
+<P>
+The formatting of the adjustments files is described in the file <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT0/format_adjustments_files.txt">format_adjustments_files.txt</a>. 
+The files for each iteration of our procedure are linked below: 
+<ul>
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT0/adjustments1.txt">adjustments1.txt</a> 
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT0/adjustments2.txt">adjustments2.txt</a> 
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT0/adjustments3.txt">adjustments3.txt</a> 
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT0/adjustments4.txt">adjustments4.txt</a> 
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT0/adjustments5.txt">adjustments5.txt</a> 
+</ul>
+<p>
+The final adjustments which are the sum of all deletions and adjustments given in the above files 
+are given in the files <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT1/hadat1_adjustments.nc">hadat1_adjustments.nc (3.1 Mb)</a> 
+and <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT1/hadat1_adjustments.txt.gz">hadat1_adjustments.txt.gz 
+(2.3 Mb, compressed)</a>. Adjustments have been applied as a seasonally invariant change to all data 
+preceding the breakpoint identified and are addative. Note that as necessary these station series 
+have been renormalised at each iteration and in these final files so that they all have a zero 1966-95 
+climatology. These climatology adjustments are given in the files.
+<p><a name="hadat1"></a>
+<h3>4. HadAT1 - homogenised station and gridded timeseries</h3>
+The adjustments outlined in Section 3 were applied to the HadAT0 station timeseries data. 
+These series were gridded onto a 10 degree longitude by 5 degree latitude grid to form HadAT1. 
+<P>
+<a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT1/">HadAT1 Data files</a> are available in the ukmo-hadat archive.
+<P><a name="hadat2"></a>
+<h3>5. Expanding the station network to create HadAT2</h3>
+As is evident from the analysis in section 1, and summarised in the excel spreadsheet 
+<a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/doc/newerdecisions.xls">decisions.xls</a>, 
+in defining our original set of candidate stations we had chosen to discard a large number of stations. 
+These were originally discarded as the thickness series for each station was not considered to be 
+significantly similar to a neighbour-average thickness series. They may have introduced gross 
+inhomgeneties into the series containing the core set of stations. Figure 1 of Thorne et al., 2005 
+shows that the decisions were far from random. In particular we had rejected a large amount of Indian, 
+Chinese, African, and tropical data. The importance of many of these regions in attempting to explain 
+apparently disparate trends between the surface and the troposphere meant that we revisited these 
+stations. These additional stations were incorporated in HadAT2. The decisions as to which station 
+version to pick for HadAT2 were based upon the excel spreadsheet, but are not documented within the 
+spreadsheet itself. The dataset source choice can be ascertained through an examination of the 
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/doc/hadat_station_information.txt">JGR 
+supplementary table 1</a>.
+<P>
+The raw station timeseries are available as 
+<a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT2/Stations/hadat2_raw_stations.nc">hadat2_raw_stations.nc</a> (1.3 Mb) or 
+<a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT2/Stations/hadat2_raw_stations.txt.gz">hadat2_raw_stations.txt.gz</a> 
+(0.5 Mb, compressed).
+<P>
+To homogenise these station timeseries we used HadAT1 as a neighbour network, with all HadAT1 stations 
+contributing to the stratospheric neighbours. (See section 3 for the neighbour coefficients). In all 
+other respects our procedure was identical to that employed in HadAT1. The formatting of the adjustments 
+files is also identical to that employed for HadAT1 
+(see <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT2/Stations/format_adjustments_files.txt">format_adjustments_files.txt).
+<P>
+<ul>
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT2/Stations/hadat2_station_adjustments1.txt">hadat2_station_adjustments1.txt</a> 
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT2/Stations/hadat2_station_adjustments2.txt">hadat2_station_adjustments2.txt</a> 
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT2/Stations/hadat2_station_adjustments3.txt">hadat2_station_adjustments3.txt</a> 
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT2/Stations/hadat2_station_adjustments4.txt">hadat2_station_adjustments4.txt</a> 
+</ul>
+<P>
+The final adjustments which are the sum of all deletions and adjustments given in the above files are 
+given in the files hadat2_adjustments.nc (X.Y Mb) and hadat2_adjustments.txt.gz (X.Y Mb, compressed) - files to be made available. 
+<P>
+The adjusted HadAT2 stations were added to the HadAT1 station series to create HadAT2.
+<P>
+<a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT2/Stations/">HadAT2 Data files</a> are available in the ukmo-hadat archive.
+</P>
+<a name="monthly"></a>
+<H3>6. Updating HadAT2 as a monthly product</H3>
+Up until now all of the analysis has been performed on a seasonal or coarser temporal resolution and 
+only up until early 2002 when the HadAT homogenisation process was initiated. However, for the purposes 
+of monitoring long-term changes it is useful to disaggregate this to the monthly resolution and update 
+in near real-time. HadAT0 and HadAT1 remain frozen seasonal products to 2001, but HadAT2 has been 
+updated as a monthly product. 
+<P>
+The final set of seasonal HadAT2 adjustments were applied to the raw monthly anomaly values that were 
+originally used do derive the seasonal values. Deletions were applied to all three monthly values 
+within each deleted season. The 1966-1995 climatologies were then recalculated to create the HadAT2 
+monthly product. 
+<P>
+Some of the original HadAT data sources are now unsuitable for updating HadAT2. GUAN is only available 
+until 2001, the CARDS (and hence MONADS) dataset is no longer being updated, and the LKS dataset only 
+contains data until 1997. The CARDS sucessor, Integrated Global Radiosonde Archive (<a href="http://www.ncdc.noaa.gov/oa/climate/igra/index.php">IGRA</a>), has therefore 
+been used to update the HadAT2 stations which orginally contained data from GUAN and LKS as well as 
+MONADS. A comparison between MONADS and IGRA data for a selection of HadAT2 stations showed no 
+significant systematic differences on monthly timescales.
+<P>
+The HadAT2 monthly product was frozen until December 1999 and has been updated with new data from 
+January 2000 onwards. The exception was the stations that originally contained data from the LKS 
+dataset, as these were updated from January 1998 (see section 1 for a list of stations and sources). 
+The new absolute temperature data was converted into anomaly space by subtracting the monthly station 
+climatologies below. The monthly gridded climatologies are also available. (<strong>Warning: Climatology values 
+may contain absolute biases as the homogenisation analysis is performed in anomaly space so cannot 
+perfectly correct for absolute biases</strong>).
+<P><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT2/Stations/">HadAT2 Station Climatologies Data files</a> are available in the ukmo-hadat archive.
+<P><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/HadAT2/Climatologies/">HadAT2 Gridded Climatologies Data files</a> are available in the ukmo-hadat archive.
+
+<P>
+To produce fully homogeneous dataset it was deemed necessary to develop some basic quality checks, 
+similar to the ones employed in the initial seasonal dataset development. A neighbour difference 
+series was calculated, as in the original quality control proceedure. A running first difference 
+series was produced using 12 months values either side of each point, and a critical value was derived 
+at each station and level from the 95th percentile of the pre-2000 absolute values of this series 
+(which are assumed homogeneous following the completion of the QC). Any points within the new post-2000 
+data that exceeded this critical value at 3 or more pressure levels were flagged as being a suspected 
+breakpoint. Manual intervention was required make the decision whether to adjust each of these potential 
+breakpoints, by analysing plots of the difference series. See Figure 2 in the <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/doc/update_report.pdf">report on the updating of 
+HadAT in near real-time</a> for an example.
+<P>
+The adjustments were calculated using the same method as in the orignal dataset development (see Thorne 
+et al., 2005 for more details). A period of up to 3 years (36 months) either side of each breakpoint 
+(trucated if there was another breakpoint identified within this period) was used unless the breakpoint 
+identified was within the most recent 36 months. In these cases a period of 1 year (12 months) was used, 
+although the adjustments will be recalculated in subsequent updates when a full 36 months worth of data 
+following the breakpoint become available. No breakpoints are identified within the most recent 12 months 
+as a 24-month window is required for their identification.
+<P>
+Each adjustment was subtracted from all the points in the station series after and including the identified 
+breakpoint (Note: post-200 adjustments are subtacted and not added). Hence our monthly HadAT2 product has 
+been adjusted to December 1999. The neighbour difference series was recalculated and any spurious values 
+after 2000 that were equal to or greater than 3.5 standard deviations of the pre-2000 data were 
+automatically deleted. The pre-2000 HadAT2 monthly product was combined with the new quality controlled 
+data (post-2000) to create the updated HadAT2 monthly product. 
+<P><a name="realtime"></a>
+<h3>7. HadAT2 near real time updates</h3>
+<P>
+<img src="update_process_thumb.png" align="right"></a>
+<P>HadAT2 is now updated in near real time on a quarterly basis. Each quarter the previous 12 months of data 
+is retrieved from the IGRA and CLIMAT TEMP databases. The temperatures are converted to anomalies using 
+the monthly climatologies. 
+<P>
+The raw station monthly timeseries that have been used to update HadAT2 are available as update_raw_stations.
+nc (2.2 Mb) or update_raw_stations.txt.gz (compressed, 1.1 Mb). (Note: These files are updated periodically 
+when HadAT2 is updated. All stations have been updated with data from January 2000 with the exception of 
+the LKS stations, which have been updated from January 1998 - see section 6 above.) 
+<P>
+Any previously calculated adjustments are applied to the anomalies (except those which require recalculating 
+with the full 36 months of data either side of the identfied breakpoint). The anomalies are then passed 
+through our quality control system, as described in the section above. 
+<P>
+The formatting of the update adjustment files is described in the file 
+
+<P><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/format_update_adjustment_file.txt">format_update_adjustment_file.txt</a>. 
+
+The file itself is linked below (Note: this file is updated periodically when HadAT2 is updated). 
+<P>
+<ul>
+<li><a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/update_adjustments.txt">update_adjustments.txt</a> 
+</ul>
+The quality controlled data is used to update the current station series, which is then gridded. 
+Various other products, including the zonal mean timeseries, the global mean time series and the 
+tropical mean timeseries are also created. 
+(See the <a href="/cgi-bin/data_browser/data_browser/badc/ukmo-hadat/data/">HadAT2 data page</a> for all the monthly HadAT2 products 
+that are updated in near real time.) A series of tests (currently under development) are applied to 
+the HadAT2 products before the website is updated. There is a typical lag of approximately 2 months 
+so that, for example, the data for January becomes available at the end of March or the beginning of 
+April. The data is updated quarterly unless a specific request for an update is received. 
+ 
+
+<p><a name="source"></a>
+<h3>2. Small change in source data</h3>
+The CLIMAT TEMP monthly radiosonde data is no longer archived at the Met Office Hadley Centre. 
+Since May 2007 IGRA data have been used to update all HadAT2 stations if available. 
+This only affected a small proportion of the stations, which were previously updated using the CLIMAT TEMP archives (see <a href="http://www.metoffice.gov.uk/hadobs/hadat/audit/hadat_station_information.txt">hadat_station_information.txt</a>). No significant systematic differences were found on monthly timescales due to this change in source data.
+
+
+
+<P>
+</BODY>
+</HTML>

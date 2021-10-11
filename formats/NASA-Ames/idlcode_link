@@ -1,0 +1,1673 @@
+;  ************ pstr start ************
+function pstr, x, format=fmt
+
+;+
+; NAME:
+;   pstr
+; PURPOSE:
+;   Utility to format a variable or array for printing as a string
+; CATEGORY:
+;   text string
+; CALLING SEQUENCE:
+;      print_str = pstr(x)
+;      print_str = pstr(x,format=fmt)
+;      print, pstr(x)
+; INPUTS:
+;    x = variable to print
+; OPTIONAL INPUT PARAMETERS: none
+; KEYWORD PARAMETERS:
+;    fmt = format descriptor string
+; OUTPUTS: none
+; SIDE EFFECTS: none known
+; RESTRICTIONS: 
+;    Format string is assumed correct.
+; PROCEDURE:
+;    A scalar is returned as a simple string with trailing
+;    and leading blanks removed. An array is returned as a string if it fits
+;    on one 79-character line, and an array of 79-character strings otherwise.
+; REQUIRED ROUTINES:
+;    IDL library: n_elements, strtrim, string, strlen, strarr, strmid
+; MODIFICATION HISTORY: 
+;   T.Atwater 910405 -- Created
+;   $Header: /home/tornado/internal/badc/nasa_ames/dataex/RCS/xchgread.pro,v 1.2 2000/02/23 14:10:46 badc Exp badc $
+;-
+
+; If variable is undefined, return the variable
+; Redefine variable as string, and remove leading and trailing blanks
+; If variable is a scalar, return the string
+; For each element in array except last, add it to string, plus a blank
+; Add last element to string
+; Compute no.lines
+; If only 1 line, return the line
+
+if n_elements(x) eq 0 then return, x
+if n_elements(fmt) eq 0 then fmt = ''
+s = strtrim(string(x,format=fmt),2)
+if n_elements(s) eq 1 then return, s
+t = ''
+for i=0,n_elements(s)-2 do t = t + s(i) + ' '
+t = t + s( n_elements(s) - 1 )
+ll = 79
+nl = strlen(t)/ll + 1
+if nl eq 0 then return, t
+
+; Dimension array of lines
+; Save normal line length (approx. length of all lines except last)
+; For each line of output
+;    Extract next chunk from string
+;    Determine length of chunk
+;    (Make sure lines do not end in the middle of a variable or word)
+;    If chunk has at least 1 blank, beginning of next chunk is not a blank,
+;          and this is not the last chunk
+;       While looking for 1st blank from end of string, increment string index
+;       Save chunk up to (but not including) last blank as output line
+;    Endif else save entire chunk as output line
+;    Increment string position counter to beginning of next chunk
+; End for
+; Return the array of lines
+
+r = strarr(nl)
+rlen = ll - 1
+c = 0
+for i=0,nl-1 do begin
+   temp = strmid(t,c,ll)
+   j = strlen(temp) - 1
+   if strpos(temp,' ') ne -1 and strmid(t,c+ll,1) ne ' ' and j eq rlen then $
+   begin
+      while strmid(temp,j,1) ne ' ' do j = j - 1
+      r(i) = strtrim( strmid(temp,0,j), 2 )
+   endif else r(i) = strtrim(temp,2)
+   c = c + j + 1
+endfor
+return, r
+
+end
+;  ************ pstr end ************
+
+;  ************ xchgread_hdcom start ************
+pro xchgread_hdcom, in, head_common
+;+
+; NAME:
+;   xchgread_hdcom
+; PURPOSE:
+;   Reads that part of exchange file header common to all formats for xchgread
+; CATEGORY:
+;   mission, exchange
+; CALLING SEQUENCE:
+;      xchgread_hdcom, in, head_common 
+; INPUTS:
+;    in = LUN of exchange file
+; OPTIONAL INPUT PARAMETERS: none
+; KEYWORD PARAMETERS: none
+; OUTPUTS:
+;    head_common = header values common to all file formats
+;       head_common.nlhead = No. lines in exchange file header
+;       head_common.ffi = File format index
+;       head_common.oname = Observer name
+;       head_common.org = Organization
+;       head_common.sname = Source of measurements
+;       head_common.mname = Mission name
+;       head_common.ivol = Volume number of this file
+;       head_common.nvol = Total no. volumes for this dataset
+;       head_common.date = Date of mission (yymmdd)
+;       head_common.rdate = Revision date (yymmdd)
+; SIDE EFFECTS: none known
+; RESTRICTIONS: none
+; PROCEDURE: straightforward
+; Date is changed from 3 integer parameters (yyyy,dd,mm) to 1 string (ddmmyy);
+; Otherwise data is not modified.
+; REQUIRED ROUTINES:
+;   Idl Library: intarr, readf, fix, long
+; MODIFICATION HISTORY: 
+;   T.Atwater 910405 -- Created
+;   $Header: /science/missions/programs/exchange/xchgread_hdcom.pro,v 1.1 
+;            91/05/07 12:27:40 atmos Exp $
+;-
+
+nlhead = 0
+ffi = 0
+oname = 'empty'
+sname = 'empty'
+mname = 'empty'
+org = 'empty'
+ivol = 0
+nvol = 0
+date = intarr(3)
+rdate = intarr(3)
+
+; Read no. lines in header, file format index
+; Read observer name, source of measurements, mission
+; Read volume no. of this file, total no. volumes of this dataset
+; Read yyyy mm dd datset created, yyyy mm dd dataset revised
+
+readf, in, nlhead, ffi
+readf, in, oname
+readf, in, org
+readf, in, sname
+readf, in, mname
+readf, in, ivol, nvol
+readf, in, date, rdate
+
+; Save common header data into structure
+; Return
+
+head_common.nlhead = nlhead
+head_common.ffi = fix(ffi)
+head_common.oname = oname
+head_common.org = org
+head_common.sname = sname
+head_common.mname = mname
+head_common.ivol = ivol
+head_common.nvol = nvol
+head_common.date = $
+         pstr( 10000 * ( long( date(0)) mod 100 ) + 100 *  date(1) +  date(2) )
+head_common.rdate = $
+         pstr( 10000 * ( long(rdate(0)) mod 100 ) + 100 * rdate(1) + rdate(2) )
+
+return
+end
+;  ************ xchgread_hdcom end ************
+
+;  ************ xchgread_var start ************
+pro xchgread_var, in, n, scal, miss, name
+
+;+
+; NAME:
+;   xchgread_var
+; PURPOSE:
+;   Reads primary or auxiliary variable descriptors for xchgread
+; CATEGORY:
+;   mission, exchange
+; CALLING SEQUENCE:
+;   xchgread_var, in, n, scal, miss, name 
+; INPUTS:
+;    in = LUN of exchange file
+; OPTIONAL INPUT PARAMETERS: none
+; KEYWORD PARAMETERS: none
+; OUTPUTS:
+;    n = No.variable(s)
+;    scal = Variable scale(s)
+;    miss = Variable missing data value(s)
+;    name = Variable name(s)
+; SIDE EFFECTS: none known
+; RESTRICTIONS:
+;   Intended for use only by procedure XCGHREAD.
+; PROCEDURE: straightforward
+; REQUIRED ROUTINES:
+;   Idl Library: readf, intarr, lonarr, strarr
+; MODIFICATION HISTORY: 
+;   T.Atwater 910405 -- Created
+;   $Header: /science/missions/programs/exchange/xchgread_var.pro,v 1.1 
+;            91/05/07 12:27:46 atmos Exp $
+;-
+
+; Read no.variables
+; If zero, return
+; Declare scale factor, missimg value, variable name arrays
+; Read scale factor, missimg value, variable name
+; Return
+
+n = 0
+readf, in, n
+if n le 0 then return
+scal = fltarr(n)
+miss = fltarr(n)      ;Changed from lonarr by A.Harwood
+name = strarr(n)
+readf, in, scal
+readf, in, miss
+readf, in, name
+
+return
+end
+;  ************ xchgread_var end ************
+
+;  ************ xchgread_cmnt start ************
+pro xchgread_cmnt, in, flag
+
+;+
+; NAME:
+;   xchgread_cmnt
+; PURPOSE:
+;   Reads and prints data exchange file comments for xchgread
+; CATEGORY:
+;   mission, exchange
+; CALLING SEQUENCE:
+;   xchgread_cmnt, in, flag 
+; INPUTS:
+;    in = LUN of exchange file
+;    flag = Comment print request flag
+;       =1, Echo all comments in file to standard output
+;       =0, Do not echo
+; OPTIONAL INPUT PARAMETERS: none
+; KEYWORD PARAMETERS: none
+; OUTPUTS: none
+; SIDE EFFECTS: none known
+; RESTRICTIONS:
+;   Intended for use only by procedure XCHGREAD.
+;   File pointer must be positioned at the correct line in the file.
+; PROCEDURE: Straightforward. Comments are not saved.
+; REQUIRED ROUTINES:
+;   Idl Library: readf, print
+; MODIFICATION HISTORY: 
+;   T.Atwater 910405 -- Created
+;   $Header: /science/missions/programs/exchange/xchgread_cmnt.pro,v 1.1 
+;            91/05/07 12:27:36 atmos Exp $
+;-
+
+; Initialize
+; For each of normal, special comments
+;    Read no.comment lines from file header
+;    For each comment line
+;       Read the comment
+;       If requested, write it to standard output
+;    End for
+; End for
+; Return
+
+cmnt = ''
+ncoml = 0
+for i=0,1 do begin
+   readf, in, ncoml
+   for j=0,ncoml-1 do begin
+      readf, in, cmnt
+      if flag then print, cmnt
+   endfor
+endfor
+
+return
+end
+;  ************ xchgread_cmnt end ************
+
+;  ************ xchgread_next start ************
+function xchgread_next, in, file_names, nf, i, nlhead, db_head
+
+;+
+; NAME:
+;   xchgread_next
+; PURPOSE:
+;   Repositions file pointer and optionally opens next data exchange file
+;      volume for xchgread
+; CATEGORY:
+;   mission, exchange
+; CALLING SEQUENCE:
+;   ret_code = xchgread_next( in, file_names, nf, i, nlhead, db_head )
+; INPUTS:
+;    in = LUN of exchange file
+;    file_names = Data exchange file name(s)
+;    nf = Total no. data volumes to process
+;    i = Volume no. of exchange file
+;    nlhead = No. lines in exchange file header
+;    db_head = 1 if database header in files
+;              0 if no database header
+; OPTIONAL INPUT PARAMETERS: none
+; KEYWORD PARAMETERS: none
+; OUTPUTS:
+;    ret_code = returned value
+;       =0, success
+;       <0, Error opening data exchange file volume #(abs(n))
+; SIDE EFFECTS: none known
+; RESTRICTIONS:
+;   Intended for use only by procedure XCGHREAD.
+; PROCEDURE: If processing more than 1 data volume, close old file and open
+;   next one; else rewind old file to top. Skip header to position file
+;   pointer at first data record.
+; REQUIRED ROUTINES:
+;   Idl Library: free_lun, openr, print, point_lun, readf
+; MODIFICATION HISTORY: 
+;   T.Atwater 910405 -- Created
+;   J.Wild    910920 -- Added lines to skip database header 
+;   $Header: /science/missions/programs/exchange/xchgread_next.pro,v 1.1 
+;            91/05/07 12:27:42 atmos Exp $
+;-
+
+; If more than 1 data volume requested
+;    Close old data file
+;    If this is not the last volume, set index to next volume
+;    Else set index to first volume
+;    Open next volume
+;    If error, return
+; Else reset file pointer to beginning of file
+; While still reading header
+;    Read a header line
+;    Increment index
+; End while
+; Return
+
+if nf gt 1 then begin
+   free_lun, in
+   if i lt nf then fi = i else fi = 0
+   openr, in, file_names(fi), error=err, /get_lun
+   if err ne 0 then begin
+      print, 'XCHGREAD_NEXT: Error opening file ' + file_names(i+1)
+      return, -1*(i+1)
+   endif
+endif else point_lun, in, 0
+a_line = ''
+nh = 0L
+while nh lt nlhead+db_head do begin
+   readf, in, a_line
+   nh = nh + 1
+endwhile
+
+return, 0
+end
+;  ************ xchgread_next end ************
+
+;  ************ xchgread_numrec start ************
+function xchgread_numrec, in, file_names, nf, nlhead, record_1, db_head, $
+                          var_rec, nx_miss, nx_max
+
+;+
+; NAME:
+;   xchgread_numrec
+; PURPOSE:
+;   Determine total no. data records in data exchange file(s) for XCHGREAD
+; CATEGORY:
+;   mission, exchange
+; CALLING SEQUENCE:
+;   nrec = xchgread_numrec( f, file_names, nf, nlhead, record_1,db_head )
+;   nrec = xchgread_numrec( f, file_names, nf, nlhead, record_1,db_head, $
+;                        record_2, nx_miss, nx_max )
+;   nrec = xchgread_numrec( f, file_names, nf, nlhead, record_1,db_head, $
+;                        nv, nx_miss, nx_max )
+; INPUTS:
+;    in = LUN of exchange file
+;    file_names = Data exchange file name(s)
+;    nf = Total no. data volumes to process
+;    nlhead = No. lines in exchange file header
+;    record_1 = Record structure
+;       If the file is of constant record length format, record_1 is the
+;          entire data record structure
+;       If the file is of variable record length format, record_1 is the
+;          structure of the constant part of the data record
+;          record_1.nx must be read as no.(variable length) sub-records
+;    db_head = 1 if file contains database header
+;            = 0 if file does not contain database header
+; OPTIONAL INPUT PARAMETERS: (variable record length format only)
+;    var_rec = Parameter relating to variable length portion of record
+;       If FFI is not 2310, var_rec is a structure describing variable portion
+;       If FFI is 2310, var_rec is a scalar and equal to no.primary variables
+;    nx_miss = missing value of no. sub-records variable
+; KEYWORD PARAMETERS: none
+; OUTPUTS:
+;    nx_max = max no.sub records in entire dataset (variable recl only)
+;    nrec = returned value
+;       >0, Total no. data records in data exchange file(s)
+;       <0, Error opening data exchange file volume #(abs(n))
+; SIDE EFFECTS: none known
+; RESTRICTIONS:
+;   Intended for use only by procedure XCGHREAD.
+; PROCEDURE:
+;    Set flags to indicate special processing cases. 
+;    For each data volume to process, while file not yet exhausted, read a
+;    record; if variable record length, also read sub_records. When file
+;    is exhausted, call routine to optionally open next file and skip over
+;    header. Return no. data records.
+; REQUIRED ROUTINES:
+;   IDL Library: n_params, size, n_elements, readf
+;   User library: xchgread_next
+; MODIFICATION HISTORY: 
+;   T.Atwater 910405 -- Created
+;   T.Halihan 910801 -- Changed loop to count through integer values
+;   J.Wild    910920 -- Added lines to skip database header 
+;   $Header: /science/missions/programs/exchange/xchgread_numrec.pro,v 1.1 
+;            91/05/07 12:27:44 atmos Exp $
+;-
+
+; Set flag to indicate whether will process sub_records
+; Determine type of input variable 'var_rec'
+; If 'var_rec' is defined (i.e. if reading a variable record length format file)
+;    If 'var_rec' is a structure
+;       Save 'var_rec' as structure for reading variable part of record
+;    Else
+;       Save 'var_rec' as scalar, no.primary variables
+;       Set flag to indicate that this is format 2310
+;    End if/else
+; Endif
+
+flag = ( n_params() gt 6 )
+var_rec_size = size( var_rec )
+var_rec_type = var_rec_size(n_elements(var_rec_size)-2)
+flag_2310 = 0
+if var_rec_type gt 0 then begin
+   if var_rec_type eq 8 then begin
+      record_2 = var_rec 
+   endif else begin
+      nv = var_rec
+      flag_2310 = 1
+   endelse
+endif
+nrec = 0L
+nx_max = 0L
+
+; For each volume
+;    While not out of data
+;       Read record (or part of record if processing sub-records)
+
+for f=1,nf do begin
+   while not eof(in) do begin
+      readf, in, record_1
+
+;       If processing sub-records and there is at least one sub-record
+;          If this is not format 2310
+;             For each sub-record, read it
+;          Else (necessary because more than 1 value per 80-char line in file)
+;             Declare array
+;             For each primary variable, read data
+;          End if/else
+;          If this is the largest no.sub-records yet read, save no.sub-records
+;       End if
+
+      if flag then if record_1.nx ne 0 and record_1.nx ne nx_miss then begin
+         if not flag_2310 then begin
+            for i=0,fix(record_1.nx-1) do readf, in, record_2
+         endif else begin
+            v_n = fltarr(record_1.nx)
+            for n=0,nv-1 do readf, in, v_n
+         endelse
+         if record_1.nx gt nx_max then nx_max = record_1.nx
+      endif
+
+;       Increment record counter
+;    End while
+;    Call routine to close file and open next one if required
+; End for
+; Return no.records read
+
+      nrec = nrec + 1
+   endwhile
+   r = xchgread_next( in, file_names, nf, f, nlhead ,db_head)
+   if r lt 0 then return, r
+endfor
+
+return, nrec
+end
+;  ************ xchgread_numrec end ************
+
+;  ************ xchgread_bldstr start ************
+function xchgread_bldstr, i, n, m, f
+
+;+
+; NAME:
+;   xchgread_bldstr
+; PURPOSE:
+;   Builds a string to be used as a structure declaration for xchgread
+; CATEGORY:
+;   mission, exchange
+; CALLING SEQUENCE:
+;      build_str =  xchgread_bldstr( i, nauxv, m, f )
+; INPUTS:
+;    i = initial string
+;    n = switch for including middle string
+;    m = middle string
+;    f = final string
+; OPTIONAL INPUT PARAMETERS: none
+; KEYWORD PARAMETERS: none
+; OUTPUTS: none
+; SIDE EFFECTS: none known
+; RESTRICTIONS:
+;   Intended for use only by procedure XCGHREAD.
+; PROCEDURE: straightforward
+; REQUIRED ROUTINES: none
+; MODIFICATION HISTORY: 
+;   T.Atwater 910405 -- Created
+;   $Header: /science/missions/programs/exchange/xchgread_bldstr.pro,v 1.1 
+;            91/05/07 12:27:34 atmos Exp $
+;-
+
+s = i
+if n gt 0 then s = s + m
+s = s + f
+return, s
+end
+;  ************ xchgread_bldstr end ************
+
+;  ************ xchgread_ffi start ************
+function xchgread_ffi, in, head_common, file_names, c_flag, db_head, data
+
+;+
+; NAME:
+;   xchgread_ffi
+; PURPOSE:
+;   Switch on file format index and read data exchange file for xchgread
+; CATEGORY:
+;   mission, exchange
+; CALLING SEQUENCE:
+;      ret_code = xchgread_ffi( in, head_common, file_names, c_flag,db_head, $
+;                               data )
+; INPUTS:
+;    in = LUN of data exchange file explicitly requested in XCHGREAD call
+;    head_common = Header values common to all formats
+;       head_common.nlhead = Total no. lines in header
+;       head_common.ffi = File format index
+;       head_common.ivol = Volume number of data exchange file explicitly
+;                          requested in XCHGREAD call
+;       head_common.nvol = Total number of volumes for this dataset
+;    file_names = Data exchange file name(s), one for each volume to read
+;    c_flag = Comment print request flag
+;       =1, Echo all comments in file to standard output
+;       =0, Do not echo (default)
+;    db_head = 1 if file contains database header
+;            = 0 if file contains no database header
+; OPTIONAL INPUT PARAMETERS: none
+; KEYWORD PARAMETERS: none
+; OUTPUTS:
+;    (Header values unique to this format are output via common blocks)
+;    data = Data values
+;       data.x = Unbounded independent variable
+;       data.x0 = Bounded independent variable(s)
+;       data.v = Primary variable(s)
+;       data.a = Auxiliary variable(s)
+;    ret_code:
+;       <0, Error reading exchange file; abs(ret_code) is file volume no.
+;       =0, Success
+;       =1, No data records found in exchange file
+;       =2, No primary variables
+;       >1000, Error processing this FFI #
+; COMMON BLOCKS:
+;    head_1, dx, xname, nv, vscal, vmiss, vname
+;       dx = Interval between values of independent variable(s)
+;       xname = Name(s) of independent variable(s)
+;       nv = No. of primary variable(s)
+;       vscal = Primary variable scale(s)
+;       vmiss = Primary variable missing data value(s)
+;       vname = Primary variable name(s)
+;    head_2, nauxv, ascal, amiss, aname
+;       nauxv = No. of auxiliary variable(s)
+;       ascal = Auxiliary variable scale(s)
+;       amiss = Auxiliary variable missing data value(s)
+;       aname = Auxiliary variable name(s)
+;    head_3, nvpm, nx, nxdef
+;       nvpm = No. of independent variable values between independent
+;                   variable marks
+;       nx = No. of values of the independent variable
+;       nxdef = No. values of the independent variable(s) explicitly
+;                    recorded in the file header
+;    head_4, lenx, nauxc, lena
+;       lenx = No. characters used to record character primary variable(s)
+;       nauxc = No. primary variables recorded as character strings
+;       lena = No.characters used to record character auxiliary variable(s)
+;    sys_time = last 3 digits of system time; used to make structures unique
+; SIDE EFFECTS: none known
+; RESTRICTIONS:
+;   Intended for use only by procedure XCGHREAD.
+;   Data file volumes must consist of whole records; that is, a volume may
+;      not end in the middle of a record.
+; PROCEDURE:
+;   Switch on file format index (FFI); read part of header unique to this
+;   format; determine number of data records in file(s); read data from
+;   file(s); close file and return.
+; REQUIRED ROUTINES:
+;   IDL Library: readf, replicate, fltarr, eof, execute, print, strarr, free_lun
+;   User Library: xchgread_var, xchgread_cmnt, xchgread_numrec, xchgread_next,
+;                 xchgread_bldstr, pstr
+; MODIFICATION HISTORY: 
+;   T.Atwater 910405 -- Created
+;   T.Atwater 910529 -- Made structure definitions unique to avoid problem with
+;                       multiple calls in 1 IDL session (FFI 2610 only)
+;   T.Atwater 910530 -- Fixed bug in structure name for all file formats
+;   T.Atwater 910610 -- Filled variable length records with missing data value
+;                                    instead of 0
+;   T.Halihan 910801 -- Changed loops to count through integer values
+;   J.Wild    910920 -- Added lines to skip database header 
+;   $Header: /science/missions/programs/exchange/xchgread_ffi.pro,v 1.4 
+;            91/06/10 11:18:30 toma Exp $
+;-
+
+common head_1, dx, xname, nv, vscal, vmiss, vname
+common head_2, nauxv, ascal, amiss, aname
+common head_3, nvpm, nx, nxdef
+common head_4, lenx, nauxc, lena
+common sys_time, sec
+nf = n_elements(file_names)
+m = 0L
+nlhead = head_common.nlhead
+temp_str = ''
+ffi = head_common.ffi
+data = 0
+data_1 = 0
+data_2 = 0
+sys_time = systime(1)/1000.0
+sec = pstr( long( 1000*( sys_time - long(sys_time) ) ) )
+
+; Missing value for bounded independent variable in formats with variable record
+;     length (MAY NEED TO CHANGE IF THIS VARIABLE IS SOMETHING OTHER
+;    THAN PRESSURE)
+press_miss = 9999.0
+
+; Switch on file format index
+
+case ffi of
+
+;  FFI 1001:
+;    -->One real, unbounded independent variable
+;    -->No auxiliary variables
+;    -->Independent and primary variables are recorded in same record
+
+ 1001: begin
+
+;    Read x data interval
+;    Read x description
+;    Read no. primary variables, their scale, missing values, and names
+;       Return if no primary variables (purpose of program is to read these)
+;    Read comments, printing them if requested
+
+   dx = 0.0
+   xname = ''
+   readf, in, dx
+   readf, in, xname
+   xchgread_var, in, nv, vscal, vmiss, vname & if nv le 0 then return, 2
+   xchgread_cmnt, in, c_flag
+
+;    Declare structure for reading a single data record
+;    Determine total no. data records in file
+
+   s = 'data_1 = { d1001_1__' + sec + ', x:0.0, v:fltarr(nv) }'
+   r = execute(s)
+   nrec = xchgread_numrec( in, file_names, nf, nlhead, data_1, db_head )
+   if nrec lt 0 then return, nrec else if nrec eq 0 then return, 1
+
+;    Declare structure for saving all data records
+;    For each data file volume
+;       While still data in file
+;          Read a data record
+;          Save permanently
+;          Increment record no.counter
+;       End while
+;       Call routine to close file and open next one (if desired)
+;    End for
+;  End
+
+   s = 'data = { d1001__' + sec + ', x:fltarr(nrec), v:fltarr(nrec,nv) }'
+   r = execute(s)
+   for f=1,nf do begin
+      while not eof(in) do begin
+         readf, in, data_1
+         data.x(m) = data_1.x
+         data.v(m,*) = data_1.v
+         m = m + 1
+      endwhile
+      r = xchgread_next( in, file_names, nf, f, nlhead, db_head )
+      if r lt 0 then return, r
+   endfor
+ end
+
+;  (Only unique features are included in comments from here on)
+;
+;  FFI 1010:
+;    -->One real, unbounded independent variable
+;    -->Auxiliary variables
+;    -->Independent and auxiliary variables are in the same record
+;    -->All primary variables for a given independent variable mark are
+;          recorded in the same record
+
+ 1010: begin
+   dx = 0.0
+   xname = ''
+   readf, in, dx
+   readf, in, xname
+   xchgread_var, in, nv, vscal, vmiss, vname & if nv le 0 then return, 2
+
+;    Read no. auxiliary variables, their scale, missing values, and names
+;    Build structure for reading data
+;       (This procedure is necessary because structure definition is different
+;        depending on whether no.auxiliary variables is non-zero)
+
+   xchgread_var, in, nauxv, ascal, amiss, aname
+   si = 'data_1 = { d1010_1__' + sec + ', x:0.0'
+   sm = ', a:fltarr(nauxv)'
+   sf = ', v:fltarr(nv) }'
+   r = execute( xchgread_bldstr( si, nauxv, sm, sf ) )
+   
+   xchgread_cmnt, in, c_flag
+   nrec = xchgread_numrec( in, file_names, nf, nlhead, data_1, db_head )
+   if nrec lt 0 then return, nrec else if nrec eq 0 then return, 1
+
+;    Build structure for saving data
+   
+   si = 'data = { d1010__' + sec + ', x:fltarr(nrec)'
+   sm = ', a:fltarr(nrec,nauxv)'
+   sf = ', v:fltarr(nrec,nv) }'
+   r = execute( xchgread_bldstr( si, nauxv, sm, sf ) )
+
+   for f=1,nf do begin
+      while not eof(in) do begin
+         readf, in, data_1
+         data.x(m) = data_1.x
+
+;          If at least 1 aux variable, save aux variables
+
+         if nauxv gt 0 then data.a(m,*) = data_1.a
+         data.v(m,*) = data_1.v
+         m = m + 1
+      endwhile
+      r = xchgread_next( in, file_names, nf, f, nlhead, db_head )
+      if r lt 0 then return, r
+   endfor
+ end
+
+;  FFI 1020:
+;    -->One real, constant increment unbounded independent variable with
+;          implied values between independent variable marks
+;    -->Auxiliary variables
+;    -->Independent and auxiliary variables are in the same record
+;    -->A record of primary variable values at implied independent variable
+;          values is recorded for each primary variable
+
+ 1020: begin
+   dx = 0.0
+   nvpm = 0
+   xname = ''
+   readf, in, dx
+
+;    Check that data interval is constant
+;    Read no. of independent variable values between independent
+;       variable marks
+;    Check this value (0 is nonsensical -- no data to read)
+
+   if dx eq 0.0 then begin
+      print, 'XCHGREAD_FFI: Error: dx=0, FFI='+pstr(ffi) & return, ffi & endif
+   readf, in, nvpm
+   if nvpm eq 0.0 then begin
+      print, 'XCHGREAD_FFI: Error: nvpm=0, FFI='+pstr(ffi) & return, ffi & endif
+
+   readf, in, xname
+   xchgread_var, in, nv, vscal, vmiss, vname & if nv le 0 then return, 2
+   xchgread_var, in, nauxv, ascal, amiss, aname
+   xchgread_cmnt, in, c_flag
+   si = 'data_1 = { d1020_1__' + sec + ', x:0.0'
+   sm = ', a:fltarr(nauxv)'
+   sf = ', v:fltarr(nvpm,nv) }'
+   r = execute( xchgread_bldstr( si, nauxv, sm, sf ) )
+   nrec = xchgread_numrec( in, file_names, nf, nlhead, data_1, db_head )
+   if nrec lt 0 then return, nrec else if nrec eq 0 then return, 1
+   si = 'data = { d1020__' + sec + ', x:fltarr(nrec)'
+   sm = ', a:fltarr(nrec,nauxv)'
+   sf = ', v:fltarr(nrec*nvpm,nv) }'
+   r = execute( xchgread_bldstr( si, nauxv, sm, sf ) )
+   for f=1,nf do begin
+      while not eof(in) do begin
+         readf, in, data_1
+         data.x(m) = data_1.x
+         if nauxv gt 0 then data.a(m,*) = data_1.a
+
+;          For each primary variable, save value as continuous stream
+
+         for n=0,nv-1 do data.v( m*nvpm:(m+1)*nvpm-1 , n ) = data_1.v(*,n)
+         m = m + 1
+      endwhile
+      r = xchgread_next( in, file_names, nf, f, nlhead, db_head )
+      if r lt 0 then return, r
+   endfor
+ end
+
+;  FFI 2010:
+;    -->Two real independent variables, one unbounded and one bounded with
+;          constant values
+;    -->Auxiliary variables
+;    -->Independent variable mark and auxiliary variables are in same record
+;    -->For each independent variable is a record of its values at the bounded
+;          independent variable values
+
+ 2010: begin
+   dx = fltarr(2)
+   xname = strarr(2)
+   nx = 0
+   nxdef = 0
+   readf, in, dx
+   readf, in, nx
+   if nx eq 0.0 then begin
+      print, 'XCHGREAD_FFI: Error: nx=0, FFI='+pstr(ffi) & return, ffi & endif
+   readf, in, nxdef
+   if nxdef eq 0.0 then begin
+      print,'XCHGREAD_FFI: Error: nxdef=0, FFI='+pstr(ffi) & return, ffi & endif
+
+;    Read independent variable that is bounded with constant values
+
+   x0 = fltarr(nxdef)
+   readf, in, x0
+   readf, in, xname
+   xchgread_var, in, nv, vscal, vmiss, vname & if nv le 0 then return, 2
+   xchgread_var, in, nauxv, ascal, amiss, aname
+   xchgread_cmnt, in, c_flag
+   si = 'data_1 = { d2010_1__' + sec + ', x:0.0'
+   sm = ', a:fltarr(nauxv)'
+   sf = ', v:fltarr(nx,nv) }'
+   r = execute( xchgread_bldstr( si, nauxv, sm, sf ) )
+   nrec = xchgread_numrec( in, file_names, nf, nlhead, data_1, db_head )
+   if nrec lt 0 then return, nrec else if nrec eq 0 then return, 1
+   si = 'data = { d2010__' + sec + ', x:fltarr(nrec)'
+   sm = ', a:fltarr(nrec,nauxv)'
+   sf = ', x0:fltarr(nxdef), v:fltarr(nx,nrec,nv) }'
+   r = execute( xchgread_bldstr( si, nauxv, sm, sf ) )
+   data.x0 = x0
+   for f=1,nf do begin
+      while not eof(in) do begin
+         readf, in, data_1
+         data.x(m) = data_1.x
+         if nauxv gt 0 then data.a(m,*) = data_1.a
+         data.v(*,m,*) = data_1.v
+         m = m + 1
+      endwhile
+      r = xchgread_next( in, file_names, nf, f, nlhead, db_head )
+      if r lt 0 then return, r
+   endfor
+ end
+
+;  FFI 2110:
+;    -->Two real independent variables, one unbounded and one bounded with
+;          its values recorded in the data records
+;    -->The first auxiliary variable is 'nx'
+;    -->The values of 'x(i,0)' are included in the records with the primary vars
+;    -->If 'dx(1)' is non-zero then 'x(m,1)' must be recorded at a constant
+;          interval of 'dx(1)'. For this case, if 'nx'='amiss(0)' or 'nx'=0
+;          then the implication is that the records containing values of the
+;          bounded independent variable and primary variables are omitted,
+;          and the next record contains the succeeding independent variable mark
+;          and auxiliary variables.
+
+ 2110: begin
+   dx = fltarr(2)
+   xname = strarr(2)
+   readf, in, dx
+   readf, in, xname
+   xchgread_var, in, nv, vscal, vmiss, vname & if nv le 0 then return, 2
+   xchgread_var, in, nauxv, ascal, amiss, aname
+   xchgread_cmnt, in, c_flag
+
+;    Define 2 structures to read data in record counter 'xchgread_numrec'
+;       Necessary because 2nd structure is repeated nx times
+;       Define no. sub-records nx explicitly in definition of 1st part of record
+;       structure
+
+   s = 'data_1 = { d2110_1__' + sec + ', x:0.0, nx:0.0,' $
+                                            + 'a:fltarr(nauxv-1) }'
+   r = execute(s)
+   s = 'data_2 = { d2110_2__' + sec + ', x0:0.0, v:fltarr(nv) }'
+   r = execute(s)
+   nrec = xchgread_numrec( in, file_names, nf, nlhead, data_1, db_head, $
+                           data_2, amiss(0), nx_max )
+   if nrec lt 0 then return, nrec else if nrec eq 0 then return, 1
+   s = 'data = { d2110__' + sec + ', x:fltarr(nrec), ' + $
+     'a:fltarr(nrec,nauxv), x0:fltarr(nx_max,nrec), v:fltarr(nx_max,nrec,nv) }'
+   r = execute(s)
+
+;    Fill variable length part of structure with missing data values
+
+   data.x0(*,*) = press_miss
+   for i=0,nv-1 do data.v(*,*,i) = vmiss(i)
+
+   for f=1,nf do begin
+      while not eof(in) do begin
+         readf, in, data_1
+         data.x(m) = data_1.x
+
+;    If at least 1 auxiliary variable
+;       Explicitly save no.sub-records into auxiliary variable array
+;       Save rest of aux variables
+;    End if
+
+         if nauxv gt 0 then begin
+            data.a(m,0) = data_1.nx
+            data.a(m,1:nauxv-1) = data_1.a(*)
+         endif
+
+;    (Read variable length part of record)
+;    If at least 1 sub_record for this x value
+;       For each sub-record
+;          Read sub_record
+;          Save value of bounded independent variable
+;          Save value of primary variable(s)
+;       End for
+;    End if
+
+         if (data_1.nx gt 0)and(data_1.nx lt amiss(0)) then begin
+;         if data_1.nx gt 0 then begin           ;corrected J. W. 12/4/92
+            for i=0,fix(data_1.nx-1) do begin
+               readf, in, data_2
+               data.x0(i,m) = data_2.x0
+               data.v(i,m,*) = data_2.v
+            endfor
+         endif
+
+         m = m + 1
+      endwhile
+      r = xchgread_next( in, file_names, nf, f, nlhead, db_head )
+      if r lt 0 then return, r
+   endfor
+ end
+
+;  FFI 2160:
+;    -->Two independent variables, the unbounded one is a character string,
+;          and the bounded one is real with its values recorded in the data recs
+;    -->The independent variable mark is in a separate record from the auxiliary
+;          variables
+;    -->The first auxiliary variable is 'nx'
+;    -->'nauxc' is the no. auxiliary variables recorded as character strings,
+;          which follow the real auxiliary variables
+;    -->The values of 'x(i,0)' are included in the records with the primary vars
+
+ 2160: begin
+   dx = 0.0
+   lenx = 0
+   xname = strarr(2)
+   nauxv = 0
+   nauxc = 0
+   readf, in, dx
+   readf, in, lenx
+   readf, in, xname
+   xchgread_var, in, nv, vscal, vmiss, vname & if nv le 0 then return, 2
+
+;   Read total no.auxiliary variables
+;   Read no.auxiliary character variables
+;   Compute no.auxiliary floating pt variables
+;   Test that no.floating pt variables non-zero (must have at least 'dx')
+
+   readf, in, nauxv
+   readf, in, nauxc
+   nauxf = nauxv - nauxc
+   if nauxf eq 0 then begin
+      print,'XCHGREAD_FFI: Error: nauxf=0, FFI='+pstr(ffi) & return, ffi & endif
+
+;   (Read auxiliary variable float and string header parameters)
+;   Define array for and read scale of float variables
+;   Build structure for reading missing data values for flt and str vars
+;   Read missing value of float values into sub-structure
+;   If at least one aux string variable
+;      Declare array for and read string length of string values
+;      Read missing value of string values into sub-structure
+;   End if
+;   Read names of float and string values
+
+   ascal = fltarr(nauxf)
+   readf, in, ascal
+   si = 'amiss = { d2160_a__' + sec + ', flt:fltarr(nauxf)'
+   sm = ', str:strarr(nauxc)'
+   sf = '}'
+   r = execute( xchgread_bldstr( si, nauxc, sm, sf ) )
+   temp_f = amiss.flt & readf, in, temp_f & amiss.flt = temp_f
+   if nauxc gt 0 then begin
+      lena = fltarr(nauxc)
+      readf, in, lena
+      temp_s = amiss.str & readf, in, temp_s & amiss.str = temp_s
+   endif
+   aname = strarr(nauxv)
+   readf, in, aname
+
+   xchgread_cmnt, in, c_flag
+
+;    Define temp structure for reading all of aux variables except nx
+
+   si = 'a0 = { d2160_a0__' + sec
+   sm = ', flt:fltarr(nauxf-1)'
+   sf = ''
+   si =  xchgread_bldstr( si, nauxf-1, sm, sf )
+   sm = ', str:strarr(nauxc)'
+   sf = '}'
+   r = execute( xchgread_bldstr( si, nauxc, sm, sf ) )
+
+   si = "data_1 = { d2160_1__" + sec + ", x:'', nx:0.0"
+   sm = ', a0:a0'
+   sf = '}'
+   r = execute( xchgread_bldstr( si, nauxv-1, sm, sf ) )
+   s = 'data_2 = { d2160_2__' + sec + ', x0:0.0, v:fltarr(nv) }'
+   r = execute(s)
+   nrec = xchgread_numrec( in, file_names, nf, nlhead, data_1, db_head, $
+                           data_2, amiss.flt(0), nx_max )
+   if nrec lt 0 then return, nrec else if nrec eq 0 then return, 1
+
+;    Define auxiliary variables as a structure in output data structure
+
+   si = 'data = { d2160__' + sec + ', x:strarr(nrec)'
+   sm = ', a:replicate(amiss,nrec)'
+   sf = ', x0:fltarr(nx_max,nrec), v:fltarr(nx_max,nrec,nv) }'
+   r = execute( xchgread_bldstr( si, nauxv-1, sm, sf ) )
+   data.x0(*,*) = press_miss
+   for i=0,nv-1 do data.v(*,*,i) = vmiss(i)
+
+   for f=1,nf do begin
+      while not eof(in) do begin
+         readf, in, data_1
+         data.x(m) = data_1.x
+
+;          Save floating point and string auxiliary variables separately
+
+         data.a(m).flt(0) = data_1.nx
+         if nauxf gt 1 then data.a(m).flt(1:nauxf-1) = data_1.a0.flt
+         if nauxc gt 0 then data.a(m).str = data_1.a0.str
+
+         if (data_1.nx gt 0)and(data_1.nx lt amiss.flt(0)) then begin
+;         if data_1.nx gt 0 then begin            ;corrected J. W. spr 1992
+            for i=0,fix(data_1.nx-1) do begin
+               readf, in, data_2
+               data.x0(i,m) = data_2.x0
+               data.v(i,m,*) = data_2.v
+            endfor
+         endif
+         m = m + 1
+      endwhile
+      r = xchgread_next( in, file_names, nf, f, nlhead, db_head )
+      if r lt 0 then return, r
+   endfor
+ end
+
+;  FFI 2310:
+;    -->Two real independent variables, one unbounded and one bounded with
+;          its no.constant increment values, base value, and increment defined
+;          in the auxiliary variable list
+;    -->The first 3 auxiliary variables are 'nx', 'x0', and 'dx'.
+;    -->If 'dx' is non-zero, then 'x(0,m)' must be recorded at a constant inter-
+;          val of 'dx'. For this case, if 'nx'='amiss(0)' or 'nx'=0, then the
+;          implication is that the records containing the values of the primary
+;          variables are omitted, and the next record contains the succeeding
+;          independent variable mark and auxiliary variables.
+;    -->For each primary variable is a record of its values at the bounded
+;          independent variable.
+;    -->The bounded independent variable values are for i=1,nx
+;          x(i,m) = x(0,m) + i * dx
+
+ 2310: begin
+   dx = 0.0
+   xname = strarr(2)
+   readf, in, dx
+   readf, in, xname
+   xchgread_var, in, nv, vscal, vmiss, vname & if nv le 0 then return, 2
+   xchgread_var, in, nauxv, ascal, amiss, aname
+   if nauxv lt 3 then begin
+      print,'XCHGREAD_FFI: Error: nauxv<3, FFI='+pstr(ffi) & return, ffi & endif
+   xchgread_cmnt, in, c_flag
+   s = 'data_1 = { d2310_1__' + sec + ', x:0.0, nx:0.0,' $
+                                            + 'a:fltarr(nauxv-1) }'
+   r = execute(s)
+
+;   (structure 'data_2' is omitted since its definition varies with each record)
+
+   nrec = xchgread_numrec( in, file_names, nf, nlhead, data_1, db_head, $
+                           nv, amiss(0), nx_max )
+   if nrec lt 0 then return, nrec else if nrec eq 0 then return, 1
+   s = 'data = { d2310__' + sec + ', x:fltarr(nrec), ' + $
+                          'a:fltarr(nrec,nauxv), v:fltarr(nx_max,nrec,nv) }'
+   r = execute(s)
+   for i=0,nv-1 do data.v(*,*,i) = vmiss(i)
+
+   for f=1,nf do begin
+      while not eof(in) do begin
+         readf, in, data_1
+         data.x(m) = data_1.x
+         data.a(m,0) = data_1.nx
+         data.a(m,1:nauxv-1) = data_1.a(*)
+
+;    (Read variable length part of record)
+;    If at least one piece of data in this record
+;       Declare array for receiving this part of data
+;       For each primary variable
+;          Read entire primary data at once
+;          Save it
+;       End for
+;    End if
+
+         if (data_1.nx gt 0)and(data_1.nx lt amiss(0)) then begin
+;         if data_1.nx gt 0 then begin             ;corrected J. W. 12/4/92
+            v_n = fltarr(data_1.nx)
+            for i=0,nv-1 do begin
+               readf, in, v_n
+               data.v(0:data_1.nx-1,m,i) = v_n
+            endfor
+         endif
+
+         m = m + 1
+      endwhile
+      r = xchgread_next( in, file_names, nf, f, nlhead, db_head )
+      if r lt 0 then return, r
+   endfor
+ end
+
+;  FFI 3010:
+;    -->Three real independent variables, one unbounded and two bounded with
+;          constant values
+;    -->Auxiliary variables
+;    -->Independent variable mark and auxiliary variables are in same record
+;    -->For each primary variable and value of the 2nd independent variable,
+;          is a record of primary variable values at values of the 1st
+;          independent variable
+
+ 3010: begin
+   dx = fltarr(3)
+   nx = fltarr(2)
+   nxdef = fltarr(2)
+   xname = strarr(3)
+   readf, in, dx
+   readf, in, nx
+   readf, in, nxdef
+   nxdef_max = max( nxdef )
+   x0 = fltarr(nxdef_max,2)
+   for i=0,1 do begin
+      temp = fltarr( nxdef(i) )
+      readf, in, temp
+      x0(0:nxdef(i)-1,i) = temp
+   endfor
+   readf, in, xname
+   xchgread_var, in, nv, vscal, vmiss, vname & if nv le 0 then return, 2
+   xchgread_var, in, nauxv, ascal, amiss, aname
+   xchgread_cmnt, in, c_flag
+   si = 'data_1 = { d3010_1__' + sec + ', x:0.0'
+   sm = ', a:fltarr(nauxv), v:fltarr(nx(0),nx(1),nv) } '
+   sf = ', v:fltarr(nx(0),nx(1),nv) }'
+   r = execute( xchgread_bldstr( si, nauxv, sm, sf ) )
+   nrec = xchgread_numrec( in, file_names, nf, nlhead, data_1, db_head )
+   if nrec lt 0 then return, nrec else if nrec eq 0 then return, 1
+   si = 'data = { d3010__' + sec + ', x0:fltarr(nxdef_max,2),' $
+                                         + 'x:fltarr(nrec)'
+   sm = ', a:fltarr(nrec,nauxv)'
+   sf = ', v:fltarr(nx(0),nx(1),nrec,nv) }'
+   r = execute( xchgread_bldstr( si, nauxv, sm, sf ) )
+   data.x0 = x0
+   for f=1,nf do begin
+      while not eof(in) do begin
+         readf, in, data_1
+         data.x(m) = data_1.x
+         if nauxv gt 0 then data.a(m,*) = data_1.a
+         data.v(*,*,m,*) = data_1.v
+         m = m + 1
+      endwhile
+      r = xchgread_next( in, file_names, nf, f, nlhead, db_head )
+      if r lt 0 then return, r
+   endfor
+ end
+
+;  FFI 4010:
+;    -->Four real independent variables, one unbounded and three bounded with
+;          constant values
+;    -->Auxiliary variables
+;    -->Independent variable mark and auxiliary variables are in same record
+;    -->For each primary variable and value of the 3rd and 2nd independent
+;          variables, is a record of primary variable values at values of the
+;          1st independent variable
+
+ 4010: begin
+   dx = fltarr(4)
+   nx = fltarr(3)
+   nxdef = fltarr(3)
+   xname = strarr(4)
+   readf, in, dx
+   readf, in, nx
+   readf, in, nxdef
+   nxdef_max = max( nxdef )
+   x0 = fltarr(nxdef_max,3)
+   for i=0,2 do begin
+      temp = fltarr( nxdef(i) )
+      readf, in, temp
+      x0(0:nxdef(i)-1,i) = temp
+   endfor
+   readf, in, xname
+   xchgread_var, in, nv, vscal, vmiss, vname & if nv le 0 then return, 2
+   xchgread_var, in, nauxv, ascal, amiss, aname
+   xchgread_cmnt, in, c_flag
+   si = 'data_1 = { d4010_1__' + sec + ', x:0.0'
+   sm = ', a:fltarr(nauxv)'
+   sf = ', v:fltarr(nx(0),nx(1),nx(2),nv)}'
+   r = execute( xchgread_bldstr( si, nauxv, sm, sf ) )
+   nrec = xchgread_numrec( in, file_names, nf, nlhead, data_1, db_head )
+   if nrec lt 0 then return, nrec else if nrec eq 0 then return, 1
+   si = 'data =  { d4010__' + sec + ', x0:fltarr(nxdef_max,3),' + $
+                                            'x:fltarr(nrec)'
+   sm = ', a:fltarr(nrec,nauxv)'
+   sf = ', v:fltarr(nx(0),nx(1),nx(2),nrec,nv) } '
+   r = execute( xchgread_bldstr( si, nauxv, sm, sf ) )
+   data.x0 = x0
+   for f=1,nf do begin
+      while not eof(in) do begin
+         readf, in, data_1
+         data.x(m) = data_1.x
+         if nauxv gt 0 then data.a(m,*) = data_1.a
+         data.v(*,*,*,m,*) = data_1.v
+         m = m + 1
+      endwhile
+      r = xchgread_next( in, file_names, nf, f, nlhead, db_head )
+      if r lt 0 then return, r
+   endfor
+ end
+
+ else: begin
+    print, 'XCHGREAD_FFI: Warning: Illegal FFI ' + pstr(ffi)
+ end
+endcase
+
+free_lun, in
+return, 0
+end
+;  ************ xchgread_ffi end ************
+
+;  ************ xchgread -- MAIN -- begin ************
+pro xchgread, in_file_name, head, data, $
+ headdb=db_head, d=in_dir, vol1=vol_1, comments=c_flag, r=ret_code
+
+;+
+; NAME:
+;   xchgread
+; PURPOSE:
+;   Read a standard format mission data exchange ASCII file
+; CATEGORY:
+;   mission, exchange
+; CALLING SEQUENCE:
+;      xchgread, in_file_name, head, data
+;      xchgread, in_file_name, head, data, $
+;            /headdb, d='./', type='ro', /vol1, /comments, r=ret_code
+; INPUTS:
+;    in_file_name = Data exchange file name
+;       Data file volume number must be the very last character in file name
+; OPTIONAL INPUT PARAMETERS: none
+; KEYWORD PARAMETERS:
+;    db_head = flag indicating if file contains database header
+;            = 0 file does not contain database header
+;            = 1 file contains database header
+;    in_dir = directory containing data exchange file (input)
+;       (default = $FLTDAT ; if non-existent, '/science/flights/data')
+;    vol_1 = Volume request flag (input)
+;       =1, Read only this particular data volume
+;       =0, Read all data volumes corresponding to this file name (default)
+;    c_flag = Comment print request flag (input)
+;       =1, Echo all comments in file to standard output
+;       =0, Do not echo (default)
+;    ret_code = return code (output)
+;       = 0, success
+;       = -1, Error reading exchange file
+;       = -2, Invalid file format index read from exchange file
+; OUTPUTS:
+;  IN GENERAL: All data is returned exactly as read, in either floating point
+;  or string format as appropriate. (Exception: 'date' is returned as 'ddmmyy'.)
+;
+;    head = Data header structure
+;          For structure usage, see IDL 2 Manual, Chapter 8
+;          Not all fields of this structure are necessarily defined
+;       head.nlhead = No. lines in exchange file header
+;       head.ffi = File format index
+;       head.oname = Observer name
+;       head.org = Organization
+;       head.sname = Source of measurements
+;       head.mname = Mission name
+;       head.ivol = Volume number of this file
+;       head.nvol = Total no. volumes for this dataset
+;       head.date = Date of mission
+;       head.rdate = Revision date
+;       head.dx = Interval between values of independent variable(s)
+;          If NIV=no.independent variables (unbounded+bounded), then
+;          head.dx(0:NIV-2) are the bounded variable intervals, and
+;          head.dx(NIV-1) or head.dx is the unbounded variable interval
+;       head.xname = Name(s) of independent variable(s)
+;          If NIV=no.independent variables (unbounded+bounded), then
+;          head.xname(0:NIV-2) are the bounded variable names, and
+;          head.xname(NIV-1) or head.xname is the unbounded variable name
+;       head.nv = No.primary variable(s)
+;       head.vscal = Primary variable scale(s)          head.vscal(0:nv-1)
+;       head.vmiss = Primary variable missing data value(s)
+;                                                       head.vmiss(0:nv-1)
+;       head.vname = Primary variable name(s)           head.vname(0:nv-1)
+;       head.nauxv = No.auxiliary variable(s)
+;       head.ascal = Auxiliary variable scale(s)        head.ascal(0:nauxv-1)
+;       head.amiss = Auxiliary variable missing data value(s)
+;                                                       head.amiss(0:nauxv-1)
+;       head.aname = Auxiliary variable name(s)         head.aname(0:nauxv-1)
+;       head.nvpm = No.of independent variable values between independent
+;                   variable marks
+;       head.nx = No.values of the independent variable (not always set)
+;             head.nx(0:#bounded_var-1) or head.nx if #bounded var = 1
+;       head.nxdef = No.values of the independent variable(s) explicitly
+;                    recorded in the file header,  ffi 3010 and 4010
+;             head.nxdef(0:2) or head.nxdef(0:3) ffi 3010 and 4010 respectively
+;       head.lenx = No.characters used to record character primary variable(s)
+;       head.nauxc = No.primary variables recorded as character strings
+;       head.lena = No.characters used to record character auxiliary variable(s)
+;    data = Data value structure
+;       data.x = Unbounded independent variable
+;       data.x0 = Bounded independent variable(s)
+;       data.v = Primary variable(s)
+;       data.a = Auxiliary variable(s)
+;
+; The dimension of the output data structure fields varies with the file format.
+; The following table gives the dimensions and an example for each file format.
+; All variables are floating point except where noted.
+; For further information see the 'Format Specification' document.
+; Note that the dimensions quoted there are not always the same as used here.
+;
+;
+;
+;
+;  ----------------------- KEY TO TABLE -----------------------
+; |                                                            |
+; |                        Variable    Index    Max value      |
+; |                        ----------  -----    ---------      |
+; | Unbounded independent  data.x        m      none           |
+; | Primary                data.v        n      nv             |
+; | Auxiliary                                                  |
+; |    Floating pt.        data.a        a      nauxv          |
+; |    *Floating pt.       data.a.flt    a      nauxv-nauxc    |
+; |    *String             data.a.str    a1     nauxc          |
+; | Bounded independent    data.x0       i      nx             |
+; |                                      j      nxdef(1)       |
+; |                                      k      nxdef(2)       |
+; | Max bounded indep.                   l      max(nx,nxdef)  |  
+;  ------------------------------------------------------------
+;
+;
+;
+;                               TABLE
+;                   OUTPUT DATA STRUCTURE DIMENSIONS
+;______________________________________________________________________________
+;
+;      INDEPENDENT VARIABLES
+;      ---------------------
+;FILE                         AUXILIARY                PRIMARY
+;FORMT  UNBOUNDED BOUNDED     VARIABLES                VARIABLES
+;INDEX  data.x    data.x0     data.a                   data.v
+;-----  --------  ---------   ---------                ---------
+; 1001  (m)                                            (m,n)
+;       data.x(*)                                      data.v(*,0:nv-1)
+;
+;
+; 1010  (m)                   (m,a)                    (m,n)
+;       data.x(*)             data.a(*,0:nauxv-1)      data.v(*,0:nv-1) 
+;
+;
+; 1020  (m)                   (m,a)                    (NVPM*m,n)
+;       data.x(m)             data.a(m,0:nauxv-1)   data.v(0:maxm*NVPM-1,0:nv-1)
+;
+;       (m = 0 to some maximum number maxm-1.  This gives maxm different
+;        values of m)
+;        *NOTE:  The values of the primary variable data.v associated with 
+;         a major indep variable mark m range from m*NVPM to (m+1)*NVPM-1.
+;
+;
+; 2010  (m)       (i)         (m,a)                    (i,m,n)
+;       data.x(*) data.x0(i)  data.a(*,0:nauxv-1)      data.v(i,*,0:nv-1)
+;       (i = 0:nx-1, nx is constant for all m)                           
+;
+;
+; 2110  (m)       (i,m)       (m,a)                    (i,m,n)
+;       data.x(*) data.x0(i,*)data.a(*,0)=#bounded var data.v(i,*,0:nv-1)
+;                             data.a(*,1:nauxv-1)    
+;                                  =remaining aux var
+;
+;       (i = 0:nx-1, nx may change with m)
+;
+;
+; 2160  strarr(m) (i)         see below                (i,m,n)
+;       data.x(*) data.x0(i,*)data.a(*).flt(0)=#bounded data.v(i,*,0:nv-1)
+;                                              var
+;                             data.a(*).flt(1:
+;                                       nauxv-nauxc-1)
+;                                =remaining flt aux var
+;                             data.a(*).str(0:nauxc-1)
+;                                =character aux var
+;
+;
+; 2310  (m)                   (m,a)                    (i,m,n)
+;       data.x(*)             data.a(*,0)=#bounded var data.v(i,*,0:nv-1)
+;                             data.a(*,1)=1st bounded 
+;                                         var
+;                             data.a(*,2)=bounded var
+;                                         increment
+;                             data.a(*,3:nauxv-1)
+;                                  =remaining aux var
+;
+;       (i = 0:nx-1, nx may change with m)
+;       *NOTE: Bounded variable values x0 are implicit in this data as
+;              x0(i,*) = data.a(*,1) + i * data.a(*,2)       i = 0:data.a(*,0)
+;             ( bounded values = 1st bounded value + i*increment)
+;              
+;
+; 3010  (m)       (l,2)          (m,a)                 (i,j,m,n)
+;       data.x(*) data.x0(0,0:1) data.a(*,0:nauxv-1)   data.v(i,j,*,0:nv-1)
+;                  =base value                             i=0,nx(0)-1
+;                 OR data.x0(i,0:1)                        j=0,nx(1)-1
+;                  = bounded var values
+;                 SEE NOTE
+;
+;    *NOTE:  Let ix be 0 or 1 and indicate the bounded indep variable 
+;            in question.  If head.nxdef(ix) = 1, then bounded variable 
+;            values for the ix bounded indep variable are defined implicitly 
+;            by increment and base value.  Then x0(i,ix) can be found as
+;               x0(i,ix) = data.x0(0,ix) + i * head.dx(ix)   i = 0:head.nx(ix)-1
+;            If head.nxdef(ix) > 1, then bounded variable values are defined
+;            explicitly in data structure as
+;              data.x0(i,ix) = 1st bounded variable i = 0:head.nxdef(ix)-1
+;
+;
+; 4010  (m)       (l,3)         (m,a)                  (i,j,k,m,n)
+;       data.x(*) data.x0(0,0:2) data.a(*,0:nauxv-1)   data.v(i,j,k,*,0:nv-1)
+;                  = base value                          i=0,nx(0)-1
+;                 OR data.x0(i,0:2)                      j=0,nx(1)-1
+;                  =bounded var values                   k=0,nx(2)-1
+;  
+;    *NOTE:  Let ix be 0, 1 or 2 and indicate the bounded indep variable 
+;            in question.  If head.nxdef(ix) = 1, then bounded variable 
+;            values for the ix bounded indep variable are defined implicitly 
+;            by increment and base value.  Then x0(i,ix) can be found as
+;               x0(i,ix) = data.x0(0,ix) + i * head.dx(ix)   i = 0:head.nx(ix)-1
+;            If head.nxdef(ix) > 1, then bounded variable values are defined
+;            explicitly in data structure as
+;              data.x0(i,ix) = 1st bounded variable i = 0:head.nxdef(ix)-1
+;
+;
+;
+;
+;; IDL PROGRAM EXAMPLE:  Plot a LIDAR temperature profile
+; pro test_xchgread
+;;
+;; PURPOSE:
+;;   test program to test XCHGREAD.PRO with data of FFI=2110(File Format Index)
+;;
+;; AUTHOR:  J. Wild RDC at NMC/CAC 910927
+;; call reading subroutine xchgread
+;; find size of array
+;; save values to arrays
+;; loop over unbounded variable
+;;  loop over primary variables
+;;  eliminate missing values
+;;  multiply by scale factors
+;;  plot profile
+;;  pause
+;;endloops
+; xchgread, 'meri_test.dat', head, data, d='', /comments,headdb=1
+;s = size(data.v)
+;time = data.x
+;height = data.x0
+;profile = data.v(*,*,*)
+;for m = 0,s(2)-1 do begin
+; for n = 0,head.nv-1 do begin
+;  it = where( profile(*,m,n) ne head.vmiss(n) )
+;  p = profile(it,m,n)*head.vscal(n)
+;  h = height(it,m)
+;  plot,p,h,/ynozero,xtitle=strtrim(head.vname(n)),ytitle=strtrim(head.xname(0))
+;  print,'type ".con" to continue'
+;  stop
+; endfor
+;endfor
+;print,'No more plots'
+;stop
+;end
+;
+;; END OF TEST PROGRAM
+;
+; COMMON BLOCKS:
+;    head_1, dx, xname, nv, vscal, vmiss, vname
+;       dx = Interval between values of independent variable(s)
+;       xname = Name(s) of independent variable(s)
+;       nv = No. of primary variable(s)
+;       vscal = Primary variable scale(s)
+;       vmiss = Primary variable missing data value(s)
+;       vname = Primary variable name(s)
+;    head_2, nauxv, ascal, amiss, aname
+;       nauxv = No. of auxiliary variable(s)
+;       ascal = Auxiliary variable scale(s)
+;       amiss = Auxiliary variable missing data value(s)
+;       aname = Auxiliary variable name(s)
+;    head_3, nvpm, nx, nxdef
+;       nvpm = No. of independent variable values between independent
+;                   variable marks
+;       nx = No. of values of the independent variable
+;       nxdef = No. values of the independent variable(s) explicitly
+;                    recorded in the file header
+;    head_4, lenx, nauxc, lena
+;       lenx = No. characters used to record character primary variable(s)
+;       nauxc = No. primary variables recorded as character strings
+;       lena = No.characters used to record character auxiliary variable(s)
+;    sys_time = last 3 digits of system time; used to make structures unique
+; SIDE EFFECTS: none known
+; RESTRICTIONS:
+;   Data exchange file must conform to one of 9 formats specified in the
+;   document 'Format Specification for Data Exchange', Version 1, May 16, 1990.
+;   Data volume number of file must be the very last character in the file name.
+;   When reading multiple volumes, headers of any volumes other than the
+;   first volume are ignored.
+;   Data file volumes must consist of whole records; that is, a volume may
+;   not end in the middle of a record.
+; PROCEDURE:
+;   After initialization, open input file and read common header values,
+;   including file format index (FFI). Construct file names of data volumes
+;   needed, then call function to switch on FFI and read rest of header plus
+;   data. Construct full header, close file and return.
+; REQUIRED ROUTINES:
+;   IDL Library: n_elements, getenv, strupcase, print, openr, strarr, strmid,
+;                strlen, execute, free_lun
+;   User Library: pstr, xchgread_hdcom, xchgread_ffi
+; MODIFICATION HISTORY: 
+;   T.Atwater 910405 -- Created
+;   T.Atwater 910529 -- Fixed bug in structure name -- name now redefined
+;                       during same IDL session (FFI 2610 only)
+;                       Forced last char of directory name to be '/'
+;                       Changed program so that no input parameters are modified
+;   T.Atwater 910530 -- Fixed bug in structure name for all file formats
+;   T.Atwater 910725 -- Documentation
+;   T.Halihan 910801 -- Commented out directory line to run on VAX-VMS
+;   J.Wild    910920 -- Added ability to skip database header
+;   $Header: /science/missions/programs/exchange/xchgread.pro,v 1.5 
+;             91/07/25 07:17:18 toma Exp $
+;-
+
+common head_1, dx, xname, nv, vscal, vmiss, vname
+common head_2, nauxv, ascal, amiss, aname
+common head_3, nvpm, nx, nxdef
+common head_4, lenx, nauxc, lena
+common sys_time, sec
+
+; Initialize
+
+sec = ''
+if n_elements(in_dir) eq 0 then begin
+   if !version.os eq 'vms' then begin
+      dir = 'FLTDAT:'
+   endif else begin
+      dir = getenv('FLTDAT')
+      if dir eq '' then  dir = '/science/flights/data/'
+   endelse
+endif else dir = in_dir
+; The following line is need for UNIX file structures, but not for VMS
+;if strmid( dir, strlen(dir)-1, 1 ) ne '/' then dir = dir + '/'
+if n_elements(vol_1) eq 0 then vol_1 = 0
+if n_elements(c_flag) eq 0 then c_flag = 0
+
+head_common = { hdcom, nlhead:0, ffi:0, oname:'', org:'', sname:'', $
+                       mname:'', ivol:0, nvol:0, date:'yymmdd', rdate:'yymmdd' }
+head_tags = ',' + $
+             ' nlhead:head_common.nlhead,' + $
+             ' ffi:head_common.ffi,' + $
+             ' oname:head_common.oname,' + $
+             ' org:head_common.org,' + $
+             ' sname:head_common.sname,' + $
+             ' mname:head_common.mname,' + $
+             ' ivol:head_common.ivol,' + $
+             ' nvol:head_common.nvol,' + $
+             ' date:head_common.date,' + $
+             ' rdate:head_common.rdate,' + $
+             ' dx:dx,' + $
+             ' xname:xname,' + $
+             ' nv:nv,' + $
+             ' vscal:vscal,' + $
+             ' vmiss:vmiss,' + $
+             ' vname:vname,' + $
+             ' nauxv:nauxv,' + $
+             ' ascal:ascal,' + $
+             ' amiss:amiss,' + $
+             ' aname:aname,' + $
+             ' nvpm:nvpm,' + $
+             ' nx:nx,' + $
+             ' nxdef:nxdef,' + $
+             ' lenx:lenx,' + $
+             ' nauxc:nauxc,' + $
+             ' lena:lena' + $
+             '  } '
+nauxv = 0
+ascal = 0
+amiss = 0
+aname = 'empty'
+nvpm = 0
+nx = 0L
+nxdef = 0
+lena = 0
+lenx = 0
+nauxc = 0
+
+; Open input data file
+; If error, return
+; Call procedure to read part of header that is common to all formats
+; Check that FFI read from file matches FFI from procedure call
+
+file_name = pstr(dir) + pstr(in_file_name)
+openr, in, file_name, error=err, /get_lun
+if err ne 0 then begin
+   print, 'XCHGREAD: Error opening file ' + file_name
+   ret_code = -1
+   return
+endif
+; Skip database header if db_head = 1
+junk = ''
+if db_head eq 1 then readf,in,junk
+xchgread_hdcom, in, head_common
+valid_ffi = [ 1001, 1010, 1020, 2010, 2110, 2160, 2310, 3010, 4010 ]
+ffi_size = size( where ( valid_ffi eq head_common.ffi ) )
+if ffi_size(0) eq 0 then begin
+   print, 'XCHGREAD: Error: Invalid FFI read from file = ' $
+           + pstr(head_common.ffi)
+   ret_code = -2
+   return
+endif
+
+; Declare array for saving file names
+; If there is more than one volume in this dataset, and
+;       user requested all volumes 
+;    Remove last character from file name (i.e. volume no.)
+;    For each volume, construct and save file name
+;  Else (single volume requested or entire dataset is on one volume)
+;    Save single file name
+;  End if/else
+
+file_names = strarr(head_common.nvol)
+if head_common.nvol gt 1 and vol_1 eq 0 then begin
+   file_qual = strmid( file_name, 0, strlen(file_name)-1 )
+   for i=0,head_common.nvol-1 do file_names(i) = file_qual + pstr(i+1)
+endif else begin
+   file_names(0) = file_name
+endelse
+
+; Call routine to switch on ffi to read unique part of header plus data
+;   (Header values are returned in common blocks)
+; If error, return
+
+r = xchgread_ffi( in, head_common, file_names, c_flag, db_head, data )
+if r lt 0 then begin & ret_code = -1 & return & endif
+
+; Construct full header structure
+; Save header data into structure
+;    (This peculiar method is necessary to make the header structure name
+;     unique, so that successive calls to XCHGREAD in a single IDL session
+;     will not cause a conflict)
+; Return
+
+head_str = 'head = { hd' + pstr(head_common.ffi) + '__' + sec + head_tags
+r = execute( head_str )
+
+ret_code = 0
+return
+end
+;  ************ xchgread -- MAIN -- end ************

@@ -1,0 +1,454 @@
+Member:  @HEADER                   Format of header record for PP-fields
+     http://www-nwp/~frhm/pp_package/codedoc/docpo/@FCODES.txt.txt
+11:39 10/10/2000
+
+     FORMAT OF HEADER RECORD ('FIELD DESCRIPTOR' OR 'FDR') FOR PP-FIELDS
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Listed below are details of the format of the m4-word header required
+for any field in 'PP-format'.  (Before release 5 of the package a
+42-word header was used - see member @HRD42 for details of format.)
+For fields on a disk or tape dataset, this header must be a SEPARATE
+RECORD preceding the field itself.  It is also sometimes referred to as
+the "field descriptor record" or FDR.  (See @FIELD for a description of
+the data record, containing the field values).  In PP-package programs,
+fields are read in to blank common with the header immediately preceding
+the field data.
+
+  Any header variables which are not applicable to the field (except
+BMDI) should be specified as zero.
+
+  Unified model documentation paper F3 section 4 also documents
+header records.
+
+  In the list below, each word is numbered and followed by a variable
+name.  These names are names of ARRAYS in blank common which can be used
+with the 'NPBGN' array in the common block COMPNT if it is necessary to
+refer to particular header words for a particular field.  For example,
+the hour of the validity time of the Kth field in blank common can be
+found in LBHR(NPBGN(K)).  Both '*CALL BLANK' and '*CALL COMPNT' must
+appear in the program to do this.
+
+   1  LBYR      Year  (eg 1986 or 86) \
+   2  LBMON     Month          (1-12)  |   Validity time of field,
+   3  LBDAT     Day of month   (1-31)  |              - or -
+   4  LBHR      Hour           (0-23)  |   Start of averaging period (for time
+   5  LBMIN     Minute         (0-59)  |   mean fields).
+   6  LBDAY     Day number of run     /
+
+   7  LBYRD     Year  (eg 1986 or 86) \
+   8  LBMOND    Month          (1-12)  |   Data time (for forecast fields),
+   9  LBDATD    Day of month   (1-31)  |              - or -
+  10  LBHRD     Hour           (0-23)  |   End of averaging period (for time
+  11  LBMIND    Minute         (0-59)  |   mean fields).
+  12  LBDAYD    Day number of run     /
+
+  13  LBTIM     Time indicator.  This indicates what the times in words 1-12
+                represent.  Referring to the times represented by words 1-6 and
+                7-12 as 'T1' and 'T2' respectively, LBTIM is coded as
+                (100*IA + 10*IB + IC) where:
+
+                  IA = 0  except for time mean fields in which case IA
+                          is the time interval in hours between the
+                          individual fields from which the mean was
+                          computed (IA may be left as zero for
+                          time-means to indicate that the time interval
+                          is unspecified).
+
+                  IB = 0  if only the validity time (T1) is valid.
+                     = 1  if the field is a forecast from T2 valid at T1.
+                     = 2  if the field is a time mean between T1 and T2,
+                          or represents a sequence of times between T1
+                          and T2.
+                     = 3  if the field is a time mean from T1 to T2 for
+                          each year from LBYR to LBYRD.
+                     = 4  if the field is a difference between fields
+                          valid at T1 and T2 (in sense T2-T1).
+                     = 5  if the field is a mean daily cycle between
+                          T2 and T1
+
+                  IC = 0  if 'model time' is used for T1 and T2 (i.e. only day
+                          number, hour and minute are set).
+                     = 1  if the 'real' (i.e. Gregorian) calendar is used for T1
+                          and T2.
+                     = 2  if the '360-day' year calendar (i.e. 12 30-day months)
+                          is used for T1 and T2.  (This is used in Met.O.20 for
+                          some model runs.)
+                     = 3  if 'model time' is used for T1 and T2 (i.e. only day
+                          number, hour and minute are valid; year, month and
+                          day in month are to be ignored if set).
+
+                'IC' corresponds to the parameter MCAL in COMCON.
+                If 'IC' is 1 or 2, coding of the 'day numbers' (words 6 and 12)
+                is optional: code as 0 if not used.
+
+  14  LBFT      Forecast period (hours).
+
+  15  LBLREC    Length of data record in words (including any 'extra data').
+
+  16  LBCODE    Grid code.  This indicates the type of grid and is coded as:
+
+                   1  Regular latitude/longitude grid.
+                   2  Regular lat/long grid boxes (grid points are box centres).
+                   3  Polar stereographic grid.
+                   4  Spectral coefficients.
+                   7  Mercator grid.
+                   8  Plane polar grid.
+                   9  Plane Cartesian grid.
+
+                For grids with non-standard polar axis, add 100 to the above
+                numbers.
+
+                For cross sections, code as (10000 + 100*IX + IY) where IX and
+                IY are codes for the x- and y-axes from the list below. Cross
+                section fields indicated in this way must contain x- and y-
+                coordinate vectors in the extra data. The following was not
+                implemented on the IBM version.  When LBCODE is coded as 30000 +
+                100*IX + IY, with IX and IY from the same list, the axes are
+                given the same interpretation as for a normal cross section, but
+                coordinate vectors need not be supplied. In this case, however,
+                the field is not regarded as a cross section by PP cross-section
+                routines.
+
+                Axis codes are as follows:
+
+                     0  Sigma (or eta, for hybrid coordinate data).
+                     1  Pressure (mb).
+                     2  Height above sea level (km).
+                     3  Eta (U.M. hybrid coordinates) only.
+                     4  Depth below sea level (m).
+                     5  Model level.
+                     6  Theta.
+                     7  Sigma only.
+                     8  Sigma-theta.
+                    10  Latitude (degrees N).
+                    11  Longitude (degrees E).
+                    12  (Horizontal) distance (km).
+                    13  Site number (set of parellel rows or columns eg
+                        timeseries)
+                    20  Time (days). (Gregorian calendar (not 360 day year)
+                                      if distinction applicable )
+                    21  Time (months).
+                    22  Time (years).
+                    23  Time (model days with 360 day model calendar)
+                    31  Logarithm to base 10 of pressure in mb.
+                    40  Pseudolevel
+                    99  Other.
+
+  17  LBHEM     Hemisphere indicator.  For geographical grids (lat/long, polar
+                stereographic, Mercator or 'Kurihara' grids), this is coded as:
+
+                  0  Global field (i.e. covering the WHOLE globe).
+                  1  Northern hemisphere polar stereographic grid, or other
+                     geographic grid covering the WHOLE northern hemisphere.
+                  2  Southern hemisphere polar stereographic grid, or other
+                     geographic grid covering the WHOLE southern hemisphere.
+                  3  Limited area of globe without 'wrap-around' (i.e. NOT
+                     covering the full 360-degree longitude range).
+                  4  Limited area of globe with 'wrap-around' (i.e. covering the
+                     full 360-degree longitude range).
+
+                For SPECTRAL COEFFICIENTS, code 0, 1 or 2 as appropriate.
+                For CROSS-SECTION FIELDS, a value of 3 should be coded.
+                For GRAPH FIELDS, a value of 5 should be coded.
+                For LATERAL BOUNDARY DATA a value of 99 should be coded.
+
+  18  LBROW     Number of rows in field.
+                (For spectral coefficients, code the 'n' truncation level.)
+
+  19  LBNPT     Number of grid points in each row.
+                (For staggered grids, code values appropriate for the longest
+                row. For spectral coefficients, code the 'm' truncation level.)
+
+  20  LBEXT     Length of 'extra data' (x- and y-vectors for cross sections, and
+                field title if any) in words. (See also @FIELD).
+
+  21  LBPACK    Packing method indicator (for fields in packed format.)
+
+                     0  Field not packed
+                     1  Field packed using WGDOS archive method
+                     2  } Note: 2 had been noted as "reserved for GRIB
+                     3  } code data" but the UM has used 3 for GRIB.
+                     4  Run length encoded field (Ocean)
+                  2000  unpacked Cray data
+                  2001  packed Cray data
+
+  22  LBREL     Header release number.  (Set to 2 for format described here.)
+
+  23  LBFC      Field code. This indicates what the data in the field represents
+                A table of field codes is given in PPP.DOC.TEXT(@FCODES).
+                Some of the more common field codes are listed below.
+
+                  1  Height field                73  Relative vorticity field
+                  8  Pressure field              74  Divergence field
+                 16  Temperature field           88  Relative humidity field
+                 40  Vertical velocity (dp/dt)   90  Total Precipitation
+                 56  Westerly wind component     95  Specific humidity field
+                 57  Southerly wind component
+
+  24  LBCFC     Second field code.  This is only used for a field which is a
+                combination of two field types; for example, a meridional
+                temperature flux field (a product of V and T).  Coding is as for
+                the field code above.
+
+  25  LBPROC    Processing code.  This indicates what processing has been done
+                to the basic field.  It should be 0 if no processing has been
+                done:  otherwise add together the relevant numbers from the list
+                below:
+
+                      1   Difference from another experiment.
+                      2   Difference from zonal (or other spatial) mean.
+                      4   Difference from time mean.
+                      8   X-derivative (d/dx).
+                     16   Y-derivative (d/dy).
+                     32   Time derivative (d/dt).
+                     64   Zonal mean (or spatially smoothed) field.
+                    128   Time mean field.
+                    256   Product of two fields.
+                    512   Square root of a field.
+                   1024   Difference between fields at levels BLEV and BRLEV.
+                   2048   Mean over layer between levels BLEV and BRLEV.
+                   4096   Minimum value of field during time period.
+                   8192   Maximum value of field during time period.
+                  16384   Magnitude of a vector, not specifically wind speed
+                  32768   log10 of a field.
+                  65536   Variance of a field.
+                 131072   Mean over an ensemble of parallel runs.
+                 262144   Field has been band pass filtered
+                 524288   Field has been low pass filtered
+
+                (For details of BLEV and BRLEV, see words 32 and 33.)
+
+  26  LBVC      Vertical co-ordinate type.  The 'vertical co-ordinate' is the
+                one which has the same value at every grid point; e.g.
+                'pressure' for a 500mb height field or 'longitude' for a zonal
+                mean cross section. The co-ordinate type is coded using the
+                table of field codes as for word 23. Numbers 126-139 are used
+                for special levels.  The most common vertical co-ordinate types
+                are:
+
+                    1  Height (m)              8  Pressure (mb)
+                    9  Hybrid co-ordinates    10  Sigma (=p/p*)
+                    65  Hybrid height co-ordinates
+                    128  Mean sea level      129  Surface
+                    130  Tropopause level    131  Maximum wind level
+                    132  Freezing level      142  Upper hybrid level
+                    143  Lower hybrid level  176  Latitude (deg)
+                    177  Longitude (deg)
+
+                For a fuller list, see  PPP.DOC.TEXT(@FCODES) .
+
+  27  LBRVC     Vertical co-ordinate type for reference level.  Used only when a
+                reference level is applicable as in thickness fields or layer
+                mean fields. Coded as above.
+                Set to 0 by the U.M. if no reference level.
+
+  28  LBEXP     Experiment identification
+
+                OPERATIONAL MODEL
+
+                This is set to the ITAB number:
+
+                   1  Global main run data
+                   2  Global update run data
+                   3  Global preliminary run (formerly LAM)
+                   4  ECMWF data
+                   5  Washington data
+                   6  Limited-area update run data
+                   7  Global wave data
+                   8  European wave data
+                   9  UK Mesoscale model main runs
+                      (Formerly limited-area SIGMA/ETA data (obsolete) )
+                  10  Paris data
+
+                  21 Bosnia Mesoscale model runs
+                  22 Gulf Mesoscale model runs
+                  23 Stratospheric model runs
+                  24 Short term Mesoscale models
+                  25 FOAM model runs
+                  26 SURG fieldsfile
+                  27 'Non-critical' suite (From Dec. 1998)
+                  28 Middle East Mesoscale model
+                  29 Indonesian Mesoscale model
+                  30 Baroclinic Shelf Seas Model
+                        (31-40 will not be used by operational models)
+
+                CLIMATE MODEL
+
+                This word contains the 5-character experiment and job name in
+                a form encoded by the UM subroutine EXPT_ENC. Encoding can
+                also be done by the PV-WAVE routine encode_expt and decoding
+                by decode_expt.
+
+  29  LBEGIN    (For fields on direct access datasets only)  Address of start of
+                field in direct access dataset.
+
+  30  LBNREC    (For fields on direct access datasets only)  Number of records
+                occupied by field on direct access dataset.
+
+  31  LBPROJ    (For Met Office fields file use)  Fields file projection number.
+  32  LBTYP     (For Met Office fields file use)  Fields file field type code.
+  33  LBLEV     (For Met Office fields file use)  Fields file level code.
+                7777 = multi-level field in lateral boundary data.
+
+34-37 LBRSVD(4)  Reserved for future PP-package use.
+
+  38  LBSRCE    In Met Office Unified Model, set to 1111 to indicate
+                items 39-43 are in use as below.  Otherwise, spare for
+                user's use.
+
+  39-45         In the PP package in general, these words are available for
+                the user's own purposes, and can be accessed as the integer
+                array LBUSER or the real array BUSER. In the Met Office
+                Unified Model, they are regarded as integer and have the
+                purposes described below. NB Before version 4.1, there was
+                an inconsistency in the treatment of the datatype of LBUSER(7)
+                in FIELDCOS.
+
+  39  LBUSER(1) In Met. Office Unified Model: Indicator for datatype, currently
+                1 (REAL data) for all output fields; fields of INTEGER/LOGICAL
+                type will not be available until further development work on
+                the diagnostic system is undertaken, as FIELDCOS does not
+                handle them.
+
+  40  LBUSER(2) In Met. Office Unified Model: Start address in DATA
+
+  41  LBUSER(3) In Met. Office Unified Model: Unused at versions .GE. 4.0;
+                Number of sampling periods for timeseries (=LBROW) at
+                earlier versions
+
+  42  LBUSER(4) In Met. Office Unified Model: STASH code - section
+                number*1000 + STASHmaster item number
+
+  43  LBUSER(5) In Met. Office Unified Model: Pseudolevel number for fields
+                which have pseudolevel defined
+
+  44  LBUSER(6) In Met. Office Unified Model: Unused
+
+  45  LBUSER(7) In Met. Office Unified Model: IM_IDENT (internal model
+                identifier) at versions .GE 4.1; unused at earlier versions
+
+  46  BRSVD(1)  Vertical coordinate of the higher boundary of layer
+                ("higher" being in the direction of increasing model
+                level number). For hybrid coordinates, code the
+                'B'-value of the level.  This word is referred to as
+                BULEV in the Unified Model.
+
+  47  BRSVD(2)  'A'-value of the vertical coordinate of the higher
+                boundary of the layer. This word is referred to as
+                BHULEV in the Unified Model.
+
+  48  BRSVD(3)  Reserved for future PP-package use.
+
+  49  BRSVD(4)  Reserved for future PP-package use.
+
+  50  BDATUM    Constant value subtracted from each value in field.  This is
+                usually zero but would be 273.15 for a temperature field in
+                degrees Celsius.
+
+  51  BACC      (Packed fields only)  Packing accuracy.
+
+  52  BLEV      Level.  This is the value of the vertical co-ordinate LBVC (word
+                26) appropriate for the field; e.g. '500.0' for a 500 mb height
+                field.  For hybrid levels code the 'B'-value of the level.  BLEV
+                should be zero if the vertical co-ordinate type is in the range
+                128 to 139.
+
+  53  BRLEV     EITHER
+
+                Reference level.  This is the value of the vertical co-ordinate
+                LBRVC (word 27) appropriate for the field.  It is used when a
+                second level is relevant as for example with thickness fields
+                when the 'reference level' should be the one nearest the
+                ground. Code as for BLEV.
+
+                OR
+
+                Vertical coordinate of the lower boundary of layer ("lower"
+                being in the direction of decreasing model level number). For
+                hybrid coordinates, code the 'B'-value of the level.
+
+  54  BHLEV     (Hybrid levels) 'A'-value of level.
+
+  55  BHRLEV    (Hybrid levels) 'A'-value of the reference level or the
+                lower boundary of the layer.
+
+  56  BPLAT     Real latitude of 'pseudo' N pole of projection.  Code as '90.0'
+                for fields on grid with normal polar axis.
+  57  BPLON     Real longitude of 'pseudo' N pole of projection.  Code as '0.0'
+                for fields on grid with normal polar axis.
+
+  58  BGOR   \
+  59  BZY     |  These five parameters define the grid for the field.
+  60  BDY     |  The coding depends on what type of grid the field is on.
+  61  BZX     |  Details for various types follow:
+  62  BDX    /
+                (i) Latitude/longitude grids.
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                BGOR   Not used - set to zero.
+                BZY    Latitude of 'zeroth' row (i.e. an imaginary row one grid
+                       length before the first row) in degrees (north positive).
+                BDY    Latitude interval between rows in degrees (negative if
+                       rows are north to south).
+                BZX    Longitude of 'zeroth' point in row (i.e. an imaginary
+                       point one grid length before the first point) in degrees
+                       (east positive).
+                BDX    Longitude spacing of points in each row in degrees
+                       (negative if points run from east to west).
+
+                (ii) Polar stereographic grids.
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                BGOR   Grid orientation. This is the longitude in degrees of the
+                       meridian which would be vertical with north at the top on
+                       a chart drawn for the grid.
+                BZY    Reference latitude in degrees (see BDY).
+                BDY    Grid length in metres at reference latitude.
+                                      \   These co-ordinates are in grid lengths
+                BZX    'X' co-ordinate |  (not necessarily whole numbers and not
+                       of the pole.    |  necessarily representing a point
+                BDX    'Y' co-ordinate |  within the area covered by the grid)
+                       of the pole.    |  counting the bottom left grid point of
+                                      /   a chart as the point (1.0, 1.0).
+                (iii) Mercator grids.
+                ~~~~~~~~~~~~~~~~~~~~~   For Mercator grids, the coding is the
+                same as in (i) except that BZY and BDY are values of:
+
+                    (earth's radius) * log((1+sin(latitude))/cos(latitude))
+
+                instead of latitude. (The earth's radius is in metres and 'log'
+                refers to the natural logarithm.)
+
+                (iv) Cross sections.
+                ~~~~~~~~~~~~~~~~~~~~   For cross-section grids, coding is as in
+                (i) above except that BZY and BDY are values of the 'y'
+                co-ordinate and BZX and BDX are values of the 'x' co-ordinate.
+                (Note that for zonal mean fields or cross sections along a
+                meridian, BZX and BZY are longitudes.)  If the cross section is
+                on irregularly spaced levels, BZY and BDY should both be zero.
+
+                (v) Graph fields.
+                ~~~~~~~~~~~~~~~~~   For graph fields, coding is as in (i) above
+                except that BZX and BDX are values of the 'x' co-ordinate, and
+                BDY and BZY are both coded as 1.0. If points on the graphs are
+                not evenly spaced in the 'x' co-ordinate, BZX and BDX should
+                both be coded as zero.
+
+                (vi) Spectral coefficients.
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                BGOR   Not used - coded as zero.
+                BZY    Not used - coded as zero.
+                BDY    Not used - coded as zero.
+                BZX    Reference longitude - usually 0.0.  This is the meridian
+                       which is treated as the origin of longitude for the
+                       coefficients.
+                BDX    Not used - coded as zero.
+
+  63  BMDI      Value used in the field to indicate missing data points.  If the
+                field contains no missing data, code a value of -1.0E30.
+
+  64  BMKS      MKS scaling factor, equal to the size of the unit in which the
+                field is expressed divided by the corresponding mks unit.  (e.g.
+                10.0 for height in dam,  100.0 for pressure in mb,  0.01 for
+                relative humidity in % etc.).
+
+

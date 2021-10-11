@@ -1,0 +1,240 @@
+
+
+
+                      ***************
+                      *             *
+                      *  E A S O E  *
+                      *             *
+                      ***************
+
+       European Arctic Stratospheric Ozone Experiment 
+
+                          1991-92
+
+
+             -----------------------------------
+              E X P E R I M E N T A L   D A T A
+             -----------------------------------
+
+
+Welcome to the CD-ROM containing the experimental data from the EASOE
+campaign.
+
+This volume contains data obtained during the experimental phase of EASOE,
+which lasted from 15 November 1991 to 30 April 1992.
+
+The following data can be found:
+
+Data from three different research aircraft operating from Kiruna.
+Data from balloon campaigns conducted at Esrange (Kiruna).
+Data from groundbased instruments deployed at several stations in Europe.
+Data from the Dobson and Brewer network.
+Data from ozonesondes launched at 28 stations in Europe, Russia and Canada.
+
+Most of the data are in the so-called NASA Ames format, which is described in
+the files nasadoc1.ps and nasadoc2.ps in the directory "doc". Files which 
+have been submitted by the principal investigators in the NASA Ames format
+have been checked with a program called dataex in order to ensure that they
+adhere to the rules set out by the format description. Files which have failed
+the dataex test have been corrected. Some of the files are not in the NASA 
+Ames format and have hence not been checked. The format checking pertains
+only to the syntax of the NASA Ames files, so there is no check of the
+data quality. The quality of the data is the responsibilty of the principal
+investigator supplying the data.
+
+The ozonesonde data have gone through a more rigorous testing. Most of the
+European stations have used the program convert 4.2 developed at NILU to
+convert ozonesonde raw data into evaluated data. All the sonde files have
+then been checked manually by Stephen J. Reid at NILU in order to take out
+data erroneous data lines.
+
+The "src" directory contains some programs for plotting of data and for
+conversion of Vaisala ozonesonde raw data.
+
+Questions regarding this CD-ROM should be addressed to one of the editors:
+Geir O. Braathen, Ole W. Saastad, Sigbjorn Skaug or Cathrine W. Tellefsen
+Norwegian Institute for Air Research (NILU)
+P.O. Box 100
+N-2007 Kjeller
+
+Tel: +47 63 89 80 00
+Fax: +47 63 89 80 50
+
+E-mail: Geir.Braathen@nilu.no, Ole.Widar.Saastad@nilu.no, 
+        Sigbjorn.Skaug@nilu.no, Cathrine.Wahlstrom.Tellefsen@nilu.no
+
+
+                
+
+
+                   --------------------------------
+                     A C K N O W L E D G E M E N T
+                   --------------------------------
+
+The authors wish to thank all those who have contributed to the production of
+this CD-ROM volume:
+
+The Commission of the European Communities (CEC) in Brussels for funding a
+large part of the EASOE campaign and for paying the production cost of 
+the CD-ROM.
+
+The European Ozone Secretariat at the British Antarctic Survey for organising
+and coordinating the EASOE campaign.
+
+The Norwegian Ministry of the Environment for financial support to the NADIR 
+data centre (NILU's Atmospheric Database for Interactive Retrieval).
+
+The Laboratory of Atmospheric Physics, Aristotle University of Thessaloniki
+for providing total ozone data from the Dobson and Brewer network.
+
+Steven Gainen and Stephen Hipskind at the NASA Ames Research Centre for
+developing the NASA Ames format and for providing the documentation and
+software for file checking.
+
+All the EASOE principal investigators who have submitted their data and
+taken the pain to learn the NASA Ames format.
+
+
+
+                     -----------------------------
+                      D I R E C T O R Y   T R E E
+                     -----------------------------
+
+
+
+
+.
+./data
+./data/aircraft
+./data/aircraft/fokker
+./data/aircraft/fokker/leandre
+./data/aircraft/falcon
+./data/aircraft/falcon/sumas
+./data/aircraft/falcon/sumas/clo
+./data/aircraft/falcon/sumas/hcl
+./data/aircraft/falcon/acims
+./data/aircraft/transall
+./data/aircraft/transall/support
+./data/aircraft/transall/mipas
+./data/aircraft/transall/aerosol
+./data/aircraft/transall/uvdoas
+./data/aircraft/transall/visdoas
+./data/aircraft/transall/lidar
+./data/balloons
+./data/balloons/cnes-pf
+./data/balloons/cnes-pf/flight
+./data/balloons/cnes-pf/ptusonde
+./data/balloons/cnrs-jpp
+./data/balloons/cnrs-pa
+./data/balloons/denve-dm
+./data/balloons/kfk-hf
+./data/balloons/lpma-ccp
+./data/balloons/kfa-us
+./data/balloons/kfa-cs
+./data/balloons/kfa-cs/flights
+./data/balloons/kfa-cs/jvalues
+./data/balloons/nagoy-yk
+./data/balloons/nagoy-yk/noy
+./data/balloons/nagoy-yk/aerosol
+./data/balloons/lmd-jo
+./data/balloons/mpik-fa
+./data/balloons/loa-mh
+./data/balloons/mpae-rb
+./data/balloons/backscat
+./data/balloons/backscat/dikson
+./data/balloons/backscat/thule
+./data/balloons/backscat/heiss
+./data/balloons/backscat/kiruna
+./data/balloons/uniwy-td
+./data/balloons/uniwy-td/aerosol
+./data/balloons/uniwy-td/water
+./data/balloons/uniwy-td/ozone
+./data/balloons/cao-vy
+./data/balloons/pgi-ll
+./data/balloons/esran-bs
+./data/balloons/uea-sap
+./data/groundba
+./data/groundba/dobsbrew
+./data/groundba/uvvis
+./data/groundba/uvvis/sondrest
+./data/groundba/uvvis/sondrest/mpi
+./data/groundba/uvvis/sondrest/dmi
+./data/groundba/uvvis/polarfro
+./data/groundba/uvvis/thule
+./data/groundba/uvvis/nyalesun
+./data/groundba/uvvis/lerwick
+./data/groundba/uvvis/sodankyl
+./data/groundba/uvvis/kiruna
+./data/groundba/uvvis/kiruna/cnrs
+./data/groundba/uvvis/kiruna/iupheide
+./data/groundba/uvvis/jungfrau
+./data/groundba/uvvis/jungfrau/mpi
+./data/groundba/uvvis/jungfrau/iasb
+./data/groundba/uvvis/reykjavi
+./data/groundba/uvvis/reykjavi/inta
+./data/groundba/uvvis/reykjavi/iasb
+./data/groundba/uvvis/ostersun
+./data/groundba/uvvis/scoresby
+./data/groundba/uvvis/abisco
+./data/groundba/uvvis/zhigansk
+./data/groundba/lidar
+./data/groundba/lidar/nyalesun
+./data/groundba/lidar/nyalesun/ozone
+./data/groundba/lidar/nyalesun/psc
+./data/groundba/lidar/thule
+./data/groundba/lidar/andoya
+./data/groundba/lidar/aberystw
+./data/groundba/lidar/provence
+./data/groundba/lidar/sodankyl
+./data/groundba/lidar/sodankyl/ozone
+./data/groundba/lidar/sodankyl/ozone/aerosol
+./data/groundba/lidar/sodankyl/ozone/ozone
+./data/groundba/lidar/sodankyl/psc
+./data/groundba/ftir
+./data/groundba/ftir/kiruna
+./data/groundba/ftir/kiruna/mipas
+./data/groundba/ftir/sondrest
+./data/groundba/ftir/ostersun
+./data/groundba/ftir/nyalesun
+./data/groundba/ftir/jungfrau
+./data/groundba/microwav
+./data/groundba/microwav/nyalesun
+./data/groundba/microwav/thule
+./data/groundba/microwav/jungfrau
+./data/o3sondes
+./data/o3sondes/aberystw
+./data/o3sondes/alert
+./data/o3sondes/athens
+./data/o3sondes/bearisla
+./data/o3sondes/capofium
+./data/o3sondes/churchil
+./data/o3sondes/dikson
+./data/o3sondes/edmonton
+./data/o3sondes/egedesmi
+./data/o3sondes/gardermo
+./data/o3sondes/goosebay
+./data/o3sondes/hautepro
+./data/o3sondes/heiss
+./data/o3sondes/hohenpei
+./data/o3sondes/iqaluit
+./data/o3sondes/julich
+./data/o3sondes/kiruna
+./data/o3sondes/lerwick
+./data/o3sondes/lindenbe
+./data/o3sondes/nyalesun
+./data/o3sondes/payerne
+./data/o3sondes/polarfro
+./data/o3sondes/resolute
+./data/o3sondes/reykjavi
+./data/o3sondes/scoresby
+./data/o3sondes/sodankyl
+./data/o3sondes/thule
+./data/o3sondes/uccle
+./doc
+./src
+./src/uniras
+./src/o3sondes
+./src/o3sondes/misc
+./src/o3sondes/convert
+./src/format
+./src/misc

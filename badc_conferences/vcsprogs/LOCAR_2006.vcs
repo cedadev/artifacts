@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060105T000000Z
+DTEND:20060107T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Hampshire Centrecourt Hotel, Basingtoke,=
+ UK.
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000C0DC6E8431F4C5010000000000000000100
+ 000009A1F0014C1AEA9498B2DBF6B369CF3F1
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:The emphasis of the meeting will be o=
+n reviewing the achievements of the programme by looking at the progress ma=
+de on each of the aims and objectives set out in th=0D=0ALOCAR Science Plan=
+.=0D=0A=0D=0AInstead of reports on individual projects, synthesis presentat=
+ions will be made on specific aspects of the programme and its broader obje=
+ctives.=0D=0A=0D=0APlease register using the on-line form on the LOCAR webs=
+ite:=0D=0Ahttp://www.nerc.ac.uk/funding/thematics/locar/sciencemeeting2006.=
+shtml =0D=0A=0D=0AAll Ph.D students working on the LOCAR catchments, regard=
+less of whether they are funded by LOCAR, are invited and will be funded to=
+ attend (hotel costs).=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Lowland Catchment Research (LOCAR) Progra=
+mme - 4th Science Meeting 2006
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

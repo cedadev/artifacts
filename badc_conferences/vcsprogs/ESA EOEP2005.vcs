@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050626T230000Z
+DTEND:20050627T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Birkbeck College
+TRANSP:1
+UID:040000008200E00074C5B7101A82E008000000000011DA1DAA62C5010000000000000000100
+ 000008A73FA68C62C664AA91D64DA3BF3AD4C
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:NERC consultation meeting on ESA EOEP=
+, 27th June, Birkbeck College=0D=0ALondon=0D=0A=0D=0ANERC is hosting a cons=
+ultation meeting to review achievements of=0D=0ANERC's investments into ESA=
+'s environmental science programmes=0D=0Aand future requirements for the th=
+ird tranche of the Earth Observation=0D=0AEnvelope Programme (EOEP-3). The =
+meeting will take place on Monday, 27th=0D=0AJune 2005 at Birkbeck College =
+(University of London, Malet Street,=0D=0ABloomsbury, London, WC1E 7HX). =
+=0D=0A=0D=0AThe meeting is open to anyone who is interested in Earth observ=
+ation=0D=0Aand ESA's environmental science programmes.=0D=0A=0D=0AThe progr=
+amme and some background information can be found at:=0D=0Ahttp://www.nerc.=
+ac.uk/funding/earthobs/meetings/intro.asp =0D=0A=0D=0AIf you would like to =
+attend the meeting, please register online at:=0D=0Ahttp://www.nerc.ac.uk/f=
+unding/earthobs/meetings/regform.asp =0D=0A=0D=0ADirections to Birkbeck Col=
+lege can be found at:=0D=0Ahttp://www.bbk.ac.uk/bbk/maps.html =0D=0A=0D=0A*=
+****************************************=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:NERC consultation meeting on ESA EOEP
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

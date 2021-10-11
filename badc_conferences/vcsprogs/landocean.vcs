@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050508T230000Z
+DTEND:20050513T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Newcastle
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000020D7D807FF43C5010000000000000000100
+ 0000041FF0690508E874D9575B9E774395865
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Dear Colleagues,=0D=0A=0D=0AIn collab=
+oration with colleagues from Bremen, we are running an Erasmus-Socrates wor=
+kshop entitled "Processes and Feedbacks of Land-Ocean Interaction", in Newc=
+astle from 9-13 May. The workshop is aimed at postgraduate students and mor=
+e senior researchers with particular interests in the biogeochemistry of th=
+e land-ocean system.=0D=0AThere is a nominal charge of 30 pounds.=0D=0A=0D=
+=0AThe programme, registration form and further contact details can be foun=
+d at:=0D=0A=0D=0Ahttp://www.ncl.ac.uk/cegs.cpd/cpd/landocean.html=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Processes and Feedbacks of Land-Ocean Int=
+eraction
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

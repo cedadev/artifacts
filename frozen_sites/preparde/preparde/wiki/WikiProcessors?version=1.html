@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      WikiProcessors – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors?version=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors" title="View WikiProcessors">WikiProcessors</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A01%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:01+01:00 in Timeline">6 years</a> ago)
+               (<a href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors?action=diff&amp;version=1">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="WikiProcessors">Wiki Processors</h1>
+<p>
+Processors are <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiMacros">WikiMacros</a> designed to provide alternative markup formats for the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracWiki">Wiki engine</a>. Processors can be thought of as <em>macro functions to process user-edited text</em>. 
+</p>
+<p>
+Wiki processors can be used in any Wiki text throughout Trac,
+for various different purposes, like:
+</p>
+<ul><li><a class="wiki" href="WikiProcessors%3Fversion=1.html#CodeHighlightingSupport">syntax highlighting</a> or for rendering text verbatim,
+</li><li>rendering <a class="wiki" href="WikiProcessors%3Fversion=1.html#HTMLrelated">Wiki markup inside a context</a>, 
+like inside &lt;div&gt; blocks or &lt;span&gt; or within &lt;td&gt; or &lt;th&gt; table cells,
+</li><li>using an alternative markup syntax, like <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiHtml">raw HTML</a> and
+<a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredText">Restructured Text</a>,
+or <a class="ext-link" href="http://www.textism.com/tools/textile/"><span class="icon"> </span>textile</a>
+</li></ul><h2 id="UsingProcessors">Using Processors</h2>
+<p>
+To use a processor on a block of text, first delimit the lines using
+a Wiki <em>code block</em>:
+</p>
+<pre class="wiki">{{{
+The lines
+that should be processed...
+}}}
+</pre><p>
+Immediately after the <tt>{{{</tt> or on the line just below, 
+add <tt>#!</tt> followed by the <em>processor name</em>.
+</p>
+<pre class="wiki">{{{
+#!processorname
+The lines
+that should be processed...
+}}}
+</pre><p>
+This is the "shebang" notation, familiar to most UNIX users.
+</p>
+<p>
+Besides their content, some Wiki processors can also accept <em>parameters</em>,
+which are then given as <tt>key=value</tt> pairs after the processor name, 
+on the same line. If <tt>value</tt> has to contain space, as it's often the case for
+the style parameter, a quoted string can be used (<tt>key="value with space"</tt>).
+</p>
+<p>
+As some processors are meant to process Wiki markup, it's quite possible to
+<em>nest</em> processor blocks.
+You may want to indent the content of nested blocks for increased clarity,
+this extra indentation will be ignored when processing the content.
+</p>
+<h2 id="Examples">Examples</h2>
+<table class="wiki">
+<tr><th> Wiki Markup </th><th> Display 
+</th></tr><tr><td colspan="2" align="center" style="border: none"><blockquote>
+<p>
+<span class="underline">Example 1</span>: Inserting raw HTML
+</p>
+</blockquote>
+</td></tr><tr>
+<td style="border: none"><pre class="wiki">{{{
+&lt;h1 style="color: grey"&gt;This is raw HTML&lt;/h1&gt;
+}}}
+</pre></td><td style="border: none; padding-left: 2em" valign="top"><h1 style="color: grey">This is raw HTML</h1>
+</td></tr><tr>
+<td colspan="2" align="center" style="border: none"><blockquote>
+<p>
+<span class="underline">Example 2</span>: Highlighted Python code in a &lt;div&gt; block with custom style
+</p>
+</blockquote>
+</td></tr><tr>
+<td style="border: none"><pre class="wiki">{{{#!div style="background: #ffd; border: 3px ridge"
+
+This is an example of embedded "code" block:
+
+  {{{
+  #!python
+  def hello():
+      return "world"
+  }}}
+
+}}}
+</pre></td><td style="border: none; padding: 1em" valign="top"><div style="background: #ffd; border: 3px ridge" class="wikipage"><p>
+This is an example of embedded "code" block:
+</p>
+<div class="code"><pre><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">"world"</span>
+</pre></div></div></td></tr><tr>
+<td colspan="2" align="center" style="border: none"><blockquote>
+<p>
+<span class="underline">Example 3</span>: Searching tickets from a wiki page, by keywords.
+</p>
+</blockquote>
+</td></tr><tr>
+<td style="border: none"><pre class="wiki">{{{
+#!html
+&lt;form action="/query" method="get"&gt;&lt;div&gt;
+&lt;input type="text" name="keywords" value="~" size="30"/&gt;
+&lt;input type="submit" value="Search by Keywords"/&gt;
+&lt;!-- To control what fields show up use hidden fields
+&lt;input type="hidden" name="col" value="id"/&gt;
+&lt;input type="hidden" name="col" value="summary"/&gt;
+&lt;input type="hidden" name="col" value="status"/&gt;
+&lt;input type="hidden" name="col" value="milestone"/&gt;
+&lt;input type="hidden" name="col" value="version"/&gt;
+&lt;input type="hidden" name="col" value="owner"/&gt;
+&lt;input type="hidden" name="col" value="priority"/&gt;
+&lt;input type="hidden" name="col" value="component"/&gt;
+--&gt;
+&lt;/div&gt;&lt;/form&gt;
+}}}
+</pre></td><td style="border: none; padding: 1em" valign="top"><form action="http://proj.badc.rl.ac.uk/query" method="get"><div>
+<input type="text" name="keywords" value="~" size="30" />
+<input type="submit" value="Search by Keywords" />
+</div></form>
+</td></tr></table>
+<h2 id="AvailableProcessors">Available Processors</h2>
+<p>
+The following processors are included in the Trac distribution:
+</p>
+<dl class="wiki"><dt><tt>#!default</tt></dt><dd>Present the text verbatim in a preformatted text block. 
+This is the same as specifying <em>no</em> processor name
+(and no <tt>#!</tt>)
+</dd><dt><tt>#!comment</tt></dt><dd>Do not process the text in this section (i.e. contents exist
+only in the plain text - not in the rendered page).
+</dd></dl>
+<h3 id="HTMLrelated">HTML related</h3>
+<dl class="wiki"><dt><tt>#!html</tt></dt><dd>Insert custom HTML in a wiki page.
+</dd><dt><tt>#!htmlcomment</tt></dt><dd>Insert an HTML comment in a wiki page (<em>since 0.12</em>).
+</dd></dl>
+<p>
+Note that <tt>#!html</tt> blocks have to be <em>self-contained</em>,
+i.e. you can't start an HTML element in one block and close it later in a second block. Use the following processors for achieving a similar effect. 
+</p>
+<dl class="wiki"><dt><tt>#!div</tt></dt><dd>Wrap an arbitrary Wiki content inside a &lt;div&gt; element
+(<em>since 0.11</em>).
+</dd><dt><tt>#!span</tt></dt><dd>Wrap an arbitrary Wiki content inside a &lt;span&gt; element 
+(<em>since 0.11</em>). 
+</dd></dl>
+<dl class="wiki"><dt><tt>#!td</tt></dt><dd>Wrap an arbitrary Wiki content inside a &lt;td&gt; element (<em>since 0.12</em>)
+</dd><dt><tt>#!th</tt></dt><dd>Wrap an arbitrary Wiki content inside a &lt;th&gt; element (<em>since 0.12</em>) 
+</dd><dt><tt>#!tr</tt></dt><dd>Can optionally be used for wrapping <tt>#!td</tt> and <tt>#!th</tt> blocks,
+either for specifying row attributes of better visual grouping
+(<em>since 0.12</em>)
+</dd></dl>
+<p>
+See <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiHtml">WikiHtml</a> for example usage and more details about these processors.
+</p>
+<h3 id="OtherMarkups">Other Markups</h3>
+<dl class="wiki"><dt><tt>#!rst</tt></dt><dd>Trac support for Restructured Text. See <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredText">WikiRestructuredText</a>.
+</dd><dt><tt>#!textile</tt></dt><dd>Supported if <a class="ext-link" href="http://cheeseshop.python.org/pypi/textile"><span class="icon"> </span>Textile</a> 
+is installed. 
+See <a class="ext-link" href="http://www.textism.com/tools/textile/"><span class="icon"> </span>a Textile reference</a>.
+</dd></dl>
+<h3 id="CodeHighlightingSupport">Code Highlighting Support</h3>
+<p>
+Trac includes processors to provide inline syntax highlighting:
+</p>
+<blockquote>
+<p>
+<tt>#!c</tt> (C), <tt>#!cpp</tt> (C++), <tt>#!python</tt> (Python), <tt>#!perl</tt> (Perl), 
+<tt>#!ruby</tt> (Ruby), <tt>#!php</tt> (PHP), <tt>#!asp</tt> (ASP), <tt>#!java</tt> (Java), 
+<tt>#!js</tt> (Javascript), <tt>#!sql (SQL)</tt>, <tt>#!xml</tt> (XML or HTML),
+<tt>#!sh</tt> (Bourne/Bash shell), etc.
+</p>
+</blockquote>
+<p>
+Trac relies on external software packages for syntax coloring,
+like <a class="ext-link" href="http://pygments.org"><span class="icon"> </span>Pygments</a>. 
+</p>
+<p>
+See <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracSyntaxColoring">TracSyntaxColoring</a> for information about which languages
+are supported and how to enable support for more languages.
+</p>
+<p>
+Note also that by using the MIME type as processor, it is possible to syntax-highlight the same languages that are supported when browsing source code. For example, you can write:
+</p>
+<pre class="wiki">{{{
+#!text/html
+&lt;h1&gt;text&lt;/h1&gt;
+}}}
+</pre><p>
+The result will be syntax highlighted HTML code:
+</p>
+<div class="code"><pre><span class="nt">&lt;h1&gt;</span>text<span class="nt">&lt;/h1&gt;</span>
+</pre></div><p>
+The same is valid for all other <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracSyntaxColoring#SyntaxColoringSupport">mime types supported</a>.
+</p>
+<p>
+For more processor macros developed and/or contributed by users, visit: 
+</p>
+<ul><li><a class="ext-link" href="http://trac.edgewall.org/intertrac/ProcessorBazaar" title="ProcessorBazaar in Trac project trac"><span class="icon"> </span>ProcessorBazaar</a>
+</li><li><a class="ext-link" href="http://trac.edgewall.org/intertrac/MacroBazaar" title="MacroBazaar in Trac project trac"><span class="icon"> </span>MacroBazaar</a>
+</li><li>[th:WikiStart Trac Hacks] community site
+</li></ul><p>
+Developing processors is no different from Wiki macros. 
+In fact they work the same way, only the usage syntax differs. 
+See <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiMacros#DevelopingCustomMacros">WikiMacros#DevelopingCustomMacros</a> for more information.
+</p>
+<hr />
+<p>
+See also: <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiMacros">WikiMacros</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiHtml">WikiHtml</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredText">WikiRestructuredText</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracSyntaxColoring">TracSyntaxColoring</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">WikiFormatting</a>, <a class="wiki" href="TracGuide.html">TracGuide</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <script type="text/javascript">
+        jQuery.loadStyleSheet("/preparde/pygments/trac.css", "text/css");
+    </script>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors?version=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

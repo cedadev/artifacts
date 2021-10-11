@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>EAQUATE Data Providers Guide</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>EAQUATE Data Providers Guide<BR CLEAR="ALL"></H1>
+<b>Data file names.</b>
+<P>Data providers are kindly requested to follow the BADC
+<a href="/help/file_naming.html">file name convention</a>.
+<li>
+Note that the first component of the file name is the instrument (or group of
+instruments, or model) name.
+A list of standard
+<a href="/filespec_doc?id=INSTRUMENTAL&hfile=1#Instrument">instrument/model names</a>, including the FAAM instruments, is available.
+Please advise the <a href="mailto:badc@rl.ac.uk">BADC</a> if you can't find
+your instrument or model in the list, or if you would like to record data from
+several instruments in a single file, so that we can update the list (in
+agreement with the FAAM board if it is an instrument or a group of instruments
+flying on the FAAM aircraft).
+
+<li>
+The second component of file names (the location/platform) must be
+<i><b>faam</b></i> in the case of data collected onboard the FAAM aircraft.
+<p>
+<b>Data file format.</b>
+Please format your data in
+<a href="/help/formats/netcdf/">NetCDF</a>,
+using the CF metadata conventions.
+<a href="/help/formats/NASA-Ames/">NASA Ames</a> formatted files are also
+accepted.
+If you wish to check that files are correctly formatted before uploading them 
+please use the <a href="http://titania.badc.rl.ac.uk/cgi-bin/cf-checker.pl">
+NetCDF format checker</a> or the BADC
+
+<a href="http://badc.nerc.ac.uk/cgi-bin/dataex_file.cgi.pl">NASA-Ames format
+checker</a>.
+Many data files contain the variable <i>time</i> which can be expressed in 
+several ways. Guidelines on the <a href="http://badc.nerc.ac.uk/help/formats/NASA-Ames/nasa-ames-time.htm"> 
+recommended format of the time-variable</a>  header lines, units and the data values in 
+Nasa-Ames files are available and are based on the format used in NetCDF.
+<p>
+<b>Metadata.</b>
+It is important that the data be well documented.
+Please follow the BADC guidelines regarding the submission of
+<a href="/help/metadata/">metadata</a>.
+<p>
+<b>Data file submission.</b>
+
+<li>FAAM Core data: via the
+<a href="/cgi-bin/fileuploader/FAAM_directory_selection">FAAM web uploader</a>
+(access restricted to FAAM instrument operators).
+<li>All other data: via the
+<a href="/cgi-bin/fileuploader/EAQUATE_directory_selection">EAQUATE web uploader</a>
+(access restricted to EAQUATE participants).
+<p>
+
+
+</BODY>
+</HTML>

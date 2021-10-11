@@ -1,0 +1,258 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Datasets: Radiosonde Data Help File</TITLE>
+</HEAD>
+<!-- Created 26th September 1996 12:25:17  -->
+<!-- Author: Deborah Miles BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>BADC Help File: Radiosonde Data<BR
+CLEAR="ALL"></H1>
+
+<P><EM>This file contains background information to help you use
+the Met Office Radiosonde data held at the BADC.</EM> <HR ALIGN=LEFT>
+
+<OL>
+  <LI><A HREF="#instrument">Radiosonde Instrumentation</A>
+  <UL>
+    <LI>1.1 <A HREF="#sonde">The Radiosonde</A>
+    <LI>1.2 <A HREF="#type">The Radiosonde type used by the Met Office</A>
+    <LI>1.3 <A HREF="#wind">Windfinding Equipment</A>
+    <LI>1.4 <A HREF="#ground">Ground Station Equipment</A>
+  </UL>
+  
+  <LI><A HREF="#data">The Data</A>
+  <UL>
+    <LI>2.1 <A HREF="#measurements">Measurements</A>
+    <LI>2.2 <A HREF="#spatial">Spatial Coverage</A>
+    <LI>2.3 <A HREF="#temporal">Temporal Coverage</A>
+    <LI>2.4 <A HREF="#resolution">Resolution</A>
+  </UL>
+</OL>
+
+<HR ALIGN=LEFT>
+
+<H2><A NAME="instrument"></A>1. Radiosonde Instrumentation</H2>
+
+<BLOCKQUOTE>
+  <H3><A NAME="sonde"></A>1.1 The Radiosonde</H3>
+  <P>A radiosonde is a small, lightweight package of instruments,
+  suspended from a helium filled balloon (see <A HREF="figures/figone.html">figure
+  1</A>). <BR>
+  When the balloon is released, the apparatus rises through the
+  atmosphere at approximately 5m/s. Measurements of pressure, temperature
+  (and humidity for 1990-1998 European stations only) are taken
+  at intervals during flight. Wind speed and direction can be determined
+  from additional <A HREF="#wind">windfinding equipment</A>. Information
+  is transmitted to the surface as a radio signal. The <A HREF="#ground">ground
+  station equipment</A> receives the signal and processes the data.
+<BR>
+  The balloon bursts at a height of 20 to 30km and the radiosonde
+  is returned safely to the surface by means of a small parachute.
+  <H3><A NAME="type"></A>1.2 The Radiosonde type <U>used by the
+  Met Office</U></H3>
+  <P>The <A HREF="figures/rs80.html">RS80</A> radiosonde, manufactured
+  by the Finnish company Vaisala, has been routinely used in the
+  UK since 1981. Powered by a water activated battery, the instrument
+  takes measurements at approximately 1.3 second intervals during
+  the ascent. Pressure, temperature (and humidity) are measured
+  using three capacitative sensors. A schematic diagram of the
+  layout of the RS80 is shown in <A HREF="figures/figtwo.html">figure
+  2</A>.
+  <H4>(i) The Pressure Sensor</H4>
+  <P>Atmospheric pressure is measured using the <A HREF="figures/figthree.html">&quot;Barocap&quot;
+  pressure sensor</A>. This device is an aneroid capsule containing
+  two capacitive transducer plates. The plates are secured to the
+  steel alloy capsule membrane by supporting rods. The sensor is
+  35.5mm in diameter and weighs 5g.
+  <P>The aneroid capsule, shown schematically in <A HREF="figures/figthree.html">figure
+  3</A>, expands or contracts as the air pressure changes. The
+  flexible membrane moves the supporting rods, which in turn alter
+  the separation of the capacitor plates. The capacitance across
+  two parallel plates is inversely proportional to the plate separation.
+  Thus a change in air pressure is detected by the variation in
+  capacitance across the plates.
+  <P>The sensor has the following measurement characteristics.
+  <PRE>
+_________________________________
+
+
+Measuring range     1060mb to 3mb
+Resolution          0.1mb
+Accuracy            +/- 0.5mb
+_________________________________</PRE>
+  <P><BR>
+  
+  <H4>(ii) The Temperature Sensor</H4>
+  <P>Temperature is measured using the <A HREF="figures/figfour.html">&quot;Thermocap&quot;</A>
+  temperature sensor. This device consists glass capsule, or radius
+  1.5mm and length 2.5mm, shown schematically in <A HREF="figures/figfour.html">figure
+  4</A>. The capsule contains a chip of ceramic dielectric, of
+  dimensions 0.5 x 0.5 x 0.2mm, placed between two electrodes.
+  <P>The capacitance across the electrodes is a function of temperature.
+  Thus a change in air temperature is detected by the variation
+  in capacitance across the electrodes.
+  <P>The sensor has the following measurement characteristics.
+  <PRE>
+___________________________________________________
+
+
+Measuring range     +60C to -90C
+Resolution          0.1C
+Accuracy            +/- 0.2C
+Lag                 &lt; 2.5s (at 6ms<SUP>-1</SUP> flow at 1000mb)
+___________________________________________________</PRE>
+  <P><BR>
+  
+  <H4>(iii) The Humidity Sensor</H4>
+  <P>Humidity is measured using the &quot;Humicap&quot; humidity
+  sensor. This device is a thin-film capacitor of dimensions 4
+  x 4 x 0.2mm. A polymer dielectric of 1 micron thickness is placed
+  between two electrodes.
+  <P>The capacitance across the electrodes is a function of the
+  amount of water absorbed by the polymer dielectric. Thus a change
+  in the humidity of the atmosphere is detected by the variation
+  in capacitance across the electrodes.
+  <P>The sensor has the following measurement characteristics.
+  <PRE>
+_____________________________________________________
+
+
+Measuring range     0% to 100% relative humidity (RH)
+Resolution	    1% RH
+Accuracy            +/- 2% RH
+Lag                 &lt; 1s (at 6ms<SUP>-1</SUP> flow at 1000mb)
+_____________________________________________________</PRE>
+  <P><BR>
+  The Vaisala RS80 Technical Specifications are summarized <A 
+  HREF="rs80spec.html">here </A>. <BR>
+<BR>
+<BR>
+  
+  <H3><A NAME="wind"></A>1.3 Windfinding Equipment</H3>
+  <P>Wind speed and direction are not directly measured by the
+  radiosonde. These parameters are calculated from the position
+  of the sonde at successive time intervals. The UK upper air network
+  currently use two such methods of windfinding. Each method requires
+  additional equipment.
+  <H4>(i) The LORAN-C Radio Navigation System</H4>
+  <P>This system, in use at all but two UK stations, was originally
+  established to aid navigation at sea. It uses a network of <B><EM>LO</EM></B>ng
+  <B><EM>RA</EM></B>nge <B><EM>N</EM></B>avigation beacons, which
+  transmit radio signals at known frequencies. In addition to the
+  sensors of the RS80 already described, the RS80L radiosonde carries
+  a <B>radio receiver</B> to detect the LORAN signals.
+  <P>The receiver measures the difference in time taken for the
+  signals from two beacons of known position to reach the sonde.
+  Such points of equal time difference form the loci of a set of
+  rectangular hyperbolae. Signals are received from three pairs
+  of beacons. The difference in the time of signal reception from
+  each pair identifies a hyperbola, as shown in <A HREF="figures/figfive.html">figure
+  5</A>. The radiosonde is thus located at the intersection of
+  these hyperbolae, a known distance from the fixed LORAN beacons.
+  The wind speed and direction can then be calculated from the
+  difference between successive positions of the sonde. These calculations
+  are performed by the <A HREF="#ground">ground station equipment</A>.
+  <P>The LORAN-C method calculates the position of the radisonde
+  with an accuracy of approximately +/- 300m. Wind speeds are calculated
+  with an accuracy of +/- 1 to 2ms<SUP>-1</SUP>.
+   <H4>(ii) Tracking with Radar</H4>
+  <P>The second method, in use at Larkhill and Aberporth, is to
+  track the radiosonde with a windfinding radar. The RS80 must
+  carry a <B>radar reflection shield</B>, as shown in <A HREF="figures/figone.html">figure
+  1</A>, in order to reflect the beam emitted by the radar. The
+  shield consists of three perpendicular intersecting planes made
+  of metallised mesh.
+  <P>The time for the beam to be returned to the radar provides
+  the distance of the sonde from the radar. The radar also measures
+  the sonde's angle of elevation and the bearing from true north.
+  The sonde is thus located at a known distance, height and direction
+  from the fixed radar. The wind speed and direction can then be
+  calculated from the difference between successive positions of
+  the sonde. These calculations are performed by the <A HREF="#ground">ground
+  station equipment</A>.
+  <P>The windfinding radar method enables wind speeds to be calculated
+  with an accuracy of approximately +/- 1ms<SUP>-1</SUP> at a height
+  of 7km. Height is accurate to within +/-40m.
+  <H3><A NAME="ground"></A>1.4 Ground Station Equipment</H3>
+  <P>The ground equipment of a radiosonde station varies with the
+  type of sonde that is used but it must at least comprise a radio
+  receiver and a means of interpreting the signals in terms of
+  the meteorological quantities observed.<BR>
+<BR>
+  The Vaisala PC-Cora ground station is used by all of the UK upper
+  air stations to recieve, record and process the measurements
+  of pressure, temperature and humidity made by the radiosonde.
+  It can be used to calculate wind speed and direction from either
+  of the above windfinding methods.
+  <H4>(i) Storing and processing the data</H4>
+  <H4>(ii) Calculating dew-point temperature</H4>
+  <H4>(iii) Calculating humidity mixing ratio</H4>
+  <H4>(iv) Calculating height</H4>
+  <H4>(v) Calculating wind speed and direction</H4>
+  <P><BR>
+<BR>
+  </BLOCKQUOTE>
+
+<H2><A NAME="data"></A>2. The Data</H2>
+
+<BLOCKQUOTE>
+  <H3><A NAME="measurements"></A>2.1 Measurements</H3>
+  <P>The data consists of vertical profiles of temperature, dew-point
+  temperature, wind speed and wind direction, from the surface to pressures
+  of approximately 20mb. <BR>
+<BR>
+  
+  <H3><A NAME="spatial"></A>2.2 Spatial Coverage</H3>
+  <UL>
+    <LI>Horizontal Coverage<BR>
+    The BADC have data from stations <A HREF="/data/radiosglobe/world.html">worldwide</A>.
+    Currently, the global radiosonde network includes about 900 upper-air
+    stations, and about two-thirds make observations twice daily
+    (at 0000 and 1200 UTC). The network is predominantly land-based
+    and favours the Northern Hemisphere.
+    <LI>Vertical Coverage<BR>
+    A radiosonde is released from the surface and rises to between
+    20 and 30km before the balloon bursts. The flight of the instrument
+    varies according to the strength of the wind and thus may not
+    ascend strictly vertically. Nevertheless, when analysing weather
+    systems on the synoptic scale, the profiles can be assumed to
+    be vertical without significant error.
+  </UL>
+  <H3><A NAME="temporal"></A>2.3 Temporal Coverage</H3>
+  <P>Upper air data is reported up to four times per day at the
+  synoptic hours of 00, 06, 12 and 18 GMT. The number of accents varies
+  widely between countries and stations. 
+  <P>Standard practice states that all measurements in the profile
+  are attributed to the nominal hour of the ascent. This is the
+  hour at which the sonde reaches 100mb. It takes approximately
+  an hour for the balloon to rise to this level and thus the sondes
+  are released one hour before the synoptic hours.
+  <P>&nbsp;
+  <H3><A NAME="resolution"></A>2.4 Resolution</H3>
+  <P>The radiosonde takes measurements at intervals of approximately
+  2 seconds. The high resolution data files contain all such data.
+  The standard resolution data files contain measurements taken
+  at particular levels of the atmosphere.
+  <P>Upper air stations are required to submit standard resolution
+    data to the Met Office. Measurements are reported at <B>standard</B>
+    and <B>significant</B> pressure levels.
+    <H5>(i) Standard Pressure Levels</H5>
+    <P>The standard pressure levels are 1000, 925, 850, 700, 500,
+    400, 300, 250, 200, 150, 100, 70, 50, 30, 20 and 10 mb.
+    <H5>(ii) Significant Pressure Levels</H5>
+    <P>These are levels added to give a clearer picture of the measured
+    profile. For example at the top and bottom of an inversion, large
+    changes in wind, temperature or humidity may well be missed by
+    the standard levels. The surface and the highest level of the
+    sounding are mandatory significant levels. Additional levels
+    are also added to ensure that linear interpolation yields values
+    of temperature which do not differ from the observed value by
+    1 degree C below 300 hPa and 2 degrees C after that.</BLOCKQUOTE>
+  <P><BR>
+ 
+ 
+<P>
+</BODY>
+</HTML>

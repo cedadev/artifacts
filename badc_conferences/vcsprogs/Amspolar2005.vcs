@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050109T080000Z
+DTEND:20050113T180000Z
+LOCATION:San Diego, California, USA
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:8th AMS Polar Meteorology and Oceanography Conference=0D=0Ahttp://www.frontier.iarc.uaf.edu/AMS_polar/=0D=0A
+SUMMARY:8th AMS Polar Meteorology and Oceanography Conference
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

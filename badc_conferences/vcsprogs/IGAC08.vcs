@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20080906T230000Z
+DTEND:20080912T230000Z
+LOCATION:Annecy, France
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000080E1D41A234EC801000000000000000
+	0100000008A5B7AD3BBA26543937C9F6FA4BB515F
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+'Bridging the Scales in Atmospheric Chemistry: Local to Global', will be =
+held in on 7th-12th September 2008. =0D=0AFor further details please see =
+the attached flyer, or visit the IGAC website http://www.igacfrance2008.f=
+r/  =0D=0A=0D=0A <<Affiche-IGAC-ECO-SCREEN-11-12-2007.pdf>> =0D=0A=0D=0A=
+=0D=0A
+SUMMARY:International Global Atmospheric Chemistry (IGAC)Conference
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

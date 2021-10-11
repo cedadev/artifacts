@@ -1,0 +1,805 @@
+Earth Radiation Budget Instruments
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Earth and solar radiances in the ultraviolet,
+visible and infrared regions are measured in 22 channels by the Earth
+Radiation Budget (ERB) Instrument on the Nimbus-6 and -7 satellites.  The
+characteristics are listed in the table that follows:
+
+              Nimbus-6 and -7 ERB Instrument Characteristics
+___________________________________________________________________________
+                 Wavelength                                Noise
+                 Limits                                  Equivalent
+       Channel   (micrometers)                             Signal
+===========================================================================
+Solar        1   0.2 - 3.8      Sht-wave (SW) Irrad.   0.02 W/(m**2)
+Channels     2   0.2 - 3.8      SW Irradiance          0.02 W/(m**2)
+             3   < 0.2 - >50    Total Irradiance       0.01 W/(m**2)
+             4   0.526 - 2.8    Ind. Spectral Region   0.02 W/(m**2)
+             5   0.698 - 2.8    Ind. Spectral Region   0.02 W/(m**2)
+             6   0.395 - 0.508  Ind. Spectral Region   0.04 W/(m**2)
+             7   0.344 - 0.460  Ind. Spectral Region   0.06 W/(m**2)
+             8   0.300 - 0.410  Ind. Spectral Region   0.08 W/(m**2)
+             9   0.275 - 0.360  Ind. Spectral Region   0.01 W/(m**2)
+             10* < 0.2 - >50    Total Irradiance       0.02 W/(m**2)
+Fixed WFOV   11  < 0.2 - >50    Total Irradiance       0.007 W/(m**2)
+Channels     12  < 0.2 - >50    Total Irradiance       0.007 W/(m**2)
+             13  0.2 - 3.8      SW Reflected           0.007 W/(m**2)
+             14  0.695 - 2.8    SW Reflected           0.007 W/(m**2)
+Scanning     15  0.2 - 4.8      SW Reflected           0.00004 W/(cm**2)-sr
+ NFOV        16  0.2 - 4.8      SW Reflected           0.00004 W/(cm**2)-sr
+Channels     17  0.2 - 4.8      SW Reflected           0.00004 W/(cm**2)-sr
+             18  0.2 - 4.8      SW Reflected           0.00004 W/(cm**2)-sr
+             19  4.5 - 50.0     Long-wave (LW) Emitted 0.00002 W/(cm**2)-sr
+             20  4.5 - 50.0     LW Emitted             0.00002 W/(cm**2)-sr
+             21  4.5 - 50.0     LW Emitted             0.00002 W/(cm**2)-sr
+             22  4.5 - 50.0     LW Emitted             0.00002 W/(cm**2)-sr
+___________________________________________________________________________
+
+* A UV channel (0.252-0.324 micrometer) on Nimbus-6 was replaced on
+Nimbus-7 by a self-calibrating cavity detector channel, 10c, which covered
+all wavelengths.
+
+Please note that these values are more accurate than those in the Nimbus-6
+User's Guide.
+
+1.2  Unit of Measurement.  Flux is measured in Watts per meter squared
+(W/(m**2)).  Albedo is measured in percent.  Radiances from scanning
+channels are measured in Watts per centimeter squared per steradian
+(W/(cm**2)-sr).
+
+1.3  Data Source.  The Earth Radiation Budget (ERB) experiments on Nimbus-6
+and Nimbus-7.
+
+1.4  Data Set Identification.  Data are archived on two sets of tapes
+identified as Master Archive Tape (MAT) and Solar and Earth Flux Data Tape
+(SEFDT).  Brief descriptions of both types follow.
+
+       Master Archive Tape (MAT), Level I
+
+       Contains calibrated and raw digital data values for all channels,
+       plus values of temperature monitoring, orbit, attitude, and solar
+       incidence angle data.  Please note that the calibration appearing on
+       the MATs is preliminary in all cases and is corrected in all other
+       products.  Also note that although ERB results from Nimbus-6 have
+       been presented in several publications, final calibrations were
+       never determined nor were the data released to NSSDC for general
+       distribution.  The Nimbus-7 data, however, are available.
+
+       Post-calibration Master Archive Tapes (DELMAT), Level I 
+
+       These tapes contain short-term calibration adjustment quantities and
+       are used for the wide-field-of-view calibrations of the Level III
+       MATRIX product.
+
+       Solar and Earth Flux Data Tape (SEFDT), Level I
+
+       Contains up to 30 days of solar data per tape (Channels 1 through
+       10) and Earth flux data (Channels 11 through 14) stripped from the
+       MAT.  Calibration corrections are applied to the data.  The final
+       calibration exists for three WFOV channels (12-14) for the period
+       November 16, 1978 to October 31, 1987.  After October, 1987 only the
+       MAT preliminary calibration is present.  Channel 11 is a comparison
+       channel for channel 12 and has not been used in long term studies.
+       Useful calibration conventions have not been developed for the solar
+       channels 1 through 9.  The channel 10C data on the SEFDT have only
+       preliminary calibration applied.  Final calibration corrections are
+       made at a later stage.
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  The spatial coverage differs with the channel, as
+described below.
+
+       Solar Channels:  As the satellite crosses over the Antarctic, and
+       before it starts its northward trip on the daylight side of the
+       Earth, the entire solar disk is viewed within the unencumbered field
+       of 10 degrees.  This field is the one for which the entire sun is
+       contained in the receiver FOV.
+
+       Wide-Angle Channels:  These four channels continuously view the
+       entire Earth disc.  The measurements are continuous over the entire
+       globe.
+
+       Narrow-Angle Channels:  The bi-axial scanning patterns were designed
+       to obtain a large number of angularly independent views of the same
+       geographical area as the entire Earth is covered. Most, but not all,
+       of the Earth is observed on most operation days.
+
+2.2  Spatial Resolution.  The spatial resolution also differs with the
+channels.  The solar channels have a 10-degree FOV, which observe only the
+solar disk with no resolution of solar features.  The wide angle channels
+have a 130 degree FOV, which is slightly larger than that required to view
+the entire Earth disk.  This corresponds to a circular footprint on the
+Earth with a diameter of about 6500 km.  However, due to the cosine
+response of the sensor elements to incident radiation, normally over 80% of
+the signal is derived from an inner circle whose diameter is 3000 km.  The
+narrow angle channels have a slightly variable rectangular footprint which
+averages approximately 150 km on a side.  The nadir footprint is about 90
+by 90 km, while at the horizon the footprint is 250 km by 250 km.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  Coverage began with ERB-6 in July 1975 and is
+still continuing with ERB-7, beginning in November 1978.  The scanning
+mechanisms of both instruments have failed, but the fixed Earth flux and
+solar channels of both are still operational.  Before July 1978, data are
+regularly available from ERB-6.  From July 1978 to February 1980, data from
+ERB-6 were only occasionally recorded.  However, no data after June 1978
+was archived.  No ERB-6 data were recorded after February 1980.
+
+Data for the angularly-dependent, terrestrial flux data (obtained from the
+scanning channels) occurs sporadically from July 1975 through January 1976
+(about 6 months total).  There are no data between January 1976 and
+November 16, 1978, when ERB-7 began operation.  ERB-7 collected scan data
+until its scanner failed on June 22, 1980 (19 months of data).  Moreover,
+during the first three months of ERB-7 operation the scanner was on a
+reduced schedule (December 10, 1978, to March 9, 1979).  This caused gaps
+in the nighttime data over the Northern Hemisphere.
+
+For the ERB-6 no large gaps exist for the solar and WFOV data from July
+1975 to June 1978.  For the ERB-7 no data gap larger than a few days exists
+in the solar data from November 16, l978 to the present.  The WFOV coverage
+covers the same period except for a gap between April 9 and June 24, l986
+when the ERB was on only for solar observations near the south pole.
+
+The duty cycle for routine operations of ERB-6 was about 60 percent. During
+the first year, it normally ran on a one-day-on/one-day-off cycle.
+Thereafter, the instrument was on all the time, but due to a faulty tape
+recorder, only 60 to 70% of the data from each orbit were recorded.
+Although the scan mechanism was faulty, the narrow angle channels continued
+to take data from the nadir position.  ERB-7 was subject to a 75 percent
+duty cycle of 3 days on and 1 day off until September 1983.  The period of
+scan-limited operation in the winter of 1978/79 did not affect the duty
+cycle.  The ERB-7 instrument was still powered on 3 days of 4.  The scanner
+operated only 2 of these 3 days.  Starting in September 1983, the ERB has
+been left on full time except for the summer of l984 when it reverted to
+the three-days-on/one-day-off cycle during the period of low spacecraft
+power and the period April 10 to June 23, l986 when the ERB was turned on
+only 20 minutes per orbit at the time of solar observations.  Due to low
+spacecraft power, ERB was on every other day from April 22 to August 27,
+1987.  During this period, solar data on the ERB off-days were taken for
+about 30 minutes per orbit near the south pole.  Beginning August 28, 1987,
+the ERB instrument has been operating full time.  While solar data is still
+being released, calibration of the Earth flux measurements stopped after
+October 1987.
+
+3.2  Temporal Resolution.  For the narrow-angle channels, the ERB had five
+different scan modes of operation.  Scan modes 1, 2, 3, and 4 obtained a
+maximum number of angularly independent views of a given geographical area.
+When the instrument was in one of these four modes of operation, the scan
+pattern was repeated every 112 seconds or every 717 km along the subpoint
+track.  Scan mode 5, which was the mode of operation used to obtain maximum
+Earth coverage, was repeated every 224 seconds or every 1434 km along the
+subpoint track.
+
+Each of the 8 NFOV channels was sampled 2 times per second.  The 4 WFOV
+channels are sampled once per second.  For the solar channels, the sun is
+viewed at sunrise over the South Pole for about 3 minutes each orbit that
+the instrument is on.  Sensor readings are recorded every second and are
+available on the Solar and Earth Flux Data Tape (SEFDT).  In addition, a
+mean value for Earth orbit is calculated.
+
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  The objectives of the Earth Radiation Budget
+(ERB) experiment were:
+
+       (1) Determine for a period of one year or longer, the Earth
+           radiation budget on both synoptic and planetary scales by
+           simultaneous measurement of:
+
+           a.  Incoming solar radiation
+
+           b.  Outgoing Earth-reflected shortwave and Earth-emitted
+               longwave radiation by:
+
+               (i)  Fixed wide-angle sampling of these terrestrial fluxes
+                    at the satellite altitude.
+
+              (ii)  Scanning narrow-angle sampling of the angular radiance
+                    components.
+
+       (2) to develop angular models of the reflection and emission of
+           radiation from clouds and Earth surfaces.
+
+4.2  Key Satellite Flight Parameters.  Nominal orbit parameters for
+Nimbus-6 are listed below.
+
+       o   Launch date              June 12, 1975
+       o   Planned duration         1 year or longer
+       o   Actual duration          Last data received February 1980
+       o   Orbit                    Near polar, sun-synchronous, circular
+       o   Semi-major axis          7480.28 km
+       o   Nominal altitude         1102 km
+       o   Inclination              99.956 degrees
+       o   Nodal period             107.31 min
+       o   Equator crossing time    1145 Local mean solar time, ascending
+
+Nominal orbit parameters for Nimbus-7 are listed below.
+
+       o   Launch date              October 24, 1978
+       o   Planned duration         1 year or longer
+       o   Actual duration          Fixed Earth flux and solar channels
+                                    still operating
+       o   Orbit                    Near polar, sun-synchronous, circular
+       o   Semi-major axis          7333.155 km
+       o   Nominal altitude         955 km
+       o   Inclination              99.28 degrees
+       o   Nodal period             104.159 min
+       o   Equator crossing time    1150 Local mean solar time, ascending
+
+4.3  Principles of Operation.  The Earth Radiation Budget (ERB) experiment
+is designed to provide highly accurate (1 percent or better) radiation
+measurements of the Sun and Earth from which the terrestrial radiation
+budget can be determined on both synoptic and planetary scales.  A special
+goal of the experiment is to provide data related to the angular
+distribution of Earth albedo.  For solar measurements each of the 10
+channels is an independent, individually replaceable modular element with a
+mated amplifier.  The sensors are advanced versions of the Eppley-JPL
+thermopiles.  There are no imaging optics, only filters, windows and
+apertures.
+
+Earth-emitted infrared radiation and Earth-reflected solar radiation are
+measured with fixed, wide angle field-of-view sensors. The wideband
+channels (11 and 12) employ a type N3 thermopile with circular receivers.
+Channel 13 is similar to a precision pyranometer.  Channel 14 has a
+broadband filter hemisphere to match the band of channel 5.
+
+The eight scanning channels were mounted in a cylindrical head which was
+gimbal mounted on the mainframe of the radiometer unit.  The gimbal
+arrangement allowed the pointing direction of the scan head to be varied
+within a vertical plane by rotation of the scan head and within a
+horizontal plane by rotation of the gimbal.  With this arrangement the same
+portion of Earth would be viewed from different directions, thus providing
+data for modeling the angular distribution of the Earth albedo.
+
+4.4  Instrument Measurement Geometry.  The viewing geometry varies with the
+type of channel.  For the wide field-of-view channels, the four sensors
+have unencumbered fields of 121 degrees and maximum fields of 133.3
+degrees.  From the orbital altitude of 955 km for Nimbus-7, the Earth
+subtends an angle of 120.8 degrees, corresponding to a circle of 29.6
+degrees radius on the Earth.  For Nimbus-6 which had an orbital altitude of
+1100 km, the Earth subtended an angle of 120.2 degrees corresponding to a
+circle of 29.9 degree radius on the Earth.  Channel 12 had an insertable
+stop so that, upon command, it could view slightly less than the entire
+Earth surface.  The geographic coordinates of the center of the field-of-
+view were stored as the location of the measurement.
+
+For the scanning channels, the cylindrical head contained the four
+telescopes aligned such that the telescope center lines were 12 degrees
+apart when projected onto the horizontal plane.  The fields-of-view (FOVs)
+of the four telescopes were rectangular (0.25 x 5.12 degrees).  The FOVs of
+the short wavelength channels (15-18) were coincident, respectively, with
+those of the long wavelength channels (19-22) (one telescope contains 1
+shortwave and 1 longwave channel).  The telescope scan head could be
+scanned fore and aft and to each side of the subsatellite track.  The
+onboard data system was preset to automatically integrate FOV measurements,
+depending on the nadir angle, so that the effective mean Earth footprint
+was close to a square at all nadir angles.  The number of measurements
+integrated to obtain this square footprint varied from twenty at nadir to
+one near the limb.  Five scan patterns were available, the difference
+between modes being the sequence and number of directions taken by the scan
+head.  The scan modes were commanded by the operations center and selected
+by the sensor scientist.
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  The User Formatted Output (UFO) tape,
+the Image Location Tape (ILT), and calibration data are merged and
+processed into two Level I products:  the Master Archive Tapes (MAT) and
+the Solar and Earth Flux Data Tapes (SEFDT).  The scanner data appear only
+on the MAT tapes.  However, the final calibration appears only on the
+SEFDT.  The UFO contains telemetry and primary sensor data.  The ILT
+contains IFOV location data, spacecraft ephemeris and attitude data, time
+corrections, and bit slip information.
+
+5.2  Derivation Techniques/Algorithms.  The measurements made by most of
+the twenty-two channels are data of primary interest.  Each channel can be
+calibrated by either on-board reference targets, the sun or space.  In-
+flight calibration of the main solar channels on Nimbus-7 may be referred
+to Channel 10c, a self-calibrated channel using the cavity heater activated
+by the GO/NO GO heater command.  In addition, the degradation of Channel 2
+is checked by the occasional exposure of its duplicate, Channel 1. Channels
+with filters do not have a direct method of optically checking their
+calibration but must rely on correlations made with the main channels.  The
+calibration history of channels 10C through 22 is well understood.
+However, the deterioration that has occurred in channels one through nine
+is not properly understood.
+
+5.3  Special Corrections/Adjustments.  Investigations are continually being
+made which would confirm and supplement the in-flight calibrations and
+assist in establishing the validity of the ERB measurements.  Efforts are
+also continuing to document the history of the ERB instrument calibrations
+and to assess the instrument stability.
+
+5.4  Processing Changes.  There are studies underway to design the
+processing which will assure the homogeneity of the ERB-6 and ERB-7 data
+sets.  New wide-field-of-view calibration optimization algorithms were
+developed following the failure of the scanner channels.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  ERB Nimbus Experiment Team (NET) members
+have devoted a great deal of time and effort to the definition of a set of
+investigations and analyses for establishing the validity of the ERB
+measurements.
+
+Validation of the Solar Channels:  Rocket flights, managed by Charles
+Duncan of GSFC, were made concurrently with operation of the ERB
+instruments on Nimbus-6 and Nimbus-7.  The rocket and the instruments it
+carried were identical to the rocket flown by Duncan in 1976 for the
+Nimbus-6 ERB.  These instruments are fully described in the report by
+Duncan et al.,"Rocket Calibration of the Nimbus-6 Solar Constant
+Measurements" listed in the reference section of this catalog.
+
+The solar constant was measured by the cavity radiometers on the rocket,
+and the result compared with the observations by the duplicate ERB and the
+Nimbus-7 ERB channels, as well as with the Nimbus-6 ERB observations.  The
+rocket data are also used in analysis of all the solar channels.
+
+The ERB-7 channel 10c data were compared to sensor data from the Active
+Cavity Radiometer Irradiance Monitor (ACRIM) on the Solar Maximum Mission
+(SMM).  Both data sets show consistent solar flux values matching the solar
+cycle.
+
+6.2  Confidence Level/Accuracy Judgment.  The design goals for each channel
+are listed in Item 1.1 above.  The actual accuracy varies by channel.
+Reprocessed data products from channels 10C, 12-17, and 19-22 are
+considered to be quite accurate by the experiment team.  However, the
+accuracy of measurements from channels 1-9 and 18 are not well understood
+at this time.
+
+6.3  Usage Guidance.  The solar observations are of prime interest in
+studies of solar variability.  The principal applications of the ERB-6 and
+ERB-7 data are the derived products with the data products ERB-MATRIX and
+ERB-MLCE.
+
+The scanning channel data are primarily for updating an existing model of
+the angular distribution of the Earth albedo and for regional (500 x 500
+km) Earth radiation budget studies.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+7.1  Nimbus Experiment Team Chairman
+
+       Dr. H. Lee Kyle
+       Code 936
+       Goddard Space Flight Center
+       Greenbelt, Maryland  20771
+       (301) 286-9514
+
+7.2  Senior Scientist
+
+       Dr. Herbert Jacobowitz
+       NOAA/NESDIS
+       Atmospheric Sciences Branch
+       World Weather Building, Room 711
+       5200 Auth Road
+       Camp Spring, MD  20746
+       (301) 763-8053
+
+7.3  Experimental Products (background on Subtarget Radiance Tape (STRT)
+     and angular distribution models)
+
+       Dr. L. L. Stowe
+       NOAA/NESDIS
+       Atmospheric Sciences Branch
+       World Weather Building, Room 711
+       5200 Auth Road
+       Camp Spring, MD  20746
+       (301) 763-8053                 
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+The following data are for ERB-7.  Detailed plans for ERB-6 are under
+study.
+
+8.1  Tape Products
+
+8.1.1  UFO-E, User Formatted Output tape-ERB, Level 0
+
+         Medium/Specification:  9-track, 1600-bpi computer tape.  Nimbus
+         Spec. No. T113011, Revision C dated January 11, 1978.
+
+         Format and Content:  This tape is generated on a CDC-3200
+         computer.  It contains a standard header record written twice as
+         the first file.  Each subsequent file contains data for one data
+         orbit (a data orbit is defined as beginning at a descending node
+         and ending at the following descending node).  All data are in
+         order of ascending time.  Each file contains 25 physical records
+         of telemetry and primary sensor data.
+
+         Data Quantity/Rate:  There are 256 seconds worth of telemetry and
+         primary sensor data in each physical record.  There are 25 records
+         per orbit and 95 orbits per tape, or 40 tapes per year.
+
+         Status:  The processing of ERB-6 data can be regarded as a
+         development effort for the processing of ERB-7 data.  The present
+         ERB-6 data set is regarded as experimental and has not been
+         archived.  A plan is being developed to reprocess it for
+         consistency with Nimbus-7 data.  Archiving of ERB-7 data is
+         complete except for the solar channels.  These products are not
+         routinely made available for public access.  See data producer for
+         additional information.
+
+         Plans/Schedule:  Archiving of the solar channel data is usually
+         completed 4 to 6 months after data acquisition.
+
+8.1.2  Master Archive Tape (MAT), Level I
+
+         Medium/Specification:  9-track, 1600-bpi or 6250-bpi computer
+         tape.  Nimbus Spec. No. T134081 Revision D dated April 7, 1980.
+
+         Format and Content:  This tape is generated on IBM 360/91 and 3081
+         computers.  The first file contains the Standard Header Record
+         which is written twice in the file.  The subsequent files contain
+         1 to 3 days of data and are in order of ascending time. The data
+         have preliminary but not final calibration and are Earth located.
+         Measurements of all channels are in orbital sequence. The tape
+         contains some statistics such as minimum, mean, maximum and
+         standard deviation as well as spacecraft attitude, scanner
+         pointing angles, solar azimuth and distance, preliminary
+         calibration factors and housekeeping information.  The last file
+         of a MAT tape is a trailer documentation file.
+
+         Data Quantity/Rate:  There is one 1600-bpi MAT per data day for
+         the first and second data years (November 1978 - October 1980).
+         From year three on, there are three data days per 6250-bpi tape.
+
+         Status:  The first thirteen years of data are available.  There
+         are 1696 tapes for thirteen years
+
+         Plans/Schedule:  Data will be added to the archive periodically.
+
+8.1.3  Solar and Earth Flux Data Tape (SEFDT), Level I
+
+         Medium/Specification:  9-track, 1600-bpi computer tape.  Nimbus
+         Spec. No. T134021 Revision I dated April 1985.
+
+         Format and Content:  This tape is generated on IBM 360/91 and 3081
+         computers.  The first file on these tapes is a NOPS Standard
+         Header file.  In this file, the header record is written twice.
+         The second file contains solar and Earth flux data stripped from
+         the MAT (Item 8.1.2).  There will be 3 different types of logical
+         records written.  The Earth flux logical record will contain 32
+         seconds of data.  The solar data logical record will contain 16
+         seconds of data, and at the end of a data orbit, a solar data
+         summary logical record will be written.  All logical records will
+         be sized identically.  Earth flux data are in orbital sequence and
+         are Earth-located and calibrated.
+
+         The third file contains an ERB Documentation Summary Record.  The
+         fourth and fifth files contain the Channel 13 and 14 Calibration
+         Adjustment Tapes (CATs).  The last file is a trailer documentation
+         file containing information about input used to create the tape.
+         This file is terminated by a double end of file.
+
+         The SEFDTs contain calibrated Earth flux data similar to those on
+         the ERB-MATRIX tapes.  The calibration of the Earth radiance data
+         is improved over that on MAT tapes for data years one through
+         nine, but not for subsequent years.  The final calibration for
+         solar channel 10C is done at a subsequent stage.
+
+         Data Quantity/Rate:  There is one tape per month.  
+
+         Status:  The first thirteen years of data are available.  Total
+         tapes are now 156.
+
+         Plans/Schedule:  Additional data are being added to the archive.
+
+8.2  Film Products  None.
+
+8.3  Other Products
+
+8.3.1  Nimbus-7 ERB Daily Averaged Total Solar Irradiance Measurements,
+       Level 1.
+
+         Medium/Specification:  On-line data file in NSSDC's Common Data
+         Format (CDF).  This format is used to store all data sets
+         supported by the NASA Climate Data System (NCDS) and contains all
+         descriptive elements necessary for listing or plotting. Data
+         coverage is from November 16, 1978 to October 31, 1991.
+
+         Format and Content:  Data are measurements from the ERB channel
+         10C.  Each record contains the mission day, and irradiance value.
+         The final calibration for the solar channel 10C data is done
+         separately from the MAT and SEFDT data.
+
+         Data Quantity/Rate:  Data file is 124 512-byte blocks in volume.
+
+         Status:  Available through the NCDS system.  Contact the NCDS User
+         Support Office for access information.
+
+         Plans/Schedule:  Data will be updated periodically as new data
+         become available.
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification.
+
+       National Space Science Data Center
+       Code 933-Central Data Services Facility
+       Goddard Space Flight Center
+       Greenbelt, Maryland  20771
+       (301) 286-6695
+
+9.2  Procedures for Obtaining Data.  Prospective users should contact the
+Coordinated Request and User Support Office at NSSDC at the above address.
+
+Researchers who reside outside the USA should direct their requests to:
+
+       World Data Center A for Rockets and Satellites
+       Code 930.2
+       Goddard Space Flight Center
+       Greenbelt, Maryland  20771 USA
+       (301) 286-6695
+
+Users may submit requests for data by letter, telephone, personal visit, or
+through the NASA Science Internet (NSI_net) network.  The mailbox is
+NCF::REQUEST.  Data costs are dependent on affiliation and sponsorship of
+the user program.  Data are free to NASA personnel.  Communication with the
+NSSDC Request Coordination Office is advised before ordering.
+
+
+9.3  NCDS Status/Plans.  NCDS supports the Nimbus-7 Channel 10C data online
+in Common Data Format (CDF).  NCDS also archives this data set in ASCII
+format for electronic file transfer.
+
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+        Request Coordination Office
+        National Space Science Data Center
+        Code 933-Central Data Services Facility
+        NASA/Goddard Space Flight Center
+        Greenbelt, Maryland 20771
+        PHONE:  (301) 286-6695
+        TELEX:  89675 NASCOM GBLT
+        TWX No: 7108289716
+
+        NASA Climate Data System (NCDS)
+        Code 934
+        NASA/Goddard Space Flight Center
+        Greenbelt, Maryland 20771
+        PHONE:  (301) 286-3209
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      a.  Bess, T. Dale and G. Louis Smith, 1987:  "Atlas of
+          Wide-Field-of-View Outgoing Longwave Radiation Derived from
+          Nimbus-6 Earth Radiation Budget Data Set, July 1975-June 1978,"
+          NASA Reference Publication 1185, August 1987, 80 pages.
+
+      b.  Bess, T. Dale and G. Louis Smith, 1987:  "Atlas of
+          Wide-Field-of-View Outgoing Longwave Radiation Derived from
+          Nimbus-7 Earth Radiation Budget Data Set, November 1978-October
+          1985," NASA Reference Publication 1186, August 1987, 176 pages.
+
+      c.  GSFC, 1975.  The Nimbus-6 User's  Guide.  NASA/GSFC. Greenbelt,
+          Maryland.
+
+      d.  GSFC, 1978.  The Nimbus-7 User's  Guide.  NASA/GSFC. Greenbelt,
+          Maryland.
+
+      e.  Hucek, R. R., H. L. Kyle, and P. E. Ardanuy, 1987:  "Nimbus-7
+          Earth Radiation Budget Wide-Field-of-View Climate Data Set
+          Improvement, Part I:  The Earth Albedo from Deconvolution of
+          Shortwave Measurements," Journal of Geophysical Research, Vol.
+          92, April 20, 1987, pp. 4107-4123.
+
+      e.  Hurley, E.J. and R. Jones, December 1983.  Nimbus-7:  Observing
+          the Atmosphere and Oceans.  NASA/GSFC.  Greenbelt, Maryland.
+
+      f.  Hurley, E.J., A.J. Fleig, P.A. Barba, 1984.  Nimbus-7 Data
+          Product Summary.  NASA/GSFC.  Greenbelt, Maryland.
+
+      g.  SASC Technologies, Inc., April 1985.  ERB SEFDT Tape
+          Specification No. T134021, NASA/GSFC, Greenbelt, MD.
+
+11.2  Journal Articles and Study Reports
+
+      a.  Ardanuy, P. E., H. L. Kyle and R. R. Hucek, 1988:  "Low Frequency
+          Oscillations Over the Indian Ocean as Observed by Nimbus-7 ERB",
+          EOS, Transactions, Vol. 69, No. 16, April 19, 1988, p. 315,
+          (Spring Meeting, American Geophysical Union, Baltimore, MD, May
+          16-21, 1988).
+
+      b.  Ardanuy, P. E. and J. Rea, June 1984:  "Degradation Asymmetries
+          and Recovery of the NIMBUS 7 Earth Radiation Budget Shortwave
+          Radiometer," Journal of Geophysical Research, Vol. 89, June 30,
+          1984, pp. 5039-5048.
+
+      c.  Cess, Robert D. and Inna L. Vulis, 1989:  "Intercomparison and
+          Interpretation of Satellite-Derived Directional Albedos Over
+          Deserts," Journal of Climate, Vol. 2, April 1989, pp. 393-407.
+
+      d.  Curran, Robert J., 1980.  "Satellite Measurements of Earth
+          Radiation Budget for Climate Applications," Space Shuttle, Dawn
+          of an Era, Volume 41, Advances in the Astronautical Sciences.
+
+      e.  Davis, P. A., E. R. Major and H. Jacobowitz, 1984:  "An
+          Assessment of NIMBUS-7 ERB Shortwave Scanner Data by Correlative
+          Analysis with Narrowband CZCS Data," Journal of Geophysical
+          Research, Vol. 89, June 30, 1984, pp. 5077-5088.
+
+      f.  Duncan, Charles H, R.G. Harrison, J.R. Hickey, J.M. Wendall, M.P.
+          Thekaekara, and R.C. Wilson, 1977.  "Rocket Calibration of the
+          Nimbus-6 Solar Constant Measurements," Appl. Optics 16:2690-2697.
+
+      g.  Hartnann, D.L., V. Ramanathan, A. Beiroir, and G.E. Hunt, 1986.
+          "Earth Radiation Budget," Rev. Geophys. (ERBE Special Issue).
+          24:439-468.
+
+      h.  Hickey, J.R., B.M. Alton, H.L. Kyle and D. Hoyt, 1988.  "Total
+          Solar Irradiance Measurements by ERB/Nimbus-7:  A Review of Nine
+          Years," Space Science Review.
+
+      i.  Hickey, J.R., L.L. Stowe, H. Jacobowitz, P. Pellegrino, R.H.
+          Maschhoff, F. House, and T.H. Vonder Haar, April 1980.  "Initial
+          Solar Irradiance Determinations from Nimbus-7 Cavity Radiometer
+          Measurements," Science 208:281-283.
+
+      k.  Hickey, J.R., B.M. Alton, F.J. Griffin, H. Jacobowitz, P.
+          Pellegrino, R.H. Maschhoff, E.A. Smith, and T.H. Vonder Haar,
+          1982.  "Extraterrestrial Solar Irradiance Variability:  Two and
+          One-half Years of Measurements from Nimbus-7," Solar Energy
+          29:125-127.
+
+      l.  Jacobowitz, H., W.L. Smith, H.B. Harell, F.W. Nagle, and J.R.
+          Hickey, 1979.  "The first 19 Months of Planetary Radiation Budget
+          Measurements from the Nimbus-6 ERB," J. Atmos. Sci. 36:501-507.
+
+      m.  Jacobowitz, H., H.V. Soule, H.L. Kyle, F.B. House, and the
+          Nimbus-7 ERB Experiment Team, 1984.  "Earth Radiation Budget
+          (ERB)," J. of Geophys. Res. 89:5021-5038.
+
+      n.  Jacobowitz, H., R.J. Tighe, and the Nimbus-7 ERB Experiment Team,
+          1984.  "The Earth Radiation Budget Derived from the Nimbus-7 ERB
+          Experiment," J. of Geophys. Res. 89:4997-5010.
+
+      o.  Kyle, H.L., F.B. House, P.E. Ardanuy, H. Jacobowitz, R.H.
+          Maschoff and J.R. Hickey, l984.  "New In-Flight Calibration
+          Adjustment of the Nimbus 6 and 7 ERB Wide Field of View
+          Radiometers," J. Geophys. Res. 89:5057-5076.
+
+      p.  Kyle, H. L., A. Mecherikunnel, P. Ardanuy, L. Penn, B. Groveman,
+          G. Campbell and T. H. Vonder Haar, 1989:  "A Comparison of Two
+          Major Earth Radiation Budget Data Sets," Journal of Geophysical
+          Research, (in press).
+
+      q.  Kyle, H.L., P.E. Ardanuy, and E.J. Hurley, l985.  "The Status of
+          the Nimbus-7 ERB Earth Radiation Budget Data Set," Bull. Amer.
+          Meteor. Soc. 66:1378-1388.
+
+      r.  Smith, G.L., and T.D. Bess, 1982.  "Annual Cycle and Spatial
+          Spectra of Earth Emitted Radiation at Large Scales," J. of the
+          Atmos. Sci. 40:998-1015.
+
+      s.  Taylor, V.R., and L.L. Stowe, June 30, 1984.  "Reflectance
+          Characteristics of Uniform Earth and Cloud Surfaces Derived from
+          Nimbus-7 ERB," J. of Geophys. Res. 89:4987-4996.
+
+11.3  Archive/DBMS Usage Documentation.  Available from NSSDC.
+
+      a.  Groveman, Brian S., 1982:  "ERB-7 MAT Validation and User's Guide
+          Document, MAT User's Guide, MAT Quality Control Document, MAT
+          Tape Specifications Document,".
+
+      b.  Groveman, Brian, April 1984:  "User's Guide for ERB 7 MAT," NASA
+          Contractor Report CR 170514, 112 pages.
+
+      c.  Ng, C.Y., and Y.P. Sheu (editors), July 1985.  "Descriptions of
+          Meteorological and Terrestrial Applications Spacecraft and
+          Investigations," Data Catalog Series for Space Science and
+          Applications Flight Missions 4A.  NSSDC/WDC-A-R&S 85-03.
+          NASA/GSFC.  Greenbelt, Maryland.
+
+      d.  Olsen, L.M., J.W. Closs, J.R. Vanderpool, November, 1991. "NASA's
+          Climate Data System Primer: Version 1.2."  National Space Science
+          Data Center, NASA Goddard Space Flight Center, Greenbelt,
+          Maryland.
+
+
+      e.  Ray, S.N., R.J. Tighe, S.A. Scherrer, April 1984.  User's Guide
+          for ERB-7 SEFDT, Volume 1 and 2.  NASA CR 170618. NASA/GSFC.
+          Greenbelt, Maryland.
+
+      f.  Vasanth, K.L., April 1984.  User's Guide for ERB-7 SEFDT, Vol.3.
+          NASA CR 170616.  NASA/GSFC.  Greenbelt, Maryland.
+
+
+12.  RELATED DATA SETS
+
+Earth Radiation Budget products from Nimbus-6 and -7 are derived from these
+level 0 and 1 data sets.  Information on these data sets can be found in
+the detailed catalog for the NCDS data sets ERB-MATRIX and ERB-MLCE.
+
+
+13.  SUMMARY/SAMPLE
+
+There are no hardcopy products available for Level 0 and Level I data.
+
+
+14.  NOTES
+
+None.
+
+
+*92/03/06

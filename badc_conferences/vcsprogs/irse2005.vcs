@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050620T090000Z
+DTEND:20050624T170000Z
+LOCATION:Saint Petersburg, Russia
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:31st International Symposium on Remote Sensing of Environment "Global Monitoring for Sustainability and Security"=0D=0Ahttp://www.niersc.spb.ru/isrse/index.shtml=0D=0A
+SUMMARY:31st International Symposium on Remote Sensing of Environment 
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

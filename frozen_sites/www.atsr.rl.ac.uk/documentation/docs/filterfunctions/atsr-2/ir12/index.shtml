@@ -1,0 +1,451 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>ATSR-2 12um Spectral Response Function
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../../../../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../../../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../../../index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../../../../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <TT>*** SPECTRAL RESPONSE DATA ***</TT>
+<BR><TT>ATSR-2&nbsp; Flight Model FPA 12um</TT><TT></TT>
+<P><TT>&nbsp;Wavelength&nbsp;&nbsp;&nbsp; Normalised</TT>
+<BR><TT>&nbsp;<U>(um)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Response</U></TT>
+<BR><TT>&nbsp;10.978300&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp;10.987675&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp;10.997049&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp;11.006424&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp;11.015799&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp;11.025173&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp;11.034548&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp;11.043922&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp;11.053297&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp;11.062672&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp;11.072046&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp;11.081421&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp;11.090796&nbsp;&nbsp;&nbsp;&nbsp; 0.00000</TT>
+<BR><TT>&nbsp;11.100170&nbsp;&nbsp;&nbsp;&nbsp; 0.00100</TT>
+<BR><TT>&nbsp;11.109545&nbsp;&nbsp;&nbsp;&nbsp; 0.00100</TT>
+<BR><TT>&nbsp;11.118919&nbsp;&nbsp;&nbsp;&nbsp; 0.00100</TT>
+<BR><TT>&nbsp;11.128294&nbsp;&nbsp;&nbsp;&nbsp; 0.00100</TT>
+<BR><TT>&nbsp;11.137669&nbsp;&nbsp;&nbsp;&nbsp; 0.00100</TT>
+<BR><TT>&nbsp;11.147043&nbsp;&nbsp;&nbsp;&nbsp; 0.00200</TT>
+<BR><TT>&nbsp;11.156418&nbsp;&nbsp;&nbsp;&nbsp; 0.00200</TT>
+<BR><TT>&nbsp;11.165792&nbsp;&nbsp;&nbsp;&nbsp; 0.00200</TT>
+<BR><TT>&nbsp;11.175167&nbsp;&nbsp;&nbsp;&nbsp; 0.00300</TT>
+<BR><TT>&nbsp;11.184542&nbsp;&nbsp;&nbsp;&nbsp; 0.00400</TT>
+<BR><TT>&nbsp;11.193916&nbsp;&nbsp;&nbsp;&nbsp; 0.00400</TT>
+<BR><TT>&nbsp;11.203291&nbsp;&nbsp;&nbsp;&nbsp; 0.00500</TT>
+<BR><TT>&nbsp;11.212666&nbsp;&nbsp;&nbsp;&nbsp; 0.00600</TT>
+<BR><TT>&nbsp;11.222040&nbsp;&nbsp;&nbsp;&nbsp; 0.00600</TT>
+<BR><TT>&nbsp;11.231415&nbsp;&nbsp;&nbsp;&nbsp; 0.00700</TT>
+<BR><TT>&nbsp;11.240789&nbsp;&nbsp;&nbsp;&nbsp; 0.00800</TT>
+<BR><TT>&nbsp;11.250164&nbsp;&nbsp;&nbsp;&nbsp; 0.00899</TT>
+<BR><TT>&nbsp;11.259539&nbsp;&nbsp;&nbsp;&nbsp; 0.01101</TT>
+<BR><TT>&nbsp;11.268913&nbsp;&nbsp;&nbsp;&nbsp; 0.01300</TT>
+<BR><TT>&nbsp;11.278288&nbsp;&nbsp;&nbsp;&nbsp; 0.01500</TT>
+<BR><TT>&nbsp;11.287663&nbsp;&nbsp;&nbsp;&nbsp; 0.01699</TT>
+<BR><TT>&nbsp;11.297037&nbsp;&nbsp;&nbsp;&nbsp; 0.02001</TT>
+<BR><TT>&nbsp;11.306412&nbsp;&nbsp;&nbsp;&nbsp; 0.02300</TT>
+<BR><TT>&nbsp;11.315786&nbsp;&nbsp;&nbsp;&nbsp; 0.02600</TT>
+<BR><TT>&nbsp;11.325161&nbsp;&nbsp;&nbsp;&nbsp; 0.02998</TT>
+<BR><TT>&nbsp;11.334536&nbsp;&nbsp;&nbsp;&nbsp; 0.03502</TT>
+<BR><TT>&nbsp;11.343910&nbsp;&nbsp;&nbsp;&nbsp; 0.03900</TT>
+<BR><TT>&nbsp;11.353285&nbsp;&nbsp;&nbsp;&nbsp; 0.04399</TT>
+<BR><TT>&nbsp;11.362659&nbsp;&nbsp;&nbsp;&nbsp; 0.05197</TT>
+<BR><TT>&nbsp;11.372034&nbsp;&nbsp;&nbsp;&nbsp; 0.05803</TT>
+<BR><TT>&nbsp;11.381409&nbsp;&nbsp;&nbsp;&nbsp; 0.06601</TT>
+<BR><TT>&nbsp;11.390783&nbsp;&nbsp;&nbsp;&nbsp; 0.07299</TT>
+<BR><TT>&nbsp;11.400158&nbsp;&nbsp;&nbsp;&nbsp; 0.08197</TT>
+<BR><TT>&nbsp;11.409533&nbsp;&nbsp;&nbsp;&nbsp; 0.08803</TT>
+<BR><TT>&nbsp;11.418907&nbsp;&nbsp;&nbsp;&nbsp; 0.10001</TT>
+<BR><TT>&nbsp;11.428282&nbsp;&nbsp;&nbsp;&nbsp; 0.10998</TT>
+<BR><TT>&nbsp;11.437656&nbsp;&nbsp;&nbsp;&nbsp; 0.12393</TT>
+<BR><TT>&nbsp;11.447031&nbsp;&nbsp;&nbsp;&nbsp; 0.13704</TT>
+<BR><TT>&nbsp;11.456406&nbsp;&nbsp;&nbsp;&nbsp; 0.15001</TT>
+<BR><TT>&nbsp;11.465780&nbsp;&nbsp;&nbsp;&nbsp; 0.16397</TT>
+<BR><TT>&nbsp;11.475155&nbsp;&nbsp;&nbsp;&nbsp; 0.17792</TT>
+<BR><TT>&nbsp;11.484529&nbsp;&nbsp;&nbsp;&nbsp; 0.20008</TT>
+<BR><TT>&nbsp;11.493904&nbsp;&nbsp;&nbsp;&nbsp; 0.22601</TT>
+<BR><TT>&nbsp;11.503279&nbsp;&nbsp;&nbsp;&nbsp; 0.24096</TT>
+<BR><TT>&nbsp;11.512653&nbsp;&nbsp;&nbsp;&nbsp; 0.26487</TT>
+<BR><TT>&nbsp;11.522028&nbsp;&nbsp;&nbsp;&nbsp; 0.28604</TT>
+<BR><TT>&nbsp;11.531403&nbsp;&nbsp;&nbsp;&nbsp; 0.29801</TT>
+<BR><TT>&nbsp;11.540777&nbsp;&nbsp;&nbsp;&nbsp; 0.32992</TT>
+<BR><TT>&nbsp;11.550152&nbsp;&nbsp;&nbsp;&nbsp; 0.35292</TT>
+<BR><TT>&nbsp;11.559526&nbsp;&nbsp;&nbsp;&nbsp; 0.36806</TT>
+<BR><TT>&nbsp;11.568901&nbsp;&nbsp;&nbsp;&nbsp; 0.39900</TT>
+<BR><TT>&nbsp;11.578276&nbsp;&nbsp;&nbsp;&nbsp; 0.42991</TT>
+<BR><TT>&nbsp;11.587650&nbsp;&nbsp;&nbsp;&nbsp; 0.46486</TT>
+<BR><TT>&nbsp;11.597025&nbsp;&nbsp;&nbsp;&nbsp; 0.48607</TT>
+<BR><TT>&nbsp;11.606400&nbsp;&nbsp;&nbsp;&nbsp; 0.51400</TT>
+<BR><TT>&nbsp;11.615774&nbsp;&nbsp;&nbsp;&nbsp; 0.53090</TT>
+<BR><TT>&nbsp;11.625149&nbsp;&nbsp;&nbsp;&nbsp; 0.57979</TT>
+<BR><TT>&nbsp;11.634523&nbsp;&nbsp;&nbsp;&nbsp; 0.60005</TT>
+<BR><TT>&nbsp;11.643898&nbsp;&nbsp;&nbsp;&nbsp; 0.62699</TT>
+<BR><TT>&nbsp;11.653273&nbsp;&nbsp;&nbsp;&nbsp; 0.65291</TT>
+<BR><TT>&nbsp;11.662647&nbsp;&nbsp;&nbsp;&nbsp; 0.68582</TT>
+<BR><TT>&nbsp;11.672022&nbsp;&nbsp;&nbsp;&nbsp; 0.72413</TT>
+<BR><TT>&nbsp;11.681396&nbsp;&nbsp;&nbsp;&nbsp; 0.77100</TT>
+<BR><TT>&nbsp;11.690771&nbsp;&nbsp;&nbsp;&nbsp; 0.73901</TT>
+<BR><TT>&nbsp;11.700146&nbsp;&nbsp;&nbsp;&nbsp; 0.77678</TT>
+<BR><TT>&nbsp;11.709520&nbsp;&nbsp;&nbsp;&nbsp; 0.79102</TT>
+<BR><TT>&nbsp;11.718895&nbsp;&nbsp;&nbsp;&nbsp; 0.81498</TT>
+<BR><TT>&nbsp;11.728270&nbsp;&nbsp;&nbsp;&nbsp; 0.86185</TT>
+<BR><TT>&nbsp;11.737644&nbsp;&nbsp;&nbsp;&nbsp; 0.88802</TT>
+<BR><TT>&nbsp;11.747019&nbsp;&nbsp;&nbsp;&nbsp; 0.87100</TT>
+<BR><TT>&nbsp;11.756393&nbsp;&nbsp;&nbsp;&nbsp; 0.88599</TT>
+<BR><TT>&nbsp;11.765768&nbsp;&nbsp;&nbsp;&nbsp; 0.88891</TT>
+<BR><TT>&nbsp;11.775143&nbsp;&nbsp;&nbsp;&nbsp; 0.92792</TT>
+<BR><TT>&nbsp;11.784517&nbsp;&nbsp;&nbsp;&nbsp; 0.91400</TT>
+<BR><TT>&nbsp;11.793892&nbsp;&nbsp;&nbsp;&nbsp; 0.93599</TT>
+<BR><TT>&nbsp;11.803267&nbsp;&nbsp;&nbsp;&nbsp; 0.93105</TT>
+<BR><TT>&nbsp;11.812641&nbsp;&nbsp;&nbsp;&nbsp; 0.92988</TT>
+<BR><TT>&nbsp;11.822016&nbsp;&nbsp;&nbsp;&nbsp; 0.96607</TT>
+<BR><TT>&nbsp;11.831390&nbsp;&nbsp;&nbsp;&nbsp; 0.99200</TT>
+<BR><TT>&nbsp;11.840765&nbsp;&nbsp;&nbsp;&nbsp; 0.97505</TT>
+<BR><TT>&nbsp;11.850140&nbsp;&nbsp;&nbsp;&nbsp; 0.97301</TT>
+<BR><TT>&nbsp;11.859514&nbsp;&nbsp;&nbsp;&nbsp; 0.96599</TT>
+<BR><TT>&nbsp;11.868889&nbsp;&nbsp;&nbsp;&nbsp; 0.96899</TT>
+<BR><TT>&nbsp;11.878263&nbsp;&nbsp;&nbsp;&nbsp; 0.97796</TT>
+<BR><TT>&nbsp;11.887638&nbsp;&nbsp;&nbsp;&nbsp; 0.98304</TT>
+<BR><TT>&nbsp;11.897013&nbsp;&nbsp;&nbsp;&nbsp; 0.97701</TT>
+<BR><TT>&nbsp;11.906387&nbsp;&nbsp;&nbsp;&nbsp; 0.99699</TT>
+<BR><TT>&nbsp;11.915762&nbsp;&nbsp;&nbsp;&nbsp; 0.98703</TT>
+<BR><TT>&nbsp;11.925137&nbsp;&nbsp;&nbsp;&nbsp; 0.99194</TT>
+<BR><TT>&nbsp;11.934511&nbsp;&nbsp;&nbsp;&nbsp; 0.99901</TT>
+<BR><TT>&nbsp;11.943886&nbsp;&nbsp;&nbsp;&nbsp; 1.00002</TT>
+<BR><TT>&nbsp;11.953260&nbsp;&nbsp;&nbsp;&nbsp; 0.98104</TT>
+<BR><TT>&nbsp;11.962635&nbsp;&nbsp;&nbsp;&nbsp; 0.98298</TT>
+<BR><TT>&nbsp;11.972010&nbsp;&nbsp;&nbsp;&nbsp; 0.96696</TT>
+<BR><TT>&nbsp;11.981384&nbsp;&nbsp;&nbsp;&nbsp; 0.93197</TT>
+<BR><TT>&nbsp;11.990759&nbsp;&nbsp;&nbsp;&nbsp; 0.97697</TT>
+<BR><TT>&nbsp;12.000134&nbsp;&nbsp;&nbsp;&nbsp; 0.93428</TT>
+<BR><TT>&nbsp;12.009508&nbsp;&nbsp;&nbsp;&nbsp; 0.93702</TT>
+<BR><TT>&nbsp;12.018883&nbsp;&nbsp;&nbsp;&nbsp; 0.96596</TT>
+<BR><TT>&nbsp;12.028257&nbsp;&nbsp;&nbsp;&nbsp; 0.96709</TT>
+<BR><TT>&nbsp;12.037632&nbsp;&nbsp;&nbsp;&nbsp; 0.94308</TT>
+<BR><TT>&nbsp;12.047007&nbsp;&nbsp;&nbsp;&nbsp; 0.94600</TT>
+<BR><TT>&nbsp;12.056381&nbsp;&nbsp;&nbsp;&nbsp; 0.93701</TT>
+<BR><TT>&nbsp;12.065756&nbsp;&nbsp;&nbsp;&nbsp; 0.94298</TT>
+<BR><TT>&nbsp;12.075130&nbsp;&nbsp;&nbsp;&nbsp; 0.94200</TT>
+<BR><TT>&nbsp;12.084505&nbsp;&nbsp;&nbsp;&nbsp; 0.93899</TT>
+<BR><TT>&nbsp;12.093880&nbsp;&nbsp;&nbsp;&nbsp; 0.91604</TT>
+<BR><TT>&nbsp;12.103254&nbsp;&nbsp;&nbsp;&nbsp; 0.90803</TT>
+<BR><TT>&nbsp;12.112629&nbsp;&nbsp;&nbsp;&nbsp; 0.91082</TT>
+<BR><TT>&nbsp;12.122004&nbsp;&nbsp;&nbsp;&nbsp; 0.94401</TT>
+<BR><TT>&nbsp;12.131378&nbsp;&nbsp;&nbsp;&nbsp; 0.93008</TT>
+<BR><TT>&nbsp;12.140753&nbsp;&nbsp;&nbsp;&nbsp; 0.90105</TT>
+<BR><TT>&nbsp;12.150127&nbsp;&nbsp;&nbsp;&nbsp; 0.90598</TT>
+<BR><TT>&nbsp;12.159502&nbsp;&nbsp;&nbsp;&nbsp; 0.90700</TT>
+<BR><TT>&nbsp;12.168877&nbsp;&nbsp;&nbsp;&nbsp; 0.93000</TT>
+<BR><TT>&nbsp;12.178251&nbsp;&nbsp;&nbsp;&nbsp; 0.91002</TT>
+<BR><TT>&nbsp;12.187626&nbsp;&nbsp;&nbsp;&nbsp; 0.92499</TT>
+<BR><TT>&nbsp;12.197001&nbsp;&nbsp;&nbsp;&nbsp; 0.89300</TT>
+<BR><TT>&nbsp;12.206375&nbsp;&nbsp;&nbsp;&nbsp; 0.85999</TT>
+<BR><TT>&nbsp;12.215750&nbsp;&nbsp;&nbsp;&nbsp; 0.89285</TT>
+<BR><TT>&nbsp;12.225124&nbsp;&nbsp;&nbsp;&nbsp; 0.90095</TT>
+<BR><TT>&nbsp;12.234499&nbsp;&nbsp;&nbsp;&nbsp; 0.91100</TT>
+<BR><TT>&nbsp;12.243874&nbsp;&nbsp;&nbsp;&nbsp; 0.89308</TT>
+<BR><TT>&nbsp;12.253248&nbsp;&nbsp;&nbsp;&nbsp; 0.87101</TT>
+<BR><TT>&nbsp;12.262623&nbsp;&nbsp;&nbsp;&nbsp; 0.88490</TT>
+<BR><TT>&nbsp;12.271997&nbsp;&nbsp;&nbsp;&nbsp; 0.87901</TT>
+<BR><TT>&nbsp;12.281372&nbsp;&nbsp;&nbsp;&nbsp; 0.84810</TT>
+<BR><TT>&nbsp;12.290747&nbsp;&nbsp;&nbsp;&nbsp; 0.83489</TT>
+<BR><TT>&nbsp;12.300121&nbsp;&nbsp;&nbsp;&nbsp; 0.86787</TT>
+<BR><TT>&nbsp;12.309496&nbsp;&nbsp;&nbsp;&nbsp; 0.85002</TT>
+<BR><TT>&nbsp;12.318871&nbsp;&nbsp;&nbsp;&nbsp; 0.81806</TT>
+<BR><TT>&nbsp;12.328245&nbsp;&nbsp;&nbsp;&nbsp; 0.82381</TT>
+<BR><TT>&nbsp;12.337620&nbsp;&nbsp;&nbsp;&nbsp; 0.86282</TT>
+<BR><TT>&nbsp;12.346994&nbsp;&nbsp;&nbsp;&nbsp; 0.84803</TT>
+<BR><TT>&nbsp;12.356369&nbsp;&nbsp;&nbsp;&nbsp; 0.79019</TT>
+<BR><TT>&nbsp;12.365744&nbsp;&nbsp;&nbsp;&nbsp; 0.75210</TT>
+<BR><TT>&nbsp;12.375118&nbsp;&nbsp;&nbsp;&nbsp; 0.74512</TT>
+<BR><TT>&nbsp;12.384493&nbsp;&nbsp;&nbsp;&nbsp; 0.72401</TT>
+<BR><TT>&nbsp;12.393867&nbsp;&nbsp;&nbsp;&nbsp; 0.72498</TT>
+<BR><TT>&nbsp;12.403242&nbsp;&nbsp;&nbsp;&nbsp; 0.72604</TT>
+<BR><TT>&nbsp;12.412617&nbsp;&nbsp;&nbsp;&nbsp; 0.71604</TT>
+<BR><TT>&nbsp;12.421991&nbsp;&nbsp;&nbsp;&nbsp; 0.70204</TT>
+<BR><TT>&nbsp;12.431366&nbsp;&nbsp;&nbsp;&nbsp; 0.64112</TT>
+<BR><TT>&nbsp;12.440741&nbsp;&nbsp;&nbsp;&nbsp; 0.64005</TT>
+<BR><TT>&nbsp;12.450115&nbsp;&nbsp;&nbsp;&nbsp; 0.61024</TT>
+<BR><TT>&nbsp;12.459490&nbsp;&nbsp;&nbsp;&nbsp; 0.59801</TT>
+<BR><TT>&nbsp;12.468864&nbsp;&nbsp;&nbsp;&nbsp; 0.57613</TT>
+<BR><TT>&nbsp;12.478239&nbsp;&nbsp;&nbsp;&nbsp; 0.54409</TT>
+<BR><TT>&nbsp;12.487614&nbsp;&nbsp;&nbsp;&nbsp; 0.54308</TT>
+<BR><TT>&nbsp;12.496988&nbsp;&nbsp;&nbsp;&nbsp; 0.51306</TT>
+<BR><TT>&nbsp;12.506363&nbsp;&nbsp;&nbsp;&nbsp; 0.46714</TT>
+<BR><TT>&nbsp;12.515738&nbsp;&nbsp;&nbsp;&nbsp; 0.44611</TT>
+<BR><TT>&nbsp;12.525112&nbsp;&nbsp;&nbsp;&nbsp; 0.42620</TT>
+<BR><TT>&nbsp;12.534487&nbsp;&nbsp;&nbsp;&nbsp; 0.40603</TT>
+<BR><TT>&nbsp;12.543861&nbsp;&nbsp;&nbsp;&nbsp; 0.38314</TT>
+<BR><TT>&nbsp;12.553236&nbsp;&nbsp;&nbsp;&nbsp; 0.34618</TT>
+<BR><TT>&nbsp;12.562611&nbsp;&nbsp;&nbsp;&nbsp; 0.33993</TT>
+<BR><TT>&nbsp;12.571985&nbsp;&nbsp;&nbsp;&nbsp; 0.34402</TT>
+<BR><TT>&nbsp;12.581360&nbsp;&nbsp;&nbsp;&nbsp; 0.31913</TT>
+<BR><TT>&nbsp;12.590734&nbsp;&nbsp;&nbsp;&nbsp; 0.29316</TT>
+<BR><TT>&nbsp;12.600109&nbsp;&nbsp;&nbsp;&nbsp; 0.27801</TT>
+<BR><TT>&nbsp;12.609484&nbsp;&nbsp;&nbsp;&nbsp; 0.28201</TT>
+<BR><TT>&nbsp;12.618858&nbsp;&nbsp;&nbsp;&nbsp; 0.25813</TT>
+<BR><TT>&nbsp;12.628233&nbsp;&nbsp;&nbsp;&nbsp; 0.23514</TT>
+<BR><TT>&nbsp;12.637608&nbsp;&nbsp;&nbsp;&nbsp; 0.22203</TT>
+<BR><TT>&nbsp;12.646982&nbsp;&nbsp;&nbsp;&nbsp; 0.22202</TT>
+<BR><TT>&nbsp;12.656357&nbsp;&nbsp;&nbsp;&nbsp; 0.20309</TT>
+<BR><TT>&nbsp;12.665731&nbsp;&nbsp;&nbsp;&nbsp; 0.18714</TT>
+<BR><TT>&nbsp;12.675106&nbsp;&nbsp;&nbsp;&nbsp; 0.17100</TT>
+<BR><TT>&nbsp;12.684481&nbsp;&nbsp;&nbsp;&nbsp; 0.18000</TT>
+<BR><TT>&nbsp;12.693855&nbsp;&nbsp;&nbsp;&nbsp; 0.16110</TT>
+<BR><TT>&nbsp;12.703230&nbsp;&nbsp;&nbsp;&nbsp; 0.14807</TT>
+<BR><TT>&nbsp;12.712605&nbsp;&nbsp;&nbsp;&nbsp; 0.14003</TT>
+<BR><TT>&nbsp;12.721979&nbsp;&nbsp;&nbsp;&nbsp; 0.14001</TT>
+<BR><TT>&nbsp;12.731354&nbsp;&nbsp;&nbsp;&nbsp; 0.13203</TT>
+<BR><TT>&nbsp;12.740728&nbsp;&nbsp;&nbsp;&nbsp; 0.12806</TT>
+<BR><TT>&nbsp;12.750103&nbsp;&nbsp;&nbsp;&nbsp; 0.11318</TT>
+<BR><TT>&nbsp;12.759478&nbsp;&nbsp;&nbsp;&nbsp; 0.10101</TT>
+<BR><TT>&nbsp;12.768852&nbsp;&nbsp;&nbsp;&nbsp; 0.10202</TT>
+<BR><TT>&nbsp;12.778227&nbsp;&nbsp;&nbsp;&nbsp; 0.09305</TT>
+<BR><TT>&nbsp;12.787601&nbsp;&nbsp;&nbsp;&nbsp; 0.09105</TT>
+<BR><TT>&nbsp;12.796976&nbsp;&nbsp;&nbsp;&nbsp; 0.08302</TT>
+<BR><TT>&nbsp;12.806351&nbsp;&nbsp;&nbsp;&nbsp; 0.08199</TT>
+<BR><TT>&nbsp;12.815725&nbsp;&nbsp;&nbsp;&nbsp; 0.08304</TT>
+<BR><TT>&nbsp;12.825100&nbsp;&nbsp;&nbsp;&nbsp; 0.07407</TT>
+<BR><TT>&nbsp;12.834475&nbsp;&nbsp;&nbsp;&nbsp; 0.07002</TT>
+<BR><TT>&nbsp;12.843849&nbsp;&nbsp;&nbsp;&nbsp; 0.06104</TT>
+<BR><TT>&nbsp;12.853224&nbsp;&nbsp;&nbsp;&nbsp; 0.05802</TT>
+<BR><TT>&nbsp;12.862598&nbsp;&nbsp;&nbsp;&nbsp; 0.05403</TT>
+<BR><TT>&nbsp;12.871973&nbsp;&nbsp;&nbsp;&nbsp; 0.05300</TT>
+<BR><TT>&nbsp;12.881348&nbsp;&nbsp;&nbsp;&nbsp; 0.05201</TT>
+<BR><TT>&nbsp;12.890722&nbsp;&nbsp;&nbsp;&nbsp; 0.05003</TT>
+<BR><TT>&nbsp;12.900097&nbsp;&nbsp;&nbsp;&nbsp; 0.04605</TT>
+<BR><TT>&nbsp;12.909472&nbsp;&nbsp;&nbsp;&nbsp; 0.04102</TT>
+<BR><TT>&nbsp;12.918846&nbsp;&nbsp;&nbsp;&nbsp; 0.03502</TT>
+<BR><TT>&nbsp;12.928221&nbsp;&nbsp;&nbsp;&nbsp; 0.03500</TT>
+<BR><TT>&nbsp;12.937595&nbsp;&nbsp;&nbsp;&nbsp; 0.03303</TT>
+<BR><TT>&nbsp;12.946970&nbsp;&nbsp;&nbsp;&nbsp; 0.03100</TT>
+<BR><TT>&nbsp;12.956345&nbsp;&nbsp;&nbsp;&nbsp; 0.03101</TT>
+<BR><TT>&nbsp;12.965719&nbsp;&nbsp;&nbsp;&nbsp; 0.02802</TT>
+<BR><TT>&nbsp;12.975094&nbsp;&nbsp;&nbsp;&nbsp; 0.02703</TT>
+<BR><TT>&nbsp;12.984468&nbsp;&nbsp;&nbsp;&nbsp; 0.02301</TT>
+<BR><TT>&nbsp;12.993843&nbsp;&nbsp;&nbsp;&nbsp; 0.02199</TT>
+<BR><TT>&nbsp;13.003218&nbsp;&nbsp;&nbsp;&nbsp; 0.02301</TT>
+<BR><TT>&nbsp;13.012592&nbsp;&nbsp;&nbsp;&nbsp; 0.02003</TT>
+<BR><TT>&nbsp;13.021967&nbsp;&nbsp;&nbsp;&nbsp; 0.01901</TT>
+<BR><TT>&nbsp;13.031342&nbsp;&nbsp;&nbsp;&nbsp; 0.01700</TT>
+<BR><TT>&nbsp;13.040716&nbsp;&nbsp;&nbsp;&nbsp; 0.01800</TT>
+<BR><TT>&nbsp;13.050091&nbsp;&nbsp;&nbsp;&nbsp; 0.01604</TT>
+<BR><TT>&nbsp;13.059465&nbsp;&nbsp;&nbsp;&nbsp; 0.01400</TT>
+<BR><TT>&nbsp;13.068840&nbsp;&nbsp;&nbsp;&nbsp; 0.01500</TT>
+<BR><TT>&nbsp;13.078215&nbsp;&nbsp;&nbsp;&nbsp; 0.01301</TT>
+<BR><TT>&nbsp;13.087589&nbsp;&nbsp;&nbsp;&nbsp; 0.01301</TT>
+<BR><TT>&nbsp;13.096964&nbsp;&nbsp;&nbsp;&nbsp; 0.01101</TT>
+<BR><TT>&nbsp;13.106339&nbsp;&nbsp;&nbsp;&nbsp; 0.01000</TT>
+<BR><TT>&nbsp;13.115713&nbsp;&nbsp;&nbsp;&nbsp; 0.01101</TT>
+<BR><TT>&nbsp;13.125088&nbsp;&nbsp;&nbsp;&nbsp; 0.00902</TT>
+<BR><TT>&nbsp;13.134462&nbsp;&nbsp;&nbsp;&nbsp; 0.00900</TT>
+<BR><TT>&nbsp;13.143837&nbsp;&nbsp;&nbsp;&nbsp; 0.00801</TT>
+<BR><TT>&nbsp;13.153212&nbsp;&nbsp;&nbsp;&nbsp; 0.00700</TT>
+<BR><TT>&nbsp;13.162586&nbsp;&nbsp;&nbsp;&nbsp; 0.00701</TT>
+<BR><TT>&nbsp;13.171961&nbsp;&nbsp;&nbsp;&nbsp; 0.00600</TT>
+<BR><TT>&nbsp;13.181335&nbsp;&nbsp;&nbsp;&nbsp; 0.00600</TT>
+<BR><TT>&nbsp;13.190710&nbsp;&nbsp;&nbsp;&nbsp; 0.00601</TT>
+<BR><TT>&nbsp;13.200085&nbsp;&nbsp;&nbsp;&nbsp; 0.00501</TT>
+<BR><TT>&nbsp;13.209459&nbsp;&nbsp;&nbsp;&nbsp; 0.00500</TT>
+<BR><TT>&nbsp;13.218834&nbsp;&nbsp;&nbsp;&nbsp; 0.00400</TT>
+<BR><TT>&nbsp;13.228209&nbsp;&nbsp;&nbsp;&nbsp; 0.00500</TT>
+<BR><TT>&nbsp;13.237583&nbsp;&nbsp;&nbsp;&nbsp; 0.00401</TT>
+<BR><TT>&nbsp;13.246958&nbsp;&nbsp;&nbsp;&nbsp; 0.00400</TT>
+<BR><TT>&nbsp;13.256332&nbsp;&nbsp;&nbsp;&nbsp; 0.00301</TT>
+<BR><TT>&nbsp;13.265707&nbsp;&nbsp;&nbsp;&nbsp; 0.00101</TT>
+<BR><TT>&nbsp;13.275082&nbsp;&nbsp;&nbsp;&nbsp; 0.00197</TT>
+<BR><TT>&nbsp;13.284456&nbsp;&nbsp;&nbsp;&nbsp; 0.00400</TT>
+<BR><TT>&nbsp;13.293831&nbsp;&nbsp;&nbsp;&nbsp; 0.00302</TT>
+<BR><TT>&nbsp;13.303205&nbsp;&nbsp;&nbsp;&nbsp; 0.00101</TT>
+<BR><TT>&nbsp;13.312580&nbsp;&nbsp;&nbsp;&nbsp; 0.00098</TT>
+<BR><TT>&nbsp;13.321955&nbsp;&nbsp;&nbsp;&nbsp; 0.00300</TT>
+<BR><TT>&nbsp;13.331329&nbsp;&nbsp;&nbsp;&nbsp; 0.00201</TT>
+<BR><TT>&nbsp;13.340704&nbsp;&nbsp;&nbsp;&nbsp; 0.00100</TT>
+<BR><TT>&nbsp;13.350079&nbsp;&nbsp;&nbsp;&nbsp; 0.00100</TT>
+<BR><TT>&nbsp;13.359453&nbsp;&nbsp;&nbsp;&nbsp; 0.00001</TT>
+<BR><TT></TT>&nbsp;
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Thursday, 06-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

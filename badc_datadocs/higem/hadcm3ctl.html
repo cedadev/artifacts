@@ -1,0 +1,271 @@
+<HTML>
+<HEAD>
+   <TITLE>HadCM3 Control  example dataset</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#ffffff">
+
+<H1>HadCM3 Control example dataset contents</H1>
+
+<p>
+The HadCM3 control dataset has been retrieved from the Hadley Centre as part of COAPEC. 
+A large number of
+have been retrieved for a 100 year period (2079-2179),
+while a more restricted set have been downloaded for a 1000 
+year period (1849-2849).   
+</p>
+
+<table border=1 cellpadding=4>
+<!--
+<tr><th>Run Identifier</th><th>Start (UM format)</th><th>Start (yyyy-mm)</th><th>End (UM format)</th><th>End (yyyy-mm)</th></tr>
+-->
+<tr><th>Run Identifier</th><th>Start (yyyy)</th><th>End (yyyy)</th></tr>
+<tr><td>aaxzk</td><td>1849</td><td>2159</td></tr>
+<tr><td>aaxzp</td><td>2159</td><td>2489</td></tr>
+<tr><td>aaxzw</td><td>2489</td><td>2789</td></tr>
+<tr><td>abxpa</td><td>2789</td><td>2849</td></tr>
+</table>
+
+
+<h2>100 year data</h2>
+
+<table>
+<tr><td>
+Location:</td><td> <a href="/cgi-bin/data_browser/data_browser/badc/coapec/data/100yr">/badc/coapec/data/100yr</a></td></TR>
+<tr><td>Filenaming convention: </td><td> ${runid}a.pm${ummonth}.pp for atmosphere files</td></tr>
+<tr><td>&nbsp</td><td>${runid}o.pm${ummonth}.pp for ocean files</td></tr>
+<tr><td>&nbsp</td><td> where ${runid} is the Run Identifier and ${ummonth} is the um formated decade-month string</td></tr>
+</table>
+
+<h3>Atmospheric Fields</h3>
+<table border=1 cellpadding=4>
+<tr><th>Variable</th><th>STASH code</th><th>pp field code</th></tr>
+<tr><td>Pstar After Timestep</td><td> 1</td><td>     8</td></tr>
+<tr><td>U Compnt Of Wind After Timestep </td><td>2 </td><td>   56</td></tr>
+<tr><td>V Compnt Of Wind After Timestep </td><td>3 </td><td>   57</td></tr>
+<tr><td>Theta After Timestep </td><td>4</td><td>    19</td></tr>
+<tr><td>Specific Humidity After Timestep </td><td>10</td><td>    95</td></tr>
+<tr><td>Conv Cloud Amount After Timestep </td><td>13</td><td>    34</td></tr>
+<tr><td>Conv Cloud Liquid Water Path </td><td>16</td><td>   219</td></tr>
+<tr><td>Snow Amount After Timestep     Kg/M2 </td><td>23</td><td>    93</td></tr>
+<tr><td>Surface Temperature After Timestep </td><td>24</td><td>    16</td></tr>
+<tr><td>Boundary Layer Depth After Timestep </td><td>25</td><td>     5</td></tr>
+<tr><td>Sea Ice Fraction After Timestep </td><td>31</td><td>    37</td></tr>
+<tr><td>Sea Ice Depth (Mean Over Ice)      M </td><td>32</td><td>   687</td></tr>
+<tr><td>Net Down Surface Sw Flux: Sw Ts Only </td><td>1201</td><td>   186</td></tr>
+<tr><td>Net Down Sw Rad Flux: Open Sea </td><td>1203</td><td>   186</td></tr>
+<tr><td>Net Down Surface Sw Flux Below 690Nm </td><td>1204 </td><td>  186</td></tr>
+<tr><td>Incoming Sw Rad Flux (Toa): All Tss </td><td>1207</td><td>   200</td></tr>
+<tr><td>Outgoing Sw Rad Flux (Toa) </td><td>208 </td><td>  201</td></tr>
+<tr><td>Clear-Sky (Ii) Upward Sw Flux (Toa) </td><td>1209 </td><td>  207</td></tr>
+<tr><td>Clear-Sky (Ii) Down Surface Sw Flux </td><td>1210  </td><td> 208</td></tr>
+<tr><td>Clear-Sky (Ii) Up Surface Sw Flux </td><td>1211</td><td>   207</td></tr>
+<tr><td>Sw Heating Rates: All Timesteps </td><td>1232</td><td>   251</td></tr>
+<tr><td>Clear-Sky Sw Heating Rates </td><td>1233</td><td>   252</td></tr>
+<tr><td>Total Downward Surface Sw Flux </td><td>1235 </td><td>  203</td></tr>
+<tr><td>Net Downward Sw Flux At The Trop. </td><td>1237</td><td>   186</td></tr>
+<tr><td>Upward Sw Flux At The Trop. </td><td>1238</td><td>   201</td></tr>
+<tr><td>Unknown Stash Code 1239</td><td>&nbsp</td><td>&nbsp</td></tr>
+<tr><td>Unknown Stash Code 1240</td><td>&nbsp</td><td>&nbsp</td></tr>
+<tr><td>Net Down Surface Lw Rad Flux </td><td>2201</td><td>   187</td></tr>
+<tr><td>Net Down Lw Rad Flux: Open Sea</td><td> 2203</td><td>   187</td></tr>
+<tr><td>Total Cloud Amount In Lw Radiation </td><td>2204</td><td>    30</td></tr>
+<tr><td>Outgoing Lw Rad Flux (Toa) </td><td>2205 </td><td>  206</td></tr>
+<tr><td>Clear-Sky (Ii) Upward Lw Flux (Toa) </td><td>2206</td><td>   210</td></tr>
+<tr><td>Downward Lw Rad Flux: Surface </td><td>2207</td><td>   205</td></tr>
+<tr><td>Clear-Sky (Ii) Down Surface Lw Flux </td><td>2208</td><td>   211</td></tr>
+<tr><td>Lw Heating Rates </td><td>2232</td><td>   253</td></tr>
+<tr><td>Clear-Sky Lw Heating Rates </td><td>2233</td><td>   254</td></tr>
+<tr><td>Net Downward Lw Flux At The Trop. </td><td>2237</td><td>   187</td></tr>
+<tr><td>Total Downward Lw Flux At The Trop. </td><td>2238</td><td>   205</td></tr>
+<tr><td>Unknown Stash Code 2239</td><td>&nbsp</td><td>&nbsp</td></tr>
+<tr><td>Unknown Stash Code 2240</td><td>&nbsp</td><td>&nbsp</td></tr>
+<tr><td>Unknown Stash Code 2241</td><td>&nbsp</td><td>&nbsp</td></tr>
+<tr><td>Unknown Stash Code 2260</td><td>&nbsp</td><td>&nbsp</td></tr>
+<tr><td>Heat Flux Through Sea Ice (Gbm) W/M2 </td><td>3201</td><td>   261</td></tr>
+<tr><td>Ht Flux From Surf To Deep Soil Lev 1 </td><td>3202</td><td>   179</td></tr>
+<tr><td>Surface & B.Layer Heat Fluxes   W/M2 </td><td>3217</td><td>   178</td></tr>
+<tr><td>X-Comp Of Surf & Bl Wind Stress N/M2 </td><td>3219</td><td>    61</td></tr>
+<tr><td>Y-Comp Of Surf & Bl Wind Stress N/M2 </td><td>3220 </td><td>   62</td></tr>
+<tr><td>Surf & Bl Totl Moisture Flux Kg/M2/S </td><td>3223</td><td>   184</td></tr>
+<tr><td>Wind Mixing En'Gy Flux Into Sea W/M2 </td><td>3224</td><td>   182</td></tr>
+<tr><td>10 Metre Wind U-Comp </td><td>3225 </td><td>   56</td></tr>
+<tr><td>10 Metre Wind V-Comp </td><td>3226</td><td>    57</td></tr>
+<tr><td>Surface Sh Flux From Sea (Gbm)  W/M2 </td><td>3228 </td><td>  178</td></tr>
+<tr><td>Evaporation From Sea (Gbm)   Kg/M2/S </td><td>3232</td><td>   285</td></tr>
+<tr><td>Surface Latent Heat Flux        W/M2 </td><td>3234</td><td>   180</td></tr>
+<tr><td>Seaice Top Melting Lh Flux(Gbm) W/M2 </td><td>3235</td><td>   260</td></tr>
+<tr><td>Temperature At 1.5M </td><td>3236</td><td>    16</td></tr>
+<tr><td>Deep Soil Temperature After B.Layer </td><td>3238 </td><td>   23</td></tr>
+<tr><td>Relative Humidity At 1.5M </td><td>3245</td><td>    88</td></tr>
+<tr><td>10 Metre Wind Speed              M/S </td><td>3249</td><td>    50</td></tr>
+<tr><td>Canopy Conductance M/S </td><td>3259</td><td>  1384</td></tr>
+<tr><td>Gross Primary Productivity Kg C/M2/S </td><td>3261</td><td>  1388</td></tr>
+<tr><td>Net Primary Productivity Kg C/M2/S </td><td>3262</td><td>  1389</td></tr>
+<tr><td>Plant Respiration Kg/M2/S </td><td>3263</td><td>  1390</td></tr>
+<tr><td>Evap From Soil Surf : Rate   Kg/M2/S </td><td>3296</td><td>  1526</td></tr>
+<tr><td>Evap From Canopy : Rate      Kg/M2/S </td><td>3297</td><td>  1527</td></tr>
+<tr><td>Sublim. Surface (Gbm) : Rate Kg/M2/S </td><td>3298</td><td>  1528</td></tr>
+<tr><td>Transpiration Rate           Kg/M2/S </td><td>3299</td><td>  1529</td></tr>
+<tr><td>Large Scale Rainfall Rate    Kg/M2/S </td><td>4203</td><td>    99</td></tr>
+<tr><td>Large Scale Snowfall Rate    Kg/M2/S </td><td>4204</td><td>   118</td></tr>
+<tr><td>Convective Rainfall Rate     Kg/M2/S </td><td>5205</td><td>    98</td></tr>
+<tr><td>Convective Snowfall Rate     Kg/M2/S </td><td>5206</td><td>   119</td></tr>
+<tr><td>Conv. Cloud Amount On Each Model Lev </td><td>5212</td><td>    34</td></tr>
+<tr><td>Total Rainfall Rate: Ls+Conv Kg/M2/S </td><td>5214 </td><td>   97</td></tr>
+<tr><td>Total Snowfall Rate: Ls+Conv Kg/M2/S </td><td>5215</td><td>   108</td></tr>
+<tr><td>Total Precipitation Rate     Kg/M2/S </td><td>5216</td><td>    90</td></tr>
+<tr><td>Gridbox Mean Convective Cloud Water </td><td>5233</td><td>   218</td></tr>
+<tr><td>Gridbox Mean Conv. Cloud Water Path </td><td>5234</td><td>   219</td></tr>
+<tr><td>U Component Of Gravity Wave Stress </td><td>6201</td><td>    61</td></tr>
+<tr><td>V Component Of Gravity Wave Stress </td><td>6202</td><td>    62</td></tr>
+<tr><td>Land Snow Melt Heat Flux        W/M2 </td><td>202</td><td>   197</td></tr>
+<tr><td>Soil Moisture Content </td><td>8208</td><td>   106</td></tr>
+<tr><td>Canopy Water Content </td><td>8209 </td><td>  271</td></tr>
+<tr><td>Soil Moisture Content In A Layer </td><td>8223</td><td>   122</td></tr>
+<tr><td>Unfrozen Soil Moisture Fraction </td><td>8229</td><td>  1385</td></tr>
+<tr><td>Frozen Soil Moisture Fraction </td><td>8230</td><td>  1386</td></tr>
+<tr><td>Canopy Throughfall Rate      Kg/M2/S </td><td>8233</td><td>  1531</td></tr>
+<tr><td>Surface Runoff Rate          Kg/M2/S </td><td>8234</td><td>  1532</td></tr>
+<tr><td>Sub-Surface Runoff Rate      Kg/M2/S </td><td>8235</td><td>  1533</td></tr>
+<tr><td>Layer Cloud Amount In Each Layer </td><td>9201</td><td>   220</td></tr>
+<tr><td>Cloud Liquid Water After Dyn Cloud </td><td>9206   </td><td> 79</td></tr>
+<tr><td>Cloud Ice Content After Dynam Cloud </td><td>9207</td><td>    78</td></tr>
+<tr><td>Omega On Model Levels </td><td>12201</td><td>    40</td></tr>
+<tr><td>Qt Source/Sink In Qt_Pos     Kg/M2/S </td><td>13201</td><td>   184</td></tr>
+<tr><td>Atmos Energy Corr'N In Column   W/M2 </td><td>14201</td><td>   259</td></tr>
+<tr><td>U Compnt Of Wind On Pressure Levels </td><td>15201 </td><td>   56</td></tr>
+<tr><td>V Compnt Of Wind On Pressure Levels </td><td>15202 </td><td>   57</td></tr>
+<tr><td>Geopotential Height: Pressure Levels </td><td>16202 </td><td>    1</td></tr>
+<tr><td>Temperature On Pressure Levels</td><td> 16203</td><td>    16</td></tr>
+<tr><td>Relative Humidity On Pressure Levels </td><td>16204</td><td>    88</td></tr>
+<tr><td>Pressure At Mean Sea Level </td><td>16222</td><td>     8</td></tr>
+</table>
+
+<h3>Ocean fields</h3>
+<table border=1 cellpadding=4>
+<tr><th>Variable</th><th>STASH code</th><th>pp field code</th></tr>
+<tr><td>Potential Temperature (Ocean)  Deg.C</td><td>101  </td><td> 601</td></tr>
+<tr><td>Salinity (Ocean)       (Psu-35)/1000</td><td>102  </td><td> 602</td></tr>
+<tr><td>Baroclinic U_Velocity (Ocean)   Cm/S</td><td>121  </td><td> 701</td></tr>
+<tr><td>Baroclinic V_Velocity (Ocean)   Cm/S</td><td>122  </td><td> 702</td></tr>
+<tr><td>Streamfunction (Ocean)         Cm3/S</td><td>130  </td><td> 611</td></tr>
+<tr><td>Streamfn Tendency (Ocean)   Cm3/S/Ts</td><td>132  </td><td> 613</td></tr>
+<tr><td>Mixed Layer Depth (Ocean)          M</td><td>137  </td><td> 653</td></tr>
+<tr><td>Snow Depth (Ocean)                 M</td><td>141  </td><td> 688</td></tr>
+<tr><td>Gbm Caryheat Misc Heat Flx(Ice) W/M2</td><td>142  </td><td> 685</td></tr>
+<tr><td>Gbm Heat Flux:Ocean To Ice(Ocn) W/M2</td><td>143  </td><td> 684</td></tr>
+<tr><td>Rate Of Salinity Change (Ice)  Psu/S</td><td>144  </td><td> 686</td></tr>
+<tr><td>Aice : Ice Concentration            </td><td>146  </td><td> 683</td></tr>
+<tr><td>Hice: Mean Ice Depth Over Gridbox  M</td><td>147  </td><td> 687</td></tr>
+<tr><td>Taux: X_Windstress           N/M2  A</td><td>150  </td><td> 721</td></tr>
+<tr><td>Tauy: Y_Windstress           N/M2  A</td><td>151  </td><td> 722</td></tr>
+<tr><td>Wme: Wind Mixing Energy Flux W/M2  A</td><td>152  </td><td> 627</td></tr>
+<tr><td>Sol: Pen.Solar*Lf Into Ocean W/M2  A</td><td>161  </td><td> 625</td></tr>
+<tr><td>Htn:Nonpen.Ht.Flx*Lf Into Ocn W/M2 A</td><td>162  </td><td> 626</td></tr>
+<tr><td>Ple:Precip-Evap Into Ocean Kg/M2/S A</td><td>165  </td><td> 629</td></tr>
+<tr><td>River Outflow Into Ocean  Kg/M2/S  A</td><td>166  </td><td> 631</td></tr>
+<tr><td>Snowfall Into Ocn/Onto Ice Kg/M2/S A</td><td>171  </td><td> 623</td></tr>
+<tr><td>Sublimation From Seaice    Kg/M2/S A</td><td>172  </td><td> 624</td></tr>
+<tr><td>P-E Flux Correction       Kg/M2/S  A</td><td>186  </td><td> 672</td></tr>
+<tr><td>Gbm Seaice Topmelt Heat Flux W/M2  A</td><td>190  </td><td> 681</td></tr>
+<tr><td>Gbm Seaice Botmelt Heat Flux W/M2  A</td><td>191  </td><td> 682</td></tr>
+<tr><td>Thickness Diff Coeff (Ocean) Cm2/S  </td><td>194    </td><td> 658</td></tr>
+<tr><td>Vert.Vel. On Ocean Half Levels  Cm/S</td><td>30201  </td><td> 680</td></tr>
+<tr><td>Gbm Htn Into Ocean Budget     W/M**2</td><td>30206  </td><td> 626</td></tr>
+<tr><td>Snowrate Where No Ice Kg M**-2 S**-1</td><td>30207  </td><td> 623</td></tr>
+<tr><td>Caryheat After Row Calculation  W/M2</td><td>30208  </td><td> 685</td></tr>
+<tr><td>Mead Diagnostics: Temperature    W  </td><td>30211  </td><td> 740</td></tr>
+<tr><td>Mead Diagnostics: Salinity     Kg/S </td><td>30212  </td><td> 740</td></tr>
+<tr><td>Baroclinic X-Accn (Zun)      Cm/S**2</td><td>30246  </td><td> 713</td></tr>
+<tr><td>Baroclinic Y-Accn (Zvn)      Cm/S**2</td><td>30247  </td><td> 714</td></tr>
+<tr><td>Anom. Heat "Sink" At Ocn Floor  W/M2</td><td>30279  </td><td> 678</td></tr>
+<tr><td>Water_Flux*Salinity/Density M Gs**-1</td><td>30280  </td><td> 632</td></tr>
+<tr><td>Gm Eddy U Velocity (Ocean)          </td><td>30281  </td><td> 831</td></tr>
+<tr><td>Gm Eddy V Velocity (N Face) (Ocean) </td><td>30282  </td><td> 832</td></tr>
+<tr><td>Gm Eddy W Vel (Top Face) (Ocean)    </td><td>30283  </td><td> 833</td></tr>
+<tr><td>Total Ocean U-Velocity      Cm S**-1</td><td>30320  </td><td> 703</td></tr>
+<tr><td>Total Ocean V-Velocity      Cm S**-1</td><td>30321  </td><td> 704</td></tr>
+<tr><td>Aice Inc. Due To Dynamics Fract/Ts  </td><td>32201  </td><td> 683</td></tr>
+<tr><td>Hice Inc. Due To Dynamics     M/Ts  </td><td>32202  </td><td> 687</td></tr>
+<tr><td>Gbm Snowdepth Dynamic Inc       M/Ts</td><td>32203  </td><td> 688</td></tr>
+<tr><td>Hice Inc. Due To Diffusion    M/Ts  </td><td>32204  </td><td> 687</td></tr>
+<tr><td>U Component Of Ice Velocity (M.S-1) </td><td>32209  </td><td> 731</td></tr>
+<tr><td>V Component Of Ice Velocity (M.S-1) </td><td>32210  </td><td> 732</td></tr>
+<tr><td>Aice Inc. (Thermodynamic) Fract/Ts  </td><td>32211  </td><td> 683</td></tr>
+<tr><td>Hice Inc. (Thermodynamic)     M/Ts  </td><td>32212  </td><td> 687</td></tr>
+<tr><td>Gbm Snowdepth Thermodynamic Inc M/Ts</td><td>32213  </td><td> 688</td></tr>
+<tr><td>Gbm Htn Into Ice Budget       W/M**2</td><td>32214  </td><td> 626</td></tr>
+<tr><td>Snowrate Where Icy    Kg M**-2 S**-1</td><td>32215  </td><td> 623</td></tr>
+<tr><td>Gbm Htn Into Ocn Where Icy    W/M**2</td><td>32217  </td><td> 626</td></tr>
+<tr><td>Gbm Snowdepth On Sea-Ice           M</td><td>32218  </td><td> 626</td></tr>
+<tr><td></table>
+
+<h2>1000 year date</h2>
+<table>
+<tr><td>
+Location:</td><td> <a href="/cgi-bin/databrowser/databroswer/badc/coapec/data/1000yr">/badc/coapec/data/1000yr</a></td></TR>
+</table>
+<h3>Atmosphere fields</h3>
+<table border=1 cellpadding=4>
+<tr><th>Variable</th><th>STASH code</th><th>pp field code</th></tr>
+<tr><td> Specific Humidity After Timestep </td><td> 00010 </td><td>    95  </td></tr>
+<tr><td> Sea Ice Fraction After Timestep </td><td> 00031 </td><td>    37  </td></tr>
+<tr><td> Sea Ice Depth (Mean Over Ice)      M </td><td> 00032 </td><td>   687  </td></tr>
+<tr><td> Net Down Surface Sw Flux: Sw Ts Only </td><td> 01201 </td><td>   186  </td></tr>
+<tr><td> Incoming Sw Rad Flux (Toa): All Tss </td><td> 01207 </td><td>   200  </td></tr>
+<tr><td> Outgoing Sw Rad Flux (Toa) </td><td> 01208 </td><td>   201  </td></tr>
+<tr><td> Total Downward Surface Sw Flux </td><td> 01235 </td><td>   203  </td><tr>
+<tr><td> Net Down Surface Lw Rad Flux </td><td> 02201 </td><td>   187  </td></tr>
+<tr><td> Downward Lw Rad Flux: Surface </td><td> 02207 </td><td>   205  </td></tr>
+<tr><td> Surface & B.Layer Heat Fluxes   W/M2 </td><td> 03217 </td><td>   178  </td></tr>
+<tr><td> 10 Metre Wind U-Comp </td><td> 03225 </td><td>    56  </td></tr>
+<tr><td> 10 Metre Wind V-Comp </td><td> 03226 </td><td>    57  </td></tr>
+<tr><td> Evaporation From Sea (Gbm)   Kg/M2/S </td><td> 03232 </td><td>   285  </td></tr>
+<tr><td> Surface Latent Heat Flux        W/M2 </td><td> 03234 </td><td>   180  </td></tr>
+<tr><td> Temperature At 1.5M </td><td> 03236 </td><td>    16  </td></tr>
+<tr><td> Relative Humidity At 1.5M </td><td> 03245 </td><td>    88  </td></tr>
+<tr><td> Large Scale Rainfall Rate    Kg/M2/S </td><td> 04203 </td><td>    99  </td></tr>
+<tr><td> Large Scale Snowfall Rate    Kg/M2/S </td><td> 04204 </td><td>   118  </td></tr>
+<tr><td> Convective Rainfall Rate     Kg/M2/S </td><td> 05205 </td><td>    98  </td></tr>
+<tr><td> Convective Snowfall Rate     Kg/M2/S </td><td> 05206 </td><td>   119  </td></tr>
+<tr><td> U Compnt Of Wind On Pressure Levels </td><td> 15201 </td><td>    56  </td></tr>
+<tr><td> V Compnt Of Wind On Pressure Levels </td><td> 15202 </td><td>    57  </td></tr>
+<tr><td> Geopotential Height: Pressure Levels </td><td> 16202 </td><td>     1  </td></tr>
+<tr><td> Temperature On Pressure Levels </td><td> 16203 </td><td>    16  </td></tr>
+<tr><td> Relative Humidity On Pressure Levels </td><td> 16204 </td><td>    88  </td></tr>
+<tr><td> Pressure At Mean Sea Level </td><td> 16222 </td><td>     8  </td></tr>
+</table>
+
+<h3>Ocean fields</h3>
+<table border=1 cellpadding=4>
+<tr><td> Potential Temperature (Ocean)  Deg.C </td><td> 00101 </td><td>   601  </td></tr>
+<tr><td> Salinity (Ocean)       (Psu-35)/1000 </td><td> 00102 </td><td>   602  </td></tr>
+<tr><td> Baroclinic U_Velocity (Ocean)   Cm/S </td><td> 00121 </td><td>   701  </td></tr>
+<tr><td> Baroclinic V_Velocity (Ocean)   Cm/S </td><td> 00122 </td><td>   702  </td></tr>
+<tr><td> Streamfunction (Ocean)         Cm3/S </td><td> 00130 </td><td>   611  </td></tr>
+<tr><td> Mixed Layer Depth (Ocean)          M </td><td> 00137 </td><td>   653  </td></tr>
+<tr><td> Gbm Caryheat Misc Heat Flx(Ice) W/M2 </td><td> 00142 </td><td>   685  </td></tr>
+<tr><td> Gbm Heat Flux:Ocean To Ice(Ocn) W/M2 </td><td> 00143 </td><td>   684  </td></tr>
+<tr><td> Rate Of Salinity Change (Ice)  Psu/S </td><td> 00144 </td><td>   686  </td></tr>
+<tr><td> Taux: X_Windstress           N/M2  A </td><td> 00150 </td><td>   721  </td></tr>
+<tr><td> Tauy: Y_Windstress           N/M2  A </td><td> 00151 </td><td>   722  </td></tr>
+<tr><td> Wme: Wind Mixing Energy Flux W/M2  A </td><td> 00152 </td><td>   627  </td></tr>
+<tr><td> Sol: Pen.Solar*Lf Into Ocean W/M2  A </td><td> 00161 </td><td>   625  </td></tr>
+<tr><td> Htn:Nonpen.Ht.Flx*Lf Into Ocn W/M2 A </td><td> 00162 </td><td>   626  </td></tr>
+<tr><td> Ple:Precip-Evap Into Ocean Kg/M2/S A </td><td> 00165 </td><td>   629  </td></tr>
+<tr><td> River Outflow Into Ocean  Kg/M2/S  A </td><td> 00166 </td><td>   631  </td></tr>
+<tr><td> P-E Flux Correction       Kg/M2/S  A </td><td> 00186 </td><td>   672  </td></tr>
+<tr><td> Vert.Vel. On Ocean Half Levels  Cm/S </td><td> 30201 </td><td>   680  </td></tr>
+<tr><td> Gbm Htn Into Ocean Budget     W/M**2 </td><td> 30206 </td><td>   626  </td></tr>
+<tr><td> Snowrate Where No Ice Kg M**-2 S**-1 </td><td> 30207 </td><td>   623  </td></tr>
+<tr><td> Caryheat After Row Calculation  W/M2 </td><td> 30208 </td><td>   685  </td></tr>
+</table>
+
+<h3>Missing files</h3>
+
+There are some missing or currupt files.  The BADC is currently retrieving these from the Met Office.
+</p>
+
+</BODY>
+</HTML>

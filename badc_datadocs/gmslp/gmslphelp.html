@@ -1,0 +1,216 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Datasets: GMSLP Data Help File</TITLE>
+</HEAD>
+<!-- Created 28th November 1996 12:25:17  -->
+<!-- Author: Deborah Miles BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>BADC Help File: GMSLP Data<BR CLEAR="ALL"></H1>
+
+<P><EM>This file contains background information to help you use
+the Met Office GMSLP data held at the BADC. This document is adapted
+from &quot;Development of the Global Mean Sea Level Pressure Data
+Set GMSLP2&quot; by T.A. BAsnett and D.E.Parker, 1997.</EM> <HR ALIGN=LEFT></P>
+
+<OL>
+  <LI><A HREF="#intro">Introduction</A>
+  <LI><A HREF="#input">Brief description of &quot;input&quot; gridded
+  data sets.</A>
+  <LI><A HREF="#creation">Creation of GMSLP2.1.</A>
+  <LI><A HREF="#conclu">Conclusion</A>
+</OL>
+
+<HR ALIGN=LEFT>
+
+<H3><A NAME="intro"></A>1. Introduction:</H3>
+
+<P>There has long been a requirement for a reliable global gridded
+dataset of observed mean sea level (MSL) pressure, that would
+be suitable for both analysing climate variability and for vaildating
+climate model output. One of the earliest attempts to map global
+MSL pressure was made by Buchan (1868), who mapped mean monthly
+MSL pressure for 1857-1866, based on observations derived from
+a representative sample of 360 stations worldwide. Notable work
+in this field was carried out by Lamb and Johnson (1966), who
+published contoured global charts of January and July MSL pressure
+for each year in 1750-1966. However existing gridded MSL pressure
+data sets generally have a restricted coverage, being either hemispheric
+or 'near-global' and consist mostly of analysed data derived from
+hand-drawn analyses in pre-computer era and more recently from
+routine GCM (Global Circulation Model) operational analyses or
+reanalyses. Also owing to the change of analysis technique, these
+data sets are unlikely to be homogeneous. Although there are several
+'observed' MSL pressure data sets available, which are either
+blends of analysed and observed data or statistical reconstructions
+based on observations, none of these has global coverage.</P>
+
+<P>GMSLP is a global, observed, monthly historical MSL pressure
+data set, which has been developed in collaboration with CSIRO
+and NIWA. The data set begins in 1871 and is composed of gridded
+values on a 5&deg; latitude and 5&deg; longitude resolution, centred
+on whole multiples of 5&deg;, e.g. 55&deg;N, 5&deg;N. It has been
+constructed from a blend of existing gridded datasets provided
+by the UK Met. Office, NCAR, Scripps Institute of Oceanography
+(SIO), University of East Anglia (UEA) and CSIRO; plus observed
+data extracted from the UKMO Marine Data Bank, Comprehensive Ocean-Atmosphere
+Data set (COADS), UKMO monthly CLIMAT message archives and land
+station time series.</P>
+
+<P>A key use of GMSLP is in the multivariate analysis of results
+of atmospheric model simulations of recent climate, aimed at detecting
+climate change and attributing it to human activities. Thus, simulations
+of historical surface pressure given observed sea surface temperatures
+and increasing greenhouse gases, sulphate aerosols, etc..., are
+being compared with observations and used to help interpret simulated
+air temperature changes. A further aim of GMSLP is to facilitate
+the validation of other atmospheric model results. GMSLP is also
+being used in the interpretation of observed global and regional
+climate variations. Particular examples are: variations in the
+El Ni&ntilde;o Southern Oscillation, variations in south Pacific
+atmospheric circulation in observations and in atmospheric model
+simulations, and the effect of atmospheric circulation on land
+surface air temperature patterns. The dataset will allow an improved
+assessment of the effects of atmospheric circulation changes on
+UK climate and therefore a more thorough interpretation, for the
+UK area, of model simulations with increasing greenhouse gases.</P>
+
+<H3><A NAME="input"></A>2. Brief description of &quot;input&quot;
+gridded data sets.</H3>
+
+<P>The input gridded data sets are summarized in Table 1.</P>
+
+<H3><TABLE BORDER="1" CELLSPACING="2" CELLPADDING="0" WIDTH="784">
+  <CAPTION ALIGN="TOP"><P ALIGN=LEFT>Table 1: Gridded data sources contributing to GMSLP2.</CAPTION>
+   
+  <TR>
+    <TH WIDTH="20%" BGCOLOR="#666666"><FONT COLOR="#ffffff">Data
+      Source</FONT>&nbsp;</TH> 
+    <TH WIDTH="15%" BGCOLOR="#666666"><FONT COLOR="#ffffff">Area
+      covered</FONT></TH> 
+    <TH WIDTH="12%" BGCOLOR="#666666"><FONT COLOR="#ffffff">Period</FONT></TH> 
+    <TH WIDTH="405" BGCOLOR="#666666"><FONT COLOR="#ffffff">Resolution</FONT></TH> 
+  </TR>
+  <TR>
+    <TD WIDTH="20%" BGCOLOR="#ffffff">&nbsp;UKMO Historical</TD> 
+    <TD WIDTH="15%" ALIGN="CENTER" BGCOLOR="#ffffff">&nbsp;15N-90N</TD> 
+    <TD WIDTH="12%" ALIGN="CENTER" BGCOLOR="#ffffff">&nbsp;1873-1995</TD> 
+    <TD WIDTH="405" BGCOLOR="#ffffff">Nodes of grid are at multiples
+      of 5&deg; lat.x 10&deg; long.</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="20%" BGCOLOR="#ffffff">&nbsp;UKMO Operational</TD> 
+    <TD WIDTH="15%" ALIGN="CENTER" BGCOLOR="#ffffff">&nbsp;Globe</TD> 
+    <TD WIDTH="12%" ALIGN="CENTER" BGCOLOR="#ffffff">&nbsp;1985-1995</TD> 
+    <TD WIDTH="405" BGCOLOR="#ffffff">Nodes of grid are at multiples
+      of 2.25&deg; lat.x 3.75&deg; long.</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="20%" BGCOLOR="#ffffff">NCAR</TD> 
+    <TD WIDTH="15%" ALIGN="CENTER" BGCOLOR="#ffffff">&nbsp;15N-90N</TD> 
+    <TD WIDTH="12%" ALIGN="CENTER" BGCOLOR="#ffffff">&nbsp;1899-1995</TD> 
+    <TD WIDTH="405" BGCOLOR="#ffffff">Nodes of grid are at multiples
+      of 5&deg; lat.x 5&deg; long</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="20%" BGCOLOR="#ffffff">SIO</TD> 
+    <TD WIDTH="15%" ALIGN="CENTER" BGCOLOR="#ffffff">&nbsp;42.5S-72.5N</TD> 
+    <TD WIDTH="12%" ALIGN="CENTER" BGCOLOR="#ffffff">&nbsp;1951-1993</TD> 
+    <TD WIDTH="405" BGCOLOR="#ffffff">Nodes of grid are at multiples
+      of 5&deg; lat.x 10&deg; long</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="20%" BGCOLOR="#ffffff">CSIRO</TD> 
+    <TD WIDTH="15%" ALIGN="CENTER" BGCOLOR="#ffffff">&nbsp;60S-60N</TD> 
+    <TD WIDTH="12%" ALIGN="CENTER" BGCOLOR="#ffffff">&nbsp;1871-1989</TD> 
+    <TD WIDTH="405" BGCOLOR="#ffffff">Nodes of grid are at multiples
+      of 10&deg; lat.x 10&deg; long</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="20%" BGCOLOR="#ffffff">&nbsp;Jones</TD> 
+    <TD WIDTH="15%" ALIGN="CENTER" BGCOLOR="#ffffff">&nbsp;15S-60S</TD> 
+    <TD WIDTH="12%" ALIGN="CENTER" BGCOLOR="#ffffff">&nbsp;1951-1985</TD> 
+    <TD WIDTH="405" BGCOLOR="#ffffff">&nbsp;Nodes of grid are at
+      multiples of 5&deg; lat.x 10&deg; long</TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="20%" BGCOLOR="#ffffff">&nbsp;Jones and Wigley</TD> 
+    <TD WIDTH="15%" ALIGN="CENTER" BGCOLOR="#ffffff">&nbsp;60S-75S</TD> 
+    <TD WIDTH="12%" ALIGN="CENTER" BGCOLOR="#ffffff">&nbsp;1957-1985</TD> 
+    <TD WIDTH="405" BGCOLOR="#ffffff">Nodes of grid are at multiples
+      of 5&deg; lat.x 10&deg; long&nbsp;</TD> 
+  </TR>
+</TABLE></H3>
+
+<P>NCAR and UKMO are both Northern Hemisphere data sets based
+on 5&deg; by 5&deg; area and 5&deg; latitude by 10&deg; longitude
+grids respectively.</P>
+
+<P>The CSIRO data set is a 'near global' data set, based on a
+10&deg; by 10&deg; area grid, constructed from a blend of land
+observations extracted from historical station records and marine
+observations from COADS.</P>
+
+<P>The SIO data set (Barnett et al., 1984) also has 'near global'
+coverage, but on a 5&deg; latitude by 10&deg; longitude grid.
+These data were derived from a variety of different sources, including
+MSL pressure analyses from various national weather centres and
+raw ships' observations.</P>
+
+<P>The data sets provided by Jones and Wigley (1988) and Jones
+(1991) are both limited area 5&deg; latitude by 10&deg; longitude
+grids covering part of the Southern Hemisphere. They are based
+solely on land station observations, which were interpolated onto
+'hemespheric' grids using regression techniques.</P>
+
+<H3><A NAME="creation"></A>3. Creation of GMSLP2.1.</H3>
+
+<P>Although GMSLP2.0 consisted of a globally complete individual
+MSL pressure field for every month for 1871-1994, it was heavily
+dependent on the component gridded analyses. To develop and further
+improve the GMSLP data set, the UK Met. Office introduced observed
+data directly.These data were a blend of marine observations from
+the UKMOMDB and COADS and land station time series from CSIRO,
+NIWA and the UKMO CLIMAT archive. The observations were blended
+with GMSLP2.0 to create GMSLP2.1 .</P>
+
+<P>Several versions of GMSLP2.1 data were created. GMSLP2.1c was
+the first published version but it was found to suffer from bias
+over the tropical oceans,owing to over-correcting marine data
+for standard gravity. A revised correction scheme was devised
+and applied to the marine data, ultimately resulting in GMSLP2.1f,
+which is the most recent version of the data set.</P>
+
+<P>More detailed information about the creation and analysis of
+this dataset is available from <EM>&quot;Development of the Global
+Mean Sea Level Pressure Data Set GMSLP2&quot;</EM> by T.A. BAsnett
+and D.E.Parker, 1997.</P>
+
+<H3><A NAME="conclu"></A>4. Conclusion</H3>
+
+<P>GMSLP2.1f is the most recent version of the Global Mean Sea-Level
+Pressure dataset. GMSLP2.1 is more reliable than GMSLP1.2, as
+it is strongly influenced by quality controlled observed data.
+GMSLP2.1f, or preceeding versions, has already been used in various
+analyses, especially studies of ENSO and for model validation.
+However there remain several weaknesses, namely the necessity
+of using climatology in data-sparse regions, especially in the
+Southern Hemisphere, together with a lack of reliable observations
+in the earlier decades. Some initial problems with the quality-control
+of several key land-station time series led to the introduction
+of noise into early versions of the data set: adjustments have
+been applied but further improvements need to be made. The problem
+of noisy data is relatively insignificant on a global scale, but
+for some regional studies it has been found that band-pass filtered
+data are of more use.</P>
+
+<P>A completely new GMSLP3 is planned. This will use a background
+field based on EOF reconstruction techniques, developed by Rayner
+et al. (1996) for the creation of the GISST data set. By using
+such techniques, the UK Met. Office hope to remove the need for
+a background field reliant on other data sets and therefore eliminate
+much of the bias that has affected the creation of GMSLP2.1.
+<P>
+</BODY>
+</HTML>

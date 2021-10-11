@@ -1,0 +1,177 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>BADC Datasets: metDB - UK Met Office metDB SHPSYN page</TITLE>
+  <!-- Created 19th May 2009 -->
+  <!-- Author: Graham Parton BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><IMG SRC="/graphics/logos/metlogos.gif" ALT="Met Office Logo"></h1><h1>
+Met Office - metDB Data: ship SYNOP data</H1>
+
+<HR ALIGN=LEFT>
+
+<H2>Brief description</H2>
+SYNOP message from sea based stations (ships, rigs, platforms and moored buoys) using WMO code FM 13-X.
+<p>
+</p>
+
+<h2>Observation coverage</h2>
+<p>
+Hourly observations from stations distributed globally resulting in around 10,000 reports a day.
+</p>
+<h2>Delivery and ingest schedule</h2>
+<p>
+Data are extracted for the 4 principal synoptic periods (00-06, 06-12, 12-18 and 18-00 UT) and delivered to the BADC at the following times (all in GMT):
+</p>
+<table cellspacing="2" cellpadding="1" border="1" align="center">
+                               <tr> <td>Synoptic period</td> <td>Delivery to BADC</td> </tr>
+                               <tr> <td>0000-0559</td> <td>1330</td> </tr>
+                               <tr> <td>0600-1159</td> <td>1930</td> </tr>
+                               <tr> <td>1200-1759</td> <td>0130</td> </tr>
+                               <tr> <td>1800-2359</td> <td>0730</td> </tr>
+                             </table>
+
+<p>Ingest scripts run at the BADC every 20 minutes, converting the incoming files to the self describing BADC-CSV format, but neither the processed or raw data are placed into archive until the following day.</p>
+<h2>Known problems</h2>
+<p>There are no known data issues at present.
+</p>
+<h2>Additional information</h2>
+<p>No additional information at this time.
+</p>
+<h2>Parameter list</h2>
+<p>The table below provides the list of available parameters in the column order that they appear in the BADC-CSV files in the archive.
+</p>
+
+<table>
+<tr>
+<tr><th>Column number</th><th>Parameter</th<th>Unit</th></tr>
+<td>1</td><td>Year</td><td>year</td></tr>
+<tr><td>2</td><td>Month</td><td>month</td></tr> 
+<tr><td>3</td><td>Day</td><td>day</td></tr> 
+<tr><td>4</td><td>Hour</td><td>hour</td></tr> 
+<tr><td>5</td><td>Minute</td><td>minute</td></tr> 
+<tr><td>6</td><td>Time of receipt year</td><td>year</td></tr> 
+<tr><td>7</td><td>Time of receipt month</td><td>month</td></tr> 
+<tr><td>8</td><td>Time of receipt day</td><td>day</td></tr> 
+<tr><td>9</td><td>Time of receipt hour</td><td>hour</td></tr> 
+<tr><td>10</td><td>Time of receipt minute</td><td>minute</td></tr> 
+<tr><td>11</td><td>Ship call sign</td><td>1</td></tr> 
+<tr><td>12</td><td>Buoy identifier</td><td>1</td></tr> 
+<tr><td>13</td><td>Latitude</td><td>degrees</td></tr> 
+<tr><td>14</td><td>Longitude</td><td>degrees</td></tr> 
+<tr><td>15</td><td>Collecting centre</td><td>1</td></tr> 
+<tr><td>16</td><td>Bulletin ID</td><td>1</td></tr> 
+<tr><td>17</td><td>Station type</td><td>1</td></tr> 
+<tr><td>18</td><td>Amend number</td><td>1</td></tr> 
+<tr><td>19</td><td>Correction number</td><td>1</td></tr> 
+<tr><td>20</td><td>Original wind speed units</td><td>1</td></tr> 
+<tr><td>21</td><td>Wind direction</td><td>degrees true</td></tr> 
+<tr><td>22</td><td>Wind direction quality control flag</td><td>1</td></tr> 
+<tr><td>23</td><td>Wind speed</td><td>m/s</td></tr> 
+<tr><td>24</td><td>Wind speed quality control flag</td><td>1</td></tr> 
+<tr><td>25</td><td>Air temperature</td><td>K</td></tr> 
+<tr><td>26</td><td>Air temperature quality control flag</td><td>1</td></tr> 
+<tr><td>27</td><td>Dew point temperature</td><td>K</td></tr> 
+<tr><td>28</td><td>Dew point temperature quality control flag</td><td>1</td></tr> 
+<tr><td>29</td><td>Relative humidity (only if dewpoint not present)</td><td>%</td></tr>
+<tr><td>30</td><td>Horizontal visibility</td><td>m</td></tr> 
+<tr><td>31</td><td>Horizontal visibility quality control flag</td><td>1</td></tr> 
+<tr><td>32</td><td>Vertical visibility</td><td>m</td></tr> 
+<tr><td>33</td><td>Present weather</td><td>1</td></tr> 
+<tr><td>34</td><td>Present weather quality control flag</td><td>1</td></tr> 
+<tr><td>35</td><td>Past weather period</td><td>hour</td></tr> 
+<tr><td>36</td><td>Most significant past weather</td><td>1</td></tr>
+<tr><td>37</td><td>Most significant past weather report quality control flag</td><td>1</td></tr> 
+<tr><td>38</td><td>least significant past weather report</td><td>1</td></tr> 
+<tr><td>39</td><td>Least significant past weather report quality control flag</td><td>1</td></tr> 
+<tr><td>40</td><td>Amount of all cloud present</td><td>1</td></tr> 
+<tr><td>41</td><td>Amount of all cloud present quality control flag</td><td>1</td></tr> 
+<tr><td>42</td><td>Period when maximum temperature reported</td><td>hour</td></tr> 
+<tr><td>43</td><td>Maximum air temperature</td><td>K</td></tr> 
+<tr><td>44</td><td>Period when minimum temperature reported</td><td>hour</td></tr> 
+<tr><td>45</td><td>Minimum air temperature</td><td>K</td></tr> 
+<tr><td>46</td><td>Section 1 rainfall period</td><td>hour</td></tr> 
+<tr><td>47</td><td>Section 1 rainfall amount</td><td>kg/m2</td></tr> 
+<tr><td>48</td><td>Section 1 rainfall amount quality control flag</td><td>1</td></tr> 
+<tr><td>49</td><td>Section 3 rainfall period</td><td>hour</td></tr> 
+<tr><td>50</td><td>Section 3 rainfall amount</td><td>kg/m2</td></tr> 
+<tr><td>51</td><td>Section 3 rainfall amount quality control flag</td><td>1</td></tr> 
+<tr><td>52</td><td>Total precipitation in past 24 hours</td><td>kg/m2</td></tr> 
+<tr><td>53</td><td>Start of period of maximum gust</td><td>minutes</td></tr> 
+<tr><td>54</td><td>End of period of maximum gust</td><td>minutes</td></tr> 
+<tr><td>55</td><td>Highest gust recorded</td><td>m/s</td></tr> 
+<tr><td>56</td><td>Start of period of high mean wind</td><td>minutes</td></tr> 
+<tr><td>57</td><td>End of period of high mean wind</td><td>minutes</td></tr> 
+<tr><td>58</td><td>Highest mean wind speed</td><td>m/s</td></tr> 
+<tr><td>59</td><td>Pressure at mean sea level</td><td>Pa</td></tr> 
+<tr><td>60</td><td>3 hour pressure tendency</td><td>1</td></tr> 
+<tr><td>61</td><td>3 hour pressure tendency quality control flag</td><td>1</td></tr> 
+<tr><td>62</td><td>3 hour pressure change</td><td>Pa</td></tr> 
+<tr><td>63</td><td>3 hour pressure change quality control flag</td><td>1</td></tr> 
+<tr><td>64</td><td>24 hour pressure change</td><td>Pa</td></tr> 
+<tr><td>65</td><td>Direction reporting method</td><td>1</td></tr> 
+<tr><td>66</td><td>Direction of platform motion</td><td>degrees</td></tr> 
+<tr><td>67</td><td>Speed reporting method</td><td>1</td></tr> 
+<tr><td>68</td><td>Speed of platform motion</td><td>m/s</td></tr> 
+<tr><td>69</td><td>Temperature measuring method</td><td>1</td></tr> 
+<tr><td>70</td><td>Sea surface temperature</td><td>K</td></tr> 
+<tr><td>71</td><td>Wet-bulb temperature measuring method</td><td>1</td></tr> 
+<tr><td>72</td><td>Wet-bulb temperature</td><td>K</td></tr> 
+<tr><td>73</td><td>Wave measuring method</td><td>1</td></tr> 
+<tr><td>74</td><td>Height of wind waves</td><td>m</td></tr> 
+<tr><td>75</td><td>Period of wind waves</td><td>seconds</td></tr> 
+<tr><td>76</td><td>Primary swell wave direction</td><td>degrees</td></tr> 
+<tr><td>77</td><td>Primary swell wave period</td><td>seconds</td></tr> 
+<tr><td>78</td><td>Primary swell wave height</td><td>m</td></tr> 
+<tr><td>79</td><td>Secondary swell wave direction</td><td>degrees</td></tr> 
+<tr><td>80</td><td>Secondary swell wave period</td><td>seconds</td></tr> 
+<tr><td>81</td><td>Secondary swell wave height</td><td>m</td></tr> 
+<tr><td>82</td><td>Origin of ice accretion on ship </td><td>1</td></tr> 
+<tr><td>83</td><td>Thickness of ice accretion on ship</td><td>m</td></tr> 
+<tr><td>84</td><td>Rate of ice accretion on ship</td><td>1</td></tr> 
+<tr><td>85</td><td>Sea ice concentration/arrangement</td><td>1</td></tr> 
+<tr><td>86</td><td>Stage of development of sea ice</td><td>m</td></tr> 
+<tr><td>87</td><td>Ice of land origin amount/type</td><td>1</td></tr> 
+<tr><td>88</td><td>Bearing of principal ice edge</td><td>degrees</td></tr> 
+<tr><td>89</td><td>Ice situation</td><td>1</td></tr> 
+<tr><td>90</td><td>Low cloud type (CL)</td><td>1</td></tr> 
+<tr><td>91</td><td>Low cloud type (CL) quality control flag</td><td>1</td></tr> 
+<tr><td>92</td><td>Medium cloud type (CM)</td><td>1</td></tr> 
+<tr><td>93</td><td>Medium cloud type (CM) quality control flag</td><td>1</td></tr> 
+<tr><td>94</td><td>High cloud type (CH)</td><td>1</td></tr> 
+<tr><td>95</td><td>High cloud type (CH) quality control flag</td><td>1</td></tr> 
+<tr><td>96</td><td>Low cloud amount</td><td>1</td></tr> 
+<tr><td>97</td><td>Low cloud amount quality control flag</td><td>1</td></tr> 
+<tr><td>98</td><td>Height of base of cloud</td><td>m</td></tr> 
+<tr><td>99</td><td>High of base of cloud quality control flag</td><td>1</td></tr> 
+<tr><td>100</td><td>Cloud amount (8 groups)</td><td>1</td></tr> 
+<tr><td>101</td><td>Cloud amount quality control flag</td><td>1</td></tr> 
+<tr><td>102</td><td>Cloud type (8 groups)</td><td>1</td></tr> 
+<tr><td>103</td><td>Cloud type quality control flag</td><td>1</td></tr> 
+<tr><td>104</td><td>Height of cloud base (8 groups)</td><td>m</td></tr> 
+<tr><td>105</td><td>Height of cloud base quality control flag</td><td>1</td></tr> 
+<tr><td>106</td><td>Cloud amount (8 groups)</td><td>1</td></tr> 
+<tr><td>107</td><td>Cloud amount quality control flag</td><td>1</td></tr> 
+<tr><td>108</td><td>Cloud type (8 groups)</td><td>1</td></tr> 
+<tr><td>109</td><td>Cloud type quality control flag</td><td>1</td></tr> 
+<tr><td>110</td><td>Height of cloud base (8 groups)</td><td>m</td></tr> 
+<tr><td>111</td><td>Height of cloud base quality control flag</td><td>1</td></tr> 
+<tr><td>112</td><td>Cloud amount (8 groups)</td><td>1</td></tr> 
+<tr><td>113</td><td>Cloud amount quality control flag</td><td>1</td></tr> 
+<tr><td>114</td><td>Cloud type (8 groups)</td><td>1</td></tr> 
+<tr><td>115</td><td>Cloud type quality control flag</td><td>1</td></tr> 
+<tr><td>116</td><td>Height of cloud base (8 groups)</td><td>m</td></tr> 
+<tr><td>117</td><td>Height of cloud base quality control flag</td><td>1</td></tr> 
+<tr><td>118</td><td>Cloud amount (8 groups)</td><td>1</td></tr> 
+<tr><td>119</td><td>Cloud amount quality control flag</td><td>1</td></tr> 
+<tr><td>120</td><td>Cloud type (8 groups)</td><td>1</td></tr> 
+<tr><td>121</td><td>Cloud type quality control flag</td><td>1</td></tr> 
+<tr><td>122</td><td>Height of cloud base (8 groups)</td><td>m</td></tr> 
+<tr><td>123</td><td>Height of cloud base quality control flag</td><td>1</td></tr>
+</table>
+
+</BODY>
+</HTML>

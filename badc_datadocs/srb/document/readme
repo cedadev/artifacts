@@ -1,0 +1,17 @@
+This directory contains the following documentation related to the 
+Surface Radiation Budget (SRB) data.  
+
+BOOKLET.DOC  -  An ASCII copy of the booklet that is delivered as
+                part of the CD-ROM package.
+HDF.DOC      -  A description of the Hierarchical Data Format.
+NCSA.DOC     -  Information on the National Center for Supercomputing
+                Applications and instructions on obtaining the HDF
+                software.
+README       -  This file. 
+SRBGUIDE.DOC -  A description of the SRB data.
+WHITLOCK.DOC -  A technical memorandum written by the data producer 
+                explaining the SRB data.
+
+The files SRB_YYMM.DOC contain information specific to each data 
+month.
+

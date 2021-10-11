@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20080406T230000Z
+DTEND:20080408T230000Z
+LOCATION:The Royal Society, London
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000000669372B073C801000000000000000
+	01000000021E104FE91CCB149B52F3CA5123AE0EA
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+As part of the Natural Environmental Research Councils Environmental eSci=
+ence Programme end of programme events, we are holding a Royal Society Di=
+scussion =0D=0AMeeting entitled the Environmental eScience Revolution (le=
+aflet attached). The meeting will take place 7th -8th April 2008. If you =
+would like to attend the discussion =0D=0Ameeting, please register at htt=
+p://royalsociety.org/event.asp?id=3D6066&month=3D4,2008 .=0D=0A=0D=0APost=
+ers=0D=0AOn the afternoon of the first day of the meeting, we will be hol=
+ding an extended poster and demonstration session on the subject of "Envi=
+ronmental eScience". If you =0D=0Awould like to participate in the poster=
+ session, please see the guidelines attached and send your contact detail=
+s and poster abstract to Michelle Truman at =0D=0Amitr@nerc.ac.uk.=0D=0A=
+=0D=0AOn the evening of the first day there will also be a drinks recepti=
+on, sponsored by Microsoft Research. More information on this will be sen=
+t to you once you have =0D=0Aregistered on the Royal Society website. =0D=
+=0A=0D=0AWe very much look forward to seeing you at the meeting.=0D=0A=0D=
+=0AWith kind regards, =0D=0A=0D=0ADr Ned Garnett, Prof Charles Godfray an=
+d Prof Robert Gurney. =0D=0A
+SUMMARY:Environmental eScience revolution 7 - 8 April 2008.
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

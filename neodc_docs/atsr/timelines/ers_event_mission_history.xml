@@ -1,0 +1,287 @@
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by A Menochet (SFTC) -->
+<data>
+	<!-- 1991-->
+	<event start="July 17 1991" title="ERS-1 Launch, Kourou, French Guiana." icon="sphere_red.png" color="red">ERS 1  Launch Site: Kourou . Launch Vehicle: Ariane 4. Mass: 2,384 kg. Perigee: 774 km. Apogee: 775 km. Inclination: 98.5 deg.</event>
+	<event start="September 13 1991 16:43" end="September 14 1991 00:58" isDuration="true" title="Payload off" color="red">Payload off following wrong MCMD schedule</event>
+	<event start="December 19 1991" end="December 23 1991 23:59" isDuration="true" title="Outgassing" color="orange">Decontamination maintenance activities - only IRR. ATSR was outgassing (decontamination) cycle between 353:11:30:00 UTC and 357:21:30:00 UTC; During the rest of the ERS-1 orbit manoeuvre period ATSR remained in nominal, but ATSR IRR and MWR data should be handled with great care during this period.</event>
+	<!-- 1992-->
+	<event start="Jan 01 1992" end="Jan 01 1992 01:40" isDuration="true" title="Gatineau acquisition failure" color="red">Gatineau acquisition failure - Antenna control malfunction</event>
+	<event start="Jan 08 1992 07:03" end="Jan 08 1992 08:37" isDuration="true" title="IDHT playback failure" color="red">IDHT playback failure due to RA external</event>
+	<event start="Jan 17 1992 07:03" end="Jan 17 1992 08:37" isDuration="true" title="IDHT playback failure" color="red">IDHT playback failure due to RA external</event>
+	<event start="Jan 30 1992 08:09" end="Jan 30 1992 09:49" isDuration="true" title="Problem at Kiruna" color="orange">Kiruna - problems with S/X antenna pass 2827</event>
+	<event start="Jan 30 1992 16:26" end="Jan 30 1992 23:06" isDuration="true" title="Problem at Kiruna" color="orange">Kiruna - problems with S/X antenna pass 2833,2834, 2835 and 2836</event>
+	<event start="Feb 03 1992 07:30" end="Feb 04 1992 01:00" isDuration="true" title="Maintenance of platform gyro configuration" color="orange">Maintenance of platform gyro configuration</event>
+	<event start="Feb 14 1992 01:23" end="Feb 14 1992 09:44" isDuration="true" title="Up-link transfer error" color="orange">Error in transfer of command up-link.</event>
+	<event start="Feb 17 1992 19:47" end="Feb 17 1992 21:26" isDuration="true" title="LR FS failed to lock on IDHT playback" color="orange">LR FS failed to lock on IDHT playback - only RT data available</event>
+	<event start="Apr 07 1992 " end="Apr 11 1992 23:59" isDuration="true" title="Outgassing" color="orange">Decontamination maintenance activities - only IRR</event>
+	<event start="Apr 20 1992 00:56" end="Apr 20 1992 01:34" isDuration="true" title="MPS scheduling error" color="orange">MPS scheduling error</event>
+	<event start="Apr 20 1992 01:43" end="Apr 20 1992 08:42" isDuration="true" title="MPS scheduling error" color="orange">MPS scheduling error</event>
+	<event start="Apr 25 1992 00:41" end="Apr 25 1992 02:31" isDuration="true" title="Gatineau acquisition failure" color="red">Gatineau acquisition failure - Antenna control problems</event>
+	<event start="Apr 27 1992 08:07" end="Apr 27 1992 11:40" isDuration="true" title="IDHT MCMD scheduling error" color="orange">IDHT MCMD scheduling error</event>
+	<event start="Apr 30 1992 06:36" end="Apr 30 1992 08:33" isDuration="true" title="Partial acquisition at Kiruna" color="orange">Partial acquisition at Kiruna (antenna pointing)</event>
+	<event start="May 03 1992 10:20" end="May 03 1992 11:59" isDuration="true" title="Partial acquisition at Kiruna" color="orange">Partial acquisition at Kiruna (servo computer)</event>
+	<event start="May 06 1992 05:08" end="May 06 1992 07:01" isDuration="true" title="Partial acquisition at Kiruna" color="orange">Partial acquisition at Kiruna (servo computer)</event>
+	<event start="May 07 1992 16:28" end="May 07 1992 18:07" isDuration="true" title="Partial acquisition at Kiruna" color="orange">Partial acquisition at Kiruna (servo computer)</event>
+	<event start="May 14 1992 06:10" end="May 14 1992 11:55" isDuration="true" title="External playback duration longer than expected" color="orange">External playback duration longer than expected</event>
+	<event start="May 18 1992 23:49" end="May 19 1992 01:36" isDuration="true" title="Gatineau acquisition failure" color="red">Gatineau acquisition failure - incorrect schedule received.</event>
+	<event start="Jun 03 1992 09:05" end="Jun 03 1992 10:46" isDuration="true" title="Partial acquisition at Kiruna" color="orange">Partial acquisition at Kiruna (servo computer)</event>
+	<event start="Jun 06 1992 17:24" end="Jun 06 1992 19:03" isDuration="true" title="Partial acquisition failure at Kiruna" color="orange">Partial acquisition failure at Kiruna (servo computer crash)</event>
+	<event start="Jun 08 1992 12:56" end="Jun 08 13:02" isDuration="true" title="Mission planning error" color="red">Mission planning error - IDHT unavailable for transmission</event>
+	<event start="Jun 10 1992 16:49" end="Jun 15 1992 15:58" isDuration="true" title="IRR 3.7um channel failure" color="orange">IRR 3.7um channel failure</event>
+	<event start="Jun 22 1992 10:48" end="Jun 22 1992 12:27" isDuration="true" title="Partial acquisition failure at Kiruna" color="orange">Partial acquisition failure at Kiruna (servo computer)</event>
+	<event start="Jun 24 1992 14:49" end="Jun 24 1992 16:07" isDuration="true" title="Recorder stopped" color="red">Recorder stopped due to erroneous BOT detection</event>
+	<event start="Jun 25 1992 19:04" end="Jun 27 1992 16:16 " isDuration="true" title="AMI anomaly" color="red">Instruments switched down following AMI anomaly.</event>
+	<event start="Jul 19 1992 09:19" end="Jul 24 1992 16:00" isDuration="true" title="PF parity error" color="orange">PF parity error</event>
+	<event start="Aug 02 1992 09:45" end="Aug 02 1992 10:45" isDuration="true" title="Tape problem" color="red">Spurious beginning of tape detected in tape recorder A</event>
+	<event start="Aug 09 1992 11:59" end="Aug 10 1992 16:00" isDuration="true" title="PF parity error" color="orange">PF parity error</event>
+	<event start="Aug 20 1992 00:27" end="Aug 20 1992 23:59" isDuration="true" title="PF parity error" color="orange">PF parity error</event>
+	<event start="Aug 25 1992 12:43" end="Aug 25 1992 22:00" isDuration="true" title="PF parity error" color="orange">PF parity error</event>
+	<event start="Sep 01 1992 21:45" end="Sep 01 1992 23:18" isDuration="true" title="Maspalomas acquisition failure" color="red">Maspalomas acquisition failure - operator mistake</event>
+	<event start="Sep 02 1992 14:34" end="Sep 02 1992 19:00" isDuration="true" title="PF parity error" color="orange">PF parity error</event>
+	<event start="Sep 03 1992 17:26" end="Sep 03 1992 23:54" isDuration="true" title="IDHT in MCMD refuse mode" color="orange">IDHT in MCMD refuse mode</event>
+	<event start="Sep 05 1992 20:37" end="Sep 06 1992 14:30" isDuration="true" title="PF parity error" color="orange">PF parity error</event>
+	<event start="Sep 06 1992 00:33" end="Sep 06 1992 03:59" isDuration="true" title="Gatineau acquisition failure" color="red">Gatineau acquisition failure - operator error</event>
+	<event start="Sep 08 1992 06:30" end="Sep 08 199 09:53" isDuration="true" title="PF parity error" color="orange">PF parity error</event>
+	<event start="Nov 04 1992 01:25" end="Nov 04 1992 04:43" isDuration="true" title="Gatineau acquisition failure" color="red">Gatineau acquisition failure</event>
+	<event start="Nov 12 1992 18:55" end="Nov 12 1992 23:54" isDuration="true" title="Instruments in STANDBY" color="red">Operational error during RA recovery: instruments in STANDBY</event>
+	<event start="Nov 12 1992 23:54" end="Nov 13 1992 10:14" isDuration="true" title="IRR unavailable" color="red">IRR unavailable alone after previous anomaly</event>
+	<event start="Nov 24 1992 12:46" end="Nov 26 1992 18:24" isDuration="true" title="Outgassing" color="red">Outgassing operations</event>
+	<event start="Dec 12 1992 22:12" end="Dec 12 1992 22:59" isDuration="true" title="Tape recorder error" color="red">On board tape recorder unexpected stop</event>
+	<event start="Dec 16 1992 12:53" end="Dec 16 1992 18:45" isDuration="true" title="OCM" color="red">OCM manoeuvre. Start transition from YSM to FSM; OCM occurred 30mn later; stabilization required 3 orbits</event>
+	<event start="Dec 23 1992 01:04" end="Dec 23 1992 01:07" isDuration="true" title="Tape recorder error" color="red">On board tape recorder unexpected stop</event>
+	<event start="Dec 25 1992 11:45" end="Dec 25 1992 11:46" isDuration="true" title="IDHT unavailable" color="red">IDHT unavailable due to re-synchronization following AMI switch down</event>
+	<event start="Dec 25 1992 13:21" end="Dec 25 1992 13:22" isDuration="true" title="IDHT unavailable" color="red">IDHT unavailable due to re-synchronization following AMI switch down</event>
+	<event start="Dec 30 1992 23:46" end="Dec 31 1992 01:33" isDuration="true" title="Gatineau acquisition failure" color="red">Gatineau acquisition failure - Operational error</event>
+	<!--1993-->
+	<event start="Jan 24 1993 02:19" end="Jan 24 1993 03:59" isDuration="true" title="Gatineau acquisition failure" color="red">Gatineau acquisition failure - MBB not switched back to acquisition.</event>
+	<event start="Feb 01 1993 13:12" end="Feb 01 1993 13:21" isDuration="true" title="ERS-1 track lost" color="red">Due to public mains failure and problems with backup generator Kiruna were unable to track ERS-1 during the pass 032:13:12:55 through 032:13:21:34 UTC. RT and playback X-Band data not received.</event>
+	<event start="Feb 17 1993 10:05" end="Feb 17 1993 11:49" isDuration="true" title="TBD" color="orange">Operational reasons connected to unprocessable Gen. Header.</event>
+	<event start="Feb 19 1993 00:14" end="Feb 19 1993 02:02" isDuration="true" title="Gatineau acquisition failure" color="red">Gatineau acquisition failure - MBB not switched back to acquisition.</event>
+	<event start="Mar 09 1993 17:38" end="Mar 11 1993 23:59" isDuration="true" title="Outgassing" color="red">Outgassing</event>
+	<event start="Mar 19 1993 06:27" end="Mar 19 1993 07:18" isDuration="true" title="Kiruna acquisition failure" color="red">Kiruna acquisition failure. Servo computer crash</event>
+	<event start="Mar 23 1993 20:41" end="Mar 23 1993 22:06" isDuration="true" title="Kiruna acquisition failure" color="red">Kiruna acquisition failure. Servo computer crash, antenna not tracking</event>
+	<event start="Apr 13 1993 11:22" end="Apr 13 1993 11:24" isDuration="true" title="TBD" color="orange">Due to RA synchronization after RA unavailability</event>
+	<event start="Apr 14 1993 20:39" end="Apr 15 1993" isDuration="true" title="TBD" color="orange">Travelling wave tube amplifier 1 unexpected switch off</event>
+	<event start="May 04 1993 11:44" end="May 04 1993 17:36" isDuration="true" title="OCM" color="orange">OCM manoeuvre. Start transition from YSM to FSM; OCM occurred 30mn later; Stabilization required 3 orbits. RA data may not be usable</event>
+	<event start="May 30 1993 19:53" end="May 30 1993 21:29" isDuration="true" title="Kiruna acquisition failure" color="red">Kiruna acquisition failure. Antenna tracking and FS problem</event>
+	<event start="Jun 01 1993 10:36" end="Jun 01 1993 10:44" isDuration="true" title="Dump scheduling error" color="orange">Dump scheduling error</event>
+	<event start="Jun 01 1993 22:07" end="Jun 01 1993 22:11" isDuration="true" title="Dump scheduling error" color="orange">Dump scheduling error</event>
+	<event start="Jun 02 1993 10:05" end="Jun 02 1993 10:14" isDuration="true" title="Dump scheduling error" color="orange">Dump scheduling error</event>
+	<event start="Jun 08 1993 10:17" end="Jun 08 1993 11:56" isDuration="true" title="Dump scheduling error" color="red">Maspalomas. Low rate data lost due to dump scheduling error</event>
+	<event start="Jun 11 1993 10:21" end="Jun 11 1993 10:31" isDuration="true" title="Dump scheduling error" color="orange">Dump scheduling error</event>
+	<event start="Jun 19 1993 13:49" end="Jun 19 1993 14:14" isDuration="true" title="Tape recorder problem" color="orange">Spurious BOT detected in record mode for tape recorder A</event>
+	<event start="Jun 21 1993 08:11" end="Jun 21 1993 09:56" isDuration="true" title="IDHT in REFUSE mode" color="red">IDHT in refuse mode due to ICU operating constraint violation</event>
+	<event start="Jun 29 1993 09:09" end="Jul 01 1993 19:34" isDuration="true" title="Outgassing" color="red">Outgassing operations</event>
+	<event start="Jul 06 1993 11:02" end="Jul 07 1993 01:20" isDuration="true" title="Gatineau acquisition failure" color="red">Gatineau acquisition failure. Equipment set-up error</event>
+	<event start="Jul 09 1993 11:02" end="Jul 09 1993 12:07" isDuration="true" title="Tape recorder problem" color="orange">Spurious BOT detection</event>
+	<event start="Jul 16 1993 20:15" end="Jul 16 1993 21:54" isDuration="true" title="Kiruna acquisition failure" color="red">Kiruna acquisition failure. Servo computer crash</event>
+	<event start="Aug 18 1993 09:38" end="Aug 20 1993 18:27" isDuration="true" title="IDHT unavailable and Outgassing" color="red">IDHT unavailable followed by IRR outgassing</event>
+	<event start="Aug 20 1993" end="Aug 20 1993 03:20" isDuration="true" title="Gatineau acquisition failure" color="red">Gatineau acquisition failure. Antennas problems</event>
+	<event start="Aug 24 1993 02:56" end="Aug 24 1993 04:35" isDuration="true" title="Gatineau acquisition failure" color="red">Gatineau acquisition failure. Antenna tracking problem</event>
+	<event start="Sep 04 1993 22:25" end="Sep 04 1993 23:50" isDuration="true" title="Partial Maspalomas acquisition " color="orange">Partial Maspalomas acquisition. Servo computer problem</event>
+	<event start="Sep 13 1993 22:29" end="Sep 13 1993 22:38" isDuration="true" title="Mission planning error" color="orange">Incomplete orbit due to mission planning error</event>
+	<event start="Sep 13 1993 23:59" end="Sep 14 1993 12:15" isDuration="true" title="instruments in REFUSE mode" color="red">Instruments in REFUSE mode after mission planning error</event>
+	<event start="Sep 22 1993 16:07" end="Sep 22 1993 16:19" isDuration="true" title="Recording problem" color="orange">RT data probably lost due to recording problem</event>
+	<event start="Sep 24 1993 10:25" end="Sep 24 1993 12:02" isDuration="true" title="Antenna not available" color="red">Antenna not available for the pass at Kiruna</event>
+	<event start="Sep 27 1993 07:04" end="Sep 27 1993 08:48" isDuration="true" title="Kiruna acquisition failure" color="red">Kiruna acquisition failure. Servo computer crash</event>
+	<event start="Oct 02 1993 12:53" end="Oct 03 1993 23:47" isDuration="true" title="TBD" color="orange">Due to resynchronization after AMI unavailability and IRR Outgassing</event>
+	<event start="Nov 02 1993 08:16" end="Nov 02 1993 11:03" isDuration="true" title="Satellite track lost" color="red">Communication problem between FEC and Servo computer: Antenna not tracking the satellite</event>
+	<event start="Nov 03 1993 20:57" end="Nov 04 1993 00:05" isDuration="true" title="Maspalomas acquisition failure" color="red">Maspalomas acquisition failure - equipment problem</event>
+	<event start="Nov 22 1993" end="Nov 23 1993" isDuration="true" title="Outgassing" color="red">Decontamination maintenance activities - only IRR affected</event>
+	<event start="Dec 06 1993 03:21" end="Dec 06 1993 10:21" isDuration="true" title="IDHT in REFUSE mode" color="red">IDHT in REFUSE mode following TWT failure (HR link)</event>
+	<event start="Dec 07 1993 08:13" end="Dec 07 1993 09:56" isDuration="true" title="IDHT testing" color="orange">Bad quality of raw data due to IDHT testing</event>
+	<event start="Dec 10 1993 11:33" end="Dec 10 1993 18:17" isDuration="true" title="IDHT problems" color="red">Problems during IDHT reconfiguration: auto switch-down to STANDBY after microcommand verification failure</event>
+	<event start="Dec 13 1993 11:47" end="Dec 16 1993 23:18 " isDuration="true" title="IDHT anomaly" color="red">Global mission interruption for IDHT anomaly investigation followed by IRR outgassing</event>
+	<event start="Dec 13 1993 20:01" end="Dec 13 1993 21:41" isDuration="true" title="Servo computer problem" color="red">Servo computer problem</event>
+	<event start="Dec 15 1993 23:31" end="Dec 15 1993 23:35" isDuration="true" title="Maspalomas acquisition problem" color="orange">Maspalomas acquisition problem</event>
+	<!--1994-->
+	<event start="Jan 10 1994 21:25" end="Jan 11 1994 00:33" title="Antenna problem at Maspalomas" isDuration="true" color="orange">Antenna problem at Maspalomas</event>
+	<event start="Jan 12 1994 22:00" end="Jan 12 1994 22:10" isDuration="true" color="orange" title="Antenna problem at Maspalomas">Antenna problem at Maspalomas</event>
+	<event start="Jan 12 1994 23:22" end="Jan 12 1994 23:23" isDuration="true" color="orange" title="Antenna problem at Maspalomas">Antenna problem at Maspalomas</event>
+	<event start="Jan 13 1994 21:23" end="Jan 13 1994 21:40" isDuration="true" color="orange" title="Antenna problem at Maspalomas">Antenna problem at Maspalomas</event>
+	<event start="Jan 13 1994 22:41" end="Jan 13 1994 22:45" isDuration="true" color="orange" title="Antenna problem at Maspalomas">Antenna problem at Maspalomas</event>
+	<event start="Jan 22 1994 16:24" end="Jan 22 1994 21:16" title="OBC anomaly" isDuration="true" color="red">ATSR switched down (OBC anomaly) during RA anomaly investigation</event>
+	<event start="Jan 27 1994 21:38" end="Jan 27 1994 23:28" title="No acquisition at Maspalomas" isDuration="true" color="red">No acquisition at Maspalomas</event>
+	<event start="Jan 29 1994 20:52" end="Jan 30 1994 13:34" title="IDHT TWTA 2 unexpected switch down" isDuration="true" color="red">IDHT TWTA 2 unexpected switch down</event>
+	<event start="Feb 09 1994 22:55" end="Feb 10 1994 00:33" title="Antenna problem at Maspalomas" isDuration="true" color="orange">Antenna problem at Maspalomas</event>
+	<event start="Mar 12 1994 00:33" end="Mar 12 1994 02:21" title="MBB test switch problem" isDuration="true" color="red">MBB test switch problem at Gatineau - Orbit not acquired</event>
+	<event start="Mar 18 1994 14:10" end="Mar 21 1994 20:43" title="Outgassing" isDuration="true" color="red">Outgassing operation</event>
+	<event start="Mar 23 1994 18:06" end="Mar 23 1994 18:16" title="satellite track lost" isDuration="true" color="red">SW problem on the FEC: Antenna stopped tracking the satellite</event>
+	<event start="Mar 23 1994 19:40" end="Mar 23 1994 19:45" title="satellite track lost" isDuration="true" color="red">SW problem on the FEC: Antenna stopped tracking the satellite</event>
+	<event start="Apr 08 1994 07:39" end="Apr 08 1994 09:21" title="Servo computer crash" isDuration="true" color="red">Servo computer crash</event>
+	<event start="Apr 10 1994 21:24" end="Apr 10 1994 22:50" title="Incorrect state vectors at Maspalomas following manoeuvres" isDuration="true" color="orange">Incorrect state vectors at Maspalomas following manoeuvres</event>
+	<event start="Apr 12 1994 20:16" end="Apr 12 1994 21:51" title="Servo computer crash" isDuration="true" color="red">Servo computer crash</event>
+	<event start="Apr 13 1994 18:01" end="Apr 13 1994 18:10" title="Kiruna Antenna problem" isDuration="true" color="orange">Antenna positioning/tracking problem at Kiruna</event>
+	<event start="Apr 13 1994 19:35" end="Apr 13 1994 19:40" title="Kiruna Antenna problem" isDuration="true" color="orange">Antenna positioning/tracking problem at Kiruna</event>
+	<event start="Apr 17 1994 09:09" end="Apr 17 1994 09:45" title="SW problem on the FEC" isDuration="true" color="red">SW problem on the FEC: Antenna stopped tracking the satellite</event>
+	<event start="Apr 17 1994 10:42" end="Apr 17 1994 10:46" title="SW problem on the FEC" isDuration="true" color="red">SW problem on the FEC: Antenna stopped tracking the satellite</event>
+	<event start="Apr 21 1994 08:28" end="Apr 21 1994 10:09" title="Antenna problem" isDuration="true" color="orange">Antenna left in program track due to procedural problems: Bad quality of the data</event>
+	<event start="Apr 23 1994 08:58" end="Apr 23 1994 09:32" title="Tracking problem at Kiruna" isDuration="true" color="orange">Tracking problem at Kiruna</event>
+	<event start="Apr 23 1994 10:31" end="Apr 23 1994 10:33" title="Tracking problem at Kiruna" isDuration="true" color="orange">Tracking problem at Kiruna</event>
+	<event start="Apr 24 1994 01:24" end="Apr 24 1994 01:50" title="Antenna problem at Gatineau" isDuration="true" color="orange">Antenna problem at Gatineau - Partial acquisition</event>
+	<event start="Apr 24 1994 02:58" end="Apr 24 1994 03:00" isDuration="true" color="orange" title="Antenna problem at Gatineau">Antenna problem at Gatineau - Partial acquisition</event>
+	<event start="Apr 30 1994 " end="Apr 30 1994 09:14" title="Kiruna Servo computer problem" isDuration="true" color="orange">Servo computer problem at Kiruna</event>
+	<event start="Apr 30 1994 09:45" end="Apr 30 1994 09:47" title="Kiruna Servo computer problem" isDuration="true" color="orange">Servo computer problem at Kiruna</event>
+	<event start="Apr 30 1994 14:27" end="Apr 30 1994 14:40" title="Kiruna Servo computer problem" isDuration="true" color="orange">Servo computer problem at Kiruna</event>
+	<event start="May 07 1994 18:12" end="May 07 1994 18:50" title="Kiruna Servo computer problem" isDuration="true" color="orange">Servo computer problem at Kiruna</event>
+	<event start="May 10 1994 09:58" end="May 10 1994 10:30" title="Problem on the FEC" isDuration="true" color="red">Problem on the FEC: Antenna stopped tracking the satellite</event>
+	<event start="May 14 1994 16:21" end="May 14 1994 16:22" title="Tape recorder miscommanding" isDuration="true" color="red">Tape recorder miscommanding</event>
+	<event start="May 14 1994 16:50" end="May 14 1994 17:59" title="Tape recorder miscommanding" isDuration="true" color="red">Tape recorder miscommanding</event>
+	<event start="May 16 1994 23:30" end="May 17 1994 04:34" title="Operator error at Gatineau" isDuration="true" color="red">Operator error at Gatineau - no data recorded on tape.</event>
+	<event start="May 22 1994 16:39" end="May 22 1994 16:42" title="Servo computer hung at Kiruna" isDuration="true" color="red">Servo computer hung at Kiruna</event>
+	<event start="May 24 1994 15:45" end="May 24 1994 16:34" title="Servo computer hung at Kiruna" isDuration="true" color="red">Servo computer hung at Kiruna</event>
+	<event start="May 24 1994 17:16" end="May 24 1994 17:19" title="Servo computer hung at Kiruna" isDuration="true" color="red">Servo computer hung at Kiruna</event>
+	<event start="May 24 1994 18:46" end="May 24 1994 18:49" title="Servo computer hung at Kiruna" isDuration="true" color="red">Servo computer hung at Kiruna</event>
+	<event start="May 27 1994 00:17" end="May 27 1994 02:05" title="Problem at Gatineau" isDuration="true" color="orange">Acquisition problem at Gatineau (snow storm)</event>
+	<event start="May 30 1994 08:59" end="May 30 1994 09:33" title="SW problem on the FEC" isDuration="true" color="red">SW problem on the FEC: Antenna stopped tracking the satellite</event>
+	<event start="May 30 1994 10:30" end="May 30 1994 10:39" title="SW problem on the FEC" isDuration="true" color="red">SW problem on the FEC: Antenna stopped tracking the satellite</event>
+	<event start="May 31 1994 01:23" end="May 31 1994 01:52" title="Antenna problem at Gatineau" isDuration="true" color="orange">Antenna problem at Gatineau - Partial acquisition</event>
+	<event start="May 31 1994 02:58" end="May 31 1994 03:01" title="Antenna problem at Gatineau" isDuration="true" color="orange">Antenna problem at Gatineau - Partial acquisition</event>
+	<event start="Jun 06 1994 18:08" end="Jun 06 1994 18:37" title="FEC problem at Kiruna" isDuration="true" color="orange">FEC problem at Kiruna</event>
+	<event start="Jun 06 1994 19:37" end="Jun 06 1994 19:39" title="FEC problem at Kiruna" isDuration="true" color="orange">FEC problem at Kiruna</event>
+	<event start="Jun 07 1994 18:34" end="Jun 07 1994 19:00" title="Servo computer hung at Kiruna" isDuration="true" color="red">Servo computer hung at Kiruna</event>
+	<event start="Jun 09 1994 20:54" end="Jun 09 1994 21:16" title="Servo computer hung at Kiruna" isDuration="true" color="red">Servo computer hung at Kiruna</event>
+	<event start="Jun 17 1994 21:36" end="Jun 18 1994 00:44" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jun 18 1994 22:41" end="Jun 19 1994 00:10" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jun 19 1994 22:06" end="Jun 19 1994 23:35" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jun 20 1994 21:31" end="Jun 21 1994 00:39" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jun 21 1994 22:35" end="Jun 22 1994 00:05" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jun 22 1994 22:01" end="Jun 22 1994 23:30" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jun 23 1994 18:08" end="Jun 23 1994 18:21" title="FEC software problem" isDuration="true" color="red">FEC software problem - Antenna stopped during the Kiruna pass</event>
+	<event start="Jun 23 1994 19:40" end="Jun 23 1994 19:45" title="FEC software problem" isDuration="true" color="red">FEC software problem - Antenna stopped during the Kiruna pass</event>
+	<event start="Jun 23 1994 21:26" end="Jun 24 1994 00:33" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jun 24 1994 00:33" end="Jun 24 1994 02:22" title="No acquisition at Gatineau" isDuration="true" color="red">No acquisition at Gatineau</event>
+	<event start="Jun 24 1994 22:30" end="Jun 24 1994 23:59" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jun 25 1994 20:58" end="Jun 25 1994 21:55" title="Servo computer hung at Kiruna" isDuration="true" color="red">Servo computer hung at Kiruna</event>
+	<event start="Jun 25 1994 21:55" end="Jun 25 1994 23:25" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jun 26 1994 21:20" end="Jun 27 1994 00:28" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jun 27 1994 18:53" end="Jun 27 1994 18:55" title="Servo computer hung at Kiruna" isDuration="true" color="red">Servo computer hung at Kiruna</event>
+	<event start="Jun 27 1994 21:16" end="Jun 27 1994 22:19" title="Servo computer hung at Kiruna" isDuration="true" color="red">Servo computer hung at Kiruna</event>
+	<event start="Jun 27 1994 22:25" end="Jun 27 1994 23:54" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jun 28 1994 20:36" end="Jun 28 1994 21:43" title="Servo computer hung at Kiruna" isDuration="true" color="red">Servo computer hung at Kiruna</event>
+	<event start="Jun 28 1994 21:50" end="Jun 28 1994 23:20" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jun 29 1994 21:15" end="Jun 30 1994 00:23" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jun 30 1994 22:20" end="Jun 30 1994 23:49" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jul 01 1994 21:45" end="Jul 02 1994 00:51" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jul 02 1994 22:49" end="Jul 03 1994 00:18" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jul 03 1994 22:14" end="Jul 03 1994 23:44" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jul 04 1994 15:06" end="Jul 04 1994 16:31" title="Acquisition problem at Kiruna" isDuration="true" color="orange">Acquisition problem at Kiruna</event>
+	<event start="Jul 04 1994 21:39" end="Jul 05 1994 00:46" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jul 05 1994 22:44" end="Jul 06 1994 00:13" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jul 06 1994 22:09" end="Jul 06 1994 23:38" title="Hardware failure at Maspalomas" isDuration="true" color="red">Servo computer hardware failure at Maspalomas</event>
+	<event start="Jul 08 1994 20:06" end="Jul 08 1994 20:51" title="Servo computer hung at Kiruna" isDuration="true" color="red">Servo computer hung at Kiruna</event>
+	<event start="Jul 15 1994 14:40" end="Jul 15 1994 15:10" title="Servo computer hung at Kiruna" isDuration="true" color="red">Servo computer hung at Kiruna</event>
+	<event start="Jul 28 1994 19:55" end="Jul 28 1994 20:49" title="Servo computer crash at Kiruna" isDuration="true" color="red">Servo computer crash at Kiruna</event>
+	<event start="Jul 30 1994 18:08" end="Jul 30 1994 18:40" title="Acquisition problem at Kiruna" isDuration="true" color="orange">Acquisition problem at Kiruna</event>
+	<event start="Jul 30 1994 19:40" end="Jul 30 1994 19:44" title="Acquisition problem at Kiruna" isDuration="true" color="orange">Acquisition problem at Kiruna</event>
+	<event start="Jul 31 1994 05:44" end="Jul 31 1994 05:59" title="Servo computer crash at Kiruna" isDuration="true" color="red">Servo computer crash at Kiruna</event>
+	<event start="Jul 31 1994 07:38" end="Jul 31 1994 07:40" title="Servo computer crash at Kiruna" isDuration="true" color="red">Servo computer crash at Kiruna</event>
+	<event start="Aug 03 1994 22:13" end="Aug 03 1994 22:17" title="Servo computer crash at Kiruna" isDuration="true" color="red">Servo computer crash at Kiruna</event>
+	<event start="Aug 10 1994 23:09" end="Aug 11 1994 00:47" title="Antenna failure at Maspalomas" isDuration="true" color="red">Antenna failure at Maspalomas</event>
+	<event start="Aug 12 1994 21:55" end="Aug 12 1994 21:59" title="Servo computer crash at Kiruna" isDuration="true" color="red">Servo computer crash at Kiruna</event>
+	<event start="Aug 18 1994 15:11" end="Aug 18 1994 15:15" title="Servo computer crash at Kiruna" isDuration="true" color="red">Servo computer crash at Kiruna</event>
+	<event start="Aug 22 1994 19:08" end="Aug 22 1994 19:23" title="Spurious BOT detection" isDuration="true" color="orange">Spurious BOT detection in record mode</event>
+	<event start="Aug 30 1994 07:30" end="Aug 30 1994 08:25" title="Servo computer crash at Kiruna" isDuration="true" color="red">Servo computer crash at Kiruna</event>
+	<event start="Sep 03 1994 20:23" end="Sep 03 1994 20:47" title="Servo computer crash at Kiruna" isDuration="true" color="red">Servo computer crash at Kiruna</event>
+	<event start="Sep 07 1994 23:25" end="Sep 08 1994 08:14" title="IDHT unavailability" isDuration="true" color="red">IDHT unavailability under investigation</event>
+	<event start="Sep 08 1994 09:49" end="Sep 08 1994 11:28" title="IDHT unavailabilty" isDuration="true" color="red">IDHT unavailability under investigation</event>
+	<event start="Sep 25 1994 18:36" end="Sep 25 1994 18:40" title="Servo computer problem at Kiruna" isDuration="true" color="orange">Servo computer problem at Kiruna</event>
+	<event start="Sep 25 1994 19:02" end="Sep 25 1994 19:35" title="Servo computer problem at Kiruna" isDuration="true" color="orange">Servo computer problem at Kiruna</event>
+	<event start="Sep 25 1994 21:25" end="Sep 25 1994 22:54" title="Servo computer failure at Maspalomas" isDuration="true" color="red">Servo computer failure at Maspalomas</event>
+	<event start="Oct 01 1994 01:30" end="Oct 01 1994 02:30" title="Tape problem" isDuration="true" color="orange">Spurious beginning of tape detected</event>
+	<event start="Oct 05 1994 03:20" end="Oct 08 1994 12:09" title="TBD" isDuration="true" color="red">ATSR ICU Permanent format error followed by IRR outgassing</event>
+	<event start="Oct 08 1994 08:59" end="Oct 08 1994 09:32" title="FEC software problem at Kiruna" isDuration="true" color="red">FEC software problem at Kiruna. Antenna stopped tracking the satellite</event>
+	<event start="Oct 08 1994 10:32" end="Oct 08 1994 10:35" title="FEC software problem at Kiruna" isDuration="true" color="red">FEC software problem at Kiruna. Antenna stopped tracking the satellite</event>
+	<event start="Oct 16 1994 22:26" end="Oct 16 1994 23:55" title="Antenna problem" isDuration="true" color="orange">Orbit partially acquired at Maspalomas due to an antenna problem</event>
+	<event start="Nov 05 1994 03:55" end="Nov 05 1994 05:38" title="Operator error at Prince Albert" isDuration="true" color="orange">Operator error at Prince Albert</event>
+	<event start="Nov 08 1994 01:57" end="Nov 08 1994 02:10" title="DPS failure at Gatineau" isDuration="true" color="orange">DPS failure at Gatineau - RT part not acquired</event>
+	<event start="Nov 14 1994 05:22" end="Nov 14 1994 17:10" title="MCMD transfer acknowledgement error" isDuration="true" color="red">MCMD transfer acknowledgement error: IDHT switched to STANDBY</event>
+	<event start="Nov 20 1994 09:06" end="Nov 20 1994 10:09" title="IDHT unavailable" isDuration="true" color="red">IDHT unavailable (spurious BOT detection)</event>
+	<event start="Dec 08 1994 18:06" end="Dec 08 1994 18:41" title="FEC calculation problem at Kiruna" isDuration="true" color="orange">FEC calculation problem at Kiruna</event>
+	<event start="Dec 08 1994 19:39" end="Dec 08 1994 19:45" title="FEC calculation problem at Kiruna" isDuration="true" color="orange">FEC calculation problem at Kiruna</event>
+	<event start="Dec 10 1994 01:46" end="Dec 10 1994 03:26" title="Antenna problem" isDuration="true" color="orange">Antenna hardware problem at Gatineau</event>
+	<event start="Dec 16 1994 00:01" end="Dec 20 1994 20:57" title="ATSR anomaly" isDuration="true" color="orange">ATSR ICU memory self test provided bad result followed by ICU switch down to STAND-BY</event>
+	<!-- 1995-->
+	<event start="Jan 03 1995 19:34" title="FEC problem at Kiruna" end="Jan 03 1995 21:13" isDuration="true" color="orange">FEC problem at Kiruna: antenna not assigned correctly</event>
+	<event start="Jan 06 1995 01:23" title="Antenna problem at Gatineau" end="Jan 06 1995 01:52" isDuration="true" color="orange">Antenna problem at Gatineau</event>
+	<event start="Jan 06 1995 02:31" title="Antenna problem at Gatineau" end="Jan 06 1995 02:33" isDuration="true" color="orange">Antenna problem at Gatineau</event>
+	<event start="Jan 17 1995 02:51" title="Antenna hardware problem at Gatineau" end="Jan 17 1995 03:33" isDuration="true" color="orange">Antenna hardware problem at Gatineau</event>
+	<event start="Jan 17 1995 04:25 " title="Antenna hardware problem at Gatineau" end="Jan 17 1995 04:30" isDuration="true" color="orange">Antenna hardware problem at Gatineau</event>
+	<event start="Jan 18 1995 22:25" title="Antenna hardware problem at Maspalomas" end="Jan 18 1995 22:58" isDuration="true" color="orange">Antenna hardware problem at Maspalomas</event>
+	<event start="Jan 18 1995 23:49" title="Antenna hardware problem at Maspalomas" end="Jan 18 1995 23:52" isDuration="true" color="orange">Antenna hardware problem at Maspalomas</event>
+	<event start="Jan 24 1995 12:23" title="IDHT MCMD transfer acknowledgement error" end="Jan 24 1995 16:02" isDuration="true" color="red">IDHT MCMD transfer acknowledgement error</event>
+	<event start="Feb 01 1995 20:53" title="Servo computer problem at Kiruna" end="feb 01 1995 21:39" isDuration="true" color="orange">Servo computer problem at Kiruna</event>
+	<event start="Feb 01 1995 22:29" title="Servo computer problem at Kiruna" end="Feb 01 1995 22:34" isDuration="true" color="orange">Servo computer problem at Kiruna</event>
+	<event start="Feb 02 1995 23:28" title="CMS problem at Gatineau" end="Feb 03 1995 04:33" isDuration="true" color="orange">CMS problem at Gatineau</event>
+	<event start="Feb 04 1995 00:32" title="CMS problem at Gatineau" end="Feb 04 1995 03:59" isDuration="true" color="orange">CMS problem at Gatineau</event>
+	<event start="Feb 05 1995 01:45" title="Operator error at Gatineau" end="Feb 05 1995 03:24" isDuration="true" color="orange">Operator error at gatineau</event>
+	<event start="Feb 06 1995 02:36" title="CMS problem at Gatineau" end="Feb 06 1995 02:49" isDuration="true" color="orange">CMS problem at Gatineau</event>
+	<event start="Feb 06 1995 04:16" title="CMS problem at Gatineau" end="Feb 06 1995 04:28" isDuration="true" color="orange">CMS problem at Gatineau</event>
+	<event start="Feb 16 1995 08:58" title="Tracking problem at Kiruna" end="Feb 16 1995 09:32" isDuration="true" color="orange">Tracking problem at Kiruna</event>
+	<event start="Feb 16 1995 10:31" title="Tracking problem at Kiruna" end="Feb 16 1995 10:33" isDuration="true" color="orange">Tracking problem at Kiruna</event>
+	<event start="Mar 08 1995 22:05" title="Antenna hardware failure at Maspalomas" end="Mar 08 1995 23:34" isDuration="true" color="red">Antenna hardware failure at Maspalomas</event>
+	<event start="Mar 09 1995 21:30" title="Antenna hardware failure at Maspalomas" end="Mar 10 1995 00:37" isDuration="true" color="red">Antenna hardware failure at Maspalomas</event>
+	<event start="Mar 10 1995 22:34" title="Antenna autotrack failure at Maspalomas" end="Mar 11 1995 00:03" isDuration="true" color="red">Antenna autotrack failure at Maspalomas</event>
+	<event start="Mar 15 1995 18:02" title="Problem with the antenna elevation drive at Kiruna" end="Mar 15 1995 21:19" isDuration="true" color="orange">Problem with the antenna elevation drive at Kiruna</event>
+	<event start="Mar 16 1995 05:37" title="Problem with the antenna elevation drive at Kiruna" end="Mar 16 1995 07:32" isDuration="true" color="orange">Problem with the antenna elevation drive at Kiruna</event>
+	<event start="Mar 31 1995 07:35" title="Special tests" end="Mar 31 1995 20:47" isDuration="true" color="orange">Special tests</event>
+	<event start="Apr 04 1995 09:00" title="FEC calculation problem at Kiruna" end="Apr 04 1995 09:31" isDuration="true" color="orange">FEC calculation problem at Kiruna - orbit partially lost</event>
+	<event start="Apr 04 1995 10:32" title="FEC calculation problem at Kiruna" end="Apr 04 1995 10:40" isDuration="true" color="orange">FEC calculation problem at Kiruna - orbit partially lost</event>
+	<event start="Apr 06 1995 01:49" title="BB Heater swapping tests" end="Apr 06 1995 21:01" isDuration="true" color="orange">BB Heater swapping tests</event>
+	<event start="Apr 08 1995 18:30" title="Tape recorder problem" end="Apr 08 1995 18:41" isDuration="true" color="red">Spurious BOT detected on tape recorder B</event>
+	<event start="Apr 20 1995 05:30" title="Antenna problem at Kiruna" end="Apr 20 1995 12:14" isDuration="true" color="orange">Antenna problem at Kiruna</event>
+	<event start="May 01 1995 18:32" title="Antenna problem at Kiruna" end="May 01 1995 18:36" isDuration="true" color="orange">Antenna incorrectly tilted at Kiruna</event>
+	<event start="May 06 1995 08:56" title="Antenna problem at Kiruna" end="May 06 1995 09:26" isDuration="true" color="orange">Antenna problem at Kiruna</event>
+	<event start="May 06 1995 10:28" title="Antenna problem at Kiruna" end="May 06 1995 10:30" isDuration="true" color="orange">Antenna problem at Kiruna</event>
+	<event start="May 08 1995 22:15" title="LR HDDR problem at Kiruna" end="May 08 1995 22:39" isDuration="true" color="orange">LR HDDR problem at Kiruna</event>
+	<event start="May 09 1995 09:14" title="Tracking problem at Kiruna" end="May 09 1995 09:30" isDuration="true" color="orange">Tracking problem at Kiruna</event>
+	<event start="Jun 21 1995 11:27" title="Problem at Kiruna station" end="Jun 21 1995 13:04" isDuration="true" color="orange">Problem at Kiruna station</event>
+	<event start="Jul 21 1995 04:45" title="Antenna problem at Prince Albert" end="Jul 21 1995 05:13" isDuration="true" color="orange">Antenna tracking problem at Prince Albert - Partial acquisition</event>
+	<event start="Jul 22 1995 03:13" title="Hardware problem at Gatineau" end="Jul 22 1995 04:45" isDuration="true" color="red">Hardware problem at Gatineau - no acquisition</event>
+	<event start="Jul 29 1995 02:51" title="Antenna problem at Gatineau" end="Jul 29 1995 04:30" isDuration="true" color="orange">Antenna problem at Gatineau linked to bad weather</event>
+	<event start="Aug 27 1995 01:02" title="MPS error" end="Aug 27 1995 08:30" isDuration="true" color="orange">MPS error</event>
+	<event start="Sep 07 1995 09:16" title="Tracking problem at Kiruna" end="Sep 07 1995 09:29" isDuration="true" color="orange">Tracking problem at Kiruna</event>
+	<event start="Sep 15 1995 14:13" title="Hardware problem at Kiruna" end="Sep 15 1995 14:34" isDuration="true" color="orange">Hardware problem on the X-band downnlink chain at Kiruna</event>
+	<event start="Oct 15 1995 12:21" title="Acquisition problem at Kiruna" end="Oct 15 1995 13:21" isDuration="true" color="orange">Acquisition problem at Kiruna</event>
+	<event start="Oct 15 1995 13:53" title="Acquisition problem at Kiruna" end="Oct 15 1995 13:57" isDuration="true" color="orange">Acquisition problem at Kiruna</event>
+	<event start="Oct 19 1995 15:35" title="Spurious BOT detection" end="Oct 19 1995 15:50" isDuration="true" color="red">Spurious BOT detection</event>
+	<event start="Oct 24 1995 22:48" title="Antenna problem at Maspalomas" end="Oct 24 1995 23:23" isDuration="true" color="orange">Antenna problem at Maspalomas</event>
+	<event start="Oct 24 1995 23:53" title="Antenna problem at Maspalomas" end="Oct 24 1995 23:55" isDuration="true" color="orange">Antenna problem at Maspalomas</event>
+	<event start="Oct 28 1995 09:11" title="Antenna problem at Kiruna" end="Oct 28 1995 09:27" isDuration="true" color="orange">Antenna problem at Kiruna</event>
+	<event start="Oct 28 1995 22:04" title="Acquisition problem at Maspalomas" end="Oct 28 1995 22:20" isDuration="true " color="orange">Acquisition problem at Maspalomas</event>
+	<event start="Oct 29 1995 06:35" title="Spurious BOT detection" end="Oct 29 1995 06:37" isDuration="true" color="red">Spurious BOT detection</event>
+	<event start="Nov 07 1995 03:53" title="Acquisition problem at Maspalomas" end="Nov 07 1995 04:02" isDuration="true" color="orange">Acquisition problem at Maspalomas</event>
+	<event start="Nov 07 1995 04:31" title="Acquisition problem at Maspalomas" end="Nov 07 1995 04:49" isDuration="true" color="orange">Acquisition problem at Maspalomas</event>
+	<event start="Nov 10 1995 23:22" title="Antenna problem at Gatineau" end="Nov 11 1995 04:30" isDuration="true" color="orange">Antenna problem at Gatineau</event>
+	<event start="Nov 12 1995 14:10" title="Acquisition problem at Kiruna" end="Nov 12 1995 14:17" isDuration="true" color="orange">Acquisition problem at Kiruna</event>
+	<event start="Nov 15 1995 14:16" title="Tape drive problem at Kiruna" end="Nov 15 1995 14:25" isDuration="true" color="red">Tape drive problem at Kiruna - RT lost</event>
+	<event start="Nov 19 1995 09:03" title="Acquisition problem at Kiruna" end="Nov 19 1995 09:35" isDuration="true" color="orange">Acquisition problem at Kiruna</event>
+	<event start="Nov 19 1995 10:35" title="Acquisition problem at Kiruna" end="Nov 19 1995 10:40" isDuration="true" color="orange">Acquisition problem at Kiruna</event>
+	<event start="Nov 26 1995 15:15" title="Acquisition problem at Kiruna" end="Nov 26 1995 15:40" isDuration="true" color="orange">Acquisition problem at Kiruna</event>
+	<event start="Nov 26 1995 16:54" title="Acquisition problem at Kiruna" end="Nov 26 1995 16:55" isDuration="true" color="orange">Acquisition problem at Kiruna</event>
+	<event start="Nov 27 1995 08:00" title="Acquisition problem at Kiruna" end="Nov 27 1995 08:10" isDuration="true" color="orange">Acquisition problem at Kiruna</event>
+	<event start="Nov 27 1995 11:17" title="Acquisition problem at Kiruna" end="Nov 27 1995 11:30" isDuration="true" color="orange">Acquisition problem at Kiruna</event>
+	<event start="Dec 15 1995 03:22" title="Acquisition problem at Prince Albert" end="Dec 15 1995 05:07" isDuration="true" color="orange">Acquisition problem at Prince Albert</event>
+	<event start="Dec 19 1995 11:40" title="Acquisition problem at Kiruna" end="Dec 19 1995 11:50" isDuration="true" color="orange">Acquisition problem at Kiruna</event>
+	<event start="Dec 19 1995 13:13" title="Acquisition problem at Kiruna" end="Dec 19 1995 13:16" isDuration="true" color="orange">Acquisition problem at Kiruna</event>
+	<!-- 1996-->
+	<event start="Jan 10 1996 11:04" title="Stirling cycle cooler back off" end="Jan 12 1996 14:00" isDuration="true" color="orange">Stirling cycle cooler back off - IRR 12 micron channel unavailable</event>
+	<event start="Feb 08 1996 07:48" end="Feb 08 1996 12:25" isDuration="true" title="Mirror jittering and high detector temperature" color="orange">Mirror jittering and high detector temperature</event>
+	<event start="Feb 21 1996 09:57" title="Spurious BOT detection" end="Feb 21 1996 10:19" isDuration="true" color="red">Spurious BOT detection</event>
+	<event start="Mar 07 1996 17:24" title="Servo computer crash" end="Mar 07 1996 17:58" isDuration="true" color="orange">Servo computer crash - partial acquisition</event>
+	<event start="Mar 07 1996 18:20" title="Servo computer crash" end="Mar 07 1996 18:242" isDuration="true" color="orange">Servo computer crash - partial acquisition</event>
+	<event start="Apr 02 1996 05:54" title="TBD" end="Apr 02 1996 15:03" isDuration="true" color="orange">ATSR 11 microns channel gain out of limit</event>
+	<event start="Apr 18 1996 13:21" title="Spurious BOT detection" end="Apr 18 1996 13:30" isDuration="true" color="red">Spurious BOT detection</event>
+	<event start="Apr 28 1996 16:17" title="Servo computer crash at Kiruna" end="Apr 28 1996 17:03" isDuration="true" color="orange">Servo computer crash at Kiruna - partial acquisition</event>
+	<event start="Apr 28 1996 17:49" title="Servo computer crash at Kiruna" end="Apr 28 1996 18:00" isDuration="true" color="orange">Servo computer crash at Kiruna - partial acquisition </event>
+	<event start="May 04 1996 17:54" title="Bad tape" end="May 04 1996 17:58" isDuration="true" color="red">Bad tape</event>
+	<event start="May 05 1996 10:32" title="Spurious BOT detection" end="May 05 1996 10:47" isDuration="true" color="red">Spurious BOT detection</event>
+	<event start="May 14 1996 16:12" title="Servo computer problem" end="May 14 1996 17:52" isDuration="true" color="orange">Servo computer problem - partial acquisition</event>
+	<event start="May 27 1996 12:48" title="Servo computer failure at Kiruna" end="May 27 1996 14:34" isDuration="true" color="red">Servo computer failure at Kiruna</event>
+	<!--1997 - no log entry-->
+	<!--1998 - no log entry-->
+	<!--1999 - no log entry-->
+	<!--2000 -->
+	<event start="Mar 10 2000" title="Contact lost with ERS-1" color="red" icon="sphere_red.png">ERS-1 platform suffered a number of anomalies resulting in a transition to SAFE mode. Contact was lost with the spacecraft.</event>
+	<event start="Mar 13 2000" title="End of ERS-1 mission" color="red" icon="sphere_red.png">ESA announce ERS-1 Nine-year success story comes to an end.</event>
+</data>

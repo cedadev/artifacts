@@ -1,0 +1,759 @@
+TOVS High Resolution Infrared Radiation Sounder 2
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Instrument Description and Data Characteristics
+    4.4  Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Calibration Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+     11.1  Satellite/Instrument/Data Processing Documentation
+     11.2  Journal Articles and Study Reports
+     11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Infrared and visible radiances measured in 20
+spectral channels by the High Resolution Infrared Radiation Sounder
+(HIRS/2).  HIRS/2 is one of the TIROS Operational Vertical Sounder (TOVS)
+instruments on-board the NOAA TIROS-N series satellites.
+
+1.2  Unit of Measurement.  Radiance in mW/(m**2)-steradian.
+
+1.3  Data Source.  High Resolution Infrared Radiation Sounder (HIRS/2)
+flown on-board the TIROS-N, NOAA-6, -7, -8, -9,-10, -11 and -12 spacecraft.
+
+1.4  Data Set Identification.  TOVS HIRS/2 Level 1b Data Set.  Level 1b
+data are raw data that have been quality controlled, assembled into
+discrete data sets, and to which Earth location and calibration information
+have been appended but not applied.
+
+HIRS/2 Level 1b data are available in two data formats: full data set
+format for all channels and an extract data set format for selective
+channels.
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  The cross-track scan of HIRS/2 provides global
+coverage of data for all 20 channels. The width of the cross-track scan is
+99 degrees or 2240 km and consists of 56 steps.  Each scan takes 6.4
+seconds, and there are 42 km between instantaneous field of views (IFOVs)
+along the sub-orbital track.
+
+2.2  Spatial Resolution.  The optical field of view (FOV) is 1.25 degrees
+which gives a ground IFOV of 17.4 km diameter at the nadir. At the end of
+the scan, the ground IFOV is 58.5 km cross-track by 29.9 km along-track.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  The overall coverage of the archived TOVS HIRS/2
+data base is shown in the following table.  However, there may be short
+gaps in the time ranges and additional data coverage outside these dates
+associated with equipment malfunctions.  Start and end dates indicate
+operational range.
+
+           SATELLITE           START DATE            END DATE
+           _________           __________            ________
+
+            TIROS-N             10/19/78             01/30/80
+
+            NOAA-6              06/27/79             03/05/83
+                                06/21/84             06/30/86
+
+            NOAA-7              08/24/81             06/07/86
+
+            NOAA-8              06/20/83             06/12/84
+                                07/01/85             10/31/85
+                                                             
+            NOAA-9              02/25/85             11/07/88
+
+            NOAA-10             11/17/86             present 
+
+            NOAA-11             11/08/88             present  
+
+            NOAA-12             09/01/91             present 
+            _______             ________             ________
+
+
+3.2  Temporal Resolution.  Each scan of the TOVS HIRS/2 views the Earth for
+a period of 6.4 seconds. During this period, the analog data output from
+the HIRS/2 sensor is digitized on-board the satellite at a rate of 2880
+bits per second.
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  TOVS sounding instruments, consisting of the High
+Resolution Infrared Radiation Sounder (HIRS/2), the Microwave Sounding Unit
+(MSU), and the Stratospheric Sounding Unit (SSU), are designed to provide
+global coverage of atmospheric temperature and moisture profiles.
+
+4.2  Key Satellite Flight Parameters.  Nominal orbit parameters for the
+TIROS-N/NOAA satellite series are:
+
+
+         o  Launch date                  TIROS-N:  October 13, 1978
+                                         NOAA-6:   June 27, 1979
+                                         NOAA-7:   June 23, 1981
+                                         NOAA-8:   March 28, 1983
+                                         NOAA-9:   December 12, 1984  
+                                         NOAA-10:  September 17, 1986 
+                                         NOAA-11:  September 24, 1988 
+                                         NOAA-12:  May 14, 1991       
+
+         o  Duration, planned            At least two years
+
+         o  Duration, actual             TIROS-N:  January 30, 1980
+                                         NOAA-6:   June 30, 1986
+                                         NOAA-7:   June 7, 1986
+                                         NOAA-8:   October 31, 1985
+                                         NOAA-9:   November 7, 1988   
+                                         NOAA-10:  Presently operating
+                                         NOAA-11:  Presently operating
+                                         NOAA-12:  Presently operating
+
+         o  Orbit type                   Near polar, circular,
+                                         sun-synchronous
+
+         o  Semi-major axis              7231.8 km
+
+         o  Nominal altitude             853.7 km
+
+         o  Inclination angle            TIROS-N:  102.3 degrees
+                                         NOAA-6:   98.7
+                                         NOAA-7:   98.9
+                                         NOAA-8:   98.8
+                                         NOAA-9:   98.9
+                                         NOAA-10:  98.9
+                                         NOAA-11:  98.9
+                                         NOAA-12:  98.7
+
+         o  Nodal period                 TIROS-N:  101.90 minutes
+                                         NOAA-6:   101.12
+                                         NOAA-7:   101.95
+                                         NOAA-8:   101.29
+                                         NOAA-9:   102.09
+                                         NOAA-10:  102.13
+                                         NOAA-11:  102.10
+                                         NOAA-12:  101.34
+
+         o  Equator crossing times
+            (ascending)*:
+
+              Afternoon orbit            TIROS-N:  1500
+                                         NOAA-7:   1431
+                                         NOAA-9:   1420
+                                         NOAA-11:  1340
+                                                          
+              Morning orbit              NOAA-6:   0730
+                                         NOAA-8:   0730
+                                         NOAA-10:  0730
+                                         NOAA-12:  0730
+
+ *Local mean solar time
+
+Instrument Parameters for HIRS/2 are:
+
+     o  Calibration                         Stable black-bodies (2)
+                                            and space background
+     o  Cross-track scan angle (degrees
+        from nadir)                          +/-   49.5
+     o  Scan time (seconds)                         6.4
+     o  Number of steps                            56
+     o  Angular FOV (degrees)                       1.25
+     o  Step angle (degrees)                        1.8
+     o  Step time (seconds)                         0.1
+     o  Ground IFOV at nadir
+        (km diameter)                              17.4
+     o  Ground IFOV at end of scan                 58.5  km cross-track
+                                                 x 29.9  km along-track
+     o  Distance between IFOV centers
+        (km along-track)                           42.0
+     o  Swath width                          +/- 1120    km
+     o  Data rate (bits per second)              2880
+     o  Data precision (bits)                      13
+     o  Time between start of each scan line        6.4  sec
+     o  Step and dwell time                         0.1  sec
+     o  Time*                                       0.5  sec
+
+*Time - the difference between the start of each scan and the center of the
+        first dwell period.
+
+
+4.3  Instrument Description and Data Characteristics.  The HIRS/2
+instrument measures incident radiation primarily in the infrared region of
+the spectrum including both longwave and shortwave regions. The central
+wave number for each of 20 HIRS/2  channel is given below:
+
+                           Central*
+        Channel          Wave Number (/cm)           Description
+        -------         -------------------      --------------------
+           1                  668.00          15 micrometer CO2 band
+           2                  679.23                      "
+           3                  691.12                      "
+           4                  703.56                      "
+           5                  716.05                      "
+           6                  732.38                      "
+           7                  748.27                      "
+           8                  897.71                    Window
+           9                 1027.87               Ozone-water vapor
+          10                 1217.10                      "
+          11                 1363.69                      "
+          12                 1484.35                    Window
+          13                 2190.43            4.3 micrometer CO2 band
+          14                 2212.65                      "
+          15                 2240.15                      "
+          16                 2276.27                      "
+          17                 2360.63                      "
+          18                 2511.95                      "
+          19                 2671.18                    Window
+          20                14367.00               Visible Window
+
+     *: These wave numbers are for TIROS-N.  Central wave numbers for other
+        NOAA satellites (NOAA 6 - 12) are slightly different.
+
+HIRS/2 can be commanded to automatically enter a calibration mode every 256
+seconds.  When the instrument is in the calibration mode, the mirror
+(starting from the beginning of a scan line) rapidly slows to a space view
+and samples all channels for the equivalent time of one complete scan line
+of 56 scan steps.  Next, the mirror is moved to a position where it views a
+cold calibration target, and data are taken for the equivalent of 56 scan
+steps.  The mirror is then stepped to view an internal warm target for
+another 56 scan steps.
+
+Upon completion of the calibration mode, the mirror continues its motion to
+the home position where it begins normal Earth scan.  The total calibration
+sequence is equivalent to three scan lines (no Earth data are obtained
+during this period).  The analog data output from the HIRS/2 sensor is
+digitized on-board the satellite at a rate of 2880 bits per second.  At
+this rate, there are 288 bits per step (step time = 100 milliseconds) which
+includes all 20 channels.  The data are digitized to 13-bits precision.
+
+Table 4.3.1 contains typical values of the HIRS/2 spectral characteristics
+and noise equivalent differential radiance (NEdN's). There will be some
+variations in the parameters from one HIRS/2 instrument to another.
+
+           Table 4.3.1 Typical HIRS/2 Channel Characteristics
+
+               Half-power             Maximum Scene        Specified
+Channel     Bandwidth (cm-1)     Temperature (deg K)        NEdN*
+
+   1                3                     280                 3.00
+   2               10                     265                 0.67
+   3               12                     240                 0.50
+   4               16                     250                 0.31
+   5               16                     265                 0.21
+   6               16                     280                 0.24
+   7               16                     290                 0.20
+   8               35                     330                 0.10
+   9               25                     270                 0.15
+  10               60                     290                 0.16
+  11               40                     275                 0.20
+  12               80                     260                 0.19
+  13               23                     300                 0.006
+  14               23                     290                 0.003
+  15               23                     280                 0.004
+  16               23                     260                 0.002
+  17               23                     280                 0.002
+  18               35                     340                 0.002
+  19              100                     340                 0.001
+  20             1000                     100%A               0.10%A
+
+*NEdN is in units of milliwatts/(m**2)-steradians-cm-1
+
+
+4.4  Measurement Geometry.  The IFOV of the HIRS/2 are stepped across the
+satellite track by use of a rotating mirror.  This cross-track scan,
+combined with the satellite's motion in orbit, will provide coverage of a
+major portion of the Earth's surface.  The width of the cross-track scan is
+99 degrees or 2240 km and consists of 56 steps. The mirror is stepped from
+home position in 55 steps of 1.8 degrees. At the end of the scan (at
+position 56) the mirror rapidly returns to the home position and repeats
+the scanning pattern.  Each scan takes 6.4 seconds to complete (100
+milliseconds per step), and there are 42 km between IFOVs along the
+sub-orbital track.  The optical FOV is 1.25 degrees which gives a ground
+IFOV of 17.4 km diameter at the nadir. At the end of the scan, the ground
+IFOV is 58.5 km cross-track by 29.9 km along-track.
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  As the satellite orbits the Earth,
+data are broadcast continually (direct readout mode) and recorded on-board
+for later playback. The National Environmental Satellite Data and
+Information Service (NESDIS) operates two Command and Data Acquisition
+(CDA) stations, one in Wallops Island, Virginia and one in Gilmore Creek,
+Alaska, to receive both recorded and direct read-out data from the
+satellites. The CDAs send these data to Suitland, Maryland via satellite
+relay.  During three sequential orbits of the Earth (sometimes four), the
+satellite remains out of contact with any of these sites.  To eliminate
+delay in receipt of high priority temperature profile data during this
+period, a data receipt-only station has been established to receive data in
+Lannion, France, by the Centre National d'Etudes Spatiales (CNES).  This
+CDA station acquires recorded TOVS data and transmits them to the Satellite
+Operation Control Center (SOCC) in Suitland, Maryland. Therefore, the
+satellite will be out of contact with the ground for no more than one
+orbital period per day.
+
+A dedicated minicomputer system is used at the NESDIS facility to perform
+the processing function as soon as possible after receipt of the data from
+the receiving stations.  The processing function is set up to perform
+quality checks and calibration computations on the incoming data and to
+attach Earth location and calibration information to the data.  It should
+be noted that in the Level 1b data the calibration is attached to, rather
+than applied to, the data.
+
+The HIRS/2 Level 1b radiance data, together with those for MSU and SSU, are
+further processed to yield another data product, called TOVS Sounding Data
+tape, which contains atmospheric sounding data.  The transformation of
+radiances measured in 27 spectral intervals of the TOVS system (20 HIRS/2,
+4 MSU, 3 SSU) into vertical profiles of atmospheric temperature and water
+vapor is accomplished by the operation of four principal software modules:
+Preprocessor, Atmospheric Radiance, Stratospheric Mapper, and Retrieval.
+The functions of each module are described in the Atmospheric Sounding
+Users Guide (Kidwell, 1991).
+
+5.2  Calibration Techniques/Algorithms.  (Calibration of HIRS/2).  HIRS/2
+thermal channel values (Channels 1-19 can be converted to brightness
+temperatures, and visible data values (HIRS/2 Channel 20) may be converted
+to percent albedo, by the following calibration procedures.
+
+After calibration coefficients have been extracted from the Level 1b tape,
+they must be scaled and normalized.  The scale factors for the coefficients
+from lowest to highest in order are 2**22, 2**30, 2**44, and 2**56.  (The
+0th order term is a constant or in this case the intercept value, and has a
+scale factor of 2**22.  Similarly, the 3rd order term has a scale factor of
+2**56.)  To scale the raw calibration values, they must be divided by their
+respective scale factors.
+
+After the coefficients have been scaled, the raw data (in counts) should be
+normalized or corrected for non-linearity by using the normalization
+coefficients which are supplied with the calibration coefficients.  The
+equation for the normalized count value c(sub i prime) is as follows:
+
+                                           2         3
+               C ' = L    + L    C + L    C  + L    C      (1)
+                i     i,0    i,1      i,2       i,3
+
+where L is the normalization coefficient, C is the raw data in counts,
+subscript i indicates the channel, and the subscript 0, 1, 2, and 3
+indicate the order of the normalization coefficient.  This is a generalized
+equation since the HIRS/2 calibration coefficients do not contain a 3rd
+order normalization coefficient (i.e., drop the L(sub i,3) C**3 term in
+Equation (1)).  When the condition of L(sub i,0) =0, L(sub i,1) = 1, L(sub
+i,2) = 0, and L(sub i,3) = 0 is met, then C(sub i prime) = C(sub i).  This
+means that channel i is linear and no non-linearity correction is
+necessary.  The scaled calibration coefficients and normalized data may now
+be used as described in Item 5.2.1.
+
+Thermal Channel Calibration.  The scaled thermal channel zero order
+coefficients (intercept) are in units of milliwatts/(m**2)-steradian -cm-1;
+the 1st order coefficients (slope) are in units of milliwatts/
+(m**2)-steradians-cm-1 per count, etc.
+
+The radiance measured by the sensor (Channel i) is computed as a function
+of the input data value as follows:
+
+                         2
+            E  = A    C '  +  A    C ' + A            (2)
+             i    i,2  i       i,1  i     i,0
+
+where E(sub "i") is the radiance value, in milliwatts/(m**2)-steradian
+-cm-1; C(sub "i prime") is the normalized count value (computed from
+Equation (1)); A is the calibration coefficient (auto or manual); subscript
+i indicates the channel; and subscripts 0, 1, and 2 indicate the order of
+the calibration coefficients.
+
+For the conversion to "brightness" temperatures for the HIRS/2 data, a band
+correction algorithm must be applied to the results of the inverse of
+Planck's equation.  The inverse of Planck's equation actually produces an
+apparent brightness temperature, T*, which is corrected using the following
+equation:
+
+                 T* - b
+           T = -----------          (3)
+                   c
+
+where T is the corrected brightness temperature, and b and c are the band
+correction coefficients.
+
+Visible Channel Calibration.  The scaled visible channel calibration values
+are in units of percent albedo for the zero order term (intercept), percent
+albedo/count for the 1st order term (slope), etc.  The only visible channel
+for HIRS/2 is Channel 20.  The equation to compute the percent albedo, B,
+is as follows:
+
+                              2           ,
+                B = A     C  '  + A    C    + A          (4)
+                     20,2  20      20,1 20     20,0
+
+where A is the calibration coefficient (auto or manual), C(sub 20 prime) is
+the normalized count value for Channel 20, subscript 20 indicates Channel
+20, and subscripts 0, 1, and 2 indicate the order of the calibration
+coefficients.  At this time, the second order term (A sub 20,2 C sub
+20'**2) in Equation (4) can be dropped since A(sub 20,2) is usually 0.
+
+5.3  Special Corrections/Adjustments.  None.
+
+
+5.4  Processing Changes.  Two additional instrument packages were added to
+the payload of the NOAA satellites:  an operational Solar Backscatter
+Ultraviolet Radiometer (SBUV/2) and an Earth Radiation Budget Experiment
+(ERBE) on NOAA-9 and -10.  For these special instruments, the spare word
+locations of the low bit rate data system of TIROS Information Processor
+(TIP) were used.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  Quality assessment information is
+appended to each scan line of TOVS HIRS/2 data.  Sixty-four bytes of the
+minor frame quality field contain data quality information for each of the
+64 minor frames making up a scan line, such as missing data, dwell data,
+Data Acquisition Control System (DACS) quality errors, mirror position
+error, and slew indicator.
+
+Satellite retrieved temperature and moisture profiles are often evaluated
+by comparing them with coincident, colocated radiosonde soundings.
+
+6.2  Confidence Level/Accuracy Judgment.  According to a study based on a
+comparison of TIROS-N and NOAA-6 temperature retrievals with radiosonde
+soundings, the largest root mean square (RMS) differences between matched
+pairs of radiosonde and satellite derived layer mean temperatures occur in
+the layers near the Earth's surface and tropopause region, with the clear
+retrievals giving the smallest RMS differences and cloudy retrievals
+producing the largest.
+
+Accuracy goals of TOVS sounding parameters are given below:
+
+              Parameters              Accuracy Goals
+              ----------              --------------
+        Layer mean temperatures    SFC - 850 mb: +/- 2.5 deg K
+                                   850 - Tropopause: +/- 2.25 deg K
+                                   Trop.-2 mb: +/- 3 deg K
+                                   2 - 4 mb: +/- 3.5 deg K
+
+        Precipitable water(mm)     +/- 30%
+
+        Tropopause pressure (mb)   P: +/- 50mb
+        and Temperature            T: +/- 2.5 deg K
+
+        Total ozone                Tropical: +/- 15%
+                                   Polar: +/- 50%
+
+        Cloud cover                +/- 20%
+
+        Equivalent blackbody       +/- 2 deg K
+        temperature
+
+
+6.3  Usage Guidance.  HIRS/2 Level 1b data, together with MSU and SSU data,
+are used to derive vertical profiles of temperatures and atmospheric
+moisture.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+7.1  Archiver
+
+      Ms. Kay Metcalf
+      NOAA/NESDIS/NCDC
+      Satellite Data Services Division
+      Room 100, Princeton Executive Square
+      Washington, D.C.  20233
+      (301) 763-8400
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products.
+
+8.1.1  TOVS HIRS/2 Level-1b Sounding Data Product
+
+       Medium/Specification:  Data can be delivered to meet user
+       requirements on 1600 or 6250-bpi computer tapes.  These products
+       contain raw data with Earth location information and calibration
+       included.
+
+       Format and Content:  The data set format for full data set copies
+       (all channels) is different from the format for selective extract
+       subsets (selected channels).  Each HIRS/2 data set normally contains
+       an individual satellite recorder playback in chronological order.
+       Each record of HIRS/2 data contains the data for one HIRS/2 scan.
+       Each record is written in binary and contains 4256 bytes in the
+       following format:
+
+                             # of Bytes
+             Byte #           in Field     Content
+
+             1-   2              2         Scan Line
+             3-   8              6         Time Code
+             9-  12              4         Scan Quality Indicators
+            13-  16              4         Earth Location Delta
+            17- 736            720         Calibration Coefficients
+           737- 740              4         Height and Local Zenith Angles
+           741- 964            224         Earth Location
+           965-3780           2816         HIRS/2 Data
+          3781-3844             64         Minor Frame Quality
+          3845-4256            412         Spare
+
+       When channels are selected for HIRS/2 data (selective extract
+       subset), the data for a full copy are formatted as described above,
+       except that the format of the HIRS/2 channel data changes.
+
+       Data Quantity/Rate:  One 1600 (6250) bpi tape will contain 981
+       (3194) minutes of HIRS/2 data for all channels.  For selective
+       extracted subsets, data volume for each magnetic tape depends on the
+       number of channels desired.
+
+       Status:  These products are available from NESDIS/SDSD.
+
+       Plans/Schedule:  The plan is to continue the current operational
+       system and make data available to the public.
+
+8.1.2  TOVS Sounding Data Product; Level 2
+      
+       Medium/Specification:  9 track, 1600- or 6250-bpi magnetic tape.
+
+       Format and Content:  Individual soundings stored on tape are
+       formatted according to NMC/NESDIS data set format.  Each tape
+       contains a data directory found at the beginning of the tape which
+       will describe the contents of the tape.  The data directory acts as
+       a housekeeping file and consists of two parts: 1) an element
+       containing directory information, and 2) the elements related to the
+       data on the tape.  The purpose of the NESDIS archive housekeeping
+       file is to aid users in determining the location of time-
+       categorized, satellite-derived soundings on the tape.  The TOVS
+       sounding product tape has a logical record length of 280 bytes and a
+       block size of 6440 bytes.  The housekeeping file has a variable
+       length block size, ranging from a minimum of 280 bytes to a maximum
+       of 3080 bytes.  The end of each group of time-categorized soundings
+       is indicated by an end of file (EOF). A double EOF marks the end of
+       data on tape.
+
+       The TOVS sounding data tape contains clear radiance (radiance
+       corrected for cloud effects and angle of view), estimate of water
+       vapor (converted to precipitable water), mean layer temperature,
+       tropopause height, temperature, geopotential thickness of selected
+       atmospheric layers, total ozone, cloud cover, and equivalent
+       blackbody temperatures for 20 HIRS/2, 4 MSU and 3 SSU channels.
+
+       Data Quantity/Rate:  NESDIS has the capability of producing a
+       maximum of 20,000 soundings every 24 hours from two operational
+       spacecrafts.  Typically, they produce 7,000 to 8,000 soundings per
+       satellite per day.  These soundings are provided to SDSD on a weekly
+       basis.  The data volume required for the TOVS sounding product for
+       one week for one satellite is approximately 20 megabytes (half of a
+       9-track, 1600-bpi tape).
+
+       Status:  Available from Satellite Data Services Division (SDSD).
+
+       Plans/Schedule:  The plan is to continue the current operational
+       system and make data available to the public.
+
+8.2  Film Products.  None.
+
+8.3  Other Products.  None. 
+
+                           
+9.  DATA ACCESS
+
+9.1  Archive Identification
+
+9.1.1  Ms. Kay Metcalf
+       NOAA/NESDIS/NCDC
+       Satellite Data Services Division
+       Room 100, Princeton Executive Square
+       Washington, DC  20233
+       (301) 763-8400
+
+9.1.2  Goddard DAAC User Support Office
+       NASA/Goddard Space Flight Center
+       Code 935
+       Greenbelt, Maryland  20771
+       (301) 286-3209
+       FTS:  888-3209
+       INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+       NSI DECnet:  NSSDCA::NCDSUSO
+
+9.2  Procedures for Obtaining Data.  Data requests may be made by visit,
+telephone call, or written request to SDSD.  Prepayment is required.
+Identification of specific data requires consultation with SDSD staff. The
+custom nature of most requests make it impossible to publish fixed prices
+for data.
+
+9.3  NCDS Status/Plans.  NCDS supports selected temporal and spatial
+subsets of TOVS HIRS/2 for Phase I and II of the First ISCCP Regional
+Experiment (FIRE) project.
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+10.1  Ms. Kay Metcalf
+      NOAA/NESDIS/NCDC
+      Satellite Data Services Division
+      Princeton Executive Square
+      Washington, DC  20233
+      (301) 763-8400
+
+10.2  Goddard DAAC User Support Office
+      NASA/Goddard Space Flight Center
+      Code 935
+      Greenbelt, Maryland  20771
+      (301) 286-3209 
+      FTS:  888-3209
+      INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+      NSI DECnet:  NSSDCA::NCDSUSO
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      a.  Hussey, J.W., 1977. "The TIROS-N NOAA Operational Satellite
+          System."  U.S. Department of Commerce, NOAA/NESS.
+
+      b.  Kidwell, K., 1991. "NOAA Polar Orbiter Data Users Guide,"
+          NCDC/SDSD.  (Updated from original 1984 edition)
+
+      c.  Lauritson, et al., 1979. "Data Extraction and Calibration of
+          TIROS-N/NOAA Radiometers."  NOAA Technical Memorandum NESS 107,
+          U.S. Department of Commerce, NOAA/NESS.
+
+      d.  Werbowetzki, A., 1981. "Atmospheric Sounding Users Guide," NOAA
+          Technical Report NESS 83, U.S. Department of Commerce, NOAA/NESS.
+
+11.2  Journal Articles and Study Reports.
+
+      a.  Brodrick, H., C. Watkins, and A. Gruber, 1981. "Statistical and
+          Synoptic Evaluations of TIROS-N and NOAA-6 Retrievals," NOAA
+          Technical Report NESS 86, U.S. Department of Commerce, NOAA/NESS.
+
+      b.  Crosby, D.S., 1980.  "The Independent Information on Atmospheric
+          Ozone in the 9.6 um channel of TIROS-N."  Proc. Quadrenn. Int.
+          Ozone Symp. 14:414-417.
+      
+      c.  Lienesch, J.H., 1988.  "Evaluation of an Improved Set of
+          Predictors for Derivation of Total Ozone from TOVS Measurements."
+          J. Atmos. Oceanic. Technol. 5:625-630.
+
+      d.  Lefevre, F., et al., 1991.  "Total Ozone from the TIROS
+          Operational Vertical Sounder During the Formation of the 1987
+          'Ozone Hole'."  Jour. Geophys. Res. 96:12,893-12,911.
+
+      e.  McMillin, L.M., D.G. Gray, H.F. Drahos, M.W. Chalfant, and C.S.
+          Novak, 1983. "Improvements in the Accuracy of Operational
+          Satellite Soundings,"  J. Clim. Appl. Meteorol., 22:1948-1955.
+
+      f.  Muller, S., and F.R. Cayla, 1983.  "Total Ozone Measurements
+          Derived from TOVS Radiances."  Planet. Space Sci. 31:779-785.
+
+      g.  Phillips, N.A., L.M. McMillin, D. Wark, and A. Gruber, 1979. "An
+          Evaluation of Early Operational Temperature Sounding from
+          TIROS-N," Bull. Am. Meteorol. Soc., 60: 1188-1197.
+
+      h.  Planet, W.G., D.S. Crosby, J.H. Lienesch, and M.L. Hill, 1984.
+          "Determination of Total Ozone Amount from TIROS Radiance
+          Measurements."  J. Clim. Appl. Meteorol. 23:308-316.
+
+      i.  Smith, W.L., H.M. Woolf, C.M. Hayden, D.Q. Wark, and L.M.
+          McMillin, 1979. "The TIROS-N Operational Vertical Sounder," Bull.
+          Am. Meteorol. Soc., 60: 1177-1187.
+
+      j.  Weinreb, M.P., and D.S. Crosby, 1972. "Optimization of Spectral
+          Intervals for Remote Sensing of Atmospheric Temperature
+          Profiles," Remote Sensing Environ.,2:193-201.
+
+      k.  Wu, M-L.C., and L.A. Chang, 1991.  "Differences in Global Data
+          Sets of Atmospheric and Surface Parameters and Their Impact on
+          Outgoing Longwave Radiation and Surface Downward Flux
+          Calculations."  J. Geophys. Res., 96:9227-9262.
+
+11.3  Archive/DBMS Usage Documentation
+
+       a.  Kidwell, K., July 1991. "NOAA Polar Orbiter Data Users Guide,"
+           NCDC/SDSD.
+
+
+12.  RELATED DATA SETS
+
+     1)  Information about two other TOVS instruments, the Microwave
+         Sounding Unit (MSU) and the Stratospheric Sounding Unit (SSU), can
+         be accessed through NCDS.  To access this information, specify the
+         following data sets within the search criteria of the Data Access
+         subsystem of the NCDS:
+
+         TOVSMSU  (TOVS Microwave Sounding Unit)
+         TOVSSSU  (TOVS Stratospheric Sounding Unit)
+
+     2)  The Susskind TOVS data sets contain Level III geo-located
+         geophysical data derived from the High Resolution Infrared
+         Radiation (HIRS/2) and the Microwave Sounding Unit (MSU) sounding
+         data.  These data sets exist online in Common Data Format (CDF).
+         To access these CDFS, specify the following as input within the
+         Data Applications subsystem of the NCDS:
+
+                        NCDS$DATA:SUSSKND-TOVS_MONTH-FIELDS 
+                        NCDS$DATA:SUSSKND-TOVS_MON-TEMP-PROF
+                        NCDS$DATA:SUSSKND-TOVS_MON-H20-PROF
+                     
+
+13.  SUMMARY/SAMPLE
+
+
+14.  NOTES
+
+Additional TOVS HIRS/2 tapes will be archived at NCDS as they become
+available in support of specified science projects; such as, FIRE, Phase
+II.
+
+*92/03/12

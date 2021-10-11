@@ -1,0 +1,71 @@
+	ASHOE/MAESA: Catalog of ER2 Flights
+
+Date		Description	From    To	Aprx	Remarks 
+						Dur'n
+						(hrs)
+940121	TestFlt MASP/FCAS	Ames    Ames	2+	
+940202	D&RTestFlt		Ames    Ames	2+	
+940204	D&RTestFlt->59N		Ames    Ames	8	
+940214	TestFlt 		Ames    Ames	2+	wake enctr
+940218	TestFlt->55N	  	Ames    Ames	8	ClO>240;vortex
+940219	TestFlt			Ames    Ames	2+	wake enctr 
+940314	TestFlt MMS only	Ames    Ames	2+	
+940318	TransitFlt	  	Ames    B Pt	5+	no dip
+940320	FltSth->16N		B Pt	B Pt	2+
+940321	FltSth->2S		B Pt    B Pt	8
+940322	FltSth->6N	  	B Pt    B Pt	5	2 dips
+940327	TransitFlt	  	B Pt    Nadi	7	no dip
+940329	TransitFlt	 	Nadi    Chch	4+	T<-86C;1 dip
+940330	FltSth->68S		Chch    Chch	8
+940403	FltNth->19S		Chch    Chch	8
+940405	FltSth->65S		Chch    Chch	8
+940408	FltSth->68S		Chch    Chch	8
+940413	D&RFltSth->68S		Chch    Chch	8	V/edge 52S
+940415	D&RFltNth->38S		Chch    Chch	3	hydraulics
+940523	FltSth->47S		Chch    Chch	3
+940524	FltSth->68S		Chch    Chch	8
+940528	FltNth->21S		Chch    Chch	8
+940601	FltSth->65S		Chch    Chch	8	bottomdip
+940603	FltSth->67S		Chch    Chch	8 	ClO climbout
+940605	D&RFltSth->68S		Chch    Chch	8	no HIS
+940608	D&RFltSth->45S		Chch    Chch	1	maxalt 47 kft
+940728	FltSth->68S		Chch    Chch	8	PSC
+940730	FltSth->68S		Chch    Chch	8	PSC
+940801	FltNth->19S		Chch    Chch	8	2 dips
+940806	FltSth->68S		Chch    Chch	8	O3 loss 67S
+940808	D&RFltSth->69S		Chch    Chch	8	dehydr dip
+940810	D&RFltSth->67S		Chch    Chch	8
+941003	D&RFltSth->68S		Chch    Chch	8	V/edge 53S
+941005	D&RFltSth->65S		Chch    Chch	8
+941008	FltEofNZ		Chch    Chch	4	Concorde wake
+941010	FltSth->70S		Chch    Chch	8
+941013	FltSth->69S		Chch    Chch	8	HCl=Cly in dip
+941016	FltSth->70S		Chch    Chch	8
+941020	FltSth->64S		Chch    Chch	8
+941022	TransitFlt		Chch    Nadi	7+	dip at 10S
+941024	TransitFlt		Nadi    B Pt	8	dip at 3S
+941026	FltSth->2N		B Pt    B Pt	7	H2O layers in dip
+941029	FltSth->2S		B Pt    B Pt	8	ditto
+941102	TransitFlt		B Pt    Ames	6+	1 dip;headwind
+941104	FltNth->59N		Ames    Ames	8	HCl/Cly < in SH
+
+
+			Supplementary Information
+Approx Positions:	Ames 		(37N,122W)
+			Barber's Point	(21N,158W)
+			Nadi		(18S,177E)
+			Christchurch	(44S,173E)
+
+
+Total Hours:		 	 289.4 
+Total Flights:			  45
+Test Flights:			   7
+Transit Flights:		   6
+Full Payload South from Chch:	  14
+Full Payload North from Chch:	   3
+D&R Payload South from Chch:	   7
+D&R Payload North from Chch:	   1
+Full Payload South from B Pt:	   5
+Full Payload North from Ames:	   1
+Full Payload Concorde Chase:	   1
+

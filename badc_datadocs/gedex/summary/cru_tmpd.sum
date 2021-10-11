@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "CRU_TMPD "
+"SUM_DATA_SET"       "CLIM-RSRCH-U "
+"SUM_DATATYPE"       "TMP-DEV      "
+"ARCHIVE_NAME"       "NCDS         "
+"ARCHIVE_STATUS"     "Available                            "
+"DS_DESCRIPTION"     "Climate Research Unit Gridded Fields "
+"DT_DESCRIPTION"     "Temperature Deviations               "
+"SUM_BEGIN_DATE"     "01-Jan-1854                          "
+"SUM_END_DATE"       "31-Dec-1990                          "
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Global                               "
+"SPATIAL2"           "                                     "
+"SPATIAL3"           "5 X 5 degree                         "
+"SPATIAL4"           "                                     "
+"TEMPORAL1"          "January 1854 - December 1990         "
+"TEMPORAL2"          "                                     "
+"TEMPORAL3"          "Monthly                              "
+"TEMPORAL4"          "                                     "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF)."
+"PRODUCT2"           "One 9-track 6250 bpi tape.                         "
+"PRODUCT3"           "Available on GEDEX CD-ROM       "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"TEMPERATURE"     "Temperature Anomaly"   "Deg C"
+EOF
+
+SOURCES
+"MODEL"           "ANALYSES"
+EOF

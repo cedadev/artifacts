@@ -1,0 +1,340 @@
+<HTML>
+<!-- saved from url=(0047)http://www.met.rdg.ac.uk/radar/doc/galileo.html -->
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>Documentation for 94 GHz Galileo radar data</TITLE>
+  <META CONTENT="text/html; charset=windows-1252" HTTP-EQUIV="Content-Type">
+</HEAD>
+<BODY ALINK="#ffa500" BGCOLOR="#ffffff" LINK="#ff0000" VLINK="#b00000">
+
+<H1><A NAME="top"></A>Chilbolton 94 GHz <I>Galileo</I>
+radar data<BR CLEAR="ALL"></H1>
+
+<H1><IMG SRC="galileo.jpg" WIDTH="288" HEIGHT="270" ALIGN="BOTTOM"
+BORDER="0" NATURALSIZEFLAG="0"></H1>
+
+<P><I>A description of the data obtained from the Galileo radar</I>.<HR ALIGN=LEFT></P>
+
+<H3>Introduction</H3>
+
+<P>This dataset consists of effective radar reflectivity factor
+(<I>Z</I>) measured by the 94 GHz <I>Galileo</I> cloud radar situated
+at Chilbolton, England (51.1445&deg;N, 1.4370&deg;W). The instrument
+is a bistatic system that operates continuously round the clock
+in a vertically-pointing configuration. It was developed for the
+European Space Agency by Officine Galileo, the Rutherford Appleton
+Laboratory and the University of Reading. The characteristics
+of the radar are as follows:</P>
+
+<PRE>_________________________________________________
+
+Frequency:                              94.00 GHz
+Antenna diameter:                       0.6 m
+Peak power:                             1.6 kW
+Pulse width:                            0.5 &micro;s
+Pulse repetition frequency (PRF):       6250 Hz
+System noise figure:                    10 dB
+Beamwidth:                              0.5&deg;
+Range resolution:                       60 m
+Noise-equivalent reflectivity at 1 km:  -36 dB</I>Z</I>
+_________________________________________________</PRE>
+
+<H3>History of operations</H3>
+
+<P>The radar was initially operated in summer 1996 for a few months,
+but a problem with sensitivity was found. This was rectified when
+the radar was Dopplerised, and from September 1999 until February
+1999 the instrument was operated from the `Receive cabin' at Chilbolton.
+It was then mounted on the side of the main 25 m antenna to permit
+scanning with the 3 GHz radar, although did not operate round
+the clock until the end of April 1999. In 17 October 2000 it was
+removed from the side of the main dish to solve the problem of
+gaps in the data whenever the 25 m antenna was scanning through
+precipitation. The data described here are from 1 May 1999 until
+17 October 2000. Doppler velocities measured during this time
+were unreliable and so have not been included in the dataset.</P>
+
+<H3>Processing that has been applied to the data</H3>
+
+<P>The following stages of processing have been applied to the
+raw data (in this order):</P>
+
+<UL>
+  <LI>True linear averaging of the original 1-s data to 30 s.
+  <LI>Rejection of rays recorded when the radar was pointing more
+  than 5&deg; from zenith (i.e. when the 3 GHz CAMRa radar on to
+  which the 94 GHz radar was attached was scanning through precipitation).
+  <LI>Rejection of `glitched' rays when the data acquisition system
+  got out of sync with the transmitter.
+  <LI>Calculation of the noise level by looking at the assumed
+  cloud-free gates between 13 and 14.5 km. This is stored in the
+  <TT>nez</TT> variable.
+  <LI>Subtraction of the noise component from the measured echo
+  power, and thresholding of the resulting signal.
+  <LI>Clean-up of speckle noise by rejecting cloudy pixels or pairs
+  of cloudy pixels with cloud-free pixels above and below them.
+  <LI>Range correction of the data to account for the inverse square
+  law and any range offset.
+  <LI>Application of calibration figure (to both <TT>Zh</TT> and
+  <TT>nez</TT>).
+</UL>
+
+<P>The result, valid for data taken between 1 May 1999 and 17
+October 2000, is that the minimum-detectable signal is around
+-52 dB<I>Z</I> at 1 km and -32 dB<I>Z</I> at 10 km. The `<TT>chil2nc</TT>'
+program was used to process the data and convert it to NetCDF;
+source code for the latest version may be downloaded from <A 
+HREF="http://www.met.rdg.ac.uk/radar/software.html">http://www.met.rdg.ac.uk/radar/software.html</A>.</P>
+
+<H3>Data format</H3>
+
+<P>The data is provided as daily <A HREF="http://www.unidata.ucar.edu/packages/netcdf/">NetCDF</A>
+files containing the following variables:</P>
+
+<UL>
+  <DL>
+    <DT><TT>frequency</TT>
+    <DD>The frequency of the radar in GHz (94.00).
+    <DT><TT>latitude</TT>
+    <DD>The latitude of Chilbolton in degrees north (51.1445).
+    <DT><TT>longitude</TT>
+    <DD>The longitude of Chilbolton in degrees east (-1.4370).
+    <DT><TT>altitude</TT>
+    <DD>The altitude of the radar antenna above mean sea level in
+    metres (90 m when the radar was on the side of the main CAMRa
+    dish).
+    <DT><TT>time</TT>
+    <DD>A vector containing the centred time of each ray of data,
+    in decimal hours UTC.
+    <DT><TT>range</TT>
+    <DD>A vector containing the centred range from the antenna, in
+    km, of each range gate. Note that to get height above mean sea
+    level you should add the <TT>altitude</TT> to this value.
+    <DT><TT>nez</TT>
+    <DD>A vector containing the noise-equivalent radar reflectivity
+    factor at 1 km, in dB<I>Z</I>, calculated for each ray using
+    gates between 13 and 14.5 km, which are assumed to be cloud free.
+    This parameter can vary by as much as 2 dB when low clouds pass
+    overhead because of the change in sky brightness temperature
+    at 94 GHz.
+    <DT><TT>Zh</TT>
+    <DD>An array containing effective radar reflectivity factor,
+    in dB<I>Z</I>. A value of -999 dB<I>Z</I> indicates that no signal
+    was detected.
+  </DL>
+</UL>
+
+<P>The following global attributes are also present:</P>
+
+<UL>
+  <DL>
+    <DT><TT>system</TT>
+    <DD>A string identifying the instrument that took the data, in
+    this case `Galileo'.
+    <DT><TT>scantype</TT>
+    <DD>A string identifying the type of scan that the radar was
+    performing, in this case `Fixed'.
+    <DT><TT>day</TT>
+    <DD>The day of the month as a short (two-byte) integer.
+    <DT><TT>month</TT>
+    <DD>The month as a short integer.
+    <DT><TT>year</TT>
+    <DD>The year as a short integer.
+    <DT><TT>file</TT>
+    <DD>The `tape' number of the original Chilbolton-format radar
+    data file from which the data in this NetCDF file was obtained,
+    as a short integer. Where a day of data spans more than one such
+    file, the tape number of the first is given.
+    <DT><TT>raster</TT>
+    <DD>The number of the first raster of the first Chilbolton-format
+    data file that was used in producing this data, as a short integer.
+    Chilbolton-format radar files are divided into rasters which,
+    in the case of cloud radar data, are usually one hour long.
+    <DT><TT>options</TT>
+    <DD>A string containing the command-line options that were used
+    with the <TT>chil2nc</TT> program to produce the data. This is
+    useful to see what processing has been done, such as the calibration
+    figure that has been applied in dB (the <TT>-Zcal</TT> switch).
+    <DT><TT>software_version</TT>
+    <DD>The version of <TT>chil2nc</TT> that was used to produce
+    the data. This field was not implemented in versions of <TT>chil2nc</TT>
+    earlier than around 0.7.6.
+  </DL>
+</UL>
+
+<P>Simple programs to read NetCDF files of Chilbolton data into
+Matlab, IDL and PV-WAVE can be found at <A HREF="http://www.met.rdg.ac.uk/radar/software.html">http://www.met.rdg.ac.uk/radar/software.html</A>.</P>
+
+<H3>Interpretation of radar reflectivity factor and calibration
+issues</H3>
+
+<P>It is taken for granted that if quantitative use is to be made
+of the <I>Z</I> values then the user has a fairly good understanding
+of the concept of radar reflectivity and how it is related to
+the particle size distribution. In this section therefore we concentrate
+on calibration issues, although the problem of attenuation at
+94 GHz is also discussed since it is much stronger than at lower
+frequencies.</P>
+
+<P>Our approach to calibration of the 94 GHz radar is by reference
+to the 3 GHz `CAMRa' radar at Chilbolton. CAMRa can be calibrated
+absolutely by exploiting the non-independence of the radar parameters
+<I>Z</I>, <I>Z</I><SUB>DR</SUB> and <I>K</I><SUB>DP</SUB> in heavy
+rain, as described by Goddard et al. (1994). However, to compare
+the two radars directly requires a Rayleigh-scattering target
+which is both near enough for attenuation to be small at 94 GHz,
+yet far enough that near-field and ground-clutter effects are
+small at 3 GHz. This is actually very difficult, but until early
+1999 the 35 GHz <I>Rabelais</I> radar (on loan from the University
+of Toulouse) was available to bridge the gap. Calibration was
+performed both during and shortly after the CLARE'98 experiment
+that took place at Chilbolton in October 1998. The <I>Rabelais</I>
+was calibrated by comparison with CAMRa during scans through light
+rain, and then <I>Galileo</I> was calibrated from <I>Rabelais</I>
+by comparing vertical profiles through low liquid water cloud.
+The result was that the <I>Galileo</I> noise-equivalent reflectivity
+factor (<TT>nez</TT>) at 1 km was found to be -36&plusmn;1.5 dB<I>Z</I>.
+This value should be independent of the data acquisition system,
+the length of the cables etc., so we have used it as a benchmark
+to calibrate the instrument in all recording modes, including
+in this dataset. However, it does not account for any degredation
+of the sensitivity in the two years following calibration.</P>
+
+<P>It is important to understand the convention used in the intercalibration
+of radars of different frequencies because of the temperature
+dependence of the |<I>K</I>|<SUP>2</SUP> parameter of liquid water
+at millimetre wavelengths. We have calibrated our radars such
+that Rayleigh-scattering liquid water droplets at 0&deg;C produce
+the same reflectivity factor at all frequencies. For example,
+a population of 100&micro;m droplets with a concentration of 10<SUP>6</SUP>
+m<SUP>-3</SUP> at 0&deg;C would have a <I>Z</I> of 0 dB<I>Z</I>
+at all frequencies. Hence a radar at frequency <I>f</I> (after
+calibration and correction for attenuation) will report an effective
+reflectivity given by</P>
+
+<BLOCKQUOTE>
+  <P><I>Z<SUB>f</SUB></I> = <FONT COLOR="#0000ff">Integral from
+  <I>D</I>=0 to <I>D</I>=infinity {</FONT> (|<I>K<SUB>f</SUB></I>|<SUP>2</SUP>/|<I>K<SUB>f,0</SUB></I>|<SUP>2</SUP>)
+  <I>n</I>(<I>D</I>) <I>D</I><SUP>6</SUP> <I>M<SUB>f</I></SUB>(<I>D</I>)
+  d<I>D</I> <FONT COLOR="#0000ff">}</FONT>,</P></BLOCKQUOTE>
+
+<P>where <I>M<SUB>f</I></SUB> is the Mie/Rayleigh backscatter
+ratio. |<I>K<SUB>f,0</SUB></I>|<SUP>2</SUP> is the dielectric
+parameter of liquid water at 0&deg;C, and is 0.93 at 3 GHz, 0.877
+at 35 GHz and 0.668 at 94 GHz. Because the |<I>K<SUB>f</SUB></I>|<SUP>2</SUP>
+of liquid water varies with temperature at 94 GHz, if the example
+above were repeated at 20&deg;C, a 94 GHz radar using this calibration
+convention would report a <I>Z</I> of +0.82 dB<I>Z</I> while a
+3 GHz radar would still report 0 dB<I>Z</I>. Formulae for the
+dielectric constants of ice and liquid water can be found in Liebe
+et al. 1989.</P>
+
+<P>Attenuation by both atmospheric gases and liquid water is much
+stronger at 94 GHz than at lower frequencies. At 10&deg;C, 1013
+mb and 100% humidity, the one-way attenuation due to gaseous attenuation
+at 94 GHz is 0.636 dB km<SUP>-1</SUP>. In summer the typical two-way
+gaseous attenuation to top-of-atmosphere is 2 dB. If the temperature
+and humidity profile is know with some degree of accuracy (such
+as from a model or a radiosonde ascent) then gaseous attenuation
+can be corrected for. However, when low clouds are present then
+the liquid water attenuation can easily exceed the gaseous attenuation,
+and of course the profile of cloud liquid water content is generally
+far more uncertain. This makes quantative use of the reflectivity
+data in ice difficult if there is any low cloud present. At 10&deg;C
+and 1013 mb, the one-way attenuation of 1 g m<SUP>-3</SUP> of
+liquid water is 4.34 dB km<SUP>-1</SUP>. Attenuation by rainfall
+is even greater, and in moderate and heavy rain can extinguish
+the signal completely.</P>
+
+<H3>Known problems with the data</H3>
+
+<OL>
+  <LI>Gaps in the data are present due to:
+  <UL>
+    <LI>The CAMRa radar (to which <I>Galileo</I> was attached from
+    February 1999 to October 2000) scanning through precipitation.
+    Cloud data were not recorded whenever the pointing angle was
+    more than 5&deg; from zenith.
+    <LI>Glitches in the data caused by the data acquisition system
+    losing sync with the transmiter. These events were easy to detect
+    and reject.
+  </UL>
+  <LI>A 50 kHz interference was present in the raw data which,
+  if unchecked, results in anomalous horizontal `lines' of cloud
+  every 3 km in processed time-height plots of reflectivity. This
+  problem has been tackled in the following ways:
+  <UL>
+    <LI>Characterising the shape of the oscillation in the cloud-free
+    gates at the top of each ray, and then using this knowledge when
+    subtracting the noise from the remainder of the ray.
+    <LI>Removing isolated cloudy pixels or pairs of pixels from the
+    processed ray.
+    <LI>Manual removal of any remaining erroneous echos.
+  </UL>
+  <P>Removing this interference has unavoidably compromised the
+  sensitivity to some extent. Also, some anomalous echos may still
+  be present in some of the data, although they are fairly easy
+  to locate subjectively. The removal of pairs of pixels (indicated
+  by the <TT>options</TT> attribute containing the string `<TT>-doubleclean</TT>')
+  obviously will remove any genuine cloud that is only two range
+  gates thick.
+  <LI>The reflectivity values in the lowest gates are affected
+  by:
+  <UL>
+    <LI>Ground clutter and leakage of the transmit pulse into the
+    receiver: this appears as a fairly constant return (in time)
+    in the lowest 6 to 8 gates that falls off rapidly with range.
+    <LI>The near field effect: this appears as decrease in the <I>Z</I>
+    of rain in the lowest 2 or 3 gates. The far-field approximation
+    is generally applicable beyond 2&times;<I>antenna diameter</I><SUP>2</SUP>/<I>wavelength</I>,
+    which for the <I>Galileo</I> radar is 225 m. A slight error in
+    the range calibration could also have contributed to the apparent
+    reduction of <I>Z</I> in the closest few gates.
+    <LI>Insects: although the problem is much less at 94 GHz than
+    35 GHz (due to the fact that insects are usually Mie scatterers),
+    on some hot summer days insects are apparent between dawn and
+    dusk as fairly low <I>Z</I> values up to 3 km. They can be distinguished
+    from cloud using data from the Chilbolton lidar ceilometer. </OL><H3>Conditions
+    of use</H3> If data from the <I>Galileo</I> radar is used in
+    any publication or report then acknowledgement must be given
+    to RCRU at the Rutherford Appleton Laboratory for providing the
+    data. The acknowledgement should be of the form: <BLOCKQUOTE>We
+    thank the Radiocommunications Research Unit at the Rutherford
+    Appleton Laboratory for providing the 94 GHz Galileo radar data.
+    The Galileo radar was developed for the European Space Agency
+    by Officine Galileo, the Rutherford Appleton Laboratory and the
+    University of Reading, under ESTEC Contract No. 10568/NL/NB.</BLOCKQUOTE>
+    <H3>Who to contact</H3> If you have any problems obtaining the
+    data, please contact the British Atmospheric Data Centre. If
+    you have problems, queries or comments regarding the data themselves
+    that are not covered adequately by this document, or would like
+    to know if any data was recorded on specific dates ouside the
+    period available on BADC, please contact Charles Kilburn (<A
+    HREF="mailto:C.Kilburn@rl.ac.uk">C.Kilburn@rl.ac.uk</A>) and
+    Robin Hogan (<A HREF="mailto:R.J.Hogan@reading.ac.uk">R.J.Hogan@rdg.ac.uk</A>).
+    Even if you use the data and have no difficulties at all, we
+    are very interested in knowing the uses to which our cloud radar
+    data is being put, so please contact us! <H3>See also</H3>
+    <UL>
+      <LI><A HREF="http://www.rcru.rl.ac.uk/">The RCRU home page</A>
+      <LI><A HREF="http://www.met.rdg.ac.uk/radar/">The Reading Radar
+      Group home page</A>
+    </UL>
+    <P><H3>References</H3>
+    <UL>
+      <LI>Goddard, J. W. F., J. Tan and M. Thurai, 1994: Technique
+      for calibration of meteorological radars using differential phase.
+      <I>Electronics Letters,</I> <B>30,</B> 166-167.
+      <LI>Liebe, H. J., T. Manabe and G. A. Hufford, 1989: Millimeter-wave
+      attenuation and delay rates due to fog/cloud conditions. <I>IEEE
+      AP,</I> <B>37,</B> 1617-1623.
+    </UL>
+  </UL>
+</OL>
+
+<P>&nbsp;</P>
+
+<P>
+
+</BODY>
+</HTML>

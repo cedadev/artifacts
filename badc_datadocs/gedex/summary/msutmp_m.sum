@@ -1,0 +1,39 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "MSUTMP_M "
+"SUM_DATA_SET"       "MSUTMP   "
+"SUM_DATATYPE"       "MONTHLY  "
+"ARCHIVE_NAME"       "MSUTMP   "
+"ARCHIVE_STATUS"     "Available"
+"DS_DESCRIPTION"     "TOVS Microwave Sounding Unit Temperature Anomaly"
+"DT_DESCRIPTION"     "Low Tropospheric Monthly Anomalies"
+"SUM_BEGIN_DATE"     "01-Jan-1979"
+"SUM_END_DATE"       "01-Mar-1992"
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Global     "
+"SPATIAL2"           " "
+"SPATIAL3"           "2.5x2.5 degree lat-long grid"
+"SPATIAL4"           " "
+"TEMPORAL1"          "January 1979 - March 1992"
+"TEMPORAL2"          " "
+"TEMPORAL3"          "Monthly"
+"TEMPORAL4"          " "
+"PRODUCT1"           "Available online through NCDS in Common Data Format (CDF)    "
+"PRODUCT2"           "Available on the GEDEX CD-ROM. "
+"PRODUCT3"           " "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"TEMPERATURE"     "MSU Temperature"         "Deg C"
+"TEMPERATURE"     "Temperature Anomalies"   "Deg C"
+EOF
+
+SOURCES
+"NOAA-6"   "TOVS-MSU"
+"NOAA-7"   "TOVS-MSU"
+"NOAA-9"   "TOVS-MSU"
+"NOAA-10"  "TOVS-MSU"
+"NOAA-11"  "TOVS-MSU"
+"NOAA-12"  "TOVS-MSU"
+"TIROS-N"  "TOVS-MSU"
+EOF

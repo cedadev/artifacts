@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20080831T230000Z
+DTEND:20080902T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Burlington House, London, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000D03F7F2D3BDEC8010000000000000000100
+ 00000AD28C115537A2445BB77980431B6276F
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:William Smith Meeting of the Geologic=
+al Society - Observations and causes of Sea-Level Change in Decadal Timesca=
+les,=0D=0ABurlington House, London, UK=0D=0ADetails are available at: http:=
+//www.geolsoc.org.uk/gsl/events/listings/page3053.html=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:William Smith Meeting of the Geological S=
+ociety - Observations and causes of Sea-Level Change in Decadal Timescales
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

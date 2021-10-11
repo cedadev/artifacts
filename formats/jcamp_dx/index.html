@@ -1,0 +1,226 @@
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>JCAMP-DX Format - Welcome Page</title>
+</head>
+
+<body bgcolor="#ffffff">
+<h1>JCAMP-DX</h1>
+
+
+
+
+<h3>
+Contents
+</h3>
+<ul>
+<li><a href="#Intro">Introduction</a></li>
+<li><a href="#Prof">Format Profile</a></li>
+<li><a href="#Soft">Software</a></li>
+<li><a href="#Ref">References</a></li>
+
+</ul>
+
+<h3><a name="Intro">Introduction</h3>
+
+<P>&nbsp;</P>
+<P LANG="en-US">BADC comments on the utility of JCAMP-DX</P>
+<UL TYPE=DISC>
+	<LI><P LANG="en-US" STYLE="margin-bottom: 0cm">This format is only
+	suitable for spectra from spectroscopy experiments.&nbsp; 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><SPAN LANG="en-US">Any
+	spectroscopy group producing data is likely to create data files via
+	proprietary software from the spectrometer manufactures. As an
+	internationally accepted format the software will usually have an
+	option to save the data in JCAMP-DX.</SPAN> 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><SPAN LANG="en-US">There are
+	general visualization tools available for the format. It is also
+	relatively easy to write code to read and process the data. If the
+	data usage is within the spectroscopic community this is a good
+	format for users.</SPAN> 
+	</P>
+	<LI><P LANG="en-US" STYLE="margin-bottom: 0cm">Metadata conventions
+	are built into the format. However most information is optional.
+	Recommend reading the standard metadata elements and inserting all
+	possible. It is also possible to encode other producer defined
+	metadata. 
+	</P>
+	<LI><P LANG="en-US">We recommend using the single data block and
+	simple packing because more tools are likely to cope reading the
+	simpler data. 
+	</P>
+</UL>
+
+<h3><a name="Prof">Format Profile</a></h3>
+
+
+<CENTER>
+	<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+		<TR>
+			<TD WIDTH=25% VALIGN=TOP>
+				<P LANG="en-US" ALIGN=CENTER STYLE="border: none; padding: 0cm"><B>Name</B></P>
+			</TD>
+			<TD>
+				<P LANG="en-US" STYLE="border: none; padding: 0cm">JCAMP-DX</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=25% VALIGN=TOP>
+				<P LANG="en-US" ALIGN=CENTER STYLE="border: none; padding: 0cm"><B>Long
+				Name</B></P>
+			</TD>
+			<TD>
+				<P LANG="en-US" STYLE="border: none; padding: 0cm">The joint
+				Committee on Atomic and Molecular Physical data &ndash; Data
+				Exchange format</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD VALIGN=TOP>
+				<P LANG="en-US" ALIGN=CENTER STYLE="border: none; padding: 0cm"><B>Version</B></P>
+			</TD>
+			<TD>
+				<P LANG="en-US" STYLE="border: none; padding: 0cm">Various. (has
+				a long history)</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=25% VALIGN=TOP>
+				<P LANG="en-US" ALIGN=CENTER STYLE="border: none; padding: 0cm"><B>Format
+				Identifiers</B></P>
+			</TD>
+			<TD>
+				<P LANG="en-US" STYLE="border: none; padding: 0cm">PUID: &nbsp;<BR>MIME:
+				&nbsp; <BR>Apple Uniform Type Identifier: &nbsp;</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD VALIGN=TOP>
+				<P LANG="en-US" ALIGN=CENTER STYLE="border: none; padding: 0cm"><B>Description</B></P>
+			</TD>
+			<TD>
+				<P LANG="en-US" STYLE="border: none; padding: 0cm"><FONT SIZE=2>JCAMP-DX
+				is a standard file form for exchange of infrared spectra and
+				related chemical and physical information between spectrometer
+				data systems of different manufacture. All data are stored as
+				labeled fields of variable length using printable ASCII
+				characters. </FONT>
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD VALIGN=TOP>
+				<P LANG="en-US" ALIGN=CENTER STYLE="border: none; padding: 0cm"><B>Byte
+				encoding</B></P>
+			</TD>
+			<TD>
+				<P LANG="en-US" STYLE="border: none; padding: 0cm">ASCII</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=25% VALIGN=TOP>
+				<P LANG="en-US" ALIGN=CENTER STYLE="border: none; padding: 0cm"><B>Developed
+				by</B></P>
+			</TD>
+			<TD>
+				<P LANG="en-US" STYLE="border: none; padding: 0cm">Academic
+				chemistry community</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=25% VALIGN=TOP>
+				<P LANG="en-US" ALIGN=CENTER STYLE="border: none; padding: 0cm"><B>Supported
+				by</B></P>
+			</TD>
+			<TD>
+				<P LANG="en-US" STYLE="border: none; padding: 0cm">Academic
+				chemistry community (see http://www.jcamp-dx.org/)</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=25% VALIGN=TOP>
+				<P LANG="en-US" ALIGN=CENTER STYLE="border: none; padding: 0cm"><B>File
+				extensions</B></P>
+			</TD>
+			<TD>
+				<P LANG="en-US" STYLE="border: none; padding: 0cm">.dx or .jdx</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH=25% VALIGN=TOP>
+				<P LANG="en-US" ALIGN=CENTER STYLE="border: none; padding: 0cm"><B>File
+				signatures</B></P>
+			</TD>
+			<TD>
+				<P LANG="en-US" STYLE="border: none; padding: 0cm">Contains line
+				beginning ##TITLE=</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+
+
+<h3><a name="Soft">Software</a></h3>
+
+<P>&nbsp;</P>
+<P><SPAN LANG="en-US">JspecView is an open Java read and
+visualisation tool (<A HREF="http://wwwchem.uwimona.edu.jm/spectra/JSpecView/">http://wwwchem.uwimona.edu.jm/spectra/JSpecView/</A>)</SPAN></P>
+<P>&nbsp;</P>
+<P><SPAN LANG="en-US">A JCAMP-DX reference implementation is
+available from source forge
+(<A HREF="http://sourceforge.net/projects/jcamp-dx/">http://sourceforge.net/projects/jcamp-dx/</A>).</SPAN></P>
+<P>&nbsp;</P>
+<P LANG="en-US">Proprietary software to acquire data from the
+spectrometer often has the facility to save spectra as JCAMP-DX
+files.</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+
+<h3><a name="Ref">References</a></h3>
+<P><SPAN LANG="en-US"><A HREF="http://www.jcamp-dx.org/">http://www.jcamp-dx.org/</A>
+JCAMP-DX site</SPAN></P>
+<P>&nbsp;</P>
+<P><SPAN LANG="en-US"><I><B>JCAMP-DX: A Standard Form for the
+Exchange of Infrared Spectra in Computer Readable Form</B></I></SPAN>
+<SPAN LANG="en-US"><BR>ROBERT S. McDONALD and PAUL A. WILKS,
+JR.<BR>Appl. Spectrosc. 42(1), pp151-162, 1988 </SPAN>
+</P>
+<P>&nbsp;</P>
+<P><SPAN LANG="en-US"><I><B>JCAMP-CS: A Standard Exchange Format for
+Chemical Structure Information in Computer-Readable Form</B></I></SPAN>
+<SPAN LANG="en-US"><BR>J. GASTEIGER, B.M P. HENDRIKS, P. HOEVER, C.
+JOCHUM and H. SOMBERG<BR>Appl. Spectrosc. 5(1), pp4-11,1991 &nbsp;</SPAN></P>
+<P>&nbsp;</P>
+<P><SPAN LANG="en-US"><I><B>JCAMP-DX for NMR</B></I></SPAN> <SPAN LANG="en-US"><BR>ANTONY
+N. DAVIES and PETER LAMPEN<BR>Appl. Spectrosc. 47(8), pp1093-1099,
+1993</SPAN></P>
+<P>&nbsp;</P>
+<P><SPAN LANG="en-US"><I><B>JCAMP-DX for Mass Spectrometry</B></I></SPAN>
+<SPAN LANG="en-US"><BR>PETER LAMPEN, HEINRICH HILLIG, ANTONY N.
+DAVIES, and MICHAEL LINSCHEID<BR>Appl. Spectrosc. 48(12),
+pp1545-1552, 1994 &nbsp;</SPAN></P>
+<P>&nbsp;</P>
+<P><SPAN LANG="en-US"><I><B>An Extension to the JCAMP-DX Standard
+File Format,</B></I></SPAN> <SPAN LANG="en-US"><I><B>JCAMP-DX V.5.01</B></I></SPAN><SPAN LANG="en-US">
+</SPAN><SPAN LANG="en-US"><I><B><BR>(IUPAC Recommendations 1999)
+</B></I></SPAN><SPAN LANG="en-US"><BR>PETER LAMPEN, J&Ouml;RG
+LAMBERT, ROBERT J. LANCASHIRE, ROBERT S. McDONALD, PETER S. McINTYRE,
+DOUGLAS N. RUTLEDGE, THORSTEN FR&Ouml;HLICH and ANTONY N. DAVIES<BR>Pure
+Appl. Chem., 71(8), pp1549-1556, 1999.</SPAN></P>
+<P>&nbsp;</P>
+<P><SPAN LANG="en-US"><I><B>JCAMP-DX - A Standard Format for the
+Exchange of Ion Mobility Spectrometry Data <BR>(IUPAC Recommendations
+2001)</B></I></SPAN> <SPAN LANG="en-US"><BR>J&Ouml;RG INGO BAUMBACH,
+ANTONY N.DAVIES, PETER LAMPEN, and<BR>HARTWIG SCHMIDT<BR>Pure Appl.
+Chem., 73(11), pp1765&ndash;1782, 2001.</SPAN></P>
+<P>&nbsp;</P>
+<P><SPAN LANG="en-US"><I><B>GUIDELINES FOR THE REPRESENTATION OF
+PULSE SEQUENCES FOR SOLUTION-STATE NUCLEAR MAGNETIC RESONANCE
+SPECTROMETRY<BR>(IUPAC Recommendations 2001) <BR></B></I></SPAN><SPAN LANG="en-US">ANTONY
+N. DAVIES, J&Ouml;RG LAMBERT, ROBERT J.LANCASHIRE, and PETER LAMPEN
+with WOODY CONOVER, MICHAEL FREY, MICHAEL GRZONKA, EVAN WILLIAMS, and
+DOUGLAS MEINHART<BR>Pure Appl. Chem., 73(11) pp1749&ndash;1764, 2001.</SPAN></P>
+</body>
+
+</html>

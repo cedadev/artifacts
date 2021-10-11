@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dataset Labeler</title>
+
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Core
+CSS -->
+    <link rel="stylesheet" href="http://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/4/flatly/bootstrap.css" media="screen">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/_assets/css/custom.min.css">
+    <link rel="stylesheet" href="http://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/_assets/css/org-custom.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+</head>
+
+<body>
+<div class="container">
+    <div class="container alert alert-primary center">
+
+        <a href="https://arrivals.ceda.ac.uk/" class="navbar-brand">
+            <img src="http://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/_assets/img/ceda_archive_logo_transp_white_3_h80.png" alt="CEDA logo">
+        </a>
+
+        <p>Data ingested into the CEDA archive must be acompanied by metadata to allow searching. Fill in the
+            form below to create a metadata file to add to your dataset.</p>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md"><button class="btn btn-lg btn-success btn-block mb-2" onclick="download();">Download metadata file
+            <i class="fas fa-download"></i></button></div>
+    </div>
+
+    <div id="title_help" class="alert alert-primary tog">
+        <h4>Title <i class="fas fa-info-circle"></i></h4>
+        <div>
+            <ul><li>The title should be understandable, brief and simple</li>
+                <li>Acronyms and abbreviations must be explained i.e. Full Name (ACRONYM)</li>
+                <li>The title should describe the data in question, NOT the project/activity which produced it</li>
+                <li>The title should be concise but as informative as possible, providing the reader with an indication of the
+                    content of the data and (where appropriate) its temporal and spatial coverage</li>
+                <li>You might consider a title that answers the “what, where, when” questions about the resource.
+                    For example: “Biogeochemical Ocean Flux Study (BOFS) North Atlantic Data Set (1989-1991)”</li>
+            </ul></div>
+    </div>
+     <textarea id="title" class="form-control mb-2" style="min-width: 100%" rows="4"></textarea>
+
+    <div id="description_help" class="alert alert-primary tog">
+        <h4>Description <i class="fas fa-info-circle"></i></h4>
+        <div><ul><li>should describe the dataset in plain language for a non-expert user (first year undergraduate level)</li>
+            <li>first few sentences should summarise the contents of the resource</li>
+            <li>specialist terms should be explained in full</li>
+            <li>Acronyms and abbreviations must be explained i.e. Full Name (ACRONYM)</li>
+            <li>should describe the dataset in question, NOT the project/activity which produced it.</li></ul>
+
+            <p>Some details of the activities which produced the resource may be pertinent, in which case they should be included.
+                To help organise thinking, it is recommended that the author may like to use the following structure for the summary: </p>
+
+            <ol>
+                <li>What - A description of what has been recorded and what form the data takes.</li>
+                <li>Where - A description of the spatial extent.  This could include, gridded/scattered data; even/very variable coverage</li>
+                <li>When - A description of the temporal coverage (e.g. the period over which data were collected)</li>
+                <li>How - A brief description of methods and instrumentation used</li>
+                <li>Why - For what purpose was the data collected?</li>
+                <li>Who - The party/parties responsible for the collection and interpretation of data.</li>
+                <li>Completeness - Are any data absent from the dataset? Explain which data are included or excluded and why.
+                </li></ol>
+        </div>
+    </div>
+
+    <textarea id="description" class="form-control mb-2" style="min-width: 100%" rows="20">
+
+    </textarea>
+
+    <div id="authors_help" class="alert alert-primary tog">
+        <h4>Authors <i class="fas fa-info-circle"></i></h4>
+        <div>
+            <p>A list of authors. Organisations can be specified using a lastname only.</p>
+        </div>
+    </div>
+
+    <div id="authors">
+
+        <div class="row template  mb-1" style="display: none">
+            <div class="col-sm"><input class="form-control" type="text"/></div>
+            <div class="col-sm"><input class="form-control" type="text"/></div>
+        </div>
+        <div class="row">
+            <div class="col-sm">Firstname</div>
+            <div class="col-sm">Surname</div>
+        </div>
+    </div>
+    <button class="form-control mb-2 btn btn-secondary" onclick="add_row('authors');">Add an author</button>
+
+
+    <div id="coverage_help" class="alert alert-primary tog">
+        <h4>Coverage <i class="fas fa-info-circle"></i></h4>
+        <div><p>Where is the data? Lat long bounding box.</p>
+        </div>
+    </div>
+
+   <div id="coverage" class="mb-2">
+
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-1"><input id="north" class="form-control" type="text"/>North</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1">West<input id="west" class="form-control" type="text"/></div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1"><input id="east" class="form-control" type="text"/>East</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-1"><input id="south" class="form-control" type="text"/>South</div>
+        </div>
+
+    </div>
+
+
+    <div id="time_range_help" class="alert alert-primary tog">
+        <h4>Temporal range <i class="fas fa-info-circle"></i></h4>
+        <div>
+            <p>Whats the time range that the data covers. YYYY-MM-DD.</p>
+        </div>
+    </div>
+
+       <div id="time_range" class="mb-2">
+
+        <div class="row">
+            <div class="col-sm-2 text-right">Start date</div>
+            <div class="col-sm-2"><input id="start" class="form-control" type="text"/></div>
+            <div class="col-sm-1 text-center"><i class="fas fa-arrow-right"></i></div>
+            <div class="col-sm-2"><input id="end" class="form-control" type="text"/> </div>
+            <div class="col-sm-1">End date</div>
+        </div>
+
+    </div>
+
+
+    <div id="lineage_help" class="alert alert-primary tog">
+        <h4>Lineage <i class="fas fa-info-circle"></i></h4>
+        <div>
+
+        <ul>
+            <li>should describe how the data resource came into existence.</li>
+            <li>should describe the stages the resource has passed through before arriving at the data centre (to the best of the metadata authors knowledge).</li>
+        </ul>
+            </div>
+    </div>
+     <textarea id="lineage" class="form-control mb-2" style="min-width: 100%" rows="4"></textarea>
+
+
+    <div id="quality_help" class="alert alert-primary tog">
+        <h4>Quality statment <i class="fas fa-info-circle"></i></h4>
+        <div>
+            <p>Any quality standards that were used in the collection of this data.</p>
+        </div>
+    </div>
+     <textarea id="quality" class="form-control mb-2" style="min-width: 100%" rows="4"></textarea>
+
+
+    <div id="docs_help" class="alert alert-primary tog">
+            <h4>Relevent online documentation sources <i class="fas fa-info-circle"></i></h4>
+            <div>
+                Any documentation.
+            </div>
+    </div>
+
+
+
+    <div id="docs">
+
+        <div class="row template mb-2" style="display: none">
+            <div class="col-lg"><input class="form-control" type="text"/></div>
+            <div class="col-md"><input class="form-control" type="text"/></div>
+        </div>
+        <div class="row">
+            <div class="col-sm">Title</div>
+            <div class="col-sm">url</div>
+        </div>
+    </div>
+    <button class="form-control mb-2 btn btn-secondary" onclick="add_row('docs');">Add a document</button>
+
+
+    <div id="project_help" class="alert alert-primary tog">
+        <h4>Project description <i class="fas fa-info-circle"></i></h4>
+        <div>The title should include an acronym if possible. This could include: what the project is about,
+            project aims and objectives, why the research is important, when did the project start/end etc.
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-sm-12">Catalogue URL - Is this project already recorded in the
+        <a href="http://catalogue.ceda.ac.uk/?q=&sort_by=relevance&record_types=Project">catalogue</a>? </div>
+        <div class="col-sm-12"><input id="project_cat_url" class="form-control" type="text"/> </div>
+    </div>
+    Project title
+    <textarea id="project_title" class="form-control mb-2" style="min-width: 100%" rows="4"></textarea>
+    Project description
+    <textarea id="project_description" class="form-control mb-2" style="min-width: 100%" rows="10"></textarea>
+        <div class="row">
+            <div class="col-sm">PI firstname <input id="project_pi_firstname" class="form-control" type="text"/></div>
+            <div class="col-sm">surname<input id="project_pi_surname" class="form-control" type="text"/></div>
+        </div>
+    <div class="row mb-2">
+        <div class="col-sm-12">Funder</div>
+        <div class="col-sm-12"><input id="funder" class="form-control" type="text"/> </div>
+    </div>
+    <div class="row mb-2">
+        <div class="col-sm-12">Grant number</div>
+        <div class="col-sm-12"><input id="grant_number" class="form-control" type="text"/> </div>
+    </div>
+    
+
+    <div id="instrument_help" class="alert alert-primary tog">
+        <h4>Instruments <i class="fas fa-info-circle"></i></h4>
+        <div>Instrument used to gather the data.
+        If your data is collected via an instrument, please check the
+            <a href="http://catalogue.ceda.ac.uk/?q=&sort_by=relevance&record_types=Instrument">catalogue</a>
+            to see if there is already a record.
+            </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-sm-12">Catalogue URL - Is this instrument already recorded in the
+        <a href="http://catalogue.ceda.ac.uk/?q=&sort_by=relevance&record_types=Instrument">catalogue</a>? </div>
+        <div class="col-sm-12"><input id="instrument_cat_url" class="form-control" type="text"/> </div>
+    </div>
+    Instrument title
+    <textarea id="instrument_title" class="form-control mb-2" style="min-width: 100%" rows="4"></textarea>
+    Instrument description
+    <textarea id="instrument_description" class="form-control mb-2" style="min-width: 100%" rows="10"></textarea>
+
+
+    <div id="comp_help" class="alert alert-primary tog">
+        <h4>Computation <i class="fas fa-info-circle"></i></h4>
+
+        <div>
+            If the data is the result of a computer model then description of model used. If you can find a record
+            already in the
+            <a href="http://catalogue.ceda.ac.uk/?q=&sort_by=relevance&record_types=Instrument">catalogue</a> then we
+            can link your data to that.
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="col-sm-12">Catalogue URL - Is this model or process already recorded in the
+        <a href="http://catalogue.ceda.ac.uk/?q=&sort_by=relevance&record_types=Computation">catalogue</a>? </div>
+        <div class="col-sm-12"><input id="computation_cat_url" class="form-control" type="text"/> </div>
+    </div>
+    Computation title
+    <textarea id="computation_title" class="form-control mb-2" style="min-width: 100%" rows="4"></textarea>
+    Computation description
+    <textarea id="computation_description" class="form-control mb-2" style="min-width: 100%" rows="10"></textarea>
+
+    <div class="row">
+        <div class="col-md"><button class="btn btn-lg btn-success btn-block mb-2" onclick="download();">Download metadata file
+            <i class="fas fa-download"></i></button></div>
+    </div>
+
+
+    <script src="http://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_vendor/jquery/dist/jquery.min.js"></script>
+    <script src="http://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="http://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="http://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_assets/js/custom.js"></script>
+    <script src="labeler.js"></script>
+</div>
+
+</body>
+</html>

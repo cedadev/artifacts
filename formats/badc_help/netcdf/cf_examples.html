@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML LANG="EN">
+
+<HEAD>
+
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<!-- Written by Helen Walker, BADC RAL CCLRC Feb 2003 -->
+
+<TITLE>BADC Datasets: CF conventions - examples</TITLE>
+
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+
+<H1>BADC: CF Conventions - examples of global attributes</H1>
+<HR ALIGN="LEFT">
+
+<A NAME="top">
+<P>
+CF conventions are guidelines and recommendations as to where to put
+information, and they provide advice as to what information you might
+want to include. Extra attributes are not outlawed and the BADC 
+recommends you include as much information as possible.
+</P> 
+<P>
+CF conventions make one global attribute mandatory:
+<BR><BR>
+<strong>Conventions</strong> "CF-1.0"
+<BR><BR>
+For the <strong>source</strong>, if the data are model generated, source 
+should name the model and the version number. If the data are observational, 
+source should characterize them, e.g. surface observation, radiosonde, satellite.
+<BR><BR>
+With the <strong>history</strong> attribute, well-behaved generic software 
+will automatically append its name, input parameters, and a timestamp.
+<BR><BR>
+Here we give three examples of datasets using the CF conventions,
+with the recommended global attributes: 
+<A HREF="cf_examples.html#instrument">instrumental data</A>,
+<A HREF="cf_examples.html#model">gridded model data</A>, and
+<A HREF="cf_examples.html#surface">surface data</A>.
+</P>
+<P>
+<A NAME="instrument">
+<TABLE BORDER="2">
+   <TR bgcolor="#EEEEEE">
+      <TH>Global attributes</TH><TH>Succinct definition</TH><TH>Instrumental data example</TH>
+   </TR>
+   <TR>
+      <TD VALIGN="TOP"><strong>Conventions</strong></TD>
+      <TD VALIGN="TOP">&nbsp;</TD>
+      <TD VALIGN="TOP">"CF-1.0";</TD>
+   </TR>
+   <TR>
+      <TD VALIGN="TOP"><strong>title</strong></TD>
+      <TD VALIGN="TOP">A succinct description of what is in the dataset.</TD>
+      <TD VALIGN="TOP">"Chilbolton 3-GHz Advanced Meteorological Radar:
+                        Doppler Radar";</TD>
+   </TR>
+   <TR>
+      <TD VALIGN="TOP"><strong>institution</strong></TD>
+      <TD VALIGN="TOP">Specifies where the original data were produced.</TD>
+      <TD VALIGN="TOP">"Original data recorded at Chilbolton Observatory 
+                        (BN_Grid_Ref=\"SU 394 386\"), part of the Radio 
+                        Communications Research Unit, RAL, UK.\n"<BR>
+                        "Data processed at University of Reading.\n"<BR>
+                        "Data held at British Atmospheric Data Centre, RAL, UK.";</TD>
+   </TR>
+   <TR>
+      <TD VALIGN="TOP"><strong>source</strong></TD>
+      <TD VALIGN="TOP">The method of production 
+                       of the original data. </TD>
+      <TD VALIGN="TOP">"Chilbolton 3-GHz Advanced Meteorological Radar (CAMRa)\n"<BR>
+                       "Frequency: 3.075 GHz\n"<BR>
+                       "Antenna diameter: 25m\n"<BR>
+                       "Peak power: 560 kW\n"<BR>
+                       "Pulse width: 0.5 us\n"<BR>
+                       "Pulse repetition frequency: 610Hz\n"<BR>
+                       "Beam width: 0.28 degrees\n"<BR>
+                       "Cross-polar isolation: -34 dB";</TD>
+   </TR>
+   <TR>
+       <TD VALIGN="TOP"><strong>history</strong></TD>
+       <TD VALIGN="TOP">Provides an audit trail for 
+                        modifications to the original data.</TD>
+       <TD VALIGN="TOP">"16/08/02 10:47:54 - netCDF generated from original data
+                        using softare version 1.1.7 by "<EM>user</EM>" "<EM>data 
+                        file</EM>"\n"<BR>
+                        "16/08/02 10:47:55 - unfolded data using chilunfold 
+                        -noisyPHIDP" -user "<EM>user</EM>" "<EM>data file</EM>"";</TD>
+   </TR>
+   <TR>
+       <TD VALIGN="TOP"><strong>references</strong></TD>
+       <TD VALIGN="TOP">Published or web-based 
+                        references which describe the data, or the
+                        methods used to produce them.</TD>
+       <TD VALIGN="TOP">"Information on the data is available at 
+                        http://badc.nerc.ac.uk/data/chilbolton\n"<BR>
+                        "Further information on the data is available at 
+                        http://www.met.rdg.ac.uk/radar/doc/camra.html";</TD> 
+   </TR>
+   <TR>
+       <TD VALIGN="TOP"><strong>comment</strong></TD>
+       <TD VALIGN="TOP">Miscellaneous information 
+                        about the data or the methods used
+                        to produce them.</TD>
+       <TD VALIGN="TOP">"In calculating the height of each data point, the
+                        curvature of the earth should be accounted for.\n"<BR>
+                        "Data restrictions: for academic research use only.";</TD>
+   </TR>
+</TABLE>
+</P>
+<A HREF="cf_examples.html#top">Back to top of page</A>
+<P>
+<A NAME="model">
+<TABLE BORDER="2">
+   <TR bgcolor="#EEEEEE">
+      <TH>Global attributes</TH><TH>Succinct definition</TH><TH>Gridded model data example</TH>
+   </TR>
+   <TR>
+      <TD VALIGN="TOP"><strong>Conventions</strong></TD>
+      <TD VALIGN="TOP">&nbsp;</TD>
+      <TD VALIGN="TOP">"CF-1.0";</TD>
+   </TR>
+   <TR>
+      <TD VALIGN="TOP"><strong>title</strong></TD>
+      <TD VALIGN="TOP">A succinct description of what is in the dataset.</TD>
+      <TD VALIGN="TOP">"ECMWF ERA-40 Re-analysis data: Model Level Parameters";</TD>
+   </TR>
+   <TR>
+      <TD VALIGN="TOP"><strong>institution</strong></TD>
+      <TD VALIGN="TOP">Specifies where the original data were produced.</TD>
+      <TD VALIGN="TOP">"Data owned by ECMWF.\n"<BR>
+                       "Data held at British Atmospheric Data Centre, RAL, UK.";</TD>
+   </TR>
+   <TR>
+      <TD VALIGN="TOP"><strong>source</strong></TD>
+      <TD VALIGN="TOP">The method of production 
+                       of the original data. </TD>
+      <TD VALIGN="TOP">"Data generated by the European Centre for 
+                       Medium-Range Weather Forecasts (ECMWF) T159L60
+                       version of the Integrated Forecast System ERA-40 model.";</TD>
+   </TR>
+   <TR>
+       <TD VALIGN="TOP"><strong>history</strong></TD>
+       <TD VALIGN="TOP">Provides an audit trail for 
+                        modifications to the original data.</TD>
+       <TD VALIGN="TOP">"07/08/01 - Data originally extracted from the ECMWF
+                        MARS archive.\n"<BR>
+                        "21/03/02 - Conversion from GRIB to netCDF format at
+                        BADC using XCONV V1.05";</TD>
+   </TR>
+   <TR>
+       <TD VALIGN="TOP"><strong>references</strong></TD>
+       <TD VALIGN="TOP">Published or web-based 
+                        references which describe the data, or the
+                        methods used to produce them.</TD>
+       <TD VALIGN="TOP">"Information on the data is available at 
+                        http://badc.nerc.ac.uk/ecmwf-e40\n"<BR>
+                        "Further information is available from the ECMWF web
+                        pages at 
+                        http://www.ecmwf.int/research/era/Project/index.htm";</TD>
+   </TR>
+   <TR>
+       <TD VALIGN="TOP"><strong>comment</strong></TD>
+       <TD VALIGN="TOP">Miscellaneous information 
+                        about the data or the methods used
+                        to produce them.</TD>
+       <TD VALIGN="TOP">"Data restrictions: for academic research use only.";</TD>
+   </TR>
+</TABLE>
+</P>
+<A HREF="cf_examples.html#top">Back to top of page</A>
+<P>
+<A NAME="surface">
+<TABLE BORDER="2">
+   <TR bgcolor="#EEEEEE">
+      <TH>Global attributes</TH><TH>Succinct definition</TH><TH>Surface station data example</TH>
+   </TR>
+   <TR>
+      <TD VALIGN="TOP"><strong>Conventions</strong></TD>
+      <TD VALIGN="TOP">&nbsp;</TD>
+      <TD VALIGN="TOP">"CF-1.0";</TD>
+   </TR>
+   <TR>
+      <TD VALIGN="TOP"><strong>title</strong></TD>
+      <TD VALIGN="TOP">A succinct description of what is in the dataset.</TD>
+      <TD VALIGN="TOP">"UK Met Office Surface data: Rainfall Amount";</TD>
+   </TR>
+   <TR>
+      <TD VALIGN="TOP"><strong>institution</strong></TD>
+      <TD VALIGN="TOP">Specifies where the original data were produced.</TD>
+      <TD VALIGN="TOP">"Data owned by UK Met Office.\n"<BR>
+                       "Data held at British Atmospheric Data Centre, RAL, UK.";</TD>
+   </TR>
+   <TR>
+      <TD VALIGN="TOP"><strong>source</strong></TD>
+      <TD VALIGN="TOP">The method of production 
+                       of the original data. </TD>
+      <TD VALIGN="TOP">"UK Met Office surface station data\n"<BR>
+                       "MET_DOM: WADRAIN\n"<BR>
+                       "STATION_ID: 261316";</TD>
+   </TR>
+   <TR>
+       <TD VALIGN="TOP"><strong>history</strong></TD>
+       <TD VALIGN="TOP">Provides an audit trail for 
+                        modifications to the original data.</TD>
+       <TD VALIGN="TOP">"Data collected on day of measurement.\n"<BR>
+                        "30/11/97 - Stored in Met Office MIDAS database.\n"<BR>
+                        "12/05/00 - Extracted from MIDAS by BADC.";</TD>
+   </TR>
+   <TR>
+       <TD VALIGN="TOP"><strong>references</strong></TD>
+       <TD VALIGN="TOP">Published or web-based 
+                        references which describe the data, or the
+                        methods used to produce them.</TD>
+       <TD VALIGN="TOP">"Information on the data is available at
+                        http://badc.nerc.ac.uk/data/surface";</TD>
+   </TR>
+   <TR>
+       <TD VALIGN="TOP"><strong>comment</strong></TD>
+       <TD VALIGN="TOP">Miscellaneous information 
+                        about the data or the methods used
+                        to produce them.</TD>
+       <TD VALIGN="TOP">"Data restrictions: for academic research use only.";</TD>
+   </TR>
+</TABLE>
+</P>
+<A HREF="cf_examples.html#top">Back to top of page</A>
+<P>
+<A HREF="index_cf.html">Back to BADC CF conventions page</A>
+</P>
+<P>
+<A HREF="index.html">Back to the BADC netCDF homepage</A>
+
+</BODY>
+
+</HTML>

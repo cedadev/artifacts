@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PRIVATE "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>ACSOE NASA Ames File Submission Page</TITLE>
+</HEAD>
+
+<!-- Created June 1997  -->
+<!-- Author: Chunkey Lepine BADC-->
+
+<body bgcolor="#ffffff">
+
+<h1>NASA-Ames file ingestion at BADC<br clear=all></h1>
+<BR>
+ 
+<HR>
+
+The purpose of the ingestion scheme is
+to move incoming files to the correct final data directory,
+to confirm that these files are fully NASA-Ames compliant and to
+extract information from these files in order
+to maintain the BADC file catalogue.
+These general requirements involve the following specific steps:<P>
+
+<OL>
+<LI> <STRONG>Logging</STRONG> -
+A cron task runs every 30 minutes to log incoming files.
+Logged details include the submitted file name,
+the user ID and the arrival date and time.
+After a file has been logged its ownership is changed to
+"acsoe" to prevent a subsequent supplier
+overwriting it.
+
+ <P><LI> <STRONG>Creating the catalogue ID</STRONG> -
+At least once a week
+(this frequency may be increased to daily when a tranche of
+new files is expected)
+the file-arrival log is scanned manually
+and the names of any newly submitted files
+checked against existing entries in the BADC file catalogue.
+
+If no previous entries for this file name exist
+then the file is given a BADC "generation number" of 1
+otherwise it is given a generation number of
+one greater than the latest entry known to the catalogue.
+The newly submitted file is then assigned a unique catalogue file key
+and its name, generation number, user id and creation time/date are
+recorded in the BADC file catalogue.
+
+
+<P><LI> <STRONG>Archiving</STRONG> -
+After the new file has been accurately catalogued
+the generation number preceded by "-" is appended to the file name
+and the file  moved to the BADC long-term archive directory 
+<EM>/home/tornado/acsoe/cache</EM>.
+
+<P><LI> <STRONG>Directory identification</STRONG>  -
+The next step is to work out the correct <EM>/badc/acsoe/data</EM> directory
+using the file name, the file extension, and the ACSOE file organisation rules
+provided by the ACSOE data manager, Claire Reeves.
+The submitted file is then copied to the correct data directory.
+
+
+<P><LI> <STRONG>Mechanical Corrections</STRONG> -
+The copy process in step 4 may not produce an exact copy of the original file,
+in particular
+<OL>
+<LI>all end-of-record markers will be set to &LTLF&GT;
+(this change happens automatically when you transfer files using ASCII-mode
+ftp).
+<LI>all double quotes (") in the NASA-Ames header will be changed to spaces
+<LI>all leading spaces in the header will be removed
+<LI>all spaces between the keyword symbol and the keyword value will also be
+removed
+</OL>
+
+
+<P><LI> <STRONG>Compliance Checking</STRONG> -
+After any necessary mechanical corrections have been made
+the file is tested for compliance
+with the NASA-Ames data format and the ACSOE data submission rules.
+At BADC a FORTRAN program <A HREF="program.html">NACHECK</A>
+is used.
+
+Broadly speaking this program reads and interprets individual records
+in the file header and lists the data tables record-by-record.
+All lines in the table listing are
+numbered and any line found not to contain the correct number of
+primary variables is flagged and reported.
+
+Further editing of the file to bring about full NASA-Ames compliance
+can be undertaken at this stage.
+
+
+
+<P><LI> <STRONG>Cataloguing</STRONG> -
+Next the information needed to update the BADC file catalogue
+is extracted from file header.
+This information is re-written in the form of a
+shell script which is then executed to update the file catalogue.
+
+
+<P><LI> <STRONG>Plotting</STRONG> -
+The BADC ingestion scheme also plots in gif format
+the first <EM>meaningful</EM> primary variable in the file.
+These gifs, identified by file name, are held in the directory
+<EM>/home/tornado/acsoe/nachecks</EM>. 
+
+
+<P><LI> <STRONG>Change recording</STRONG> -
+The final step is to record for future reference
+any differences existing between the final version of
+the file stored in the data directory and the submitted version
+held in <EM>/home/tornado/acsoe/cache</EM>.
+These differences can be identified by file name and are stored
+under <EM>/home/tornado/acsoe/filediff</EM>.
+
+</OL>
+
+
+<HR>
+<P>
+Go to: 
+<A HREF="index.html">Index page</A> 
+<A HREF="program.html">Next doc. (FORTRAN program)</A>
+<P>
+</BODY>
+</HTML>

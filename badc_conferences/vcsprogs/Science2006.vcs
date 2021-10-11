@@ -1,0 +1,44 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20051207T000000Z
+DTEND:20051208T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Royal Society, London
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000080D99A6698EAC5010000000000000000100
+ 000003F8109822DD6014EB7102010A2889A1E
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Bacterial conversations:  talking, li=
+stening and eavesdropping =0D=0A=0D=0A=0D=0AA NERC scientific meeting, co-s=
+ponsored by the BBSRC, EPSRC, MRC and the Wellcome Trust, will take place a=
+t the Royal Society, London, on 7 December 2005. =0D=0A=0D=0AThe community =
+ecology of microbial populations cannot be understood if we ignore quorum s=
+ensing - the process of chemical cell-to-cell signalling. But bacterial com=
+munication is not just an environmental concern; many research disciplines =
+have interests in microbial quorum sensing and this is a rapidly developing=
+ research area. It is timely for a scientific meeting to review what is kno=
+wn about quorum sensing. This international meeting will facilitate interac=
+tion between different Research Council communities and encourage interdisc=
+iplinary approaches to practical problems.   =0D=0A=0D=0AThe programme of s=
+peakers includes an overview of bacterial signalling by Paul Williams (Nott=
+ingham, UK), and talks will cover the following topic areas: =0D=0A=0D=0AAg=
+riculture.  QS is a key process not only for soil bacteria that enhance fer=
+tility and crop growth, but also in controlling virulence and secondary met=
+abolite production by many plant pathogens.   =0D=0ASpeakers:  Steve Winans=
+ (Cornell, USA ), Allan Downie (John Innes Centre, UK ) and George Salmond =
+(Cambridge, UK ) =0D=0A=0D=0AEnvironment and evolution.  The subtleties of =
+QS in terrestrial, marine and enteric environments, and its relevance to bi=
+oremediation, biofilms and biofouling.   =0D=0ASpeakers:   Gary Dunny (Minn=
+esota, USA), Andrew Whiteley (CEH Oxford, UK ) and Ian Joint (Plymouth Mari=
+ne Laboratory, UK ). =0D=0A=0D=0AMedicine and infection control.  As we ent=
+er a post-antibiotic world, interfering with quorum sensing may provide nov=
+el and effective means of combating bacteria infection.  =0D=0ASpeakers:   =
+S=F8ren Molin (Tech Univ, Denmark ), LianHui Zhang (National Univ, Singapor=
+e ) and Mikhail Givskov (Tech Univ, Denmark ). =0D=0A=0D=0AThis is an open =
+meeting but registration is essential. For full programme details and regis=
+tration information, see www.pml.ac.uk/pml/quorumsensing.htm =0D=0A=0D=0A**=
+************************************=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Science Meeting: Bacterial conversations
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

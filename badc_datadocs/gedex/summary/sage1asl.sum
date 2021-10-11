@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SAGE1ASL "
+"SUM_DATA_SET"       "SAGEI-PROF   "
+"SUM_DATATYPE"       "AEROSOLS     "
+"ARCHIVE_NAME"       "NSSDC, NCDS          "
+"ARCHIVE_STATUS"     "Available.  Reprocessed - February 1991.                     "
+"DS_DESCRIPTION"     "AEM-2 Stratospheric Aerosol and Gas Experiment I Profiles    "
+"DT_DESCRIPTION"     "Aerosol Profile"
+"SUM_BEGIN_DATE"     "21-Feb-1979    "
+"SUM_END_DATE"       "18-Nov-1981    "
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "72 deg N to 72 deg S (above 10km or cloud tops)              "
+"SPATIAL2"           "                                                             "
+"SPATIAL3"           "250 km X 250 km  Vertical resolution is 1 km below 25km      "
+"SPATIAL4"           "and 5 km above."
+"TEMPORAL1"          "February 21,1979 - November 18,1981                          "
+"TEMPORAL2"          "Sunsets only after June 1979                                 "
+"TEMPORAL3"          "Full coverage in about 1 month but latitude varies with      "
+"TEMPORAL4"          "season         "
+"PRODUCT1"           "Aerosol and Raleigh extinction at 1.0, 0.45 microns          "
+"PRODUCT2"           "One 6250-bpi tape/yr;                                        "
+"PRODUCT3"           "Available on GEDEX CD-ROM.                     "
+"PRODUCT4"           "  "
+EOF
+                                                                                                                                    
+PARAMETERS
+"AEROSOLS" "Stratospheric Aerosols" "1/km"
+EOF
+
+SOURCES
+"AEM-2"    "SAGEI"
+EOF

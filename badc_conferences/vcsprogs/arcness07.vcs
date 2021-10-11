@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070812T230000Z
+DTEND:20070817T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:University of Wollongong, Wollongong, Au=
+stralia
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000507FCBA2B06BC7010000000000000000100
+ 00000D3D8F9BBF567E9429259CE0EB24998CF
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:1st International ARCNESS Winter Scho=
+ol=0D=0A"Atmospheric composition observation and modeling"=0D=0AUniversity =
+of Wollongong, Wollongong, Australia=0D=0A13 - 17 August 2007=0D=0A=0D=0AAp=
+plication Deadline: 30 May 2007=0D=0A=0D=0AFor further information, please =
+refer to:=0D=0Ahttp://www.uow.edu.au/conferences/ARCNESS%202007/home.html=
+=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Winter School "Atmospheric composition ob=
+servation and modeling"
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

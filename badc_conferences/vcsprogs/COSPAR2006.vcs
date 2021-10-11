@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060715T230000Z
+DTEND:20060723T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Beijing, China
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000C03A65D48E1AC6010000000000000000100
+ 000002B2E892493A17B47922E409ADA81076C
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:36th Scientific Assembly of the Commi=
+ttee on Space Research (COSPAR) which will bring together approximately 200=
+0 scientists and engineers from all over the world to present the latest re=
+sults in 82 symposia and special events covering all areas of space science=
+. The Assembly will take place 16 - 23 July 2006 in Beijing, China. =0D=0A=
+=0D=0AScientific program and abstract instructions: =0D=0Ahttp://meetings.c=
+opernicus.org/cospar2006/ =0D=0A=0D=0AAbstract deadline: 17 February 2006 =
+=0D=0A=0D=0ARegistration and hotel reservations: =0D=0Ahttp://www.cospar200=
+6.org/ =0D=0A=0D=0AEarly registration deadline: 15 May 2006 =0D=0A=0D=0AThe=
+ program for distinguished interdisciplinary lectures and panel events is n=
+ow available and may be consulted on the first site listed above. =0D=0A=0D=
+=0APlease do not hesitate to forward this message to colleagues who may be =
+interested in submitting an abstract. =0D=0A=0D=0AWe look forward to your p=
+articipation in the Assembly, =0D=0A=0D=0AWith kind regards, =0D=0A=0D=0AKa=
+tja Gaenger =0D=0Ameetings@copernicus.org  =0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=
+=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:COSPAR2006
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

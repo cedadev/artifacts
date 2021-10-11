@@ -1,0 +1,273 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Datasets: ISAMS Data</TITLE>
+</HEAD>
+<!-- Created 25th July 1996 11:30:00  -->
+<!-- Author: Simon Williams BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1>BADC Help File: ISAMS L2 Data<BR CLEAR="ALL"></H1>
+
+<P><EM>This file contains a summary of the instrument documentation
+to help you use the ISAMS L2 data held at the BADC.</EM> 
+<HR ALIGN=LEFT>
+
+<H2><A NAME="contents"></A>Contents</H2>
+
+<UL>
+  <LI>1. <A HREF="#instrument">The Instrument</A>
+  <UL>
+    <LI>1.1 <A HREF="#description">Instrument Description</A>
+    <LI>1.2 <A HREF="#techniques">Measurement Techniques</A>
+    <LI>1.3 <A HREF="#process">Data Processing</A>
+  </UL><P>
+  <LI>2. <A HREF="#data">The Data</A>
+  <UL>
+    <LI>2.1 <A HREF="#horizontal">Horizontal Range</A>
+    <LI>2.2 <A HREF="#vertical">Vertical Range</A>
+    <LI>2.3 <A HREF="#temporal">Temporal Range</A>
+    <LI>2.4 <A HREF="#resolution">Resolution</A>
+    <LI>2.5 <A HREF="#quality">Quality</A>
+    <LI>2.6 <A HREF="#units">Units</A>
+  </UL>
+</UL>
+
+<HR ALIGN=LEFT>
+
+
+<H2>1. <A NAME="instrument"></A>The Instrument</H2>
+
+<P>This is a brief, simplified outline of the ISAMS instrument
+and the measurement techniques which are employed. Users requiring
+a more detailed description of the design and operation of the
+instrument should consult the paper by <A HREF="references.html">Taylor
+et al. (1993).</A> 
+
+<BLOCKQUOTE>
+
+<H3>1.1 <A NAME="description"></A>Instrument Description</H3>
+
+<P>ISAMS is an infrared radiometer which measures thermal emission
+from the Earth's limb. Measurements are made in eight channels
+in the 4-17 microns range using pressure modulation and wideband
+radiometric techniques to select regions of the spectrum appropriate
+to the species to be measured. 
+
+<P>The instrument observes the earth's limb in a direction normal
+to the orbital track (with a small offset to correct for the Doppler
+shift due to the Earth's rotation). The tangent point is a great
+circle distance of approximately 23&deg; (approx. 2500km) away
+from the sub-satellite track. 
+
+<P>A switching mirror is included in the optical path to allow
+the instrument to view the limb on either side of the spacecraft
+velocity vector, but in practice viewing on the &quot;Sun-side&quot;
+of the spacecraft is limited to periods when the Sun is behind
+the Earth so that solar radiation cannont enter the instrument. 
+
+<P>The primary optics of the instrument focus the radiation onto
+a chopper which modulates between the Earth's limb and cold space
+at a frequency of 1kHz, giving a zero-radiance reference signal.
+The gain is measured relative to an internal black body calibration
+source at 290K. 
+
+<P>The incoming beam is divided into 8 separate pressure modulator
+channels, each of which contains a sample of the gas to be measured.
+ISAMS uses pressure-modulator cells for each of the following
+gases : CO<sub>2</sub> (times 2), CO, CH<sub>4</sub>, N<sub>2</sub>O, NO<sub>2</sub> and H<sub>2</sub>O. The two
+CO<sub>2</sub> channels can be operated at different pressures which ensures
+that temperature measurements may be made over a extended range. 
+
+<P>Each of the two CO<sub>2</sub> channels also contains a filter wheel to
+allow wideband measurements of three key chemical species - ozone
+(O<sub>3</sub>), nitric acid (HNO<sub>3</sub>) and dinitrogen pentoxide (N<sub>2</sub>O<sub>5</sub>) - none
+of which can be isolated in a gas cell. There is also a `window'
+channel at 12.1 microns which is relatively free of molecular
+absorption and can be used in the retrieval of aerosol opacities. 
+
+<H3>1.2 <A NAME="techniques"></A>Measurement Techniques</H3>
+
+<P>The measurement technique used by ISAMS is known as Pressure
+Modulation Radiometry. The incoming radiation in each channel
+passes through a cell containing a sample of the gas to be measured,
+in which the pressure is modulated at a frequency of about 30Hz. 
+
+<P>A multi-layer interference filter in front of the detector
+restricts the radiation reaching the detector to a narrow part
+of the vibration-rotation band of the relevant species. 
+
+<P>The signal processing electronics demodulates the signal from
+the detector at the chopper frequency to give a wideband signal
+for the spectral band defined by the interference filter. This
+&quot;wideband&quot; signal is then further demodulated at the
+pressure modulation frequency. This pressure modulated signal
+originates in or near the spectral lines of the species in the
+gas cell and is therefore very selective for radiation originating
+from that species in the atmosphere. 
+
+<H3>1.3 <A NAME="process"></A>Data Processing Techniques</H3>
+
+<P>The <A HREF="/data/uars/">UARS</A> data processing is carried
+out at the <A HREF="http://www-uars.gsfc.nasa.gov/" TARGET="_top">Central
+Data Handling Facility</A> at the Goddard Space Flight Center
+using software supplied by the Instrument's Principal Investigator
+group. 
+
+<P>The data processing for UARS instruments consists of a progression
+through a sequence of `levels' from the raw telemetry at level
+0 to geophysical quantities interpolated onto standard grids at
+level 3. The processing steps for ISAMS are outlined below : 
+
+<DL>
+ <P> <DT><STRONG>Level 1 processing</STRONG>
+  <DD>At the level 0-1 processing step, instrument-specific effects
+  are removed and a set of calibrated data are derived in physical
+  units (eg. voltages and radiances) tagged with their locations.
+ <P> <DT><STRONG>Level 2 processing</STRONG>
+  <DD>The level 1 data are then processed further to produce the
+  level 2 product which contains vertical profiles of temperature,
+  pressure and mixing ratios of chemical constituents at the measurement
+  positions. This step involves a complex inversion algorithm which
+  consists of two principal stages :
+  <P>Firstly the temperature and pressure are retrieved using the
+  radiances from the CO<sub>2</sub> channels, using a sequential estimation
+  scheme, or Kalman filter, similar to that described by Rodgers
+  et al (1984) for SAMS data. This method combines the radiance
+  data with retrievals from neighbouring profiles and with climatology
+  to produce a statistically optimal result.
+  <P>The temperatures and pressures are then combined with the
+  data from the constituent channels to retrieve vertical profiles
+  of the constituents using a maximum likelihood estimator.
+ <P> <DT><STRONG>Level 3A processing</STRONG>
+  <DD>The level 2 data are profiles located at the measurement
+  positions which are determined by the scan pattern and by the
+  track of the tangent point. The level 2-3A processing step takes
+  these data and interpolates them onto a standard set of vertical
+  levels -- evenly spaced in log pressure, and onto standard times
+  (level 3AT) and standard latitudes (level 3AL).
+</DL>
+
+</BLOCKQUOTE>
+
+<H2>2. <A NAME="data"></A>The Data</H2>
+
+<P>Restricted access ISAMS data held at the BADC is at level 2 version 8
+If you would like to use the level 2 data, please 
+<A HREF="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=isamsl2">apply for access to ISAMS Level 2 data</A> . 
+You will then be given a web account to access the restricted
+ISAMS data. 
+
+<BLOCKQUOTE>
+<H3><A NAME="horizontal"></A>2.1. Horizontal Range</H3>
+
+<P>Views of the limb from the UARS orbit extend to approximately
+10&deg; of the pole. To achieve maximum latitude coverage, the
+instrument views at right angles to the orbit track. 
+
+<P>A switching mirror allows the instrument to observe on either
+side of the orbital track, so that in principle the coverage could
+extend from 80&deg;N to 80&deg;S, every day. In practice, viewing
+is only possible from the Sun-viewing side of the spacecraft when
+the Sun is behind the Earth, so that solar radiation cannot enter
+the instrument. Generally, therefore the coverage is restricted
+to the anti-Sun side of the spacecraft between 34&deg; in one
+hemisphere and 80&deg; in the other. 
+
+<P>The spacecraft performs a 180&deg; yaw approximately every
+36 days so that the spacecraft orientation relative to the velocity
+vector is reversed. (eg. the spacecraft flies `backwards' rather
+than `forwards'). 
+
+<P>Each spacecraft yaw manoeuvre changes the coverage from high
+latitudes in one hemisphere to high latitudes in the other. Thus,
+when the spacecraft files `forwards', the coverage is 80&deg;S
+ to 34&deg;N, and when it flies `backwards' the coverage is
+80&deg;N to 34&deg;S. 
+
+<P>The latitudinal coverage of the ISAMS instrument is compared
+with the other UARS instruments in <A HREF="/data/uars/figures/uars_lat_coverage.html">Figure
+2.</A>
+
+<H3><A NAME="vertical"></A>2.2. Vertical Range</H3>
+<P>The vertical range depends on measured parameters.
+
+
+<H3><A NAME="temporal"></A>2.3 Temporal Range</H3>
+
+<P>ISAMS operated from shortly after the UARS launch in October
+1991 until the end of July 1992 when failure of the instrument's
+chopper halted operations. However there were several periods
+within these dates when the collection of data ceased because
+of operational difficulties. These are summarised below : 
+
+<PRE>
+     Date              UARS day         Comments
+---------------------------------------------------------- 
+12th Sept. 1991          1         Launch 
+28th Sept  1991         17         Beginning of operations 
+ 
+15th Oct.  1991         34         Scan Mirror Problem 
+                                   Data collection ceased 
+28th Oct.  1991         47         Problem fixed 
+                                   Data collection resumed 
+ 
+18th Jan.  1992        129         Chopper failed 
+                                   Data collection ceased 
+17th Mar.  1992        198         Chopper recovered 
+                                   Data collection resumed 
+ 
+2nd  June  1992        265         Solar Array Problem 
+                                   Data collection ceased 
+19th July  1992        312         Problem fixed 
+                                   Data collection resumed
+                                             
+29th July  1992        322         Chopper failed 
+                                   Data collection ceased 
+
+----------------------------------------------------------</PRE>
+Each Level 2 file contains data from a single UT day. ISAMS acquired science
+data over the following periods:
+<pre>
+
+26 Sep 1991 - 14 Oct 1991 (UARS Day  15 -  33)
+28 Oct 1991 - 18 Jan 1992 (UARS Day  47 - 129)
+27 Mar 1992 -  2 Jun 1992 (UARS Day 198 - 265)
+19 Jul 1992 - 29 Jul 1992 (UARS Day 312 - 322)
+</pre>
+
+<H3><A NAME="resolution"></A>2.4 Resolution</H3>
+
+<P><strong>2.4.1 Vertical Resolution</strong>
+<br>Generally 0.05&deg; elevation increments (approx. 2.5km). Please refer to the
+validation document associated with each version of the ISAMS data.
+
+<P><strong>2.4.2 Horizontal Resolution</strong>
+<br>Horizontal Resolution is 400km in line-of-sight direction, 400km or 200km
+along tangent track, depending on measured parameter. 400km is approximately 4&deg;
+ lat near the equator.
+
+
+<H3><A NAME="quality"></A>2.5 Data Quality</H3>
+
+<P>Please, refer to the individual validation reports for details (e.g. Rodgers et al, 1994).
+<H3><A NAME="units"></A>2.6 Units</H3>
+
+<P>The units for the parameters present in the ISAMS data files
+are tabulated below : 
+
+<PRE>
+Parameter               Units   
+__________________________________________
+Temperatures            K
+Pressures               mb
+Mixing Ratios           by volume
+Aerosol extinction      km(-1)
+__________________________________________</PRE>
+
+
+</BLOCKQUOTE>
+
+<P>
+</BODY>
+</HTML>

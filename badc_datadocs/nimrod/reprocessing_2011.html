@@ -1,0 +1,130 @@
+<html>
+<head>
+  <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+  <title>Met Office - Nimrod</title>
+
+</head>
+<body bgcolor="#ffffff">
+
+<h1>Changes to Nimrod Rain Radar data holdings</h1>
+
+<p>This page details important and necessary changes to the Nimrod archive holdings that will come into effect in January 2011, explaining the reasons for the changes and a schedule for the implementation.</p>
+
+<p> Please see the <a href="#progress">&quot; Progress &quot;</a> section at the bottom of this page for latest information about this implementation of these changes. This will be updated as progress is made. </p>
+
+<h3>Why are changes being made?</h3>
+
+<p>The present delivery mechanism of the Nimrod rain radar products from the Met Office to the BADC suffers from occasional drop outs due to a variety of reasons - e.g. site connection issues at the BADC, ftp transfer issues from the Met Office.</p>
+
+<p>While a small back log of data are possible at the Met Office which can then be resent once a connection has been re-established (and this means most delayed data arrives ok) as a consequence of the file naming convention used in the delivery mechanism lacking a date string and are re-cycled every 24 hours drop outs longer than 24 hours result in loss of data. (files are checked on arrival at the BADC and given the appropriate date string when they are re-named for inclusion in our archive).</p>
+<p>
+In addition to the delivery mechanism issues there are archive management issues at the BADC given the sheer number of files within the Nimrod dataset (over 17 million files, the single largest number of files in any one dataset at the BADC). The large number of files result in performance issues with the back-up and file corruption checking systems. To address this necessary changes to the archive structure will be instigated.
+</p>
+<p>
+Finally, the changes required to meet the issues above provide an opportunity to bring the Nimrod file naming convention inline with the BADC file naming convention. This will make the file names more explicit, allowing users to identify the products with greater ease.
+</p>
+
+<p><b>The content and format of the files will not be changed - only the archive structure and file names will be. Therefore, the files should remain compatible with existing scripts to read in and plot data.</b>
+</p>
+
+<h3>What changes will be made?</h3>
+<p>
+To address the issues above two changes are being made. The first is to switch the delivery mechanism to use an agreed route that the BADC has much greater control over. This will give us an improved ability to cope with Met Office- BADC connection issues in the future. Coupled with this the file naming convention used
+by the Met Office to deliver data to the BADC will be changed to include a date-string. Although some delays in delivery may still occur from time to time users should no longer suffer from gaps in archive for future data (sadly, there is still no mechanism to back fill existing gaps).
+</p>
+<p>
+Finally, once files have arrived at the BADC they will be re-named to meet BADC file naming conventions, compressed and "tar"-ed together with files for the same day. ("tarring" creates one archive file containing multiple files)
+</p>
+<p>
+To ensure consistency of the archive and address archive management issues, the existing data will then be re-processed to rename, compress and "tar" together files.
+</p>
+
+<h3>How will the old archive structure and file names map to the new structure and names?</h3>
+<p>
+The directory structure will remain largely the same, with the only change being that the need to have month and day splitting will be removed, thus making for easier and quicker navigation of the archive.
+</p>
+
+<hr />
+
+<h2>File Name Mapping</h2>
+<p> The table below shows how the old filenames map over to the new file naming convention which is consistent with the <a href="http://badc.nerc.ac.uk/help/file_naming.html">BADC file naming convention</a></p>
+
+<table cellspacing="2" cellpadding="1" border="1" align="left">
+    <tr><td><b>Product</b></td><td><b>Old Path and file name</b></td><td><b>New Path and file name</b></td></tr>
+    <tr><td>UK 1km Composite data</td><td>/badc/ukmo-nimrod/data/composite/uk-1km/yyyy/mm/dd/rCOMPmerged1kmd.yyyymmdd-hhmm.dat.gz</td><td>metoffice-c-band-rain-radar_uk_{yyyymmddhhmm}_1km-composite.dat<br />     held in <br />
+    /badc/ukmo-nimrod/data/composite/uk-1km/yyyy/metoffice-c-band-rain-radar_uk_yyyymmdd_1km-composite.dat.gz.tar</td></tr>
+    <tr><td>UK 5km Composite data</td><td>/badc/ukmo-nimrod/data/composite/uk-5km/yyyy/mm/dd/rCOMPstdrd5kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_uk_yyyymmddhhmm_5km-composite.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/composite/uk-5km/yyyy/metoffice-c-band-rain-radar_uk_yyyymmdd_5km-composite.dat.gz.tar</td></tr>
+    <tr><td>UK 5km Composite images</td><td>/badc/ukmo-nimrod/data/composite/uk-images/yyyy/mm/rdcomp.yyyymmdd-hhmm.gif</td><td>metoffice-c-band-rain-radar_uk_yyyymmddhhmm_5km-composite.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/composite/uk-5km/yyyy/metoffice-c-band-rain-radar_uk_yyyymmdd_5km-composite.gif.gz.tar</td></tr>
+    <tr><td>Europe 5km Composite data</td><td>/badc/ukmo-nimrod/data/composite/euro-5km/yyyy/mm/rnimeurod.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_europe_yyyymmddhhmm_5km-composite.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/composite/europe-5km/yyyy/metoffice-c-band-rain-radar_europe_yyyymmdd_5km-composite.dat.gz.tar</td></tr>
+    <tr><td>Europe 5km Composite images</td><td>/badc/ukmo-nimrod/data/composite/euro-images/yyyy/mm/reuro.yyyymmdd-hhmm.gif</td><td>
+    metoffice-c-band-rain-radar_europe_yyyymmddhhmm_5km-composite.gif
+    held in <br />
+    /badc/ukmo-nimrod/data/composite/europe-5km/yyyy/metoffice-c-band-rain-radar_europe_yyyymmdd_5km-composite.gif.gz.tar</td></tr>
+    <tr><td>Chenies 2km single site data</td><td>/badc/ukmo-nimrod/data/single-site/chenies/2km/yyyy/mm/dd/rSSche2kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_chenies_yyyymmddhhmm_2km-single-site-rainrate.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/single-site/chenies/2km/yyyy/metoffice-c-band-rain-radar_chenies_yyyymmdd_2km-single-site-rainrate.dat.gz.tar</td></tr>
+    <tr><td>Chenies 5km single site data</td><td>/badc/ukmo-nimrod/data/single-site/chenies/5km/yyyy/mm/dd/rSSche5kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_chenies_yyyymmddhhmm_5km-single-site-rainrate.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/single-site/chenies/5km/yyyy/metoffice-c-band-rain-radar_chenies_yyyymmdd_5km-single-site-rainrate.dat.gz.tar</td></tr>
+    <tr><td>Clee Hill 2km single site data</td><td>/badc/ukmo-nimrod/data/single-site/clee
+    /2km/yyyy/mm/dd/rSScle2kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_clee-hill_yyyymmddhhmm_2km-single-site-rainrate.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/single-site/clee-hill/2km/yyyy/metoffice-c-band-rain-radar_clee-hill_yyyymmdd_2km-single-site-rainrate.dat.gz.tar</td></tr>
+    <tr><td>Clee Hill 5km single site data</td><td>/badc/ukmo-nimrod/data/single-site/clee/5km/yyyy/mm/dd/rSScle5kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_clee-hill_yyyymmddhhmm_5km-single-site-rainrate.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/single-site/clee-hill/5km/yyyy/metoffice-c-band-rain-radar_clee-hill_yyyymmdd_5km-single-site-rainrate.dat.gz.tar</td></tr>
+    <tr><td>Cobbacombe 2km single site data</td><td>/badc/ukmo-nimrod/data/single-site/cobbacombe/2km/yyyy/mm/dd/rSScob2kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_cobbacombe_yyyymmddhhmm_2km-single-site-rainrate.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/single-site/cobbacombe/2km/yyyy/metoffice-c-band-rain-radar_cobbacombe_yyyymmdd_2km-single-site-rainrate.dat.gz.tar</td></tr>
+    <tr><td>Cobbacombe 5km single site data</td><td>/badc/ukmo-nimrod/data/single-site/cobbacombe/5km/yyyy/mm/dd/rSScob5kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_cobbacombe_yyyymmddhhmm_5km-single-site-rainrate.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/single-site/cobbacombe/5km/yyyy/metoffice-c-band-rain-radar_cobbacombe_yyyymmdd_5km-single-site-rainrate.dat.gz.tar</td></tr>
+    <tr><td>Hameldon Hill 2km single site data</td><td>/badc/ukmo-nimrod/data/single-site/hameldon_hill/2km/yyyy/mm/dd/rSSham2kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_hameldon-hill_yyyymmddhhmm_2km-single-site-rainrate.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/single-site/hameldon_hill/2km/yyyy/metoffice-c-band-rain-radar_hameldon-hill_yyyymmdd_2km-single-site-rainrate.dat.gz.tar</td></tr>
+    <tr><td>Hameldon Hill 5km single site data</td><td>/badc/ukmo-nimrod/data/single-site/hameldon_hill/5km/yyyy/mm/dd/rSSham5kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_hameldon-hill_yyyymmddhhmm_5km-single-site-rainrate.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/single-site/hameldon_hill/5km/yyyy/metoffice-c-band-rain-radar_hameldon-hill_yyyymmdd_5km-single-site-rainrate.dat.gz.tar</td></tr>
+    <tr><td>Jersey 2km single site data</td><td>/badc/ukmo-nimrod/data/single-site/jersey/2km/yyyy/mm/dd/rSSjer2kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_jersey_yyyymmddhhmm_2km-single-site-rainrate.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/single-site/jersey/2km/yyyy/metoffice-c-band-rain-radar_jersey_yyyymmdd_2km-single-site-rainrate.dat.gz.tar</td></tr>
+    <tr><td>Jersey 5km single site data</td><td>/badc/ukmo-nimrod/data/single-site/jersey/5km/yyyy/mm/dd/rSSjer5kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_jersey_yyyymmddhhmm_5km-single-site-rainrate.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/single-site/jersey/5km/yyyy/metoffice-c-band-rain-radar_jersey_yyyymmdd_5km-single-site-rainrate.dat.gz.tar</td></tr>
+    <tr><td>Predannack 2km single site data</td><td>/badc/ukmo-nimrod/data/single-site/predannack/2km/yyyy/mm/dd/rSSpre2kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_predannack_yyyymmddhhmm_2km-single-site-rainrate.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/single-site/predannack/2km/yyyy/metoffice-c-band-rain-radar_predannack_yyyymmdd_2km-single-site-rainrate.dat.gz.tar</td></tr>
+    <tr><td>Predannack 5km single site data</td><td>/badc/ukmo-nimrod/data/single-site/predannack/5km/yyyy/mm/dd/rSSpre5kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_predannack_yyyymmddhhmm_5km-single-site-rainrate.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/single-site/predannack/5km/yyyy/metoffice-c-band-rain-radar_predannack_yyyymmdd_5km-single-site-rainrate.dat.gz.tar</td></tr>
+    <tr><td>Wardon Hill 2km single site data</td><td>/badc/ukmo-nimrod/data/single-site/wardon_hill/2km/yyyy/mm/dd/rSSwar2kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_wardon-hill_yyyymmddhhmm_2km-single-site-rainrate.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/single-site/wardon_hill/2km/yyyy/metoffice-c-band-rain-radar_wardon-hill_yyyymmdd_2km-single-site-rainrate.dat.gz.tar</td></tr>
+    <tr><td>Wardon Hill 5km single site data</td><td>/badc/ukmo-nimrod/data/single-site/wardon_hill/5km/yyyy/mm/dd/rSSwar5kmd.yyyymmdd-hhmm.dat</td><td>metoffice-c-band-rain-radar_wardon-hill_yyyymmddhhmm_5km-single-site-rainrate.dat<br />
+    held in <br />
+    /badc/ukmo-nimrod/data/single-site/wardon_hill/5km/yyyy/metoffice-c-band-rain-radar_wardon-hill_yyyymmdd_5km-single-site-rainrate.dat.gz.tar</td></tr>
+</table>
+
+<br />
+<hr />
+
+<h2><a name="progress">Progress</a></h2>
+<p>2011-02-22 : Reprocessing of existing archive has been completed and new version of the archive are being ingested. New filenaming convention and delivery route for data has been enabled at the Met Office. Operational ingest process has been deployed and tests will continue over the next week to ensure that all data are arriving and ingesting ok. During this period data will continue to be delivered in the old filenaming convention and delivery root.</p>
+<p>2011-01-11 : Reprocessing of existing archive initiated. This will be background operation until products are ready.</p>
+<p>2011-01-10 : Change request has been submitted to Met Office for change in data supply route and file naming convention used for supplied files. Ingest scripts have been prepared for new ingest and start of back reprocessing of data.</p>
+
+<hr />
+<h2><img src="/graphics/blue/letter.gif" alt="*" align="BOTTOM">
+Who to Contact</h2>
+
+<p>If you have queries on this  page or about obtaining the data then you should contact <a href="/help/contact.html">BADC Support</a>. </p>
+
+
+</body>
+</html>

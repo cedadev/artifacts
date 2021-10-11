@@ -1,0 +1,79 @@
+<head>
+<title>UTLS-Ozone NASA-Ames filenaming conventions</title>
+</head>
+<body BGCOLOR=#ffffff>
+<h1>UTLS-Ozone NASA-Ames filenaming conventions</h1>
+<em>This is a draft document, and will change with time.</em>
+<h1>Description</h1>
+
+This page defines the filename conventions used for UTLS-OZONE NASA-Ames format 
+files at the
+BADC. The filename conventions reflect the content of the file: they indicate
+the site or platform of the measurement, the date on which the measurement
+started and the instrument and parameters measured.
+</P>
+<P>When submitting files to the BADC please ensure that the files comply 
+to the agreed conventions.  The file name is used to automatically move
+the file into the appropriate directory in the BADC archive.
+It is therefore important that all files are given the correct name.</P>
+
+<p>The filenames for NASA-Ames files are determined, in part, by the NASA-Ames
+Format for Data Exchange.
+The filename is of the form ppYYMMDD.xxx, where pp is a two character prefix, 
+YYMMDD is a six character date and xxx is a file extension of up to 3
+characters.  A commonly adopted convention, which will be implemented for
+UTLS-OZONE files, is that the prefix indicates the site or platform from
+which the measurements were made, and the extension gives and indication of the
+instruement and physical or chemical quantity measured.  The date is the date
+on which the observations recored in the file started.  At the BADC the prefix 
+suffix for a particular site or instrument are inherited from previous field
+campaings such as <A HREF="/data/acsoe/">ACSOE</A>.
+
+<h1>Components of filename</h1>
+<h2>Prefix</h2>
+
+The two character prefix identifies the site or platform for the observation.
+<h4>Allowed values:</h4>
+<table border>
+<th>Value</th><th>Description</th>
+<tr><td>ab</td><td>Aberystwyth</td></tr>
+<tr><td>he</td><td>Hercules C-130</td></tr>
+</table>
+<p>
+<h2>Start date</h2>
+
+
+The six character date identifies the start date of the observations in the
+file. The start date is in the format YYMMDD.  The observations may span more
+than one day.  The date in the file name is always the start date of the
+observations.
+<p>
+e.g. '990110' represents  10th January 1999
+
+<p>
+<h2>Extension</h2>
+
+The file extension identifies the instrument and constituents measured. Listed
+below are the valid file extensions, together with the constituents, 
+instrument, institute and group or person responsible.
+
+<h4>Allowed values:</h4>
+<table border>
+<th>Value</th><th>Description</th>
+<tr><td>asc</td><td>Aerosol Scattering / PCASP / MRF / Richer</td></tr>
+<tr><td>b2'n'</td><td>Ozone, Temperature, Pressure / Ozone-Sonde / U Wales / Vaughan</td></tr>
+<tr><td>bc3</td><td>Black Carbon Soot / Aethalometer PSAP / MRF / Richer</td></tr>
+<tr><td>cm1</td><td>Carbon Monoxide (CO) / Fluorescence / MRF/KFA / Richer</td></tr>
+<tr><td>cn5</td><td>Condensation Nuclei / CCN Counter/ MRF / Richer</td></tr>
+<tr><td>fm1</td><td>Formaldehyde (HCHO) / Fluorometric / UEA / Mills</td></tr>
+<tr><td>jn4</td><td>J (NO2) / UV Photometer / MRF/FZJ / Richer/Gerbig</td></tr>
+<tr><td>nxy</td><td>Nitrogen Oxides (NO, NO2, NOy, NOy*) / Chemiluminescence / UEA / Brough</td></tr>
+<tr><td>o3l</td><td>Ozone / LIDAR / U Wales / Vaughan</td></tr>
+<tr><td>o36</td><td>Ozone / Teco 49 / MRF / Richer</td></tr>
+<tr><td>po1</td><td>Peroxide (H2O2, RO2H) / Fluorometric / UEA / Bandy</td></tr>
+<tr><td>ps1</td><td>C-130 Position / Navigation / MRF / Richer</td></tr>
+<tr><td>tmp</td><td>Temperature / Various / MRF / Richer</td></tr>
+<tr><td>wnd</td><td>Wind / Various / MRF / Richer</td></tr>
+</table>
+<p>
+</body></html>

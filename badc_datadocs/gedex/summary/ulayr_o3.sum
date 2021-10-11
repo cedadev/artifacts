@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "ULAYR_O3 "
+"SUM_DATA_SET"       "ANGELL-LYRO3 "
+"SUM_DATATYPE"       "UMKEHR-SEASN "
+"ARCHIVE_NAME"       "NCDS                 "
+"ARCHIVE_STATUS"     "Available as online CDF in NCDS, updated periodically "
+"DS_DESCRIPTION"     "Dr. Jim Angell's Layer Ozone Analysis                  "
+"DT_DESCRIPTION"     "Seasonal Layer Ozone Deviations from Umkehr           "
+"SUM_BEGIN_DATE"     "01-Dec-1967                                           "
+"SUM_END_DATE"       "01-Nov-1989                                           "
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Partial global coverage                               "
+"SPATIAL2"           "                                                      "
+"SPATIAL3"           "Various continental and zonal regions                 "
+"SPATIAL4"           "                                                      "
+"TEMPORAL1"          "December, 1967 - November, 1989                       "
+"TEMPORAL2"          "                                                      "
+"TEMPORAL3"          "Seasonal: Winter (Dec-Feb), Spring (Mar-May), Summer  "
+"TEMPORAL4"          "(Jun-Aug), and Fall (Sep-Nov)                         "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF).   "
+"PRODUCT2"           "Available on GEDEX CD-ROM."
+"PRODUCT3"           "Data producer's handwritten notes"
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"OZONE"    "Percent deviation of layer ozone"  "Percent"
+EOF
+
+SOURCES
+"STATION"  "UMKEHR"
+EOF

@@ -1,0 +1,33 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SSC30YRG "
+"SUM_DATA_SET"       "SSCLIMATE    "
+"SUM_DATATYPE"       "30YR_GLOBAL  "
+"ARCHIVE_NAME"       "NCDC, NCAR   "
+"ARCHIVE_STATUS"     "Available    "
+"DS_DESCRIPTION"     "World Monthly Surface Station Climatology                    "
+"DT_DESCRIPTION"     "30 Year Global Station Means                                 "
+"SUM_BEGIN_DATE"     "01-Jan-1931  "
+"SUM_END_DATE"       "01-Dec-1970  "
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "Global       "
+"SPATIAL2"           " "
+"SPATIAL3"           "Station      "
+"SPATIAL4"           " "
+"TEMPORAL1"          "January 1931 - December 1970"
+"TEMPORAL2"          " "
+"TEMPORAL3"          "30 year monthly mean"
+"TEMPORAL4"          "30 year period varies with station "
+"PRODUCT1"           "Available online through NCDS in Common Data Format (CDF).   "
+"PRODUCT2"           "Available on GEDEX CD-ROM. "
+"PRODUCT3"           " "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"TEMPERATURE"   "Station Temperature"   "Deg C"
+"PRECIPITATION" "Station Precipitation" "mm"
+EOF
+
+SOURCES
+"STATION"         "IN SITU"
+EOF

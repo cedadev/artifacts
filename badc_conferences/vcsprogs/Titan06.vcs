@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060210T000000Z
+DTEND:20060211T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Geological Society Lecture Theatre, Burl=
+ington House
+TRANSP:1
+UID:040000008200E00074C5B7101A82E008000000006010B2B38D1AC6010000000000000000100
+ 00000299EAFDB14040E4E9E248B3374DB3D53
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0ASCIENTIFIC DISCUSSION MEETING:=
+=0D=0A=0D=0ATitan Revealed: Latest findings from Cassini/Huygens measuremen=
+ts=0D=0A=0D=0ARoyal Astronomical Society=0D=0AGeological Society Lecture Th=
+eatre, Burlington House=0D=0APiccadilly, London=0D=0A=0D=0AFebruary 10, 200=
+6=0D=0A=0D=0AIn this discussion meeting we intend to examine latest scienti=
+fic  =0D=0Afindings about Saturn's largest moon, Titan. The Cassini/Huygens=
+  =0D=0Amission is continuously providing new observations of Titan's  =0D=
+=0Asurface, atmosphere and space environment which along with  =0D=0Atheore=
+tical modelling, Earth based observations and laboratory  =0D=0Ameasurement=
+s are exploited scientifically. Their ongoing  =0D=0Ainterpretation will su=
+bstantially benefit from cross-discipline  =0D=0Acollaborations in the same=
+ way that different regions on Titan, its  =0D=0Aspace environment, atmosph=
+ere and surface are known to directly  =0D=0Ainteract. We therefore welcome=
+ contributions from all areas of Titan  =0D=0Ascience.=0D=0A=0D=0AMeeting w=
+eb site: http://www.sp.ph.ic.ac.uk/~ingo/RAS_2006/ =0D=0A=0D=0A** Abstract =
+deadline: 27 Jan 2006 **=0D=0APlease email abstracts to  i.mueller-wodarg@i=
+mperial.ac.uk =0D=0A=0D=0AScientific organizers:=0D=0AIngo Mueller-Wodarg, =
+Imperial College London (i.mueller- =0D=0Awodarg@imperial.ac.uk)=0D=0AAndre=
+w Coates, Mullard Space Sciences Laboratory, UCL  =0D=0A(ajc@mssl.ucl.ac.uk=
+)=0D=0Aand the UK Planetary Forum=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Titan Revealed: Latest findings from Cass=
+ini/Huygens measurements
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,1011 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>ATSR-1 Anomaly Log
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../../../../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../../index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../../../../documentation/index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../../documentation/docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../../../../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      ATSR-1 Anomaly log</H2>
+<pre>
+ATSR DATA AVAILABILITY AND STATUS SUMMARY TO 13th March 2000
+                 ------------------------------------------------------------
+                                                                               
+                     John Wright (ATSR Operations Manager)
+                        Rutherford Appleton Laboratory
+                              UK +(0)1235-445809 
+                      Email: john.wright@rutherford.ac.uk
+                              
+
+
+
+The following is a brief summary of period when ATSR data was not available or
+should be handled with care.  The summary is for the period between launch of
+ERS-1 to date.  At all other time ATSR was nominal.  The normal configuration
+for ATSR was that 12.0 and 11.0 channels are always packed into the telemetry 
+stream, while the 3.7 is packed during night-time and 1.6 during day-time. 
+This remained in effect until the 3.7um channel failed on 27 May 1992, after
+which time the 1.6um channel was always packed.
+
+
+DATE					STATUS
+----					------
+
+16 July to	ATSR undergoing commissioning activities.  All ATSR
+14 Sept 91	science data in this period should be  handled with 
+		care.  For details of ATSR configuration during this 
+		period refer to ATSR Commissioning Status note.
+
+31 Jul 91	Commissioning Phase orbit (3 day repeat cycle) began
+
+8 Oct 91	None nominal pixel selection map selected ATSR IRR:- 
+		PSM 1 selected between 14:37:24 to 16:12:40 UTC 
+		PSM 2 selected between 16:12:41 to 17:51:04 UTC
+		PSM 3 selected between 17:51:05 to 19:28:48 UTC
+
+		ATSR IRR science data should NOT be used during	the 
+		period 14:37:24 to 19:28:48 UTC.
+
+21-23 Nov 91	Planned Outgassing Procedure began at :-
+		325:11:50 UTC with SCC Comp Amplitudes and Displacer
+		Amplitudes commanded to zero. The detectors began their
+		warm-up. The Outgassing (warm-up and subsequent cool-down)
+		was completed at 327:01:00 UTC.
+		During this period (MWR remained nominal).   
+
+25 Nov 91	ATSR cooler operations test with modified displacer 
+		phase:-
+		Disp. ph. = 95.625 between 12:59:32 to 14:39:31 UTC
+		Disp. ph. = 104.625 between 14:39:32 to 16:18:11 UTC
+
+		This test has NO effect on quality of ATSR IRR or 
+		MWR science data.
+
+9 Dec 91	ATSR cooler operations test with modified displacer 
+		amplitude:-
+		Disp. amp. = 0.92v between 10:08:52 to 13:27:31 UTC
+		Disp. amp. = 0.93v between 13:27:32 to 16:43:16 UTC
+
+		This test has NO effect on quality of ATSR IRR or MWR
+		science data.
+
+10 - 26 Dec 91	ERS-1 performing orbit manoeuvres to change from 
+		Commission Phase (3 day) to Ice Phase (3 day) orbit 
+		and perform SAR Roll mode data.
+
+		ATSR cooler set to use optimized displacer amplitude
+		Disp. amp. = 0.93v on 11 Dec. 
+                  
+		ATSR cooler operations test with modified compressor 
+		amplitude:- 
+		Comp. amp. = 2.13v between 09:41:50 UTC 16 Dec and 
+		             09:08:35 UTC 17 Dec   
+		Comp. amp. = 2.23v between 09:08:36 UTC 17 Dec and
+                             11:19:57 UTC 19 Dec   
+		SCC set point = 90K between 10:18:11 UTC 16 Dec and 
+                             11:19:57 UTC 19 Dec   
+			
+		This test has no effect on quality of ATSR IRR or MWR 
+		science data.
+
+19 to 23 Dec	ATSR was outgassing (decontamination) cycle between 
+		353:11:30:00 UTC and 357:21:30:00 UTC
+		During the rest of the ERS-1 orbit manoeuvre period 
+		ATSR remained in nominal, but ATSR IRR and MWR data 
+		should be handled with great care during this period.
+
+3 Feb 92	ATSR IRR and MWR is stand-by due to ERS-1 activity.
+		No IRR or MWR science data during the period.
+		034:07:30:00 UTC and 034:23:20:00 UTC
+
+30 Mar to 	ERS-1 performing orbit manoeuvres to change from Ice 
+14 Apr 92	Phase (3 day) to Multidisciplinary Phase (35 day) orbit and 
+		perform SAR Roll mode data.
+
+07-11 Apr	Planned Outgassing Procedure began at :-
+		098:17:00 UTC with SCC Comp Amplitudes and Displacer
+		Amplitudes commanded to zero. The detectors began their
+		warm-up. The outgassing (warm-up and subsequent cool-down)
+		was completed at 102:04:50 UTC.
+		                  
+
+		During the rest of the ERS-1 orbit manoeuvre period 
+		ATSR remained in nominal, but ATSR IRR and MWR data 
+		should be handled with great care during this period.
+
+27 May 92	At 19:12 UTC ATSR IRR 3.7um channel failed.
+
+		No ATSR 3.7um channel data from this time onward.
+
+27 May to	ATSR IRR 1.6um channel data not useable during this 
+04 Jun 92	period due to effects of 3.7um channel failure.
+
+
+04 Jun to	Investigation of ATSR 3.7um channel failure.  During 
+16 Jun 92	this period ATSR was set into a variety of modes in
+		order to determine the cause of the 3.7um channel 
+		failure.  For further details of IRR & MWR science 
+		data availability during this period refer to note 
+		on 3.7um channel failure.
+
+10 Jun to	Outgassing performed during investigations between
+16 Jun 92	331:13:40 UTC and 337:08:00 UTC
+
+		After these activities cooler displacer amplitude
+		left at default value of 0.909V.  This resulted
+		in 0.25K higher detector temperatures than
+		normal until preferred value set on 8 July.
+
+26 Jun to	ATSR IRR and MWR in stand-by due to ERS-1 
+27 Jun 92	PDU anomaly.
+
+		No IRR or MWR science data during this period.
+
+8 July 92	Cooler displacer amplitude set to preferred value:-
+		disp. amp. = 0.9V at xx.xx
+
+		Detector temperatures reduced by 0.25K at
+		result.                
+
+19 Jul to	ATSR IRR and MWR in stand-by due to ERS-1 activities. 
+23 Jul 92	ATSR IRR and MWR commanded to stand-by at 9:19 UTC on 
+		19 July 92 when OBC detected 'bit flip' in ERS-1 
+		None Vital Data Store.  
+
+		No IRR or MWR science data during this period.
+
+9 - 10 Aug 92	ATSR IRR and MWR in stand-by due to ERS-1 activities.
+		ATSR IRR and MWR commanded to stand-by at 10:40 UTC on 
+		9 Aug 92 when OBC detected 'bit flip' in ERS-1 
+		Vital Data Store. MWR returned to normal operations
+		at 11:00 UTC on 10 Aug.  The IRR reached normal operating
+		temperature at 21:00 UTC on 10 Aug.
+
+		No IRR or MWR science data during this period.
+                        
+10 - 12 Aug 92	ATSR Instrument Data Formatting (AIDF) monitoring
+		enable.  The AIDF monitoring had been disabled during
+		commissioning.  This test was performed to collect 
+		data for ATSR-2 project.  Monitoring was enabled
+		between 09:57 UTC on 10 Aug to 12:13 UTC on 12 Aug.
+
+		This test has NO effect on quality of ATSR IRR or MWR
+		science data.
+
+13 - 14 Aug 92	ATSR cooler operations test with modified operating frequency:-
+		Freq = 43.353Hz between 15:01 UTC 13 Aug and 14:13 UTC 14 Aug. 
+		This test has NO effect on quality of ATSR IRR or MWR
+		science data.
+
+25 - 26 Aug 92	ERS-1 Payload was switched down to standby at 12:43 UTC
+		on 25 August due to a transient error.  ATSR MWR
+		restored to normal operations by 17:00 UTC on 24 August.
+		ATSR IRR reached normal operating temperature at
+		01:20 UTC on 26 August.                    
+
+		No IRR or MWR science data during this period.
+
+2 - 6 Sep 92	ERS-1 Payload was switched down to standby at 14:34 UTC
+		on 2 September due to a VDS parity error.  ATSR MWR
+		restored to normal operations by 19:00 UTC on 3 September.
+                   
+		During the payload recovery on 3 Sep the IDHT entered
+		command refuse mode resulting in loss of payload data 
+		transmission 17:26 to 20:42 UTC and 20:46 to 23:45 UTC
+		
+		Another parity error caused payload to enter standby
+		at 20:37 UTC on 5 September. ATSR MWR restored to normal
+		operations by 09:25 UTC on 6 September. ATSR IRR reached 
+		normal operating temperature at 14:30 UTC on 6 September.
+
+8 Sep 92	ERS-1 suffered another VDS parity error on 
+		8 September 1992.  This occurred at 252:06:30.08 and 
+		resulted in the payload being commanded to STANDBY. 
+		ATSR MWR returned to NOMINAL at 252:09:48:35. ATSR IRR was
+		turned on at 252:09:53:55 and cooldown to its operational 
+		temperature by 252:15:00 UTC.
+                        
+		No IRR or MWR science data during this period.
+
+07 Oct 92	IDHT was inoperative between 281:11:25:50 and
+		281:11:27:10 UTC whilst Payload timing resynchronising
+		took place. 
+			
+		No IRR or MWR data during this period.
+
+12/13 Nov 92	Due to ESOC operations IDHT and hence ATSR data were
+		unavailable between 317:18:55:39 and 318:08:30:00 UTC.
+
+		No IRR or MWR data during this period.
+
+		Due to a procedural discrepancy, on reconfiguration the 
+		wrong compression mode was selected AND the 1.6/3.7 AUTOCAL
+		was turned ON. 
+
+13-16/24 Nov 92	1.6 channel gain incorrectly being controlled by the
+		(failed) 3.7 AUTOCAL, resulting in unstable 1.6 data.
+		from 318:08:30:00 to 321:10:19:00 UTC. The correct
+		compression mode was then reselected at the start
+		of the planned outgassing which commenced at 
+		329:12:46:00 UTC							
+
+17 Nov 92	New Nominal Settings for SCC.		
+			
+		SCC Compressor Amplitude adjusted to A8 hex (2.1333v)
+		and SCC Frequency to 2B hex (43.605 Hz) at :-
+		322:11:28:01 UTC and 322:11:28:52 UTC respectively.
+                        
+24-26 Nov 92	Planned Outgassing Procedure began at :-
+		329:12:46:51 UTC with SCC Comp Amplitudes and Displacer
+		Amplitudes commanded to zero. The detectors began their
+		warm-up. The Outgassing (warm-up and subsequent cool-down)
+		was completed at 331:18:24:07 UTC
+                         
+		IRR science data is not available between :-
+		329:12:46:51 and 331:18:24:07 UTC.
+
+12 Dec 92	Due to an unexpected tape recorder Beginning of Tape
+		(BOT), the tape recording was stoped for low bit rate
+		data between 347:22:12:27 and 347:22:59:40.
+
+		No IRR or MWR science data during this period.
+
+
+16 Dec 92	ERS-1 performed orbit correction manoeuvre.  ERS-1
+		not in Yaw Steering Mode between 351:12:53:52 and 
+		351:18:45:56. During this period it was not possible
+		to maintain nominal pointing accuracy.  For this 
+		reason, ERS-1 products during the  period may not
+		meet their specification.
+
+			
+23 Dec 92	A spurious BOT was detected in the recording 
+		period 358:00:34:59 to 358:02:12:13. resulting in 
+		loss of low bit rate data.
+
+		No IRR or MWR data for the period 358:01:04:35 to 
+		358:01:07:25 UTC.
+
+
+25 Dec 92	As a result of recovery of AMI and need for two timing
+		resyncronisations the IDHT was not supplying  IRR or MWR
+		data between :-
+		360:11:45:00 to 360:11:46:00 UTC and
+		360:13:21:00 to 360:13:22:00 UTC.
+                         
+                        
+01 Feb 93	Due to public mains failure and problems with backup
+		generator Kiruna were unable to track ERS-1 during
+		the pass 032:13:12:55 thru' 032:13:21:34 UTC
+		R/T and playback X-Band data not received.
+
+		(at this time 02-Feb the strt/stop times of lost 
+		tape data are not clear )
+
+14 Feb 93	Data problems caused by a radiation hit (SEU ?). The ERS1
+		General Data header was corrupted which caused ground
+		station processing problems. Data users who rely on
+		"General Header" (Not ATSR at RAL) must beware between : -
+		045:15:22:00 to 048:14:??:?? UTC
+
+09/11 Mar 93	ATSR and MWR were inadvertently switched to STANDBY after
+		an AMI instrument recovery when resynchronising the payload.
+		Recovery of the ATSR was postponed in order to take
+		advantage of the shut down to "outgas" (this was being 
+		planned for 15th Mar 93 anyway).
+			
+		The complete decontamination period lasted from :-
+		068:17:38:56 to 070:19:59:29 UTC. ATSR data between these
+		times will not be NOMINAL.
+
+16 Mar 93	Default upper limit setting commanded for parameters F716,
+		F717 SCC Comp. A/B current - new value 40 Hex for both.
+		Limits 0.5547v (F716); 0.5518v (F717) converted 
+
+17 Mar 93	New Nominal Settings for SCC.		
+			
+		SCC Compressor Amplitude adjusted to AB hex (2.171v)
+		and SCC Frequency to 2A hex (43.859 Hz) at :-
+		076:11:59:38 UTC and 076:12:01:12 UTC respectively.
+                         
+13 Apr 93	Due to ESOC operations the IDHT was unavailable between :-
+		103:11:22:30 UTC and
+		103:11:24:15 UTC
+
+14 Apr 93	Due to ESOC operations the IDHT was unavailable between :-
+		104:20:39:14 UTC and
+15 Apr 93	105:11:48:18 UTC
+
+04 May 93	ERS-1 completed a scheduled Orbit Control Manoeuvre at
+		124:12:17:48 UTC. Between 11:44:48 and 17:36:54 UTC the 
+		spacecraft was in pre-operational Fine Pointing Mode, 
+		and scientific data may not be usable.
+
+05 May 93	A Fine Control Orbit manoeuvre was performed between :-
+		125:04:17:47 UTC and
+		125:04:18:07 UTC       ATSR image data may be affected.
+17 Jun 93	Due to ESOC operations the IDHT was unavailable between :-
+		168:12:17:00 UTC and 168:12:18:30 UTC       
+		NB ATSR was resynchronised at 168:12:17:35 UTC
+
+19 Jun 93	Due to an anomaly the IDHT was unavailable between :-
+		170:13:49:57 UTC and
+		170:14:14:20 UTC
+
+21 Jun 93	Due to ESOC operations the IDHT was unavailable between :-
+		172:08:11:00 UTC and
+		172:09:56:44 UTC
+
+29 Jun 93	Scheduled IRR outgassing took place between :-
+		180:09:09:12 UTC and
+01 Jul 93	182:19:34:56 UTC  
+		ATSR data between these times is not be nominal.
+
+09 Jul 93	Due to spurious BOT (onboard T/R) detection LBR data 
+		is missing between :-
+		190:11:02:30 UTC and
+		190:12:07:04 UTC
+
+18 Aug 93	Due to a Platform anomaly the payload was switched to STBY
+		at 230:09:38:09 UTC The opportunity was taken to outgass
+		the ATSR. This operation was completed at :-
+20 Aug 93	232:18:27:07 UTC Data between these times is not nominal.		
+
+13 Sep 93	Due to operational reasons no LBR data between :-
+		256:22:29:00 and 256:22:38:00 UTC 
+14 Sep 93	and again between :-
+		256:23:59:41 and 257:12:15:28 UTC.
+
+02 Oct 93	Due to an operational anomaly payload switched to STBY at
+		275:12:45:38 UTC The opportunity was taken to outgass the
+		ATSR. This operation was completed at :-
+03 Oct 93	276:23:47:33 UTC Data between these times is not nominal.
+
+18 Oct 93	Over the next four days some adjustments have been made
+		to SCC operating paramaters. No science data has been lost
+		but cooler paramter changes will have affected detector
+		sensitivity. The adjustments have been made to characterise
+		the SCC performance.
+		291:07:40:00 UTC SCC Freq. adjusted from 43.86 to 43.35 Hz
+		291:16:00:00 UTC SCC Freq. readjusted back to 43.86 Hz
+
+19 Oct 93	292:07:10:00 UTC SCC Disp. Amp. from 0.93v to 0.91v (B3 to AF)
+		292:15:30:00 UTC SCC Disp. Amp. reset to 0.93v
+
+20 Oct 93	293:08:20:00 UTC SCC Comp. Amp. from 2.171v to 2.13v (AB to A8)
+		293:14:58:00 UTC SCC Comp. Amp. from 2.13v to 2.108v (A8 to A6)
+		293:21:34:00 UTC SCC Comp. Amp. from 2.108v to 2.171v(A6 to AB)
+
+21 Oct 93	294:12:47:00 UTC SCC Frequency adjusted to (28 hex) 44.37 Hz
+
+22 Nov 93	326:07:40:00 UTC SCC Disp. Phase from 100.1 deg to 95.6 deg
+		326:15:55:00 UTC SCC Disp. Phase back to 100.1 deg (nominal)
+
+02 Dec 93	336:09:05:40 UTC SCC Disp. Phase  from 100.1 deg to 104.6 deg
+		336:17:20:47 UTC SCC Disp. Phase back to 100.1 deg
+
+06 Dec 93	Due to an anomaly with the IDHT LBR data was lost between
+		340:03:21:56 UTC and
+		340:10:21:40 UTC
+
+13 Dec 93	Whilst investigating a problem with an X-Band TWT the IDHT
+		and ICU were powered off and on again, this caused the ATSR
+		to go into STBY resulting in loss of data at :-
+		347:11:47:11 UTC. 
+		The IRR will be allowed to "warm-up" and outgass.
+
+16 Dec 93	Outgassing complete and nominal data available again from :-
+		350:23:18:26 UTC
+
+17 Dec 93	End of Multidisciplinary Phase (35 day repeat cycle)
+	
+20 Dec 93	354:12:59:41 UTC SCC Comp. Amp. set to AD (hex) 2.196v
+
+21 Dec 93	Second Ice Phase (3 day repeat begins)
+
+06 Jan 94	006:08:40:00 UTC SCC Disp. Phase changed from 100.1 deg to 97.87
+                
+22 Jan 94	During investigation of an RA anomaly ATSR was switched down
+		to STBY between:- 
+		022:16:24:13 UTC and
+		022:21:16:52 UTC. 
+		During this time the detectors warmed up, after the restart they  
+		reached nominal operating temps. the following day, 23rd Jan,
+		by approx. 023:05:00 UTC
+
+29 Jan 94	Due to inavailability of the IDHT there are no LBR data from :-
+		029:22:19:00 UTC and
+30 Jan 94	030:13:34:10 UTC
+
+07 Feb 94	Cooler operating parameters adjusted.	
+		038:09:12:00 UTC SCC Comp. Amp. from 2.197v to 2.210v (AD to AE)		
+		038:09:13:00 UTC SCC Frequency adjusted from 44.37 to 44.64 Hz.
+                        
+18 Mar 94	Planned SCC Outgassing from :-
+		077:14:10:14 UTC Warm-up began
+		080:09:20:00 UTC Cool-down began
+21 Mar 94	080:20:43:00 UTC the detectors had resumed nominal operating temps.
+
+06 Apr 94	Cooler operating parameters adjusted.	
+		096:07:02:30 UTC SCC Comp. Amp. from 2.210v to 2.235v (AE to B0)		
+
+10 Apr 94	End of Second Ice Phase (3 day repeat)
+		Geodetic Phase (168 day repeat cycle) starts
+                        
+14 May 94	Due to TR miscommanding LBR data was lost between :-
+		134:16:21:34 and 134:16:22:06 UTC
+		134:16:50:24 and 134:17:59:10 UTC
+
+23 May 94       Cooler operating parameters adjusted.	
+		144:09:03:03 UTC SCC Comp. Amp. from 2.235v to 2.222v (B0 to AF)		
+		144:09:04:36 UTC SCC Frequency adjusted from 44.64 to 44.91 Hz.
+                
+15 Jun 94	Default upper limit setting commanded for parameters F716,
+		F717 SCC Comp. A/B current - new value 3C Hex for both.
+		Limits 0.517v (F716); 0.521v (F717) converted
+
+16 Jun 94      	SCC Compressor A and B Offsets set to 60 Hex (-0.448v)
+	       	Approx 0.6 K improvement in detector temps seen.
+
+17 Jun 94	SCC Compressor A and B Offsets reset to 70 Hex (-0.224v)
+		after ~24 hours.
+
+27 Jun 94	SCC Compressor A and B Offsets set back again to 60 Hex
+		(-0.448v) and SCC Comp. Amp. set down one step to AE Hex
+		(2.210v)
+
+03 Aug 94	Cooler operating parameters adjusted.	
+		215:14:07:05 UTC SCC Comp. Amp. from 2.210v to 2.235v (AE to B0)		
+		215:14:07:27 UTC SCC Freq. adjusted from 44.91 to 45.18Hz.
+		(25 to 26 Hex)
+                
+22 Aug 94	Due to spurious BOT on the IDHT LBR data lost from :
+		234:19.08:20 thru' 234:19:23:08 UTC
+
+08 Sep 94	Due to an IDHT anomaly LBR data lost between :-
+		251:01:47:30 thru' 251:08:06:47 UTC
+		251:09:06:21 thru' 251:09:41:51 UTC and lastly
+		251:09:49:30 thru' 251:11:28:06 UTC
+
+05 Oct 94	Due to an anomaly the ATSR DEU performed an autonomous
+		shutdown, this occurred at 278:03:20:38 UTC. The present
+		belief is that this was an SEU as ERS-1 was in the South
+		Atlantic Anomaly region at this time. ATSR was left to
+		outgass. During recovery the DEU was reset, Cool down
+		began on Friday 7th Oct. with the following SCC settings
+		Compressor Amplitude 2.171v (AB hex)
+		Displacer Amplitude  0.93v  (B3 hex)
+		Compressor Frequency 44.37 Hz
+
+08 Oct 94	ATSR resumed "Nominal" operation at :
+		281:12:09:51 UTC. The FPA was running at this time 2-3 deg.
+		warmer than just prior to the shut down. Fine adjustments 
+		to the SCC were made over the next three days. The cooler
+		amplitude will be kept at 2.210v (AE).
+
+11 Oct 94       Cooler operating parameters adjusted.	
+		SCC Compressor A and B Offsets set to 60 Hex (-0.448v) at
+	        284:10:25:11 UTC
+
+12 Oct 94	Cooler operating parameters adjusted.	
+		Reset on board limit checking of TMZ716/717
+		285:13:01:51 UTC SCC Disp. Phase from 100.1 deg to 97.85 (27H) 
+		285:13:01:51 UTC SCC Comp. Amp. from 2.171v to 2.210v (AB to AE)
+				 
+13 Oct 94       Cooler operating parameters adjusted.	
+		286:10:55:00 UTC SCC Freq. adjusted from 44.37 to 45.18Hz. (25H)
+		
+14 Nov 94	Due to problems with the IDHT no low bitrate data was available
+		318:06:18:40 UTC thru'
+		318:17:05:30 UTC
+
+20 Nov 94	Due to a spurious BOT on the IDHT tape LBR was lost between:-
+		324:09:06:19 UTC and 324:10:09:19 UTC
+
+16 Dec 94	Due to an anomaly the ATSR DEU performed an autonomous
+		shutdown, this occurred at 350:00:01 UTC. At the time ERS-1
+		was in the process of moving from Yaw Steeering Mode to Fine
+		Pointing Mode after a planned orbit manoeuvre. Inspection of
+		Telemetry showed the shut down to have been initiated due to
+		ATSR health indicator 0,1 and 3 timing out, failing and overunning
+		respectively. ATSR ICU correctly issued an EQSOL request to
+		the OBC and ATSR was shut down. Further inspection of telemetry
+		showed excessive build up of F401 "Sub pixel position adjustment"
+		events this had occurred over the preceding 72 hours - these
+		events are commonly associated with Scan Mirror jitter. The 
+		instrument was left to outgass, as is now our standard procedure.
+
+19/20 Dec 94	During the next two days the ATSR was recovered with particular
+		attention being paid to the SMU performance. The scan mirror was
+		run for approximately 20 hours before begining the cool down. 
+		Cool down commenced on 20th Dec at 09:35 UTC and NOMINAL
+		status was achieved at 354:20:57:06 UTC with the SCC operating
+		at pre-anomaly settings ( except for compressor amplitude at 2.21v 
+		AE HEX, two steps below the pre-anomaly setting) and detectors fully 
+		cooled down. Later telemetry indicated though that the 
+		autogain/offset loops had not settled down correctly until 21st 
+		Dec 355:01:30:00 UTC. Scan mirror "jitter" events cleared up to 
+		pre-anomaly rates at approx 20th Dec 354:17:00:00 UTC 
+		Data therefore should be usable again from 355:01:30 UTC.
+
+24 Jan 95	Due to an onboard anomaly the IDHT was unavailable from :-
+		025:12:47:38 UTC thru 025:16:02:45 UTC No LBR data was 
+		collected during this period.	
+
+19 Mar 95	ERS-1 Manoeuvre to change from 168 to 35 day repeat began.
+		The platform was in Fine Pointing Mode from approx
+		078:10:05:00 UTC through 078:16:50:00 UTC. Data processed
+		for this period should be viewed with caution.
+
+21 Mar 95	ERS-1 Manoeuvre finishes today. The platform is expected
+		to be in Fine Pointing Mode again from :-
+		080:05:40:00 UTC through 080:13:45:00 UTC. Again data
+		processed for this period should be viewed cautiously.
+
+
+31 Mar 95	Black Body Cross Over Test begins to verify the accuracy
+		of the emissivities and temperature measurement of the
+		on-board calibration black bodies.
+		Cross-over began at 090:07:35:57 UTC. The BB temperatures
+		had stabilised by 090:20:47:56 UTC. Data between these times
+		is not nominal. The black bodies will remain in crossed over
+		roles for approx six days.
+
+04 Apr 95	The heater power to the -XBB was changed from MEDIUM to HIGH
+		at 094:13:49:49 UTC. This raised the temperature of the 'Hot'
+		Black Body from 31 to 36 degrees C.
+
+06 Apr 95	The reverse crossover test to bring the BB configuration
+		back to normal began at 096:07:49:37 UTC. The BB temperatures
+		had stabilised by 096:21:01:23 UTC. Data between these times
+		is not nominal. The ATSR Black Body configuration is now 
+		back at the nominal settings as of 31 Mar 95 prior to 07:35 UTC.
+	
+08 Apr 95	Due to a spurious BOT on the IDHT tape LBR data was lost
+		between 098:18:30:03 UTC and 098:18:41:28 UTC.
+
+
+27 Aug 95	Due to an MPS error the IDHT LBR data was unavailable from
+		day 239:01:02:00 UTC to 239:08:17:00 UTC. Ther will be no
+		ATSR-1 data between these times.
+
+15 Sep 95       Cooler operating parameters adjusted.	
+		258:09:38:15 UTC SCC Comp. Amp. from 2.210v to 2.235v (AE to B0)		
+		
+19 Oct 95       Cooler operating parameters adjusted.	
+		292:15:07:39 UTC SCC Comp. Amp. from 2.235v to 2.260v (B0 to B2)		
+		
+19 Oct 95	Due to spurious BOT detection, LBR data was lost between
+		292:15:35:40 and 292:15:50:31 UTC
+
+29 Oct 95	Due to spurious BOT detection, LBR data was lost between
+		302:06:35:22 and 302:06:37:51 UTC
+
+14 Nov 95       Cooler operating parameters adjusted.	
+		318:11:34:40 UTC SCC Comp. Amp. from 2.260v to 2.286v (B2 to B4)		
+                
+04 Dec 95      	Cooler operating parameters adjusted.	
+		338:11:02:45 UTC SCC Comp. Amp. from 2.286v to 2.311v (B4 to B6)		
+               
+10 Jan 96	Cooler operating parameters adjusted.	
+		010:09:59:26 UTC SCC Comp. Amp. from 2.311v to 2.235v (B6 to B0)
+                The cooler has been deliberately backed off in order to extend
+		its lifetime having run for the last two months at higher 
+		compressor amplitudes than qualified for. The detector temperatures
+		have continued to rise (currently 107-108 K). It is expected that
+		auto gain/offset control of the 12um channel will be lost with the
+		further increase in detector temperature expected after this cooler 
+		setting change.	
+	
+12 Jan 96	Following the SCC changes on 10th Jan. the detector temperatures
+		rose by approx. 3 degs. The auto gain/offset control on the 12um
+		channel was lost shortly afterwards. Today at 012:14:00:00 UTC
+		the 12um channel auto gain/offset control was deselected and a
+		fixed gain of 42 and offset of 0.483v commanded. The pixel
+		compression was changed to "10bit for 11/12um" from "12bit for 11um
+		and 8bit for 11 to 12 difference".
+
+
+08 Feb 96	The 11um auto gain/offset control was lost from 039:07:48:36 UTC
+		through 039:12:25:00 UTC. 11um data through this period will be
+		unusable. Lock was re-acquired autonomously by increasing the
+		the cooler amplitude from B0 to B4 Hex for one orbit. This
+		briefly gave an additional 1-2 deg.K cooling on the detectors.
+		The instrument resumed normal running as set up on 12 Jan.'96
+                
+21 Feb 96	Due to an on-board anomaly (spurious BOT detection) low bit rate
+		data was lost between 052:09:57:29 and 052:10:19:05 UTC.
+
+02 Apr 96	The 11um auto gain/offset control was lost from 093:05:54:02 UTC
+		through 093:15:03:00 UTC. 11um data through this period will be
+		unusable. Lock was re-acquired autonomously by increasing the
+		the cooler amplitude from B0 to B4 Hex for several orbits. This
+		gave an additional 1-2 deg.K cooling on the detectors.
+		At this time the 12um fixed gain and offset was optimised with
+		the gain set to 47 and offset to 0.537v.		
+
+28 Apr 96	At about this time the AMI routine mode of operation on ERS-1 was
+		changed (from Wind/Wave around the orbit to Wind only) this resulted
+		in an approx drop of 5 degC of the structure around the AMI. A small
+		but noticeable beneficial effect was noted on the IRR detector temps.
+		
+05 May 96	Due to an on-board anomaly (spurious BOT detection) low bit rate
+		data was lost between 126:10:32:18 and 126:10:47:42 UTC.
+
+08 May 96      	Cooler operating parameters adjusted.	
+		129:09:30:nn UTC SCC Comp. Amp. from 2.235v to 2.260v (B0 to B2)		
+               
+02 Jun 96	In preparation for the planned hibernation of the ERS-1 payload
+		the ATSR-1 IRR SCC compressor and displacer amplitudes were commanded
+		to zero allowing the detectors to warm up. This began at 154:09:40 UTC
+		which effectively marked the end of science data gathering.
+
+03 Jun 96	The IRR was placed in STBY mode and hibernation began 155:07:30 UTC.
+
+09 Jul 96	ATSR brought out of STBY and cool-down commenced in preparation for
+		upcoming Mutsu Bay (MUBEX-96) Campaign.
+
+11 Jul 96	X-Band data downlink from ERS-1 during Kiruna pass 17:18:25 UTC thru'
+		17:30:06 UTC. From this data instrument performance was evaluated
+		in readiness for the Campaign.
+
+15 Jul 96	A second realtime X-Band dump was taken from 16:53:13 UTC thru'
+		17:04:39 UTC to confirm the ATSR-1 setup. After processing the
+		instrument was declared ready to support MUBEX-96.
+
+26 Jul 96	The first of a planned eight whole orbit X-Band tape dumps for the 
+		MUBEX-96 Campaign from approx. 11:16 thru' 14:38 UTC. The pass
+		over Japan took place at 12:40:20 UTC. The total data period actually
+		covers nearly two orbits.
+
+29 Jul 96	The second and third of the planned eight X-Band tape dumps for the 
+		MUBEX-96 Campaign were acquired at 01:12 thru' 01:48 UTC and 11:16
+		thru' 13:12 UTC The passes over Japan took place at 211:01:28:58 UTC 
+		and 211:12:46:05 UTC respectively.
+	
+01 Aug 96	The fourth of a planned eight X-Band tape dumps for the MUBEX-96 
+		Campaign from approx. 01:15 thru' 01:55 UTC. The pass over Japan 
+		took place at 214:01:34:43 UTC.
+
+04 Aug 96	The fifth of a planned eight X-Band tape dumps for the MUBEX-96 
+		Campaign from approx. 01:25 thru' 01:55 UTC. The pass over Japan 
+		took place at 217:01:40:28 UTC.
+
+07 Aug 96	The sixth of a planned eight X-Band tape dumps for the MUBEX-96 
+		Campaign from approx. 01:30 thru' 02:00 UTC. The pass over Japan 
+		took place at 220:01:46:13 UTC.
+
+08 Aug 96	The seventh of a planned eight X-Band tape dumps for the MUBEX-96 
+		Campaign from approx. 12:15 thru' 13:00 UTC. The pass over Japan 
+		took place at 221:12:31:43 UTC. This was the last pass supported
+		in the campaign.
+
+09 Aug 96	In preparation for the continued hibernation of the ATSR-1 IRR the
+		SCC compressor and displacer amplitudes were commanded to zero 
+		allowing the detectors to warm up. This began at 222:08:55 UTC,
+		the auto gain/offset loops were later disabled, the black body 
+		system was left in its normal configuration and the instrument
+		in NOMINAL mode which should enable minimum time and commanding 
+		to bring the ATSR back into operation at the next re-activation. 
+
+16 Oct 96	ERS-1 payload shut-down whilst ESOC perform spacecraft onboard
+		computer maintenance. Three day reactivation of whole s/c
+		being planned for 22nd, 23rd and 24th Oct.	
+
+
+18 Oct 96	DEU powered up and then inadvertently shut down again by payload
+		EQSOL.
+
+19 Oct 96	DEU finally reconfigured in readiness for the planned payload
+		reactivation.
+
+21 Oct 96 	ESOC begin detector cool down, instrument ready to collect
+		science data when IDHT data gathering begins at midnight
+		21/22nd.
+
+22 Oct 96	After observing the first EGH data it was clear that with the
+		12um channel auto gain/offset loop was dropping lock during
+		the 'hottest' part of the orbit. In order to overcome this
+		the SCC cooler amplitude was increased from B2 to B6, this
+		gave sufficient extra detector cooling to keep the loop
+		locked throughout the whole orbit.
+
+24 Oct 96	X-Band (IDHT) data ended at approx 23:00 UTC at the end of
+		the activation period.
+
+25 Oct 96	ATSR-1 was hibernated again with the cooler amplitudes set
+		to zero and the scan mirror stopped, auto gain/offset loops
+		were deselected to avoid generation of IRRAD offscale
+		anomalies in the history reports.  (08:40 UTC approx) 
+
+30 Dec 96	ESOC begin ATSR de-hibernation and start detector cool-down
+		SCC cold tip down to approx. 103K by 20:30 UTC. IDHT data
+		gathering should start on 31-Dec-96.
+                
+31 Dec 96	Instrument operates nominally with 11/12um auto gain/offset
+		loops enabled. At approx 23:30 UTC the 12um gain/offset dropped
+		lock once for about 20 mins during the "hottest" part of the
+		orbit.
+
+02 Jan 97	12um auto gain/offset loop losing lock on most orbits just
+		during the hottest part of the orbit otherwise nominal.
+
+03 Jan 97	Instrument hibernated again with cooler amplitudes set to zero
+		and scan mirror stopped. In all 43 orbits of IDHT data were
+		collected, all of which have useful IRR data.
+                
+10 Mar 97	ESOC begin ATSR de-hibernation and start detector cool-down
+		SCC cold tip down to approx. 101K by 19:00 UTC. IDHT data
+		gathering should start on 11-Mar-97 around 071:00:00:00 UTC.
+                
+11 Mar 97	ERS-1 planned reactivation of IDHT commenced, during the next
+		43 orbits ATSR-1 was was fully operational with both the 11 and
+		12um channel auto gain/offset loops enabled.
+
+14 Mar 97	Instrument hibernated at approx. 03:00 UTC with cooler amplitudes 
+		set to zero and scan mirror stopped. In all 43 orbits of IDHT 
+		data were collected, all of which have useful IRR data
+                                		
+19 Mar 97	ERS-1 payload shutdown to STBY caused by PF anomaly.
+
+20 Mar 97	ATSR back in pseudo-hibernation.
+
+19 May 97	ERS-1 planned reactivation of IDHT commenced, during the next
+		43 orbits ATSR-1 was was fully operational with both the 11 and
+		12um channel auto gain/offset loops enabled.
+
+23 May 97	Instrument hibernated at approx. 03:00 UTC with cooler amplitudes 
+		set to zero and scan mirror stopped. In all 43 orbits of IDHT 
+		data were collected, all of which have useful IRR data
+
+28 Jul 97	ERS-1 planned reactivation of IDHT commenced, during the next
+		43 orbits ATSR-1 was was fully operational with both the 11 and
+		12um channel auto gain/offset loops enabled. During this reactivation
+		campaigns in Australia (Great Barrier Reef) and Mutsu Bay, Japan
+		were supported.
+
+01 Aug 97	Instrument hibernated at approx. 08:00 UTC with cooler amplitudes 
+		set to zero and scan mirror stopped. In all 45 orbits of IDHT 
+		data were collected, all of which have useful IRR data
+
+06 Oct 97	ERS-1 planned reactivation of IDHT commenced, during the next
+		45 orbits ATSR-1 was was fully operational with both the 11 and
+		12um channel auto gain/offset loops enabled.
+
+10 Oct 97	Instrument hibernated at approx. 03:00 UTC with cooler amplitudes 
+		set to zero and scan mirror stopped. In all 45 orbits of IDHT 
+		data were collected, all of which have useful IRR data
+
+15 Dec 97	ERS-1 planned reactivation of IDHT commenced. The instrument
+		detectors were cooled and the instrument in nominal when IDHT
+		operations commenced at approx. 23:50 UTC
+
+17 Dec 97	S-Band data received today shows the 12uM channel gain/offset loop
+		loosing lock at the warmest part of the orbit. The 12um was therefore
+		commanded at approx 11:10 UTC to a fixed gain of 38 and offset of 
+		0.46v for the rest of the reactivation.
+
+18 Dec 97	Before the instrument could be hibernated an anomaly on the platform
+		caused a payload shut down this happened at approx. 13:27 UTC. The
+    		instrument was left off whilst investigation of the problem was made.
+                Approximately 35 orbits of data will have been gathered.
+
+30 Dec 97	ERS-1 spacecraft emergency declared when 40% of the solar array output
+		was lost. Future payload operations will be limited.
+
+28 Apr 99	Dehibernation of ATSR begins at 09:30 UTC, cool down took approximately 
+		12 hours with the 12uM channel auto gain/offset loop failing to lock.
+		
+29 Apr 99	IDHT data was collected from 05:45 UTC through 20:25 UTC. 
+		The cooler compressor amplitude was increased to 2.311v at 15:20 UTC to 
+		improve the chance of 12uM auto gain/offset loop lock, lock had still 
+		not been achieved by 20:25 UTC when the instrument was powered down.
+		Detector temperatures were around 101K.
+
+24 Jan 00	Dedicated ATSR/IRR payload dehibernation and checkout began at approx.
+		09:30 UTC the SCC compressor amplitude being set at 2.311v, due to power
+		constraints only realtime S-Band data was available during the instrument
+		set up.
+
+25 Jan 00	IDHT data storage commenced at 06:35 UTC and continued through 21:50 UTC,
+		eight full orbits of science data were collected. Despite the cold-tip 
+		temperature reaching a low of 97.6K, the 12uM auto gain/offset loop still 
+		failed to lock, a fixed gain/offset of 36/0.45v was commanded at 11:45 UTC
+		in the 12uM channel together with a data compression change to 10 bit for the
+		11/12uM channels. A second change of gain/offset to 26/0.4v was commanded at
+		16:40 UTC in an attempt to optimise performance.
+		
+		With the IRR the only instrument powered during this payload reactivation, it
+		was evident that 2 to 3 degree cooler detector temperatures could be achieved
+		for the nominal SSC settings.
+
+10 Mar 00	ERS-1 platform suffered a number of anomalies resulting in a transition to SAFE
+		mode. Contact was lost with the spacecraft.
+
+13 Mar 00	ESA announce ERS-1 Nine-year success story comes to an end.		 
+	
+
+
+</pre>
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Thursday, 06-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

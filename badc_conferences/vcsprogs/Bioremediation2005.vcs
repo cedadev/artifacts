@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050606T090000Z
+DTEND:20050609T170000Z
+LOCATION:Baltimore, Maryland USA.
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:In Situ and On-Site Bioremediation Symposium =0D=0Ahttp://www.battelle.org/environment/er/conferences/biosymp/default.stm =0D=0A
+SUMMARY:In Situ and On-Site Bioremediation Symposium
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

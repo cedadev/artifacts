@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20080422T230000Z
+DTEND:20080423T230000Z
+LOCATION:University of Manchester, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E008000000003010F3D0388FC801000000000000000
+	01000000088466FA270ED5A448728065543DA0D88
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+Royal Met Soc National Meeting:=0D=0A=0D=0AThe Mason Gold Medal and suppo=
+rting programme=0D=0A=0D=0AIce in the Atmosphere: from the Micro to the G=
+lobal Scale=0D=0A=0D=0AWEDNESDAY 23 APRIL 2008=0D=0A=0D=0ATo be held at t=
+he harwood room, barnes wallis building, altrincham street (off sackville=
+ street), university of manchester (north campus)=0D=0A=0D=0A
+SUMMARY:Royal Met Soc National Meeting
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

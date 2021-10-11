@@ -1,0 +1,526 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>GOSTAplus - Appendix 1</TITLE>
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.0Gold (X11; I; IRIX 5.3 IP22) [Netscape]">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#F0F0F0" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+
+<P><!-- This document was created from RTF source by rtftohtml version
+2.7.5 --><A NAME="RTFToC11"></A><B>APPENDIX
+1</B>
+
+<P><B>NOTES ON PROCESSING AND QUALITY CONTROL</B>
+
+<P><B>OF THE SEA SURFACE TEMPERATURE DATA</B>
+
+<P><B>FROM THE METEOROLOGICAL OFFICE MAIN</B>
+
+<P><B>MARINE DATA BANK (MOMMDB)</B>
+
+<P><A NAME="RTFToC12"></A><B>1. REMOVAL OF DUPLICATES</B> (Figure 3 (in
+main text), Box 1).
+
+<P>Observations originally entered the MOMMDB on punched cards or on data
+sets keyed in 'card image' format. Any observation in a card batch or data
+set was removed from the batch or data set if it was found to have all
+80 columns identical with any other observation in that card batch or data
+set: if there were 75 to 79 identical columns, the observation was printed
+out for visual inspection and possible removal. When card batches or data
+sets were being merged into the MOMMDB, observations identical to ones
+already in MOMMDB were not added. The subsequent averaging of data for
+1 deg. areas for individual pentads (Section 3(c) of the main text) will
+have reduced the effects of undetected duplicates.
+
+<P><A NAME="RTFToC13"></A><B>2. CREATION OF BACKGROUND FIELDS</B> (Figures
+4a, b, c, d (in main text))
+
+<P>(a) <B>Formation of 'first guess' 1 deg. area background field averages</B>
+
+<P>Accepted SAT or NMAT observations (Box 1 of Figure 4a) f or the whole
+period of the record (1854-1981) were averaged, irrespective of the number
+of observations in each contributing year, into a first-guess climatology
+for each 1 deg. area and pentad (1-5 January etc.) (Box 2 of Figure 4a).
+Away from the main shipping lanes, these averages were frequently based
+on small samples of data, and in many 1 deg. areas an appreciable number
+of pentads had no data.
+
+<P>When filling the gaps, the first step (Boxes 3 to 5 of Figure 4a, expanded
+in Figure 4b) was to combine (without weighting) averages from consecutive
+pentads in each 1 deg. area to produce up to 24 calendar 'half-monthly'
+first guess values, using the mainly 3-pentad groupings in Table A1.1.
+A single 4-pentad half month is required because there are 73 pentads in
+a year: the period 2nd to 21st March was chosen for this because at this
+time of the year SST usually changes only slowly with time, at least in
+the northern hemisphere extratropics. A half-monthly value was permitted
+to be formed from as little as a single pentad .
+
+<P>1 deg. areas that contained all possible calendar 'half-monthly' values
+were defined as 'qualifying areas' (Box 2 of Figure 4b). If there were
+fewer than four such 1 deg. areas in any 10 deg. area (Box 4 of Figure
+4b), no background field was created for the 10 deg. area, except for a
+few 10 deg. areas with more than about 3000 observations but with data
+mostly missing at particular times of the year, e.g. some sub-arctic regions
+with winter ice (Boxes 6 and 7 of Figure 4b). In these cases, a similar
+selection of 'qualifying areas' was carried out using calendar 'monthly'
+averages from pentads grouped as in Table A1.2 (Boxes 8 to 11 of Figure
+4b).
+
+<P>
+<HR WIDTH="100%"><B>(Table A1.1) Definition of calendar 'half-months' used
+in the preliminary stages of creating the background fields</B><BR>
+
+
+<CENTER><TABLE CELLSPACING=0 CELLPADDING=4 >
+<TR>
+<TD><B>Pentad numbers</B></TD>
+
+<TD></TD>
+
+<TD><B>Dates</B></TD>
+
+<TD><B>Half-month<BR>
+numbers</B></TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>1,2,3</TD>
+
+<TD ALIGN=RIGHT>1-15</TD>
+
+<TD>January</TD>
+
+<TD ALIGN=CENTER>1</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>4,5,6</TD>
+
+<TD ALIGN=RIGHT>16-30</TD>
+
+<TD>January</TD>
+
+<TD ALIGN=CENTER>2</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>7,8,9</TD>
+
+<TD ALIGN=RIGHT>31</TD>
+
+<TD>January - 14 February</TD>
+
+<TD ALIGN=CENTER>3</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>10,11,12</TD>
+
+<TD ALIGN=RIGHT>15</TD>
+
+<TD>February - 1 March<BR>
+(in all years</TD>
+
+<TD ALIGN=CENTER>4</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>13,14 ,15,16</TD>
+
+<TD ALIGN=RIGHT>2-21 </TD>
+
+<TD>March</TD>
+
+<TD ALIGN=CENTER>5</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>17,18,19</TD>
+
+<TD ALIGN=RIGHT>22</TD>
+
+<TD>March - 5 April</TD>
+
+<TD ALIGN=CENTER>6</TD>
+</TR>
+
+<TR VALIGN=TOP>
+<TD>20,21,22</TD>
+
+<TD ALIGN=RIGHT>6-20</TD>
+
+<TD>April</TD>
+
+<TD ALIGN=CENTER>7</TD>
+</TR>
+
+<TR>
+<TD>.</TD>
+
+<TD></TD>
+
+<TD>.</TD>
+
+<TD ALIGN=CENTER>.</TD>
+</TR>
+
+<TR>
+<TD>.</TD>
+
+<TD></TD>
+
+<TD>.</TD>
+
+<TD ALIGN=CENTER>.</TD>
+</TR>
+
+<TR>
+<TD>.</TD>
+
+<TD></TD>
+
+<TD>.</TD>
+
+<TD ALIGN=CENTER>.</TD>
+</TR>
+
+<TR>
+<TD>71,72,73</TD>
+
+<TD>17-31</TD>
+
+<TD>December</TD>
+
+<TD ALIGN=CENTER>24</TD>
+</TR>
+</TABLE></CENTER>
+
+<PRE>
+
+<HR WIDTH="100%"></PRE>
+
+<P><B>(Table A1.2) Definition of calendar 'months' used in processing SST
+and NMAT data from the MOMMDB<BR>
+<BR>
+Month Pentads Calendar Equivalent</B>
+
+<P>January 1-6 1-30 January February 7-12 31 January - 1 March (in all
+years) March 13-18 2-31 March April 19-24 1-30 April May 25-30 1-30 May
+June 31-36 31 May - 29 June July 37-42 30 June - 29 July August 43-49 30
+July - 2 September September 50-55 3 September - 2 October October 56-61
+3 October - 1 November November 62-67 2 November - 1 December December
+68-73 2-31 December 
+
+<P>(b) <B>Smoothing of first guess 1 deg. area background field averages
+to produce initial pentad 10 deg. area background field averages</B>
+
+<P>For each qualifying 1 deg. area the 24 (or 12) first guess background
+field averages were harmonically analysed (Box 6 of Figure 4a, expanded
+in Figure 4c). The results were used to synthesize 1 deg. area calendar
+pentad values, which varied smoothly in time. These values were averaged
+to make a first estimate of the 10 deg. area background average for the
+given pentad.
+
+<P>(c) <B>Production of pentad 1 deg. area background field averages and
+derived 5 deg. area monthly averages</B>
+
+<P>The above calendar pentad 10 deg. area averages were combined with available
+incomplete 1 deg. area calendar pentad background field averages from non-
+qualifying 1 deg. areas within the same 10 deg. area, to complete initial
+calendar pentad background field averages for these 1 deg. areas (Box 7
+of Figure 4a, expanded in Figure 4d). This synthesis was, however, not
+carried out for 1 deg. areas having fewer than four pentad averages (Figure
+4d). The 1 deg. area calendar pentad background averages for the 10 deg.
+area were then smoothed with the aid of timewise harmonic analysis and
+synthesis. The results were re-analysed into sets of harmonic coefficients
+(Boxes 8 to 10 of Figure 4a). However, some of the harmonic coefficients
+were still found to fluctuate spatially by amounts exceeding the likely
+real variations. Accordingly, each set of harmonic coefficients of a given
+order was smoothed using a polynomial filter applied firstly to each of
+the ten 1 deg. longitude bands and then to each of the ten 1 deg. latitude
+bands (Box 11 of Figure 4a); the order of the polynomial was automatically
+reduced if there were fewer than ten coefficients per row or column. This
+could result from the presence of land or ice, or from 1 deg. areas being
+absent because they had fewer than four original pentad values. The order
+of the polynomial was five if there were ten or nine coefficients in the
+row or column, four if there were only eight or seven coefficients, while
+a third order polynomial was used if fewer than seven coefficients were
+available. In this way all 1 deg. areas in processible 10 deg. areas were
+provided with harmonic coefficients, from which a final set of background
+1 deg. area calendar pentad averages was synthesized (Box 12 of Figure
+4a). Background field values were derived for 5 deg. areas and calendar
+months (as defined in Table A1.2) by averaging the appropriate 1 deg. area
+calendar pentad values.
+
+<P>(d) <B>Discussion of background fields</B>
+
+<P>The calendar pentad 1 deg. area means were now smooth within any 10
+deg. area, but some discontinuities across 10 deg. area boundaries required
+smoothing. This was not done for the background field but the necessary
+smoothing was incorporated at a later stage for SST when the MOMMDB-MIT
+climatology was blended with the Alexander and Mobley climatology (see
+Section 4 of this Appendix).
+
+<P>Near ice-edges, the annual cycle of the background field may have been
+distorted by the limitation of SST and NMAT data to warmer than average
+(i.e. ice-free) years, with consequent biases of the order of 0.5 deg.
+C to 1 deg. C in the background field. Although systematic biases of this
+size should have had much smaller biasing effects on the accuracy of later
+stages of the procedure, similar problems are likely in the data used for
+the final SST and NMAT climatologies.
+
+<P><A NAME="RTFToC14"></A><B>3. QUALITY CONTROL FLAGS</B> (Figure 3 (in
+main text), Boxes 6 to 16)
+
+<P>(a) <B>Range test </B>(Figure 3 (in main text), Box 11)
+
+<P>In the range test, the standard deviation of all the winsorised monthly
+mean anomalies available for a given 5 deg. area and calendar month was
+calculated once and for all for the whole period 1854-1981. If the 5 deg.
+area monthly mean anomaly for a given year lay outside the limit &#177;3 standard
+deviations, the corresponding SST or NMAT value was flagged when archived
+
+<P>(b) <B>Variance test</B> (Figure 3, Box 13)
+
+<P>In the variance test, the pooled, weighted variance <img src="symbols/nu.gif"><sub>2</sub>
+of winsorised
+pentad 1 deg. area values about their 5 deg. area mean was calculated for
+the given calendar month using all years (1854-1981) where at least 16
+such values were available. The weights were set proportional to the number
+of 1 deg. area pentad values available in each year. Also calculated was
+the variance <img src="symbols/nu.gif"><sub>1</sub> of the winsorised 
+set of 1 deg. area values for the
+month and year under examination. When <img src="symbols/nu.gif"><sub>1</sub>
+exceeded the empirically-
+chosen quantity 0.08n(<img src="symbols/nu.gif"><sub>2</sub> + 1),
+where n is the number of 1 deg. area
+pentad values available in the year under test, that monthly 5 deg. area
+value was flagged. This empirical expression was chosen, after large number
+of experiments, to flag approximately 0.5% of those monthly 5 deg. area
+values that were derived from 12 to 15 deg. area values, rising to 25%
+of those monthly 5 deg. area values that were derived from only four 1
+deg. area values.
+
+<P><A NAME="RTFToC15"></A><B>4. BLENDING OF MOMMDB/MIT AND ALEXANDER AND
+MOBLEY SST CLIMATOLOGIES</B>
+
+<P>(a) <B>Rationale</B>
+
+<P>The climatology of Alexander and Mobley (1976) was used as a method
+of filling the empty areas in the SST climatology mainly because it was
+available in computer-compatible form. However, it is based on data for
+a variety of periods earlier than 1951-80 (mainly 1920-60), so the temperatures
+contained in it are probably negatively biased with respect to 1951-80
+because of large-scale slow climatic changes (Folland, Parker and Kates
+1984) Uncompensated changes of instrumentation may have caused an additional
+overall negative bias, though these instrumental biases appear to be small
+in the Southern Ocean (Section 3(h) of main text). Reynolds (1983) also
+suggested that the Alexander and Mobley climatology has a winter bias to
+lower temperatures that is greater than other climatologies. We therefore
+merged the Alexander and Mobley climatology into the MOMMDB-MIT SST climatology
+in such a way that the resulting values were as consistent as possible
+with the MOMMDB-MIT climatology.
+
+<P>(b) <B>Procedure</B>
+
+<P>An MOMMDB-MIT 1 deg. area monthly SST climatology was produced by averaging
+the constituent pentad values (see Box 8 of Figure 5 and Table A1.2). A
+few modifications were made to the resulting climatology e.g. in the Sea
+of Japan where the MOMMDB-MIT climatology had failed to represent adequately
+the large west-east gradients, especially in winter. Revised values in
+and around the Sea of Japan were derived using the 1951-80 climatology
+of the Japan Meteorological Agency (1983) as a strong guide to the 'true'
+climatology.
+
+<P>The following procedure achieved the goal of providing the empty areas
+with an SST climatology that retained the patterns of geographical variation
+contained in the Alexander and Mobley climatology but whose absolute values
+were anchored as far as possible to those of the generally warmer and more
+reliable MOMMDB-MIT climatology.
+
+<P>Empty areas of the MOMMDB-MIT climatology were filled in by solving
+the following Poisson equation in spherical coordinates:
+
+<P><img src="symbols/triangle.gif"><sup>2</sup> <img src="symbols/phi.gif"> = 
+<img src="symbols/triangle.gif"><sup>2</sup> A
+
+<P>where A is the Alexander and Mobley climatology (in a modified form
+that resulted from timewise harmonic analysis and synthesis to ensure smooth
+annual cycles) and <I><img src="symbols/phi.gif"></I> is the resulting blended climatology
+(Reynolds and Gemmill 1985). Thus, essentially, the spatial rates of change
+of SST gradient in these areas of the MOMMDB-MIT climatology were set equal
+to those in the modified Alexander and Mobley climatology. All SST values
+were constrained to remain above -1.8 deg. C.
+
+<P>The solution of equation A1 is subject to internal and external boundary
+conditions imposed by the MOMMDB-MIT SST values and by Alexander and Mobley's
+SSTs along their ice limits. These ice limits are the only places where
+Alexander and Mobley data are used in a direct way to produce the blended
+field. However, their use is important as they will strongly influence
+the derived blended values over much of the Southern Ocean because of the
+great lack of MOMMDB-MIT data there. At lower latitudes MOMMDB-MIT data
+become more plentiful and their influence on the blended solution predominates.
+
+<P>The blended 1 deg. area climatology was smoothed with a 1:2:1 filter,
+first east-west and then north-south. This ensured that any residual 'jumps'
+across 10 deg. area boundaries in the MOMMDB-MIT climatology (for instance
+see Section 2(d) of this Appendix) were well-smoothed without affecting
+SST gradients on &gt;200 km scales.
+
+<P><A NAME="RTFToC16"></A><B>5. DETERMINATION OF LAND/SEA/ICE CLASSIFICATION
+FOR 5 deg. AREA CLIMATOLOGY</B>
+
+<P>A 5 deg. area is defined to be land if and only if all 25 constituent
+1 deg. areas are land. The 5 deg. area is ice if the number of ice 1 deg.
+areas exceeds the number of sea 1 deg. areas. Otherwise the 5 deg. area
+is sea.
+
+<P><A NAME="RTFToC17"></A><B>APPENDIX 2</B>
+
+<CENTER><P><A NAME="RTFToC18"></A><B>LISTS OF SHIPS FROM THE 1857 ANNUAL
+REPORT</B></CENTER>
+
+<CENTER><P><B>OF THE DIRECTOR OF THE METEOROLOGICAL</B></CENTER>
+
+<CENTER><P><B>DEPARTMENT OF THE BOARD OF TRADE</B></CENTER>
+
+<P><A HREF="figures/app1.gif"><IMG SRC="figures/app1_i.gif" BORDER=1 HEIGHT=225 WIDTH=256></A><BR>
+<B><A HREF="figures/app1.gif">First list</A></B>
+
+<P><A HREF="figures/app2.gif"><IMG SRC="figures/app2_i.gif" BORDER=1 HEIGHT=290 WIDTH=256></A><BR>
+<B><A HREF="figures/app2.gif">Second list</A></B>
+
+<P><A HREF="figures/app3.gif"><IMG SRC="figures/app3_i.gif" BORDER=1 HEIGHT=299 WIDTH=240></A><BR>
+<B><A HREF="figures/app3.gif">Third list</A></B>
+
+<P><A HREF="figures/app4.gif"><IMG SRC="figures/app4_i.gif" BORDER=1 HEIGHT=111 WIDTH=235></A><BR>
+<B><A HREF="figures/app4.gif">Fourth list</A></B>
+
+<P><A NAME="RTFToC19"></A><B>APPENDIX 3</B>
+
+<CENTER><P><A NAME="RTFToC20"></A><B>LIST OF ABBREVIATIONS</B></CENTER>
+
+<TABLE CELLSPACING=0 CELLPADDING=3 >
+<TR>
+<TD><B>CDS</B></TD>
+
+<TD>Consolidated Data Set</TD>
+</TR>
+
+<TR>
+<TD><B>COADS</B></TD>
+
+<TD>Comprehensive Ocean-Atmosphere Data Set</TD>
+</TR>
+
+<TR>
+<TD><B>FNOC</B></TD>
+
+<TD>Fleet Numerical Oceanography Center (USA)</TD>
+</TR>
+
+<TR>
+<TD><B>GOSTA</B></TD>
+
+<TD>Global Ocean Surface Temperature Atlas</TD>
+</TR>
+
+<TR>
+<TD><B>GTS</B></TD>
+
+<TD>Global Telecommunication System</TD>
+</TR>
+
+<TR>
+<TD><B>HMSO</B></TD>
+
+<TD>Her Majesty's Stationery Office (UK</TD>
+</TR>
+
+<TR>
+<TD><B>ICSU</B></TD>
+
+<TD>International Council of Scientific Unions</TD>
+</TR>
+
+<TR>
+<TD><B>IOC</B></TD>
+
+<TD>Intergovernmental Oceanographic Commission (of UNESCO)</TD>
+</TR>
+
+<TR>
+<TD><B>LRFRR</B></TD>
+
+<TD>Long-Range Forecasting Research Report</TD>
+</TR>
+
+<TR>
+<TD><B>MAT</B></TD>
+
+<TD>Marine Air Temperature</TD>
+</TR>
+
+<TR>
+<TD><B>MIT</B></TD>
+
+<TD>Massachusetts Institute of Technology (USA)</TD>
+</TR>
+
+<TR>
+<TD><B>MOMMDB</B></TD>
+
+<TD>Meteorological Office Main Marine Data Bank</TD>
+</TR>
+
+<TR>
+<TD><B>NCAR</B></TD>
+
+<TD>National Center for Atmospheric Research (USA)</TD>
+</TR>
+
+<TR>
+<TD><B>NMAT</B></TD>
+
+<TD>Night-time Marine Air Temperature</TD>
+</TR>
+
+<TR>
+<TD><B>NOAA</B></TD>
+
+<TD>National Oceanic and Atmospheric Administration (USA)</TD>
+</TR>
+
+<TR>
+<TD><B>SST</B></TD>
+
+<TD>Sea Surface Temperature</TD>
+</TR>
+
+<TR>
+<TD><B>TDF</B></TD>
+
+<TD>Tape Data Family</TD>
+</TR>
+
+<TR>
+<TD><B>UNESCO</B></TD>
+
+<TD>United Nations Educational Scientific and Cultural Organization</TD>
+</TR>
+
+<TR>
+<TD><B>WCRP</B></TD>
+
+<TD>World Climate Research Programme</TD>
+</TR>
+
+<TR>
+<TD><B>WMO</B></TD>
+
+<TD>World Meteorological Organization</TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>

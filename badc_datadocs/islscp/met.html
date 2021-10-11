@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>ISLSCP - Near Surface Meteorology</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><IMG SRC="meteo.gif" ALT="*" WIDTH="92" HEIGHT="51" NATURALSIZEFLAG="3"
+ALIGN="BOTTOM"> &nbsp;&nbsp;&nbsp;ISLSCP - Near Surface Meteorology</H1>
+
+<P><HR ALIGN=LEFT><BR>
+<BR>
+</P>
+
+<BLOCKQUOTE>
+  <P>The bulk of the near-surface meteorological products on the
+  CD were extracted from the ECMWF operational forecast analysis
+  archive. <p>
+  The data set consists of time-series of meteorological variables
+  at 6-hourly intervals (0000Z, 0600Z, 1200Z, 1800Z) and monthly
+  6-hourly averages of these and many other diagnostic and prognostic
+  variables. <p>
+  The meteorological variables that are required to force land-atmosphere
+  models with resolved diurnal cycles were extracted from this
+  stream: surface pressure, air temperature, dew point, and wind
+  speed (magnitude). It was also desired to have incident shortwave
+  and longwave radiation fluxes and precipitation rates, preferably
+  broken into large-scale and convective components, at the same
+  6-hourly temporal resolution. <p>
+
+  However, the ECMWF output did not contain precipitation rates,
+  and their radiation flux estimates were thought to be biased
+  due to a systematic underestimation of cloud cover by the model
+  version used to generate these products. To fill the gap, the
+  NASA GSFC team generated hybrid radiation products: the time-series
+  of ECMWF estimates of surface shortwave and longwave fluxes were
+  used to divide up the NASA LaRC satellite-based monthly radiation
+  fluxes into 6-hourly intervals. This resulted in the synthesis
+  of 6-hourly incident shortwave and longwave fluxes that add up
+  to match the NASA LaRC monthly means. <p>
+  A similar procedure was used at NMC by Mitchell to generate 6-hourly
+  estimates of precipitation. Six-hourly total and convective precipitation
+  fields from the 4DDA-based NMC Reanalysis Project (Kalnay and
+  Jenne, 1991) were used to partition the observed monthly GPCP
+  precipitation products into 6-hourly time series of estimated
+  total and convective precipitation, wherein the total precipitation
+  added up to match the GPCP monthly totals. In this procedure,
+  a screening was applied, based on the FGGE daily rainfall data,
+  following Liston et al. (1993), to better reproduce the observed
+  frequency of measurable daily rainfall. All of this effort has
+  resulted in a temporally and spatially consistent meteorological
+  forcings data set with a 6-hourly timestep. These quantities,
+  and some others that were held on the ECMWF record at 6- hourly
+  resolution, were processed to provide monthly 6-hourly mean products
+  and statistics. Of particular interest are the ECMWF- generated
+  estimates of the surface radiation and heat fluxes. <p>
+
+  These fields were generated from a variety of sources (see the
+  documentation) and are not recommended as initialization or boundary
+  condition fields for current modelers. For example, the ECMWF
+  snow-free albedo field is based on the products of Dorman and
+  Sellers (1989), which are thought to be less accurate than the
+  satellite-data based products. All the ECMWF fields were converted
+  from grid cell corner point values to values representative of
+  the entire (ECMWF) grid cell; these were then converted to the
+  ISLSCP 1&deg; x 1&deg; grid and the land/sea mask was applied.
+  In summary, a combination of products from operational meteorological
+  agencies (ECMWF and NMC); satellite-data based radiation estimates
+  (NASA LaRC); and global surface rain gauge analyses (GPCP) have
+  been used to generate time- series of the required near-surface
+  model forcings for the period 1987-1988 at a 6-hourly time resolution.
+  These are supported by a range of ancillary time- averaged quantities
+  that may be useful for forcing models that run on a monthly timestep.</P></BLOCKQUOTE>
+
+<P><BR>
+</P>
+
+<BLOCKQUOTE>
+  <H3>Documentation available on CD-rom (volume1)</H3>
+  <UL>
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/CDs/islscp/islscp_v1/document/nrsurmet/ecmwf.doc">Near-surface
+    meteorological analyses and hybrid products</A> <BR>
+<BR>
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/CDs/islscp/islscp_v1/document/nrsurmet/nmc_gpcp.doc">Total
+    and Convective precipitation</A> <BR>
+<BR>
+  </UL>
+</BLOCKQUOTE>
+
+<P><BR>
+</P>
+
+<BLOCKQUOTE>
+  <P>This data is available on <A HREF="volume25.html">Volumes
+  2 to 5</A>.</P></BLOCKQUOTE>
+
+<P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,42 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070923T230000Z
+DTEND:20070928T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Santorini, Greece
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000020B9A0087B39C7010000000000000000100
+ 00000266A33AD6A2F3A4FA07E0D20C0072EE9
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:This is just a brief note that there =
+will be an AGU Chapman Conference on Stratosphere-Troposphere Coupling, on =
+the Island of Santorini, 24-28 September 2007. Here are some links about th=
+e conference center and the location.=0D=0A=0D=0Ahttp://www.therafoundation=
+.org/theraconferencecenter =0D=0Ahttp://www.dilos.com/location/243 =0D=0A=
+=0D=0A=0D=0AThe main topics for the meeting will be:=0D=0A=0D=0A* Dynamical=
+ mechanisms for stratosphere-troposphere coupling.=0D=0A* Effects of climat=
+e change on the stratospheric circulation and on ozone recovery=0D=0A* Effe=
+cts of climate change on the tropopause layer=0D=0A* To what extent do volc=
+anoes, the QBO, oceanic changes, and the solar cycle affect surface climate=
+ via stratosphere/troposphere coupling? =0D=0A* Forecasting; modeling prior=
+ities and strategies=0D=0A=0D=0AThe AGU has not yet put up the Web site, an=
+d we do not yet have any deadlines. We will provide more information when i=
+t becomes available. Chapman Conferences are open, and we will have some fu=
+nding available to cover travel costs, especially for students and post-doc=
+s. =0D=0A=0D=0APlease distribute this message to potential participants.=0D=
+=0A=0D=0A=0D=0AMark Baldwin=0D=0A=0D=0ADave Thompson=0D=0A=0D=0AEmily Shuck=
+burgh=0D=0A=0D=0A**********************************************************=
+*******************************=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=
+=0D=0A-- =0D=0AThis message (and any attachments) is for the recipient only=
+. NERC=0D=0Ais subject to the Freedom of Information Act 2000 and the conte=
+nts=0D=0Aof this email and any reply you make may be disclosed by NERC unle=
+ss=0D=0Ait is exempt from release under the Act. Any material supplied to=
+=0D=0ANERC may be stored in an electronic records management system.=0D=0A=
+=0D=0A=0D=0A_______________________________________________=0D=0ANERC-Atmos=
+ mailing list=0D=0ANERC-Atmos@ncas.ac.uk=0D=0Ahttp://www.ncas.ac.uk/mailman=
+/listinfo/nerc-atmos=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:AGU Chapman Conference on Stratosphere-Tr=
+oposphere Coupling
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

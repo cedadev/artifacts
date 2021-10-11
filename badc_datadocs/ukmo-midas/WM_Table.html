@@ -1,0 +1,202 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Mean Wind Data Table</TITLE>
+  <!-- Created 14th June 2006 -->
+  <!-- Author: Belinda Robinson BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Mean Wind data - Columns in the WM table <BR CLEAR="ALL"></H1>
+<HR ALIGN=LEFT>
+<a href="WM_Table.html#description">Table Description</a> - <a href="WM_Table.html#table">Columns in the WM table</a> - <a href="WM_Table.html#filter">How to start filtering the rows of data out</a>
+<P><HR ALIGN=LEFT>
+The surface observation data are in a simple
+ASCII format.</P>
+<a name="description"></a>
+<h3>Table Description: </h3>This entity contains values of mean wind and gust direction and speed 
+	  measured during one or more hours ending at the stated date and time. &quot;Hour ending&quot; 
+	  is contrary to the CDB practice, which uses hour beginning at the stated time, but provides 
+      a uniform practice in MIDAS, and simplifies the creation of SQL views. The rows in this table 
+	  are of two types:
+      <ul>
+        <li>Wind and gust direction and speed measured over a WHOLE hour<br>
+        There may be hourly gust data from SYNOPs (with an <font face="Courier New">id_type</font> 
+		of WMO) where the gust speed is 25 knots or more. However these will be overwritten by 
+		later input - eg. hourly climate message data (from ESAWS or SAMOS), DALE tapes or 
+		Metform 6910.</li>
+        <li>Mean value of wind speed for a 24 hour period, usually 09-09Z, obtained from 
+		run-of-wind.</li>
+      </ul>
+      This table is NOT intended for:
+      <ul>
+        <li>Ten minute winds recorded in SYNOPs and METARs - they are stored in 
+		the UK Hourly Weather table</li>
+        <li>Mean speeds for 24 hours, obtained by meaning the hourly means - they are derived.</li>
+      </ul>
+      Identifier is DCNN + anemograph site number.<br><br>
+
+<p>
+<a name="table"></a>
+<h3>Columns in the WM table:</h3>
+For the convenience of users, the WM file column headers are available for download in <a href="Headers/WM_Column_Headers.xlsx    ">Excel</a> or as a <a href="Headers/WM_Column_Headers.csv">comma separated text file</a>
+<P>
+
+
+<table border="1" cellspacing="0" width="95%">
+      <tr> 
+        
+        <td valign="TOP" width="5%" align="center"><b>PK</b></td>
+        <td valign="TOP" width="40%"><b>Attribute</b></td> 
+        <td valign="TOP" width="35%"><b>Description / Units</b></td>
+      </tr>
+      <tr> 
+        
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_end_time</font></td>
+        <td valign="TOP" width="35%">Data and time at end of observation</td>
+      </tr>
+      <tr> 
+        
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id_type</font></td>
+        <td valign="TOP" width="35%">Identifier type</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_hour_count</font></td>
+        <td valign="TOP" width="35%">Observation hour count</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_domain_name</font></td>
+        <td valign="TOP" width="35%"><a href="met_domain.html">Message Type</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">version_num</font></td>
+        <td valign="TOP" width="35%">Observation version number - <strong>Use the row with '1'</strong>, as this has been quality checked by the Met Office </td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_id</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#wind">Unique source identifier</a> or station site number</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rec_st_ind</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/state_indicators.html">State indicator for the record</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">mean_wind_dir</font></td>
+        <td valign="TOP" width="35%">Mean wind direction - The wind direction from which the wind blows, is measured in Degrees (true). The entry for an east wind is 090, that for a south wind 180 and so on clockwise.
+Note that zero values in both wind speed and wind direction fields indicate that there was no wind blowing at the time of observation. <a href="ukmo_guide.html#5.5">More...</a><br>degs true</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">mean_wind_speed</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.5">Mean wind speed</a><br>knots. Wind mast elevations from selected stations are available <a href="http://badc.nerc.ac.ukhttp://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/WindElevations.xls">here</a> (MIDAS users only).</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">max_gust_dir</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.5">Direction of maximum gust</a><br>degs true</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">max_gust_speed</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.5">Speed of maximum gust</a><br>knots</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">max_gust_ctime</font></td>
+        <td valign="TOP" width="35%">Clock-time of maximum gust<br>hhmm</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">mean_wind_dir_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - mean wind direction</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">mean_wind_speed_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - mean wind speed</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">max_gust_dir_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - maximum gust direction</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">max_gust_speed_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - maximum gust speed</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">max_gust_ctime_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - maximum gust time</a>**</td>
+      </tr>
+  <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">meto_stmp_time</font></td>
+        <td valign="TOP" width="35%">Met Office receipt stamp time</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">midas_stmp_etime</font></td>
+        <td valign="TOP" width="35%">Elapsed time to storage in MIDAS<br>minutes</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">mean_wind_dir_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - mean wind direction</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">mean_wind_speed_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - mean wind speed</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">max_gust_dir_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - max gust direction</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">max_gust_speed_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - max gust speed</a>**</td>
+      </tr>
+    
+      </table><BR>
+<BR>
+** Details available to registered users only.
+<P>
+More information about the Met Office surface data is available
+in the <A HREF="ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+
+<a name="filter"></a>
+<h3>How to start filtering the rows of data out:</h3>
+<ol>
+<li>As the data arrive at the Met Office it undergoes quality control to check that the data are correct and consistent with the surrounding data points. Whether the process has occured or not is indicated by the <strong>version number</strong> (1 is
+the one to use as indicated in the table above).
+<p>
+<li>To show the progress of the data through the quality control the various variables
+will have an associated <strong>_q value</strong> (e.g. mean_wind_dir_q). This _q value will have different values for each record (see details in table above).
+<p>
+<li> While the Met Office MIDAS system overwrites the existing entry in their database
+the BADC's MIDAS entries do not as the BADC takes snapshots of the the MIDAS database from
+time to time leading to duplicate entries occuring in our archive. If duplicate records are found, check the associated meto_stmp_time to determine which record is the most recent one - this is the one to use and the other(s) can be ignored. 
+</ol>
+<p>
+</BODY>
+</HTML>

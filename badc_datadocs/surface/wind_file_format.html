@@ -1,0 +1,182 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Wind measurements - File Format</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Wind data - <I>.wind</I> (wind data) file format<BR CLEAR="ALL"></H1>
+
+<hr>
+<blockquote>
+<strong><FONT COLOR="#FB0000"><Strong>PLEASE NOTE:</strong></FONT> The file format described below refers to the Met Office Land Surface data (1900-2000) dataset which has been superseded by the <a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__dataent_ukmo-midas">Met Office MIDAS dataset (1853-present)</a> at the BADC.
+</strong>
+</blockquote>
+
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<P>A <STRONG>list of UK stations</STRONG> for which the BADC holds
+.wind files is available (<A HREF="/data/surface/station_lists/ukstation.wind.html">.wind
+stations</A>).</P>
+
+<P>The file name convention is (STATION_NAME)(YEAR).(MESSAGE_TYPE).(FILE_EXTENSION)</P>
+
+<UL>
+  <LI>STATION_NAMES is the complete station name.<BR>
+  <LI>YEAR is the year expressed in full, ie 1998. <BR>
+  <LI>Description of the <A HREF="met_domain.html">message types</A>
+  is available.<BR>
+  <LI>The file extension is <STRONG>.wind</STRONG> meaning that
+  the file contains wind measurements.<BR>
+</UL>
+
+<P>These .wind files contain values of mean wind and gust direction
+and speed measured during one or more hours ending at the stated
+date and time. There are two types of measurements: Wind and gust
+direction and speed measured over a whole hour and mean value
+of wind speed for a 24 hour period, usually 09-09Z. <BR>
+<BR>
+<STRONG>-999</STRONG> indicates a missing value. <BR>
+<BR>
+The first line of the data file are the fields headers (which
+are detailed in the table below).<BR>
+<BR>
+The fields in the .wind data files are: <BR>
+<BR>
+<td><!--SELECTION--><TABLE BORDER="1" CELLSPACING="2" CELLPADDING="0">
+  <TR>
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">HEADER</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">PARAMETER</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">FIELDS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">COLUMNS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">UNITS</FONT></TH> 
+    <TH BGCOLOR="#666666" HEIGHT="30"><FONT COLOR="#ffffff">COMMENTS</FONT></TH> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">ID</TD> 
+    <TD BGCOLOR="#ffffff">Station Number</TD> 
+    <TD BGCOLOR="#ffffff">1</TD> 
+    <TD BGCOLOR="#ffffff">1-8</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#3.6">Wind observing
+      site identification</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">IDTYPE</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">2</TD> 
+    <TD BGCOLOR="#d4d4d4">9-17</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas.ukmo_guide.html#3.6">Wind observing
+      site identification</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">MET_DOM</TD> 
+    <TD BGCOLOR="#ffffff">Meteorological Domain</TD> 
+    <TD BGCOLOR="#ffffff">3</TD> 
+    <TD BGCOLOR="#ffffff">18-28</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="met_domain.html">Message types</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">YEAR</TD> 
+    <TD BGCOLOR="#d4d4d4">Year</TD> 
+    <TD BGCOLOR="#d4d4d4">4</TD> 
+    <TD BGCOLOR="#d4d4d4">29-35</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">4 characters</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">MON</TD> 
+    <TD BGCOLOR="#ffffff">Month</TD> 
+    <TD BGCOLOR="#ffffff">5</TD> 
+    <TD BGCOLOR="#ffffff">36-43</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff">1 or 2 characters (from 1 to 12)</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">DAY</TD> 
+    <TD BGCOLOR="#d4d4d4">Day</TD> 
+    <TD BGCOLOR="#d4d4d4">6</TD> 
+    <TD BGCOLOR="#d4d4d4">44-51</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4">1 or 2 characters (from 1 to 31max)</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">END_HOUR</TD> 
+    <TD BGCOLOR="#ffffff">Hour</TD> 
+    <TD BGCOLOR="#ffffff">7</TD> 
+    <TD BGCOLOR="#ffffff">52-61</TD> 
+    <TD BGCOLOR="#ffffff">-</TD> 
+    <TD BGCOLOR="#ffffff">Hour of observation from 0 to 2300</TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">COUNT</TD> 
+    <TD BGCOLOR="#d4d4d4">Hour count</TD> 
+    <TD BGCOLOR="#d4d4d4">7</TD> 
+    <TD BGCOLOR="#d4d4d4">62-69</TD> 
+    <TD BGCOLOR="#d4d4d4">-</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="count.html">See COUNT definition</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">MDIR</TD> 
+    <TD BGCOLOR="#ffffff">Mean Wind Direction</TD> 
+    <TD BGCOLOR="#ffffff">9</TD> 
+    <TD BGCOLOR="#ffffff">70-77</TD> 
+    <TD BGCOLOR="#ffffff">degree true</TD> 
+    <TD BGCOLOR="#ffffff">The wind direction from which the wind
+      blows, is measured in Degrees (true). The entry for an east wind
+      is 090, that for a south wind 180 and so on clockwise.<BR>
+Note that zero values in both wind speed and wind direction fields indicate that there was no wind blowing at the time of observation.<BR>
+      <A HREF="../ukmo-midas/ukmo_guide.html#5.5">See Met Office documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">MSPEED</TD> 
+    <TD BGCOLOR="#d4d4d4">Mean Wind Speed</TD> 
+    <TD BGCOLOR="#d4d4d4">10</TD> 
+    <TD BGCOLOR="#d4d4d4">78-85</TD> 
+    <TD BGCOLOR="#d4d4d4">knots</TD> 
+    <TD BGCOLOR="#d4d4d4">Note that those mean wind speed values are the total of the daily measurements, that is, a daily mean up to the reporting time. Please divide value by 24 to get the daily mean.<br>
+Note also that zero values in both wind speed and wind direction fields indicate that there was no wind blowing at the time of observation.<BR>
+<A HREF="../ukmo-midas/ukmo_guide.html#5.5">See Met Office
+      documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">GUST_DIR</TD> 
+    <TD BGCOLOR="#ffffff">Max Gust Direction</TD> 
+    <TD BGCOLOR="#ffffff">11</TD> 
+    <TD BGCOLOR="#ffffff">86-95</TD> 
+    <TD BGCOLOR="#ffffff">degree true</TD> 
+    <TD BGCOLOR="#ffffff"><A HREF="../ukmo-midas/ukmo_guide.html#5.5">See Met Office
+      documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#d4d4d4">GUST_SPEED</TD> 
+    <TD BGCOLOR="#d4d4d4">Max Gust Speed</TD> 
+    <TD BGCOLOR="#d4d4d4">12</TD> 
+    <TD BGCOLOR="#d4d4d4">96-107</TD> 
+    <TD BGCOLOR="#d4d4d4">knots</TD> 
+    <TD BGCOLOR="#d4d4d4"><A HREF="../ukmo-midas/ukmo_guide.html#5.5">See Met Office
+      documentation</A></TD> 
+  </TR>
+  <TR>
+    <TD BGCOLOR="#ffffff">GUST_TIME</TD> 
+    <TD BGCOLOR="#ffffff">Time of Maximum Gust</TD> 
+    <TD BGCOLOR="#ffffff">13</TD> 
+    <TD BGCOLOR="#ffffff">108-118</TD> 
+    <TD BGCOLOR="#ffffff">hhmm</TD> 
+    <TD BGCOLOR="#ffffff">In hours and minutes (24 hour clock)<BR>
+      <A HREF="../ukmo-midas/ukmo_guide.html#5.5">See Met Office documentation</A></TD> 
+  </TR>
+</TABLE><!--/SELECTION--><BR>
+<BR>
+More information about Wind network is available in the <A HREF="../ukmo-midas/ukmo_guide.html#3.3">documentation
+provided by the Met Office</A>.
+<P>
+</BODY>
+</HTML>

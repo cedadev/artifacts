@@ -1,0 +1,178 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Daily Temperature Data Table</TITLE>
+  <!-- Created 16th June 2006 -->
+  <!-- Author: Belinda Robinson BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Daily Temperature data - Columns in the TD table <BR CLEAR="ALL"></H1>
+<HR ALIGN=LEFT>
+<a href="TD_Table.html#description">Table Description</a> - 
+<a href="TD_Table.html#table">Columns in the TD table</a> - 
+<a href="TD_Table.html#filter">How to start filtering the rows of data out</a>
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<a name="description"></a>
+<h3>Table Description: </h3> This entity contains maximum and minimum temperatures measured over a
+	  period of up to 24 hours. <font face="Courier New">ob_end_time</font> and
+	  <font face="Courier New">ob_hour_count</font> define the observation period. Attributes with
+	  different time-scales will not be compressed into a single row. For air temperatures, the
+	  observation period will usually be one of the following: 09-09Z, 09-21Z, 21-09Z.  For minimum
+	  grass temperature and minimum concrete temperature <font face="Courier New">ob_end_time</font>
+	  is most usually 0900. Where the period of exposure is known to be 21-09Z, then
+	  <font face="Courier New">ob_hour_count = 12</font>. For some stations, the period of exposure
+	  is not known, but could be as much as 09-09Z, so a nominal
+	  <font face="Courier New">ob_hour_count = 12</font> is used. MIDAS will store rows in this
+	  table using climatological station number, i.e.
+	  <font face="Courier New">id_type = 'DCNN'</font>. If the station does not have a DCNN, it
+	  will use WMO number, i.e. <font face="Courier New">id_type = 'WMO'</font>. <br><br>
+<p>Please note that although observing practice "throws back" certain parameters to the previous day (e.g. maximum temperature) these are not thrown back within the MIDAS system, but are entered in the MIDAS system as the values recorded at the observation time for the record.</p>
+<p>
+<a name="table"></a>
+<h3>Columns in the TD table:</h3>
+For the convenience of users, the TD file column headers are available for download in <a href="Headers/TD_Column_Headers.xlsx">Excel</a> or as a <a href="Headers/TD_Column_Headers.csv">comma separated text file</a>
+<P>
+
+      <table border="1" cellspacing="0" width="95%">
+      <tr>
+        <td valign="TOP" width="5%" align="center"><b>PK</b></td>
+        <td valign="TOP" width="40%"><b>Attribute</b></td>
+        <td valign="TOP" width="35%"><b>Description / Units / Precision</b></td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_end_time</font></td>
+        <td valign="TOP" width="35%">Date and time at end of observation</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id_type</font></td>
+        <td valign="TOP" width="35%">Identifier type</font></td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_hour_count</font></td>
+        <td valign="TOP" width="35%">Observation hour count</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">version_num</font></td>
+        <td valign="TOP" width="35%">Observation version number - <strong>Use the row with '1'</strong>, as this has been quality checked by the Met Office </td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_domain_name</font></td>
+        <td valign="TOP" width="35%"><a href="met_domain.html">Message type</a></td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_id</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#wind">Unique source identifier</a> or station site number</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rec_st_ind</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/state_indicators.html">State indicator for the record</a>**</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">max_air_temp</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.2">Maximum air temperature</a><br>Unit=1 deg C to the nearest 0.1 deg C</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">min_air_temp</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.2">Minimum air temperature</a><br>Unit=1 deg C to the nearest 0.1 deg C</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">min_grss_temp</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.2">Minimum grass temperature</a><br>Unit=1 deg C to the nearest 0.1 deg C</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">min_conc_temp</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.2">Minimum concrete temperature</a><br>Unit=1 deg C to the nearest 0.1 deg C</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">max_air_temp_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - max air temperature</a>**</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">min_air_temp_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - min air temperature</a>**</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">min_grss_temp_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - min grass temp</a>**</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">min_conc_temp_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - min concrete temp</a>**</td>
+      </tr>
+ <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">meto_stmp_time</font></td>
+        <td valign="TOP" width="35%">Met Office receipt stamp time</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">midas_stmp_etime</font></td>
+        <td valign="TOP" width="35%">Elapsed time to storage in MIDAS<br>minutes</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">max_air_temp_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - max air temp</a>**</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">min_air_temp_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - min air temp</a>**</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">min_grss_temp_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - min grass temp</a>**</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">min_conc_temp_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - min concrete temp</a>**</td>
+      </tr>
+
+      </table><BR>
+<BR>
+** Details available to registered users only.<P>
+More information about the Met Office surface data is available
+in the <A HREF="ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+<a name="filter"></a>
+<h3>How to start filtering the rows of data out:</h3>
+<ol>
+<li>As the data arrive at the Met Office it undergoes quality control to check that the data are correct and consistent with the surrounding data points. Whether the process has occured or not is indicated by the <strong>version number</strong> (1 is the one to use as indicated in the table above).
+<p>
+<li>To show the progress of the data through the quality control the various variables will have an associated <strong>_q value</strong> (e.g. max_air_temp_q). This _q value will have different values for each record (see details in table above).
+<p>
+<li> While the Met Office MIDAS system overwrites the existing entry in their database the BADC's MIDAS entries do not as the BADC takes snapshots of the the MIDAS database from time to time leading to duplicate entries occuring in our archive. If duplicate records are found, check the associated meto_stmp_time to determine which record is the most recent one - this is the one to use and the other(s) can be ignored.
+</ol>
+<p>
+
+
+</BODY>
+</HTML>

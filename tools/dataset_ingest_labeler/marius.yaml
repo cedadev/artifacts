@@ -1,0 +1,141 @@
+
+# Title
+# - The title should be understandable, brief and simple
+# - Acronyms and abbreviations must be explained i.e. Full Name (ACRONYM)
+# - The title should describe the data in question, NOT the project/activity which produced it
+# - The title should be concise but as informative as possible, providing the reader with an indication of the 
+#   content of the data and (where appropriate) its temporal and spatial coverage
+# - You might consider a title that answers the “what, where, when” questions about the resource.  
+#   For example: “Biogeochemical Ocean Flux Study (BOFS) North Atlantic Data Set (1989-1991)”
+
+title: |
+  Managing the Risks, Impacts and Uncertainties of drought and water Scarcity (MaRIUS) project: Large set of 
+  potential past and future climate time series for the UK from the weather@home2 model 
+
+# Description
+# - should describe the dataset in plain language for a non-expert user (first year undergraduate level)
+# - first few sentences should summarise the contents of the resource
+# - specialist terms should be explained in full
+# - Acronyms and abbreviations must be explained i.e. Full Name (ACRONYM)
+# - should describe the dataset in question, NOT the project/activity which produced it. 
+#   Some details of the activities which produced the resource may be pertinent, in which case they should be included.
+#
+# To help organise thinking, it is recommended that the author may like to use the following structure for the summary:
+#
+# 1.     What - A description of what has been recorded and what form the data takes. 
+# 2.     Where - A description of the spatial extent.  This could include, gridded/scattered data; even/very variable coverage
+# 3.     When - A description of the temporal coverage (e.g. the period over which data were collected)
+# 4.     How - A brief description of methods and instrumentation used
+# 5.     Why - For what purpose was the data collected?
+# 6.     Who - The party/parties responsible for the collection and interpretation of data.
+# 7.     Completeness - Are any data absent from the dataset? Explain which data are included or excluded and why.
+
+description: |
+  Large data sets created within the MaRIUS project (Managing the Risks, Impacts and Uncertainties of drought and water Scarcity). 
+  Three time periods are covered: historical baseline (BS: 1900-2006), near-future (NF: 2020-2049) and far-future (FF: 2070-2099), whereby the RCP8.5 is assumed for future time slices. The 30-year baseline to which future time slices should be compared to are years 2075-2004 of the historical baseline, since oceanic variability in future time slices is based on these years.
+  One set of 100 time series is available for the historical baseline, while 5 sets of about 85-100 time series are available for each future time slice. The five sets sample climate model uncertainty by sampling a range of sea surface temperature warming patterns as follows: nf and ff use the median warming pattern of CMIP5 climate models. The four others sets are called nf-pYYz (near future) and ff-pYYz (far future) whereby 'YY' stands for the percentile of global mean SST warming (YY=10 or 90) and 'z' stands for the North Atlantic SST gradient (z=n for minimum, z=x for maximum). All natural forcings (e.g., volcanoes) in the future time slices are replications of years 1975-2004, while anthropogenic forcings (e.g., CO2 concentrations) follow the high-emission scenario RCP8.5.
+  The time series were created from single-year simulations that have been stitched together while ensuring continuity in the slowly-evolving variability (see Guillod et al., Hydrol. Earth Syst. Sci., 2017 for details). Therefore, for each set (e.g., near_future_p10n), a 'stitching table' is provided alongside with data from individual yearly simulations, which contains the simulation ID ('umid') for each year and each individual time series (i.e., each column within the table list the umid for each year of the time series).
+  Data are gridded NetCDF V3 files, provided on a rotated longitude-latitude grid at a 0.22 degree resolution (European CORDEX grid) over a domain encompassing the United Kingdom. A subset of variables are available at daily, 5-days, and monthly temporal resolutions, based on a calendar with 360 days a year (30 days per month). Included are only data from HadRM3P, the regional climate model within weather@home2. After unpacking yearly *tgz files for a given time slice and scenario (e.g., near_future_p10n) within a directory with the relevant name, the data are structured as follows:
+  timeslice / year / umid / temporalResolution / WAH_umid_variable_temporalResolution_g2_year.nc
+  where:
+  - The temporal resolution ('temporalResolution') available depends on the variable, but it can be 'daily', 'monthly', or '5days'
+  - 'timeslice' can be one of: 'baseline', 'near_future', 'near_future_p10n', 'near_future_p10x', 'near_future_p90n', 'near_future_p90x', ‘far_future’, 'far_future_p10n', 'far_future_p10x', 'far_future_p90n', 'far_future_p90x'.
+  - 'year' is the year of the simulation and data.
+  - 'umid' is the ID of the simulation, to be read from the stitching table.
+  - 'variable' is the variable, following CMOR conventions (see also Table 3 in Guillod et al., Hydrol. Earth Syst. Sci., 2017).
+  Further details about the data, including validation of the climate time series and analyses of some changes in the future projections, can be found in the PDF documentation as well as in Guillod et al., 2017b. A detailed validation of the model (weather@home2) can be found in Guillod et al., 2017a (see list of references below).
+# Authors
+# A list of authors. Organisations can be specified using a lastname only.
+
+authors:
+ - firstname: Benoit P.
+   lastname: Guillod
+ - firstname: Richard G.
+   lastname: Jones
+ - firstname: Alison L.
+   lastname: Kay
+ - firstname: Neil R.
+   lastname: Massey
+ - firstname: Sarah
+   lastname: Sparrow
+ - firstname: David C. H.
+   lastname: Wallom
+ - firstname: Simon S.
+   lastname: Wilson
+
+# Where is the data? Lat long bounding box.
+
+bbox:
+  west: -15.83
+  east: 6.68
+  north: 60.81
+  south: 47.59
+
+
+time_range:
+  start: 1900-01-01
+  end: 2099-12-30
+
+# Lineage
+# - should describe how the data resource came into existence.
+# - should describe the stages the resource has passed through before arriving at the data centre (to the best of the metadata authors knowledge).
+
+lineage: The Weather@Home2 climate simulation environment uses the HadAM3P Atmosphere-only General Circulation Model (AGCM) 
+  with an embedded Regional Climate Model (RCM) variant, HadRM3P, both from the UK Met Office Hadley Centre. Unlike the original Weather@Home, 
+  Weather@Home2 uses a more sophisticated land-surface model, MOSES2.
+  These models are based upon the atmospheric component of HadCM3, a well documented and widely used coupled ocean – atmosphere model. 
+  HadRM3P is the regional model used in the Providing Regional Climates for Impacts Studies project (PRECIS)10, also 
+  originating from the UK Met Office. 
+
+quality: Research data.
+
+# List of relevent online documentation sources
+docs:
+  - title: |
+      Guillod, B. P., Jones, R. G., Dadson, S. J., Coxon, G., Bussi, G., Freer, J., Kay, A. L., Massey, N. R., Sparrow, S. N., Wallom, D. C. H., Allen, M. R., and Hall, J. W. (2017b) A large set of potential past, present and future hydro-meteorological time series for the UK, Hydrology and Earth System Sciences Discussion, in review.
+    url: https://doi.org/10.5194/hess-2017-246.
+  - title: |
+      Guillod, B. P., Jones, R. G., Bowery, A., Haustein, K., Massey, N. R., Mitchell, D. M., Otto, F. E. L., Sparrow, S. N., Uhe, P., Wallom, D. C. H., Wilson, S., and Allen, M. R. (2017a) weather@home 2: validation of an improved global–regional climate modelling system, Geoscientific Model Development 10, 1849–1872.
+    url: http://www.geosci-model-dev.net/10/1849/2017/
+
+# A Project description
+# The title should include an acronym if possible.
+# This could include: what the project is about, project aims and objectives, why the research is important, when did the project start/end etc.
+
+project: 
+#  catalogue_url: http://catalogue.ceda.ac.uk/uuid/df021ea6dd0248e5a8a411f3b80e9859
+  title: Managing the Risks, Impacts and Uncertainties of drought and water Scarcity (MaRIUS)
+  description: |
+    MarIUS, the “Managing the Risks, Impacts and Uncertainties of drought and water Scarcity” project, is an NERC-funded project studying the 
+    drought and water scarcity in the United Kingdom. Grant number NE/L010364/1.
+
+  PI:
+    firstname: Jim W.
+    lastname: Hall
+  funder:
+    lastname: Natural Environment Research Council (NERC)
+  grant_number: NE/L010364/1
+
+# Instruments
+# List any instruments used. 
+# If your data is collected via an instrument, please check the CEDA instrument record list here:
+# http://catalogue.ceda.ac.uk/listings/instr/ 
+
+computations:
+  name: Weather@Home2 climate simulation environment uses the HadAM3P Atmosphere-only General Circulation Model (AGCM) with an embedded Regional Climate Model (RCM)
+  description: |
+    The Weather@Home2 climate simulation environment uses the HadAM3P Atmosphere-only General Circulation Model (AGCM) 
+    with an embedded Regional Climate Model (RCM) variant, HadRM3P, both from the UK Met Office Hadley Centre. Unlike the original 
+    Weather@Home, Weather@Home2 uses a more sophisticated land-surface model, MOSES2.  
+
+
+format: NetCDF
+
+ceda_officer: 
+  firstname: Sam
+  lastname: Pepler
+
+result_path: /badc/weather_at_home/data/marius_time_series
+
+n_files: 420
+size: 1104984893114

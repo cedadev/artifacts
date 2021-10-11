@@ -1,0 +1,1532 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>UTLS-Ozone Data Scoping Study</TITLE>
+</HEAD>
+<BODY>
+
+<B><FONT FACE="Arial" SIZE=4><P>UTLS-OZONE Data Scoping Study</P>
+</B></FONT><P>J. A. Kettleborough, L. J. Gray, and S. R. Williams.  British Atmospheric Data Centre, Rutherford Appleton Laboratory.</P>
+<B><I><FONT FACE="Arial"><P>Summary</P>
+
+<UL>
+</B></I></FONT><LI>UTLS-OZONE funds a diverse set of projects encompassing field observations, data analysis, model studies and chemical kinetics studies.  The data requirements of the different types of project are clearly different.</LI>
+<LI>Field observation projects will measure a large range of chemical and meteorological parameters from a range of platforms such as the MRF C-130 aircraft, the Egrett aircraft, balloon based observations, and ground based LIDAR. They are the most data intensive projects requiring data dissemination and long term archive facilities. The adopted file format for data exchange and archive will be NASA-Ames format.</LI>
+<LI>Model and data analysis projects potentially use and produce large volumes of data.  Continuous model development and improvement means it is not appropriate to keep this data in a long-term archive.  There is a case, however, for storing some chemical fields to act as reference fields.  The adopted file format for model data will be NetCDF.</LI>
+<LI>Chemical kinetics studies produce small amounts of data that is readily disseminated via published papers.  This data is most usefully archived along with other chemical kinetic data rather than in isolation. </LI>
+<LI>There are significant demands for 3<SUP>rd</SUP> party data sets to aid the planning and analysis of field observation campaigns, to establish the climatology and variability of the UTLS, and to evaluate the performance of numerical models.  These data sets include ECMWF analyses, UKMO Unified Model output, and value-added products such as trajectories.</LI>
+<LI>Many of the UTLS-OZONE projects involve collaboration with EU and US funded programs.  This presents some challenges for dissemination and archiving the data: how much of the data should be stored at the BADC, and what are the most effective ways to maintain references between data centres?</LI></UL>
+
+<B><I><FONT FACE="Arial"><P>&nbsp;</P>
+<P>Purpose</P>
+</B></I></FONT><P>The British Atmospheric Data Centre (BADC) has been designated by NERC as the data centre for archiving data collected or produced as part of the UTLS-OZONE thematic program.  All projects funded by NERC under the UTLS-OZONE thematic program have a commitment to archive the data they produce as part of the program at the BADC, if appropriate.  The BADC will then be responsible for disseminating the data and provide a long-term archive.</P>
+
+<P>The general objective of the scoping study was to determine the data requirements of the program.  Having determined these requirements the study can be used to identify and prioritise the tasks needed to ensure that these requirements are met efficiently and effectively.</P>
+<P>The specific objectives of the scoping study were to:</P>
+<OL>
+
+<LI>Determine the type of data to be collected.</LI>
+<LI>Determine the 3<SUP>rd</SUP> party data sets needed by the projects.</LI>
+<LI>Determine a timetable for data collection.</LI>
+<LI>Determine the most useful file formats for the data.</LI>
+<LI>Determine the structure of the Data Archive.</LI>
+<LI>Determine the most appropriate keywords for the data set catalogue.</LI>
+<LI>Highlight any areas of data management that are uncertain at present.</LI></OL>
+
+<B><I><FONT FACE="Arial"><P>Sources</P>
+</B></I></FONT><P>Most of the information used in compiling this study was acquired using a data questionnaire sent to all round 1 and round 2 funded projects. A copy of the data questionnaire used in the data scoping study can be found in appendix A.  Copies of the individual returns to the questionnaire can be obtained from the BADC on request.  The returns to the questionnaire have been supplemented by e-mail contact with researchers in the individual projects.</P>
+<B><I><FONT FACE="Arial"><P>Project Types</P>
+</B></I></FONT><P>One of the challenges of data management for the UTLS project is the diversity of the data sets produced as part of the project.  For the purposes of data management the projects can be characterised as one of three types.</P>
+<OL>
+
+<LI>Field observation (FO): using instruments employed to observe geophysical parameters.</LI>
+<LI>Model studies (MS) and data analysis (DA): using mainly computational and numerical techniques.</LI>
+<LI>Chemical kinetics (CK): using laboratory based instruments.</LI></OL>
+
+<P>Clearly some projects encompass more than one type.  For instance field observation projects always include an element of data analysis.  The division of projects into the different types is not intended to completely define the aims of any one project: it is intended to act as a simple categorisation to infer where the emphasis for data management tasks will be.</P>
+<P>The data management demands for the three types of project are clearly different.  Field observations, satellite data apart, tend to produce small data sets confined in time and space.  The field observations need both to be disseminated rapidly and to be archived for the long term.  Model studies and data analysis often use and produce large data sets.  For these projects the 3<SUP>rd</SUP> party data requirements, such as meteorological analyses, are often of a higher priority than long term archiving.  Long term archiving of the data sets produced by MS and DA projects is of low priority since they have a limited life span as the models evolve and improve.  The results of chemical kinetics experiments are very small data sets that can be disseminated either simply by the originating investigator or in published papers.  The archiving of chemical kinetics results is obviously important, but is usually achieved by results appearing in published papers.</P>
+<P>FOs are the most demanding of the types of project for data management.  The BADC has gained experience of dealing with field observations through the ACSOE project.  Although it has to be noted that not all of the field observation projects funded under UTLS will fit the ACSOE model.  Many of the FO projects are funded under UTLS, but form part of larger field campaigns funded by other bodies such as the EU and NASA.  These projects may have commitments to other funding bodies: these might include a commitment to archive data somewhere other than the BADC.   The issues raised by the collaborations will be covered later in this document.</P>
+<B><I><FONT FACE="Arial"><P>Projects</P>
+</B></I></FONT><P>Table 1 lists the projects, with a classification of the project type, and any collaborations and/or prior data commitments.  Of the thirteen FO projects nine involve collaborations with external projects, or have prior data commitments.  Of the eight MS/DA projects three have the specific task of providing modeling support for non-UTLS projects.</P>
+<P>&nbsp;</P>
+<B><P><A NAME="_Ref453921368"><A NAME="_Ref457368028">Table 1</A></A> UTLS round 1 and 2 projects</P></B>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=574>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<B><P>Project</B></TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<B><P>P.I.</B></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<B><P>Type</B></TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<B><P>Collaboration</B></TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Airborne Measurements of Atmospheric Tracers in the UTLS for studies of atmospheric chemistry and transport</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Jones, Pyle, and Gardiner</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>FO</TD>
+<TD WIDTH="20%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Atmospheric Chemistry and transport of Ozone in the UTLS (ACTO)</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Penkett <I>et al.</I></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>FO MS DA</TD>
+<TD WIDTH="20%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Campaign participation and modeling studies for APE-GAIA</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Chipperfield, Roscoe</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>FO MS</TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<P>APE-GAIA</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Characterisation of volatile organic compounds in the UTLS</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Pilling, Lewis, Bartle</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>FO</TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<P>MAXOX</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Development of scientific instrumentation for commercial aircraft</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Jones</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>FO</TD>
+<TD WIDTH="20%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Extension of THESEO balloon-borne measurements of atmospheric tracers and chemically active gases in the mid-latitude lower stratosphere for test of atmospheric transport</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Jones, Pyle, Woods</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>FO</TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<P>THESEO</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>GCM measurements of halogenated source gases in the UTLS region in air samples from CARIBIC flight program</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Penkett, Oram, Sturges</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>FO</TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<P>CARIBIC</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Improved upper air forecasting and analysis for APE-THESEO</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>MacKenzie</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>FO MS</TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<P>APE THESEO</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Improvements to calculations of lower stratosphere exchange between southern mid-latitudes and Antarctica by radiosonde launches during the Airborne Polar Experiment</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Roscoe, Shanklin</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>FO</TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<P>APE</P>
+<FONT SIZE=2><P>Antarctic Archive</FONT></TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Ozone LIDAR investigations of the subtropical jetstream and of subtropical intrusions into mid-latitudes</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Vaughan</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>FO</TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<P>METRO/</P>
+<P>TRACAS</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Support and Analysis for Far-Infrared emission remote sensing</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Hamilton, Ade</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>FO</TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<P>SAFIRE/IBEX</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>The Aberystwyth-Egrett Experiment</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Whiteway, Vaughan</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>FO</TD>
+<TD WIDTH="20%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>The role of frontal zones in determining upper troposphere chemical distributions</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Browning <I>et al.</I></TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>FO MS</TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<P>MAXOX</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>A General Circulation Model study of Ozone/Temperature interactions</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Shine, Fish</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>MS</TD>
+<TD WIDTH="20%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Development of a microphysical and chemical model of cirrus clouds</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Choularton</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>MS</TD>
+<TD WIDTH="20%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Evaluation of the Ozone and Water vapour data sets of the 40 year European Re-Analysis of the Global Atmosphere</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Lahoz, O’Neill,  Hoskins</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>DA</TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<P>ECMWF</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Forecast and Analysis of polar stratospheric clouds and cirrus for the NASA SOLVE arctic ozone campaign</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Carslaw</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>MS</TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<P>SOLVE</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Gas Phase and aerosol composition of air entering the upper troposphere through convection</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Parker, Carslaw</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>MS</TD>
+<TD WIDTH="20%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Studies of the tropopause region using version 5 data from MLS</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Harwood</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>DA</TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<P>UARS/MLS</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>The response of lower stratosphere ozone to solar variability and its impact on radiative forcing and climate</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Haigh, Austin</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>MS</TD>
+<TD WIDTH="20%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Three Dimensional model studies for THESEO</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Chipperfield</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>MS</TD>
+<TD WIDTH="20%" VALIGN="TOP">
+<P>THESEO</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Laboratory studies of  OH production and removal  rates for the upper troposphere</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Heard, Pilling</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>CK</TD>
+<TD WIDTH="20%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Laboratory studies of the heterogeneous interaction of pollutants from aircraft – of HNO<SUB>3</SUB>, H<SUB>2</SUB>O and soot aerosols</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Cox</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>CK</TD>
+<TD WIDTH="20%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="39%" VALIGN="TOP">
+<P>Laboratory, theoretical, and modeling studies of Gas phase peroxy radical reactions affecting the UTLS HO<SUB>x</SUB> budget</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Rowley, Cox, Clary</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P>CK</TD>
+<TD WIDTH="20%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+</TABLE>
+
+<B><I><FONT FACE="Arial"><P>Campaign Times</P>
+</B></I></FONT><P>Table 2 shows the main times when data will be collected.  For projects funded in rounds one and two, most of the data will be collected during the first 3 years of funding.  This implies that the initial emphasis for data management should be development and population of the archive.  Development of value added products will be delayed until later in the program.</P>
+<B><P><A NAME="_Ref457368052">Table 2</A> Times for Experimental Campaigns</P></B>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=612>
+<TR><TD WIDTH="21%" VALIGN="TOP" HEIGHT=15>
+<B><P>Project</B></TD>
+<TD WIDTH="23%" VALIGN="TOP" HEIGHT=15>
+<B><P>Campaign</B></TD>
+<TD WIDTH="19%" VALIGN="TOP" COLSPAN=6 HEIGHT=15>
+<B><P>1998</B></TD>
+<TD WIDTH="19%" VALIGN="TOP" COLSPAN=6 HEIGHT=15>
+<B><P>1999</B></TD>
+<TD WIDTH="19%" VALIGN="TOP" COLSPAN=6 HEIGHT=15>
+<B><P>2000</B></TD>
+</TR>
+<TR><TD WIDTH="21%" VALIGN="TOP" HEIGHT=15>
+<P>Hamilton et al</TD>
+<TD WIDTH="23%" VALIGN="TOP" HEIGHT=15>
+<P>SAFIRE/IBEX</TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+</TR>
+<TR><TD WIDTH="21%" VALIGN="TOP" HEIGHT=15>
+<P>Penkett et al</TD>
+<TD WIDTH="23%" VALIGN="TOP" HEIGHT=15>
+<P>CARIBIC</TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+</TR>
+<TR><TD WIDTH="21%" VALIGN="TOP" HEIGHT=15>
+<P>Vaughan et al</TD>
+<TD WIDTH="23%" VALIGN="TOP" HEIGHT=15>
+<P>TRACAS/METRO</TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+</TR>
+<TR><TD WIDTH="21%" VALIGN="TOP" HEIGHT=15>
+<P>McKenzie</TD>
+<TD WIDTH="23%" VALIGN="TOP" HEIGHT=15>
+<P>APE-THESEO</TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+</TR>
+<TR><TD WIDTH="21%" VALIGN="TOP" HEIGHT=15>
+<P>Browning et al</TD>
+<TD WIDTH="23%" VALIGN="TOP" HEIGHT=15>
+<P>MAXOX</TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+</TR>
+<TR><TD WIDTH="21%" VALIGN="TOP" HEIGHT=15>
+<P>Jones et al</TD>
+<TD WIDTH="23%" VALIGN="TOP" HEIGHT=15>
+<P>THESEO</TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+</TR>
+<TR><TD WIDTH="21%" VALIGN="TOP" HEIGHT=15>
+<P>Pilling et al</TD>
+<TD WIDTH="23%" VALIGN="TOP" HEIGHT=15>
+<P>MAXOX</TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+</TR>
+<TR><TD WIDTH="21%" VALIGN="TOP" HEIGHT=15>
+<P>Chipperfield</TD>
+<TD WIDTH="23%" VALIGN="TOP" HEIGHT=15>
+<P>APE-GAIA</TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+</TR>
+<TR><TD WIDTH="21%" VALIGN="TOP" HEIGHT=15>
+<P>Carslaw</TD>
+<TD WIDTH="23%" VALIGN="TOP" HEIGHT=15>
+<P>SOLVE</TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+</TR>
+<TR><TD WIDTH="21%" VALIGN="TOP" HEIGHT=15>
+<P>Jones et al</TD>
+<TD WIDTH="23%" VALIGN="TOP" HEIGHT=15>
+<P>EGRETT</TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+</TR>
+<TR><TD WIDTH="21%" VALIGN="TOP" HEIGHT=15>
+<P>Whiteway et al</TD>
+<TD WIDTH="23%" VALIGN="TOP" HEIGHT=15>
+<P>EGRETT</TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+</TR>
+<TR><TD WIDTH="21%" VALIGN="TOP" HEIGHT=15>
+<P>Penkett et al </TD>
+<TD WIDTH="23%" VALIGN="TOP" HEIGHT=15>
+<P>ACTO</TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT=15><P></P></TD>
+<TD WIDTH="3%" VALIGN="TOP" HEIGHT=15><P></P></TD>
+</TR>
+</TABLE>
+
+<P>&nbsp;</P>
+<B><I><FONT FACE="Arial"><P>Data Sets</P>
+</B></I></FONT><P>The data sets to be collected by UTLS-OZONE projects are listed in Table 3.  The list is, at present, incomplete.  More details of the various data sets will be added, as the information becomes available.</P>
+<P> </P>
+<B><P><A NAME="_Ref457623078">Table 3</A> Data Sets produced as part of Field Campaigns</P></B>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=621>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<B><P>Quantity</B></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<B><P>Instrument</B></TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<B><P>Platform</B></TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<B><P>Time</B></TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<B><P>Project</B></TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<B><P>Data set Size</B></TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>CH<SUB>4</SUB> </TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>GC</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>EGRETT</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9912-0002</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Jones et al.</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>3 CFCs</TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>GC</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>EGRETT</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9912-0002</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Jones et al.</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>2.5MBytes</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>reflectance</TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>MST Radar</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>Ground based</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>0101-0201</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Whiteway et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>O<SUB>3</SUB></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>Chemical Cell</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>Balloon </TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>0101-0201</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Whiteway et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>O<SUB>3</SUB></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>LIDAR</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>Ground based</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>0101-0201</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Whiteway et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>u, v, w, T</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>EGRETT</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>0101-0201</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Whiteway et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>u,v,w,T </TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>O<SUB>3</SUB></TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>H<SUB>2</SUB>0</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>PAN</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>&gt;30 NMHCs</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>&gt;40 Halocarbons</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>DMS</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>Acetone</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>CO</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>NO NO<SUB>2</SUB></TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>NO<SUB>y</SUB></TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>HNO<SUB>3</SUB></TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>J(NO<SUB>2</SUB>)</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>J(O<SUB>3</SUB>-&gt;O<SUP>1</SUP>D)</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>Peroxides</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>Peroxy radicals</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>HCHO</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>CH<SUB>4</SUB></TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>N<SUB>2</SUB>O</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>Aerosols</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>00Spring-00Aut.</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett ACTO</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>400Mbytes</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>Benzene, Toluene</TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>GC</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9903-9904, 9908</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Pilling et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>H<SUB>2</SUB>O</TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>SAW</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Jones</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>CH<SUB>4</SUB>, H<SUB>2</SUB>O, CFCs</TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>GC</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>Balloon</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9901-9912</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Jones et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>1.2Mbytes</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>Halocarbons</TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>GC</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>Airborne</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9801-2010</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Penkett CARIBIC</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>3Mbyte</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>u,T</TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>Radio Sonde</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9909-9910</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Roscoe</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>O<SUB>3</SUB></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>Chemical Cell</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>Ozone Sonde</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9904-0104</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Vaughan et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>2.5Mbyte</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>O<SUB>3</SUB></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>LIDAR</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>Groud Based</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9904-0104</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Vaughan et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>1Mbyte</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>Reflectance</TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>MST Radar</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>Ground Based</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9904-0104</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Vaughan et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>OH,NO<SUB>2</SUB>,HOCl,HO<SUB>2</SUB>, O<SUB>3</SUB>, H<SUB>2</SUB>O, HBr, HOBr, BrONO<SUB>2</SUB>, HNO<SUB>3</SUB></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>FIR</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>Various</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9807, 981115-981215, 990915-991015</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Hamilton</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>Reflecatance etc</TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P>Chilbolton Radar</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>Ground based</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9901-9905</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Browning et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>600Mbytes</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>NOx, NOy</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9901-9905</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Browning et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>HCHO</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9901-9905</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Browning et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>H<SUB>2</SUB>O<SUB>2</SUB>, RO<SUB>2</SUB></TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9901-9905</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Browning et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>CO</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9901-9905</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Browning et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="18%" VALIGN="TOP">
+<P>Aerosols</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>C-130</TD>
+<TD WIDTH="18%" VALIGN="TOP">
+<P>9901-9905</TD>
+<TD WIDTH="17%" VALIGN="TOP">
+<P>Browning et al</TD>
+<TD WIDTH="15%" VALIGN="TOP">
+<P>100Mbyte</TD>
+</TR>
+</TABLE>
+
+<P>&nbsp;</P>
+<B><I><FONT FACE="Arial"><P>Collaborating Projects</P>
+</B></I></FONT><P>As noted earlier, many of the UTLS-OZONE projects are part of collaborations with NASA and EU funded projects.  The collaborations raise several questions for the dissemination and archiving of the data collected as part of these projects.</P>
+<P>If the collaborating project has its own designated data centre, then, presumably, that data centre will be responsible for the dissemination of data during field campaigns.  The main question is then how much of the data archive will subsequently be mirrored at the BADC.  Although there is a commitment to archive all UTLS-OZONE funded data at the BADC it may be that it is simply not appropriate, and possibly meaningless, to archive the UTLS-OZONE project data in isolation from the collaborating project data.    In these cases it may be that the BADC could act as a mirror to the primary archive, although this obviously would entail negotiation with the data centre of the collaborating project.  Alternatively, and probably more practically, the BADC could maintain references to the collaborating project data centre.   This would pass responsibility for the maintenance of some of the UTLS-OZONE data archive to another data centre, which may have its own problems.</P>
+<P>If the collaborating project does not have its own designated data centre, then the BADC could act as the data centre for the project, if required.  The dissemination of UTLS data to other researchers in the collaborating projects can be facilitated by the BADC.  Collaborating researchers would be required to sign a data agreement, in a similar way to ACSOE.  It would have to be decided, probably on a case by case basis, how much of the UTLS-OZONE archive the external researchers would have access too.  Presumably collaborating project researchers would only need access to the data sets produced by the UTLS-OZONE project with which they are collaborating.  If the BADC is to facilitate the dissemination of data to collaborating projects, it will be necessary to set up the relevant mechanism in the archive at an early stage. </P>
+<B><I><FONT FACE="Arial"><P>3<SUP>rd</SUP> Party Data</P>
+</B></I></FONT><P>Table 4 lists the 3<SUP>rd</SUP> party data requirements of the various UTLS-OZONE projects.  The column labelled status indicates whether the project already has access to the required data set.  If the data set is already available the column labeled source indicates the source of the data.  It should be noted that some data sets have separate agreements and are not necessarily available to the all UTLS projects.  These include the UKMO/ECMWF forecasts used during APE-THESEO (McKenzie), and, at least initially, the new 40-year ECMWF-ERA data (Lahoz et al).</P>
+<P>Forecast data is required for mission planning during field campaigns.  ECMWF forecast data can be obtained through the BADC, but requires an independent letter of application to go to the ECMWF.</P>
+<P>Some of the 3<SUP>rd</SUP> Party data requirements are already being met by the BADC.  These include the ECMWF analyses and UKMO UARS assimilated data.  Plans are already underway to meet the UTLS requirement for access to the UKMO Unified Model data.  No doubt other 3<SUP>rd</SUP> party data requirements will become evident throughout the period of the UTLS-OZONE program.</P>
+<P>There is some demand for value added products such as trajectories, meteorological variables on isentropic surfaces, and meteorological variables along flight tracks.  The BADC has developed a WWW interface to a trajectory model to help fulfil the demand for trajectory data by the UTLS-OZONE projects. The BADC will also investigate the possibility of adding tools to the BADC archive to calculate other value-added products.</P>
+<B><P><A NAME="_Ref457367997"><A NAME="_Ref457368032">Table 4</A> Third Party data Requirements of the UTLS-OZONE projects</A></P></B>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=640>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<B><P>Project</B></TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<B><P>Data Required</B></TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<B><P>Status</B></TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<B><P>Source</B></TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Vaughan et al</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>ECMWF Met. Data</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Semi – no isentropic data or PV</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>BADC</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Vaughan et al</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>Meteosat Water Vapour</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Not currently available</TD>
+<TD WIDTH="19%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Pilling et al</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>Trajectories</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Yes</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>HYSPLIT Model</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Oram et al</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>Trajectories</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Yes</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>CARIBIC</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>McKenzie et al</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>ECMWF/UKMO data</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Yes</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>UKMO/</P>
+<P>ECMWF</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Browning et al</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>UKMO Unified model</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Yes</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>UKMO-JCMM</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Browning et al</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>Network Rain Rate</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Yes</TD>
+<TD WIDTH="19%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Browning et al</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>ECMWF data</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Yes</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>BADC</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Parker et al</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>Met Data for initialisations</TD>
+<TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="19%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Jones</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>T, H<SUB>2</SUB>O from UKMO/ECMWF</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Semi – no along flight track data</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>BADC</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Harwood et al</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>ECMWF/UKMO</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Yes</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>BADC UKMO</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Chipperfield </TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>UKMO UARS assimilations</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Yes</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>BADC</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Chipperfield</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>ECMWF Reanalysis</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>No</TD>
+<TD WIDTH="19%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Shine et al</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>O<SUB>3</SUB> Trends</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Yes</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>NASA</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Lahoz et al</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>ERA O<SUB>3</SUB> and H<SUB>2</SUB>O</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Yes</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>ECMWF</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Haigh et al</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>SBUV O<SUB>3</SUB></TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Yes</TD>
+<TD WIDTH="19%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Haigh et al</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>SOLSTICE/SUSIM</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Yes</TD>
+<TD WIDTH="19%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Whiteway</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>ECMWF Forecasts</TD>
+<TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>BADC/ECMWF</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Whiteway</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>Forecasts</TD>
+<TD WIDTH="31%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="19%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="20%" VALIGN="TOP">
+<P>Penkett et al ACTO</TD>
+<TD WIDTH="30%" VALIGN="TOP">
+<P>Trajectories</TD>
+<TD WIDTH="31%" VALIGN="TOP">
+<P>Yes</TD>
+<TD WIDTH="19%" VALIGN="TOP">
+<P>U. Reading/</P>
+<P>BADC</TD>
+</TR>
+</TABLE>
+
+<P>&nbsp;</P>
+<B><I><FONT FACE="Arial"><P>Data File Formats</P>
+</B></I></FONT><P>The adoption of common, standard file formats both eases the dissemination of results and helps ensure the long-term integrity of a data set.  Standard formats reduce any ambiguity in a data set and simplify the maintenance of reading and writing software and associated documentation.  A good standard data format should be:</P>
+<OL>
+
+<LI>Portable across computer platforms.</LI>
+<LI>Self-describing: there is enough information in the file to determine the contents of that file.</LI></OL>
+
+<P>As well as being portable across platforms a good standard format will have potential for use in many analysis packages.  In deciding the standard file format to be adopted it is important to consider users previous experience and the resources available for analysis. </P>
+<P>Figure 1 indicates the experience of researchers funded by UTLS with various established data formats.  NASA-Ames Format for Data Exchange is the format that has had most previous usage.  This is an ASCII based format ideal for exchange of FO data.  Each NASA Ames file consists of a header, which describes the contents of the file, followed by the data.</P>
+<P>A binary format is often more useful for storage of large gridded data sets.  Although researchers have about equal experience of GRIB and NetCDF format some thought that NetCDF was easier to use.  NetCDF is a portable binary format, with access routines in FORTRAN, C, C++, perl, java, and IDL.</P>
+<P>Figure 2 shows the analysis/display methods used by the researchers.  IDL is the most widely used, although clearly a significant number use Excel and MATLAB.</P>
+<P>Given the previous experience of data formats and analysis/plotting packages used UTLS Ozone will adopt NASA-Ames as the standard data format.  Large gridded data sets will use NetCDF.  NASA-Ames files are readable by IDL, Excel, and MATLAB.  NetCDF files are supported by IDL, and some freely available software packages for plotting NetCDF files, such as FERRET.  LiveAcess server can also be used to give WWW access to NetCDF files.</P>
+<B><FONT FACE="Arial" SIZE=4><P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>Appendix A UTLS-OZONE Data Questionnaire</P>
+</B></FONT>
+<P>&nbsp;</P>
+<P><IMG SRC="Image1.gif" WIDTH=143 HEIGHT=57><IMG SRC="Image2.gif" WIDTH=150 HEIGHT=62></P>
+<B><FONT FACE="Arial" SIZE=4><P>Project Details</P>
+</B></FONT>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=590>
+<TR><TD WIDTH="36%" VALIGN="TOP">
+<P>Title of Project:</P>
+</TD>
+<TD WIDTH="64%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="36%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="64%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="36%" VALIGN="TOP">
+<P>PI's Name:</TD>
+<TD WIDTH="64%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="36%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="64%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="36%" VALIGN="TOP">
+<P>Your Name (if not the PI):</TD>
+<TD WIDTH="64%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="36%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="64%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="36%" VALIGN="TOP">
+<P>Your Address:</P>
+
+<P>&nbsp;</TD>
+<TD WIDTH="64%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="36%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="64%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="36%" VALIGN="TOP">
+<P>E-mail:</TD>
+<TD WIDTH="64%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+</TABLE>
+
+<P>&nbsp;</P>
+<B><FONT FACE="Arial" SIZE=4><P>Data sets that you will produce</P>
+</FONT><P>2.1</B> What data sets are you likely to produce as part of your UTLS-Ozone funded work? Please give some indication of the size (to an approximate order of magnitude) of each of these data sets.</P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=581>
+<TR><TD VALIGN="TOP" HEIGHT=231><P></P></TD>
+</TR>
+</TABLE>
+
+<B>
+<P>2.2</B> Which of these data sets do you consider might be worth archiving in the long-term?</P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=584>
+<TR><TD VALIGN="TOP" HEIGHT=137><P></P></TD>
+</TR>
+</TABLE>
+
+
+<B><P>2.3</B> What will be the primary times of your data collection and/or model result production?</P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=590>
+<TR><TD WIDTH="50%" VALIGN="TOP">
+<P>Start time</TD>
+<TD WIDTH="50%" VALIGN="TOP">
+<P>Finish time</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP" HEIGHT=155><P></P></TD>
+<TD WIDTH="50%" VALIGN="TOP" HEIGHT=155><P></P></TD>
+</TR>
+</TABLE>
+
+
+<B><P>2.4</B> Do you think that other projects within UTLS-Ozone would find it useful to have access to your data?</P>
+<P ALIGN="CENTER"><CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=415>
+<TR><TD WIDTH="9%" VALIGN="TOP">
+<P></TD>
+<TD WIDTH="36%" VALIGN="TOP">
+<P>Yes</TD>
+<TD WIDTH="13%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="10%" VALIGN="TOP">
+<P></TD>
+<TD WIDTH="32%" VALIGN="TOP">
+<P>No</TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+
+<B><P>2.5</B> Will you <B>need</B> to share data with other institutes? </P>
+<P ALIGN="CENTER"><CENTER><TABLE CELLSPACING=0 BORDER=0 CELLPADDING=7 WIDTH=522>
+<TR><TD WIDTH="8%" VALIGN="TOP">
+<P></TD>
+<TD WIDTH="45%" VALIGN="TOP">
+<P>Within your UTLS project</TD>
+<TD WIDTH="8%" VALIGN="TOP">
+<P></TD>
+<TD WIDTH="39%" VALIGN="TOP">
+<P>With other UTLS projects</TD>
+</TR>
+<TR><TD WIDTH="8%" VALIGN="TOP">
+<P></TD>
+<TD WIDTH="45%" VALIGN="TOP">
+<P>Outside UTLS (<I>e.g</I>. with EU partners)</TD>
+<TD WIDTH="8%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="39%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+
+<P>If so, please give details:</P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=575>
+<TR><TD VALIGN="TOP" HEIGHT=58><P></P></TD>
+</TR>
+</TABLE>
+
+
+<P>Do you already have plans for doing this, or would you like assistance from the BADC?</P>
+<P ALIGN="CENTER"><CENTER><TABLE CELLSPACING=0 BORDER=0 CELLPADDING=7 WIDTH=522>
+<TR><TD WIDTH="8%" VALIGN="TOP">
+<P></TD>
+<TD WIDTH="45%" VALIGN="TOP">
+<P>Distribute data yourselves</TD>
+<TD WIDTH="8%" VALIGN="TOP">
+<P></TD>
+<TD WIDTH="39%" VALIGN="TOP">
+<P>Use the BADC</TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+
+<B><P>2.6</B> When do you anticipate submitting data to the BADC archive?</P>
+<P ALIGN="CENTER"><CENTER><TABLE CELLSPACING=0 BORDER=0 CELLPADDING=7 WIDTH=522>
+<TR><TD WIDTH="10%" VALIGN="TOP">
+<P></TD>
+<TD WIDTH="90%" VALIGN="TOP">
+<P>As soon as possible to allow you to use the BADC to share and validate data with other UTLS projects. </TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="TOP">
+<P></TD>
+<TD WIDTH="90%" VALIGN="TOP">
+<P>When you are happy that the data is in a suitably validated form for other people to use.</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="TOP">
+<P></TD>
+<TD WIDTH="90%" VALIGN="TOP">
+<P>At the end of the project.</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="TOP">
+<P></TD>
+<TD WIDTH="90%" VALIGN="TOP">
+<P>Not Applicable</P>
+</TD>
+</TR>
+</TABLE>
+</CENTER></P>
+
+<B><FONT FACE="Arial" SIZE=4><P>Third Party Data Requirements</P>
+</FONT><P>3.1</B> If you anticipate using any third party data (<I>e.g.</I> Met. data or trajectories), please tell us what they are.</P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=568>
+<TR><TD VALIGN="TOP" HEIGHT=155><P></P></TD>
+</TR>
+</TABLE>
+
+
+<B><P>3.2</B> Do you already have access to these data sets? If not how do you anticipate getting them?</P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=568>
+<TR><TD VALIGN="TOP" HEIGHT=146><P></P></TD>
+</TR>
+</TABLE>
+
+
+<P>&nbsp;</P>
+<B><P>3.3</B> Are there any issues of intellectual property rights that will restrict the availability of these data to other UTLS projects or that will prevent them from being added to the "public" UTLS data sets at the end of the UTLS project?</P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=575>
+<TR><TD VALIGN="TOP" HEIGHT=153><P></P></TD>
+</TR>
+</TABLE>
+
+<B><FONT FACE="Arial" SIZE=4><P>&nbsp;</P>
+<P>4 Computing Issues</P>
+</B></FONT>
+<B><P>4.1 </B>Which of these standard data formats do you have experience of working with?</P>
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=7 WIDTH=590>
+<TR><TD WIDTH="50%" VALIGN="TOP">
+<P> netCDF</TD>
+<TD WIDTH="50%" VALIGN="TOP">
+<P> NASA Ames</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP">
+<P> GRIB</TD>
+<TD WIDTH="50%" VALIGN="TOP">
+<P> HDF</TD>
+</TR>
+</TABLE>
+
+
+<P>Please list any other formats that you might like to use:</P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=589>
+<TR><TD VALIGN="TOP" HEIGHT=71><P></P></TD>
+</TR>
+</TABLE>
+
+
+<P>Would you be prepared to write your data to standard data format(s), if assistance was available from the BADC to help with this job?</P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=594>
+<TR><TD VALIGN="TOP" HEIGHT=108><P></P></TD>
+</TR>
+</TABLE>
+
+<P>  </P>
+
+<P>&nbsp;</P>
+<B><P>4.2</B> What computer hardware are you likely to use to work on your data? Please tick any appropriate boxes:</P>
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=7 WIDTH=590>
+<TR><TD WIDTH="50%" VALIGN="TOP">
+<P> Supercomputer</TD>
+<TD WIDTH="50%" VALIGN="TOP">
+<P> Linux workstation</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP">
+<P> Sun Unix workstation</TD>
+<TD WIDTH="50%" VALIGN="TOP">
+<P> Windows 95/98/NT PC</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP">
+<P> HP Unix workstation</TD>
+<TD WIDTH="50%" VALIGN="TOP">
+<P> Macintosh PC</TD>
+</TR>
+<TR><TD WIDTH="50%" VALIGN="TOP">
+<P> DEC Unix workstation</TD>
+<TD WIDTH="50%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+</TABLE>
+
+
+<P>Other - please specify:</P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=586>
+<TR><TD VALIGN="TOP" HEIGHT=46><P></P></TD>
+</TR>
+</TABLE>
+
+
+<B><P>4.3</B> If you intend to use commercial software to manipulate your data, for example, IDL, PV-Wave or Excel, please list them in the space below:</P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=589>
+<TR><TD VALIGN="TOP" HEIGHT=122><P></P></TD>
+</TR>
+</TABLE>
+
+<P>&nbsp;</P>
+<B><FONT FACE="Arial" SIZE=4><P>Anything Else?</P>
+</B></FONT><P>Are there any other UTLS-Ozone data issues with which the BADC could help you? Do you have any other comments about the UTLS-Ozone data management?  Are you happy with the UTLS-Ozone data protocol as it stands at present?</P>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=589>
+<TR><TD VALIGN="TOP" HEIGHT=233><P></P></TD>
+</TR>
+</TABLE>
+
+
+<P></BODY>
+</HTML>

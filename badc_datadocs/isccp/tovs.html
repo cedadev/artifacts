@@ -1,0 +1,768 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>ISCCP TOVS Documentation</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>ISCCP TOVS indexed Documentation<BR CLEAR="ALL"></H1>
+
+<HR ALIGN=LEFT>
+
+<H3>Content</H3>
+
+<P><BR>
+1.<A HREF="#type">TYPE OF DATA</A></P>
+
+<UL>
+  <LI>1.1 Parameter/Measurement
+  <LI>1.2 Unit of Measurement
+  <LI>1.3 Data Source
+  <LI>1.4 Data Set Identification
+</UL>
+
+<P>2.<A HREF="#spatial">SPATIAL CHARACTERISTICS</A></P>
+
+<UL>
+  <LI>2.1 Spatial Coverage
+  <LI>2.2 Spatial Resolution
+</UL>
+
+<P>3.<A HREF="#temp">TEMPORAL CHARACTERISTICS</A></P>
+
+<UL>
+  <LI>3.1 Temporal Coverage
+  <LI>3.2 Temporal Resolution
+</UL>
+
+<P>4. <A HREF="#inst">INSTRUMENT DESCRIPTION</A></P>
+
+<UL>
+  <LI>4.1 Mission Objectives
+  <LI>4.2 Key Satellite Flight Parameters
+  <LI>4.3 Principles of Operation
+  <LI>4.4 Instrument Measurement Geometry
+</UL>
+
+<P>5. <A HREF="#process">DATA PROCESSING SEQUENCE</A></P>
+
+<UL>
+  <LI>5.1 Processing Steps and Data Sets
+  <LI>5.2 Derivation Techniques/Algorithms
+  <LI>5.3 Special Corrections/Adjustments
+  <LI>5.4 Processing Changes
+</UL>
+
+<P>6. <A HREF="#quality">QUALITY ASSESSMENT</A></P>
+
+<UL>
+  <LI>6.1 Data Validation by Producer
+  <LI>6.2 Confidence Level/Accuracy Judgement
+  <LI>6.3 Usage Guidance
+</UL>
+
+<P>7. <A HREF="#contact">CONTACTS</A> FOR DATA PRODUCTION INFORMATION<BR>
+<BR>
+8. <A HREF="#output">OUTPUT PRODUCTS AND AVAILABILITY</A></P>
+
+<UL>
+  <LI>8.1 Tape Products
+  <LI>8.2 Film Products
+  <LI>8.3 Other Product
+</UL>
+
+<P>9. <A HREF="#access">DATA ACCESS</A></P>
+
+<UL>
+  <LI>9.1 Archive Identification
+  <LI>9.2 Procedures for obtaining data
+  <LI>9.3 NCDS Status/Plans
+</UL>
+
+<P>10. <A HREF="#contact2">CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION</A>
+<BR>
+<BR>
+11. <A HREF="#ref">REFERENCES</A></P>
+
+<UL>
+  <LI>11.1 Satellite/Instrument/Data Processing Documentation
+  <LI>11.2 Journal Articles and Study Reports
+  <LI>11.3 Archive/DBMS Usage Documentation
+</UL>
+
+<P>12. <A HREF="#relate">RELATED DATA SETS</A> <BR>
+<BR>
+13. <A HREF="#sample">SUMMARY/SAMPLE</A> <BR>
+<BR>
+14. <A HREF="#note">NOTES</A> <BR>
+<HR ALIGN=LEFT><BR>
+</P>
+
+<H3><A NAME="type"></A>1. TYPE OF DATA</H3>
+
+<BLOCKQUOTE>
+  <P>1.1 Parameter/Measurement.<BR>
+<BR>
+  Temperature profiles at 9 layers; precipitable water at 5 layers;
+  surface and tropopause temperature and pressure; and ozone. <BR>
+<BR>
+  1.2 Unit of Measurement.<BR>
+<BR>
+  Temperature in degrees Kelvin (K); precipitable water in centimeters
+  (cm); pressure in millibars (mb); ozone in Dobson Units. <BR>
+<BR>
+  1.3 Data Source.<BR>
+<BR>
+  The main data set used to produce a daily, global description
+  of the ozone, temperature and humidity distributions is that
+  obtained from the analysis of data from the TIROS Operational
+  Vertical Sounder (TOVS) System, flown on the NOAA (National Oceanic
+  and Atmospheric Administration) Operational Polar Orbiting Satellite
+  series (Webowetzki, 1981). The TOVS system consists of three
+  instruments (Kidwell, 1991): the High Resolution Infrared Radiation
+  Sounder (HIRS/2), the Stratospheric Sounding Unit (SSU), and
+  the Microwave Sounding Unit (MSU). The HIRS/2 is a 20 channel
+  infrared spectrometer (along with one visible channel) that makes
+  measurements in the vicinity of 3.7-4.6 micrometers (um), 6.7-11
+  um and 13-15 um that are sensitive to atmospheric carbon dioxide,
+  water vapor, ozone and the temperature structure of the troposphere.
+  The SSU (supplied by the United Kingdom) is a pressure modulation
+  spectrometer that makes three measurements at the same wavelength
+  in the 15 um carbon dioxide band with different cell pressures
+  to sense the temperature at about 1, 5, and 15 mb in the stratosphere.
+  The MSU is a passive, scanning microwave spectrometer making
+  measurements in four channels in the 5.5 um oxygen band that
+  senses the temperature of the troposphere. <BR>
+<BR>
+  The measurements from the three instruments of the TOVS system
+  are processed by NOAA to produce the TOVS Sounding Product. Contents
+  of this product include: satellite identification, data and Earth-location
+  of observation, solar zenith angle, land/sea indicator, surface
+  (skin) temperature, estimated surface pressure, channels and
+  method used for retrieval, 15 layer temperatures, 3 layer water
+  abundances (precipitable water amount), tropopause temperature
+  and pressure, ozone abundance, cloud cover and top pressure,
+  and sounding radiances (Kidwell, 1991). <BR>
+<BR>
+  1.4 Data Set Identification.<BR>
+<BR>
+  </P></BLOCKQUOTE>
+
+<P>The International Satellite Cloud Climatology Project (ISCCP),
+the first project of the World Climate Research Programme, is
+organized to obtain global satellite observations of clouds for
+research and to produce a cloud climatology covering a period
+of at least twelve years. As part of the data analysis, information
+concerning the temperature structure and water and ozone abundances
+in the atmosphere are used in radiative model analyses of the
+satellite radiance measurements to retrieve physical properties
+of the surface and clouds (Schiffer and Rossow, 1985). Although
+these data are available from the original sources covering a
+longer time period, the versions used during the processing of
+the satellite data are archived with the cloud climatology. <BR>
+<BR>
+</P>
+
+<H3><A NAME="spatial"></A>2. SPATIAL CHARACTERISTICS</H3>
+
+<BLOCKQUOTE>
+  <P>2.1 Spatial Coverage. <BR>
+<BR>
+  The typical fraction of the globe covered by the TOVS Sounding
+  Product, on a given day within a three hour interval, is 27%.
+  Since the observations are so sparse, no attempt was made to
+  retain information regarding the diurnal variability of temperature
+  and humidity. However, tests of the variability of temperatures
+  in the first layer show that the error associated with neglecting
+  time-of-day is about 2-3 degrees K but is somewhat larger over
+  land. The typical coverage of the globe obtained by collecting
+  all observations from the same day, regardless of time of observation,
+  is about 67%. <BR>
+<BR>
+  2.2 Spatial resolution. <BR>
+<BR>
+  The ISCCP version of the atmospheric data is interpolated to
+  seven layers in the troposphere, defined by a specific surface
+  and tropopause pressure at each location and time, and to two
+  stratospheric temperature layers. The standard pressures defining
+  these layers in the troposphere are 1000, 800, 680, 560, 440,
+  310, 180, and 50 mb; the stratosphere layers are defined by the
+  pressures 70, 30, and 5 mb. Thus, the layer mean temperatures
+  and humidities represent values at the center pressures of these
+  layers: 900, 740, 620, 500, 375, 245, 115, 50, and 15 mb. The
+  surface and tropopause pressures actually define the extent of
+  the lower and higher layers in the troposphere. For example,
+  if the surface pressure is 900 mb, then the first layer extends
+  from 800 to 900 mb with a center at 850 mb; if the tropopause
+  pressure is 100 mb, then the seventh layer extends from 180 to
+  100 mb with a center at 140 mb. The two stratosphere layers are
+  fixed regardless of the location of the tropopause.</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="temp"></A>TEMPORAL CHARACTERISTICS</H3>
+
+<BLOCKQUOTE>
+  <P>3.1 Temporal coverage.<BR>
+<BR>
+  The ISCCP atmospheric data are presented as a series of data
+  sets representing daily and complete global coverage, starting
+  1 July 1983 and running through December 1990. <BR>
+<BR>
+  3.2 Temporal Resolution.<BR>
+<BR>
+  Daily.</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="inst"></A>4. INSTRUMENT DESCRIPTION</H3>
+
+<BLOCKQUOTE>
+  <P>4.1 Mission Objectives. <BR>
+<BR>
+  ISCCP focuses on the study of the distribution and variation
+  of cloud radiative properties. Scientific objectives are as follows:<BR>
+<BR>
+  </P>
+  <OL>
+    <LI>To produce a global, reduced resolution, infrared and visible,
+    calibrated and normalized radiance data set containing basic
+    information on the radiative properties of the atmosphere from
+    which cloud parameters can be derived. <BR>
+<BR>
+    <LI>To stimulate and coordinate basic research on techniques
+    for inferring the physical properties of clouds from the condensed
+    radiance data set, and to apply the resulting algorithms to derive
+    and validate global cloud climatology for improving the parameterization
+    of clouds in climate models. <BR>
+<BR>
+    <LI>To promote research using ISCCP data and contribute to improved
+    understanding of the Earth's radiation budget (top of atmosphere
+    and surface) and hydrological cycle. <BR>
+<BR>
+  </OL>
+  <P>4.2 Key Satellite Flight Parameters. <BR>
+<BR>
+  The NOAA spacecraft are a series of satellites in 870 kilometer
+  (km) (nominal), circular, near-polar, sun-synchronous orbits
+  with an inclination angle of approximately 99 degrees (retrograde)
+  to the equator. They cross the equator during local morning and
+  afternoon (and corresponding night times), with an orbital period
+  of approximately 102 minutes. Each sequential orbit covers adjacent
+  longitudes near the equator and overlapping longitudes near the
+  poles. Temperature sounding and ozone observations are made by
+  the TIROS Operational Vertical Sounder (TOVS) and are used in
+  the ISCCP analysis of B3 data. In addition, the Advanced Very
+  High Resolution Radiometer (AVHRR) on board this series is composed
+  of up to five spectral channels with a nadir resolution of 1.1
+  km.<BR>
+<BR>
+  4.3 Principles of Operation.<BR>
+<BR>
+  See the TOVS/MSU, TOVS/HIRS, and TOVS/SSU description in the
+  1991 NOAA Polar Orbiter Data Users Guide (Item 11.1 a). 4.4 Instrument
+  Measurement Geometry.<BR>
+<BR>
+  See the TOVS/MSU, TOVS/HIRS, and TOVS/SSU instrument description
+  in the 1991 NOAA Polar Orbiter Data Users Guide (item 11.1 a).</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="process"></A>5. DATA PROCESSING SEQUENCE</H3>
+
+<BLOCKQUOTE>
+  <P>5.1 Processing Steps and Data Sets.<BR>
+<BR>
+  The TOVS Sounding Product atmospheric data have a resolution
+  of about 2.5 degrees latitude-longitude. The NOAA Geophysical
+  Fluid Dynamic Laboratory (GFDL) data have a resolution of 2.5
+  degrees latitude and 5 degrees longitude. The ozone climatology
+  has a latitude resolution of 10 degrees. Since the ISCCP 2.5
+  degree equivalent equal-area grid has lower resolution at higher
+  latitudes than the TOVS Sounding Product, these data are mapped
+  to the ISCCP grid by placing them into the cell which contains
+  the coordinates of the sounding. Only one observation per cell
+  per day is reported. If more than one observation is available,
+  the one closest to the cell-center coordinates is used. The NOAA
+  GFDL and ozone data, having lower resolutions than the ISCCP
+  grid, are mapped such that all ISCCP grid cells with centers
+  within the range of the original data grid cells are filled with
+  same value. Original observations are indicated by an Origin
+  Code value of 1. <BR>
+<BR>
+  To increase the coverage obtained on a single day, grid cells
+  lacking an observation are filled from nearby values, as long
+  as the topographic heights of the two locations differ by no
+  more than one kilometer (actually, the difference is restricted
+  to be &lt; or = 1005.84 meters = 3300 feet - the original units
+  of the topography data set). Synthetic tests of this procedure
+  were conducted to determine the error as a function of the distance
+  over which the observation is moved. In data-dense regions, the
+  observation at one location is compared to nearby observations.
+  The error not only grows with increasing distance but grows more
+  rapidly in the north-south direction than the east-west direction.
+  Based on these results, missing values are filled by nearby observations
+  that are within two grid cells to the east or west, i.e., within
+  a distance of about 500 km. The typical error introduced is expected
+  to be about 2-3 degrees K in temperature and less than 15% for
+  precipitable water and 10% for ozone. With this replication,
+  typical global coverage provided by daily observations is about
+  85%. Values obtained by replication are indicated by an Origin
+  Code value of 2. <BR>
+<BR>
+  Monthly mean values are formed from the daily TOVS data with
+  spatial replications performed where needed. No value is reported
+  if less than five observations are available during the month.
+  The error produced by replacing a daily observation with the
+  monthly mean value at the same location is about 3 degrees K
+  for temperatures, 17% for water abundances, and 12% for ozone
+  abundances. If no observation is available for a particular location
+  and day and no observation is near enough on that day, then the
+  monthly mean values for that location are used, if available.
+  By filling with the monthly mean values, the daily global coverage
+  is typically about 95%. Monthly mean values used for daily observations
+  are indicated by an Origin Code value of 3. <BR>
+<BR>
+  If a TOVS monthly mean value is not available for a particular
+  location, the ISCCP analysis uses two climatologies to fill in
+  gaps in coverage. These data sets are the NOAA GFDL temperature/humidity
+  climatology (Oort, 1983) and an ozone climatology from the NIMBUS-4
+  BUV data (Hilsenrath and Schlesinger, 1981). Estimated errors
+  are about 5 degrees K for temperatures, about 25% for water abundances,
+  and about 15% for ozone abundances. Values obtained from the
+  combined climatology are indicated by an Origin Code value of
+  4. <BR>
+<BR>
+  The differences between the TOVS DAILY and MONTHLY layer-one
+  water abundance show some significant departures from the monthly
+  mean values. Further study of the distribution of these differences
+  with latitude and season reveals a small population (about 2-4%)
+  with values much larger than three standard deviations from the
+  local monthly mean value. Other parameters in the data set did
+  not exhibit this behaviour. These &quot;anomalous&quot; values
+  were removed with the following procedure: (1) distributions
+  of differences between daily and monthly mean, water abundance
+  values for the first three layers in each grid cell are collected
+  for eight latitude zones for each month, (2) a range of variations
+  with respect to the monthly mean is determined by the width of
+  these distributions defined by the plus and minus difference-values
+  with 5% of the mode frequency (approximately equivalent to three
+  standard deviations), (3) daily values outside the range defined
+  by zonal difference distributions and local monthly mean are
+  set equal to the nearest value within the range. Observations
+  which have been changed in this way are indicated by an Origin
+  Code value of 5. <BR>
+<BR>
+  The ISCCP atmospheric data are presented as daily, global maps.
+  The data at a particular location and time are labeled by whether
+  they represent an actual observation at that place and time (Origin
+  Code = 1), nearby observation on the same day (Origin = 2), the
+  TOVS monthly mean observations for that location and month (Origin
+  Code = 3), or the climatological values for that month (Origin
+  Code = 4). Although the typical amount of monthly mean or climatological
+  data used is less than 5%, there are some occasions when fewer
+  TOVS data are used. If data for a whole day are missing, for
+  example, then the values found in the ISCCP data set for that
+  day would be constructed from the TOVS monthly mean and climatological
+  values. <BR>
+<BR>
+  5.2 Derivation Techniques/Algorithms.<BR>
+<BR>
+  See the TOVS/MSU, TOVS/HIRS, and TOVS/SSU description in the
+  1991 NOAA Polar Orbiter Data Users Guide (item 11.1 a). <BR>
+<BR>
+  5.3 Special Corrections/Adjustments.<BR>
+<BR>
+  See the TOVS/MSU, TOVS/HIRS, and TOVS/SSU description in the
+  1991 NOAA Polar Orbiter Data Users Guide (item 11.1 a). <BR>
+<BR>
+  5.4 Processing Changes.<BR>
+<BR>
+  This data set has been reprocessed. An error in mapping was found
+  in an earlier version of TOVS atmospheric data delivered to the
+  ISCCP Central Archive (ICA) that affects less than 1% of the
+  grid cells. This error is only noticeable in those temperature
+  values reported for layers with too high a pressure near the
+  edge of high topography regions.</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="quality"></A>6. QUALITY ASSESSMENT</H3>
+
+<BLOCKQUOTE>
+  <P>6.1 Data Validation by Producer.<BR>
+<BR>
+  A publication describing the validation of the TOVS data at NOAA/NESDIS
+  (Burdsall, 1991) prior to their use for ISCCP describes quality
+  checking. During this validation all retrievals are checked to
+  see if they are super-adiabatic. All super-adiabatic retrievals
+  are marked as such and are not used for coefficient generation.
+  A final check of the data is made by comparing it to the NMC
+  analysis. If a substantial portion of an orbit is super-adiabatic
+  and differs significantly from the NMC analysis, then the orbit
+  is not distributed nor archived. <BR>
+<BR>
+  6.2 Confidence Level/Accuracy Judgment.<BR>
+<BR>
+  Certain errors are introduced as a result of the processing of
+  the TOVS data. Since the observations are so sparse, no attempt
+  was made to retain information regarding the diurnal variability,
+  resulting in an error of 2-3 degrees K, with somewhat larger
+  errors over land. The error introduced by replacing missing values
+  by nearby observations (within 500 km) is about 2-3 degrees K
+  in temperature, less than 15% in precipitable water and 10% for
+  ozone. The error introduced by replacing daily observations by
+  the monthly mean values is about 3 degrees K for temperature,
+  17% for precipitable water and 12% for ozone. When the combined
+  climatology data are used to replace the missing TOVS monthly
+  mean value for a particular location, the error introduced is
+  about 5 degrees K for temperature, 25% for precipitable water
+  and 15% for ozone. <BR>
+<BR>
+  6.3 Usage Guidance.<BR>
+<BR>
+  The processing method used in each processing step in Item 5.1
+  and corresponding error estimates are indicated by the Origin
+  Code which is available for each map cell in the TOVS daily record
+  file.</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="contact"></A>7. CONTACTS FOR DATA PRODUCTION INFORMATION</H3>
+
+<BLOCKQUOTE>
+  <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ISCCP Ice/Snow Data Producer<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr.
+  William B. Rossow<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ISCCP
+  Global Processing Center<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NASA
+  Goddard Institute for Space Studies<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2880
+  Broadway<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New
+  York, NY 10025<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS: (212) 678-5567<BR>
+<BR>
+  </P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="output"></A>8. OUTPUT PRODUCTS AND AVAILABILITY</H3>
+
+<BLOCKQUOTE>
+  <P>8.1 Tape Products<BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1.1 ISCCP-TOVS<BR>
+<BR>
+  Medium/Specification: Available on 9-track, 6250-bpi tapes.<BR>
+<BR>
+  Format and Content: The data tapes are written in &quot;IBM standard
+  label&quot; format, which means that each data file is preceded
+  and followed by a very small, separate file for documentation
+  purposes. These files contain data set names that can be used
+  to read the data files on some computer systems.<BR>
+<BR>
+  The basic tape characteristics are as follows:<BR>
+<BR>
+  <TABLE BORDER="0" CELLSPACING="2" CELLPADDING="0">
+    <TR>
+      <TD>2</TD>
+      <TD>Header files on tape in ASCII</TD>
+    </TR> 
+    <TR>
+      <TD>2</TD>
+      <TD>Ancillary data files on tape in ASCII</TD>
+    </TR> 
+    <TR>
+      <TD>1</TD>
+      <TD>Ancillary data file on tape in BINARY</TD>
+    </TR> 
+    <TR>
+      <TD>12</TD>
+      <TD>Climatological data files on tape in BINARY</TD>
+    </TR> 
+    <TR>
+      <TD>366</TD>
+      <TD>Daily data files on tape in BINARY</TD>
+    </TR> 
+    <TR>
+      <TD>13040</TD>
+      <TD>Bytes per record in all files</TD>
+    </TR> 
+  </TABLE><BR>
+<BR>
+  Data Quantity/Rate: One 9-track, 6250-bpi tape/year<BR>
+<BR>
+  Status: Data are available for the period 7/3/83 - 12/31/90.<BR>
+<BR>
+  Plans/Schedule: The NCDS/Goddard Distributed Active Archive Center
+  (DAAC) will continue to support this data set.<BR>
+<BR>
+  8.2 Film Products. None.<BR>
+<BR>
+  8.3 Other Products.<BR>
+<BR>
+  8.3.1 The ISCCP-C2 CD-ROM<BR>
+<BR>
+  Medium/Specification: CD-ROM in ISO 9660 standard.<BR>
+<BR>
+  Format and Content: The data on this disk consist of the ISCCP-C2
+  data, read routines and associated documentation. The data set
+  includes the variables from the TIROS Operational Vertical Sounder
+  (TOVS) and ISCCP Ice/Snow. Documentation for ISCCP Level C1,
+  ISCCP TOVS, and the ISCCP Ice/Snow data are also included.<BR>
+<BR>
+  Quantity/Rate: 1 CD-ROM disk.<BR>
+<BR>
+  Status: Release date for this product is scheduled for late Spring
+  1992.<BR>
+<BR>
+  Plans/Schedule: Users interested in this product should contact
+  the NCDS/Goddard DAAC User Support Office for more details.<BR>
+<BR>
+  </P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="access"></A>9. DATA ACCESS</H3>
+
+<BLOCKQUOTE>
+  <P>9.1 Archive Identification <BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ISCCP
+  Central Archive<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NOAA/NESDIS/NCDC<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Satellite
+  Data Services Division (SDSD)<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Princeton
+  Executive Square, Suite 100<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Washington,
+  DC 20233<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS: (301) 763-8400<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Telex:
+  RCA 248376 OBSWUR or TRT 197683 KWBC<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS Telefax: (301) 763-8443 <BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCDS/Goddard
+  DAAC User Support Office<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Code
+  935<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NASA/Goddard
+  Space Flight Center<BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Greenbelt,
+  Maryland 20771<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS: (301) 286-3209<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INTERNET:
+  NCDSUSO@NSSDCA.GSFC.NASA.GOV<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NSI
+  DECNET: NSSDCA::NCDSUSO <BR>
+<BR>
+  9.2 Procedures for Obtaining Data. <BR>
+<BR>
+  Enquiries about data availability and procedures for acquiring
+  ISCCP-TOVS radiance data should be referred to the ISCCP Central
+  Archive at NOAA/NESDIS. Inquiries for ISCCP/TOVS data from NCDS
+  can be directed to:<BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCDS/Goddard
+  DAAC User Support Office<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Code
+  935<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NASA/Goddard
+  Space Flight Center<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Greenbelt,
+  Maryland 20771<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS: (301) 286-3209<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INTERNET:
+  NCDSUSO@NSSDCA.GSFC.NASA.GOV&quot;<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NSI
+  DECNET: NSSDCA::NCDSUSO<BR>
+<BR>
+<BR>
+  9.3 NCDS Status/Plans.<BR>
+<BR>
+  The NCDS provides inventory and data access support for the ISCCP-TOVS
+  data.</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="contact2"></A>10. CONTACTS FOR ARCHIVE/DATA ACCESS
+INFORMATION</H3>
+
+<BLOCKQUOTE>
+  <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;User
+  Services Branch<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Satellite
+  Data Services Division (SDSD)<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NOAA/NESDIS/NCDC<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Princeton
+  Executive Square, Suite 100<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Washington,
+  DC 20233 <BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS: (301) 763-8400<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Telex:
+  RCA 248376 OBSWUR or TRT 197683 KWBC<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS Telefax: (301) 763-8443<BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Goddard
+  DAAC User Support Office<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Code
+  935<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NASA
+  Goddard Space Flight Center <BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Greenbelt,
+  Maryland 20771 <BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS: (301) 286-3209<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INTERNET:
+  NCDSUSO@NSSDCA.GSFC.NASA.GOV<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NSI
+  DECnet: NCF::NCDSUSO<BR>
+  </P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="ref"></A>11. REFERENCES</H3>
+
+<BLOCKQUOTE>
+  <P>11.1 Satellite/Instrument/Data Processing Documentation<BR>
+<BR>
+  a.&nbsp;&nbsp;Kidwell, K.B., 1991. &quot;NOAA Polar Orbiter Data
+  Users Guide (TIROS-N, NOAA-6, NOAA-7, NOAA-8, NOAA-9 , NOAA-10,
+  NOAA-11, and NOAA-12).&quot; NOAA/NESDIS, U.S. Dept. of Commerce,
+  Washington, DC.<BR>
+<BR>
+  b.&nbsp;&nbsp;Rossow, W.B., L.C. Garder, P-J. Lu and A.W. Walker,
+  1991. &quot;International Satellite Cloud Climatology Project
+  (ISCCP) Documentation of Cloud Data.&quot; WMO/TD No. 266 (revised).
+  World Meteorological Organization, Geneva, 76 pp. plus three
+  appendices. <BR>
+<BR>
+  c.&nbsp;&nbsp;Rossow, W.B. and B. Kachmar, June 1988. &quot;International
+  Satellite Cloud Climatology Project (ISCCP): Description of Atmosphere
+  Data Set.&quot; World Meteorological Organization/ International
+  Council of Scientific Unions.<BR>
+<BR>
+  d.&nbsp;&nbsp;Rossow, W.B., E. Kinsella, A. Wolf, L. Garder,
+  July 1985, revised August 1987. &quot;International Satellite
+  Cloud Climatology Project Description of Reduced Resolution Radiance
+  Data.&quot; WMO TD-No. 58, World Meteorological Organization/
+  International Council of Scientific Unions.<BR>
+<BR>
+  e.&nbsp;&nbsp;World Climate Research Programme, November, 1982.
+  &quot;The International Satellite Cloud Climatology Project Preliminary
+  Implementation Plan.&quot; World Meteorological Organization.
+  WCP-35. <BR>
+<BR>
+  11.2 Journal Articles and Study Reports<BR>
+<BR>
+  a.&nbsp;&nbsp;Burdsall, E.L, 1991. &quot;NESDIS Operational Sounding
+  Products from Polar Orbiting Satellites.&quot; Palaeogeography,
+  Palaeoclimatology, Palaeoecology, 90:107-111<BR>
+<BR>
+  b.&nbsp;&nbsp;Hilsenrath, E., and B.M. Schlesinger, 1981. &quot;Total
+  Ozone Seasonal and Interannual Variations Derived from the 7
+  Year NIMBUS-4 BUV data set.&quot; J. Geophys. Res., 86:12087-12096.<BR>
+<BR>
+  c.&nbsp;&nbsp;London, J.R., B.D. Bojkov, S. Oltmans and J.F.
+  Kelly, 1976. &quot;Atlas of the Global Distribution of Total
+  Ozone, July 1957-July 1967. &quot;Tech. Note NCAR/TN/113 + STR,
+  National Center for Atmospheric Research, Boulder, CO, 276 pp.<BR>
+<BR>
+  d.&nbsp;&nbsp;Masaki, G.T., 1972 (revised 1976). &quot;The Wolf
+  Plotting and Contouring Package.&quot; GSFC Computer Program
+  Library #A00227, Computer Science Corp., NASA Goddard Space Flight
+  Center, Greenbelt, MD, 180 pp.<BR>
+<BR>
+  e.&nbsp;&nbsp;Oort, A.H., 1983. &quot;Global Atmospheric Circulation
+  Statistics, 1958-1973.&quot; NOAA Professional Paper 14, NOAA
+  Geophysical Fluid Dynamics Laboratory, U.S. Dept. of Commerce,
+  Rockville, MD, 180 pp.<BR>
+<BR>
+  f.&nbsp;&nbsp;Schiffer, R.A., and W.B. Rossow, 1983. &quot;The
+  International Satellite Cloud Climatology Project (ISCCP): The
+  First Project of the World Climate Research Programme,&quot;
+  Bull. Amer. Meteor. Soc., 64:779-784. <BR>
+<BR>
+  g.&nbsp;&nbsp;Schiffer, R.A., and W.B. Rossow, 1985. &quot;ISCCP
+  Global Radiance Data Set: A New Resource for Climate Research.&quot;
+  Bull. Amer. Meteor. Soc., 66:1498-1505.<BR>
+<BR>
+  h.&nbsp;&nbsp;Werbowetzki, A., (ed.), 1981. &quot;Atmospheric
+  Sounding User's Guide.&quot; NOAA, U.S. Dept. of Commerce, Washington,
+  D.C.<BR>
+<BR>
+  11.3 Archive/DBMS Usage Documentation<BR>
+<BR>
+  a.&nbsp;&nbsp;Olsen, L.M, J.W. Closs, and F.E. Corprew, November
+  1991. &quot;NASA's Climate Data System Primer: Version 4.0.&quot;
+  EOS DAAC, NASA Goddard Space Flight Center, Greenbelt, Maryland.<BR>
+<BR>
+  b.&nbsp;&nbsp;World Climate Research Programme, April 1985. &quot;The
+  International Satellite Cloud Climatology Project (ISCCP) --
+  Catalog of Data and Products.&quot; WCP-95.<BR>
+<BR>
+  </P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="relate"></A>12. RELATED DATA SETS</H3>
+
+<BLOCKQUOTE>
+  <P>Because the TOVS data set does not provide complete global
+  coverage at all times, the final atmospheric data set constructed
+  for use in the ISCCP analysis uses two climatologies to fill
+  in gaps in coverage. These data sets are the NOAA GFDL temperature/humidity
+  climatology (Oort, 1983) and an ozone climatology from the NIMBUS-4
+  BUV data (Hilsenrath and Schlesinger, 1981).</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="sample"></A>13. SUMMARY/SAMPLE</H3>
+
+<BLOCKQUOTE>
+  <P>None currently available.</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="note"></A>14. NOTES</H3>
+
+<BLOCKQUOTE>
+  <P>None.</P></BLOCKQUOTE>
+
+<P>
+</BODY>
+</HTML>

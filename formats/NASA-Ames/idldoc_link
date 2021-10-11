@@ -1,0 +1,199 @@
+AMES ACCESS ROUTINES
+
+I   Location 
+II IDL Read Routines (xchgread)
+    A.  Location
+    B.  File descriptions
+    C.  Running the code
+    D.  Input Parameters
+    E.  Output
+    F.  Sample_run
+
+AMES ACCESS ROUTINES
+
+   The following set of programs and routines are intended to be used with
+   data sets that are formatted as described in "Format Specification for
+   Data Exchange" written by S. Gaines and S. Hipskind, Feb. 1992.  This 
+   document is located at /oracle_db/ndsc/ames/gaines2.ps in PostScript form.
+
+   Two types of access routines are available:  a format checking program,
+   dataex, and an IDL reading/plotting program, xchgread.
+
+I   Location 
+     Copy the files from the following directories to your user area.
+
+     Format checking routines (dataex):  /oracle_db/ndsc/ames/format
+     IDL reading routines (xchgread):    /oracle_db/ndsc/ames/idl
+ 
+II IDL Read Routines (xchgread)
+     Author:    T. Atwater NASA/GSFC  4-5-91.  Small modifcations have been 
+     made by J. Wild RDC at NMC/CAC and T. Hallihan.
+
+     The IDL version of the Ames format reader, XCHGREAD.PRO, reads the 
+     Ames header and data into IDL structures.  These data are then 
+     available for plotting.  Often it is desirable to use the header 
+     information, particularly the variable names, as graph titles.  
+     Since structures are available only in the second version of IDL, 
+     this reading program is not compatable with IDL1.
+  
+
+    A.  Location
+        The IDL read routines routines are located in the directory:
+        /oracle_db/ndsc/ames/idl.  Copy the file xchgread.pro to your user 
+        area.
+
+    B.  File descriptions
+        xchgread.pro  The IDL read routines for Ames data -- copy this file to
+                      your user area.
+        test2110.pro  A sample prgram for reading and plotting data from a 
+                      file.  This routine reads the datafile and creates 
+                      successive plots of the primary variable data.v(*,0:nv) 
+                      vs. the bounded independant variable data.x0(i,*).  This 
+                      routine is written for format 2110 data.  With minor 
+                      modifications it will work for several other formats.
+        2110h.d       Test 2110 data file with database header
+
+    C.  Running the code
+        All of the necessary procedures are contained in xchgread.pro.  The 
+        main routine is at the end of the file because IDL requires the 
+        compilation of the subroutines before the compilation of the calling 
+        routine.  Enter the IDL shell by typing idl at the prompt.  Then 
+        compile by typing 
+               .run xchgread
+        or 
+               .rnew xchgread
+        The calling sequence is
+
+          xchgread, in_file_name, head, data, $
+             headdb=db_head,d=in_dir,type=file_type,vol1=vol_1,  $
+             comments=c_flag,r=ret_code
+
+        Note:  Using /keyword sets the keyword to 1, ie /comments in the 
+        calling sequence is the same as comments=1.
+
+    D.  Input Parameters
+        INPUTS:
+        in_file_name = Data exchange file name
+                       *NOTE - file volume number must be the very last 
+                       character in the file name.
+        
+        KEYWORD PARAMETERS:
+        in_dir    = directory containing data exchange file (input)
+        db_head   = flag to indicate if file contains database header (input)
+                  = 1 if file contains UARS header 
+                  = 0 if file does not contain UARS header 
+        vol_1     = Volume request flag (input)
+                  =1, Read only this particular data volume
+                  =0, Read all data volumes corresponding to this file 
+                      name (default)
+        c_flag    = Comment print request flag (input)
+                  =1, Echo all comments in file to standard output
+                  =0, Do not echo (default)
+        ret_code  = return code (output)
+                  = 0, success
+                  = -1, Error reading exchange file
+                  = -2, Invalid file format index read from exchange file
+
+
+    E.  Output
+        IN GENERAL: All data is returned exactly as read, in either 
+           floating point or string format as appropriate. 
+           (Exception: 'date' is returned as 'ddmmyy'.)  For more information
+           see the documentation in the body of the idl code xchgread.pro.
+        
+        head        = data header structure
+                      (Not all fields of this structure are necessarily 
+                      defined)
+        
+          head.nlhead = Number of lines in file header
+          head.ffi    = File format index
+          head.oname  = Observer name
+          head.org    = Organization
+          head.sname  = Source of measurements
+          head.mname  = Mission name
+          head.ivol   = Volume number of this file
+          head.nvol   = Total number of volumes for this dataset
+          head.date   = Date of mission
+          head.rdate  = Revision date
+          head.dx     = Interval between values of independent variable(s)
+                        If NIV=no. of independent variables (unbounded+
+                         bounded), then head.dx(0:NIV-2) are the bounded 
+                         variable intervals, and head.dx(NIV-1) or head.dx 
+                         is the unbounded variable interval
+          head.xname  = Name(s) of independent variable(s)
+                        If NIV=no.independent variables (unbounded+
+                         bounded), then head.xname(0:NIV-2) are the bounded
+                         variable names, and head.xname(NIV-1) or 
+                         head.xname is the unbounded variable name
+          head.nv     = Number of primary variable(s)
+          head.vscal  = Primary variable scale(s)                
+                        head.vscal(0:nv-1)
+          head.vmiss  = Primary variable missing data value(s)   
+                        head.vmiss(0:nv-1)
+          head.vname  = Primary variable name(s)                 
+                        head.vname(0:nv-1)
+          head.nauxv  = No.auxiliary variable(s)
+          head.ascal  = Auxiliary variable scale(s)                
+                        head.ascal(0:nauxv-1)
+          head.amiss  = Auxiliary variable missing data value(s)   
+                        head.amiss(0:nauxv-1)
+          head.aname  = Auxiliary variable name(s)                 
+                        head.aname(0:nauxv-1)
+          head.nvpm   = Number of independent variable values between 
+                        independent variable marks
+          head.nx     = Number of values of the independent variable (not 
+                         always set) head.nx(0:#bounded_var-1) or head.nx 
+                         if #bounded var = 1
+          head.nxdef  = Number of values of the independent variable(s) 
+                        explicitly recorded in the file header,  ffi 3010 
+                        and 4010 head.nxdef(0:2) or head.nxdef(0:3) 
+                        ffi 3010 and 4010 respectively
+          head.lenx   = Number of characters used to record character 
+                        primary variable(s)
+          head.nauxc  = Number of primary variables recorded as character 
+                        strings
+          head.lena   = Number of characters used to record character 
+                        auxiliary variable(s)
+          
+        data        = Data value structure 
+          
+          data.x      = Unbounded independent variable
+          data.x0     = Bounded independent variable(s)
+          data.v      = Primary variable(s)
+          data.a      = Auxiliary variable(s)
+           
+
+    F.  Sample_run
+        The following is an example session with test2110.pro.  It 
+        assumes that you are in the directory that contains 
+        test2110.pro, xchgread.pro, and 2110h.dat.  Note first the
+        user enters the idl shell by typing "idl".  Then the xchgread code is
+        compiled.  Finally the test program is run.  This program plots
+        each primary variable and then stops.  The program is restarted
+        by typing ".con", at which point the next primary varaible is plotted.
+        The idl shell is exited by typing "exit". 
+
+
+        % idl
+        .run xchgread
+        % Compiled module: PSTR.
+        % Compiled module: XCHGREAD_HDCOM.
+        % Compiled module: XCHGREAD_VAR.
+        % Compiled module: XCHGREAD_CMNT.
+        % Compiled module: XCHGREAD_NEXT.
+        % Compiled module: XCHGREAD_NUMREC.
+        % Compiled module: XCHGREAD_BLDSTR.
+        % Compiled module: XCHGREAD_FFI.
+        % Compiled module: XCHGREAD.
+        IDL> .run test2110
+        % Compiled module: $MAIN$.
+        Flags:
+           Instrment=
+           Dataset=
+        Comments:
+        type ".con" to continue
+        % Stop encountered:  $MAIN$             32 test2110.pro
+        IDL> .con
+        type ".con" to continue
+        % Stop encountered:  $MAIN$             32 test2110.pro
+        IDL> exit

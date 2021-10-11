@@ -1,0 +1,71 @@
+ER-2 table for ASHOE/MAESA    (1995-05-23)
+
+Table of available datasets in the er2 subdirectory, ordered by
+investigator and file name code (prefix.platform).
+The month and day for each flight is obtained by reading down the
+columns of the first four rows of numbers.  
+All flights were during the year 1994.
+An "X" indicates the file is available, a "+" indicates it is
+unavailable.
+
+
+             000000000000000000000000000000001111111111111
+             122222333333334444455566667788880000000000011
+             200111112222230001122200002300010001112222200
+             124489480127903583534813588016803580360246924
+Baumgardner  
+       FS.E  +++++++XXXXX+XXXXXX+XXXXXXXXXXXXXXXXXXXXXXXXX
+Boering      
+       CD.E  +XXXXX+XXXXXXXXXXXXXXXXXXXXXXXXXXXX+XXXXXXXXX
+Chan         
+       MM.E  ++XXXX+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+       FP.E  ++XXXX+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Elkins       
+       GC.E  +++XX++XXX++++X+X++XXXXX++XX+++++++XXXXXXXXXX
+Fahey        
+       ND.E  +++XX++X+++++X++++++++X+++++++++++XXXXX++++++
+       NO.E  +++XX++XXXXXXXXXX++XXXXX++XXXX++++XXXXXXXXXXX
+       NY.E  +++XX++XXXXXXXXXX+++XXXX++XXXX++++XXXXXXXXXXX
+       RC.E  ++++++++++++++++++++++++++++++++++X++++++++++
+       RE.E  ++++++++++++++++++++++++++++++++++X++++++++++
+Gaines       
+       NM.E  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX+XXXX
+       NP.E  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX+XXXX
+       FN.E  X++++++++++++++++++++++++++++++++++++++++++++
+Gary         
+       MP.E  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX++XXXXXXXXXXX
+Kelly        
+       WV.E  +XXXXX+XXXXXXXXXXXXXXXXXXX++XXXXXXXXXXXXXXXXX
+Lait         
+       FA.E  XXXXXXXXXXXXXXXXXXXXXXXXX+XXXXXXXXXXXXXXXXXXX
+Lloyd        
+       JV.E  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX+++XX++
+Loewenstein  
+       N2.E  +XXXXX+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+McElroy      
+       UP.E  +++XX++XXXXXXXXXXXXXXX++++XXXXXX++++++++++XXX
+       UV.E  +++XX++XXXXXXXXXXXXXXX++++XXXXXX++++++++++XXX
+       US.E  +++XX++XXXXXXXXXXXXXXX++++XXXXXX++++++++++XXX
+Newman       
+       XS.E  XXXXXXXXXXXXXXXXXXXXXXXXX+XXXXXXXXXXXXXXXXXXX
+Pfister      
+       CT.E  ++++X++XXXXXXXXXXXX+XXXXX+XXXXXXXXXXXXXXXXXXX
+Proffitt     
+       O3.E  +XXXXX+XXXXXXXXXXXXXXXXXXX+XXXXXXXXXXXXXXXXXX
+Salawitch    
+       SP.E  +++XX++XXXXXXXXXX++XXXXX++XXXX++XXXXXXXXXXXXX
+Schoeberl    
+       BT.E  +++++++XXXXXXXXXXXXXXXXXX+XXXXXX++XXXXXXXXXXX
+Smith        
+       ST.E  ++X++++++++++++++X++++++++++++XXXX+++++++++++
+       HP.E  +++++++++++++++++X++++++++++++XXXX+++++++++++
+Stimpfle     
+       BR.E  +++XX++X+XXXXXXXX+++XXXX++XXXX+++++XX+XXXXXXX
+       CL.E  +++XX++XXXXXXXXXX+++XXXX++XXXX++++XXXXXXXXXXX
+Webster      
+       AL.E  +++XXX+++XXX+XXXXX+XXXXXX+XXXXXXXXXXXXXXXXXXX
+Wennberg     
+       HO.E  +++XX++XXXXXXXXXX++X+XXX++XXXX++++XXXXXXXXX+X
+Wilson       
+       CN.E  +++XXX+XXXXXXXXXXXXXXXXXX+XXXXXXXXXXXXXXXXXXX
+

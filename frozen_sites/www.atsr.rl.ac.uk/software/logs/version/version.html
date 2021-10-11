@@ -1,0 +1,36 @@
+<h2>Sadist-2 version history</h2>
+<P><B>v100 :</B> First release of SADIST -2. ATSR-2 data only processed. Uses 
+  same cloud-clearing as SADIST-1 but incorporates new product formats with greatly 
+  improved header information and a totally new Level 1 processing system.</P>
+
+<P><B>v200 :</B> Improved cloud-clearing scheme incorporating new versions of 
+  the 1.6 um Histogram Test and the Infrared Histogram Test.</P>
+<P><B>v201 :</B> Corrects bug in the 1.6um Histogram Test to correctly set the 
+  sunglint flag. (Previously always flagged no-sunglint.)</P>
+<P><B>v203 :</B> Corrects bug in the CloudQuantityTest function in the 1.6 um 
+  Histogram Test (previously caused an occasional crash, so products not affected).</P>
+<P><B>v213 :</B> New format ABT product introduced giving higher precision in 
+  brightness temperature data.</P>
+
+<P><B>v300 :</B> New version of SADIST-2 giving ATSR-1 as well as ATSR-2 processing 
+  capability. No differences with v213 as far as ATSR-2 processing is concerned. 
+  ATSR-1 data now available for the first time with the improved cloud-clearing 
+  scheme and better Level_1 processing.</P>
+<P><B>v301 :</B> Cloud-clearing improved - new 11um Spatial Coherence Test introduced. 
+  Level_1 processing modified to exclude data affected by extreme cases of scan-mirror 
+  "jitter". </P>
+<P><B>v302 :</B> Corrects bug in the 11um Spatial Coherence Test (previously caused 
+  an occasional crash, so products not affected).</P>
+<P><B>v303 :</B> Corrects bug in Infrared Histogram Test which occasionally gave 
+  conflicting nadir-view forward-view cloud-flagging </P>
+<P><B>v310 :</B> Improved SST-retrieval algorithm and coefficients introduced. 
+</P>
+<P><B>v320 :</B> Y2K compliant version. Functionally identical to v310. </P>
+<P><B>v321</B>: Allows calibration of reflectance channels when ATSR-2 is in the 
+  non-nominal fixed gain and offset mode of operation. In addition, the ABT product 
+  content is amended to include the processed forward-view-only data at the end 
+  of each Level_0 input file.</P>
+<P><B>v322</B>:Uses the new SST-retrieval tables (for ATSR-2 only). </p>
+
+</BODY>
+

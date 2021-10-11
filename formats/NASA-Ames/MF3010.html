@@ -1,0 +1,241 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>NASA Ames FFI 3010 Metadata Format</title>
+</head>
+
+<body bgcolor="#ffffff">
+<h1><font color="#333399">NASA Ames Metadata Format: FFI 3010</font></h1>
+<hr>
+Metadata pertaining to a given NASA Ames formatted data file are recorded in the
+first lines (header) of the file itself.
+The header is made of three subsections:
+<ul>
+ <li><a href="firstlines.html">Top 7 lines</a>
+ <li>Body
+ <li><a href="lastlines.html">Comment fields</a>
+</ul>
+This document gives the format of the <u>header body for FFI 3010</u>.
+
+<h2>Symbols used</h2>
+
+<table>
+<tr valign=top>
+ <td>DX<sup>s</sup></td>
+ <td width=6></td>
+ <td>Interval identifier for the s<sup>th</sup> independent variable (real
+     number).
+     It is the interval between two successive values of the s<sup>th</sup>
+     independent variable if this interval is uniform, <i>i.e.</i> if
+     X<sup>s</sup>(m+1)-X<sup>s</sup>(m) = X<sup>s</sup>(m)-X<sup>s</sup>(m-1)
+     for all valid m.<br>
+     For a non-uniform interval, DX<sup>s</sup> = 0.</td>
+ </tr>
+<tr valign=top>
+ <td>XNAME<sup>s</sup></td>
+ <td></td>
+ <td>Name and unit of the s<sup>th</sup> independent variable.
+     Not more than 132 characters long.
+     </td>
+ </tr>
+<tr valign=top>
+ <td>NX<sup>s</sup></td>
+ <td></td>
+ <td>Number of values of X<sup>s</sup> for s < 3 (<i>i.e.</i> for the bounded
+     independent variables).</td>
+ </tr>
+<tr valign=top>
+ <td>NXDEF<sup>s</sup></td>
+ <td></td>
+ <td>Number of values of X<sup>s</sup> (for s < 3) which are explicitly
+     defined in the file header (NXDEF<sup>s</sup> = 1 or NX<sup>s</sup>).
+     <br>
+     If NXDEF<sup>s</sup> = NX<sup>s</sup>, then X<sup>s</sup> is explicit.
+     <br>
+     If NXDEF<sup>s</sup> = 1, then X<sup>s</sup> is implicit and its values are
+     defined by
+     X<sup>s</sup>(i) = X<sup>s</sup>(1) + (i-1)*DX<sup>s</sup> for all
+     i from 1 to NX<sup>s</sup>.</td>
+ </tr>
+<tr valign=top>
+ <td>NV</td>
+ <td></td>
+ <td>Number of primary dependent variables.</td>
+ </tr>
+<tr valign=top>
+ <td>NAUXV</td>
+ <td></td>
+ <td>Number of auxiliary dependent variables.</td>
+ </tr>
+<tr valign=top>
+ <td>VSCAL<sub>n</sub></td>
+ <td></td>
+ <td>Scale factor (real number) for the n<sup>th</sup> primary variable.
+     VSCAL<sub>n</sub> is the number by which the recorded values of
+     V<sub>n</sub> must be multiplied in order to convert it in the
+     unit of measure specified in VNAME<sub>n</sub> (see below).
+     If the n<sup>th</sup> primary variable is not rescaled, then
+     VSCAL<sub>n</sub> = 1.
+     </td>
+     </tr>
+<tr valign=top>
+ <td>VMISS<sub>n</sub></td>
+ <td></td>
+ <td>Missing value identifier for the n<sup>th</sup> primary variable (real
+     number).
+     VMISS<sub>n</sub> is a number indicating missing or erroneous values
+     in the record of the n<sup>th</sup> primary variable.
+     It must be <u>larger</u> than the maximal "good" value of V<sub>n</sub>.
+     </td>
+     </tr>
+<tr valign=top>
+ <td>VNAME<sub>n</sub></td>
+ <td></td>
+ <td>Name and unit of the n<sup>th</sup> primary dependent variable.
+     VNAME<sub>n</sub> must not be more than 132 characters long.
+     The unit specified in VNAME<sub>n</sub> must be the unit of
+     VSCAL<sub>n</sub>*V<sub>n</sub>.
+     </td>
+     </tr>
+<tr valign=top>
+ <td>ASCAL<sub>a</sub></td>
+ <td></td>
+ <td>Scale factor (real number) for the a<sup>th</sup> auxiliary variable.
+     ASCAL<sub>a</sub> is the number by which the recorded values of
+     A<sub>a</sub> must be multiplied in order to convert it in the
+     unit of measure specified in ANAME<sub>a</sub> (see below).
+     If the a<sup>th</sup> auxiliary variable is not rescaled, then
+     ASCAL<sub>a</sub> = 1.
+     </td>
+     </tr>
+<tr valign=top>
+ <td>AMISS<sub>a</sub></td>
+ <td></td>
+ <td>Missing value identifier for the a<sup>th</sup> auxiliary variable (real
+     number).
+     AMISS<sub>a</sub> is a number indicating missing or erroneous values
+     in the record of the a<sup>th</sup> auxiliary variable.
+     It must be <u>larger</u> than the maximal "good" value of A<sub>a</sub>.
+     </td>
+     </tr>
+<tr valign=top>
+ <td>ANAME<sub>a</sub></td>
+ <td></td>
+ <td>Name and unit of the a<sup>th</sup> auxiliary dependent variable.
+     ANAME<sub>a</sub> must not be more than 132 characters long.
+     The unit specified in ANAME<sub>a</sub> must be the unit of
+     ASCAL<sub>a</sub>*A<sub>a</sub>.
+     </td>
+     </tr>
+</table>
+
+<p>
+VSCAL, VMISS and VNAME must be listed in the same order as the one in which
+the primary variables are recorded in the data section (n ranging from 1 to NV).
+</p>
+<p>
+Similarly, ASCAL, AMISS and ANAME must be listed in the same order as the one
+in which the auxiliary variables are recorded in the data section (a ranging
+from 1 to NAUXV).
+</p>
+
+<h2>Condensed notation</h2>
+
+[ DX<sup>s</sup>, s=1,3 ]
+<br>
+[ NX<sup>s</sup>, s=1,2 ]
+<br>
+[ NXDEF<sup>s</sup>, s=1,2 ]
+<br>
+[ X<sup>s</sup>(i), i=1,NXDEF<sup>s</sup> ] s=1,2
+<br>
+[ XNAME<sup>s</sup> ] s=1,3
+<br>
+NV
+<br>
+[ VSCAL<sub>n</sub>, n=1,NV ]
+<br>
+[ VMISS<sub>n</sub>, n=1,NV ]
+<br>
+[ VNAME<sub>n</sub> ] n=1,NV
+<br>
+NAUXV
+<br>
+[ ASCAL<sub>a</sub>, a=1,NAUXV ]
+<br>
+[ AMISS<sub>a</sub>, a=1,NAUXV ]
+<br>
+[ ANAME<sub>a</sub> ] a=1,NAUXV
+
+<h2>Expanded notation</h2>
+
+<table>
+<tr><td>DX<sup>1</sup></td>
+    <td>DX<sup>2</sup></td>
+    <td>DX<sup>3</sup></td>
+    </tr>
+<tr><td>NX<sup>1</sup></td>
+    <td>NX<sup>2</sup></td>
+    <td></td>
+    </tr>
+<tr><td>NXDEF<sup>1</sup></td>
+    <td>NXDEF<sup>2</sup></td>
+    <td></td>
+    </tr>
+<tr><td>X<sup>1</sup>(1)</td>
+    <td>...</td>
+    <td>X<sup>1</sup>(NXDEF<sup>1</sup>)</td>
+    </tr>
+<tr><td>X<sup>2</sup>(1)</td>
+    <td>...</td>
+    <td>X<sup>2</sup>(NXDEF<sup>2</sup>)</td>
+    </tr>
+<tr><td colspan=3>XNAME<sup>1</sup></td>
+    </tr>
+<tr><td colspan=3>XNAME<sup>2</sup></td>
+    </tr>
+<tr><td colspan=3>XNAME<sup>3</sup></td>
+    </tr>
+<tr><td colspan=3>NV</td>
+    </tr>
+<tr><td>VSCAL<sub>1</sub></td>
+    <td>...</td>
+    <td>VSCAL<sub>NV</sub></td>
+    </tr>
+<tr><td>VMISS<sub>1</sub></td>
+    <td>...</td>
+    <td>VMISS<sub>NV</sub></td>
+    </tr>
+<tr><td colspan=3>VNAME<sub>1</sub></td>
+    </tr>
+<tr><td colspan=3>...</td>
+    </tr>
+<tr><td colspan=3>VNAME<sub>NV</sub></td>
+    </tr>
+<tr><td colspan=3>NAUXV</td>
+    </tr>
+<tr><td>ASCAL<sub>1</sub></td>
+    <td>...</td>
+    <td>ASCAL<sub>NAUXV</sub></td>
+    </tr>
+<tr><td>AMISS<sub>1</sub></td>
+    <td>...</td>
+    <td>AMISS<sub>NAUXV</sub></td>
+    </tr>
+<tr><td colspan=3>ANAME<sub>1</sub></td>
+    </tr>
+<tr><td colspan=3>...</td>
+    </tr>
+<tr><td colspan=3>ANAME<sub>NAUXV</sub></td>
+    </tr>
+</table>
+
+<p>
+<a href="FFI-summary.html">Back to FFI Summary.</a>
+</p>
+
+<p>
+</body>
+
+</html>

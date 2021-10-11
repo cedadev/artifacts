@@ -1,0 +1,63 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>NEU Data File Names</title>
+ <meta name="keywords" content="NEU, EC, nitrogen, flux">
+</head>
+
+<body bgcolor="#ffffff">
+
+<style>
+<!--
+P.right-shift {text-indent: -1.1em; margin-left: 1.1em; margin-top: 0.1em; margin-bottom: 0.1em}
+-->
+</style>
+
+<h1>
+NEU Data File Names
+</h1>
+<hr>
+
+<center><i>
+This convention is currently provisional.
+</i></center>
+
+<p>
+NEU data file names are of the form
+<br><center><b><br>
+instrument_location_YYYYMMDD[hh[mm[ss]]]_[extra-]vnn.ext
+</b></center><br>
+where
+<ul>
+<li>fields inside square brackets are optional;
+<li><b>instrument</b>, <b>location</b>, <b>YYYYMMDD</b>, <b>hh</b>,
+    <b>mm</b>, <b>ss</b>, <b>extra</b> and <b>ext</b> are defined
+    in the
+    <a href="/help/file_naming.html">BADC File Name Convention</a>;
+<li><b>vnn</b> is the data version number (from v01 up to v99).
+</ul>
+</p>
+
+<p>
+When <b>location</b> is a NEU site, it is a two part field of the form
+<b>sitename-ly</b>
+where <b>ly</b> is the site level number (l1, l2 or l3),
+e.g. <i>easterbush-l3</i>.
+</p>
+
+<p>
+<u>Examples of valid NEU data file names</u>:
+<br><br>
+ceh-met_easterbush-l3_20060801_v01.na
+<br>
+ceh-met_easterbush-l3_20060801_30min-v01.na
+<br>
+ceh-met_easterbush-l3_20060801_c1-v01.na
+<br>
+ceh-met_easterbush-l3_20060801_c1-30min-v01.na
+</p>
+
+<p>
+</body>
+</html>

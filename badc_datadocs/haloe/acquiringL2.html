@@ -1,0 +1,132 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Datasets: HALOE L2 Data</TITLE>
+</HEAD>
+<!-- Created 6th December 1998 12:25:17  -->
+<!-- Author: Simon Williams BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>Acquiring the HALOE L2 data held at the BADC<BR
+CLEAR="ALL"></H1>
+<br><br>
+<P><EM>This file contains background information to help you get
+the HALOE L2 data held at the BADC.</EM> <HR ALIGN=LEFT>
+
+<OL>
+  <LI><A HREF="#before">Before you start</A>
+  <LI><A HREF="#transfer">Checking and Transferring Data from the BADC</A>
+  <LI><A HREF="#convention">File name convention</A>
+  <LI><A HREF="#files">Reading the data files</A>
+</OL>
+<HR ALIGN=LEFT>
+<p>
+The HALOE level 2 data was supplied to the BADC
+in IEEE binary files by the instrument team at NASA Langley. These
+files should be readable on most Unix platforms using the software
+provided, but note that if you want to read the data using a DEC
+alpha machine running Digital Unix, then you will have to compile
+the routines using the - <I>convert big_endian</I> option. 
+
+<P>Since the dataset is restricted, you need to <A HREF="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=haloel2">apply for access to the HALOE Level 2 data</a>   
+. 
+
+<H3><A NAME="before"></A>1. Before you start</H3>
+
+<BLOCKQUOTE>
+  <P>You will need <B>gzip</B> installed on your local system to uncompress
+  the data files and software packages - the source code is available
+  from software archives. You will also need to know <A HREF="/help/howtogetdata_gzip_and_tar.html">how
+  to use gzip and tar</A> once you have the files on your system.
+</BLOCKQUOTE>
+
+<H3><A NAME="transfer"></A>2. Checking and Transferring Data from the BADC</H3>
+
+<BLOCKQUOTE>
+  
+<P>All data and software is located beneath the directory <EM><A
+  HREF="/cgi-bin/data_browser/data_browser/badc/haloe/">/badc/haloe/</A></EM>. 
+  Here you will find a README file and the following subdirectories:
+<P> <UL>
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/data/haloel2/">data/haloel2/</A>
+    - contains the HALOE Level 2 data files.
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/doc/">doc</A>
+    - contains HALOE documentation.
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/software/haloel2/">software/haloel2/</A>
+    - contains the example read routines and any 3rd party software available to read HALOE Level 2 data.
+  </UL>
+<P>Check whether the data you require is available by browsing the <A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/data/haloel2/">HALOE L2 
+data</A> directories.
+
+</BLOCKQUOTE>
+
+<H3><A NAME="convention"></A>3. File name convention</H3>
+The file name convention adopted is as follows:&nbsp;&nbsp;
+HALOE_Ll_Sssss_Ddddd.Vvvvv_Ccc_xxxx, 
+<p>
+where: 
+<ul>
+<li>l is the UARS processing level (e.g. 2), 
+<li>ssss is the subtype or parameter, 
+<li>dddd is the UARS acquisition day (0001 = 12 September 1991), 
+<li>vvvv is the data version number (e.g. 18 or 19), 
+<li>cc is the data version cycle number, and 
+<li>xxxx is the file extension (PROD for the binary files).
+</ul>
+
+
+<H3><A NAME="files"></A>4. Reading the data files</H3>
+
+<BLOCKQUOTE>
+  <H4><A NAME="structure"></A>4.1 The file structure</H4>
+  <P>Level 2 data are organized into one file per day. Each daily
+  file contains data for all constituents for the sunrise and sunset
+  events in the day (typically 29 or 30 in total). An overview
+  of the file structure is shown below. Formal file specifications
+  can be found in the HALOE level 2 documentation. 
+  <P>At the beginning of each file, there is a block of summary
+  information. The files are then organized sequentially by event.
+  The data from the event is arranged into a standard header containing
+  the level 1 data used in the level 2 retrievals, and a data block
+  containing the level 2 results of the retrieval. 
+  <P>Schematically the file has the following structure : 
+  <PRE>
+ ______________________________
+|                              |
+|    Day Summary Block         |
+|______________________________|
+|                              |
+|Profile 1 : Level 1 Header    |
+|______________________________|
+|                              |
+|Profile 1 : Level 2 Data Block|
+|______________________________|
+|                              |
+|Profile 2 : Level 1 Header    |
+|______________________________|
+|                              |
+|Profile 2 : Level 2 Data Block|
+|______________________________|
+          .
+          .
+          .
+         etc</PRE>
+  <H4><A NAME="routines"></A>4.2 The Access Routines</H4>
+  <P>A set of FORTRAN subroutines to read the data are available
+  from the <A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/software/haloel2/examples/">HALOE software</a> directory at the BADC. These are the
+  routines supplied by the instrument team at NASA Langley which
+  should compile and run on the majority of platforms. 
+  <P>A set of access <A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/software/haloel2/3rdparty/">routines written in IDL</a> at the BADC is also
+  available. 
+  <H4><A NAME="3rdparty"></A>4.3 Third Party Software</H4>
+  <P>In the <A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/software/haloel2/">software
+  directories</A> for the HALOE Level 2 data, there is a subdirectory for
+  3rd Party software. If you develop software to use with the HALOE Level 2
+  data, then we encourage you to let us have a copy so that we
+  can make it available to other researchers. </BLOCKQUOTE>
+
+<P>
+</BODY>
+</HTML>
+
+

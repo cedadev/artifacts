@@ -1,0 +1,69 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20080610T230000Z
+DTEND:20080611T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Directory for Social Change, 24 Stephens=
+on Way, London
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000108C3D71CBA6C8010000000000000000100
+ 00000D8C0C071B5E6AA4EA9C486094AEC5B34
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:NERC Atmospheric Science Listserver=
+=0D=0A********************************************=0D=0A=0D=0ANERC MESO-NET=
+/MESOMAQ Meeting=0D=0A=0D=0AUser Needs in relation to Comprehensive Air Qua=
+lity Models=0D=0A=0D=0AWednesday 11 June 2008, Directory for Social Change,=
+ 24 Stephenson Way, London=0D=0A =0D=0A=0D=0APurpose of the meeting=0D=0A=
+=0D=0AThe purpose of the meeting is to explore how potential users can bene=
+fit from comprehensive meteorological and air quality model calculations. O=
+ne practical outcome is to identify realistic case studies to demonstrate t=
+he feasibility of models such as CMAQ, which could be integrated into curre=
+nt projects such as CREMO1/MESO-NET2. Resource issues related to input data=
+ bases and run times also need to be addressed. Regulatory needs are alread=
+y a part of the CREMO work programme, but an important outcome should be th=
+e identification of applications relevant for UK policy which highlight pot=
+ential future developments. =0D=0A=0D=0AThe day will start with presentatio=
+n of results from simple models and how they could be improved using compre=
+hensive models, or integrated with comprehensive model runs. The major part=
+ of the day will deal with applications and the testing of comprehensive mo=
+dels. Finally, there will be a discussion of policy needs which require the=
+ use of such models.=0D=0A=0D=0AVenue=0D=0A=0D=0AThe meeting will take plac=
+e in London, on Wednesday 11 June, at the Directory for Social Change, 24 S=
+tephenson Way, London NW1 2DP, near Euston underground station. =0D=0A=0D=
+=0AAttendance registration=0D=0A=0D=0AThe meeting is open to all but if you=
+ intend to come please email Sue Luckett sue.luckett@environment-agency.gov=
+.uk who will confirm your attendance.=0D=0A=0D=0A =0D=0A1 Co-operative rese=
+arch programme funded by the Environment Agency with the University of Hert=
+fordshire as principal contractor=0D=0A=0D=0A2 NERC Knowledge Transfer Netw=
+ork on Mesoscale Modelling for Air Pollution Applications=0D=0A=0D=0AProgra=
+mme=0D=0A=0D=0A09:30   Tea/Coffee=0D=0A=0D=0A10:00  Welcome and introductio=
+n (Ranjeet Sokhi/Bernard Fisher)=0D=0A=0D=0A10:10  Annual audits to assess =
+performance of Environment Agency regulation using simpler models for annua=
+l audits, and assessing outcomes in terms of lives lost, ecological damage =
+or monetary values (Keith Vincent AEA=0D=0ATechnology) =0D=0A=0D=0A10:30 Co=
+mparison of photochemical schemes and implications for ozone assessments (G=
+arry Hayman NPL) =0D=0A=0D=0A10:50 Derivation of pollution footprints from =
+comprehensive models (Stephen Griffiths and Ray Wright e.on/RWE/JEP)=0D=0A=
+=0D=0A11:10   Tea/coffee=0D=0A=0D=0A11:30 Results from 2003 annual run for =
+the UK and Europe and lessons for users (Charles Chemel University of Hertf=
+ordshire)=0D=0A=0D=0A11:50 Combining the use of models with measurements (R=
+ong-Ming Hu University of Hertfordshire)=0D=0A=0D=0A12:10 Application of co=
+mprehensive models to urban and regional air quality from an international =
+perspective (Ranjeet S Sokhi University of=0D=0AHertfordshire)=0D=0A=0D=0A1=
+2:30 Derivation of source-receptor relations using the EMEP model country-c=
+ountry source-receptor matrices and treatment of non-linearity (Dick Derwen=
+t rdscientific)=0D=0A=0D=0A12:50   Lunch=0D=0A=0D=0A14:00 Development and r=
+esults of UK regional modelling from the EMEPUK Model (Massimo Vieno CEH Ed=
+inburgh)=0D=0A=0D=0A14:20 Overview of USEPA air quality modeling research a=
+nd its applications - lessons learned (ST Rao USEPA/NOAA)=0D=0A=0D=0A14:50 =
+Making decisions following air quality modelling - Uncertainty and user nee=
+ds (Bernard Fisher Environment Agency)=0D=0A=0D=0A15:10 National/DEFRA poli=
+cy needs for comprehensive modelling (Martin=0D=0AWilliams      DEFRA)=0D=
+=0A=0D=0A15:30 Tea/Coffee=0D=0A=0D=0A15:50 Discussion to prioritise applica=
+tions of CMAQ and role of MESO-NET to facilitate future developments=0D=0A=
+=0D=0A16:20   Close of meeting=0D=0A=0D=0A16:30   Meeting of the MESO-NET/M=
+ESOMAQ Steering Board=0D=0A=0D=0A17:30   Close of SB Meeting=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:NERC MESO-NET/MESOMAQ Meeting
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

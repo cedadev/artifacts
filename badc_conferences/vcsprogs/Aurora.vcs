@@ -1,0 +1,44 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20051109T000000Z
+DTEND:20051110T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Institute of Mechanical Engineers, Lectu=
+re Theatre, One Birdcage Walk, Westminster, London
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000040065F35BBD4C5010000000000000000100
+ 000005237FDAA01FC6747954C6002AE4062A5
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:PARC Aurora Town Meeting - 9 November=
+ 2005=0D=0AInstitute of Mechanical Engineers, Lecture Theatre, One Birdcage=
+ Walk,=0D=0AWestminster, London 10.00 - 12.30=0D=0A=0D=0AThis meeting will =
+inform the community about the proposed ESA programme, the proposed associa=
+ted PPARC programme and provide the community with the opportunity to expre=
+ss their views.  =0D=0AThe draft agenda is as follows:=0D=0A=0D=0A10.00 - 1=
+0.30	Arrival and coffee=0D=0A10.30 - 10.40	Welcome address=0D=0A10.40 - 11.=
+00 	The PPARC Aurora Programme=0D=0A                                - Dr D =
+Parker, PPARC=0D=0A11.00 - 11.20	ESA Programme=0D=0A                       =
+        - Dr M Sims, University of Leicester=0D=0A11.20 - 12.20	Discussion=
+=0D=0A12.20 - 12.30	Concluding Remarks=0D=0A=0D=0ATo register attendance, p=
+lease e-mail Michelle Cooper at=0D=0Amichelle.cooper@pparc.ac.uk by 1 Novem=
+ber 2005.  =0D=0APlease note that this meeting is open to academia and indu=
+stry.=0D=0A=0D=0AA venue location map is available at=0D=0Ahttp://www.imech=
+e.org.uk/1bcw/location.asp =0D=0A=0D=0ABackground: =0D=0A*  Aurora is a fra=
+mework for the European involvement in the long-term exploration of the Sol=
+ar System, focussed on Moon and Mars for the foreseeable future. The defini=
+tion phase was approved at the ESA Council Ministerial-level meeting in 200=
+1 and most ESA members are participants including the UK (funding is from P=
+PARC). It comprises two themes that might eventually converge on a human mi=
+ssion to Mars in the middle of the century: =0D=0A=0D=0A*  Robotic science =
+missions to Mars, foreseen to be a European exobiology/geophysics mission (=
+ExoMars) and a European participation in an international mission to return=
+ to Earth samples of Martian regolith (MSR); =0D=0A=0D=0A*  Development of =
+long-duration human mission technologies using the International Space Stat=
+ion, rehearsal missions in Earth orbit and a human mission to the Moon (by =
+2025). =0D=0A=0D=0AThe UK believes that for the foreseeable future its prio=
+rity should lie with robotic missions. =0D=0A=0D=0Ahttp://www.aurora.rl.ac.=
+uk/Community_notice.htm =0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:PPARC Aurora Town Meeting=20
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

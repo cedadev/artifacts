@@ -1,0 +1,24 @@
+BODY {
+BACKGROUND: #fffaf0; text: "black" link="blue" alink="steelblue" vlink="mediumblue"
+}
+A.vlnk:visited {
+COLOR: #332469
+}
+P {
+FONT-FAMILY: Helvetica; FONT-SIZE: 14pt; LINE-HEIGHT: 16pt
+}
+TD {
+FONT-FAMILY: Comic Sans,Helvetica,Arial; FONT-SIZE: 12pt; LINE-HEIGHT: 14pt
+}
+TH {
+FONT-FAMILY: Helvetica; FONT-SIZE: 16pt; LINE-HEIGHT: 16pt
+}
+LI {
+FONT-FAMILY: Lucida; FONT-SIZE: 14pt; LINE-HEIGHT: 16pt
+}
+#lnk {
+FONT-SIZE: 12pt; FONT-WEIGHT: normal
+}
+#bq1 {
+FONT-SIZE: 14pt
+}

@@ -1,0 +1,35 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060507T230000Z
+DTEND:20060512T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:ESRIN, Frascati, Italy=20
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000D09367859600C6010000000000000000100
+ 000008384D0D7DC76334C9C7B07754DA458E8
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:The European Space Agency is organisi=
+ng its first Europhysics Conference=0D=0Aon the topical theme atmosphere to=
+ provide scientists and data users=0D=0Awith the opportunity to present fir=
+st-hand and up-to-date results=0D=0Afrom their ongoing research activities =
+on the ERS-2/GOME-1,=0D=0AENVISAT/GOMOS/MIPAS/SCIAMACHY, EOS-AURA/OMI and A=
+CE/FTS/MAESTRO=0D=0Ainstruments.=0D=0A=0D=0AAdditional information on objec=
+tives and conference themes, as=0D=0Awell as abstract submission, is availa=
+ble on the conference website:=0D=0A   http://earth.esa.int/atmos2006/=0D=
+=0A=0D=0AConference proceedings will be published as a Special Publication=
+=0D=0Aby the ESA Conference Bureau.=0D=0A=0D=0ALanguage and Fees=0D=0A=0D=
+=0AThe official language of the workshop is English. No=0D=0Aparticipation =
+fees will be charged.=0D=0A=0D=0ADeadlines=0D=0A=0D=0ASubmission of Abstrac=
+ts........13 January 2006=0D=0ANotification of Acceptance.....10 February 2=
+006=0D=0AIssue of Preliminary =0D=0A Programme on the web site..... 3 March=
+ 2006=0D=0ARegistration...................24 March 2006=0D=0ASubmission of =
+Full Paper.......21 April 2006=0D=0A=0D=0AWe look forward to welcoming you =
+to the conference.=0D=0APlease do not hesitate to forward this announcement=
+ to=0D=0Awhomever you feel may be interested.=0D=0A=0D=0ABest regards,=0D=
+=0A=0D=0AThe Atmos 2006 Organising Committee=0D=0AC. Zehner=0D=0AM. Eisinge=
+r=0D=0AR. Koopman=0D=0AJ. Langen=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:First Europhysics Conference on the topic=
+al theme atmosphere=20
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

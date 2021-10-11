@@ -1,0 +1,140 @@
+
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>Polluted Troposphere Data Submission</title>
+ <meta name="keywords" content="NERC, troposphere, air pollution">
+</head>
+
+<body bgcolor="#ffffff">
+
+<h1>
+Polluted Troposphere
+- Instructions to Data Providers
+</h1>
+<hr>
+
+<ul>
+
+<li><b>Preliminaries</b><br><br>
+To upload your data files on the BADC computer, you will need
+<ol>
+ <li>to have registered as a BADC user and got a password
+     &#151; if you are not a BADC registered user, please
+     <a href="/reg/user_register_info.html">register here</a>;
+     if you are a BADC registered user but have forgotten your user ID and/or
+     password, please ask help from the BADC support desk at
+     <a href="mailto:badc@rl.ac.uk">badc@rl.ac.uk</a>;
+ <li>to have been granted access to the <i>Polluted Troposphere</i> archive
+     &#151; if you do not yet have access to the Polluted Troposphere 
+     <A HREF="/cgi-bin/data_browser/data_browser/badc/polluted-tropo/">archive</a>, 
+     please
+     <A HREF="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=polltro">
+     apply here</a>.
+</ol>
+<br>
+<li><b><a name="filename">File structure and naming</a></b><br><br>
+<P>The BADC is encouraging all Polluted Troposphere projects and campaigns to deliver 
+data in either <a href="/help/formats/netcdf/">NetCDF</a> (binary) or 
+<a href="/help/formats/NASA-Ames/">NASA Ames</a> (ASCII) format. To ensure the future usability of the 
+data, it is important to include all necessary information about the data with the file. This is termed 
+<a href="/data/ufam/metadata.html">metadata</a>. The data files submitted should 
+conform to the <a href="/help/formats/netcdf/index_cf.html">Climate and Forecasts 
+(CF) Metadata Convention</a>.
+If you wish to check that files are correctly formatted before uploading them 
+please use the <a href="http://titania.badc.rl.ac.uk/cgi-bin/cf-checker.pl">
+NetCDF format checker</a> or <a href="http://badc.nerc.ac.uk/cgi-bin/dataex_file.cgi.pl">
+NASA-Ames format checker</a>.
+
+<P>Advice on standardising filenames is provided on the 
+<a href="http://badc.nerc.ac.uk/help/file_naming.html">file-naming convention page</a> 
+along with a list of <a href="http://badc.nerc.ac.uk/filespec_doc?id=INSTRUMENTAL&hfile=1">common names</a> 
+used for instruments, locations etc. in filenames. For data files from instruments operating on the 
+FAAM aircraft, there are extra filename fields, see the <a href="http://badc.nerc.ac.uk/data/faam/file-names.html">FAAM filenaming 
+convention page</a>.<P>
+<p>Many data files contain the variable <i>time</i> which can be expressed in 
+several ways. Guidelines on the <a href="http://badc.nerc.ac.uk/help/formats/NASA-Ames/nasa-ames-time.htm"> 
+recommended format of the time-variable</a>  header lines, units and the data values in 
+Nasa-Ames files are available and are based on the format used in NetCDF.<P>
+     
+<br>
+
+<li><b><a name="uploading">Uploading data</a></b><br><br>
+Data providers can upload their data files directly from their home computer
+into the BADC <i>incoming</i> directory, <i>via</i> the BADC Web based
+<a href="../upload.html">file uploader</a>.
+This device can also be used to submit software and text files containing
+metadata or any relevant information on the project deliverables.
+Please have your BADC user ID and password handy.
+You will be asked to select the appropriate subdirectory (please refer to
+the list below).
+<br><br>
+
+<table cellpadding=4>
+<tr valign=middle bgcolor=#666666>
+ <th><font color=#ffffff>/ incoming / polluted-tropo / ...</font></th>
+ <th><font color=#ffffff>PI or lead scientist</font></th>
+ <th colspan=2><font color=#ffffff>Project name or cross-project activity</font></th>
+</tr>
+<tr valign=top bgcolor=#dddddd>
+ <td><a href="/cgi-bin/fileuploader/POLLTRO_file_type_selection.cgi.pl?directory=%2Fincoming%2Fpolluted-tropo%2Ftorch">/incoming/polluted-tropo/torch/</a></td>
+ <td>Dr Ally Lewis</td>
+ <td><a href="/data/polluted-tropo/projects/torch.html">
+     Tropospheric ORganic CHemistry expt (TORCH)</a>
+ </td>
+</tr>
+<tr valign=top bgcolor=#dddddd>
+ <td><a href="/cgi-bin/fileuploader/POLLTRO_file_type_selection.cgi.pl?directory=%2Fincoming%2Fpolluted-tropo%2Fclopap">/incoming/polluted-tropo/clopap/</a></td>
+ <td>Prof Tom Choularton</td>
+ <td><a href="/data/polluted-tropo/projects/clopap.html">
+     CLOud Processing of regional Air Pollution (CLOPAP)</a>
+ </td>
+</tr>
+<tr valign=top bgcolor=#dddddd>
+ <td><a href="/cgi-bin/fileuploader/POLLTRO_file_type_selection.cgi.pl?directory=%2Fincoming%2Fpolluted-tropo%2Ffronts">/incoming/polluted-tropo/fronts/</a></td>
+ <td>Dr Suzanne Gray</td>
+ <td><a href="/data/polluted-tropo/projects/fronts.html">
+     Transport and mixing in fronts</a>
+ </td>
+</tr>
+<tr valign=top bgcolor=#dddddd>
+ <td><a href="/cgi-bin/fileuploader/POLLTRO_file_type_selection.cgi.pl?directory=%2Fincoming%2Fpolluted-tropo%2Fions">/incoming/polluted-tropo/ions/</a></td>
+ <td>Dr Giles Harrison</td>
+ <td><a href="/data/polluted-tropo/projects/ions.html">
+     Ionisation as a precursor to aerosol formation)</a>
+ </td>
+</tr>
+<tr valign=top bgcolor=#dddddd>
+ <td><a href="/cgi-bin/fileuploader/POLLTRO_file_type_selection.cgi.pl?directory=%2Fincoming%2Fpolluted-tropo%2Fovocs_and_nmhcs">/incoming/polluted-tropo/ovocs_and_nmhcs/</a></td>
+ <td>Dr Dudley Shallcross</td>
+ <td><a href="/data/polluted-tropo/projects/ampep.html">
+     Advanced GC-MS technology for observing OVOCs and NMHCs in the 
+     polluted troposphere</a>
+ </td>
+</tr>
+<tr valign=top bgcolor=#dddddd>
+ <td><a href="/cgi-bin/fileuploader/POLLTRO_file_type_selection.cgi.pl?directory=%2Fincoming%2Fpolluted-tropo%2Fampep">/incoming/polluted-tropo/ampep/</a></td>
+ <td>Prof David Fowler</td>
+ <td><a href="/data/polluted-tropo/projects/ampep.html">
+     Aircraft Measurement of chemical Processing and Export fluxes 
+     of Pollutants over the UK (AMPEP)</a>
+ </td>
+</tr>
+<tr valign=top bgcolor=#dddddd>
+ <td><a href="/cgi-bin/fileuploader/POLLTRO_file_type_selection.cgi.pl?directory=%2Fincoming%
+2Fpolluted-tropo%2Fmcm">/incoming/polluted-tropo/mcm/</a></td>
+ <td>Dr. Mike Jenkin</td>
+ <td>Provision of reduced chemistry mechanisms from the Master Chemical Mechanism (MCM)</td>
+</tr>
+<tr valign=top bgcolor=#bbbbbb>
+</table>
+</ul>
+
+
+<P>Return to main <a href="/data/polluted-tropo/">Polluted Troposphere page</a>.
+ 
+
+<p>
+</body>
+</html>

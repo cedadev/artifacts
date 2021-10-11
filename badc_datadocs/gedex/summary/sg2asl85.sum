@@ -1,0 +1,36 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SG2ASL85 "
+"SUM_DATA_SET"       "SAGEII-PROF  "
+"SUM_DATATYPE"       "AEROSOLS     "
+"ARCHIVE_NAME"       "NSSDC, NCDS          "
+"ARCHIVE_STATUS"     "Available.  Reprocessed March, 1991.                         "
+"DS_DESCRIPTION"     "ERBS Stratospheric Aerosol and Gas Experiment II Profiles    "
+"DT_DESCRIPTION"     "Aerosol Profiles                                             "
+"SUM_BEGIN_DATE"     "24-Oct-1984                                                                 "
+"SUM_END_DATE"       "30-Nov-1985                                                                 "
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "80 deg N to 80 deg S (above 10 km or cloud tops)             "
+"SPATIAL2"           "                                                             "
+"SPATIAL3"           "250 km X 250 km  Vertical resolution is 1 km below 25 km    "
+"SPATIAL4"           "and 5 km above 25 km.                               "
+"TEMPORAL1"          "October, 1984 - November, 1985                             "
+"TEMPORAL2"          "                                                             "
+"TEMPORAL3"          "Full coverage in about 1 month, but latitude coverage    "
+"TEMPORAL4"          "varies with season.                                                  "
+"PRODUCT1"           "Aerosol and Raleigh extinction at 1.0, 0.53, 0.453, & 0.385  "
+"PRODUCT2"           "micrometers.  One 6250-bpi tape/yr.                           "
+"PRODUCT3"           "Available on GEDEX CD-ROM.                     "
+"PRODUCT4"           "   "
+EOF
+
+PARAMETERS
+"AEROSOLS"     "Aerosol Extinction Coefficient"   "1.0E-4 km**(-1)"
+"EXTINCTION"   "Rayleigh Extinction Coefficient"  "1.0E-4 km**(-1)"
+"EXTINCTION"   "Aerosol Extinction Ratio"         "None"
+"PRESSURE"     "Atmospheric Pressure"             "mb"
+"TEMPERATURE"  "Temperature Profile"              "Deg K"
+EOF
+
+SOURCES
+"ERBS"      "SAGEII"
+EOF

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>PREPARDE: {4} Accepted, Active Tickets by Owner</title>
+    <link>http://proj.badc.rl.ac.uk/preparde/report/4</link>
+    <description>Trac Report -
+List accepted tickets, group by ticket owner, sorted by priority.
+</description>
+    <language>en-us</language>
+    <image>
+      <title>PREPARDE</title>
+      <url>http://proj.badc.rl.ac.uk/preparde/chrome/common/trac_banner.png</url>
+      <link>http://proj.badc.rl.ac.uk/preparde/report/4</link>
+    </image>
+    <generator>Trac v0.12.2</generator>
+  </channel>
+</rss>

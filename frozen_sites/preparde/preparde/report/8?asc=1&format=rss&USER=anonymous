@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>PREPARDE: {8} Active Tickets, Mine first</title>
+    <link>http://proj.badc.rl.ac.uk/preparde/report/8</link>
+    <description>Trac Report -
+ * List all active tickets by priority.
+ * Show all tickets owned by the logged in user in a group first.
+</description>
+    <language>en-us</language>
+    <image>
+      <title>PREPARDE</title>
+      <url>http://proj.badc.rl.ac.uk/preparde/chrome/common/trac_banner.png</url>
+      <link>http://proj.badc.rl.ac.uk/preparde/report/8</link>
+    </image>
+    <generator>Trac v0.12.2</generator>
+  </channel>
+</rss>

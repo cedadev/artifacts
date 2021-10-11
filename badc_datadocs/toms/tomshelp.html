@@ -1,0 +1,634 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC: help on the TOMS instrument and data</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>The TOMS instrument and data products<BR CLEAR="ALL"></H1>
+
+<P><EM>Information compiled by the BADC team</EM> <HR ALIGN=LEFT><A
+NAME="Top"></A></P>
+
+<H2>Contents</H2>
+
+<OL>
+  <LI><A HREF="#Instrument">The instrument</A>
+  <UL>
+    <LI><A HREF="#InstDes">1.1 Instrument description and measurement
+    technique</A>
+    <UL>
+      <LI><A HREF="#Nim7InstDes">1.1.1 Nimbus-7 TOMS</A>
+      <LI><A HREF="#Met3InstDes">1.1.2 Meteor-3 TOMS</A>
+      <LI><A HREF="#EPInstDes">1.1.3 Earth-Probe TOMS</A>
+      <LI><A HREF="#ADInstDes">1.1.4 ADEOS TOMS</A>
+    </UL>
+    <LI><A HREF="#Processing">1.2 Data processing</A>
+  </UL>
+  <LI><A HREF="#Data">TOMS data</A>
+  <UL>
+    <LI><A HREF="#Ozone">2.1 'Column' or 'total' ozone measurements
+    and units</A>
+    <LI><A HREF="#Spatial">2.2 Spatial coverage and resolution</A>
+    <LI><A HREF="#Temporal">2.3 Temporal coverage</A>
+  </UL>
+  <LI><A HREF="#Quality">Data quality overview</A>
+  <UL>
+    <LI><A HREF="#Albedo">3.1 Accuracy and precision of the TOMS
+    albedo</A>
+    <LI><A HREF="#Errors">3.2 Random, time-invariant and time-dependent
+    errors</A>
+    <LI><A HREF="#Localised">3.3 Problems localised in space and
+    time</A>
+  </UL>
+  <LI><A HREF="#Transfer">Transferring TOMS data from the BADC</A>
+  <UL>
+    <LI><A HREF="#Directory">4.1 Finding the data directory for FTP</A>
+    <LI><A HREF="#File">4.2 File names</A>
+    <LI><A HREF="#Software">4.3 Read software</A>
+  </UL>
+</OL>
+
+<P><HR ALIGN=LEFT><A NAME="Instrument"></A>Go to: [ <A HREF="#Top">Contents</A>
+| Instrument| <A HREF="#Data">Data</A> | <A HREF="#Quality">Quality</A>
+| <A HREF="#Transfer">Transfer</A> | <A HREF="#bottom">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H2>1. The instrument</H2>
+
+<H3><A NAME="InstDes"></A>1.1 Instrument description and measurement
+technique</H3>
+
+<H4><A NAME="Nim7InstDes"></A>1.1.1 Nimbus-7 TOMS</H4>
+
+<P><EM>Sources: &quot;Nimbus-7 TOMS Data Products Users Guide&quot;
+(NASA reference publication 1384), Goddard Space Flight Centre
+TOMS home page, Goddard DAAC WWW pages</EM></P>
+
+<P>TOMS was one of eight instruments designed to provide continuous,
+long-term monitoring of atmospheric, oceanic and surface parameters
+on a global basis throughout most of the 1980s. The Nimbus-7 TOMS
+instrument operated from 1st November 1978 to 5th May 1993.</P>
+
+<P>The Nimbus-7 TOMS instrument measures backscattered ultraviolet
+radiance from Earth at wavelength bands centred at 312.5, 317.5,
+331.3, 339.9, 360.0 and 380.0 nanometres. The first four wavelengths
+are sensitive to ozone; the two longer wavelengths are used for
+estimating the scene reflectivity necessary for deriving ozone
+amounts. The instrument is a single stage fixed-grating Ebert-Fastie
+monochromater with a rotating chopper wheel to resolve the incoming
+light into these 6 wavelength bands with a one nanometer bandpass.</P>
+
+<P>Total column ozone is inferred from the differential absorption
+of scattered sunlight in the ultraviolet using the ratio of two
+wavelengths, 312nm and 331nm for instance, where one wavelength
+is strongly absorbed by ozone while the other is weakly absorbed.
+TOMS scans in the cross-track direction in 3 degree steps from
+51 degrees on one side of nadir to 51 degrees on the other, for
+a total of 35 samples. The instantaneous field-of-view (IFOV)
+of 3 degrees x 3 degrees results in a footprint varying from a
+50 km x 50 km square at nadir to a 130 km by 300 km diamond at
+the scan extremes. The total swath width is 3000 km, implying
+that consecutive orbits overlap to create a contiguous mapping
+of ozone data. Approximately 200,000 measurements are made on
+a daily basis during the sunlit portions of the orbits.</P>
+
+<P>Nimbus-7 is in a south-north sun synchronous polar orbit such
+that it is always close to a local noon/midnight beneath the satellite.
+Thus, ozone over the entire world is measured every 24 hours.</P>
+
+<PRE>
+Launch date                     10/24/78
+Orbit                           Sun-synchronous, near polar
+Nominal Altitude (km)           955
+Inclination (deg)               104.9
+Nodal Period (min.)             104
+Equator Crossing Time           1200 noon (ascending)
+Nodal Increment (deg)           26.1</PRE>
+
+<P><HR ALIGN=LEFT><A NAME="Met3InstDes"></A>Go to: [ <A HREF="#Top">Contents</A>
+| Instrument| <A HREF="#Data">Data</A> | <A HREF="#Quality">Quality</A>
+| <A HREF="#Transfer">Transfer</A> | <A HREF="#bottom">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H4>1.1.2 Meteor-3 TOMS</H4>
+
+<P><EM>Sources: Goddard Space Flight Center online documentation
+and WWW pages.</EM></P>
+
+<P>Meteor-3 was launched on August 15, 1991 from Plesetsk, Russia,
+and failed on 27th December 1994. The orbit drifts with respect
+to the sun angle with a period of 212 days. Complete global measurements
+are made except when the orbit is near the day-night terminator.
+Under these conditions, the TOMS instrument may not be able to
+view one of the hemispheres for a period of up to 3 weeks. This
+differs from the Nimbus-7/TOMS ozone data obtained in a near-noon
+sun synchronous orbit.</P>
+
+<P>Because of the precessing nature of the Meteor-3 orbit (precession
+period = 212 days), the equator crossing time goes from noon (overhead
+sun, solar zenith angle = 0 deg) to the terminator (solar zenith
+angle = 90 deg). The best data quality is when the equator crossing
+time of the ascending node of the orbit is between 10am and 2pm
+or between 10pm and 2am (which indicates that the equator crossing
+time of the descending node of the orbit is between 10am and 2pm).
+Good data quality is obtained over a wider range of equator crossing
+times.</P>
+
+<P>Some other potentially useful data concerning the Meteor orbit
+and Meteor-3/TOMS characteristics:</P>
+
+<PRE>
+	altitude		1202 km
+	orbit inclination	82.5 deg
+	orbit period		109 min
+	orbit eccentricity	&lt; 2 x 10^-3
+	orbit precession	212 days
+	launch date		08/15/91
+	launch time		12:15 Moscow standard time
+	1st ozone data		08/22/91
+	# orbits/day		13.21
+	field of view		3 x 3 degrees
+	wavelengths		312.35, 317.4, 331.13
+				339.73, 359.0, 380.16 nm
+	bandwidth		1.1 nm
+	cross-track scan angle	+/- 51 deg
+	number of views/scan	35
+	nadir ground size	64 x 64 km
+	extreme off nadir view  260 x 70 km  (approx) rotated 45 deg.</PRE>
+
+<P>Ozone is calculated from the measured radiances by first forming
+the ratio with measured irradiances (solar view) in each wavelength
+channel. These ratios, known as directional albedos, are further
+combined into ratios of directional albedos from 2 wavelength
+channels.</P>
+
+<PRE>
+	N = -100 Log (A1/A2)</PRE>
+
+<P>Tables of ozone amount vs N-value are precomputed from a variety
+of atmospheric models using a radiative transfer computer program.
+For details of this computation and the corrections involved,
+see Herman et al, &quot;A new self-calibration method applied
+to TOMS and SBUV backscattered ultraviolet data to determine long-term
+global ozone change&quot;, J. Geophys. Res., 96, 7531-7545, 1991.
+<HR ALIGN=LEFT><A NAME="Met3InstDes"></A>Go to: [ <A HREF="#Top">Contents</A>
+| Instrument| <A HREF="#Data">Data</A> | <A HREF="#Quality">Quality</A>
+| <A HREF="#Transfer">Transfer</A> | <A HREF="#bottom">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H4><A NAME="EPInstDes"></A>1.1.3 Earth-Probe TOMS</H4>
+
+<P><EM>Sources: Goddard Space Flight Center WWW pages.</EM></P>
+
+<P>Earth-Probe TOMS was launched on 2nd July 1996. The satellite
+is being flown in a 500km polar orbit, rather than the 950 km
+orbit that was originally planned. While ADEOS TOMS gives full
+daily global coverage, Earth-Probe will be unable to do so for
+ozone measurements within 60 degrees of the equator. However it
+will give full coverage at the poles. In addition, the lower orbit
+will give increased resolution and increase the probability of
+making measurements over cloudless scenes, due to the smaller
+&quot;footprint&quot;. The lower orbit will also improve the ability
+of the TOMS instrument to make measurements of UV-absorbing aerosols
+in the troposphere, a capability that was recently developed using
+earlier TOMS data. The increased probability of making measurements
+over cloud-free areas will enhance the capability of converting
+the TOMS aerosol measurements into geophysical quantities such
+as optical depth. The increased resolution available with the
+lower orbit may even result in the ability of the TOMS instrument
+to detect urban-scale aerosols such as pollution. The wavelengths
+used by Earth-Probe TOMS are:</P>
+
+<P>Band 1 - 360.0 +/- 0.2 nm<BR>
+Band 2 - 331.2 +/- 0.1 nm<BR>
+Band 3 - 322.3 +/- 0.1 nm<BR>
+Band 4 - 317.5 +/- 0.1 nm<BR>
+Band 5 - 312.5 +/- 0.1 nm<BR>
+Band 6 - +/- 0.1 nm<BR>
+</P>
+
+<H4><A NAME="ADInstDes"></A>1.1.4 ADEOS TOMS</H4>
+
+<P><EM>Sources: Goddard Space Flight Center WWW pages.</EM></P>
+
+<P>The ADEOS TOMS instrument was launched on 17th Aug 1996 from
+Tanegashima Space Center in Japan. ADEOS is the Advanced Earth
+Observing Satellite, developed by NASDA (the National Space Development
+Agency of Japan). The instrument is designed to operate for 3
+years. The satellite is flying in a 800km orbit, giving full daily
+global coverage, and uses the following wavebands: 308.6, 312.5,
+317.5, 332.2, 331.2, 360.0 nm. <HR ALIGN=LEFT><A NAME="Processing"></A>Go
+to: [ <A HREF="#Top">Contents</A> | Instrument| <A HREF="#Data">Data</A>
+| <A HREF="#Quality">Quality</A> | <A HREF="#Transfer">Transfer</A>
+| <A HREF="#bottom">End</A> ] <HR ALIGN=LEFT></P>
+
+<H3>1.2 Data Processing</H3>
+
+<P><EM>Source: &quot;Nimbus-7 TOMS Data Products Users Guide&quot;
+(NASA reference publication 1384)</EM></P>
+
+<P>The retrieval of total ozone is based on a table look-up and
+interpolation process. A table is constructed that gives backscattered
+radiance as a function of total ozone, optical slant path length,
+surface pressure, surface reflectivity and latitude. Given the
+computed radiances for the latitude, surface pressure, reflectivity
+and slant path for a particular radiance measurement, the total
+ozone value for the scan can be derived by interpolation in the
+table.</P>
+
+<P>The two shortest TOMS wavelengths are strongly absorbed by
+ozone and only very weakly absorbed by other atmospheric components.
+At wavelengths above 310 nm, the backscattered radiance is primarily
+solar radiation reflected from the Earth's surface and the troposphere.
+Since 90% of the ozone is in the stratosphere, the backscattered
+radiance at 310nm and higher is only weakly dependent on the vertical
+distribution of ozone.</P>
+
+<P>Derivation of ozone values from backscattered radiance requires
+an understanding of reflections from the Earth's surface and scattering
+from clouds and other aerosols. The scattered or reflected light
+depends upon both the incident angle of the sunlight and the satellite
+viewing angle. In practice, the cloud and aerosol contributions
+can be treated as if the effective lower boundary of the atmosphere
+is located at an average pressure in the troposphere (the &quot;scene
+pressure&quot;), with an effective reflectivity (the &quot;scene
+reflectivity&quot;) that accounts for scattering from clouds,
+tropospheric aerosols and the Earth's surface. Values for these
+quantities are derived for every instantaneous field-of-view (IFOV)
+of the instrument, although this is not possible where stratospheric
+aerosols are present (e.g. from volcanic eruptions).</P>
+
+<P>The backscattered radiance is dependent on atmospheric and
+surface components, where only the surface component depends on
+the scene reflectivity. The scene reflectivity can be calculated
+from the longest two TOMS wavelengths, which are not sensitive
+to ozone. The measured backscattered radiances are corrected for
+wavelength drift and changes in instrument optics and sensitivity,
+and used in the formulation of &quot;N-values&quot;, which depend
+on the ratio of backscattered intensity to the incident intensity
+at the level of the instrument. A set of tables is created to
+relate total ozone to this ratio, taking into account climatological
+ozone profiles, pressure of the reflecting surface (2 values are
+used, 1000 and 400mb), solar zenith angle and satellite zenith
+angle at the IFOV.</P>
+
+<P>In calculating total ozone, radiance ratios called Pair values
+are computed. These are ratios of the backscattered to incident
+radiation ratio at two wavelengths, where the longer wavelength
+is insensitive to ozone while the shorter is sensitive. The values
+are separated by 20nm or less in order to keep the scattering
+effects approximately the same and ensure that their relative
+attenuation is sensitive mostly to ozone absorption. The choice
+of pair depends on the conditions: high or low sun angle, ozone
+values etc.</P>
+
+<P>For each of the three Pair values, four total ozone estimates
+are made by table interpolation. The four values correspond to
+the two pressure values, 1000 and 400 mb, and two standard latitudes
+situated on either side of the measured latitude. Linear interpolation
+in pressure and then in latitude yields the Pair ozone value at
+the scene pressure and measured latitude.</P>
+
+<P>A &quot;best&quot; value comes from a weighted average of the
+total ozone from the A, B and C Pairs, taking into account sensitivity
+of each pair to ozone profile shape, solar zenith angle and changes
+in total ozone. The daily gridded product is then calculated by
+averaging the data over 1 degree (latitude) by 1.25 degree (longitude)
+cells, after rejecting values with stratospheric aerosol contamination,
+inconsistent pair ozone or anomalous ozone or reflectivity values.</P>
+
+<P>The first TOMS data released by NASA was processed using version
+4 of the software; versions 1 to 3 were for development only.
+In 1985, Version 5 introduced newly approved ozone absorption
+coefficients (Bass and Paur). Version 6 introduced a stabilised
+long-term calibration to compensate for the observed drift in
+derived total ozone values resulting from an error in the correction
+for the diffuser plate degradation. The most recent processing
+version, Version 7, uses a revised instrument calibration based
+on analysis of the entire 14.5 year data record, as well as an
+improved algorithm. Improvements include:</P>
+
+<UL>
+  <LI>corrected 0.2 nm wavelength calibration error; this error
+  caused a 3% absolute offset relative to Dobson
+  <LI>use of wavelength &quot;triplets&quot; that correct for errors
+  linear in wavelength
+  <LI>improved ISCCP cloud height climatology, higher resolution
+  terrain height maps
+  <LI>use of improved profile shape selection to improve total
+  ozone at very large solar zenith angles
+  <LI>use of a more accurate model for partially-clouded scenes
+  <LI>improved radiative transfer calculations for table generation
+</UL>
+
+<P>For information on the algorithms used for retrieving ozone
+from the TOMS instrument, contact the Ozone Processing Team at
+Goddard Space Flight Centre.</P>
+
+<P><EM>See the &quot;Nimbus-7 TOMS Data Products Users Guide&quot;
+(NASA reference publication 1384) for more information</EM> <HR ALIGN=LEFT><A
+NAME="Data"></A>Go to: [ <A HREF="#Top">Contents</A> | <A HREF="#Instrument">Instrument</A>
+| Data | <A HREF="#Quality">Quality</A> | <A HREF="#Transfer">Transfer</A>
+| <A HREF="#bottom">End</A> ] <HR ALIGN=LEFT></P>
+
+<H2>2. TOMS data</H2>
+
+<H3><A NAME="Ozone"></A>2.1 'Column' or 'total' ozone measurements
+and units</H3>
+
+<P>TOMS measures `column' ozone (sometimes referred to as `total'
+ozone), ie the total amount of ozone in a column of unit area
+above the Earth's surface. The data is stored as gridded averages.</P>
+
+<P>Column ozone is usually expressed in terms of the equivalent
+thickness of the ozone layer at standard temperature and pressure
+(0 degrees C, 1013.25 mb). If an entire column of ozone (i.e.
+the mass per unit area in a column of air extending from the surface
+to the top of the atmosphere) is brought to standard temperature
+and pressure, the thickness of the column would be, on average,
+about 3 millimetres.</P>
+
+<P>The units of the TOMS column ozone measurements are Dobson
+Units (DU), where 1 DU = 10 E-5 metres, also expressed as a milli-atmosphere-centimetre
+of ozone. Hence, a typical value of column ozone is of the order
+of 300 DU.</P>
+
+<H3><A NAME="Spatial"></A>2.2 Spatial coverage and resolution</H3>
+
+<P>TOMS measurements cover the whole globe from -90 to 90 degrees
+latitude, -180 to 180 degrees longitude. However, an individual
+day's coverage can never be truly global since the instrument
+relies on backscattered UV and there are always some areas of
+the Earth in shade.</P>
+
+<P>The data is gridded such that the cell area over which each
+measurement is made is roughly constant. The Earth is divided
+into 1 degree latitude zones, each of which is subdivided into
+a number of longitude cells. The number of cells is allowed to
+vary with latitude, from 288 at the equator to 72 at the poles,
+as shown in the table below. Because the constant separation in
+degrees between orbits corresponds to a smaller distance in kilometres
+closer to the poles, a particular cell may be viewed from several
+adjacent orbits in the higher latitudes (at approx. 100 minutes
+time interval).</P>
+
+<P>In the ASCII data files, higher latitude measurements are repeated
+such that there is a constant 288 measurements per latitude zone.</P>
+
+<PRE>
+                                 No of     
+                      No. of     observations  Expected no.
+           Longitude  cells      permitted     of orbits    Resolution
+ Latitude  size       in zone    per cell      per cell     (km x km)
+ ========  =========  ========   ============  ===========  ==========
+
+ 
+ 0 to      1.25 deg.  288        1             1.0          110 x 138
+ 50 deg.                                       1.6          110 x 88.4
+ 
+ 50 to     2.5 deg.   144        2             1.6          110 x 76
+ 70 deg.                                       3.5          110 x 94.1
+ 
+ 70 to     5 deg.      72        4             3.5          110 x 188
+ 80 deg.                                       7.3          110 x 95.5
+ 
+ 80 to     5 deg.      72        4             7.3          110 x 95.5
+ 90 deg.                                       14.0         110 x 0.0</PRE>
+
+<H3><A NAME="Temporal"></A>2.3 Temporal coverage</H3>
+
+<P>The TOMS instrument on Nimbus-7 operated from 1st Nov. 1978
+to 6th May 1993. From 22nd June 1979 TOMS operated full-time.
+Prior to this date, TOMS followed a regular on/off schedule for
+spacecraft power management, operating on 10 of each 12 days.
+At times the instrument was also operated on scheduled off days,
+resulting in an actual duty cycle of greater than 83%.</P>
+
+<P>Meteor-3 TOMS operated from 22nd August 1991 until 27th Dec.
+1994. Data coverage during the latter part of 1994 was sporadic.
+Due to the precessing nature of the Meteor-3 orbit, there were
+periods (when the orbit was near the day-night terminator) when
+the TOMS instrument was unable to view one of the hemispheres
+for up to 3 weeks.</P>
+
+<P>Meteor-3 TOMS data is only available (at level 3) for high
+data quality periods, namely:</P>
+
+<PRE>
+  22nd Aug. 91 -  2nd Sep. 91
+  26th Oct. 91 - 17th Dec. 91
+   9th Feb. 92 -  2nd Apr. 92
+  26th May  92 - 17th July 92
+  31st Aug. 92 -  9th Nov. 92
+  16th Dec. 92 - 24th Feb. 93
+   1st Apr. 93 - 10th June 93
+  17th July 93 - 25th Sep. 93
+  31st Oct. 93 -  1st Sep. 94
+  14th Feb. 94 - 25th Apr. 94
+   1st June 94 - 10th Aug. 94
+  15th Sep. 94 - 24th Nov. 94</PRE>
+
+<P>After a gap of one and a half years, two new instruments were
+launched on the Earth-Probe and ADEOS satellites in July and August
+1996.</P>
+
+<PRE>
+Nov 1978 -/~/- Aug 1991 -/~/- May 1993 -/~/- Dec 1994 -/~/- July 1996 - Aug 1996
+
+Nimbus-7 launch ------------&gt; N-7 TOMS fails
+
+               Meteor-3 launch ------------&gt; M-3 TOMS fails
+                                
+                                                            Earth-Probe launch----&gt;
+                                                                  
+                                                                        ADEOS launch</PRE>
+
+<P><HR ALIGN=LEFT><A NAME="Quality"></A>Go to: [ <A HREF="#Top">Contents</A>
+| <A HREF="#Instrument">Instrument</A> | <A HREF="#Data">Data</A>
+| Quality | <A HREF="#Transfer">Transfer</A> | <A HREF="#bottom">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H2>3. Data quality overview</H2>
+
+<P><EM>Source: &quot;Nimbus-7 TOMS Data Products User's Guide&quot;,
+McPeters et al, NASA Reference Publication 1384. See also &quot;Meteor-3
+Total Ozone Mapping Spectrometer (TOMS) Data Products User's Guide&quot;,
+NASA reference publication 1393</EM></P>
+
+<P>TOMS data is subject to uncertainties from several sources,
+a few of which are outlined here. For a full discussion of these
+uncertainties you should refer to the source document.</P>
+
+<H3><A NAME="Albedo"></A>3.1 Accuracy and precision of the TOMS
+albedo</H3>
+
+<P>Uncertainty in the albedo used in total ozone retrieval depends
+on three factors:</P>
+
+<UL>
+  <LI>the laboratory calibration, where an error could lead to
+  a bias in the retrieved ozone values
+  <LI>changes with time of the instrument sensitivity, which could
+  lead to a drift with time of the retrieved ozone values
+  <LI>precision of the derived ozone values, which depends on instrument
+  noise and atmospheric variability within the field of view.
+</UL>
+
+<P>The laboratory calibration depends on the accuracy of the standard
+calibration lamp and the accuracy with which the reflecting properties
+of the instrument diffuser plate are known. This is known to be
+better than +/-3%. The accuracy of the long-term calibration depends
+on the accuracy with which changes with time of the diffuser plate
+optical properties can be modelled. Studies by Herman et al (1991)
+estimate that this accuracy produces a 1.3% uncertainty in long-term
+ozone trends over the first 10 years of data. The study by Gleason
+et al (1993) indicates that this accuracy was maintained through
+the first 14 yeas of data. The precision of the TOMS albedo measurement
+is better than 0.8% at all wavelengths.</P>
+
+<P>Uncertainties in the instrument wavelength can also lead to
+uncertainties in the retrieved ozone, since radiance is measured
+at a &quot;known&quot; wavelength. If the measurement wavelengths
+are not those specified, the backscattered radiation will not
+match the algorithm, leading to an error in the ozone value. It
+is estimated that the initial Nimbus-7 TOMS wavelength calibration
+was known to +/-0.5nm accuracy and that the calibration drifted
+by less than 0.005nm over the life of the instrument.</P>
+
+<H3><A NAME="Errors"></A>3.2 Random, time-invariant and time-dependent
+errors</H3>
+
+<P>TOMS ozone retrievals are subject to random, time-invariant
+and time-dependent errors. Random errors of approx 2% net arise
+from instrument noise, digitization, atmospheric temperature and
+retrieval errors. Time-invariant errors occur due to Rayleigh
+scattering, wavelength and radiometric calibrations, retrieval
+error (all of order &lt;1%) and the ozone absorption cross-section
+(&lt;3%). Time-dependent errors are due to radiometric and wavelength
+calibrations (&lt;0.1 and &lt;0.02 %/yr respectively), atmospheric
+temperature (0.16%/K) and tropospheric ozone (0.05%/% change).</P>
+
+<P>All values expressed here are typical and may not be representative
+under extreme conditions. In all cases, the uncertainty in total
+ozone depends on the wavelengths used, the uncertainty in the
+measurement at those wavelengths and the sensitivity of the retrieved
+ozone to a change in albedo at that wavelength.</P>
+
+<P>The time-invariant errors due to Rayleigh scattering and absorption
+cross-section coefficients arise through errors in the laboratory
+measurements used to determine these values. These are values
+required for the calculation of the scattering of atmospheric
+radiation by ozone. Errors propagate through the retrieval algorithm
+to produce a systematic offset.</P>
+
+<P>The Nimbus-7 TOMS instrument was in orbit for 15 years, during
+which time the instrument sensitivity changed significantly. NASA's
+Ozone Processing Team has devoted considerable effort to understanding
+these changes, which account for about 1% per decade change in
+the instrument calibration.</P>
+
+<P>Differences between the actual vertical distribution of ozone
+and the standard profiles can contribute to significant random
+errors at high solar zenith angles. Thus, the combination of long-term
+decreases in ozone at high altitudes and a drift in the Nimbus-7
+orbit that resulted in a small increase in SZA, can lead to systematic
+errors up to -5%/decade in Version 6 TOMS data at latitudes greater
+than 70 deg. during Northern hemisphere winter. In lower latitudes,
+the seasonal trend is estimated to be less than 2%/decade.</P>
+
+<P>No detectable change with time has been found in the Nimbus-7
+TOMS wavelength scale. The upper limit for the possible change
+is 0.02%/year.</P>
+
+<P>&nbsp;</P>
+
+<H3><A NAME="Localised"></A>3.3 Problems localised in space and
+time</H3>
+
+<P>Volcanic SO2 and aerosol contamination prevented TOMS from
+accurately measuring total ozone when volcanic clouds were present,
+prior to the development of an algorithm to detect the presence
+of sulphur dioxide. Since this algorithm was developed over 100
+eruptions have been detected and measured, the most notable being
+El Chichon in 1982 and Mt. Pinatubo in 1991. Values that are flagged
+for SO2 contamination are not used to calculate grid means, since
+the error in the ozone values can be as high as 50DU.</P>
+
+<P>Other localised problems include scan angle dependence (of
+the order 1%, rising to 2% if there is sun glint), solar eclipses
+(when no ozone values are retrieved due to the decrease in solar
+irradiance), the presence of polar stratospheric clouds which
+can lead to total ozone being underestimated at solar zenith angles
+greater than 70 degrees, and high terrain. <HR ALIGN=LEFT><A 
+NAME="Transfer"></A>Go to: [ <A HREF="#Top">Contents</A> | <A
+HREF="#Instrument">Instrument</A> | <A HREF="#Data">Data</A> |
+<A HREF="#Quality">Quality</A> | Transfer | <A HREF="#bottom">End</A>
+] <HR ALIGN=LEFT></P>
+
+<H2>4. Transferring TOMS data from the BADC</H2>
+
+<P>You can obtain copies of TOMS ASCII data files via this WWW
+server, or via the BADC ftp service on <EM>ftp.ceda.ac.uk</EM>.
+For the inexperienced user, help is available on <A HREF="/help/ftp_guide.html">how
+to use FTP (File Transfer Protocol)</A>. The daily data files
+are relatively small (approx. 170 kilobytes) and easy to transfer.</P>
+
+<H3><A NAME="Directory"></A>4.1 Finding the data directory for
+FTP</H3>
+
+<P>After logging in, <EM>cd /badc/toms</EM>
+to reach the top of the TOMS directory tree. You will then see
+the data and software directories. The ASCII data files are in
+subdirectories for all four TOMS satellites below the <EM>data</EM>
+directory. (These subdirectories contain further subdirectories
+for the processing version and year).</P>
+
+<P><STRONG>GIF images</STRONG> can be found in the <EM>images</EM>
+directory, where there are some sample files and subdirectories
+for northern and southern hemisphere plots. A full set of plots
+for the two hemispheres is currently held online, although these
+may be removed if there is pressure on disk space in the future.
+The IDL code used to plot the sample files is available in the
+<EM>3rdparty</EM> software directory.</P>
+
+<H3><A NAME="File"></A>4.2 File names</H3>
+
+<P>The file name convention for daily ASCII data files is:</P>
+
+<P><EM>gayymmdd.sat</EM></P>
+
+<P>where: <BR>
+<EM>ga</EM> = gridded ASCII<BR>
+<EM>sat</EM> = satellite ID:<BR>
+<EM>sat</EM> = m3t = Meteor-3 TOMS<BR>
+<EM>sat</EM> = n7t = Nimbus-7 TOMS<BR>
+<EM>sat</EM> = ept = Earth-Probe TOMS<BR>
+<EM>sat</EM> = a1t = ADEOS TOMS<BR>
+<EM>yy</EM>, <EM>mm</EM> and <EM>dd</EM> = year, month and day
+(all two digits)<BR>
+</P>
+
+<P>The GIF image files also use the <EM>yymmdd</EM> date convention,
+as follows:</P>
+
+<P><EM>satyymmddh.</EM>gif</P>
+
+<P>where <EM>sat</EM> = satellite, but the 3-letter code above
+is replaced by a 1-letter code<BR>
+<EM>h</EM> = hemisphere ('n' or 's') for north or south, e.g.
+a1t961001s.gif for ADEOS TOMS data for the southern hemisphere,
+1st Oct. 1996.</P>
+
+<H3><A NAME="Software"></A>4.3 Read software</H3>
+
+<P>There is an example FORTRAN program called READGRID.FOR, which
+is supplied with the Nimbus-7 ASCII files obtainable on CD-ROM.
+The Meteor-3 format is also readable with this program.</P>
+
+<P><A NAME="bottom"></A>Some additional software is available
+on the Nimbus-7 CD-ROM. We also hold this software online.</P>
+
+<P>
+</BODY>
+</HTML>

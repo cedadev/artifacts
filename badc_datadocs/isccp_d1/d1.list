@@ -1,0 +1,292 @@
+******************************************************************************  
+                       D 1   V A R I A B L E   L I S T                             
+******************************************************************************  
+                                                                                
+Variables labeled with 'd' are defined only for local daytime, and              
+are undefined at night (undefined=255).                                         
+                                                                                
+IR = 11um channel                                                               
+VIS = .6um channel                                                              
+NI = 3.7um channel                                                              
+cloudy = IR or VIS or NI cloudy                                                 
+VIS/IR-cloudy = IR or VIS cloudy                                                
+IR-cloudy = IR cloudy                                                           
+IR-only-cloudy = IR cloudy and VIS clear                                        
+NI-cloudy = NI cloudy                                                           
+NI-only-cloudy = NI cloudy and ( IR and VIS clear )                             
+VIS-only-cloudy = VIS cloudy and IR clear                                       
+IR-marginally-cloudy = IR marginally cloudy                                     
+VIS/IR-marginally-cloudy = VIS or IR marginally cloudy                          
+NI-marginally-cloudy = NI marginally cloudy                                     
+NI-only-marginally-cloudy = NI marginally cloudy and ( IR and VIS clear )       
+clear = IR and VIS and NI clear                                                 
+IR-clear = IR clear                                                             
+VIS/IR-clear = IR and VIS clear                                                 
+                                                                                
+------------------------------------------------------------------------------- 
+Box identification                                                              
+------------------------------------------------------------------------------- 
+  1  Latitude index (equal-area and equal-angle)                                
+  2  Longitude index (equal-area)                                               
+  3  Westernmost longitude index (equal-angle)                                  
+  4  Easternmost longitude index (equal-angle)                                  
+  5  Satellite-ID-code (see table above)                                        
+  6  Day/night/land/water/coast code                                            
+               day  night                                                       
+        water   1    101    (land fraction 0-35 %)                              
+        land    2    102    (land fraction 65-100 %)                            
+        coast   3    103    (land fraction 35-65 %                              
+  7  Snow/ice cover (percent)                                                   
+  8  MUE = cosine of satellite zenith angle * 100 (0-100)                       
+  9d MU0 = cosine of solar zenith angle * 100 (0-100)                           
+ 10d PHI = relative azimuth angle (0-180 degrees)                               
+------------------------------------------------------------------------------- 
+Pixel counters                                                                  
+------------------------------------------------------------------------------- 
+ 11  Total number of pixels                                                     
+ 12  Number of cloudy pixels                                                    
+ 13  Number of IR-cloudy pixels                                                 
+ 14d Number of IR-only-cloudy pixels                                            
+ 15  Number of NI-cloudy pixels                                                 
+ 16  Number of NI-only-cloudy pixels                                            
+ 17  Number of IR-marginally-cloudy pixels                                      
+ 18d Number of VIS/IR-marginally-cloudy pixels                                  
+ 19  Number of NI-only-marginally-cloudy pixels                                 
+------------------------------------------------------------------------------- 
+Algorithm statistics                                                            
+------------------------------------------------------------------------------- 
+ 20  Number of pixels with IR long term statistics                              
+ 21  Ratio number of IR-clear pixels < clear IR to number > clear IR            
+ 22d Ratio number of VIS/IR-clear pixels > clear VIS to number < clear VIS      
+------------------------------------------------------------------------------- 
+Cloud top pressure (PC) distribution (unadjusted PC)                            
+------------------------------------------------------------------------------- 
+ 23  Number of IR-cloudy pixels  10 <= PC <=  180 mb                            
+ 24  Number of IR-cloudy pixels 180  < PC <=  310 mb                            
+ 25  Number of IR-cloudy pixels 310  < PC <=  440 mb                            
+ 26  Number of IR-cloudy pixels 440  < PC <=  560 mb                            
+ 27  Number of IR-cloudy pixels 560  < PC <=  680 mb                            
+ 28  Number of IR-cloudy pixels 680  < PC <=  800 mb                            
+ 29  Number of IR-cloudy pixels 800  < PC <= 1000 mb                            
+------------------------------------------------------------------------------- 
+Cloud top pressure (PC) and optical thickness (TAU) distribution                
+(VIS-adjusted PC)                                                               
+------------------------------------------------------------------------------- 
+ 30d Number of cloudy pixels  10 <= PC <=  180 mb,  0.02 <= TAU <=   1.27       
+ 31d Number of cloudy pixels  10 <= PC <=  180 mb,  1.27  < TAU <=   3.55       
+ 32d Number of cloudy pixels  10 <= PC <=  180 mb,  3.55  < TAU <=   9.38       
+ 33d Number of cloudy pixels  10 <= PC <=  180 mb,  9.38  < TAU <=  22.63       
+ 34d Number of cloudy pixels  10 <= PC <=  180 mb, 22.63  < TAU <=  60.36       
+ 35d Number of cloudy pixels  10 <= PC <=  180 mb, 60.36  < TAU <= 378.65       
+ 36d Number of cloudy pixels 180  < PC <=  310 mb,  0.02 <= TAU <=   1.27       
+ 37d Number of cloudy pixels 180  < PC <=  310 mb,  1.27  < TAU <=   3.55       
+ 38d Number of cloudy pixels 180  < PC <=  310 mb,  3.55  < TAU <=   9.38       
+ 39d Number of cloudy pixels 180  < PC <=  310 mb,  9.38  < TAU <=  22.63       
+ 40d Number of cloudy pixels 180  < PC <=  310 mb, 22.63  < TAU <=  60.36       
+ 41d Number of cloudy pixels 180  < PC <=  310 mb, 60.36  < TAU <= 378.65       
+ 42d Number of cloudy pixels 310  < PC <=  440 mb,  0.02 <= TAU <=   1.27       
+ 43d Number of cloudy pixels 310  < PC <=  440 mb,  1.27  < TAU <=   3.55       
+ 44d Number of cloudy pixels 310  < PC <=  440 mb,  3.55  < TAU <=   9.38       
+ 45d Number of cloudy pixels 310  < PC <=  440 mb,  9.38  < TAU <=  22.63       
+ 46d Number of cloudy pixels 310  < PC <=  440 mb, 22.63  < TAU <=  60.36       
+ 47d Number of cloudy pixels 310  < PC <=  440 mb, 60.36  < TAU <= 378.65       
+ 48d Number of cloudy pixels 440  < PC <=  560 mb,  0.02 <= TAU <=   1.27       
+ 49d Number of cloudy pixels 440  < PC <=  560 mb,  1.27  < TAU <=   3.55       
+ 50d Number of cloudy pixels 440  < PC <=  560 mb,  3.55  < TAU <=   9.38       
+ 51d Number of cloudy pixels 440  < PC <=  560 mb,  9.38  < TAU <=  22.63       
+ 52d Number of cloudy pixels 440  < PC <=  560 mb, 22.63  < TAU <=  60.36       
+ 53d Number of cloudy pixels 440  < PC <=  560 mb, 60.36  < TAU <= 378.65       
+ 54d Number of cloudy pixels 560  < PC <=  680 mb,  0.02 <= TAU <=   1.27       
+ 55d Number of cloudy pixels 560  < PC <=  680 mb,  1.27  < TAU <=   3.55       
+ 56d Number of cloudy pixels 560  < PC <=  680 mb,  3.55  < TAU <=   9.38       
+ 57d Number of cloudy pixels 560  < PC <=  680 mb,  9.38  < TAU <=  22.63       
+ 58d Number of cloudy pixels 560  < PC <=  680 mb, 22.63  < TAU <=  60.36       
+ 59d Number of cloudy pixels 560  < PC <=  680 mb, 60.36  < TAU <= 378.65       
+ 60d Number of cloudy pixels 680  < PC <=  800 mb,  0.02 <= TAU <=   1.27       
+ 61d Number of cloudy pixels 680  < PC <=  800 mb,  1.27  < TAU <=   3.55       
+ 62d Number of cloudy pixels 680  < PC <=  800 mb,  3.55  < TAU <=   9.38       
+ 63d Number of cloudy pixels 680  < PC <=  800 mb,  9.38  < TAU <=  22.63       
+ 64d Number of cloudy pixels 680  < PC <=  800 mb, 22.63  < TAU <=  60.36       
+ 65d Number of cloudy pixels 680  < PC <=  800 mb, 60.36  < TAU <= 378.65       
+ 66d Number of cloudy pixels 800  < PC <= 1000 mb,  0.02 <= TAU <=   1.27       
+ 67d Number of cloudy pixels 800  < PC <= 1000 mb,  1.27  < TAU <=   3.55       
+ 68d Number of cloudy pixels 800  < PC <= 1000 mb,  3.55  < TAU <=   9.38       
+ 69d Number of cloudy pixels 800  < PC <= 1000 mb,  9.38  < TAU <=  22.63       
+ 70d Number of cloudy pixels 800  < PC <= 1000 mb, 22.63  < TAU <=  60.36       
+ 71d Number of cloudy pixels 800  < PC <= 1000 mb, 60.36  < TAU <= 378.65       
+ 72d Number of cloudy pixels for cloud type  4 = Cumulus, ice                   
+ 73d Number of cloudy pixels for cloud type  5 = Stratocumulus, ice             
+ 74d Number of cloudy pixels for cloud type  6 = Stratus, ice                   
+ 75d Number of cloudy pixels for cloud type 10 = Altocumulus, ice               
+ 76d Number of cloudy pixels for cloud type 11 = Altostratus, ice               
+ 77d Number of cloudy pixels for cloud type 12 = Nimbostratus, ice              
+------------------------------------------------------------------------------- 
+Cloud top pressures (PC)                                                        
+------------------------------------------------------------------------------- 
+ 78  Mean PC for cloudy pixels (VIS-adjusted day, unadjusted night)             
+ 79  Mean PC for IR-cloudy pixels (unadjusted)                                  
+ 80d Mean PC for IR-only-cloudy pixels (VIS-adjusted)                           
+ 81  Mean PC for NI-only-cloudy pixels (unadjusted)                             
+ 82  Mean PC for IR-marginally-cloudy pixels (unadjusted)                       
+ 83d Mean PC for VIS/IR-marginally-cloudy pixels (VIS-adjusted)                 
+ 84  Sigma-PC for IR-cloudy pixels (unadjusted)                                 
+------------------------------------------------------------------------------- 
+Cloud top temperatures (TC)                                                     
+------------------------------------------------------------------------------- 
+ 85  Mean TC for cloudy pixels (VIS-adjusted day, unadjusted night)             
+ 86  Mean TC for IR-cloudy pixels (unadjusted)                                  
+ 87d Mean TC for IR-only-cloudy pixels (VIS-adjusted)                           
+ 88  Mean TC for NI-only-cloudy pixels (unadjusted)                             
+ 89  Mean TC for IR-marginally-cloudy pixels (unadjusted)                       
+ 90d Mean TC for VIS/IR-marginally-cloudy pixels (VIS-adjusted)                 
+ 91  Sigma-TC for IR-cloudy pixels (unadjusted)                                 
+------------------------------------------------------------------------------- 
+Cloud optical thicknesses (TAU)                                                 
+------------------------------------------------------------------------------- 
+ 92d Mean TAU for cloudy pixels                                                 
+ 93d Mean TAU for IR-cloudy pixels                                              
+ 94d Mean TAU for IR-only-cloudy pixels                                         
+ 95d Mean TAU for NI-only-cloudy pixels                                         
+ 96d Mean TAU for IR-marginally-cloudy pixels                                   
+ 97d Mean TAU for VIS/IR-marginally-cloudy pixels                               
+ 98d Sigma-TAU for IR-cloudy pixels                                             
+------------------------------------------------------------------------------- 
+Cloud water paths (WP)                                                          
+------------------------------------------------------------------------------- 
+ 99d Mean WP for cloudy pixels                                                  
+100d Mean WP for IR-cloudy pixels                                               
+101d Mean WP for IR-only-cloudy pixels                                          
+102d Mean WP for NI-only-cloudy pixels                                          
+103d Mean WP for IR-marginally-cloudy pixels                                    
+104d Mean WP for VIS/IR-marginally-cloudy pixels                                
+105d Sigma-WP for IR-cloudy pixels                                              
+------------------------------------------------------------------------------- 
+Cloud top temperature (TC) distribution (unadjusted PC,TC)                      
+------------------------------------------------------------------------------- 
+106  Mean TC for IR-cloudy pixels  10 <= PC <=  180 mb                          
+107  Mean TC for IR-cloudy pixels 180  < PC <=  310 mb                          
+108  Mean TC for IR-cloudy pixels 310  < PC <=  440 mb                          
+109  Mean TC for IR-cloudy pixels 440  < PC <=  560 mb                          
+110  Mean TC for IR-cloudy pixels 560  < PC <=  680 mb                          
+111  Mean TC for IR-cloudy pixels 680  < PC <=  800 mb                          
+112  Mean TC for IR-cloudy pixels 800  < PC <= 1000 mb                          
+------------------------------------------------------------------------------- 
+Temperature, optical thickness, water path means for LOW cloud types            
+(VIS-adjusted TC)                                                               
+------------------------------------------------------------------------------- 
+113d Mean TC for cloud type 1 = Cumulus,liquid                                  
+114d Mean TAU for cloud type 1                                                  
+115d Mean WP for cloud type 1                                                   
+116d Mean TC for cloud type 2 = Stratocumulus,liquid                            
+117d Mean TAU for cloud type 2                                                  
+118d Mean WP for cloud type 2                                                   
+119d Mean TC for cloud type 3 = Stratus,liquid                                  
+120d Mean TAU for cloud type 3                                                  
+121d Mean WP for cloud type 3                                                   
+122d Mean TC for cloud type 4 = Cumulus,ice                                     
+123d Mean TAU for cloud type 4                                                  
+124d Mean WP for cloud type 4                                                   
+125d Mean TC for cloud type 5 = Stratocumulus,ice                               
+126d Mean TAU for cloud type 5                                                  
+127d Mean WP for cloud type 5                                                   
+128d Mean TC for cloud type 6 = Stratus,ice                                     
+129d Mean TAU for cloud type 6                                                  
+130d Mean WP for cloud type 6                                                   
+------------------------------------------------------------------------------- 
+Temperature, Optical thickness, Water path means for MIDDLE cloud types         
+(VIS-adjusted TC)                                                               
+------------------------------------------------------------------------------- 
+131d Mean TC for cloud type 7 = Altocumulus,liquid                              
+132d Mean TAU for cloud type 7                                                  
+133d Mean WP for cloud type 7                                                   
+134d Mean TC for cloud type 8 = Altostratus,liquid                              
+135d Mean TAU for cloud type 8                                                  
+136d Mean WP for cloud type 8                                                   
+137d Mean TC for cloud type 9 = Nimbostratus,liquid                             
+138d Mean TAU for cloud type 9                                                  
+139d Mean WP for cloud type 9                                                   
+140d Mean TC for cloud type 10 = Altocumulus,ice                                
+141d Mean TAU for cloud type 10                                                 
+142d Mean WP for cloud type 10                                                  
+143d Mean TC for cloud type 11 = Altostratus,ice                                
+144d Mean TAU for cloud type 11                                                 
+145d Mean WP for cloud type 11                                                  
+146d Mean TC for cloud type 12 = Nimbostratus,ice                               
+147d Mean TAU for cloud type 12                                                 
+148d Mean WP for cloud type 12                                                  
+------------------------------------------------------------------------------- 
+Temperature, Optical thickness, Water path means for HIGH cloud types           
+(VIS-adjusted TC)                                                               
+------------------------------------------------------------------------------- 
+149d Mean TC for cloud type 13 = Cirrus                                         
+150d Mean TAU for cloud type 13                                                 
+151d Mean WP for cloud type 13                                                  
+152d Mean TC for cloud type 14 = Cirrostratus                                   
+153d Mean TAU for cloud type 14                                                 
+154d Mean WP for cloud type 14                                                  
+155d Mean TC for cloud type 15 = Deep convective                                
+156d Mean TAU for cloud type 15                                                 
+157d Mean WP for cloud type 15                                                  
+------------------------------------------------------------------------------- 
+Surface temperatures (TS)                                                       
+------------------------------------------------------------------------------- 
+158  Mean TS from clear sky composite                                           
+159  Mean TS for clear pixels                                                   
+160  Mean TS for IR-clear pixels                                                
+161d Mean TS for VIS/IR-clear pixels                                            
+162  Sigma-TS for IR-clear pixels                                               
+------------------------------------------------------------------------------- 
+Surface reflectances (RS)                                                       
+------------------------------------------------------------------------------- 
+163d Mean RS from clear sky composite                                           
+164d Mean RS for clear pixels                                                   
+165d Mean RS for IR-clear pixels                                                
+166d Mean RS for VIS/IR-clear pixels                                            
+167d Sigma-RS for IR-clear pixels                                               
+------------------------------------------------------------------------------- 
+Near-IR channel reflectance                                                     
+------------------------------------------------------------------------------- 
+168d Mean NI reflectance from clear sky composite                               
+------------------------------------------------------------------------------- 
+IR channel radiances                                                            
+------------------------------------------------------------------------------- 
+169  Mean IR radiance for IR-cloudy pixels                                      
+170  Sigma-IR radiance for IR-cloudy pixels                                     
+171d Mean IR radiance for VIS/IR-cloudy pixels                                  
+172  Mean IR radiance for IR-clear pixels                                       
+173  Sigma-IR radiance for IR-clear pixels                                      
+174d Mean IR radiance for VIS/IR-clear pixels                                   
+175  Mean IR radiance from clear sky composite                                  
+------------------------------------------------------------------------------- 
+VIS channel radiances                                                           
+------------------------------------------------------------------------------- 
+176d Mean VIS radiance for VIS/IR-cloudy pixels                                 
+177d Sigma-VIS radiance for VIS/IR-cloudy pixels                                
+178d Mean VIS radiance for IR-cloudy pixels                                     
+179d Mean VIS radiance for VIS/IR-clear pixels                                  
+180d Sigma-VIS radiance for VIS/IR-clear pixels                                 
+181d Mean VIS radiance for IR-clear pixels                                      
+182d Mean VIS radiance from clear sky composite                                 
+------------------------------------------------------------------------------- 
+TOVS atmospheric information                                                    
+------------------------------------------------------------------------------- 
+183  Atmospheric data origin code                                               
+184  Surface pressure                                                           
+185  Near-surface air temperature                                               
+186  Temperature at 900 mb                                                      
+187  Temperature at 740 mb                                                      
+188  Temperature at 620 mb                                                      
+189  Temperature at 500 mb                                                      
+190  Temperature at 375 mb                                                      
+191  Temperature at 245 mb                                                      
+192  Temperature at 115 mb                                                      
+193  Tropopause pressure                                                        
+194  Tropopause temperature                                                     
+195  Stratosphere temperature at 50 mb                                          
+196  Stratosphere temperature at 15 mb                                          
+197  Precipitable water for 1000-800 mb                                         
+198  Precipitable water for 800-680 mb                                          
+199  Precipitable water for 680-560 mb                                          
+200  Precipitable water for 560-440 mb                                          
+201  Precipitable water for 440-310 mb                                          
+202  Ozone abundance                                                            

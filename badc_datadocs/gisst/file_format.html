@@ -1,0 +1,224 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>Documentation</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>GISST/GICE/MOHMATN4/MOHSST6 File Format Documentation<BR CLEAR="ALL"></H1>
+
+<HR ALIGN=LEFT>
+
+<UL>
+  <LI><A HREF="#gisst">GISST file format</A>
+  <LI><A HREF="#gice">GICE file format</A>
+  <LI><A HREF="#mohmatn4">MOHMATN4 file format</A>
+  <LI><A HREF="#mohsst6">MOHSST6 file format</A>
+</UL>
+<BR>
+<HR ALIGN=LEFT><A NAME="gisst"></A>
+
+<H1>GISST File Format</H1>
+
+<P>Data are stored in ASCII.<BR>
+<BR>
+All values are integers. Temperature values are in Degree Celsius.<BR>
+<BR>
+
+
+<UL>
+  <LI>Monthly mean SST are stored as counts * 100 (in Degree Celsius)
+  <LI>counts of stations used are stored as counts * 100
+  <LI>IF GISST ice covered, gridboxes are flagged as -1000
+  <LI>missing data are set to -32768.
+</UL>
+
+<P><BR>
+The month and year are stored at the start of each month. <BR>
+<BR>
+Data Array (360x180).<BR>
+Item (1,1) stores the value for the 1-deg-area centred at 179.5W
+and 89.5N.<BR>
+Item (360,180) stores the value for the 1-deg-area centred at
+179.5E and 89.5S.<BR>
+<BR>
+
+
+<PRE>
+
+          -----------
+         |     |     |
+         | MON | YR  |
+         |_____|_____|__________________________________
+     90N |(1,1)                                         |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+         |(1,90)                                        |
+     Equ |                                              |
+         |(1,91)                                        |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+     90S |(1,180)______________________________(360,180)|
+          180W                 0                    180E</PRE>
+
+<P><BR>
+<BR>
+<HR ALIGN=LEFT><A NAME="gice"></A>
+
+<H1>GICE File Format</H1>
+
+<P>Data are stored in ASCII.<BR>
+<BR>
+All values are integers.<BR>
+<BR>
+
+
+<UL>
+  <LI>Ice concentrations are stored as tenths of gridbox covered
+  with ice (0-9)
+  <LI>Gridboxes completely ice-covered are stored as '*'
+  <LI>missing data are set to '-'
+</UL>
+
+<P><BR>
+The month and year are stored at the start of each month. <BR>
+<BR>
+Data Array (360x180).<BR>
+Item (1,1) stores the value for the 1-deg-area centred at 179.5W
+and 89.5N.<BR>
+Item (360,180) stores the value for the 1-deg-area centred at
+179.5E and 89.5S.<BR>
+<BR>
+
+
+<PRE>
+
+          -----------
+         |     |     |
+         | MON | YR  |
+         |_____|_____|__________________________________
+     90N |(1,1)                                         |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+         |(1,90)                                        |
+     Equ |                                              |
+         |(1,91)                                        |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+     90S |(1,180)______________________________(360,180)|
+          180W                 0                    180E</PRE>
+
+
+<P><BR>
+
+<BR>
+
+<HR ALIGN=LEFT><A NAME="mohmatn4"></A>
+
+<H1>MOHMATN4 File Format</H1>
+
+<P>Data are stored in ASCII.<BR>
+<BR>
+All values are integers.<BR>
+<BR>
+
+
+<UL>
+  <LI>Max and Min anomalies are stored as temperature anomalies
+  * 100
+  <LI>Counts of stations used are stored as counts * 100
+  <LI>Missing data are set to -32768.
+</UL>
+
+<P><BR>
+The month and year are stored at the start of each month. <BR>
+<BR>
+Data Array (72x36).<BR>
+Item (1,1) stores the value for the 5-deg-area centred at 177.5W
+and 87.5N.<BR>
+Item (72,36) stores the value for the 5-deg-area centred at 177.5E
+and 87.5S.<BR>
+
+
+<PRE>
+
+          -----------
+         |     |     |
+         | MON | YR  |
+         |_____|_____|__________________________________
+     90N |(1,1)                                         |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+         |(1,18)                                        |
+     Equ |                                              |
+         |(1,19)                                        |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+     90S |(1,36)_________________________________(72,36)|
+          180W                 0                    180E</PRE>
+
+<P><BR>
+<BR>
+<HR ALIGN=LEFT><A NAME="mohsst6"></A>
+
+<H1>MOHSST6 File Format</H1>
+
+<P>Data are stored in ASCII.<BR>
+<BR>
+All values are integers.<BR>
+<BR>
+
+
+<UL>
+  <LI>Max and Min anomalies are stored as temperature anomalies
+  * 100
+  <LI>Counts of stations used are stored as counts * 100
+  <LI>Missing data are set to -32768.
+</UL>
+
+<P><BR>
+The month and year are stored at the start of each month. <BR>
+<BR>
+Data Array (72x36).<BR>
+Item (1,1) stores the value for the 5-deg-area centred at 177.5W
+and 87.5N.<BR>
+Item (72,36) stores the value for the 5-deg-area centred at 177.5E
+and 87.5S.<BR>
+
+
+<PRE>
+
+          -----------
+         |     |     |
+         | MON | YR  |
+         |_____|_____|__________________________________
+     90N |(1,1)                                         |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+         |(1,18)                                        |
+     Equ |                                              |
+         |(1,19)                                        |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+     90S |(1,36)_________________________________(72,36)|
+          180W                 0                    180E</PRE>
+
+<P>
+</BODY>
+</HTML>

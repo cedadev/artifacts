@@ -1,0 +1,321 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>Related links
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../documentation/index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../documentation/docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+       <H2> Get ATSR Banner </H2>
+<p> Please, support us and link to us </p>
+<BLOCKQUOTE> 
+  <P><IMG src="../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+    <A href="linktous/index.shtml">Links and Buttons</A></P>
+</BLOCKQUOTE>
+
+<H2>Related links</H2>
+<TABLE>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://envisat.esa.int/instruments/aatsr" target="_blank">
+    http://envisat.esa.int/instruments/aatsr</A></TD>
+    <TD width="81%">Further information on AATSR instrument.</TD>
+  </TR>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://earth1.esrin.esa.it/ERS" target="_blank">
+    http://earth1.esrin.esa.it/ERS</A></TD>
+    <TD width="81%">Further information on ERS-2 spacecraft.</TD>
+  </TR>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://www.stfc.ac.uk/" target="_blank">http://www.stfc.ac.uk/</A></TD>
+    <TD width="81%">One of Europe's largest multidisciplinary research organisations, 
+      supporting scientists and engineers worldwide.</TD>
+  </TR>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://www.ssd.rl.ac.uk/" target="_blank">http://www.ssd.rl.ac.uk/</A></TD>
+    <TD width="81%">Space Science and Technology Department at RAL</TD>
+  </TR>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://www.esa.int/" target="_blank">http://www.esa.int/</A></TD>
+    <TD width="81%">The European Space Agency</TD>
+  </TR>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://www.nerc.ac.uk/" target="_blank">http://www.nerc.ac.uk/</A></TD>
+    <TD width="81%">The Natural Environment Research Council</TD>
+  </TR>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://www.nrsc.co.uk/" target="_blank">http://www.nrsc.co.uk/</A></TD>
+    <TD width="81%">The National Remote Sensing Centre </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://www.bnsc.gov.uk/" target="_blank">http://www.bnsc.gov.uk/</A></TD>
+    <TD width="81%">The British National Space Centre website</TD>
+  </TR>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://www.esa.int/SPECIALS/ESRIN_SITE/index.html" target="_blank">http://www.esa.int/SPECIALS/ESRIN_SITE/index.html</A></TD>
+    <TD width="81%">ESRIN, the European Space Agency's Centre in Frascati </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://earth.esa.int/ERS/" target="_blank">http://earth.esa.int/ERS/</A></TD>
+    <TD width="81%">Home page of the ERS-1 &amp; 2 missions.</TD>
+  </TR>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://envisat.esa.int/" target="_blank">http://envisat.esa.int/ 
+      </A></TD>
+    <TD width="81%">Homepage of the ENVISAT mission.</TD>
+  </TR>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://www.tss.no" target="_blank">http://www.tss.no/</A></TD>
+    <TD width="81%">Homepage of the Tromsø Satellite Station</TD>
+  </TR>
+</TABLE>
+<H2>Ice and Icebergs</H2>
+<TABLE>
+  <TR>
+    <TD><A href="http://ice.ssec.wisc.edu/iceberg.php" target="_blank">http://ice.ssec.wisc.edu/iceberg.php</A></TD>
+    <TD>The AMRC iceberg page at the University of Wisconsin</TD>
+  </TR>
+  <TR>
+    <TD><A href="http://www.acecrc.org.au/" target="_blank">http://www.acecrc.org.au/</A></TD>
+    <TD>Antarctic Climate and Ecosystems Cooperative Research Centre </TD>
+  </TR>
+</TABLE>
+<H2>General interest</H2>
+<TABLE>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://www.pmel.noaa.gov/toga-tao/el-nino/" target="_blank">http://www.pmel.noaa.gov/toga-tao/el-nino/</A></TD>
+    <TD width="81%">The El Nino theme page at NOAA.</TD>
+  </TR>
+</TABLE>
+<H2>ATSR Research</H2>
+<TABLE>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://atsrus.ag.rl.ac.uk/team/watts/CDROM-page1.html" 
+    target="_blank">http://atsrus.ag.rl.ac.uk/team <BR>
+      watts/CDROM-page1.html</A></TD>
+    <TD width="75%">ATSR cloud retrieval algorithm development - New cloud parameters 
+      from ATSR-2 </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD width="19%"><A href="../validation/index.shtml">Validation</A></TD>
+    <TD width="75%">Validation Page </TD>
+  </TR>
+  
+  
+ </TABLE>
+   
+  
+   
+
+<H2>Browsing ATSR</H2>
+<TABLE>
+  <TR valign="top"> 
+    <TD width="19%"><A href="http://abf1.ag.rl.ac.uk:8080/" target="_blank">http://abf1.ag.rl.ac.uk:8080/</A></TD>
+    <TD width="81%">The ATSR Browse facility based at the RAL. Data is processed 
+      as it is received, and a complete data set is generally available a week 
+      later. </TD>
+  </TR>
+</TABLE>
+<H2>Who is using ATSR data?</H2>
+<TABLE>
+ <TR valign="top"> 
+    <TD><A href="http://www.antarctica.ac.uk/" target="_blank">http://www.antarctica.ac.uk/</A></TD>
+    <TD>The British Antarctic Survey </TD>
+  </TR>
+  <TR valign="top">
+    <TD><A href="http://www.satobsys.co.uk/CSeas/" target="_blank">http://www.satobsys.co.uk/CSeas/</A></TD>
+    <TD>The Clean Seas Project</TD>
+  </TR>
+ 
+</TABLE>
+ <H2>Are you using ATSR data?</H2>
+ <p> <A href="mailto:wwwadmin@www.atsr.rl.ac.uk"> Tell us 
+  about it!</A></P>
+<p><!-- Copy this to create a new entry --> </p>
+<TABLE>
+  <TR valign="top"> 
+    <TD width="19%"><!-- <A HREF="">link here</A> --></TD>
+    <TD width="81%"><!-- text here --></TD>
+  </TR>
+</TABLE>
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Tuesday, 04-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

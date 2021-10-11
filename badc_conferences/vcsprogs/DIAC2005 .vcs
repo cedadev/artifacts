@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050412T230000Z
+DTEND:20050414T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:School of Chemistry, University of Leeds
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000080C402B60D15C5010000000000000000100
+ 00000521E10DC2A6DEC4A843222744D12490B
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0ADistributed Institute for Atmos=
+pheric Composition (NCAS/DIAC) - Research Meeting =0D=0A=0D=0A13th - 14th A=
+pril 2005 =0D=0A=0D=0ASchool of Chemistry, University of Leeds, following o=
+n from Faraday Discussion 130 meeting. =0D=0A=0D=0AStudent Bursaries Availa=
+ble =0D=0A=0D=0AFor more information on the meeting and bursaries, please s=
+ee: http://ncas.nerc.ac.uk/opportunities/bursaries_diac_science_mtg05.asp=
+=0D=0A=0D=0Aand http://ncas.nerc.ac.uk/opportunities/fd130_bursaries.asp=0D=
+=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:DIAC Science Meeting - "Distributed Insti=
+tute for Atmospheric Composition (NCAS/DIAC) - Research Meeting "
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

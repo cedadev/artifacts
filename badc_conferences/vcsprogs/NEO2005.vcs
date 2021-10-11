@@ -1,0 +1,34 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050905T230000Z
+DTEND:20050906T230000Z
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000908D860A241BC5010000000000000000100
+ 000000564BA1F92986A43A177FF4A757F2360
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:NERC Earth Observation Conference, 6t=
+h=0D=0ASeptember 2005, University of Portsmouth=0D=0A=0D=0ACall for Abstrac=
+ts Deadline: 29th April 2005=0D=0A=0D=0AThe NERC Earth Observation Conferen=
+ce will be held jointly with the=0D=0ARemote Sensing and Photogrammetry Soc=
+iety's (RSPSoc) Annual Conference=0D=0A(6th to 9th September 2005, Universi=
+ty of Portsmouth).=0D=0A=0D=0AMeasuring, Mapping and Managing a Hazardous W=
+orld.=0D=0A=0D=0AThe one-day NERC event will focus on the use of Earth Obse=
+rvation to=0D=0Ameasure, monitor and understand the causes and consequences=
+ of=0D=0Aglobal-scale natural hazards. =0D=0A=0D=0ATopics include: climate =
+change, ozone 'holes', meteorology,=0D=0Aoceanography, geohazards, carbon s=
+equestration, deforestation,=0D=0Adesertification, urbanisation. =0D=0AThe =
+links between climate change, natural hazards and disasters are of=0D=0Apar=
+ticular interest. =0D=0A=0D=0ANERC is inviting abstracts for oral or poster=
+ presentations at this=0D=0Aconference. For further information and to subm=
+it an abstract, please go=0D=0Ato:=0D=0Ahttp://www.nerc.ac.uk/funding/earth=
+obs/conference/ =0D=0A=0D=0A***********************************************=
+**=0D=0ANERC-Atmos mailing list=0D=0ANERC-Atmos@ncas.ac.uk =0D=0Ahttp://www=
+.ncas.ac.uk/mailman/listinfo/nerc-atmos=0D=0A______________________________=
+_________________=0D=0ANERC-Atmos mailing list=0D=0ANERC-Atmos@ncas.ac.uk=
+=0D=0Ahttp://www.ncas.ac.uk/mailman/listinfo/nerc-atmos=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:[nerc-atmos] IODP conference, BA Media Fe=
+llowship, NERC EarthObservation Conference
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

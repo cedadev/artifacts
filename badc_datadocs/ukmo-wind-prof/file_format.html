@@ -1,0 +1,203 @@
+<HTML lang="en">
+<HEAD>
+<META name="keywords"
+      content="MST, VHF, Doppler, radar, wind, profiler, wave, turbulence">
+
+<TITLE>File format for the Met Office boundary-layer wind-profiler data</TITLE>
+</HEAD>
+
+<BODY>
+<A name="top">
+
+<H1>File format for Met Office 915 MHz boundary-layer wind-profiler data</H1>
+
+<!*** Page contents to go here ***>
+<P>The principal data products from the 915 MHz Met Office
+boundary-layer wind-profiler are the wind speed and (meteorological
+convention) direction, as functions of time and altitude; radial
+velocities and signal-to-noise ratios (S/Ns) for individual beam
+directions are also given. Observations are made in both a "low" mode,
+covering the approximate altitude range 0.1 - 2.0 km at 0.1 km
+intervals, and a "high" mode, covering the approximate altitude range
+0.2 - 8.0 km at 0.2 km intervals; the useful coverage varies with
+atmospheric conditions.</P>
+
+<P>Each file begins with a blank line and is then followed by a
+sequence of 96 records; 48 for the low mode and 48 for the high
+mode. <B>NOTE</B> that the order of low and high mode records is not
+necessarily the same for each 30 minute period; it is therefore
+necessary to determine the mode from the inter-pulse-period, <FONT
+class="code_red">IPP</FONT>, in header line 7 described below. The
+first 15 lines of the first record in <B>ukmo-radar-1290mhz-2_wattisham_20021231.txt</B> are shown as
+follows exactly as they appear in the file:</P>
+
+ <PRE><FONT color="green"> Wattisham Airfield
+ WINDS    rev 4.1
+  52.10    1.00     87
+  02 12 31 00 00 00   0
+  30  3  19
+ 06:08 (2.5) 06:08 (2.5) 06:08 (2.5)
+  144 144 127 127 700 700 23 23
+  17.5  17.5  1  2100 2100 19 19 700 700
+  133 90.0   133 74.5   43 74.5 
+   HT   SPD DIR  Radials...
+ 0.152 9999 999   0.3   0.6  12.1  8  8  5   4   5  -8
+ 0.253 11.0  48   0.8   1.0   3.7  8  8  8   9  13   6
+ 0.354 10.7  52   0.8   1.2   3.6  8  8  8   9  11   9
+ 0.455 11.2  53   0.9   1.4   3.9  8  8  8   4   8   7
+ 0.556 10.8  47   0.5   0.6   3.3  8  8  6   3   6   6</FONT></PRE>
+ 
+
+<P>For most purposes the only header information that is actually
+required consists of the date and time of observation from line 4, the
+number of altitude gates, <FONT color="red">NAG</FONT>, from line
+5 (each record consists of <FONT color="red">NAG</FONT>+11
+lines), and the pulse length from line 7.  In the explanations of the
+line contents below, some of the horizontal spacings have been altered
+for the sake of clarity. The text shown in red is for descriptive
+purposes only and does not appear in the files.</P>
+
+<P>Lines 1 - 3 give the station name, the file format and station
+position, respectively; they are the same in all records.</P>
+
+ <PRE><FONT color="green"> Wattisham Airfield
+ WINDS    rev 4.1
+  52.10    1.00     87</FONT><FONT color="red">
+    LAT    LONG   ELEV</FONT></PRE>
+
+<DL>
+  <DD><FONT FONT color="red">LAT</FONT> - Latitude North (&deg;)
+  <DD><FONT FONT color="red">LONG</FONT> - Longitude East (&deg;)
+  <DD><FONT FONT color="red">ELEV</FONT> - Elevation above mean sea level (m)
+</DL>
+
+<P>Line 4 gives the date and time at the start of the consensus period.</P>
+
+<PRE><FONT color="green"> 01 09 03 00 00 18     0</FONT>
+<FONT class="code_red"> YY MM DD hh mm ss UTOFF</FONT></PRE>
+
+<DL>
+  <DD><FONT color="red">YY</FONT> - Year (00 - 99)
+  <DD><FONT color="red">MM</FONT> - Month (01 - 12)
+  <DD><FONT color="red">DD</FONT> - Day (01 - 31)
+  <DD><FONT color="red"">hh</FONT> - Hour (00 - 23)
+  <DD><FONT color="red">mm</FONT> - Minute (00 - 59)
+  <DD><FONT color="red">ss</FONT> - Second (00 - 59)
+  <DD><FONT color="red">UTOFF</FONT> - Offset required to convert to
+      UT (mins)
+</DL>
+
+<P>Line 5 gives observational format details.</P>
+
+
+<PRE><FONT color="green">  30  3  19</FONT>
+<FONT FONT color="red"> CAP NBD NAG</FONT></PRE>
+
+<DL>
+  <DD><FONT color="red">CAP</FONT> - Consensus averaging period (mins)
+  <DD><FONT color="red">NBD</FONT> - Number of beam directions used to
+      derive the wind information
+  <DD><FONT color="red">NAG</FONT> - Number of altitude gates, i.e.
+      number of data lines in each record
+</DL>
+
+<P>Line 6 gives consensus details for each beam direction used; the
+beam directions are given in line 9.</P>
+
+<PRE><FONT color="green">   06:08  (2.5)    06:08  (2.5)    06:08  (2.5)</FONT>
+<FONT color="red"> NCRC:NCT  CWS   NCRC:NCT  CWS   NCRC:NCT  CWS</FONT></PRE>
+
+<DL>
+  <DD><FONT color="red">NCRC</FONT> - Number of cycles required to make
+      consensus
+  <DD><FONT color="red">NCT</FONT> - Number of cycles in total (for
+      each consensus period)
+  <DD><FONT color="red">CWS</FONT> - Consensus window size
+      (m s<SUP>-1</SUP>)
+</DL>
+
+<P>Line 7 gives observation format details. Two values are given for
+each parameter; the first relates to the off-vertical beam
+observations and the second to vertical beam observations.</P>
+ 
+<PRE><FONT color="green">  144 144 127 127  700  700  23  23</FONT>
+<FONT class="code_red">  NCC NCC NSP NSP PLEN PLEN IPP IPP</FONT></PRE>
+
+<DL>
+  <DD><FONT color="red">NCC</FONT> - Number of coded cells
+  <DD><FONT color="red">NSP</FONT> - Number of spectra
+  <DD><FONT color="red">PLEN</FONT> - Pulse length (ns)
+  <DD><FONT color="red">IPP</FONT> - Inter-pulse period (us);
+      <FONT color="red">IPP</FONT> < 40 corresponds to low mode
+      observations and <FONT color="red">IPP</FONT> > 40 to high
+      mode observations
+</DL>
+
+<P>Line 8 gives more observation format details; again the first of
+each value corresponds to off-vertical beam observations and the
+second to vertical beam observations.</P>
+
+<PRE><FONT color="green">  17.5  17.5  1  2100 2100  19  19 700 700</FONT>
+<FONT color="red">   MDV   MDV VC  TDFG TDFG NRG NRG RGI RGI</FONT></PRE>
+
+<DL>
+  <DD><FONT color="red">MDV</FONT> - Maximum Doppler velocity, i.e.
+      that corresponding to the Nyquist frequency of the spectra
+  <DD><FONT color="red">VC</FONT> - Vertical correction applied to
+      oblque beams? (0 = no, 1 = yes)
+  <DD><FONT color="red">TDFG</FONT> - Time delay to first range gate (ns)
+  <DD><FONT color="red">NRG</FONT> - Number of range gates
+  <DD><FONT color="red">RGI</FONT> - Range gate interval (ns)
+</DL>
+
+<P>Line 9 gives the beam pointing directions.</P>
+
+<PRE><FONT class="code_green">  133 90.0   133 74.5   43  74.5</FONT>
+<FONT color="red"> AZIA ELEA  AZIA ELEA  AZIA ELEA</FONT></PRE>
+
+<DL>
+  <DD><FONT color="red">AZIA</FONT> - Azimuth angle, from North = 0&deg;
+  <DD><FONT color="red">ELEA</FONT> - Elevation angle, from horizontal =
+      0&deg;
+</DL>
+
+<P>Line 10 gives labels for the columns that follow</P>
+
+<PRE><FONT color="green">   HT   SPD DIR  Radials...</FONT></PRE>
+
+<P>Lines 11 to (10 + <FONT class="code_red">NAG</FONT>), of which only
+the first 5 are shown, give the actual data. Radial data (columns 4 to
+12) are given in the beam order defined in line 9.</P>
+
+<PRE><FONT color="green"> 0.152 9999 999   0.3   0.6  12.1    8    8    5   4   5  -8
+ 0.253 11.0  48   0.8   1.0   3.7    8    8    8   9  13   6
+ 0.354 10.7  52   0.8   1.2   3.6    8    8    8   9  11   9
+ 0.455 11.2  53   0.9   1.4   3.9    8    8    8   4   8   7
+ 0.556 10.8  47   0.5   0.6   3.3    8    8    6   3   6   6</FONT>
+<FONT color="red">     Z  SPD DIR  VRAD  VRAD  VRAD NCMC NCMC NCMC S/N S/N S/N</FONT></PRE>
+
+<DL>
+  <DD><FONT color="red">Z</FONT> - Altitude above ground (km)
+  <DD><FONT color="red">SPD</FONT> - Horizontal wind speed
+      (m s<SUP>-1</SUP>); a value of 9999 indicates that no consensus was
+      reached
+  <DD><FONT color="red">DIR</FONT> - Meteorological convention
+      horizontal wind direction, i.e. FROM which the wind is blowing (&deg;);
+      a value of 999 indicates that no consensus was reached.
+  <DD><FONT color="red">VRAD</FONT> - Radial component of wind
+      velocity, +ve indicating towards the radar (m s<SUP>-1</SUP>)
+  <DD><FONT color="red">NCMC</FONT> - Number of cycles making consensus
+  <DD><FONT color="red">S/N</FONT> - Average signal-to-noise ratio
+      of cycles in consensus
+</DL>
+
+<P>Line (11 + <FONT color="red">NAG</FONT>) contains a single
+<FONT color="green">$</FONT> character.</P><BR>
+
+
+<P><A HREF="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__dataent_ukmowindpr">Return to main Wind Profiler page.</A>
+<P>
+Thanks to David Hooper, RAL for this page. 
+<P>
+</BODY>
+</HTML>

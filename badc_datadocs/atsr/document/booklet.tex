@@ -1,0 +1,1157 @@
+% ATSR CD-ROM Booklet for Distribution Package
+%
+% Written September 1995 by Jo Murray, Space Science Department, RAL.
+%
+%\documentclass[10pt,]{article} 
+%\usepackage{times}
+
+\documentstyle [twoside] {article}
+%
+\pagestyle{myheadings}
+\markboth{Rutherford Appleton Laboratory}
+{ATSR CD-ROM}
+
+\setlength{\textwidth}{4.0in}
+\setlength{\textheight}{3.8in}
+\setlength{\topmargin}{0.2in}
+\setlength{\oddsidemargin}{0.5in}
+\setlength{\evensidemargin}{0.5in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\smallskipamount}
+\raggedbottom
+\tolerance=800
+%
+% Quire input and settings (see quire.doc for more information)
+\input quire
+\latexquire
+%\htotal 5.0in       \vtotal 5.0in
+\htotal 4.75in       \vtotal 4.7in
+\horigin -0.3in     \vorigin -0.2in
+\shoutline 0pt      \shstaplewidth 0pt
+\shcrop 1pt
+%\shonly2
+% Use these two lines to format one booklet page per sheet with crop marks
+\shhtotal 8.5in
+\qonepage
+% Use these two lines to format two booklet pages per sheet with crop marks
+% (Make sure the printer is set for landscape mode, not portrait mode)
+%\shhtotal 11in
+%\quire{16}
+%
+\newcommand{{\mic}}{{$\mu$m}}
+\newcommand{{\etal}}{{\sl et al.}}
+\newcommand{{\degree}}{{$^{\rm o}$}}
+\newcommand{\dir}[1]{$[${\bf#1}$]$}
+\newcommand{\tm} {$^{\rm\small TM}$} 
+\hfuzz=4pt
+
+\title{ \bf {\Huge Sea-surface temperatures from ATSR \\}
+{\sl \LARGE \sl August 1991 -- July 1995}}
+\author{ Jo Murray \thanks{Telephone (01235)~446705; Fax (01235)~445848;
+e-mail  jo.murray@rl.ac.uk.} \\ \\ 
+Space Science Department \\ Rutherford Appleton Laboratory 
+\date{September 1995}
+}
+
+\begin{document}
+\maketitle
+\clearpage
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+
+\clearpage
+
+
+ 
+
+\section{Introduction}
+\label{sec:intro}
+
+The first Along-Track Scanning Radiometer (ATSR-1) is a four-channel, 
+dual-view, self-calibrating, infrared radiometer with spatially coregistered 
+spectral channels centred at  1.6{\mic}, 3.7{\mic}, 10.8{\mic} and 12.0{\mic}.
+The instrument's innovative design has enabled the remote sensing of 
+Sea-Surface Temperature (SST) to unprecedented levels of accuracy 
+(better than $0.3$K).
+The instrument was launched on board ESA's first remote-sensing 
+satellite, ERS-1, on 21st  July 1991, and has performed well since that 
+time with the only serious setback being the failure of the 3.7\mic\  
+channel in May 1992.
+
+The instrument design is described in Edwards \etal\ (1990)
+and the results from the validation programme  are reported in 
+Mutlow \etal\ (1995) and  Barton \etal\ (1995).
+A short description of the novel aspects of ATSR is given 
+in Appendix~\ref{app:atsr}.
+
+Suffice to say here that the on-board calibration and the use of the 
+along-track scanning technique enable the accurate retrieval of ocean skin
+temperature.\footnote{Infrared radiometers measure the radiant 
+temperature of a water layer 
+less than 0.1{\thinspace}mm thick; this is typically 0.5K cooler than 
+the bulk temperature measured at 1{\thinspace}m depth.}
+Unlike the AVHRR SST retrieval algorithms which are
+empirically adjusted using {\sl in situ\/} bulk measurements 
+(McClain \etal, 1985) 
+the ATSR scheme results in the determination of very accurate SSTs without 
+recourse to ground-based observations.
+Therefore the data presented here represent an independent set of 
+measurements of global SST.
+
+The second instrument in the ATSR series, ATSR-2, was launched on board 
+ESA's second remote-sensing satellite, ERS-2, on 21st April 1995.
+ERS-2 is currently (September~1995) in a similar orbit but trailing  one 
+day behind ERS-1.
+ATSR-1 has already operated beyond its three-year design lifetime  
+but is likely to remain in operation at least until the end of 1995.
+This will enable comparison of data from the two ATSRs, and 
+data from both instruments will be made available on a future CD-ROM set.
+
+Four years of data,  August 1991 -- July 1995 inclusive, are 
+supplied on this CD-ROM set.
+Updates to the data, documentation and software presented here will 
+be made available on the anonymous ftp account {\tt sstaxp.ag.rl.ac.uk}
+(username {\tt anonymous}, and please supply your e-mail address as 
+the password).
+The {\tt atsr1} directory  on this account has a subdirectory
+structure which reflects the CD-ROM layout as described in 
+Section~\ref{subsec:layout}.
+
+
+\subsection{ATSR data products}
+\label{subsec:introdata}
+
+A variety of products are derived from ATSR data, but this CD-ROM set 
+comprises only two types of data.
+\begin{itemize}
+\item The spatially-Averaged Sea-Surface Temperature (ASST) product.
+These data comprise half-degree, spatially-averaged SSTs 
+with associated temporal, positional  and confidence 
+information as described in Section~\ref{sec:asst}.
+
+\item Time-averaged global maps.
+\begin{enumerate} 
+\item A monthly average at half-degree spatial resolution as 
+described in Section~\ref{subsec:month}.
+\item A five-day average at one-degree spatial resolution as 
+described in Section~\ref{subsec:super}.
+\end {enumerate}
+\end {itemize}
+
+
+Other data products from ATSR include: high-resolution 
+({\sl i.e.\ }1km$\times$1km\/) `brightness temperature' products 
+for each thermal channel; 
+%high-resolution `reflectance' products from the 1.6\mic\ channel;
+high-resolution SSTs, and  products containing results 
+from cloud identification tests performed during processing.
+A complete description of these and other ATSR data products 
+is given in Bailey (1993).
+
+\subsection{CD-ROM layout}
+\label{subsec:layout}
+
+
+This CD-ROM set is written to the ISO~9660 standard with no record format
+specified for the files.
+Each end of line in the text files is marked by a line-feed character.
+On VMS systems where the default action is to use carriage-return 
+to indicate ends of lines,  the line structure of text files will look strange 
+and the text will contain embedded control characters. 
+However the files will remain readable.
+Advice for dealing with this and other complications on VMS systems is 
+given in the file {\tt vms.txt} in the \dir{docs} directory.
+
+The structure of the CD-ROM set is summarised in Figure~\ref{fig:layout}.
+In addition to those containing data, there are directories for software
+and documentation.
+
+\begin{description}
+\item{\bf Software:} -- the \dir{software} directory 
+contains programs to assist in reading the supplied datasets
+as described in Section~\ref{sec:soft}.
+All data are stored as 2-byte or 4-byte integers
+in fixed-length records for maximum portability and ease of use.
+Details of the actual formats are given in Sections~\ref{sec:asst}
+and~\ref{sec:time} for the ASST data and time-averaged global maps respectively.
+\item{\bf Documentation:} --
+as described in Section~\ref{sec:docs},
+the \dir{docs} directory contains the \LaTeX\ source 
+for this booklet and various other useful text files.
+\end{description}
+
+\clearpage
+\begin{figure}\caption{Arrangement of data on CD-ROM set}
+\label{fig:layout}
+\bigskip
+\smallskip
+
+\begin{picture}(200,250)
+
+\put(5,195){\framebox(40,15){\bf DISK 1}}
+
+\put(45,200){\line(1,0){5}}
+
+\put(50,200){\vector(1,0){30}}
+
+\put(50,200){\line(0,-1){30}}
+\put(70,170){\oval(40,40)[bl]}
+\put(70,150){\vector(1,0){5}}
+
+\put(50,200){\line(0,1){30}}
+\put(70,230){\oval(40,40)[tl]}
+\put(70,250){\vector(1,0){10}}
+
+
+\put(85,245){\framebox(25,10){\tt asst}}
+\put(85,195){\framebox(25,10){\tt docs}}
+\put(75,145){\framebox(50,10){\tt software}}
+
+\put(140,247){\sl ASST data for 1991--1993}
+\put(140,197){\sl documentation}
+\put(140,147){\sl software}
+
+
+
+%************************ -100
+
+\put(5,45){\framebox(40,15){\bf DISK 2}}
+
+\put(45,50){\line(1,0){5}}
+
+\put(50,50){\vector(1,0){23}}
+
+\put(50,50){\line(0,-1){30}}
+\put(70,20){\oval(40,40)[bl]}
+\put(70,00){\vector(1,0){5}}
+
+\put(50,50){\line(0,1){30}}
+\put(70,80){\oval(40,40)[tl]}
+\put(70,100){\vector(1,0){10}}
+
+
+\put(85,95){\framebox(25,10){\tt asst}}
+\put(80,45){\framebox(37,10){\tt months}}
+\put(75, -5){\framebox(50,10){\tt supers}}
+
+\put(140,98){\sl ASST data for 1994--1995}
+\put(140,48){\sl Monthly Maps}
+\put(140, -2){\sl Five-day maps}
+\end{picture}
+\end{figure} 
+
+\clearpage
+
+
+\section{The spatially-Averaged Sea-Surface Temperature (ASST) product}
+\label{sec:asst}
+
+The ASST product contains half-degree, spatially-averaged SSTs 
+with associated temporal, positional  and confidence 
+information.
+These data are generated using SADIST 
+(Synthesis of ATSR Data Into Sea-surface Temperatures),  the 
+Rutherford Appleton Laboratory's ATSR data-processing scheme
+(Z\'{a}vody \etal, 1994, 1995).
+This software is under continuous development and the data described herein 
+were produced by SADIST, Version~500, hereafter SADIST~v500 
+(Bailey, 1993).
+See Appendix~\ref{app:sad2} for a discussion of planned changes to
+SADIST and the ASST product.
+
+\subsection{ASST derivation} 
+\label{subsec:sst_types}
+
+As described in Appendix~\ref{app:sad2}, SST retrieval involves
+a linear combination of single-channel brightness temperatures
+from both forward and nadir views.
+Derivation of half-degree ASSTs is accomplished in two steps:
+\begin{enumerate}
+
+\item Single-pixel (1km$\times$1km) brightness temperatures are 
+averaged into ten-arcminute brightness temperatures.
+SSTs are then derived from these brightness temperatures via the usual 
+retrieval algorithm.
+
+\item These ten-arcminute SSTs are then averaged to obtain a half-degree SST. 
+Nine ten-arcminute cells are contained in each half-degree (thirty-arcminute)
+cell.
+\end{enumerate}
+
+A proportion of the ten-arcminute, nadir-view brightness temperatures is 
+without associated forward-view values.
+This is usually  a result of cloud coverage affecting only the forward
+scene, but may occur because for sections of most orbits, the forward and
+nadir scenes are stored on different raw data tapes.
+Including such nadir-only data compromises the SST accuracy,
+whereas omitting these data results in reduced coverage.
+
+Rather than attempt a single solution to this problem, 
+three different SSTs are provided for each half-degree cell 
+as described below.
+\begin{description}
+\item[\bf Nadir-view SSTs:] SSTs derived using the nadir-view data only.
+\item[\bf Dual-view SSTs:] SSTs derived using both nadir- and forward-view
+data.
+\item[\bf Mixed SSTs:] SSTs derived using a dual-view retrieval if possible,
+and nadir-only retrieval otherwise.
+This will coincide with the nadir-view SST when no forward data are available 
+for a half-degree cell, and with the dual-view SST  in the case where 
+all the contributing ten-arcminute cells have associated forward data.
+\end{description}
+
+The choice of SST type to use will vary with application.
+Dual-view SSTs represent the most accurate retrieval, and are least 
+likely to be affected by cloud contamination.
+However exclusive use of these data will restrict coverage.
+For example in 1992, a dual-view SST was present for only 85\% of those
+half-degree cells for which an SST had been evaluated.
+
+\subsection{Arrangement of ASST data on CD-ROMs}
+\label{subsec:arr}
+
+The ASST data are stored in the directory \dir{asst} on the CD-ROM
+set. Disk~1 contains data from 1st~August 1991 to 31st December 1993
+inclusive.
+Data for the period 1st~January 1994 to 31st~July 1995 are contained in 
+the \dir{asst}  directory on Disk~2.
+
+Each day's data is in a separate file; the filenames have the form:\\
+\hspace*{2cm} {\tt day }{\sl y mm dd}{\tt.dat}\\
+where {\sl y} is the (year$-1990$), {\sl mm} is the month of the year,
+and {\sl dd} is the day of the month.
+Thus {\tt day20304.dat} contains data for 4th~March 1992.
+
+Each file contains a number of 32-byte records, each of which 
+is associated with a single half-degree cell.
+The number of records per day is highly variable, and lies in the range
+$0-31624$.
+Days on which no reliable data were obtained (usually due to instrument operations)
+are associated with files of zero length.
+The variation in daily data volume during normal operation
+reflects differences in the proportion of a day's coverage that was over 
+cloud-free water.
+
+
+
+\subsection{ASST product format}
+
+ 
+The contents of the 32-byte record product are shown in Table~\ref{tab:record}
+and described in full below.
+Each record contains SSTs and associated information for a single 
+half-degree cell.
+The information is stored as two- or four-byte integers, but 
+as an example, a textual representation of the first five records 
+for 1st~January 1992 is shown below:
+
+\begin{footnotesize}{\begin{verbatim}
+15340  202  59 333  4   27130  -1  27143  -1   27136  -1  11   9351
+15340  203  59 334  4   27123   4  27153   6   27153   6  29  43655
+15340  221  60 337  2   27118  13  27165   6   27154  21  48  26759
+15340  236  62 340  0   27141   7  27158  -1   27149   8  23   9863
+15340  237  62 334  3   27127  -1  27161  -1   27161  -1  34   8839
+\end{verbatim}}\end{footnotesize}
+The first two numbers give the time (in days and seconds as described below), 
+the third and fourth give the position of the half-degree cell 
+(again, see below),
+and the fifth number is associated with the position of the cell within
+the ATSR swath.
+
+The sixth, eighth and tenth values are ASST values in centiKelvin,
+and the seventh, ninth and eleventh represent the associated 
+root-mean-square (rms) deviations of the contributing ten-arcminute SSTs in each
+case.
+
+The last two values represent the mean view-difference and the confidence 
+word as described below.
+Any parameter that cannot be evaluated is represented as $-1$ 
+(see Table~\ref{tab:exc}). 
+A description of each parameter is given below, and the format summarised
+in Table~\ref{tab:record}.
+
+\begin{table}
+\begin{center}
+\caption{\bf ASST product record format }
+\label{tab:record}
+\begin{tabular}{|r|l|l|l|} \hline
+
+{\bf Byte } & {\bf Parameter description} & {\bf Type} & {\bf Unit} \\ 
+{\bf range} & & & \\ \hline \hline
+
+0 -- 3   & Time of data (days since Jan 1st 1950)   & Integer & Days  \\ \hline
+4 -- 7   & Time of data (secs within current day)   & Integer & Secs  \\ \hline
+8 -- 9   & Latitude cell number                     & Integer & Cell  \\ \hline
+10 -- 11 & Longitude cell number                    & Integer & Cell  \\ \hline
+12 -- 13 & Mean across-track band number            & Integer & None  \\ \hline
+14 -- 15 & Nadir-only ASST                          & Integer & K/100 \\ \hline
+16 -- 17 & RMS deviation of ten-arcmin SSTs         & Integer & K/100 \\ 
+         & contributing to nadir-only ASST          &         &       \\ \hline
+18 -- 19 & Dual-only ASST                           & Integer & K/100 \\ \hline
+20 -- 21 & RMS deviation of ten-arcmin SSTs         & Integer & K/100 \\
+         & contributing to dual-only ASST           &         &       \\ \hline
+22 -- 23 & Mixed nadir/dual ASST                    & Integer & K/100 \\ \hline
+24 -- 25 & RMS deviation of ten-arcmin SSTs         & Integer & K/100 \\ 
+         & contributing to mixed nadir/dual ASST    &         &       \\ \hline
+26 -- 27 & Mean view-difference of nadir/dual       & Integer & K/100 \\
+         & ten-arcminute SST                        &         &       \\ \hline
+28 -- 31 & Confidence word associated with ASST     & None    & None  \\ 
+         & derivation                               &         &       \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{description}
+
+\item[Time of data (days).] This is given as the 
+number of days since 1st~January, 1950 (Modified Julian Day) and 
+does not include the current, incomplete day.
+Dates in the ({\sl y mm dd}) format (as described in 
+Section~\ref{subsec:arr}) are given for the relevant day numbers 
+in the text file {\tt daydates.dat} in the \dir{docs} directory on Disk~1 
+(see Section~\ref{sec:docs}).
+
+\item[Time of data (seconds).] The integer value containing the time in 
+seconds within the current day.
+Note that the time used within each record is the time of the first 
+ATSR nadir-view
+scan to contribute to the ASST derivation. 
+The variable nature of cloud-cover makes it
+impossible to predict the position of this scan relative to the centre of
+the half-degree cell. Under any circumstances, this time cannot be more
+than approximately six seconds from the time at which the centre of the
+cell is scanned by the nadir view. 
+
+\item[Latitude.] The latitude is provided as a cell number. The edges of
+half-degree cells are sections of parallels and meridians. The latitude
+cells are numbered from the South Pole to the North Pole, in the range 0 to
+359. Latitude cell number 0 extends from 90{\degree}S to 89.5{\degree}S; 
+latitude cell number 359 extends from 89.5{\degree}N to 
+90{\degree}N. The latitude of the cell centre may be derived by:
+\begin{quote} ${\sl latitude} = 
+(({\sl lat}\_{\sl cell}\_{\sl num} - 180.0) / 2.0) + 0.25$.
+\end{quote} 
+The latitudes which are implied by the product cell numbers are
+geocentric. 
+Geodetic latitudes may be derived using:
+\begin{quote}
+$ {\sl geodetic} = tan^{-1}(1.0067451 \times tan({\sl geocentric}))$
+\end{quote}
+
+\item[Longitude.] The longitude is provided as a cell number. The edges of
+half-degree cells are sections of parallels and meridians. The longitude
+cells are numbered from 180{\degree}W to 180{\degree}E, in the range
+0 to 719. Longitude cell number 0 extends from 180{\degree}W to 
+179.5{\degree}W; longitude cell number 719 extends from 179.5{\degree}E to
+180{\degree}E. The longitude of the cell centre may be derived by:
+\begin{quote} $longitude = ((lon\_cell\_num - 360.0) / 2.0) + 0.25$.
+\end{quote} 
+
+\item[Mean across-track band number.] The five across-track bands are numbered
+0 to 4 from left to right,  and are centred on the ground-track. 
+Each band is 50{\thinspace}km 
+wide, except the fifth, which is 62{\thinspace}km wide, and extends to the 
+edge of the swath. 
+
+                   
+\item[Nadir-only SST and rms deviation.] These are the mean and the rms
+deviation of ten-arcminute cell SSTs derived using only
+nadir-view data. Note that the rms deviation is set to $-1$ if fewer than three
+ten-arcminute cells contributed. 
+
+\item[Dual-only SST and rms deviation.] These are the mean and the rms 
+deviation of ten-arcminute cell SSTs derived using
+nadir- and forward-view data. Note that the SST is set to $-1$
+if dual-view retrieval was not possible for any ten-arcminute cell, and
+that the rms deviation is set to $-1$ if fewer than three ten-arcminute cells
+contributed. 
+
+\item[Mixed SST and rms deviation.] These are the mean and the rms  deviation
+of ten-arcminute cell SSTs derived using the best
+available combination of nadir- and forward-view data. Note that the
+rms deviation is set to  $-1$ if fewer than three ten-arcminute cells 
+contributed.
+If no ten-arcminute cells were used by the dual-view retrieval, these
+values will be identical to the nadir-only SST and rms deviation.
+
+\item[Mean view-difference.] This is the mean difference between the
+ten-arcminute cell SSTs derived using dual-view and
+nadir-only retrieval algorithms. This value is set to $-1$ if no dual-view 
+retrieval was possible. 
+
+\item[Confidence word.] Table~\ref{tab:con} describes the contents of the
+ASST product confidence word. 
+Bits 0 to 8 are set if, within all of the contributing ten-arcminute cells,
+at least 90\% of the contributing pixels have the
+characteristic defined in Table~\ref{tab:con}. 
+Bits 9 to 12 contain the number of ten-arcminute cell SSTs 
+contributing to the nadir-only half-degree SST, 
+and (the number is necessarily the same) to the mixed
+nadir-only/dual-view half-degree SST.
+Bits 13 to 16 contain the number of ten-arcminute cell SSTs 
+contributing to the dual-only half-degree SST. 
+This number may be zero. 
+
+
+\end{description}
+
+\begin{table}
+\caption{\bf ASST product confidence word}
+\label{tab:con}
+\begin{center}
+\begin{tabular}{|r|l|} \hline
+
+{\bf Bits } & {\bf Meaning if set}                          \\ \hline \hline
+0           & 12.0$\mu$m channel present in source data     \\ \hline
+1           & 11.0$\mu$m channel present in source data     \\ \hline
+2           & 3.7$\mu$m channel present in source data      \\ \hline
+3           & 1.6$\mu$m channel present in source data      \\ \hline
+4           & Cloud-identification used 1.6$\mu$m histogram \\
+            & reflection cloud test                         \\ \hline
+5           & 1.6$\mu$m histogram reflectance cloud test    \\
+            & used a dynamic threshold                      \\ \hline
+6           & Sunglint detected by 1.6$\mu$m                \\
+            & reflectance reflectance cloud test            \\ \hline
+7           & 3.7$\mu$m channel used in SST retrieval       \\ \hline
+8           & SST derivation used day-time data             \\
+            & (night-time if zero)                          \\ \hline
+9 -- 12     & Number of ten-arcminute cell SSTs             \\
+            & derived using nadir-only retrieval (1 -- 9)   \\ \hline
+13 -- 16    & Number of ten-arcminute cell SSTs             \\
+            & derived using dual-only retrieval (0 -- 9)    \\ \hline
+17 -- 31    & Unused                                        \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+Exceptional values within the ASST product are described in 
+Table~\ref{tab:exc}. 
+
+\begin{table}
+\begin{center}
+\caption{\bf ASST product exceptional values}
+\label{tab:exc}
+\begin{tabular}{|r|l|l|} \hline
+
+{\bf Parameter}      & {\bf Value} & {\bf Reason}              \\ \hline \hline
+
+Dual-only SST        & $-1$        & No ten-arcminute cells used a \\
+                     &             & dual-view SST retrieval       \\ \hline
+RMS deviations       & $-1$        & Fewer than 3 ten-arcminute    \\
+                     &             & cells contributed to the      \\
+                     &             & half-degree ASST              \\ \hline
+Mean view-difference & $-1$        & No ten-arcminute cells used a \\
+                     &             & dual-view SST retrieval       \\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+
+
+\clearpage
+\subsection{Quality control of ASST data}
+\label{subsec:qa}
+
+The quality of SSTs from ATSR data can be compromised by a number of causes.
+These can be classified broadly into two groups as follows:
+\begin{enumerate}
+\item ATSR or ERS-1 instrument operations.
+\item Inadequate cloud-clearing or atmospheric correction.
+\end{enumerate}
+
+Clearly data which are unreliable as a result of the first cause should not
+be included in this archive, and the quality-control procedure described
+below is addressed to removing these data.
+
+
+However some data affected by cloud-contamination or high aerosol levels remain
+in the archive. 
+Removal of these data would be inappropriate as the selection process 
+would require arbitrary choices and
+would exclude the use of the archive for many purposes, such as 
+studying the  effect of aerosols or the effectiveness of the ATSR 
+cloud-clearing scheme\footnote{Jones \etal\ (1995) have recently 
+suggested a useful scheme for identifying cloud-contaminated ASST data.}.
+See Appendix~\ref{app:sad2} for more information on the ATSR 
+cloud-identification scheme.
+
+Data arising from periods when ATSR-1 was not in nominal operation have been 
+identified in two ways:
+
+{\bf Inspection of the ATSR operations log:} -- 
+various instrument operations affect data quality.
+For example, periodically the instrument cooler is turned off to allow
+residues which have accumulated on the detectors to boil off.
+During this `outgassing' procedure, the thermal detectors lose their
+sensitivity and the associated data are of little value.
+Orbit manoeuvres also affect data quality with the forward-view data
+being particularly affected.
+The ATSR operations log is 
+stored in {\bf atsrops.txt} in the \dir{docs} directory.
+Note that not all suspicious data have been discarded. For example
+data from the commissioning phase (from launch until 14th September 1991) 
+are regarded as non-nominal, but most of these data remain in the archive.
+
+
+{\bf Inspection of the deviation from climatology:} --
+less serious instrument operations can also affect the data, and these 
+cannot always be identified from the instrument 
+log\footnote{In versions of the processing software previous to SADIST~v500, 
+an occasional orbit was mis-geolocated due to an incorrect time being 
+associated with the data; this problem has been corrected in the 
+SADIST~v500 software.}.
+Therefore it is necessary to compare data with climatological values
+in order to identify such compromised observations.
+
+GOSTA monthly one-degree climatology was used (see Bottomley \etal, 1990) with 
+unfilled locations being assigned a value by taking the first of these to
+provide a value:
+\begin{enumerate}
+\item the average of 8 adjacent points;
+\item the average of 16 next-most adjacent points;
+\item the zonal mean for that latitude;
+\item 271.5K (only Arctic and  Antarctic regions have no zonal mean).
+\end{enumerate}
+Linear interpolation was used to generate a half-degree grid for 
+comparison with the ASST data.
+                    
+Data have been discarded from periods  where:
+\begin{itemize}
+\item more than 10\% of the day-time ASSTs fell outside climatological 
+values.
+\item more than 40\% of the night-time ASSTs fell outside climatological 
+values.
+\end{itemize}
+
+These thresholds were chosen after inspection of the percentage of
+data per 100-minute orbit which was more than 6K from climatological
+values.
+The higher threshold selected for night-time observations arises
+as these are more likely to be depressed as a result of incomplete 
+cloud-clearing (in the absence of the 1.6\mic\ data at night).
+
+The identification of a `bad' orbit did not necessarily result
+in the discarding of 100-minutes worth of data.
+Rather, for each such orbit,  the deviation of individual ASSTs 
+from climatology was examined to establish when normal
+operation ceased and resumed.
+All data from periods which failed the aforementioned quality criteria 
+have been removed from the archive.
+All other data remain, including individual ASSTs widely deviant from 
+climatology.
+
+
+\begin{figure}
+\caption{ATSR comparison with climatology in 1993}
+\label{fig:clim}
+\vspace{10cm}
+\end{figure}
+
+In general this test discriminated well and less than 0.3\% of ASST data has
+been discarded.
+Figure~\ref{fig:clim} shows the results from comparing day-time 
+data with climatology for each month in 1993. The percentage of data in 
+a 100-minute period (corresponding to one orbit) is shown as a function of time.
+Note there is little sign of bad data until late June, when a 
+bad period is clearly identifiable. This corresponds to an outgassing 
+which was scheduled for 29th~June to 1st~July, and the affected data 
+have been removed.
+However the data also exhibit a marked increase in deviation from
+climatology throughout July;
+this is due to the effects of Saharan dust during that month, and, 
+of course, such data remain in the archive.
+
+The time ranges which have been removed from the supplied data set
+are given in {\tt baddata.txt} in the \dir{docs} directory.
+
+
+\subsection{Removal of duplicates from ASST archive}
+
+A duplicate is defined to occur when more than one day-time observation or 
+more than one night-time observation is recorded for a particular 
+half-degree cell on a particular day.
+Such duplicates arise in several ways as described below.
+\begin{enumerate}
+\item The same data have reached the RAL ASST archive 
+more than once, for example,  after having been received from different 
+ground stations. 
+In this case, the ASST records are identical.
+
+\item  More than one observation actually occurred. This is possible at high
+latitudes.
+
+\item Data division -- ATSR raw data are downlinked to a ground station 
+about once per orbit, giving rise to a break in the data stream as presented
+to the processing software.
+No attempt is made to unite divided data for processing.
+Therefore data which are associated with a single half-degree cell can 
+be separated, and give rise to two distinct ASSTs, constructed with
+complementary fractions of the complete data associated with the cell.
+Such duplicates tend to occur at characteristic latitudes associated with
+data downlink and usually several adjacent cells at that latitude are affected.
+
+\item  Due to a minor bug in the processing software, occasionally 
+two records are generated for a single half-degree cell. In such cases,
+more than 90\% of the data is used for the first record and less than 10\% for
+the second.
+
+\end{enumerate}
+
+
+In all these cases, the observation associated with the earlier time 
+is retained and any subsequent record is removed.
+Thus a maximum of one day-time and one night-time observation is 
+stored for each half-degree cell for any day.
+Clearly this is appropriate in the first case above where the same
+data are represented more than once.
+However in the second case (two distinct observations) both 
+records are equally valid.
+In the third and fourth cases, the later data are useful but
+do not have equal weight with the first observation.
+
+The duplicates arising from the latter three causes are 
+stored in files in the \dir{asst} directories.
+These are in the same format as the ASST files, with all the duplicates
+for 1991--1993 in {\tt dups9193.dat} on Disk~1, and those for 1994--1995 in
+{\tt dups9495.dat} on Disk~2, that is, the same temporal division used 
+for the ASST data.
+
+
+\clearpage
+
+\section{Time-averaged global maps}
+\label{sec:time}
+
+
+Global maps with averaged SSTs are provided at two spatial 
+and temporal resolutions as described below.
+
+\begin{enumerate}
+\item Monthly maps at half-degree resolution. 
+
+\item Maps averaged  over five-day periods at one-degree resolution.
+This is chosen to match the `superobservation' grid of the 
+U.K.~Meteorological Office (UKMO), see Bottomley \etal, 1990.
+
+\end{enumerate}
+
+`Mixed' ASSTs  as described in Section~\ref{subsec:sst_types} were used.
+Each averaged SST value is a simple unweighted mean of the day-time 
+and night-time data associated with the appropriate half-degree or 
+one-degree cell during the time period.
+However only ASSTs which fell within 6K of climatology
+(from Bottomley \etal, 1990)
+contributed  to the averaged SSTs supplied in  these files.
+
+
+Note that ATSR-1 does not achieve complete global coverage when ERS-1
+is in a three-day repeat cycle. The repeat cycle history and the associated
+global coverage are discussed in Appendix~\ref{app:orbit}.
+
+\subsection{Monthly-averaged maps}
+\label{subsec:month}
+
+Data averaged over calendar months are 
+stored on Disk~2 of the CD-ROM set in the directory
+\dir{months}.
+
+The filenames have the form:\\
+\hspace*{2cm} {\tt month }{\sl y mm}{\tt.dat}\\
+where {\sl y} is the (year$-1990$) and {\sl mm} is the month of the year.
+Thus {\tt month203.dat} contains data for March 1992.
+
+Each file contains a two-byte-integer array of dimensions $720\times360$.
+Each array element represents an averaged  SST  in centiKelvin for a 
+half-degree cell.
+The terrestrial position associated with each SST is implicit in its 
+array position as described below.
+(The array is stored as 360 1440-byte records, with the 720 two-byte values
+for a particular latitude stored in each 1440-byte record. 
+Thus the first record contains values for the  half-degree cells
+centred at 89.75{\degree}S {\sl etc}.)
+
+
+Considering the array to be numbered $0\le i \le 719$, $0 \le j \le 359$,
+the position of the cell centre of {\tt element}\dir{i,j} is given by:
+\begin{quote} $longitude = ((i - 360.0) / 2.0) + 0.25$
+\end{quote} 
+\begin{quote} $latitude = ((j - 180.0) / 2.0) + 0.25$
+\end{quote} 
+The latitudes which are implied by the product cell numbers are
+geocentric.
+
+The exceptional value of $-1$ is used to indicate that no data were 
+available to generate an ASST for a particular half-degree cell.
+Such a value will apply to all cells over land, over ice, under cloud
+when observed, or not observed at all during the month.
+
+
+\subsection{Five-day averaged maps}
+\label{subsec:super}
+
+Data averaged over five-day periods at one-degree resolution are
+stored on Disk~2 of the CD-ROM set in the directory
+\dir{supers}.
+This temporal and spatial resolution was chosen to match the UKMO's 
+`superobservation' grid  (Bottomley \etal, 1990).
+In leap years, data for 29th February are included with the previous 
+five days, thus the superobservations start on the same dates from year to 
+year.
+
+The filenames have the form:\\
+\hspace*{2cm} {\tt sup }{\sl y mm dd}{\tt.dat}\\
+where {\sl y} is the (year$-1990$), {\sl mm} is the month of the year,
+and {\sl dd} is the day of the month corresponding to the first day of the
+five-day period.
+Thus {\tt sup20307.dat} contains data for the five-day period 
+starting on 7th~March 1992.
+
+
+Each file contains a two-byte-integer array of dimensions $360\times180$.
+Each array element represents an averaged  SST  in centiKelvin for a 
+one-degree cell.
+The terrestrial position associated with each SST is implicit in its 
+array position as described below.
+(The array is stored as 180 720-byte records, with the 360 two-byte values
+for a particular latitude stored in each 720-byte record. 
+The first record contains values for the  one-degree cells
+centred at 89.5{\degree}S {\sl etc}.)
+
+Considering the array to be numbered $0\le i \le 359$, $0 \le j \le 179$,
+the position of the cell centre of {\tt element}\dir{i,j} is given by:
+\begin{quote} $longitude = ((i - 180.0) / 2.0) + 0.5$
+\end{quote} 
+\begin{quote} $latitude = ((j - 90.0) / 2.0) + 0.5$
+\end{quote} 
+The latitudes which are implied by the product cell numbers are
+geocentric.
+
+The exceptional value of $-1$ is used to indicate that no data were 
+available to generate an ASST for a particular one-degree cell.
+Such a value will apply to all cells over land, over ice, under cloud
+when observed, or not observed at all during the five-day period.
+
+
+\clearpage
+
+
+\section{Software }
+\label{sec:soft}
+
+Software to help with accessing the data on this  CD-ROM set 
+is stored on Disk~1 in the directory \dir{software}.
+Routines written in Fortran, C and 
+IDL\footnote{IDL is a registered trademark of Research Systems, Inc.} are
+provided as described below.
+
+\begin{description}
+\item{\tt readasst.c}  -- a C program to read an ASST file 
+and print the contents of the first record. 
+
+\item {\tt disasst.pro, dismonth.pro, dissuper.pro}  -- IDL procedures
+to display the contents of ASST, monthly average and `superobservation' files 
+respectively as global maps.
+
+\item{\tt avgasst.for}  -- a FORTRAN program to produce a time-averaged
+half-degree SST array for any date range.
+
+\item{\tt rdmonth.for, rdsuper.for}   -- FORTRAN programs to read the
+monthly and superobservation files respectively, and print some simple 
+statistics about the data.
+\end{description}
+
+These programs are provided as templates from which the user can develop
+more specialised software as required.
+Whilst portability has been the main programming consideration,
+inevitably small alterations to the software will be necessary.
+In particular, the filenames of the input data must be 
+changed to reflect the actual location of the CD directory 
+on the local system.
+
+The other likely change is associated with the byte-ordering used
+by the computer system.
+As mentioned earlier, the data are stored as 2-byte or 4-byte integers
+in fixed-length records.
+Byte ordering within values follows the 
+DEC/VMS\footnote{VMS is a registered trademark of Digital Equipment Corp.}
+standard; that is, bytes are ordered in increasing significance  
+({\sl little-endian\/}).
+This byte-ordering is also used on most PCs.
+However, swapping of bytes will be necessary on those platforms 
+where the contrary convention is used ({\sl big-endian}).
+All the programs supplied incorporate a byteswap flag, and will perform
+byte-swapping if this flag set to true.
+Note that the programs will warn the user if the data values suggest the wrong 
+choice regarding byteswapping has been made.
+
+A complete description of the programs is  provided in the source code 
+and in {\tt aareadme.txt} in the \dir{software} directory.
+
+\clearpage
+\section{Documentation}
+\label{sec:docs}
+Useful documentation stored in the \dir{docs} directory includes:
+\begin{description}
+\item {booklet.tex, booklet.ps} -- the \LaTeX\ source and
+PostScript\footnote{PostScript is a registered trademark of ADOBE.}
+file for this booklet.
+
+\item {sad500.ps, sad2.ps} -- the PostScript files for the 
+SADIST~v500 and SADIST~2 products documents.
+
+\item {atsrops.txt} -- a text file containing the ATSR operations log.
+
+
+\item{baddata.txt}  --  a text file summarising the time ranges which
+have been removed from the ASST data set for quality control purposes
+(see Section~\ref{subsec:qa}).
+                     
+\item{ftp.txt}  --  a text file describing the anonymous ftp
+account where updates to the data, software and documentation will be 
+made available.
+
+\item{vms.txt}  --  a text file with VMS-specific advice.
+
+\item {daydates.dat} -- dates in the ({\sl y mm dd}) format (as described in 
+Section~\ref{subsec:arr}) are given for the day numbers as used in the ASST 
+data.
+\end{description}
+
+
+\clearpage
+\appendix
+
+
+\section{The ATSR Instrument}
+\label{app:atsr}
+
+ATSR-1 is a dual-view, self-calibrating, infrared radiometer
+with spectral channels centred at  1.6{\mic}, 
+3.7{\mic}, 10.8{\mic} and 12.0{\mic} (Edwards \etal, 1990).
+Several aspects of the ATSR design enable the measurement of 
+high-precision SSTs.
+\begin{description}
+\item[\bf On-board calibration] -- two highly-precise, ultra-stable, 
+on-board calibration
+targets are  maintained at around 265K and 305K.
+Radiation from each of these is measured during every scan,
+and these data are used to continually calibrate the instrument, enabling
+the determination of single-channel equivalent temperatures
+correct to within 0.05K.
+\item[\bf Low-noise detectors] -- a Stirling-cycle cooler maintains the
+detectors below 100K.
+At the start of the mission, noise temperatures lower than 0.05K 
+(for scene temperatures up to 300K) were achieved for each 
+channel.
+\item[\bf Dual-view] -- ATSR's conical scanning technique results in two 
+views of the Earth's surface, one close to nadir and one at 
+55{\degree} to nadir.
+As these views are associated with different atmospheric path
+lengths, a correction for atmospheric absorption can be determined.
+\end{description}
+\clearpage
+
+\section{SADIST -- the ATSR data processing scheme}
+\label{app:sad2}
+
+The tasks performed by the ATSR data-processing scheme include:
+\begin{description}
+\item {\bf Geolocation and Collocation of data: -- } 
+the Earth location of acquired ATSR data is determined with an accuracy 
+of better than 2{\thinspace}km, and the collocation (matching of forward 
+and nadir data) has a similar accuracy (Z\'{a}vody, 1995).
+
+\item {\bf Cloud clearing: -- }
+the cloud-clearing scheme extends that developed by Saunders and 
+Kriebel (1988) for use with AVHRR data over the North Atlantic.
+Additional tests involve: 
+consistency checks on forward and nadir brightness temperatures for 
+individual channels; 
+consistency checks on nadir-view brightness temperatures from different 
+channels, and the use of the 1.6\mic\ channel in daytime.
+Note that the requirements of the nadir/forward-view difference test have been 
+relaxed from the ideal in order to avoid rejecting large quantities of 
+data affected by aerosols from the 1991  Mount~Pinatubo eruption.
+This can result in SSTs depressed by up to 1K from their true value
+(and also in the admission of genuinely cloudy data). 
+The error is greater in nadir-only  SSTs than in dual-view SSTs
+by an amount which is correlated with the degree of atmospheric aerosol
+contamination.
+See Zavody {\etal} (1995) for a discussion of this and a description
+of the cloud tests.
+
+\item {\bf SST retrieval: --}
+the SST retrieval scheme follows that demonstrated by McClain {\etal} 
+(1985), where SST is given by a linear combination of brightness 
+temperatures.
+$$ {\rm SST} = a_0 + \sum^N_{i=1} a_i T_i$$
+where $a_i$ is a constant linear regression coefficient and $T_i$ is the 
+cloud-free scene brightness temperature observed by ATSR.
+The coefficients are derived using global radiosonde sets and 
+an atmospheric radiative transfer model; three different sets of 
+coefficients are used depending on latitude range (polar, mid-latitude 
+or tropical). 
+Day-time SST retrieval uses  the 11\mic\ and 12\mic\ brightness temperatures;
+night-time SST retrieval also uses the 3.7\mic\ brightness temperature 
+when available (that is, for data acquired previous to the May~1992 failure).
+Therefore a maximum of six brightness temperatures can contribute to an
+SST derivation, {\sl i.e.\/} forward and nadir values from the 11, 12 
+and 3.7\mic\  channels.
+This calculation is performed independently for each pixel when
+evaluating SSTs at 1{\thinspace}km$\times$1{\thinspace}km resolution,
+or on averaged ten-arcminute brightness temperatures 
+when evaluating half-degree ASSTs (see Section~\ref{subsec:sst_types}).
+A complete description of the SST retrieval is given by
+Z\'{a}vody \etal\ (1994, 1995).
+\end{description}
+
+
+All data contained on the CD-ROM set discussed here were produced using 
+SADIST~v500.
+However,  a radically-revised version of the processing
+software, SADIST-2 is in the final stages of development.
+In the new ASST product, SSTs averaged over a ten-arcminute cell 
+will be stored; that is, nine values for each half-degree cell.
+The implications of SADIST-2 for the ASST product and the new
+ASST format made necessary by this change are discussed in 
+Bailey (1995). 
+Later versions of the ASST archive produced using SADIST-2, will
+be made available on future CD-ROM sets.
+
+\clearpage
+
+\section{Global coverage and the ERS-1 orbit}
+\label{app:orbit}
+
+ERS-1 is in a near-polar, Sun-synchronous orbit, of inclination
+98.5{\degree} and mean altitude 785{\thinspace}km.
+The ATSR swath is approximately 256{\thinspace}km each side of the 
+sub-satellite track;
+this gives rise to near-global coverage in three days during the 
+basic ERS-1 three-day repeat cycle, although some regions at tropical latitudes 
+are never observed.
+Complete global coverage is achieved during the alternative 35-day and 
+168-day repeat cycles 
+which have also been employed by ERS-1.
+
+The result of a month's observation in January~1992 and January~1993
+are shown in Figure~\ref{fig:repeat}; these months were associated 
+with a 3-day and a 35-day repeat cycle respectively.
+Note the characteristic gap pattern evident in the earlier map 
+compared to the full coverage exhibited by the later one.
+\begin{figure}
+\caption{Global coverage during 3-day and 35-day repeat cycles}
+\label{fig:repeat}
+\vspace{10cm}
+\end{figure}
+
+\clearpage
+A record of ERS-1 repeat cycles is given in Table~\ref{tab:cycles}.
+Note that the different three-day repeat cycles were associated with
+different global coverage, that is, the data voids were in  different places.
+
+\begin{table}
+\caption{\bf ERS-1 Repeat Cycles }
+\label{tab:cycles}
+\begin{center}
+\begin{tabular}{|l|l|} \hline
+{\bf Date range}                     & {\bf Repeat Cycle} \\ \hline \hline
+31 July 1991 -- 10 December 1991     & 3-day (Commissioning Phase)\\
+10--26 December 1991                 & ERS-1 orbit manoeuvres \\
+26 December 1991 -- 30 March 1992    & 3-day (Ice Phase)\\
+30 March 1992  -- 14 April 1992      & ERS-1 orbit manoeuvres \\
+14 April 1992 -- 17 December 1993    & 35-day (Global Phase) \\ 
+17--21 December 1993                 & ERS-1 orbit manoeuvres \\
+21 December 1993 -- 10 April 1994    & 3-day (Second Ice Phase) \\
+10 April 1994 -- 19 March 1995       & 168-day (Geodetic Phase) \\ 
+19--21 March 1995                    & ERS-1 orbit manoeuvres \\
+21 March 1995 --                     & 35-day (Global Phase)\\ \hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\clearpage
+
+
+
+
+{\footnotesize
+\begin{thebibliography}{99}
+
+\bibitem{sad:v500prod} P.~Bailey,  {\sl SADIST Products (Version 500)},
+Space Science Department, Rutherford Appleton Laboratory, 1993. 
+
+\bibitem{sad:sad2}  P.~Bailey, {\sl SADIST-2, v100 products},  
+(ER-TN-RAL-AT-2164), 
+Space Science Department, Rutherford Appleton Laboratory, 1995.
+
+\bibitem{barton} I.J.~Barton \etal, ``Validation of the ATSR in 
+Australian Waters'', 
+{\sl J. Atmos. Oceanic Technol.}, {\bf 12}, 290-300.
+
+\bibitem{bottomley} M.~Bottomley \etal, ``Global Ocean Surface 
+Temperature Atlas, Joint Project, United Kingdom Meteorological Office and 
+Massachusetts Institute of Technology'', 
+{\sl Her Majesty's Stationary Office, London}, 20pp, 313 plates.
+
+\bibitem{edwards} T.~Edwards \etal, ``The Along Track Scanning Radiometer
+-- Measurement of Sea-Surface Temperature from ERS-1'',
+{\sl J. British Interplan. Soc.}, {\bf 43}, 160--180,
+1990.
+
+\bibitem{jones} M.S.~Jones \etal, ``Reducing Cloud Contamination
+in ATSR Averaged SST data'', 
+{\sl J. Atmos. Oceanic Technol.}, accepted, 1995.
+
+\bibitem{mcclain} E.P.~McClain \etal, ``Comparative performance of AVHRR 
+based multichannel SSTs'', 
+{\sl J. Geophys. Res.,} {\bf 90}, 11587--11601, 1985. 
+
+\bibitem{mutlow} C.T.~Mutlow \etal, ``Sea surface temperature measurements
+by the along-track scanning radiometer on the ERS-1 satellite: Early
+results'', {\sl J. Geophys. Res.,} {\bf 99}, 575--588, 1994. 
+
+\bibitem{Saunders} R.~W.~Saunders and K.~T.~Kriebel,
+``An improved method for detecting clear sky and cloudy sky radiances
+from AVHRR data'', 
+{\sl Int. J. Remote Sens.,} {\bf 9}, 123--150, 1988.
+
+\bibitem{zavodya} A.~Z\'{a}vody \etal, 
+``The  ATSR data processing Scheme Developed for the  EODC'', 
+{\sl Int. J. Remote Sens.,} {\bf 15}, 827--843, 1994.
+
+\bibitem{zavodyb} A.~Z\'{a}vody \etal, 
+``A radiative transfer model for SST retrieval for the ATSR'',
+{\sl J. Geophys. Res.,} {\bf 100}, 937--952, 1995.
+
+\bibitem{zavodyc} A.~Z\'{a}vody, private communication, 1995.
+
+\end{thebibliography} }
+
+Further information on ATSR can be obtained from:
+
+Dr.\ Chris Mutlow,\\
+ATSR-1 Principal Investigator,\\
+Space Science Department,\\
+Rutherford Appleton Laboratory,\\
+Chilton, Didcot,\\
+OX11 OQX,\\
+United Kingdom.\\
+~\\
+Tel: 01235-446525\\
+Fax: 01235-445848.
+
+\bigskip
+
+{\large\bf Acknowledgements:}
+Thanks to Chris Mutlow, Paul Bailey, Peter Allan, Myles Allen, Peter Chiu, 
+Brian Coan, Malcolm Currie, Sean Lawrence, Chunkey Lepine, 
+David Llewellyn-Jones, Nigel Houghton, Chris Seelig, Phil Watts 
+and Albin Z\'{a}vody for useful discussions on the data and software
+presented here.
+\end{document}
+

@@ -1,0 +1,125 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC ERA-40 Archive Status</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<IMG SRC="/graphics/logos/ecmwflogo.gif" ALT="ECMWF logo" ALIGN="BOTTOM">
+<IMG SRC="/graphics/logos/ecmwf_era_logo.gif" ALIGN="BOTTOM" ALT="ERA logo">
+
+<H1>Status of the ERA-40 Re-Analysis Archive at the BADC</H1>
+<I>This page is updated monthly to inform users of the current 
+status of ERA-40 at the BADC.</I>
+
+<HR ALIGN=LEFT>
+
+<H2>Introduction</H2>
+
+<P>The BADC archives ECMWF <a href="/data/ecmwf-e40/">ERA-40 Re-analysis data</a> into two separate archives: 
+<UL>
+<LI>The <a href="#badc">standard BADC data archive</a> (at the Rutherford Appleton Laboratory, Oxfordshire)</LI>
+<LI>An <a href="#manchester">archive at the Manchester High-Performance Computing Centre</a> (maintained and 
+updated by CGAM (Centre for Global Atmospheric Modelling) at the University of Reading).</LI>
+</UL>
+<P>
+The reason for holding two separate data archives is to meet the requirements of two 
+distinct groups of atmospheric (and other) scientists. The standard BADC archive will 
+serve the data using formats and utilities that the majority of earth scientists can 
+make use of. The Manchester archive, on the other hand, is aimed specifically at users 
+of the modelling resources held on the high-performance computing systems. This data 
+will be mainly used by members of UGAMP (the UK universities Global Atmospheric Modelling 
+Programme). This page gives an overview of the contents and the current 
+status of each archive. 
+<P>
+Links are also provided to <A HREF="#validation">validation information relating to ERA-40</A> and 
+a <A HREF="/data/ecmwf-e40/news.html">latest news page for ERA-40</A>.
+<P>
+<HR ALIGN=LEFT>
+
+<H2>Production Status</H2>
+The ECMWF has now completed production of ERA-40 and all the 6-hourly data is available from the BADC.
+<a href="/data/ecmwf-e40/means.html">Monthly means</a> of the data are also archived.
+
+<P>
+The data in the standard archive is  held in its original 
+<a href="/data/ecmwf-era/grib.html">GRIB</a> format in 
+<a href="/data/ecmwf-op/grids.html#t159">T159 Spectral</a> and 
+<a href="/data/ecmwf-op/levels.html#n80_reduced">N80 Reduced 
+Gaussian Gridded</a> resolutions. 
+
+<P>The BADC is developing a new system that will allow users to access 
+the ERA-40 dataset in a regular gridded format. This involves the 
+conversion of spectral and reduced Gaussian gridded data when the user calls the files. The 
+main reason for storing all the data in the spectral and reduced Gaussian forms is 
+that these formats are considerably smaller in volume than the equivalent 1&deg; x 1&deg; 
+gridded data. This allows us to hold all the data on disk.
+
+<P>
+ERA-40 data is held on the following atmospheric level types:
+<UL>
+	<LI>Surface level.</LI>
+	<LI>Model levels (1-60).</LI>
+	<LI>Pressure levels (1, 2, 3, 5, 7, 10, 20, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 600, 700, 775, 850, 925 and 1000hPa).</LI>
+	<LI>Potential temperature levels (256, 275, 285, 300, 315, 330, 350, 370, 395, 430, 475, 530, 600, 700 and 850K).</LI>
+	<LI>Potential vorticity levels (PV = +/-2).</LI>
+</UL>
+<P>Details about the variables available in the BADC archive are documented on the 
+<a href="/data/ecmwf-e40/params.html">ERA-40 parameters page</a>. Each individual file 
+holds one parameter at one time-step for the entire globe. A common  
+<a href="/data/ecmwf-e40/file_naming.html">file-naming convention</a> has been adopted for 
+both ERA-40 archives.
+<p>
+The data can be accessed using an via FTP or via our web-interface.<P>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<H2><a name="manchester">The Manchester BADC ERA-40 Archive</a></H2>
+The Manchester BADC ERA-40 archive is populated and managed by Paul Berrisford of CGAM at the 
+University of Reading. Documentation about the archive is available from the 
+<a href="http://www.met.rdg.ac.uk/~paulb/cgam/uera40.html">CGAM web site</a>. 
+The data is being stored in both <a href="/help/formats/grib/">GRIB</a> 
+and <a href="/help/formats/netcdf">NetCDF</a> formats on the 128-processor Origin 2000 machine, 
+<i>Fermat</i>. 
+
+The files on Fermat are instantaneous but contain several fields (e.g. in the GRIB files  
+all pressure level spectral fields are together, and in NetCDF files all pressure level fields 
+are together). 
+The parameters stored at 
+Manchester are the same as those held in the standard BADC archive. 
+Files of one type, at one analysis time, are tarred together for each available month. 
+For example, all the 06:00 hour 
+files are tarred into one file for January (as opposed to the standard BADC archive where 
+each time-step has a separate file). A common 
+<a href="/data/ecmwf-e40/file_naming.html">file-naming convention</a> has been adopted for 
+both ERA-40 archives.
+
+<P>Queries about accessing the Manchester dataset and its contents should be directed to 
+<a href="mailto:P.Berrisford@reading.ac.uk">Paul Berrisford</a>. Please note that you will 
+need to register as a BADC user for ERA-40 data if you want to gain access to either of the 
+archives.
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<H2><A NAME="validation">Links Relating to the Validation of ERA-40 data</A></H2>
+
+<P>The ECMWF web pages document 
+<A HREF="http://www.ecmwf.int/research/era/Data_Services/section3.html">data quality issues</A> 
+relating to ERA-40. This includes information on a probable 
+<A HREF="http://www.ecmwf.int/research/era/Data_Services/section2.html">rerun 
+of the latter part of ERA-40<A>.
+
+<P>You can also visit the links below to access details of validation studies for ERA-40:<P>
+
+<UL>
+  <LI><A HREF="http://www.mpimet.mpg.de/Depts/Modell/LSP/ERA/result.htm">MPI Validation of the Hydrological Cycle</A></LI>
+  <LI><A HREF="http://www.knmi.nl/onderzk/oceano/waves/era40/">KNMI Ocean Wave Product Validation and Analysis</A></LI>
+</UL>
+<P>
+Modifications to the BADC archive are detailed in the <A HREF="/data/ecmwf-e40/news.html">latest news page</A>.
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<P>
+</BODY>
+</HTML>

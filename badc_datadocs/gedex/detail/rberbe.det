@@ -1,0 +1,944 @@
+Radiation Budget from ERBE
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Earth radiances and solar irradiances in broad
+spectral bands are measured by two instrument packages:  a scanner and a
+nonscanner, with characteristics listed in the following table:
+
+     Earth Radiation Budget Satellite (ERBS), NOAA-9, and NOAA-10 ERBE
+                     Instrument Characteristics
+________________________________________________________________________
+                       Wavelength limits
+              Channel    (micrometers)            Measurement
+________________________________________________________________________
+
+Fixed WFOV*      1        0.2 - 50.0            Total Radiance
+                 2        0.2 -  5.0            Shortwave (SW) Reflected
+Fixed MFOV**     3        0.2 - 50.0            Total Radiance
+                 4        0.2 -  5.0            SW Reflected
+Fixed Solar      5        0.2 - 50.0            Total Irradiance
+Monitor
+Scanning NFOV~   1        0.2 - 50.0            Calibrated Radiance
+                 2        0.2 -  5.0            SW Reflected
+                 3        5.0 - 50.0            Longwave (LW) Emitted
+________________________________________________________________________
+*   Wide field-of-view              
+**  Medium field-of-view
+~   Narrow field-of-view
+
+Albedo, radiant exitances, and solar irradiances are the geophysical
+parameters found in the ERBE Level-II and -III data sets.
+
+1.2  Unit of Measurement.  Nonscanner measurements in counts and in
+W/(m**2). Scanner measurements in counts and in W/m**2-sr.  Albedo is
+unitless.
+
+1.3  Data Source.  The Earth Radiation Budget Experiment (ERBE) on ERBS,
+NOAA-9, and NOAA-10.
+
+1.4  Data Set Identification.  Solar Incidence data (S-2), Regional, Zonal
+and Global Averages (S-4), Processed Archival (PAT or S-8) data and the
+Earth Radiant Exitance and Albedo Scanner (S-9) and Nonscanner (S-10) data
+are archived on optical disks.
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  The spatial coverage differs with the channel and
+the spacecraft, as described below.
+
+        Wide-angle Channels:  These two fixed channels continuously view
+        the earth disc.  The measurements are continuous over the entire
+        globe for NOAA-9 and NOAA-10, and between 57 degrees north and
+        south latitudes for ERBS which precesses 4.95 degrees west per day.
+
+        Medium-angle Channels:  These two fixed channels continuously view
+        a circle of nominally 5 degree radius at the top of the atmosphere.
+        The measurements are continuous over the entire globe for NOAA-9
+        and NOAA-10, and between 57 degrees north and south latitude for
+        ERBS which precesses 4.95 degrees west per day.
+
+        Narrow-angle Channels:  These three scanning channels continuously
+        view small areas over the entire Earth.  The cross-track scan
+        field-of-view (FOV) is approximately 40 km at nadir, and there is a
+        35% FOV overlap at nadir for ERBS.
+
+NOAA-9 and -10 provide global coverage, and the ERBS satellite provides
+coverage between 57 degrees north and south latitude.
+
+2.2  Spatial Resolution.  The spatial resolution differs with the four
+types of channels and the two types of spacecraft (ERBS and NOAA).  The
+wide-angle channels have a 136 degree FOV on ERBS and a 126 degree FOV on
+the NOAA satellite.  The medium-angle channels have footprints of
+approximately a 5 degree radius or 1000 km at the top-of-the-atmosphere.
+The narrow-angle channels have an instantaneous hexagonal FOV with an
+angular size of 3 x 4.5 degrees, which is equivalent to a 31 km cross-track
+x 47 km along-track footprint at nadir for ERBS and 44 km cross-track x 65
+km along-track for NOAA.  The solar channel has an unencumbered FOV which
+observes the entire solar disk.
+
+Scanner gridded products are available at 2.5 x 2.5 degree resolution.  In
+addition, scanner data are also available in 5 x 5 degree and 10 x 10
+degree nested grids.  Numerical filter (NF) nonscanner data are available
+in 5 x 5 degree resolutions and 10 x 10 degree nested grids.  Shape factor
+(SF) nonscanner data are available in 10 x 10 degree resolutions in the S-4
+output product.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  ERBS was launched October 5, 1984 and is still
+operational.  NOAA-9 became operational in January 1985 and NOAA-10 in
+October 1986.  The NOAA-9 scanner failed on January 20, 1987, the NOAA-10
+scanner failed on May 22, 1989, and the ERBS scanner failed on February 28,
+1990.  ERBE nonscanner measurements on both NOAA satellites and the ERBS
+satellite are continuing (please see Item 14 concerning the ERBS
+nonscanner).  All the Earth-viewing channels collect measurements
+continuously.  The solar channel collects 20 minutes of usable data (about
+twice per month) during solar calibration periods.
+
+3.2  Temporal Resolution.  Data records are at sixteen-second intervals for
+the Level-II products.  Gridded data are daily, monthly-hourly (hourly
+averages for a month), monthly-daily (daily averages for a month), and
+hourly (S-4, S-9, and S-10).  S-9 and S-10 also include individual hour box
+estimates.
+
+
+4.  Instrument Description
+
+4.1  Mission Objectives.
+
+     The objectives of the Earth Radiation Budget Experiment (ERBE) are:
+
+     (1)  to determine for a minimum of 1 year the monthly average
+          radiation budget on regional, zonal, and global scales,
+
+     (2)  to determine the equator-to-pole energy transport gradient, and
+
+     (3)  to determine the average diurnal variation of the radiation
+          budget on a regional and monthly scale.
+
+4.2  Key Satellite Flight Parameters.
+
+Nominal orbit parameters for ERBS are listed below:
+
+              .  Launch date                October 5, l984
+              .  Planned duration*          1 year
+              .  Actual duration            (Scanner failed 02/28/90)
+              .  Orbit                      Non-sun synchronous
+              .  Semi-major axis            6988 km
+              .  Normal Altitude            610 km
+              .  Inclination                57 deg
+              .  Nodal period               98 min
+              .  Equator Crossing time      Precesses
+
+Nominal orbit parameters for NOAA-9 are listed below:
+
+              .  Launch date                December 12, l984
+              .  Planned duration           1 year
+              .  Actual duration            (Scanner failed 01/20/87)
+                                            (Nonscanner failed 11/7/88)
+              .  Orbit                      Sun-synchronous
+              .  Semi-major axis            7248 km
+              .  Normal Altitude            872 km
+              .  Inclination                98 deg
+              .  Nodal period               102.08 min
+              .  Equator Crossing time      1430 Local Mean Solar Time, 
+                                            ascending
+
+Nominal orbit parameters for NOAA-10 are listed below:
+
+              .  Launch date                September 17, l986
+              .  Planned duration           1 year
+              .  Actual duration            (Scanner failed 05/22/89)
+              .  Orbit                      Sun-synchronous
+              .  Semi-major axis            7211 km
+              .  Normal Altitude            833 km
+              .  Inclination                98 deg
+              .  Nodal period               101.2 min
+              .  Equator Crossing time      0730 Local Mean Solar Time, 
+                                            descending
+
+*The design life for all ERBE instruments is one year with a two-year goal.
+
+4.3  Principles of Operation.
+
+The nonscanner package consists of four Earth-viewing channels, consisting
+of two MFOV, two WFOV channels, and a solar monitor.  All five instruments
+are active cavity radiometers, with an accuracy of approximately 1% for
+spectral flatness and electrical substitution radiation detection.  The
+Earth-viewing channels have two spectral ranges, one sensitive to all
+wavelengths and the other only to shortwave by means of a fused silica
+filter dome.  Cavities are enclosed in modules which include filter domes
+and aperture limiters.  The modules are mounted in an elevation beam, which
+can be rotated to point the detectors at the Earth, at the internal
+calibration sources, or at the Sun.
+
+The scanner package contains three NFOV radiometric channels each of which
+consists of an F/1.84 Cassegrain telescope.  All are located within a
+single, rotating scan-head which scans the FOV across-track. The scan-head
+can also be rotated in azimuth at a slow rate.  Each channel makes 74
+measurements per scan.  One channel has no filter and so absorbs all
+wavelengths.  A second has a Suprasil-W1 filter which transmits only
+shortwave radiation.  The third has a multilayer filter on a diamond
+substrate to reject shortwave and accept longwave radiation.
+
+4.4  Instrument Measurement Geometry.
+
+The non-scanner modules can be rotated to any of three positions:
+launch/internal calibration position (180 degrees), the solar calibration
+position (78 degrees), and the Earth-viewing (nadir) position (0 degrees).
+The WFOV channels view the Earth from limb-to-limb.  The MFOV channels are
+designed to include approximately an Earth view of 10 degrees within the
+unencumbered FOV.  The scanner package can rotate in azimuth between 0
+degrees and 180 degrees with an accuracy of 0.075 degrees.  (The normal
+scan mode is cross-track.)  The hexagonal IFOV of each channel has an
+angular size of 3 x 4.5 degrees, the longer dimension being along the
+satellite ground track.
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  Four products:  the Solar Incidence
+(S-2), the Regional, Zonal and Global Averages  (S-4), the Processed
+Archival (PAT or S-8), and the Earth Radiant Exitance and Albedo Scanner
+(S-9) and Nonscanner (S-10) optical disks are produced.  The solar  monitor
+channel of the nonscanner instrument collects about 20 minutes of usable
+data during solar calibration periods that occur approximately every two
+weeks.  The solar data and other pertinent data collected per month per
+spacecraft are called the S-2 product.  The S-4 product contains the time
+and space averages of all the individual estimates of radiant exitance at
+the top of the atmosphere per month per spacecraft.  S-4 data are a
+combination of all operational spacecraft (ERBS, NOAA-9 and -10) data.  It
+contains 4-second averaged measurements per month per satellite.  The Earth
+Radiant Exitance and Albedo Scanner product (S-9) contains inverted daily,
+monthly-hourly (hourly averages for a month) and monthly averages of
+shortwave and longwave radiant exitance at the top of the atmosphere for
+ERBE scanner data per month, as well as individual hour box estimates per
+month.  The S-10 disk contains the same information for the ERBE
+nonscanner.  The Processed Archival disk (PAT or S-8) identifies scene
+type, computes shortwave and longwave unfiltered radiances, and estimates
+the radiant exitances at the top of the Earth's atmosphere for each scanner
+measurement and for 32-second nonscanner average measurements.
+
+5.2  Derivation Techniques/Algorithms.  In-flight calibration is performed
+to ensure high accuracy of radiometric measurements.  The design and
+calibrations of the ERBE instrument are tied to the 1968 International
+Practical Temperature Scale and the World Radiometer Reference.  There is
+at least one on-board calibration device for each channel.  These devices,
+together with a space look which provides a near-zero radiance, give basic
+offset and gain information for periodic in-flight calibration of the
+instruments.  The scanner measurements are converted, pixel by pixel, to
+radiances by use of spectral factors, and to radiant exitance at the top of
+the atmosphere by use of angular directional models.  The nonscanner
+measurements are inverted by both a shape factor method and a numerical
+filter technique.
+
+5.3  Special Corrections/Adjustments.  Concurrent development of a
+mathematical model for each instrument helps in the understanding of
+instrument response in ground and in-flight calibration conditions and in
+space operation.
+
+5.4  Processing Changes.  The Hourly Grand Monthly Average (HGMA) net value
+was originally based only on the days where actual data was collected. The
+HGMA net value (for both total and clear sky) has been revised, in the
+operational Time Space Averaging (TSA) code, and now uses the integrated
+solar radiation summed over the entire month.  This assumes that the albedo
+for the days with shortwave measurements is representative of the albedo
+for all the days of the month.  Only one change has been made in the
+calculation of the Daily Grand Monthly Average (DGMA) shortwave value (for
+both total and clear sky).  The DGMA shortwave value is now derived from
+integrated solar radiation for all days of the month.  As with the HGMA, it
+is implicitly assumed that the albedo for days with shortwave measurements
+is the same as the albedo for all days of the month.  No attempts have been
+made to fill in albedo values on days without shortwave measurements.  A
+study showed that the impact of such a change was negligible on a global
+scale and, in addition, would be difficult and time consuming to implement
+in the operational code.
+ 
+Three additional improvements in the TSA code have been implemented.  Minor
+corrections have been made in the procedures for handling fill values in
+regions which are illuminated for only a part of the month and have no
+shortwave measurements during the month.  DGMA clear-sky longwave over land
+had previously been filled with fill values.  Now the HGMA values will be
+used to fill these regions with appropriate clear-sky longwave results.
+These DGMA clear-sky longwave values over land are then used to calculate
+clear-sky net radiation for the land regions.  This change makes the zonal
+and global average values for DGMA clear-sky longwave more meaningful.
+Integrated solar radiation (HGMA and DGMA) had previously been summed over
+only the days with shortwave measurements.  Now the integrated solar
+radiation is summed over the entire month.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  Recent experiences in validating ERBE
+data output products have revealed several shortcomings in the time-space
+averaging (TSA) algorithms for ERBE.  In particular, sparse sampling,
+especially in the case of clear-sky shortwave data, causes significant
+inconsistencies in the monthly average results.  This problem is evident
+from an examination of the two separate monthly average products:  Hourly
+Grand Monthly Average (HGMA) and Daily Grand Monthly Average (DGMA).  In
+the S-9, S-10 and S-4 Users guides, HGMA refers to monthly (hour)
+quantities and DGMA refers to monthly (day) quantities.
+
+The albedos are calculated differently for the S-9, S-10 and S-4 products.
+In creating the S-9 and S-10, albedos (DGMA) are calculated using the
+incoming solar radiation integrated over the days of the month in which
+shortwave data have been collected.  Albedos (HGMA) are calculated in a
+similar manner except that the solar incoming radiation is summed rather
+than integrated.  The albedos thus calculated are generally close to each
+other.  In creating the S-4, albedos (DGMA and HGMA) are calculated using
+the integrated incoming solar.  For S-9's, S-10's, and S-4's, the Net (DGMA
+and HGMA) use integrated solar incidence now.  The shortwave has always
+been calculated the same way.
+
+These products were originally retained for comparison purposes.  If one of
+the products was significantly different from the other, then that served
+to demonstrate that the sampling was inadequate.  Unfortunately, when the
+results are related to the clear-sky shortwave flux the samples are often
+poor and, therefore, the results are questionable.
+
+6.2  Confidence Level/Accuracy Judgment.  A confidence level has not been
+determined for the ERBE data, and there are no immediate plans to do so.
+Some effort has been made to assess the accuracy of selected parameters
+(such as longwave and shortwave); however, a rigorous error analysis has
+not been undertaken.
+
+6.3  Usage Guidance.  A Monthly Product Summary (MPS) is currently
+available for PAT data, which includes an explanation of the data coverage
+for the month.  The summary explains why an archival disk was not produced,
+and the reason for data dropouts.  Global processing summaries are
+currently produced for the monthly products (S-9, S-10, and S-4).  The S-9
+and S-10 summary lists the regions located on a given disk and the number
+of satellites that were merged per region in order to obtain combined
+satellite data.  The S-4 summary contains the number of records filled per
+region, zonal and global averages, and an output disk summary.
+
+It should be recalled that the monthly-hourly averaged results and the
+corresponding statistics (minimums, maximums, standard deviations) are a
+combination of measurements and models.  The mean and standard deviation of
+these results, which are on the S-9 and S-10 data disks, represent the best
+estimates of the monthly-hourly results.  However, the maximum and minimum
+values for the monthly-hourly parameters should be handled with caution
+because they include extrapolation or interpolation between measurements
+having many missing hours of data.  (Note:  A simple average of the
+measurements, in order to determine the monthly-hourly means, is not
+advised because the resultant diurnal cycle could be misleading.)  The
+combination of measurements and models leads to a more reasonable estimate
+when compared to full-time sampling of the Geostationary Operational
+Environmental Satellite (GOES).
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+7.1  ERBE Experiment Scientist and Science Team Leader
+
+     Dr. Bruce R. Barkstrom
+     Atmospheric Sciences Division
+     Mail Stop 420
+     NASA/Langley Research Center
+     Hampton, Virginia  23665
+     (804) 864-5676
+     FTS 928-5676
+   
+7.2  ERBE Data Management Team Leader
+
+     Mr. James F. Kibler
+     Atmospheric Sciences Division
+     Mail Stop 423
+     NASA/Langley Research Center
+     Hampton, Virginia  23665
+     (804) 864-5386
+     FTS 928-5386
+
+   
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1   Optical Disk Products.  The following data products are from ERBS,
+      NOAA-9, and NOAA-10.
+
+8.1.1   Processed Archival Data (PAT or S-8), Level-II.
+
+        Medium/Specifications:  12-in. write-once-read-many (WORM) optical
+        disks.  "Earth Radiation Budget Experiment (ERBE) Data Management
+        System Processed Archival Tape (S-8) PAT Users Guide." January
+        1985.
+
+        Format and Content:  The optical disks are created on Optimem
+        drives in an Aquidneck system.  This data was first generated on a
+        CDC computer.  The first file is a header record.  All records are
+        written in multiples of 8-bit bytes.  After the header file, the
+        second file contains a test record.  The third file contains scale
+        factors and offsets.  The data file is comprised of 5400 16-second
+        data records, which contain ERBE scanner and nonscanner
+        measurements, their viewing angles at the top of the atmosphere and
+        estimates of the radiant exitance based on these measurements.
+
+        Data Quantity/Rate:  Each physical record contains 16-seconds worth
+        of data.  There is one tape per day per spacecraft.  There is one
+        optical disk per month.
+
+        Status:  PAT data on optical disks are available from ERBS for the
+        period November 1984 through September 1989 (discontinuous), from
+        NOAA-9 for the period March 1985 through January 1987, and from
+        NOAA-10 for the period February 1987 through July 1988
+        (discontinuous).
+
+        Plans/Schedule:  NSSDC will continue to archive these data.
+
+8.1.2   Solar Incidence Data (S-2), Level-II.
+
+        Medium/Specification:  12-in. WORM optical disks. "Earth Radiation
+        Budget Experiment (ERBE) Data Management System Solar Incidence
+        Tape (S-2) Users Guide."  July 1985.
+
+        Format and Content:  The optical disks are created on Optimem
+        drives in an Aquidneck system.  This data was first generated on a
+        CDC computer.  The first file contains a header record.  The second
+        file begins with a scale factor record, an offset record, and a
+        time offset record, followed by 16-second data records.  All data
+        are arranged in ascending time of the Julian date.  The Solar
+        Incidence disk (S-2), contains the solar data and the housekeeping
+        data for the nonscanner.
+
+        Data Quantity/Rate:  Each physical record contains 16 seconds worth
+        of data.  There is one tape per spacecraft and one optical disk per
+        month.
+
+        Status:  Data are available on optical disk from ERBS for the
+        period November 1984 through May 1991, from NOAA-9 for the period
+        March 1985 through January 1987, and from NOAA-10 for the period
+        February 1987 through July 1988.
+
+        Plans/Schedule:  NCDS provides access to these data.
+
+8.1.3   Regional, Zonal and Global Averages (S-4), Level-III.
+
+        Medium/Specifications:  12-in. WORM optical disks. "Earth Radiation
+        Budget Experiment (ERBE) Data Management System The Regional, Zonal
+        and Global Averages (S-4) Users Guide." July 1991.
+
+        Format and Content:  The optical disks are created on Optimem
+        drives in an Aquidneck system.  These data were first generated on
+        a CDC computer.  The first file on each disk contains a header. The
+        second file contains the scanner scale factors.  The third file
+        contains the nonscanner scale factors.  Files 4 through 26 contain
+        the data records.  The S-4 disks provide monthly averages of
+        radiant exitant values and albedos for regional, zonal and global
+        levels at 2.5, 5, and 10 degrees resolution.
+
+        Data Quantity/Rate:  One tape contains one month of data from
+        combined spacecraft (ERBS, NOAA-9, NOAA-10).  These data are
+        archived on the last Processed Archive Tape (PAT) optical disk of
+        the month.
+
+        Status:  The regional, zonal, and global data on optical disk from
+        ERBS, NOAA-9, and NOAA-10 are available for the period November
+        1984 to December 1988 (discontinuous).
+
+        Plans/Schedule:  NCDS provides access to these data.
+
+8.1.4   Earth Radiant Exitance and Albedo Data, Level-III.
+        Scanner (S-9) and Nonscanner (S-10);
+
+        Medium/Specifications:  12-in. WORM optical disks. "Earth Radiation
+        Budget Experiment (ERBE) Data Management System Earth Radiant
+        Exitance and Albedo Scanner (S-9) and Nonscanner (S-10) Users
+        Guides."  June 1985.
+
+        Format and Content:  The optical disks are created on Optimem
+        drives in an Aquidneck system.  These data were first generated on
+        a CDC computer.  Each disk contains two files.  The first file
+        contains the standard ERBE header record.  The second file contains
+        the scale factors and the data records.  Each S-9 disk contains
+        inverted daily, monthly-hourly (hourly averages for a month), and
+        monthly averages of shortwave and longwave radiant exitance at the
+        top of the atmosphere for ERBE scanner data for one month.  Each
+        S-9 disk also contains individual hour box estimates.  The S-10
+        disk contains the same information for the ERBE nonscanner data.
+        Grids are provided at 2.5, 5, and 10 degree resolution.
+
+        Data Quantity/Rate:  One S-9 and four S-10 tapes are produced per
+        satellite per month.  If more than one satellite was operational
+        during the month, one S-9 tape and a set of S-10 tapes, containing
+        the combined multiple satellite data, was produced.  These data
+        sets are then archived on the last Processed Archive Tape (PAT)
+        optical disk of the month.
+
+        Status:  S-9 and S-10 data from ERBS are available for the period
+        November 1, 1984 through January 31, 1988, and from NOAA-9 for the
+        period April 1, 1985 through October 31, 1986.  S-9 and S-10 data
+        are not available from NOAA-10.
+
+        Plans/Schedule:  NSSDC will continue to archive these data.
+
+8.2  Film Products.  None.
+
+8.3  Other Products.
+
+8.3.1  Solar Incidence (S-2) data from the ERBS Satellite in Common Data
+       Format (CDF)
+
+       Medium/Specification:  Magnetic disk
+
+       Format and Contents:  The data are stored in a special
+       data-set-independent format, designated the Common Data Format
+       (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  The CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" allows a user within an NCDS session to create and access
+       these data and descriptions.  This CDF file may be accessed within
+       the Data Applications Subsystem of NCDS.
+
+       Data Quantity/Rate:  ERBE-S2_ERBS; 5 files, 9.2 Kb
+
+       Status:  Data are available from October 25, 1984 through May 8,
+                1991.
+
+       Plans/Schedule:  NCDS will continue to support and update these data
+       as they are received.
+
+8.3.2  Solar Incidence (S-2) data from the NOAA-9 Satellite in Common Data
+       Format (CDF)
+       
+       Medium/Specification:  Magnetic disk
+
+       Format and Contents:  The data are stored in a special
+       data-set-independent format, designated the Common Data Format
+       (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  The CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" allows a user within an NCDS session to create and access
+       these data and descriptions.  This CDF file may be accessed within
+       the Data Applications Subsystem of NCDS.
+
+       Data Quantity/Rate:  ERBE-S2_NOAA9; 5 files, 7.7 Kb 
+
+       Status:  Data are available from January 23, 1985 through December
+       12, 1990.
+
+       Plans/Schedule:  NCDS will continue to support and update this data
+       as they are received.
+
+8.3.3  Solar Incidence (S-2) data from the NOAA-10 Satellite in Common Data
+       Format (CDF)
+ 
+       Medium/Specification:  Magnetic disk
+
+       Format and Contents:  The data are stored in a special
+       data-set-independent format, designated the Common Data Format
+       (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  The CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" allows a user within an NCDS session to create and access
+       these data and descriptions.  This CDF file may be accessed within
+       the Data Applications Subsystem of NCDS.
+       
+       Data Quantity/Rate:  ERBE-S2_NOAA10; 6 files, 5.6 Kb
+
+       Status:  Data are available from October 22, 1986 through April 1,
+       1987.
+
+       Plans/Schedule:  NCDS will to continue support and update this data
+       as they are received.
+
+8.3.4  Combined Solar Incidence (S-2) data for the ERBS, NOAA-9, and
+       NOAA-10 Satellites in Common Data Format (CDF)
+
+       Medium/Specification:  Magnetic disk
+       
+       Format and Contents:  The data are stored in a special
+       data-set-independent format, designated the Common Data Format
+       (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  The CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" allows a user within an NCDS session to create and access
+       these data and descriptions.  This CDF file may be accessed within
+       the Data Applications Subsystem of NCDS.
+
+       Data Quantity/Rate:  ERBE-S2_SAT-COMB; 1 file, 25.6 Kb
+
+       Status:  Data are available from October 25, 1984 through May 8,
+                1991.
+
+       Plans/Schedule:  NCDS will continue to support and update this data
+       as they are received.
+     
+8.3.5  Regional, Zonal, and Global Averages (S-4) Wide Field-of-View Shape
+       Factor (WFVSF) data in Common Data Format (CDF)
+
+       Medium/Specification:  Magnetic disk
+       
+       Format and Contents:  The data are stored in a special
+       data-set-independent format, designated the Common Data Format
+       (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  The CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" allows a user within an NCDS session to create and access
+       these data and descriptions.  These CDF files may be accessed within
+       the Data Applications Subsystem of NCDS.
+
+       Data Quantity/Rate:  ERBE-S4_WFVSF-MN (by year); 5 files, 1.2 Mb
+                                                        
+       Status:  Data are available from November 1984 through December
+       1988.
+
+       Plans/Schedule:  NCDS will continue to support and update these data
+       as they are received.
+
+8.3.6  Regional, Zonal, and Global Averages (S-4) Narrow Field-of-View
+       (NFOV) data in Common Data Format (CDF)
+
+       Medium/Specification:  Magnetic disk
+       
+       Format and Contents:  The data are stored in a special
+       data-set-independent format, designated the Common Data Format
+       (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  The CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" allows a user within an NCDS session to create and access
+       these data and descriptions.  This CDF file may be accessed within
+       the Data Applications Subsystem of NCDS.
+
+       Data Quantity/Rate:  ERBE-S4_NFV-MNTH (by year); 5 files, 19.6 Mb
+                                                        
+       Status:  Data are available from November 1984 through December
+       1988.
+
+       Plans/Schedule:  NCDS will continue to support and update these data
+       as they are received.
+     
+8.4.1  The Greenhouse Effect Detection Experiment (GEDEX) CD-ROM
+
+       Medium/Specifications:  CD-ROM in ISO 9660 standard
+
+       Format and Content:  The data on this disk will be stored in a
+       special data-set-independent format, designated the Common Data
+       Format (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  A standard software packaged called the
+       "CDF Library" will be included with this CD-ROM allowing a user to
+       create and access these data and descriptions.  The CD-ROM will
+       consist of many different data sets related to the study of the
+       Greenhouse Effect, including the Solar Incidence (S-2) data set and
+       subsets of the Regional, Zonal, and Global Averages (S-4) data set,
+       and the accompanying data set documentation.
+
+       Data Quantity/Rate:  1 CD-ROM disk set.
+
+       Status:  Release date for this product is scheduled for early 1992.
+
+       Plans/Schedule:  Users interested in this product should contact
+       NCDS staff for more details.
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification.
+
+     Central Data Services Facility
+     Code 933
+     National Space Science Data Center
+     NASA/Goddard Space Flight Center
+     Greenbelt, Maryland  20771
+     (301) 286-6695
+     FTS 888-6695
+   
+9.2  Procedures for Obtaining Data.  Users may submit requests for data by
+letter, telephone, personal visit, or through the NSI DECnet computer
+network at NSSDC::REQUEST.  Data costs are dependent upon affiliation and
+sponsorship of the user program.  Data are available at no cost to NASA
+personnel.  Communication with the NSSDC Request Coordination Office is
+advised before ordering.
+
+Researchers who reside outside the USA should direct their requests to:
+
+     World Data Center A for Rockets and Satellites
+     Code 930.2
+     Goddard Space Flight Center
+     Greenbelt, Maryland  20771  USA
+     (301) 286-6695
+
+9.3   NCDS Status/Plans.  NCDS provides online access to the entire S-2
+product in Common Data Format (CDF).  The ERBE-S2 and ERBE-S4 (by year)
+data in CDF are accessible via the CDFBrowse, CDFList, and Graphics options
+within the Data Applications subsystem of the NCDS.  To view these data
+specify the following:
+
+                          NCDS$DATA:ERBE-S2_ERBS
+                          NCDS$DATA:ERBE-S2_NOAA9
+                          NCDS$DATA:ERBE-S2_NOAA10
+                          NCDS$DATA:ERBE-S2_SAT-COMB
+
+                          NCDS$DATA:ERBE-S4_WFVSF-MN 
+                          NCDS$DATA:ERBE-S4_NFV-MNTH
+
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+      Request Coordination Office
+      Code 933
+      National Space Science Data Center
+      Goddard Space Flight Center
+      Greenbelt, Maryland  20771
+      (301) 286-6695
+
+      Goddard DAAC User Support Office
+      NASA/Goddard Space Flight Center
+      Code 935
+      Greenbelt, Maryland  20771
+      (301) 286-3209
+      FTS:  888-3209
+      NSI DECnet:  NSSDCA@NCDSUSO
+      INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation.
+
+      a.  Rao, P.K., S.J. Holmes, R.K. Anderson, J.S. Winston, and P.E.
+          Lehr, 1990.  "Weather Satellites:  Systems, Data and
+          Environmental Applications."  American Meteorological Society.
+          Boston, Massachusetts.
+
+11.2  Journal Articles and Study Reports.
+
+      a.  Avis, L.M., R.N. Green, J.T. Suttles, and S.K. Gupta, 1984.  "A
+          Robust Pseudo-Inverse Spectral Filter Applied to the Earth
+          Radiation Budget Experiment (ERBE) Scanning Channels."  NASA
+          Tech. Memorandum 85781, NASA Langley Research Center, Hampton,
+          Virginia.
+
+      b.  Barkstrom, B.R., 1984.  "The Earth Radiation Budget Experiment
+          (ERBE)."  Bull. Amer. Met. Soc., 65:1170-1185.
+
+      c.  Barkstrom, B.R, and G.L. Smith, 1986.  "The Earth Radiation
+          Budget Experiment:  Science and Implementation."  J. Geophys.
+          Res., 24:379-390.
+
+      d.  Barkstrom, B.R., E.F. Harrison, G. Smith, R. Green, J. Kibler, R.
+          Cess, and the ERBE Science Team, 1989.  "Earth Radiation Budget
+          Experiment (ERBE) Archival and April 1985 Results." Bull. Amer.
+          Met. Soc., 70:1254-1262.
+  
+      e.  Barkstrom, B.R., E.F. Harrison, R.B. Lee, III, and the ERBE
+          Science Team, 1990.  "Earth Radiation Budget Experiment
+          Preliminary Seasonal Results."  EOS, 71:297-312.
+
+      f.  ERBE Science Team, l986.  "First Data from the Earth Radiation
+          Budget Experiment (ERBE)." Bull. Amer. Meteor. Soc., 67:818-824.
+
+      g.  Green, R.N., and G.L. Smith, 1991.  "Shortwave Shape Factor
+          Inversion of Earth Radiation Budget Observations."  J. Atm. Sci.,
+          48:390-402.
+
+      h.  Green, R.N., et al., 1990.  "Intercomparison of Scanner and
+          Nonscanner Measurements for the Earth Radiation Budget Experiment
+          (ERBE)."  J. Geophys. Res., 95:11,785-11,798.
+
+      i.  Harrison, E.F., et al., 1983.  "Orbital and Cloud Cover Sampling
+          Analyses for Multisatellite Earth Radiation Budget Data."  J.
+          Spacecr. Rockets, 20:491-495.
+
+      j.  Harrison, E.F., et al., 1988.  "First Estimates of the Diurnal
+          Variation of Longwave Radiation from the Multiple-Satellite Earth
+          Radiation Budget Experiment (ERBE)."  Bull. Amer. Meteor. Soc.,
+          69:1144-1151.
+
+      k.  Harrison, E.F., et al., 1990.  "Seasonal Variation of Cloud
+          Radiative Forcing Derived from the Earth Radiation Budget
+          Experiment."  J. Geophys. Res., 94:18,687-18,703.
+
+      l.  Hartmann, D.L., and D. Doelling, 1991.  "On the Net Radiative
+          Effectiveness of Clouds."  J. Geophys. Res., 96:869-891.
+
+      m.  Kopia, L.P., 1986.  "The Earth Radiation Budget Experiment
+          Scanner Instrument."  Rev. Geophys., 24:400-406.
+
+      n.  Luther, M.R., J.E. Cooper, and G.R. Taylor, 1986.  "The Earth
+          Radiation Experiment Nonscanner Instrument."  Rev. Geophys.,
+          24:391-399.
+
+      o.  Ramanathan, V., et al., 1989.  "Cloud-radiative Forcing and
+          Climate:  Results from the Earth Radiation Budget Experiment."
+          Science, 243:57-63.
+
+      p.  Smith, G.L., R.N. Green, E. Raschke, L.M. Avis, B.A. Wielicki,
+          and R. Davies, l986.  "Inversion Methods for Satellite Studies of
+          the Earth's Radiation Budget: Development of Algorithms for the
+          ERBE Missions." Rev. of Geophys., 24:407-421.
+
+      q.  Wielicki, B.A., and R.N. Green, 1989.  "Cloud Identification for
+          ERBE Radiation Flux Retrieval."  J. Appl. Met., 28:1133-1146.
+
+11.3  Archive/DBMS Usage Documentation.
+
+      a.  ERBE Data Management Team, December, 1987.  "ERBE Data Management
+          System Processed Archival Tape, S-8, PAT Users Guide". NASA/
+          Langley, Hampton, Virginia.
+
+      b.  ERBE Data Management Team, December, 1987.  "ERBE Processed
+          Archival Tape Monthly Product Summary, April 1985, ERBS".
+          NASA/Langley, Hampton, Virginia.
+
+      c.  ERBE Data Management Team, June, 1985.  "ERBE Data Management
+          System, Earth Radiant Exitance and Albedo, Scanner S-9,
+          Nonscanner S-10 Users Guides," NASA/Langley, Hampton, Virginia.
+
+      d.  ERBE Data Management Team, July, 1991.  "ERBE Data Management
+          System, The Regional, Zonal and Global Averages, S-4 Users
+          Guide." NASA/Langley, Hampton, Virginia.
+
+      e.  ERBE Data Management Team, August, 1989.  "ERBE Monthly Medium-
+          Wide Data Tape, S-7 Monthly MWDT Users Guide," NASA/Langley,
+          Hampton, Virginia.
+
+      f.  Olsen, L.M, J.W. Closs, and F.E. Corprew, November 1991. "NASA's
+          Climate Data System Primer:  Version 4.0."  EOS DAAC, NASA
+          Goddard Space Flight Center, Greenbelt, Maryland.
+
+
+12.  RELATED DATA SETS
+
+Related data sets or information about related data sets are available. For
+more information, specify the following data sets within the search
+criteria screen of the Data Access subsystem of NCDS:
+
+ERB-MATRIX   (Nimbus-7 Earth Radiation Budget's Gridded Product)
+ERBE-S4-G    (Earth Radiation Budget Experiment's Global Product)  
+ERBE-S4-Z    (Earth Radiation Budget Experiment's Zonal Product)
+AVHRR-1B     (NOAA Polar Orbiter Advanced Very High Resolution Radiometer)
+NOAA-HB      (NOAA Heat Budget)
+
+
+13.  SUMMARY/SAMPLE
+
+Sample subsets are available in Common Data Format (CDF) for other ERBE-S4
+regional, zonal, and global data sets.  The CDF subsets are accessible via
+the CDFBrowse, CDFList, and Graphics options within the Data Applications
+subsystem of the NCDS.  To view these sample subsets specify one of the
+following:
+
+                        NCDS$SMPL:ERBE-S4_MFVNF-DY
+                        NCDS$SMPL:ERBE-S4_MFVNF-HR
+                        NCDS$SMPL:ERBE-S4_MFVNF-MN
+                        NCDS$SMPL:ERBE-S4_MFVSF-DY
+                        NCDS$SMPL:ERBE-S4_MFVSF-HR
+                        NCDS$SMPL:ERBE-S4_MFVSF-MN
+                        NCDS$SMPL:ERBE-S4_WFVNF-DY
+                        NCDS$SMPL:ERBE-S4_WFVNF-HR
+                        NCDS$SMPL:ERBE-S4_WFVNF-MN
+                        NCDS$SMPL:ERBE-S4_WFVSF-DY
+                        NCDS$SMPL:ERBE-S4_WFVSF-HR
+                        NCDS$SMPL:ERBE-S4_WFVSF-MN
+                        NCDS$SMPL:ERBES4-G_NFOV-DAY
+                        NCDS$SMPL:ERBES4-Z_NFOV-DAY
+
+
+14.  NOTES
+
+NOAA-9 was used as a test bed for software modifications after NOAA-11
+developed gyroscope problems.  While testing the software, a command error
+resulted in a complete shutdown of all instruments on-board the NOAA-9
+spacecraft on May 21, 1991.  The ERBE nonscanner instrument on-board NOAA-9
+was powered up on May 22, 1991, followed by the detector heaters on May 23,
+1991.  The nonscanner elevation beam was undefined once the nonscanner was
+powered up, and attempts to command the elevation beam to its correct
+position were unsuccessful.  Although the telemetry data showed that the
+ERBE instrument was in no physical danger, further command testing of
+NOAA-9 was discontinued because of NOAA operational conflicts.  These
+operational conflicts came to an end July 16, 1991 and command testing was
+resumed in order to recover normal operation of NOAA-9 (which was achieved
+July 25, 1991).  Further testing of NOAA-11 software modifications occurred
+in late August to correct continuing gyroscope problems.
+
+
+Variables from the ERBE-S4_NFOV-DAY datatype (with their associated
+mnemonics) are listed here as an example.
+
+EPOCH                 Time Line
+Latitude              LATITUDE 
+Longitude             LONGITUD 
+Solar Incidence       SOLAR_IN 
+LW Radiant Exitance   OLR      
+SW Radiant Exitance   SW_TOA   
+Albedo                ALBEDO   
+LW Rad Ext-Clr        OLR_CLR  
+SW Rad Ext_Clr        SWTOACLR 
+Albedo_clr Sky        ALBD_CLR 
+Num Hours_LW          NHOUR_LW 
+Num Hours_SW          NHOUR_SW 
+Num Hours_LW Clr      N_HR_LWC   
+Num Hours_SW Clr      N_HR_SWC 
+
+
+A proposed S-7 product has not yet been produced; however, there are plans
+to produce S-7 data in the near future.
+
+*92/03/12

@@ -1,0 +1,190 @@
+Text taken from http://cloud1.arc.nasa.gov/aaoe/project/overview.html 
+6/12/05
+--------------------------------------------
+
+
+ER-2 & DC-8 Aircraft Mission To Investigate Antarctic Ozone In Late Winter 1987
+ 
+                                             Introduction
+
+                                            Observations
+
+Recent observations have shown since 1979 a dramatic and unexpected downward trend 
+in the overhead column abundance of ozone during late winter and early spring over 
+Antarctica, at the Halley Bay and Argentine Islands stations (76 degrees S, 27 degrees W 
+and 65 degrees S, 64 degrees W). The reduction, amounting by 1985 to about 40% of the 
+historical October monthly mean, has been confirmed and given a geographically mapped 
+perspective by observations from NASA's Total Ozone Mapping Spectrometer (TOMS) 
+on Nimbus 7. Ozonesonde ascents from Syowa station (69 degrees S, 40 degrees E) in 
+1982 and 1983 have shown that in October, before the final warming, ozone is depleted 
+by between 10% and 50% at altitudes between about 10 and 22 km, compared to values 
+observed in the late 1960's and early 1970's. The chemical data base has been 
+considerably enhanced by the observations taken from late August to the beginning of 
+November 1986 from McMurdo Base (78 degreees S, 167 degrees E) by the National 
+Ozone Expedition (NOZE), which was organized by NSF. Ozone profiles, 33 in number 
+distributed fairly evenly between 25 August and 6 November, confirmed the picture 
+suggested by the Syowa data, and showed considerable vertical structure in the mixing 
+ratio, particularly during October. It was clear that the ozone loss over McMurdo 
+developed during September. Further, as yet unpublished, observations of the column 
+abundances of O3, NO2, and OC1O by the NOAA Aeronomy Lab, of HCl, ClONO2 and 
+HNO3 (inter alia) by JPL and observations of N2O and C1O by SUNY which contain 
+some coarse information about altitude distribution, should all have a substantial impact 
+on knowledge of the photochemical balance, and its interpretation. The NOAA data 
+Show evidence of very unusual odd nitrogen chemistry (very low abundance and very 
+small diurnal variation of NO2 and of unusual chlorine chemistry (high abundance of 
+OC1O). 
+
+In any instance where spatial or temporal change of a stratospheric chemical species is 
+observed, the first question to be asked is whether it can be attributed to chemical or 
+meteorological processes, or both. Correlations of the Antarctic total ozone amount 
+during the relevant time of year with stratospheric temperature have been reported by five 
+sets of authors in the special issue of Geophysical Research Letters (November 
+Supplement,1986). Temperature correlation with ozone does not resolve this issue, since 
+it could be cause or effect. As yet unpublished work from a collaborative study between 
+the UK Meteorological Office, the ECMWF, and the NOAA Aeronomy Lab reveals clear 
+correlations of the area bounded by TOMS total ozone contours in October and the area 
+bounded by the Antarctic sea ice limit in late winter, from 1979-86. In addition, the 
+Halley Bay total ozone amount during October is highly anticorrelated with Southern 
+Hemisphere sea surface temperatures, averaged for July-August- September, over the 
+period 1957-1985, with r = -0.74 (significant at better than 1% level). The angular 
+momentum from 1000 to 100 mb, in the latitude belt 51.5 degrees S to 65.9 degrees S has 
+shown a marked increase during the period 1976-1985, a result consistent with an 
+equatorward shift in the contours of zonal mean wind in September, as analyzed by 
+NASA Ames meteorologists from radiosonde data.
+
+Although correlations have been established between tropospheric variables and total 
+ozone during late Antarctic winter, no causal mechanism is immediately evident. The 
+question then arises as to whether there is a corresponding signal of change in any 
+stratospheric dynamical variables. The objectively analyzed cross-section of wind and 
+temperature produced at NASA Ames from radiosonde data show that, for example, the 
+20 ms-1 September zonal mean wind contours enclose a monotonically increasing area; 
+at 50 mb the increase from 1976 to 1980 amounts to a factor of two. Examination of 
+stratospheric potential vorticity fields, calculated with a geostrophic wind assumption 
+from satellite soundings of temperature and pressure, does not show evidence of 
+systematic change in the lower Antarctic stratosphere during late winter. In the upper 
+stratosphere, however, there is evidence of variation in the areas bounded by potential 
+vorticity contours defining the edge of the vortex during much of the winter and spring. 
+During Septembers 1979-86, the area sharply increased by ~20% from 1979 to 1980, and 
+then decreased steadily until by September 1986 it was about 5% below the 1979 value. 
+On the other hand, the October monthly means show an increase in area of about 50% 
+from 1979 to 1985, with a partial recovery in 1986. This could be interpreted as a 
+tendency to a later final warming in October, or as an expanded vortex, or some 
+combination of the two. In either case, the effect would be to produce a downward trend 
+in the total ozone column via the 15-20% of the total column which is above about 30 
+km. It cannot, however, account for changes Of 40-50% in the total column; most of such 
+large changes can only arise from losses where most of the column is, in the lower 
+stratosphere. Finally, it has been observed that polar stratospheric clouds occur in the 
+same region as the Antarctic ozone depletion, and at about the same time; they have also 
+been observed over small regions and less persistently, during the Arctic winter. 
+Summarizing the chemical and meteorological data, there is evidence both for an unusual 
+chemical composition in the lower Antarctic stratosphere of late winter, and for changes 
+in the Southern Hemisphere circulation which are correlated with the ozone change.
+
+                                                 Theories
+
+There are very broadly two categories of hypothesis which have been advanced to 
+explain the late winter loss of Antarctic ozone. One is that it is essentially chemical in 
+origin, the other that it is caused by a change in the circulation leading to enhanced 
+ingress of ozone-poor air from the troposphere. The chemical theories require some 
+means of maintaining a large positive departure of the mixing ratio of chlorine monoxide 
+from that expected due to standard gas phase stratospheric photochemistry; most 
+hypotheses have appealed to an intervention by heterogeneous phase chemistry occurring 
+on polar stratospheric clouds. One suggestion along these lines is that active chlorine is 
+released from HCl and especially ClON02 by reactions on p.s.c., polar stratospheric 
+clouds, surfaces; another is that nitric acid vapor is condensed into p.s.c.'s, having the 
+effect of removing NOx from the gas phase and so allowing high ClO amounts because 
+of the resulting inhibition of ClON02 formation. The loss of HN03 from the gas phase 
+could permit high HOx amounts, which in turn can liberate ClO from HCl. There are four 
+chain reactions by which chlorine can destroy ozone:
+
+1.	C10 + O ---> Cl + O2
+2.	Cl + 03 ----> C10+ O2
+ 
+net: O + 03 --- > O2 + O2 
+----------------------------------
+
+3.	C10 + BrO ---> Cl + Br +O2
+4.	Cl + 03---> C10 + O2
+5.	Br + 03 ~> BrO +O2
+----------------------------------
+
+net: O3 + O3 ---> O2 + O2 + O2
+
+Note that there is another channel in reaction (3) 
+C1O + BrO ---> Br + OC10 (3b) 
+which does not cause catalytic O3 loss, and which produces the OC1O molecule.
+
+6.	C1O + C10 + M ---> (C1O)2 + M
+7.	(C1O)2 + hv ---> Cl + C1OO
+8.	C1OO + M ---> Cl + O2 + M
+ 
+2. Cl + 03 ---> C10 + O2 
+2. Cl + 03 ---> C10 + O2 
+--------------------------------- 
+net: O3 + O3 ---> O2 + O2 + O2 
+
+9.	C10 + H02 ---> HOCl + O2
+ 
+11. HOCl + hv ---> OH + Cl
+10.	OH + O3 ---> H02 + O2
+ 
+2. Cl + 03 ---> C10 + O2 
+--------------------------------  
+net: O3 + O3 ---> O2 + O2 
+
+One common feature to all four chain reactions is that C1O is the product of the reaction 
+destroying O3, so measurement of it must be a high priority. Measurement of BrO and 
+OC1O would decide the extent of occurrence of the 2nd mechanism, (3a-4-5). None of 
+the above mechanisms can be made to work with purely homogeneous gas phase 
+chemistry, because the reaction 
+C1O + N02 + M ---> ClONO2 + M (12) 
+locks up the chlorine in the reservoir species ClONO2, which it is thus obviously useful 
+to measure. Another chlorine reservoir is HCl, so this too should be measured. HCl may 
+be in either the gas phase or condensed on particle surfaces.
+
+It is not certain how reactive nitrogen is partitioned between NO, NO2, N2O5, HNO3 
+and the aqueous phase (in p.s.c's), so measurements of these species and/or their sum 
+total in the gas phase is also important. The nitric acid content of p.s.c. particles would 
+provide a crucial constraint.
+
+There are a number of other chemical theories, such as one suggesting a solar cycle 
+induced enhancement of NOy that would affect ozone. Although these currently seem 
+unlikely, evidence concerning them will be sought.
+
+Measurements of species which have a source at the surface and a sink in the middle and 
+upper stratosphere (for example N2O, CF2C12, CFC13) should provide valuable data on 
+how long the air sampled has been in the stratosphere, and whether it has descended 
+during the period of winter circulation (March - October) from higher levels, or whether 
+it has ascended from the troposphere below. Such measurements, if taken horizontally (or 
+isentropically) across the vortex, could also test another possible mechanism, not so far 
+aired in the literature, that increased frequency in recent years of isentropic transport of 
+air from the lower midlatitude stratosphere to high latitudes would appear as an ozone 
+reduction there; below about 60 mb, the isentropic ozone gradient from 35 S to 90 S 
+appears to be equatorward in late winter.
+
+                                                       Operational Plan
+
+Scientific Observations Required to Understand the Antarctic Ozone Hole 
+There is no doubt that we are data limited. While the data base for the total column 
+content of ozone is excellent, we have a very limited data base for temperature and the 
+vertical distribution of ozone, and a data base limited to total column abundances for 
+some of the many chemical species involved.
+
+To help improve our understanding of the processes which are causing Antarctic ozone to 
+decrease, NASA is planning a two-aircraft experiment in order to obtain a data set that 
+can be used to address the probable causes for the phenomenon. The aircraft experiment 
+has been designed to test many of the key aspects of the present theories, but has also 
+been designed to provide a rather complete data base of valuable information even if all 
+the current ideas are incorrect.
+
+The NASA ER-2 aircraft and the DC-8 are ideally suited to study this important problem. 
+The ER-2 is the high altitude research aircraft and will be able to penetrate the ozone hole 
+at the altitudes of the maximum decline in ozone. It will carry a suite of in situ 
+experiments that will provide data on the air mass within the confines of the hole itself.
+The DC-8 will be equipped with remote sensors that will map the vertical distributions of 
+ozone and aerosols above the cruising altitude of the aircraft and within the hole. There 
+will also be measurements of the column abundance of NO2, OClO, BrO, ClONO2, HCl, 
+NHO3 and other species. In addition, the DC-8 will carry a number of in situ experiments 
+because this aircraft will attain altitudes associated with the lower extremes of the ozone 
+hole.
+

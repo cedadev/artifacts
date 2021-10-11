@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<GroundOverlay>
+		<description>TOA reflectance over land produced on the Swansea AARDVARC processor derived from approximately 1200 AATSR striplines for June, July and August 2005.</description>
+		<name>AATSR_JJA2005</name>
+		<LookAt>
+			<longitude>0</longitude>
+			<latitude>0</latitude>
+			<range>20000000</range>
+			<tilt>0.0</tilt>
+			<heading>0.0</heading>
+		</LookAt>
+		<visibility>1</visibility>
+		<Icon>
+			<href>AATSR_JJA2005.jpg</href>
+		</Icon>
+		<LatLonBox id="global_mosaic">
+			<north>90</north>
+			<south>-90</south>
+			<east>180</east>
+			<west>-180</west>
+		</LatLonBox>
+	</GroundOverlay>
+</kml>

@@ -1,0 +1,531 @@
+Ozone Profiles from SAGE I and SAGE II
+1.  TYPE OF DATA                                                              
+                                                                                
+    1.1  Parameter/Measurement                                                
+    1.2  Unit of Measurement                                                  
+    1.3  Data Source                                                          
+    1.4  Data Set Identification                                              
+                                                                                
+2.  SPATIAL CHARACTERISTICS                                                   
+                                                                                
+    2.1  Spatial Coverage                                                     
+    2.2  Spatial Resolution                                                   
+                                                                                
+3.  TEMPORAL CHARACTERISTICS                                                  
+                                                                                
+    3.1  Temporal Coverage                                                    
+    3.2  Temporal Resolution                                                  
+                                                                                
+4.  INSTRUMENT DESCRIPTION                                                    
+                                                                                
+5.  DATA PROCESSING SEQUENCE                                                  
+                                                                                
+    5.1  Processing Steps and Data Sets                                       
+    5.2  Derivation Techniques/Algorithms                                     
+    5.3  Processing Changes                                                   
+                                                                                
+6.  QUALITY ASSESSMENT                                                        
+                                                                                
+    6.1  Data Validation by Producer                                          
+    6.2  Confidence Level/Accuracy Judgment                                   
+    6.3  Usage Guidance                                                       
+                                                                                
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION                                  
+                                                                                
+8.  OUTPUT PRODUCTS AND AVAILABILITY                                          
+                                                                                
+    8.1  Tape Products                                                        
+    8.2  Film Products                                                        
+    8.3  Other Products                                                       
+                                                                                
+9.  DATA ACCESS                                                               
+                                                                                
+    9.1  Archive Identification                                               
+    9.2  Procedures for Obtaining Data                                        
+    9.3  NCDS Status/Plans                                                    
+                                                                                
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION                             
+                                                                                
+11.  REFERENCES                                                               
+                                                                                
+    11.1  Satellite/Instrument/Data Processing Documentation                  
+    11.2  Journal Articles and Study Reports                                  
+    11.3  Archive/DBMS Usage Documentation                                    
+                                                                                
+12.  RELATED DATA SETS                                                        
+                                                                                
+13.  SUMMARY/SAMPLE                                                           
+                                                                                
+14.  NOTES                                                                    
+ENDOFTOC                                                                       
+1.  TYPE OF DATA                                                                
+                                                                                
+1.1  Parameter/Measurement.  Ozone concentration profiles of the                
+stratosphere, as derived from solar occultation radiometric measurements.       
+                                                                                
+1.2  Unit of Measurement. 
+                                                                                
+         Parameter                   Unit                         
+         ---------                   ----                       
+         Ozone Number Density        1.0E11 cm**-3
+         Ozone Volume Mixing Ratio       ----            
+                                                                                
+1.3  Data Source.  Parameters are derived from the Stratospheric Aerosol        
+and Gas Experiment (SAGE I) instrument on the Applications Explorer             
+Mission-2 (AEM-2) and the Stratospheric Aerosol and Gas Experiment              
+(SAGE II) instrument on ERBS.  The 0.600 um channel, which is near the
+center of the Chappuis ozone band, is the primary channel used for ozone
+measurement.
+                                                                                
+1.4  Data Set Identification.  The Atmospheric Explorer Mission's 
+SAGE I ozone data are identified within NCDS as SAGEI-PROF_OZONE.
+The ERBS SAGE II ozone data are identified as SAGEII-PROF_OZONE.              
+                                                                                
+The data sets contain derived ozone number densities, volume mixing         
+ratios, and corresponding error arrays for each sunrise and sunset event.       
+Within NCDS, sunrise events are identified as 0 and sunset events are
+identified as 1.
+            
+                                                                    
+2.  SPATIAL CHARACTERISTICS                                                     
+                                                                                
+2.1  Spatial Coverage.  The orbital characteristics of SAGE I and SAGE II       
+provide low- and mid-latitude coverage of ozone measurements.  Each         
+instrument observes one sunrise and one sunset per orbit.  
+                     
+SAGE I:  There are 15 sunrise and 15 sunset events per day.  SAGE I         
+events offer latitudinal sweep ranges of approximately 130 degrees within
+a 4 week period.  In addition, they provide global coverage from 72        
+degrees N to 72 degrees south during a year.  Successive observations of
+the same type are separated by approximately 24 degrees longitude.           
+                                                                                
+SAGE II:  Spatial coverage is similar to that of SAGE I; however,        
+coverage is provided from 80 degrees S to 80 degrees N annually.               
+                                                                                
+2.2  Spatial Resolution.  The spatial resolution of the SAGE I and SAGE II
+data sets is the same.  The 1 micrometer wavelength measurement has a
+vertical resolution of 1 km below 25 km and a resolution of 5 km above 25
+km.  The vertical resolution of the 0.45 micrometer wavelength channel is 3
+km below 25 km.  The horizontal resolution is about 250 km for all
+wavelengths.   
+                                                                                
+                                                                                
+3.  TEMPORAL CHARACTERISTICS                                                    
+                                                                                
+3.1  Temporal Coverage.  SAGE I data collection began February 21, 1979.
+Four months after launch, a spacecraft power subsystem problem forced SAGE
+I data collection to be limited to sunsets only (identified as "1" in
+NCDS).  Limited operation continued until November 18, 1981.  SAGE II data
+collection began October 5, 1984 and continues to the present time.         
+                                                                                
+3.2  Temporal Resolution.  Each satellite instrument makes two ozone 
+profile determinations per orbit (96-97 minutes).  Each event is 
+separated by approximately 24 degrees of longitude.  SAGE I and SAGE II 
+each have 15 orbits per day.                                              
+                                                                                
+                                                                                
+4.  INSTRUMENT DESCRIPTION                                                      
+
+4.1  Mission Objectives.  The mission objectives of the SAGE I and SAGE
+II are to determine the spatial distribution and map vertical profiles
+of ozone.  Specific objectives are:
+
+         a.  To develop a viable satellite-based remote sensing technique
+             for measuring ozone.   
+
+         b.  To utilize these measurements to study global circulation,
+             transient stratospheric phenomena, and sources and sinks of
+             individual species.
+
+         c.  To investigate ozone optical properties using data from
+             flight experiments and correlative observations.
+            
+4.2  Key Satellite Flight Parameters.  Nominal orbit parameters for SAGE I
+and SAGE II are listed below:
+
+                                 SAGE I                  SAGE II
+                                 ------                  -------
+     o  Launch Date         February 18, 1979       October 5, 1984
+     o  Planned Duration    1 year                  1 year  
+     o  Actual Duration     2 years and 9 months    Still operating
+     o  Orbit               Non-sun synchronous     Non-sun synchronous
+     o  Inclination         55 degrees              57 degrees
+     o  Nodal Period        96.8 minutes            98 minutes
+
+4.3  Principles of Operation.  SAGE I is a four-channel solar photometer 
+with spectral bands at 0.385, 0.450, 0.600, and 1.00 micrometers.  SAGE II
+is a seven-channel solar photometer with spectral bands 0.385, 0.448,
+0.454, 0.525, 0.600, 0.940, and 1.019 micrometers.  The 0.940 um channel
+allows concentration profiles of water vapor to be mapped.  The 0.448 um
+channel provides an additional channel for nitrogen dioxide detection, and
+the 0.525 um channel is an additional channel used for aerosol detection.
+The 0.600 um channel, which is near the center of the Chappuis ozone band,
+is the primary channel used for ozone measurement.  The remaining channels 
+allow for the separation of atmospheric extinction along the line-of-sight
+that are due to Rayleigh scattering, aerosols, and nitrogen dioxide.  The
+SAGE I and SAGE II channels provide corrections for overlapping
+contributions of aerosols and nitrogen dioxide.     
+
+4.4  Instrument Measurement Geometry.  The SAGE I and SAGE II instruments
+use the sun as a constant radiant energy source.  The instrument's sensors
+measure the radiation that has passed through the Earth's atmosphere
+during sunrise and sunset.  The photometers receive a vertically scanned
+solar image with respect to the Earth's surface.
+
+The SAGE I photometric data are sampled at a rate of 64 samples per second
+per channel and digitized to 12-bit resolution.  Accuracy of the sample is
+1 bit.  Sampling occurs twice per orbit for durations varying from 3 to
+10 minutes each, depending on the angle between the orbital plane of the
+spacecraft and the Earth-Sun vector.  The SAGE I field-of-view,
+approximately 0.5 arc-minutes, produces an approximate vertical resolution
+of 1 km at altitudes ranging from 10 km to the horizon.
+
+The nominal scan rate of the SAGE II instrument is 15 arc-minutes per
+second.  The radiometric data are sampled at a rate of 64 samples per
+second per channel and digitized to 12-bit accuracy.  Sampling occurs 
+twice per orbit for durations varying from 3 to 10 minutes each.  The 
+SAGE II vertical resolution is approximately 1 km at altitudes ranging
+from cloud tops to 10 km.
+
+                                                                                
+5.  DATA PROCESSING SEQUENCE                                                    
+                                                                                
+5.1  Processing Steps and Data Sets.  The SAGE I and II series raw data
+are merged with their associated ephemeris and meteorological data sets
+to form file sets that contain the information to process the experiment 
+data into the ozone profiles described in this document.  The temperature 
+profiles in the meteorological data are provided by the NOAA National 
+Meteorological Center (NMC).  Platform ephemeris data for the experiments 
+are extrapolated from definitive data into weekly data sets by GSFC.            
+                                                                                
+From these data sets NASA Langley Research Center (LaRC) personnel 
+calculate ozone number density and volume mixing ratio as a function of
+altitude and store them on SAGE I and II Profile Tapes. 
+                                                                                
+5.2  Derivation Techniques/Algorithms.  Data from each satellite sunrise 
+and sunset event are converted to an atmospheric transmission versus 
+tangent-height profile.  The mean slant path optical depth is calculated 
+for 1 km altitude bins using the Lambert-Beer law.  The following 
+three-step inversion is then performed:                                 
+                                                                                
+     1.  The effects of Rayleigh scattering are calculated from the             
+         meteorological data and subtracted out                                
+                                                                                
+     2.  The slant path optical depths are separated by species:
+         aerosols, ozone, nitrogen dioxide, or water vapor 
+                                                                                
+     3.  Inversion from slant path optical depth to vertical extinction
+         is performed using the Twomey modification of the Chahine 
+         nonlinear inversion.                                  
+                                                                                
+5.3  Special Corrections/Adjustments.  During the processing of SAGE I and 
+SAGE II data, corrections are made for solar limb darkening, atmospheric
+refraction, and Rayleigh scattering to derive the parameter data sets. 
+When atmospheric temperature and pressure profiles are not available to
+make these corrections, latitude-dependent model temperature/pressure
+profiles, based on standard atmospheric profiles, are provided.  If model
+data are provided, the event containing model data is so annotated.          
+                                                                                
+5.4  Processing Changes.  As a result of published corrections to the
+NOAA temperature data at 5 mb and above and, the desire to compare SAGE I
+and SAGE II data for long-term trend studies, the SAGE I data were 
+reprocessed using improved retrieval techniques employed for SAGE II in
+1991.      
+                                                                                
+                                                                                
+6.  QUALITY ASSESSMENT                                                          
+                                                                                
+6.1  Data Validation by Producer.  SAGE I and SAGE II results have              
+been validated by comparison with those obtained from a wide range of           
+sensors, including an airborne LIDAR, balloon-borne optical particle            
+counters, impactors, spectrometer strobes, ozonesondes, ozone  
+rocketsondes, and other satellite data sets.  Details are contained in
+the references in Item 11.                                     
+                                                                                
+NASA has made facilities available at LaRC so that visiting scientists 
+may analyze and evaluate SAGE I and SAGE II data sets with their 
+correlative data.  Predictions of SAGE II overpasses for correlative 
+purposes are also available upon request from LaRC.                      
+                                                                                
+6.2  Confidence Level/Accuracy Judgment.  Because measurement accuracy is
+a function of altitude, each atmospheric profile array is accompanied by 
+an error array.  Typically, ozone concentration uncertainties are less
+than 10 percent from cloud tops to 60 km.                         
+                                                                                
+6.3  Usage Guidance.  Numerous studies using SAGE I and SAGE II data have       
+been conducted.  SAGE I and SAGE II results have been combined to study    
+long-term trends in stratospheric ozone.                                        
+                                                                                
+                                                                                
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION                                    
+                                                                                
+7.1  SAGE Scientist  
+                                                                                
+     Dr. M. Patrick McCormick                                                   
+     Mail Stop 475                                                              
+     NASA Langley Research Center                                               
+     Hampton, Virginia  23665-5225                                              
+     (804) 864-2669                                                             
+     FTS 928-2669                                                               
+                                              
+                                                                                
+8.  OUTPUT PRODUCTS AND AVAILABILITY                                            
+                                                                                
+8.1  Tape Products.                                                             
+                                                                                
+8.1.1  SAGE I Profile Archival Tape, Level II                     
+                                                                                
+       Medium/Specification:  9-track, 6250-bpi computer tape.                  
+                                                                                
+       Format and Content:  The tape is generated on a Control Data Corp.
+       (CDC) Cyber-series computer.  Each record contains one event and is    
+       688 60-bit fields in length.  Each field is in CDC-Cyber floating
+       point notation.  Each record contains the event time and location, 
+       the type of event (sunrise [0] or sunset [1]), meteorological data,  
+       processing information, ground distances, quality factors for the 
+       .600 micrometer wavelength measurements, and arrays of number 
+       density and mixing ratio.
+
+       Data Quantity/Rate:  Each magnetic tape contains one year of ozone 
+       profiles beginning with December and ending with November of the 
+       next year.  For year one of SAGE I (1979), the tape begins in late 
+       February (first data of instrument).
+                                                                                
+       Status:  Available
+                                                                                
+       Plans/Schedule:  No additions or changes are expected.               
+                                                                                
+8.1.2  SAGE II Profile Archival Tape, Level II                   
+                                                                                
+       Medium/Specification:  9-track, 6250-bpi computer tape.               
+   
+       Format and Content:  The SAGE II ozone profile tapes are the same 
+       format as the SAGE I tapes.  Each record represents one profile and
+       is 680 60-bit Cyber floating-point words long (39 660 total bits per 
+       record).  An end-of-tape mark signals the end of the data.  This tape
+       contains processed ozone concentration profiles along with associated 
+       error estimates.          
+          
+       Data Quantity/Rate:   Each magnetic tape contains one year of ozone 
+       profiles beginning with December and ending with November of the 
+       next year.  For year one of SAGE II (1985), the tapes also include 
+       the November 1984 profile.
+                                
+       Status:  Available.                               
+                                                                                
+       Plans/Schedule:  NCDS plans to archive all SAGE I and SAGE II
+       profile tapes.                                 
+                                                                                
+8.2  Film Products.   None.                            
+                                                                                
+8.3  Other Products.                  
+                                                                                
+8.3.1  SAGE I and II Ozone Profile Common Data Formats (CDF)
+
+       Medium/Specification:  Magnetic disk
+
+       Format and Content:  The data are stored in a special data-
+       set-independent format, designated as the Common Data Format
+       (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  Each CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" allows a user within an NCDS session to create and
+       access these data and descriptions.  These CDF files may be
+       accessed within the Data Applications Subsystem of NCDS.       
+                                                                                
+       Data Quantity/Rate:  SAGEI-PROF_OZONE; 1 file, 23 Mb
+                            SAGEII-PROF_OZONE; 5 files (1/year), 97 Mb
+                            SAGEII-PROF_MET-DATA; 1 file, 30 Mb
+                           
+       Status:  Available
+
+       Plans/Schedule:  The SAGE I Ozone Profile data set is complete.
+       NCDS plans to continue archiving SAGE II Ozone profile data
+       for the duration of the experiment.
+
+8.3.2  The Greenhouse Detection Experiment (GEDEX) CD-ROM
+    
+       Medium/Specifications:  CD-ROM in ISO 9660 standard
+
+       Format and Content:  The data on this disk will be stored in 
+       a special data-set-independent format, designated the Common
+       Data Format (CDF).  CDF was developed as a uniform method of
+       storing and retrieving data on disk.  The CDF contains data
+       and descriptions about the data.  A standard software package
+       called the "CDF Library" will be included with this CD-ROM
+       allowing a user to create and access these data and descriptions.
+       The CD-ROM will consist of many different data sets related to
+       the study of the Greenhouse Effect, including the SAGE I and
+       SAGE II Ozone Profiles, and the accompanying NCDS data set
+       documentation.
+
+       Data Quantity/Rate:  1 CD-ROM disk set.
+  
+       Status:  This product was released in March 1992.  An update is
+       scheduled for June 1, 1992.
+
+       Plans/Schedule:  Users interested in this product should contact
+       NCDS staff for more details.
+         
+
+9.  DATA ACCESS                                                                 
+                                                                                
+9.1  Archive Identification                                                     
+                      
+     Code 933-Central Data Services Facility   
+     National Space Science Data Center                                         
+     Goddard Space Flight Center                                                
+     Greenbelt, Maryland  20771                                                 
+     (301) 286-6695                                                             
+                                                                                
+9.2  Procedures for Obtaining Data.  Users may submit requests for data  
+by letter, telephone, personal visit, or through the NSI Decnet computer 
+network at NSSDC::REQUEST.  Data costs are dependent on affiliation and
+sponsorship of the user program.  Communication with the NSSDC Request
+Coordination Office is advised before ordering.    
+                                                                                
+Researchers who reside outside the USA should direct their requests to:         
+                                                                                
+     World Data Center A for Rockets and Satellites                             
+     Code 930.2                                                                 
+     Goddard Space Flight Center                                                
+     Greenbelt, Maryland  20771  USA                                            
+     (301) 286-6695                                                             
+                                                                                
+9.3  NCDS Status/Plans.  NCDS currently supports SAGE I and SAGE II 
+aerosol, nitrogen dioxide, ozone, water vapor and NMC meteorological 
+profile data.  (NSSDC supports SAGE I and SAGE II MERDAT data sets.) 
+
+                                                                                
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION                               
+                                                                                
+     Request Coordination Office                                                
+     National Space Science Data Center                                         
+     Code 933-Central Data Services Facility                                    
+     NASA/Goddard Space Flight Center                                           
+     Greenbelt, Maryland 20771                                                  
+     PHONE:  (301) 286-6695                                                     
+     TELEX:  89675 NASCOM GBLT                                                  
+     TWX No: 7108289716                                                         
+                                                                                
+     Goddard DAAC User Support Office           
+     NASA/Goddard Space Flight Center                                           
+     Code 935                                                                  
+     Greenbelt, Maryland  20771      
+     (301) 286-3209                                                             
+     INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+     NSI DECnet:  NSSDCA::NCDSUSO                                  
+                                           
+11.  REFERENCES                                                                 
+                                                                                
+11.1  Satellite/Instrument/Data Processing Documentation                        
+                                                                                
+      a.  Chu, W.P., and M.P. McCormick, 1979. "Inversion of 
+          Stratospheric Aerosol and Gaseous Constituents from
+          Spacecraft Solar Extinction Data in the 0.38 - 1.0 Micron
+          Wavelength Region." Applied Optics 18:1404-1413.                 
+                                                                                
+      b.  Chu, W.P., M.P. McCormick, J. Lenoble, C. Brogniez, and P.            
+          Pruvost, 1989.  "SAGE II Inversion Algorithm" J. Geophys.             
+          Res. 94, D6:8339-8351                                                 
+                                                                         
+      c.  Mauldin, L.E., III, N.H. Zaun, M.P. McCormick, J.H. Guy, and          
+          W.P. Vaughan, 1985.  "Stratospheric Aerosol and Gas                   
+          Experiment II Instrument:  A Functional Description." Optical         
+          Eng. 24:307-312                                                       
+                                                                                
+      d.  McCormick, M.P., P. Hamill, T.J. Pepin, W.P. Chu, T.J.
+          Swissler, and L.R. McMaster, 1979.  "Satellite Studies of the 
+          Stratospheric Aerosol." Bull. Amer. Meteor. Soc. 60:1038-1046.      
+                                                                                
+11.2  Journal Articles and Study Reports                                        
+                                                                                
+      a.  Attmannspacher, W., J. de la Noe, D. de Muer, J. Lenoble, G.          
+          Megie, J. Pelon, P. Pruvost, and R. Reiter, 1989.  "European          
+          Validation of SAGE II Ozone Profiles."  J. Geophys. Res. 94,
+          D6: 8461-8466.                                   
+                                                                                
+      b.  Cunnold, D.M., W.P. Chu, R.A. Barnes, M.P. McCormick, and             
+          R.E. Veiga, 1989.  "Validation of SAGE II Ozone Measurements."        
+          J. Geophys. Res. 94, D6:8447-8460.                                    
+                                                                                
+      c.  Ghazi, A., Pi Wang, and M.P. McCormick, 1985.  "On Radiative          
+          Damping of Planetary Waves Using Stratospheric Observations."         
+          J. Atmos. Sci. 42, 19:2032-2042.                                      
+                                                                                
+      d.  McCormick, M.P., et al, 199=81. "High Latitude Stratospheric 
+          Aerosols Measured by SAM II: 1978-1979." Science 214:238-331.         
+                                                                                
+      e.  McCormick, M.P., et al, September 1989.  "An Overview of              
+          SAGE I and II Ozone Measurements".  Planet, Space Sci., Vol           
+          37, No 12, pp. 1567-1586.                                             
+
+      f.  McCormick, M.P., P. Minnis, R.E. Veiga, and W.P. Chu, 1991.
+          "Stratospheric Ozone Profile and Total zone Trends Derived
+          from the SAGE I and SAGE II Data."  Geophys. Res. Lett.,
+          submitted.
+                                                                                
+11.3  Archive/DBMS Usage Documentation                                          
+                                                                                
+     a.  "ERBS/SAGE II Ozone Profile Data Archival Tape Users Guide"           
+         June, 1988.  
+                             
+                                                   
+12.  RELATED DATA SETS.                                                         
+                                                                                
+     Several related data sets exist online through NCDS as follows:
+
+     1) The SAGE I profile data sets contain derived mixing ratio profiles 
+        and number densities for aerosols and nitrogen dioxide.  These data 
+        sets will be available online through NCDS in Common Data Format 
+        (CDF).  To access these CDFs, specify the following as input within 
+        the Data Applications subsystem of the NCDS:
+
+                         NCDS$DATA:SAGEI-PROF_NO2
+                         NCDS$DATA:SAGEI-PROF_AEROSOLS
+
+     2) The SAGE II Profile data sets contain derived mixing ratio profiles 
+        and number densities for nitrogen dioxide, aerosols, and water 
+        vapor.  An additional data set contains the NMC meteorological 
+        profile data.  These data sets are available online by year  
+        through NCDS in Common Data Format (CDF).  To access these CDFs, 
+        specify the following as input within the Data Applications 
+        subsystem of the NCDS:
+  
+                         NCDS$DATA:SAGEII-PROF_NO2
+                         NCDS$DATA:SAGEII-PROF_AEROSOLS
+                         NCDS$DATA:SAGEII-PROF_H20VAPOR
+                         NCDS$DATA:SAGEII-PROF_MET-DATA
+
+     3) The Nimbus-7 Limb Infrared Monitor of the Stratosphere (LIMS) data
+        sets contain mixing ratio profiles of ozone, nitric acid, water
+        vapor and nitrogen dioxide along with temperature and geopotential
+        height distribution.  All profiles are given as a function of
+        pressure.  These data sets are available offline through NCDS.  
+        To access these data sets, specify the following as input within 
+        the Data Applications Subsystem of the NCDS.  Data are converted
+        to Common Data Format (CDF) "on the fly".
+
+                         NCDS$DATA:LIMS-LAMAT_DAY_GRID
+                         NCDS$DATA:LIMS-LAMAT_ZONEMEAN
+                                    
+               
+13.  SUMMARY/SAMPLE.                                                            
+                                                                                
+                                                                                
+14.  NOTES.  
+                                                 
+SAGE I and SAGE II meteorological profile data are provided by the NOAA
+National Meteorological Center (NMC).  The meteorological profile data,
+combined with spacecraft position and velocity and SAGE I or SAGE II raw
+radiance data, are needed to map nitrogen dioxide, ozone, aerosol, and
+water vapor profiles.  The meteorological data include temperature,
+altitude, and density profiles at 19 different pressure levels in the
+atmosphere.  (The pressure levels themselves can be used to derive
+molecular (Rayleigh) scattering corrections.)  In addition, the
+meteorological data provided by NOAA/NMC contain error estimates for both
+temperature and density at each of the pressure levels.  These
+meteorological data are included as part of each SAGE I and SAGE II Profile
+and MERDAT data set.
+
+*92/05/14

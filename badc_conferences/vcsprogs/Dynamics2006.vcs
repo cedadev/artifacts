@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060106T000000Z
+DTEND:20060107T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:room 500 of the Department of Mathematic=
+s, UCL, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000F09A9F249300C6010000000000000000100
+ 000009B3A086289D1CC4F87598F2D92C80671
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=20DYNAMICS OF ROTATING FLUIDS=0D=0A=
+=0D=0A A meeting on the above theme will be held on Friday 6 January 2006 i=
+n room 500 of the Department of Mathematics, UCL. The programme is as follo=
+ws:=0D=0A=0D=0A1.30pm Oscar Martinez-Alvarado (Oxford) ''Low-order models o=
+f the Martian atmospheric dynamics''=0D=0A=0D=0A2.00pm Peter Killworth (Nat=
+ional Oceanography Centre, Southamtopn) ''How to force an ocean''=0D=0A=0D=
+=0A2.20pm Jean Reinaud (St. Andrews) ''Destructive interactions between two=
+ counter-rotating geophysical vortices''=0D=0A=0D=0A 2.35pm Riwal Plougonve=
+n (LMD, Paris) ''Generation and propagation ofinertia-gravity waves in baro=
+clinic life cycles''=0D=0A=0D=0A2.50pm Andrew Willmott (Proudman Oceanograp=
+hic Laboratory) ''Spatially growing modes in a barotropic coastal current; =
+linear and nonlinear theory''=0D=0A=0D=0A3.10pm Tea=0D=0A=0D=0A3.40pm Mark =
+Brend/Peter Thomas (Warwick) ''Effects of background rotation on vortex rin=
+gs''=0D=0A=0D=0A4.10pm Paul Dellar (Imperial) ''Shallow water equations on =
+revolving spheres''=0D=0A=0D=0A4.30pm Georgi Sutyrin (Rhode Island) ''Vorte=
+x interactions with sloping boundaries''=0D=0A=0D=0A 5.00 Close=0D=0A=0D=0A=
+ Many of the participants will be meeting for lunch in the Lower Refectory =
+from around 12.30pm. A map of the UCL site and the surrounding area can be =
+found at http://www.ucl.ac.uk/Mathematics/. All are welcome.=0D=0A=0D=0AFur=
+ther details can be obtained by e-mailing Robb McDonald (robb@math.ucl.ac.u=
+k)=0D=0A=0D=0A(Please feel free to forward this email to anyone who may be =
+interested)=0D=0A=0D=0AContact: Dr Matthew D. Piggott=0D=0ATelephone: +44 (=
+0)207 59 49319 Ext: 49319=0D=0Amailto:m.d.piggott@imperial.ac.uk       URL:=
+http://amcg.ese.ic.ac.uk=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:DYNAMICS OF ROTATING FLUIDS
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

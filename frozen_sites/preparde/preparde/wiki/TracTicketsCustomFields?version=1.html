@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracTicketsCustomFields – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTicketsCustomFields?version=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTicketsCustomFields" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTicketsCustomFields" title="View TracTicketsCustomFields">TracTicketsCustomFields</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTicketsCustomFields" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A01%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:01+01:00 in Timeline">6 years</a> ago)
+               (<a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTicketsCustomFields?action=diff&amp;version=1">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="CustomTicketFields">Custom Ticket Fields</h1>
+<p>
+Trac supports adding custom, user-defined fields to the ticket module. Using custom fields, you can add typed, site-specific properties to tickets.
+</p>
+<h2 id="Configuration">Configuration</h2>
+<p>
+Configuring custom ticket fields is done in the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">trac.ini</a> file. All field definitions should be under a section named <tt>[ticket-custom]</tt>.
+</p>
+<p>
+The syntax of each field definition is:
+</p>
+<pre class="wiki"> FIELD_NAME = TYPE
+ (FIELD_NAME.OPTION = VALUE)
+ ...
+</pre><p>
+The example below should help to explain the syntax.
+</p>
+<h3 id="AvailableFieldTypesandOptions">Available Field Types and Options</h3>
+<ul><li><strong>text</strong>: A simple (one line) text field.
+<ul><li>label: Descriptive label.
+</li><li>value: Default value.
+</li><li>order: Sort order placement. (Determines relative placement in forms with respect to other custom fields.)
+</li><li>format: Either <tt>plain</tt> for plain text or <tt>wiki</tt> to interpret the content as <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">WikiFormatting</a>. (<em>since 0.11.3</em>)
+</li></ul></li><li><strong>checkbox</strong>: A boolean value check box.
+<ul><li>label: Descriptive label.
+</li><li>value: Default value (0 or 1).
+</li><li>order: Sort order placement.
+</li></ul></li><li><strong>select</strong>: Drop-down select box. Uses a list of values.
+<ul><li>label: Descriptive label.
+</li><li>options: List of values, separated by <strong>|</strong> (vertical pipe).
+</li><li>value: Default value (one of the values from options).
+</li><li>order: Sort order placement.
+</li></ul></li><li><strong>radio</strong>: Radio buttons. Essentially the same as <strong>select</strong>.
+<ul><li>label: Descriptive label.
+</li><li>options: List of values, separated by <strong>|</strong> (vertical pipe).
+</li><li>value: Default value (one of the values from options).
+</li><li>order: Sort order placement.
+</li></ul></li><li><strong>textarea</strong>: Multi-line text area.
+<ul><li>label: Descriptive label.
+</li><li>value: Default text.
+</li><li>cols: Width in columns.
+</li><li>rows: Height in lines.
+</li><li>order: Sort order placement.
+</li><li>format: Either <tt>plain</tt> for plain text or <tt>wiki</tt> to interpret the content as <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">WikiFormatting</a>. (<em>since 0.11.3</em>)
+</li></ul></li></ul><h3 id="SampleConfig">Sample Config</h3>
+<pre class="wiki">[ticket-custom]
+
+test_one = text
+test_one.label = Just a text box
+
+test_two = text
+test_two.label = Another text-box
+test_two.value = Default [mailto:joe@nospam.com owner]
+test_two.format = wiki
+
+test_three = checkbox
+test_three.label = Some checkbox
+test_three.value = 1
+
+test_four = select
+test_four.label = My selectbox
+test_four.options = one|two|third option|four
+test_four.value = two
+
+test_five = radio
+test_five.label = Radio buttons are fun
+test_five.options = uno|dos|tres|cuatro|cinco
+test_five.value = dos
+
+test_six = textarea
+test_six.label = This is a large textarea
+test_six.value = Default text
+test_six.cols = 60
+test_six.rows = 30
+</pre><p>
+<em>Note: To make entering an option for a <tt>select</tt> type field optional, specify a leading <tt>|</tt> in the <tt>fieldname.options</tt> option.</em>
+</p>
+<h3 id="ReportsInvolvingCustomFields">Reports Involving Custom Fields</h3>
+<p>
+Custom ticket fields are stored in the <tt>ticket_custom</tt> table, not in the <tt>ticket</tt> table. So to display the values from custom fields in a report, you will need a join on the 2 tables. Let's use an example with a custom ticket field called <tt>progress</tt>.
+</p>
+<div class="code"><pre><span class="k">SELECT</span> p<span class="p">.</span>value <span class="k">AS</span> __color__<span class="p">,</span>
+   id <span class="k">AS</span> ticket<span class="p">,</span> summary<span class="p">,</span> <span class="k">owner</span><span class="p">,</span> <span class="k">c</span><span class="p">.</span>value <span class="k">AS</span> progress
+  <span class="k">FROM</span> ticket t<span class="p">,</span> enum p<span class="p">,</span> ticket_custom <span class="k">c</span>
+  <span class="k">WHERE</span> status <span class="k">IN</span> <span class="p">(</span><span class="s1">'assigned'</span><span class="p">)</span> <span class="k">AND</span> t<span class="p">.</span>id <span class="o">=</span> <span class="k">c</span><span class="p">.</span>ticket <span class="k">AND</span> <span class="k">c</span><span class="p">.</span>name <span class="o">=</span> <span class="s1">'progress'</span>
+<span class="k">AND</span> p<span class="p">.</span>name <span class="o">=</span> t<span class="p">.</span>priority <span class="k">AND</span> p<span class="p">.</span><span class="k">type</span> <span class="o">=</span> <span class="s1">'priority'</span>
+  <span class="k">ORDER</span> <span class="k">BY</span> p<span class="p">.</span>value
+</pre></div><p>
+<strong>Note</strong> that this will only show tickets that have progress set in them, which is <strong>not the same as showing all tickets</strong>. If you created this custom ticket field <em>after</em> you have already created some tickets, they will not have that field defined, and thus they will never show up on this ticket query. If you go back and modify those tickets, the field will be defined, and they will appear in the query. If that's all you want, you're set.
+</p>
+<p>
+However, if you want to show all ticket entries (with progress defined and without), you need to use a <tt>JOIN</tt> for every custom field that is in the query.
+</p>
+<div class="code"><pre><span class="k">SELECT</span> p<span class="p">.</span>value <span class="k">AS</span> __color__<span class="p">,</span>
+   id <span class="k">AS</span> ticket<span class="p">,</span> summary<span class="p">,</span> component<span class="p">,</span> <span class="k">version</span><span class="p">,</span> milestone<span class="p">,</span> severity<span class="p">,</span>
+   <span class="p">(</span><span class="k">CASE</span> status <span class="k">WHEN</span> <span class="s1">'assigned'</span> <span class="k">THEN</span> <span class="k">owner</span><span class="o">||</span><span class="s1">' *'</span> <span class="k">ELSE</span> <span class="k">owner</span> <span class="k">END</span><span class="p">)</span> <span class="k">AS</span> <span class="k">owner</span><span class="p">,</span>
+   time <span class="k">AS</span> created<span class="p">,</span>
+   changetime <span class="k">AS</span> _changetime<span class="p">,</span> description <span class="k">AS</span> _description<span class="p">,</span>
+   reporter <span class="k">AS</span> _reporter<span class="p">,</span>
+  <span class="p">(</span><span class="k">CASE</span> <span class="k">WHEN</span> <span class="k">c</span><span class="p">.</span>value <span class="o">=</span> <span class="s1">'0'</span> <span class="k">THEN</span> <span class="s1">'None'</span> <span class="k">ELSE</span> <span class="k">c</span><span class="p">.</span>value <span class="k">END</span><span class="p">)</span> <span class="k">AS</span> progress
+  <span class="k">FROM</span> ticket t
+     <span class="k">LEFT</span> <span class="k">OUTER</span> <span class="k">JOIN</span> ticket_custom <span class="k">c</span> <span class="k">ON</span> <span class="p">(</span>t<span class="p">.</span>id <span class="o">=</span> <span class="k">c</span><span class="p">.</span>ticket <span class="k">AND</span> <span class="k">c</span><span class="p">.</span>name <span class="o">=</span> <span class="s1">'progress'</span><span class="p">)</span>
+     <span class="k">JOIN</span> enum p <span class="k">ON</span> p<span class="p">.</span>name <span class="o">=</span> t<span class="p">.</span>priority <span class="k">AND</span> p<span class="p">.</span><span class="k">type</span><span class="o">=</span><span class="s1">'priority'</span>
+  <span class="k">WHERE</span> status <span class="k">IN</span> <span class="p">(</span><span class="s1">'new'</span><span class="p">,</span> <span class="s1">'assigned'</span><span class="p">,</span> <span class="s1">'reopened'</span><span class="p">)</span>
+  <span class="k">ORDER</span> <span class="k">BY</span> p<span class="p">.</span>value<span class="p">,</span> milestone<span class="p">,</span> severity<span class="p">,</span> time
+</pre></div><p>
+Note in particular the <tt>LEFT OUTER JOIN</tt> statement here.
+</p>
+<h3 id="Updatingthedatabase">Updating the database</h3>
+<p>
+As noted above, any tickets created before a custom field has been defined will not have a value for that field. Here's a bit of SQL (tested with SQLite) that you can run directly on the Trac database to set an initial value for custom ticket fields. Inserts the default value of 'None' into a custom field called 'request_source' for all tickets that have no existing value:
+</p>
+<div class="code"><pre><span class="k">INSERT</span> <span class="k">INTO</span> ticket_custom
+   <span class="p">(</span>ticket<span class="p">,</span> name<span class="p">,</span> value<span class="p">)</span>
+   <span class="k">SELECT</span> 
+      id <span class="k">AS</span> ticket<span class="p">,</span>
+      <span class="s1">'request_source'</span> <span class="k">AS</span> name<span class="p">,</span>
+      <span class="s1">'None'</span> <span class="k">AS</span> value
+   <span class="k">FROM</span> ticket 
+   <span class="k">WHERE</span> id <span class="k">NOT</span> <span class="k">IN</span> <span class="p">(</span>
+      <span class="k">SELECT</span> ticket <span class="k">FROM</span> ticket_custom
+   <span class="p">);</span>
+</pre></div><p>
+If you added multiple custom fields at different points in time, you should be more specific in the subquery on table <tt>ticket</tt> by adding the exact custom field name to the query:
+</p>
+<div class="code"><pre><span class="k">INSERT</span> <span class="k">INTO</span> ticket_custom
+   <span class="p">(</span>ticket<span class="p">,</span> name<span class="p">,</span> value<span class="p">)</span>
+   <span class="k">SELECT</span> 
+      id <span class="k">AS</span> ticket<span class="p">,</span>
+      <span class="s1">'request_source'</span> <span class="k">AS</span> name<span class="p">,</span>
+      <span class="s1">'None'</span> <span class="k">AS</span> value
+   <span class="k">FROM</span> ticket 
+   <span class="k">WHERE</span> id <span class="k">NOT</span> <span class="k">IN</span> <span class="p">(</span>
+      <span class="k">SELECT</span> ticket <span class="k">FROM</span> ticket_custom <span class="k">WHERE</span> name <span class="o">=</span> <span class="s1">'request_source'</span>
+   <span class="p">);</span>
+</pre></div><hr />
+<p>
+See also: <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTickets">TracTickets</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">TracIni</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <script type="text/javascript">
+        jQuery.loadStyleSheet("/preparde/pygments/trac.css", "text/css");
+    </script>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracTicketsCustomFields?version=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

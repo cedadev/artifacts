@@ -1,0 +1,12 @@
+<Limit READ>
+	DenyAll
+        AllowGroup csipukmo
+</Limit> 
+<Limit WRITE>
+	DenyAll
+</Limit>
+<Limit DIRS>
+	DenyAll
+	AllowGroup csip
+	AllowGroup csipukmo
+</Limit>

@@ -1,0 +1,447 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>TOVS Analyses Data VMS binaryFormats</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>TOVS analyses : VMS Binary Data Formats<BR CLEAR="ALL"></H1>
+
+<P><EM>Detailed data format descriptions for the TOVS gridded
+radiances and analysed geopotential heights</EM> <HR ALIGN=LEFT> 
+
+<H2>Contents</H2>
+
+<UL>
+  <LI>1. <A HREF="#rads">Format of SSU monthly radiance datasets (1978-1995)</A>
+  <UL>
+    <LI>1.1 <A HREF="#rads_intro">Introduction</A>
+    <LI>1.2 <A HREF="#rads_first">Format of First (Header) Record</A>
+    <LI>1.3 <A HREF="#rads_second">Format of Second (Data) Record</A>
+    <LI>1.4 <A HREF="#rads_third">Format of third to 38th (Data)
+    Records</A>
+    <LI>1.5 <A HREF="#rads_notes">Notes</A>
+  </UL>
+  <LI>2. <A HREF="#hgts">Format of SSU monthly height datasets (1979-1997)</A>
+  <UL>
+    <LI>2.1 <A HREF="#hgts_intro">Introduction</A>
+    <LI>2.2 <A HREF="#hgts_first">Format of First (Header) Record</A>
+    <LI>2.3 <A HREF="#hgts_second">Format of Second (Data) Record</A>
+    <LI>2.4 <A HREF="#hgts_third">Format of third to 38th (Data)
+    Records</A>
+    <LI>2.5 <A HREF="#hgts_notes">Notes</A>
+  </UL>
+</UL>
+
+<HR ALIGN=LEFT>
+
+<H2>1. <A NAME="rads"></A>Format of SSU monthly radiance datasets (1978-1995)</H2>
+
+<P>&nbsp; 
+
+<H3>1.1 <A NAME="rads_intro"></A>Introduction</H3>
+
+<P>Each dataset contains analysed atmospheric radiances from a
+number of radiance channels on a global grid for each day in a
+month. The radiances are for the following radiometer channels: 
+
+<PRE>
+      HIRS 2    Channel       1                    
+      HIRS 2    Channel       2                    
+      HIRS 2    Channel       3                    
+      HIRS 2    Channel       8                    
+      HIRS 2    Channel       9       [See         
+      HIRS 2    Channel       17      [ <A HREF="#rad_note2">Note 2</A>     
+      MSU       Channel       23                   
+      MSU       Channel       24                   
+      SSU       Channel       25                   
+      SSU       Channel       26                   
+      SSU       Channel       27                 </PRE>
+
+<P>The global grid is a regular latitude - longitude grid of grid
+length 5 degrees. There are 37 latitudes from 90 degrees N to
+90 degrees S and 72 longitudes from 180 degrees W to 175 degrees
+E. 
+
+<P>The radiances are obtained from analysis of radiances supplied
+on an orbital grid by NOAA/NESDIS (as described in Section 2.2
+Stage 2.6). 
+
+<P>Each day's data consists of 38 records. The first record contains
+header information about the data while the other 37 records contain
+the radiances. The days are in chronological order. 
+
+<P>There are 1080 items in each record Each item is of type integer
+* 2. Note that data are scaled as indicated in <A HREF="#rad_note4">Note
+4</A>. 
+
+<P>Missing data are indicated by the value -32768. 
+
+<P>The formats of the 38 records are given in the following sections: 
+
+<H3>1.2 <A NAME="rads_first"></A>Format of First (Header) Record</H3>
+
+<PRE>
+ <B>ITEM NO.</B>      <B>BYTE OFFSET</B>         <B>DESCRIPTION</B>              <B>COMMENTS</B>       
+     1              0         Grid Type                 3 Global Grid        
+     2              2         No of Columns in Grid     72                   
+     3              4         No. of Rows in Grid       37                   
+     4              6         1st Channel Number        See <A
+HREF="#rad_note2">Note 2</A>           
+     5              8         2nd Channel Number         &quot;    &quot;  &quot;           
+     6             10         3rd Channel Number         &quot;    &quot;  &quot;           
+     7             12         4th Channel Number         &quot;    &quot;  &quot;           
+     8             14         5th Channel Number         &quot;    &quot;  &quot;           
+     9             16         6th Channel Number         &quot;    &quot;  &quot;           
+    10             18         7th Channel Number         &quot;    &quot;  &quot;           
+    11             20         8th Channel Number         &quot;    &quot;  &quot;           
+    12             22         9th Channel Number         &quot;    &quot;  &quot;           
+    13             24         10th Channel Number        &quot;    &quot;  &quot;           
+    14             26         11th Channel Number        &quot;    &quot;  &quot;           
+    15             28         Not Used                                       
+    16             30         Year/Month                mm + (yy * 100)      
+                              (year = true year -                            
+                              1990)                                          
+    17             32         Day/Hour                  hh + (dd * 100)      
+    18             34         Analysis time window      720 Minutes          
+    19             36         Data Flat for 1st         0 = Invalid Data     
+                              Channel Number            1 = Valid Data     </PRE>
+
+<P>Items 20 to 30 are as Item 19 but for the other Channels. The
+order of the flags is the same as the order of the channel numbers. 
+
+<PRE>
+ <B>ITEM NO.</B>      <B>BYTE OFFSET</B>         <B>DESCRIPTION</B>               <B>COMMENTS</B>        
+    31             60         Hemisphere covered        0 = global             
+    32             62         Number of fields of view  16                     
+                              per record of orbital                            
+                              radiance data used in                            
+                              analysis                                         
+    33             64         Number of radiance        Variable               
+                              records used in analysis  (0 - no data)          
+    34             66         Spacecraft Code           See <A
+HREF="#rad_note1">Note 1</A>                        
+    35             68         Search Radius used for    500 km                 
+                              individual fields of                             
+                              view in analysis                                 
+    36             70         Search radius used for a  900 km                 
+                              record of radiances used                         
+                              in analysis                                      
+    37             72         Analysis time window      720 Minutes            
+    38             74         Background weighting in   0 = no background      
+                              hundredths                                       
+    39             76         Number of grid points     Variable, See <A
+HREF="#rad_note3">Note 3</A> 
+                              with no fields of view    (2664 - no data)       
+                              within search radius.                            
+    40             78         Number of smoothing       25                     
+                              vectors used in                                  
+                              smoothing analysed data                          
+    41             80         Not used                                         
+    42             82         Not used                                         
+    43             84         Not used                                       </PRE>
+
+<P>Items 44 to 1080 are not used and are set to 0. 
+
+<H3>1.3 <A NAME="rads_second"></A>Format of Second (Data) Record</H3>
+
+<P>The data is for row 1 (90 degrees N) of the lat-long grid. 
+
+<PRE>
+ <B>ITEM NO.</B>    <B>BYTE OFFSET</B>         <B>DESCRIPTION</B>              <B>COMMENTS</B>       
+     1            0         Not Used                  Set to -32768        
+     2            2         Not Used                  Set to -32768        
+     3            4         Not Used                  Set to -32768        
+     4            6         1st Channel Radiance for  See Notes <A
+HREF="#rad_note4">4</A> and <A HREF="#rad_note5">5</A>    
+                                                                             
+                            1st Longitude (180 degrees W)                        </PRE>
+
+<P>Items 5 to 14 are the same as Item 4 but for the 2nd to 11th
+Channels. 
+
+<PRE>
+     15           28        Not Used                                       </PRE>
+
+<P>Items 16 to 30 are the same as Items 1 to 15 but for the 2nd
+longitude (175 degrees W) of the 90 degrees N latitude circle. 
+
+<P>Similarly, Items 31 to 1080 are for the 3rd to 72nd longitudes
+(170 degrees W to 175 degrees E) respectively of the 90 degrees
+N latitude circle. 
+
+<P>&nbsp; 
+
+<H3>1.4 <A NAME="rads_third"></A>Format of third to 38th (Data)
+Records</H3>
+
+<P>The format of each of these records is the same as that of
+the second record except that the data is for the 2nd (85 degrees
+N) to the 37th (90 degrees S) latitudes of the lat-long grid. 
+
+<H3>1.5 <A NAME="rads_notes"></A>Notes</H3>
+
+<DL>
+  <DT><A NAME="rad_note1"></A><STRONG>Note 1:</STRONG>
+  <DD>The spacecraft identifier (Item 34 of header) is a code with
+  value 2n-1,
+  <P>where : <PRE>n = 1 = TIROS-N 2 = NOAA-6 4 = NOAA-7 5 = NOAA-9
+  6 = NOAA-8 8 = NOAA-11 </PRE>
+  <DT><A NAME="rad_note2"></A><STRONG>Note 2:</STRONG>
+  <DD>The channel number (Item 4 of header) indicates one of the
+  following channels: <PRE><B>CHANNEL NUMBER</B> <B>CHANNEL</B>
+  1 HIRS-2 Channel 1 2 HIRS-2 Channel 2 3 HIRS-2 Channel 3 8 HIRS-2
+  Channel 8 9 HIRS-2 Channel 9 [ See 17 HIRS-2 Channel 17 [ below
+  23 MSU Channel 23 24 MSU Channel 24 25 SSU Channel 25 26 SSU
+  Channel 26 27 SSU Channel 27 </PRE>For certain periods HIRS-2
+  channels 9 and 17 are replaced by MSU channels 21 and 22.
+  <DT><A NAME="rad_note3"></A><STRONG>Note 3:</STRONG>
+  <DD>The number of grid points with no fields of view within the
+  search radius (Item 39) gives an indication of the accuracy of
+  the analysis. If there are more than 650 missing grid points
+  it is recommended that the analysis is not used.
+  <DT><A NAME="rad_note4"></A><STRONG>Note 4:</STRONG>
+  <DD>The radius values (main items in data records) are in units
+  of mW/(cm-1 Sr m2) and are scaled by a factor which depends on
+  the channel. <PRE><B>CHANNEL</B> <B>SCALING FACTOR</B> 1 X64
+  2 X64 3 X64 8 X64 9 X64 17 X4096 21 X262144 22 X262144 23 X262144
+  24 X262144 25 X64 26 X64 27 X64 </PRE>
+  <P>True radiance value = radiance value in dataset / scaling
+  factor.
+  <DT><A NAME="rad_note5"></A><STRONG>Note 5:</STRONG>
+  <DD>True radiances can be converted to equivalent brightness
+  temperatures using the FORTRAN code available from the BADC
+  <DT><A NAME="rad_note6"></A><STRONG>Note 6:</STRONG>
+  <DD>Dataset file names are as follows : M20.SnnRAD#3.YyyMmmG
+  <PRE>where nn = Spacecraft Number = 01 for TIROS-N = 02 for NOAA-6
+  = 04 for NOAA-7 = 05 for NOAA-9 = 06 for NOAA-8 = 08 for NOAA-11
+  yy = Year - 1990 mm = Month G = Generation Number = 1 = Data
+  from SSU Radiance Channels Only = 2 = Data from all Radiance
+  Channels </PRE>Users should note that the monthly radiance dataset
+  is constructed from daily radiance datasets. Each of these datasets
+  has its own generation number. The generation number used in
+  the monthly radiance dataset name is set equal to the most common
+  generation number amongst the daily radiance datasets.
+  <DT><A NAME="rad_note7"></A><STRONG>Note 7:</STRONG>
+  <DD>The datasets are organised on tape into blocks of records
+  of fixed length. The blocksize = 21600 bytes and the record length
+  = 2160 bytes.
+</DL>
+
+<H2>2. <A NAME="hgts"></A>Format of the SSU monthly heights datasets (1979-1997)</H2>
+
+<H3>2.1 <A NAME="hgts_intro"></A>Introduction</H3>
+
+<P>Each dataset contains analysed tropospheric and stratospheric
+geopotential heights on a global grid for each day in a month. 
+
+<P>The heights are for the levels: 
+
+<PRE>
+        850, 500, 300, 200, 100, 50, 20, 10, 5, 2, 1 HPa </PRE>
+
+<P>The global grid is a regular latitude - longitude grid of grid
+length 50. There are 37 latitudes from 90 degrees N to 90 degrees
+S and 72 longitudes from 180 degrees W to 175 degrees E. 
+
+<P>The tropospheric heights (up to and including the 50 Hpa level)
+are obtained from an operational global analysis, while the stratospheric
+heights are calculated from the 100 Hpa operational analysis heights
+and sets of thicknesses on an orbital grid. The latter are retrieved
+from orbital radiances as measured by HIRS-2, MSU and SSU sounding
+units. 
+
+<P>Each day's data consists of 38 records. The first record contains
+header information about the data, while the other 37 records
+contain the heights. The days are in chronological order. 
+
+<P>There are 1080 items in each record. Each item is of type integer
+* 2. Data are scaled as indicated in <A HREF="#hgt_note4">Note
+4</A>. 
+
+<P>Missing data are indicated by the value -32768. 
+
+<P>The formats of the 38 records are as follows: 
+
+<P>&nbsp; 
+
+<H3>2.2 <A NAME="hgts_first"></A>Format of First (Header) Record</H3>
+
+<PRE>
+<B>ITEM NO.</B>     <B>BYTE OFFSET</B>          <B>DESCRIPTION</B>                 <B>COMMENTS</B>          
+     1              0        Grid Type                 3 - Global Grid            
+     2              2        No of Columns             72                         
+                             (longitudes) in Grid                                 
+     3              4        No of Rows                37                         
+                             (latitudes) in Grid                                  
+     4              6        1st Pressure Level (Hpa)  1000 (not used)            
+     5              8        2nd Pressure Level (Hpa)  850                        
+     6             10        3rd Pressure Level (HPa)  500                        
+     7             12        4th Pressure Level (Hpa)  300                        
+     8             14        5th Pressure Level (Hpa)  200                        
+     9             16        6th Pressure Level (HPa)  100                        
+     10            18        7th Pressure Level (HPa)  50                         
+     11            20        8th Pressure Level (HPa)  20                         
+     12            22        9th Pressure Level (Hpa)  10                         
+     13            24        10th Pressure Level       5                          
+                             (Hpa)                                                
+     14            26        11th Pressure Level       2                          
+                             (Hpa)                                                
+     15            28        12th Pressure Level       1                          
+                             (Hpa)                                                
+     16            30        Year/Month                mm + yy * 100)             
+                             (Year = True Year -                                  
+                             1900)                                                
+     17            32        Day/Hour                  hh + (dd * 100)            
+                                                       hh = 0 GMT before 3/8/79   
+                                                       12 GMT from 3/8/79         
+     18            34        Analysis Time Window      720 Minutes                
+     19            36        Data Flag for 1000 mb     0 = Invalid Data           
+                                                       1 = Valid Data             
+                                                       2 = Interpolated Data      
+                                                       3 = thicknesses           </PRE>
+
+<P>Items 20 to 30 are as Item 19 but for the other heights. The
+order of the flags is the same as the order of the pressure levels. 
+
+<PRE>
+<B>ITEM NO.</B>     <B>BYTE OFFSET</B>             <B>DESCRIPTION</B>                 <B>COMMENTS</B>         
+     31             60        Hemisphere Covered         0 - Global               
+     32             62        Number of Fields of View   16                       
+                              per Record of Orbital                               
+                              Thickness Data used in                              
+                              Analysis                                            
+     33             64        Number of Thickness        Variable                 
+                              Records used in Analysis                            
+     34             66        Spacecraft Code            See <A
+HREF="#hgt_note1">Note 1</A>               
+     35             68        Search Radius used for     500 km                   
+                              Individual Fields of View                           
+                              in Analysis                                         
+     36             70        Search Radius used for a   900 km                   
+                              Record of Thicknesses                               
+                              used in Analysis                                    
+     37             72        Analysis Time Window       720 Minutes              
+     38             74        Background Weighting in    0 = No Background        
+                              Hundredths                                          
+     39             76        Number of Grid Points      Variable                 
+                              with no Fields of View     See <A
+HREF="#hgt_note2">Note 2</A>              
+                              within search radius                                
+     40             78        Number of smoothing        25 (i.e. truncation at   
+                              vectors used in smoothing  zonal wave 12)           
+                              analysis                                            
+     41             80        Coverage Code              See <A
+HREF="#hgt_note3">Note 3</A>           
+     42             82        Time of tropospheric data  Usually, but not         
+                                                         always, the same as hh   
+                                                         in item 17               
+     43             84        Interpolation of 50 Hpa    0 = Actual Data          
+                              data                       1 = Interpolated Data   </PRE>
+
+<P>Items 44 to 1080 are not used and are set to 0 
+
+<P>&nbsp; 
+
+<H3>2.3 <A NAME="hgts_second"></A>Format of Second (Data) Record</H3>
+
+<P>The data is for row 1 (900N) of the lat-long grid. 
+
+<PRE>
+<B>ITEM NO.</B>     <B>BYTE OFFSET</B>            <B>DESCRIPTION</B>               <B>COMMENTS</B>         
+     1              0        Not Used                  Set to -32768           
+     2              2        Not Used                  Set to -32768           
+     3              4        Not Used                  Set to -32768           
+     4              6        1000 Hpa heights for 1st  Not Used.  Set to       
+                             longitude (180 degrees W)         -32768                  
+     5              8        850 Hpa heights for 1st   See <A
+HREF="#hgt_note4">Note 4</A>               
+                             longitude (180 degrees W)                                </PRE>
+
+<P>Items 6 to 15 are the same as Item 5 but for pressure levels
+500, 300, 200, 100, 50, 20, 10, 5, 2 and 1 Hpa. 
+
+<P>Items 16 to 30 are the same as Items 1 to 15 but for the 2nd
+longitude (175 degrees W) of the 90 degrees N latitude circle. 
+
+<P>Similarly, Items 31 to 1080 are for the other longitudes (170
+degrees W to 175 degrees E) of the 90 degrees N latitude circle. 
+
+<P>&nbsp; 
+
+<H3>2.4 <A NAME="hgts_third"></A>Format of third to 38th (Data)
+Records</H3>
+
+<P>The format of each of these records is the same as that of
+the 2nd record except that the data is for latitudes 85 degrees
+N to 90 degrees S. 
+
+<P>&nbsp; 
+
+<H3>2.5 <A NAME="hgts_notes"></A>Notes</H3>
+
+<DL>
+  <DT><A NAME="hgt_note1"></A><STRONG>Note 1:</STRONG>
+  <DD>The spacecraft identifier (Item 34) is a code with value
+  2n-1, where <PRE>n = 1 = TIROS-N 2 = NOAA-6 4 = NOAA-7 5 = NOAA-9
+  6 = NOAA-8 8 = NOAA-11 </PRE>
+  <DT><A NAME="hgt_note2"></A><STRONG>Note 2:</STRONG>
+  <DD>The number of grid points with no fields of view within the
+  search radius (Item 39) gives an indication of the accuracy of
+  the analysis. If there are more than 650 missing grid points
+  it is recommended that the analysis is not used.
+  <DT><A NAME="hgt_note3"></A><STRONG>Note 3:</STRONG>
+  <DD>The coverage code (Item 41) gives information about the data
+  used to produce the height analysis.
+  <P><PRE>0 = NMC + THK#3 Thicknesses (Global 1 = NMC Only (Global)
+  2 = UKMO(NH) + THK#3 Thicknesses (N Hemi) THK#3 100 Hpa + THK#3
+  Thicknesses (S Hemi) 3 = UKMO(NH) + THK#3 Thicknesses (N Hemi)
+  THK#3 Thicknesses Only (S Hemi) 4 = UKMO(NH) Only 5 = THK#3 100
+  Hpa + THK#3 Thicknesses (Global) 6 = THK#3 Thicknesses Only (Global)
+  7 = No Data 8 = ECMWF + THK#3 (Global) 9 = ECMWF Only (Global)
+  10 = UKMO(GL) or UKMO(UM) + THK#3 (Global) 11 = UKMO(GL) or UKMO(UM)
+  Only (Global) </PRE>Where:
+  <P><PRE>NMC = Analysed tropospheric heights (850, 500, 300, 100
+  and 50 Hpa) from NMC (Washington) THK#3 Thicknss = Analysed stratospheric
+  thicknesses (100-20, 100-10, 100-5, 100-2 and 100-1 HPa) UKMO
+  = Analysed tropospheric heights (850, 500, 300, 100 and 50 Hpa)
+  from the Met Office operational analysis UKMO(NH)
+  = For coverage codes 2, 3 and 4, the UKMO tropospheric heights
+  were produced for the northern hemisphere only using the hemispheric
+  Octagon model. UKMO(GL) = Before 12 June 1991, for coverage codes
+  10 and 11, the UKMO analyses were produced with the first global
+  weather forecasting model (GL) at UKMO. UKMO(UM) = After 12 June
+  1991, for coverage codes 10 and 11, the UKMO analyses were produced
+  with the new weather forecasting model at UKMO, the Unified Model
+  (UM) THK#3 100 Hpa = Analysed heights at 100 Hpa from NMC (Washington)
+  ECMWF = Analysed tropospheric heights (850, 500, 300, 100 and
+  50 Hpa) from ECMWF N Hemi = Data from 90 degrees N to approximately
+  20 degrees N S Hemi = Data from approximately 20 degrees N to
+  90 degrees S </PRE>
+  <DT><A NAME="hgt_note4"></A><STRONG>Note 4:</STRONG>
+  <DD>The heights (main items in data records) are written in decametres
+  and are scaled by a factor of 5. The true height in metres =
+  height value in datasetx2.
+  <DT><A NAME="hgt_note5"></A><STRONG>Note 5:</STRONG>
+  <DD>Dataset names are as follows :
+  <P>M20.SnnHTS#3.YyyMmmG
+  <P>where <PRE>nn = Spacecraft Number = 01 for TIROS-N = 02 for
+  NOAA 6 = 04 for NOAA 7 = 05 for NOAA 9 = 06 for NOAA 8 = 08 for
+  NOAA 11 yy = Year - 1900 mm = Month G = Generation Number = 1
+  Data from SSU Radiance Channels only = 2 Data from all Radiance
+  Channels </PRE>
+  <P>The monthly heights dataset is constructed from daily heights
+  datasets. Each of these datasets has its own generation number.
+  the generation number used in the monthly heights dataset name
+  is set equal to the most common generation number amongst the
+  daily heights datasets.
+  <DT><A NAME="hgt_note6"></A><STRONG>Note 6:</STRONG>
+  <DD>The datasets are organised on tape into blocks of records
+  of fixed length. The block size = 21600 bytes and the record
+  length = 2160 bytes.
+</DL>
+
+<P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,125 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>GRIB Decoding Software</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>GRIB Decoding Software</H1>
+<HR ALIGN=LEFT>
+
+<H2>Introduction</H2>
+This page details a number of software options for decoding GRIB (GRIdded Binary) data that are available from the BADC:
+
+<UL>
+  <LI><a href="#gribex">ECMWF GRIBEX Fortran code software</a>
+  <LI><a href="#local">Local software for GRIB decoding</a>
+  <LI><a href="#other">Other software for decoding, converting and subsetting GRIB files</a>
+</UL>
+
+<H2><a name="gribex">ECMWF GRIBEX Fortran code software (now replaced by GRIB_API)</a></H2>
+The ECMWF provides Fortran routines and example programs to decode GRIB data. This software is 
+now publicly and freely available from the 
+<A HREF="https://software.ecmwf.int/wiki/display/GRIB/Home">ECMWF software pages</A>. Documentation 
+is also provided for users.
+
+ 
+<H2><a name="local">Local software for GRIB decoding</a></H2>
+<P>The BADC have adapted the GRIBEX sample routines to provide some quick-look
+facilities for GRIB files.  These routines are available on <I>login.badc.rl.ac.uk</I>, the BADC server.
+The routines can be used to list the
+record header information, giving information on the parameters, levels, dates
+within the file, and/or decode and list the data itself in ASCII format. 
+
+Files stored on the BADC contain many GRIB records and decoding them using any
+of the following routines often results in large amounts of output.  It is a
+good idea to <I>pipe</I> the output into the <I>more</I> command or redirect the output to a different
+file.  The utilities are provided mainly for a quick-look facility.  The decoded
+data output from the utilities takes up more disk space than the GRIB files and
+it is suggested that to use the GRIB data it is more efficient to download the
+GRIB files to your local machine rather than decoded text versions.
+
+<h3>Decoding the record headers</h3>
+The record headers contain information on the parameters, levels, dates, data
+grid etc. within the file.  A list of the headers can be obtained using the
+program <kbd>grib2brief</kbd>.
+<pre>
+grib2brief file | more
+</pre>
+
+To get very brief output pipe the output of <kbd>grib2brief</kbd> through
+<kbd>grep</kbd>. 
+
+<pre>
+grib2brief file | grep "Section 0" | wc -l
+</pre>
+gives the number of GRIB records in the file.
+
+<pre>
+grib2brief file | grep "Parameter" | sort | uniq
+</pre>
+lists the parameters present in the file.
+
+<h3>Decoding the data</h3>
+The BADC provide two utilities that can be used to decode the data as well as
+the record header information.  The first, <kbd>grib2fulltxt</kbd>, gives full
+record header information as well as the data.  The second, <kbd>grib2txt</kbd>
+gives an abbreviated form of the record headers as well as the data.  The
+abbreviated header is a simple column of data.  The rows in the column are:
+parameter, leveltype, level, year, month, day, hour, minute.
+
+<pre>
+grib2fulltxt file
+</pre>
+
+<pre>
+grib2txt file
+</pre>
+
+<h3>GRIB record filters</h3>
+A couple of utilities are provided to help reduce the size of GRIB files that
+are downloaded from the BADC.  These utilities extract GRIB records, either by
+level or parameter, from a GRIB file.  To
+filter a particular level out of a GRIB file use <kbd>griblevel</kbd>.  To
+filter a particular parameter out of a GRIB file use <kbd>gribparameter</kbd>.
+
+<pre>
+griblevel -l level file_in > file_out
+</pre>
+
+to extract level <kbd>level</kbd> or
+<pre>
+gribparameter -p parameter file_in > file_out
+</pre>
+
+to extract parameter <kbd>parameter</kbd>.  At present <kbd>griblevel</kbd> and
+<kbd>gribparameter</kbd> will only extract one level or parameter at a time.
+ 
+
+<h2><kbd>gribdecode</kbd></h2>
+In the current implementation all of the above GRIB utilities sit on top of a
+single program <kbd>gribdecode</kbd>.  To get more information use
+<pre>
+gribdecode -h
+</pre>
+
+
+<h2><a name="other">Other software for decoding, converting and subsetting GRIB files</a></h2>
+The BADC provides an X windows utility called <a href="/help/software/xconv">XCONV</a> which allows the user to interactively manipulate GRIB data. 
+The package includes format conversion, interpolation, sub-setting and plotting options. 
+XCONV is presented via a user-friendly Graphical User Interface.
+
+<P>The BADC also provides a the <a href="/help/software/xconv">CONVSH</A> 
+utility which is a command-line equivalent of XCONV. 
+Scripts can be written for CONVSH to batch process data files. Both packages can are available via 
+<a href="/help/software/xconv/index.html#download">download</a> for a number 
+of different platforms. The BADC has developed the 
+<a href="/help/software/xconv/subset.html">subset.tcl</a> command line utility 
+to allow subsetting, batch processing and conversion of GRIB files. 
+ 
+<P>If you have any problems with the GRIB decoding utilities please contact 
+<a href="/help/contact.html">BADC Support</a>.
+
+<P>
+</BODY>
+</HTML>

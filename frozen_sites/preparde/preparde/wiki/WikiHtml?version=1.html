@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      WikiHtml – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiHtml?version=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiHtml" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiHtml" title="View WikiHtml">WikiHtml</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiHtml" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A01%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:01+01:00 in Timeline">6 years</a> ago)
+               (<a href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiHtml?action=diff&amp;version=1">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="UsingHTMLinWikiText">Using HTML in Wiki Text</h1>
+<p>
+Trac supports inserting HTML into any wiki context, accomplished using the <tt>#!html</tt> <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors">WikiProcessor</a>. 
+</p>
+<p>
+However a constraint is that this HTML has to be well-formed.
+In particular you can't insert a start tag in an <tt>#!html</tt> block,
+resume normal wiki text and insert the corresponding end tag in a 
+second <tt>#!html</tt> block. 
+</p>
+<p>
+Fortunately, for creating styled &lt;div&gt;s, &lt;span&gt;s  or even complex tables
+containing arbitrary Wiki text, there's a powerful alternative: use of
+dedicated <tt>#!div</tt>, <tt>#!span</tt> and <tt>#!table</tt>, <tt>#!tr</tt>, <tt>#!td</tt> and <tt>#!th</tt> blocks.
+</p>
+<p>
+Those Wiki processors are built-in, and does not require installing any additional packages.
+</p>
+<h2 id="HowtoUseHTML">How to use <tt>#!html</tt></h2>
+<p>
+To inform the wiki engine that a block of text should be treated as HTML, use the <em>html</em> processor. 
+</p>
+<table class="wiki">
+<tr><th> Wiki Markup </th><th> Display 
+</th></tr><tr><td><pre class="wiki">{{{
+#!html
+&lt;h1 style="text-align: right; color: blue"&gt;HTML Test&lt;/h1&gt;
+}}}
+</pre></td><td style="padding-left: 2em"><h1 style="text-align: right; color: blue">HTML Test</h1>
+</td></tr></table>
+<p>
+Note that Trac sanitizes your HTML code before displaying it. That means that if you try to use potentially dangerous constructs such as Javascript event handlers, those will be removed from the output. 
+</p>
+<p>
+Since 0.11, the filtering is done by Genshi, and as such, the produced output will be a well-formed fragment of HTML. As noted above in the introduction, this mean that you can no longer use two HTML blocks, one for opening a &lt;div&gt;, the second for closing it, in order to wrap arbitrary wiki text.
+The new way to wrap any wiki content inside a &lt;div&gt; is to use the <tt>#!div</tt> Wiki  processor.
+</p>
+<h2 id="HowtoUseDivSpan">How to use <tt>#!div</tt> and <tt>#!span</tt></h2>
+<table class="wiki">
+<tr><th> Wiki Markup </th><th> Display 
+</th></tr><tr><td><pre class="wiki">{{{
+#!div class="important" style="border: 2pt solid; text-align: center"
+This is the ''only'' way to go in Trac 0.11
+}}}
+
+{{{
+#!div class="wikipage" style="border: 1pt dotted"
+Only `wikipage` (same as specifying no class attribute)
+}}}
+
+{{{
+#!div class="wikipage compact " style="border: 1pt solid"
+Use combined classes (`compact` and `wikipage`)
+}}}
+
+{{{
+#!div class="compact" style="border: 1pt dotted"
+Only `compact`
+}}}
+
+{{{
+#!div class="" style="border: 1pt solid"
+No classes (//not// the same as specifying no class attribute...)
+}}}
+</pre></td><td style="padding-left: 2em"><div style="border: 2pt solid; text-align: center" class="important"><p>
+This is the <em>only</em> way to go in Trac 0.11
+</p>
+</div><div style="border: 1pt dotted" class="wikipage"><p>
+Only <tt>wikipage</tt> (same as specifying no class attribute)
+</p>
+</div><div style="border: 1pt solid" class="wikipage compact "><p>
+Use combined classes (<tt>compact</tt> and <tt>wikipage</tt>)
+</p>
+</div><div style="border: 1pt dotted" class="compact"><p>
+Only compact
+</p>
+</div><div style="border: 1pt solid" class=""><p>
+No classes (<em>not</em> the same as specifying no class attribute...)
+</p>
+</div></td></tr></table>
+<p>
+Note that the contents of a <tt>#!div</tt> block are contained in one or more paragraphs, which have a non-zero top and bottom margin. This leads to the top and bottom padding in the example above. To remove the top and bottom margin of the contents, add the <tt>compact</tt> class to the <tt>#!div</tt>. Another predefined class besides <tt>wikipage</tt> and <tt>compact</tt> is <tt>important</tt>, which can be used to make a paragraph stand out. Extra CSS classes can be defined via the <tt>site/style.css</tt> file for example, see <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization#SiteAppearance">TracInterfaceCustomization#SiteAppearance</a>.
+</p>
+<p>
+For spans, you should rather use the Macro call syntax:
+</p>
+<table class="wiki">
+<tr><th> Wiki Markup 
+</th></tr><tr><td><pre class="wiki">Hello 
+[[span(''WORLD'' (click [#anchor here]), style=color: green; font-size: 120%, id=anchor)]]!
+</pre></td></tr><tr>
+<th> Display 
+</th></tr><tr><td style="padding-left: 2em"><blockquote>
+<p>
+Hello
+<span style="color: green; font-size: 120%" id="anchor"><em>WORLD</em> (click <a class="wiki" href="WikiHtml%3Fversion=1.html#anchor">here</a>)</span>!
+</p>
+</blockquote>
+</td></tr></table>
+<h2 id="Tables">How to use <tt>#!td</tt> and other table related processors</h2>
+<p>
+<tt>#!td</tt> or <tt>#!th</tt> processors are actually the main ones, for creating table data and header cells, respectively. The other processors <tt>#!table</tt> and <tt>#!tr</tt> are not required for introducing a table structure, as <tt>#!td</tt> and <tt>#!th</tt> will do this automatically. The <tt>|-</tt> row separator can be used to start a new row when needed, but some may prefer to use a <tt>#!tr</tt> block for that, as this introduces a more formal grouping and offers the possibility to use an extra level of indentation. The main purpose of the <tt>#!table</tt> and <tt>#!tr</tt> is to give the possibility to specify HTML attributes, like <em>style</em> or <em>valign</em> to these elements.
+</p>
+<table class="wiki">
+<tr><th> Wiki Markup </th><th> Display 
+</th></tr><tr><td><pre class="wiki">Simple 2x2 table with rich content:
+{{{#!th align=left
+ - Left
+ - Header
+}}}
+{{{#!th align=left
+ - Right
+ - Header
+}}}
+|----------------------------------
+{{{#!td style="background: #ffd"
+ - Left
+ - Content
+}}}
+{{{#!td style="vertical-align: top"
+!RightContent
+}}}
+|----------------------------------
+|| ... and this can be mixed||\
+||with pipe-based cells ||
+{{{#!td colspan=2
+Pick the style the more appropriate
+to your content
+
+See WikiFormatting#Tables for details
+on the pipe-based table syntax.
+}}}
+
+If one needs to add some 
+attributes to the table itself...
+
+{{{
+#!table style="border:none;text-align:center;margin:auto"
+  {{{#!tr ====================================
+    {{{#!th style="border: none"
+    Left header
+    }}}
+    {{{#!th style="border: none"
+    Right header
+    }}}
+  }}}
+  {{{#!tr ==== style="border: 1px dotted grey"
+    {{{#!td style="border: none"
+    1.1
+    }}}
+    {{{#!td style="border: none"
+    1.2
+    }}}
+  }}}
+  {{{#!tr ====================================
+    {{{#!td style="border: none"
+    2.1
+    }}}
+    {{{#!td
+    2.2
+    }}}
+  }}}
+}}}
+
+
+</pre></td><td valign="top"><p>
+Simple 2x2 table with rich content:
+</p>
+<table class="wiki">
+<tr><th align="left"><ul><li>Left
+</li><li>Header
+</li></ul></th><th align="left"><ul><li>Right
+</li><li>Header
+</li></ul></th></tr><tr>
+<td style="background: #ffd"><ul><li>Left
+</li><li>Content
+</li></ul></td><td style="vertical-align: top"><p>
+RightContent
+</p>
+</td></tr><tr>
+<td style="text-align: right"> ... and this can be mixed
+</td><td style="text-align: left">with pipe-based cells 
+</td></tr><tr><td colspan="2"><p>
+Pick the style the more appropriate
+to your content
+</p>
+<p>
+See <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting#Tables">WikiFormatting#Tables</a> for details
+on the pipe-based table syntax.
+</p>
+</td></tr></table>
+<p>
+If one needs to add some 
+attributes to the table itself...
+</p>
+<table style="border:none; text-align:center; margin:auto" class="wiki"><tr><th style="border: none"><p>
+Left header
+</p>
+</th><th style="border: none"><p>
+Right header
+</p>
+</th></tr><tr style="border: 1px dotted grey"><td style="border: none"><p>
+1.1
+</p>
+</td><td style="border: none"><p>
+1.2
+</p>
+</td></tr><tr><td style="border: none"><p>
+2.1
+</p>
+</td><td><p>
+2.2
+</p>
+</td></tr></table></td></tr></table>
+<p>
+Note that by default tables are assigned the "wiki" CSS class, which gives a distinctive look to the header cells and a default border to the table and cells (as can be seen for the tables on this page). By removing this class (<tt>#!table class=""</tt>), one regains complete control on the table presentation. In particular, neither the table, the rows nor the cells will have a border, so this is a more effective way to get such an effect than having to specify a <tt>style="border: no"</tt> parameter everywhere. 
+</p>
+<table class=""><tr><th> Wiki Markup </th><th> Display 
+</th></tr><tr><td><pre class="wiki">{{{#!table class=""
+||  0||  1||  2||
+|| 10|| 20|| 30||
+|| 11|| 22|| 33||
+||||||=  numbers  =||
+}}}
+</pre></td><td><table class=""><tr><td style="text-align: right">  0</td><td style="text-align: right">  1</td><td style="text-align: right">  2
+</td></tr><tr><td style="text-align: right"> 10</td><td style="text-align: right"> 20</td><td style="text-align: right"> 30
+</td></tr><tr><td style="text-align: right"> 11</td><td style="text-align: right"> 22</td><td style="text-align: right"> 33
+</td></tr><tr><th colspan="3" style="text-align: center">  numbers  
+</th></tr></table></td></tr></table><p>
+Other classes can be specified as alternatives (remember that you can define your own in <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization#SiteAppearance">site/style.css</a>).
+</p>
+<table class="wiki">
+<tr><th> Wiki Markup </th><th> Display 
+</th></tr><tr><td><pre class="wiki">{{{#!table class="listing"
+||  0||  1||  2||
+|| 10|| 20|| 30||
+|| 11|| 22|| 33||
+||||||=  numbers  =||
+}}}
+</pre></td><td><table class="listing"><tr><td style="text-align: right">  0</td><td style="text-align: right">  1</td><td style="text-align: right">  2
+</td></tr><tr><td style="text-align: right"> 10</td><td style="text-align: right"> 20</td><td style="text-align: right"> 30
+</td></tr><tr><td style="text-align: right"> 11</td><td style="text-align: right"> 22</td><td style="text-align: right"> 33
+</td></tr><tr><th colspan="3" style="text-align: center">  numbers  
+</th></tr></table></td></tr></table>
+<h2 id="HTMLcomments">HTML comments</h2>
+<p>
+HTML comments are stripped from the output of the <tt>html</tt> processor. To add an HTML comment to a wiki page, use the <tt>htmlcomment</tt> processor (available since 0.12). For example, the following code block:
+</p>
+<table class="wiki">
+<tr><th> Wiki Markup 
+</th></tr><tr><td><pre class="wiki">{{{
+#!htmlcomment
+This block is translated to an HTML comment.
+It can contain &lt;tags&gt; and &amp;entities; that will not be escaped in the output.
+}}}
+</pre></td></tr><tr>
+<th> Display 
+</th></tr><tr><td><pre class="wiki">&lt;!--
+This block is translated to an HTML comment.
+It can contain &lt;tags&gt; and &amp;entities; that will not be escaped in the output.
+--&gt;
+</pre></td></tr></table>
+<p>
+Please note that the character sequence "--" is not allowed in HTML comments, and will generate a rendering error.
+</p>
+<h2 id="MoreInformation">More Information</h2>
+<ul><li><a class="ext-link" href="http://www.w3.org/"><span class="icon"> </span>http://www.w3.org/</a> -- World Wide Web Consortium
+</li><li><a class="ext-link" href="http://www.w3.org/MarkUp/"><span class="icon"> </span>http://www.w3.org/MarkUp/</a> -- HTML Markup Home Page
+</li></ul><hr />
+<p>
+See also:  <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiProcessors">WikiProcessors</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiFormatting">WikiFormatting</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiRestructuredText">WikiRestructuredText</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/WikiHtml?version=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

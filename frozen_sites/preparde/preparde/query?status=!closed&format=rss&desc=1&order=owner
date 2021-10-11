@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>PREPARDE: Ticket Query</title>
+    <link>http://proj.badc.rl.ac.uk/preparde/query?status=!closed&amp;desc=1&amp;order=owner</link>
+    <description>Peer REview for Publication &amp; Accreditation of          	Research Data in the Earth sciences Project</description>
+    <language>en-US</language>
+    <image>
+      <title>PREPARDE</title>
+      <url>http://proj.badc.rl.ac.uk/preparde/chrome/common/trac_banner.png</url>
+      <link>http://proj.badc.rl.ac.uk/preparde/query?status=!closed&amp;desc=1&amp;order=owner</link>
+    </image>
+    <generator>Trac 0.12.2</generator>
+ </channel>
+</rss>

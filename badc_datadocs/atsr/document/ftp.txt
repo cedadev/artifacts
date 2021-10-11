@@ -1,0 +1,17 @@
+ 
+ FTP account.
+
+ Updates to the data, software and documentation contained on these 
+ CDs will be made available on an anonymous ftp account.
+ Use the ftp address below, with the username `anonymous' and your email
+ address as the password.
+
+ The directory structure reflects that on the CD and is given below.
+
+ FTP ADDRESS:  sstaxp.ag.rl.ac.uk
+
+ DIRECTORIES:  atsr1/asst          (asst data)
+               atsr1/docs          (documentation)
+               atsr1/months        (monthly-averaged maps)
+               atsr1/software      (software)
+               atsr1/supers        (five-day averaged data)

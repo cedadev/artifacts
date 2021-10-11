@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "VGL_MTMP "
+"SUM_DATA_SET"       "VGL-TMP-DEV  "
+"SUM_DATATYPE"       "MONTHLY      "
+"ARCHIVE_NAME"       "NCDS         "
+"ARCHIVE_STATUS"     "Available    "
+"DS_DESCRIPTION"     "Vinnikov, Groisman, Lugina Temperature Deviations"
+"DT_DESCRIPTION"     "Monthly Temperature Deviation                   "
+"SUM_BEGIN_DATE"     "01-Jan-1881"
+"SUM_END_DATE"       "31-Dec-1990"
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Global"
+"SPATIAL2"           " "
+"SPATIAL3"           "30 deg latitudinal zones"
+"SPATIAL4"           " "
+"TEMPORAL1"          "January, 1880 - December, 1990"
+"TEMPORAL2"          " "
+"TEMPORAL3"          "Monthly temperature deviations"
+"TEMPORAL4"          " "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF)."
+"PRODUCT2"           "Available on GEDEX CD-ROM.           "
+"PRODUCT3"           " "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"TEMPERATURE"     "Monthly temperature deviation" "Deg C"
+EOF
+
+SOURCES
+"MODEL"           "ANALYSES"
+EOF

@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20090323T000000Z
+DTEND:20090327T000000Z
+LOCATION:Perth, Australia
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000060C992D21A77C901000000000000000
+	010000000F2DA95AD24F0E34E9CD426AB2CC98EB6
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+CSIRO, in conjunction with the Australian Climate Change Science Program,=
+ is proud to announce GREENHOUSE 2009: Climate Change and Resources. The =
+conference is the latest in the 'GREENHOUSE' series, following the highly=
+-successful events in 2007 in Sydney, and 2005 in Melbourne.=0D=0A=0D=0AD=
+etails available at: http://www.greenhouse2009.com/=0D=0A
+SUMMARY:GREENHOUSE 2009: Climate change and Resources
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

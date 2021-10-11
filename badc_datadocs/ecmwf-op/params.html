@@ -1,0 +1,2375 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC ECMWF Operational data - Parameters</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<!--SELECTION--><!--/SELECTION--><IMG SRC="ecmwflogo.gif"
+ALT="ECMWF logo:" ALIGN="BOTTOM">
+
+<A NAME=top></A>
+<H1>Parameters available in the ECMWF Operational data held at the BADC (March 1994 - Present)</H1>
+
+<HR ALIGN=LEFT>
+
+<H2><IMG SRC="/graphics/blue/info.gif" BORDER="0" ALIGN="BOTTOM">Introduction</H2>
+
+
+The BADC archives a range of parameters produced by the ECMWF Operational analyses and forecasts.<P> 
+
+The tables on this web page display all the parameters that are available for each grid type and resolution.
+The tables also include the time period and the type and number of levels for which each parameter is available.<P>
+
+<B>The following data types are consistent with the ECMWF ERA-15 Re-analysis data held at the BADC. The data spans March 1994 to the present day:</B><P>
+
+<UL>
+<LI><a href="#2.5_deg">Regular 2.5&deg; x 2.5&deg; gridded data</a>
+	<UL>
+	<LI><a href="#lisf">Surface/single level analysis fields (lisfYYMMDDHH)</a>
+	<LI><a href="#lisfmm">Surface/single level monthly means (lisfYYYYMMmmHH.PPP)</a>
+	<LI><a href="#lipr">Upper air analysis fields on pressure levels (liprYYMMDDHH)</a>
+	<LI><a href="#liprmm">Upper air analysis monthly means (liprYYYYMMmmHH.PPP)</a>
+	</UL>
+<BR>
+<LI><a href="#gaussian">N80 Full Gaussian Gridded data</a>
+	<UL><LI><a href="#gisf">Surface/single level analysis fields (gisfYYMMDDHH)</a>
+	<LI><a href="#gpsfo">Surface/single level forecast fields (gpsfoYYMMDDHH)</a>
+	</UL>
+<BR>
+<LI><a href="#spectral">Spectral T106 data</a>
+	<UL><LI><a href="#siua">Upper air analysis fields on model levels (siuaYYMMDDHH)</a>
+	<LI><a href="#sipr">Upper air analysis fields on pressure levels (siprYYMMDDHH)</a>
+	</UL>
+<BR>
+<LI><a href="#orog">Orography</a>	
+</UL>
+
+<BR>
+Details of the available parameters are also listed for the 
+<A HREF="/data/ecmwf-era/params.html">ERA-15 dataset</A> on a separate page.<P>
+
+<B>The following gridded data type has been extracted since October 1998 due to its popularity with users:</B><P>
+<UL>
+<LI><a href="#1.125_deg">Regular 1.125&deg; x 1.125&deg; gridded data</a>
+	<UL><LI><a href="#ML">Upper air analysis fields on model levels (ML.[param].YYYYMMDDHH.grib)</a>
+	  </UL>
+</UL>
+
+<B>The following data types are consistent with the ECMWF ERA-40 Re-analysis data held at the BADC. The data spans from September 2002 to the present day:</B><P>
+
+<UL>
+<LI><a href="#redgaussian">N80 Reduced Gaussian Gridded data</a>
+	<UL>
+	<LI><a href="#ggam">Gaussian Gridded Analyses on Model Levels (ggamYYYYDDHHTTPPP.grb)</a>
+	<LI><a href="#ggap">Gaussian Gridded Analyses on Pressure Levels (ggapYYYYDDHHTTPPP.grb)</a>
+	<LI><a href="#ggas">Gaussian Gridded Analyses on Surface/Single Levels (ggasYYYYDDHHTTPPP.grb)</a>
+	<LI><a href="#ggat">Gaussian Gridded Analyses on Potential Temperature Levels (ggatYYYYDDHHTTPPP.grb)</a>
+	<LI><a href="#ggav">Gaussian Gridded Analyses on Potential Vorticity Levels (ggavYYYYDDHHTTPPP.grb)</a>
+	<LI><a href="#ggfm">Gaussian Gridded Forecasts on Model Levels (ggfmYYYYDDHHTTPPP.grb)</a>
+	<LI><a href="#ggfs">Gaussian Gridded Forecasts on Surface/Single Levels (ggfsYYYYDDHHTTPPP.grb)</a>
+	</UL>
+<BR>
+<LI><a href="#spectralT159">Spectral T159 data</a>
+	<UL>
+	<LI><a href="#spam">Spectral T159 Analyses on Model Levels (spamYYYYDDHHTTPPP.grb)</a>
+	<LI><a href="#spap">Spectral T159 Analyses on Pressure Levels (spapYYYYDDHHTTPPP.grb)</a>
+	<LI><a href="#spat">Spectral T159 Analyses on Potential Temperature Levels (spatYYYYDDHHTTPPP.grb)</a>
+	</UL>
+</UL>
+
+<P>Details of the available parameters are also listed for the 
+<A HREF="/data/ecmwf-e40/params.html">ERA-40 dataset</A> on a separate page.<P>
+
+<P><a href="#forecasts">An explanation of the forecast files</a> for these datasets is also provided.
+
+<HR ALIGN=LEFT>
+
+<H2><a name="2.5_deg">Regular 2.5&deg; x 2.5&deg; gridded data</a></H2>
+
+Tables 1 and 2 show the parameters available for ECMWF Operational analysis data on a 
+<a href="/data/ecmwf-op/grids.html#2.5_deg">2.5&deg; x 2.5&deg; regular grid</a>. 
+These files are located in the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/gridded/</KBD>     or     <KBD>/badc/ecmwf-op/data/gridded_2.5/</KBD><P>
+
+They can also be accessed via the webserver (by registered BADC users) at: <BR>
+
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/gridded">
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/gridded/</A>        or<BR>
+<A 
+
+HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/gridded_2.5">
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/gridded_2.5/</A><P>
+
+<BR><B><a name="lisf">Surface/single level analysis fields (lisfYYMMDDHH)</a></B><P>
+
+The regular 2.5&deg; x 2.5&deg; gridded surface/single level fields are stored following the file-naming 
+
+convention:<P>
+
+<KBD>lisfYYMMDDHH</KBD><P>
+Where  <KBD>li</KBD> means lat/long regular grid (the "i" is historical, meaning initialised - this is 
+
+not relevant to the Operational data sets),<BR>
+<KBD>sf</KBD> means surface or single levels (i.e. only one atmospheric level),<BR>
+and <KBD>YYMMDDHH</KBD> stand for the Year, Month, Day (of the month), and Hour (either 00, 06, 12 or 
+
+18).<BR>
+The format of the files is <a href="/data/ecmwf-era/grib.html">GRIB</A>.<P>
+
+The complete file and directory structure of the regular 2.5&deg; x 2.5&deg; gridded surface/single level 
+
+fields takes the form of: <P>
+
+<KBD>/badc/ecmwf-op/data/gridded/YYYY/lisfYYMM/lisfYYMMDDHH</KBD><P>
+
+<small><a name="table_1"><B>Table 1.</a>&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational 
+
+regular 2.5&deg; x 2.5&deg; gridded surface/single level fields.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+  </tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters
+    (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td ><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+  </tr>
+  <tr align="center">
+    <td> 01/03/1994 </td>
+    <td> 26/06/2000 </td>
+    <td>Soil temperature level 1</td>
+    <td>139</td>
+    <td>STL1</td>
+    <td>K</td>
+    <td>Surface/single</td>
+    <td>1</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Soil wetness level 1</td>
+    <td>140</td>
+    <td>SWL1</td>
+    <td>m (of water)</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Snow depth</td>
+    <td>141</td>
+    <td>SD</td>
+    <td>m (of water equivalent)</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Mean sea level pressure</td>
+    <td>151</td>
+    <td>MSL</td>
+    <td>Pa</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>10 metre u wind component</td>
+    <td>165</td>
+    <td>10U</td>
+    <td>m s<sup>-1</sup></td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>10 metre v wind component</td>
+    <td>166</td>
+    <td>10V</td>
+    <td>m s<sup>-1</sup></td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>2 metre temperature</td>
+    <td>167</td>
+    <td>2T</td>
+    <td>K</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>2 metre dewpoint temperature</td>
+    <td>168</td>
+    <td>2D</td>
+    <td>K</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Soil temperature level 2</td>
+    <td>170</td>
+    <td>STL2</td>
+    <td>K</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Soil wetness level 2</td>
+    <td>171</td>
+    <td>SWL2</td>
+    <td>m (of water)</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Surface roughness</td>
+    <td>173</td>
+    <td>SR</td>
+    <td>m</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Albedo</td>
+    <td>174</td>
+    <td>AL</td>
+    <td>-</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Soil temperature level 3</td>
+    <td>183</td>
+    <td>STL3</td>
+    <td>K</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Soil wetness level 3</td>
+    <td>184</td>
+    <td>SWL3</td>
+    <td>m (of water)</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Skin reservoir content</td>
+    <td>198</td>
+    <td>SRC</td>
+    <td>m (of water)</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Percentage of vegetation</td>
+    <td>199</td>
+    <td>VEG</td>
+    <td>%</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Apparent surface humidity</td>
+    <td>233</td>
+    <td>ASQ</td>
+    <td>kg/kg</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Log of surface roughness length for heat</td>
+    <td>234</td>
+    <td>LSRH</td>
+    <td>-</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Skin temperature</td>
+    <td>235</td>
+    <td>SKT</td>
+    <td>K</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Soil temperature level 4</td>
+    <td>236</td>
+    <td>STL4</td>
+    <td>K</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Soil wetness level 4</td>
+    <td>237</td>
+    <td>SWL4</td>
+    <td>m (of water)</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+ <tr align="center">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr align="center">
+    <td> 27/06/2000*</td>
+    <td>Now</td>
+    <td>Soil temperature level 1</td>
+    <td>139</td>
+    <td>STL1</td>
+    <td>K</td>
+    <td class="xl25" width="118" align="center">Surface/single</td>
+    <td class="xl25" x:num width="56" align="center">1</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Snow depth</td>
+    <td>141</td>
+    <td>SD</td>
+    <td>m (of water equivalent)</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Mean sea level pressure</td>
+    <td>151</td>
+    <td>MSL</td>
+    <td>Pa</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>10 metre u wind component</td>
+    <td>165</td>
+    <td>10U</td>
+    <td>m s<sup>-1</sup></td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>10 metre v wind component</td>
+    <td>166</td>
+    <td>10V</td>
+    <td>m s<sup>-1</sup></td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>2 metre temperature</td>
+    <td>167</td>
+    <td>2T</td>
+    <td>K</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>2 metre dewpoint temperature</td>
+    <td>168</td>
+    <td>2D</td>
+    <td>K</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Soil temperature level 2</td>
+    <td>170</td>
+    <td>STL2</td>
+    <td>K</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Surface roughness</td>
+    <td>173</td>
+    <td>SR</td>
+    <td>m</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Albedo</td>
+    <td>174</td>
+    <td>AL</td>
+    <td>-</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Soil temperature level 3</td>
+    <td>183</td>
+    <td>STL3</td>
+    <td>K</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Skin reservoir content</td>
+    <td>198</td>
+    <td>SRC</td>
+    <td>m (of water)</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Log of surface roughness length for heat</td>
+    <td>234</td>
+    <td>LSRH</td>
+    <td>-</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Skin temperature</td>
+    <td>235</td>
+    <td>SKT</td>
+    <td>K</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Soil temperature level 4</td>
+    <td>236</td>
+    <td>STL4</td>
+    <td>K</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+</table>
+<small>* The ECMWF stopped producing 6 parameters at this point. The ECMWF parameter
+codes for these were 140, 171, 184, 199, 233 and 237.<BR>
+&nbsp;&nbsp;For monthly means, the data is only available for full months.</small><p><p>
+
+<BR><B><a name="lisfmm">Surface/single level monthly means (lisfYYYYMMmmHH.PPP)</a></B><P>
+
+Monthly means are archived for the regular 2.5&deg; x 2.5&deg; gridded surface/single level 
+data. The ECMWF calculates monthly means from its 6-hourly operational data. Four separate 
+monthly mean files are available for each parameter in each month, for times 00hr, 06hr, 12hr and 18hr. 
+The monthly means follow the file-naming convention:<P>
+
+<KBD>lisfYYYYMMmmHH.PPP</KBD><P>
+Where  <KBD>li</KBD> means lat/long regular grid (the "i" is historical, meaning 
+initialised - this is not relevant to the Operational data sets),<BR>
+<KBD>sf</KBD> means surface or single levels (i.e. only one atmospheric level),<BR>
+<KBD>YYYYMMmmHH</KBD> stands for the Year (4 digits), Month, "mm" is Monthly Mean (instead of the Day), 
+and Hour (either 00, 06, 12 or 18).<BR>
+<KBD>PPP</KBD> is the ECMWF code for each parameter. Note that the monthly mean for 
+each parameter is stored in an individual file.<BR>
+
+The format of the files is <a href="/data/ecmwf-era/grib.html">GRIB</A>.<P>
+
+The complete file and directory structure of the regular 2.5&deg; x 2.5&deg; gridded 
+surface/single level monthly means takes the form of: <P>
+
+<KBD>/badc/ecmwf-op/data/gridded/monthly_means/by_date/YYYY/lisfYYYYMMmmHH.PPP</KBD><P>
+
+The monthly means can also be browsed by parameter under the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/gridded/monthly_means/by_param/PPP/lisfYYYYMMmmHH.PPP</KBD><P>
+
+The monthly mean regular 2.5&deg; x 2.5&deg; gridded surface/single level 
+data is available for the same parameters as given above in <a href="#table_1">Table 1</a>.<P>
+
+<B>Monthly means of soil water parameters</B><BR>
+The Soil Wetness Levels (1-4) were produced until mid-June 2000 so the monthly means 
+are only archived up to May 2000. 
+From June 2000 onwards, the monthly means for Volumetric Soil Water Layers (1-4) 
+are also archived. The corresponding ECMWF codes (numeric) are swvl1 (39), swvl2 (40), 
+swvl3 (41) and swvl4 (42). The units for the volumetric soil water layers are 
+m<sup>3</sup>/m<sup>3</sup> and the conversion from Soil Wetness Levels is 
+explained at the <a href="http://wms.ecmwf.int/products/data/technical/soil/discret_soil_lay.html">ECMWF webpages</a>.<P>
+
+<BR><a name="lipr"><B>Upper air analysis fields on pressure levels (liprYYMMDDHH)</B></a><P>
+
+The regular 2.5&deg; x 2.5&deg; gridded <a href="/data/ecmwf-op/levels.html#pressure">pressure level</a> fields are stored following the file-naming 
+
+convention:<P>
+
+<KBD>liprYYMMDDHH</KBD><P>
+Where  <KBD>li</KBD> means lat/long regular grid (the "i" is historical, meaning initialised - this is 
+
+not relevant to the Operational data sets),<BR>
+<KBD>pr</KBD> means the data is stored on pressure levels,<BR>
+and <KBD>YYMMDDHH</KBD> stand for the Year, Month, Day (of the month), and Hour (either 00, 06, 12 or 
+
+18).<BR>
+The format of the files is <a href="/data/ecmwf-era/grib.html">GRIB</A>.<P>
+
+The complete file and directory structure of the regular 2.5&deg; x 2.5&deg; gridded pressure level 
+
+fields takes the form of: <P>
+
+<KBD>/badc/ecmwf-op/data/gridded/YYYY/liprYYMM/liprYYMMDDHH</KBD><P>
+
+<small><B><a name="table_2">Table 2</a>.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational 
+
+regular 2.5&deg; x 2.5&deg; gridded upper air fields on pressure levels.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+  </tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters
+    (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td width="100"><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+  </tr>
+<TR align="center"><TD>01/03/1994</TD><TD>08/03/1999</TD><TD>Geopotential (at the surface = 
+
+orography)</TD><TD>129</TD><TD>Z</TD><TD>m<sup>2</sup> s<sup>-2</sup></TD><TD>10, 30, 50, 70, 100, 150, 
+
+200, 250, 300, 400, 500, 700, 850, 925, 1000 hPa</TD><TD>15</TR><TR 
+
+align="center"><TD>"</TD><TD>"</TD><TD>Temperature</TD><TD>130</TD><TD>T</TD><TD>K</TD><TD>"</TD><TD>"</T
+
+R><TR align="center"><TD>"</TD><TD>"</TD><TD>U-velocity</TD><TD>131</TD><TD>U</TD><TD>m 
+
+s<sup>-1</sup></TD><TD>"</TD><TD>"</TD></TR><TR 
+
+align="center"><TD>"</TD><TD>"</TD><TD>V-velocity</TD><TD>132</TD><TD>V</TD><TD>m 
+
+s<sup>-1</sup></TD><TD>"</TD><TD>"</TR><TR align="center"><TD>"</TD><TD>"</TD><TD>Vertical 
+
+velocity</TD><TD>135</TD><TD>W</TD><TD>Pa s<sup>-1</sup></TD><TD>"</TD><TD>"</TR><TR 
+
+align="center"><TD>"</TD><TD>"</TD><TD>Relative 
+
+humidity</TD><TD>157</TD><TD>R</TD><TD>%</TD><TD>"</TD><TD>"</TR><TR 
+
+align="center"><TD></TD><TD></TD><TD></TD><TD></TD><TD></TD><TD></TD><TD></TD><TD></TR>
+
+ <tr align="center">
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+     <td>&nbsp;</td>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+    <td>&nbsp;</td>
+     <td>&nbsp;</td>
+     <td>&nbsp;</td>
+  </tr>
+
+<TR align="center"><TD>09/03/1999*</TD><TD>Now</TD><TD>Geopotential (at the surface = 
+
+orography)</TD><TD>129</TD><TD>Z</TD><TD>m<sup>2</sup> s<sup>-2</sup></TD><TD>1, 2, 3, 5, 7, 10, 20, 30, 
+
+50, 70, 100, 150, 200, 250, 300, 400, 500, 700, 850, 925, 1000 hPa</TD><TD>21</TR><TR 
+
+align="center"><TD>"</TD><TD>"</TD><TD>Temperature</TD><TD>130</TD><TD>T</TD><TD>K</TD><TD>"</TD><TD>"</T
+
+R><TR align="center"><TD>"</TD><TD>"</TD><TD>U-velocity</TD><TD>131</TD><TD>U</TD><TD>m 
+
+s<sup>-1</sup></TD><TD>"</TD><TD>"</TR><TR 
+
+align="center"><TD>"</TD><TD>"</TD><TD>V-velocity</TD><TD>132</TD><TD>V</TD><TD>m 
+
+s<sup>-1</sup></TD><TD>"</TD><TD>"</TR><TR align="center"><TD>"</TD><TD>"</TD><TD>Vertical 
+
+velocity</TD><TD>135</TD><TD>W</TD><TD>Pa s<sup>-1</sup></TD><TD>"</TD><TD>"</TR><TR 
+
+align="center"><TD>"</TD><TD>"</TD><TD>Relative 
+
+humidity</TD><TD>157</TD><TD>R</TD><TD>%</TD><TD>"</TD><TD>"</TR>
+</TABLE>
+<small>* The ECMWF added another 6 pressure levels at this point, at 1, 2, 3, 5, 7 and 20 hPa.<BR>
+&nbsp;&nbsp;For monthly means pressure levels are only archived where full months exist.</small>
+<p>
+
+
+<BR><a name="liprmm"><B>Upper air analysis monthly means (liprYYYYMMmmHH.PPP)</B></a><P>
+
+Monthly means are archived for the regular 2.5&deg; x 2.5&deg; gridded pressure level 
+data. The ECMWF calculates monthly means from its 6-hourly operational data. Four separate 
+monthly mean files are available for each parameter in each month, for times 00hr, 06hr, 12hr and 18hr. 
+The monthly means follow the file-naming convention:<P>
+
+<KBD>liprYYYYMMmmHH.PPP</KBD><P>
+Where  <KBD>li</KBD> means lat/long regular grid (the "i" is historical, meaning 
+initialised - this is not relevant to the Operational data sets),<BR>
+<KBD>pr</KBD> means the data is stored on pressure levels,<BR>
+<KBD>YYYYMMmmHH</KBD> stands for the Year (4 digits), Month, "mm" is Monthly Mean (instead of the Day), 
+and Hour (either 00, 06, 12 or 18).<BR>
+<KBD>PPP</KBD> is the ECMWF code for each parameter. Note that the monthly mean for 
+each parameter is stored in an individual file.<BR>
+
+The format of the files is <a href="/data/ecmwf-era/grib.html">GRIB</A>.<P>
+
+The complete file and directory structure of the regular 2.5&deg; x 2.5&deg; gridded 
+pressure level monthly means takes the form of: <P>
+
+<KBD>/badc/ecmwf-op/data/gridded/monthly_means/by_date/YYYY/liprYYYYMMmmHH.PPP</KBD><P>
+
+The monthly means can also be browsed by parameter under the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/gridded/monthly_means/by_param/PPP/liprYYYYMMmmHH.PPP</KBD><P>
+
+The monthly mean regular 2.5&deg; x 2.5&deg; gridded pressure level 
+data is available for the same parameters as given above in <a href="#table_2">Table 2</a>.<P>
+
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+
+
+<H2><a name="gaussian">N80 Full Gaussian Gridded data</a></H2>
+
+Tables 4 and 5 show the parameters available for ECMWF Operational data on an 
+<a href="/data/ecmwf-op/grids.html#n80_full">N80 Full Gaussian grid</a>. 
+
+These files are located in the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/N80/</KBD>     or     <KBD>/badc/ecmwf-op/data/gaussian/</KBD><P>
+
+They can also be accessed via the webserver (by registered BADC users) at: <BR>
+
+<A 
+
+HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/N80">
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/N80/</A>        or<BR>
+<A 
+
+HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/gaussian">
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/gaussian/</A><P>
+
+<B><a name="gisf">Surface/single level analysis fields (gisfYYMMDDHH)</a></B><P>
+
+The N80 Full Gaussian gridded surface/single level analysis fields are stored following the file-naming 
+
+convention:<P>
+
+<KBD>gisfYYMMDDHH</KBD><P>
+Where  <KBD>gi</KBD> means a Gaussian grid (the "i" is historical, meaning initialised - this is not 
+
+relevant to the Operational data sets),<BR>
+<KBD>sf</KBD> means surface or single levels (i.e. only one atmospheric level),<BR>
+and <KBD>YYMMDDHH</KBD> stand for the Year, Month, Day (of the month), and Hour (either 00, 06, 12 or 
+
+18).<BR>
+The format of the files is <a href="/data/ecmwf-era/grib.html">GRIB</A>.<P>
+
+The complete file and directory structure of the N80 Full Gaussian gridded surface/single level analysis 
+
+fields takes the form of: <P>
+
+<KBD>/badc/ecmwf-op/data/gaussian/YYYY/gisfYYMM/gisfYYMMDDHH</KBD><P>
+
+<small><B>Table 4.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational 
+
+N80 Full Gaussian gridded surface/single level fields.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+  </tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters
+    (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td ><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+  </tr>
+  <tr align="center">
+    <td> 01/03/1994 </td>
+    <td> 26/06/2000 </td>
+    <td>Soil temperature level 1</td>
+    <td>139</td>
+    <td>STL1</td>
+    <td>K</td>
+    <td>Surface/single</td>
+    <td>1</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Soil wetness level 1</td>
+    <td>140</td>
+    <td>SWL1</td>
+    <td>m (of water)</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Snow depth</td>
+    <td>141</td>
+    <td>SD</td>
+    <td>m (of water equivalent)</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Mean sea level pressure</td>
+    <td>151</td>
+    <td>MSL</td>
+    <td>Pa</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>10 metre u wind component</td>
+    <td>165</td>
+    <td>10U</td>
+    <td>m s<sup>-1</sup></td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>10 metre v wind component</td>
+    <td>166</td>
+    <td>10V</td>
+    <td>m s<sup>-1</sup></td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>2 metre temperature</td>
+    <td>167</td>
+    <td>2T</td>
+    <td>K</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>2 metre dewpoint temperature</td>
+    <td>168</td>
+    <td>2D</td>
+    <td>K</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Soil temperature level 2</td>
+    <td>170</td>
+    <td>STL2</td>
+    <td>K</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Soil wetness level 2</td>
+    <td>171</td>
+    <td>SWL2</td>
+    <td>m (of water)</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Surface roughness</td>
+    <td>173</td>
+    <td>SR</td>
+    <td>m</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Albedo</td>
+    <td>174</td>
+    <td>AL</td>
+    <td>-</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Soil temperature level 3</td>
+    <td>183</td>
+    <td>STL3</td>
+    <td>K</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Soil wetness level 3</td>
+    <td>184</td>
+    <td>SWL3</td>
+    <td>m (of water)</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Skin reservoir content</td>
+    <td>198</td>
+    <td>SRC</td>
+    <td>m (of water)</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Percentage of vegetation</td>
+    <td>199</td>
+    <td>VEG</td>
+    <td>%</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Apparent surface humidity</td>
+    <td>233</td>
+    <td>ASQ</td>
+    <td>kg/kg</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Log of surface roughness length for heat</td>
+    <td>234</td>
+    <td>LSRH</td>
+    <td>-</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Skin temperature</td>
+    <td>235</td>
+    <td>SKT</td>
+    <td>K</td>
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Soil temperature level 4</td>
+    <td>236</td>
+    <td>STL4</td>
+    <td>K</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td 
+    align="center">&quot;</td>
+    <td>&quot;</td>
+    <td>Soil wetness level 4</td>
+    <td>237</td>
+    <td>SWL4</td>
+    <td>m (of water)</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+ <tr align="center">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr align="center">
+    <td> 27/06/2000*</td>
+    <td>Now</td>
+    <td>Soil temperature level 1</td>
+    <td>139</td>
+    <td>STL1</td>
+    <td>K</td>
+    <td class="xl25" width="118" align="center">Surface/single</td>
+    <td class="xl25" x:num width="56" align="center">1</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Snow depth</td>
+    <td>141</td>
+    <td>SD</td>
+    <td>m (of water equivalent)</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Mean sea level pressure</td>
+    <td>151</td>
+    <td>MSL</td>
+    <td>Pa</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>10 metre u wind component</td>
+    <td>165</td>
+    <td>10U</td>
+    <td>m s<sup>-1</sup></td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>10 metre v wind component</td>
+    <td>166</td>
+    <td>10V</td>
+    <td>m s<sup>-1</sup></td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>2 metre temperature</td>
+    <td>167</td>
+    <td>2T</td>
+    <td>K</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>2 metre dewpoint temperature</td>
+    <td>168</td>
+    <td>2D</td>
+    <td>K</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Soil temperature level 2</td>
+    <td>170</td>
+    <td>STL2</td>
+    <td>K</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Surface roughness</td>
+    <td>173</td>
+    <td>SR</td>
+    <td>m</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Albedo</td>
+    <td>174</td>
+    <td>AL</td>
+    <td>-</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Soil temperature level 3</td>
+    <td>183</td>
+    <td>STL3</td>
+    <td>K</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Skin reservoir content</td>
+    <td>198</td>
+    <td>SRC</td>
+    <td>m (of water)</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Log of surface roughness length for heat</td>
+    <td>234</td>
+    <td>LSRH</td>
+    <td>-</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Skin temperature</td>
+    <td>235</td>
+    <td>SKT</td>
+    <td>K</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+  <tr align="center">
+    <td>&quot;</td>
+    <td>&quot;</td>
+    <td>Soil temperature level 4</td>
+    <td>236</td>
+    <td>STL4</td>
+    <td>K</td>
+    <td>&quot;</td>
+    <td>&quot;</td>
+  </tr>
+</table>
+<small>* The ECMWF stopped producing 6 parameters at this point. The ECMWF parameter
+codes for these were 140, 171,184, 199, 233 and 237.</small><p><BR>
+
+<B><a name="gpsfo">Surface/single level forecast fields (gpsfoYYMMDDHH)</a></B><P>
+
+The N80 Full Gaussian gridded surface/single level forecast fields are stored following the file-naming 
+
+convention:<P>
+
+<KBD>gpsfoYYMMDDHH[HH]</KBD><P>
+Where  <KBD>gp</KBD> stands for N80 Gaussian grid ("grid-point"),<BR>
+<KBD>sfo</KBD> means surface or single level forecast,<BR>
+<KBD>YYMMDD</KBD> stand for the Year, Month and Day (of the month).<BR>
+<KBD>HH[HH]</KBD> stands for the hour of the forecast. The forecast parameters are recorded as 
+
+accumulations over a given period. The forecast data archived at the BADC is the 24-hour accumulation 
+
+from midday (1200) on the day the forecast begins to midday the next day. Up until the end of 1998 the 
+
+file-naming convention for describing this was to use 4 numerical characters 1224 to indicate the start 
+
+time (12) and the length of the accumulation period (24). However, from 1999 onwards the file-naming 
+
+convention changed and only the start time is used (12 - i.e. only two characters). Please note that the 
+
+contents of the file and the forecast times were not altered, only the naming system was changed.<P>
+
+The format of the files is <a href="/data/ecmwf-era/grib.html">GRIB</A>.<P>
+
+The complete file and directory structure of the N80 Full Gaussian gridded surface/single level forecast 
+
+fields takes the form of: <P>
+
+<KBD>/badc/ecmwf-op/data/gaussian/YYYY/gpsfoYYMM/gpsfoYYMMDDHHHH</KBD>&nbsp;&nbsp;&nbsp;
+before March 1999, 
+
+and<BR>
+<KBD>/badc/ecmwf-op/data/gaussian/YYYY/gpsfofYYMM/gpsfoYYMMDDHH</KBD>&nbsp;&nbsp;&nbsp;
+March 1999 onwards.<P>
+
+<small><B>Table 5.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational 
+
+N80 Full Gaussian gridded surface/single level forecast fields.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+  </tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters
+    (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td width="100"><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><b>Total Levels</b></td>
+  </tr>
+<TR align=center><TD>01/03/1994</TD><TD>Now</TD><TD>Large scale 
+
+precipitation</TD><TD>142</TD><TD>LSP</TD><TD>m</TD><TD>Surface/single</TD><TD>1</TR><TR 
+
+align=center><TD>"</TD><TD>"</TD><TD>Convective 
+
+precipitation</TD><TD>143</TD><TD>CP</TD><TD>m</TD><TD>"</TD><TD>"</TR><TR 
+
+align=center><TD>"</TD><TD>"</TD><TD>Surface sensible heat 
+
+flux</TD><TD>146</TD><TD>SSHF</TD><TD>Wm<sup>-2</sup>s</TD><TD>"</TD><TD>"</TR><TR 
+
+align=center><TD>"</TD><TD>"</TD><TD>Surface latent heat 
+
+flux</TD><TD>147</TD><TD>SLHF</TD><TD>Wm<sup>-2</sup>s</TD><TD>"</TD><TD>"</TR><TR 
+
+align=center><TD>"</TD><TD>"</TD><TD>Total cloud 
+
+cover</TD><TD>164</TD><TD>TCC</TD><TD>(0-1)</TD><TD>"</TD><TD>"</TR><TR 
+
+align=center><TD>"</TD><TD>"</TD><TD>Surface solar 
+
+radiation</TD><TD>176</TD><TD>SSR</TD><TD>Wm<sup>-2</sup>s</TD><TD>"</TD><TD>"</TR><TR 
+
+align=center><TD>"</TD><TD>"</TD><TD>Surface thermal 
+
+radiation</TD><TD>177</TD><TD>STR</TD><TD>Wm<sup>-2</sup>s</TD><TD>"</TD><TD>"</TR><TR 
+
+align=center><TD>"</TD><TD>"</TD><TD>Top solar 
+
+radiation</TD><TD>178</TD><TD>TSR</TD><TD>Wm<sup>-2</sup>s</TD><TD>"</TD><TD>"</TR><TR 
+
+align=center><TD>"</TD><TD>"</TD><TD>Top thermal 
+
+radiation</TD><TD>179</TD><TD>TTR</TD><TD>Wm<sup>-2</sup>s</TD><TD>"</TD><TD>"</TR><TR 
+
+align=center><TD>"</TD><TD>"</TD><TD>East/West surface 
+
+stress</TD><TD>180</TD><TD>EWSS</TD><TD>Nm<sup>-2</sup>s</TD><TD>"</TD><TD>"</TR><TR 
+
+align=center><TD>"</TD><TD>"</TD><TD>North/South surface 
+
+stress</TD><TD>181</TD><TD>NSSS</TD><TD>Nm<sup>-2</sup>s</TD><TD>"</TD><TD>"</TR><TR 
+
+align=center><TD>"</TD><TD>"</TD><TD>Latitudinal component of gravity wave 
+
+stress</TD><TD>195</TD><TD>LGWS</TD><TD>Nm<sup>-2</sup>s</TD><TD>"</TD><TD>"</TR><TR 
+
+align=center><TD>"</TD><TD>"</TD><TD>Meridional component of gravity wave 
+
+stress</TD><TD>196</TD><TD>MGWS</TD><TD>Nm<sup>-2</sup>s</TD><TD>"</TD><TD>"</TR><TR 
+
+align=center><TD></TR>
+</TABLE><P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+<H2><a name="spectral">Spectral T106 data</a></H2>
+
+Tables 6 and 7 show the parameters available for ECMWF Operational data in 
+<a href="/data/ecmwf-op/grids.html#t106">T106 Spectral resolution</a>. 
+
+These files are located in the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/T106/</KBD><P>
+
+They can also be accessed via the webserver (by registered BADC users) at: <BR>
+
+<A 
+
+HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/T106">
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/T106/</A><P>
+
+<B><a name="siua">Upper air analysis fields on model levels (siuaYYMMDDHH)</a></B><P>
+
+The T106 Spectral resolution <a href="/data/ecmwf-op/levels.html#model">model level</a> analysis fields are stored following the file-naming 
+
+convention:<P>
+
+<KBD>siuaYYMMDDHH</KBD><P>
+Where  <KBD>si</KBD> means Spectral resolution (the "i" is historical, meaning initialised - this is not 
+
+relevant to the Operational data sets),<BR>
+<KBD>ua</KBD> means upper air model levels,<BR>
+and <KBD>YYMMDDHH</KBD> stand for the Year, Month, Day (of the month), and Hour (either 00, 06, 12 or 
+
+18).<BR>
+The format of the files is <a href="/data/ecmwf-era/grib.html">GRIB</A>.<P>
+
+The complete file and directory structure of the T106 Spectral model level analysis fields takes the form 
+
+of: <P>
+
+<KBD>/badc/ecmwf-op/data/T106/YYYY/siuaYYMM/siuaYYMMDDHH</KBD><P>
+
+<small><B>Table 6.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational 
+T106 Spectral upper air fields on model levels.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+  </tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters (Name)</b></td>
+    <td><b>ECMWF code (numeric)</b></td>
+    <td><b>ECMWF code</b></td>
+    <td width="100"><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><b>Total Levels</b></td>
+  </tr>
+<TR align="center"><TD>01/03/1994</TD><TD>03/04/1995</TD> <TD>Temperature</TD><TD>130</TD><TD>T</TD><TD>K</TD><TD>1-31</TD><TD>31</TD></TR>
+<TR align="center"><TD>"</TD><TD>"</TD><TD>Specific humidity</TD><TD>133</TD><TD>SP</TD><TD>kg/kg</TD><TD>"</TD><TD>"</TD>
+<TR align="center"><TD>"</TD><TD>"</TD><TD>Vertical velocity</TD><TD>135</TD><TD>W</TD><TD>Pa s<sup>-1</sup></TD> <TD>"</TD><TD>"</TD></TR>
+<TR align="center"><TD>"</TD><TD>"</TD><TD>Vorticity 
+(relative)</TD><TD>138</TD><TD>VO</TD><TD>s<sup>-1</sup></TD><TD>"</TD><TD>"</TD></TR>
+<TR align="center"><TD>"</TD><TD>"</TD><TD>Log surface 
+pressure</TD><TD>152</TD><TD>LNSP</TD><TD>-</TD><TD>"</TD><TD>"</TD></TR>
+<TR align="center"><TD>"</TD><TD>"</TD><TD>Divergence</TD><TD>155</TD><TD>D</TD><TD>s<sup>-1</sup></TD>
+<TD>"</TD><TD>"</TD></TR>
+ <tr align="center">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+<TR align="center"></TD><TD>04/04/1995*</TD><TD>28/02/1999**</TD> <TD>Temperature</TD><TD>130</TD><TD>T</TD><TD>K</TD><TD>1-31</TD><TD>31</TD></TR>
+<TR align="center"></TD><TD>"</TD><TD>"</TD><TD>Vertical velocity</TD><TD>135</TD><TD>W</TD><TD>Pa s<sup>-1</sup></TD><TD>"</TD><TD>"</TD></TR>
+<TR align="center"></TD><TD>"</TD><TD>"</TD><TD>Vorticity 
+(relative)</TD><TD>138</TD><TD>VO</TD><TD>s<sup>-1</sup></TD><TD>"</TD><TD>"</TD></TR>
+<TR align="center"></TD><TD>"</TD><TD>"</TD><TD>Log surface pressure</TD><TD>152</TD><TD>LNSP</TD>
+<TD>-</TD><TD>"</TD><TD>"</TD></TR>
+<TR align="center"></TD><TD>"</TD><TD>"</TD><TD>Divergence</TD><TD>155</TD><TD>D</TD><TD>s<sup>-1</sup></TD><TD>"</TD><TD>"</TD></TR>
+ <tr align="center">
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+<TR align="center"></TD><TD>01/10/2000***</TD><TD>31/10/2000</TD> <TD>Temperature</TD><TD>130</TD><TD>T</TD><TD>K</TD><TD>1-60</TD><TD>60</TD></TR>
+<TR align="center"></TD><TD>"</TD><TD>"</TD><TD>Vertical velocity</TD> <TD>135</TD><TD>W</TD><TD>Pa s<sup>-1</sup></TD><TD>"</TD><TD>"</TD></TR>
+<TR align="center"></TD><TD>"</TD><TD>"</TD><TD>Vorticity (relative)</TD> <TD>138</TD><TD>VO</TD><TD>s<sup>-1</sup></TD><TD>"</TD><TD>"</TD></TR>
+<TR align="center"></TD><TD>"</TD><TD>"</TD><TD>Log surface pressure</TD>
+<TD>152</TD><TD>LNSP</TD><TD>-</TD><TD>"</TD><TD>"</TD></TR>
+<TR align="center"></TD><TD>"</TD><TD>"</TD><TD>Divergence</TD>
+<TD>155</TD><TD>D</TD><TD>s<sup>-1</sup></TD><TD>"</TD><TD>"</TD></TR>
+</TABLE>
+<small>* The ECMWF stopped producing the Specific Humidity parameter (133) in a spectral form at this 
+
+point. Specific Humidity is available in the gridded 1.125&deg; data.</small><BR>
+<small>** After 28/02/1999 the BADC stopped regularly archiving ECMWF Operational data in spectral form 
+
+due to lack of demand from users.</small><br>
+<small>*** The year 2000 data is only archived for October of that year.</small><p><p>
+
+<B><a name="sipr">Upper air analysis fields on pressure levels (siprYYMMDDHH)</a></B><P>
+
+The T106 Spectral resolution <a href="/data/ecmwf-op/levels.html#pressure">pressure level</a> analysis fields are stored following the file-naming 
+
+convention:<P>
+
+<KBD>siprYYMMDDHH</KBD><P>
+Where  <KBD>si</KBD> means Spectral resolution (the "i" is historical, meaning initialised - this is not 
+
+relevant to the Operational data sets),<BR>
+<KBD>pr</KBD> means upper air pressure levels,<BR>
+and <KBD>YYMMDDHH</KBD> stand for the Year, Month, Day (of the month), and Hour (either 00, 06, 12 or 
+
+18).<BR>
+The format of the files is <a href="/data/ecmwf-era/grib.html">GRIB</A>.<P>
+
+The complete file and directory structure of the T106 Spectral pressure level analysis fields takes the 
+
+form of: <P>
+
+<KBD>/badc/ecmwf-op/data/T106/YYYY/siprYYMM/siprYYMMDDHH</KBD><P>
+
+<small><B>Table 7.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational 
+
+T106 Spectral upper air fields on pressure levels.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+  </tr>
+
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters
+    (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td width="100"><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><b>Total Levels</b></td>
+  </tr>
+<TR align="center">
+<TD>01/03/1994</TD><TD>28/02/1999*</TD><TD>Geopotential</TD><TD>129</TD><TD>Z</TD><TD>m<sup>2</sup> s<sup>-2</sup></TD><TD>10, 30, 50, 70, 100, 150, 200, 250, 300, 400, 500, 700, 850, 925, 1000 hPa</TD> <TD>15</TD>
+</TR>
+<TR align=center>
+<TD>"</TD><TD>"</TD><TD>Temperature</TD><TD>130</TD><TD>T</TD><TD>K</TD><TD>"</TD><TD>"</TD>
+</TR>
+<TR align=center><TD>"</TD><TD>"</TD><TD>Vertical velocity</TD><TD>135</TD><TD>W</TD><TD>Pa s<sup>-1</sup></TD> <TD>"</TD><TD>"</TD>
+</TR>
+<TR align=center><TD>"</TD><TD>"</TD><TD>Vorticity (relative)</TD> <TD>138</TD><TD>VO</TD><TD>s<sup>-1</sup></TD><TD>"</TD><TD>"</TD>
+</TR>
+<TR align="center"><TD>"</TD><TD>"</TD><TD>Divergence</TD><TD>155</TD><TD>D</TD><TD>s<sup>-1</sup></TD> <TD>"</TD><TD>"</TD></TR>
+<TR align="center"><TD>"</TD><TD>"</TD><TD>Relative humidity</TD><TD>157</TD> <TD>R</TD><TD>%</TD><TD>"</TD><TD>"</TD>
+</TR>
+</TABLE>
+<small>* After 28/02/1999 the BADC stopped regularly archiving ECMWF Operational data in spectral form 
+
+due to lack of demand from users.</small><P>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<H2><a name="orog">Orography files</a></H2>
+
+Separate files are used to store the orography data for a number of Operational datasets. Note that the surface geopotential (where available) is equal to the orography.<P>
+
+The orography files for Operational data sets are held in the directory: <P>
+
+<KBD>/badc/ecmwf-op/data/orography</KBD>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp or via the webserver 
+(by registered BADC users) at: <BR>
+
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/orography">
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/orography/</A> 
+
+<P>
+
+There are four types of orography files:<P>
+<UL>
+<LI>Gridded 2.5&deg; x 2.5&deg;	-	<KBD>liorYYYYMMDDTT</KBD></LI>
+<LI>Gridded 1.125&deg; x 1.125&deg;	-	<KBD>lhorYYYYMMDDTT</KBD></LI>
+<LI>N80 (full) Gaussian grid	-	<KBD>gporYYYYMMDDTT</KBD></LI>
+<LI>Spectral (T106)			-	<KBD>sporYYYYMMDDTT</KBD></LI>
+</UL>
+
+These files are updated each time the model orography is changed. For the Operational data (March 1994-present day) there are orography files for the following dates:<P>
+
+<UL>
+<LI>1 March 1994</LI>
+<LI>4 April 1995</LI>
+<LI>8 September 1996</LI>
+<LI>10 December 1996</LI>
+<LI>1 April 1998</LI>
+<LI>12 October 1999</LI>
+</UL>
+
+More information about the orography changes detailed on the <a href="/data/ecmwf-op/model_changes.html">model changes</a> page.<P>
+
+The spectral orography file spor90010100 contains just the orography data (surface geopotential).<P>
+
+Depending on the age and grid type, the files will contain some of the constant fields listed in Table 8.<P>
+
+<small><B>Table 7.&nbsp;&nbsp;&nbsp;</B>Orography parameters and their ECMWF codes.<BR></small>
+
+<table width="500" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+	<td><b>Parameter name</b></td>
+	<td><b>ECMWF code (numeric)</td><td><b>ECMWF code</b></td></tr>
+<tr align="center"><td>Geopotential (at the surface, orography)</td><td>129</TD><TD>Z</TD></TR>
+<tr align="center"><td>Standard deviation of orography</td><td>160</TD><TD>SDOR</TD></TR>
+<tr align="center"><td>Anisotropy of subgrid scale orography</td><td>161</TD><TD>ISOR</TD></TR>
+<tr align="center"><td>Angle of subgrid scale orography</td><td>162</TD><TD>ANOR</TD></TR>
+<tr align="center"><td>Slope of subgrid scale orography</td><td>163</TD><TD>SLOR</TD></TR>
+<tr align="center"><td>Land/Sea mask</td><td>172</TD><TD>LSM</TD></TR>
+<tr align="center"><td>EW component of sub-grid scale orographic variance</td><td>190</TD><TD>EWOV</TD></TR>
+<tr align="center"><td>NS component of sub-grid scale orographic variance</td><td>191</TD><TD>NSOV</TD></TR>
+<tr align="center"><td>NWSE component of sub-grid scale orographic variance</td><td>192</TD><TD>NWOV</TD></TR>
+<tr align="center"><td>NESW component of sub-grid scale orographic variance</td><td>193</TD><TD>NEOV</TD></TR>
+</TABLE>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+
+<H2><a name="1.125_deg">Regular 1.125&deg; x 1.125&deg; gridded data</a></H2>
+
+Table 3 shows the parameters available for ECMWF Operational data on a 
+<a href="/data/ecmwf-op/grids.html#1.125_deg">1.125&deg; x 1.125&deg; regular 
+
+grid</a>. These files are located in the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/gridded_1.125/</KBD><P>
+
+They can also be accessed via the webserver (by registered BADC users) at: <BR>
+
+<A 
+
+HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/gridded_1.125">
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/gridded_1.125/</A><P>
+
+<BR><B><a name="ML">Upper air analysis fields on model levels (ML.[param].YYYYMMDDHH.grib)</a></B><P>
+
+The BADC currently only archives upper air data (on <a href="/data/ecmwf-op/levels.html#model">model levels</a>
+) on a regular 1.125&deg; x 1.125&deg; 
+
+grid. The data is stored using the following the file-naming convention:<P>
+
+<KBD>ML.[param].YYYYMMDDHH.grib</KBD><P>
+Where  <KBD>ML</KBD> stands for model levels,<BR>
+<KBD>[param]</KBD> is the parameter name (lnsp = Log (Natural) Surface Pressure, q = Specific Humidity, t 
+
+= Temperature, u = U-velocity, v = V-velocity, vort = Vorticity (relative), w = Vertical Velocity),<BR>
+<KBD>YYYYMMDDHH</KBD> stand for the Year, Month, Day (of the month), and Hour (either 00, 06, 12 or 
+
+18),<BR>
+and <KBD>grib</KBD> indicates the <a href="/data/ecmwf-era/grib.html">GRIB</A> file format.<P>
+
+The complete file and directory structure of the regular 1.125&deg; x 1.125&deg; gridded data model level 
+
+fields takes the form of: <P>
+
+<KBD>/badc/ecmwf-op/data/gridded_1.125/YYYY/MM/DD/model/ML.[param].YYYYMMDDHH.grib</KBD><P>
+
+<small><B>Table 3.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational 
+
+regular 1.125&deg; x 1.125&deg; gridded upper air fields on model levels.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+  </tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters
+    (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td   width="100"><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+  </tr>
+<TR align=center>
+<TD>01/10/1998</TD><TD>11/10/1999</TD><TD>Temperature</TD><TD>130</TD><TD>T</TD><TD>K</TD><TD>1-50</TD><TD>50</TR>
+<TR align=center><TD>"</TD><TD>"</TD><TD>U-velocity</TD><TD>131</TD><TD>U</TD><TD>m<sup>2</sup> 
+
+s<sup>-2</sup></TD><TD>"</TD><TD>"</TR>
+
+<TR align=center><TD>"</TD><TD>"</TD><TD>V-velocity</TD><TD>132</TD><TD>V</TD><TD>m<sup>2</sup> 
+
+s<sup>-2</sup></TD><TD>"</TD><TD>"</TR><TR align=center><TD>"</TD><TD>"</TD><TD>Specific 
+
+Humidity</TD><TD>133</TD><TD>Q</TD><TD>kg/kg</TD><TD>"</TD><TD>"</TR>
+<TR align=center>
+<TD>"</TD><TD>"</TD><TD>Vertical velocity</TD><TD>135</TD><TD>W</TD><TD>Pa 
+
+s<sup>-1</sup></TD><TD>"</TD><TD>"</TR><TR align=center><TD>"</TD><TD>"</TD><TD>Vorticity 
+
+(relative)</TD><TD>138</TD><TD>VO</TD><TD>s<sup>-1</sup></TD><TD>"</TD><TD>"</TR>
+<TR align=center><TD>"</TD><TD>"</TD><TD>Log surface 
+
+pressure</TD><TD>152</TD><TD>LNSP</TD><TD>-</TD><TD>"</TD><TD>"</TR>
+<TR align=center><TD></TD><TD></TD><TD></TD><TD></TD><TD></TD><TD></TD><TD></TD><TD></TR>
+ <tr align="center">
+    <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td>
+  </tr>
+<TR 
+
+align=center><TD>12/10/1999*</TD><TD>01/02/2006 00:00</TD><TD>Temperature</TD><TD>130</TD><TD>T</TD><TD>K</TD><TD>1-60
+</TD><TD>60</TR><TR align=center>
+<TD>"</TD><TD>"</TD><TD>U-velocity</TD><TD>131</TD><TD>U</TD><TD>m<sup>2</sup> 
+s<sup>-2</sup></TD><TD>"</TD><TD>"</TR>
+<TR align=center>
+<TD>"</TD><TD>"</TD><TD>V-velocity</TD><TD>132</TD><TD>V </TD><TD>m<sup>2</sup> 
+s<sup>-2</sup></TD><TD>"</TD><TD>"</TR><TR align=center><TD>"</TD><TD>"</TD><TD>Specific 
+Humidity</TD><TD>133</TD><TD>Q</TD><TD>kg/kg</TD><TD>"</TD><TD>"</TR>
+<TR align=center>
+<TD>"</TD><TD>"</TD><TD>Vertical velocity</TD><TD>135</TD><TD>W</TD><TD>Pa 
+s<sup>-1</sup></TD><TD>"</TD><TD>"</TR><TR align=center><TD>"</TD><TD>"</TD><TD>Vorticity 
+(relative)</TD><TD>138</TD><TD>VO</TD><TD>s<sup>-1</sup></TD><TD>"</TD><TD>"</TR><TR 
+align=center><TD>"</TD><TD>"</TD><TD>Log surface 
+pressure</TD><TD>152</TD><TD>LNSP</TD><TD>-</TD><TD>"</TD><TD>"</TR>
+
+<TR align=center><TD></TD><TD></TD><TD></TD><TD></TD><TD></TD><TD></TD><TD></TD><TD></TR>
+ <tr align="center">
+     <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td>
+       </tr>
+       <TR align=center><TD>01/02/2006 06:00</TD><TD>Now</TD><TD>Temperature</TD><TD>130</TD><TD>T</TD><TD>K</TD><TD>1-91
+       </TD><TD>91</TR><TR align=center>
+       <TD>"</TD><TD>"</TD><TD>U-velocity</TD><TD>131</TD><TD>U</TD><TD>m<sup>2</sup>
+       s<sup>-2</sup></TD><TD>"</TD><TD>"</TR>
+       <TR align=center>
+       <TD>"</TD><TD>"</TD><TD>V-velocity</TD><TD>132</TD><TD>V </TD><TD>m<sup>2</sup>
+       s<sup>-2</sup></TD><TD>"</TD><TD>"</TR><TR align=center><TD>"</TD><TD>"</TD><TD>Specific
+       Humidity</TD><TD>133</TD><TD>Q</TD><TD>kg/kg</TD><TD>"</TD><TD>"</TR>
+       <TR align=center>
+       <TD>"</TD><TD>"</TD><TD>Vertical velocity</TD><TD>135</TD><TD>W</TD><TD>Pa
+       s<sup>-1</sup></TD><TD>"</TD><TD>"</TR><TR align=center><TD>"</TD><TD>"</TD><TD>Vorticity
+       (relative)</TD><TD>138</TD><TD>VO</TD><TD>s<sup>-1</sup></TD><TD>"</TD><TD>"</TR><TR
+       align=center><TD>"</TD><TD>"</TD><TD>Log surface
+       pressure</TD><TD>152</TD><TD>LNSP</TD><TD>-</TD><TD>"</TD><TD>"</TR>
+       
+
+</TABLE>
+
+<A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<H2><a name="redgaussian">N80 Reduced Gaussian Gridded data</a></H2>
+
+There are 7 types of Operational data archived on the N80 Reduced Gaussian Grid, 5 analysis archives and 
+2 forecasts archives. The analyses are available on model levels, pressure levels, on surface/single levels, 
+on potential temperature levels and on potential vorticity levels. <a href="#forecasts">Forecasts</a> 
+are available on model levels and on surface/single levels. 
+Please see the <a href="/data/ecmwf-op/grids.html">ECMWF Model Grids page</a> for an explanation of the 
+<a href="/data/ecmwf-op/grids.html#N80_reduced">N80 Reduced Gaussian Grid</a>.<P>
+
+<B><a name="ggam">Gaussian Gridded Analyses on Model Levels (ggamYYYYDDHHTTPPP.grb)</a></B><P>
+
+Table 1 shows the Model Level parameters available for Operational analysis data on the 
+N80 Reduced Gaussian Grid. These files are located in the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/op_as_e40/gg/am/</KBD><P>
+
+They can also be accessed via the web-interface (by registered BADC users) at: <BR>
+
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/gg/am/"> 
+
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/gg/am/</A> 
+
+<P>The N80 Reduced Gaussian Gridded model level analyses are stored following the BADC's
+<a href="/data/ecmwf-e40/file_naming.html">ERA-40 file-naming convention</a>.
+
+<P>The complete file and directory structure of the N80 Reduced Gaussian Gridded model level data 
+takes the form of: <P>
+<KBD>/badc/ecmwf-op/data/op_as_e40/gg/am/YYYY/MM/DD/ggamYYYYDDHHTTPPP.grb</KBD><P>
+
+<small><B>Table 1.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational N80 Reduced Gaussian Gridded model level fields.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+</tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+  
+<tr align=center><td>01/09/2002</td><td>01/02/2006 00:00</td><td>Specific 
+ humidity</td><td>133</td><td>Q</td><td>kg/kg</td><td>1-60</td><td>60</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Ozone mass mixing 
+ ratio</td><td>203</td><td>O3</td><td>kg/kg</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>01/02/2006 06:00</td><td>Now</td><td>Specific 
+humidity</td><td>133</td><td>Q</td><td>kg/kg</td><td>1-91</td><td>91</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Ozone mass mixing
+ ratio</td><td>203</td><td>O3</td><td>kg/kg</td><td>"</td><td>"</td></tr>
+
+</table>
+
+
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+
+<HR ALIGN=LEFT>
+
+<p><B><a name="ggap">Gaussian Gridded Analyses on Pressure Levels (ggapYYYYDDHHTTPPP.grb)</B></a>
+<P>
+
+Table 2 shows the Pressure Level parameters available for Operational analysis data on the 
+N80 Reduced Gaussian Grid.
+
+<P><b>Note:</b> The pressure levels at 775 and 600hPa that are present in the ERA-40 dataset are 
+not available in this dataset so the total number of levels is 21.
+
+<p>There are also two parameters, u-velocity and v-velocity, 
+that are stored on a <a href="/data/ecmwf-op/grids.html#n80_full">N80 Full Gaussian Grid</a>
+(due to the interpolation from spectral fields). These files are located in the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/op_as_e40/gg/ap/</KBD><P>
+
+They can also be accessed via the web-interface (by registered BADC users) at: <BR>
+
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/gg/ap"> 
+
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/gg/ap/</A> 
+
+<P>The N80 Reduced Gaussian Gridded pressure level analyses are stored following the BADC's
+<a href="/data/ecmwf-e40/file_naming.html">ERA-40 file-naming convention</a>.
+
+<P>The complete file and directory structure of the N80 Reduced Gaussian Gridded pressure level data 
+takes the form of: <P>
+<KBD>/badc/ecmwf-op/data/op_as_e40/gg/ap/YYYY/MM/DD/ggapYYYYDDHHTTPPP.grb</KBD><P>
+
+<small><B>Table 2.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF 
+Operational N80 Reduced Gaussian Gridded pressure level fields.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+</tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+<tr align=center><td>01/09/2002</td><td>Now</td><td>Potential
+vorticity</td><td>60</td><td>PV</td><td>m<sup>2</sup> s<sup>-1</sup> K
+kg<sup>-1</sup></td><td>1,2,3,5,7,10,20,30,50,70,100,150,200,250,300,400,500,700,850,925,1000</td><td>21</td></tr>
+<tr align=center><td>"</td><td>"</td><td>U-velocity*</td><td>131</td><td>U</td><td>m<sup>2</sup> s<sup>-2</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>V-velocity*</td><td>132</td><td>V</td><td>m<sup>2</sup> s<sup>-2</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Specific humidity</td><td>133</td><td>Q</td><td>kg/kg</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Ozone Mass Mixing Ratio</td><td>203</td><td>O3</td><td>kg/kg</td><td>"</td><td>"</td></tr>
+</table>
+<small>*&nbsp;u-velocity and v-velocity are held on an 
+<a href="/data/ecmwf-op/grids.html#n80_full">N80 Full Gaussian Grid</a> as opposed to 
+a reduced grid. The extraction process requires them to be generated from spectral 
+vorticity and divergence fields and therefore these parameters cannot be obtained 
+on the reduced grid.</small>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<p><B><a name="ggas">Gaussian Gridded Analyses on Surface/Single Levels (ggasYYYYDDHHTTPPP.grb)</a>
+</B><P>
+
+Table 3 shows the Surface/Single Level parameters available for Operational analysis data on the 
+N80 Reduced Gaussian Grid. These files are located in the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/op_as_e40/gg/as/</KBD><P>
+
+They can also be accessed via the web-interface (by registered BADC users) at: <BR>
+
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/gg/as"> 
+
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/gg/as/</A> 
+
+<P>The N80 Reduced Gaussian Gridded surface/single level analyses are stored following the BADC's
+<a href="/data/ecmwf-e40/file_naming.html">ERA-40 file-naming convention</a>.
+
+<P>The complete file and directory structure of the N80 Reduced Gaussian Gridded surface/single level data 
+takes the form of: <P>
+<KBD>/badc/ecmwf-op/data/op_as_e40/gg/as/YYYY/MM/DD/ggasYYYYDDHHTTPPP.grb</KBD><P>
+
+<small><B>Table 3.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational N80 Reduced Gaussian Gridded surface/single level fields.<BR></small>
+
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+</tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+<tr align=center><td>01/09/2002</td><td>Now</td><td>Low vegetation cover</td><td>27</td><td>LVC</td><td>(0-1)</td><td>1</td><td>1</td></tr>
+<tr align=center><td>"</td><td>"</td><td>High vegetation cover</td><td>28</td><td>HVC</td><td>(0-1)</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Low vegetation type (table index)</td><td>29</td><td>LVT</td><td>index</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>High vegetation type (table index)</td><td>30</td><td>HVT</td><td>index</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Sea ice fraction (1 = full ice, 0 = no ice)</td><td>31</td><td>CI</td><td>(0, 1)</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Snow albedo</td><td>32</td><td>ASN</td><td>-</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Snow density</td><td>33</td><td>RSN</td><td>kg</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Sea surface temperature</td><td>34</td><td>SSTK</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Sea ice temperature layer 1</td><td>35</td><td>ISTL1</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Sea ice temperature layer 2</td><td>36</td><td>ISTL2</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Sea ice temperature layer 3</td><td>37</td><td>ISTL3</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Sea ice temperature layer 4</td><td>38</td><td>ISTL4</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Soil moisture level 1 (volumetric)</td><td>39</td><td>SWVL1</td><td>m<sup>3</sup>/m<sup>3</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Soil moisture level 2 (volumetric)</td><td>40</td><td>SWVL2</td><td>m<sup>3</sup>/m<sup>3</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Soil moisture level 3 (volumetric)</td><td>41</td><td>SWVL3</td><td>m<sup>3</sup>/m<sup>3</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Soil moisture level 4 (volumetric)</td><td>42</td><td>SWVL4</td><td>m<sup>3</sup>/m<sup>3</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Geopotential (at the surface = orography)</td><td>129</td><td>Z</td><td>m<sup>2</sup> s<sup>-2</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Total column water</td><td>136</td><td>TCW</td><td>kg/m<sup>2</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Total column water vapour</td><td>137</td><td>TCWV</td><td>kg/m<sup>2</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Soil temperature level 1</td><td>139</td><td>STL1</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Snow Depth</td><td>141</td><td>SD</td><td>m (of water equivalent)</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Charnock parameter</td><td>148</td><td>CHNK</td><td>-</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Mean sea level pressure</td><td>151</td><td>MSL</td><td>Pa</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Standard deviation of subgrid scale orography</td><td>160</td><td>SDOR</td><td>-</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Anisotropy of subgrid scale orography</td><td>161</td><td>ISOR</td><td>-</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Angle of subgrid scale orography</td><td>162</td><td>ANOR</td><td>-</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Slope of subgrid scale orography</td><td>163</td><td>SLOR</td><td>-</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>10 metre u-wind component</td><td>165</td><td>10U</td><td>m s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>10 metre v-wind component</td><td>166</td><td>10V</td><td>m s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>2 metre temperature</td><td>167</td><td>2T</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>2 metre dewpoint temperature</td><td>168</td><td>2D</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Soil temperature level 2</td><td>170</td><td>STL2</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Land/sea mask</td><td>172</td><td>LSM</td><td>(0, 1)</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Surface roughness</td><td>173</td><td>SR</td><td>m</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Albedo</td><td>174</td><td>AL</td><td>-</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Soil temperature level 3</td><td>183</td><td>STL3</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Low cloud cover</td><td>186</td><td>LCC</td><td>(0-1)</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Medium cloud cover</td><td>187</td><td>MCC</td><td>(0-1)</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>High cloud cover</td><td>188</td><td>HCC</td><td>(0-1)</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Skin reservoir content</td><td>198</td><td>SRC</td><td>m (of water)</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Total column ozone</td><td>206</td><td>TCO3</td><td>kg m<sup>-2</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Logarithm of surface roughness length for heat</td><td>234</td><td>LSRH</td><td>-</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Skin temperature</td><td>235</td><td>SKT</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Soil temperature level 4</td><td>236</td><td>STL4</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Temperature of snow layer</td><td>238</td><td>TSN</td><td>K</td><td>"</td><td>"</td></tr>
+</table>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<p><b><a name="ggat">Gaussian Gridded Analyses on Potential Temperature Levels (ggatYYYYDDHHTTPPP.grb)</a>
+</b><P>
+
+Table 4 shows the Potential Temperature Level parameters available for Operational analysis data on the 
+N80 Reduced Gaussian Grid. These files are located in the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/op_as_e40/gg/at/</KBD><P>
+
+They can also be accessed via the web-interface (by registered BADC users) at: <BR>
+
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/gg/at"> 
+
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/gg/at/</A> 
+
+<P>The N80 Reduced Gaussian Gridded potential temperature level analyses are stored following the BADC's
+<a href="/data/ecmwf-e40/file_naming.html">ERA-40 file-naming convention</a>.
+
+<P>The complete file and directory structure of the N80 Reduced Gaussian Gridded 
+potential temperature level data takes the form of: <P>
+
+<KBD>/badc/ecmwf-op/data/op_as_e40/gg/at/YYYY/MM/DD/ggatYYYYDDHHTTPPP.grb</KBD><P>
+
+<small><B>Table 4.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational N80 Reduced Gaussian Gridded potential temperature level fields.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+</tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+<tr align=center><td>01/09/2002</td><td>Now</td><td>Potential vorticity</td><td>60</td><td>PV</td><td>m<sup>2</sup> s<sup>-1</sup> K kg<sup>-1</sup></td><td>265, 275, 285, 300, 315, 330, 350, 370, 395, 430, 475, 530, 600, 700, 850</td><td>15</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Specific humidity</td><td>133</td><td>Q</td><td>kg/kg</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Ozone mass mixing ratio</td><td>203</td><td>O3</td><td>kg/kg</td><td>"</td><td>"</td></tr>
+</table>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<p><b><a name="ggav">Gaussian Gridded Analyses on Potential Vorticity Levels (ggavYYYYDDHHTTPPP.grb)</a></B><P>
+
+Table 5 shows the Potential Vorticity Level parameters available for Operational analysis data on the 
+N80 Reduced Gaussian Grid. These files are located in the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/op_as_e40/gg/av/</KBD><P>
+
+They can also be accessed via the web-interface (by registered BADC users) at: <BR>
+
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/gg/av"> 
+
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/gg/av/</A> 
+
+<P>The N80 Reduced Gaussian Gridded potential vorticity level analyses are stored following the BADC's
+<a href="/data/ecmwf-e40/file_naming.html">ERA-40 file-naming convention</a>.
+
+<P>The complete file and directory structure of the N80 Reduced Gaussian Gridded 
+potential vorticity level data takes the form of: <P>
+
+<KBD>/badc/ecmwf-op/data/op_as_e40/gg/av/YYYY/MM/DD/ggavYYYYDDHHTTPPP.grb</KBD><P>
+
+<small><B>Table 5.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational N80 Reduced Gaussian Gridded potential vorticity level fields.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+</tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+<tr align=center><td>01/09/2002</td><td>Now</td><td>Potential temperature</td><td>3</td><td>PT</td><td>K</td><td>1</td><td>1</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Pressure</td><td>54</td><td>PRES</td><td>Pa</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Geopotential (at the surface = orography)</td><td>129</td><td>Z</td><td>m<sup>2</sup> s<sup>-2</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>U-velocity</td><td>131</td><td>U</td><td>ms<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>V-velocity</td><td>132</td><td>V</td><td>ms<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Specific humidity</td><td>133</td><td>Q</td><td>kg/kg</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Ozone mass mixing ratio</td><td>203</td><td>O3</td><td>kg/kg</td><td>"</td><td>"</td></tr>
+</table>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<p><b><a name="ggfm">Gaussian Gridded Forecasts on Model Levels (ggfmYYYYDDHHTTPPP.grb)</a></b><P>
+
+Table 6 shows the Model Level parameters available for Operational forecast data on the 
+N80 Reduced Gaussian Grid. These files are located in the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/op_as_e40/gg/fm/</KBD><P>
+
+They can also be accessed via the web-interface (by registered BADC users) at: <BR>
+
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/gg/fm"> 
+
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/gg/fm/</A> 
+
+<P>The N80 Reduced Gaussian Gridded potential vorticity level forecasts are stored following the BADC's
+<a href="/data/ecmwf-e40/file_naming.html">ERA-40 file-naming convention</a>.
+
+<P>The complete file and directory structure of the N80 Reduced Gaussian Gridded 
+model level data takes the form of: <P>
+
+<KBD>/badc/ecmwf-op/data/op_as_e40/gg/fm/YYYY/MM/DD/ggfmYYYYDDHHTTPPP.grb</KBD><P>
+
+<small><B>Table 6.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational N80 Reduced Gaussian Gridded model level fields.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+</tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+<tr align=center><td>01/09/2002</td><td>01/02/2006 00:00</td><td>Cloud liquid water content</td><td>246</td><td>CLWC</td><td>kg/kg</td><td>1-60</td><td>60</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Cloud ice water content</td><td>247</td><td>CIWC</td><td>kg/kg</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Cloud cover</td><td>248</td><td>CC</td><td>(0-1)</td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>01/02/2006 06:00</td><td>Now</td><td>Cloud liquid water content</td><td>246</td><td>CLWC</td><td>kg/kg</td><td>1-60</td><td>60</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Cloud ice water content</td><td>247</td><td>CIWC</td><td>kg/kg</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Cloud cover</td><td>248</td><td>CC</td><td>(0-1)</td><td>"</td><td>"</td></tr>
+
+</table>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<p><b><a name="ggfs">Gaussian Gridded Forecasts on Surface/Single Levels (ggfsYYYYDDHHTTPPP.grb)</a></b>
+<P>
+
+Table 7 shows the Surface/Single Level parameters available for Operational forecast data on the 
+N80 Reduced Gaussian Grid. These files are located in the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/op_as_e40/gg/fs/</KBD><P>
+
+They can also be accessed via the web-interface (by registered BADC users) at: <BR>
+
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/gg/fs"> 
+
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/gg/fs/</A> 
+
+<P>The N80 Reduced Gaussian Gridded surface/single level forecasts are stored following the BADC's
+<a href="/data/ecmwf-e40/file_naming.html">ERA-40 file-naming convention</a>.
+
+<P>The complete file and directory structure of the N80 Reduced Gaussian Gridded 
+surface/single level data takes the form of: <P>
+
+<KBD>/badc/ecmwf-op/data/op_as_e40/gg/fsYYYY/MM/DD/ggfsYYYYDDHHTTPPP.grb</KBD><P>
+
+<small><B>Table 7.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational N80 Reduced Gaussian Gridded surface/single level fields.<BR></small>
+
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+</tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+<tr align=center><td>01/09/2002</td><td>Now</td><td>Snow evaporation (accum.)</td><td>44</td><td>ES</td><td>m</td><td>1</td><td>1</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Snow melt (accum.)</td><td>45</td><td>SMLT</td><td>m</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Wind gusts at 10 m</td><td>49</td><td>10FG</td><td>m s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Large scale precipitation fraction (accum.)</td><td>50</td><td>LSPF</td><td>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Large scale precipitation (accum.)</td><td>142</td><td>LSP</td><td>m</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Convective precipitation (accum.)</td><td>143</td><td>CP</td><td>m</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Snow fall (accum.)</td><td>144</td><td>SF</td><td>m (of water equivalent)</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Boundary layer dissipation (accum.)</td><td>145</td><td>BLD</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Surface sensible heat flux (accum.)</td><td>146</td><td>SSHF</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Surface latent heat flux (accum.)</td><td>147</td><td>SLHF</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Boundary layer height</td><td>159</td><td>BLH</td><td>m</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Total cloud cover</td><td>164</td><td>TCC</td><td>(0-1)</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Downward surface solar radiation (accum.)</td><td>169</td><td>SSRD</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Downward surface thermal radiation (accum.)</td><td>175</td><td>STRD</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Surface solar radiation (accum.)</td><td>176</td><td>SSR</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Surface thermal radiation (accum.)</td><td>177</td><td>STR</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Top solar radiation (accum.)</td><td>178</td><td>TSR</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Top thermal radiation (accum.)</td><td>179</td><td>TTR</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>East/West surface stress (accum.)</td><td>180</td><td>EWSS</td><td>N m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>North/South surface stress (accum.)</td><td>181</td><td>NSSS</td><td>N m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Evaporation (accum.)</td><td>182</td><td>E</td><td>m (of water)</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Sunshine duration since last post-processing step</td><td>189</td><td>SUND</td><td>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Latitudinal component of gravity wave stress (accum.)</td><td>195</td><td>LGWS</td><td>N m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Meridional component of gravity wave stress (accum.)</td><td>196</td><td>MGWS</td><td>N m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Gravity wave dissipation (accum.)</td><td>197</td><td>GWD</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Runoff (accum.)</td><td>201</td><td>RO</td><td>m</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Minimum temp. at 2m since previous post-processing</td><td>202</td><td>MN2T</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Ozone mass mixing ratio</td><td>205</td><td>O3</td><td>kg/kg</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Top solar radiation clear sky (accum.)</td><td>208</td><td>TSRC</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Top thermal radiation clear sky (accum.)</td><td>209</td><td>TTRC</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Surface solar radiation clear sky (accum.)</td><td>210</td><td>SSRC</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Surface thermal radiation clear sky (accum.)</td><td>211</td><td>STRC</td><td>W m<sup>-2</sup>s</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Forecast albedo</td><td>243</td><td>FAL</td><td>-</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Forecast surface roughness</td><td>244</td><td>FSR</td><td>m</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Forecast logarithm of surface roughness for heat</td><td>245</td><td>FLSR</td><td>-</td><td>"</td><td>"</td></tr>
+</table>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<H2><a name="spectralT159">Spectral T159 data</a></H2>
+
+There are 3 types of Operational data archived at Spectral T159 resolution as analyses. 
+They are held on model levels, pressure levels and on potential temperature levels.  
+Please see the <a href="/data/ecmwf-op/grids.html">ECMWF Model Grids page</a> for an 
+explanation of the <a href="/data/ecmwf-op/grids.html#t159">Spectral T159 resolution</a>.<P>
+
+<b><a name="spam">Spectral T159 Analyses on Model Levels (spamYYYYDDHHTTPPP.grb)</a></b><P>
+
+Table 8 shows the Model Level parameters available for Operational analysis data at 
+Spectral T159 resolution. These files are located in the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/op_as_e40/sp/am/</KBD><P>
+
+They can also be accessed via the web-interface (by registered BADC users) at: <BR>
+
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/sp/am"> 
+
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/sp/am/</A> 
+
+<P>The Spectral T159 model level analyses are stored following the BADC's
+<a href="/data/ecmwf-e40/file_naming.html">ERA-40 file-naming convention</a>.
+
+<P>The complete file and directory structure of the N80 Reduced Gaussian Gridded model level data 
+takes the form of: <P>
+<KBD>/badc/ecmwf-op/data/op_as_e40/sp/am/YYYY/MM/DD/spamYYYYDDHHTTPPP.grb</KBD><P>
+
+<small><B>Table 8.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational Spectral T159 model level fields.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+</tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+<tr align=center><td>01/09/2002</td><td>01/02/2006 00:00</td><td>Geopotential (at the surface = orography)</td><td>129</td><td>Z</td><td>m<sup>2</sup> s<sup>-2</sup></td><td>1-60</td><td>60</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Temperature</td><td>130</td><td>T</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>U-velocity</td><td>131</td><td>U</td><td>ms<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>V-velocity</td><td>132</td><td>V</td><td>ms<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Vertical velocity</td><td>135</td><td>W</td><td>Pa s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Vorticity (relative)</td><td>138</td><td>VO</td><td>s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Log surface pressure</td><td>152</td><td>LNSP</td><td>-</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Divergence</td><td>155</td><td>D</td><td>s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+
+<tr align=center><td>01/02/2006 06:00</td><td>Now</td><td>Geopotential (at the surface = orography)</td><td>129</td><td>Z</td><td>m<sup>2</sup> s<sup>-2</sup></td><td>1-60</td><td>60</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Temperature</td><td>130</td><td>T</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>U-velocity</td><td>131</td><td>U</td><td>ms<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>V-velocity</td><td>132</td><td>V</td><td>ms<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Vertical velocity</td><td>135</td><td>W</td><td>Pa s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Vorticity (relative)</td><td>138</td><td>VO</td><td>s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Log surface pressure</td><td>152</td><td>LNSP</td><td>-</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Divergence</td><td>155</td><td>D</td><td>s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+
+</table>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<p><a name="spap"><b>Spectral T159 Analyses on Pressure Levels (spapYYYYDDHHTTPPP.grb)</b></a><P>
+
+Table 9 shows the Pressure Level parameters available for Operational analysis data at 
+Spectral T159 resolution. These files are located in the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/op_as_e40/sp/ap/</KBD><P>
+
+They can also be accessed via the web-interface (by registered BADC users) at: <BR>
+
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/sp/ap"> 
+
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/sp/ap/</A> 
+
+<P>The Spectral T159 pressure level analyses are stored following the BADC's
+<a href="/data/ecmwf-e40/file_naming.html">ERA-40 file-naming convention</a>.
+
+<P>The complete file and directory structure of the N80 Reduced Gaussian Gridded pressure level data 
+takes the form of: <P>
+<KBD>/badc/ecmwf-op/data/op_as_e40/sp/ap/YYYY/MM/DD/spapYYYYDDHHTTPPP.grb</KBD><P>
+
+<small><B>Table 9.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational Spectral T159 pressure level fields.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+</tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+<tr align=center><td>01/09/2002</td><td>Now</td><td>Geopotential (at the surface = orography)</td><td>129</td><td>Z</td><td>m<sup>2</sup> s<sup>-2</sup></td><td>1,2,3,5,7,10,20,30,50,70,100,150,200,250,300,400, 500,600,700,775,850,925,1000</td><td>23</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Temperature</td><td>130</td><td>T</td><td>K</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>U-velocity</td><td>131</td><td>U</td><td>ms<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>V-velocity</td><td>132</td><td>V</td><td>ms<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Vertical velocity</td><td>135</td><td>W</td><td>Pa s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Vorticity (relative)</td><td>138</td><td>VO</td><td>s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Divergence</td><td>155</td><td>D</td><td>s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Relative humidity</td><td>157</td><td>R</td><td>%</td><td>"</td><td>"</td></tr>
+</table>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<P><b><a name="spat">Spectral T159 Analyses on Potential Temperature Levels (spatYYYYDDHHTTPPP.grb)</a></b><P>
+
+Table 10 shows the Potential Temperature Level parameters available for Operational analysis data at 
+Spectral T159 resolution. These files are located in the directory:<P>
+
+<KBD>/badc/ecmwf-op/data/op_as_e40/sp/at/</KBD><P>
+
+They can also be accessed via the web-interface (by registered BADC users) at: <BR>
+
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/sp/at"> 
+
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/data/op_as_e40/sp/at/</A> 
+
+<P>The Spectral T159 potential temperature level analyses are stored following the BADC's
+<a href="/data/ecmwf-e40/file_naming.html">ERA-40 file-naming convention</a>.
+
+<P>The complete file and directory structure of the N80 Reduced Gaussian Gridded 
+potential temperature level data 
+takes the form of: <P>
+<KBD>/badc/ecmwf-op/data/op_as_e40/sp/at/YYYY/MM/DD/spatYYYYDDHHTTPPP.grb</KBD><P>
+
+<small><B>Table 10.&nbsp;&nbsp;&nbsp;</B>Parameters, dates and levels available for the ECMWF Operational Spectral T159 potential temperature level fields.<BR></small>
+
+<table width="775" cellspacing="1" border="1" cellpadding="1" style="font-size: smaller">
+  <tr align="center">
+    <td colspan="2"><big><b>Dates</b></big></td>
+    <td colspan="4"><big><b>Parameters</b></big></td>
+    <td colspan="2"><big><b>Levels</b></big></td>
+</tr>
+  <tr align="center">
+    <td><b>Start</b></td>
+    <td><b>End</b></td>
+    <td><b>Parameters (Name)</b></td>
+    <td><b>ECMWF
+    code (numeric)</b></td>
+    <td><b>ECMWF
+    code</b></td>
+    <td><b>Units</b></td>
+    <td><b>Levels</b></td>
+    <td><p align="center"><b>Total
+    Levels</b></td>
+<tr align=center><td>01/09/2002</td><td>Now</td><td>Montgomery potential</td><td>53</td><td>MONT</td><td>m<sup>2</sup> s<sup>-2</sup></td><td>1,2,3,5,7,10,20,30,50,70,100,150,200,250,300,400,500,600,700,775,850,925,1000</td><td>23</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Pressure</td><td>54</td><td>PRES</td><td>Pa</td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>U-velocity</td><td>131</td><td>U</td><td>ms<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>V-velocity</td><td>132</td><td>V</td><td>ms<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Vorticity (relative)</td><td>138</td><td>VO</td><td>s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+<tr align=center><td>"</td><td>"</td><td>Divergence</td><td>155</td><td>D</td><td>s<sup>-1</sup></td><td>"</td><td>"</td></tr>
+</table>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<H2><a name="forecasts">An explanation of the forecast files in the ECMWF Operational data</a></H2>
+
+The BADC archives ERA-40 data as both <b>analyses</b> and <b>forecasts</b>. <b>Analyses</b> 
+represent the state 
+of the atmosphere at the zero time-step, i.e. the start of a forecast. This is the point at 
+which initial observations have been assimilated with the 6-hour forecast of the previous model 
+run. Many parameters are 
+available in the analyses and are archived only at the zero time-step (i.e. a file for 
+15 January 1991 at midday would include "1991011512" in its name and would represent the state 
+of the atmosphere at midday on that day). The analyses are calculated and archived 
+4 times a day, at 00hr, 06hr, 12hr and 18hrs.
+
+<P><b>Forecast</b> files contain parameters that are not available in the analyses. Such 
+parameters are accumulated from the analysis time to the time of the forecast. 
+
+<P>The content of the ECMWF forecasts held at the BADC depend on which data resolution is being used. The N80 Full Gaussian Gridded forecasts (i.e. filenames beginning with <B>'gpsfo'</B>) represent a forecast from midday (12hr) on the date in the filename to 24 hours later (12hr the next day). This is consistent with files produced during the ERA-15 period.
+
+<P>The N80 Reduced Gaussian Gridded forecasts (i.e. filenames beginning <B>'ggfm'</B> or <B>'ggfs'</B>) are archived to cover the entire day of the date in the filename. The 24-hour forecasts therefore start at 00hr on the morning of a given day and span through until midnight that day. For example, 
+a forecast file for 25 February 2003 would include "2003022500" in its name and would 
+represent accumulated fields for the entire 24-hour period of that day. 
+
+<P>Both datasets therefore only produce 1 forecast file per day. Note that the ECMWF actually provides all the analysis fields at forecast times as well, this data is not archived at the BADC.
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+
+<HR ALIGN=LEFT>
+
+</BODY>
+</HTML>

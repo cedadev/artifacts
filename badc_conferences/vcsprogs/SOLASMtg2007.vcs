@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070924T230000Z
+DTEND:20070927T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:University of Leeds
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000060C79BE70BADC7010000000000000000100
+ 000009492A71F3ADF1A46BA30835AA508AE0F
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:SOLAS Annual Science Meeting 2007=0D=
+=0A=0D=0AThe 2007 SOLAS Annual Science Meeting will take place at the Unive=
+rsity of Leeds, 25-27th September. This event is primarily aimed at the =0D=
+=0ASOLAS science community and is an opportunity to present and discuss the=
+ latest research results from the programme. Registration is open =0D=0Aunt=
+il Wednesday 8th August. For more information, please visit the NERC UKSOLA=
+S =0D=0Awebsite (http://www.nerc.ac.uk/research/programmes/solas/events/070=
+925/).=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:SOLAS Annual Science Meeting 2007
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

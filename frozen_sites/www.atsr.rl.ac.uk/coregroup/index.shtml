@@ -1,0 +1,322 @@
+<DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>ATSR Core group objectives, Terms of reference and Reports
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../documentation/index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../documentation/docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <!-- This is the core group page. It includes the various sub sections to ease -->
+<!-- juggling and to allow you to include the various bits on other pages -->
+
+<!-- Core group Team members -->
+
+<H2>ATSR Core group team</H2>
+
+
+<!-- The Chairman -->
+<H3>Chairman : </H3>
+<BLOCKQUOTE> 
+  <P>Prof David Llewllyn-Jones, University of Leicester </P>
+</BLOCKQUOTE>
+<H3>Secretary :</H3>
+<BLOCKQUOTE>
+  <P> Dr Anne Jolly, NERC</P>
+</BLOCKQUOTE>
+<!-- The Members -->
+<H3>Members :</H3>
+<BLOCKQUOTE> 
+  <P>Dr Steven Wilson, NERC<BR>
+    Dr Ian Barton, CSIRO, Australia<BR>
+    Dr Philippe Goryl, ESRIN<BR>
+    Dr Pascal Lecomte, ESRIN<BR>
+    Dr Hannah Tait, ENVISAT System and Payload Project, ESTEC<BR>
+    Mr Trevor Guymer, Southampton Oceanography Centre<BR>
+    Dr Seymour Laxon ,UCL <BR>
+    Dr J Settle, University of Reading <BR>
+    Mr Tony Underwood, NRSC Ltd (on behalf of Karen Hutchins , NRSC Ltd)<BR>
+    Mr Gordon McFadyen, DETR (on behalf of Dr Cathy Johnson, DETR) <BR>
+    <!-- Ms Marianne Edwards, AATSR Validation Scientist, University of Leicester <BR> -->
+    Dr Alessandra Buongiorno, ESRIN<BR>
+  </P>
+  </BLOCKQUOTE>
+<!-- The Offices -->
+<H3>RAL :</H3>
+<BLOCKQUOTE> 
+  <P>Dr Brian Maddison<BR>
+    Dr Chris Mutlow<BR>
+  </P>
+</BLOCKQUOTE>
+
+<!-- Core group objectives -->
+
+<H2>Objectives</H2>
+
+<P>The ATSR Core Group is an independent advisory and review body, with the objective of assisting the NERC (Natural Environment Research Council) EOSTB (Earth Observation Science & Technology Board) via the head of the NERC Earth Observation Programme in providing the most scientifically relevant and cost-effective ATSR data to the UK research community, and seeking to ensure the maximum return from NERC investment in the ATSR project (including associated RAL-funded activity).</P>
+
+<P>The Core Group will also assess the achievement of the primary ATSR mission objectives as required and have the option to report anually to the EOSTB on the ATSR project.</P>
+
+<!-- The terms of reference pagelette -->
+
+<H2>Terms of Reference</H2>
+
+
+<P>To provide a scientific focus for the '91 UK ATSR project '92 and to encourage and promote the highest quality exploitation of ATSR data by the UK research community and to advise on the smooth transition from ATSR (1&2) to AATSR. Tasks include:</P>
+
+<!-- Bulletted list -->
+<UL>
+<LI>Provide a focus for geophysical validation activities and monitor the quality of ATSR data products.<BR>
+<LI>Review the membership and activities of the ATSR Science Team.<BR>
+<LI>Facilitate the coordination of ATSR data exploitation by the UK research community where appropriate.<BR>
+</UL>
+
+
+
+
+<P>To implement a process, within the guidelines set by the EOSTB ATSR Working Group, for managing access to ATSR data and to review requests for data generated by the UK research community and instrument funding partners. Tasks include:</P>
+
+<!-- Bulletted list -->
+<UL>
+<LI>Develop guidelines and provide advice on the prioritisation of requests for ATSR data products.<BR>
+<LI>Advise on the appropriate route for data provision.<BR>
+<LI>Monitor the cost-effectiveness of satisfying data requests.<BR>
+<LI>Advise the RAL (Rutherford Appleton Laboratory) on the setting of a threshold for dealing with ad hoc data requests.<BR>
+</UL>
+
+
+
+
+<P>Monitor progress and report on the ATSR Post Launch Support (PLS) project. Tasks include:</P>
+
+<!-- Bulletted list -->
+<UL>
+<LI>Provide advice as may be required on the instrument in flight operations.<BR>
+<LI>Report on any mismatch between the PLS service provided and the evolving user requirements.<BR>
+<LI>Provide guidance on the development of new products.<BR>
+<LI>Consider issues pertinent to the implementation and evolution of the ATSR PLS Project Management Plan.<BR>
+<LI>Contribute to future PLS reviews as may be required by the EOSTB.<BR>
+</UL>
+
+<P>The Objectives and the Terms of Reference were approved by the ATSR Core Group meeting of 1st March 1996.</P>
+
+
+<!-- Core group reports -->
+
+<H2>Reports</H2>
+
+<!-- Reports. Place the PDF files in ~/website/coregroup/files, and add links --> 
+<!-- here.                                                                    --> 
+<BLOCKQUOTE>
+  <P><IMG src="../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+    <A href="files/index.shtml">Click here to browse and download the ATSR Coregroup reports 
+    </A><BR>
+    <BR>
+  </P>
+</BLOCKQUOTE>
+
+<p><FORM method="get" action="http://www.badc.nerc.ac.uk/cgi-bin/mailit.cgi.pl">
+  <TABLE border="0">
+    <TR> 
+      <TD> 
+        <INPUT type=hidden name="subject" value="/coregroup/index.shtml ( ATSR Core group objectives, Terms of reference and Reports
+ )"> 
+        <INPUT type=hidden name="recipient" value="wwwadmin@www.atsr.rl.ac.uk">
+        <INPUT type=hidden name="env_report" value="REMOTE_HOST, REMOTE_ADDR, HTTP_USER_AGENT">
+	<FONT size="-2"><B>Did you find this information helpful?</B></FONT><FONT size="-2"> 
+        Yes 
+        <INPUT type="radio" value="Yes" name="radiobutton">
+        No 
+        <INPUT type="radio" name="radiobutton" value="No"><BR>
+        <INPUT type="submit" name="Submit" value="Submit">
+        <INPUT type="reset" name="Reset" value="Reset"> 
+	 &nbsp<a href = "../feedback/index.shtml">Give details...</a></FONT>
+      </TD>
+ 
+    </TR>
+  </TABLE>
+</FORM>
+
+</p>
+
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Tuesday, 04-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

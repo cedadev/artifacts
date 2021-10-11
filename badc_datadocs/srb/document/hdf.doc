@@ -1,0 +1,118 @@
+Hierarchical Data Format
+
+
+Hierarchical Data Format (HDF) has been adopted by EOSDIS as the
+Version 0 standard data format in which data will be distributed to the
+scientific community.  Where technically feasible and where resources
+allow, the Langley DAAC (as well as other DAACs) will implement
+datasets using HDF or develop conversion software to allow distribution
+of datasets in HDF.  In addition, many datasets will be available
+off-line in their `native' format upon request.
+
+Hierarchical Data Format (HDF)
+
+What is HDF?
+
+HDF is a multi-object file structure that is designed to facilitate the
+sharing of data among people, projects, and machines on a network.
+HDF was developed by the National Center for Supercomputing
+Applications (NCSA) to serve the needs of diverse groups of scientists
+working on supercomputing projects of various kinds.
+
+Why HDF?
+
+Scientists commonly generate and process data files on several
+different machines, use various software packages to process files, and
+share data files with others who use different machines and software.
+Also, the mixture of information that scientists need to work with
+often varies from one file to another, even for the same application.
+Files may be conceptually related but physically separated; e.g.,
+some data may be dispersed among different files, some in program code,
+and some in the minds of various users.  HDF addresses these problems
+by providing a general purpose file structure that does the following:
+
+o  Makes it possible for programs to obtain information about the
+   data from the data file itself, rather than from another source;
+
+o  Lets you store different mixtures of data (e.g., raster and
+   floating- point) and related information in different files, even when
+   the files are processed by the same applications program;
+
+o  Standardizes the format and descriptions of many types of
+   commonly used datasets, such as raster images and scientific data;
+
+o  Encourages the use of a standard data format by all machines
+   and programs that produce files containing a specific dataset;
+
+o  Can be adapted to accommodate virtually any kind of data by
+   defining new tags or new combinations of tags.
+
+HDF files are self-describing.  For each data object in an HDF file,
+there are predefined tags that identify such information as the type of
+data, the amount of data, its dimensions, and its location in the
+file.  The self-describing capability of HDF files has important
+implications for processing scientific data.  It makes it possible to
+fully understand the structure and contents of a file just from the
+information stored in the file itself.  A program that has been written
+to interpret certain tag types can scan a file containing those tag
+types and process the corresponding data.  Self-description also means
+that many types of data can be bundled in an HDF file.  For example, it
+is possible to accommodate symbolic, numerical, and graphical data in
+one HDF file.
+
+One of the primary reasons HDF was chosen was the availability of HDF
+visualization tools and packages.  Commercial software, such as, Spy-
+glass, Intergraph, and SGI Explorer, and public domain software, such
+as X Image, and X DataSlice, exist which read data in HDF and display
+two- and three-dimensional images.  In addition, NCSA has been funded
+to merge HDF with NetCDF (Network Common Data Format) and CDF (Common
+Data Format), which makes it much more powerful and versatile than
+other standard formats.  The first priority of NCSA is to modify their
+software and tools so they can work with netCDF and CDF.
+
+HDF Library
+
+Since datasets will be distributed in HDF, it will be necessary to have
+an HDF library installed on your workstation in order to have access to
+the data once you get it.  The HDF library is available via `Anonymous
+FTP' from NCSA.   Please refer to the document NCSA.DOC in the DOCUMENT
+directory for instructions to obtain and install the HDF libraries.
+
+
+HDF Command Line Utilities
+
+HDF command line utilities are applications available from NCSA that
+allow you to perform common operations on and manipulations of HDF
+files.  These utilities can be executed at the command level, in other
+words, they can be entered directly at your workstation.  The following
+are four examples of NCSA HDF command line utilities:
+
+hdfls - Allows you to list basic information about an HDF file, such
+as, tags and reference numbers, and the length of each data element.
+
+hdfed - Allows you to examine the data file itself and to move data
+between two HDF files.
+
+r8tohdf - One of three that allows you to manipulate HDF files that
+con- tain raster image sets.  This utility converts one or more raw
+images to HDF 8-bit raster image set format and writes them to a file.
+
+fptohdf - Converts floating-point arrays (from either text files or HDF
+scientific datasets) to either HDF 8-bit raster image sets (RIS8) or
+HDF scientific datasets (SDS), or both, and stores the results in an
+HDF file.  The image can be scaled about a mean value that is provided
+by you.
+
+These utilities, as well as many others, are available from NCSA.
+Refer to NCSA.DOC for instructions on how to access NCSA.
+
+Read Software
+
+Read software for datasets in HDF are available in the SOFTWARE directory. 
+Source code for each routine is currently available in both FORTRAN and C. 
+You must obtain the HDF Libraries from NCSA to compile these rou-
+tines.   Detailed instructions on obtaining the HDF libraries are
+available in the file NCSA.DOC in the DOCUMENT directory.  Documentation 
+in the form of `readme' files are also provided for each dataset to 
+help you use the read routines effectively.
+

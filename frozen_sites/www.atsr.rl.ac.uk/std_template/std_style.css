@@ -1,0 +1,40 @@
+
+
+TABLE
+{
+    FONT-SIZE: x-small;
+}
+
+BODY
+{
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    BACKGROUND-COLOR: white;
+    COLOR: #000000;
+    FONT-SIZE: x-small;
+    FONT-VARIANT: normal;
+}
+
+
+P, FONT, TH, TD, H1, H2, H3, H4, H5
+{
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+
+}
+
+A:link
+{
+    COLOR: #515151;
+   /* COLOR: #666666;*/
+    TEXT-DECORATION: underline
+}
+A:visited
+{
+    COLOR: #a0a0a0;
+    TEXT-DECORATION: underline
+}
+A:hover
+{
+    COLOR: #0000da;
+    TEXT-DECORATION: underline;
+}
+

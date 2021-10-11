@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Datasets: HALOE L3 Data</TITLE>
+</HEAD>
+<!-- Created 6th December 1998 12:25:17  -->
+<!-- Author: Simon Williams BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>Acquiring the HALOE L3 data held at the BADC<BR
+CLEAR="ALL"></H1>
+<br><br>
+<P><EM>This file contains background information to help you get
+the HALOE L3 data held at the BADC.</EM> <HR ALIGN=LEFT>
+
+<OL>
+  <LI><A HREF="#transfer">Checking and Transferring Data from the BADC</A>
+  <LI><A HREF="#convention">File name convention</A>
+  <LI><A HREF="#files">Reading the data files</A>
+</OL>
+<HR ALIGN=LEFT>
+<p>
+
+
+<H3><A NAME="transfer"></A>1. Checking and Transferring Data from the BADC</H3>
+
+<BLOCKQUOTE>
+  
+<P>All data is located beneath the directory <EM><A
+  HREF="/cgi-bin/data_browser/data_browser/badc/haloe/">/badc/haloe/</A></EM>. 
+  Here you will find a README file and the following subdirectories:<P> 
+  <UL>
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/data/haloel3/">data</A>
+    - contains the data files
+    <LI><A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/doc/">doc</A>
+    - contains HALOE documentation
+  </UL>
+<P>Check whether the data you require is available by browsing the <A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/data/haloel3/">HALOE L3 
+data</A> directories.
+
+</BLOCKQUOTE>
+
+<H3><A NAME="convention"></A>2. File name convention</H3>
+The file name convention adopted is as follows:&nbsp;&nbsp;
+HALOE_Ll_Sssss_Ddddd.Vvvvv_Ccc_xxxx, 
+<p>
+where: 
+<ul>
+<li>l is the UARS processing level (e.g. 2), 
+<li>ssss is the subtype or parameter, 
+<li>dddd is the UARS acquisition day (0001 = 12 September 1991), 
+<li>vvvv is the data version number (e.g. 18 or 19), 
+<li>cc is the data version cycle number, and 
+<li>xxxx is the file extension (PROD for the binary files)
+</ul>
+
+<P>The <A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/data/haloel3/">data files</a> 
+(*PROD extension) are in subdirectories 3at/subtype/yyyy/mm,
+where subtype corresponds to a measured parameter (aextch4, aexthcl, aexthf,
+aextno, ch4, h2o, hcl, hf, no, no2, o3, or temp), yyyy is the year, and mm is
+the month of the data.  Each data file has an ASCII file (*META extension)
+associated with it, which contain information about the data file.
+<p>
+The 3tp subdirectory (in the <A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/data/haloel3/">haloel3 
+data directory</a>)contains the parameter files which are associated with
+each data file.  There are two parameter files per day.  The first, 'lat'
+gives the latitudes for each profile level, and 'lon' gives the longitude for
+each profile level.  The data files only contain the average latitude and
+longitude for the profile.  The parameter files also have corresponding
+ASCII metadata files.
+
+<H3><A NAME="files"></A>3. Reading the data files - The file structure</H3>
+
+
+Level 3AT data is organized into thirteen files per day, one each for 
+temperature, mixing ratios of H<sub>2</sub>O, NO<sub>2</sub>, O<sub>3</sub>, NO, CH<sub>4</sub>, HCl, and HF, and aerosol
+extinction values for CO<sub>2</sub>, NO, CH<sub>4</sub>, HCl, and HF channels.  Each file contains 
+the retrievals for the sunrise and sunset events for the day (typically 29 or 
+30 total), and files are organized by event.  The two Level 3TP files are 
+latitude and longitude for each pressure level of each event for the day.
+<P>
+<A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/software/haloel3/">Software</a> is also available to read the data (as provided by Goddard DAAC User Support Office).
+
+
+<P>
+</BODY>
+</HTML>
+
+

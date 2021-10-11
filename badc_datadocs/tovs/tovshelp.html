@@ -1,0 +1,445 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>TOVS: BADC SSU (TOVS) Analyses Help File</TITLE>
+</HEAD>
+<!-- Created 10th May 1996 12:25:17  -->
+<!-- Author: Simon Williams BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1>BADC Help File : Met Office TOVS (SSU) Analyses<BR
+CLEAR="ALL"></H1>
+
+<P><EM>This section contains basic background information to help
+you use the Met Office SSU Analyses held at the BADC.</EM> <HR ALIGN=LEFT> 
+
+<P><A NAME="top"></A> 
+
+<H2>Contents</H2>
+
+<UL>
+  <LI>1. <A HREF="#introduction">Introduction</A>
+  <LI>2. <A HREF="#system">The Analysis System</A>
+  <UL>
+    <LI>2.1 <A HREF="#instruments">Instrument Descriptions</A>
+    <LI>2.2 <A HREF="#analysis">Analysis Technique</A>
+    <LI>2.3 <A HREF="#regression">Calculation of Regression of Coefficients</A>
+    <LI>2.4 <A HREF="#operational">Operational Data Processing</A>
+  </UL>
+  <LI>3. <A HREF="#data">The Data</A>
+  <UL>
+    <LI>3.1 <A HREF="#spatial">Spatial Coverage</A>
+    <LI>3.2 <A HREF="#temporal">Temporal Coverage</A>
+    <LI>3.3 <A HREF="#resolution">Resolution</A>
+    <LI>3.4 <A HREF="#quality">Quality</A>
+    <LI>3.5 <A HREF="#units">Units</A>
+  </UL>
+  <LI>4. <A HREF="#using">Using TOVS Analyses from the BADC</A>
+  <UL>
+    <LI>4.1 <A HREF="#catalogue">Checking the catalogue</A>
+    <LI>4.2 <A HREF="#transfer">Transferring Data from the BADC</A>
+    <LI>4.3 <A HREF="#files">Reading the data files</A>
+  </UL>
+</UL>
+
+<H2><A NAME="introduction"></A>1. Introduction</H2>
+
+<P>These data consist of sets of 3-dimensional gridpoint analyses
+of the stratosphere which are produced by the <A HREF="http://www.metoffice.com/"
+TARGET="_top">Met Office </A>using data from the
+TIROS Operational Vertical Sounder 
+instruments onboard the NOAA operational polar orbiters. The analyses
+are usually refered to as the SSU analyses, but this is slightly
+misleading since they use data from all three of the TOVS sub-instruments
+<EM>not</EM> just the SSU. 
+
+<P>The primary products which are archived at the BADC are synoptic
+maps of measured radiances and geopotential height. The radiances
+are stored on a 5 degree latitude by 5 degree longitude grid,
+whilst the geopotential heights are stored on the same grid on
+the 850, 500, 300, 200, 100, 50, 20, 10, 5, 2 and 1 hPa pressure
+surfaces. Both datasets are produced daily at 1200 UTC. The analyses
+have been produced from December 1978 to June 1998. 
+
+<P><A HREF="/cgi-bin/data_browser/data_browser/badc/ukmo-tovs/software/">Software</A> is available
+to calculate brightness temperatures from the radiances and temperatures
+and geostrophic winds and potential vorticity from the geopotential
+height fields. 
+
+<H2><A NAME="system"></A>2. The Analysis System</H2>
+
+<H3><A NAME="instruments"></A>2.1 Instrument Descriptions</H3>
+
+<P>The TOVS system has been flown on successive spacecraft in
+the TIROS-N/NOAA series of Polar Orbiting Environmental Satellites
+(POES) since 1978. TOVS consists of 3 sub-instruments which make
+measurements of radiance from the Earth over a large portion of
+the electromagnetic spectrum from the microwave to the visible: 
+
+<UL>
+  <LI>The Stratospheric Sounding Unit (SSU) uses the technique
+  of pressure modulation radiometry to measure radiation emitted
+  by CO2 3 channels in the infra-red. This instrument has the highest
+  vertical resolution in the stratosphere.
+  <LI>The High-Resolution Infrared Sounder makes measurements in
+  19 regions of the infrared spectrum between 3.7 and 15 microns.
+  <LI>The Microwave Sounding Unit (MSU) measures thermal microwave
+  radiation in the 4 regions of the oxygen emission spectrum at
+  around 50GHz.
+</UL>
+
+<P>All three instruments scan perpendicular to the orbital path
+which greatly improves their vertical resolution, although they
+use different scanning patterns. The SSU (which was built by the
+Met Office) is described in detail in <A HREF="references.html#pick">Pick
+and Brownscombe</A> (1981), whilst <A HREF="references.html#schwalb">Schwalb
+(1978)</A> gives a description of the TOVS system as a whole. 
+
+<P>The Met Office analyses use a total of 8 channels from all
+three instruments. SSU channels 25, 26 and 27, which have weighting
+functions peaking near 15, 5 and 1.5 hPa respectively, HIRS channels
+1, 2 and 3 which have broad weighting functions spanning much
+of the stratosphere and MSU channels 23 and 24 which peak in the
+lower stratosphere. The Spatial distribution of the weighting
+functions is shown in <A HREF="tovs_weight_fn.html">Fig.1</A> 
+
+<H3><A NAME="analysis"></A>2.2 Analysis Technique</H3>
+
+<P>The Met Office uses 8 of the channels from the TOVS analyses
+to calculate 5 deep layer thicknesses in the stratosphere: 100-20,
+100-10, 100-5, 100-2 and 100-1 hPa. Thicknesses rather than temperatures
+are retrieved because of the low vertical resolution of the soundings. 
+
+<P>The analysis process may be divided into two distinct stages. 
+
+<DL>
+  <DT><STRONG>I. Calculation of regression Coefficients</STRONG>
+  <DD>A first preparatory step involves the calculation of regression
+  coefficients to derive a linear relationship giving thicknesses
+  in terms of radiances.
+  <DT><STRONG>II. Operational Data Processing</STRONG>
+  <DD>This relationship is then used operationally to retrieve
+  thicknesses from the radiances measured by TOVS. The thicknesses
+  are interpolated to give synoptic thickness maps on a regular
+  grid. Geopotential heights are then obtained by adding thicknesses
+  to an independently analysed field of geopotential height at
+  100hPa.
+</DL>
+
+<P>These stages are outlined in more detail in the following sections. 
+
+<H3><A NAME="regression"></A>2.3 Calculation of Regression of
+Coefficients</H3>
+
+<P>In order to use the satellite radiances to calculate thicknesses
+and and hence geopotential heights, a linear equation is derived
+which gives the thicknesses in terms of radiances. This is achieved
+by using a reference set of rocket profiles. For each of the reference
+profiles a set of simulated radiances (which would have been measured
+by a coincident satellite sounding) is calculated. These are used
+in conjunction with the measured thicknesses to derive a set of
+linear equations for the calculation of thickness from radiance.
+These equations may then be used to calculate thicknesses operationally. 
+
+<P>The rocket profiles used in the calculation are a reference
+set of 1200 which were obtained from the NOAA/NMC Upper Air Branch.
+The profiles are divided into 7 zones by latitude, and a radiance-thickness
+expression is derived for each zone separately. There are three
+zones in the winter extra-tropics, three in the summer extra-tropics
+(each 20 degrees wide) and one tropical zone (60 degrees wide).
+There is no distinction between the hemispheres, biasing the <EM>a
+priori</EM> in favour of the northern hemisphere where the majority
+of the rocket ascents took place. Note that reference set of rocket
+soundings includes profiles representative of winter warming conditions. 
+
+<P>The radiance-thickness expressions are recalculated for each
+new satellite and also if there is a change in the number of operational
+channels in the TOVS subsystem, or if there is a significant change
+(&gt; 10%) in the gas-cell pressure in one of the SSU channels. 
+
+<H3><A NAME="operational"></A>2.4 Operational Data Processing
+Steps</H3>
+
+<P>The data used to calculate the analyses are supplied to the
+Met Office by NOAA/NESDIS. The routine processing of the data
+involves the following steps. 
+
+<OL>
+  <LI><STRONG>Interpolation of HIRS and MSU data</STRONG><BR>
+  HIRS and MSU data are interpolated onto SSU fields of view by
+  locating the nearest 4 HIRS/MSU radiances to each SSU viewing
+  position. This step effectively means that all three instruments
+  can be considered to provide data at common viewing angles. (5,15,25
+  and 35 degrees off nadir).
+  <LI><STRONG>Quality Control</STRONG><BR>
+  A spike check is made by taking the mean and standard deviation
+  of all radiances in a block of data. All radiances further than
+  three standard deviations from the mean are rejected.
+  <LI><STRONG>Grouping into &quot;Superobs&quot;</STRONG><BR>
+  The 8x8 observations from the 8 different viewing angles are
+  grouped into 4x4 fields of view by combining 4 adjacent observations
+  into a single observation known as a &quot;superob&quot;. The
+  superobs are centred at angles 10 and 30 degrees either side
+  of the nadir.
+  <LI><STRONG>Nadir corrections</STRONG><BR>
+  The off-nadir SSU radiances are corrected to a nadir view by
+  using a pre-computed matrix correction. (Note that the HIRS and
+  MSU radiances are corrected to nadir at NESDIS).
+  <LI><STRONG>Retrieval of thicknesses</STRONG><BR>
+  For each nadir-corrected 8-channel radiance vector, pre-calculated
+  (see section 1.3 above) regression coefficients are used to calculate
+  thicknesses for the standard layers 100-20, 100-10, 100-5, 100-2
+  and 100-1hPa. The regression coefficients chosen depend on the
+  latitude band of the measurement, and the values are varied sinusoidally
+  to allow for the seasonal cycle.
+  <LI><STRONG>Interpolation onto a global grid at 12GMT.</STRONG><BR>
+  Radiances and retrieved thicknesses are linearly interpolated
+  in both space and time onto a regular 5 degree latitude by 5
+  degree longitude grid at 12 GMT. The value at each grid point
+  is calculated from all observations within 500km and within 12
+  hours of 12 GMT.
+  <LI><STRONG>Filling in missing values</STRONG><BR>
+  Where there is missing radiance data, grid points may have no
+  data assigned to them. In this case a search is performed over
+  20 grid lengths for valid data and linear interpolation is used.
+  If no data is found within this range then a global mean value
+  is substituted. Note that the number of missing grid points is
+  recorded in the file header and if more that 650 points are missing
+  then the day's analysis should be discarded.
+  <LI><STRONG>Analyses of Geopotential Height</STRONG><BR>
+  Global fields of geopotential height for the stratosphere are
+  constructed by adding the gridded thicknesses to an objective
+  analysis of geopotential height at 100hPa. This analysis comes
+  from an operational weather forecasting centre (either the 
+  Met Office or the European Centre for Medium-range Weather Forecasts).
+  This analysis also provides the data fields for the tropospheric
+  levels. The result of this process is a set of geopotential heights
+  at 850, 500, 300, 200, 100, 50, 20, 10, 5, 2 and 1 hPa.
+  <LI><STRONG>Smoothing</STRONG><BR>
+  The gridded fields of radiances, thicknesses and heights are
+  then smoothed in the horizontal by Fourier analysis. Zonal wavenumbers
+  greater than 12 are discarded and the Fourier coefficients of
+  remaining zonal wavenumbers are smoothed by discarding pole-to-pole
+  wavenumbers greater than 12. This is a compromise between almost
+  complete coverage at high latitudes and much poorer coverage
+  at lower latitudes (<A HREF="tovs_weight_fn.html">See
+  Fig. 1a.</A>)
+</OL>
+
+<H2><A NAME="data"></A>3. The Data</H2>
+
+<P>This section contains a brief summary of the information in
+the Hadley Centre Climate Research Technical Note (CRTN24) on
+the TOVS analyses <A HREF="references.html">(Bailey et al., 1992).</A>
+You are strongly advised to consult this document before using the data. 
+
+<H3><A NAME="spatial"></A>3.1 Spatial Coverage</H3>
+
+<H4>3.1.1 Vertical Coverage</H4>
+
+<P>The Geopotential height data are available on a set of levels
+from 850 to 1 hPa. For the levels available see the section on
+resolution below. Radiance data are available for the 8 channels
+of the TOVS instruments which are used in the Met Office Analysis
+system. For the weighting functions for these channels refer to
+<A HREF="tovs_weight_fn.html">Fig. 1b</A>. 
+
+<H4>3.1.2 Horizontal Coverage</H4>
+
+<P>The geopotential height and radiance data are both stored on
+a grid which covers the whole globe. For further information,
+see the section below on the data resolution. 
+
+<H3><A NAME="temporal"></A>3.2 Temporal Coverage</H3>
+
+<P>The analyses are available from the BADC for a continuous period
+from January 1979 to June 1998. There is a separate file for each month of data. 
+
+<H3><A NAME="resolution"></A>3.3 Resolution</H3>
+
+<P>Both the radiance and the geopotential height fields held at
+the BADC are on a 5 degree by 5 degree latitude-longitude global
+grid. There are 37 latitudes from 90 degrees N to 90 degrees S
+and 72 longitudes from 180 degrees W to 180 degrees E. The geopotential
+heights are stored on the following set of pressure levels: 
+
+<P>850, 500, 300, 200, 100, 50, 20, 10, 5, 2 and 1 hPa 
+
+<P>The Radiance data are supplied for up to 11 channels of the
+TOVS instruments. 
+
+<H3><A NAME="quality"></A>3.4 Data Quality</H3>
+
+<P>The accuracy (precision and systematic biases) of stratospheric
+analyses produced by Met Office is influenced by the following factors: 
+
+<OL>
+  <LI>The accuracy and stability of the measuring instruments.
+  <LI>The vertical resolution of the measurements. This is limited
+  by the width and overlap of weighting functions.
+  <LI>The horizontal resolution of the measurements. This is limited
+  by the number of satellite orbits and the angular range of side
+  scanning.
+  <LI>The retrieval method which derives thicknesses from radiances.
+  The reference a priori data used in the retrieval cannot represent
+  the full range of stratospheric conditions.
+  <LI>The interpolation of observations. Errors inevitably arise
+  when observations from orbits spread throughout the day are interpolated
+  onto a regular latitude longitude grid at a specified synoptic
+  time.
+  <LI>The accuracy of the 100 HPa analysis which is used as a base
+  level. Though operational weather forecasting centres such as
+  the Met Office continue to improve their tropospheric analyses, errors
+  remain as evidenced by differences between independently produced
+  fields, particularly in the southern hemisphere where ground-based
+  data are sparse.
+</OL>
+
+<P>The effect of each of these factors is difficult, if not impossible,
+to assess definitively given the limited amounts (or complete
+lack of) independent data for the middle and upper stratosphere.
+The reliability of derived fields is strongly influenced locally
+by the vertical and horizontal scales of the actual circulation. 
+
+<P><A HREF="references.html">Bailey et al.</A> (1992) discuss a number of tests of the data quality and conclude that the
+principal limitation is the inherently low vertical resolution,
+which can blur comparatively small-scale baroclinic structures
+in the stratosphere (especially during strong warmings), and which
+can lead to discrepancies in diagnostic calculations, especially
+when second (or higher) orders of spatial differentiation are
+involved. 
+
+<P>When examining data for a particular day, users are advised
+to check the following indicators of data quality detailed in
+the appendix: 
+
+<OL>
+  <LI>The coverage code, which gives information about the data
+  used to produce the analysis.
+  <LI>The number of missing grid points (for gridded data). If
+  this exceeds 650, then consider rejecting that day.
+  <LI>Missing data indicators, which show which fields, if any,
+  are missing on a given day.
+</OL>
+
+<P>See the <A HREF="tovs_format.html">file format</A> document
+for the locations of these parameters. 
+
+<H2><A NAME="using"></A>4. Using TOVS analyses from the BADC</H2>
+
+<P>The TOVS analyses are covered by a data protocol between the
+Natural Environment Research Council (NERC) and the Met Office.
+This is to allow the Met Office to keep track who is using the
+data. 
+
+<P>Since the dataset is restricted, it is not available anonymously
+and cannot be accessed through the WWW. If you want to use the
+data, please <A HREF="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=tovs">apply 
+for access to the Met Office TOVS data</a>.  <!-- Out of action at the moment 
+<H3><A NAME="catalogue">4.1 Checking the catalogue</A></H3>
+
+The TOVS Analysis data files are listed in our data 
+<A HREF="">catalogue</A>. We suggest that you look here
+to check whether the data you require is available.
+--> 
+
+<H3><A NAME="transfer"></A>4.1 Transferring Data from the BADC</H3>
+
+<P>All data and software is located beneath the directory <EM>/badc/ukmo-tovs</EM>.
+Here you will find a README file and the following subdirectories 
+
+<UL>
+  <LI><A href="/cgi-bin/data_browser/data_browser/badc/ukmo-tovs/doc/">doc</a> - contains Met Office documentation for the dataset.
+  <LI><A href="/cgi-bin/data_browser/data_browser/badc/ukmo-tovs/software/">software</a> - contains the example read software and any 3rd
+  party software available
+  <LI><A href="/cgi-bin/data_browser/data_browser/badc/ukmo-tovs/data/">data</a> - contains the data the original VMS binary files. This
+  is the format supplied to us by the Met Office. The file format
+  is simple, so the files are easily read on other platforms.
+</UL>
+
+<H3><A NAME="files"></A>4.4 Reading the data files</H3>
+
+<H4><A NAME="structure"></A>4.4.1 File structure</H4>
+
+<P>This section contains an overview of the file structures of
+the TOVS radiance data and geopotential height analyses. The detailed
+<A HREF="tovs_format.html">file formats</A> are also available
+online. 
+
+<P>The radiance and geopotential height datasets use a similar
+file format. In both cases, the data are stored on a global grid
+with a 5x5 degree resolution (37 latitudes for 90 degrees N to
+90 degrees S and 72 longitudes from 180 degrees W to 180 degrees
+E). For each grid-point, the radiance files contain the data for
+the 8 channels used by the analyses, whilst the height files contain
+the geopotential heights on the 11 pressure surfaces. 
+
+<P>The data are stored in files which contain the data for a single
+calendar month. Each day's data within the files contains 38 records,
+consisting header record and 37 records, one for each latitiude
+row. Days are stored in chronological order. 
+
+<P>Schematically the files have the following structure: 
+
+<P>&nbsp; 
+
+<PRE>
+      ______________________________
+     | Day 1 : Header Record        |
+     |______________________________|
+     | Day 1 : 1st Latitude (90N)   |
+     |______________________________|
+     | Day 1 : 2nd Latitude (85N)   |
+     |______________________________|
+     | Day 1 : 3rd Latitude (80N)   |
+     |______________________________|
+     
+               ............
+     
+      ______________________________
+     | Day 1 : 37th Latitude (90S)  |
+     |______________________________|
+     | Day 2 : Header Record        |
+     |______________________________|        39th record = Header for 
+     | Day 2 : 1st Latitude (90N)   |        2nd day's data.
+     |______________________________|
+     | Day 2 : 2nd Latitude (85N)   |
+     |______________________________|
+     
+                ............
+    
+                ............
+      ______________________________
+     | Day N : 37th Latitude (90S)  |        N=Last day in the month
+     |______________________________| </PRE>
+
+<P>Each record contains 1080 data items of type integer*2. Missing
+data has a value of -32768. The data is encoded to fit into the
+arrays. If you are using the geopotential height analyses, then
+you should multiply the raw values by a factor of 2 to get heights
+in metres. The factors for the radiance data are channel dependent.
+You should consult the <A HREF="tovs_format.html">format document</A>
+to find out how to convert the data values to radiances. 
+
+<H4><A NAME="routines"></A>4.4.2 Access Routines</H4>
+
+<P>A set of FORTRAN subroutines to read the data are available
+from the TOVS software directory at the BADC. These are the routines
+supplied by the instrument team at the Met Office which should
+compile and run on the majority of platforms. 
+
+<P>A set of access routines written in IDL at the BADC is also
+available. 
+
+<H4><A NAME="3rdparty"></A>4.4.3 Third Party Software</H4>
+
+<P>In the software directories for the TOVS data, there is a subdirectory
+for 3rd Party software. If you develop software to use with the
+TOVS data, then we encourage you to let us have a copy so that
+we can make it available to other researchers. 
+
+
+<P>
+
+</BODY>
+</HTML>

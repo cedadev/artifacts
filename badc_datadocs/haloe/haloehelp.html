@@ -1,0 +1,649 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Datasets: HALOE Data</TITLE>
+</HEAD>
+<!-- Created 25th July 1996 11:30:00  -->
+<!-- Author: Simon Williams BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1><!--SELECTION--><!--/SELECTION--><A NAME="top"></A>BADC Help
+File: HALOE Data<BR CLEAR="ALL"></H1>
+
+<P><EM>This file contains a summary of the instrument documentation
+to help you use the HALOE Level 2 and Level 3 data held at the BADC.</EM> <HR ALIGN=LEFT> 
+
+<H2><A NAME="contents"></A>Contents</H2>
+
+<OL>
+  <LI><A HREF="#instrument">The Instrument</A>
+  <UL>
+    <LI>1.1 <A HREF="#description">Instrument Description</A>
+    <LI>1.2 <A HREF="#techniques">Measurement Techniques</A>
+    <LI>1.3 <A HREF="#process">Data Processing</A>
+  </UL>
+<P>
+  <LI><A HREF="#data">The Level 2 Data</A>
+  <UL>
+    <LI>2.1 <A HREF="#spatial1">Spatial Coverage</A>
+    <LI>2.2 <A HREF="#temporal1">Temporal Coverage</A>
+    <LI>2.3 <A HREF="#resolution1">Resolution</A>
+    <LI>2.4 <A HREF="#quality1">Quality</A>
+    <LI>2.5 <A HREF="#units1">Units</A>
+  </UL>
+<P>
+  <LI><A HREF="#data">The Level 3 Data</A>
+  <UL>
+    <LI>3.1 <A HREF="#spatial">Spatial Coverage</A>
+    <LI>3.2 <A HREF="#temporal">Temporal Coverage</A>
+    <LI>3.3 <A HREF="#resolution">Resolution</A>
+    <LI>3.4 <A HREF="#quality">Quality</A>
+    <LI>3.5 <A HREF="#units">Units</A>
+  </UL>
+
+<P>
+
+  <LI><A HREF="#info">More information</A>
+</OL>
+
+<HR ALIGN=LEFT>
+
+<H3>1. <A NAME="instrument"></A><U>The Instrument</U></H3>
+
+<P>Here is a brief outline of the HALOE instrument and the measurement
+and data processing techniques which are employed. Users requiring
+a more detailed description of the design and operation of the
+instrument should consult the paper by <a href="/data/haloe/references.html">Russell et al. (1993a)</a>. 
+
+<BLOCKQUOTE>
+  <P><B>1.1 </B><A NAME="description"></A><B>Instrument Description</B> 
+  <P>HALOE is a satellite solar occultation experiment designed to monitor the vertical distributions of HCl, HF, CH<sub>4</sub>, and NO by gas filter
+          correlation radiometry and H<sub>2</sub>O, NO<sub>2</sub>, O<sub>3</sub>, and temperature versus pressure using CO<sub>2</sub> absorption by broadband filter radiometry
+          (<a href="/data/haloe/references.html">Russell et al., 1993a</a>). Aerosol extinction is directly measured in each of the gas filter channel wavelengths which range from 2.5 to 5.26
+          m (<a href="/data/haloe/references.html">Hervig, et al., 1993</a>). The broad band radiometer measurements range from 2.7 to 10 m wavelength. The absorption of solar energy
+          at selected spectral bands is used to infer vertical profiles of atmospheric temperature, pressure, and mixing ratios of key gases involved
+          in ozone chemistry. The HALOE instrument includes both broadband and gas filter channels covering the spectral range from 2.45 to
+          10.04 microns. 
+<P>HALOE uses the solar occultation technique to make measurements
+  of vertical profiles of atmospheric parameters. The satellite
+  observes 15 sunrises and 15 sunsets per day. For each of these
+  events a vertical scan of the atmosphere is obtained by tracking
+  the position of the Sun during the occultation. The technique
+  is illustrated schematically in <A HREF="figures/solar_occultation.html">Figure 1
+</A>. 
+  <P>As each event proceeds, the instrument locks onto the sun
+  and goes through a sequence of operational modes, which can be
+  divided into two distinct phases : 
+  <P><STRONG>An Exo-Atmospheric Reference Phase:</STRONG>In this
+  phase the instrument observes the sun above the atmosphere. An
+  intensity profile for the sun is measured by scanning across
+  the solar disk, the gas-correlation channels are balanced (for
+  sunsets only), and a sequence of calibration measurements are
+  made in each spectral channel. 
+  <P><STRONG>An Atmospheric Tracking Phase:</STRONG> The solar
+  position is tracked through the atmosphere, and the atmospheric
+  absorption is measured in each channel as a function of the pressure
+  at the tangent height (defined as the altitude of the closest
+  approach of the ray path to the Earth's surface). 
+  <P>The order in which these two steps are performed depends on
+  whether the event is a sunrise or a sunset. 
+  <P>Gas mixing ratio profiles are then determined by taking the
+  ratio of the solar intensity which has been attenuated by its
+  passage through the atmosphere with the unattenuated intensity
+  measured outside the atmosphere. The use of a relative measurement
+  means that the instrument is virtually self-calibrating. 
+  <P>The instrument uses Gas Filter Correlation Radiometry to make
+  measurements of HCl, HF, CH<sub>4</sub> and NO, and Broadband Filter Radiometry
+  for measurements of O<sub>3</sub>, H<sub>2</sub>O, NO<sub>2</sub> and the temperature as a function
+  of pressure using a CO<sub>2</sub> channel. Aerosol extinction is also measured
+  in each of the gas filter channels. <BR>
+
+
+<P>
+<b>1.2 <A NAME="techniques"></A>Measurement Techniques. </b>
+
+<P>1.2.1 Gas Filter Correlation Radiometry (HCl, HF, NO, CH<sub>4</sub>) 
+
+<P>Solar energy enters the gas correlation section of the instrument
+and is divided into two paths for each channel. The first path
+contains a cell filled with a sample of the gas to be measured;
+the second is a vacuum path. The output signals from the detector
+in each of these paths are fed into a differencing amplifier,
+where a differenced signal is calculated. 
+
+<P>In the reference phase of an occultation event, when the instrument
+observes the sun above the atmosphere, the gains of the two channels
+are balanced, so that the difference signal is close to zero. 
+
+<P>During the atmospheric tracking phase, absorption by the target
+species in the atmosphere changes the spectrum of the incoming
+radiation in a way which is strongly correlated with the absorption
+line spectrum of the gas cell. This introduces a difference signal,
+from which the concentration of the target gas in the atmosphere
+may be derived. 
+
+<P>Since absorption by aerosol is spectrally broad, it may be
+taken as flat across the bandpass of a single HALOE channel. affecting
+both the gas-cell path and the vacuum path equally. As a result
+it does not contribute to the differenced signal. Once the mixing
+ratio of the target gas has been derived, the broadband signal
+in the vacuum path is used to derive the aerosol transmission. 
+
+<P>1.2.2 Broadband Filter Radiometry (H<sub>2</sub>O, NO<sub>2</sub>, O<sub>3</sub>,CO<sub>2</sub>) 
+
+<P>These channels are conventional broadband filter radiometers.
+The instrument signal is a direct measurement of the energy absorbed
+during occultation. The ratio of the atmospheric signal to the
+exo-atmospheric signal is a measure of the atmospheric transmission
+in the optical path. Aerosol absorption has a large effect on
+the radiometer measurements but signal correction methods have
+been developed (<A HREF="references.html">Hervig et al., 1993</A>) and used successfully to
+derive mixing ratios. 
+
+<b><P>1.3 <A NAME="process"></A>Data Processing Techniques</b> 
+
+<P>The <A HREF="/data/uars/">UARS</A> data processing is carried
+out at the Central Data Handling Facility at the Goddard Space
+Flight Center using software supplied by the Instrument's Principal
+Investigator group. 
+
+<P>The data processing for UARS instruments consists of a progression
+through a sequence of `levels' from the raw telemetry at level
+0 to geophysical quantities interpolated onto standard grids at
+level 3. The processing steps for HALOE are outlined below : <STRONG>Level
+0-1</STRONG> At the level 0-1 processing step, instrument-specific
+effects are removed and a set of calibrated data are derived in
+physical units (eg. voltages and radiances) tagged with their
+locations. 
+
+<P><STRONG>Level 1-2</STRONG> The level 1 data are then processed
+further to produce the level 2 product which contains vertical
+profiles of temperature, pressure, mixing ratios of chemical constituents
+and aerosol extinctions at the measurement positions. This step
+involves a complex `onion-peeling' algorithm in which species
+are retrieved layer-by-layer from the top of the profile downwards,
+using the data from the layers above to retrieve at lower levels. 
+
+<P>For each event the pressure and temperature retrievals are
+performed first, followed by the mixing ratios and aerosol extinctions.
+The order in which the retrievals are carried out is important,
+since some species are spectral contaminants in other channels.
+Where this happens, retrievals are repeated using the derived
+profiles from the contaminant channel to improve the original
+retrieval. 
+
+<P>The level 1-2 processing step also requires data on spectral
+line parameters and spectral filter functions for the gas-filter
+functions and band averaged emissivity tables for the radiometer
+channels. 
+
+<P><STRONG>Level 2-3A</STRONG> The level 2 data are profiles located
+at the measurement positions which are determined by the Sun-satellite
+geometry. The level 2-3A processing step takes these data and
+interpolates them onto a standard set of vertical levels evenly
+spaced in pressure, and onto standard times (level 3AT) and standard
+latitudes (level 3AL).
+</blockquote> 
+
+<H3>2.<U> </U><A NAME="data"></A><U>The Level 2 Data</U></H3>
+
+<P>The data available through the BADC are in level 2 files. These
+consist of day files containing vertical profiles for all of the
+parameters measured. There are typically 29 or 30 profiles per
+day corresponding to each occultation event. The HALOE level 2
+data are not public and users who require access to the HALOE data must apply for a web account
+at the BADC. 
+
+<BLOCKQUOTE>
+  <H4><A NAME="spatial1"></A>2.1 Spatial Coverage</H4>
+    2.1.1 Vertical Coverage
+    <P>The parameters available in the files are listed below, together
+    with their approximate vertical ranges 
+    <PRE>
+             			Vertical         Altitude               
+Parameter   			Resolution         Range                  
+________________________________________________________________________________________
+       
+Hydrogen Chloride (HCl)           4.5 km           10-60 km          
+Hydrogen Fluoride (HF)            4.5 km           10-60 km          
+Methane (CH4)          		  4.5 km           15-75 km          
+Nitric Oxide (NO)         	  4.5 km           10-130 km     (below 78 km)
+             			  6.5 km                         (above 78 km) 10-20 km
+Aerosol      			  2-3 km           10-50 km          
+(HCl, HF                                  
+CH4, NO Channels)                               
+Ozone (O3)	           	  2-3 km           10-85 km          
+Water Vapour (H2O)                3-4 km           10-75 km          
+Nitrogen Dioxide (NO2)            2-3 km           10-55 km          
+
+Temperature  			  4.5 km           10-130 km          
+_________________________________________________________________________________________</PRE>
+                              
+
+
+
+    <P>Note that these data have not been interpolated; the level
+    2 profiles are provided at the location of the measurements and
+    are not on a regular pressure grid. 
+    <P>The vertical coverage is illustrated in <A HREF="figures/haloe_vert_coverage.html">Figure 2
+</A>. 
+    <P>2.1.2 Horizontal Coverage
+    <P>As HALOE only makes measurements during sunrise and sunset
+    it does not operate continuously. 
+    <P>The locations of the HALOE profiles varies with the spacecraft-Earth-Sun
+    geometry. For a given day, the locations tend to be in two distinct
+    latitude bands with 14 - 15 sunrises in one band and 14 - 15
+    sunsets in the other. These bands are typically in opposite hemispheres.
+    The longitudinal separation of profiles in each band is approximately
+    24&deg;, and a day's measurements therefore covers the full
+    longitude range. 
+    <P>The latitudes of successive events of one type (e.g. sunsets),
+    shift over the course of a day. The magnitude of the shift varies
+    with latitude. Near the equator it may be as much as 10&deg;
+    per day, whereas at high latitudes measurements lie almost along
+    zonal circles. The total sweep from high latitude in one hemisphere
+    to high latitude in the other takes between 2 and 6 weeks, and
+    the maximum latitude reached varies, the extremes being 80&deg;
+S and 80&deg;N. The latitude range covered by the measurements
+    is shown in the BADC catalogue, and a typical range over the
+    course of a year is shown in <A HREF="figures/haloe_lat_coverage.html">
+Figure 3</A>. 
+    <P>A polar projection of the measurement points shows a pattern
+    of measurements which appears to spiral towards the poles before
+    changing direction and spiraling away.
+  <P><BR>
+   
+  <H4><A NAME="temporal1"></A>2.2 Temporal Coverage</H4>
+  <P>HALOE began operations on the 11th October 1991 (UARS day
+  30) until 21st November 2005. Since
+  launch there have been a number of periods during which data
+  collection has ceased. These are tabulated below, with comments. 
+  <PRE>
+Year      dates            UARS days        Comments       
+_______________________________________________________________
+
+1991      21 - 30 Dec      101 - 110        High beta        
+1992      1 - 10 Mar       172 - 181        High beta         
+          9 - 14 Apr       211 - 216        High beta         
+          3 - 11 Jun       266 - 274        Solar Array Problem  
+          15 - 26 Dec      461 - 472        High beta         
+1993      24 Feb - 1 Mar   532 - 537        High beta         
+          13 - 24 Jun      641 - 652        High beta         
+          4 - 8 Aug        693 - 697        Solar Array Anomaly  
+          27 - 28 Aug      700 - 701        High beta         
+          18 Sep           738              Solar Array Anomaly 
+          10 - 20 Dec      821 - 831        High beta         
+1994      8 - 18 Jun       1001 - 1011      High beta          
+          23 - 25 Aug      1077 - 1079      High beta       
+          7 - 15 Dec       1183 - 1191      High beta         
+_______________________________________________________________</PRE>
+  <P><BR>
+<BR>
+<BR>
+   
+  <H4><A NAME="resolution1"></A>2.3 Resolution</H4>
+  <P>The vertical resolution of the data varies with channel and
+  is not equivalent to the vertical spacing in the level 2 file.
+  Several factors contribute to the resolution. Instrument optics,
+  signal measurement bandwidth and data processing procedures are
+  the primary factors. Although the field of view projects to roughly
+  1.6 km at the limb, when combined with the electronic bandpass
+  and solar sink/rise rate, the natural instrument resolution varies
+  between about 2 and 3 km, (depending on the sink rate). Events
+  viewed parallel to the orbital plane have faster sink rates than
+  events viewed at large angles to the orbital plane (large beta
+  angle) 
+  <P>The resolution can be further degraded by the processing.
+  In fact, nearly any attempt at improving the stability of retrievals
+  has the consequence of smoothing results in the vertical. The
+  lower the signal-to-noise (S/N) the more instability, requiring
+  more smoothing. 
+  <P>Each HALOE channel is processed with point spacing and smoothing
+  chosen to give a good balance between stability and resolution.
+  The low S/N regions (mainly upper altitudes) are smoother than
+  the high signal regions. For the radiometer retrievals (NO<sub>2</sub>,
+  H<sub>2</sub>O, O<sub>3</sub> and aerosols) the advantages of the highly over sampled
+  HALOE data are used to achieve results very close to the natural
+  instrument resolution in regions of sufficient signal. The computationally
+  intensive gas channels (HF, HCl, CH<sub>4</sub> and NO) have been limited
+  to 3 km point spacing in the processing, which limits effective
+  resolution to about 4.5 km. At high altitude (dependent on channel,
+  but always above the stratopause), an additional smoothing of
+  the signal is performed, before processing, that is inversely
+  proportional to S/N. This smoothing starts when signals drop
+  below a S/N of 20 and is limited to no more than a 5 km smoothing.
+  Consequently, resolution at the higher altitudes will be closer
+  to 6 or 7 km, quickly improving as signal increases at lower
+  altitudes. Although variable smoothing can violate conservation
+  of signal rules, the error is a very small fraction of total
+  estimated error. 
+  <P>Estimated resolutions for each species are tabulated in the
+  instrument team's <A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/doc">data
+  quality</A> document. <BR>
+<BR>
+<BR>
+   
+  <H4><A NAME="quality1"></A>2.4 Data Quality</H4>
+  <P>The data have undergone extensive validation. They have been
+  compared to a variety of correlative measurements, as well as
+  data from other <A HREF="/data/uars/">UARS</A> instruments. Although
+  all channels have produced high quality results, there are known
+  and suspected errors; these are outlined below, using information
+  taken from documentation supplied by the HALOE team. 
+  <P>For each mixing ratio profile in the level 2 file, there is
+  an accompanying quality profile which is a measure of the `random'
+  error in that species, expressed in standard deviation. 
+ 
+    <p>2.4.1 General considerations
+    <P>The single most difficult problem to address in processing
+    HALOE data has been the increased aerosol extinction in the lower
+    stratosphere due to the Mt. Pinatubo eruption (June 1991, 12
+&deg;N). The Aerosol cloud rose to ~40km in January 1992 and
+    spread globally, before subsiding. The worst problems occurred
+    in the equatorial lower stratosphere in the first few months
+    of operation. 
+    <P>The aerosol has induced problems through two distinct mechanisms;
+    contaminate absorption and degraded solar tracking. 
+    <P>Results from the radiometer channels may be in error by as
+    much as 20-30% due to error in estimating the aerosol extinction
+    under the heavy aerosol conditions prevailing after the Pinatubo
+    eruption. Since the aerosol can contribute up to 80% of the absorption
+    in some channels when aerosol levels are high (typically the
+    tropics and subtropics from October 1991 and throughout 1992
+    around the aerosol peak). 
+    <P>The second mechanism, degradation of the ability to track
+    the sun, leads to a reduced altitude registration accuracy. Early
+    in the mission, HALOE profiles often cut-off with a minimum altitude
+    in the mid stratosphere. There is an additional problem with
+    the tracking mechanism when the sun is within a small angle of
+    thick aerosol layers, which leads to errors in the mixing ratio
+    profiles which are near constant or decrease with pressure, principally
+    H<sub>2</sub>O and CH<sub>4</sub>. This problem can manifest itself as pockets of apparently
+    dry air at the lower altitudes in the tropics and sub-tropics.
+    The effect is typically under 10%, but can be as high as 30%. 
+    <P>The tracking fidelity also degrades at low altitude (below
+    18 km) for a variety of other reasons, making results below the
+    450K surface quite variable for all channels and all products..
+    The measurement at the bottom point in a profile is made close
+    to the time at which the Sun lock was acquired or lost, so the
+    time delay in the instrument response can result in a corrupted
+    datum for this point. Considerable effort has been devoted to
+    this problem, but there is some evidence that occasional rogue
+    values persist. 
+    <P>Above the aerosol layer the data quality is limited primarily
+    by the random errors tabulated in the data files. However, certain
+    conditions related to both the atmosphere and instrument can
+    be more error prone than others. Major systematic errors are
+    mostly limited to the lower stratosphere and troposphere. 
+    <p>2.4.2 Individual species<p>
+    <P>For information about the quality of the measurements of individual
+    species, users should refer to the <A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/doc/haloe_l2.sfdu">documentation</A>
+    produced by the instrument team which gives a detailed discussion
+    of measurement errors and vertical resolution for each species
+    measured by the instrument. 
+  <P><BR>
+   
+  <H4><A NAME="units1"></A>2.5 Units</H4>
+  <P>The units for the parameters present in the HALOE data files
+  are tabulated below : 
+  <P>&nbsp; 
+  <PRE>
+Parameter               Units   
+__________________________________________
+Temperatures            Kelvins
+Mixing Ratios           By volume
+Quality                 Standard Deviation
+Column Sum              molecules/cm(+2)
+Pressures               mbar
+Transmission            (none)
+Aerosol extinction      km(-1)
+Altitude                km
+Refraction factor       (none)
+__________________________________________</PRE>
+</BLOCKQUOTE>
+
+
+<H3>3.<U> </U><A NAME="data"></A><U>The Level 3A Data</U></H3>
+<BLOCKQUOTE>
+<H4><A NAME="description2"></A>3.1 Data Description</H4>
+
+Level 3AT data consists of atmospheric profiles on a vertical spacing 
+corresponding to the standard UARS pressure grid.  In many cases this vertical
+spacing is much broader than the HALOE Level 2 point spacing.  For this 
+reason, HALOE Level 3AT data is not always representative of the HALOE Level 
+2 data from which it was produced.  Therefore, care should be taken in 
+interpreting the HALOE Level 3AT data between the UARS standard pressure 
+levels.  Also, the temperature profiles are retrieved on a 1.5 kilometer
+grid, interpolated to a 0.3 kilometer grid, and then interpolated to the
+UARS Level 3AT pressure grid.  The temperature standard deviation values, on
+the other hand, are taken directly from the 1.5 kilometer gridded values.
+The standard deviation value of -999.0 indicates a temperature value from 
+NMC or climatology.
+<p>
+With the last few points of all HALOE Level 2 profiles being suspect, large 
+variations may occur at the bottom of the profiles.  On rare occasions the 
+Level 3AT interpolation will wash out these variations and they will be 
+reduced or not appear at all in the interpolated 3AT profile.  In cases 
+where this occurs, the comment associated with the quality number will not
+accurately describe the bottom of the profiles.
+<P>Level 3AT data is organized into thirteen files per day, one each for 
+temperature, mixing ratios of H<sub>2</sub>O, NO<sub>2</sub>, O<sub>3</sub>, NO, CH<sub>4</sub>, HCl, and HF, and aerosol
+extinction values for CO<sub>2</sub>, NO, CH<sub>4</sub>, HCl, and HF channels.  Each file contains 
+the retrievals for the sunrise and sunset events for the day (typically 29 or 
+30 total), and files are organized by event.  The two Level 3TP files are 
+latitude and longitude for each pressure level of each event for the day.
+
+
+<H4><A NAME="spatial"></A>3.2 Spatial Coverage and Resolution</H4>
+    
+<P>Latitudinal coverage is from 80&deg;S to 80&deg;N over the course of a year and includes 
+extensive observations of the Antarctic region during spring. The latitude and
+longitude locations of the actual retrievals vary with each retrieval point due
+to motion of the spacecraft during the length of the occultation event. For this
+reason, two HALOE level 3TP parameter files are produced, one containing the
+latitude and one containing the longitude at each UARS pressure level for each
+HALOE event. Also the level 3AT data are assigned a latitude/longitude location
+corresponding to that of the 30km retrieval point.
+
+<P>Horizontal resolution is 4&deg; for level 3AL files and about 495 km along the orbital track
+for level 3AT files.<BR>
+Vertical resolution for level 3A files is about 2.5 km between pressure surfaces.
+
+
+<H4><A NAME="grid"></A>3.3 Grid description</H4>
+
+<p>All HALOE level 3A data have been referenced to the UARS standard pressure grid. The index of
+the data array defines the pressure level (in millibars) given by:
+<pre>
+<center>
+P(i) = 1000 x 10<sup>**</sup>(-i/6) mb, where i=0,1,2,...54
+</center>
+</pre>
+
+
+
+<H4><A NAME="temporal"></A>3.4 Temporal Coverage</H4>
+HALOE began operations on the 11th October 1991 (UARS day 30) until 21st November 2005. Since 
+launch there have been a number of periods during which HALOE data are missing or unavailable:
+<PRE>
+              
+               Days Since Launch                 Date Ranges
+_____________________________________________________________________
+               
+                  33                    (14-OCT-1991)
+                  35                    (16-OCT-1991)
+                 100 to  110            (20-DEC-1991 to 30-DEC-1991)
+                 174 to  179            (03-MAR-1992 to 08-MAR-1992)
+                 211 to  216            (09-APR-1992 to 14-APR-1992)
+                 264                    (01-JUN-1992)
+                 266 to  303            (03-JUN-1992 to 10-JUL-1992)
+                 360                    (05-SEP-1992)
+                 460 to  472            (14-DEC-1992 to 26-DEC-1992)
+                 477                    (31-DEC-1992)
+                 533 to  538            (25-FEB-1993 to 02-MAR-1993)
+                 540                    (04-MAR-1993)
+                 641 to  651            (13-JUN-1993 to 23-JUN-1993)
+                 658                    (30-JUN-1993)
+                 694 to  697            (05-AUG-1993 to 08-AUG-1993)
+                 716 to  719            (27-AUG-1993 to 30-AUG-1993)
+                 744                    (24-SEP-1993)
+                 821 to  831            (10-DEC-1993 to 20-DEC-1993)
+                 895 to  898            (22-FEB-1994 to 25-FEB-1994)
+                 902                    (01-MAR-1994)
+                1001 to 1012            (08-JUN-1994 to 19-JUN-1994)
+                1077 to 1082            (23-AUG-1994 to 28-AUG-1994)
+                1181 to 1194            (05-DEC-1994 to 18-DEC-1994)
+                1252 to 1263            (14-FEB-1995 to 25-FEB-1995)
+                1316 to 1321            (19-APR-1995 to 24-APR-1995)
+                1342 to 1349            (15-MAY-1995 to 22-MAY-1995)
+                1354                    (27-MAY-1995)
+                1362 to 1374            (04-JUN-1995 to 16-JUN-1995)
+                1388 to 1395            (30-JUN-1995 to 07-JUL-1995)
+                1418 to 1419            (30-JUL-1995 to 31-JUL-1995)
+                1435 to 1443            (16-AUG-1995 to 24-AUG-1995)
+                1450 to 1451            (31-AUG-1995 to 01-SEP-1995)
+                1495 to 1497            (15-OCT-1995 to 17-OCT-1995)
+                1527 to 1528            (16-NOV-1995 to 17-NOV-1995)
+                1541 to 1553            (30-NOV-1995 to 12-DEC-1995)
+                1568 to 1569            (27-DEC-1995 to 28-DEC-1995)
+                1605 to 1623            (02-FEB-1996 to 20-FEB-1996)
+                1674 to 1676            (11-APR-1996 to 13-APR-1996)
+                1706 to 1709            (13-MAY-1996 to 16-MAY-1996)
+                1721 to 1734            (28-MAY-1996 to 10-JUN-1996)
+                1747 to 1749            (23-JUN-1996 to 25-JUN-1996)
+                1776 to 1784            (22-JUL-1996 to 30-JUL-1996)
+                1794 to 1808            (09-AUG-1996 to 23-AUG-1996)
+                1815 to 1820            (30-AUG-1996 to 04-SEP-1996)
+                1854 to 1860            (08-OCT-1996 to 14-OCT-1996)
+                1883 to 1891            (06-NOV-1996 to 14-NOV-1996)
+                1902 to 1914            (25-NOV-1996 to 07-DEC-1996)
+                1928 to 1932            (21-DEC-1996 to 25-DEC-1996)
+                1958 to 1959            (20-JAN-1997 to 21-JAN-1997)
+                1973 to 1984            (04-FEB-1997 to 15-FEB-1997)
+                1997 to 2000            (28-FEB-1997 to 03-MAR-1997)
+                2034 to 2039            (06-APR-1997 to 11-APR-1997)
+                2046                    (18-APR-1997)
+                2062                    (04-MAY-1997)
+                2066 to 2069            (08-MAY-1997 to 11-MAY-1997)
+                2083 to 2094            (25-MAY-1997 to 05-JUN-1997)
+                2101 to 2103            (12-JUN-1997 to 14-JUN-1997)
+                2108 to 2111            (19-JUN-1997 to 22-JUN-1997)
+                2130 to 2136            (11-JUL-1997 to 17-JUL-1997)
+                2139 to 2140            (20-JUL-1997 to 21-JUL-1997)
+_____________________________________________________________________
+</pre>
+
+<H4><A NAME="resolution"></A>3.5 Resolution</H4>
+
+The gridded Level 3a product is put on UARS standard pressure grid points that result in roughly 
+a 2.5 km point spacing.  This can severely alias the HALOE O<sub>3</sub>, H<sub>2</sub>O, NO<sub>2</sub> and aerosol data which often resolve real features under 2 km in height (although 
+at reduced amplitude).  Therefore, if the higher resolution information is important to the user, the Level 2 product should be used.  It is planned for 
+future releases to include a product for delivery to the DAAC with a format nearly identical to 3a but with a grid spacing closer to 0.5 km. This will 
+coincide with future HCl, HF, CH<sub>4</sub> and NO releases at point spacings near 1 km to attain a resolution closer to the natural 2-3 km  instrument 
+resolution.  (Note that for this discussion we define a resolution, say 4 km, as a Gaussian apodization of the perfectly resolved signal transform 
+in which the amplitude of an 8 km wave (needed to detect 4 km features) would be attenuated by 50%.  Therefore even 1 km features may be detected 
+with sufficient sampling, although the amplitude would be reduced by 94%.)
+
+
+
+<H4><A NAME="quality"></A>3.6 Data Quality</H4>
+  The data have undergone extensive validation. They have been
+  compared to a variety of correlative measurements, as well as
+  data from other <A HREF="/data/uars/">UARS</A> instruments. Although
+  all channels have produced high quality results, there are known
+  and suspected errors; these are outlined below, using information
+  taken from documentation supplied by the HALOE team. 
+  
+ 
+    <p>3.6.1 General considerations
+    <P>The single most difficult problem to address in processing
+    HALOE data has been the increased aerosol extinction in the lower
+    stratosphere due to the Mt. Pinatubo eruption (June 1991, 12
+&deg;N). The Aerosol cloud rose to ~40km in January 1992 and
+    spread globally, before subsiding. The worst problems occurred
+    in the equatorial lower stratosphere in the first few months
+    of operation. 
+    <P>The aerosol has induced problems through two distinct mechanisms;
+    contaminate absorption and degraded solar tracking. 
+    <P>Results from the radiometer channels may be in error by as
+    much as 20-30% due to error in estimating the aerosol extinction
+    under the heavy aerosol conditions prevailing after the Pinatubo
+    eruption. Since the aerosol can contribute up to 80% of the absorption
+    in some channels when aerosol levels are high (typically the
+    tropics and subtropics from October 1991 and throughout 1992
+    around the aerosol peak). 
+    <P>The second mechanism, degradation of the ability to track
+    the sun, leads to a reduced altitude registration accuracy. Early
+    in the mission, HALOE profiles often cut-off with a minimum altitude
+    in the mid stratosphere. There is an additional problem with
+    the tracking mechanism when the sun is within a small angle of
+    thick aerosol layers, which leads to errors in the mixing ratio
+    profiles which are near constant or decrease with pressure, principally
+    H<sub>2</sub>O and CH<sub>4</sub>. This problem can manifest itself as pockets of apparently
+    dry air at the lower altitudes in the tropics and sub-tropics.
+    The effect is typically under 10%, but can be as high as 30%. 
+    <P>The tracking fidelity also degrades at low altitude (below
+    18 km) for a variety of other reasons, making results below the
+    450K surface quite variable for all channels and all products..
+    The measurement at the bottom point in a profile is made close
+    to the time at which the Sun lock was acquired or lost, so the
+    time delay in the instrument response can result in a corrupted
+    datum for this point. Considerable effort has been devoted to
+    this problem, but there is some evidence that occasional rogue
+    values persist. 
+    <P>Above the aerosol layer the data quality is limited primarily
+    by the random errors tabulated in the data files. However, certain
+    conditions related to both the atmosphere and instrument can
+    be more error prone than others. Major systematic errors are
+    mostly limited to the lower stratosphere and troposphere. 
+    <p>3.6.2 Individual species<p>
+    <P>For information about the quality of the measurements of individual
+    species, users should refer to the <A HREF="/cgi-bin/data_browser/data_browser/badc/haloe/doc/haloe_l2.sfdu">documentation</A>
+    produced by the instrument team which gives a detailed discussion
+    of measurement errors and vertical resolution for each species
+    measured by the instrument. 
+  <P><BR>
+   
+  <H4><A NAME="units"></A>3.7 Units</H4>
+  The units for the parameters present in the HALOE data files
+  are tabulated below : 
+  
+  <PRE>
+Parameter               Units   
+__________________________________________
+Temperatures            Kelvins
+Mixing Ratios           By volume
+Quality                 Standard Deviation
+Column Sum              molecules/cm(+2)
+Pressures               mbar
+Transmission            (none)
+Aerosol extinction      km(-1)
+Altitude                km
+Refraction factor       (none)
+__________________________________________</PRE>
+
+</BLOCKQUOTE>
+
+<H3>4.<U> </U><A NAME="info"></A><U>More information</U></H3>
+
+<BLOCKQUOTE>
+For more background information, you may read the following documents:
+<p>
+<ul>
+<li><A href="/cgi-bin/data_browser/data_browser/badc/haloe/doc/haloe_l3at.sfdu">haloe_l3at.sfdu</a>
+
+
+<li><A href="/cgi-bin/data_browser/data_browser/badc/haloe/doc/haloe_l2.sfdu">haloe_l2.sfdu</a>
+
+
+<li><A href="http://haloe.gats-inc.com/home/index.php">HALOE Homepage</a>
+
+
+<li><A href="/data/haloe/references.html">HALOE References</A>
+</ul>
+</BLOCKQUOTE>
+
+
+<P>
+</BODY>
+</HTML>

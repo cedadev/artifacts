@@ -1,0 +1,585 @@
+
+                      ISCCP D1 Data Set Readme File
+
+NOTE: The file contents for the time periods July 1983 - January 1994
+and February 1994 - present are different.  The later files no longer
+contain the read software and the ancillary data are included as a
+VDATA.  The latest FORTRAN read software will read both formats.  
+
+
+1.0 Introduction
+
+This file contains information about the International Satellite Cloud
+Climatology Project (ISCCP) D1 data set. (ISCCP_D1) The data files are
+in HDF format. The home page for ISCCP is located at
+http://isccp.giss.nasa.gov/
+
+This readme file also includes the following sections:
+
+Section 2.0 - provides general information about the data set.
+Section 3.0 - describes the format of the data.
+Section 4.0 - provides the user with science parameter information
+Section 5.0 - describes the sample read software.
+Section 6.0 - discusses how to invoke the run-time executable.
+Section 7.0 - provides an example of an actual run of the sample read
+              software.
+
+If users have questions while using the ISCCP_D1 sample read software,
+please contact the Langley Data Center Science, User and Data Services office 
+at:
+	Langley Atmospheric Sciences Data Center
+	NASA Langley Research Center
+	Mail Stop 157D, 2 S. Wright St.
+	Hampton, VA 23681-2199
+	USA
+	E-Mail:	larc@eos.nasa.gov 
+	Phone:	(757)864-8656 
+	FAX:	(757)864-8807
+          
+
+2.0 Data Set Description
+
+Documentation on the ISCCP_D1 data set can be obtained from the
+following URL: 
+http://isccp.giss.nasa.gov/doc/documents.html
+
+Contact for scientific inquiries: 
+Dr. William B. Rossow 
+NASA Goddard Institute for Space Studies 
+2880 Broadway
+New York, NY 10025
+
+email: clwbr@giss.nasa.gov
+Phone: 212-678-5567
+FAX:   212-678-5662
+
+Contact for technical assistance: 
+
+Chris Brest, PhD. 
+NASA Goddard Institute for Space Studies
+2880 Broadway, Rm 322A
+New York, NY 10025
+
+email:cbrest@giss.nasa.gov
+Phone: 212 678-5565
+FAX: 212 678-5552
+
+3.0 Format and Packaging
+
+NOTE: The file contents for the time periods July 1983 - January 1994
+and February 1994 - present are different.  The later files no longer
+contain the read software and the ancillary data are included as a
+VDATA.  The latest FORTRAN read software will read both formats.  
+
+There are 2 naming conventions for these files.  The first convention
+is as follows: 
+
+d1_YYYYMMDDHH 
+ YYYY is the year, 
+ MM is the month, 
+ DD is the day
+ HH is the GMT hour (00, 03, 06, 09, 12, 15, 18 or 21) 
+
+There are 3 ancillary files that are included within the ISCCP_D1 data
+files. They are a volume identification file, a table of contents file
+and ancillary data file.  
+
+For example:
+d1_1987020100 
+
+
+The second file naming convention is as follows:
+
+ISCCP.TTTTTT.V.SATID.YYYY.MM.DD.HH.MM.DCN.hdf
+
+TTTTTT - data type
+	 D1 - ISCCP D1 data file
+V      - version number
+SATID  - GLOBAL - used if multiple or no satellites apply
+YYYY   - year = 1981...2005 (always 4 numbers, fill = 9999)
+MM     - month number = 1...12 (always 2 numbers, fill = 99)    
+DD     - day of month = 1...31 (always 2 numbers, fill = 99)
+HHMM   - hour-minute GMT = 0000...2100 (always 4 characters, 
+         fill = 9999)
+DCN    - data center name where data originated.
+For non-data files, the date and time fields may be fill values.
+
+Example: ISCCP.D1.0.GLOBAL.1995.10.01.0300.GPC.hdf (data file)
+         
+The ISCCP D1 data set has one file per day for the data years
+currently archived at the Data Center.  These files each contain data
+for 8 UTCs (GMT 0, GMT 3, GMT 6, ..., GMT 21).  There are 202 variables
+per UTC.  These variables are identified in the README file which the
+user can extract from the HDF file using the sample read software.
+
+Hierarchical Data Format Libraries (HDF):
+=========================================
+
+The HDF libraries, source code and documentation can be obtained free
+of  charge from the National Center for Supercomputing Applications
+(NCSA) at the following URL 
+http://hdf.ncsa.uiuc.edu
+
+NCSA also provides a variety of tools to assist in viewing, analyzing,
+and displaying HDF formatted data files.
+
+4.0 Science Parameters Information
+
+The ISCCP_D1 data set contains 3-hourly, 280 KM equal-area grid data
+from various polar and geostationary satellites. More information on
+the ancillary and data files can be obtained from the International
+Satellite Cloud Climatology Project (ISCCP) Documentation of New Cloud
+Datasets documentation available at the URL 
+http://isccp.giss.nasa.gov/doc/documents.html
+
+
+5.0 Description of Sample Read Software
+
+  The Hierarchical Data Formatted (HDF) ISCCP D1 data files have an 
+embedded FORTRAN read program supplied by the data provider.  This
+program is sample software intended to provide minimal capabilities. 
+Users should modify the program to accommodate their specific needs.
+
+  A "C" language version of the program was developed by the Langley
+Data  Center and is also provided as sample read software.  It is the
+user's  responsibility to modify the program to accommodate their
+specific needs.
+
+  Both read software programs have been tested with the HDF 3.3r4 and
+HDF 4.1r1 libraries. If using any of the HDF 4.0 beta releases of the
+HDF  libraries, the user should be aware of additional HDF libraries
+which must  be included for the program to load correctly.  The release
+notes for the  various beta releases specify the additional required
+libraries and the order in which they should be specified for proper
+loading.  
+
+6.0 Implementing Sample Read Software
+
+  Example command line compilation statements are included here.  The
+various paths need to be changed to correspond to those being used on
+your platform. In addition, special DEFINES may be required for
+specific platforms.  For  example, an HP platform may require a
+"-DHP9000", while an SGI platform may  require a "-32" or "-n32" in the
+command line compilation statement.
+
+    HDF 3.3r4 and earlier:
+
+     f77 -o read_d1_f isccp_d1_read.f -I/usr/local/hdf-3.3r4/hdf/include 
+     -L/usr/local/hdf-3.3r4/hdf/lib -ldf 
+
+     /bin/cc -Aa -DHP9000 -o read_d1_c -I/usr/local/hdf-3.3r4/hdf/include
+     isccp_d1_read.c -L/usr/local/hdf-3.3r4/hdf/lib -ldf -lm
+  
+    HDF 4.1r1:
+
+   
+   a) for SUN OS: (must be one continuous line)
+
+   f77 isccp_d1_read.f -I/usr/local/HDF4.1r1/hdf/include 
+   -I/usr/local/HDF4.1r1/include -DSUN -o read_d1_f 
+   -L/usr/local/HDF4.1r1/lib -lmfhdf -ldf -ljpeg -lz
+
+   gcc isccp_d1_read.c -I/usr/local/HDF4.1r1/hdf/include 
+   -I/usr/local/HDF4.1r1/include -DSUN -o read_d1_c 
+    -L/usr/local/HDF4.1r1/lib -lmfhdf -ldf -ljpeg -lz /usr/lib/libm.a
+     
+   b) for SGI:
+
+    f77 -64 -mips4 -O -s -o read_d1_f isccp_d1_read.f 
+     -I/usr/local/HDF4.1r1/hdf/include -I/usr/local/HDF4.1r1/include
+     -I/usr/local/HDF4.1r1/mfhdf/libsrc -I/usr/local/HDF4.1r1/mfhdf/port
+     -L/usr/local/HDF4.1r1/lib -ldf -lz
+
+     cc -ansi -64 -mips4 -O -s -o read_d1_c isccp_d1_read.c 
+     -I/usr/local/HDF4.1r1/hdf/include -I/usr/local/HDF4.1r1/include
+     -I/usr/local/HDF4.1r1/mfhdf/libsrc -I/usr/local/HDF4.1r1/mfhdf/port
+     -L/usr/local/HDF4.1r1/lib -ldf -lz
+     -L/usr/lib64/mips4 -lc -lm
+
+     c) for HP:
+     
+     f77 -o read_d1_f isccp_d1_read.f -I/usr/local/hdf4.1r1/include/ 
+     /usr/local/hdf4.1r1/lib/libmfhdf.a /usr/local/hdf4.1r1/lib/libz.a
+     /usr/lib/libm.a
+
+     cc -AE -O -o read_d1_c isccp_d1_read.c -I/usr/local/hdf4.1r1/include/
+     -L/usr/local/hdf4.1r1/include 
+     -L/usr/local/hdf4.1r1/lib -lmfhdf -ldf -ljpeg -lz /usr/lib/libm.a
+
+
+6.1 Note on sample FORTRAN read software
+
+  The sample FORTRAN read software can be modified to print out the
+specific data desired.  To assist the user in this effort the following
+notes are included:
+
+1) Change line "DO 600 IUTC=1,8" to match whatever UTCs (GMTs) you want
+   to  extract (~line 77)
+
+2) Change line "IF ( LAT .EQ. 36 .AND. LON .LT. 5 ) THEN" (~line 110)
+   to match the latitude longitudes values for whatever cells you want
+   the program to output.  The correlation between the cell number and
+   the latitude/longitude can be found in the fourth HDF file
+   description included in the file.
+
+3) Change variable HDFFILE (~line 67) to the appropriate file name.  
+
+   If many different files will be processed, it will be easier to use
+   a  generic name (something like HDF_LINK) and use the UNIX symbolic
+   link  capability.  This will avoid the necessity of re-editing the
+   program to change the file name assigned to HDFFILE and recompiling
+   the program.
+
+      ln -s /ISCCP_D1/1990/December/d1_901230.hdf.bin HDF_LINK
+
+   After that file is processed, remove the link and generate a new
+one:
+
+      rm -f HDF_LINK ln -s /ISCCP_D1/d1_901231.hdf.bin HDF_LINK
+
+4) If you are attempting to use the FORTRAN read program and it was
+   extracted directly from one of the ISCCP D1 data granules, it may
+   also be necessary to modify the following two lines (~line 743):
+
+      PRINT 100,LON 100 FORMAT(/1X,'TOTVIS:  VIS RADIANCES')
+
+   Either delete the print statement, or add a format descriptor. 
+   Otherwise, the program will compile, but the program will abort with
+   a core dump  during execution.  The version provided by the Langley
+   Data Center has the  print statement already commented out.  This,
+   plus the data file name on  line 67 are the only differences between
+   the program contained in the HDF  data file and the Data Center's
+   online version.
+
+5) Two discrepancies were noted in the README file embedded in the
+   ISCCP D1  HDF data files: 
+
+   a) The line "FILE DESCRIPTION 5 - ANCILLARY DATA TABLE"  should
+      indicate "FILE DESCRIPTION 4 - ANCILLARY DATA TABLE" instead.
+
+   b) The ANCILLARY DATA TABLE description should include columns
+      12-15, which are the Satellite Preference values.
+
+6) On the SGI, ICHAR evidently interprets the high order (leftmost) bit
+   in the byte as the sign of the number (+ or-), which means that
+   values  greater than 127 are interpreted on the SGI as being
+   negative, with  values ranging from -128 to -1. This is a compiler
+   "bug" which has apparently been fixed in IRIX 7.2. If you are using
+   an earlier version of IRIX then you need to use the following fix.
+
+   To fix this problem, add the following code in the DO 490 loop after
+   the ICHAR line (after line 244):
+
+   IF (IVAR(I,LON) .LT. 0) THEN IVAR(I,LON) = IVAR(I,LON) + 256 ENDIF
+
+6.2 Notes on the C Sample Read Software:
+==========
+
+  The sample C read software can be modified to print out specific
+variables as desired.  This can be accomplished by modifying the
+variables which are used to read data blocks from the input data file
+(begin2, end2 ~line 593). However, other portions of the program would
+have to be modified also.  It would be much easier to test for the
+variable's ordinal value (as specified in the README file extracted
+from the data file).  The integer values are printed out starting at
+(~line 1163):
+
+  for (j=winst[1]; j<=winend[1]; j++){ /* for each variable (202 max) *
+
+  The physical values are printed inside the series of case statements
+which begin ~1180.  Simply eliminate the variables ordinal from the
+appropriate case statement.  It would also be advisable to delete the
+line (~1361):
+
+	 fprintf(out,"********");
+
+
+
+Section: 7.0  A Sample Run
+
+% read_d1_c
+This program reads the ISCCP D1 HDF formatted data files 
+ Please enter file name to read: /ISCCP_D1/1991/January/d1_910101.hdf.bin
+
+
+please enter report file name (use `-' to print to screen): -
+***********************************************************************
+
+ISCCP D1 HDF formatted files include four file descriptions - they are:
+
+	1) README SECTION - including contributing satellites,
+	processing centers, file format description, etc. 
+	2) TABLE OF
+	CONTENTS - Lists the date and spatial coverage of each  data
+	object in the HDF file in ASCII text tabular form and cell 
+	statistics 
+	3) FORTRAN READ SOFTWARE 
+	4) ANCILLARY DATA TABLE -
+	Lists characteristics of each ISCCP grid box in tabular form
+	(NOTE: data may vary between granules)
+***********************************************************************
+
+
+
+ This program can write these descriptors into a set of files
+  ####### The ANCILLARY DATA TABLE file is automatically generated  ###########
+  ####### since this data is required to calculate Cloud Top Height ###########
+
+
+ NOTE: The data in the Ancillary Data File may vary between data granules
+Please enter file name to write the Ancillary Data File into: 910101.ann_data
+
+
+Input file is /ISCCP_D1/1991/January/d1_910101.hdf.bin
+Output file is stdout
+Ancillary Data file is 910101.ann_data
+
+File ID:  ISCCP-D1 Year   91 Month 01 Day 01
+
+Would you like to have the README SECTION, TABLE OF CONTENTS,
+ and FORTRAN READ software written to local files? (Y or N): y
+
+
+Please enter file name to write the README data into: 910101.RD_ME
+
+Please enter file name to write the Table Of Contents data into: 910101.TOC
+
+ The FORTRAN read program will be written to the file ISCCP_READ.for
+
+Would like to subset data based on CELL NUMBER?
+yes (Y) or no subsetting (N): y
+
+
+Enter beginning and ending cell numbers separated by a space
+)  (1 <= cell no. <= 6596):  1 1
+
+Item    Dims            Label
+
+  1     (6596X202)       UTC   0
+  2     (6596X202)       UTC   3
+  3     (6596X202)       UTC   6
+  4     (6596X202)       UTC   9
+  5     (6596X202)       UTC  12
+  6     (6596X202)       UTC  15
+  7     (6596X202)       UTC  18
+  8     (6596X202)       UTC  21
+
+Please select the numbers of the data items to dump separated by a space.
+Enter 0 (zero) to quit entering parameters
+
+1 0
+
+
+Getting data, Please wait ...
+        Processing: UTC   0
+Data attributes are as follows:
+
+Label            : UTC   0
+Units            : counts
+Format           : I3
+Fill Value       : 0
+Coordinate System:  
+
+Original data dimensions are 6596 by 202
+
+Data values for each ISCCP cell from 1 to 1 
+for variables 1 to 202 are:
+
+********** CELL NO. 1 **********
+
+
+        INTEGER COUNTS:
+(  1)       1       1       1      48      13       2     100      54      37      56
+( 11)      41      35       7       7      35      28       7       7       4       0
+( 21)     183      48       0       0       0       0       7       0       0       0
+( 31)       0       0       0       0       0       0       0       0       0       0
+( 41)       0       0       0       0       0       0       0       4       2       0
+( 51)       0       0       0       1       4       4      12       0       0       2
+( 61)       5       0       1       0       0       0       0       0       0       0
+( 71)       0       7       1       0      11      16       0     123     117     109
+( 81)     127     117     109       1      49      47      44      51      47      44
+( 91)       2      90      71      71      94      71      71      78     136     118
+(101)     118     140     118     118     123     255     255     255     255      47
+(111)     255     255     255     255     255     255     255     255     255     255
+(121)     255      56      43      45      54     139     139     255     255     255
+(131)     255     255     255     255     255     255     255     255     255      45
+(141)      43      44      49     139     141     255     255     255     255     255
+(151)     255     255     255     255     255     255     255      54      57      52
+(161)      52      12     250     241     120     120      72       9      47       2
+(171)      47      52      12      52      54      87       4      87      86       6
+(181)      86      88       3     138      52     255      54      50      42      32
+(191)      23     255      63      27      44      57     255       1       2       1
+(201)       1     153
+
+        PHYSICAL VALUES:
+(  1)    1.00    1.00    1.00   48.00   13.00    2.00  100.00    0.54    0.37   56.00
+( 11)   41.00   85.37   17.07   17.07   85.37   68.29   17.07   17.07    9.76    0.00
+( 21)    1.83    0.48    0.00    0.00    0.00    0.00   17.07    0.00    0.00    0.00
+( 31)    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00
+( 41)    0.00    0.00    0.00    0.00    0.00    0.00    0.00    9.76    4.88    0.00
+( 51)    0.00    0.00    0.00    2.44    9.76    9.76   29.27    0.00    0.00    4.88
+( 61)   12.20    0.00    2.44    0.00    0.00    0.00    0.00    0.00    0.00    0.00
+( 71)    0.00   17.07    2.44    0.00   26.83   39.02    0.00  610.00  580.00  540.00
+( 81)  630.00  580.00  540.00    1.00  241.00  239.20  236.60  242.80  239.20  236.60
+( 91)    0.30    4.95    3.32    3.32    5.35    3.32    3.32    3.88   71.41   52.22
+(101)   52.22   76.57   52.22   52.22   57.01-1000.00-1000.00-1000.00-1000.00  239.20
+(111)-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00
+(121)-1000.00  246.90    1.57   17.53  245.30   11.96  125.58-1000.00-1000.00-1000.00
+(131)-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00  237.50
+(141)    1.57   17.01  241.00   11.96  130.10-1000.00-1000.00-1000.00-1000.00-1000.00
+(151)-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00  245.30  247.70  243.70
+(161)  243.70    3.30    1.02    0.96    0.48    0.48    0.29    0.04  239.20    0.30
+(171)  239.20  243.70    3.30  243.70  245.30    0.35    0.02    0.35    0.34    0.02
+(181)    0.34    0.35    3.00  685.00  243.70-1000.00  245.30  241.90  234.80  224.40
+(191)  212.80-1000.00  310.00  217.90  236.60  247.70-1000.00    0.00    0.03    0.00
+(201)    0.00  304.00
+
+ CENTER:  CENTER LON/LAT   60.00  -88.75
+ TOTIR:   IR RADIANCES
+          USING IR CLOUD/CLEAR CATEGORIES
+                NUMBER OF PIXELS CLOUD/CLEAR/TOTAL               7        34        41
+                RADIANCE (K) CLOUD/CLEAR/TOTAL              239.20    243.70    242.80
+          USING VIS/IR CLOUD/CLEAR CATEGORIES
+                NUMBER OF PIXELS CLOUD/CLEAR/TOTAL               7        34        41
+                RADIANCE (K) CLOUD/CLEAR/TOTAL              239.20    243.70    242.80
+
+ TOTVIS:  VIS RADIANCES
+          USING IR CLOUD/CLEAR CATEGORIES
+                NUMBER OF PIXELS CLOUD/CLEAR/TOTAL               7        34        41
+                RADIANCE (REFLECTANCE) CLOUD/CLEAR/TOTAL      0.35      0.34      0.34
+          USING VIS/IR CLOUD/CLEAR CATEGORIES
+                NUMBER OF PIXELS CLOUD/CLEAR/TOTAL               7        34        41
+                RADIANCE (REFLECTANCE) CLOUD/CLEAR/TOTAL      0.35      0.34      0.34
+ MIDPRS:  ACTUAL PRESSURE LAYER MID-POINTS (MB)-1000.00  682.50  620.00  500.00  375.00  245.00  245.00
+ CLDHGT:  CLOUD TOP PRESSURE (MB)       610          CLOUD TOP HEIGHT (M)      3718
+
+***************************************************************
+*                                                             *
+*         Program has completed processing                    *
+*                                                             *
+***************************************************************
+%
+
+Sample Output From The FORTRAN Program:
+=======================================
+ 
+% read_d1_f
+ FILE ID: ISCCP-D1 Year   90 Month 12 Day 31
+ FILE POSITIONED AT DATA LABEL: UTC   0
+ D1PHYS:  LAT BAND   1 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND   2 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND   3 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND   4 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND   5 CONVERTED TO PHYSICAL VALUES
+                ^
+                |
+                | (some output deleted for readability)
+                V  
+ D1PHYS:  LAT BAND  36 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  37 CONVERTED TO PHYSICAL VALUES
+
+
+****************************************************************************************************
+
+ PROCESSING EQUAL-AREA LON/LAT        35        37
+
+ PRINTI:  COUNT VALUES FOR ALL VARIABLES
+                          1       2       3       4       5       6       7       8       9      10
+ VARIABLE (001-010)      37      35      35      35      54     101       0      47     255     255
+ VARIABLE (011-020)      36      17      17     255   2     255     255     255     255     255     255     255     255     255
+ VARIABLE (011-020)      36      17      17     255       0       0       3     255       0       0
+ VARIABLE (021-030)     255     255       0       6       2       0       1       4       4     255
+ VARIABLE (031-040)     255     255     255     255     255     255     255     255     255     255
+ VARIABLE (041-050)     255     255     255     255     255     255     255     255     255     255
+ VARIABLE (051-060)     255     255     255     255     255     255     255     255     255     255
+ VARIABLE (061-070)     255     255     255     255     255     255     255     255     255     255
+ VARIABLE (071-080)     255     255     255     255     255     255     255     111     111     255
+ VARIABLE (081-090)     255     187     255      56      86      86     255     255     147     255
+ VARIABLE (091-100)     102     255     255     255     255     255     255     255     255     255
+ VARIABLE (101-110)     255     255     255     255     255     255      31      67     255      97
+ VARIABLE (111-120)     119     143     255     255     255     255     255     255     255     255
+ VARIABLE (121-130)     255     255     255     255     255     255     255     255     255     255
+ VARIABLE (131-140)     255     255     255     255     255     255     255     255     255     255
+ VARIABLE (141-150)     255     255     255     255     255     255     255     255     255     255
+ VARIABLE (151-160)     255     255     255     255     255     255     255     161     157     157
+ VARIABLE (161-170)     255       5     255     255     255     255     255     255      81      92
+ VARIABLE (171-180)     255     128       5     255     132     255     255     255     255     255
+ VARIABLE (181-190)     255     255       1     201     159     139     119     102      85      64
+ VARIABLE (191-200)      37      17      20      11      19      35      98      40      29      15
+ VARIABLE (201-202)       6     123
+
+ PRINTR:  PHYSICAL VALUES FOR ALL VARIABLES
+                          1       2       3       4       5       6       7       8       9      10
+ VARIABLE (001-010)   37.00   35.00   35.00   35.00   54.00  101.00    0.00    0.47-1000.00-1000.00
+ VARIABLE (011-020)   36.00   47.22   47.22-1000.00    0.00    0.00    8.33-1000.00    0.00    0.00
+ VARIABLE (021-030)-1000.00-1000.00    0.00   16.67    5.56    0.00    2.78   11.11   11.11-1000.00
+ VARIABLE (031-040)-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (041-050)-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (051-060)-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (061-070)-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (071-080)-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00  550.00  550.00-1000.00
+ VARIABLE (081-090)-1000.00  930.00-1000.00  275.00  267.80  267.80-1000.00-1000.00  299.60-1000.00
+ VARIABLE (091-100)   30.30-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (101-110)-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00  223.10  255.30-1000.00  274.40
+ VARIABLE (111-120)  286.30  297.80-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (121-130)-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (131-140)-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (141-150)-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (151-160)-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00  305.80  304.00  304.00
+ VARIABLE (161-170)-1000.00    1.20-1000.00-1000.00-1000.00-1000.00-1000.00-1000.00  264.70   27.30
+ VARIABLE (171-180)-1000.00  290.70    1.20-1000.00  292.70-1000.00-1000.00-1000.00-1000.00-1000.00
+ VARIABLE (181-190)-1000.00-1000.00    1.00 1000.00  304.90  296.00  286.30  277.30  267.20  253.10
+ VARIABLE (191-200)  229.60  202.70   95.00  192.00  206.20  227.50    2.91    1.17    0.84    0.42
+ VARIABLE (201-202)    0.15  244.00
+
+ CENTER:  CENTER LON/LAT   86.25    1.25
+
+ TOTIR:   IR RADIANCES
+          USING IR CLOUD/CLEAR CATEGORIES
+                NUMBER OF PIXELS CLOUD/CLEAR/TOTAL              17        19        36
+                RADIANCE (K) CLOUD/CLEAR/TOTAL              264.70    290.70    279.50
+          USING VIS/IR CLOUD/CLEAR CATEGORIES
+                NUMBER OF PIXELS CLOUD/CLEAR/TOTAL              17        19        36
+                RADIANCE (K) CLOUD/CLEAR/TOTAL            -1000.00  -1000.00  -1000.00
+
+ TOTVIS:  VIS RADIANCES
+ TOTVIS:  VIS RADIANCES
+          USING IR CLOUD/CLEAR CATEGORIES
+                NUMBER OF PIXELS CLOUD/CLEAR/TOTAL              17        19        36
+                RADIANCE (REFLECTANCE) CLOUD/CLEAR/TOTAL  -1000.00  -1000.00  -1000.00
+          USING VIS/IR CLOUD/CLEAR CATEGORIES
+                NUMBER OF PIXELS CLOUD/CLEAR/TOTAL              17        19        36
+                RADIANCE (REFLECTANCE) CLOUD/CLEAR/TOTAL  -1000.00  -1000.00  -1000.00
+
+ MIDPRS:  ACTUAL PRESSURE LAYER MID-POINTS (MB)  900.00  740.00  620.00  500.00  375.00  245.00  137.50
+
+ CLDHGT:  CLOUD TOP PRESSURE (MB)      550.          CLOUD TOP HEIGHT (M)     5328.
+
+
+                       |
+                       |
+                       V
+
+**** ADDITIONAL OUTPUT DELETED DUE TO SPACE ******
+
+                       |
+                       |
+                       V
+
+ D1PHYS:  LAT BAND  65 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  66 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  67 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  68 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  69 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  70 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  71 CONVERTED TO PHYSICAL VALUES
+ D1PHYS:  LAT BAND  72 CONVERTED TO PHYSICAL VALUES
+
+ NUMBER OF FULL BOXES:  6119
+
+ NORMAL END OF PROGRAM
+STOP: 0
+
+
+
+Last updated: April 19, 2002

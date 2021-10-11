@@ -1,0 +1,200 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<TITLE>CRU TS - CEDA WPS User Guide</TITLE>
+<!-- Created 21th July 2011 -->
+<!-- Author: Anabelle Guillory BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>CEDA WPS User Guide for extracting CRU TS data</H1>
+
+<HR ALIGN=LEFT>
+<strong>User Guide content</strong>
+<ul>
+<li><a href="WPS_CRU.html#things">Things to know before using the WPS</a>
+<li><a href="WPS_CRU.html#way">How to find your way on the WPS</a>
+<li><a href="WPS_CRU.html#subsetter">Procedure to extract CRU TS data using the WPS</a>
+<li><a href="WPS_CRU.html#csv">How to read the CRU TS CSV data output files</a>
+<li><a href="WPS_CRU.html#contact">Who to Contact</a>
+</ul>
+<hr>
+
+<p>
+The latest version of the CRU TS data is available for extraction using the <a href="http://ceda-wps2.badc.rl.ac.uk/ui/home">CEDA Web Processing Service</a>. Subsets of the CRU TS data may be extracted (e.g. data from a specific geographical area for a defined period of time). 
+<P>
+
+<H2><a name="things"></a>Things to know before using the WPS</H2>
+
+<ul>
+	<li><strong>Access restrictions:</strong>
+	<p>In order to use the CEDA WPS, you must be registered with CEDA (new users should register <a href="https://services.ceda.ac.uk/cedasite/register/info/">here</a>). 
+<p>
+	<li><strong>WPS Data Output files availability:</strong>
+	<p>The extracted data will be available through the WPS.
+<P>
+	<li> <strong>WPS Data Output file format:</strong>
+<p>The data output file format is either NetCDF or CSV. Explanation about how to read the CSV file format is provided below. Note that CSV files can be directly imported into MS Excel.
+<p>
+	<li><strong>Browser compatibility:</strong>
+<p>
+The CEDA WPS has been tested with the following browsers:
+		<ul>
+			<li>    Firefox 3+
+			<li>    Chrome 10+
+			<li>    Internet Explorer 8
+		</ul>
+<p>If you test the CEDA WPS in other browsers and it works, please let <a href="http://www.ceda.ac.uk/contact/">CEDA Support</a> know.
+<P><strong>Update 31/03/2014:</strong> Some issues have been reported using the WPS in the latest versions of Chrome and Internet Explorer. We recommend that you use Firefox.
+<p>
+	<li><strong>Bugs and future developments:</strong>
+<p>If you discover a problem with the CEDA WPS service please notify <a href="http://www.ceda.ac.uk/contact/">CEDA Support</a>. 
+When reporting a problem please include the following information:
+		<ul>
+			<li>The browser you use (please include the browser version).
+			<li>The page the bug occured on. Give the title of the page as it appears in the browser window title.
+			<li>The nature of the problem.
+			<li>Any error messages. 
+		</ul>
+<p>Please note that the CEDA WPS service is continuously being developed. The following list gives the improvements that will be made in the future:
+
+		<ul>
+			<li>availability of output files via the CEDA user requested data area
+			<li>reset button on BBox map
+			<li>Providing links to user guides for each process on the job submission page
+			<li>Providing long names  for options on submission form (such as .Hourly Weather. instead of .WH.)
+			<li>Allow users to submit multiple requests by pasting in WPS request URLs directly (without using the submission form) - this could be very handy for users who need to do repeat requests when only changing the date (or some other parameter).
+        </ul>
+        <p>
+        If you think anything should be added to the list, please contact <a href="http://www.ceda.ac.uk/contact/">CEDA Support</a>.
+
+</UL>
+
+
+        <H2><a name="way"></a>How to find your way on the WPS</H2>
+
+
+        Follow this link to the <a href="http://ceda-wps2.badc.rl.ac.uk/ui/home">CEDA WPS Home page</a>. 
+
+        <CENTER>
+        <img src="WPS_homepage.JPG" alt="CEDA WPS Homepage">
+        </CENTER>
+
+        <p>On the home page, you can find summaries briefly highlighting what CEDA WPS is, What it can do, How to run a process, how to view jobs and outputs and how to cancel a job. 
+        <p>Also on this front page and available throughout all CEDA WPS website pages is the top menu bar with direct links to Home, Processes, Jobs, Login as well as News. You can also find a contact link on this menu bar on the right-hand side.
+
+        <p>All job processes currently available under the WPS are detailed under the "Processes" in the top menu bar (left side). As the service develops, additional processes will be described on this "Processes" page.
+
+        <H2><a name="subsetter"></a>Procedure to extract CRU TS data using the WPS</H2>
+
+        <P>
+        The procedure is straightforward and in 4 steps, as follows:
+        
+		<ol>
+			<li><a href="WPS_CRU.html#login">login</a>
+			<li><a href="WPS_CRU.html#job">How to submit a job (select, configure and submit your process)</a>
+			<li><a href="WPS_CRU.html#download">download the job outputs</a>
+			<li><a href="WPS_CRU.html#logout">logout</a>
+        </ol>
+        
+		<p>Details to successfully complete each step in this procedure are given below.
+        <P>
+        
+<ol>		
+        <li><h4><a name="login"</a>Login</h4>
+        <ol>
+        <li>click on the login link in the top menu bar.
+        <li>Enter your Open-ID, immediately after the last forward slash (Note that open-ID and BADC account name are different. If you don't know your Open-ID or you don't remember it, then you can find it on your <a href="http://www.ceda.ac.uk/myceda">MyCEDA</a> page).
+        <li>If you reach the CEDA-BADC login page, please enter your CEDA credentials (i.e. account name and associated password).
+        <li>On the next screen, please click on "yes"
+        <li>You should now be logged in and in the top menu bar, you should now see your OpenID and a link to "logout"
+        </ol>
+        <p>
+
+        <li><h4><a name=job></a>Submit a job to extract CRU TS data</h4>
+
+<ol>
+<li>Select the process:
+<p>To start submitting a job to extract some data via the WPS, follow the link to "Processes" on the top menu bar.
+<P>The Subsetter process is a subsetting tool that allows the extraction of variable subsets from a range of datasets. The user can select a dataset, a single variable, time range and bounding box. The output format can also be selected (NetCDF or CSV) along with instructions on how to divide output files into sensible time chunks. The tool uses CDAT's CDMS (Climate Data Management System) libraries to interact with the datasets in the archives. The extraction jobs run on the batch processing servers and the user is e-mailed when the job has completed. 
+<p>At this stage, you can either scroll down the page until you find the job process of interest (in this case "Subsetter") or you can filter the list by entering a keyword (i.e. subsetter). Simply click on the job process title bar or follow the link to "submit a request" on the job process title bar.
+<p><P>Full documentation on the Subsetter tool is available at: <a href="http://ceda-wps2.badc.rl.ac.uk/docs/cows_wps/supported_procs/subsetter_process.html">http://ceda-wps2.badc.rl.ac.uk/docs/cows_wps/supported_procs/subsetter_process.html</a>
+<li>Define your inputs page:
+<P>
+        You shoud now see a page entitled "Define the inputs for the Subsetter process". This is the page where your define your criteria to extract the data of interest.
+
+        <P>Fields to be defined are:<p>
+
+                        <ul>
+                        <li>dataset - select the dataset of interest (i.e. CRU TS) among all those datasets currently available under the Subsetter tool.
+                        <li>variable - select the variable you wish to subset (e.g. precipitation) 
+                        <li>start date time and End data time - self-explanatory
+                        <li>BBOX - to define the geographical area of interest by either entering latitude and longitude details for a bounding box surrounding the location you interested in <b><u>OR</u></b> draw a bounding box on the map.
+						<li>Output Format - select the preferred format for your extracted data. The choice is either netCDF or CSV.
+						<LI>Split Output Files Into Time Chunks - to instruct the process to split the output files into chunks of a fixed and constant duration. IF the default value is selected (AUTOMATIC) then the process will try to determine a sensible chunking of the outputs based on the volume of the extraction. 
+						</ul>
+<P>						
+<li>Submit your job
+<p>Click on the Submit button at the bottom of the "Define the inputs for the Subsetter process" page.
+
+        <p>You should now see a page which gives you details about your job (Information about your asynchronous job page) and in particular the estimated duration and estimated volume. 
+        Click on the Submit button to run the job and extract the data as per your request. Upon submitting your job, the server will be contacted and you should then see a monitoring page with your job details (Job: job id number page). 
+		
+        <P>Monitoring your job: job id number page
+        As your job is running on the server, the monitoring page shows your job details, and eventually below the job details, your job output files will be listed (you should see a link to download a zip file containing all the netCDF/csv files listed below). Note that the job id page will continue to poll offline jobs when they are running unless you click the "stop polling" option when it is visible. 
+
+        <P>IMPORTANT NOTE: Immediately after you have confirmed to run your job, you can either log out or submit another job while the job you just submitted is running. At this point, your job has been submitted to run offline on the server. Please note that offline jobs are scheduled and may take a long time to run. You will receive an e-mail when your offline job has run so you do not need to stay on this page i.e. you may submit additional jobs. Note that you can view all previous jobs and the status of those jobs currently running on the Jobs page (link on the menu bar). This page lists all the jobs (in the lower part) you have submitted to the WPS. The upper part of the page allows you to quickly find a specific job.
+        <p>
+</ol>
+<LI><h4><a name=download></a>Download the job outputs</h4>
+<P>You will receive an e-mail when your offline job has run. To find your job outputs, either follow the link provided in the email message or go to Jobs (top menu bar).  This page lists all the jobs (in the lower part) you have submitted to the WPS. The upper part of the page allows you to quickly find a specific job. To find your job outputs, follow the job associated link to View job info/outputs. The View job info/outputs displays the job details in the upper part and list the output files in the lower part of the page.  
+
+<li><h4><a name=logout></a>Logout</h4>
+<p>Once you have submitted all your data extraction jobs, you should logout by simply clicking on the logout link on the top menu bar.
+</ol>
+
+</ul>
+<h2><a name=csv></a>How to read the CRU TS CSV data output files</h2>
+
+The CSV file can be directly imported into MS Excel.
+<P>
+It contains a Header and a Data section as shown in this example: 
+<P>
+The header contains the metadata (i.e. information about the data extracted) and should be self-explanatory.
+<P>
+The data section can be best explained following an example. 
+<P>
+Say that PET data has been extracted for a specific geographical area between 96.75W,43.75N and 91.75W,48.75N for the whole year of 1901.
+<P>
+The CRU TS grid is 0.5x0.5deg and as explained in the File_Format_explained PDF document available from the CRU TS dataset catalogue record, the 360-lat x 720-long grid is presented exactly as that, with 720 columns, and 360 rows per timestep. So the first row in each grid is the southernmost (centred on 
+89.75S). The first column is the westernmost (centred on 179.75W). So if one is extracting the whole grid, one would get the whole global grid (i.e. 360 rows) for the first time step, then the whole grid for the second, and so on. 
+<P>
+When one extracts a subset of the data however, only a limited number of grid cells are extracted - in the example given above, only 11 cells of the grids (96.75W,43.75N and 91.75W,48.75N) are requested so one should only expect 11 rows of data for Jan 1901 (highlighted in green in the example below), then next 11 rows the data are for Feb 1901 and so on until December 1901. 
+<P>
+       <CENTER>
+        <img src="CRU-TS-csv-datasection_70.jpg" alt="example of CRU TS CSV data section">
+        </CENTER>
+<P>The first and unique number that appears above the gridded data (see highlighted number in yellow in the example above) is the time in days since 01/01/1900.
+<P>
+So on the example above, one can see that:
+<P>
+B45 is the time in days since 01/01/1900.<BR>
+B46 is PET value for grid cell at 43.75N and 96.75W in Jan. 1901<BR>
+L46 is PET value for grid cell at 43.75N and 91.75W in Jan. 1901<BR>
+B56 is PET value for grid cell at 48.75N and 96.75W in Jan.1901<BR>
+L56 is PET value for grid cell at 48.75N and 91.75W in Jan.1901<BR>
+etc<BR>
+B57 is the time in days since 01/01/1900, so in Feb. 1901<BR>
+B58 is PET value for grid cell at 43.75N and 96.75W in Feb. 1901
+<P>
+and so on...
+<P>
+<h2><a name="contact"></a>Who to Contact</H2>
+<P>The WPS is still work in progress. If you have queries about it then you should contact <A HREF="/help/contact.html">CEDA Support</A>. Your query should be answered within one working day. When follow-up work is required, CEDA support will carry out the work as quickly and efficiently as possible, and in any case, the user will be kept informed of progress.
+
+           
+            </BODY>
+            </HTML>
+
+

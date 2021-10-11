@@ -1,0 +1,368 @@
+Trends '90:  Data on Global Change
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Data Set Reference
+    11.2  Satellite/Instrument/Data Processing Documentation
+    11.3  Journal Articles and Study Reports
+    11.4  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Atmospheric concentrations of carbon dioxide
+and methane from selected measuring stations.
+
+1.2  Unit of Measurement.  Atmospheric carbon dioxide in parts per million 
+by volume (ppmv); methane in parts per billion by volume (ppbv).
+
+1.3  Data Source.  Refer to "Trends '90:  A Compendium of Data on Global
+Change" (Boden et al., 1990) for a complete description.
+
+1.4  Data Set Identification.  Atmospheric concentrations of carbon dioxide
+and methane of various types from selected stations are presented. 
+Historical records from ice cores, results from continuous monitoring and
+flask sampling programs are included.  Refer to "Trends '90:  A Compendium
+of Data on Global Change" (Boden et al., 1990) for a complete description. 
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  Data were selected from the following stations:
+
+     Historical Carbon Dioxide  - 78 deg S, 107 deg E (Vostok)
+
+     Carbon Dioxide monitoring  - 14 deg S, 171 deg W (Cape Matatula)
+                                  20 deg N, 156 deg W (Mauna Loa)
+                                  71 deg N, 157 deg W (Point Barrow) 
+                                  90 deg S,  24 deg W (South Pole)
+
+     Carbon Dioxide flask data  - 21 sites (see dataset)
+
+     Methane flask measurements - 21 sites (see dataset)
+
+2.2  Spatial Resolution.  Point data.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  Historical data cover the time period between
+160,000 years and 1700 years before present.  Flask and monitoring data
+approximately cover the time period from 1958 to 1989. 
+
+3.2  Temporal Resolution.  Historical data are episodic.  Flask and
+monitoring data are monthly means. 
+
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  N/A
+
+4.2  Key Satellite Flight Parameters. N/A
+
+4.3  Principles of Operation.
+
+4.3.1  Historical Carbon Dioxide - Extraction via "Grenoble analytical
+                                   setup", followed by gas chromatography
+
+4.3.2  Carbon Dioxide monitoring - Concentrations were measured using an
+                                   Applied Systems Corp. nondispersive
+                                   infrared gas analyzer with a water vapor
+                                   freeze trap
+
+4.3.3  Carbon Dioxide flask      - Ambient air was collected and
+                                   concentrations were measured with a
+                                   UNOR-2 semiautomatic nondispersive
+                                   infrared gas analyzer
+
+4.3.4  Methane flask             - Ambient air was collected, and
+                                   concentrations were measured using a gas
+                                   chromatograph with a flame ionization
+                                   detector
+
+4.4  Instrument Measurement Geometry.  N/A
+
+
+5.  DATA PROCESSING SEQUENCE
+
+Detailed descriptions of the data sets used to produce the Greenhouse
+Gases data sets are available in "Trends '90:  A Compendium of Data on
+Global Change" (Boden et al., 1990).
+                                     
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  Original investigators and publications
+(see Item 11.2).
+
+6.2  Confidence Level/Accuracy Judgment.  Some data considered preliminary
+are flagged in the printed version.  Carbon dioxide concentrations are
+rounded to the nearest tenth (ppmv).  No estimates are given for methane
+flask measurements.  Standard deviations are given for the historical
+methane measurements.
+
+6.3  Usage Guidance.  Some of the atmospheric carbon dioxide and methane
+data are considered preliminary.  Users should note table footnotes in
+Steele et al. (1987) to avoid misrepresentations of the accuracy of these
+data.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+    TRENDS
+    Carbon Dioxide Information Analysis Center (CDIAC)
+    Environmental Sciences Division
+    Oak Ridge National Laboratory
+    P. O. Box 2008
+    Oak Ridge, TN  37831-6335
+    USA
+    TEL:  (615) 574-0390
+    FTS:  624-0390
+    INTERNET:  CDP@STC10.CTD.ORNL.GOV
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products.  None
+
+8.2  Film Products.  None
+
+8.3  Other products
+
+8.3.1   Trends '90 raw data available on magnetic disk in ASCII format
+
+        Medium/Specification:  Magnetic floppy disk
+
+        Format and Content:  The data are stored in plain ASCII files, one
+        file for each station and data type.  The format is the same as the
+        one provided by CDIAC.
+                                                                 
+        Data Quantity/Rate:  126 files, 400 Kb
+ 
+        Status:  Available
+
+        Plans/Schedule:  Data will be kept online.  No current update
+        plans.
+
+8.3.2   Greenhouse Gases data in Common Data Format (CDF)
+
+        Medium/Specification:  Magnetic disk
+
+        Format and Content:  The data are stored in a special 
+        data-set-independent format, designated the Common Data Format 
+        (CDF).  CDF was developed as a uniform method of storing and 
+        retrieving data on disk.  The CDF contains data and descriptions 
+        about the data.  A standard software package called the "CDF 
+        Library" allows a user within NCDS to create and access these data 
+        and descriptions.  These CDF files may be accessed within the Data 
+        Applications subsystem of the NCDS.     
+
+        Data Quantity/Rate:  GRNHS-GASES_CO2_FLASK; 1 file, 32 Kb  
+                             GRNHS-GASES_CO2_HISTORIC; 1 file, 9 Kb
+                             GRNHS-GASES_CO2_MONITOR; 1 file, 19 Kb
+                             GRNHS-GASES_METHANE_FLAS; 1 file, 13 Kb
+                             
+        Status:  These data are currently available online in the NASA 
+        Climate Data System (NCDS).
+
+        Plans/Schedule:  NCDS will continue to support this data.  There  
+        are currently no plans to update these data sets.
+
+8.3.3   The Greenhouse Effect Detection Experiment (GEDEX) CD-ROM
+
+        Medium/Specification:  CD-ROM in ISO 9660 standard
+
+        Format and Content:  The data on this disk will be stored in a 
+        special data-set-independent format, designated the Common Data 
+        Format (CDF).  CDF was developed as a uniform method of storing 
+        and retrieving data on disk.  A standard software package called 
+        the "CDF Library" will be included with this CD-ROM allowing a user
+        to create and access these data and descriptions.  The CD-ROM will 
+        consist of many different data sets related to the study of the
+        Greenhouse Effect, including the Greenhouse Gases data sets, and
+        the accompanying data set documentation.
+      
+        Data Quantity/Rate:  1 CD-ROM disk set.
+ 
+        Status:  This product was released in March 1992.  An update is
+        scheduled for June 1, 1992.
+
+        Plans/Schedule:  Users interested in this product should contact
+        the Goddard DAAC User Support Office (Item 10.2) for more details. 
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification.  The entire data collection is available 
+     from:
+
+     TRENDS
+     Carbon Dioxide Information Analysis Center (CDIAC)
+     Environmental Sciences Division
+     Oak Ridge National Laboratory
+     P. O. Box 2008
+     Oak Ridge, TN  37831-6335
+     USA
+     TEL:  (615) 574-0390
+     FTS:  624-0390
+     INTERNET:  CDP@STC10.CTD.ORNL.GOV
+
+9.2  Procedures for Obtaining Data.  Contact CDIAC and reference TRENDS
+'90, ESD Publication No. 3430, or contact the Goddard DAAC User Support
+Office (Item 10.2).  These data are available online through the NASA
+Climate Data System (NCDS) in Common Data Format (CDF).  The CDF files are
+accessible through the Data Applications subsystem by specifying one of the
+following:
+                                                                                
+                    NCDS$DATA:GRNHS-GASES_METHANE_FLAS
+                    NCDS$DATA:GRNHS-GASES_CO2_FLASK
+                    NCDS$DATA:GRNHS-GASES_CO2_HISTORIC
+                    NCDS$DATA:GRNHS-GASES_CO2_MONITOR
+                                                                                
+9.3  NCDS Status/Plans.  NCDS will continue to support these data; however,
+no further updates to these data sets are planned at this time.
+
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+10.1    TRENDS
+        Carbon Dioxide Information Analysis Center
+        Environmental Sciences Division
+        Oak Ridge National Laboratory
+        P. O. Box 2008
+        Oak Ridge, TN  37831-6335
+        USA
+        TEL:  (615) 574-0390
+        FTS:  624-0390
+        INTERNET:  CDP@STC10.CTD.ORNL.GOV
+
+10.2    Goddard DAAC User Support Office 
+        Code 935
+        NASA Goddard Space Flight Center 
+        Greenbelt, Maryland  20771 
+        (301) 286-3209    
+        FTS:  301-286-3209
+        INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+        NSI DECnet:  NSSDCA::NCDSUSO
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation.
+
+      a.  Boden, T.A., P. Kanciruk, and M.P. Farrell, 1990.  "TRENDS '90:  
+          A Compendium of Data on Global Change."  ORNL/CDIAC-36.  Carbon 
+          Dioxide Information Analysis Center, Oak Ridge National 
+          Laboratory, Oak Ridge, Tennessee.
+
+11.2  Journal Articles and Study Reports
+
+      a.  Barnola, J.M., D. Raynaud, A. Neftel, and H. Oeschger, 1983.  
+          "Comparison of CO2 Measurements by Two Laboratories on Air
+          Bubbles in Polar Ice."  Nature, 303:410-413.  
+          
+      b.  Conway, T.J., P. Tans, L.S. Waterman, K.W. Thoning, 
+          K.A. Masarie, and R.H. Gammon, 1988.  "Atmospheric Carbon
+          Dioxide Measurements in the Remote Global Troposphere."  
+          Tellus, 40(B):81-115.  
+
+      c.  Keeling, C.D., R.B. Bacastrow, and T.P. Whorf, 1982.  
+          "Carbon Dioxide Review:  1982."  Oxford University Press, 
+          New York. 
+
+      d.  Komhyr, W.D., R.H. Gammon, T.B. Harris, L.S. Waterman, 
+          T.J. Conway, W.R. Taylor, and K.W. Thoning, 1985.  "Global
+          Atmospheric CO2 Distributions and Variations from 1968-82 
+          NOAA/GMCC CO2 Flask Sample Data."  Journal of Geophysical 
+          Research, 90:5567-5596.  
+          
+      e.  Lang, P.M., L.P. Steele, R.C. Martin, and K.A. Masarie, 1990. 
+          NOAA Technical Memorandum ERL CMDL-1.  Climate Monitoring 
+          and Diagnostics Laboratory, Boulder, CO.  
+
+      f.  Steele, L.P., P.J. Fraser, R.A. Rasmussen, M.A.K. Khalil, 
+          T.J. Conway, A.J. Crawford, R.H. Gammon, K.A. Masarie, and 
+          K.W. Thoning, 1987.  "The Global Distribution of Methane in the
+          Troposphere."  Journal of Atmospheric Chemistry, 5:125-171.  
+       
+11.3  Archive/DBMS Usage Documentation
+
+      Olsen, L., J.W. Closs, and F.E. Corprew, November 1991.  
+      "NASA's Climate Data System Primer:  Version 4.0."  EOS 
+      DAAC, NASA Goddard Space Flight Center, Greenbelt, Maryland.
+
+
+12.  RELATED DATA SETS
+
+      Monthly carbon dioxide concentrations from Mauna Loa are available 
+      online through NCDS in the Common Data Format.  To access this CDF, 
+      specify the following as input within the Data Applications subsystem 
+      of the NCDS.
+
+                        NCDS$DATA:MLOA_CO2_MONTHLY
+
+
+13.  SUMMARY/SAMPLE
+
+
+14.  NOTES
+
+
+*92/05/19

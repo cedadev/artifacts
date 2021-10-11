@@ -1,0 +1,150 @@
+<HTML>
+<HEAD><title>NetCDF file contents for HadCEML dataset</title></HEAD>
+<BODY bgcolor="#ffffff">
+<H1>NetCDF file contents for HadCEML dataset</H1>
+
+HadCEML is a low resolution version of HadCEM.  It has a 1.25x1.25
+degree 40 level resolution ocean and the same atmosphere as HadCM3
+(2.5x3.75 degrees).  A costal tiling scheme is used and so the
+coastline resolution is 1.25deg.  In the table that follows the shape
+entry gives an indication of the grid that the variable is on.
+Variables with shape [96,73,...] or [96,72,...] are on the atmosphere grid, while
+those with shape [144,288,...] are on the ocean grid.  The BADC holds
+100 years of data from HadCEML.
+</p>
+<table><tr><td>Location:</td><td> <a href="/cgi-bin/data_browser/data_browser/badc/higem/data/HadCEML/ncfiles">/badc/higem/data/HadCEML/ncfiles</a></td></tr>
+</table>
+
+<h2>Dataset Contents</h2>
+<TABLE border=1 cellpadding=4>
+ <TR>
+  <TH>Variable id</TH>
+  <TH>Name</TH>
+  <TH>Units</TH>
+  <TH>Name in File</TH>
+  <TH>(Example) filename</TH>
+  <TH>shape</TH>
+ </TR>
+ <TR>
+  <TD>curlTor</TD>
+  <TD>x component of wind stress</TD>
+  <TD>N/m3</TD>
+  <TD>curlTor</TD>
+  <TD>wStressCurl.nc</TD>
+  <TD>[96, 72, 6, 1200]</TD>
+ </TR>
+ <TR>
+  <TD>lsm</TD>
+  <TD></TD>
+  <TD></TD>
+  <TD>lsm</TD>
+  <TD>landSea.nc</TD>
+  <TD>[96, 73, 1]</TD>
+ </TR>
+ <TR>
+  <TD>ocean_depth</TD>
+  <TD></TD>
+  <TD></TD>
+  <TD>lsm</TD>
+  <TD>ocean_depth.nc</TD>
+  <TD>[288, 144, 1]</TD>
+ </TR>
+ <TR>
+  <TD>ocean_temp</TD>
+  <TD>OCtr/ Temperature.</TD>
+  <TD>degC</TD>
+  <TD>temp</TD>
+  <TD>ocean_t/o0.nc</TD>
+  <TD>[288, 144, 40, 1200]</TD>
+ </TR>
+ <TR>
+  <TD>precip</TD>
+  <TD>Total precipitation rate</TD>
+  <TD>kg m-2</TD>
+  <TD>precip</TD>
+  <TD>ppt.nc</TD>
+  <TD>[96, 73, 1, 1200]</TD>
+ </TR>
+ <TR>
+  <TD>q</TD>
+  <TD>Specific humidity q</TD>
+  <TD>kg kg-1</TD>
+  <TD>q</TD>
+  <TD>q.nc</TD>
+  <TD>[96, 73, 19, 1200]</TD>
+ </TR>
+ <TR>
+  <TD>sealand</TD>
+  <TD></TD>
+  <TD></TD>
+  <TD>lsm</TD>
+  <TD>seaLand.nc</TD>
+  <TD>[288, 144, 40, 1]</TD>
+ </TR>
+ <TR>
+  <TD>sst</TD>
+  <TD>Temperature T</TD>
+  <TD>K</TD>
+  <TD>sst</TD>
+  <TD>sst.nc</TD>
+  <TD>[96, 73, 1, 1200]</TD>
+ </TR>
+ <TR>
+  <TD>taux</TD>
+  <TD>x component of wind stress</TD>
+  <TD>N m-2</TD>
+  <TD>taux</TD>
+  <TD>taux.nc</TD>
+  <TD>[96, 72, 6, 1200]</TD>
+ </TR>
+ <TR>
+  <TD>tauy</TD>
+  <TD>y component of wind stress</TD>
+  <TD>N m-2</TD>
+  <TD>tauy</TD>
+  <TD>tauy.nc</TD>
+  <TD>[96, 72, 6, 1200]</TD>
+ </TR>
+ <TR>
+  <TD>temp</TD>
+  <TD>Temperature T</TD>
+  <TD>K</TD>
+  <TD>temp</TD>
+  <TD>sfcT.nc</TD>
+  <TD>[96, 73, 1, 1200]</TD>
+ </TR>
+ <TR>
+  <TD>u</TD>
+  <TD>Westerly component of wind  u</TD>
+  <TD>m s-1</TD>
+  <TD>u</TD>
+  <TD>U.nc</TD>
+  <TD>[96, 72, 17, 1200]</TD>
+ </TR>
+ <TR>
+  <TD>u10</TD>
+  <TD>Westerly component of wind  u</TD>
+  <TD>m s-1</TD>
+  <TD>u</TD>
+  <TD>u10m.nc</TD>
+  <TD>[96, 72, 1, 1200]</TD>
+ </TR>
+ <TR>
+  <TD>v</TD>
+  <TD>Southerly component of wind v</TD>
+  <TD>m s-1</TD>
+  <TD>v</TD>
+  <TD>V.nc</TD>
+  <TD>[96, 72, 17, 1200]</TD>
+ </TR>
+ <TR>
+  <TD>v10</TD>
+  <TD>Southerly component of wind v</TD>
+  <TD>m s-1</TD>
+  <TD>v</TD>
+  <TD>v10m.nc</TD>
+  <TD>[96, 72, 1, 1200]</TD>
+ </TR>
+</TABLE>
+</BODY>
+    </HTML>

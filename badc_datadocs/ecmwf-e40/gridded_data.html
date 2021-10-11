@@ -1,0 +1,78 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC ERA-40 Regular Gridded Data</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<IMG SRC="/graphics/logos/ecmwflogo.gif" ALT="ECMWF logo" ALIGN="BOTTOM">
+<IMG SRC="/graphics/logos/ecmwf_era_logo.gif" ALIGN="BOTTOM" ALT="ERA logo">
+
+<H1>ERA-40 data on a regular latitude/longitude grid</H1>
+<I>This page is outlines how users can access regular latitude/longitude gridded ERA-40 data.</I>
+
+<HR ALIGN=LEFT>
+
+<H2>Introduction</H2>
+
+<P>As stated on the <a href="/data/ecmwf-e40/params.html">parameters page</a>, the BADC archives the ECMWF ERA-40 data in its original format (<a href="/help/formats/grib/">GRIB</a>) and grid types. These are the <a href="/data/ecmwf-op/grids.html#n80_reduced">N80 Reduced Gaussian Grid</a> for surface data and at <a href="/data/ecmwf-op/grids.html#t159">T159 Spectral Resolution</a> for upper air data. 
+
+<P>The main reasons for keeping the data in these representations are (i) to maintain an archive of the original data and (ii) to keep the data in its most compressed format (both reduced gaussian and spectral resolutions are more efficient than a regular latitude/longitude grid).
+
+<!--<P>However, we appreciate that many users will wish to obtain the data in a more
+convenient regular latitude/longitude grid and we have developed
+tools to make these available. Users can access the <a href="#dx">BADC Data Extractor</A>
+ which allows sub-setting, plotting, animations and output to <a
+href="/help/formats/netcdf">NetCDF format</a>. 
+-->
+
+<P>Note that users that require 2.5&deg; x 2.5&deg; regular gridded data can access it via <a href="http://data.ecmwf.int/data">ECMWF's public data server</a>.
+
+<P><B>Please note that you must <a href="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=era">apply for access to the ERA-40 
+dataset</a> before you can access ERA-40 under the services mentioned below.</B>
+
+<P>
+<H2>The regular gridded ERA-40 data - <i>Virtual Datasets</i></H2>
+<P>Please note that the regular gridded ERA-40 data is produced when requested by users. This is because the full dataset (if converted to NetCDF) would be 10s of terrabytes in volume. By storing the data in a more efficient format the data is all held on disk and is therefore more accessible to users. 
+
+<P>This means that already the BADC LAS and ERA-40 Data Selector present the data as already present in our archive, it is actually a <i>virtual</i> dataset, parts of which are created via user requests. We have designed a Caching Architecture to create, store, delete and manage the virtual datasets.
+
+<P>Regular latitude/longitude datasets are available in the following resolutions:
+<UL>
+ <LI>1&deg; x 1&deg; (denoted as 'gp' under the 
+<a href="file_naming.html">ERA-40 file-naming convention</a>).
+ <LI>1.125&deg; x 1.125&deg; (denoted as 'lf' under the 
+<a href="file_naming.html">ERA-40 file-naming convention</a>).
+ <LI>2.5&deg; x 2.5&deg; (denoted as 'li' under the 
+<a href="file_naming.html">ERA-40 file-naming convention</a>).
+</UL>
+
+<P>Please be patient with the system. Multiple users may all be requesting the creation of particular files concurrently. Our computers are working as fast as they can to deliver the data to you. We will aim to provide you with a delivery time estimate to keep you informed at all times.
+
+<P>
+<H2>The BADC ERA-40 Caching Architecture</H2>
+<P>In order to provide data conversion and delivery at the request of the user the BADC has developed a caching system that is called when the user asks for some data (via either the BADC LAS or the ERA-40 Data Selector). A list of the required original files is produced and this is sent to the cache processor. For more information, please see our <a href="badc_caching_system.gif">animated slide (95KB) of how the caching system works</a>.
+
+<P>The cache is interrogated to find out if the regular gridded equivalents of the original files are already present. If not, they are created and stored in the cache. Otherwise, they are delivered directly. The cache manager makes sure that old files are deleted and that the cache does not exceed its volume limit.
+
+<P>The cache manager also evaluates the size of your request and will do one of the following depending on the volume of data you ask for:
+<OL>
+<LI>Create the necessary files and deliver the data to you quickly.
+<LI>Inform you of the expected delay before you can collect the data you have requested.
+<LI>Ask you to contact the BADC to make a formal request for a very large dataset.
+</OL>
+
+<P>
+<!--
+<H2><a name="dx">The BADC Data Extractor</a></H2>
+
+The BADC Data Extractor allows sub-sets, plots and animations to be created dynamically from the ERA-40 dataset. It also allows users to access larger volumes data and subsets of the data in various formats and grids. You can find out more about on the <A HREF="/help/software/dx">Data Extractor web pages</A>. The Data Extractor can be accessed at:
+
+<P><A HREF="http://cdat.badc.nerc.ac.uk/cgi-bin/dxui.py">http://cdat.badc.nerc.ac.uk/cgi-bin/dxui.py</A>
+<P>
+Users registered for the ERA-40 data held at the BADC can log in to the Data Extractor to extract subsets of the dataset. All model levels and parameters are available and all data has been transformed to a 1&deg; x 1 &deg; grid (this was the favoured resolution in a user questionnaire). The Data Extractor allows data sub-setting in latitude, longitude, altitude and time. The output can be obtained in a number of formats including gif and postscript image files, or NetCDF data files. A limited animation facility is also available.
+-->
+<P>
+
+</BODY>
+</HTML>

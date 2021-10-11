@@ -1,0 +1,329 @@
+Berlin Stratospheric Monthly Mean Temperatures                  
+1.  TYPE OF DATA                          
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC  
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Stratospheric temperatures.
+                                                                                
+1.2  Unit of Measurement.  Temperature in degrees Celsius.
+                                                                                
+1.3  Data Source.  Data obtained from radiosonde, balloon, and rocketsonde
+observations.
+                                                                                
+1.4  Data Set Identification.  This temperature data set was prepared at
+the Institut Fur Meteorologie, Freie Universitat, Berlin (Dr. Karin
+Labitzke, Director) and resides within NCDS as BERLIN-STRAT_MONTH_TMP.
+                          
+                                                      
+2.  SPATIAL CHARACTERISTICS                                                  
+                                                                                
+2.1  Spatial Coverage.  Northern Hemisphere global.
+                                                                                
+2.2  Spatial Resolution.  10 x 10 degree latitude-longitude grid at four
+pressure levels:  100, 50, 30, and 10 millibars (mb).
+
+                                                                                
+3.  TEMPORAL CHARACTERISTICS                                                 
+                                                                                
+3.1  Temporal Coverage.  July 1957 - February 1991
+                                                                                
+3.2  Temporal Resolution.  Monthly
+
+                                                                                
+4.  INSTRUMENT DESCRIPTION                                                   
+
+Measurements were obtained from unmanned balloons, radiosondes, and
+rocketsondes when and where available.  Each of these carried lightweight
+packages of instruments fitted with radio transmitters.  These instruments
+were launched into the atmosphere to measure and transmit data on
+temperature, pressure, and relative humidity.
+
+
+5.  DATA PROCESSING SEQUENCE                                                 
+                                                                                
+5.1  Processing Steps and Data Sets.  Available from the Institut Fur
+Meteorologie, Freie Universitat, Berlin (Dr. Karin Labitzke, Director).
+                                                                                
+5.2  Derivation Techniques/Algorithms.  Available from the Institut Fur
+Meteorologie, Freie Universitat, Berlin (Dr. Karin Labitzke, Director).
+                                                                                
+5.3  Special Corrections/Adjustments.  The observational coverage of these
+instruments has improved with time, and therefore the quality of the
+analyses likewise improved.  Improved reliability of the temperature
+analysis after 1963 occurred over Asia, as Russia improved the transmission
+of data at that time.
+                                                                      
+5.4  Processing Changes.  None.            
+
+                                                                                
+6.  QUALITY ASSESSMENT                                                       
+
+6.1  Data Validation by Producer.  Available from the Institut Fur
+Meteorologie, Freie Universitat, Berlin (Dr. Karin Labitzke, Director).
+                                                  
+6.2  Confidence Level/Accuracy Judgment.  The observational coverage of
+these instruments has improved with time, and therefore the quality of the
+analyses likewise improved.  Improved reliability of the temperature
+analysis after 1963 occurred over Asia, as Russia improved the transmission
+of data at that time.
+                                                 
+6.3  Usage Guidance.  These data can be used to investigate large-scale
+stratospheric phenomena.
+
+                                                                                
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION                                 
+                                                                                
+     Dr. Karin Labitzke, Director
+     Institut Fur Meteorologie
+     Freie Universitat, Berlin
+     Dietrich-Schafer-Weg 6-10
+     1000 Berlin 41, Germany
+     
+     Dr. Harry van Loon
+     National Center for Atmospheric Research (NCAR)
+     P.O. Box 3000
+     Boulder, Colorado  80307-3000
+     303-497-1359
+     INTERNET:  van@ncar.ucar.edu
+
+     Wilbur M.L. Spangler and Roy L. Jenne
+     Data Support Section/SCD
+     National Center for Atmospheric Research
+     P.O. Box 3000
+     Boulder, Colorado  80307-3000
+     303-497-1217/303-497-1215
+                                    
+                                            
+8.  OUTPUT PRODUCTS AND AVAILABILITY                                         
+                                                                                
+8.1  Tape Products. 
+
+     Medium/Specification:  One 9-track, 6250 bpi tape.
+
+     Format and Content:  Gridded 10 x 10 degree northern hemisphere
+     stratospheric temperature data obtained from radiosonde observations.
+
+     Data Quantity/Rate:  1 tape, 34.2 years
+
+     Status:  Available.
+
+     Plans/Schedule:  Additional data will be integrated periodically as
+     they are received.
+                                                                                
+8.2  Film Products.  None.   
+                                                                                
+8.3  Other products.
+                                                         
+8.3.1  Berlin Stratospheric Monthly Mean Temperatures in Common Data Format
+       (CDF) file
+
+       Medium/Specification:  Magnetic disk
+
+       Format and Content:  The data are stored in a special
+       data-set-independent format, designated the Common Data Format
+       (CDF).  CDF as a uniform method of storing and retrieving data on
+       disk.  The CDF contains data and descriptions about the data.  A
+       standard software package called the "CDF Library" allows a user
+       within an NCDS session to create and access these data and
+       descriptions.  These CDF files may be accessed within the Data
+       Applications Subsystem of NCDS.
+
+       Data Quantity/Rate:  Berlin Stratospheric Monthly Mean Temperatures;
+       1 file, 4.22 Mb
+
+       Status:  Available
+
+       Plans/Schedule:  Additional data will be integrated periodically as
+       it becomes available.
+
+8.3.2  The Greenhouse Effect Detection Experiment (GEDEX) CD-ROM
+
+       Medium/Specifications:  CD-ROM in ISO 9660 standard
+
+       Format and Content:  The data on this disk will be stored in a
+       special data-set-independent format, designated the Common Data
+       Format (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  The CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" will be included with this CD-ROM allowing a user to create
+       and access these data and descriptions. The CD-ROM will consist of
+       many different data sets related to the study of the Greenhouse
+       Effect, including the Berlin Stratospheric Monthly Mean Temperatures
+       data set, and the accompanying NCDS data set documentation.
+
+       Data Quantity/Rate:  1 CD-ROM disk set.
+
+       Status:  Release date for this product is scheduled for early 1992.
+
+       Plans/Schedule:  Users interested in this product should contact
+       NCDS staff for more details.
+
+
+9.  DATA ACCESS                                                              
+
+9.1  Archive Identification.  
+
+     Goddard DAAC User Support Office           
+     NASA/Goddard Space Flight Center
+     Code 935
+     Greenbelt, Maryland  20771
+     (301) 286-3209
+     INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+     NSI DECnet:  NSSDCA::NCDSUSO 
+         
+9.2  Procedures for Obtaining Data.  Users may request data by letter,
+telephone, or personal visit.  Personal communication with NCAR personnel
+before ordering is advised.
+
+9.3  NCDS Status/Plans.  NCDS provides access to the Berlin Stratospheric
+Monthly means data set.  The data can be accessed via the NCDS Data
+Applications Subsystem using NCDS$DATA:BERLIN-STRAT_MONTH_TMP as input.
+
+                                                                                
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION                            
+                                                                                
+     Goddard DAAC User Support Office
+     NASA/Goddard Space Flight Center
+     Code 935
+     Greenbelt, Maryland  20771
+     (301) 286-3209                                                          
+     INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+     NSI DECnet:  NSSDCA::NCDSUSO 
+
+                                                                                
+11.  REFERENCES                                                              
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+                                                                                
+11.2  Journal Articles and Study Reports
+                                                                                
+      a.  Barnston, Anthony G., and Robert E. Livezey, February 1991.
+          "Statistical Prediction of January-February Mean Northern
+          Hemisphere Lower Tropospheric Climate from the 11-Year Solar
+          Cycle and the Southern Oscillation for West and East." Journal of
+          Climate, Vol. 4, No. 2, 249-262.
+
+      b.  Barnston, Anthony G., Robert E. Livezey, and Michael S. Halpert,
+          February 1991.  "Modulation of Southern Oscillation-Northern
+          Hemisphere Mid-Winter Climate Relationships by the QBO." Journal
+          of Climate, Vol. 4, No. 2, 203-217.
+                                                                       
+      c.  Labitzke, Karin, and Harry van Loon, June 1989.  "Association
+          Between the 11-Yr Solar Cycle, the QBO, and the Atmosphere. Part
+          III:  Aspects of the Association."  Journal of Climate, Vol. 2,
+          No. 6, 554-565.
+
+      d.  Labitzke, Karin, and Harry van Loon, October 1989.  "The Southern
+          Oscillation.  Part IX:  The Influence of Volcanic Eruptions on
+          the Southern Oscillation in the Stratosphere." Journal of
+          Climate, Vol. 2, No. 10, 1223-1226.
+
+      e.  Labitzke, Karin, and Harry van Loon, August 1990.  "Association
+          Between the 11-year Solar Cycle and the Atmosphere.  Part IV: The
+          Stratosphere, Not Grouped by the Phase of the QBO." Journal of
+          Climate, Vol. 3, No. 8, 827-837.
+         
+11.3  Archive/DBMS Usage Documentation                                       
+                                                                                
+      a.  Olsen, L.M., J.W. Closs, and F.E. Corprew, November 1991. "NASA's
+          Climate Data System Primer:  Version 4.0."  EOS DAAC, NASA
+          Goddard Space Flight Center, Greenbelt, Maryland.
+
+
+12.  RELATED DATA SETS                                                       
+                                                                                
+     Several related data sets exist online through NCDS as follows:
+
+     1)  The Angell Global Temperature Deviations data set contains zonal
+         temperature deviations derived from radiosonde measurements
+         compiled in Monthly Climatic Data for the World, published by the
+         National CLimatic Data Center.  These data are available online
+         through NCDS in Common Data Format (CDF).  To access this CDF,
+         specify the following as input within the Data Applications
+         subsystem in NCDS:
+
+                         NCDS$DATA:ANGELL_TMP_DEV
+
+     2)  The Monthly Mean Rawinsonde Station Observations data set contains
+         pressure, height, temperature, dew point, wind direction and speed
+         from 34 stations for the 40-year period 1950-1989.  These data are
+         available online through NCDS in Common Data Format (CDF). To
+         access this CDF, specify the following as input within the Data
+         Applications subsystem in NCDS:
+
+                      NCDS$DATA:RAOB-STATION_MONTHLY
+
+      
+13.  SUMMARY/SAMPLE                                                          
+
+     None available.
+
+
+14.  NOTES                                                                   
+
+     
+*92/03/12

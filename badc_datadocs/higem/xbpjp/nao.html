@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+   <TITLE>HiGEM Simulation Status - North Atlantic Oscillation</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>HiGEM xbpjp Simulation Status</H1>
+
+<HR ALIGN=LEFT>
+<h2>North Atlantic Oscillation (NAO)</h2>
+<p>
+The North Atlantic Oscillation Index presented here is a function of 
+the difference between the surface level pressure (SLP) in Akuyreyr, 
+Iceland and the SLP in Lisbon, Portugal. Following Hurrell (1995).
+</p>
+<p>
+To calculate the NAO index the winter SLP anomalies are normalised by dividing 
+the measured seasonal pressure values by the long-term standard deviation of 
+the seasonal sea level pressure.
+(This prevents the NAO index from being skewed towards the greater
+variability of the Icelandic low).
+</p>
+<p>
+The SLP data presented here are NOT normalised if the length of the simulation
+is less than 10 years.  Instead the time series plot simply shows the 
+difference in pressure between Lisbon and Iceland.  
+</p>
+<p>
+Python algorithms for Iceland and Lisbon surface level pressure:<br>
+slp_iceland=av(var_slp(lat=(64.6, 66.6), lon=(340.9,342.9), squeeze=1),axis="xy")<br>
+slp_lisbon=av(var_slp(lat=(37.8, 39.8), lon=(349.9, 351.9), squeeze=1), axis="xy")
+</p>
+<p>
+See <a href="http://www.cgd.ucar.edu/cas/jhurrell/indices.html">Jim Hurrell's web page</a> 
+for further details on NAO indices.
+</p>
+
+<table>
+<tr><td><a href="./xbpjp_apa_nao.gif"><img src="./crop_xbpjp_apa_nao.gif" width="700px"></a></td>
+<td>NAO index as a function of
+    Lisbon minus Iceland SLP.</br>
+    Lisbon (38.8N,350.9E)<br>
+    Iceland (65.6N, 341.9E)<br>
+    <a href="./xbpjp_apa_nao.gif">gif</a><br>
+    <a href="./xbpjp_apa_nao.ps">ps</a></td></tr>
+</table>
+<hr>
+</body>
+</HTML>

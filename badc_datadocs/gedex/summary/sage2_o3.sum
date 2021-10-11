@@ -1,0 +1,34 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SAGE2_O3 "
+"SUM_DATA_SET"       "SAGEII-PROF  "
+"SUM_DATATYPE"       "OZONE        "
+"ARCHIVE_NAME"       "NSSDC, NCDS          "
+"ARCHIVE_STATUS"     "Available.   Reprocessed March, 1991.                        "
+"DS_DESCRIPTION"     "ERBS Stratospheric Aerosol and Gas Experiment II Profiles    "
+"DT_DESCRIPTION"     "Ozone Profiles                                               "
+"SUM_BEGIN_DATE"     "24-Oct-1984                                                                 "
+"SUM_END_DATE"       "30-Nov-1989                                                                 "
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "80 deg N to 80 deg S (above 5 km or cloudtop)                "
+"SPATIAL2"           "                                                             "
+"SPATIAL3"           "250 km X 250 km  Vertical resolution is 1 km below 25 km,    "
+"SPATIAL4"           "and 5km above                                                "
+"TEMPORAL1"          "October 21,1984 - ongoing                                    "
+"TEMPORAL2"          "                       "
+"TEMPORAL3"          "Full coverage in about 1 month, but latitude coverage        "
+"TEMPORAL4"          "varies with season.                                          "
+"PRODUCT1"           "Ozone number density and mixing ratio profiles               "
+"PRODUCT2"           "One 6250-BPI tape per year.                                  "
+"PRODUCT3"           "Available on GEDEX CD-ROM.                     "
+"PRODUCT4"           "   "
+EOF
+                                                                                                                                    
+PARAMETERS
+"OZONE"           "Ozone Density"            "molecule/cc"
+"PRESSURE"        "Atmospheric Pressure"     "mb"
+"TEMPERATURE"     "Temperature Profile"      "Deg K"
+EOF
+
+SOURCES
+"ERBS"     "SAGEII"
+EOF

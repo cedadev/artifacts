@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050418T080000Z
+DTEND:20050422T170000Z
+LOCATION: Prague, Czech Republic.
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:4th WMO International Symposium on Assimilation of Observations in Meteorology and Oceanography=0D=0Ahttp://www.chmi.cz/dasympos/index.html=0D=0A
+SUMMARY:4th WMO International Symposium
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

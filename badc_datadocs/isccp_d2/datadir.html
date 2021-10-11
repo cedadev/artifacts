@@ -1,0 +1,48 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.77 [en] (X11; U; Linux 2.4.3-12smp i686) [Netscape]">
+   <title>ISCCP-D2 Data directory</title>
+</head>
+<body bgcolor="#FFFFFF">
+
+<h1>
+ISCCP Data Directory</h1>
+
+<hr ALIGN=LEFT>
+<br>&nbsp;
+<blockquote>The <a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/isccp_d2/data">data directory</a> holds
+the ISCCP-D2 Monthly Mean Cloud Products for the years 1983 (beginning
+July 1983), 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993,
+1994, 1995, 1996, 1997, 1998 and 1999 in one directory [e.g., data/isccp_d2/].
+The data reside on the disk in HDF4 format. The data is provided in HDF
+by the&nbsp; <a href="http://eosweb.larc.nasa.gov/PRODOCS/isccp/table_isccp.html">Langley
+Atmospheric Sciences Data Centre</a>.&nbsp; A wider set of ISCCP data is
+available from their webpage. The data in its raw format is stored on an
+equal area grid of 280km resolution. The <a href="softwaredir.html">sample
+read software</a> provided converts this to an equal angle resolution of
+2.5 degrees. Additionally, conversion tables are required to convert the
+data to real numbers from integer counts.
+<p>There is a small change in the data format and filenames from 1994 onwards.
+For the years 1983 to 1993 the file naming convention is d2_3hrlymon_yyyymm
+(e.g. d1_3hrlymon_199205). For the years 1994 onwards the file naming convention
+becomes ISCCP.D2.1.GLOBAL.yyyy.mm.99.9999.GPC.hdf (e.g. ISCCP.D2.1.GLOBAL.1997.12.99.9999.GPC.hdf).
+These later files no longer contain the read software and the ancillary
+data is included as a VDATA. The sample read files will read both file
+types.</blockquote>
+
+<blockquote><a href="var.html">One hundred and thirty variables</a> are
+available which include temporal and spatial means and standard deviations
+for cloud top pressure and temperature, cloud optical depth, and cloud
+water path. Optical depth, water path, cloud top pressure, cloud top temperature,
+and frequencies are available for low, middle, and high clouds as well
+as 16 different cloud types e.g. cumulus, cirrus etc. Variables derived
+from the TIROS Operational Vertical Sounder (TOVS) are precipitable water
+and atmospheric temperatures. Variables derived from visible wavelengths
+are available only during daylight hours.&nbsp; Each variable has monthly
+mean values for the following GMT times of day: 00:00,&nbsp; 03:00, 06:00,
+09:00, 12:00, 15:00, 18:00, 21:00.</blockquote>
+
+</body>
+</html>

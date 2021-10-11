@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20080318T000000Z
+DTEND:20080319T000000Z
+LOCATION:University of Leicester 
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000900B93C23A28C801000000000000000
+	010000000F23E4BDE1C1BCE4EA1B4050A8AC1957D
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+=0D=0AA date for your diary. =0D=0A=0D=0AThe next annual meeting of the A=
+tmospheric Chemistry Special Interest Group will be entitled "The urban a=
+tmosphere from the street to the region".  It will be held at=0D=0A the U=
+niversity of Leicester on Tuesday 18 March 2008.  Speakers so far include=
+ Roy Harrison (Birmingham University), Nicolas Moussiopolous (Univ. Thess=
+aloniki) Alan =0D=0AGadian (Leeds University), Dudley Shallcross (Bristol=
+ University, tbc), David Carslaw (Leeds University), Evan Davies (Leicest=
+er City Council) and Eiko Nemitz (CEH).=0D=0A=0D=0AFor more information c=
+ontact the ACSG convener Howard Roscoe: h.roscoe@bas.ac.uk =0D=0A=0D=0A=
+=0D=0A
+SUMMARY:Atmospheric Chemistry Special Interest Group - Annual Meeting
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+
+  <TITLE>Met Office MIDAS data  - MESSAGE TYPES</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Met Office MIDAS data - Message Types<BR CLEAR="ALL"></H1>
+
+It is convenient to distinguish between:
+<ul>
+<li>an observation, a group of one or more meteorological elements, plus some location and time information; other data items are added to an observation before it is encoded into a message.
+<li>a message, meteorological information encoded into a pre-defined format for exchange between meteorological centres
+<li>a report, some form of summary of (meteorological) data.
+</ul>
+<p>
+Data contained in messages and reports are structured to facilitate the extraction of selected data from the archive, the selection being based on location, time and meteorological element (where an element is a single meteorological variable such as wind speed, cloud cover or relative humidity). The tables do not store the incoming reports and data files, just the information held by them. (The tables do hold information on how the data were received i.e. met domain or message type.)
+<p>
+Some reports are automatically and routinely ingested into the database. Others only become available on an intermittent basis and are processed accordingly.
+<p>
+
+<h2>Mapping between message types, measured parameters, observation timescales and MIDAS datasets</h2>
+To help users determine which messages provide parameters that they want an on time scales that are appropriate for their work and how to find them in MIDAS <a href=https://docs.google.com/spreadsheets/d/15jzsi3L4dCsGCJ1tpV2gXvbhO8WPs0RpE2kB2p12Ays/edit?usp=sharing"> a spreadsheet</a> has been put together. This isn't a perfect match, but should hopefully get MIDAS data users to the right parts of MIDAS to find the data that they seek.
+<h2>MIDAS Message Types</h2>
+<table border cellpadding=5>
+<th>Message type<th>Description<th>Available in MIDAS<th>Available elsewhere in BADC
+
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_8d6e25b0-d732-11e1-b519-00163e251233">AWSDLY</a>         <td> Daily values from non-standard AWS       <td> Yes <td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_8d6e25b0-d732-11e1-b519-00163e251233">AWSHRLY</a>        <td> Hourly values from non-standard AWS      <td> Yes <td> -
+<tr><td>AWSRADT/<a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_cdbabfae-d7c6-11e1-a28c-00163e251233">ESAWRADT</a>        <td> Hourly radiation values from AWS/ESAWS         <td> Yes <td> -
+<tr><td>AWSSOIL/<a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_f6aa543e-d734-11e1-979f-00163e251233">ESAWSOIL</a>        <td> Soil temperatures from AWS/ESAWS               <td> Yes <td> -
+<tr><td>AWSWIND/<a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_396aee06-d72f-11e1-b536-00163e251233">ESAWWIND</a>        <td> Wind observations from AWS/ESAWS               <td> Yes <td> -
+<tr><td>BATHY          <td>Elements from FM 63-IX BATHY message      <td> -      <td> -
+<tr><td>BUOY           <td>Elements from FM 18-X BUOY message        <td> -     <td> -
+<tr><td>CARLOS         <td>Monthly & annual climatological averages,calculated by NCIC      <td> Yes <td> -
+<tr><td>CARLOSEX       <td>This domain constrains met_element values in the Carlos Station_Exceedence table   <td> - <td> -
+<tr><td>CAWS           <td>Hourly values from non-standard AWS       <td> - <td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_9ee916a6-d732-11e1-b950-00163e251233">CHECK</a>           <td>Check readings                           <td> - <td> -
+<tr><td>CLM-UAN         <td>CLIMAT upper air normals                <td> Yes <td> -
+<tr><td>CLMSN       <td>Monthly & annual climatological averages, & check values for sfc CLIMAT messages        <td> Yes <td> -
+<tr><td>CLMSPN          <td>Monthly & annual precipitation averages, & check values for sfc CLIMAT messages     <td> Yes <td> -
+<tr><td>CLMULN          <td>CLIMAT u/a standard isobaric surface check values for a month & stn                 <td> Yes <td> -
+<tr><td>CLMUML          <td>Elements from CLIMAT u/a messages at a standard isobaric surface                    <td> Yes <td> -
+<tr><td>CLMUMR          <td>Elements from CLIMAT u/a messages at ground level           <td> Yes <td> -
+<tr><td>CLMURN      <td>Long period monthly surface averages for a CLIMAT upper air stn     <td> Yes <td> -
+<tr><td>CLM71       <td>Monthly & annual climatological averages, & check values for sfc CLIMAT         <td> Yes <td> -
+<tr><td>CLM71-06    <td>Elements from FM 71-VI CLIMAT message           <td> Yes <td> -
+<tr><td>CLM71-11    <td>Elements from FM 71-XI CLIMAT message, post 1994            <td> Yes <td> -
+<tr><td>CLM72SHP    <td>Elements from FM 72-VI CLIMAT SHIP message                  <td> - <td> -
+<tr><td>CLM75TMP    <td>Elements from FM 75/6-VI CLIMAT TEMP/SHIP messages          <td> Yes <td> -
+<tr><td>CURRENT         <td>Directions and speeds of marine currents                <td> - <td> -
+<tr><td>DLY3208         <td>Elements from Metform 3208 - Monthly Return of Daily Obs        <td> Yes <td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_9df306be-d7c6-11e1-bc03-00163e251233">DRADR35</a>     <td>MetO1 Form R35 elements - Dly Totals of Radiation/Sunshine      <td> Yes <td> -
+<tr><td>DRIFTER         <td>Elements from FM 18-X Ext DRIFTER message from drifting buoys.      <td> - <td> -
+<tr><td>GLBLWXOB    <td>GLBL_WX_OB table.  3-hrly synoptic reports from overseas stations.      <td> Yes <td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_24917ec0-d72d-11e1-be76-00163e251233">HCM</a>     <td>Elements from HCM reports               <td> Yes <td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_e373db06-d734-11e1-ac07-00163e251233">HSUN3445</a>    <td>Elements from Metform 3445 - Hourly values of Sunshine Duration     <td> - <td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_02847268-d72f-11e1-b0e6-00163e251233">HWNDAUTO</a>    <td>Elements from automatic wind recording devices      <td> - <td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_97a63a6c-d72e-11e1-86de-00163e251233">HWND6910</a>    <td>Elements from Metform 6910 - Analysis of Anemograms     <td> - <td> -
+<tr><td>MARCUR          <td>MARINE-CURRENT table.  Directions and speeds of marine currents        <td> - <td> -
+<tr><td>MAROB           <td>MARINE-OB table.  Elements from marine messages         <td> - <td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_e71e3bf0-d7c2-11e1-b950-00163e251233">METAR</a>       <td>Elements from full FM 15-V METAR message            <td> Yes <td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_8dbc7f6e-d7c6-11e1-a7d5-00163e251233">MODLERAD</a>    <td>Hourly radiation values from MODLE                  <td> Yes  <td> -
+<tr><td>MOSFCELM    <td>Monthly climatological values from CLM-71 messages or derived from ob values    <td> - <td> -
+<tr><td>MOSFCREC    <td>Mo_Sfc_Rec table.  Header for monthly surface climatological values     <td> - <td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_5ffa5202-d732-11e1-b950-00163e251233">NCM</a>     <td>Elements from NCM reports           <td> Yes <td> -
+<tr><td>PLAT        <td>Elements from PLAT marine messages          <td> - <td> -
+<tr><td>RADTOB          <td>RADT-OB table.  Radiation values currently being reported           <td> Yes <td> -
+<tr><td>RIG     <td>Surface weather elements from moveable rigs         <td> - <td> -
+<tr><td>RNDYOB          <td>RAIN-DRNL-OB table.  Daily rainfall values      <td> Yes <td> -
+<tr><td>RNHROB          <td>RAIN-HRLY-OB table.  Hourly rainfall observations       <td> Yes <td> -
+<tr><td>RNSHRLY         <td>RAIN-SUBHRLY-OB table.  Tip values from automatic rain recorders        <td> Yes <td> -
+<tr><td>RUNWAY          <td>Runway measurements, e.g. visual range      <td> - <td> -
+<tr><td>SHIP        <td>Marine surface obs, code type is 'FM 13-XI SHIP'.  No 8-groups          <td> - <td> -
+<tr><td>SHIP-AUX    <td>Marine surface obs, abbreviated list of elements, e.g. MARID, from trawlers, etc    <td> - <td> -
+<tr><td>SHIP-LV         <td>Marine surface obs, from Light Vessel messages      <td> - <td> -
+<tr><td>SHIP-NVY    <td>Marine surface obs, code type is 'SHIP', 8-groups, from Navy ships      <td> - <td> -
+<tr><td>SHIP-OWS    <td>Marine surface obs, code type is 'SHIP', 8-groups, from Ocean Weather Ships     <td> - <td> -
+<tr><td>SOILOB          <td>Daily & hourly soil temperatures at 5, 10, 20, 30, 50 & 100cm       <td> Yes<td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_b06e4d56-d732-11e1-b7de-00163e251233">SREW</a>        <td>Hourly Rainfall values      <td> Yes <td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_c21bdf28-d732-11e1-b3c6-00163e251233">SSER</a>        <td>Rainfall values from SSER loggers       <td> - <td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_92bff898-d72a-11e1-8550-00163e251233">SYNOP</a>       <td>Elements from full FM 12-VII SYNOP message      <td> Yes <td> -
+<tr><td>TDYOB           <td>TEMP-DRNL-OB table.  Daily temperature extremes     <td> Yes <td> -
+<tr><td>TEMPMNSL    <td>Bare soil minimum temperatures      <td> Yes <td> -
+<tr><td>TESAC       <td>Elements from FM 64-IX TESAC message        <td> - <td> -
+<tr><td>TRACKOB         <td>FM62-VIII TRACKOB.  Values of sea temp, salinity, current speed & direction     <td> - <td> -
+<tr><td>UAPLT           <td>Upper air pilot wind message, e.g. FM 32-PILOT      <td> - <td> <a href="http://badc.nerc.ac.uk/data/radiosglobe/">Radiosonde</a>
+<tr><td>UAPLTSHP    <td>Upper air pilot wind message from ship, e.g. FM 33-V        <td> - <td> <a href="http://badc.nerc.ac.uk/data/radiosglobe/">Radiosonde</a>
+<tr><td>PILOT SHIP      <td> - <td> - <td> <a href="http://badc.nerc.ac.uk/data/radiosglobe/">Radiosonde</a>
+<tr><td>UASNDG          <td>UA_SOUNDING table. Non-repeating elements of an u/a ascent, e.g. sonde type     <td> - <td> -
+<tr><td>UASNDGPT    <td>UA_SOUNDING_POINT table.  Repeating values of an upper air ascent       <td> - <td> -
+<tr><td>UATMP           <td>Upper air temp message, e.g. FM 35-V TEMP       <td> - <td> <a href="http://badc.nerc.ac.uk/data/radiosglobe/">Radiosonde</a>
+<tr><td>UATMPSHP    <td>Upper air temp message from ship, e.g. FM 36-V TEMP SHIP        <td> - <td> <a href="http://badc.nerc.ac.uk/data/radiosglobe/">Radiosonde</a>
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_45570aee-d732-11e1-b536-00163e251233">WADRAIN</a>         <td>Daily rainfall values from Water Authorities        <td> Yes <td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_d1cbd004-d732-11e1-ac07-00163e251233">WAHRAIN</a>         <td>Hourly rainfall values from Water Authorities       <td> Yes <td> -
+<tr><td><a href="http://badc.nerc.ac.uk/view/badc.nerc.ac.uk__ATOM__OBS_754a21fa-d732-11e1-b5aa-00163e251233">WAMRAIN</a>         <td>Monthly rainfall values from Water Authorities      <td> Yes <td> -
+<tr><td>WINDMEAN    <td>WIND-MEAN-OB table.  Wind parameters measured during one or more hours  <td> Yes <td> -
+<tr><td>WX_EVT          <td>Weather event.  Defines the list of weather events for CARLOS   <td> - <td> -
+<tr><td>WXDYOB          <td>WEATHER-DRNL-OB table.  Daily weather values    <td> Yes <td> -
+<tr><td>WXHROB          <td>WEATHER-HRLY-OB table.  Hourly weather values   <td> Yes <td> -
+
+</table>
+<p>
+
+
+</BODY>
+</HTML>

@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050410T230000Z
+DTEND:20050411T230000Z
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000A0BCD841B228C5010000000000000000100
+ 0000020CB23748D3DB74B80DDF408F9D1CBFE
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0AAnnouncement of Town Meeting of=
+ the NERC Directed Programme:=0D=0AQuantifying and Understanding the Earth =
+System (QUEST)=0D=0A=0D=0AIdentifying research priorities for QUEST Theme 3=
+: The implications of=0D=0Aglobal environmental changes for the sustainable=
+ use of resources=0D=0A=0D=0AMonday 11 April 2005, Harvey Goodwin Suite, Ch=
+urch House Conference=0D=0ACentre, Westminster=0D=0A=0D=0AThe Town Meeting =
+aims to bring together representatives of the UK=0D=0Aresearch community op=
+erating in areas at the environment/society=0D=0Ainterface, so that they ca=
+n become engaged in QUEST's Earth System=0D=0Ascience activities.  There ar=
+e three broad objectives:=0D=0A-       to inform the community about QUEST'=
+s research programme and=0D=0Ait's activities so far;=0D=0A-       to ident=
+ify what should be the priority questions and criteria=0D=0Afor research un=
+der QUEST's Theme 3 (The implications of global=0D=0Aenvironmental change f=
+or the sustainable  use of resources),  and=0D=0A-       to provide an oppo=
+rtunity for new community cross-linkages to be=0D=0Adeveloped=0D=0A=0D=0AFu=
+rther information and an on-line registration form will be available=0D=0Af=
+rom the QUEST website [LINK TO http://quest.bris.ac.uk ] from Monday,=0D=0A=
+March 21, 2005.  For any queries, please contact Dr. Sarah Cornell=0D=0A(sa=
+rah.cornell@bris.ac.uk).=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Town Meeting of NERC Directed Programme: =
+Quantifying and Understanding the Earth System (QUEST)
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

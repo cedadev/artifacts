@@ -1,0 +1,33 @@
+DABEX - Dust and Biomass EXperiment. 
+This experiment, probably based in Dakar, Senegal, will investigate the radiative effect of dust and biomass aerosols emitted from the Sahara/Sahelian regions. The interaction of dust and biomass over this region has not yet been well-established, although the few aircraft measurements that do exist suggest that dust and biomass become mixed in March-April-May. This may have important consequences on the radiative impact as the anthropogenic biomass burning aerosol may be effectively removed from the optically most active part of the electromagnetic spectrum. Flights will be performed in conjunction with surface based sun-photometers to determine the accuracy of the retrieval algorithms in terms of the aerosol optical depth, size distribution, and refractive indices. The new GERB and SEVERI instruments onboard the geostationary MSG platform provide ideal tools for monitoring the evolution of the dust and biomass plumes. The direct effect from these instruments will be validated directly by using the various radiometers on the BAE146. Provisional dates 9th January - 17th February 2006
+
+DODO - Dust Outflow and Deposition to Ocean. 
+A SOLAS experiment in conjunction with DABEX and AMMA. Aims: 
+Deliver case study based predictions of dust deposition to the northern hemisphere Atlantic Ocean constrained by in situ aircraft measurements. 
+Describe how chemical and physical changes in the dust affect its long range transport, and how transport is affected by the properties of the dust. 
+Fingerprint dust sources using single particle characterisation and assess their main composition, including iron content. 
+Assess the climatological representativeness of the case studies and predict the seasonal footprint of dust deposition to the north Atlantic Ocean. 
+Assess the radiative impact of the dust over the Atlantic Ocean and its effect on sea surface temperatures in nutrient rich waters. 
+
+CAESAR - Cirrus and Anvils: European Satellite and Airborne Radiation measurements project. 
+The overall scientific objective of this project is to understand the radiative properties of cirrus cloud over a wide range of wavelengths in combination with airborne in situ measurements of cirrus microphysical properties. Flights will observe frontal and anvil cirrus co-incident with the CloudSat Aqua-train and AATSR satellites over the Chilbolton cloud radars and lidars as well as ocean/sea surrounding the UK. Aircraft measurements will be used to obtain vertical profiles of ice crystal size, shape and IWC and how these quantities vary in the horizontal direction so that a good statistical sampling is obtained representative of the cirrus microphysical state. Summer and winter periods are required to observe the different types of cirrus clouds.
+
+
+NEON - NEON Infra-Red Camera 
+This trial will test the operation of the NEON Infra-Red camera looking at the contrast between a runway and surrounding grass areas. 
+
+
+POSE - Production of Ozone of South-east England 
+The overall goal of this project is to understand more fully the factors governing ozone chemistry during summer periods in the UK. In particular, the relative sources of ozone i.e general Northern Hemisphere background + regionally produced products + local/in situ generation.
+Measurements will be made of CO, ozone, hydrocarbons and oxygenated VOCs, throughout the troposphere. The transport of pollutants from Europe within the boundary layer has been implicated in the very high levels of ozone seen in the UK during summer 2003. A period of high pressure over the South of England is required, with decoupling of the boundary layer and free troposphere. During the TORCH field campaign in Writtle, Essex, high levels of ozone and other reactive species was seen during the 2003 heatwave, and results suggest that this may be a result of mixing down of polluted air from aloft during the collapse of the night-time shallow inversion layer to form the day time boundary layer. In order to understand this behaviour, a series of profiles will be carried out as close as possible to the Writtle site, to determine the influence of regional transport and local chemistry on ozone concentrations.
+
+
+LAND EMISS - LAND EMISSivity experiment (Formerly PRO-MED) 
+Land Emiss aims to study the thermal infrared emissivity of a range of different land surface types. A UK based camapaign will be flown in the May-June 2006 period. In addition the possibility of including Land Emiss sorties during the DABEX and/or T-REX foreign detachments will be pursued. A further period of UK-based flying is expected for summer 2007 and opportunities for flights over snow and ice will be investigated.
+
+
+T-REX - Terrain-induced Rotor EXperiment (Formerly SWRP - Sierra Wave Rotor Project.) 
+This is a joint American/European project with a main field campaign scheduled for late Spring 2006 (March/April). The project aims to take measurements of strong gravity wave activity and associated rotor activity beneath the waves in the lee of the Sierra Nevada mountains, California, USA. The main scientific objectives are to improve the understanding of the atmospheric conditions conducive to strong gravity wave activity, wave induced rotors and gravity wave breaking. Aviation safety aspects and improved aviation forecasting tools motivate the science. The aircraft is likely to be based at Fresno, California. Normal flight level wind, temperature, pressure, height and humidity information, together with turbulence characteristics, aerosol concentrations and dropsonde remote sensing observations will be required.
+
+
+

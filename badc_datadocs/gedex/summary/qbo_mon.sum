@@ -1,0 +1,33 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "QBO_MON "
+"SUM_DATA_SET"       "Q-BI-OSCIL   "
+"SUM_DATATYPE"       "MONTHLY      "
+"ARCHIVE_NAME"       "NCDS         "
+"ARCHIVE_STATUS"     "Available as online CDF in NCDS, updated periodically"
+"DS_DESCRIPTION"     "Quasi-Biennial Oscillation                   "
+"DT_DESCRIPTION"     "Monthly QBO Wind and Temperature             "
+"SUM_BEGIN_DATE"     "01-Jan-1950  "
+"SUM_END_DATE"       "01-Dec-1991  "
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Equatorial Region"
+"SPATIAL2"           " "
+"SPATIAL3"           "Station:  Balboa, Singapore, Ascension Island"
+"SPATIAL4"           " "
+"TEMPORAL1"          "January 1950 - December 1991"
+"TEMPORAL2"          " "
+"TEMPORAL3"          "Monthly means"
+"TEMPORAL4"          " "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF)"
+"PRODUCT2"           "Available on GEDEX CD-ROM.           "
+"PRODUCT3"           "Data producer's handwritten notes                 "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"TEMPERATURE"  "Atmospheric temperature"  "Deg C"
+"WIND"         "U component of wind"      "knots (east)"
+EOF
+
+SOURCES
+"STATION"         "RAWINSONDE"
+EOF

@@ -1,0 +1,91 @@
+<HTML>
+<HEAD>
+   <TITLE>HiGEM HadCM3(L30) example dataset</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#ffffff">
+
+<H1>HiGEM HadCM3(L30) example dataset contents</H1>
+
+<p>
+The HadCM3(L30) dataset is a 100 year dataset made up of a number of
+model runs. The run is split into a number of segments due to run restarts and data archiving problems.
+The run identifiers and the times they span are:
+</p>
+
+<table border=1 cellpadding=4>
+<tr><th>Run Identifier</th><th>Start (UM format)</th><th>Start (yyyy-mm)</th><th>End (UM format)</th><th>End (yyyy-mm)</th></tr>
+<tr><td>xbare</td><td>p0jan</td><td>2050-01</td><td>q9dec</td><td>2069-12</td></tr>
+<tr><td>xbarq</td><td>r0jan</td><td>2070-02</td><td>r0mar</td><td>2070-03</td></tr>
+<tr><td>xbbde</td><td>r0apr</td><td>2070-04</td><td>r1dec</td><td>2071-12</td></tr>
+<tr><td>xbare</td><td>r2jan</td><td>2072-01</td><td>t1dec</td><td>2091-12</td></tr>
+<tr><td>xbble</td><td>t2jan</td><td>2092-01</td><td>v9dec</td><td>2119-12</td></tr>
+<tr><td>xbblz</td><td>w0jan</td><td>2120-01</td><td>w1jan</td><td>2121-01</td></tr>
+<tr><td>xbble</td><td>w1feb</td><td>2121-02</td><td>y9dec</td><td>2149-12</td></tr>
+</table>
+
+<p>Intially, since this is an example dataset, only the fields at the highest time resolution have been
+archived.  Monthly mean and Seasonal mean files also exist and can be archived if requested.</p>
+
+<table>
+<tr><td>Location:</td><td> <a href="/cgi-bin/data_browser/data_browser/badc/higem/data/HadCM3L30/atmos/daily">/badc/higem/data/HadCM3L30/atmos/daily</a></td></tr>
+<tr><td> &nbsp</td><td><a href="/cgi-bin/data_browser/data_browser/badc/higem/data/HadCM3L30/ocean/daily">/badc/higem/data/HadCM3L30/ocean/daily</a></td></tr>
+<tr><td>File naming convention:</td><td>${runid}${model}.p${unit}${ummonth}.pk</td></tr>
+<tr><td>&nbsp</td><td>where ${runid} is the run identifier</td></tr>
+<tr><td>&nbsp</td><td>${model} is the model identifier, 'a' for atmosphere, 'o' for ocean</td></tr>
+<tr><td>&nbsp</td><td>${unit} is the model output channel 'a' for daily atmosphere, 'e' for five daily ocean</td></tr>
+<tr><td>&nbsp</td><td>${ummonth} is the date as a um formatted decade-month string</td></tr>
+</table>
+
+<h2>Daily Atmosphere File contents</h2>
+
+<table border=1 cellpadding=4>
+<tr><th>Variable</th><th>STASH code</th><th>pp field code</th></tr>
+<tr><td> Net short wave radiation flux   </td><td>1201 </td><td>186</td></tr>
+<tr><td> Net long wave radiation flux    </td><td>2201 </td><td>187</td></tr>
+<tr><td> IR up               </td><td>2205 </td><td>206</td></tr>
+<tr><td> Sensible heat flux      </td><td>3217 </td><td>178 </td></tr>
+<tr><td> x component of wind stress  </td><td>3219 </td><td>61 </td></tr>
+<tr><td> y component of wind stress  </td><td>3220 </td><td>62 </td></tr>
+<tr><td> Westerly component of wind  u (10m)</td><td>3225 </td><td>56 </td></tr>
+<tr><td> Southerly component of wind v (10m)</td><td>3226 </td><td>57 </td></tr>
+<tr><td> Latent heat flux        </td><td>3234 </td><td>180 </td></tr>
+<tr><td> Dynamic rainfall rate       </td><td>4203 </td><td>99 </td></tr>
+<tr><td> d theta/dt from convection  </td><td>5203 </td><td>24 </td></tr>
+<tr><td> Specific humidity increment from convection </td><td>5204 </td><td>95 </td></tr>
+<tr><td> Convective rainfall rate    </td><td>5205 </td><td>98 </td></tr>
+<tr><td> Convective cloud        </td><td>5212 </td><td>34 </td></tr>
+<tr><td> Westerly component of wind  u   </td><td> 15201</td><td>56 </td></tr>
+<tr><td> Southerly component of wind v   </td><td> 15202</td><td>57 </td></tr>
+<tr><td> Omega  (= dp/dt)        </td><td> 15222</td><td>40 </td></tr>
+<tr><td> Specific humidity q         </td><td> 15226</td><td> 95</td></tr>
+<tr><td> Surface Pressure            </td><td> 1</td><td> 8</td></tr>
+<tr><td> Surface Temperature T           </td><td> 24</td><td> 16</td></tr>
+</table>
+
+<h2>Five Daily Ocean File contents</h2>
+
+<table border=1 cellpadding=4>
+<tr><th>Variable</th><th>STASH code</th><th>pp field code</th></tr>
+<tr><td> OCtr/ W (vertical velocity).                        </td><td>30201</td><td>680</td></tr>  
+<tr><td> OCE/  ocean extra tracer 16 (baroclinic x accn)      </td><td>30246</td><td>816</td></tr>
+<tr><td> OCE/  ocean extra tracer 17 (baroclinic y accn)      </td><td>30247</td><td>817</td></tr>
+<tr><td> OCtr/ In-situ temperature               </td><td>30301</td><td>637</td></tr>
+<tr><td> OCtr/ Salinity.                     </td><td>102</td><td>602</td></tr>
+<tr><td> OCuv/ Baroclinic component of zonal velocity        </td><td>121</td><td>701</td></tr>
+<tr><td> OCuv/ Baroclinic component of meridional velocity   </td><td>122</td><td>702</td></tr>
+<tr><td> OCtr/ Change of stream function across a time step. </td><td>132</td><td>613</td></tr>
+<tr><td> OCtr/ Mixed layer depth,type 1.             </td><td>137</td><td>653</td></tr>
+<tr><td> OCuv/ Zonal component of windstress (TAUX)      </td><td>150</td><td>721</td></tr>
+<tr><td> OCuv/ Meridional component of windstress (TAUY)     </td><td>151</td><td>722</td></tr>
+<tr><td> OCtr/ Precipitation minus evaporation (PLE)         </td><td>165</td><td>629</td></tr> 
+
+</table>
+
+<h3>Missing files</h3>
+
+<p>xbbleo.pet2jan.pk is missing due to archiving problems
+</p>
+
+</BODY>
+</HTML>

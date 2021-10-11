@@ -1,0 +1,2553 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>ISCCP Documentation</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>ISCCP indexed Documentation<BR CLEAR="ALL"></H1>
+
+<HR ALIGN=LEFT>
+
+<H3>Content</H3>
+
+<P><BR>
+1.<A HREF="#type">TYPE OF DATA</A></P>
+
+<UL>
+  <LI>1.1 Parameter/Measurement
+  <LI>1.2 Unit of Measurement
+  <LI>1.3 Data Source
+  <LI>1.4 Data Set Identification
+</UL>
+
+<P>2.<A HREF="#spatial">SPATIAL CHARACTERISTICS</A></P>
+
+<UL>
+  <LI>2.1 Spatial Coverage
+  <LI>2.2 Spatial Resolution
+</UL>
+
+<P>3.<A HREF="#temp">TEMPORAL CHARACTERISTICS</A></P>
+
+<UL>
+  <LI>3.1 Temporal Coverage
+  <LI>3.2 Temporal Resolution
+</UL>
+
+<P>4. <A HREF="#inst">INSTRUMENT DESCRIPTION</A></P>
+
+<UL>
+  <LI>4.1 Mission Objectives
+  <LI>4.2 Key Satellite Flight Parameters
+  <LI>4.3 Principles of Operation
+  <LI>4.4 Instrument Measurement Geometry
+</UL>
+
+<P>5. <A HREF="#process">DATA PROCESSING SEQUENCE</A></P>
+
+<UL>
+  <LI>5.1 Processing Steps and Data Sets
+  <LI>5.2 Derivation Techniques/Algorithms
+  <LI>5.3 Special Corrections/Adjustments
+  <LI>5.4 Processing Changes
+</UL>
+
+<P>6. <A HREF="#quality">QUALITY ASSESSMENT</A></P>
+
+<UL>
+  <LI>6.1 Data Validation by Producer
+  <LI>6.2 Confidence Level/Accuracy Judgement
+  <LI>6.3 Usage Guidance
+</UL>
+
+<P>7. <A HREF="#contact">CONTACTS</A> FOR DATA PRODUCTION INFORMATION<BR>
+<BR>
+8. <A HREF="#output">OUTPUT PRODUCTS AND AVAILABILITY</A></P>
+
+<UL>
+  <LI>8.1 Tape Products
+  <LI>8.2 Film Products
+  <LI>8.3 Other Product
+</UL>
+
+<P>9. <A HREF="#access">DATA ACCESS</A></P>
+
+<UL>
+  <LI>9.1 Archive Identification
+  <LI>9.2 Procedures for Obtaining Data
+  <LI>9.3 NCDS Status/Plans
+</UL>
+
+<P>10. <A HREF="#contact2">CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION</A>
+<BR>
+<BR>
+11. <A HREF="#ref">REFERENCES</A></P>
+
+<UL>
+  <LI>11.1 Satellite/Instrument/Data Processing Documentation
+  <LI>11.2 Journal Articles and Study Reports
+  <LI>11.3 Archive/DBMS Usage Documentation
+</UL>
+
+<P>12. <A HREF="#relate">RELATED DATA SETS</A> <BR>
+<BR>
+13. <A HREF="#sample">SUMMARY/SAMPLE</A> <BR>
+<BR>
+14. <A HREF="#note">NOTES</A> <BR>
+<HR ALIGN=LEFT><BR>
+</P>
+
+<H3><A NAME="type"></A>1. TYPE OF DATA</H3>
+
+<BLOCKQUOTE>
+  <P>1.1 Parameter/Measurement.<BR>
+<BR>
+  There are 132 quantities reported for the ISCCP-C1 product for
+  each 280 X 280 km map cell. These quantities are arranged into
+  two groups: the first 74 values are integers representing various
+  counts, while the last 58 values are real numbers representing
+  physical quantities. These quantities are listed in Item 14 at
+  the end of this catalog. There are 72 quantities reported for
+  the ISCCP-C2 product for each 280 X 280 km map cell, consisting
+  of averages of the hour-monthly mean values obtained separately
+  for each of the 00, 03, 06, 09, 12, 15, 18, and 21 Greenwich
+  Mean Time (GMT) time periods. In addition to mean cloud properties,
+  the frequency of occurrence and average properties of ten cloud
+  types are reported. These quantities are listed in Item 14 at
+  the end of this catalog. <BR>
+<BR>
+  Count values on the tape for ISCCP-C1 and ISCCP-C2 range from
+  0 to 255. Values are coded with counts from 1 to 253, with count
+  0 reserved for underflow and count 254 reserved for overflow.
+  Overflow occurs at lower values for pressures and cloud thicknesses.
+  The count 255 is reserved to signify NO DATA. If a count value
+  &lt;1 or &gt;253 is converted to a physical value, using the
+  current version of the conversion tables described, the table
+  returns a value of -100.0 for a count of 0, -200.0 for a count
+  of 254, and -1000.0 for a count of 255. The physical quantities
+  for these data are IR radiance, temperature, pressure, VIS radiance,
+  reflectance, optical thickness, precipitable water amount, and
+  ozone column abundance. <BR>
+<BR>
+  1.2 Unit of Measurement.<BR>
+<BR>
+  The units defined for the physical quantities in the C1 and C2
+  data are: <TABLE BORDER="0" CELLSPACING="2" CELLPADDING="0">
+    <TR>
+      <TD>Parameter</TD>
+      <TD>Units</TD>
+    </TR> 
+    <TR>
+      <TD>------------------------</TD>
+      <TD>------------------------</TD>
+    </TR> 
+    <TR>
+      <TD>Infrared (IR) Radiance</TD>
+      <TD>Degrees Kelvin</TD>
+    </TR> 
+    <TR>
+      <TD>Temperature</TD>
+      <TD>Degrees Kelvin</TD>
+    </TR> 
+    <TR>
+      <TD>Precipitable Water</TD>
+      <TD>Centimeters</TD>
+    </TR> 
+    <TR>
+      <TD>Pressure</TD>
+      <TD>Millibars</TD>
+    </TR>
+    <TR>
+      <TD>Visible (VIS) Radiance</TD>
+      <TD>Unitless</TD>
+    </TR> 
+    <TR>
+      <TD>Ozone Column Abundance</TD>
+      <TD>Dobson Units</TD>
+    </TR> 
+    <TR>
+      <TD>Reflectance</TD>
+      <TD>Unitless</TD>
+    </TR> 
+    <TR>
+      <TD>Cloud Optical Thickness</TD>
+      <TD>Unitless</TD>
+    </TR> 
+  </TABLE><BR>
+<BR>
+  NOTE: VIS radiances and actual reflectances are both coded using
+  the same table. However, the radiances are not reflectances.
+  Their value represents the measured intensity as a fraction of
+  the effective solar constant of the radiometer. This quantity
+  divided by the cosine of the solar zenith angle is equal to a
+  reflectance. Both brightness temperatures (representing IR radiances)
+  and physical temperatures are also coded using the same table.
+<BR>
+<BR>
+  The count value to physical relationship is not always linear.
+  Since the radiometers measure radiances (generally with a linear
+  response), the sensitivity and accuracy of the physical quantities
+  derived from these radiances may not be the same over their whole
+  range. For example, warm temperatures are measured more precisely
+  by most radiometers than cold temperatures. It is misleading
+  to present the data with the same &quot;apparent&quot; precision
+  over the whole range. Hence, the temperature and optical thickness
+  conversion tables are non-linear in a way that approximates the
+  linear response of the AVHRR instrument: a difference of a single
+  count represents a larger temperature difference for cold temperatures
+  than for warm temperatures or a larger optical thickness difference
+  for larger values than for smaller values. This means that a
+  linear average of the count values representing temperature or
+  optical thickness produces an energy-weighted result. If a different
+  weighting is desired, then the conversion tables should be applied
+  before averaging. All other conversion tables are linear. <BR>
+<BR>
+  1.3 Data Source. <BR>
+<BR>
+  The primary data sets used to infer the cloud properties are
+  reduced resolution narrowband radiance (0.6 and 11 um) measurements
+  made by the imaging radiometers on operational weather satellites
+  (Schiffer and Rossow, 1985). These data, called Stage B3 data,
+  have a nominal spatial resolution of 30 km and temporal resolution
+  of 3 hours produced by sampling the full resolution imaging data.
+  Global coverage is provided by up to five geostationary satellites
+  (METEOSAT, INSAT, GMS, GOES-East and GOES-West) and up to two
+  polar orbiting NOAA satellite (see Rossow et al., 1985, revised
+  August 1987, for complete details). In the analysis of these
+  data, two correlative data sets are utilized: data from the TIROS
+  Operational Vertical Sounder (TOVS) operation system on the NOAA
+  polar orbiting satellites and data from NOAA and US NAVY operational
+  analyses of several satellite and surface measurements. The former
+  provides daily, global atmospheric temperature and humidity profiles,
+  plus ozone column abundances, while the latter provides weekly
+  snow and sea ice coverage. <BR>
+<BR>
+  1.4 Data Set Identification.<BR>
+<BR>
+  The cloud analysis products of the International Satellite Cloud
+  Climatology Project (ISCCP), called Stage C1 and C2 data, are
+  constructed from the original B3 radiances, the results of the
+  three parts of a cloud algorithm and the correlative data used
+  in the analysis. Stage C1 data represent the global, merged results
+  reported every 3 hours with a spatial resolution of 280 km; Stage
+  C2 data are the monthly averages and other summary statistics
+  of the Stage C1 quantities.</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="spatial"></A>2. SPATIAL CHARACTERISTICS</H3>
+
+<BLOCKQUOTE>
+  <P>2.1 Spatial Coverage. <BR>
+<BR>
+  Global coverage is provided by the set of satellites employed
+  in ISCCP. The approximate coverage of each sensor is listed below
+  in degrees of longitude and latitude: <BR>
+<BR>
+  <TABLE BORDER="0" CELLSPACING="2" CELLPADDING="0">
+    <TR>
+      <TD>Satellite</TD>
+      <TD>Sensor</TD>
+      <TD>Longitude range</TD>
+      <TD>Latitude range</TD>
+      <TD WIDTH="20%">&nbsp;</TD>
+    </TR> 
+    <TR>
+      <TD>------------</TD>
+      <TD>------</TD>
+      <TD>---------------------</TD>
+      <TD>--------------------</TD>
+      <TD WIDTH="20%">&nbsp;</TD>
+    </TR> 
+    <TR>
+      <TD>NOAA-7,8,9,10,</TD>
+      <TD>AVHRR</TD>
+      <TD>Global</TD>
+      <TD>Global</TD>
+      <TD>(1)</TD>/tr> 
+    </TR>
+    <TR>
+      <TD>11,12</TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+    </TR> 
+    <TR>
+      <TD>GOES-5(E)</TD>
+      <TD>VISSR</TD>
+      <TD>15 W to 135 W</TD>
+      <TD>60 N to 60 S</TD>
+      <TD WIDTH="20%">&nbsp;</TD>
+    </TR> 
+    <TR>
+      <TD>GOES-6(W)</TD>
+      <TD>VISSR</TD>
+      <TD>75 W to 165 E</TD>
+      <TD>60 N to 60 S</TD>
+      <TD>(2)</TD>
+    </TR> 
+    <TR>
+      <TD>GOES-7(E)</TD>
+      <TD>VISSR</TD>
+      <TD>15 W to 135 W</TD>
+      <TD>60 N to 60 S</TD>
+      <TD>(3)</TD>
+    </TR> 
+    <TR>
+      <TD>METEOSAT-2,3,4,5</TD>
+      <TD>MIR</TD>
+      <TD>60 W to 60 E</TD>
+      <TD>60 N to 60 S</TD>
+      <TD>(4)</TD>
+    </TR> 
+    <TR>
+      <TD>GMS-1</TD>
+      <TD>VISSR</TD>
+      <TD>160 W to 80 E</TD>
+      <TD>60 N to 30 S</TD>
+      <TD WIDTH="20%">&nbsp;</TD>
+    </TR>
+    <TR>
+      <TD>GMS-2,3,4</TD>
+      <TD>VISSR</TD>
+      <TD>160 W to 80 E</TD>
+      <TD>60 N to 60 S</TD>
+      <TD WIDTH="20%">&nbsp;</TD>
+    </TR> 
+    <TR>
+      <TD>INSAT-1A,1B,1C,1D</TD>
+      <TD>VISSR</TD>
+      <TD>20 E to 120 E</TD>
+      <TD>60 N to 60 S</TD>
+      <TD WIDTH="20%">&nbsp;</TD>
+    </TR> 
+    <TR>
+      <TD>------------</TD>
+      <TD>------</TD>
+      <TD>---------------------</TD>
+      <TD>--------------------</TD>/tr> 
+      <TD WIDTH="20%">&nbsp;</TD>
+    </TR>
+  </TABLE><BR>
+<BR>
+  (1) &nbsp;Global coverage over a period of approximately 24 hours.<BR>
+  (2) &nbsp;For better coverage of seasonal weather events, GOES-6
+  was moved to 98 W on August 30, 1984, to 108 W on November 22,
+  1984, back to 98 W on July 28, 1986,and to 135 W from April 1987
+  until its failure on 1/21/89.<BR>
+  (3) &nbsp;For better coverage of seasonal weather events, GOES-7
+  is positioned between 98W and 108W, with a position of 98W during
+  the tropical convective season. This regular change in positions
+  will occur until GOES-I becomes operational, approximately late
+  1993.<BR>
+  (4) &nbsp;METEOSAT-3 was positioned to 50 deg W. in early August
+  1991 to supplement the coverage of GOES-7. This move was necessary
+  in order to provide coverage of Atlantic weather events during
+  the absence of a GOES East Satellite.<BR>
+<BR>
+  2.2 Spatial Resolution.<BR>
+<BR>
+  The spatial resolution for the C1 and C2 data set is 280 km x
+  280 km on an equal area grid (an equal angle grid of 2.5 deg
+  x 2.5 deg is also provided). For the spatial resolutions of the
+  sensors before and after processing, see the specific descriptions
+  for each sensor in Item 4.3 of this catalog entry.</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="temp"></A>TEMPORAL CHARACTERISTICS</H3>
+
+<BLOCKQUOTE>
+  <P>3.1 Temporal coverage.<BR>
+<BR>
+  The ISCCP data are planned to cover the twelve year period from
+  July 1983 to 1995. The overall coverage of each of the satellites
+  and sensors participating in the ISCCP are listed below: <BR>
+<BR>
+  <TABLE BORDER="0" CELLSPACING="2" CELLPADDING="0">
+    <TR>
+      <TD>Satellite</TD>
+      <TD>Sensor</TD>
+      <TD>ISCCP-C1 Start Date*</TD>
+      <TD>ISCCP-C1 End Date*</TD>
+    </TR> 
+    <TR>
+      <TD>---------</TD>
+      <TD>------</TD>
+      <TD>--------------------</TD>
+      <TD>------------------</TD>
+    </TR> 
+    <TR>
+      <TD>NOAA-7</TD>
+      <TD>AVHRR</TD>
+      <TD>07/01/83</TD>
+      <TD>01/31/85</TD>
+    </TR> 
+    <TR>
+      <TD>NOAA-8</TD>
+      <TD>AVHRR</TD>
+      <TD>10/01/83</TD>
+      <TD>06/24/84</TD>
+    </TR> 
+    <TR>
+      <TD>NOAA-9</TD>
+      <TD>AVHRR</TD>
+      <TD>02/01/85</TD>
+      <TD>11/08/88</TD>
+    </TR> 
+    <TR>
+      <TD>NOAA-10</TD>
+      <TD>AVHRR</TD>
+      <TD>11/17/86</TD>
+      <TD>08/30/91</TD>
+    </TR> 
+    <TR>
+      <TD>NOAA-11</TD>
+      <TD>AVHRR</TD>
+      <TD>10/18/88</TD>
+      <TD>ongoing</TD>
+    </TR> 
+    <TR>
+      <TD>NOAA-12</TD>
+      <TD>AVHRR</TD>
+      <TD>09/01/91</TD>
+      <TD>ongoing</TD>
+    </TR> 
+    <TR>
+      <TD>GOES-5</TD>
+      <TD>VISSR</TD>
+      <TD>07/01/83</TD>
+      <TD>07/30/84</TD>
+    </TR> 
+    <TR>
+      <TD>GOES-6</TD>
+      <TD>VISSR</TD>
+      <TD>07/01/83</TD>
+      <TD>01/21/89</TD>
+    </TR> 
+    <TR>
+      <TD>GOES-7</TD>
+      <TD>VISSR</TD>
+      <TD>04/26/87</TD>
+      <TD>ongoing</TD>
+    </TR> 
+    <TR>
+      <TD>METEOSAT-2</TD>
+      <TD>MIR</TD>
+      <TD>07/01/83</TD>
+      <TD>08/11/88</TD>
+    </TR> 
+    <TR>
+      <TD>METEOSAT-3</TD>
+      <TD>MIR</TD>
+      <TD>08/11/88</TD>
+      <TD>01/25/91</TD>
+    </TR> 
+    <TR>
+      <TD>METEOSAT-4</TD>
+      <TD>MIR</TD>
+      <TD>06/19/89</TD>
+      <TD>ongoing</TD>
+    </TR> 
+    <TR>
+      <TD>METEOSAT-5</TD>
+      <TD>MIR</TD>
+      <TD>---- (pending)</TD>
+      <TD>----</TD>
+    </TR>
+    <TR>
+      <TD>GMS-1</TD>
+      <TD>VISSR</TD>
+      <TD>01/21/84</TD>
+      <TD>06/30/84</TD>
+    </TR> 
+    <TR>
+      <TD>GMS-2</TD>
+      <TD>VISSR</TD>
+      <TD>07/01/83</TD>
+      <TD>09/27/84</TD>
+    </TR> 
+    <TR>
+      <TD>GMS-3</TD>
+      <TD>VISSR</TD>
+      <TD>09/27/84</TD>
+      <TD>12/04/89</TD>
+    </TR> 
+    <TR>
+      <TD>GMS-4</TD>
+      <TD>VISSR</TD>
+      <TD>12/04/89</TD>
+      <TD>ongoing</TD>
+    </TR> 
+    <TR>
+      <TD>INSAT-1A</TD>
+      <TD>VISSR</TD>
+      <TD>04/82</TD>
+      <TD>09/82</TD>
+    </TR> 
+    <TR>
+      <TD>INSAT-1B</TD>
+      <TD>VISSR</TD>
+      <TD>04/01/84</TD>
+      <TD>ongoing</TD>
+    </TR> 
+    <TR>
+      <TD>INSAT-1C</TD>
+      <TD>VISSR</TD>
+      <TD>----</TD>
+      <TD>problems</TD>
+    </TR>
+    <TR>
+      <TD>INSAT-1D</TD>
+      <TD>VISSR</TD>
+      <TD>06/01/90 (proposed)</TD>
+      <TD>----</TD>
+    </TR> 
+    <TR>
+      <TD>---------</TD>
+      <TD>------</TD>
+      <TD>----------</TD>
+      <TD>--------</TD>
+    </TR> 
+  </TABLE><BR>
+  * Note: Some gaps exist between start and end dates.<BR>
+  ** NOAA-D was launched on May 14, 1991. NOAA-D became NOAA-12
+  and replaced NOAA-10 as the morning satellite.<BR>
+<BR>
+<BR>
+  3.2 Temporal Resolution.<BR>
+<BR>
+  Stage C1 data represent the global, merged results reported every
+  3 hours. Values retrieved on a daily or weekly basis appear repeatedly
+  at 3 hourly intervals. Stage C2 data contain monthly summaries
+  of the Stage C1 data. Some of the variables depend on the availability
+  of the visible channels and are therefore not available at all
+  time periods.</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="inst"></A>4. INSTRUMENT DESCRIPTION</H3>
+
+<BLOCKQUOTE>
+  <P>4.1 Mission Objectives.<BR>
+<BR>
+  ISCCP focuses on the study of the distribution and variation
+  of cloud radiative properties. Scientific objectives are as follows:
+<BR>
+  </P>
+  <OL>
+    <LI>To collect and analyze satellite radiance measurements to
+    infer the global distribution of cloud radiative properties and
+    their diurnal and seasonal variations.
+    <LI>To improve the understanding and modeling of the effects
+    of clouds on climate.
+    <LI>To elucidate the role of clouds in the radiation balance
+    (top of the atmosphere and surface) and also improve the understanding
+    of the long-term global hydrologic cycle.
+  </OL>
+  <P><BR>
+<BR>
+  4.2 Key Satellite Flight Parameters.<BR>
+<BR>
+  The NOAA spacecraft are a series of satellites in 870 km (nominal)
+  circular, near-polar, sun-synchronous orbits with an inclination
+  angle of approximately 99 degrees (retrograde) to the equator.
+  They cross the equator during local morning and afternoon (and
+  corresponding night times), with an orbital period of approximately
+  102 minutes. Each sequential orbit covers adjacent longitudes
+  near the equator and overlapping longitudes near the poles. The
+  Advanced Very High Resolution Radiometer (AVHRR) on-board this
+  series is composed of up to five spectral channels with a nadir
+  resolution of 1.1 km. The AVHRR 1.1 km data is not available
+  globally. The AVHRR Global Area Coverage (GAC) data, with a resolution
+  of 4.4 km, does provide global coverage. In addition, temperature
+  sounding and ozone observations are made by the TIROS (Television
+  and Infrared Operational Satellite) Operational Vertical Sounder
+  (TOVS) and are used in the ISCCP analysis of B3 data. <BR>
+<BR>
+  The Geostationary Operational Environmental Satellite (GOES)
+  series consist of spin-stabilized spacecraft in geostationary
+  circular orbit located over 75 degrees west longitude for GOES-East
+  (5 & 7), and 135 degrees west longitude for GOES-West (6). The
+  GOES-6 satellites was routinely moved to provide better coverage
+  of seasonal weather events until its failure on 1/21/89. The
+  GOES-7 satellite is now utilized in this manner. Data are collected
+  in the visible and infrared bands by the Visible Infrared Spin-Scan
+  Radiometer (VISSR). The visible channel detector consists of
+  eight identical photo-multiplier tubes that scan the Earth in
+  parallel, producing a visible channel resolution of 0.9 km. The
+  IR detector produces a resolution of 7 km. <BR>
+<BR>
+  METEOSAT is in geostationary circular orbit over the equator
+  centered at the Greenwich Meridian (0 degrees E longitude), with
+  the exception of METEOSAT-3. METEOSAT-3 is now centered at 50
+  degrees west and is functioning as a replacement for GOES-7 which
+  was moved westward as in response to the failure of GOES-6. The
+  Multispectral Imaging Radiometer (MIR) on METEOSAT-2, -3, -4,
+  and -5 collects data over the Earth in three spectral regions,
+  one in the visible and two in the infrared. The satellite scans
+  the Earth from east to west and, if the water vapor channel (6.7
+  um) is turned off, is capable of producing a visible resolution
+  of 2.5 km. The infrared resolution is 5.0 km for both IR channels.
+<BR>
+<BR>
+  The Geostationary Meteorological Satellites (GMS) are a series
+  of satellites placed in geostationary circular orbit over the
+  equator centered at 140 degrees east longitude. The VISSR onboard
+  the GMS satellite collects data with four identical detectors
+  operating in parallel, producing a visible resolution of 1.25
+  km and an infrared resolution of 5.0 km. <BR>
+<BR>
+  The INSAT satellites are a series of spacecraft placed in geostationary
+  circular orbit over the equator centered at 74 degrees E longitude.
+  This series carries a VISSR similar to those on the GMS and GOES
+  satellites, yielding a visible resolution of 1.25 km and an infrared
+  resolution of 11 km. <BR>
+<BR>
+  4.3 Principles of Operation.<BR>
+<BR>
+  NOAA/AVHRR:<BR>
+  The AVHRR is a four or five channel scanning radiometer that
+  operates in the visible, near-infrared, and far-infrared regions.
+  The fifth channel was added on the AVHRR/2 instrument flown on
+  NOAA-7, -9, -11 and -12. Scanning is provided by an elliptical
+  beryllium mirror rotating at 360 rpm about an axis parallel to
+  the Earth. A two-stage radiant cooler is designed to provide
+  a basic temperature of 95 degrees K for the IR detectors. The
+  telescope is an 8-inch afocal, all-reflective system, with polarization
+  of less than 10 percent. Instrument operation is controlled by
+  26 commands and monitored by 20 analog housekeeping parameters.
+<BR>
+<BR>
+  GOES/VISSR:<BR>
+  The VISSR instrument operates in the visible region of 0.55 to
+  0.75 micrometers and in the infrared region of 10.5 to 12.6 micrometers.
+  Each of the eight photo-multiplier tubes on the visible detector
+  is 0.025 X 0.021 mrads, with a dynamic range of 3-100% albedo.
+  The infrared portion of the instrument consists of two detectors
+  cooled to 95 degrees K, with an instantaneous field-of-view (IFOV)
+  of 192 X 192 microradians. The VISSR telescope has an aperture
+  of 40 cm and a focal length of 291 cm, and routes the IR wavelengths
+  to separate detectors. The video analog output of all detectors
+  is transmitted to the VISSR Digital Multiplexer (VDM) where it
+  is sequentially sampled every 2 microseconds by the visible channel
+  and every 8 microseconds by the IR channel. <BR>
+<BR>
+  METEOSAT/MIR:<BR>
+  The Multispectral Imaging Radiometer (MIR) sensor on METEOSAT
+  is a scanning radiometer which provides images in the visible
+  and thermal IR regions of the spectrum. The instrument produces
+  images of the full Earth disc viewed from a geostationary orbit.
+  A reduced image format, corresponding to a limited band across
+  the Earth's disc, may be selected by telecommand. The optical
+  reflector system of the radiometer includes a movable Ritchey-Chretien
+  telescope with primary and secondary mirrors. This includes a
+  mirror located in the center of the primary mirror inclined at
+  45 degrees to the optical axis, four folding mirrors, and a separation
+  mirror for diverting light to the visible sensor. <BR>
+<BR>
+  The optically-collected visible and IR signals are converted
+  into analog electric signals by five detectors. These are divided
+  into two subsets, two visible and three IR. The detectors are
+  distributed across the focal plane of the radiometer and as a
+  result of the relative displacement of the detectors in this
+  plane, their respective fields-of-view (FOV) do not coincide
+  but are displaced relative to each other. <BR>
+<BR>
+  The two visible detectors are positioned in the focal plane of
+  the primary telescope. Their instantaneous FOV at the Earth's
+  surface (2.5 square km) is determined by their physical size
+  (250 X 250 micrometers sensitive area) and the telescope's focal
+  length (3650 millimeters). While the visible detectors function
+  properly at ambient temperatures, the three IR detectors must
+  be cooled to less than 95 degrees K. <BR>
+<BR>
+  Each IR detector is 70 square micrometers and generates an instantaneous
+  5 km square FOV at the subsatellite point. One visible channel
+  time shares with the water vapor channel so that the resolution
+  of the visible image changes depending on the choice of channels.
+<BR>
+<BR>
+  GMS/VISSR:<BR>
+  The GMS Visible and IR Spin-Scan Radiometer (VISSR) is very similar
+  to the scanning radiometers carried on Synchronous Meteorological
+  Satellite (SMS) and GOES (1 through 3) satellites except for
+  some modifications to stepping gears and detector portions. The
+  number of steps in each scan is 2500 for the IR detector on GMS
+  versus 1821 for GOES. <BR>
+<BR>
+  INSAT/VISSR:<BR>
+  The INSAT VISSR is also a scanning radiometer with a visible
+  channel cover- ing 0.55 to 0.75 micrometers and an IR channel
+  covering the 10.5 to 12.5 micrometer spectral regions. The full
+  disc can be scanned every half-hour (23 minute scan plus 7 minute
+  housekeeping), processing from north to south. Sector scanning
+  of the 1/4 disc (full east to west, 1/4 north to south) is possible
+  every 6 minutes. <BR>
+<BR>
+  4.4 Instrument Measurement Geometry.<BR>
+<BR>
+  The following table lists the measuring geometry characteristics
+  for the satellites employed by the ISCCP program: <TABLE BORDER="0"
+  CELLSPACING="2" CELLPADDING="0">
+    <TR>
+      <TD>SATELLITE</TD>
+      <TD>SCAN SYSTEM</TD>
+      <TD>SCAN DIRECTION</TD>
+      <TD>IMAGE VIEWING</TD>
+    </TR> 
+    <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ANGLE</TD>
+      <TD></TD>
+    </TR> 
+    <TR>
+      <TD>---------</TD>
+      <TD>-----------</TD>
+      <TD>--------------</TD>
+      <TD>--------------</TD>
+    </TR> 
+    <TR>
+      <TD>NOAA</TD>
+      <TD>Cross-track</TD>
+      <TD>Moving south to</TD>
+      <TD>55.4 degrees</TD>
+    </TR> 
+    <TR>
+      <TD></TD>
+      <TD>scan mirror</TD>
+      <TD>north, scanning</TD>
+      <TD WIDTH="25%">&nbsp;</TD>
+    </TR> 
+    <TR>
+      <TD></TD>
+      <TD>west to east</TD>
+      <TD WIDTH="25%">&nbsp;</TD>
+      <TD WIDTH="25%">&nbsp;</TD>
+    </TR> 
+    <TR>
+      <TD>---------</TD>
+      <TD>-----------</TD>
+      <TD>--------------</TD>
+      <TD>--------------</TD>
+    </TR> 
+    <TR>
+      <TD>GOES</TD>
+      <TD>Spacecraft spin</TD>
+      <TD>Stepping north to</TD>
+      <TD>20 X 20 degrees</TD>
+    </TR> 
+    <TR>
+      <TD></TD>
+      <TD>motion plus</TD>
+      <TD>south, scan west</TD>
+      <TD WIDTH="25%">&nbsp;</TD>
+    </TR> 
+    <TR>
+      <TD></TD>
+      <TD>scan mirror</TD>
+      <TD>to east</TD>
+      <TD WIDTH="25%">&nbsp;</TD>
+    </TR> 
+    <TR>
+      <TD>---------</TD>
+      <TD>-----------</TD>
+      <TD>--------------</TD>
+      <TD>--------------</TD>
+    </TR> 
+    <TR>
+      <TD>METEOSAT</TD>
+      <TD>Spacecraft spin</TD>
+      <TD>Stepping south to</TD>
+      <TD>18 X 18 degrees</TD>
+    </TR> 
+    <TR>
+      <TD></TD>
+      <TD>motion plus</TD>
+      <TD>north, scan east</TD>
+      <TD WIDTH="25%">&nbsp;</TD>
+    </TR> 
+    <TR>
+      <TD></TD>
+      <TD>scan mirror</TD>
+      <TD>west</TD>
+      <TD WIDTH="25%">&nbsp;</TD>
+    </TR> 
+    <TR>
+      <TD>---------</TD>
+      <TD>-----------</TD>
+      <TD>--------------</TD>
+      <TD>--------------</TD>
+    </TR> 
+    <TR>
+      <TD>GMS</TD>
+      <TD>Spacecraft spin</TD>
+      <TD>Stepping north to</TD>
+      <TD>18 X 18 degrees</TD>
+    </TR> 
+    <TR>
+      <TD></TD>
+      <TD>motion plus</TD>
+      <TD>south, scan west</TD>
+      <TD WIDTH="25%">&nbsp;</TD>
+    </TR> 
+    <TR>
+      <TD></TD>
+      <TD>scan mirror</TD>
+      <TD>to east</TD>
+      <TD WIDTH="25%">&nbsp;</TD>
+    </TR> 
+    <TR>
+      <TD>---------</TD>
+      <TD>-----------</TD>
+      <TD>--------------</TD>
+      <TD>--------------</TD>
+    </TR> 
+    <TR>
+      <TD>INSAT</TD>
+      <TD>Spacecraft spin</TD>
+      <TD>Stepping north to</TD>
+      <TD>Not available</TD>
+    </TR> 
+    <TR>
+      <TD></TD>
+      <TD>motion plus</TD>
+      <TD>south, scan east</TD>
+      <TD WIDTH="25%">&nbsp;</TD>
+    </TR> 
+    <TR>
+      <TD></TD>
+      <TD>scan mirror</TD>
+      <TD>to west</TD>
+      <TD WIDTH="25%">&nbsp;</TD>
+    </TR>
+    <TR>
+       
+      <TD WIDTH="25%">&nbsp;</TD>
+      <TD WIDTH="25%">&nbsp;</TD>
+      <TD WIDTH="25%">&nbsp;</TD>
+      <TD WIDTH="25%">&nbsp;</TD>
+    </TR>
+    <TR>
+      <TD>---------</TD>
+      <TD>-----------</TD>
+      <TD>--------------</TD>
+      <TD>--------------</TD>
+    </TR> 
+  </TABLE></P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="process"></A>5. DATA PROCESSING SEQUENCE</H3>
+
+<BLOCKQUOTE>
+  <P>5.1 Processing Steps and Data Sets.<BR>
+<BR>
+  The ISCCP C1 data are comprised of two Level I databases archived
+  at the ISCCP Central Archive (ICA). The data have been reduced
+  from the original resolutions for each of the satellites. At
+  the B1 stage of processing all data sets have a nominal 10 km
+  resolution except for data sets from the polar orbiters (NOAA
+  series), which are retained at the original 4 km resolution.
+  At the B3 stage all data sets have a nominal 30 km resolution.
+  Radiance values at the 30 kilometer resolution for each of the
+  sensors are normalized to the polar orbiter radiometer response.
+  The cloud analysis products of ISCCP, called Stage C1 and C2
+  data, are constructed from the original B3 radiances, the results
+  of the three parts of the cloud algorithms, and the correlative
+  data used in the analysis. Stage C1 data represent the global,
+  merged results reported every 3 hours with a spatial resolution
+  of 280 km; Stage C2 data are the monthly averages and the other
+  summary statistics of the Stage C1 quantities. Additional information
+  about the processing steps can be found within Item 5.2. <BR>
+<BR>
+  5.2 Derivation Techniques/Algorithms.<BR>
+<BR>
+  The cloud analysis algorithm for ISCCP-C1 was developed from
+  a three year pilot study that compared the performance of nine
+  different algorithms applied to the same data (Rossow et al.,
+  1985; Rossow, W.B. and R.A. Schiffer, 1991). This algorithm has
+  three fundamental parts: cloud detection, radiative transfer
+  model analysis, and statistical analysis. <BR>
+<BR>
+  <U>A. Cloud Detection</U>. <BR>
+  The cloud detection step analyzes the radiance data twice: first
+  to determine an estimate for the radiance values that represent
+  clear conditions and second, to determine which radiance measurements
+  deviate from these clear sky values. Cloudy conditions are defined
+  to be those that exhibit radiance values that are sufficiently
+  different from the clear values. <BR>
+<BR>
+  To avoid spurious diurnal variations of cloudiness caused by
+  changes in methodology associated with the presence or absence
+  of VIS data, the clear sky composite procedure relies primarily
+  on IR radiance tests to obtain both the VIS and IR clear radiances.
+  However, since the daytime results can be improved by use of
+  the VIS channel measurements, these results are incorporated
+  so that the IR-only results can be reconstructed. <BR>
+<BR>
+  </P>
+  <OL>
+    <LI>Clear Sky Composites The cloud detection part of the analysis
+    must separate the radiance data set into two parts: the radiance
+    values representing clear scenes and those representing cloudy
+    scenes (in this case a &quot;scene&quot; is one image pixel with
+    a field-of-view size ranging from 4 to 8 km, depending on satellite).
+    Many studies have suggested that the radiances associated with
+    clear scenes are generally, though not always, less variable
+    in space and time than those associated with cloudy scenes (Rossow
+    et al., 1985, Seze and Rossow, 1991, and references therein,
+    see Item 11.2). Thus, the cloud detection process starts by first
+    testing all the radiances for low spatial and temporal variability
+    to determine a best estimate of the clear scene radiance value
+    at each location and time. The distribution of these clear radiance
+    values is referred to as the clear sky composite. <BR>
+<BR>
+    The clear sky composite values are obtained as the result of
+    two tests and the accumulation of three kinds of statistics over
+    two time periods. The two tests for low spatial and temporal
+    variability are meant to isolate many, but not all, of the clear
+    image pixels from the images. The statistics are used to check
+    whether these radiance values have the proper characteristics
+    thought to represent clear conditions. This latter aspect of
+    the algorithm is necessary because the magnitude of the radiance
+    variability associated with different surface types and different
+    cloud types is highly changeable. In some climate regimes the
+    surface properties are much more variable; in some cases, the
+    cloud properties are not highly variable. Thus, no single aspect
+    of the cloud detection algorithm is successful everywhere. The
+    final step of the process is an intercomparison of the results
+    of all the preliminary steps to determine the best value of the
+    clear radiances. <BR>
+<BR>
+    The first step tests the spatial variability of the IR radiances
+    within small regions (about 100 km on land and 300 km over ocean).
+    All pixels determined to be much colder (by 3.5 K over ocean
+    and 6.5 K over land) than the warmest pixel are labelled &quot;cloudy&quot;;
+    all others (including the warmest) are labelled &quot;undecided&quot;.
+    The second step tests the time variability of the IR radiances
+    over three days at the same GMT. All pixels determined to be
+    much colder (by 3.5 K over ocean and 8.0 K over land) than the
+    values at the same location either yesterday or tomorrow are
+    labelled &quot;cloudy&quot;; all pixels found to be the same temperature
+    (to within 1.1 K over ocean and 2.5 K over land) as they were
+    either yesterday or tomorrow are labelled &quot;clear&quot;. (Performing
+    comparisons at the same local time each day avoids the large
+    diurnal variation of land surface temperature.) The remaining
+    pixels with intermediate variability are labelled &quot;undecided&quot;.
+<BR>
+<BR>
+    Three statistics are collected: the differences of the extremum
+    radiances (maximum IR and minimum VIS) for consecutive 5 day
+    periods, the number and average values of the pixels labelled
+    &quot;clear&quot; for 5 day periods, and the number and average
+    values of the pixels labelled &quot;clear&quot; by the time test
+    and &quot;undecided&quot; by the space test. Large differences
+    in the extremum radiances generally indicate remaining cloud
+    contamination; low populations of &quot;clear&quot; pixels indicate
+    persistent cloudiness. If these statistics suggest little cloud
+    contamination, then the clear sky composite is formed from the
+    5-day-average radiances of &quot;clear&quot; pixels. If the statistics
+    indicate contamination, then the clear sky composite is formed
+    from the 30-day-average. If the 30-day statistic (number of &quot;clear&quot;
+    pixels) is too small, then the 30-day extremum radiance is used.
+<BR>
+<BR>
+    Each pixel is labelled by the combined results of the two tests
+    and the statistics. The two tests produce four categories, depending
+    on whether the tests agree or disagree. The combinations (space-time
+    of cloudy-cloudy, cloudy-undecided, and undecided-cloudy are
+    labelled 'cloudy'; the combination of undecided-clear is labelled
+    'clear'. The combination undecided-undecided is labelled 'undecided',
+    while the combination cloudy-clear is labelled 'mixed'. The statistics
+    indicate whether the short-term or long-term values were employed
+    in the clear sky composite, (i.e., whether the clear radiance
+    value is more or less accurate). All of these labels are used
+    to evaluate the success of the analysis by checking their consistency.
+<BR>
+<BR>
+    The version of the algorithm used to produce this C1 data does
+    not use any correlative data to construct the clear sky composite,
+    except a classification data set that indicates whether a particular
+    location is land, water, or coast. The revised algorithm will
+    use an augmented classification that includes topography and
+    snow/ice cover. <BR>
+<BR>
+    <LI>Threshold Decision The final decision on the status of an
+    image pixel is made by the bispectral threshold test (IR-only
+    threshold at night). Using the clear sky radiances derived for
+    each location and time, all image pixels with radiance values
+    that are sufficiently different from clear sky conditions are
+    declared to be cloudy. To improve the detection of cirrus and
+    low-level clouds, single channel detections are allowed. Thus,
+    if the VIS radiance or the IR radiance is different from the
+    clear sky values, the pixel is called a cloud. The magnitude
+    of the difference required is set by the estimate of the uncertainty
+    in the clear radiance values. In these results, the VIS thresholds
+    are 3.5 % to 6.0 % (land) and the IR thresholds are 3.0 deg K
+    (ocean) and 8.0 deg K (land). (VIS radiances are represented
+    as a percent of the instrument response obtained when measuring
+    the full solar flux; IR radiances are represented as brightness
+    temperatures in deg K.) Thus, if a pixel has a VIS (IR) radiance
+    greater than (less than) the clear value by more than the threshold
+    amount, it is considered to be cloudy. <BR>
+<BR>
+    This labelling of pixels as cloudy or clear is performed without
+    regard to the previous labels derived from the clear sky composite
+    analysis; however, the success of the cloud detection is indicated
+    by whether these labels generally agree or disagree. The clear
+    sky composite analysis is meant to be more conservative than
+    the threshold test because the low variability of the surface
+    properties means that not all measurements need to be included
+    to get a good estimate of the clear radiance values. Thus, the
+    image pixels are generally equally divided among the 'cloudy',
+    'clear', and 'undecided' categories obtained from the clear sky
+    composite analysis; the 'mixed' category is usually very small
+    except when the algorithm is having difficulty distinguishing
+    the clouds. The threshold decision is made for all pixels; most
+    pixels labelled as 'cloudy' or 'clear' in the clear sky composite
+    analysis are similarly labelled by the threshold decision, confirming
+    the success of the method. The 'undecided' category contains
+    radiances that are too ambiguous to make a reliable decision
+    in the composite analysis. These pixels are usually divided into
+    cloudy and clear in rough proportion to the number of pixels
+    already labelled as cloudy or clear. This two stage decision process
+    provides an &quot;error&quot; check from the internal consistency
+    of the result. <BR>
+<BR>
+    The actual relationship between the pixel radiances and the clear
+    radiances is recorded for each pixel by a two-part code: each
+    part records a value from 0 to 5 representing the VIS and IR
+    results separately. This preserves the ability to reconstruct
+    the IR-only results in the final C1 data. <BR>
+<BR>
+    <TABLE BORDER="0" CELLSPACING="2" CELLPADDING="0">
+      <TR>
+        <TD>VIS code - 0</TD>
+        <TD>no decision (no data)</TD>
+      </TR> 
+      <TR>
+        <TD>VIS code - 1</TD>
+        <TD>less than clear VIS by more than threshold</TD>
+      </TR> 
+      <TR>
+        <TD>VIS code - 2</TD>
+        <TD>less that clear VIS by less than threshold</TD>
+      </TR> 
+      <TR>
+        <TD>VIS code - 3</TD>
+        <TD>greater than clear VIS by less than threshold</TD>
+      </TR> 
+      <TR>
+        <TD>VIS code - 4</TD>
+        <TD>greater than clear VIS by more than threshold</TD>
+      </TR> 
+      <TR>
+        <TD>VIS code - 5</TD>
+        <TD>greater than clear VIS by more than 2 X threshold</TD>
+      </TR> 
+    </TABLE><BR>
+<BR>
+    <TABLE BORDER="0" CELLSPACING="2" CELLPADDING="0">
+      <TR>
+        <TD>IR code - 0</TD>
+        <TD>no decision (no data)</TD>
+      </TR> 
+      <TR>
+        <TD>IR code - 1</TD>
+        <TD>greater than clear IR by more than threshold</TD>
+      </TR> 
+      <TR>
+        <TD>IR code - 2</TD>
+        <TD>greater than clear IR by less than threshold</TD>
+      </TR> 
+      <TR>
+        <TD>IR code - 3</TD>
+        <TD>less than clear IR by less than threshold</TD>
+      </TR> 
+      <TR>
+        <TD>IR code - 4</TD>
+        <TD>less than clear IR by more than threshold</TD>
+      </TR> 
+      <TR>
+        <TD>IR code - 5</TD>
+        <TD>less than clear IR by more than 2 X threshold</TD>
+      </TR> 
+    </TABLE><BR>
+<BR>
+    In the C1 data various additional combinations of the two codes
+    (VIS-IR) are used as follows to diagnose the performance of the
+    algorithm. Classes 2, 3, 4, and 5 are also counted in class 1,
+    while classes 7 and 8 are also counted in class 6. <BR>
+<BR>
+    <TABLE BORDER="0" CELLSPACING="2" CELLPADDING="0">
+      <TR>
+        <TD>0 = bad (no data)</TD>
+        <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 =
+          bad-cloudy</TD>
+      </TR>
+      <TR>
+        <TD>1 = cloudy</TD>
+        <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6 =
+          clear</TD>
+      </TR> 
+      <TR>
+        <TD>2 = VIS-only-cloudy</TD>
+        <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7 =
+          uncertain-clear</TD>
+      </TR> 
+      <TR>
+        <TD>3 = IR-only-cloudy</TD>
+        <TD>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8 =
+          bad-clear</TD>
+      </TR> 
+      <TR>
+        <TD>4 = uncertain-cloudy</TD>
+        <TD></TD>
+      </TR> 
+    </TABLE><BR>
+<BR>
+    Uncertain-cloudy (class 4) pixels are pixels with radiance values
+    that are between the threshold and two times the threshold amount.
+    Because these radiances are often caused by broken clouds or
+    occur when the scene is ambiguous, a count of the pixels lying
+    near the threshold indicates how much the result would change
+    if a different threshold value were used. This count provides
+    a dynamic sensitivity monitor or uncertainty estimate. VIS-only-cloudy
+    (class 2) and IR-only-cloudy (class 3) pixels are those that
+    were determined to be cloudy by a single channel decision; that
+    is, VIS-only-cloudy pixels have a VIS radiance that is greater
+    than the clear sky VIS value by more than the threshold amount
+    but have an IR radiance that is similar to the clear IR value.
+    (At night there are no VIS-only-cloudy pixels and all cloudy
+    pixels are IR-only-cloudy pixels.) Uncertain-clear (class 7)
+    pixels are those which have a radiance value similar to the clear
+    value in one channel but deviate from clear conditions too much
+    in the other channel. For example, the VIS (IR) radiance may
+    be similar to the clear value, but the IR (VIS) radiance is much
+    warmer (darker) than the clear value. Bad-cloudy (class 5) pixels
+    are similar to uncertain-clear pixels except that one channel
+    has a radiance value similar to cloudy radiances. Bad-clear (class
+    8) pixels have VIS and IR radiances that are much too dark and
+    warm compared to the clear radiance values. Bad (class 0) pixels
+    are daytime pixels with no VIS decision or any pixels with no
+    IR decision (usually due to lost data). <BR>
+<BR>
+    A summary of the pixel-by-pixel threshold information is provided
+    for each region (nominal size is 280 X 280 km) in the C1 data
+    set. Cloud amount is defined in the ISCCP data as the number
+    of cloudy pixels within the region. Although this approach is
+    thought to overestimate cloud coverage when using &quot;low&quot;
+    resolution satellite data, no technique is yet available that
+    determines fractional cover of individual pixels for all cases.
+    Hence, the meaning of the cloud amount reported in C1 data is
+    defined by this procedure: the cloud amount obtained from this
+    analysis is an &quot;effective value,&quot; which indicates the
+    variation of actual cloud amount on a scale &gt;5-10 km. In C1
+    the number of cloudy pixels is reported together with the total
+    number of pixels; cloud fraction is the ratio of these numbers.
+<BR>
+<BR>
+    The uncertainty estimate is provided by the number of pixels
+    classified as uncertain-cloudy by the threshold and by the number
+    of pixels labelled as undecided in the composite step; however,
+    several other counts are summarized which indicate in different
+    ways that the algorithm is or is not performing as expected.
+    In particular, when the scene is ambiguous or the clear sky composite
+    value is contaminated, then the number of mixed, uncertain-clear,
+    bad-clear, and bad-cloudy pixels grows. Generally, the number
+    of bad-clear pixels should be small. Further investigation of
+    the behaviour of these &quot;error&quot; counts will improve their
+    interpretation.
+  </OL>
+  <P><BR>
+<BR>
+  <U>B. Radiative Transfer Model Analysis</U><BR>
+  Once pixels are classified as cloudy or clear, the radiances
+  are compared to radiative transfer model calculations designed
+  to simulate the measurements of the AVHRR channels (to which
+  all the radiometers have been normalized). These comparisons
+  are used to isolate the surface reflectances and temperatures
+  from the clear radiances and the cloud optical thicknesses and
+  cloud top temperatures from the cloudy radiances. Atmospheric
+  properties that affect the satellite measured radiances are specified
+  from the correlative data. <BR>
+<BR>
+  Analysis proceeds in five steps.</P>
+  <OL>
+    <LI>Retrieval of surface temperatures from the clear pixel IR
+    radiances (if present) and the clear sky composite IR radiances.
+    The surface is assumed to be a blackbody. The effects of atmospheric
+    water vapor absorption are calculated. <BR>
+<BR>
+    <LI>Retrieval of surface reflectances from the clear pixel VIS
+    radiances (if present) and the clear sky composite VIS radiances.
+    The surface is assumed to be an isotropic reflector. The effects
+    of Rayleigh scattering and ozone absorption are calculated. No
+    retrieval is performed at night. <BR>
+<BR>
+    <LI>Retrieval of cloud top temperature and pressure from the
+    cloudy pixel IR radiance (if present) utilizing the surface temperature
+    from the clear sky composite and assuming clouds to be an opaque
+    single layer. <BR>
+<BR>
+    <LI>Retrieval of cloud optical thickness from the cloudy pixel
+    VIS radiances (if present) utilizing the surface reflectance
+    and assuming the cloud is a single, conservative Mie scattering
+    layer. Over oceans a model of surface reflectance is employed
+    in place of the retrieved surface reflectance. No retrieval is
+    performed at night. <BR>
+<BR>
+    <LI>If the optical thickness of the cloud is small, the cloud
+    top temperature is recalculated to account for transmission of
+    radiation from the surface using the retrieved optical thickness.
+    The revised cloud top pressure is then used to recalculate the
+    optical thickness. No adjustment is performed at night.
+  </OL>
+  <P><BR>
+  A number of consistency checks are made to determine if the radiative
+  analysis is performing as expected. These checks generally detect
+  problems with the data or errors in the cloud decision. Among
+  the most interesting results so far is the check on the altitude
+  adjustment. This procedure encounters difficulties with the optically
+  thinner clouds because the VIS radiance measurement accuracy
+  and the uncertainties in the calculation of the clear radiances
+  from the retrieved surface reflectance prevent a meaningful measurement
+  of the optical thickness. In other words, even though the cloud
+  may be &quot;obvious&quot; in the IR image, its VIS radiance
+  effect may be negligible. The presence of this condition is tested
+  by solving the radiative transfer equation of the minimum cloud
+  optical thickness consistent with the coldest possible cloud
+  top temperature (cloud top at the tropopause), the surface temperature
+  and the observed brightness temperature. If the retrieved optical
+  thickness is less than this value (often the retrieved value
+  is zero because there is no measurable difference between the
+  observed radiance and the clear radiance), then the cloud top
+  temperature is set to the coldest possible value and the optical
+  thickness is set to its minimum value. The success of this technique
+  appears good in some preliminary tests, but a refinement of this
+  approach is possible. <BR>
+<BR>
+  Interesting results also include the check on the surface temperature
+  retrieval when low cloud contamination of the clear sky radiances
+  is present. This refers to the effect of undetected clouds on
+  the surface temperature retrieval because the retrieval overestimates
+  the atmospheric emission over the higher, but mislabelled, cloud
+  tops. This causes the retrieved temperature to be colder than
+  the observed brightness temperature, the opposite of the expected
+  relationship. Further tests are underway to develop useful error
+  flags. <BR>
+<BR>
+  <U>C. Statistical Analysis</U> The average and variance of each
+  cloud and surface parameter are provided for the 280 km region.
+  The average value is reported directly,along with the total number
+  of pixels used to calculate it and the root mean square value.
+  The variance is calculated from the number of pixels, the average
+  value, and the root mean square value. Both the average and the
+  root mean square values are decoded in the same way. <BR>
+<BR>
+  The reported cloud parameters represent averages over all cloudy
+  pixels in each region at that time. These average values do not
+  indicate the structure of the clouds present, however. Original
+  ISCCP plans called for reporting the properties of five cloud
+  types: low, middle, high, cirrus, and deep convective clouds.
+  The latter two types were qualitatively defined to be optically
+  thin and thick high clouds, respectively. Consideration of how
+  best to define these types precisely, as well as studies of the
+  adequacy of this classification scheme to represent the actual
+  cloud structures, was part of a pilot study on the uses of ISCCP
+  data. Recommendations from that study were to make the definitions
+  more flexible and to preserve greater resolution in cloud top
+  location and cloud optical thickness. Thus, cloud type information
+  is presented in the C1 data by counting the number of cloudy
+  pixels with optical thicknesses and top pressures in each of
+  25 categories. (Only the five cloud top pressure categories exist
+  at night. These results are reported in the first optical thickness
+  class within each pressure category.) <BR>
+<BR>
+  Several features of this method of classification are:</P>
+  <OL>
+    <LI>Definitions of low clouds, for example, can be formulated
+    by combining or interpolating among the five cloud top pressure
+    categories. In particular the height categories can be adjusted
+    to the levels in a climate model. <BR>
+<BR>
+    <LI>Different definitions that depend on the optical thickness,
+    such as cirrus (i.e., &quot;thin&quot;, &quot;high&quot; clouds)
+    can be adopted. Users can construct their own cloud classes.
+<BR>
+<BR>
+    <LI>The mean values of optical thickness and top pressure are
+    assumed to be equal to the central value within each class. <BR>
+<BR>
+    <LI>The cloud top temperature can be obtained by interpolation
+    of the reported atmospheric temperature profile at the cloud
+    top pressure. <BR>
+<BR>
+    <LI>To allow for the diurnal studies, the number of VIS-only
+    cloudy pixels contributing to each cloud top pressure class is
+    reported separately. For diurnal comparisons, these numbers should
+    be subtracted from the totals reported in each pressure class.
+<BR>
+<BR>
+  </OL>
+  <P>A single C1 data file represents the merging of analysis results
+  from all available satellites within the three hour time period;
+  however, in one map cell the values from only one satellite are
+  reported. Each location has an established hierarchy of satellite
+  observations based on the variations of viewing geometry and
+  time coverage characteristic of each satellite. For low latitudes,
+  observations from the nearest geostationary satellite are preferred,
+  while the polar regions (poleward of 55 degrees latitude) are
+  covered only by the polar orbiter. If data from the primary geostationary
+  satellites are not available, then a secondary geostationary
+  satellite may be used if the viewing geometry is not too extreme.
+  If no geostationary data are available at low latitudes, then
+  polar orbiter data are used, if available. Since the time period
+  of each data set is 3 hours long, anywhere from zero to two polar
+  orbiter observations may be reported within this time period.
+  The satellite that contributes the specific results is identified
+  with a code number which is defined in the Volume ID file. <BR>
+<BR>
+  The basic objective of the ISCCP-C2 analysis is to summarize
+  the cloud analysis results (Stage C1 data) on a monthly time
+  scale. To preserve information about diurnal variability, the
+  results are first averaged over the calendar month, separately
+  for 00, 03, 06, 09, 12, 15, 18, and 21 GMT. These eight time
+  periods are referred to as the hour-monthly means. The number
+  of days of observations contributing to the average values is
+  recorded as the sixth parameter in each map grid cell. Then,
+  the hour-monthly mean values are averaged to obtain the monthly
+  mean values. Hour-monthly mean values which consist of less than
+  three daily observations are excluded from the monthly mean.
+  Before averaging over the eight hour-monthly mean time periods
+  a number of adjustments are made. <BR>
+<BR>
+  Averaging the quantities from Stage C1 data to produce the Stage
+  C2 data can be done in two ways, depending on the purpose. Some
+  quantities, such as cloud optical thickness or cloud top temperature,
+  are related to the effect of clouds on radiation in a non-linear
+  way. Thus, an average value meant to be indicative of the average
+  radiative effect of clouds must give equal weight to these values
+  proportional to their effect. Since these quantities were retrieved
+  from radiation measurements, this weighting is also related to
+  the variation of relative measurement precision over the range
+  of the parameters. All quantities in Stage C2 data are averaged
+  in this way, except for parameter 20, called PATH. For most parameters,
+  this weighting procedure produces an average value that is not
+  much different than that given by a simple linear average. This
+  is not the case for cloud optical thickness, where a simple linear
+  average produces a global monthly mean value that is about 60%
+  larger than that produced by an energy-weighted average. Parameter
+  17, TAU, gives the value which represents the average radiative
+  effect of the clouds. Since cloud optical thickness is proportional
+  to cloud water content, parameter 20, PATH, records the result
+  of a simple linear average of optical thickness values. For a
+  constant cloud particle size distribution (as assumed in the
+  retrieval of optical thicknesses), cloud water path, WP, is given
+  by <BR>
+<BR>
+  </P>
+  <P><CENTER>WP = [40/3]*[r~ * PATH]/Q &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kg/m**2</CENTER></P>
+  <P><BR>
+<BR>
+  where r~ is the average particle radius in cm, and Q is the normalized
+  Mie extinction efficiency at 0.6 micrometers wavelength. For
+  the cloud particle size distribution used, with r~ approximately
+  equal to -.001 cm,<BR>
+<BR>
+  </P>
+  <P><CENTER>WP = 6.292 PATH &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g/m**2</CENTER></P>
+  <P><BR>
+<BR>
+  5.3 Special Corrections/Adjustments. <BR>
+<BR>
+  The method used to reconstruct the variances utilizes the mean
+  and root mean square (rms) values of each quantity; however,
+  this approach does not retain enough precision to report small
+  variances accurately. In this version of C1 data, the variances
+  are only accurate to the nearest 10% of the mean value. Since
+  most variances are smaller than this amount, most variances are
+  reported to be zero. <BR>
+<BR>
+  The mean cloud properties reported in the C1 product are the
+  final values from the radiative analysis. This means that the
+  daytime values of cloud top temperature (TC) and cloud top pressure
+  (PC) have been altered by the effects of the VIS channel measurements.
+  Since the same adjustment is not performed at night, direct comparison
+  of the day and night values of cloud top temperature and pressure
+  must be interpreted with caution. However, the vertical distribution
+  of clouds can be reconstructed from cloud classes and the mean
+  IR radiance values. The visible only (VIS-ONLY) numbers can be
+  subtracted from the total number of pixels at each pressure level,
+  while the IR radiances can be used to estimate the cloud top
+  temperature and pressure without TAU corrections. <BR>
+<BR>
+  Producing the ISCCP-C2 product involved performing a number of
+  adjustments on the ISCCP-C1 data before determining the monthly
+  averages. The adjustments necessary included VIS adjustments
+  during daytime, VIS adjustments during nighttime, calibration
+  adjustments, standard adjustments, special METEOSAT adjustments,
+  and diurnal adjustments <BR>
+<BR>
+  VIS adjustments during daytime (Adj1): <BR>
+<BR>
+  In the Stage C1 data, two different versions of cloud amount
+  and cloud top temperature/pressure are reported for daytime conditions.
+  One version of cloud amount is obtained from the IR radiances
+  alone, as must be done for nighttime conditions; the other version
+  combines cloud detections from both the VIS and IR radiances.
+  IR radiances are insensitive to low-level clouds, especially
+  broken ones, the VIS radiances analysis detects more low-level
+  cloudiness than the IR analysis. Likewise, one version of the
+  cloud top temperature/pressure is obtained directly from the
+  IR radiances as is done for nighttime conditions and the other
+  version adjusts the values consistent with the cloud optical
+  thickness value retrieved from the VIS radiances. This adjustment
+  is significant only for optically thin clouds, which transmit
+  IR radiation from below the cloud and, consequently, appear to
+  have a higher temperature/pressure than they actually do. Thus,
+  the VIS/IR version is superior to the IR-only version. Stage
+  C2 data contain the VIS/IR versions of cloud amount, cloud top
+  temperature and cloud top pressure. <BR>
+<BR>
+  VIS adjustments during nighttime (Adj2): <BR>
+<BR>
+  The mean differences between the VIS/IR and IR-only results during
+  daytime conditions are used to adjust the nighttime results in
+  the hour-monthly mean data. Daytime differences between VIS/IR
+  and IR-only values of total cloud amount, mean cloud top pressure
+  and cloud top temperature are linearly interpolated over the
+  nighttime periods between the dusk and dawn values. This interpolated
+  difference is then added to the IR-only value during this time
+  period. The magnitude of these corrections is generally small.
+  The smaller (&lt;= 5%) cloud amount adjustments are distributed
+  nearly uniformly over the globe with values slightly higher over
+  ocean than over land. The larger adjustments occur in near coastal
+  regions, land and ocean, in low latitudes primarily associated
+  with tropical rain forests and marine stratus regimes. The unadjusted
+  cloud amount is reported as the last parameter in each map grid
+  cell. The cloud top pressure correction is positive where low
+  clouds predominate, primarily in marine stratus regimes over
+  oceans, and negative where high, thin clouds predominate, primarily
+  over land, especially in desert areas. <BR>
+<BR>
+  Interpolation to fill during nighttime (Adj3) <BR>
+<BR>
+  Values of the cloud optical thickness (both TAU and PATH) are
+  interpolated over the nighttime period between the dusk and dawn
+  values. <BR>
+<BR>
+  Standard adjustment (Adj4): <BR>
+<BR>
+  To produce Stage C1 data, results from several satellites are
+  merged into a single global dataset. In regions where more than
+  one satellite provides results, the merger process selects the
+  preferred satellite according to a specified hierarchy that favours
+  data continuity and observations made closer to nadir view. Frequency
+  histograms of the differences in the overlapping measurements
+  between all pairs of satellites are collected and the modal value
+  estimated from the average of the mode value and the three nearest
+  values above and below the mode value. These estimated differences
+  for each satellite, when compared to the reference polar orbiter,
+  are applied to adjust for small residual radiance calibration
+  differences. The corrected quantities in the hour-monthly mean
+  are: cloud top and surface temperature, cloud optical thickness
+  and water path, and surface reflectance. Magnitudes of these
+  corrections are illustrated in the table below. Actual calibration
+  adjustments for each month are reported in the record prefixes
+  for each parameter for each satellite. <BR>
+<BR>
+  The magnitude of the calibration adjustments applied to Stage
+  C2 data to remove small residual calibration differences are
+  shown here as the standard deviation and range of all corrections
+  applied to each satellite over the period July 1983 - February
+  1987. <BR>
+<BR>
+  <TABLE BORDER="0" CELLSPACING="2" CELLPADDING="0">
+    <TR>
+      <TD>Parameter</TD>
+      <TD>Std Dev</TD>
+      <TD>Range</TD>
+    </TR> 
+    <TR>
+      <TD>-----------------------------</TD>
+      <TD>-------</TD>
+      <TD>--------</TD>
+    </TR> 
+    <TR>
+      <TD>Cloud Top Temperature</TD>
+      <TD>0.74 K</TD>
+      <TD>+- 2.5 K</TD>
+    </TR> 
+    <TR>
+      <TD>Surface Temperature</TD>
+      <TD>1.10 K</TD>
+      <TD>+- 3.0 K</TD>
+    </TR> 
+    <TR>
+      <TD>Cloud Optical Thickness</TD>
+      <TD></TD>
+      <TD></TD>
+    </TR> 
+    <TR>
+      <TD>and Water Path</TD>
+      <TD>0.02</TD>
+      <TD>+- 0.08</TD>
+    </TR> 
+    <TR>
+      <TD>Surface Visible Reflectance</TD>
+      <TD>2%</TD>
+      <TD>+- 8%</TD>
+    </TR> 
+  </TABLE><BR>
+<BR>
+  Special METEOSAT adjustment (Adj5): <BR>
+<BR>
+  The spectral response of the METEOSAT &quot;visible&quot; channel
+  is wider than that of the other radiometers used in the ISCCP
+  analysis; normalization of METEOSAT radiances is done using spectrally
+  uniform targets (clouds and clear ocean areas). The spectral
+  response difference means that surface reflectances calculated
+  for vegetated land areas from METEOSAT are larger than for the
+  other satellites. This difference in surface reflectance is removed
+  in the hour-monthly mean dataset by using regression relations
+  that are obtained by comparing METEOSAT and NOAA measurements
+  as a function of vegetation type and season. A single relationship
+  that varies with season was found to represent differences as
+  a function of vegetation. Adjustment factors are applied for
+  each season and are given in the table below. Unadjusted values
+  can be recovered from Stage C2 data by multiplying by the slopes
+  (given in the table below) and adding the intercept values. <BR>
+<BR>
+  Adjustment factors applied to METEOSAT land surface reflectances
+  to reduce them to values measured at an approximate wavelength
+  of 0.6 +- 0.1 micrometers are shown in the table below. Seasons
+  are the standard three-month periods in the northern hemisphere.
+<BR>
+<BR>
+  Adjustment: Adjusted Value = (Original Value - Intercept)/Slope
+<BR>
+<BR>
+  </P>
+  <P><CENTER><TABLE BORDER="0" CELLSPACING="2" CELLPADDING="0">
+    <TR>
+      <TD>Season</TD>
+      <TD>Slope</TD>
+      <TD>Intercept</TD>
+    </TR> 
+    <TR>
+      <TD>------</TD>
+      <TD>-----</TD>
+      <TD>---------</TD>
+    </TR> 
+    <TR>
+      <TD>Winter</TD>
+      <TD>0.893</TD>
+      <TD>0.1154</TD>
+    </TR> 
+    <TR>
+      <TD>Spring</TD>
+      <TD>0.786</TD>
+      <TD>0.1135</TD>
+    </TR> 
+    <TR>
+      <TD>Summer</TD>
+      <TD>0.752</TD>
+      <TD>0.1290</TD>
+    </TR> 
+    <TR>
+      <TD>Fall</TD>
+      <TD>0.820</TD>
+      <TD>0.1362</TD>
+    </TR> 
+  </TABLE></CENTER></P>
+  <P><BR>
+<BR>
+  Diurnal adjustment (Adj6): <BR>
+<BR>
+  Before the hour-monthly means are combined into a monthly mean,
+  small corrections are made to account for incomplete sampling
+  of the diurnal variations of cloud and surface properties. An
+  incomplete sample is less than 8 hour-monthly observations at
+  low and middle latitudes. These adjustments are determined using
+  the zonally averaged variations of the quantities in local time
+  at all locations with eight hour-monthly mean values available.
+  The diurnal average is calculated for the number of samples actually
+  available and compared with the average of eight samples to determine
+  the effect of sub-sampling on the diurnal average. The calculations
+  are performed within each latitude interval, separately for land
+  and water areas. The quantities that are adjusted are the total
+  cloud amount, cloud top temperature and pressure, cloud optical
+  thickness and water path, and the surface temperature. These
+  adjustments affect only the monthly mean values and are not applied
+  to the individual hour-monthly means. <BR>
+<BR>
+  5.4 Processing Changes. <BR>
+<BR>
+  <U>A. Cloud Detection</U></P>
+  <OL>
+    <LI>Clear Sky Composites <BR>
+    Since diurnal-uniform quality is desired, algorithm design has
+    emphasized improvements in the accuracy of the IR tests. A number
+    of very good techniques for improving the accuracy of the clear
+    VIS radiance composite (cf., Rossow et al., 1985b) already exist.
+    In addition, accurate models of the clear VIS radiances over
+    ocean are available (Minnis and Harrison, 1984). Relatively good
+    models of the land surface reflectance are also being constructed
+    (see Matthews and Rossow, 1987, and references therein). Thus,
+    to preserve the uniformity of the IR dependent results, while
+    improving the daylight analysis results, the final clear-sky
+    composite will be modified using the ocean model and the stable
+    statistics of the land surface reflectances (Matthews and Rossow,
+    1987). All results dependent on VIS tests will be held separately
+    to facilitate diurnal studies. A comparison of the IR-only results
+    with the full daytime results will also permit estimates of the
+    errors derived from the nighttime analysis. Early tests show
+    that removing cloud contamination only changes the clear-sky
+    IR radiance by 1-3 degrees K. <BR>
+<BR>
+    Spatial variations of radiances can also be caused by changes
+    in surface properties. Thus, the clear-sky composite will also
+    be modified to avoid comparisons where snow or sea ice cover
+    has changed. <BR>
+<BR>
+    An improved version of the statistics for the clear-sky condition
+    will also be implemented. The primary purpose of the revision
+    is to avoid tests that depend on single data values. For example,
+    the image from GOES-East for 19 July at 12 GMT was affected by
+    a spurious gain change in the IR channel. This event caused 50
+    degree K colder than normal brightness temperatures, and caused
+    the algorithm to classify the image as cloudy. Although the B3
+    data are undergoing quality inspection that should remove this
+    &quot;large&quot; error, small errors of this type will be detected
+    using statistical intercomparisons of the clear radiances over
+    small regions. Thus, the alternative method will allow for identification
+    and elimination of spurious data values. <BR>
+<BR>
+    <LI>Threshold Decision <BR>
+    The only planned refinements in the threshold step are the possible
+    addition of two extra values for snow and ice surfaces and the
+    implementation of thresholds that are linear in radiance. Many
+    algorithms apply thresholds in terms of physical quantities.
+    However, not all the radiometers made measurements that are linear
+    in these quantities. To properly account for the radiometer performance
+    and the changing sensitivity to clouds under different circumstances,
+    the thresholds will be made linear in measured radiances. This
+    actually introduces no change for the VIS channel; however, the
+    IR radiance data are currently handled as brightness temperatures
+    rather than linear counts. This change is most important in the
+    polar regions where the radiometers are less sensitive to clouds
+    because of the very low temperatures. This approach is more consistent
+    with the interpretation of the threshold magnitude as an estimate
+    of the clear sky radiance uncertainty. In addition, some refinement
+    of the uncertainty and error counts discussed above may occur
+    after study of the distribution and behaviour of these quantities.
+  </OL>
+  <P><BR>
+  <U>B. Radiative Transfer Model Analysis</U> The planned refinements
+  for the radiative transfer model analysis are intended to improve
+  the reporting of the error checks thereby providing better documentation
+  of algorithm performance. In particular, those &quot;error&quot;
+  conditions that indicate cloud contamination of the clear radiances
+  or improper labelling of the pixels will be added to the summary
+  statistics to provide internal error estimates. <BR>
+<BR>
+  There have been some minor changes to the radiative analysis
+  to prevent unnecessary data losses. The most noticeable problem
+  in these results is that small uncertainties in the retrieval
+  process can cause very low clear radiances to produce surface
+  reflectances that are slightly less than zero. The current code
+  discards these data causing a loss of data near the terminator
+  in the images. This result suggests that the daytime analysis
+  should be ended at a somewhat larger solar zenith angle (the
+  cutoff is currently 81 degrees). However, these small negative
+  values are also valid, but &quot;inaccurate&quot; measurements
+  of a small value; hence, processing can proceed by setting small
+  negative values to zero. Another problem is that the B3 data
+  contain no geostationary VIS images for the three time periods
+  near local midnight, even when small portions of the image actually
+  have solar zenith angles larger than the cut-off value. The current
+  analysis code interprets this situation as a loss of data; hence,
+  portions of these images were unnecessarily discarded. Changes
+  in the software logic will avoid these problems. <BR>
+<BR>
+  <U>C. Statistical Analysis</U> Based on further accuracy tests
+  and studies of the information content of the statistics, there
+  may be some refinements or changes in definitions. Suggested
+  changes include adding more pressure categories in the cloud
+  classification, adding an alternative VIS cloud parameter equivalent
+  to the surface reflectance, and improving the height adjustment
+  information to indicate how many pixels actually changed height
+  categories.</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="quality"></A>6. QUALITY ASSESSMENT</H3>
+
+<BLOCKQUOTE>
+  <P>6.1 Data Validation by Producer.<BR>
+<BR>
+  Comparisons of parameters retrieved from the ISCCP analysis to
+  other measurements of the same or related parameters shows that
+  the cloud amounts are generally accurate to within 5-10% random
+  and &lt;5% bias, except in polar regions (where the ISCCP cloud
+  amounts are lower limits), over land areas in winter and at night
+  (where ISCCP values are biased low by about 5-7%). Cloud top
+  temperatures are accurate to within 2 K, with the exception of
+  optical thin cirrus clouds, where the error is about 5-8K. Cloud
+  optical thicknesses are accurate to about 10%, except for optically
+  thin cirrus, where errors are about 25-40%. Surface temperatures
+  are accurate to about 2 K over oceans and about 4 K over land.
+  Surface visible reflectances are accurate to about 2-4%. <BR>
+<BR>
+  6.2 Confidence Level/Accuracy Judgment.<BR>
+<BR>
+  The overlapping portions of the first C1 data provide an opportunity
+  to compare the normalized calibrations of the geostationary satellites
+  directly. This comparison, though still being studied, does not
+  show any significant discrepancies for July 1983. The comparison
+  results suggest an uncertainty in the normalizations of no more
+  than 1-3 % in visible radiances and 1-3 degrees K in IR radiances.
+  This cross-check procedure will be incorporated into the operational
+  C1 data production to provide further monitoring of the radiance
+  calibrations. <BR>
+<BR>
+  6.3 Usage Guidance.<BR>
+<BR>
+  The C1 data products are intended to meet two objectives: 1)
+  to report the &quot;results&quot; of the cloud analysis and 2)
+  to aid in the identification of statistics which are meaningful
+  to cloud climatology studies. The latter objective will be met
+  by providing fewer statistics and more detail. This detail will
+  be useful for later validation studies, algorithm improvements
+  and radiative model development efforts.</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="contact"></A>7. CONTACTS FOR DATA PRODUCTION INFORMATION</H3>
+
+<BLOCKQUOTE>
+  <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dr.
+  William B. Rossow (or Alison Walker)<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ISCCP
+  Global Processing Center<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NASA
+  Goddard Institute for Space Studies<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2880
+  Broadway<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;New
+  York, NY 10025<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS: (212) 678-5567<BR>
+  </P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="output"></A>8. OUTPUT PRODUCTS AND AVAILABILITY</H3>
+
+<BLOCKQUOTE>
+  <P>8.1 Tape Products <BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;8.1.1 Stage C1 (ISCCP-C1) <BR>
+<BR>
+  Medium/Specification: C1 data are written in &quot;IBM Standard
+  Label&quot; format on 9-track, 6250-bpi magnetic tapes. <BR>
+<BR>
+  Format and Content: Each actual data file is accompanied by additional,
+  very short header and trailer files. Thus, users whose computer
+  systems do not use these additional files should start reading
+  with the second actual file on the tape and read every third
+  file thereafter. All C1 data files are coded entirely as 1-byte
+  binary values. Each data file is composed of 67 data records,
+  13,200 bytes in length. There is no header record in a data file.
+  Instead, each record begins with a 132-byte prefix that identifies
+  the contents of that record. The prefix is followed by 99 map
+  cells of data, each represented by 132 bytes. The 132 quantities
+  are listed in Item 14 of this catalog. <BR>
+<BR>
+  Data Quantity/Rate: 2 tapes/month. <BR>
+<BR>
+  Status: The tapes covering the period 07/01/83 through 08/30/90
+  are available. The coverage of the C1 products includes the FIRE
+  (CIRRUS and MARINE STRATOCUMULUS) regions and time periods, 10/01/86
+  - 11/30/86 and 06/01/87 - 07/31/87. <BR>
+<BR>
+  Plans/Schedule: NCDS will continue to support and archive these
+  data. <BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;8.1.2 Stage C2 (ISCCP-C2) <BR>
+<BR>
+  Medium/Specification: C2 data are written in &quot;IBM Standard
+  Label&quot; format on 9-track, 6250-bpi magnetic tapes <BR>
+<BR>
+  Format and Content: Each actual data file is accompanied by additional,
+  very short header and trailer files. Thus, users whose computer
+  systems do not use these additional files should start reading
+  with the second actual file on the tape and read every third
+  file thereafter. All C1 data files are coded entirely as 1-byte
+  binary values. Each data file is composed of 67 data records,
+  7,200 bytes in length. There is no header record in a data file.
+  Instead, each record begins with a 72-byte prefix that identifies
+  the contents of that record. The prefix is followed by 99 map
+  cells of data, each represented by 72 bytes. <BR>
+<BR>
+  Data Quantity/Rate: 1 tape/year. <BR>
+<BR>
+  Status: Tapes covering the period July 1, 1983 through December
+  31, 1990 are available. <BR>
+<BR>
+  Plans/Schedule: NCDS will continue to support and archive these
+  data. <BR>
+<BR>
+  8.2 Film Products. <BR>
+<BR>
+  A poster photograph exhibiting six of the ISCCP parameters for
+  July 1983 is available from the Goddard Institute of Space Studies.
+<BR>
+<BR>
+  8.3 Other Products.<BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;8.3.1 Stage C2 (ISCCP-C2) Monthly Averages
+  and Summary Statistics for ISCCP-C2 in Common Data Format (CDF).<BR>
+<BR>
+  Medium/Specification: Magnetic disk <BR>
+<BR>
+  Format and Content: The data are stored in a special data-set-independent
+  format, designated the Common Data Format (CDF). CDF was developed
+  as a uniform method of storing and retrieving data on magnetic
+  disk. The CDF contains data and descriptions about the data.
+  A standard software package called the &quot;CDF Library&quot;
+  allows a user within an NCDS session to create and access these
+  data and descriptions. These data contain the monthly averages
+  and summary statistics for the ISCCP-C1 data at the same spatial
+  resolution, including mean diurnal variations, and can be accessed
+  within the Data Applications subsystem of NCDS. <BR>
+<BR>
+  Data Quantity/Rate: Approximately 330,000 512-byte blocks in
+  72 files. <BR>
+<BR>
+  Status: Available online within NCDS. <BR>
+<BR>
+  Plans/Schedule: NCDS will continue to support this data set online,
+  and update as additional data are received. <BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;8.3.2 The Greenhouse Effect Detection
+  Experiment (GEDEX) CD-ROM <BR>
+<BR>
+  Medium/Specifications: CD-ROM in ISO 9660 standard <BR>
+<BR>
+  Format and Content: The data on this disk will be stored in a
+  special data-set-independent format, designated as the Common
+  Data Format (CDF). CDF was developed as a uniform method of storing
+  and retrieving data on disk. The CDF contains data and descriptions
+  about the data. A standard software package called the &quot;CDF
+  Library&quot; will be included with this CD-ROM allowing a user
+  to create and access these data and descriptions. The CD-ROM
+  will consist of many different data sets related to the Greenhouse
+  Effect, including the ISCCP-C2 data set, and the accompanying
+  NCDS data set documentation. Some of the parameters that compose
+  this data set have been rederived in a manner different than
+  was previously done. These changes are presented on the GEDEX
+  CD-ROM. The low cloud amounts are derived from a combination
+  of cumulus and stratus measurements. The amount of middle clouds
+  was derived from a combination of altostratus and nimbostratus
+  measurements. The amount of high clouds was derived from measurements
+  of cirrus, cirrostratus, and deep convective clouds. Although
+  this change in the derivation of these three parameters introduces
+  a small diurnal effect, the representation of the vertical cloud
+  distribution is improved. <BR>
+<BR>
+  Data Quantity/Rate: One CD-ROM disk set <BR>
+<BR>
+  Status: Release date for this product is scheduled for early
+  1992. <BR>
+<BR>
+  Plans/Schedule: Users interested in this product should contact
+  the NCDS/Goddard DAAC User Support Office for more details. <BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;8.3.3 The ISCCP-C2 CD-ROM <BR>
+<BR>
+  Medium/Specifications: CD-ROM in ISO 9660 standard <BR>
+<BR>
+  Format and Content: The data on this disk consist of the ISCCP-C2
+  data, read routines and associated documentation. Documentation
+  for ISCCP Level C1, ISCCP TOVS, and the ISCCP Ice/Snow data is
+  also included. <BR>
+<BR>
+  Data Quantity/Rate: One CD-ROM disk <BR>
+<BR>
+  Status: Release date for this product is scheduled for late spring
+  1992. <BR>
+<BR>
+  Plans/Schedule: Users interested in this product should contact
+  the NCDS/Goddard DAAC User Support Office for more details.</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="access"></A>9. DATA ACCESS</H3>
+
+<BLOCKQUOTE>
+  <P>9.1 Archive Identification <BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;9.1.1<BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ISCCP
+  Central Archive<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Satellite
+  Data Service Division (SDSD)<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NOAA/NESDIS/NCDC<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Princeton
+  Executive Square, Suite 100<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Washington,
+  DC 20233<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS: (301) 763-8400<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Telex:
+  RCA 248376 OBSWUR or TRT 197683 KWBC<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS Telefax: (301) 763-8443 <BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;9.1.2<BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Goddard
+  DAAC User Support Office<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Code
+  935<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NASA
+  Goddard Space Flight Center<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Greenbelt,
+  Maryland 20771<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS: (301) 286-3209<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INTERNET:
+  NCDSUSO@NSSDCA.GSFC.NASA.GOV<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NSI
+  DECnet: NCF::NCDSUSO<BR>
+<BR>
+  9.2 Procedures for Obtaining Data. <BR>
+<BR>
+  Users can obtain the ISCCP-C1 and ISCCP-C2 through NASA's Climate
+  Data System (NCDS). To use NCDS, you must be able to access the
+  National Space Science Data Center (NSSDC) Computer Facility
+  (NCF) and obtain an NCF/VAX user account. Enquiries for ISCCP-C1
+  and ISCCP-C2 data from NCDS should be directed to: <BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Goddard
+  DAAC User Support Office<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Code
+  935<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NASA
+  Goddard Space Flight Center<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Greenbelt,
+  Maryland 20771<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS: (301) 286-3209<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INTERNET:
+  NCDSUSO@NSSDCA.GSFC.NASA.GOV<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NSI
+  DECnet: NCF::NCDSUSO<BR>
+<BR>
+<BR>
+  9.3 NCDS Status/Plans.<BR>
+<BR>
+  The NASA Climate Data System (NCDS) supports the ISCCP-C2 monthly
+  data set online in Common Data Format (CDF). The Common Data
+  Format is data-set independent, which allows the application
+  of a single set of analysis tools regardless of the original
+  data format. To access these data, specify the following CDF
+  within the Data Application subsystem of the NCDS:<BR>
+<BR>
+  </P>
+  <P><CENTER>ISCCP-C2_MONTHLY</CENTER></P>
+  <P><BR>
+<BR>
+  The NCDS provides access to the ISCCP-C1 and the ISCCP-C2 HOUR-MONTHLY
+  data through the Data Access subsystem. To access these data,
+  specify the data set &quot;ISCCP-C1&quot; or &quot;ISCCP-C2&quot;
+  within the search criteria screen of the NCDS Data Access subsystem.</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="contact2"></A>10. CONTACTS FOR ARCHIVE/DATA ACCESS
+INFORMATION</H3>
+
+<BLOCKQUOTE>
+  <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;User
+  Services Branch<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Satellite
+  Data Services Division (SDSD)<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NOAA/NESDIS/NCDC<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Princeton
+  Executive Square, Suite 100<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Washington,
+  DC 20233 <BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS: (301) 763-8400<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Telex:
+  RCA 248376 OBSWUR or TRT 197683 KWBC<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS Telefax: (301) 763-8443<BR>
+<BR>
+  For information on access to NCDS contact:<BR>
+<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Goddard
+  DAAC User Support Office<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Code
+  935<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NASA
+  Goddard Space Flight Center <BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Greenbelt,
+  Maryland 20771 <BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Commercial
+  and FTS: (301) 286-3209<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INTERNET:
+  NCDSUSO@NSSDCA.GSFC.NASA.GOV<BR>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NSI
+  DECnet: NCF::NCDSUSO<BR>
+  </P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="ref"></A>11. REFERENCES</H3>
+
+<BLOCKQUOTE>
+  <P>11.1 Satellite/Instrument/Data Processing Documentation<BR>
+<BR>
+  a.&nbsp;&nbsp;Rossow, W.B., L.C. Garder, P-J. Lu and A.W. Walker,
+  1991. &quot;International Satellite Cloud Climatology Project
+  (ISCCP) Documentation of Cloud Data.&quot; WMO/TD No. 266 (revised).
+  World Meteorological Organization, Geneva, 76 pp. plus three
+  appendices. <BR>
+<BR>
+  b.&nbsp;&nbsp;Rossow, W.B., E. Kinsella, A. Wolf, L. Garder,
+  July 1985, revised August 1987. &quot;International Satellite
+  Cloud Climatology Project Description of Reduced Resolution Radiance
+  Data.&quot; WMO TD-No. 58, World Meteorological Organization/
+  International Council of Scientific Unions.<BR>
+<BR>
+  c.&nbsp;&nbsp;World Climate Research Programme, November, 1982.
+  &quot;The International Satellite Cloud Climatology Project Preliminary
+  Implementation Plan.&quot; World Meteorological Organization.
+  WCP-35.<BR>
+<BR>
+  11.2 Journal Articles and Study Reports<BR>
+<BR>
+  a.&nbsp;&nbsp;Hirai, M. et al., 1975. &quot;Development of Geostationary
+  Meteorological Satellite (GMS) of Japan.&quot; Proc. of the Eleventh
+  International Symposium of Space Technology and Science, Tokyo,
+  Japan, 461-465.<BR>
+<BR>
+  b.&nbsp;&nbsp;Matthews, E., and W.B. Rossow, 1987. &quot;Regional
+  and Seasonal Variations of Surface Reflectance from Satellites
+  Observations at 0.6 um. J. Climate Appl. Meteor., 26: 170-202.<BR>
+<BR>
+  c.&nbsp;&nbsp;Minnis, P., and E.F. Harrison, 1984. &quot;Diurnal
+  Variability of Regional Cloud and Clear Sky Radiative Parameters
+  Derived from GOES Data. Part I: Analysis Method.&quot; J. Climate
+  Appl. Meteor., 23: 993-1011.<BR>
+<BR>
+  d.&nbsp;&nbsp;Raschke, E., W. Rossow and R. Schiffer, 1987. &quot;The
+  International Satellite Cloud Climatology Project - Preliminary
+  Results and its Potential Aspects.&quot; Advanced Space Research,
+  7: (3)137-(3)145.<BR>
+<BR>
+  e.&nbsp;&nbsp;Rossow, W.B., and L. Garder, 1984. &quot;Selection
+  of Map Grid for Data Analysis and Archival.&quot; J. Climate
+  Appl. Meteor., 23: 1253-1257.<BR>
+<BR>
+  f.&nbsp;&nbsp;Rossow, W.B., F. Mosher, E. Kinsella, A. Arking,
+  M. Desbois, E. Harrison, P. Minnis, E. Ruprecht, G. Seze, C.
+  Simmer and E. Smith, 1985. &quot;ISCCP Cloud Algorithm Intercomparison.&quot;
+  J. Climate Appl. Meteor., 24: 877-903.<BR>
+<BR>
+  g.&nbsp;&nbsp;Rossow, W.B., 1989. &quot;Measuring Cloud Properties
+  from Space: A Review.&quot; J. of Climate, 2: 201-213.<BR>
+<BR>
+  h.&nbsp;&nbsp;Rossow, W.B., L.C. Garder, and L.C. Lacis, 1989.
+  &quot;Global, Seasonal Cloud Variations from Satellite Radiance
+  Measurements, Part I: Sensitivity of Analysis.&quot; J. of Climate,
+  2: 419-458.<BR>
+<BR>
+  i.&nbsp;&nbsp;Rossow, W.B., C.L. Brest, and L.C. Garder, 1989.
+  &quot;Global, Seasonal Surface Variations from Satellite Radiance
+  Measurements.&quot; J. of Climate, 2: 214-247.<BR>
+<BR>
+  j.&nbsp;&nbsp;Rossow, W.B., and R.A. Schiffer, 1991. &quot;ISCCP
+  Cloud Data Products.&quot; Bull. Amer. Meteor. Soc., 72: 2-20.<BR>
+<BR>
+  k.&nbsp;&nbsp;Schiffer, R.A., and W.B. Rossow, 1983. &quot;The
+  International Satellite Cloud Climatology Project (ISCCP) --
+  The First Project of the World Climate Research Program.&quot;
+  Bull. Amer. Meteor. Soc., 64: 779-784.<BR>
+<BR>
+  l.&nbsp;&nbsp;Schiffer, R.A., and W.B. Rossow, 1985. &quot;ISCCP
+  Global Radiance Data Set. A New Resource for Climate Research.&quot;
+  Bull. Amer. Meteor. Soc., 66: 1498-1505.<BR>
+<BR>
+  m.&nbsp;&nbsp;Seze, G., and M. Desbois, 1987. &quot;Cloud Cover
+  Analysis from Satellite Imagery using Spatial and Temporal Characteristics
+  of the Data.&quot; J. Climate Appl. Meteor., 26: 287-303.<BR>
+<BR>
+  n.&nbsp;&nbsp;Seze, G., and W.B. Rossow, 1987. &quot;Time-cumulated
+  Visible and Infrared Histograms used as Descriptor of Cloud Cover.&quot;
+  Advanced Space Research, 7: (3)155-(3)158.<BR>
+<BR>
+  o.&nbsp;&nbsp;Seze, G., and W.B. Rossow, 1991. &quot;Time-cumulated
+  Visible and Infrared Radiance Histograms Used as Descriptors
+  of Surface and Cloud Variations.&quot; Int. J. Remote Sensing,
+  12: 877-920.<BR>
+<BR>
+  p.&nbsp;&nbsp;Seze, G., and W.B. Rossow, 1991. &quot;Effects
+  of Satellite Data Resolution on Measuring the Space/Time Variations
+  of Surfaces and Clouds.&quot; Int. J. Remote Sensing, 12: 921-952.<BR>
+<BR>
+  11.3 Archive/DBMS Usage Documentation<BR>
+<BR>
+  a.&nbsp;&nbsp;Olsen, L.M, J.W. Closs, and F.E. Corprew, November
+  1991. &quot;NASA's Climate Data System Primer: Version 4.0.&quot;
+  EOS DAAC, NASA Goddard Space Flight Center, Greenbelt, Maryland.<BR>
+<BR>
+  b.&nbsp;&nbsp;Rossow, W.B., L.C. Garder, P-J. Lu and A.W. Walker,
+  1991. &quot;International Satellite Cloud Climatology Project
+  (ISCCP) Documentation of Cloud Data.&quot; WMO/TD No. 266 (revised).
+  World Meteorological Organization, Geneva, 76 pp. plus three
+  appendices.<BR>
+<BR>
+  </P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="relate"></A>12. RELATED DATA SETS</H3>
+
+<BLOCKQUOTE>
+  <P>The Cloud Product from Nimbus-7 THIR is available through
+  the NASA Climate Data System (NCDS). Specify the data set &quot;CMATRIX&quot;
+  in the search criteria screen of the Data Access subsystem of
+  NCDS. The NCDS also supports tape copies at the file level for
+  the ISCCP-B3 product.</P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="sample"></A>13. SUMMARY/SAMPLE</H3>
+
+<BLOCKQUOTE>
+  <P>Sample Common Data Format (CDF) data sets are available through
+  NCDS. The CDF is a special data-set independent format that converts
+  data to a format that allows storage and retrieval regardless
+  of the scaling or precision of the original data. The CDF data
+  sets are accessible via the CDF Browse, CDF List, and Graphics
+  options within the Data Applications subsystem of the NCDS. To
+  view these sample data sets specify one of the following:<BR>
+<BR>
+  </P>
+  <P><CENTER>NCDS$SMPL:ISCCP-C1_CLDPIXEL<BR>
+  NCDS$SMPL:ISCCP-C1_CLD_SFC<BR>
+  NCDS$SMPL:ISCCP-C2_HOUR-MONTHLY</CENTER></P>
+  <P><BR>
+<BR>
+  A sample plot is available for the ISCCP-C1 and ISCCP-C2 data
+  sets. They are accessible via the Graphics option of the Data
+  Manipulation subsystem of the NCDS. To view this sample plot,
+  specify the plot files:<BR>
+<BR>
+  </P>
+  <P><CENTER>NCDS$DEMO:ISCCP-C1<BR>
+  NCDS$DEMO:ISCCP-C2</CENTER></P></BLOCKQUOTE>
+
+<P><BR>
+<BR>
+</P>
+
+<H3><A NAME="note"></A>14. NOTES</H3>
+
+<BLOCKQUOTE>
+  <P>14.1 NCDS has divided the ISCCP-C1 data set into two datatypes:
+  CLD_SFC and CLDPIXEL. CLD_SFC holds the cloud and surface properties
+  and mean radiances data, and CLDPIXEL holds the pixel data. NCDS
+  has divided the ISCCP-C2 data set into two datatypes: MONTHLY
+  and HOUR-MONTHLY. MONTHLY contains the monthly means, and HOUR-MONTHLY
+  contains the 3 hour monthly means for 00, 03, 06, 09, 12, 15,
+  18, 21 GMT.<BR>
+<BR>
+  The ice/snow and atmospheric profiles are supported as separate
+  data sets: ISCCP_IS and ISCCP-TOVS, respectively.<BR>
+<BR>
+  These are the variables included for the ISCCP-C1 Stage C1 tape:<BR>
+<BR>
+  Byte # &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contents<BR>
+<BR>
+  Location information:<BR>
+<BR>
+  1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Latitude
+  index (equal-area)<BR>
+  2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Longitude
+  index (equal-area)<BR>
+  3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lower
+  longitude index (2.5 deg lat/lon)<BR>
+  4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upper
+  longitude index (2.5 deg lat/lon)<BR>
+<BR>
+  Cloud amount:<BR>
+<BR>
+  5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total
+  number of pixels<BR>
+  6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of cloudy pixels<BR>
+  7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of IR-cloudy pixels<BR>
+  8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of marginal IR-cloudy pixels<BR>
+  9 (d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of marginal VIS/IR-cloudy pixels<BR>
+  10 (d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of IR-only-cloudy pixels<BR>
+<BR>
+  Identification, snow/ice and viewing geometry:<BR>
+<BR>
+  11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Day/Night/Land/Water/Coast
+  code<BR>
+  12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Satellite
+  identification<BR>
+  13&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Snow/ice
+  cover percent<BR>
+  14 (d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cosine
+  of solar zenith angle (MUO = 0-100)<BR>
+  15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cosine
+  of satellite zenith angle (MUE = 0-100)<BR>
+  16 (d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relative
+  azimuth angle (PHI = 0 - 180 degrees)<BR>
+<BR>
+  Clear sky quality information:<BR>
+<BR>
+  17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels with long term statistics<BR>
+  18 (d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels from cloud contaminated region (VIS)<BR>
+  19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels cooler than clear IR<BR>
+  20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels warmer than clear IR<BR>
+  21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels much warmer than clear IR<BR>
+  22 (d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of clear IR pixels brighter than clear VIS<BR>
+  23 (d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of clear IR pixels darker than clear VIS<BR>
+  24 (d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of clear IR pixels much darker than clear VIS<BR>
+  25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of clear pixels showing IR cloud contamination in RAD ANAL<BR>
+<BR>
+  PC distribution (UNADJUSTED PC)<BR>
+<BR>
+  26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;5 &lt; PC &lt; 180 mb<BR>
+  27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;180 &lt; PC &lt; 310 mb<BR>
+  28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;310 &lt; PC &lt; 440 mb<BR>
+  29&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;440 &lt; PC &lt; 560 mb<BR>
+  30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;560 &lt; PC &lt; 680 mb<BR>
+  31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;680 &lt; PC &lt; 800 mb<BR>
+  32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;800 &lt; PC &lt; 1000 mb<BR>
+<BR>
+  PC distribution (VIS-ONLY CLOUDY, UNADJUSTED PC)<BR>
+<BR>
+  33(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;5 &lt; PC &lt; 180 mb<BR>
+  34(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;180 &lt; PC &lt; 310 mb<BR>
+  35(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;310 &lt; PC &lt; 440 mb<BR>
+  36(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;440 &lt; PC &lt; 560 mb<BR>
+  37(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;560 &lt; PC &lt; 680 mb<BR>
+  38(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;680 &lt; PC &lt; 800 mb<BR>
+  39(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;800 &lt; PC &lt; 1000 mb<BR>
+<BR>
+  PC/TAU distribution (ADJUSTED PC)<BR>
+<BR>
+  40(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;5 &lt; PC &lt; 180 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.02
+  &lt; TAU &lt; 1.27<BR>
+  41(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;5 &lt; PC &lt; 180 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.27
+  &lt; TAU &lt; 3.55<BR>
+  42(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;5 &lt; PC &lt; 180 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.55
+  &lt; TAU &lt; 9.38<BR>
+  43(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;5 &lt; PC &lt; 180 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.38
+  &lt; TAU &lt; 22.63<BR>
+  44(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;5 &lt; PC &lt; 180 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.63
+  &lt; TAU &lt; 119.59<BR>
+  45(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;180 &lt; PC &lt; 310 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.02
+  &lt; TAU &lt; 1.27<BR>
+  46(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;180 &lt; PC &lt; 310 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.27
+  &lt; TAU &lt; 3.55<BR>
+  47(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;180 &lt; PC &lt; 310 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.55
+  &lt; TAU &lt; 9.38<BR>
+  48(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;180 &lt; PC &lt; 310 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.38
+  &lt; TAU &lt; 22.63<BR>
+  49(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;180 &lt; PC &lt; 310 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.63
+  &lt; TAU &lt; 119.59<BR>
+  50(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;310 &lt; PC &lt; 440 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.02
+  &lt; TAU &lt; 1.27<BR>
+  51(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;310 &lt; PC &lt; 440 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.27
+  &lt; TAU &lt; 3.55<BR>
+  52(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;310 &lt; PC &lt; 440 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.55
+  &lt; TAU &lt; 9.38<BR>
+  53(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;310 &lt; PC &lt; 440 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.38
+  &lt; TAU &lt; 22.63<BR>
+  54(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;310 &lt; PC &lt; 440 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.63
+  &lt; TAU &lt; 119.59<BR>
+  55(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;440 &lt; PC &lt; 560 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.02
+  &lt; TAU &lt; 1.27<BR>
+  56(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;440 &lt; PC &lt; 560 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.27
+  &lt; TAU &lt; 3.55<BR>
+  57(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;440 &lt; PC &lt; 560 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.55
+  &lt; TAU &lt; 9.38<BR>
+  58(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;440 &lt; PC &lt; 560 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.38
+  &lt; TAU &lt; 22.63<BR>
+  59(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;440 &lt; PC &lt; 560 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.63
+  &lt; TAU &lt; 119.59<BR>
+  60(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;560 &lt; PC &lt; 680 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.02
+  &lt; TAU &lt; 1.27<BR>
+  61(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;560 &lt; PC &lt; 680 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.27
+  &lt; TAU &lt; 3.55<BR>
+  62(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;560 &lt; PC &lt; 680 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.55
+  &lt; TAU &lt; 9.38<BR>
+  63(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;560 &lt; PC &lt; 680 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.38
+  &lt; TAU &lt; 22.63<BR>
+  64(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;560 &lt; PC &lt; 680 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.63
+  &lt; TAU &lt; 119.59<BR>
+  65(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;680 &lt; PC &lt; 800 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.02
+  &lt; TAU &lt; 1.27<BR>
+  66(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;680 &lt; PC &lt; 800 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.27
+  &lt; TAU &lt; 3.55<BR>
+  67(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;680 &lt; PC &lt; 800 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.55
+  &lt; TAU &lt; 9.38<BR>
+  68(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;680 &lt; PC &lt; 800 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.38
+  &lt; TAU &lt; 22.63<BR>
+  69(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;680 &lt; PC &lt; 800 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.63
+  &lt; TAU &lt; 119.59<BR>
+  70(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;800 &lt; PC &lt; 1000 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.02
+  &lt; TAU &lt; 1.27<BR>
+  71(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;800 &lt; PC &lt; 1000 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.27
+  &lt; TAU &lt; 3.55<BR>
+  72(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;800 &lt; PC &lt; 1000 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.55
+  &lt; TAU &lt; 9.38<BR>
+  73(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;800 &lt; PC &lt; 1000 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.38
+  &lt; TAU &lt; 22.63<BR>
+  74(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number
+  of pixels&nbsp;&nbsp;&nbsp;800 &lt; PC &lt; 1000 mb&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22.63
+  &lt; TAU &lt; 119.59<BR>
+<BR>
+  Mean cloud properties: <BR>
+<BR>
+  75&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  PC for IR-cloudy pixels<BR>
+  76&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sigma-PC
+  for IR-cloudy pixels<BR>
+  77&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  PC for marginal IR-cloudy pixels<BR>
+  78(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  PC for VIS/IR-cloudy pixels<BR>
+  79(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  PC for marginal VIS/IR-cloudy pixels<BR>
+  80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  TC for IR-cloudy pixels<BR>
+  81&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sigma-TC
+  for IR-cloudy pixels<BR>
+  82&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  TC for marginal IR-cloudy pixels<BR>
+  83(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  TC for VIS/IR-cloudy pixels<BR>
+  84(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  TC for marginal VIS/IR-cloudy pixels<BR>
+  85(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  TAU for VIS/IR-cloudy pixels<BR>
+  86(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sigma-TAU
+  for VIS/IR-cloudy pixels<BR>
+  87(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  TAU for marginal IR-cloudy pixels<BR>
+  88(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  TAU for marginal VIS/IR-cloudy pixels<BR>
+<BR>
+  Mean surface properties: <BR>
+<BR>
+  89&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  TS from clear sky composite<BR>
+  90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  TS for IR-clear pixels<BR>
+  91&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sigma-TS
+  for IR-clear pixels<BR>
+  92(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  TS for VIS/IR-clear pixels<BR>
+  93(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  RS from clear sky composite<BR>
+  94(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  RS for VIS/IR-clear pixels<BR>
+  95(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sigma-RS
+  for VIS/IR-clear pixels<BR>
+  96(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  RS for IR-clear pixels<BR>
+<BR>
+  Mean radiances:<BR>
+<BR>
+  97&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  IR for IR-cloudy pixels<BR>
+  98&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sigma-IR
+  for IR-cloudy pixels<BR>
+  99(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  IR for VIS/IR-cloudy pixels<BR>
+  100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  IR for IR-clear pixels<BR>
+  101&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sigma-IR
+  for IR-clear pixels<BR>
+  102(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean IR
+  for VIS/IR-clear pixels<BR>
+  103&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean
+  IR from clear sky composite<BR>
+  104(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean VIS
+  for VIS/IR-cloudy pixels<BR>
+  105(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sigma-VIS
+  for VIS/IR-cloudy pixels<BR>
+  106(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean VIS
+  for IR-cloudy pixels<BR>
+  107(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean VIS
+  for VIS/IR-clear pixels<BR>
+  108(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sigma-VIS
+  for VIS/IR-clear pixels<BR>
+  109(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean VIS
+  for IR-clear pixels<BR>
+  110(d)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mean VIS
+  from clear sky composite<BR>
+<BR>
+  Coincident cloud amount differences:<BR>
+<BR>
+  111&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Difference
+  in mean MUE<BR>
+  112&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Difference
+  in mean cloud frequency<BR>
+<BR>
+<BR>
+  The following variables are available on the ISCCP-C1 tape, but
+  are offered as a separate data set called ISCCP-TOVS through
+  NCDS. <BR>
+<BR>
+  Atmospheric properties:<BR>
+<BR>
+  113 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Atmospheric
+  origin code<BR>
+  114 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PS,
+  surface pressure <BR>
+  115 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TS,
+  surface temperature<BR>
+  116 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T,
+  temperature 900 mb<BR>
+  117 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T,
+  temperature 740 mb<BR>
+  118 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T,
+  temperature 620 mb<BR>
+  119 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T,
+  temperature 500 mb<BR>
+  120 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T,
+  temperature 375 mb<BR>
+  121 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T,
+  temperature 245 mb<BR>
+  122 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T,
+  temperature 115 mb<BR>
+  123 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PT,
+  tropopause pressure<BR>
+  124 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TT,
+  tropopause temperature<BR>
+  125 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ST,
+  stratosphere temperature at 50 mb<BR>
+  126 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ST,
+  stratosphere temperature at 15 mb<BR>
+  127 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PW,
+  precipitable water at 900 mb<BR>
+  128 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PW,
+  precipitable water at 740 mb<BR>
+  129 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PW,
+  precipitable water at 620 mb<BR>
+  130 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PW,
+  precipitable water at 500 mb<BR>
+  131 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PW,
+  precipitable water at 375 mb<BR>
+  132 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;O3,
+  ozone abundance<BR>
+<BR>
+<BR>
+  The <A HREF="var.html">variables</A> included for the ISCCP Stage
+  C2 data are also listed.</P></BLOCKQUOTE>
+
+<P>
+</BODY>
+</HTML>

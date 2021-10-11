@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070121T000000Z
+DTEND:20070130T000000Z
+TRANSP:1
+UID:040000008200E00074C5B7101A82E008000000004068783A13F1C6010000000000000000100
+ 00000F40F817C3F8F4F4AA9CBE7D293B99FF1
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:International Networking of Young Sci=
+entists    Arctic Frontiers Conference and Workshop    Balancing Human Use =
+and Ecosystem Protection =0D=0A=0D=0AInternational Networking for Young Sci=
+entists (INYS) is an initiative that aims to create collaborative links bet=
+ween young researchers in the UK and other countries. INYS is the only inte=
+rnational programme which supports face-to-face meetings between young scie=
+ntists from the UK and other countries for the exchange of ideas, knowledge=
+ and information and for building international connections that assist the=
+ innovation process and career development. =0D=0A=0D=0APlease see attached=
+ document for further information. <<inys advert_norway.pdf>> =0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:International Networking for Young Scient=
+ists (INYS) Conference
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

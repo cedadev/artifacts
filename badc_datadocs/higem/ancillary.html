@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>HiGEM Ancillary Upload</title>
+</head>
+<body>
+<h1>Uploading Ancillary files for HiGEM</h1>
+
+<TABLE width="100%" align="center" bgcolor="5f99ff">
+  <TR>
+    <TD><a href="http://badc.nerc.ac.uk/cgi-bin/fileuploader/fileuploader?package=HIGEM_ANC">File uploader</a></TD>
+    <TD><A href="http://badc.nerc.ac.uk/cgi-bin/higem/ancils/upload_v">HiGEM ancillary Ingestion</A></TD>
+    <TD><A href="http://bscw.badc.nerc.ac.uk/bscw/bscw.cgi/0/26896">Ancillary workspace</A></TD>
+  </TR>
+</TABLE>
+
+<p>To be able to upload and download ancillary files for HiGEM you will
+need to have a valid BADC account and have access to HiGEM data.
+&nbsp;</p>
+
+<h2>Upload the ancillary file to the BADC</h2>
+<p>This can be done in one of two ways.</p>
+<ol>
+  <li>
+         ftp:
+     ftp to ftp.badc.rl.ac.uk, cd to /incoming/higem/ancil and put the file
+  </li>
+  <li>The BADC file
+  <a href="http://badc.nerc.ac.uk/cgi-bin/fileuploader/fileuploader?package=HIGEM_ANC">uploader</a>.
+  The file uploader is a www based tool that will allow you to copy files from 
+  your local disk to the BADC using a simple web page.  There are limits on file sizes
+  that can be moved using this www based method. If you get a message that says 
+  you are trying to upload too much data then you should try the ftp method.
+  </li>
+</ol>
+<p>During the upload the ancillary file will go into a temporary holding
+space at the BADC (in the directory /incoming/higem/ancil). 
+You can upload more than one file into the temporary holding space before
+going on to ingest the files into the HiGEM ancillary archive.</p>
+<h2>Ingest the file into the Ancillary Archive</h2>
+<p>This stage performs some checking on the contents of the file, assigns 
+an ancillary type, such as orography or vegetation to the file, allows
+you to set a version for the file, and finally moves the file to 
+the HiGEM ancillary file archive.</p>
+
+<p>The ingestion is controlled by the 
+<A href="http://badc.nerc.ac.uk/cgi-bin/higem/ancils/upload_v">HiGEM ancillary</A>
+web page  There is a link to this page from the BADC file uploader, labelled
+ 'Ingest Ancillary Files'.</p>
+ <ol>
+ <li>Find the file to ingest.  The HiGEM ancillary web page allows you to browse around
+ the temporary space at the BADC to find the file you want to ingest.</li>
+ <li>Set the file type.  The HiGEM ancillary web page will check the contents of the
+ ancillary file and, if it can, use these to determine the ancillary type.  If it can not
+ determine the ancillary type, for instance if this is the first time that a file
+ of this type has been uploaded then you will be given a chance to set the type.</li>
+ <li>Set the file version.  A file version will be suggested on the form, you may set your
+ own version number.  This should be a decimal digit.  How the version numbers are
+ managed is up to you.  A suggestion is to increment the most significant digit only when
+ major revisions have occurred.</li>
+ <li>Move the file to the BADC archive.  This stage is done automatically.  The files
+ are moved to a location /badc/higem/data/ancil/vnn.m, where n.m is the version number.</li>
+ </ol>
+
+<H2>Add any notes on the ancillary files to the Workspace</H2>
+<p>If you have any notes on the ancillary file you have uploaded you can add these
+to the <A href="http://bscw.badc.nerc.ac.uk/bscw/bscw.cgi/0/26896">workspace</A>.
+You may add notes in text or word or as links to www pages.  Notes should be added
+to the workspace with names that reflect the file type and version 
+e.g. file_type_version.  Other comments about the ancillaries can be added to the 
+workspace, either by modifying the notes, by adding new documents, or through a
+workspace discussion.</p>
+
+<TABLE width="100%" align="center" bgcolor="#5f99ff">
+  <TR>
+    <TD><a href="http://badc.nerc.ac.uk/cgi-bin/fileuploader/fileuploader?package=HIGEM_ANC">File uploader</a></TD>
+    <TD><A href="http://badc.nerc.ac.uk/cgi-bin/higem/ancils/upload_v">HiGEM ancillary Ingestion</A></TD>
+    <TD><A href="http://bscw.badc.nerc.ac.uk/bscw/bscw.cgi/0/26896">Ancillary workspace</A></TD>
+  </TR>
+</TABLE>
+
+</body>
+</html>

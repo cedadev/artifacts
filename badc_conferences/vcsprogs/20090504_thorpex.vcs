@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20090503T230000Z
+DTEND:20090508T230000Z
+LOCATION:Monterey, CA, USA
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000E0CA9A689D75C901000000000000000
+	01000000054F729606A84134EB8CC32F4DF6ED731
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+3rd THORPEX International Science Symposium =0D=0AMonterey, CA, USA, 4-8 =
+May 2009=0D=0A  =0D=0ABackground=0D=0ATHORPEX (The Observing System Resea=
+rch and Predictability Experiment), an element of the WMO World Weather R=
+esearch Programme, is an international programme with a global scope whic=
+h aims to accelerate improvements in the accuracy of 1-day to 2-week high=
+-impact weather forecasts. These improvements will lead to substantial be=
+nefits for humanity, as we respond to the weather-related challenges of t=
+he 21st century.=0D=0A2nd Announcement and Call for Papers <http://www.wm=
+o.int/pages/prog/arep/wwrp/new/documents/TTISS_2nd_announcement.pdf> =0D=
+=0AConference Registration and Hotel Reservation <https://www.regonline.c=
+om/TTISS>   =0D=0AAbstracts Submission <http://www.wmo.int/pages/prog/are=
+p/wwrp/new/registration_form.html> =0D=0A(deadline 15 February 2009)=0D=
+=0AFurther details available at http://www.wmo.int/pages/prog/arep/wwrp/n=
+ew/thorpex_ttiss.html=0D=0A	=0D=0A=0D=0A
+SUMMARY:3rd THORPEX International Science Symposium
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,71 @@
+51  1020
+Sutton, Mark; Campbell, Claire
+CEH Edinburgh, Bush Estate, Penicuik, Midlothian EH26 0QB, UK
+Meteorological sensors
+NitroEurope Integrated Project (NEU IP) Component 1
+1  1
+2006 08 01  2006 08 30
+0.5
+4
+time (h since 2006-08-01 00:00:00 +0:00)
+4
+1.  1.  10.  1.
+999999.9  999.9  999.9  999.9
+time (days since 1900-01-01 00:00:00 +0:00)
+temperature (C)
+pressure (hPa)
+relative_humidity (per_cent)
+0
+10
+The data recorded in this file represent instantaneous values of the variables measured.
+site_name: Easter Bush
+country: UK
+longitude: 3.20 degrees_east
+latitude: 55.87 degrees_north
+height_above_sea_level: 190 m
+ecosystem: lolium perenne
+average_annual_temperature: 9.6 C
+average_annual_precipitation: 850 mm
+This site is a NEU Level 3 site (cf. NEU IP Description of Work for the definition of "Level 3").
+21
+ -------------------------------------------------------------------------------------------
+These data were generated or collected within the framework of the NitroEurope IP.
+The user agrees
+ - to restrict the use of the data to the context of the research topic specified at the time
+   of the application, when this application was made to access data still restricted from
+   the public domain;
+ - not to disclose the data to other parties;
+ - not to use the data for commercial purposes;
+ - that the Intellectual Property Right remains with the Data Originator;
+ - as long as feasible, to contact the Data Originator prior to any use of the data;
+ - to offer the Data Originator(s) co-authorship of any publication or communication based on
+   NitroEurope IP data; in the event that the offer is declined or when the Data Originators
+   cannot be contacted, Data Originators must be duly acknowledged.
+ -------------------------------------------------------------------------------------------
+This file uses the NASA Ames format developed in
+S. E. Gaines and R. S. Hipskind, Format Specification for Data Exchange, Version 1.3, 1998.
+ -------------------------------------------------------------------------------------------
+N.B. The data below have no scientific value. They are entirely fictitious and their sole
+     purpose is to illustrate format features.
+      t
+     X(t)        X(t+0.5)        X(t+1)         X(t+1.5)
+           0.0
+  38927.000000   38927.020833   38927.041667    38927.062500
+          10.0           10.1            9.5             9.2
+          99.0           98.9           99.3            99.5
+          60.0           59.1           62.0            63.2
+           2.0
+  38927.083333   38927.104167   38927.125000    38927.145833
+           9.3            8.9            8.5             8.9
+          99.4           99.9          100.1            99.8
+         999.9          999.9           63.2            62.2
+           4.0
+  38927.166667   38927.187500   38927.208333    38927.229167
+           9.4           10.1           10.2            10.4
+          99.7           99.5           99.3            99.0
+          61.0           60.4           59.5            58.0
+           6.0
+  38927.245000       999999.9       999999.9        999999.9
+          10.3          999.9          999.9           999.9
+          99.2          999.9          999.9           999.9
+          58.7          999.9          999.9           999.9

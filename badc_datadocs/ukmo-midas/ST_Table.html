@@ -1,0 +1,196 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Soil Temperature Data Table</TITLE>
+  <!-- Created 14th June 2006 -->
+  <!-- Author: Belinda Robinson BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Soil Temperature data - Columns in the ST table <BR CLEAR="ALL"></H1>
+<HR ALIGN=LEFT>
+<a href="ST_Table.html#description">Table Description</a> - 
+<a href="ST_Table.html#table">Columns in the ST table</a> - 
+<a href="ST_Table.html#filter">How to start filtering the rows of data out</a>
+
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+<a name="description"></a>
+<H3>Table Description: </h3>This entity contains soil temperatures reported daily and hourly. Time 
+	  (hour) is part of the key. Daily soil temperatures are usually measured at 0900Z. NCMs send 
+	  30 and 100 cm temperatures. F3208 can send 5, 10, 20, 30, 50 and 100 cm temperatures, but all 
+	  values are optional. Hourly soil temperatures are usually at 10 cm. Identifier is 
+	  climatological number (DCNN) or WMO station number.
+<P>For the convenience of users, the ST file column headers are available for download in <a href="Headers/ST_Column_Headers.xlsx    ">Excel</a> or as a <a href="Headers/ST_Column_Headers.csv">comma separated text file</a>
+<P>
+
+<a name="table"></a>
+<h3>Columns in the ST table:</h3>
+
+      <table border="1" cellspacing="0" width="95%">
+      <tr> 
+        <td valign="TOP" width="5%" align="center"><b>PK</b></td>
+        <td valign="TOP" width="40%"><b>Attribute</b></td> 
+        <td valign="TOP" width="35%"><b>Description / Units / Precision</b></td>
+      </tr>
+	
+  <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id_type</font></td>
+        <td valign="TOP" width="35%">Identifier type</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_time</font></td>
+        <td valign="TOP" width="35%">Date and time of observation</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_domain_name</font></td>
+        <td valign="TOP" width="35%"><a href="met_domain.html">message type</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">version_num</font></td>
+        <td valign="TOP" width="35%">Observation version number - <strong>Use the row with '1'</strong>, as this has been quality checked by the Met Office </td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_id</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#wind">Unique source identifier</a> or station site number</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rec_st_ind</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/state_indicators.html">State indicator for the record</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q5cm_soil_temp</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.2">5cm soil temperature</a><br>Unit= 1 deg C, to the nearest 0.1 deg C</td>
+      </tr>
+<tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q10cm_soil_temp</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.2">10cm soil temperature</a><br>Unit=1 deg C, to the nearest 0.1 deg C</td>
+      </tr>
+ <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q20cm_soil_temp</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.2">20cm soil temperature</a><br>Unit=1 deg C to the nearest 0.1 deg C</td>
+      </tr>
+ <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q30cm_soil_temp</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.2">30 cm soil temperature</a><br>Unit=1 deg C to the nearest 0.1 deg C</td>
+      </tr>
+  <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q50cm_soil_temp</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.2">50cm soil temperature</a><br>Unit=1 deg C to the nearest 0.1 deg C</td>
+      </tr>
+   <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q100cm_soil_temp</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.2">100cm soil temperature</a><br>Unit=1 deg C to the nearest 0.1 deg C</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q5cm_soil_temp_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - 5cm soil temperature</a>**</td>
+      </tr>
+ <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q10cm_soil_temp_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - 10cm soil temperature</a>**</td>
+      </tr>   
+ <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q20cm_soil_temp_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - 20cm soil temperature</a>**</td>
+      </tr>
+ <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q30cm_soil_temp_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - 30cm soil temperature</a>**</td>
+      </tr>
+<tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q50cm_soil_temp_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - 50cm soil temperature</a>**</td>
+      </tr>
+<tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q100cm_soil_temp_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - 100cm soil temperature</a>**</td>
+      </tr>
+ <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">meto_stmp_time</font></td>
+        <td valign="TOP" width="35%">Met Office receipt stamp time</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">midas_stmp_etime</font></td>
+        <td valign="TOP" width="35%">Elapsed time to storage in MIDAS<br>minutes</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q5cm_soil_temp_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - 5cm soil temp</a>**</td>
+      </tr>           
+	  <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q10cm_soil_temp_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - 10cm soil temp</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q20cm_soil_temp_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - 20cm soil temp</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q30cm_soil_temp_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - 30cm soil temp</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q50cm_soil_temp_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - 50cm soil temp</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q100cm_soil_temp_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - 100cm soil temp</a>**</td>
+      </tr>
+     
+      </table>
+<BR>
+<BR>
+** Details available to registered users only.
+<p>
+More information about the Met Office surface data is available
+in the <A HREF="ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+<a name="filter"></a>
+<h3>How to start filtering the rows of data out:</h3>
+<ol>
+<li>As the data arrive at the Met Office it undergoes quality control to check that the data are correct and consistent with the surrounding data points. Whether the process has occured or not is indicated by the <strong>version number</strong> (1 is the one to use as indicated in the table above).
+<p>
+<li>To show the progress of the data through the quality control the various variables will have an associated <strong>_q value</strong> (e.g. q5cm_soil_temp_q). This _q value will have different values for each record (see details in table above).
+<p>
+<li> While the Met Office MIDAS system overwrites the existing entry in their database the BADC's MIDAS entries do not as the BADC takes snapshots of the the MIDAS database from time to time leading to duplicate entries occuring in our archive. If duplicate records are found, check the associated meto_stmp_time to determine which record is the most recent one - this is the one to use and the other(s) can be ignored. 
+</ol>
+<p>
+
+</BODY>
+</HTML>

@@ -1,0 +1,99 @@
+<HTML>
+<HEAD><TITLE>UTLS-Ozone: Description of NASA-Ames filename conventions</TITLE></HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<h1>Description of UTLS-OZONE NASA-Ames filename conventions</h1>
+<em>Note this document is a draft: its contents may change.</em>
+<HR ALIGN=LEFT>
+This page defines the filename conventions used for UTLS-OZONE NASA-Ames format 
+files at the
+BADC. The filename conventions reflect the content of the file: they indicate
+the site or platform of the measurement, the date on which the measurement
+started and the instrument and parameters measured.
+</P>
+<P>When submitting files to the BADC please ensure that the files comply 
+to the agreed conventions.  The file name is used to automatically move
+the file into the appropriate directory in the BADC archive.
+It is therefore important that all files are given the correct name.</P>
+
+<p>The filenames for NASA-Ames files are determined, in part, by the NASA-Ames
+Format for Data Exchange.
+The filename is of the form ppYYMMDD.xxx, where pp is a two character prefix, 
+YYMMDD is a six character date and xxx is a file extension of up to 3
+characters.  A commonly adopted convention, which will be implemented for
+UTLS-OZONE files, is that the prefix indicates the site or platform from
+which the measurements were made, and the extension gives and indication of the
+instruement and physical or chemical quantity measured.  The date is the date
+on which the observations recored in the file started.  At the BADC the prefix 
+suffix for a particular site or instrument are inherited from previous field
+campaings such as <A HREF="/data/acsoe/">ACSOE</A>.
+
+<h1>Components of filename</h1>
+<h2>Prefix</h2>
+
+The two character prefix identifies the site or platform for the observation.
+<h4>Allowed values:</h4>
+<table border>
+<th>Value</th><th>Description</th>
+<tr><td>ab</td><td>Aberystwyth</td></tr>
+<tr><td>cb</td><td>Chilbolton Radar</td></tr>
+<tr><td>eg</td><td>ARA Egrett Aircraft</td></tr>
+<tr><td>he</td><td>Hercules C-130</td></tr>
+<tr><td>ki</td><td>Kiruna</td></tr>
+</table>
+<p>
+<h2>Start date</h2>
+
+
+The six character date identifies the start date of the observations in the
+file. The start date is in the format YYMMDD.  The observations may span more
+than one day.  The date in the file name is always the start date of the
+observations.
+<p>
+e.g. '990110' represents  10th January 1999
+
+<p>
+<h2>Extension</h2>
+
+The file extension identifies the instrument and constituents measured. Listed
+below are the valid file extensions, together with the constituents, 
+instrument, institute and group or person responsible.
+
+<h4>Allowed values:</h4>
+<table border>
+<th>Value</th><th>Constituents</th><th>Instrument</th><th>Institute</th><th>Group or person</th>
+<tr><td>asc</td><td> Aerosol Scattering</td><td>   PCASP</td><td>    MRF</td><td>Richer</td></tr>
+<tr><td>b[21-22]</td><td>Ozone, Temperature, Pressure</td><td>Ozone-Sondes</td><td>U Wales</td><td>Vaughan</td></tr>
+<tr><td rowspan=2>bsw[10-17]</td><td>Ozone, Temperature, Pressure</td><td>Ozone-Sondes</td><td>U Wales</td><td>Vaughan</td></tr>
+<tr><td>   Relative humidity</td><td>     Snow-White Hygrometer</td><td>      U Wales</td><td>Vaughan</td></tr>
+<tr><td>bc3</td><td>   Black Carbon Soot</td><td>     Aethalometer PSAP</td><td>      MRF</td><td>Richer</td></tr>
+<tr><td>me1</td><td>   Methane</td><td>     Near Infra Red Tunable Diode </td><td>      NPL/Cambridge</td><td>Howieson</td></tr>
+<tr><td>cld</td><td>Cloud cover flag</td><td></td><td>ARASF/MRF</td><td>ACTO</td></tr>
+<tr><td>cm1</td><td>   Carbon Monoxide (CO)</td><td>     Fluorescence</td><td>      MRF/KFA</td><td>Richer</td></tr>
+<tr><td>cn5</td><td>   Condensation Nuclei</td><td>     CCN Counter</td><td>      MRF</td><td>Richer</td></tr>
+<tr><td>fm1</td><td>   Formaldehyde (HCHO)</td><td>     Fluorometric</td><td>      UEA</td><td>Mills</td></tr>
+<tr><td>ha2</td><td>   Halocarbons</td><td>     GC (Grab Sample)</td><td>      UEA</td><td>Oram</td></tr>
+<tr><td>ha5</td><td>   Halocarbons</td><td>     GC (Egrett)</td><td>      Cambridge</td><td>Robinson</td></tr>
+<tr><td>hc2</td><td>   NMHC</td><td>     GC (Grab Sample)</td><td>      UEA</td><td>Oram</td></tr>
+<tr><td>hc3</td><td>   NMHC</td><td>     GC (Grab Sample)</td><td>      Leeds</td><td>McQuaid</td></tr>
+<tr><td>hc6</td><td>   NMHC</td><td>     ORAC(GC)</td><td>      Leeds</td><td>McQuaid</td></tr>
+<tr><td>jn4</td><td>   J (NO2)</td><td>     UV Photometer</td><td>      MRF/FZJ</td><td>Richer/Gerbig</td></tr>
+<tr><td>jo5</td><td>   J (O1D)</td><td>     UV Photometer</td><td>      U Leicester</td><td>Monks</td></tr>
+<tr><td>lw1</td><td>   Liquid Water</td><td>     Johnson Williams</td><td>      MRF</td><td>Richer</td></tr>
+<tr><td>nxy</td><td>   Nitrogen Oxides (NO, NO2, NOy, NOy*)</td><td>     Chemiluminescence</td><td>      UEA</td><td>Brough</td></tr>
+<tr><td>o3l</td><td>   Ozone</td><td>     LIDAR</td><td>      U Wales</td><td>Vaughan</td></tr>
+<tr><td>o36</td><td>   Ozone</td><td>     Teco 49</td><td>      MRF</td><td>Richer</td></tr>
+<tr><td>pn5</td><td>   Peroxyacetylnitrate</td><td>     GC</td><td>      MRF/UEA</td><td>Richer</td></tr>
+<tr><td>po1</td><td>   Peroxide (H2O2, RO2H)</td><td>     Fluorometric</td><td>      UEA</td><td>Bandy</td></tr>
+<tr><td>pr2</td><td>   Speciated Peroxides</td><td>     PERCA</td><td>      UEA</td><td>Green</td></tr>
+<tr><td>ps1</td><td>   C-130 Position</td><td>     GPS</td><td>      MRF</td><td>Richer</td></tr>
+<tr><td>tmp</td><td>   Temperature</td><td>     Various</td><td>      MRF</td><td>Richer</td></tr>
+<tr><td>tw1</td><td>   Total Water</td><td>     Lyman-Alpha</td><td>      MRF</td><td>Richer</td></tr>
+<tr><td>wnd</td><td>   Wind</td><td>     Various</td><td>      MRF</td><td>Richer</td></tr>
+<tr><td>wv1</td><td>   Dew Point</td><td>     FWVS</td><td>      MRF</td><td>Richer</td></tr>
+</table>
+<p>
+
+</BODY>
+</HTML>
+

@@ -1,0 +1,49 @@
+netcdf simple {
+dimensions:
+	lon = 1 ;
+	lat = 1 ;
+	time = UNLIMITED ; // (10 currently)
+variables:
+	float lon(lon) ;
+		lon:units = "degrees_east" ;
+		lon:point_spacing = "even" ;
+	float lat(lat) ;
+		lat:units = "degrees_north" ;
+		lat:point_spacing = "even" ;
+	float time(time) ;
+		time:units = "days since 1994-01-01 00:00:00" ;
+		time:time_origin = "01-JAN-1994:00:00:00" ;
+	float temp(time, lon, lat) ;
+		temp:source = "Made up data" ;
+		temp:name = "temp" ;
+		temp:title = "Surface temperature in degrees C" ;
+		temp:units = "deg_C" ;
+		temp:_FillValue = 2.e+020f ;
+		temp:valid_min = -80.f ;
+		temp:valid_max = 60.f ;
+
+// global attributes:
+		:history = "Created by hand - 10 Sep 2002" ;
+		:institute = "BADC" ;
+		:comments = "not very useful data" ;
+		:references = "A report being written" ;
+data:
+
+ lon = 2 ;
+
+ lat = 54 ;
+
+ time = 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ;
+
+ temp =
+  34.5,
+  31.2,
+  23.7,
+  19.6,
+  35.8,
+  29.2,
+  24.4,
+  18.6,
+  15.2,
+  13.1 ;
+}

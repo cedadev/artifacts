@@ -1,0 +1,290 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>CLAES Data</TITLE>
+</HEAD>
+<!-- Created 25th July 1996 11:30:00  -->
+<!-- Author: Simon Williams BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>BADC Help File: CLAES data<BR CLEAR="ALL"></H1>
+
+<P><EM>This file contains a summary of the instrument documentation
+to help you use the CLAES data held at the BADC</EM> <HR ALIGN=LEFT>
+
+<H2><A NAME="contents"></A>Contents</H2>
+
+<OL>
+  <LI><A HREF="#instrument">The Instrument</A>
+  <UL>
+    <LI>1.1 <A HREF="#description">Instrument Description</A>
+    <LI>1.2 <A HREF="#techniques">Measurement Techniques</A>
+    <LI>1.3 <A HREF="#process">Data Processing</A>
+  </UL>
+  <LI><A HREF="#data">The Data</A>
+  <UL>
+    <LI>2.1 <A HREF="#spatial">Spatial Coverage</A>
+    <LI>2.2 <A HREF="#temporal">Temporal Coverage</A>
+    <LI>2.3 <A HREF="#resolution">Resolution</A>
+    <LI>2.4 <A HREF="#quality">Quality</A>
+    <LI>2.5 <A HREF="#units">Units</A>
+  </UL>
+</OL>
+
+<HR ALIGN=LEFT>
+
+<H3>1. <A NAME="instrument"></A><U>The Instrument</U></H3>
+
+<P>This section contains a brief, simplified outline of the CLAES
+instrument and the measurement techniques which are employed. Users
+requiring a more detailed description of the design and operation
+of the instrument should consult the paper by <A HREF="references.html">Roche
+et al. (1993).</A>
+
+<BLOCKQUOTE>
+  <H4>1.1 <A NAME="description"></A>Instrument Description</H4>
+  <P>CLAES is a cryogenically cooled infrared spectrometer which measures thermal emission from the Earth's limb. Characteristic
+  vibration-rotation spectral line radiances are obtained between
+  3.5 and 13 microns and these are then fed into retrieval algorithms
+  to obtain pressures, temperatures and species mixing ratios.
+  <P>The instrument observes the Earth's limb in a direction normal
+  to the orbital track on the anti-sun side of the spacecraft.The
+  tangent point is a great circle distance of approximately 
+23&deg; (2500km) away from the sub-satellite track, and is swept
+  horizontally along the limb by the motion of the spacecraft. The
+  field of view of the instrument is centred on a point at approximately
+  35km altitude at the limb tangent point. The optical design allows
+  observations to be performed over an altitude range of 10 to
+  60 km with a spacing of 2.5km.
+  <P>The instrument observes radiation through a 6-inch aperture
+  Mersene telescope. The altitude range of the observations is
+  adjusted by means of a motorised limb acquisition and adjustment
+  mirror (LAAM). The CLAES spectrometer consists of one of four
+  tilt-scanned Fabry-Perot etalons which are used in conjunction
+  with one or more of nine interference filters which define the
+  spectral channels. Radiation emerging from the spectrometer is
+  focussed onto the focal plane assembly (FPA) consisting of two
+  linear arrays of SiGa detectors. The main array has 20 elements
+  and provides 2.5 km spacing at the limb. A separate three-element
+  array is used with the 3.5 mm HCL channel, which sacrifices vertical
+  resolution to increase signal-to-noise for the weak atmospheric
+  thermal emissions at this short wavelength.
+  <P>CLAES carries a full aperture black body calibration source
+  on the inside of the telescope aperture door, which is passively
+  heated by radiation from the Earth when the door is open during
+  data acquisition. When the door is closed the black body slowly
+  cools allowing an end-to-end absolute radiometric calibration
+  over a large part of the instrument's dynamic range. 
+<P>The Cryogens which slowly evaporated as they cooled the instrument, were designed to last about 18
+months in orbit, allowing CLAES to make scientific measurements from 1st October 1991 through 5th May
+1993, when the cryogens finally evaporated and the instrument warmed up.
+<BR>
+<BR>
+  
+  <H4>1.2 <A NAME="techniques"></A>Measurement Techniques</H4>
+  <P>Spectroscopy of the incoming radiation is performed by tilt-scanning
+  one of the four Fabry-Perot etalons between 0 and 23&deg;
+  in conjunction with blocking filters to define the spectral channel.
+  The spectrometer can operate in one of two modes :
+  <P><ul><li><STRONG>Spectral Survey Mode </STRONG>in which each of the
+  nine spectral intervals is spectrally scanned in 0.02 cm<sup>-1</sup> steps
+  over the etalon's free spectral range. Each scan takes 65.5 seconds
+  making a total of 590 seconds for all channels.
+  <p><li><STRONG>Primary Science Mode </STRONG>this is the usual CLAES
+  operating mode, in which all parameters required to retrieve
+  geophysical parameters must be acquired in a single 65.5 second
+  period - the time taken for the spacecraft to move 500 km along
+  track. This is achieved by targetting a limited number of spectral
+  positions in each of the nine intervals. <BR>
+</ul><BR>
+<BR>
+  
+  <H4>1.3 <A NAME="process"></A>Data Processing Techniques</H4>
+  <P>The UARS data processing is carried out at the <A HREF="http://www-uars.gsfc.nasa.gov/"
+  TARGET="_top">Central Data Handling Facility</A> at the Goddard
+  Space Flight Center using software supplied by the instrument's
+  Principal Investigator group. The data processing for UARS instruments
+  consists of a progression through a sequence of `levels' from
+  the raw telemetry at level 0 to geophysical quantities interpolated
+  onto standard grids at level 3. The processing steps for CLAES
+  are outlined below : <p>
+  <ul>
+<li><STRONG>Level 1 processing</STRONG>: In the first processing
+  step, the level 0 data (the raw telemetry) is processed to remove
+  instrument-specific effects and a set of calibrated data is derived
+  in physical units (eg. voltages and radiances) tagged with their
+  locations which are written to a level 1 product.
+  <P><li><STRONG>Level 2 processing </STRONG>: The level 1 data are
+  then processed further to produce the level 2 product which contains
+  vertical profiles of temperature, pressure and mixing ratios
+  of chemical constituents at the measurement positions. This step
+  involves a complex retrieval algorithm which consists of two
+  principal stages : In the first step the pressure and temperature
+  are retrieved as a function of the instrument's altitude grid,
+  using features of the CO<sub>2</sub> spectrum in the spectral channel at
+  789-793 cm<sup>-1</sup>. This region also contains a significant contribution
+  from ozone, which must be retrieved simultaneously. The temperatures
+  and pressures are then fed into the retrievals of mixing ratios
+  from the radiances measured in other spectral channels. The algorithm
+  used in the routine retrievals of geophysical parameters from
+  CLAES data is an optimal mix of two different processes, one
+  involving a relaxation technique to obtain a simultaneous retrieval
+  over the whole altitude range and the second using an onion-peeling
+  process. Both algorithms use some a priori information. For more
+  details refer to <A HREF="references.html">Roche et al.(1993).</A>
+  <P><li><STRONG>Level 3A processing </STRONG>: The level 2 data are
+  profiles located at the measurement positions which are determined
+  by the scan pattern and by the track of the tangent point. The
+  level 2-3A processing step takes these data and interpolates
+  them onto a standard set of vertical levels, evenly spaced
+  in log pressure, and onto standard times (level 3AT) and standard
+  latitudes (level 3AL).</BLOCKQUOTE>
+</ul>
+<H3>2. <A NAME="data"></A><U>The Data</U></H3>
+
+<P>The public <a href="/cgi-bin/data_browser/data_browser/badc/claesl3//data">CLAES data</a> held at the BADC is at level 3A version
+ 8.  Some files from earlier processing version (v0007) are also held where there are gaps in the version 8 data. 
+The version number refers to the processing algorithm which
+is used to create the level 3A files.
+
+<P>The data is stored in UARS binary format. Software
+is available to convert the files into ASCII data.
+
+<BLOCKQUOTE>
+  <H4><A NAME="spatial"></A>2.1 Spatial Coverage</H4>
+  <P><STRONG>Vertical Coverage:</STRONG> <BR>
+  The table below gives the vertical ranges over which geophysical
+  parameters are retrieved. The retrieved quantities are not necessarily
+  valid over this range, and users should consult the 
+<A HREF="/cgi-bin/data_browser/data_browser/badc/claesl3/doc/claes_changes.sfdu">CLAES
+  Data Set Change History Document</A> before using any CLAES data.
+  <PRE>
+      Parameter        |     Retrieved Range (mb) 
+      ------------------------------------------- 
+      Temperature      |     150-0.1
+      O3               |     150-0.1
+      CH4              |     100-0.1 
+      N2O              |     100-0.15
+      NO2              |     100-0.1 
+      HNO3             |     100-0.1 
+      NO               |     100-0.1 
+      H2O              |     100-0.1 
+      ClONO2           |     100-1.0  
+      CF2Cl2           |     100-2.0
+      AEROSOL          |     68-20 
+      N2O5             |     46-1.0 
+      CFCl3            |     100-10</PRE>
+  <P>The vertical coverage of the CLAES instrument is shown schematically
+  in <A HREF="/data/uars/figures/uars_vert_coverage.html">UARS Figure
+  3</A> which compares the vertical coverage of the UARS instruments.
+<BR>
+<BR>
+  <STRONG>Horizontal Coverage:</STRONG> <BR>
+  Views of the limb from the UARS orbit extend to 10&deg; of
+  the pole. To achieve maximum latitude coverage, the instrument
+  views at right angles to the orbit track. The spacecraft performs
+  a 180&deg;
+ yaw approximately every 36 days so that the spacecraft
+  orientation relative to the velocity vector is reversed. (eg.
+  the spacecraft flies &quot;backwards&quot; rather than &quot;forwards&quot;).
+  <P>Each spacecraft yaw manoeuvre changes the coverage from high
+  latitudes in one hemisphere to high latitudes in the other. Thus,
+  when the spacecraft files &quot;forwards&quot;, the coverage
+  is 80&deg;S to 34&deg;N, and when it flies &quot;backwards&quot;
+  the coverage is 80&deg;N to 34&deg;S.
+  <P>The latitudinal coverage of the CLAES instrument is compared
+  with the other UARS instruments in <A HREF="/data/uars/figures/uars_lat_coverage.html">UARS Figure
+  2</A>.<BR>
+<BR>
+<BR>
+  
+  <H4><A NAME="temporal"></A>2.2 Temporal Coverage</H4>
+  <P>CLAES operated from shortly after the UARS launch in October
+  1991 until the 5th May 1993, when the instrument's cryogen was
+  exhausted. The following list gives days for which data are missing
+  or unavailable at version 7.
+  <PRE>
+  Date                     UARS day         Comments
+  13th-16th Jan 1992       124-127          Aperture door closed
+  31st Jan 1992            142              Aperture door closed
+  13th-17th Feb 1992       155-159          Aperture door closed
+  4th Mar 1992             175              Aperture door closed
+  8th Mar 1992             179              Processing failed
+  22nd-25th Mar 1992       193-196          Aperture door closed
+  13th Apr 1992            215              Aperture door closed
+  17th May 1992            249              Aperture door closed
+  30th May-10th Jun 1992   262-273          Solar array problem
+  19th Jun 1992            282              Processing failed
+  11th-16th Jul 1992       304-309          Aperture door closed
+  18th Jul 1992            311              Processing failed
+  29th Jul 1992            322              Aperture door closed
+  11th-15th Aug 1992       335-339          Aperture door closed
+  18th-23th Sep 1992       373-378          Aperture door closed
+  10th Oct 1992            395              Aperture door closed
+  27th-31st Oct 1992       412-416          Aperture door closed
+  13th Nov 1992            429              Aperture door closed
+  27th Nov-1st Dec 1992    443-447          Solar array problem
+  8th-11th Jan 1992        485-488          Aperture door closed
+  28th Jan 1992            505              Aperture door closed
+  7th-11th Feb 1992        515-519          Aperture door closed
+  17th-21st Mar 1992       553-557          Aperture door closed
+  27th Mar 1992            563              Processing failed
+  30th Mar 1992            566              Processing failed
+  4th Apr 1992             571              Aperture door closed
+  16th-20th Apr 1992       583-587          Aperture door closed
+  25th-29th Apr 1992       592-596          Aperture door closed
+  6th May 1992             603              Cryogen exhausted.</PRE>
+  <P><BR>
+  
+  <H4><A NAME="resolution"></A>2.3 Resolution</H4>
+  <P><STRONG>Vertical Resolution: </STRONG><BR>
+  The UARS level 3A data are interpolated onto a standard set of
+  logarithmically spaced pressure levels. There are 6 levels per
+  decade in pressure given by the following relation :
+  <PRE>
+         p = 1000 x 10<sup>(-i/6)</sup>,        i=0, 1, 2, ...</PRE>
+  <P><BR>
+  <STRONG>Horizontal Resolution: </STRONG><BR>
+  The level 3AT and level 3AL products differ in their horizontal
+  gridding: <p>
+  <ul><li><STRONG>Level 3AT</STRONG>: The 3AT products are interpolated
+  along the tangent-point track at standard output times corresponding
+  to intervals of one UARS Engineering MAjor Frame (1 EMAF = 65.536
+  s). This period represents an along- track displacement of approximately
+  400 km between measurements.The profiles are constructed by linear
+  interpolation in observation time from the level 2 profiles.
+  Note that the level 2 files have a higher resolution along track,
+  each level 3 profile being constructed from two level 2 profiles.
+  <P><li><STRONG>Level 3AL</STRONG>: The 3AL products are interpolated
+  onto positions defined by the intersection of the tangent track
+  with a latitude circle at standard 4&deg; latitude intervals
+</ul><BR>
+  
+  <H4><A NAME="quality"></A>2.4 Data Quality</H4>
+  <P>The quality of the CLAES data is comprehensively reviewed
+  in the <A HREF="/cgi-bin/data_browser/data_browser/badc/claesl3/doc/claes_changes.sfdu">CLAES Data
+  Set Change History Document</A>, which is available online in
+  the BADC's CLAES documentation directory. Details of the data
+  quality change from one data version to the next, so the contents
+  of this document are not reproduced here. <BR>
+<BR>
+<BR>
+  
+  <H4><A NAME="units"></A>2.5 Units</H4>
+  <P>The units for the parameters present in the CLAES data files
+  are tabulated below :
+  
+  <PRE>
+         Parameter               |    Units 
+         ----------------------------------------------
+         Temperature             |    K
+         Pressure                |    mb 
+         Gas Mixing Ratios       |    by volume
+         Aerosol Extinction      |    km<sup>-1</sup>
+         ---------------------------------------------</PRE>
+</BLOCKQUOTE>
+
+<P>
+
+</BODY>
+</HTML>

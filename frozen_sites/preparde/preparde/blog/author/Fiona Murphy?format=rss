@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  
+
+  <channel>
+    <title>PREPARDE - Blog</title>
+    <link>http://proj.badc.rl.ac.uk/preparde/blog</link>
+    <description></description>
+    <language>en-US</language>
+    <generator>Trac 0.12.2</generator>
+    <image>
+      <title>PREPARDE</title>
+      <url>http://proj.badc.rl.ac.uk/preparde/chrome/common/trac_banner.png</url>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog</link>
+    </image>
+    <item>
+      <title>Supporting Infrastructure Models for Research Data Management (SIM4RDM) Project workshop</title>
+      <dc:creator>Fiona Murphy</dc:creator>
+      <pubDate>Mon, 04 Feb 2013 09:09:40 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/SIM4RDM</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/SIM4RDM</guid>
+      <description>&lt;p&gt;
+Not strictly a PREPARDE event (although our funder, JISC is one of the partners) but extremely relevant to the bigger picture, I attended the Supporting Infrastructure Models for Research Data Management (&lt;a class="ext-link" href="http://www.sim4rdm.eu/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;SIM4RDM&lt;/a&gt;) Project workshop on the 31st Jan in Dublin. SIM4RDM is putting a framework of evaluation and policy recommendations together to inform key EU research and innovation funding programme &lt;a class="ext-link" href="http://ec.europa.eu/research/horizon2020/index_en.cfm"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Horizon 2020’s&lt;/a&gt; decision-making processes.
+&lt;/p&gt;
+&lt;p&gt;
+Crucially, SIM4RDM is aiming for national and global coverage as well as EU-level initiatives, and research data funding, management, curation, re-use, accreditation (the usual suspects) are all key parts of the picture. There was an interesting EC presentation by Carlos Morais Pires on how it relates to the overall plans for a research data management framework, updates on the project’s progress and methodology to date from key members, as well as a sneak preview on the &lt;a class="ext-link" href="http://rd-alliance.org/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Research Data Alliance&lt;/a&gt; by RDA Council Member (and leader of the group that produced &lt;a class="ext-link" href="http://cordis.europa.eu/fp7/ict/e-infrastructure/docs/hlg-sdi-report.pdf"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Riding the Wave&lt;/a&gt;) John Wood. All in all, a tiring but worthwhile day.
+&lt;/p&gt;
+&lt;p&gt;
+A couple of take-homes:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Collaborations. The SIM4RDM Landscape Report, available on the website, indicates that ‘mixed’ groups such as we have on the JISC funded PREPARDE project - with publishers, researchers, data centre managers, etc all working towards a common goal - are very much the exception rather than the norm. That’s something that would ideally change.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Related point) Engagement. OK, so we can fill a room with engaged enthusiasts, but there is still a sense of it being largely the same crowd in different rooms. We need to find some potential new converts to preach to.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+The workflows and missions espoused by PREPARDE need to become the norm, and I’d very much like to think we can put something in place to support that.
+&lt;/p&gt;
+</description>
+    </item><item>
+      <title>Report from the American Meteorological Society Annual Meeting </title>
+      <dc:creator>Fiona Murphy</dc:creator>
+      <pubDate>Tue, 22 Jan 2013 10:35:32 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/AMS-report</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/AMS-report</guid>
+      <description>&lt;p&gt;
+The American Meteorological Society held its &lt;a class="ext-link" href="http://annual.ametsoc.org/2013/?CFID=861015&amp;amp;CFTOKEN=26507193"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Annual Meeting&lt;/a&gt; in Austin Texas earlier this month, which gave Matt Mayernik and me the opportunity to hold forth on various aspects of data citation, peer review, etc.
+&lt;/p&gt;
+&lt;p&gt;
+Matt’s poster was based on current work with NCAR colleagues on ‘What Does Peer Review of Data Sets Mean and What Roles do Data Archiving and Quality Control Have in the Process?’ (attached). The poster compares/contrasts conventional peer review processes with data quality control processes in place at current NCAR data archives. It attracted interest from a number of delegates as well as the Editor of BAMS.
+&lt;/p&gt;
+&lt;p&gt;
+I presented on Geoscience Data Journal and PREPARDE, and Matt on the NCAR Data Citation Initiative to the &lt;a class="ext-link" href="http://aslionline.org/wp/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Atmospheric Science Librarians International&lt;/a&gt; (ASLI) strand of the meeting, which had several sessions around ‘Expanding Data’ and ‘Expanding Publications’. Several other speakers, including John Sandy of Alabama and Gloria Hicks of NSIDC, are working in compatible areas (see full program details &lt;a class="ext-link" href="http://aslionline.org/wp/2013-conference-program/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;here&lt;/a&gt;)  and there were some lively discussions, particularly in the breaks.
+&lt;/p&gt;
+&lt;p&gt;
+Other than that, there were some opportunities to further catch up on &lt;a class="ext-link" href="http://earthcube.ning.com/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;EarthCube&lt;/a&gt;, the NSF-driven cyberinfrastructure project for the geosciences, which is of immense interest and potential importance for underpinning the future of data-driven research, particularly from North America. The other key development, from my point of view was the Town Hall meeting organised by the &lt;a class="ext-link" href="http://www2.ametsoc.org/stac/index.cfm/boards/board-on-data-stewardship/terms-of-reference/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;AMS Board on Data Stewardship&lt;/a&gt; which is working on a wide-ranging position paper. Not only does this encompass data citation, encouraging good data management by producers, it is also looking at the status the ‘data scientist’ has within research institutions, and the influence of funders, policy makers and industry in all aspects of research data origination, use and management. It is simply the most ambitious mission I have yet to see from a learned society. I very much welcome this development and hope we have the opportunity to support its continuing progress.
+&lt;/p&gt;
+</description>
+    </item><item>
+      <title>Report from the CODATA General Assembly, Taipei, 27-31 October 2012</title>
+      <dc:creator>Fiona Murphy</dc:creator>
+      <pubDate>Tue, 13 Nov 2012 14:00:45 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/CODATA_Taipei_report</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/CODATA_Taipei_report</guid>
+      <description>&lt;p&gt;
+This is my first ever blogpost - so it's a momentous moment, for me at least.
+&lt;/p&gt;
+&lt;p&gt;
+I recently had the the opportunity to attend the &lt;a class="ext-link" href="http://www.codata.org/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;CODATA&lt;/a&gt; meeting in Taipei, where I presented on PREPARDE, the Geoscience Data Journal and more generally on some of the projects and initiatives which the scholarly publishing industry has been taking part in (see slides attached).
+&lt;/p&gt;
+&lt;p&gt;
+I was kindly invited to work with the &lt;a class="ext-link" href="http://www.codata.org/taskgroups/TGdatacitation/index.html"&gt;&lt;span class="icon"&gt; &lt;/span&gt;CODATA-ICSTI Task Group on Data Citation Standards and Practices&lt;/a&gt; for two days as a pre-meeting activity. (PREPARDE Project manager, Sarah Callaghan, is one of the Co-Chairs.) The Task Group is currently compiling a report being which focuses on the international good practices in data citation to be published next year. Incidentally, they're on the look-out for reviewers to help facilitate this process, so do get in touch with one of the Co-Chairs if you want to volunteer.
+&lt;/p&gt;
+&lt;p&gt;
+I also chaired a very interesting session on  'Best Practices and Future Directions in Data Sharing'. We had a preview of the new Creative Commons data licence, had an account of the 2011'Canadian Research Data Summit and heard a fascinating account of a discipline wholly new to me - Computer Supported Cooperative Work - which amongst other things studies cyber infrastructure development as a way of understanding dynamic, emergent human collaborations.
+&lt;/p&gt;
+&lt;p&gt;
+As usual at these sorts of events, I emerged both far better informed than before, as well as humbled by the expertise and achievements I witnessed around me. Personal highlights were an impromptu meeting with Mark Hahnel of Figshare, and the WDS members' Forum, where a number of members, including Kerstin Lehnert of IEDA, gave flash presentations of their work.
+&lt;/p&gt;
+&lt;p&gt;
+The general feeling seems to be that progress - towards the better management, curation, re-integration, linking, etc of research data - is being made, but there is still a long way to go. So any feedback you have on what's going well, or where your pain points are would be tremendously welcome. It's all about communities, collaboration and communication, after all.....
+&lt;/p&gt;
+</description>
+    </item>
+   </channel>
+</rss>

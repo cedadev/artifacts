@@ -1,0 +1,122 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>CLIMAT Upper Air Surface Norms Data Table</TITLE>
+  <!-- Created 13th April 2010 -->
+  <!-- Author: Graham Parton BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>CLIMAT Upper Air Long Period Surface Average Values - Columns in the CUNS table <BR CLEAR="ALL"></H1>
+
+    <p><b>Description: </B>Long period surface averages for a CLIMAT upper air station for the
+	  specified month. Attributes <font face="Courier New">norm_first_year</font> and
+	  <font face="Courier New">norm_last_year</font> specify the period over which the normals
+	  are calculated. CLIMAT normals are not subject to quality control, so there are no QC or
+	  version number attributes.<br><br>
+<P>
+For the convenience of users, the CUNS file column headers are available for download in <a href="Headers/CUNS_Column_Headers.xlsx    ">Excel</a> or as a <a href="Headers/CUNS_Column_Headers.csv">comma separated text file</a>
+<P>
+
+<table border="1" cellspacing="0" width="95%">
+      <tr>
+        <td valign="TOP" width="5%" align="center"><b>PK</b></td>
+        <td valign="TOP" width="40%"><b>Attribute</b></td>
+        <td valign="TOP" width="20%"><b>Datatype</b></td>
+        <td valign="TOP" width="35%"><b>Description / Units / Precision</b></td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_id</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(6)</font></td>
+        <td valign="TOP" width="35%">Unique source identifier</td>				
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">norm_first_year</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(4)</font></td>
+        <td valign="TOP" width="35%">First year of normal</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">norm_last_year</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(4)</font></td>
+        <td valign="TOP" width="35%">Last year of normal</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">norm_month</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(2)</font></td>
+        <td valign="TOP" width="35%">Month of normal</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id_type</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">VARCHAR2(4)</font></td>
+        <td valign="TOP" width="35%">Identifier type</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">VARCHAR2(8)</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_domain_name</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">VARCHAR2(8)</font></td>
+        <td valign="TOP" width="35%"><A HREF="met_domain.html">Message type</A></td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rec_st_ind</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(4)</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/state_indicators.html">State indicator for the record</a>**</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">mean_stn_lvl_pres</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(5,1)</font></td>
+        <td valign="TOP" width="35%">Normal - monthly mean pressure<br>0.1 hpa</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">sd_mean_stn_lvl_pres</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(5,1)</font></td>
+        <td valign="TOP" width="35%">Std dev - monthly mean pressure<br>0.1 hpa</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">mean_sfc_air_temp</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(3,1)</font></td>
+        <td valign="TOP" width="35%">Normal - monthly mean air temp<br>0.1 deg C</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">sd_mean_sfc_air_temp</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(2,1)</font></td>
+        <td valign="TOP" width="35%">Std dev - monthly mean air temp<br>0.1 deg C</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">mean_surface_dewpoint</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(2)</font></td>
+        <td valign="TOP" width="35%">Normal - mean monthly dew point<br>0.1 deg C</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">sd_mean_sfc_dwpt</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(2,1)</font></td>
+        <td valign="TOP" width="35%">Std dev - mean monthly dew point<br>0.1 deg C</td>
+      </tr>
+      </table><BR>
+<BR>
+** Details available to registered users only.
+<P>
+More information about the Met Office surface data is available
+in the <A HREF="ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+</BODY>
+</HTML>

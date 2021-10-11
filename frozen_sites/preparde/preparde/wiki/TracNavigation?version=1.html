@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      TracNavigation – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracNavigation?version=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracNavigation" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracNavigation" title="View TracNavigation">TracNavigation</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracNavigation" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A00%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:00+01:00 in Timeline">6 years</a> ago)
+               (<a href="http://proj.badc.rl.ac.uk/preparde/wiki/TracNavigation?action=diff&amp;version=1">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="TracNavigation">Trac Navigation</h1>
+<p>
+Starting with Trac 0.11, it is now possible to customize the main and meta navigation entries in some basic ways.
+</p>
+<p>
+The new <tt>[mainnav]</tt> and <tt>[metanav]</tt> configuration sections can now be used to customize the text and link used for the navigation items, or even to disable them.
+</p>
+<h3 id="mainnav-bar"><tt>[mainnav]</tt></h3>
+<p>
+<tt>[mainnav]</tt> corresponds to the <strong>main navigation bar</strong>, the one containing entries such as <em>Wiki</em>, <em>Timeline</em>, <em>Roadmap</em>, <em>Browse Source</em> and so on. This navigation bar is meant to access the default page of the main modules enabled in Trac and accessible for the current user.
+</p>
+<p>
+<strong> <span class="wikianchor" id="Example">Example</span> </strong> 
+</p>
+<p>
+In the following example, we rename the link to the Wiki start "Home", and hide the "Help/Guide" link. 
+We also make the "View Tickets" entry link to a specific report.
+</p>
+<p>
+Relevant excerpt from the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">TracIni</a>:
+</p>
+<pre class="wiki">[mainnav]
+wiki.label = Home
+tickets.href = /report/24
+</pre><h3 id="metanav-bar"><tt>[metanav]</tt></h3>
+<p>
+<tt>[metanav]</tt> corresponds to the <strong>meta navigation bar</strong>, by default positioned above the main navigation bar and below the <em>Search</em> box. It contains the <em>Log in</em>, <em>Logout</em>, <em>Help/Guide</em> etc. entries. This navigation bar is meant to access some global information about the Trac project and the current user.
+</p>
+<p>
+There is one special entry in the  <tt>[metanav]</tt> section: <tt>logout.redirect</tt> is the page the user sees after hitting the logout button. 
+
+</p>
+<p>
+<strong> Example </strong> 
+</p>
+<pre class="wiki">[metanav]
+help = disabled
+logout.redirect = wiki/Logout
+</pre><h3 id="Notes">Notes</h3>
+<p>
+Possible URL formats (for <tt>.href</tt> or <tt>.redirect</tt>):
+</p>
+<table class="wiki">
+<tr><td> <strong>config</strong> </td><td> <strong>redirect to</strong> 
+</td></tr><tr><td> <tt>wiki/Logout</tt> </td><td> <tt>/projects/env/wiki/Logout</tt> 
+</td></tr><tr><td> <tt>http://hostname/</tt> </td><td> <tt>http://hostname/</tt> 
+</td></tr><tr><td> <tt>/projects</tt> </td><td> <tt>/projects</tt> 
+</td></tr></table>
+<p>
+Note that it is still not possible to customize the <strong>contextual navigation bar</strong>, i.e. the one usually placed below the main navigation bar.
+</p>
+<hr />
+<p>
+See also: <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracInterfaceCustomization">TracInterfaceCustomization</a>, and the <a class="ext-link" href="http://trac-hacks.org/wiki/NavAddPlugin"><span class="icon"> </span>TracHacks:NavAddPlugin</a> or <a class="ext-link" href="http://trac-hacks.org/wiki/MenusPlugin"><span class="icon"> </span>TracHacks:MenusPlugin</a> (still needed for adding entries)
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracNavigation?version=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

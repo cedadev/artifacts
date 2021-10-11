@@ -1,0 +1,422 @@
+<HTML>
+<HEAD>
+<TITLE>Cardington - data description</TITLE>
+<STYLE>
+<!--
+  BODY {
+        font : 11pt sans-serif,arial;
+        background-color : #FFFFFF;
+       }
+
+  H1   {font : italic bold 230% sans-serif,arial;
+        color: #333399;}
+
+  H2   {font : bold 175% sans-serif,arial;}
+
+  H3   {font : bold 120% sans-serif,arial;}
+
+  TD.heading   {font : bold italic 100% sans-serif,arial;}
+  TD.notes   {font : italic 80% sans-serif,arial;}
+
+  TD.title   {font : 100% sans-serif,arial;}
+
+  TD    {font : 80% sans-serif,arial;}
+
+
+-->    
+</STYLE>
+</HEAD>
+
+<BODY>
+
+<TABLE VSPACE=20 CELLSPACING=5 WIDTH=100% BORDER=0>
+<TR>
+  <TD CLASS=TITLE>
+    <H1>Cardington Data Description</H1>
+   </TD>
+</TR>
+</TABLE>
+
+This document describes the file format and contents of the processed data from the
+<A HREF="index.html">Cardington instrumentation site</A>.
+
+<H2>1. File names</H2>
+Data files are named using the following convention: 
+<PRE> card_YYYYMMDD_xx.dat
+</PRE>
+where <I>YYYY</I> is the year, <I>MM</I> is the month, <I>DD</I> is the day and <I>xx</I> the averaging period 
+of the data in minutes (eg. 01, 10 or 30).
+<H2>2. File Format</H2>
+
+The datasets are ascii files, which begin with a header section. This consists of a list of the variables contained
+within the file. Each line in the variable list is made up of  three elements - a data prefix, 
+a variable label, and a long-hand description of the parameter. 
+ 
+<P>
+The prefix refers to the source of the data within the <A HREF="index.html#logging">logging
+system<A>. For instance, variables with a <I>50m</I> prefix  refers to instruments on the 50m sonic mast, and
+<I>rad</I> refers to the radiation instrumentation data logger. Some parameters, which are measured at
+more than one height, may be allocated the same variable label, but have different data prefixes. A full list of 
+parameters available in the files, is given <A HREF="#pars">below</A>.
+ 
+<P>
+Data is then aligned in columns, beneath the relevent variable labels and prefixes. Each data element is 
+preceded by a symbol, representing the quality control status of the instrument. 
+Possible values for the quality control flags are as follows:-
+<PRE>
+    |  = data OK
+    X  = data flagged as bad
+    m  = data missing
+    ?  = possibly suspect data
+    c  = calibration suspect 
+    D  = sonic orientation bad for wind direction
+    H  = wind coming from hangar direction
+</PRE>
+
+A dummy value (1x10<SUP><FONT SIZE=-1>11</FONT></SUP>) is substituted for any data which has been assigned 
+an  'X' flag. 
+
+'D' and 'H' flags are applied to data derived from the sonic anemometers only, and indicate that the wind, 
+and turbulence data in particular, may not be reliable.
+
+<P>
+
+To read in  data from  a single file, the PVWAVE/IDL function <I>read_proc_file.pro</I>, may be used.
+This program returns an unnmamed structure consisting of a 2-d data array, and arrays containing the labels, 
+prefixes and QC flags.
+
+
+<A NAME="pars"></A>
+<H2>3. Parameter List</H2>
+
+The table below, shows a list of the parameters currently contained within the datasets:-
+
+
+<P>
+
+<TABLE BORDER=2 CELLPADDING=5 CELLSPACING=2 HSPACE=25 WIDTH=96% BGCOLOR="#FFFFFF">
+
+<TR>
+  <TD CLASS=heading WIDTH=35%> Parameter</TD>
+  <TD CLASS=heading> Label</TD>
+  <TD CLASS=heading> Prefix</TD>
+  <TD CLASS=heading> Notes</TD>
+</TR>
+
+<TR>
+  <TD> Time [hrs]</TD>
+  <TD> HOUR</TD>
+  <TD> time</TD>
+  <TD CLASS=notes> Midpoint of averaging period </TD>
+</TR>
+
+<TR>
+  <TD> Mean wind speed [m/s] </TD>  
+  <TD> UTOT</TD>
+  <TD> 10m, 25m, 50m </TD>
+  <TD CLASS=notes ROWSPAN=2> Magnitude and direction of the mean wind vector</TD>
+</TR>
+
+
+<TR>
+  <TD> Wind direction [deg]</TD>
+  <TD> DIR</TD>
+  <TD> 10m, 25m, 50m </TD>
+</TR>
+
+<TR>
+  <TD>* Maximum  gust [m/s]</TD>
+  <TD> UMAX</TD>
+  <TD>10m, 25m, 50m</TD>
+  <TD CLASS=notes> Peak scalar windspeed during averaging period</TD>
+</TR>
+
+<TR>
+  <TD>* Variance <I>U</I> wind component [m<SUP>2</SUP>/s<SUP>2</SUP>]</TD>
+  <TD> UU</TD>
+  <TD>10m, 25m, 50m</TD>
+  <TD CLASS=notes ROWSPAN=11> 
+  
+   <U>Turbulence statistics</U>
+   <BR><BR>The three wind components are defined as follows:-
+   
+   <BR> - U is the horizontal wind in the direction of the mean wind vector.
+   <BR> - V is the horizontal wind perpendicular to the mean wind vector.
+   <BR> &nbsp (mean V = 0)
+   <BR> - W is the vertical wind component.
+   <BR> &nbsp (upwards positve)
+    <P>
+    T is the sonic-derived temperature
+    <P>
+    Q is the specific humidity derived from either the LICOR (10m) or humicaps (25m and 50m)
+    <P>
+    CO<SUB>2</SUB> concentration is derived from the LICOR 
+  </TD>
+</TR>
+
+<TR>
+  <TD>* Variance <I>V</I> wind component [m<SUP>2</SUP>/s<SUP>2</SUP>]</TD>
+  <TD> VV</TD>
+  <TD>10m, 25m, 50m</TD>
+</TR>
+
+<TR>
+  <TD>* Variance <I>W</I> wind component [m<SUP>2</SUP>/s<SUP>2</SUP>]</TD>
+  <TD> WW</TD>
+  <TD>10m, 25m, 50m</TD>
+</TR>
+
+<TR>
+  <TD>* Variance Sonic Temperature [K<SUP>2</SUP>]</TD>
+  <TD> TT</TD>
+  <TD>10m, 25m, 50m</TD>
+</TR>
+
+<TR>
+  <TD>* Covariance <I>U</I> and <I>W</I> [m<SUP>2</SUP>/s<SUP>2</SUP>]</TD>
+  <TD> UW</TD>
+  <TD>10m, 25m, 50m</TD>
+</TR>
+
+<TR>
+  <TD>* Covariance <I>V</I> and <I>W</I> [m<SUP>2</SUP>/s<SUP>2</SUP>]</TD>
+  <TD> VW</TD>
+  <TD>10m, 25m, 50m</TD>
+</TR>
+
+<TR>
+  <TD>* Covariance <I>U</I> and <I>V</I> [m<SUP>2</SUP>/s<SUP>2</SUP>]</TD>
+  <TD> UV</TD>
+  <TD>10m, 25m, 50m</TD>
+</TR>
+
+<TR>
+  <TD>* Covariance <I>W</I> and <I>T</I> [K.m/s]</TD>
+  <TD> WT</TD>
+  <TD>10m, 25m, 50m</TD>
+</TR>
+
+<TR>
+  <TD>* Covariance <I>W</I> and <I>Q</I> [kg/m<SUP>2</SUP>/s]</TD>
+  <TD> WQL</TD>
+  <TD>10m</TD>
+  
+</TR>
+
+<TR>
+  <TD>* Covariance <I>W</I> and <I>Q</I> [kg/m<SUP>2</SUP>/s]</TD>
+  <TD> WQH</TD>
+  <TD> 25m, 50m</TD>
+</TR>
+
+<TR>
+  <TD>* Covariance <I>W</I> and <I>CO<SUB>2</SUB></I> [kg/m<SUP>2</SUP>/s]</TD>
+  <TD> FCO2</TD>
+  <TD>10m</TD>
+</TR>
+
+
+<TR>
+  <TD> Temperature [<FONT SIZE=-1><SUP>o</SUP></FONT>C] </TD>
+  <TD> TEMP</TD>
+  <TD> screen, 10m, 25m, 50m</TD>
+  <TD CLASS=notes ROWSPAN=5> 'screen' temperature and humidity sensors located at 1.2m above gorund level</TD>
+</TR>
+
+<TR>
+  <TD> Relative humidity from Humicap [%] </TD>
+  <TD> RHHU</TD>
+  <TD> screen </TD>
+</TR>
+
+
+<TR>
+  <TD> Dewpoint from Michell hygrometer [<FONT SIZE=-1><SUP>o</SUP></FONT>C] </TD>
+  <TD> DEWP</TD>
+  <TD> screen</TD>
+</TR>
+
+<TR>
+  <TD> Specific humidity from Michell hygrometer [%] </TD>
+  <TD> QMIC</TD>
+  <TD> screen</TD>
+</TR>
+
+<TR>
+  <TD> Relative humidity from Michell hygrometer [%] </TD>
+  <TD> RHMI</TD>
+  <TD> screen</TD>
+</TR>
+
+<TR>
+  <TD> Relative humidity from Humicap [%] </TD>
+  <TD> MRH</TD>
+  <TD> 25m, 50m </TD>
+  <TD CLASS=notes> &nbsp</TD>
+</TR>
+
+<TR>
+  <TD> Specific humidity [g/kg] </TD>
+  <TD> QLIC</TD>
+  <TD> 10m</TD>
+  <TD CLASS=notes ROWSPAN=2> from LICOR</TD>
+</TR>
+
+<TR>
+  <TD> C0<FONT SIZE=-1><SUB>2</SUB></FONT> concentration [ppm] </TD>
+  <TD> MCO2</TD>
+  <TD> 10m</TD>
+</TR>
+
+<TR>
+  <TD> Global solar irradiance [W m<FONT SIZE=-1><SUP>-2</SUP></FONT>] </TD>
+  <TD> SWDN</TD>
+  <TD> rad</TD>
+  <TD CLASS=notes> &nbsp</TD>
+</TR>
+
+<TR>
+  <TD>* Maximum global solar irradiance [W m<FONT SIZE=-1><SUP>-2</SUP></FONT>]</TD>
+  <TD> SWMX</TD>
+  <TD> rad</TD>
+  <TD CLASS=notes> &nbsp</TD>
+</TR>
+
+<TR>
+  <TD> Diffuse solar irradiance [W m<FONT SIZE=-1><SUP>-2</SUP></FONT>] </TD>
+  <TD> SWDF</TD>
+  <TD> rad</TD>
+  <TD CLASS=notes> &nbsp</TD>
+</TR>
+
+<TR>
+  <TD> Reflected solar irradiance [W m<FONT SIZE=-1><SUP>-2</SUP></FONT>] </TD>
+  <TD> SWUP</TD>
+  <TD> rad</TD>
+  <TD CLASS=notes> &nbsp</TD>
+</TR>
+
+<TR>
+  <TD> Downwelling LW irradiance [W m<FONT SIZE=-1><SUP>-2</SUP></FONT>] </TD>
+  <TD> LWDN</TD>
+  <TD> rad</TD>
+  <TD CLASS=notes> &nbsp</TD>
+</TR>
+
+<TR>
+  <TD> Upwelling LW irradiance [W m<FONT SIZE=-1><SUP>-2</SUP></FONT>] </TD>
+  <TD> LWUP</TD>
+  <TD> rad</TD>
+  <TD CLASS=notes> &nbsp</TD>
+</TR>
+
+<TR>
+  <TD> Surface radiation temperature [<FONT SIZE=-1><SUP>o</SUP></FONT>C] </TD>
+  <TD> IRTG</TD>
+  <TD> rad</TD>
+  <TD CLASS=notes> &nbsp</TD>
+</TR>
+
+<TR>
+  <TD> Visibilty [km] </TD>
+  <TD> VISI</TD>
+  <TD> screen</TD>
+  <TD CLASS=notes> &nbsp</TD>
+</TR>
+
+<TR>
+  <TD> Nephelometer scattering coefficient [km<FONT SIZE=-1><SUP>-1</SUP></FONT>] </TD>
+  <TD> NEPH</TD>
+  <TD> rad</TD>
+  <TD CLASS=notes> &nbsp</TD>
+</TR>
+
+<TR>
+  <TD> Barometric pressure [hPa] </TD>
+  <TD> PRES</TD>
+  <TD> screen</TD>
+  <TD CLASS=notes> 1.2m above ground level</TD>
+</TR>
+
+<TR>
+  <TD>* Rainfall [mm]</TD>
+  <TD> RAIN</TD>
+  <TD >screen</TD>
+  <TD CLASS=notes> Accumulation over averaging period</TD>
+</TR>
+
+<TR>
+  <TD>* Soil Moistures (south site) [%vol]</TD>
+  <TD> SM<I>xx</I></TD>
+  <TD>subsoil_s</TD>
+  <TD CLASS=notes ROWSPAN=2 VALIGN=TOP> <I>xx</I> is depth of the sensor:
+     <BR> 10 = 10cm
+     <BR> 22 = 22cm
+     <BR> 57 = 57cm
+     <BR> 2M = 1.6m
+  </TD>
+</TR>
+
+<TR>
+  <TD>* Soil Moisture (west site) [%vol]</TD>
+  <TD> WM<I>xx</I></TD>
+  <TD> screen</TD>
+</TR>
+
+<TR>
+  <TD>* Soil Temperature (south site) [<FONT SIZE=-1><SUP>o</SUP></FONT>C] </TD>
+  <TD> ST<I>xx</I></TD>
+  <TD> subsoil_s</TD>
+  <TD CLASS=notes> <I>xx</I> is depth of the sensor (cm):
+   <BR> 01,04,07,10,17,35 or 65
+</TR>
+
+
+<TR>
+  <TD>* Water table depth (west site) [mm]</TD>
+  <TD> WTWE</TD>
+  <TD> screen</TD>
+  <TD CLASS=notes ROWSPAN=2 VALIGN=TOP> Depth below ground level</TD>
+</TR>
+
+<TR>
+  <TD>* Water table depth (south site) [mm]</TD>
+  <TD> WTSO</TD>
+  <TD> subsoil_s</TD>
+</TR>
+
+</TABLE>
+ <BR> <BR>
+
+* Note that the parameters indicated above are not output in the 1 minute datasets.
+This includes the various  turbulence quantities derived from the sonic anemometers, plus the slow response 
+measurements (ie soil moistures and temperatures.)
+ 
+<P>
+Some of the parameter labels are common to more than one data prefix and so reference must be made to 
+both the variable label and the prefix when extracting the desired data from the file. For example, to access  
+the mean windspeed at 25m, the variable labelled 'UTOT', and having a prefix '25m' should be accessed.
+Other variables on the other hand, are unique to a single data prefix, and so reference need only be made to the 
+variable label (eg. 'VISI' for the visibility)
+
+<!----------------------------------------------------------->
+
+<BR>
+<BR>
+
+<A HREF="index.html">Cardington Instrumentation Facility</A>
+<BR>
+<BR>
+
+<HR>
+<FONT SIZE=1>
+Last Modified:- 6th November 2006
+<BR>
+By:- <A HREF="mailto:james.mcgregor@metoffice.gov.uk">james.mcgregor@metoffice.gov.uk</A>
+
+</BODY>
+</HTML>
+
+
+
+

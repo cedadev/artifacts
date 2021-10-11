@@ -1,0 +1,119 @@
+<head>
+<Title>UTLS-Ozone Data Archive Directory Structure</Title>
+</head>
+<body BGCOLOR=#ffffff>
+<h1>UTLS-Ozone Directory Structure</h1>
+<em>This is a draft document, and will change with time.</em>
+<HR ALIGN=LEFT>
+<h1>Description</h1>
+<P>
+This document outlines the unix directory structure used at the BADC for the
+UTLS-OZONE data archive.  The structure reflects 
+conventions adopted by the BADC for other data archives, which are based on ease of
+navigation and access. </P>
+
+<P>Most, but not all, of the files relating to data collected as part of
+UTLS-OZONE funded
+projects are stored at the BADC under <kbd>/badc/utls-ozone</kbd>.  This
+directory has subdirectories <kbd>data</kbd>, <kbd>doc</kbd>, and
+<kbd>software</kbd>, that contain the data, documentation, and software
+respectively.  Some files relating to data collected as part of UTLS-OZONE funded
+projects are held elsewhere on the BADC. These are from the MST radar which are
+regularly archived at the BADC in the directory <kbd>/badc/mst</kbd>.</P> 
+
+<p>The <kbd>/badc/utls-ozone/data</kbd> directory is split in to a number of
+subdirectories.  These are based loosely on individual projects.  It is not,
+however, appropriate to have a subdirectory for each individual project.  For
+instance the Aberystwyth ozone sonde and LIDAR profiles have been funded by several
+projects and there are some overlaps.  To make access to the ozone sonde and LIDAR
+data simple and to avoid repetition the ozone profiles are stored in a subdirectory
+not associated with an individual project.</P>
+
+<h2>Data Directories</h2>
+The main subdirectories of the UTLS data archive are given in the table below.
+Links from the directory names give more information on the contents of the
+individual data directories.
+<table border>
+<tr><th>Directory</th><th>Associated Projects</th><th>(First) PI or<br>
+    data provider</th></tr>
+<tr><td><kbd>/badc/utls/data/acto</kbd></td><td>Atmospheric Chemistry and Transport of Ozone
+</td><td>Penkett</td></tr>
+<tr>
+ <td><a href=#dcfz><kbd>/badc/utls/data/dcfz</kbd></a></td>
+ <td>Dynamics and Chemistry of Frontal Zones</td>
+ <td>Browning</td>
+</tr>
+<tr>
+ <td rowspan=2><kbd>/badc/utls/data/egrett</kbd></td>
+ <td>Aberystwyth Egrett Experiment</td>
+ <td>Whiteway</td>
+</tr>
+<tr><td>Airborne Measurements of Atmospheric Tracers</td><td>Jones</td></tr>
+<tr>
+ <td><kbd>/badc/utls/data/gcm-hal</kbd></td>
+ <td>GCM measurements of halogenated source gases</td>
+ <td>Penkett</td>
+</tr>
+<tr>
+ <td><kbd>/badc/utls/data/itop/</kbd></td>
+ <td>Intercontinental transport of ozone and precursors</td>
+ <td>Lewis</td>
+</tr>
+<tr>
+ <td><kbd>/badc/utls/data/met_images/</kbd></td>
+ <td align=center><i>- All -</i></td>
+ <td>Kettleborough</td>
+</tr>
+<tr>
+ <td><kbd>/badc/utls/data/mst/</kbd></td>
+ <td align=center><i>Egrett</i></td>
+ <td>Hooper</td>
+</tr>
+<tr>
+ <td rowspan=4><kbd>/badc/utls/data/ozprof</kbd></td>
+ <td>Investigations of the Subtropical Jetstream</td>
+ <td>Vaughan</td>
+</tr>
+<tr><td>DCFZ</td><td>Browning</td></tr>
+<tr><td>ACTO</td><td>Penkett</td></tr>
+<tr><td>Egrett</td><td>Whiteway</td></tr>
+<tr><td><kbd>/badc/utls/data/sica</kbd></td><td>Scientific instruments for
+Commercial Aircraft</td><td>Jones</td</tr>
+<tr><td><a href=#slim><kbd>/badc/utls/data/slimcat</kbd></a></td>
+    <td align=center><i>- All -</i></td><td>Chipperfield</td></tr>
+<tr><td rowspan=2><kbd>/badc/utls/data/theseo</kbd></td><td>THESEO Balloon Borne Measurements</td><td>
+Jones</td></tr>
+<tr><td>Improved Upper-Air Analysis</td><td>McKenzie</td></tr>
+<tr><td><kbd>/badc/utls/data/tropopause_O3_and_H2O</kbd></td><td>Ozone and water vapour in the tropopause region</td><td>
+Vaughan</td></tr>
+<tr><td><kbd>/badc/utls/data/voc</kbd></td><td>Characterisation of VOCs in the
+UTLS</td><td>Pilling</td></tr>
+</table>
+
+<h3><a name=slim><kbd>/badc/slimcat/data/UTLS_Ref_Atm</kbd></a></h3>
+Contains 3-D chemical and meteorological global stratospheric fields computed
+by Martyn Chipperfield with the SLIMCAT model.
+Twelve files (one model output at one date near the middle of each month of
+1997).
+
+<h3><a name=dcfz><kbd>/badc/utls/data/dcfz</kbd></a></h3>
+The dcfz directory will contain the following:<P>
+<table>
+<tr><td><kbd>c-130<kbd></td><td>Data from the c-130.
+<tr><td><kbd>chilbolton/raw</kbd></td><td>RAW data from the Chilbolton
+Radar.</td></tr>
+<tr><td><kbd>chilbolton/images</kbd></td><td>Images produced from Chilbolton
+Radar Data.</td></tr>
+<tr><td><kbd>mst/README</kbd></td><td>References to files in<kbd>/badc/mst</kbd> for
+MST observations made during DCFZ.</td></tr>
+<tr><td><kbd>ozprof/README</kbd></td><td>References to files
+in<kbd>/badc/utls/data/ozprof</kbd> for
+Ozone Sonde and LIDAR observations made during DCFZ.</td></tr>
+<tr><td><kbd>summaries</kbd></td><td>Summary documents for each of the
+flights.</td></tr>
+</table>
+
+<P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,1477 @@
+SURFACE RADIATION BUDGET (SRB) SHORTWAVE
+
+
+
+1.0     TYPE OF DATA
+	1.1     Parameter/Measurement, Units of Measurement
+	1.2     Data Source
+	1.3     Dataset Identification
+
+2.0     SPATIAL CHARACTERISTICS
+	2.1     Spatial Coverage
+	2.2     Spatial Resolution
+
+3.0     TEMPORAL CHARACTERISTICS
+	3.1     Temporal Coverage
+	3.2     Temporal Resolution
+
+4.0     INSTRUMENT DESCRIPTION
+	4.1     Mission Objectives
+	4.2     Key Satellite Flight Parameters
+	4.3     Principles of Operation
+	4.4     Instrument Measurement Geometry
+
+5.0     DATA PROCESSING SEQUENCE
+	5.1     Processing Steps and Datasets
+	5.2     Derivation Techniques/Algorithms
+	5.2.1   Conceptual Framework
+	5.2.2   Atmospheric Radiative Transfer Component
+	5.2.2.1 Ozone and Water Vapor Absorption
+	5.2.2.2 Rayleigh Scattering
+	5.2.2.3 Aerosol Extinction
+	5.2.2.4 Cloud Extinction
+	5.2.2.5 Surface Reflectivity
+	5.2.2.6 Surface Albedo
+	5.3     Special Corrections/Adjustments
+	5.4     Processing Changes
+
+6.0     QUALITY ASSESSMENT
+
+	6.1     Data Validation by Producer
+	6.2     Confidence Level/Accuracy Judgement
+	6.3     Usage Guidance
+
+7.0     CONTACT FOR DATA PRODUCTION INFORMATION
+
+8.0     DATASETS AND AVAILABILITY
+
+	8.1     Datasets
+	8.2     Browse Products
+	8.3     Data Packages
+
+9.0     PROCEDURES FOR OBTAINING DATA
+
+10.0    REFERENCES
+
+	10.1    SRB References
+	10.2    Pinker References
+	10.3    Staylor References
+	10.4    Archive References
+
+11.0    RELATED LaRC DAAC DATASETS
+
+12.0    SUMMARY
+
+13.0    NOTES
+
+
+1.0       TYPE OF DATA
+
+1.1       Parameter/Measurement, Units of Measurement
+
+Fifty-eight quantities are reported for the SRB Shortwave Data Package
+(excluding data date and processing date). There are 50 monthly average
+quantities and 8 daily average quantities.  The principle parameters in the
+data package are Pinker and Staylor (SRB satellite algorithms) calculated
+irradiances for the surface and top-of-atmosphere.  Ground truth values
+for downward shortwave irradiance and an accuracy assessment are also
+included.  SRB uses the same equal area grid system as that used by the
+International Satellite Cloud Climatology Project (ISCCP) for its C1
+products.  The equal-area grid contains 6596 cells covering the globe;
+where a cell is approximately 280km X 280km at the equator.  Ground
+truth values for downward shortwave irradiance and an accuracy
+assessment are also included.
+
+The SRB Shortwave Data Package parameters and their units are listed
+below.
+
+DEFINITIONS OF SRB PARAMETERS AND CODES
+
+A.  Definition Of 52 Items In Monthly Binary File: mon_yymm.hdf.
+    Cell information including both ISCCP and ERBE -derived properties:
+
+    1.  CELL NUMBER (beginning at Greenwich south pole circling east),
+	DIMENSIONLESS.
+
+    2.  ISCCP LATITUDE INDEX, DIMENSIONLESS.
+
+    3.  ISCCP LONGITUDE INDEX, DIMENSIONLESS.
+
+    4.  LATITUDE OF CELL CENTER, DEGREES.
+
+    5.  LONGITUDE OF CELL CENTER, DEGREES.
+
+    6.  ISCCP SURFACE TYPE CODE (ISCCP parameter 11 for daytime), DIMENSIONLESS.
+
+	CODE  SURFACE TYPE
+
+	 1     WATER
+	 2     LAND
+	 3     COASTAL
+
+    7.  ISCCP PRINCIPAL SATELLITE CODE (ISCCP parameter 12), DIMENSIONLESS.
+
+	Satellite codes used by SRB are:
+
+	CODE   SATELLITE
+
+	 11 NOAA-7
+	 61 NOAA-8
+	 12 NOAA-9
+	 62 NOAA-10
+	 13 NOAA-11
+	 63 NOAA-12
+	 31 GOES-5
+	 21 GOES-6
+	 32 GOES-7
+	 41 METEOSAT-2
+	 42 METEOSAT-3
+	 43 METEOSAT-4
+	 44 METEOSAT-5
+	 51 GMS-1
+	 52 GMS-2
+	 53 GMS-3
+	 54 GMS-4
+
+  8.  NUMBER OF GROUND TRUTH SITES IN CELL, DIMENSIONLESS (GEBA Subset).
+
+  9.  NUMBER OF DAYS OF MISSING ISCCP RADIANCE DATA THAT WERE FILLED,
+      DAYS (STAYLOR VALUE).
+
+      This number allows the user to know how much radiation
+      data for this cell are based on real ISCCP data and how much
+      are based on fill values obtained by interpolation.  The
+      PINKER ALGORITHM also fills over gaps of missing data.
+
+ 10.  STAYLOR SNOW/ICE COVER, PERCENT OF MONTH.
+
+      This is the percentage of time when snow/ice cover is greater
+      than 10 percent and the surface temperature (ISCCP
+      PARAMETER 115) is less than 285 DEG K over a 5-day
+      period.  The value is calculated as a percentage of days when
+      actual data are available.  Thus, data gaps are assumed to
+      have the same snow/ice frequency as data days.  When
+      average   surface temperature is greater than 285 DEG K over
+      a 5-day period, Staylor assumes that the snow/ice cover has
+      melted and modifies ISCCP PARAMETER 13 to zero snow/
+      ice cover.
+
+ 11.  NUMBER OF ISCCP ALL-SKY PIXELS (linear average of
+      daylight values of ISCCP parameter 5 over the month).
+
+ 12.  NUMBER OF ISCCP CLOUDY-SKY PIXELS (linear
+      average of daylight values of ISCCP parameter 6 over the
+      month).
+
+ 13.  ISCCP DAYLIGHT CLOUD FRACTION, DIMENSIONLESS (SRB ITEM 12/SRB ITEM 11).
+
+ 14.  ISCCP CLOUDY-PIXEL CLOUD OPTICAL DEPTH, DIMENSIONLESS (linear
+      average of daylight values of ISCCP parameter 85 over the month).
+
+ 15.  ISCCP SURFACE PRESSURE, MB (linear average of daylight values for
+      ISCCP parameter 114 over the month).
+
+ 16.  ISCCP SURFACE TEMPERATURE (TOVS SOUNDER PRODUCT), DEG K (linear
+      average of daylight values for ISCCP parameter 115 over the month).
+
+ 17.  ISCCP SURFACE TEMPERATURE (ISCCP CLOUD-IMAGER PRODUCT), DEG K (linear
+      average of daylight values for ISCCP parameter 89 over the month).
+
+ 18.  ISCCP TOTAL COLUMN PRECIPITABLE WATER, CM (linear average of the
+      daylight sum of ISCCP parameters 127, 128, 129, 130, and 131 over the month).
+
+ 19.  ISCCP TOTAL COLUMN OZONE, DOBSON UNITS (linear average of daylight
+      values of ISCCP parameter 132 over the month).
+
+ 20.  ISCCP CLEAR-SKY COMPOSITE TOP-OF-ATMOSPHERE REFLECTANCE, DIMENSIONLESS
+      (linear average of daytime values of ISCCP clear-sky composite scaled
+      radiance divided by solar zenith angle [ISCCP parameter 110/isccp
+      parameter 14], See WMO/TD- No. 58, Revised August 1987, page 16 for discussion).
+
+ 21.  ERBE ALL-SKY, TOP-OF-ATMOSPHERE SW NET IRRADIANCE, W/M**2.
+
+ 22.  ERBE CLEAR-SKY, TOP-OF-ATMOSPHERE SW NET IRRADIANCE, W/M**2.
+
+Downward SW surface irradiance:
+
+ 23.  PINKER ALL-SKY DOWNWARD SW SURFACE IRRADIANCE, W/M**2 (average of 24-hr
+      values over the month).
+
+ 24.  STAYLOR ALL-SKY DOWNWARD SW SURFACE IRRADIANCE, W/M**2 (average of 24-hr
+      values over the month).
+
+ 25.  GEBA SUBSET ALL-SKY DOWNWARD SW IRRADIANCE GROUND TRUTH, W/M**2.
+
+Other parameters used to estimate downward SW surface irradiance:
+
+ 26.  PINKER SURFACE PRESSURE, MB (assumed value).
+
+ 27.  STAYLOR SURFACE PRESSURE, MB (assumed value).
+
+ 28.  PINKER TOP-OF-ATMOSPHERE DOWNWARD SW IRRADIANCE, W/M**2 (average of 24-hr
+      values over the month).
+
+ 29.  STAYLOR TOP-OF-ATMOSPHERE DOWNWARD SW IRRADIANCE, W/M**2 (average of 24-hr
+      values over the month).
+
+Calculated parameters (without validation):
+
+ 30.  PINKER SURFACE DOWNWARD SW DIRECT/ DIFFUSE RATIO (linear average of daylight
+      values over the month).
+
+ 31.  PINKER CLEAR-SKY DOWNWARD SW SURFACE IRRADIANCE, W/M**2 (average of 24-hr
+      values over month).
+
+ 32.  STAYLOR CLEAR-SKY DOWNWARD SW SURFACE IRRADIANCE, W/M**2 (average of 24-hr values
+      over month).
+
+ 33.  PINKER DOWNWARD SW SURFACE "CLOUD FORCING" IRRADIANCE, W/M**2 (SRB item 23-SRB
+ item 31).
+
+ 34.  STAYLOR DOWNWARD SW SURFACE "CLOUD FORCING" IRRADIANCE, W/M**2 (SRB item 24-SRB
+ item 32).
+
+ 35.  PINKER SW SURFACE ALBEDO, DIMENSIONLESS   (Surface Upward/Surface Downward).
+
+ 36.  STAYLOR SW SURFACE ALBEDO, DIMENSIONLESS (analysis of ERBE data).
+
+ 37.  PINKER ALL-SKY SURFACE SW NET IRRADIANCE, W/M**2. (Surface Downward/Surface
+ Upward)
+
+ 38.  STAYLOR ALL-SKY SURFACE SW NET IRRADIANCE, W/M**2 (Downward (1-surface albedo)).
+
+ 39.  PINKER ALL-SKY, TOP-OF-ATMOSPHERE SW NET IRRADIANCE, W/M**2.
+
+ 40.  PINKER CLEAR-SKY, TOP-OF-ATMOSPHERE SW NET IRRADIANCE, W/M**2.
+
+ 41.  PINKER ATMOSPHERE SW ABSORBED IRRADIANCE, W/M**2 (SRB item 39 - SRB item 37).
+
+
+Diagnostic parameters:
+
+ 42.  PINKER MINUS STAYLOR ALL-SKY DOWNWARD SW SURFACE IRRADIANCE, W/M**2
+      (SRB item 23- SRB item 24).
+
+ 43.  GEBA SUBSET GROUND TRUTH MINUS PINKER ALL-SKY DOWNWARD SW SURFACE
+      IRRADIANCE, W/M**2 (SRB item 25 - SRB item 23).
+
+ 44.  GEBA SUBSET GROUND TRUTH MINUS STAYLOR ALL-SKY DOWNWARD SW SURFACE
+      IRRADIANCE, W/M**2 (SRB item 25 - SRB item 24).
+
+ 45.  PINKER MINUS STAYLOR CLEAR-SKY DOWNWARD SW SURFACE IRRADIANCE, W/M**2
+      (SRB item 31 - SRB item 32).
+
+ 46.  PINKER MINUS STAYLOR SURFACE SW CLOUD FORCING IRRADIANCE, W/M**2
+      (SRB item 33- SRB item 34).
+
+ 47.  PINKER MINUS STAYLOR SW SURFACE ALBEDO, DIMENSIONLESS
+      (SRB item 35 - SRB item 36).
+
+ 48.  PINKER MINUS STAYLOR ALL-SKY SURFACE SW NET IRRADIANCE, W/M**2
+      (SRB item 37 - SRB item 38).
+
+ 49.  PINKER MINUS ERBE ALL-SKY, TOP-OF- ATMOSPHERE SW NET IRRADIANCE, W/M**2
+      (SRB item 39 - SRB item 21).
+
+ 50.  PINKER MINUS ERBE CLEAR-SKY, TOP-OF- ATMOSPHERE SW NET IRRADIANCE, W/M**2
+      (SRB item 40 - SRB item 22).
+
+ 51.  DATA DATE, MMYY.
+
+ 52.  PROCESSING DATE, DDMMYY.
+
+NOTE:  A value of -1000 means that no data are available for this item.
+
+B.  DEFINITIONS OF 10 ITEMS IN DAILY BINARY FILE
+
+     day_yymm.hdf
+
+ 1.  CELL NUMBER (beginning at Greenwich south pole circling east,
+     1-6596, Dimensionless.
+
+ 2.  DAYLIGHT CLOUD FRACTION, DIMENSIONLESS (linear average of
+     daylight values of ISCCP parameter 6/ linear average of
+     daylight values of ISCCP parameter 5).
+
+ 3.  PINKER ALL-SKY DOWNWARD SW SURFACE IRRADIANCE, W/M**2.
+
+ 4.  STAYLOR ALL-SKY DOWNWARD SW SURFACE IRRADIANCE, W/M**2.
+
+ 5.  PINKER CLEAR-SKY DOWNWARD SW SURFACE IRRADIANCE, W/M**2.
+
+ 6.  STAYLOR CLEAR-SKY DOWNWARD SW SURFACE IRRADIANCE, W/M**2.
+
+ 7.  PINKER ALL-SKY, TOP-OF-ATMOSPHERE SW NET IRRADIANCE, W/M**2.
+
+ 8.  PINKER TOP-OF-ATMOSPHERE DOWNWARD SW IRRADIANCE, W/M**2.
+
+ 9.  DATA DATE, MMYY.
+
+10.  PROCESSING DATE, DDMMYY.
+
+ NOTE:  A value of -1000 means that no data are available for this item.
+
+1.2       Data Source
+
+SRB has a variety of data sources.  The primary source is the International
+Satellite Cloud Climatology Project (ISCCP) C1 monthly dataset. The
+ISCCP product provides input for the Staylor and Pinker satellite
+algorithms.  Earth Radiation Budget Experiment (ERBE) data are also
+used - as input to the models, as well as for top-of-atmosphere (TOA)
+irradiance comparisons with the Pinker Model output.  The Swiss Federal
+Institute of Technology, Zurich, provides ground-truth fluxes from the
+Global Energy Budget Archive   (GEBA).  This data is used for validation
+of the Pinker and Staylor calculated downward shortwave surface
+irradiances.
+
+1.3      Dataset Identification
+
+SURFACE RADIATION BUDGET (SRB) SHORTWAVE DATA PACKAGE
+
+2.0       SPATIAL CHARACTERISTICS
+
+2.1       Spatial Coverage
+
+The SRB data package provides global coverage.
+
+     ISCCP
+
+     SATELLITE              SENSOR   LONGITUDE        LATITUDE
+				     RANGE            RANGE
+
+     NOAA-7,8,9,10, 11,12   AVHRR    Global           Global  (1)
+     GOES-5(E)              VISSR    15 W to 135 W    60 N to 60 S
+     GOES-6(W)              VISSR    75 W to 165 E    60 N to 60 S  (2)
+     GOES-7(E)              VISSR    15 W to 135 W    60 N to 60 S  (3)
+     METEOSAT-2,3,4,5       MIR      60 W to 60 E     60 N to 60 S  (4)
+     GMS-1                  VISSR    160 W to 80 E    60 N to 30 S
+     GMS-2,3,4              VISSR    160 W to 80 E    60 N to 60 S
+
+
+(1) Global coverage over a period of approximately 24 hours.
+
+(2) For better coverage of seasonal weather events, GOES-6 was moved
+to 98 W on August 30, 1984; to 108 W on November 22, 1984, back
+to 98 W on July 28, 1986, and to 135 W from April 1987 until its
+failure on 1/21/89.
+
+(3) For better coverage of seasonal weather events, GOES-7 is positioned
+between 98W and 108W, with a position of 98W during the tropical
+convective season.  This regular change in positions will occur until
+GOES-I becomes operational, approximately late 1993.
+
+(4) METEOSAT-3 was positioned to 50 deg W in early August 1991 to
+supplement the coverage of GOES-7.  This move was necessary in
+order to provide coverage of Atlantic weather events during the
+absence of a GOES East Satellite.
+
+   ERBE
+
+   Satellite Sensor        North     South     East     West
+   ERBS      Nonscanner    67.5      67.5      180      180
+   ERBS      Scanner       67.5      67.5      180      180
+   NOAA-9    Nonscanner    90        90        180      180
+   NOAA-9    Scanner       90        90        180      180
+   NOAA-10   Nonscanner    90        90        180      180
+   NOAA-10   Scanner       90        90        180      180
+
+2.2       Spatial Resolution
+
+The SRB data package uses the ISCCP C1 equal-area map grid consisting
+of 6596 cells covering the entire globe. The C1 dataset is on an equal-area
+grid (the dimension of a cell at the equator is about 280 km X 280 km).The
+spatial resolution of the ERBE dataset is 2.5 degrees X 2.5 degrees on an
+equal-angle grid.  The ERBE dataset is converted to equal-area resolution
+using a weighting technique.
+
+3.0       TEMPORAL CHARACTERISTICS
+
+3.1      Temporal Coverage
+
+The SRB data package will consist of monthly datasets covering a twelve
+year period from July 1983 through 1995. The ISCCP data are planned to
+cover the twelve year period from July 1983 to 1995.  The overall
+coverage of each of the satellites and sensors participating in the SRB are
+listed below:
+
+
+
+SATELLITE        SENSOR         SRB              SRB
+				START DATE*      END DATE*
+
+NOAA-7           AVHRR          07/01/83         02/09/85
+NOAA-8           AVHRR          09/20/83         06/24/84
+NOAA-9           AVHRR          01/09/85         11/08/88
+NOAA-10          AVHRR          11/10/86         09/16/91
+NOAA-11          AVHRR          10/18/88         ongoing
+NOAA-12          AVHRR          09/16/91         ongoing
+GOES-5           VISSR          07/01/83         07/30/84
+GOES-6           VISSR          07/01/83         01/21/89
+GOES-7           VISSR          04/26/87         ongoing
+METEOSAT-2       MIR            07/01/83         08/11/88
+METEOSAT-3       MIR            08/11/88         01/25/91
+METEOSAT-4       MIR            05/19/89         ongoing
+METEOSAT-5       MIR            08/01/91         ongoing
+GMS-1            VISSR          01/21/84         06/29/84
+GMS-2            VISSR          07/01/83         09/27/84
+GMS-3            VISSR          09/27/84         12/04/89
+GMS-4            VISSR          12/04/89         ongoing
+ERBS             ERBE-SCANNER   11/05/84         02/28/90
+
+*Note:  Some gaps exist between start and end dates
+**NOAA-D was launched on May 14, 1991.  NOAA-D became
+
+    NOAA-12 and replaced NOAA-10 as the morning satellite.
+
+3.2        Temporal Resolution
+
+The SRB data package represents global, merged results from a variety of
+data sources (listed previously).   Fifty parameters are reported as monthly
+averages, eight parameters are reported as daily averages.
+
+4.0      INSTRUMENT DESCRIPTION
+
+4.1     Mission Objectives
+
+The mission objectives of SRB are to use the ISCCP C1 data
+supplemented with ERBE data as input to the SRB satellite algorithms to
+estimate various top-of-atmosphere and surface parameters.  Where
+GEBA data are available and determined by Satellite Data Analysis
+Center (SDAC) to be accurate, it is compared with both algorithm's
+calculation of downward shortwave irradiance at the surface.
+
+
+
+4.2     Key Satellite Flight Parameters
+
+The NOAA spacecraft are a series of satellites in 870 km (nominal)
+circular, near-polar, sun-synchronous orbits with an inclination angle of
+approximately 99 degrees (retrograde) to the equator.  They cross the
+equator during local morning and afternoon (and corresponding night
+times), with an orbital period of approximately 102 minutes.  Each
+sequential orbit covers adjacent longitudes near the equator and
+overlapping longitudes near the poles.  The Advanced Very High
+Resolution Radiometer (AVHRR) on-board this series is composed of up
+to five spectral channels with a nadir resolution of 1.1 km.  In addition,
+temperature sounding and ozone observations are made by the TIROS
+(Television and Infrared Operational Satellite) Operational Vertical
+Sounder (TOVS) and are used in the ISCCP analysis of B3 data.
+
+The Geostationary Operational Environmental Satellite (GOES) series
+consist of spin-stabilized spacecraft in geostationary circular orbit located
+over 75 degrees west longitude for GOES-East (5 & 7), and 135 degrees
+west longitude for GOES-West (6).  The GOES-6 satellite was routinely
+moved to provide better coverage of seasonal weather events until its
+failure on 1/21/89.  The GOES-7 satellite is now utilized in this manner.
+Data are collected in the visible and infrared bands by the Visible Infrared
+Spin-Scan Radiometer (VISSR).  The visible channel detector consists of
+eight identical photo-multiplier tubes that scan the Earth in parallel,
+producing a visible channel resolution of 0.9 km.  The IR detector
+produces a resolution of 8 km.
+
+The Meteorological Satellite (Meteosat) series are operated by the
+European Space Agency and are in geostationary circular orbit over the
+equator centered at the Greenwich meridian (0 degrees E longitude), with
+the exception of METEOSAT-3.  METEOSAT-3 is now centered at 50
+degrees west and is functioning as a replacement for GOES-7 which was
+moved westward in response to the failure of GOES-6.  The Multispectral
+Imaging Radiometer (MIR) on METEOSAT-2, -3, -4, and -5 collect data
+over the Earth in three spectral regions, one in the visible and two in the
+infrared.  The satellite scans the Earth from east to west and, if the water
+vapor channel (6.7 um) is turned off, is capable of producing a resolution
+of 2.5 km.
+
+The Geostationary Meteorological Satellites (GMS) are a series of
+satellites operated by the Japan Meteorological Agency.  They are located
+in geostationary circular orbit over the equator centered at 140 degrees
+east longitude.  The VISSR on board the GMS satellite collects data with
+four identical detectors operating in parallel, producing a resolution of
+1.25 km
+
+4.3     Principles of Operation
+
+NOAA/ AVHRR:
+
+ The AVHRR is a four or five channel scanning radiometer that operates
+in the visible, near-infrared, and far-infrared regions.  The fifth channel
+was added on the AVHRR/2 instrument flown on NOAA-7, -9, -11 and -
+12.  Scanning is provided by an elliptical beryllium mirror rotating at 360
+rpm about an axis parallel to the Earth.  A two stage radiant cooler is
+designed to provide a basic temperature of 95 degrees K for the IR
+detectors.  The telescope is an 8-inch afocal, all-reflective system, with
+polarization of less than 10 percent.  Instrument operation is controlled by
+26 commands and monitored by 20 analog housekeeping parameters.
+
+GOES/VISSR:
+
+The VISSR instrument operates in the visible region of 0.55 to 0.75
+micrometers, and in the infrared region of 10.5 to 12.6 micrometers.  Each
+of the eight photo-multiplier tubes on the visible detector is 0.025 X 0.021
+microradians (mrads), with a dynamic range of 3-100% albedo.  The
+infrared portion of the instrument consists of two detectors cooled to 95
+degrees K, with an instantaneous field-of-view (IFOV) of 192 X 192
+mrads.  The VISSR telescope has an aperture of 40 cm and a focal length
+of 291 cm, and routes the IR wavelengths to separate detectors.  The video
+analog output of all detectors is transmitted to the VISSR Digital
+Multiplexer (VDM) where it is sequentially sampled every 2
+microseconds by the visible channel and every 8 microseconds by the IR
+channel.
+
+METEOSAT/MIR:
+
+The Multispectral Imaging Radiometer (MIR) sensor on METEOSAT is
+a scanning radiometer which provides images in the visible and thermal
+IR regions of the spectrum.  The instrument produces images of the full
+Earth disc viewed from a geostationary orbit.  A reduced image format,
+corresponding to a limited band across the Earth's disc, may be selected
+by telecommand.  The optical reflector system of the radiometer includes
+a movable Ritchey-Chretien telescope with primary and secondary
+mirrors.  This includes a mirror located in the center of the primary mirror
+inclined at 45 degrees to the optical axis, four folding mirrors, and a
+separation mirror for diverting light to the visible sensor.
+
+The optically-collected visible and IR signals are converted into analog
+electric signals by five detectors.  These are divided into two subsets, two
+visible and three IR.  The detectors are distributed across the focal plane
+of the radiometer and as a result of the relative displacement of the
+detectors in this plane, their respective fields-of-view (FOV) do not
+coincide but are displaced relative to each other.
+
+The two visible detectors are positioned in the focal plane of the primary
+telescope.  Their instantaneous FOV at the Earth's surface (2.5 square km)
+is determined by their physical size (250 X 250 micrometers sensitive
+area) and the telescope's focal length (3650 millimeters).  While the
+visible detectors function properly at ambient temperatures, the three IR
+detectors must be cooled to less than 95 degrees K.
+
+ Each IR detector is 70 square micrometers and generates an instantaneous
+5 km square FOV at the subsatellite point.  One visible channel is time
+sharing with the water vapor channel so that the resolution of the visible
+image changes depending on the choice of channels.
+
+GMS/VISSR:
+
+The GMS Visible and IR Spin-Scan Radiometer (VISSR) is very similar
+to the scanning radiometers carried on Synchronous Meteorological
+Satellite (SMS) and GOES (1 through 3) satellites except for some
+modifications to stepping gears and detector portions; the number of steps
+in the scan is 2500 for the IR detector on GMS versus 1821 for GOES.
+
+4.4       Instrument Measurement Geometry
+
+The following table lists the measuring geometry characteristics for the
+satellites employed by the SRB program:
+**
+
+SATELLITE       SCAN               SCAN                 IMAGE
+		SYSTEM             DIRECTION            VIEWING
+-------------------------------------------------------------------------
+
+NOAA            Cross-track        Moving south         55.4 degrees
+		scan mirror        to north, scan-
+				   ning west to east
+
+GOES            Spacecraft spin    Stepping north       20 x 20 degrees
+		motion plus scan   to south, scan
+		mirror             west to east
+
+
+METEOSAT        Spacecraft spin    Stepping south       18 x 18 degrees
+		motion plus scan   to north, scan
+		mirror             east west
+
+GMS             Spacecraft spin    Stepping north       18 x 18 degrees
+		motion plus scan   to south, scan
+		mirror             west to east
+
+
+ERBS
+
+
+
+5.0      DATA PROCESSING SEQUENCE
+
+5.1      Processing Steps and Datasets
+
+The SRB dataset processing steps include:
+
+1.  Executing the ISCCP C1 READ program which reads the ISCCP C1
+data from tape, unpacks the necessary parameters, and stores them on
+disk.
+
+2.  Reformatting ERBE data to ISCCP grid.
+
+3.  Executing the Pinker and Staylor satellite algorithms.
+
+4.  Executing various support programs which put the appropriate
+parameters in data-ready format for global-map picture generation.
+
+5.  Executing the program which puts the data month into hierarchical data
+format (HDF).
+
+5.2      Derivation Techniques/Algorithms
+
+DESCRIPTION OF PINKER METHOD:
+
+The algorithm was developed at the UNIVERSITY OF MARYLAND by
+R. T. Pinker and I. Laszlo who supplied this ASCII character
+documentation.  It is a physical model based on radiative transfer
+calculations using the delta- Eddington approximation.  The model is an
+improvement on earlier concepts (Pinker and Ewing, 1985) and is more
+fully described in Pinker and Laszlo (1992).
+
+ Conceptual Framework:
+
+Reflectivity (R), transmissivity (T), and absorptivity (A), of the
+atmosphere (clear or cloudy) can be determined by the following set of
+optical parameters: optical depth (TAU); single scattering albedo
+(OMEGA); and phase function/asymmetry parameter (g).  It has been
+demonstrated that a reverse application, i.e., the retrieval of these
+parameters from the measurements of R, T and A is also possible, namely,
+that information on optical depth can be recovered from satellite data and
+that the visible albedo provides the most sensitive measure of optical
+depth.  Using similar concepts, a low resolution spectral model in the 0.2-
+4.0 micrometer range, was formulated for computing T from satellite
+observations of top of the atmosphere (TOA) reflectivity (R); if the
+transmissivity (T), of the atmosphere is known, one can also compute the
+downwelling radiation at the surface.
+
+The method is based on relating the broadband (0.2-4.0 micrometer)
+transmissivity, T, (ratio of the irradiance at the surface to that at TOA) to
+the broadband TOA reflectivity, R, (ratio of the reflected flux at TOA to
+the TOA irradiance).  Once the relationship, T = f(R) is known, T (and the
+surface irradiance, SWDN) can be computed by using R as determined
+from the satellite measured narrowband radiance.  Three major steps are
+involved.  First, relationships of the type T = fi(R), i = 1, ... N, representing
+N realistic atmosphere/surface conditions are established through
+radiative transfer computations of transmitted and reflected radiation.
+Each of the N different conditions is characterized by a specific surface
+albedo, given amounts of absorbing gases (ozone; water vapor) and
+scatterers (molecules; aerosols; cloud droplets).  Next, a broadband TOA
+albedo, RSAT, is determined from the satellite measurement.  Finally, the
+relationship, T = fs(R), pertaining to the atmosphere/surface condition (S),
+that existed when the satellite measurement was taken, is selected from the
+results of the first step, and an estimate of T (and SWDN) is obtained by
+matching the satellite derived broadband albedo, RSAT, to an albedo (R)
+computed in the first step. The first step has to be performed only once and
+the results of the radiative transfer computations can be stored in a data
+library.  Steps 2 and 3 have to be executed for each satellite observation.
+
+ Atmospheric Radiative Transfer Component:
+
+The reflected and transmitted radiation are computed for a plane-parallel,
+vertically inhomogeneous, scattering and absorbing atmosphere in five
+spectral intervals (0.2-0.4, 0.4-0.5, 0.5-0.6, 0.6-0.7, 0.7-4.0 micrometer)
+using the delta-Eddington approximation of radiative transfer. The
+rationale for the selection of the delta-Eddington approach, and the
+accuracy of this method are discussed in Pinker and Ewing (1985).  The
+atmospheric radiative transfer model accounts for 1) absorption by ozone
+and water vapor; 2) multiple scattering by molecules; 3) multiple
+scattering and absorption by aerosols and cloud droplets and 4) multiple
+reflection between the atmosphere and the surface.  It has five or six
+layers, depending on the aerosol profile considered, and on whether a
+cloud is present.  The parameterizations used in the atmospheric radiative
+transfer model will be described in what follows.
+
+Ozone and Water Vapor Absorption:
+
+Scattering of radiation is weak at high altitudes where much of the
+absorption by ozone takes place.  It is therefore assumed that ozone is
+concentrated in a single, pure absorbing layer at the top of the atmosphere.
+The fraction of the incident solar radiation absorbed by ozone in this layer
+(A), is computed following Lacis and Hansen (1974):
+
+(1)
+
+where THETA0 is the solar zenith angle, R(THETA0) is the reflectivity of
+the atmosphere-surface system below the absorbing ozone layer, and x is
+the relative optical ozone pathlength.  The first term represents the absorp-
+tion of the downwelling direct radiation, while the second one gives the
+absorption of the upwelling diffuse radiation.  Ozone absorption is
+accounted for in the 0.2-0.4 micrometer (UV) and in the 0.5-0.6 microme-
+ter (VIS) spectral intervals (Lacis and Hansen, 1974):
+
+(2)
+
+(3)
+
+The absorption by water vapor, Awv, in the 0.7-4.0 micrometer band is
+computed in terms of the discrete probability distribution (p(kn)) of the
+absorption coefficients (kn) following Lacis and Hansen (1974):
+
+(4)
+
+Here Yl is the effective water vapor amount (temperature and pressure
+scaled amount) in the Lth atmospheric layer.  The total amount of ozone
+and the effective water vapor amount in each layer of the atmosphere were
+obtained from detailed data on ozone and water vapor densities,
+temperature and pressure at 31 levels of the Standard Atmospheres
+(tropical, mid-latitude summer and winter, subarctic summer and winter)
+(Kneizys et al., 1980).
+
+Rayleigh Scattering:
+
+Molecular scattering is accounted for in the first four spectral intervals
+0.2-0.4; 0.4-0.5; 0.5-0.6; and 0.6-0.7 micrometer.  For Rayleigh scattering
+OMEGA = 1 and g = 0.  The Rayleigh scattering optical depth of a layer,
+dTAU, between levels L and L-1 (Penndorf, 1957) is expressed as:
+
+(5)
+
+where:   z(L), z(L-1) - heights (km) at levels L and L-1   p(L), p(L-1) -
+pressures (mb) at levels L and L-1   r - relative humidity in the layer   t - a
+function of wavelength, depolarization factor and the refractive index of
+the air.
+
+Equation (5) includes corrections for humidity and the variation of gravi-
+tation with altitude.  For the four spectral intervals between 0.2-0.7
+micrometer, the parameter t was computed with the ATRAD model (Wis-
+combe et al., 1984).
+
+Aerosol Extinction:
+
+Four atmospheric aerosol profiles (MAR-I, MAR-II, CONT-I and CONT-
+II) of the Standard Radiation Atmosphere (SRA) (WCP-55, 1983) have
+been incorporated into the solar model.  They depict typical maritime
+conditions, dust outbreaks over oceans, average rural-continental aerosol
+atmosphere and desert atmosphere under conditions of heavy haze,
+respectively.  Depending on the aerosol profile selected, the atmosphere is
+divided into five (CONT-I, CONT-II and MAR-I) or six (MAR-II) layers.
+For each layer, the aerosol models give the extinction coefficients,
+SIGMALAMBDA, single scattering albedos, OMEGA, and asymmetry
+parameters, gLAMBDA, as functions of wavelength, LAMBDA, and
+aerosol type (continental, maritime, background stratospheric and upper
+atmospheric).
+
+
+
+Cloud Extinction:
+
+The cloud parameterization of Stephens et al. (1984) for two broad
+spectral intervals in the shortwave region (0.2-0.75 micrometer and 0.75-
+4.0 micrometer) was adopted.  It is expressed in terms of optical thickness,
+TAU, single scattering albedo, OMEGA, and backscattered fraction of
+monodirectional incident radiation BETA(MU0), as a function of the
+cosine of the solar zenith angle, MU0.  In the solar model the radiative
+transfer is treated in the framework of the delta-Eddington approximation;
+the optical properties are described by the optical depth, TAU, the single
+scattering albedo, OMEGA, and the asymmetry parameter, g.  In order to
+implement the cloud parameterization of Stephens into the delta-
+Eddington scheme, it is necessary to relate BETA(MU0) to g.
+
+The single scattering albedos and the asymmetry parameters to be used in
+the delta-Eddington approximation have been derived iteratively so that
+they yield reflectance, R, and absorption, A, of clouds as given by the
+Stephens' parameterization scheme.  This method allows the inclusion of
+aerosols in the atmospheric column.  The parameterization of Stephens
+does not account for aerosol extinction.  Because it was assumed by
+Stephens that the cloud does not absorb in the visible spectrum, the ability
+to include aerosol extinction is important.  In all the radiative transfer
+computations, the spectral interval was (0.2-4.0 micrometer), to be
+compatible with the parameterization of Stephens.
+
+Surface Reflectivity:
+
+The ocean- and land-albedo models of Briegleb et al., (1986) were
+adopted to prescribe the surface reflectance as a function of solar zenith
+angle, THETA0, and wavelength, LAMBDA.  In the land-albedo models
+each surface is considered to consist of two components (ak, where k =
+1,2) with fractions f and (1-f):
+
+(6)
+
+The albedo of each component is given as a function of the solar zenith
+angle, the albedo for THETA0 = 60 degrees, a0, and an empirical
+parameter, (dk, where k = 1,2), (Dickinson, 1983):
+
+(7)
+
+In the surface albedo models a0 is specified for 4 spectral intervals in the
+shortwave band with boundaries at 0.2, 0.5, 0.7, 0.85 and 4.0 micrometer,
+as well as the values of dk and the fractions f for each component.  The
+above parameters and the surface reflectivities based on surface and
+aircraft measurements are specified for ten surface types (Briegleb et al.,
+1986).  It is assumed that land surface albedos are the same for both the
+direct and the diffuse components of the solar irradiance.
+
+The ocean-albedo for direct solar radiation is obtained from the following
+expression (Briegleb et al., 1986):
+
+adir(THETA0) = (2.6/((((cos(THETA0))**1.7)+0.065))
+	+(15(cos(THETA0)-0.1)*(cos(THETA0)-0.5)
+	*(cos(THETA0)-1))        (8)
+
+For diffuse irradiance, a constant albedo value, adif, of 6% is used.
+
+A surface albedo is derived from the satellite measurements at clear sky,
+using the actual values of ozone and water vapor amounts and aerosol
+climatology.  This value is then used as a scaling factor.  This scaling
+procedure retains the spectral and angular characteristics of the surface
+model of Briegleb et al. (1986), but yields a broadband albedo which is
+consistent with satellite observations.  This procedure will accommodate
+future developments of global scale surface reflectance models, as might
+result from the EOS mission.
+
+Further details about the model and its implementation can be found in
+Pinker and Laszlo (1992).
+
+Description of Staylor Method:
+
+The algorithm was developed at NASA LANGLEY RESEARCH
+CENTER by W. F. Staylor who supplied this ASCII-character
+documentation.  It is an empirical/physical model that utilizes ISCCP-C1
+data (Schiffer and Rossow, 1983) as its primary input data.  The model is
+a modified version of an earlier model by Darnell et al. (1988), hereafter
+D88, that utilized TOVS meteorological data (Smith et al., 1979) and Heat
+Budget Product radiance data (Gruber, 1978) as input data to estimate
+surface insolation.
+
+The current insolation model uses a broadband shortwave approach which
+assumes that insolation at the surface for all-sky conditions (clear and
+cloudy), ISASi, can be related as the product of insolation at the top of the
+atmosphere, ITOAi, clear-sky atmospheric transmittance, TA, and cloud
+transmittance, TC,
+
+	ISASi = ITOAi*TA*TC .   (1)
+
+This is an instantaneous expression (i) and it is assumed that TA and TC
+are independent.  ITOAi is given by
+
+	ITOAi = S*cos(theta)    (2)
+
+where S is the Earth-Sun distance-corrected solar flux and theta is the
+solar zenith angle.
+
+Atmospheric transmittance can be expressed as:
+
+	TA = (1+0.065*PS*AS+2*J*AS)*exp(-TAU,theta)     (3)
+
+where PS is the surface pressure, AS is surface albedo, J is an aerosol
+parameter, and TAU,theta is the effective clear-sky atmospheric optical
+depth. The first term in brackets relates the atmospheric backscattering of
+surface reflected flux (treated as negative optical depth in D88).  The
+0.065 coefficient is the average of values given by Lacis and Hansen
+(1974) and Hoyt (1978).  Surface albedo will be treated later (see
+SURFACE ALBEDO).  In Fig. 2 of D88, it was found that TAU,theta and
+the optical depth at zero degrees solar zenith angle, TAU,zero, were
+related as:
+
+	TAU,theta = TAU,zero*(sec(theta))**N    (4)
+
+and the power, N, could be calculated as:
+
+	N = 2.1*(log(TAU,70.5 deg)-log(TAU,0 deg)).     (5)
+
+Vertical optical depth (theta = 0 degrees) is defined as:
+
+	TAU,zero = -ln(1-ALPHA,zero)    (6)
+
+where ALPHA,zero is the effective downward attenuation factor for solar
+energy due to all absorption and scattering processes (clear-sky only).
+ALPHA,zero is the summation of six components given as:
+
+
+
+ALPHA,zero = ALPHA,WV + ALPHA,OZ + ALPHA,02
+	+ALPHA,CO2 +ALPHA,RAY + ALPHA,AER        (7)
+
+Lacis and Hansen (1974) gave equations for the broadband absorptions of
+water vapor and ozone which are approximated here as:
+
+	ALPHA,WV = 0.100*(WV)**0.27     (8)
+
+and
+
+	ALPHA,OZ = 0.037*(OZ)**0.43      (9)
+
+Yamamoto (1962) gave equations for the broadband absorptions of
+oxygen and carbon dioxide which are approximated here as:
+
+	ALPHA,O2 = 0.002*(PS)**0.87     (10)
+
+and
+
+	ALPHA,CO2 = 0.006*(PS)**0.29    (11)
+
+Rayleigh attenuation was estimated by Lacis and Hansen (1974) as:
+
+	ALPHA,RAY = 0.035*PS    (12)
+
+Aerosol attenuation was based on WCP models (WCRP, 1983) given here
+as:
+
+	ALPHA,AER = J/2 + K     (13)
+
+The J term is equal to aerosol optical depth times the quantity one minus
+the asymmetry factor and K is equal to the optical depth times the quantity
+one minus the single-scattering albedo.  Values for J and K are given in
+Table 1 for five surface types.
+
+It should be noted that the Rayleigh and aerosol attenuation terms are
+concerned only with backscattering and/or absorption, but not with
+forward scattering of flux which reaches the surface.
+
+With values of S, PS, AS, WV, OZ, J, K, and TC (see INPUT DATA), one
+could compute the instantaneous insolation at the surface as a function of
+theta using equations (1) through (13).  Computation of the daily
+insolation (d) involves the time integration of the instantaneous insolation
+(i) from sunrise (sr) to sunset (ss) which can be approximated as:
+
+ISASd = S*TC*(1 + 0.065*PS*AS+2*J*AS)
+	*integral(exp(-TAU,theta)*cos(theta)*dt)
+	  taken over sr to ss   (14)
+
+where PS, AS, S, J, and TC are assumed to be constant for a region during
+the course of each day.  Equation (14) can be evaluated as:
+
+ISASd = S*H*TC*(1 + 0.065*PS*AS+2*J*AS)
+	*exp(-TAU,zero*(UE)**-N)        (15)
+
+where H is the daily vertical Sun fraction and UE is the effective daily
+cosine of the solar zenith angle.  Both H and UE are defined in Table 2.
+
+Cloud transmittance is based on a threshold technique (D88, Fig. 7) given
+by:
+
+	TC = 0.O5 +0.95*(Ro-Rm)/(Ro-Rc) (16)
+
+where Ro, Rc and Rm are the TOA reflectances for overcast, clear-sky and
+measured conditions, respectively.  The coefficients 0.05 and 0.95 (rather
+than 0 and 1) simply relate the observation that for totally overcast days
+(Rm=Ro) cloud transmittance is about 5 percent, not zero.  Each of the
+three reflectance terms in equation (16) is a daily value obtained by
+weighting the ISCCP 3-hourly instantaneous values with the cosine of the
+solar zenith angle, UO.  The measured value, for instance, would be
+
+	Rm = summation Rmi*UO/summation UO      (17)
+
+Instantaneous overcast reflectances are estimated from a model by Staylor
+(1985) as:
+
+Roi = D1/(UO*UV) + (D2/(UO*UV))*((UO*UV)
+	/(UO + UV))**2  (18)
+
+where UV is the cosine of the viewing zenith angle and D1 and D2 are
+ISCCP satellite coefficients given in Table 3.  These coefficients are
+determined from ISCCP data from a number of non-snow, totally overcast
+regions with mean cloud optical depths greater than 80 for each satellite
+every month.  A linear regression of (Roi*UO*UV) versus
+(((UO*UV)**2)/((UO + UV)**2)) is performed to determine D1 and D2.
+
+Clear-sky reflectances are determined by one of several methods
+depending on the surface type and snow cover.  For ocean regions, which
+cover the majority of the Earth's surface,
+
+	Rci = D3 + D4*((UO*UV)**-0.75)  (19)
+
+where D3 and D4 are ISCCP satellite coefficients, given in Table 3, that
+were determined from a number of totally-clear ocean regions for each
+satellite every month.  A linear regression of (Rci) versus ((UO*UV)**-
+0.75) is performed to determine D3 and D4.  For land regions where there
+is no snow or where the snow cover does not change by more than 10%
+during the month, daily Rc values are computed from the clear-sky pixels
+and the minimum value for the month is used for the entire month.  If the
+snow cover changes more than 10% during the month (determined for 5-
+day intervals), the above procedure is still used, but is applied to several
+shorter time intervals.
+
+Measured instantaneous reflectances,  Rmi, are the pixel-weighted
+average of the clear and cloud pixel reflectances which are then UO-
+weighted to produce the daily Rm values (equation 17).  If only a single
+Rmi value exists for a day (average of about four for the ISCCP
+geostationary satellites), a value of Rm can be computed for that day.  But
+if no Rmi value exists for a day (occurs most frequently in regions of polar
+satellite coverage), a fill value is provided by one of two methods.  If an
+Rm value exists for an adjacent longitudinal region for that day, it is used.
+If it does not exist, the previous day's value of Rm is used.  This procedure
+is expanded spatially, then temporally until a non-fill value of Rm is
+found.
+
+ Surface Albedo:
+
+A daily surface albedo value for all-sky conditions, AS, is needed for the
+computation of insolation (equation 15), and it is also used in the
+computation of surface absorbed insolation which is given by:
+
+	IAASd = ISASd*(1-AS)    (20)
+
+The all-sky albedo is estimated as
+
+	AS = Aso + (Asc - Aso)*(TC)**2  (21)
+
+where Aso is the daily overcast albedo and Asc is the daily clear-sky
+albedo. Because of the difficulty of obtaining consistent surface albedos
+using the visible (0.5 - 0.7 micron: GOES, GMS, NOAA) and near-
+infrared (0.7 - 1.1 micron; METEOSAT) radiances from ISCCP, daily
+clear-sky albedo results from Staylor and Wilber (1990) were used which
+were based on broadband ERBE scanner data.  Daily overcast albedos are
+estimated to be equal to the instantaneous clear-sky albedos for a solar
+zenith angle of 53 degrees (cosine = 0.6) as that is approximately the
+effective downward zenith angle of diffuse rays from clouds.  For oceans,
+
+	Aso = 0.065,    (22a)
+
+and for land
+
+	Aso = 1.1*Asc*(UE)**0.2         (22b)
+
+
+
+Input Data
+
+ISCCP datasets contain data bytes (B) for 132 parameters which are given
+once every 3 hours (0, 3, 6, 9, 12, 15, 18, 21 GMT).  Surface pressure is
+given in millibars (1000 mb = sea level pressure) and is converted to
+atmospheres as
+
+	PS = B114/1000  (23)
+
+Precipitable water vapor is given in centimeters for each of 5 layers and
+converted to total burden in precipitable centimeters as
+
+	WV = B127 + B128 + B129 + B130 + B131   (24)
+
+Ozone is given in Dobson units and converted to atmosphere-cm as
+
+	OZ = B132/1000  (25)
+
+The cosine of the solar zenith angle, UO, is B14/100 and the cosine of the
+viewing zenith angle, UV, is B15/100.  Snow coverage in percent is B13.
+Total number of pixels in a region is B5, and the number of those which
+are cloudy is B6.  Mean scaled reflectance (Rmi*UO) for the cloudy
+pixels is B104, and mean scaled reflectance for the clear pixels is B107.
+
+Solar declinations and Earth-Sun distances were obtained from the Naval
+Observatory Almanac for each day.  A solar flux of 1365 W/m2 was used
+for an Earth-Sun distance of 1AU.  As mentioned previously, surface
+albedos were derived from ERBE scanner data (Staylor and Wilber,
+1990).
+
+
+
+Table 1.  Aerosol Models
+
+SURFACE               J                     K
+-------------------------------------------------
+
+OCEAN              0.06*UE              0.008*UE
+LAND               0.12*UE              0.035*UE
+COASTAL            0.09*UE              0.020*UE
+DESERT             0.20*UE              0.040*UE
+
+
+
+
+
+Table 2.  Definition of Insolation Parameters
+
+F/G> 1                   1 > F/G > -1                F/G < -1
+no sunset              sunrise and sunset     Nsunrise
+
+H = F              (1/PI)*(F*arccos(-F/G)**2)**0.5) 0
+UE = F              F + G*(G-F/2*G)**0.5            -
+
+
+
+F = sin(ELAT)*sin(SDEC)
+G = cos(ELAT)*cos(SDEC)
+ELAT = Effective latitude of a region, area-centered
+
+SDEC = Solar declination
+
+
+
+Table 3.          ISCCP SATELLITE COEFFICIENT
+		(Applicable from April 1985 to January 1986)
+
+Satellite       CODE      D1      D2      D3      D4
+--------------------------------------------------------
+NOAA 9           12     0.023    3.08  -0.007   0.040
+GOES 6 (WEST)    21     0.000    3.40   0.002   0.038
+METEOSAT 2       41     0.004    3.35  -0.010   0.040
+GMS 3            53     0.005    3.38  -0.012   0.040
+
+5.3     Special Corrections/Adjustments
+
+The GEBA ground truth sites in the SRB data package are a subset of all
+GEBA sites around the globe.  Only those sites which are most accurate
+(GEBA category 88) and believed most representative of the large-scale
+ISCCP cell have been retained.  Data from ground-truth sites which are
+either in mountains, near mountain coastlines, or in ISCCP cells labeled
+COASTAL were removed because of potential local topography effects.
+
+ERBE data were transformed from an equal-angle grid to an equal-area
+grid system using a weighting technique.
+
+5.4     Processing Changes
+
+None.
+
+
+6.0     QUALITY ASSESSMENT
+
+6.1     Data Validation by Producer
+
+SRB results are dependent on the absolute accuracy of ISCCP C1 data
+radiances which are input to the shortwave algorithms.  Algorithm output
+has been checked to validate results against output provided by the Pinker
+and Staylor research groups.
+
+6.2     Confidence Level/Accuracy Judgement
+
+ISCCP
+
+ISCCP performs an absolute calibration of the polar orbiter instrument
+with an uncertainty of less than 7 percent (see WMO/TD-No. 266,
+Revised March 1991, pp 25).  ISCCP also normalizes the visible-
+wavelength channel of each geostationary satellite to that of the NOAA
+polar orbiter to within plus or minus 5 percent (see WMO.TD-No. 266,
+Revised March 1991, pp 25).  After normalization, the polar orbiter
+absolute calibration is transferred to each geostationary satellite.
+Both the Staylor and Pinker methods have satisfied the ICRCCM Model-
+Validation Tests using standard atmospheric profiles.  For this SRB
+application, they use ISCCP scaled-radiance, cloud, precipitable water,
+and ozone parameters, as well as some ERBE data for input.  The Pinker
+Algorithm assumes accurate satellite calibration by ISCCP.   The Staylor
+Algorithm uses a relative threshold technique and is somewhat insensitive
+to satellite calibration errors.
+
+GEBA
+
+Caution is required when comparing cell-averaged, ground-truth values
+with satellite estimates.  Of the ISCCP cells which contain GEBA
+SUBSET sites, approximately 75 percent contain only one GEBA site per
+ISCCP cell.  In such a case, an intercomparison of satellite results with
+ground-truth values assumes that the fluxes averaged over a month over
+the entire cell is the same as the monthly average of the fluxes over the
+ground truth site.  That may not be true if either the meteorology or solar
+exposure varies over the cell.  Thus, even a GEBA category 88 site in
+near-flat topography may still not be representative of an ISCCP cell if it
+is in a polluted, obstructed, or frequently-foggy area relative to the rest of
+the cell.  In some cases (much of Europe and a few other locations), there
+are multiple ground sites per ISCCP cell, and the cell-averaged ground
+truth values can be used with more confidence.  Another issue is that
+satellite estimates are based on the solar radiation between 0.2-4.0
+(Pinker) or 0.2-5.0 (Staylor) micrometers.  The ground truth
+measurements are for the wavelength interval of 0.3-3.0 micrometers.
+This spectral mismatch means that satellite-estimated downward
+irradiance should be approximately one percent higher than ground
+measurements on a clear day.  On an overcast day with a cloud optical
+depth = 10, the differences due to spectral mismatch is less than 0.02
+percent based on high- resolutions spectral calculations supplied by the
+UNIVERSITY OF MARYLAND. Thus, there could be positive bias
+between 0 and 1 percent (depending on monthly-averaged cloud cover)
+when satellite estimates of downward irradiance are compared with
+ground truth.
+
+6.3     Usage Guidance
+
+The SRB product is intended to provide users a time series of radiation
+budget parameters for the period spanning July 1983 through 1995.
+
+
+
+7.0      CONTACT FOR DATA PRODUCTION INFORMATION
+
+
+Charles H. Whitlock, Head, SRB/SDAC
+MS 420
+NASA Langley Research Center
+Hampton, VA 26665-5225 USA
+TEL:  (804) 864-5675
+FAX: (804) 864-7996
+
+8.0     DATASETS AND AVAILABILITY
+
+The total SRB data package for each month consists of 5 files.  The first
+file is the ASCII header file, named README.MMMYY. The second and
+third files are ASCII showing Fortran listings of the Pinker and Staylor
+algorithms (PINKER.FOR and STAYLOR.FOR, respectively).  The
+fourth and fifth files are binary data files in HDF format.  The fourth file
+is the monthly binary file and presents monthly average gridded values for
+52 different items in each cell (srb_monavgs_yymm).  The fifth file is the
+daily binary file and presents 24-hr daily average values for 10 key items
+in each cell (srb_dayavgs_yymm). This package is currently stored on the
+Langley DAAC IMS system and can be retrieved through electronic mail
+(INTERNET).
+
+8.1     Datasets
+
+SRB_DAILY
+
+The Surface Radiation Budget (SRB) Daily Averages dataset is available
+from the Langley DAAC in Hierarchical Data Format.
+
+SRB_MONTHLY
+
+The Surface Radiation Budget (SRB) Monthly Averages dataset is
+available from the Langley DAAC in Hierarchical Data Format.
+
+8.2     Browse Products
+
+Surface Radiation Budget (SRB) browse products (i.e, Staylor All-Sky
+Downward Shortwave Surface Irradiance (W/M**2)) are available from
+the Langley DAAC.
+
+8.3     Data Packages
+
+The Surface Radiation Budget CD-ROM will be available from the
+Langley DAAC in summer 1993.
+
+9.0     PROCEDURES FOR OBTAINING DATA
+
+The Langley DAAC Information Management System (IMS) is an online
+system that features a graphical user interface (GUI) that allows to query
+the Langley DAAC dataset holdings, to view pre-generated browse
+products, and to order specific data products.  Users may also request data
+by letter, telephone, electronic mail (INTERNET), or personal visit.
+
+The Langley DAAC User and Data Services (UDS) staff provides
+technical and operational support for users ordering data.  The Langley
+DAAC Handbook is available in a postscript file through the IMS for
+users who want detailed information about the Langley DAAC holdings.
+Users may also obtain a copy by contacting:
+
+Langley DAAC User and Data Services Office
+NASA Langley Research Center
+Mail Stop 157B
+Hampton, VA  23681-0001
+Tel:  (804) 864-8656
+FAX:  (804) 864-8807
+Internet:  userserv@eosdis.larc.nasa.gov
+
+10.0    REFERENCES
+
+10.1    SRB References
+
+Brest, C. L. and W. B. Rossow.  1991.  Radiometric Calibration and
+Monitoring of NOAA AVHRR Data for ISCCP. Int. J. Remote
+Sensing, In Press.
+
+Gautier, C. and R. Frouin.  1988.  Sensitivity of Satellite-Derived Net
+Shortwave Irradiance at the Earth's Surface to Radiometric
+Calibration.  In Proc. 4th International   Colloquium on Spectral
+Sognatures of Objects in Remote Sensing, Aussois, France, January
+18-22, 1988, ESA SP-287; ESA Paris,    179-183.
+
+Rossow, W. B., L.  C. Gardner, P-J. Lu, and A. W. Walker.  1988.
+International Satellite Cloud Climatology Project (ISCCP)
+Description of Reduced    Resolution Data.  WMO/TD-No. 266,
+World Meteorological Organization, Geneva.
+
+Rossow, W. B., C. L. Brest, and L. C. Garder.  1989.  Global, Seasonal
+Surface Variations form Satellite Radiance Measurements.  J.
+Climate 2(3): 214-247.
+
+Sellers, P.  J., S. I. Rasool, and H. -J. Bolle.  1990.  A Review of Satellite
+Data Algorithms for Studies of the Land Surface.  Bull. Amer.
+Meteor. Soc. 71(10): 1429-1477.
+
+Staylor, W. F., and A. C. Wilber.  1990.  Global Surface Albedos
+Estimated from ERBE Data. In Proc. AMS 7th Conference on
+Atmospheric Radiation,  San Francisco, California, July23-27,
+1990, 231-236.
+
+Suttles, J. T., R. N. Green, P. Minnis, G. L. Smith, W. F. Staylor, B. A.
+Wielicki, I. J. Walker, D. F. Young, V. R. Taylor, and L. L, Stowe.
+1988.    Angular Radiation Models for Earth-Atmosphere System,
+Volume I-Shortwave Radiation.  NASA RP-1184; NASA Langley
+Research Center, Hampton, VA 23665-5225.
+
+WCRP.  1988.  International Satellite Cloud Climatology Project (ISCCP)
+Working Group on Data Management, Sixth Session.  Ft. Collins,
+CO, June 16-18,  1987, WMO/TD-No. 210,Geneva.
+
+Whitlock  C. H., W. F. Staylor, J. T. Suttles, G. Smith, R, Levin, R. Frouin,
+C. Gautier, P. M. Teillet, P. N. Slater, Y. J. Kaufman, B. N. Holben,
+W. B. Rossow, C., Brest, and S. R. LeCroy.  1990a. AVHRR and
+VISSR Satellite Instrument Calibration Results for both Cirrus and
+Marine Stratocumulus IFO Periods.  In Proc.  FIRE Science
+Meeting, Vail, Co., July 11-15,1988, NASA CP-3083, NASA
+Langley Research Center, Hampton, VA 23665-5225, 141-146.
+
+Whitlock, C. H., W. F. Staylor, W. L. Darnell, M-D. Chou, G. Dedieu, P.
+Y. Deschamps, J. Ellis, C. Gautier, R. Frouin, R. T. Pinker, I. Laslo,
+W. B. Rossow, and D. Tarpley. 1990b.  Comparison of Surface
+Radiation    Budget Satellite Algorithms for Downwelled
+Shortwave Irradiance With Wisconsin FIRE/SRB Surface Truth
+Data. In Proc. AMS 7th Conference on Atmospheric Radiation, San
+Francisco, California, July 23-27, 1990, 237-242.
+
+10.2    Pinker References
+
+Briegleb, B. P., P. Minnis, V. Ramanathan and E. Harrison. 1986.
+Comparison of regional clear-sky albedos inferred from satellite
+observations and model calculations.    J. Climate Appl. Meteor.
+25:214-226.
+
+Kneizys, F., E. Shettle, W. Gallery, J. Chetwynd, L. Abreu, J. Selby, R.
+Fenn and R. McClatchey, 1980: Atmospheric transmittance/
+radiance:    Computer code LOWT RAN5. Rep. AFGL-Tr-80-67,
+Air Force Geophysics    Laboratory, Hanscomb AFB, MA, 127 pp.
+
+Lacis, A. A. and J. E. Hansen. 1974.  A parameterization for the
+absorption of solar radiation in the earth's atmosphere.  J. Atmos.
+Sci.  31:118-133.
+
+Pinker, R. and J. Ewing. 1985. Modeling surface solar radiation:  Model
+formulation and validation.  J. Climate Appl. Meteor.  24:389-401.
+
+Pinker, R. T. and I. Laszlo. 1992. Modeling surface solar irradiance for
+satellite applications on a global scale. J. Appl. Meteor., February
+issue. Stephens, G. L., S. Ackerman and E. Smith.  1984. A
+shortwave parameterization revised to improve cloud absorption.  J.
+Atmos. Sci. 41:687-690.
+
+WCP-55. 1983. World Climate Research report of the experts meeting on
+aerosols and      their climatic effects. Williamsburg, Virginia, 28-30
+March 1983, A. Deepak and H. E. Gerber, Eds. 107 pp.
+
+Wiscombe, W. J., R. M. Welch and W. D. Hall.  1984.  The effects of very
+large drops on cloud absorption.  Part I:  Parcel models.  J. Atmos.
+Sci.  41:1336-1355.
+
+10.3     Staylor References
+
+Darnell. W. L., W. F. Staylor, S. K. Gupta, and F. M. Denn.  1988.
+Estimation of surface insolation using Sun-synchronous satellite
+data. J. Clim. 1:820-835.
+
+Hoyt, D. V.  1978.  A model for the calculation of solar global insolation.
+Sol. Energy 21:27-35.
+
+Lacis, A. A., and J. E. Hansen.  1978.  A parameterization for the
+absorption of solar radiation in the Earth's atmosphere. J. Atmos.
+Sci.  31:118-133.
+
+The Astronomical Almanac, Nautical Almanac Office, U. S. Naval
+Observatory, Washington, D. C., 1985, 1980.
+
+Schiffer, R. A., and W. B. Rossow.  1983.  The International Satellite
+Cloud Climatology Project (ISCCP): The first project of the World
+Climate    Research Programme. Bull. Amer.  Met. Soc.  64:779-784.
+
+Smith, W. L., H. M. Woolf, C. M. Hayden, D. Q. Wark, and L. M.
+McMillin.  1979.  The Tiros-N operational vertical sounder.  Bull.
+Amer. Met. Soc.  60:1177-1187.
+
+Staylor, W. F. 1985.  Reflection and emission models for clouds derived
+from Nimbus 7 Earth radiation budget scanner measurements.  JGR
+90:8075-8079.
+
+Staylor, W. F., and A. C. Wilber. 1990.  Global surface albedos estimated
+from ERBE data. Proceedings of AMS Conf. on Atmospheric
+Radiation,  July 23-27, 1990, San Francisco, CA, pp 231-236.
+
+WCRP, 1983: Experts meeting on aerosols and their climate effects.  A.
+Deepak and H. E. Gerber editors, WCP-55, 107 pp.
+
+Yamamoto, G. 1962.  Direct absorption of solar radiation by atmospheric
+water vapor, carbon dioxide, and molecular oxygen.  J. Atmos. Sci.
+19:182-188.
+
+10.4     Archive References
+
+Sorlie, S., February 1993.  Langley DAAC Handbook.  LaRC DAAC,
+NASA Langley Research Center, Hampton, VA.
+
+11.0    RELATED LaRC DAAC DATASETS
+
+ISCCP-C1                ISCCP C1 3-Hourly Data
+
+ERBE-S4                 ERBE Monthly Regional Averages
+
+12.0    SUMMARY
+
+This is Version 1.0 of a new interim product with parameters obtained
+from a variety of sources.  As such, it is expected that revisions will be
+necessary as corrections are received from various users.  The general
+approach is to use the ISCCP C1 data supplemented by the ERBE results
+as input to SRB satellite algorithms to estimate various surface
+parameters.  Where possible, the satellite-estimated fluxes are compared
+with surface-measured ground truth.  Using the ISCCP 3-hourly
+parameters as input, SRB results were generated using two different
+algorithms.  The two methods use different approaches.  Both methods
+apply spectral and angular corrections (based on ERB and ERBE results)
+which are not included in the original ISCCP C1 data.  The user may have
+increased confidence in the SRB results for those cells wherein the two
+methods obtain values that differ slightly.  The Pinker Algorithm
+(developed jointly by Drs. R. T. Pinker and I. Laszlo from the University
+of Maryland) is a physical model which uses an iterative procedure based
+on delta-Eddington radiative transfer calculations.  The Staylor algorithm
+(developed by Mr. W. F. Staylor from the NASA Langley Research
+Center) is a parameterized physical model in which both cloud and aerosol
+transmission characteristics have been separately tuned to historic data at
+various locations around the globe.  The monthly-averaged radiative
+fluxes are based on the monthly average of 24-hr daily averages, but
+certain other items are simple linear averages of values during daylight
+hours.
+
+Refer to the srb_yymm.doc file for further information.
+
+13.0 NOTES
+
+
+
+SATELLITE DATA GAPS
+
+On a given day, time, and location, one or more parameters may be
+missing from either the ISCCP C1 or ERBE data used as inputs to the SRB
+algorithms.  ISCCP missing data is caused by gaps in the operational satellite
+data being used to create the C1 product.  Both the Pinker and Staylor
+algorithms use automated gap-filling techniques to compensate for voids in
+either the ISCCP or ERBE input data.  Each algorithm uses a different
+technique which may cause notable differences between the two algorithms for
+one or more of the output parameters.  (Details concerning the gap-filling
+techniques for each algorithm can be found in listings of the Fortran code
+supplied with each month's SRB data package.)  These large differences occur
+infrequently and should not be of general concern.  The user should be alert
+to the possibility of their existence, however.  Whenever a parameter seems
+"out-of-line" with historical values, exceeds expected max or min values, or
+is significantly different from results of the other algorithm, it is
+recommended that the user examine other supporting parameters in the monthly
+file to determine the cause of the erratic behavior.  Monthly-file parameters
+9 through 22 and 42 through 50 should be useful.  Examination of the daily
+files for the month may also be useful.  If a cause for the abnormal value
+cannot be found or supported by other results from literature, the most likely
+problem is a combination of data gaps which cannot be properly handled by the
+automated procedures.  In such a case, that value should be considered as
+missing data.  Automated procedures are seldom successful in accounting for
+all possible combinations of data gaps or errors in input data.
+
+
+REPROCESSING OF DATA MONTHS
+
+September 1988 and November 1988 have been reprocessed due to
+errors found in an input file for the Staylor algorithm. Only
+parameters that have Staylor output have been affected.
+September 1988 was reprocessed on September 17, 1993, and
+November 1988 was reprocessed on November 22, 1993.
+The SRB version number now listed in the README files for these
+months is 1.1.r1.  Users should obtain this new release for these
+two months.  The new release is consistent with Version 1.1 for
+all other data months.
+
+
+RECREATION OF HDF FILES
+
+All of the monthly and daily HDF files from March 1985 through
+December 1988 (excluding the quarterly months - January, April,
+July and October) have been recreated to correct an error found
+in the listing of the processing date. The processing date month
+was listed as "00". This revision, Version 1.1.r2 updates the
+processing date of these data months to that listed in the
+respective README file originally released. For simplicity, all
+of the HDF file versions have been changed to 1.1.r2, including
+the quarterly months. Please note that the information contained
+in parameters 1 through 51 for the monthly files, and parameters
+1 through 9 for the daily files, has not been changed. If the user
+does not have a need for the processing date as part of the HDF
+file, then it is not necessary to obtain Version 1.1.r2 for these
+months.
+
+
+
+
+
+

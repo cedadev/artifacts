@@ -1,0 +1,258 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+  <TITLE>FIRETRACC/CRYOSTAT format and filenaming conventions</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<h1>FIRETRACC/CRYOSTAT format and filenaming conventions</h1>
+
+<div>
+
+<div class=MsoNormal><span style='font-family:Arial'>
+
+<hr size=2 width="100%" align=left>
+
+</span></div>
+
+</div>
+
+<p><b><span style='font-family:Arial'>Introduction</span></b><span
+style='font-family:Arial'> <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>All FIRETRACC and </span><st1:PersonName><span
+ style='font-family:Arial'>CRYOSTAT</span></st1:PersonName><span
+style='font-family:Arial'> data is archived at the British Atmospheric
+Data Centre.</p>
+
+<p>FIRETRACC and CRYOSTAT data are now publicly accessible,
+but you are advised to consult with the authors of the data before citing the data in any
+publication or presentation. Contact authors are shown on the data files.</p>
+
+<p>Data will be 'primary' (simple
+concentration versus depth profiles), or 'secondary' (reconstructed
+trends from firn).
+</p>
+
+<p><span style='font-family:Arial'><br>
+<b>NASA-Ames Format</b> <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>Data must be formatted in
+&quot;NASA-Ames&quot; format. NASA-Ames is not difficult! A <u><a
+href="http://badc.nerc.ac.uk/data/firetracc/submit.html#template">template</a></u>
+has been constructed below. To submit data, cut and paste the template to your
+word processor or spreadsheet, modify the header lines to match your requirements,
+and then add your table of data in <b><i>space delimited</i></b> format. You
+can construct your files in Excel or similar, but it is recommended to at least
+check the resulting file in a text viewer before submitting.<o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>Filenames must conform to the <a
+href="http://badc.nerc.ac.uk/data/firetracc/submit.html#nameconv">naming
+convention</a> outlined below. They are saved as ASCII text and sent by ftp
+(Note: set the file type to ASCII) to the restricted database at UEA. It will
+be sent from there to the </span><st1:PersonName><span style='font-family:Arial'>BADC</span></st1:PersonName><span
+style='font-family:Arial'>. Notify the <a
+href="http://badc.nerc.ac.uk/data/firetracc/BillSturges.html">Co-<span
+class=SpellE>ordinator</span></a> when they have been submitted to the UEA
+database. <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>There is a useful program on the </span><st1:PersonName><span
+ style='font-family:Arial'>BADC</span></st1:PersonName><span style='font-family:
+Arial'> website that checks files for <a
+href="http://badc.nerc.ac.uk/cgi-bin/dataex_file.cgi.pl">compliance with
+NASA-Ames</a>. Please check your files with this utility before submitting to
+the database. <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'><br>
+<b>Example of NASA-Ames file</b> <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>The file text is in black, with explanatory
+notes underlined in red. You can read more about <a
+href="http://badc.nerc.ac.uk/help/formats/NASA-Ames/">NASA-Ames here</a>. <o:p></o:p></span></p>
+
+<pre>
+25 1001                                                                   25 is number of header lines including this one, 1001 is the same for all files 
+Sturges, William T                                                        name
+School of Environmental Sciences, University of East Anglia               address
+Long-lived halocarbons in <span
+class=SpellE>firn</span> air, Dome Concordia, <st1:place>Antarctica</st1:place> <span
+style='color:red'>- short description</span></pre><pre>FIRETRACC<span style='mso-spacerun:yes'>             </span><span
+style='color:red'>– project name, same for all files</span></pre><pre>1 <span
+class=SpellE>1</span><span style='mso-spacerun:yes'>                   </span><span
+style='color:red'>– same for all files (purely historical reason, means tape volume 1 of 1)</span></pre><pre>1998 04 03 2000 05 21 <span
+style='color:red'>– data start date, and date this file was created as YYYY MM DD</span></pre><pre>0<span style='mso-spacerun:yes'>                     </span><span
+style='color:red'>– interval between independent variable values; use zero if not <span
+class=GramE>constant,</span> or if in doubt!</span></pre><pre>Depth (m)<span
+style='color:red'><span style='mso-spacerun:yes'>             </span>– description of independent variable including units</span></pre><pre>4<span style='mso-spacerun:yes'>                     </span><span
+style='color:red'>– number of dependent variables</span></pre><pre>1 <span
+class=SpellE>1</span> <span class=SpellE>1</span> <span class=SpellE>1</span><span style='mso-spacerun:yes'>               </span><span
+style='color:red'>– scaling factors of dependent variables in order (CFC-12, CFC-11, CH3Br)</span></pre><pre>99999 <span
+class=SpellE>99999</span> <span class=SpellE>99999</span> <span class=SpellE>99999</span><span style='mso-spacerun:yes'>       </span><span
+style='color:red'>– missing value indicators for the dependent variables (must be &gt;largest data value)</span></pre><pre><span
+class=GramE>canister</span><span style='mso-spacerun:yes'>              </span><span
+style='color:red'>– name of first independent variable (here it is the type of sample canister)</span></pre><pre><span
+class=GramE>CFC-12 (<span class=SpellE>ppt</span>)<span style='mso-spacerun:yes'>          </span><span
+style='color:red'>– name of second independent variable including units, etc.</span></span></pre><pre>CFC-11 (<span
+class=SpellE>ppt</span>)<span style='mso-spacerun:yes'>          </span><span
+style='color:red'>- third independent variable</span></pre><pre><span
+class=GramE>CH3Br (<span class=SpellE>ppt</span>)<span style='mso-spacerun:yes'>           </span><span
+style='color:red'>- fourth independent variable, etc.</span></span></pre><pre>2<span
+style='color:red'><span style='mso-spacerun:yes'>                     </span>– number of ‘special’ comment lines, however many you want</span></pre><pre>Sample canister codes: 1=<span
+class=SpellE>Silcocan</span>; 2=<span class=SpellE>Meriter</span>; 3=NCAR; 4=Max <span
+class=GramE>Plank<span style='color:red'><span style='mso-spacerun:yes'>  </span>–</span></span><span
+style='color:red'> ‘special’ comment</span></pre><pre>CFC-12 calibration preliminary; consult data author before use<span style='mso-spacerun:yes'>     </span><span
+style='color:red'>– ‘special’ comment</span></pre><pre>5<span style='mso-spacerun:yes'>                     </span><span
+style='color:red'>– number of ‘normal’ comment lines + title line (same for all files)</span></pre><pre>THIS-FILE-NAME= <span
+class=GramE>dc9fup01.lha<span style='mso-spacerun:yes'>  </span><span
+style='color:red'>–</span></span><span style='color:red'> ‘normal’ comment: must be in this format</span></pre><pre>THIS-FILE-VERSION=1<span style='mso-spacerun:yes'>           </span><span
+style='color:red'>– must be in this format; versions start at 1 and increment by 1</span></pre><pre>THIS-FILE-ENDS=1999 01 10</pre><pre>E-MAIL-CONTACT=<st1:PersonName><span
+ class=GramE>w.sturges@uea</span></st1:PersonName><span class=GramE>.ac.uk<span style='mso-spacerun:yes'>  </span><span
+style='color:red'>–</span></span><span style='color:red'> ‘normal’ comment line: must be in this format</span></pre><pre>Depth canister CFC-12 CFC-11 <span
+class=GramE>CH3Br<span style='color:red'><span style='mso-spacerun:yes'>  </span>–</span></span><span
+style='color:red'> column titles</span></pre><pre>0 1 550 245 8.1<span style='mso-spacerun:yes'>                     </span><span
+style='color:red'>– first line of data; space delimited</span></pre><pre>1 <span
+class=SpellE>1</span> 549 243 8.2</pre><pre>5 1 530 240 8.0</pre><pre>10 2 520 236 99999</pre>
+
+<p><a name=template><b><span style='font-family:Arial'>NASA-Ames Template</span></b></a><span
+style='mso-bookmark:template'></span><span style='font-family:Arial'> <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>Here is the template again, without the
+notes, which can be cut-and-pasted to your word processor or spreadsheet: <o:p></o:p></span></p>
+
+<pre>25 1001 </pre><pre>Sturges, William T</pre><pre>School of Environmental Sciences, University of East Anglia</pre><pre>Long-lived halocarbons in <span
+class=SpellE>firn</span> air, Dome Concordia, Antarctica</pre><pre>FIRETRACC</pre><pre>1 <span
+class=SpellE>1</span></pre><pre>1998 04 03 2000 05 21</pre><pre>0</pre><pre>Depth (m)</pre><pre>4</pre><pre>1 <span
+class=SpellE>1</span> <span class=SpellE>1</span> <span class=SpellE>1</span></pre><pre>99999 <span
+class=SpellE>99999</span> <span class=SpellE>99999</span> <span class=SpellE>99999</span></pre><pre><span
+class=GramE>canister</span></pre><pre>CFC-12 (<span class=SpellE>ppt</span>)</pre><pre>CFC-11 (<span
+class=SpellE>ppt</span>)</pre><pre>CH3Br (<span class=SpellE>ppt</span>)</pre><pre>2</pre><pre>Sample canister codes: 1=<span
+class=SpellE>Silcocan</span>; 2=<span class=SpellE>Meriter</span>; 3=NCAR; 4=Max Plank</pre><pre>CFC-12 calibration preliminary; consult data author before use</pre><pre>5</pre><pre>THIS-FILE-NAME= dc9fup01.lha</pre><pre>THIS-FILE-VERSION=1</pre><pre>THIS-FILE-ENDS=1999 01 10</pre><pre>E-MAIL-CONTACT=<st1:PersonName>w.sturges@uea</st1:PersonName>.ac.uk</pre><pre>Depth canister CFC-12 CFC-11 CH3Br</pre>
+
+<p><a name=nameconv></a><span style='font-family:Arial'><br>
+<b>File Naming Conventions</b> <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>Filenames should be 8 characters long with a
+three character extension, and should follow the format: <o:p></o:p></span></p>
+
+<p><span class=SpellE><b><span style='font-size:18.0pt;font-family:"Courier New";
+color:red'>uu</span></b><b><span style='font-size:18.0pt;font-family:"Courier New";
+color:#003399'>v</span></b><b><span style='font-size:18.0pt;font-family:"Courier New";
+color:lime'>w</span></b><b><span style='font-size:18.0pt;font-family:"Courier New";
+color:fuchsia'>x</span></b><b><span style='font-size:18.0pt;font-family:"Courier New";
+color:#990000'>y</span></b><b><span style='font-size:18.0pt;font-family:"Courier New";
+color:#999900'>zz</span></b><b><span style='font-size:18.0pt;font-family:"Courier New"'>.<span
+style='color:#009900'>rrr</span></span></b></span><span style='font-family:
+Arial'> <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-family:Arial'>where</span></span><span
+style='font-family:Arial'> <o:p></o:p></span></p>
+
+<p><span class=SpellE><span class=GramE><b><span style='font-size:18.0pt;
+font-family:"Courier New";color:red'>uu</span></b></span></span><span
+style='font-family:Arial'> = <span class=SpellE>di</span> (</span><st1:place><span
+ style='font-family:Arial'>Devon Island</span></st1:place><span
+style='font-family:Arial'>), dm (<span class=SpellE>Dronning</span> Maud Land),
+dc (Dome Concordia), nm (<span class=SpellE>Neumayer</span>) <o:p></o:p></span></p>
+
+<p><b><span style='font-size:18.0pt;font-family:"Courier New";color:#003399'>v</span></b><span
+style='font-family:Arial'> = year of campaign (e.g. 8 for 1998, etc.) <o:p></o:p></span></p>
+
+<p><b><span style='font-size:18.0pt;font-family:"Courier New";color:lime'>w</span></b><span
+style='font-family:Arial'> = measurement type (f = <span class=SpellE>firn</span>
+air depth profile, a = ambient air measurements, r = reconstructed time series,
+m = model parameters) <o:p></o:p></span></p>
+
+<p><b><span style='font-size:18.0pt;font-family:"Courier New";color:fuchsia'>x</span></b><span
+style='font-family:Arial'> = institute (u = <span class=SpellE>uea</span>, l = <span
+class=SpellE>lgge</span>, b = <span class=SpellE>unibe</span>, a = bas (<span
+class=SpellE><u>a</u>ntractic</span> survey), m = <span class=SpellE>mpi</span>,
+n = <span class=SpellE>ncar</span>, c = <span class=SpellE>cfr/lcme</span>, r =
+reading, o = open, z = <span class=SpellE>csiro</span> (oz!)) <o:p></o:p></span></p>
+
+<p><b><span style='font-size:18.0pt;font-family:"Courier New";color:#990000'>y</span></b><span
+style='font-family:Arial'> = p (primary data – concentrations versus depths),
+or s (secondary data – concentration versus year) <o:p></o:p></span></p>
+
+<p><span class=SpellE><span class=GramE><b><span style='font-size:18.0pt;
+font-family:"Courier New";color:#999900'>zz</span></b></span></span><span
+style='font-family:Arial'> = version number (01, 02, etc.) <o:p></o:p></span></p>
+
+<p><span class=SpellE><span class=GramE><b><span style='font-size:18.0pt;
+font-family:"Courier New";color:#009900'>rrr</span></b></span></span><span
+style='font-family:Arial'> = variable type (see below) <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'><br>
+<b>Variable types</b> <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>The following are reserved variable types,
+please inform the <a
+href="http://badc.nerc.ac.uk/data/firetracc/BillSturges.html">Co-<span
+class=SpellE>ordinator</span></a> if you use a new variable name, to avoid
+duplication. <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.co2 carbon dioxide gas concentration <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.ch4 methane gas concentration<o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.<span class=SpellE>ccg</span> CO2 and CH4
+gas <span class=SpellE>concentrations</span><o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.cog carbon monoxide <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.dc2 isotopes of CO<sub>2 </sub><o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.dc1 isotopes of CO <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.<span class=SpellE>dch</span> isotopes of
+CH<sub>4 </sub><o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.<span class=SpellE>icc</span> isotopes of
+multiple carbon gases<o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.<span class=SpellE>ipm</span> isotopes (and
+elemental ratios) of permanent gases <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.<span class=SpellE>phy</span> <span
+class=SpellE>firn</span> physical parameters <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.has halocarbons, short-lived<o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.<span class=SpellE>hal</span> halocarbons,
+long-lived<o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.<span class=SpellE>haa</span> halocarbons
+and alkyl nitrates<o:p></o:p></span></p>
+
+<p><span lang=FR style='font-family:Arial;mso-ansi-language:FR'>.<span
+class=SpellE>nmh</span> <span class=SpellE>non-methane</span> <span
+class=SpellE>hydrocarbons</span> <o:p></o:p></span></p>
+
+<p><span lang=FR style='font-family:Arial;mso-ansi-language:FR'>.<span
+class=SpellE>rno</span> alkyl nitrates<o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.sf5 specific data on SF5CF3 and SF6<o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.<span class=SpellE>cmp</span> comparison
+between laboratories<o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.<span class=SpellE>gch</span> Green
+Functions (age spectra) for CH4<o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>.<span class=SpellE>gco</span> Green
+Functions (age spectra) for OCS (carbonyl <span class=SpellE>sulphide</span>)<o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'><br>
+<b>Example</b> <o:p></o:p></span></p>
+
+<p><span style='font-family:Arial'>di8fup01.has <o:p></o:p></span></p>
+
+<p><span class=GramE><span style='font-family:Arial'>is</span></span><span
+style='font-family:Arial'> </span><st1:place><span style='font-family:Arial'>Devon
+ Island</span></st1:place><span style='font-family:Arial'> 1998 <span
+class=SpellE>firn</span> air data <span class=SpellE>analysed</span> for short-lived
+halocarbons by UEA as a primary depth profile, version 1. <o:p></o:p></span></p>
+
+<P>
+</BODY>
+</HTML>

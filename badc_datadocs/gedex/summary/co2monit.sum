@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "CO2MONIT "
+"SUM_DATA_SET"       "GRNHS-GASES  "
+"SUM_DATATYPE"       "CO2-MONITOR  "
+"ARCHIVE_NAME"       "NCDS                 "
+"ARCHIVE_STATUS"     "Available                                              "
+"DS_DESCRIPTION"     "Concentrations of atmospheric greenhouse effect gases  "
+"DT_DESCRIPTION"     "CO2 Continuous Monitoring Program                      "
+"SUM_BEGIN_DATE"     "15-Jun-1957                                                                 "
+"SUM_END_DATE"       "15-Oct-1989                                                                 "
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Point data measured at 3 stations                      "
+"SPATIAL2"           "                                                       "
+"SPATIAL3"           "Station                                                "
+"SPATIAL4"           "                                                       "
+"TEMPORAL1"          "June, 1957 - October, 1989 (not complete at all stations)"
+"TEMPORAL2"          "                                                       "
+"TEMPORAL3"          "Monthly averages                                       "
+"TEMPORAL4"          "                                                       "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF).    "
+"PRODUCT2"           "Available on GEDEX CD-ROM.               "
+"PRODUCT3"           "3 ASCII files on MS-DOS format floppy disk             "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"CO2"             "Carbon Dioxide Concentration"             "ppmv"
+EOF
+
+SOURCES
+"FIELD-OBS"       "CO2-ANALYZER"
+EOF

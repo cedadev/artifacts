@@ -1,0 +1,805 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>ATSR-2 Anomaly Log archive
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../../../../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../../index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../../../../documentation/index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../../documentation/docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../../../../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      
+<h2>ATSR-2 Status :-</h2>
+<P>Under normal circumstances ATSR-2 operates under ERS-2 Mission Planning rules 
+  in a very systematic configuration. An overview of these mission planning rules, 
+  as far as they affect ATSR-2, is given <A href="../../../../../documentation/docs/userguide/index.shtml">in 
+  the user guide</A>, sections 5.3 to 5.5.</P>
+<P>If for any reason the instrument is unable to follow the mission plan then 
+  behind the following table of dates is a short description of the problem.. 
+  These events relate to the instrument status and not necessarily to data availability.</P>
+<P>&nbsp;</P>
+
+<hr>
+<H3> 15th April 2002 </H3>
+<P>ICU reset at ~07:30 UTC followed by restart of MWR and GOME and IRR cool down at ~12.40 UTC, the restart
+went smoothly and the instrument was commanded to NOMINAL at 17:26:40 UTC.  The auto gain/offset loops 
+operating correctly. </P>
+  
+<H3> 16th January 2002 </H3>     
+<P>Whilst ESOC commission EXTRA-BACKUP-MODE (an attitude control mode planned for
+NO-gyro operation) the instrument pointing will be degraded, these activities
+commenced at 016:06:30:00 UTC and are expected to be completed by 
+019:17:00:00 UTC. </P>
+<P>The ATSR-2 IRR will remain on during those activities and it's expected that
+ co-location of forward/nadir views in the data processing will be affected .</P>	 
+
+ <H3> 12th Apil 2002 </H3>
+ <P>Instrument operations request #127 prepared to request ATSR-2 instruments to STANDBY followed by an ICU
+ reset and restart for Monday 15th April.  The IRR continues running with the gains/offsets set at default
+ values. </P>
+ 
+<H3> 11th April 2002 </H3>
+<P>Due to an on-board anomaly the ATSR-2 instrument suffered an emergency switch down at 101:02:18:48 UTC.
+Recovery of the IRR instrument began at approx. 16:00 UTC with cool down and operation complete by 23:00 UTC.
+However, it was noticed that the auto gain/offset loops were frozen as has been seen before. </P>
+ 
+<H3> 21st March 2002 </H3>
+<P>The ATSR-2 IRR detector cool down took place on 21/03/02 and the instrument operation returned
+to nominal at 080:18:50:41 UTC.</P>
+  
+   
+<H3> 20th March 2002 </H3> 
+   <P>The payload shutdown and subsequent safe mode were caused by a problem with the
+   RA instrument ICU data-bus.  The platform is now out of safe-mode.  Troubleshooting
+   the RA problem today was successful and the rest of the payload will be switched
+   on.  ATSR-2 switch on and return to operation is expected on 21/03/02.</P>
+ 
+<H3> 8th March 2002 </H3>
+<p>A platform anomaly occurred at 067:03:29:03 UTC which caused a payload shutdown.  The reacquisition
+   of nominal platform steering is still ongoing as of early Tuesday 12th March. </p>
+
+
+<H3> 28/29th November 2001 </H3>
+<p> ATSR-2 IRR reconfiguration began at 332:21:05:00 UTC.  All went nominally and the instrument
+was nominal by 333:10:55:46 UTC. </p>
+
+<H3> 27th November 2001 </H3>
+<p>Due to ESOC planned requirements for 1 Gyro Coarse Mode Commissioning the whole payload
+was shut down at 331:08:39 UTC. </p>
+
+<H3> 19th November 2001 </H3>
+<p> ATSR-2 IRR reconfiguration began at 323:18:00 UTC all went smoothly and the instrument was 
+nominal by approx. 324:00:30 UTC.  The auto gain/offset loops are functioning correctly now. </p>
+<p> During the restart the SCC cooler amplitude was increased by two command steps.  This is
+the first SCC change since launch.  </p>
+
+<H3> 17th November 2001 </H3>
+<p>ERS-2 payload shut down at 321:17:30 UTC to make safe during the Leonids meteor storm.</p>
+
+<H3> 04th September 2001 </H3>
+<p> Reconfiguration and cool down of the IRR began at 248:09:15 UTC.  The instrument reconfiguration was
+completed by 248:16:30 UTC, however, the instrument auto gain/offset loops were seen to be 'stuck' 
+(again). </p>
+<p> It was agreed to leave the instrument in this state at this time after sample NRT products had been
+analysed to show that the default gains and offsets were producing good data with no sign of saturation..</p>
+
+<H3> 03rd September 2001 </H3>
+<p>  During recovery of the RA instrument after an earlier anomaly the ERS-2 payload and ATSR-2 
+suffered a shut down, this occurred at approx. 247:08:45 UTC. </p>
+
+<H3> 11th June 2001 </H3>
+<p> On orbit nr. 32110 the IRR Auto gain/offset loops were disabled at 162:07:26:40 for 1023 scans whilst
+descending over the Arabian Peninsular.  The purpose of this test was to characterise the IR channel
+operation over hot land surfaces. </p>
+
+<H3> 06th June 2001 </H3>
+<p>Platform AOCS using <b>ZGM</b> mode (Zero Gyro Mode)</p>
+
+<H3> 01st June 2001 </H3>
+<p> ESOC begin a campaign of AOCS testing to improve the YSM steering, the impact will be
+continued lack of H/R data for the IRR whilst global wind/wave data products are taken to be
+used for YSM performance characterisation. </p>
+
+<H3> 29th May 2001 </H3>
+<P> After difficutly re-installing the platform attitude control mode, ATSR-IRR finally was 
+reconfigured on 29th May when the start up and cool down went uneventfully with a return to nominal 
+operation at 149:15:40 UTC. </p>
+  
+<H3> 21st May 2001 </H3>
+<P> Due to  platform anomaly the ERS-2 payload was turned off at 141:18:12:31 UTC.  Recovery will 
+involve coarse attitude mode and 3 gyro pointing in order to re-instate EBM attitude control. </P> 
+
+<H3> 30th March 2001 </H3>
+<P> ERS-2 attitude and orbit control system (AOCS) software updated with the new yaw
+steering control mode known as EBM-YSM.  This took place around 089:10:30 UTC.  Co-location of
+ATSR imagery should be improved. </P> 
+
+<H3> 24th March 2001 </H3>
+<P> Pixel read/write anomaly at 083:05:58:16 UTC. </P> 
+
+<H3> 12th February 2001 </H3>
+<P> 65.7w power spike at 043:22:24:55 UTC, an isolated event. </P> 
+
+<H3> 9th February 2001 </H3>
+<P>ATSR-2 was successfully restarted at 11:43 on 8 February after being
+      off for almost three weeks.  The cooldown to 80K was completed at 07:49 on
+      9 February and is now back to nominal operations. </P>
+      <P> The ERS-2 spacecraft attitude is operating in Extra-Backup-Mode (i.e.
+      no gyros).  This will have a significant effect on ATSR-2 images, in particular 
+      the co-location of nadir and along-track views.  ESA hope to improve  the performance
+      of the attitude control as the orbit behaviour becomes more understood.  The aim is to
+      attain optimum attitude control by June in readiness for the launch of ENVISAT-1
+      in July.  To provide data for the orbit analysis, ESA will run the AMI instrument
+      in wind-wave mode for an extended period.  This means that there will be no ATSR-2
+      H-Rate data until 16 February (TBC). </P> 
+
+<H3> 2nd February 2001 </H3>
+<P>ESOC's efforts to establish a stable Emergency Back-up Mode (EBM) attitude
+      control of the spacecraft platform using <B>no</B> gyros has not been
+      without problems.  Whilst EBM tests continue it is still not possible to operate
+      the payload.</P>
+       <P>It is expected that return of ATSR-2 IRR operation will not be before
+       Monday 5th February.</P>
+
+<H3> 26th January 2001 </H3>
+<P>ERS-2 payload still remains unavailable.  ESOC's efforts to reconfigure
+      the spacecraft platform have taken longer than expected. </P>
+       <P>Payload operations are not now expected to restart before the end
+       of the weekend at the earliest.</P>
+
+<H3> 19th January 2001 </H3>
+<P>At 017:19:53:00 UTC there has been a payload shutdown. </P>
+
+<H3> 16th January 2001 </H3>
+<P>Whilst ESOC commission EXTRA-BACKUP-MODE (an attitude control mode planned for
+      NO-gyro operation) the instrument pointing will be degraded, these activities
+      commenced at 016:06:30:00 UTC and are expected to be completed by 
+      019:17:00:00 UTC. </P>
+      <P>The ATSR-2 IRR will remain on during those activities and it's expected that
+      co-location of forward/nadir views in the data processing will be affected .</P>	 
+
+
+<H3> 5th December 2000 </H3>
+<P>ERS-2 platform was in FPM between 340:13:09:46 UTC and 341:03:24:52 UTC
+      whilst orbit control manoeuvres were executed.  Co-location of fotward/nadir
+      views in the data processing will be affected. </P>
+
+<H3> 2nd November 2000 </H3>
+<P>Platform coarse mode attitude control was reconfigured in the period
+      307:10:26:02 UTC through 307:17:08:26 UTC during this time YSM was replaced
+      by FPM and consequently forward/nadir views in data processed will be affected </P>
+
+<H3> 25th October 2000 </H3>
+ <P>Due to Gyro 6 becoming noisy, Fine Pointing Mode was initiated at
+      	298:16:00:54 UTC.  After platform reconfiguration Yaw Steering Mode was
+	re-instated at 299:12:08:06 UTC.</P>
+      <P>For this period of approximately 20 hours ATSR data products will have
+      anomalous geo-location.</P>
+
+<H3> 12th October 2000 </H3>
+      <P>ERS-2 platform is now operational again using mono-gyro steering.</P>
+      <P>Reactivation of ATSR IRR began Wednesday afternoon, however, time
+         ran out before the detector cool down could begin with an anticipated
+	 return to nominal before the last Kiruna pass for the day.</P>
+     <P>Detector cool down began at 09:00 UTC today, Thursday 12th October, and
+     	it is now expected that the instrument operation will be nominal by
+	approximately 15.30 UTC. </P>
+
+<H3>7th October 2000 </H3>
+  <P>On Saturday 7th October at 17:30:49 UTC the ERS-2 platform suffered an
+      attitude anomaly and, as a consequence, all the payload instruments are
+      powered off whilst recovery takes place.</P>
+      <P>ESOC estimate ATSR should be powered up again on Wednesday 11th October, pm.</P>
+    
+ <H3>8th August 2000</H3>
+  <p>Due to an ATSR software anomaly, the instrument was shut down autonomously on 
+   08/08/2000 at 221:11:47:45 UTC.  A recovery was started later in the day after 
+   an instrument power cycling and the instrument was nominal again by 222.01:27:27 UTC.
+  </p>
+   <p>However, there will need to be a further ICU reset and instrument restart when time is 
+   available (Kiruna Ground Station is occupied by the Cluster II Launch 
+   activities on 9th August).</p>
+  <H3>11th July 2000</H3>
+<p>The ATSR-IRR instrument was fully recovered to nominal operation at 17:00 UTC
+on 6th July 2000. </p>
+ <p> Further difficulties with the payload were encountered yesterday, 10th July 2000,
+ at 16:32:47 UTC, when all the instruments were switched off again. </p>
+ <p> Recovery of the payload has commenced today, 11th July 2000, and it is 
+ expected that the ATSR-IRR will be back to nominal later. </p>
+<H3>30th June 2000</H3><P>Since Friday 30th June at 182:06:43:00 UTC all payload instruments are
+      	 switched off due to a platform anomaly.</P>
+      <P>The Problem is under investigation by ESA. </P> 
+<H3>15th June 2000</H3>
+<P><FONT size="-2">Power spikes peaking 48.4w were noted during the period 167:10:00 
+  UTC through 167:14:30 UTC on the Electronics Power Converter 1 power monitor 
+  TM F900. These spikes were associated with pixel 2002 events and a rise, peaking 
+  at approximately 14:00 UTC, of about 4 degrees in the SMU encoder temperatures. 
+  </FONT></P>
+<P><FONT size="-2"> The SMU temperatures had reverted to their nominal orbital 
+  variations by the end of the GMT day.</FONT></P>
+<P><FONT size="-2">Scan jitter events will be noticeable in SADIST products during 
+  the period reported. </FONT></P>
+<H3>29/30th May 2000 </H3>
+<P><FONT size="-2">Due to an out of plane manoeuvre, the ERS-2 spacecraft was 
+  NOT in Yaw Steering Mode (YSM), but in Fine Pointing Mode (FPM) for the period 
+  29th May 2000 at 21:03:57 through 30th May 2000 23:53:31 UTC.</FONT></P>
+<P><FONT size="-2">During this period, co-location of ATSR-2 forward and nadir 
+  views in SADIST products will be anomalous.</FONT></P>
+<P><FONT size="-2">At approximately 06:50 UTC 30th May the orbit plane manoeuvre 
+  was executed, this involved the whole spacecraft performing a 90 degree yaw 
+  slew to the attitude for the manoeuvre burn and a subsequent 90 degree slew 
+  back to nominal. This manoeuvre took place during the dayside of the orbit. 
+  During the period 06:50 through 07:20 UTC a number of instrument temperature 
+  anomalies were noted. (NCR ER-NC-RAL-AT-2065 refers)</FONT></P>
+<H3>25th March 2000 </H3>
+<P><FONT size="-2">The re-configuration and start-up of the ATSR-IRR was completed 
+  by 085:20:59:29 UTC. The scan mirror start-up and auto gain/offset loop operation 
+  initiated nominally. </FONT></P>
+<H3>24th March 2000 </H3>
+<P><FONT size="-2">Due to an ERS-2 on board detected under-voltage in Memory Module 
+  2 power supply, the payload was switched to STANDBY, this occurred at 084:18:15:46 
+  UTC when there was an abrupt end to data collection. </FONT></P>
+<H3>22nd March 2000</H3>
+<P><FONT size="-2">61.2w power spike at 082:09:30:03 UTC this was an isolated 
+  case, causing a number of Pixel 2002 events, after which power consumption and 
+  SMU running was nominal.</FONT></P>
+<H3>21st March 2000 </H3>
+<P><FONT size="-2">After an ICU reset and reconfiguration of the GOME and MWR 
+  instruments the IRR start-up began at approx. 081:09:40 UTC with the SMU start 
+  being nominal. The detector cool down continued at 11:20 UTC and the instrument 
+  was back to nominal operation by 18:00 UTC. </FONT></P>
+<P><FONT size="-2">The auto gain/offset loop (recently frozen after 2 instrument 
+  restarts) kicked into operation straight away ! </FONT></P>
+<P><FONT size="-2">The instrument is now functioning in a fully nominal state. 
+  </FONT></P>
+<H3>20th March 2000 </H3>
+<P><FONT size="-2">During a planned ATSR-GOME operational activity by ESOC the 
+  ATSR Instrument Control Unit (ICU) went into an unplanned status (WAIT). </FONT></P>
+<P><FONT size="-2">ATSR payload instrument operations halted at 080:16:12:44 UTC. 
+  </FONT></P>
+<H3>9th March 2000 </H3>
+<P><FONT size="-2">Checks made on low rate data from the one orbit test on the 
+  7th March show the current settings of gain/offset in the 11 and 12 uM channels 
+  to be satisfactory for 12 bit retrieval using the 11/12uM difference coding.</FONT></P>
+<P><FONT size="-2"> 12 bit difference coding was commanded at 069:12:40:52 UTC. 
+  </FONT></P>
+<P><FONT size="-2">Trend plots over the duration of the mission have shown that 
+  'auto' adjusted values of gain/offset drift slowly, there are also step changes 
+  in 'auto' adjusted gains and offset immediately after outgassings. </FONT></P>
+<P><FONT size="-2">It is foreseen that the current setting will be updated from 
+  time to time and scheme of monitoring will be set up whereby these commanded 
+  values are reviewed twice monthly.</FONT> </P>
+<H3>7th March 2000</H3>
+<P><FONT size="-2">Yet a further iteration at 11/12 gain/offset setting was calculated 
+  and up-linked at 067:13:41 UTC</FONT></P>
+<TABLE width="75%" border="1">
+  <TR> 
+    <TH><B>Channel</B></TH>
+    <TH><B>Gain</B></TH>
+    <TH><B>Offset</B></TH>
+  </TR>
+  <TR> 
+    <TD>11</TD>
+    <TD>8.76</TD>
+    <TD>-0.710</TD>
+  </TR>
+  <TR> 
+    <TD>12</TD>
+    <TD>10.57</TD>
+    <TD>-0.262</TD>
+  </TR>
+</TABLE>
+<P><FONT size="-2">with 12 bit difference coding for the 11/12uM channels commanded 
+  at 067:13:42 UTC</FONT></P>
+<P> <FONT size="-2">10 bit coding for the 11/12uM data was re-commanded at 067:15:18 
+  UTC </FONT></P>
+<H3>6th March 2000 </H3>
+<P><FONT size="-2">A further iteration at 12uM offset setting was calculated and 
+  up-linked at 066:12:33 UTC</FONT></P>
+<TABLE width="75%" border="1">
+  <TR> 
+    <TH><B>Channel</B></TH>
+    <TH><B>Gain</B></TH>
+    <TH><B>Offset</B></TH>
+  </TR>
+  <TR> 
+    <TD>12</TD>
+    <TD>&nbsp;</TD>
+    <TD>-0.180</TD>
+  </TR>
+</TABLE>
+<P><FONT size="-2">with 12 bit difference coding for the 11/12uM channels commanded 
+  at 066:12:33 UTC</FONT></P>
+<P><FONT size="-2">10 bit coding for the 11/12uM data was re-commanded at 066:14:11 
+  UTC</FONT></P>
+<P><FONT size="-2"> Again later analysis of the orbit of data with 12 bit coding 
+  still did not return full resolution science data. </FONT></P>
+<H3>2nd March 2000</H3>
+<P><FONT size="-2">A further iteration at gain/offset setting was calculated and 
+  up-linked at 062:16:14 UTC </FONT></P>
+<TABLE width="75%" border="1">
+  <TR> 
+    <TH><B>Channel</B></TH>
+    <TH><B>Gain</B></TH>
+    <TH><B>Offset</B></TH>
+  </TR>
+  <TR> 
+    <TD>11</TD>
+    <TD>8.72</TD>
+    <TD>-0.745</TD>
+  </TR>
+  <TR> 
+    <TD>12</TD>
+    <TD>10.6</TD>
+    <TD>-0.191</TD>
+  </TR>
+</TABLE>
+<P> <FONT size="-2">with 12 bit difference coding for the 11/12uM channels commanded 
+  at 062:16:17 UTC 10 bit coding for the 11/12uM data was re-commanded at 062:17:52 
+  UTC Again later analysis of the orbit of data with 12 bit coding still did not 
+  return full resolution science data.</FONT> </P>
+<H3>1st March 2000</H3>
+<P><FONT size="-2">Further command tests after the 15th Feb. on the instrument 
+  were held off whilst ESOC continued their Mono Gyro Commissioning activities 
+  and RAL analysed in detail high science data from Kiruna. </FONT></P>
+<P><FONT size="-2">The problem appears as an inability of the instrument on-board 
+  software to activate the auto gain/offset loop, so whilst this is further investigated 
+  attempts to set up the instrument with fixed gains and offsets together with 
+  12bit compression for the 11/12uM channels in low rate format will be made. 
+  The following SCP settings were commanded at 061:15:08 UTC</FONT></P>
+<TABLE width="75%" border="1">
+  <TR> 
+    <TH><B>Channel</B></TH>
+    <TH><B>Gain</B></TH>
+    <TH>Offset</TH>
+  </TR>
+  <TR> 
+    <TD>11 </TD>
+    <TD>8.56</TD>
+    <TD>-0.734</TD>
+  </TR>
+  <TR> 
+    <TD>12 </TD>
+    <TD>10.82</TD>
+    <TD> -0.191</TD>
+  </TR>
+  <TR> 
+    <TD>1.6</TD>
+    <TD>&nbsp;</TD>
+    <TD>0.0466967</TD>
+  </TR>
+  <TR> 
+    <TD>.87</TD>
+    <TD>&nbsp;</TD>
+    <TD>0.0472217</TD>
+  </TR>
+  <TR> 
+    <TD>.67</TD>
+    <TD>&nbsp;</TD>
+    <TD>0.0414476</TD>
+  </TR>
+  <TR> 
+    <TD>.56</TD>
+    <TD>&nbsp;</TD>
+    <TD>0.0251756</TD>
+  </TR>
+</TABLE>
+<P><FONT size="-2">12 bit difference coding for the 11/12uMdata in low rate format 
+  for one orbit from 061:16:45 UTC to 061:18:22 UTC when 10 bit coding was re-commanded. 
+  Later data analysis of this orbit revealed that the 12 bit difference coding 
+  was still not returning full resolution data.</FONT></P>
+<H3>15th February 2000</H3>
+<P><FONT size="-2">With the instrument in its current status and when in low-rate 
+  format using 12bit coding for the 11/12uM channels some data is being lost. 
+  </FONT></P>
+<P><FONT size="-2">A brief test to check the commandability of the SCP units was 
+  set up. </FONT></P>
+<P><FONT size="-2">The signal channels were successfully commanded to fixed gains/offsets 
+  (6.25v gain;0.0v offset) for the 3.7, 11 and 12uM detectors using 12bit coding 
+  for the 11/12uM channel data and the auto gain/offset loop commanded to 'enabled', 
+  which however still remained 'frozen'. These commands took place at approx. 
+  046:16:12 UTC and remained in operation until approx. 046:17:50 UTC when the 
+  setting were set again to:- </FONT></P>
+<TABLE width="75%" border="1">
+  <TR> 
+    <TH><B>Channel</B></TH>
+    <TH><B>Gain</B></TH>
+    <TH><B>Offset</B></TH>
+  </TR>
+  <TR> 
+    <TD>3.7 </TD>
+    <TD>8.6</TD>
+    <TD>-0.115</TD>
+  </TR>
+  <TR> 
+    <TD>11 </TD>
+    <TD>8.77 </TD>
+    <TD>-0.728</TD>
+  </TR>
+  <TR> 
+    <TD>12 </TD>
+    <TD>10.42</TD>
+    <TD>-0.223</TD>
+  </TR>
+</TABLE>
+<P><FONT size="-2"> with 10bit coding for 11/12uM data in the low rate format. 
+  </FONT></P>
+<H3>14<SUP>th</SUP> February 2000</H3>
+<P><FONT size="-2">All the ATSR instruments were commanded to standby followed 
+  by an ICU reset command at approximately 045:08:30 UTC, this was followed by 
+  an IRR cool-down at 045:13:40 UTC. The instrument was fully cooled down and 
+  back in nominal by 045:19:40 UTC. </FONT></P>
+<P><FONT size="-2">The reset though did not have the desired effect and the auto 
+  gain/offset loop remains frozen. </FONT></P>
+<H3>11<SUP>th</SUP> February 2000 </H3>
+<P><FONT size="-2">Data from the cool down and reconfiguration of the IRR unfortunately 
+  shows that the auto gain/offset loop for the IR channels was not operating as 
+  has occurred twice before. A request has been made to ESOC to reset the ATSR 
+  ICU, this of course requires that GOME/MWR and IRR are commanded to STANDBY 
+  and needs coordination. </FONT></P>
+<H3>10<SUP>th</SUP> February 2000</H3>
+<P><FONT size="-2">With early tests of the mono gyro commissioning completed and 
+  the platform in 1GYSM the ATSR-2 IRR was powered-up, configured and cool-down 
+  commenced at 041:15:30 UTC approx. The detectors reached nominal temperatures 
+  at approx. 22:00 UTC.</FONT></P>
+<H3>7<SUP>th</SUP> February 2000</H3>
+<P><FONT size="-2">The ERS-2 payload including the ATSR-2 IRR was shut down at 
+  the commencement of the Mono Gyro AOCS software In-Flight Commissioning. Data 
+  collection ceased at 038:06:59:00 UTC.</FONT></P>
+<H3>13<SUP>th</SUP>- 16<SUP>th</SUP> January 2000</H3>
+<P><FONT size="-2">Daily housekeeping data plots show Scan Mirror Unit temperatures 
+  F501/F508 slowly rising from 12:00 UTC on the 16<SUP>th</SUP> through to the 
+  end of the UTC day. A mean rise of approximately 2 deg. C was seen peaking at 
+  02:00 UTC on the 14<SUP>th</SUP>, and between the times of 01:40 and 03:15 UTC 
+  some severe scan mirror jitter was noted associated with pixel 2002 events.</FONT></P>
+<P><FONT size="-2">By the end of the day on the 16<SUP>th</SUP> January the elevated 
+  temperatures had settled back to nominal.</FONT></P>
+<H3>2<SUP>nd</SUP> January 2000</H3>
+<P><FONT size="-2">After ERS-2 platform and payload reconfiguration and the restart 
+  of the ground segment support software, collection of Low Bit Rate data recommenced 
+  at 002:15:57:02 UTC.</FONT></P>
+<H3>31<SUP>st</SUP> December 1999</H3>
+<P><FONT size="-2">In readiness for the year 2000 roll-over, the ERS ground segment/mission 
+  planning was to be de-activated and restarted after the year change-over.</FONT></P>
+<P><FONT size="-2">The ATSR/IRR instrument was left running in nominal. </FONT></P>
+<P><FONT size="-2">As part of the Y2K operations precautions the ERS-2 IDHT data 
+  collection/retrieval was paused from 365:12:23:00 UTC.</FONT></P>
+<H3>15<SUP>th</SUP> December 1999</H3>
+<P><FONT size="-2">66.3w power spike at 348:04:55:36 UTC this was an isolated 
+  case after which power monitoring was nominal.</FONT></P>
+<H3>16<SUP>th</SUP> – 18<SUP>th</SUP> November 1999</H3>
+<P><FONT size="-2">It was decided that as ESOC had planned to curtail payload 
+  operations during the Leonids Meteor Shower that a detector outgassing should 
+  be allowed for during the instrument shut-down. </FONT></P>
+<P><FONT size="-2">The IRR shut-down began prior to the general Leonids instrument 
+  shut down with the detector warm-up beginning at approximately 09:00 UTC on 
+  the 16<SUP>th</SUP> November.</FONT></P>
+<P><FONT size="-2">After clearing the Meteor shower trail in the early hours of 
+  the 18<SUP>th</SUP> Nov the IRR instrument reconfiguration and cool down began 
+  at ~14:45 UTC. The start up of the instrument was uneventful and cool down completed 
+  by 23:30 UTC with a resumption of nominal operations.</FONT></P>
+<H3><B>16<SUP>th</SUP> November 1999</B></H3>
+<P><FONT size="-2">IRR operations prior to the Leonids</FONT></P>
+<H3><B>31<SUP>st</SUP> May 1999</B></H3>
+<P><FONT size="-2">Pixel read/write anomaly at 151:19:54:25 UTC</FONT></P>
+<H3><B>28<SUP>th</SUP> May 1999</B></H3>
+<P><FONT size="-2">Pixel read/write anomaly at 148:15:40:17 UTC</FONT></P>
+<H3><B>26<SUP>th</SUP> May 1999</B></H3>
+<P><FONT size="-2">A series of high power spikes reported at:-</FONT></P>
+<P><FONT size="-2">65.7w at 146:08:32:17 UTC</FONT></P>
+<P><FONT size="-2">68.0w at 146:11:47:50 UTC</FONT></P>
+<P><FONT size="-2">69.7w at 146:11:57:10 UTC</FONT></P>
+<P><FONT size="-2">53.9w at 146:13:31:01 UTC</FONT></P>
+<P><FONT size="-2">71.1w at 146:15:22:38 UTC</FONT></P>
+<H3><B>25<SUP>th</SUP> May 1999</B></H3>
+<P><FONT size="-2">66.3w power spike at 145:00:12:32 UTC again an isolated event</FONT></P>
+<H3>4<SUP>th</SUP> May 1999</H3>
+<P><FONT size="-2">68.5w power spike at 124:16:11:25 UTC again an isolated event.</FONT></P>
+<H3>22nd April 1999</H3>
+<P><FONT size="-2">66.3w power spike at 112:17:58:59 UTC this was an isolated 
+  case and power monitoring was nominal.</FONT></P>
+<H3><B>21<SUP>st</SUP> April 1999</B></H3>
+<P><FONT size="-2">Pixel read/write anomaly at 111:23:28:33UTC</FONT></P>
+<H3><B>4<SUP>th</SUP> April 1999</B></H3>
+<P><FONT size="-2">Several high power spike seen in the SMU power monitor these 
+  also were associated with 2002 pixel events.</FONT></P>
+<P><FONT size="-2">70.8w at 094:09:40:32 UTC</FONT></P>
+<P><FONT size="-2">50.5w at 094:11:29:26 UTC</FONT></P>
+<P><FONT size="-2">65.7w at 094 12:38:17 UTC</FONT></P>
+<P><FONT size="-2">After 13:00 UTC these jitter events subsided and power monitor 
+  reading were normal again.</FONT></P>
+<H3><B>31<SUP>st</SUP> March 1999</B></H3>
+<P><FONT size="-2">48.9w power spike at 090:19:30:12 UTC causing single pixel 
+  2002 event.</FONT></P>
+<H3><B>20<SUP>th</SUP> March 1999</B></H3>
+<P><FONT size="-2">72.5w power spike at 079:22:06:09 UTC causing multiple pixel 
+  2002 events for several minutes.</FONT></P>
+<H3><B>9<SUP>th</SUP> March 1999</B></H3>
+<P><FONT size="-2">66w power spike at 060:16:27:27 UTC. The next three days the 
+  SMU temperatures rose by approx. 1degC with a noticeable rise in mechanism power 
+  consumption.</FONT></P>
+<H3><B>1<SUP>st</SUP> March 1999</B></H3>
+<P><FONT size="-2">Scan Mirror Mechanism power supply experienced a non nominal 
+  power spike at 059:0650:22 UTC this was also associated with pixel 2002 events 
+  indicating severe scan jitter momentarily.</FONT></P>
+<H3><B>23<SUP>rd</SUP> November 1998</B></H3>
+<P><FONT size="-2">ICU reset operation executed at approx. 11:30 UTC. IRR data 
+  was not nominal between 327:11:32:42 and 327:18:12:00 UTC. The reset operation 
+  was successful and the gain/offset loops are now functioning correctly.</FONT></P>
+<H3><B>20<SUP>th</SUP> November 1998</B></H3>
+<P><FONT size="-2">It was again noticed that the IR channel auto gain/offset loop 
+  was ‘frozen’ as was the case on 10/11 June 1998. It was again determined that 
+  an ATSR ICU RESET was required. The sanction for this command required input 
+  from the GOME and MWR Project Team and was agreed for the 23<SUP>rd</SUP> Nov.</FONT></P>
+<H3><B>19<SUP>th</SUP> November 1998</B></H3>
+<P><FONT size="-2">Detector cool down begins at 10:40 UTC and was complete with 
+  nominal data collection by 16:56 UTC</FONT></P>
+<H3><B>18th November 1998</B></H3>
+<P><FONT size="-2">The IRR remained off due to lengthy operations to get the other 
+  ERS-2 instruments operational, the IRR restart will begin on the 19<SUP>th</SUP> 
+  Nov</FONT> </P>
+<H3><B>17th November 1998</B></H3>
+<P><FONT size="-2">ERS-2 payload was shut down at 13:02 UTC in readiness for the 
+  Leonids Meteor Shower, the the planned sequence was actually brought forward 
+  by some hours as visual monitoring around the globe gave concern of more intense 
+  storm than originally expected. </FONT></P>
+<H3><B>26th October 1998</B></H3>
+<P><FONT size="-2">Due to an MPS error which began on 22<SUP>nd</SUP> October 
+  there has been NO Highrate data scheduled over land areas, return to ‘nominal’ 
+  scheduling around 23:00UTC </FONT></P>
+<H3>06th October 1998</H3>
+<P><FONT size="-2">For the first time since the 12th May 1998 when the scan mirror 
+  encoder temperature showed some significant non nominal excursions, an increase 
+  in temperature of approximately 2 deg.C was noted at about 10:45 UTC. The temperature 
+  slowly fell back to nominal values over the next 24 hours. At the same time 
+  the average power to drive the SMU rose by a noticeable amount (0.5w).</FONT></P>
+<P><FONT size="-2">No noticeable level of scan jitter was observed and it is believed 
+  that the scan mirror bearing(s) may have created a new 'track' in the race and 
+  took the next few hours to 'run-in'.</FONT></P>
+<H3>15-16th September 1998</H3>
+<P><FONT size="-2">On the 15th Sept 1998 there was a payload anomaly associated 
+  with a command procedure for the RA instrument. A payload STANDBY command was 
+  issued by the on board computer switching all instruments to standby mode. This 
+  occurred at 258:20:58:25 UTC.</FONT></P>
+<P><FONT size="-2">Recovery procedures for the ATSR-2 IRR commenced at 12:00 UTC 
+  on 16th Sept 1998 when visible data became available again.</FONT></P>
+<P><FONT size="-2">The IR detector cool down was complete by 259:18:47:29 UTC 
+  at which time these data became nominal.</FONT></P>
+<H3>08th September 1998</H3>
+<P><FONT size="-2">12:30 UTC adjusted the ATSR-2 visible gains on the 0.56uM channel 
+  to 5.53, 0.67uM channel to 3.71 and the 0.87uM channel to 4.34 in Instrument 
+  Operations Request #110. These changes were made to compensate for observed 
+  gain drift over the mission so far and to optimise the control dynamic range.</FONT></P>
+<H3>15th June 1998</H3>
+<P><FONT size="-2">Shortly after the last IRR re-configuration it was noticed 
+  that the IR channel auto gain/offset loops appeared frozen at nominal fixed 
+  values.</FONT></P>
+<P><FONT size="-2">It was decided to reset the ICU (Instrument Control Unit) software, 
+  this command though needed sanction from the GOME and MWR instrument teams. 
+  </FONT></P>
+<P><FONT size="-2">All ATSR-2 instruments were commanded to STBY, the ICU reset 
+  issued and the IRR reconfigured. There was a period from approx. 12:30 UTC through 
+  to 18:30 UTC when data was non-nominal.</FONT></P>
+<P><FONT size="-2">The reset was successful and immediately the gain/offset loops 
+  functioned correctly.</FONT></P>
+<P><FONT size="-2">Data for the IR channels may need 'special consideration' from 
+  159:16:30:00 through 166:12:30:00 UTC whilst the gains/offsets remained fixed</FONT></P>
+<H3>03rd June 1998</H3>
+<P><FONT size="-2">On the 3rd June 1998 ERS-2 suffered an anomaly associated with 
+  the attitude control Gyro #3. This caused a de-pointing of the spacecraft platform 
+  which triggered a payload EQSOL (an automatic equipment safe switch off)</FONT></P>
+<P><FONT size="-2">This occurred at 154:14:43:53 UTC causing an abrupt end of 
+  data collection.</FONT></P>
+<P><FONT size="-2">Subsequent operations by ESOC to recover the platform in safe 
+  attitude control with the desired yaw steering mode (YSM) took some time.</FONT></P>
+<P><FONT size="-2">The recovery of the IRR began at about 10:00 UTC on 8th June 
+  with an ATSR-2 restart. The scan mirror start up was uneventful and data collection 
+  of visible data using pixel map 14 began more or less straight away.</FONT></P>
+<P><FONT size="-2">The IR detector cool down began at the same time and the detectors 
+  reached nominal (cold) values at ~82K by 16:30 UTC</FONT></P>
+
+<hr>
+<FORM method="get" action="http://www.badc.nerc.ac.uk/cgi-bin/mailit.cgi.pl">
+  <TABLE border="0">
+    <TR> 
+      <TD> 
+        <INPUT type=hidden name="subject" value="/satellite/logs/anomaly/archive/atsr-2/index.shtml ( ATSR-2 Anomaly Log archive
+ )"> 
+        <INPUT type=hidden name="recipient" value="wwwadmin@www.atsr.rl.ac.uk">
+        <INPUT type=hidden name="env_report" value="REMOTE_HOST, REMOTE_ADDR, HTTP_USER_AGENT">
+	<FONT size="-2"><B>Did you find this information helpful?</B></FONT><FONT size="-2"> 
+        Yes 
+        <INPUT type="radio" value="Yes" name="radiobutton">
+        No 
+        <INPUT type="radio" name="radiobutton" value="No"><BR>
+        <INPUT type="submit" name="Submit" value="Submit">
+        <INPUT type="reset" name="Reset" value="Reset"> 
+	 &nbsp<a href = "../../../../../feedback/index.shtml">Give details...</a></FONT>
+      </TD>
+ 
+    </TR>
+  </TABLE>
+</FORM>
+
+
+
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Thursday, 06-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

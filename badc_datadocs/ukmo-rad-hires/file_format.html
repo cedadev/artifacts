@@ -1,0 +1,49 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>High Resolution Radiosonde - File Format</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>High Resolution Radiosonde - Aberporth
+Data file format<BR CLEAR="ALL"></H1>
+
+<P><HR ALIGN=LEFT>The Aberporth radiosonde data is in a simple
+ASCII format.<BR>
+<BR>
+The naming convention is balYYMMDD_HH, where &quot;YYMMDD&quot;
+is year/month/day eg 960920, &quot;HH&quot; is the hour of release
+of the balloon.<BR>
+<BR>
+Each file contains one ascent. The measurements are displayed
+in the following format. Where data is missing, a default value
+is written.<BR>
+<BR>
+The fields in each file are as indicated below ... <BR>
+<BR>
+
+<PRE>
+
+                        
+FORMAT	PARAMETER			FIELDS   COLUMNS 	UNITS	     DEFAULT
+-------------------------------------------------------------------------------------
+I4	Time after launch		 1	  1-4		mins		
+I3	Time after launch		 2	  5-7		secs	
+I5	Pressure			 3	  8-12		mb		9999
+F6.1	Temperature			 4	  13-18		deg C		9999
+I4	Relative humidity		 5	  19-22		%		 999
+F8.4	Humidity mixing ratio		 6	  23-30		g/kg	     99.9999
+I6	Height (from sonde data) 	 7	  31-36		m	       -9999
+I6	Height (from radar data)	 8	  37-42		m	       -9999
+I4 	Azimuth of sonde from launch     9	  43-46		deg		 -99
+F5.1    Elevation of sonde from launch	 10	  47-51		deg		-9.9
+I7	Slant range of sonde		 11	  52-58		m	       -9999
+I4	Wind direction			 12	  59-62		deg		 999
+F6.1	Wind speed			 13	  63-68		m/s	       999.9
+-------------------------------------------------------------------------------------</PRE>
+
+<P>
+
+</BODY>
+</HTML>

@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PRIVATE "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<TITLE>ACSOE NASA Ames: NACHECK - A NASA Ames Format Checking Program</TITLE>
+</HEAD>
+
+<!-- Created June 1997  -->
+<!-- Author: Chunkey Lepine BADC-->
+
+<body bgcolor="#ffffff">
+
+<h1>A NASA-Ames file format checking program<br clear=all></h1>
+<BR>
+<HR>
+
+<P>
+The BADC FORTRAN program NACHECK was written specifically for
+checking that the NASA-Ames format files,
+submitted in connection with the NERC Special Programme, ACSOE,
+were NASA-Ames and project compliant.
+
+The current version of this program handles File Format Indices
+of 1001, 1010, 2110 and 2160 only, although the logical
+structure is such that it is relatively easy to modify the
+program so that it can handle other formats.
+
+It can also handle ACSOE files in which the first independent
+variable is a colon-separated time code representing, hours, minutes, secs
+etc. Note however that whilst the program can deal with the file headers for
+these formats, the data tables themselves are not well handled.
+<p>
+You can
+<a href="/cgi-bin/dataex_file.cgi.pl">run the NACHECK program</a> 
+from your web browser to validate your files online.
+
+</P>
+<P>
+The NASA-Ames file header structure is explained under
+<A HREF="header.html">NASA-Ames</A>.
+</P>
+
+<H3>Main Program</H3>
+
+<P>
+The main program gets the file name and the directory from the command line,
+and then calls subroutines
+which read and interpret the components of the file header and
+finally, read the data tables.
+</P>
+
+
+<H3>Subroutine OVERVIEW </H3>
+
+<P>
+The subroutine OVERVIEW extracts the number of header records (HEADRECS)
+and the file format index (FFI) from the first record of a NASA-Ames
+file and then reads to EOF counting the number of records (RECORDCNT)
+This routine also prints record HEADRECS 
+which should be compared with the known last record in the header.
+</P>
+
+<H3>Subroutine FIXEDHEAD </H3>
+
+<P>
+Subroutine FIXEDHEAD reads and prints the first seven records of a
+NASA-Ames file - note that the meaning of each of these records
+is the same for any NASA-Ames file.
+</P>
+
+<H3>Subroutine INDEPENDENT </H3>
+	
+<P>
+Subroutine INDEPENDENT reads and prints the attributes of the independent
+variable or variables from the NASA-Ames header
+- the current program works with FFI values of 1001, 1010, 2110 and 2160.
+</P>
+
+<H3>Subroutine PRIMARY </H3>
+
+<P>
+Subroutine PRIMARY reads and prints the three attributes associated with
+each of the the primary variables - these are the scale factor,
+the default value substituted for missing data and the name of the variable.
+</P>
+
+
+<H3>Subroutine AUXILIARY </H3>
+
+<P>
+Subroutine AUXILIARY reads and prints the three attributes associated with
+each of the the auxiliary variables.
+For the case of real variables this is the scale factor, the default
+value substituted for missing data and the name of the variable.
+In the case of character variables the respective quantities are
+number of characters in string, the default strings and the names of
+the variables. 
+</P>
+
+<H3>Subroutine COMMENTS </H3>
+
+<P>
+Subroutine COMMENTS reads and prints special and normal comments held in the
+file and annotates the print accordingly.
+</P>
+
+<H3>Subroutine TABLES </H3>
+
+<P>
+Subroutine TABLES reads and examines and prints the data tables. The
+examination consists of attempting to read the correct number of
+primary values from each table record.
+If the wrong number are found - this happens for instance if a  primary
+variable is missing or there are spurious characters in the record -
+then an error will be reported.
+</P>
+
+<P>Please note this is a very basic routine - it does not, for example,
+distinguish between records containing primary values and those
+containing auxiliary ones and may flag an error 
+when there is nothing wrong.
+It does however correctly interpret colon-separated time codes
+which is done by reading the table records into a buffer,
+counting the number of colons and replacing each ":" by ",".
+before the record is read the appropriate independent and
+primary variable dimensions are worked out.  
+Note that this feature cannot be supported on MS-DOS systems.
+</P>
+	
+<HR>
+<P>
+Go to: 
+<A HREF="index.html">Index page</A> |
+<A HREF="checklist.html">Next doc. (Checklist)</A>
+
+<P>
+</BODY>
+</HTML>

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 9.0 MIMEDIR//EN
+VERSION:2.0
+METHOD:PUBLISH
+BEGIN:VEVENT
+ORGANIZER:MAILTO:A.S.Harwood@rl.ac.uk
+DTSTART:20021001T083000Z
+DTEND:20021001T153000Z
+LOCATION:Chancellors Hall\, Senate House\, University of London
+TRANSP:OPAQUE
+SEQUENCE:0
+UID:040000008200E00074C5B7101A82E0080000000070B85BA9355BC2010000000000000000100
+ 000000A3E94DCEAC9314E9495522529AD0ED2
+DTSTAMP:20020913T135608Z
+DESCRIPTION:\nSee page http://www.nerc.ac.uk/funding/thematics/free/ for
+  details.\n\nTo see a list of those currently registered to attend:
+  http://www.badc.rl.ac.uk/cgi-bin/community/nerc_town_mtg/view_registration
+ s.cgi.pl\n
+SUMMARY:FREE Town meeting
+PRIORITY:5
+CLASS:PUBLIC
+END:VEVENT
+END:VCALENDAR

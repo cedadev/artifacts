@@ -1,0 +1,35 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SAGE1OZO "
+"SUM_DATA_SET"       "SAGEI-PROF   "
+"SUM_DATATYPE"       "OZONE        "
+"ARCHIVE_NAME"       "NSSDC, NCDS          "
+"ARCHIVE_STATUS"     "Available.  Reprocessed - February, 1991."
+"DS_DESCRIPTION"     "AEM-2 Stratospheric Aerosol and Gas Experiment I Profiles    "
+"DT_DESCRIPTION"     "Ozone Profile"
+"SUM_BEGIN_DATE"     "21-Feb-1979"
+"SUM_END_DATE"       "18-Nov-1981"
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "72 deg N to 72 deg S (above 5 km or cloud tops)            "
+"SPATIAL2"           "             "
+"SPATIAL3"           "250 km X 250 km  Vertical resolution is 1 km below 25 km    "
+"SPATIAL4"           "and 5 km above 25 km."
+"TEMPORAL1"          "February 21, 1979 - November 18, 1981                  "
+"TEMPORAL2"          "Sunsets only after June, 1979                         "
+"TEMPORAL3"          "Full coverage in about 1 month, but latitude coverage"
+"TEMPORAL4"          "varies with season.                            "
+"PRODUCT1"           "Ozone number density and mixing ratio profiles "
+"PRODUCT2"           "One 6250-bpi tape per year.             "
+"PRODUCT3"           "Available on GEDEX CD-ROM."
+"PRODUCT4"           "  "
+EOF
+
+PARAMETERS
+"NUMBER DENSITY"  "Ozone Number Density" "1.0E11 cm**(-3)"
+"MIXING RATIO"    "Volume Mixing Ratio"  "None"
+"PRESSURE"        "Atmospheric Pressure"     "mb"
+"TEMPERATURE"     "Temperature"      "Deg K"
+EOF
+
+SOURCES
+"AEM-2"    "SAGEI"
+EOF

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060927T230000Z
+DTEND:20060928T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:University of East Anglia=20
+TRANSP:1
+UID:040000008200E00074C5B7101A82E0080000000030776FCF87DDC6010000000000000000100
+ 000001A48533AAE81FC49ABD7D59D50D4796B
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:NERC Council to hold Open Meeting=0D=
+=0AThe 6th Annual Open NERC Council Meeting will be held at the University =
+of East Anglia on Thursday 28 September 2006. This =0D=0Ais your the chance=
+ to find out how NERC's governing council makes its choices on spending pub=
+lic money and what its priorities=0D=0Aare for science and the environment.=
+ And you can have your say about what you think is important. For further i=
+nformation on this=0D=0Aevent and to register online go to http://www.nerc.=
+ac.uk/secretariat-council/openmeeting.asp =0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:NERC Open Council Meeting
+PRIORITY:1
+END:VEVENT
+END:VCALENDAR

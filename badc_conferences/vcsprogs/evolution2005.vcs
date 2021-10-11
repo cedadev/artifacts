@@ -1,0 +1,37 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20051016T230000Z
+DTEND:20051018T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Society's London offices at Carlton Hous=
+e Terrace=20
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000C098DC2A0F15C5010000000000000000100
+ 00000DB9C7C8FA090D844866142BBF580FF01
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0ARoyal Society Discussion Meetin=
+g on Evolution of the Antarctic ice sheet=0D=0A=0D=0AI would like to draw y=
+our attention to a Discussion Meeting organised by the Royal Society on "Ev=
+olution of the Antarctic ice sheet: new understanding and new challenges". =
+ The meeting will be held at Society's London offices at Carlton House Terr=
+ace over the 17th and 18th October 2005.=0D=0A=0D=0AThe meeting will be arr=
+anged around fourteen invited talks, with an open poster session. Speakers =
+that have agreed to contribute include: Bob Bindschadler; Duncan Wingham an=
+d Andrew Shepherd; Eric Rignot; David Vaughan; Stan Jacobs; David Holland; =
+David Bromwich; Philippe Huybrechts; Richard Hindmarsh; Andrew Fowler; Ian =
+Joughin; Rob Arthern; Jonathan Gregory and Richard Alley; and Andreas Vieli=
+.=0D=0A=0D=0AWe hope to discuss all aspects of the Antarctic ice sheet's re=
+cent and future response to climate change.  This includes sessions on the =
+record from satellite observations; evidence of external forcing from the o=
+ceans and atmosphere; modelling the ice sheet's dynamics; and assessing the=
+ implications for global sea levels.=0D=0A=0D=0AIf you are interested in at=
+tending the meeting, you should contact the Royal Society via their web pag=
+e on the meeting.=0D=0A=0D=0Ahttp://www.royalsoc.ac.uk/event.asp?id=3D1834&=
+month=3D10,2005 =0D=0A=0D=0AThe meeting is free to attend however lunch cos=
+ts =A314.50 per day.  The number of attendees is limited to around 300.=0D=
+=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:"Evolution of the Antarctic ice sheet: ne=
+w understanding and new challenges"
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

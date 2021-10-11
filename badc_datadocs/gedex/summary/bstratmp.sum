@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "BSTRATMP "
+"SUM_DATA_SET"       "BERLIN-STRAT "
+"SUM_DATATYPE"       "MONTH_TMP    "
+"ARCHIVE_NAME"       "NCDS                 "
+"ARCHIVE_STATUS"     "Available                                              "
+"DS_DESCRIPTION"     "Institut fur Meterologie, Berlin                       "
+"DT_DESCRIPTION"     "Stratospheric Monthly Mean Temperatures         "
+"SUM_BEGIN_DATE"     "01-Jul-1957                                            "
+"SUM_END_DATE"       "28-Feb-1991                                            "
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Northern Hemisphere"
+"SPATIAL2"           "                                                       "
+"SPATIAL3"           "10 x 10 deg latitude-longitude grid                    "
+"SPATIAL4"           "                                                       "
+"TEMPORAL1"          "July, 1957 - February, 1991                            "
+"TEMPORAL2"          "                                                       "
+"TEMPORAL3"          "Monthly                                                "
+"TEMPORAL4"          "                                                       "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF).    "
+"PRODUCT2"           "Available on GEDEX CD-ROM.                             "
+"PRODUCT3"           " "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"TEMPERATURE"     "Stratospheric temperatures" "Deg C"
+EOF
+
+SOURCES
+"BALLOON"         "RADIOSONDE"
+EOF

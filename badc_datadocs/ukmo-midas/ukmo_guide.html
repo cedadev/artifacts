@@ -1,0 +1,2670 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>Met Office Surface Data Users Guide</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Met Office Surface
+Data Users Guide <BR CLEAR="ALL"></H1>
+
+<hr />
+<br />
+<br />
+
+<H2><b>NOTE  - the latest version of the MIDAS User Guide is now availalbe at: <a href="http://cedadocs.ceda.ac.uk/1465/">http://cedadocs.ceda.ac.uk/1465/</a></b></H2>
+<br />
+<br /><br />
+
+<p><em>The following content are kept for historic purposes only as a refernce to previous content of the MIDAS User Guide.</em></p>
+
+<hr />
+
+<P><EM>This document, which describes the meteorological surface
+data in the Met Office Database - MIDAS, is an abridged version
+of &quot;MIDAS Data Users Guide&quot;, provided by the Met Office. The BADC is not responsible for its content. </EM><HR ALIGN=LEFT>
+
+<OL>
+  <LI><A HREF="#intro">Introduction</A>
+  <LI><A HREF="#2">Methods of Observing</A> <BR>
+  <UL>
+    <LI><A HREF="#2.1">2.1. The site</A> <BR>
+    <LI><A HREF="#2.2">2.2. Manual observing practice </A><BR>
+    <LI><A HREF="#2.3">2.3. Automatic observing systems </A><BR>
+    <LI><A HREF="#2.4">2.4. Observation time </A><BR>
+    <LI><A HREF="#2.5">2.5. Calibration, maintenance and inspection
+    </A><BR>
+    <LI><A HREF="#2.6">2.6. Sources of metadata </A><BR>
+  </UL>
+  <LI><A HREF="#3">Stations and networks</A> <BR>
+  <UL>
+    <LI><A HREF="#3.1">3.1. Synoptic network</A> <BR>
+    <LI><A HREF="#3.2">3.2. Climate network </A><BR>
+    <LI><A HREF="#3.3">3.3. Wind network </A><BR>
+    <LI><A HREF="#3.4">3.4. Rainfall network </A><BR>
+    <LI><A HREF="#3.5">3.5. Sunshine and radiation network </A><BR>
+    <LI><A HREF="#3.6">3.6. Station identification </A><BR>
+  </UL>
+  <LI><A HREF="#4">Message and report types</A> <BR>
+  <UL>
+    <LI><A HREF="#4.1">4.1. SYNOP</A> <BR>
+    <LI><A HREF="#4.2">4.2. SREW </A><BR>
+    <LI><A HREF="#4.3">4.3. METAR </A><BR>
+    <LI><A HREF="#4.4">4.4. HCM </A><BR>
+    <LI><A HREF="#4.5">4.5. NCM </A><BR>
+    <LI><A HREF="#4.6">4.6. Daily climate </A><BR>
+    <LI><A HREF="#4.7">4.7. Hourly climate analyses </A><BR>
+    <LI><A HREF="#4.8">4.8. Logger data </A><BR>
+    <LI><A HREF="#4.9">4.9. Surface CLIMAT mesage </A><BR>
+    <LI><A HREF="#4.10">4.10. Other message types </A><BR>
+  </UL>
+  <LI><A HREF="#5">Characteristics of the data</A> <BR>
+  <UL>
+    <LI><A HREF="#5.1">5.1. General</A> <BR>
+    <LI><A HREF="#5.2">5.2. Temperature </A><BR>
+    <LI><A HREF="#5.3">5.3. Pressure </A><BR>
+    <LI><A HREF="#5.4">5.4. Humidity </A><BR>
+    <LI><A HREF="#5.5">5.5. Wind </A><BR>
+    <LI><A HREF="#5.6">5.6. Precipitation </A><BR>
+    <LI><A HREF="#5.7">5.7. Radiation </A><BR>
+    <LI><A HREF="#5.8">5.8. Sunshine </A><BR>
+    <LI><A HREF="#5.9">5.9. Visibility </A><BR>
+    <LI><A HREF="#5.10">5.10. Present and Past weather </A><BR>
+    <LI><A HREF="#5.11">5.11. Clouds </A><BR>
+  </UL>
+  <LI><A HREF="#6">Storage of data in MIDAS</A> <BR>
+  <UL>
+    <LI><A HREF="#6.1">6.1. Loading of data into MIDAS</A> <BR>
+    <LI><A HREF="#6.2">6.2. Attributes for each observation record
+    </A><BR>
+    <LI><A HREF="#6.3">6.3. Tables and observations </A><BR>
+  </UL>
+  <LI><A HREF="#7">Quality control</A> <BR>
+  <LI><A HREF="#8">Bibliography</A> <BR>
+</OL>
+
+<HR ALIGN=LEFT>
+
+<H1><A NAME="intro"></A>1. Introduction</H1>
+
+<P>Since the early days of this century the Met Office has been
+responsible for maintaining the public memory of the weather.
+All meteorological observations made in the UK and over neighbouring
+sea areas have been carefully recorded and placed in an archive
+where they may be accessed today by those with an interest in
+the weather and where they will also be available to those in
+future generations. Up to fairly recently all observations have
+been recorded on paper forms which, when completed and checked,
+have been stored in secure archive buildings. Today there are
+archive sites at Bracknell, Edinburgh and Belfast. In this way
+the Met Office has met the requirements of the Publics Record
+Act for public access to the Met Office&#146;s technical records.
+
+<P>In the age of computers, paper records are an unsuitable format
+for meteorological data and in 1959 a new system was introduced
+whereby all current climate data received at the Met Office was
+manually keyed and stored in digital format. At the same time
+a limited number of records for earlier years were also transferred
+into digital format so that some continuous climate sequences
+were available immediately. In the 40 years that have elapsed
+since those days the digital climate record has been maintained
+and, as more automation has occurred, especially within observing
+systems themselves, the role of the paper record has declined.
+Today fewer and fewer paper records arrive at the archives and
+their principal purpose is a historical one.
+
+<P>The storage of climate data at the Met Office has slowly developed
+over time, first as a collection of data on paper or magnetic
+tape, then, from the early 1970s as an organised database, the
+CDB, which served many users until its final demise in July 1998.
+The current climate database is MIDAS (Met Office Integrated
+Data Archive System) which has a relational structure.
+
+<P>The MIDAS database contains the following general types of
+meteorological data:
+
+<UL>
+  <LI>Surface observations over land areas of the UK as far back
+  as the digital record extends
+  <LI>A selection of global surface observations for the last 20
+  years
+  <LI>Global surface marine observations from national and international
+  sources as far back as the digital record extends
+  <LI>Radiosonde observations over the UK, and at overseas stations
+  operated by the Met Office, as far back as the digital record
+  extends
+  <LI>A selection of global radiosonde observations for the last
+  10 years
+</UL>
+
+<P>MIDAS does not contain any remote sensing data such as radar
+estimates of precipitation, thunderstorm locations or satellite
+imagery. Such data are stored by the Met Office but they are
+not part of this archive.
+
+<P>The purpose of this guide is to describe the basic features
+of the observing systems used over the years, the way the observations
+have been processed and stored in the database and the general
+characteristics of the data. It is aimed at those with little
+familiarity with observing methods or instrumentation.
+
+<H1><A NAME="2"></A>2. Methods of observing</H1>
+
+<OL>
+  <P><A NAME="2.1"></A><h2>2.1. The site</h2> <h3><I>Location</I></h3>
+  <P>The location of the site should be selected in such a way
+  that the observations are representative on a scale required
+  from the station; a station in the synoptic network should make
+  observations to meet synoptic scale requirements, a rainfall
+  station should measure the impact of local orography on the rainfall
+  amount, while an aviation station should observe the local conditions
+  at the aerodrome. As far as it is possible, stations in the synoptic
+  and climatological networks meet the following requirements for
+  site location:
+  <UL>
+    <LI>The site should be representative of an area up to several
+    tens of km from the station
+    <LI>The instruments should be installed on level ground
+    <LI>There should be no steeply sloping ground in the vicinity
+    and the site should not be in a hollow
+    <LI>The site should be well away from trees or any other large
+    obstructions. The distance of any such object should be not less
+    than twice the height of the object, and preferably four times
+    the height
+    <LI>The site should be adequately protected to exclude entry
+    by unauthorised persons
+    <LI>It must be possible to meet the exposure requirements of
+    the raingauge, sunshine recorder and anemometer. Separate sites
+    may be chosen for these instruments.
+  </UL>
+  <P>It is unavoidable that some sites do not meet all these requirements,
+  particularly where a station set up for one purpose gradually
+  takes on a different role, for example an airport site originally
+  established for aviation observing may become a key synoptic
+  or climate station while suffering the effects of urbanisation.
+  A few sites are in city centres and may be unsuitably located
+  close to large obstacles or even on the roof of a building.
+  <P>The horizontal location of the station and its height above
+  mean sea level are determined from the position of the principal
+  raingauge.
+  <P><h3><I>Layout of the instruments</I></h3>
+  <P>Most instruments at the station are located close together
+  in the enclosure, a flat area of ground approximately 10 m by
+  7 m covered by short grass and surrounded by fencing. Typically
+  the enclosure contains one or more raingauges, a screen containing
+  the thermometers, soil thermometers, a concrete slab with a concrete
+  minimum thermometer, a grass minimum thermometer, and a sunshine
+  recorder. Where there is a 10 m anemometer mast it is often at
+  a separate location. The barometer may be located in a building,
+  often some distance from the enclosure, such as the forecast
+  office if the station has a forecasting function.
+  <P><A NAME="2.2"></A><h2>2.2. Manual observing practice</h2>
+  <P>Until recent years all surface observing has been performed
+  manually; the observer reads the instruments, makes visual estimates
+  of visibility, cloud, present weather and the state of ground,
+  records the observation on paper, and, if the station produces
+  SYNOP and NCM messages, encodes the report and transmits it.
+  An observation pad or pocket register is provided for noting
+  the observation as it is made, a permanent record being made
+  once the observation is complete. At synoptic stations observations
+  are recorded in the daily register in permanent ink, which then
+  becomes the official record for the station. Daily observations
+  at climate stations are recorded on climate forms which are returned
+  to the Met Office at the end of each month. Metform 3208b is
+  in use at present but there have been a variety of different
+  form types in the past. The observer may also have other climate
+  returns to complete such as the analysis of hourly wind from
+  anemograms, hourly sunshine from sunshine cards, and hourly rainfall
+  from a rain recorder. A return of instrumentation in use at the
+  station should also be completed once a year.
+  <P>With the introduction of automated systems the role of the
+  human observer has diminished. Even where a station remains manned
+  24 hours a day the process of reading the instrument, processing
+  the result, encoding the message, and transmitting the data is
+  largely automated today by systems such as SAMOS. The observer
+  is still required to make the an observation of those parameters
+  for which automated systems of measurement either do not exist
+  or are insufficiently accurate, for example, snow depth, state
+  of ground, cloud and present weather. He also has the capability
+  of modifying the automated input if it is considered to be in
+  error. At such stations the Daily Register is discontinued and
+  the only permanent record of the observation is the electronic
+  one contained in the MIDAS database.
+  <P><A NAME="2.3"></A><h2>2.3. Automatic observing systems</h2>
+  <P>Automation, which began in the 1970s, now affects virtually
+  all aspects of synoptic observing, and to a lesser extent the
+  observations from the climate and rainfall networks. Automated
+  systems have been developed as:
+  <UL>
+    <LI>A complete replacement of the human observer &#150; the station
+    becomes fully automatic
+    <LI>An aid to the human observer - the mechanistic parts of the
+    observing process are automated
+    <LI>A means of logging data from a particular instrument
+  </UL>
+  <P>An unavoidable consequence of automation has been the increased
+  number of missing observations in the climate record. The human
+  can improvise by using an alternative means if the primary system
+  fails, the machine can not. The data loss at some fully automatic
+  stations can be as high as 5%. A second consequence of automation
+  has been the gradual replacement of one type of instrumentation
+  by another; the Electrical Resistance Thermometer has replaced
+  the liquid-in-glass thermometer, and the tipping bucket raingauge
+  has replaced the 5 inch raingauge. This may have significant
+  consequences for the user of the climate record interested in
+  small departures from the long term average.
+  <P><B><I>SAWS, ESAWS, SIESAWS and CDL</I></B>
+  <P>The Synoptic Automatic Weather Station (SAWS) was the first
+  fully automated observing system deployed in any number by the
+  Met Office. The system operated at many remotes sites and provided
+  hourly SYNOP messages from the mid 1980s. It was later replaced
+  by the Enhanced SAWS (ESAWS) which is capable of producing hourly
+  climate messages (HCM) and 12-hourly national climate messages
+  (NCM) in addition to the SYNOP. A version designed to operate
+  in severe icing environments, SIESAWS, has been installed at
+  a few high level locations. Climate Data Loggers (CDL) of a number
+  of different designs have been installed at a number of sites
+  during the 1990s; most record the main synoptic and climate parameters
+  and there is a facility for polling the data remotely. There
+  is a project underway to develop their use as real time observing
+  systems.
+  <P><B><I>SAMOS and CODET</I></B>
+  <P>The Met Office has developed SAMOS (Semi Automatic Meteorological
+  Observing System) and CODETS (Coded Observation Data Entry Transmission
+  System) to aid the manual production of observations. Both are
+  PC based systems which can generate the full range of messages
+  for a synoptic station (SYNOP, NCM, SREW, HCM), the CODET system
+  being specially designed to operate at auxiliary stations. The
+  observer can add to or modify any part of the observation through
+  the PC. Quality control checks are incorporated into the interface.
+  The SAMOS system can operate in automatic mode in the following
+  ways:
+  <UL>
+    <LI>By default at any synoptic hour if no observer input has
+    been provided by a specific time (at present set at HH-5min)
+    <LI>For selected hours at stations which are only part manned,
+    for example at weekends
+    <LI>For all hours where the system has been installed at an unmanned
+    station.
+  </UL>
+  <P><B><I>Rainfall and wind loggers</I></B>
+  <P>A number of rainfall and wind logging systems have been installed
+  at Met Office stations since the 1970s. The data are recorded
+  on magnetic medium at the site and transferred at monthly intervals
+  to MIDAS. The SSER and MTER loggers for rainfall are covered
+  in section 5.5 and the DALE logger for wind is covered in section
+  5.4. The Environment Agency operates a number of rainfall loggers,
+  but only derived daily values from selected stations are stored
+  in MIDAS.
+  <P><A NAME="2.4"></A><h2>2.4. Observation time</h2>
+  <P>The standard of time for all UK observations is GMT. This
+  was not always the case in the early days of observing, but it
+  is thought that any observations recorded by clock time have
+  been entered against the correct hour GMT in the MIDAS database.
+  The meteorological convention for midnight is 0000 hours on the
+  new day.</p>
+  <p>All non-UK Observation times are in UTC.<p>
+  <P>WMO recommendations state that the observation should be made
+  in as short a time as possible just prior to the nominal time
+  of observation and that the pressure reading should be taken
+  last at the exact hour. The UK practice since the 1960s, and
+  possibly from an even earlier date, has differed from this recommendation
+  in the case of real time observations for reasons connected with
+  transmission schedules which are no longer valid. These observations
+  are typically completed by HH-10 and transmitted before the hour
+  is complete. This practice has continued to the present day,
+  even where SAMOS and ESAWS automatic systems are installed, and
+  applies not only to the SYNOP report, but also to the NCM, SREW
+  and HCM messages. CDL systems, by contrast, record observations
+  on the synoptic hour.
+  <P><A NAME="2.5"></A><h2>2.5. Calibration, maintenance and inspection</h2>
+  <P>Most measurements are made with full traceability to national
+  or international standards; in other words, it can be demonstrated
+  that a series of calibrations have been performed which link
+  the instrument used for the measurement to some national or international
+  standard instrument. This practice, which for temperature and
+  pressure has been unbroken since 1851, ensures a uniformity of
+  measurement over time. Instruments are calibrated after receipt
+  from the manufacturer and in some cases at intervals after that
+  (aneriod barometers and some wind, radiation and humidity sensors
+  are returned for recalibration every few years, but not thermometers).
+  Some of the other checks performed to ensure a properly functioning
+  observing system are as follows:
+  <OL>
+    <LI>Observers perform basic routine checks of equipment quality
+    as part of normal observing practice.
+    <LI>Observations and the observing practice are checked. The
+    oncoming shift checks the offgoing and a supervisor, if present,
+    has a monitoring role.
+    <LI>Observations are monitored routinely on receipt and technicians
+    are called out where faults occur.
+    <LI>Regular maintenance is performed on all instrumentation.
+    <LI>Regular inspections of all surface land stations are carried
+    out. Checks are made of equipment, exposure and observing practice.
+    Check readings are taken.
+    <LI>Quality control is performed on all data in the climate database
+    MIDAS (see section 7).
+  </OL>
+  <P><A NAME="2.6"></A><h2>2.6. Sources of metadata</h2>
+  <P>The term metadata, as applied to observations, is taken to
+  mean those data which describe the contents of the climate archive
+  and which allow the user to understand the origins of the meteorological
+  values themselves. They describe the characteristics of the observational
+  networks and typically include details about the station, its
+  location, environment and observing programme as well as information
+  about the instruments, their relative locations and exposure
+  at present and at times in the past. Observational metadata for
+  UK stations have been built up over the years from several sources:
+  <UL>
+    <LI>Records by those managing the station networks
+    <LI>Records held at the stations themselves
+    <LI>Inventories of instruments held returned annually to the
+    Met Office (though this practice ceased in the 1990s)
+    <LI>Reports from regular inspections of the station
+    <LI>Records in the climate section of the Met Office responsible
+    for collecting and storing the observations.
+  </UL>
+  <P>Only a small part of all the information is stored in digital
+  format. A metadata database is under development which will ensure
+  that all recent station metadata will be available electronically.
+</ul></ul>
+  <P></ul><A NAME="3"></A><h1>3. Stations and networks</h1>
+  <P>Surface observations over the UK meet many different requirements
+  in such areas as forecasting, civil aviation, defence, commerce,
+  industry, agriculture and research. Stations are organised into
+  networks which are designed to meet particular user requirements,
+  the details of which are contained in a series of UKON (United
+  Kingdom Observation Network) documents; UKON1 deals with the
+  synoptic network, UKON2 with the climate network, UKON4 with
+  the wind network, UKON5 with the rainfall network and UKON8 with
+  the sunshine and radiation network. The organisation of the present
+  day networks is described in the rest of section 3 below.
+  <UL>
+    <P><A NAME="3.1"></A><h2>3.1. Synoptic network</h2>
+    <P>The synoptic network meets the requirements of forecasting,
+    nowcasting, NWP and international exchange for real time observations
+    taken at intervals between 1 and 3 hours. The observed elements
+    include weather, cloud, temperature, humidity, wind, visibility,
+    pressure etc. contained in the SYNOP message (see 4.1). Most
+    synoptic stations also report hourly rain in the SREW message
+    (see 4.2) as well as observations which meet more general climate
+    requirements in the HCM and NCM messages (see 4.4 and 4.5). The
+    current synoptic network has an average station spacing of less
+    than 50 km; it is made up of the following sub-networks:
+    <UL>
+      <LI>Regional Basic Synoptic Network (RBSN). The RBSN consists
+      of some 30 stations, fully manned by professional observers,
+      which produce hourly observations. A high level of accuracy and
+      reporting reliability is expected. 3-hourly observations from
+      these stations are exchanged in real time internationally on
+      the GTS.
+      <LI>Basic Synoptic Network. This consists of some 85 stations,
+      many automated or semi-automated, which provide the same hourly
+      observations as from the RBSN. At semi-automatic stations visual
+      input from an observer is available only at certain times of
+      the day; typically weekday working hours.
+      <LI>Supplementary Network. This network of some 110 stations
+      has a more irregular spacing and reporting frequency than the
+      Basic Synoptic Network and is designed to sample a wider range
+      of environments (e.g. coastal, upland, urban) for specific specialised
+      business needs. Some stations are automatic and some are manned
+      by auxiliary observers whose work may be in some weather related
+      sector (e.g. coastguards). The observing schedule at auxiliary
+      stations may be irregular and receipt of observations at any
+      hour is not guaranteed.
+      <LI>Aviation Network. Some 130 stations of the Aviation Network,
+      based at airfields, produce half hourly METAR observations (see
+      4.3) for the requirements of short period aviation forecasting.
+      There is considerable overlap with stations in the Basic Synoptic
+      Network.
+    </UL>
+    <P><A NAME="3.2"></A><h2>3.2. Climate network</h2>
+    <P>The purpose of the climate network is to enable the climate
+    of the United Kingdom to be determined and monitored and thereby
+    meeting the requirements for international exchange, commercial
+    applications and research. The UKON2 document specifies how requirements
+    for network density, site representativity, observing schedules
+    and accuracy are met at the present time. The minimum observing
+    requirement at a climate station is the daily measurement of
+    maximum temperature, minimum temperature and rainfall amount
+    though many stations make a wider range of observations such
+    as those elements listed in sections 4.5 &#150; 4.8. The current
+    climate network is made up of the following sub-networks:
+    <UL>
+      <LI>Principal Climatological Stations (PCS). These are manned
+      or automatic stations at which hourly reading are taken. Their
+      spacing over the UK is around the WMO recommended value of 30
+      km. Most are part of the synoptic network and provide their observations
+      in real time.
+      <LI>Reference Climatological Stations (RCS). These stations are
+      designated to meet the UK needs for climate monitoring. All have
+      a long observational record spanning at least 30 years and their
+      distribution aims to be representative of the major climatological
+      areas unaffected by environmental changes such as urbanisation.
+      Hourly observations are desirable from these stations and most,
+      but not all, are included in the PCS network.
+      <LI>Ordinary Climatological Stations. These are climatological
+      stations at which observations, made at least once a day, include
+      readings of maximum and minimum temperature and precipitation
+      amount. The observation time is normally 0900 UTC. There are
+      some 500 stations in the network run both by authorities with
+      an interest in the weather (e.g. National Trust, Forestry Commission,
+      educational and agricultural institutions and local authorities),
+      and by private individuals. In recent years a small number of
+      Climate Data Loggers (CDL) have been added to the network. Observational
+      data are usually returned at the end of the month.
+      <LI>WMO Climate Stations. All WMO members identify a number of
+      climate stations from which monthly CLIMAT reports are generated
+      each month for international exchange. The surface CLIMAT message
+      (see section 4.9) contains monthly mean values of such elements
+      as rainfall, sunshine, and temperature as well as long term climatological
+      averages. 20 UK stations have been identified as WMO Reference
+      Stations most of which belong to the RCS network.
+      <LI>GCOS Climate Stations. A subset of the WMO Climate Stations
+      provide a contribution to the Global Climate Observing System
+      (GCOS) which is specifically aimed at meeting the needs of research
+      and monitoring of climate change. At present 6 UK stations are
+      part of the GCOS surface network.
+      <LI>Health Resort Stations. These stations are part of the network
+      of Ordinary Climatological Stations but report daily at 1700
+      local clock time. Although originally set up last century to
+      publicise the healthy benefits of coastal resorts, their main
+      use today is for the daily weather summaries that appear in local
+      and national press. These stations do not necessarily meet the
+      standards expected of the stations of the other climate networks.
+    </UL>
+    <P><A NAME="3.3"></A><h2>3.3. Wind network</h2>
+    <P>Observations of wind are required from the synoptic network
+    to meet the real time needs of forecasting and NWP and have usually
+    always been based on 10-minute averages. The climatological requirement
+    for wind measurement is more varied and observations using a
+    wider range of averaging periods have been made. Although some
+    wind-only sites exist, observations of wind are usually collocated
+    with observations of other meteorological elements. The current
+    wind network is made up of the following sub-networks:
+    <UL>
+      <LI>Synoptic wind network. All stations in the synoptic network
+      (3.1) report wind in the SYNOP message; most are measured 10-minute
+      means but visual estimates are made at some auxiliary stations.
+      Stations with recording devices report values over the last three
+      minutes prior to the observation time if there has been a significant
+      change during the last ten minutes.
+      <LI>Climatological wind network. Mean hourly winds are also reported
+      from many stations in the synoptic network, either in real time
+      in the HCM message or, as was generally the practice in the past,
+      from an manual analysis of the anemograph record performed at
+      the end of the month and returned on Form 6910. Some stations
+      in the climatological network report a run of wind for a 24-hour
+      period which is converted to a mean wind speed on storage in
+      MIDAS.
+      <LI>DALE network. Between 1980 and 1984 a DALE wind logging equipment
+      was installed at some 75 stations across the UK. 1-minute averages
+      of wind are stored on magnetic tape and returned to Bracknell
+      at the end of the month for processing. With the introduction
+      of SAMOS, DALE sites are gradually being phased out.
+    </UL>
+    <P><A NAME="3.4"></A><h2>3.4. Rainfall network</h2>
+    <P>Although many of the requirements for the measurement of precipitation
+    amount may be met by the stations in the climate network, it
+    is important for some applications to be able to resolve detail
+    on smaller space scales. Point to point variability, and therefore
+    the interpolation error between two neighbouring stations, is
+    larger for rainfall than for most other climate elements. In
+    terms of station numbers, the rainfall network is largest having
+    some 5000 stations currently open across the UK. Radar rainfall
+    sites are not included in this network and their data are not
+    yet part of the MIDAS database. The current rainfall network
+    is made up of the following sub-networks:.
+    <UL>
+      <LI>Stations providing sub-hourly data. Solid State Event Recorder
+      (SSER) logging devices have been in operation at some 50-60 stations
+      since about 1986 (see 4.8). Some Water Authorities operate loggers
+      but sub hourly data from these devices are not stored in MIDAS.
+      <LI>Stations providing hourly data. Most stations in the Basic
+      Synoptic Network report hourly rainfall as a SREW message transmitted
+      in real time. Many stations have a record of hourly rainfall
+      observations stretching back to 1959 or, in some cases, earlier.
+      A number of CDL stations are equipped to provide real time hourly
+      amounts.
+      <LI>Daily rainfall stations. Daily rainfall, measured at 0900
+      UTC, is provided from all stations of the Climate network. These
+      are augmented by almost 4000 stations where rainfall is the sole
+      observation made. The vast majority of stations in England and
+      Wales are managed by the Environment Agency, while many of those
+      in Scotland and Northern Ireland are managed by other government
+      bodies. Although daily reading are preferred from these sites,
+      some may only report weekdays, weekly, monthly or at some infrequent
+      intervals. Data are returned monthly.
+    </UL>
+    <P><A NAME="3.5"></A><h2>3.5. Sunshine and radiation network</h2>
+    <P>Stations in this network provide measurements of solar and
+    terrestrial electromagnetic radiation and the duration of bright
+    sunshine.
+    <P>The routine measurement of solar radiation was started in
+    the UK at Kew Observatory in 1908. Daily measurements of the
+    direct solar irradiance were taken at noon when conditions allowed
+    and this practice was continued for the next 40 years. Regular
+    measurements of global and diffuse irradiance began at Kew in
+    1946, at Lerwick and Eskdalemuir in 1952, and at Aberporth, Cambridge
+    and London in 1957. The network in UK was further enlarged by
+    the addition of co-operating stations making solar radiation
+    measurements for their own purposes and by 1975 the network consisted
+    of 29 stations with at least 5 years continuous recording of
+    global radiation. At the present time (1996) the network consists
+    of 11 Met Office manned stations and 20 unmanned stations (ESAWS)
+    plus 17 co-operating stations.
+    <P>Stations at present measuring radiation and sunshine may be
+    assigned to any of 5 sub networks designed to meet specific user
+    requirements:
+    <UL>
+      <LI>Climatological Radiation Network. A network of stations that
+      will allow the climatology of radiation in the UK to be maintained.
+      <LI>Climatological Sunshine Network. A network of stations that
+      is required to maintain the climatology of sunshine in the UK.
+      <LI>Synoptic Radiation Network. A network of stations that is
+      required to provide solar and terrestrial radiation in support
+      of numerical weather prediction and associated products.
+      <LI>Synoptic Sunshine Network. A network of stations that is
+      required to provide sunshine data in support of media enquiries
+      and products.
+      <LI>Reference Radiation Network. A network of stations that is
+      required to provide high quality reference solar and terrestrial
+      radiation measurements in support of research and development.
+    </UL>
+    <P><A NAME="3.6"></A><h2>3.6. Station identification</h2>
+    <P>A station may be defined as a collection of instruments and
+    observing systems, existing today or for periods of time in the
+    past, which together may be considered as a common source of
+    observations associated with a given location. At a typical station
+    the thermometers and rain gauges are located in an enclosure,
+    which is a small area of level ground suitably exposed to the
+    weather. Not all instruments at a station are necessarily collocated;
+    for example, the anemometer mast may be at the end of a runway
+    some distance from the enclosure, the pressure sensor may be
+    in a separate building and the estimate of visibility made be
+    made on a roof-top. Observations from all these sources may,
+    nevertheless, be regarded as representative of a single location
+    represented by the station. The concept of a station is reinforced
+    by the way meteorological observations are grouped together into
+    reports: the SYNOP, NCM, SREW or F3208 reports (see section 4)
+    represent groupings of observations from a common general location.
+    Each report requires an identifying number or character string
+    which links it to the originating station. Several identifying
+    systems that have evolved over the years are described in more
+    detail in the following sub-sections.
+    <P>Over time certain instruments, or the whole enclosure, may
+    be relocated some distance away from the original site. Where
+    the distance moved is small, the observations obtained from the
+    new site may have exactly the same climatological characteristics
+    as previously and it makes sense to regard them as coming from
+    the same source or station distinguished by certain identifiers.
+    Where the distance moved is large, or, where the exposure at
+    the new site is sufficiently different that a detectable impact
+    on the measured climatology is judged likely, it is appropriate
+    that observations from the new site are labelled by a different
+    set of identifiers.
+    <P><B><I>Station name</I></B>
+    <P>The purpose of the station name is to give an unambiguous
+    label to the source of observations such that no two stations
+    have the same name. It should be meaningful, at least to those
+    who know the locality.
+    <P>The format of the station name is as follows:<BR>
+    : : : <I>Principal Name [,Qualifying Name]</I><BR>
+    where the square brackets indicate an optional field.
+    <P>The Principal Name relates to the general location of the
+    station; it may take the name of the nearest village, town or
+    city, or, the name of the (small) island on which the station
+    is located. When naming a station, Met Office staff have always
+    tried to use a name which appears on an OS map. To avoid many
+    stations having the same Principal Name, the names of large cities
+    are often avoided.
+    <P>A Qualifying Name, separated from the Principal Name by a
+    comma, may often be required to ensure that each station name
+    is unique; it is however optional. It is generally the name of
+    some local feature such as a building, road or small geographical
+    feature; e.g. <I>Walsingham, Hill House</I> and <I>Blackshiels,
+    Fala Dam</I>. Where an observing site moves a small distance,
+    but sufficiently far that that the new site is regarded as a
+    new station, there might be no reason for wishing to change the
+    station name. In such cases differing stations are identified
+    by No.1, No2, &#133; etc. added on to the end of the Qualifying
+    name; e.g<I>. Coldwell Resr, No.2</I>. <A NAME="wmo"></A>
+    <P><B><I>WMO number</I></B>
+    <P>Synoptic stations selected as suitable for possible international
+    exchange are give a 5-figure WMO number which is used as the
+    identifier for all SYNOP and SREW reports. It is also used as
+    identifier for climate reports, NCM and HCM, exchanged within
+    the UK in real time. The first 2 figures of the WMO number are
+    03 which is the block number for the UK and Ireland. Numbering
+    runs from north to south across Britain followed by Ireland.
+    <A NAME="dcnn"></A>
+    <P><B><I>DCNN</I></B>
+    <P>All stations that are part of the climate network have a 4-figure
+    DCNN (district county number). In general, if a station moves
+    more than 800m in a region of homogeneous terrain it is allocated
+    a new DCNN, while a lesser distance will justify a new DCNN only
+    if it is considered that the exposure at the new site is sufficiently
+    different to affect the measured climatology.
+    <P><B><I>ICAO identifier</I></B>
+    <P>Stations that are part of the aviation network have a 4-character
+    international ICAO number. The first two character are EG which
+    represent Europe-UK. <A NAME="rain"></A>
+    <P><B><I>Rainfall number</I></B>
+    <P>The principal purpose of the rainfall number is to identify
+    a rainfall observing site. Where rainfall is the sole observation
+    made at the station, the number doubles up as the station identifier.
+    Where there is more than one rainfall observing site at the station,
+    each site has a different rainfall number. Where the rainfall
+    observing site moves, even a small distance, the new site is
+    given a new rainfall number while the station may retain its
+    original name, WMO number and DCNN; it is therefore very common
+    for a station to be associated with several rainfall numbers,
+    some identifying rainfall sites open today and some that existed
+    in the past. It is also possible for more than one gauge to be
+    attached to one rainfall number, for instance, 2 gauges may have
+    existed in the enclosure, one used for the hourly reading and
+    one for the 12-hourly reading.
+    <P>Over the years, the observation branches of the Met Office
+    have followed an agreed set of rules to determine whether measurements
+    of rainfall should be considered as originating from a new source
+    or rainfall number when the conditions under which rainfall observations
+    are made changes. These are specified as the occurrence of one
+    or more of the following:
+    <UL>
+      <LI>The new site is 400m (400yds) from the previous site
+      <LI>The new site is 15m (50ft) altitude different from the previous
+      site
+      <LI>The new environment is different (degree of shelter)
+      <LI>The new site is in a different stream catchment
+      <LI>The type of rainfall collecting equipment changes
+    </UL>
+    <P>The last criterion is included because the rainfall number
+    acts as an instrument and logging system identifier as well as
+    a station identifier. This can lead to a number of confusing
+    situations, for example, it is often the case that when a SAMOS
+    system has been installed at a SSER site; the SSER retains its
+    original rainfall number while the SREW and NCM reports from
+    the same TBR are identified by using a different number (see
+    section 5.5). Rainfall numbers run from north to south and uniquely
+    identify the river basin and tributary nearest which the site
+    lies. <A NAME="wind"></A>
+    <P><B><I>Wind number</I></B>
+    <P>Like rainfall number the wind number identifies the characteristics
+    of the observing site. Each anemometer mast has a 6-figure wind
+    number of the format DCNNnn, where nn=01,02,&#133; is the anemometer
+    site number. A new site number is allocated to the observations
+    if the mast is repositioned but not if the height of the anemometer
+    on the mast is changed. A station may therefore be associated
+    with several wind numbers.
+    <P><B><I>Source identifier</I></B>
+    <P>Within the MIDAS database, stations are uniquely determined
+    by a source identifier which is an integer running from 1 upwards.
+    All observations in the database are stored with their source
+    identifier.
+    <P><B><I>Station definition</I></B>
+    <P>It can be seen that under the present organisation of the
+    UK observing networks there is no unambiguous definition of a
+    station. At any one time there is a network of synoptic stations
+    identified by WMO numbers, a network of climate stations identified
+    by DCNN and rainfall stations identified by rainfall number.
+    However, the longer the historical record, the more complex the
+    picture becomes and the less easy it is to define what collection
+    of observations should be regarded as originating from a single
+    station. The following rules define the stations stored in MIDAS
+    labelled by their unique source identifier:
+    <OL>
+      <LI>A station is a collection of instruments and observing systems,
+      existing today or for periods of time in the past, which together
+      may be considered as a common source of observations associated
+      with a given location.
+      <LI>Each station may be considered as being made up of a number
+      of clusters of instruments or observing systems, each defined
+      by its location relative to the station position. Any 2 clusters
+      will be regarded as belonging to the same station if:<BR>
+      (a) at the present time or at some time in time in the past observations
+      from both clusters have been reported under the same identifier
+      (WMO/DCNN/ICAO/Rainfall/Wind), or,<BR>
+      (b) one cluster may be considered as taking over the role of
+      the other cluster on its closure.
+      <LI>Each of the identifiers WMO/DCNN/ICAO/Rainfall/Wind will
+      be associated with one and only one station. Where this rule
+      has been broken in the past in the case of WMO numbers, a letter
+      is added as a suffix. Each station may, however, have more than
+      one WMO, DCNN, Rainfall or Wind number.
+      <LI>Each source in MIDAS, identified by the attribute src_id,
+      will be associated with a station as defined above and there
+      will be a one-to-one correspondence with stations in the Metadata
+      Database.
+      <LI>Each station in MIDAS will be uniquely defined by its name
+      and there is a one-one correspondence between src_id and station
+      name. Information on other names used in the past will be stored
+      in the metadata database.
+      <LI>The station position is the current position of the primary
+      rain gauge (assuming that there is one).
+    </OL>
+  </UL>
+  <P><A NAME="4"></A><h1>4. Message and report types</h1>
+  <P>The following sections list the parameters contained in various
+  messages and reports. The second column of each list gives the
+  precision to which each parameter is observed and reported. It
+  must be noted that not all elements are reported from every station.
+  <UL>
+    <P><A NAME="4.1"></A><h2>4.1. SYNOP</h2>
+    <P>The international SYNOP message format has been used for the
+    real time transmission of synoptic weather observations for about
+    50 years. Today it is used at some 200 or more Met Office or
+    auxiliary UK stations for observations made at hourly, 3-hourly,
+    6-hourly or irregular intervals. The hour of the observation
+    is contained in the message header, rather than in the message
+    itself, and there is no facility to specify the time of the observation
+    to the nearest minute. As noted in Section 2 above, the UK practice
+    for many years has regarded the actual observation time as HH-10.
+    <P>The following from the SYNOP message are stored in MIDAS:
+    <P><TABLE CELLSPACING="0" BORDER="0" CELLPADDING="7" WIDTH="619">
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Mean sea level pressure</TD>
+        <TD WIDTH="17%" VALIGN="TOP">0.1 hPa</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Station level pressure</TD>
+        <TD WIDTH="17%" VALIGN="TOP">0.1 hPa</TD>
+        <TD WIDTH="53%" VALIGN="TOP">High level stations only</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Air temperature</TD>
+        <TD WIDTH="17%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Whole degrees pre 1982</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Dew point</TD>
+        <TD WIDTH="17%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Whole degrees pre 1982</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Wind speed</TD>
+        <TD WIDTH="17%" VALIGN="TOP">1 knot</TD>
+        <TD WIDTH="53%" VALIGN="TOP">10-minute average, HH-20 to HH-10</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Max. gust speed</TD>
+        <TD WIDTH="17%" VALIGN="TOP">1 knot</TD>
+        <TD WIDTH="53%" VALIGN="TOP">10-minute max. gust speed, HH-20
+          to HH-10</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Wind direction</TD>
+        <TD WIDTH="17%" VALIGN="TOP">10 degrees</TD>
+        <TD WIDTH="53%" VALIGN="TOP">10-minute average, HH-20 to HH-10</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Visibility</TD>
+        <TD WIDTH="17%" VALIGN="TOP">1 m</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Conversion from code</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Cloud type</TD>
+        <TD WIDTH="17%" VALIGN="TOP">Code</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Low/medium/high/total</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Cloud amount</TD>
+        <TD WIDTH="17%" VALIGN="TOP">1/8</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Low/medium/high/total. 9 = sky obscured</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Cloud height</TD>
+        <TD WIDTH="17%" VALIGN="TOP">1 dam</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Low/medium/high/total. Conversion
+          from code</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Present weather</TD>
+        <TD WIDTH="17%" VALIGN="TOP">Code</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Past weather 1</TD>
+        <TD WIDTH="17%" VALIGN="TOP">Code</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Post 1982.</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Past weather 2</TD>
+        <TD WIDTH="17%" VALIGN="TOP">Code</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Post 1982.</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">State of ground</TD>
+        <TD WIDTH="17%" VALIGN="TOP">Code</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+    </TABLE><A NAME="4.2"></A><h2>4.2. SREW</h2>
+    <P>The real time exchange of hourly rainfall accumulations between
+    European countries is achieved using the SREW message format
+    (Synoptic Rainfall Europe West). As for SYNOPs, the UK practice
+    regards the observation period as ending at HH-10, therefore
+    the reported rainfall is for the period HH-70 to HH-10. Accumulations
+    are reported to the nearest 0.1 mm and there is an indicator
+    for trace.
+    <P><A NAME="4.3"></A><h2>4.3. METAR</h2>
+    <P>Synoptic observations for aviation purposes use the METAR
+    code. Most stations report hourly.
+    <P>The following from the METAR message are stored in MIDAS:
+    <P><TABLE CELLSPACING="0" BORDER="0" CELLPADDING="7" WIDTH="619">
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Altimeter pressure (QNH)</TD>
+        <TD WIDTH="17%" VALIGN="TOP">1 hPa</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Air temperature</TD>
+        <TD WIDTH="17%" VALIGN="TOP">1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Dew point</TD>
+        <TD WIDTH="17%" VALIGN="TOP">1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Wind speed</TD>
+        <TD WIDTH="17%" VALIGN="TOP">1 knot</TD>
+        <TD WIDTH="53%" VALIGN="TOP">10-minute average</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Wind direction</TD>
+        <TD WIDTH="17%" VALIGN="TOP">10 degrees</TD>
+        <TD WIDTH="53%" VALIGN="TOP">10-minute average</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Visibility</TD>
+        <TD WIDTH="17%" VALIGN="TOP">&nbsp;</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Runway visual range</TD>
+        <TD WIDTH="17%" VALIGN="TOP">&nbsp;</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Cloud type</TD>
+        <TD WIDTH="17%" VALIGN="TOP">Code</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Low/medium/high</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Cloud amount</TD>
+        <TD WIDTH="17%" VALIGN="TOP">1/8</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Low/medium/high. 9 = sky obscured</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Cloud height</TD>
+        <TD WIDTH="17%" VALIGN="TOP">1 m</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Low/medium/high</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Present weather</TD>
+        <TD WIDTH="17%" VALIGN="TOP">Code</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Maximum gust speed</TD>
+        <TD WIDTH="17%" VALIGN="TOP">1 knot</TD>
+        <TD WIDTH="53%" VALIGN="TOP">10-minute, HH-20 to HH-10</TD>
+      </TR>
+    </TABLE><A NAME="4.4"></A><h2>4.4. HCM</h2>
+    <P>Hourly Climate Messages (NCM), produced from automated systems
+    such as ESAWS, SAMOS and CDL, are transmitted in real time in
+    the same way as SYNOPs and SREWs, and like those observations
+    the HCM covers the period HH-70 to HH-10. The following from
+    the HCM message are stored in MIDAS:
+    <P><TABLE CELLSPACING="0" BORDER="0" CELLPADDING="7" WIDTH="619">
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Mean hourly wind direction</TD>
+        <TD WIDTH="17%" VALIGN="TOP">10 degrees</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Mean hourly wind speed</TD>
+        <TD WIDTH="17%" VALIGN="TOP">1 knot</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Direction of maximum gust</TD>
+        <TD WIDTH="17%" VALIGN="TOP">10 degrees</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Speed of maximum gust</TD>
+        <TD WIDTH="17%" VALIGN="TOP">1 knot</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Time of maximum gust</TD>
+        <TD WIDTH="17%" VALIGN="TOP">HHmm</TD>
+        <TD WIDTH="53%" VALIGN="TOP">To the nearest minute</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">10 cm soil temperature</TD>
+        <TD WIDTH="17%" VALIGN="TOP">0.1C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="30%" VALIGN="TOP">Global irradiation</TD>
+        <TD WIDTH="17%" VALIGN="TOP">W hr/m<SUP>2</SUP></TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+    </TABLE><A NAME="4.5"></A><h2>4.5. NCM</h2>
+    <P>National Climate Messages (NCM), produced from all Met Office
+    and many auxiliary stations, are transmitted in the same way
+    as SYNOPs and SREWs. A full message is sent at the nominal time
+    of 0900 each day and most stations also send an abbreviated message
+    at 2100. Note that, as for SYNOP and SREW, the periods of the
+    observations start and end at 10 minutes to the main hour, i.e.
+    0850 and 2050.
+    <P>The following from the NCM message are stored in MIDAS:
+    <P><TABLE CELLSPACING="0" BORDER="0" CELLPADDING="7" WIDTH="619">
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Grass minimum temperature</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">0900-0900 or 1800-0900 or one hour
+          before sunset to 0900, depending on local practice</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Concrete minimum temperature</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">0900-0900 or 1800-0900 or one hour
+          before sunset to 0900, depending on local practice</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">State of ground</TD>
+        <TD WIDTH="14%" VALIGN="TOP">Code</TD>
+        <TD WIDTH="53%" VALIGN="TOP">At 0000, 0300, 0600, &#133;.. 2100</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">State of concrete slab</TD>
+        <TD WIDTH="14%" VALIGN="TOP">Code</TD>
+        <TD WIDTH="53%" VALIGN="TOP">At 0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Maximum temperature</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">0900-2100 &amp; 2100-0900, or 0900-0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Minimum temperature</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">0900-2100 &amp; 2100-0900, or 0900-0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Rainfall accumulation</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 mm</TD>
+        <TD WIDTH="53%" VALIGN="TOP">0900-2100 &amp; 2100-0900, or 0900-0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Sunshine</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 hr</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Reported at 0900 for previous 00-24
+          day</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Soil temperature</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">At 30 cm and 100 cm. At 0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Days of hail, thunder, gale, snow</TD>
+        <TD WIDTH="14%" VALIGN="TOP">Code</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Reported at 0900 for previous 00-24
+          day</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Depth of snow</TD>
+        <TD WIDTH="14%" VALIGN="TOP">1 cm</TD>
+        <TD WIDTH="53%" VALIGN="TOP">At 0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Depth of fresh snow</TD>
+        <TD WIDTH="14%" VALIGN="TOP">1 cm</TD>
+        <TD WIDTH="53%" VALIGN="TOP">0900-0900</TD>
+      </TR>
+    </TABLE><A NAME="4.6"></A><h2>4.6. Daily climate</h2>
+    <P>Climate stations normally make one observation a day, though
+    over the years practices have changed and twice or three times
+    a day observing was more common than it is today. The paper form,
+    covering a month&#146;s observations, has always been the usual
+    method of recording though electronic methods are beginning to
+    become more widespread. The Form type in current use is Met Form
+    3208b which contains up to 31 daily observations. The observation
+    time at most stations is 0900, though a few observe at 1000.
+    <P>The following from the 3208b form are stored in MIDAS:
+    <P><TABLE CELLSPACING="0" BORDER="0" CELLPADDING="7" WIDTH="619">
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Cloud amount</TD>
+        <TD WIDTH="14%" VALIGN="TOP">1/8</TD>
+        <TD WIDTH="53%" VALIGN="TOP">At 0900. 9 = sky obscured</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Wind direction</TD>
+        <TD WIDTH="14%" VALIGN="TOP">10 degrees</TD>
+        <TD WIDTH="53%" VALIGN="TOP">At 0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Wind speed</TD>
+        <TD WIDTH="14%" VALIGN="TOP">1 knot</TD>
+        <TD WIDTH="53%" VALIGN="TOP">At 0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Present weather</TD>
+        <TD WIDTH="14%" VALIGN="TOP">Code</TD>
+        <TD WIDTH="53%" VALIGN="TOP">At 0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Visibility</TD>
+        <TD WIDTH="14%" VALIGN="TOP">Code</TD>
+        <TD WIDTH="53%" VALIGN="TOP">At 0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Air temperature</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">At 0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Wet bulb temperature</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">At 0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Minimum temperature</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">0900-0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Maximum temperature</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">0900-0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Grass minimum temperature</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Usually 0900-0900, but may be 1
+          hour before sunset to 0900, depending on local practice</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Concrete minimum temperature</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">Usually 0900-0900, but may be 1
+          hour before sunset to 0900, depending on local practice</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Soil temperature</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="53%" VALIGN="TOP">At 10, 20, 30, 50 100 cm. At 0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">State of ground</TD>
+        <TD WIDTH="14%" VALIGN="TOP">Code</TD>
+        <TD WIDTH="53%" VALIGN="TOP">At 0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Depth of snow</TD>
+        <TD WIDTH="14%" VALIGN="TOP">1 cm</TD>
+        <TD WIDTH="53%" VALIGN="TOP">At 0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Rainfall accumulation</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 mm</TD>
+        <TD WIDTH="53%" VALIGN="TOP">0900-0900</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Run of wind</TD>
+        <TD WIDTH="14%" VALIGN="TOP">1 knot</TD>
+        <TD WIDTH="53%" VALIGN="TOP">0900-0900. Integrated speed*time
+          reported in km</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Sunshine</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 hr</TD>
+        <TD WIDTH="53%" VALIGN="TOP">0000-2400</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Days of snow, hail, thunder, gale</TD>
+        <TD WIDTH="14%" VALIGN="TOP">Code</TD>
+        <TD WIDTH="53%" VALIGN="TOP">0000-2400. Note: though reported
+          many climate stations do not keep 24 hour watch.</TD>
+      </TR>
+    </TABLE>
+    <P>&nbsp;
+    <P>Where the station observes at a time different from 0900 (0700,
+    0800 or 1000) read that time in the table above in place of 0900.
+    Where a daily observation or a sequence of daily observations
+    are missing, for example because the observer is unavailable
+    or the station is not manned 7 days a week, the rainfall accumulation
+    for the first day after the break will represent a multi-day
+    total; similarly the maximum and minimum values may represent
+    extremes over several days. The correct interpretation of the
+    readings will be made clear on the form and stored in MIDAS,
+    where appropriate, with a day count greater than 1.
+    <P>On the Met Form each line represents the observation for the
+    given day; values of rainfall, maximum temperature, run of wind
+    and sunshine are &quot;thrown back&quot; to the previous day,
+    in the sense that, for example, the 24 hour accumulation of rainfall
+    read at 0900 on the 10th is entered on the 9th because it is
+    assumed that most of the rain fell on that day. This practice
+    does not affect the way the data are stored in MIDAS as the database
+    indicates the observation period by the two parameters: observation
+    end time and hour count.
+    <P>There were a great many different form types that preceded
+    the 3208b, each allowing for the different observing practices
+    that were in force at the time. MIDAS only contains the complete
+    set of observed parameters since 1959; before that date only
+    the main climate parameters (e.g. maximum, minimum and rainfall)
+    are stored for selected stations and periods.
+    <P>Stations of the rainfall network, for which rainfall accumulation
+    is the only observation produce, return daily amounts on rain
+    cards (Met Forms 7133, 7135). Where observations are made less
+    frequently than once a day, multi-day accumulations are marked
+    on the card and stored in MIDAS with a day count greater than
+    1. Many stations in England and Wales are operated by the Environment
+    Agency who may also return keyed data on tape to the Met Office.
+    <P><A NAME="4.7"></A><h2>4.7. Hourly climate analyses</h2>
+    <P>Many stations with autographic or other recording instruments
+    provide analyses of hourly values for climate purposes. The data
+    are usually returned on Met Forms at the end of the month. The
+    following are stored in MIDAS:
+    <P><TABLE CELLSPACING="0" BORDER="0" CELLPADDING="7" WIDTH="619">
+      <TR>
+        <TD WIDTH="47%" VALIGN="TOP" COLSPAN="2"><I>Hourly rainfall from
+          Met Form 7113</I></TD>
+
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Rainfall accumulation</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 mm</TD>
+        <TD WIDTH="53%" VALIGN="TOP">HH-60 to HH-0</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Rainfall duration</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 hour</TD>
+        <TD WIDTH="53%" VALIGN="TOP">HH-60 to HH-0</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="47%" VALIGN="TOP" COLSPAN="2"><I>Hourly wind from
+          Met Form 6910</I></TD>
+
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Mean wind direction</TD>
+        <TD WIDTH="14%" VALIGN="TOP">10 degrees</TD>
+        <TD WIDTH="53%" VALIGN="TOP">HH-60 to HH-0</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Mean wind speed</TD>
+        <TD WIDTH="14%" VALIGN="TOP">1 knot</TD>
+        <TD WIDTH="53%" VALIGN="TOP">HH-60 to HH-0</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Direction maximum gust</TD>
+        <TD WIDTH="14%" VALIGN="TOP">10 degrees</TD>
+        <TD WIDTH="53%" VALIGN="TOP">HH-60 to HH-0</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Speed maximum gust</TD>
+        <TD WIDTH="14%" VALIGN="TOP">1 knot</TD>
+        <TD WIDTH="53%" VALIGN="TOP">HH-60 to HH-0</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Time maximum gust</TD>
+        <TD WIDTH="14%" VALIGN="TOP">&nbsp;</TD>
+        <TD WIDTH="53%" VALIGN="TOP">HH-60 to HH-0, in tenths of hour</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="47%" VALIGN="TOP" COLSPAN="2"><I>Hourly sunshine from
+          Met Form 3445</I></TD>
+
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="33%" VALIGN="TOP">Sunshine duration</TD>
+        <TD WIDTH="14%" VALIGN="TOP">0.1 hr</TD>
+        <TD WIDTH="53%" VALIGN="TOP">HH-60 to HH-0</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="47%" VALIGN="TOP" COLSPAN="2"><I>Radiation from Met
+          Form</I></TD>
+
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="47%" VALIGN="TOP" COLSPAN="2">&nbsp;</TD>
+        <TD WIDTH="53%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+    </TABLE><A NAME="4.8"></A><h2>4.8. Logger data</h2>
+    <P>Various data logging systems are in use or have been used
+    in the past to record meteorological data, and the recording
+    media are returned at intervals (usually monthly) to Bracknell
+    for downloading, processing and loading into MIDAS. Such systems
+    include:
+    <UL>
+      <LI>Solid State Event Recorder (SSER). This logging device records
+      tip times to the nearest minute from 0.2 mm tipping bucket raingauges
+      (see Section 5.5).
+      <LI>Digital Anemograph Logging Equipment (DALE). A logging device
+      that records 1-minute averages of wind speed and direction plus
+      the maximum gust speed and direction of the maximum gust.
+      <LI>Climate Data Loggers (CDL). Commercial and Met Office designs
+      of CDLs create hourly and daily weather messages which may be
+      retrieved by remote polling or downloading at the station onto
+      floppy disk. The Met Office data format CAWS is used widely.
+      <LI>Magnetic Tape Event Recorder (MTER). A precursor to SSER
+      in use from about 1978-82 for recording tip times from tipping
+      bucket raingauges. Data unreliable and have not been loaded into
+      MIDAS.
+    </UL>
+    <P><A NAME="4.9"></A><h2>4.9. Surface CLIMAT message</h2>
+    <P>Surface CLIMAT messages are produced each month by WMO Climate
+    Reference Stations of which there are currently 20 in the UK
+    and some 400 world wide. The messages contain climatological
+    summaries for the month made by the observing station or the
+    responsible National Meteorological Service using all data available
+    locally. The following is stored in MIDAS
+    <P><TABLE CELLSPACING="0" BORDER="0" CELLPADDING="7" WIDTH="619">
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Monthly mean msl pressure</TD>
+        <TD WIDTH="12%" VALIGN="TOP">0.1 hPa</TD>
+        <TD WIDTH="45%" VALIGN="TOP">Using 3-hourly observations 00,03&#133;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Monthly mean station level pressure</TD>
+        <TD WIDTH="12%" VALIGN="TOP">0.1 hPa</TD>
+        <TD WIDTH="45%" VALIGN="TOP">Using 3-hourly observations 00,03&#133;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Monthly mean air temperature</TD>
+        <TD WIDTH="12%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="45%" VALIGN="TOP">Using 3-hourly observations 00,03&#133;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Monthly mean vapour pressure</TD>
+        <TD WIDTH="12%" VALIGN="TOP">0.1 hPa</TD>
+        <TD WIDTH="45%" VALIGN="TOP">Using 3-hourly observations 00,03&#133;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Monthly mean daily max. temperature</TD>
+        <TD WIDTH="12%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="45%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Monthly mean daily min. temperature</TD>
+        <TD WIDTH="12%" VALIGN="TOP">0.1 C</TD>
+        <TD WIDTH="45%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Total precipitation for month</TD>
+        <TD WIDTH="12%" VALIGN="TOP">mm</TD>
+        <TD WIDTH="45%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Total sunshine for month</TD>
+        <TD WIDTH="12%" VALIGN="TOP">Hours</TD>
+        <TD WIDTH="45%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Days precipitation &gt; various
+          limits</TD>
+        <TD WIDTH="12%" VALIGN="TOP">No.</TD>
+        <TD WIDTH="45%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Days max. temperature &gt;/&lt;
+          various limits</TD>
+        <TD WIDTH="12%" VALIGN="TOP">No.</TD>
+        <TD WIDTH="45%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Days min. temperature &lt; various
+          limits</TD>
+        <TD WIDTH="12%" VALIGN="TOP">No.</TD>
+        <TD WIDTH="45%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Days snow depth &gt; various limits</TD>
+        <TD WIDTH="12%" VALIGN="TOP">No.</TD>
+        <TD WIDTH="45%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Days wind speed &gt; various limits</TD>
+        <TD WIDTH="12%" VALIGN="TOP">No.</TD>
+        <TD WIDTH="45%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Days visibility &lt; various limits</TD>
+        <TD WIDTH="12%" VALIGN="TOP">No.</TD>
+        <TD WIDTH="45%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Days of other phenomena</TD>
+        <TD WIDTH="12%" VALIGN="TOP">No.</TD>
+        <TD WIDTH="45%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Monthly extremes and dates</TD>
+        <TD WIDTH="12%" VALIGN="TOP">&nbsp;</TD>
+        <TD WIDTH="45%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="42%" VALIGN="TOP">Days of missing data</TD>
+        <TD WIDTH="12%" VALIGN="TOP">&nbsp;</TD>
+        <TD WIDTH="45%" VALIGN="TOP">&nbsp;</TD>
+      </TR>
+    </TABLE><A NAME="4.10"></A><h2>4.10. Other message types</h2>
+    <P>Check NCM
+    <P>At manned or part-manned stations where an automated system
+    such as SAMOS has been installed, Check NCM messages are normally
+    transmitted in real time at 0900 each day. The message contains
+    observations of air maximum, air minimum, grass minimum and concrete
+    minimum from liquid-in-glass thermometers, and 24-hour rainfall
+    accumulation from a 5 inch gauge. These observations, made with
+    instruments used from climate observing for over 100 years, allow
+    long-term comparisons to be made with the modern instrumentation,
+    such as ERT and tipping bucket gauges, which are required for
+    automation. A paper record of the Check NCM messages is kept
+    at each station and returned at the end of the month since 1997.
+    <P><B><I>Caretaker</I></B>
+    <P>Routine maintenance at fully automated sites is undertaken
+    by caretakers, perhaps once or twice a week, who in addition
+    to cutting the grass and checking and cleaning the instrumentation,
+    make check readings of air maximum, air minimum, dry bulb and
+    wet bulb minimum from liquid-in-glass thermometers, and rainfall
+    accumulation from a 5 inch gauge. Readings are recorded on paper
+    and returned at the end of each month.
+    <P><B><I>Water equivalent of snow</I></B>
+    <P>Designated stations, mostly manned Met Office stations, make
+    daily measurements of the water equivalent of any snow that is
+    lying. 3 samples are normally taken at different locations around
+    the enclosure from which the mean is calculated. All measurements
+    are recorded on paper and returned at the end of the month between
+    November and April.
+  </UL>
+  <P><A NAME="5"></A><h1>5. Characteristics of the data</h1>
+  <UL>
+    <P><A NAME="5.1"></A><h2>5.1. General</h2>
+    <P>There is a convention, followed by the human observer, that
+    where a value is read as half way between two points on the observing
+    scale it is &quot;rounded to the odd&quot;, except for pressure
+    which is rounded down. A value falling half way between 13.4
+    and 13.5 would be reported as 13.5.
+    <P><A NAME="5.2"></A><h2>5.2. Temperature</h2>
+    <P><B><I>Units, accuracy and precision</I></B>
+    <P>Temperature was recorded in degrees Fahrenheit before 1961
+    and in degrees Celsius after that date. The precision of the
+    measurement in the meteorological report has varied over the
+    years:
+    <UL>
+      <LI>0.1C for all temperatures that are reported today
+      <LI>1C for hourly temperatures received in SYNOP code prior to
+      1982
+      <LI>1F for many maximum and minimum temperatures prior to 1961
+      <LI>0.1F for most air temperatures prior to 1961 and for some
+      maximum and minimum temperatures prior to the 1920s
+      <LI>0.5F for maximum and minimum temperatures at a few stations
+      prior to 1961
+    </UL>
+    <P>All temperatures in MIDAS have been converted to Celsius and
+    are stored with a precision of 0.1C. The J-descriptor indicates
+    the original units of observation.
+    <P>Instruments are calibrated on receipt from the manufacturer
+    and at intervals after deployment by the QA Lab at Bracknell
+    with the aim of ensuring that the accuracy of the measurement
+    is better than 0.2C. Traceability to national standards has been
+    maintained since 1858 and corrections determined from the calibration
+    are applied to most observations made with the instrument. For
+    the large majority of observations, MIDAS contains only the corrected
+    value, however, at some climate stations in the past the normal
+    practice was to record the original measurement on the meteorological
+    form and only to apply the correction to the monthly mean. Reference
+    to the original records stored in the archives is necessary to
+    determine the observing practice at any particular station.
+    <P><B><I>Liquid-in-glass thermometers</I></B>
+    <P>A liquid-in-glass thermometer, having a surrounding glass
+    sheath, has been the normal means of measuring temperature since
+    the earliest days of observing. The liquid is generally mercury,
+    except for minimum thermometers in which ethanol is used. Maximum
+    and minimum thermometers are reset after the reading has been
+    taken, by a vigorous shake in the case of the maximum, and by
+    tilting upright in the case of minimum.
+    <P><B><I>Electrical resistance thermometers</I></B>
+    <P>Electrical thermometry is now in widespread use; its main
+    virtue lies in the ability to automate the measurement process.
+    Electrical resistance thermometers (ERT) first came into regular
+    use in the early 1980s at the fully automatic SAWS stations,
+    and since then have been introduced at all Met Office synoptic
+    stations. The instrument measures the resistance of platinum
+    which depends on temperature according to a quadratic relationship.
+    As is the case for liquid-in-glass thermometers, calibration
+    is performed at regular intervals by the QA Lab. There is no
+    means of determining from the data stored within MIDAS whether
+    an ERT or a liquid-in-glass thermometer was used to make the
+    measurement, though this information may be found in the archived
+    station documentation.
+    <P><B><I>Screen level temperature</I></B>
+    <P>The standard exposure for thermometers for measuring the dry,
+    wet-bulb, maximum and minimum temperatures is at 1.25m above
+    the ground in a louvered white screen of wooden construction.
+    This design allows a free circulation of air around the thermometers
+    while shielding them from precipitation and external radiation.
+    <P><B><I>Grass and concrete minimum</I></B>
+    <P>The grass minimum temperature is the lowest temperature reached
+    overnight by a thermometer freely exposed to the sky with its
+    bulb just touching the tips of short grass (25 to 50 mm above
+    the ground). Normally the thermometer is exposed at the last
+    hour before sunset and the reading is taken next morning. However,
+    at stations where an observer is not available near sunset, such
+    as at Ordinary Climatological Stations, the thermometer is often
+    exposed throughout the day. When snow covers the ground the thermometer
+    should be supported immediately above the surface of the snow
+    without actually touching it, though this is only possible at
+    manned stations. Doubtful readings, such as might occur where
+    snow falls overnight, are not normally reported. Long grass and
+    other characteristics of a poorly maintained site will cause
+    inaccurate measurements.
+    <P>The concrete minimum thermometer is exposed at the centre
+    of, and in contact with, a concrete slab which should be cleared
+    of any snow. At some climate stations in the first half of this
+    century readings were taken over bare soil but these values have
+    never been stored in MIDAS.
+    <P><B><I>Soil temperature</I></B>
+    <P>At many stations temperatures below the surface are measured
+    at various depths. The depths used today are 5, 10, 20, 30 and
+    100cm, although measurements are not necessarily made at all
+    these depths at a station and exceptionally measurements may
+    be made at other depths. When imperial units were in general
+    use, typically before 1961, the normal depths of measurement
+    were 4, 8, 12, 24 and 48 inches.
+    <P>Liquid-in-glass soil thermometers at a depth of 20 cm or less
+    are unsheathed and have a bend in the stem between the bulb and
+    the lowest graduation. At greater depths the thermometer is suspended
+    in a steel tube and has its bulb encased in wax.
+    <P><B><I>Sources of error</I></B>
+    <P>Common errors in the measurement of temperature include:
+    <UL>
+      <LI>Gross errors of manual reading: typically 1, 5, 10 degrees,
+      reporting the wrong sign, or reading the wrong end of the minimum
+      index (7 degrees)
+      <LI>Breaking of the liquid column
+      <LI>Parallax
+      <LI>Maximum or minimum thermometers not properly reset the previous
+      day
+    </UL>
+    <P>There may be slow changes in the characteristics of the thermometer,
+    but these are reduced to a minimum by regular maintenance and
+    calibration.
+    <P><A NAME="5.3"></A><h2>5.3. Pressure</h2>
+    <P>To be completed.
+    <P><A NAME="5.4"></A><h2>5.4. Humidity</h2>
+    <P><I>Units, accuracy and precision</I>
+    <P>In MIDAS humidity is stored either as wet bulb temperature
+    or as dew point to a precision of 0.1C. WMO accuracy requirements
+    for wet bulb temperature are <U>+</U>0.2C or an equivalent <U>+</U>3-5%
+    in derived values of humidity. Measurements of dry and wet bulb
+    temperatures are reported to the nearest 0.1K and when units
+    of measurement were Fahrenheit reports were given to the nearest
+    0.1F.
+    <P><B><I>Wet bulb thermometer</I></B>
+    <P>Almost all observations of surface humidity have been made
+    using a wet bulb thermometer though some recent automatic stations
+    have a relative humidity sensor fitted. The wet bulb is exposed
+    alongside the dry bulb in the meteorological screen with no additional
+    ventilation other than that provided by the natural flow of air.
+    The wet bulb is kept moist through the capillary action of water
+    up a muslin wick. Where ERT thermometers are used, such as in
+    any automatic station, the siting of instruments is the same.
+    On occasions when air temperatures fall below zero, the wet bulb
+    should be covered by a thin film of ice, this being ensured by
+    the observer at manned sites each time a reading is taken. Conversion
+    to a dew point uses values of saturated vapour pressure with
+    respect to a ice covered surface.
+
+    <P><B><I>Sources of error</I></B>
+    <P>Common sources of error in the measurement of humidity include:
+    <UL>
+      <LI>Errors in the readings of the dry and wet bulbs or out of
+      date corrections to the temperatures read.
+      <LI>Contamination of the wick, especially where it has not been
+      changed sufficiently frequently or impure water has been used.
+      <LI>Drying out of the wick. This is a common problem at automatic
+      stations in summer which are infrequently maintained by a caretaker.
+      <LI>Poor ventilation on a calm day.
+      <LI>Drops of water on the dry bulb in conditions of high humidity
+      causing it to act as a wet bulb.
+      <LI>Inappropriate ice covering of the wet bulb in freezing conditions,
+      especially at automatic stations.
+    </UL>
+    <P><A NAME="5.5"></A><h2>5.5. Wind</h2>
+    <P><I>Units, accuracy and precision</I>
+    <P>Horizontal wind is a 2-dimensional vector and is usually reported
+    as an averaged direction from which the wind is blowing and a
+    speed. The maximum observed speed over a specified time interval
+    and the time of occurrence may also be reported. The unit of
+    speed used at UK stations is the knot (0.515&nbsp;ms<SUP>-1</SUP>)
+    and the unit of direction the degree. Where observations of wind
+    speed from overseas stations are in ms<SUP>-1</SUP>, values are
+    converted to knots before storage. The data are reported to the
+    nearest knot and 10 degrees in the SYNOP and HCM messages and
+    on Form 6910. 1-minute DALE data are recorded to the nearest
+    0.1 knot and 1 degree.
+    <P>The accuracy requirements, which are met in most instances
+    by the current synoptic network, are for speed to be measured
+    within 1 knot or 10%, direction within 5 degrees and gust speeds
+    within 10%. There are, however, larger errors in near calm conditions
+    where the Munro anemometer is used (see below).
+    <P><B><I>Averaging</I></B>
+    <P>Speed and direction are averaged separately which introduces
+    a slight overestimate of the mean vector. The calculation of
+    mean direction has to take into account the cyclical nature of
+    the measurement between 0 and 360 degrees. Where the sampling
+    rate is sufficiently high, the maximum gusts are normally calculated
+    from 3-second averages of speed and this is the case at most
+    SAMOS stations today. A 1.5-second averaging period was used
+    in early versions of SAMOS, it is still used at all ESAWS stations
+    and it is the typical averaging period obtained from an anemograph
+    trace. Metadata describing what averaging periods have been used
+    at stations at a given date has been poorly recorded over the
+    years. Where wind speed and direction are recorded on an anemograph,
+    mean values and gust speeds are estimated by human analysis.
+    Estimates of average speed from a continuously changing dial,
+    which are subject to large error, are made at a few stations
+    in the supplementary network. This observing practice was more
+    common in the past.
+    <P>10-minute averaged winds reported in the SYNOP message are
+    for the period HH-20 to HH-10. Hourly mean winds in the HCM message
+    and gusts reported in the SYNOP message are for the period HH-70
+    to HH-10. Some Ordinary Climatological Stations report run of
+    wind from an anemometer on a 2 m mast. This is converted to a
+    24-hour mean wind speed in knots for storage in MIDAS.
+    <P><B><I>Munro anemometer</I></B>
+    <P>The Munro cup anemometer and vane have been the basic instrumental
+    method for measuring wind in the UK for many years. Traditionally
+    it has been connected to an anemograph and/or dial, but with
+    the advent of automatic systems it has been attached various
+    processing devices, e.g. the DALE logger. The cup has a large
+    inertia and therefore has a relatively slow response time, but
+    of more concern is the high start-up speed, which in the case
+    of the Mk4 is about 6 knots. In 1998 a project began for the
+    replacement of Munros by a lightweight anemometer with better
+    response characteristics.
+    <P><B><I>Other wind measuring methods</I></B>
+    <P>Visual estimates of wind have been made a number of stations
+    in the supplementary network for many years and the observations
+    have been reported as 10-minute winds in the SYNOP message.
+    <P>Dines pressure tube anemometers, having a better response
+    at low wind speeds than the Munro, were installed at a number
+    of stations in the early years of observing, but few of these
+    instruments have remained in use in recent years.
+    <P>SIESAWS systems use an orthogonal arrangement of pressure
+    tubes to measure wind and have not proved reliable in the extreme
+    environment in which they are sited. Light winds were not handled
+    well but most now have a bias reset which the error.
+    <P>Other methods of wind measurements, such as hot-wire anemometers,
+    are not used in operational observing.
+    <P><B><I>Exposure, effective height and corrections</I></B>
+    <P>Correct exposure of the wind instrument is essential for accurate
+    measurement. The standard exposure is over level, open terrain
+    at a height of 10m above the ground. Open terrain is defined
+    as an area where the distance between the anemometer and any
+    obstruction is at least 10 times the height of that obstruction.
+    Measurement of wind in the direct wake of buildings or a row
+    of trees are of little value and this should be borne in mind
+    with city centre or other highly sheltered sites. If standard
+    exposure is unobtainable the anemometer may be installed at a
+    height greater than 10m. Whether or not such an adjustment is
+    made, all anemometers are allocated an &quot;effective height&quot;
+    which is defined as the height above open, level terrain in the
+    vicinity at which mean wind speeds would be the same as those
+    actually recorded by the anemometer. Various methods have been
+    devised for the calculation of effective height. At stations
+    where the effective height differs substantially from the actual
+    height, corrections are applied to the 10-minute wind speed reported
+    in the SYNOP message. No corrections are applied to any gusts
+    measurements or to any hourly mean wind speeds.
+    <P><B><I>Wind analysis and processing methods</I></B>
+    <P>Over the years many stations have provided climatological
+    returns on Form 6910 containing hourly mean wind, speed/direction
+    of the maximum gust in the hour and time of the maximum gust.
+    The following rules have been applied for the analysis of the
+    anemograph record:
+    <UL>
+      <LI>Time is determined from the daily time marks made by the
+      observer. The observing period is defined as HH-60 to HH-0.
+      <LI>Mean wind speeds are estimated to the nearest knot but a
+      value of 1 knot is not normally reported. Where the mean speed
+      is 0 or 1 knot and the wind vane shows gusty, but not smooth
+      variations, the speed is reported as 2 knots and the gust as
+      missing. A mean speed of 0 is only reported if the speed trace
+      indicates calm over the complete 1 hour period and the vane is
+      unmoving or records only smooth variations.
+      <LI>Maximum gust speeds in each hour are analysed unless 2 knots
+      is reported as above. The direction of the maximum gust during
+      the 24 hour period is reported, but not the direction of the
+      maximum gust in each hour.
+    </UL>
+    <P>1-minute speeds and directions from the DALE logging system
+    are processed to provide mean hourly winds for the period HH-60
+    to HH-0. For a number of years after its installation the processing
+    method attempted to mimic the Form 6910 analysis method, in particular,
+    no instances of 1 knot mean speed were allowed. This practice
+    was discontinued in the mid 1990s after which date simple hourly
+    averages of the 1-minutes data were calculated.
+    <P><B><I>Sources of error</I></B>
+    <P>Common sources of error in the measurement of wind include:
+    <UL>
+      <LI>Poor exposure at the site. Exposure may change gradually
+      with time, for example as nearby trees grow, leading to slowly
+      changing systematic errors in the climate record.
+      <LI>Poor response in low wind speeds, particularly the Mk2 and
+      Mk4 Munro anemometers which require a speed of 6 knots to start
+      cup rotation.
+      <LI>A scale error in measurements from DALE systems which resulted
+      in mean and gust speeds 5% too low. This was corrected in the
+      early 1990s (date unknown) in all stations except ESAWS. At ESAWS
+      stations the error in the gust speed is almost cancelled by the
+      effect of using an averaging time of 1.5 seconds rather than
+      3 seconds.
+      <LI>Calibration errors. Depending on the calibration methods
+      used, systematic errors may be present in the speeds from anemographs
+      and consequently in the speeds reported in Metform 6910. The
+      most likely magnitude of the error is +5%.
+      <LI>Stuck wind vane.
+      <LI>Inaccurate estimation in the case of visual observations
+      of wind.
+    </UL>
+    <P><A NAME="5.6"></A><h2>5.6. Precipitation</h2>
+    <P><I>Units, accuracy and precision</I>
+    <P>The total amount of precipitation which reaches the ground
+    over a stated period is expressed as the depth to which it would
+    cover a horizontal surface. The reported accumulation of rainfall
+    is the sum of the amount of liquid precipitation plus the liquid
+    equivalent of any solid precipitation (that is the liquid obtained
+    by melting snow or ice that has fallen). Similarly, the depth
+    of snowfall is expressed by the depth of fresh snow covering
+    an even horizontal surface. The unit of rainfall is the mm and
+    amounts are measured and reported to the nearest 0.2 mm, and
+    where possible, to the nearest 0.1 mm. Snowfall is measured and
+    reported to the nearest cm. Trace is reported where precipitation
+    is observed during the period, but the amount would otherwise
+    be reported as zero.
+    <P>The inch was the unit of rainfall in the past and amounts
+    were usually measured and reported to the nearest 0.01 in, but
+    other levels of precision have been in use at a few stations
+    (e.g. 0.005 in, 0.1 in). Inches were the sole unit of measurement
+    in the 19th century and mm the sole unit since 1970, but in the
+    long period between these dates the reporting practice varied
+    from station to station. All rainfall accumulations in MIDAS
+    have been converted to mm and are stored with a precision of
+    0.1 mm. The J-descriptor indicates the original units of observation.
+    <P>The achievable accuracy of precipitation measurements with
+    raingauges in current use is about 5% though errors will be larger
+    at exposed sites.
+    <P><B><I>Ordinary raingauge</I></B>
+    <P>An ordinary funnel-type raingauge has been in use for all
+    manual measurements since the earliest days of observing. The
+    design has varied over the years but today the Met Office strongly
+    encourages conformity in order to maximise comparability of readings
+    across the network. The standard design has a rim of diameter
+    5 in (127 mm) standing 12 in (30 cm) above the ground. Raingauges
+    based on the standard design are adapted to meet specific needs;
+    there is a version having a capacity to hold a large volume of
+    rain which is used in remote sites where readings may only be
+    taken once a month. Exposure of the gauge should be on open ground
+    distant from the effects of sheltering objects. At a few windy
+    sites, established a number of years ago, there may be a surrounding
+    turf wall of diameter 3&nbsp;m and height 30 cm which shields
+    the gauge from the extreme effects of strong winds. Systematic
+    differences as large as 12% have been noted between an unsheltered
+    gauge and one within a turf wall. It is not the present practice
+    to build turf walls at new stations.
+    <P><B><I>Tipping bucket raingauge</I></B>
+    <P>The tipping bucket raingauge is particularly suitable for
+    the automation of rainfall measurement but it does not perform
+    well in freezing conditions. It is based on a small container
+    or bucket which, when filled with rain, tips and empties while
+    recording the event electronically. The size of bucket used widely
+    across the UK network holds 0.2 mm of rain. A larger 0.5 mm bucket
+    is in use at some Environment Agency stations though only those
+    at some remote or high level locations send readings to the Met
+    Office. Bucket tip times may be stored directly by a data logger
+    (such as the Met Office SSER system in use since the early 1980s)
+    or converted locally to a rainfall accumulation by systems such
+    as SAMOS, ESAWS or CDL.
+    <P><B><I>Tilting siphon raingauge</I></B>
+    <P>The tilting siphon raingauge produces an autographic record
+    of rainfall accumulation from a pen attached to a float in the
+    rainfall chamber of the instrument. The rainfall chart is analysed
+    to give hourly accumulation as well as duration of precipitation
+    where this exceeds 0.1mm/hour.
+    <P><B><I>Sub-hourly accumulations</I></B>
+    <P>The only sub-hourly data stored in MIDAS originate from Met
+    Office SSER systems. The values are the tip times to the nearest
+    minute from a 0.2 mm tipping bucket raingauge and span the period
+    1982 to the present. Sub hourly data from Environment Agency
+    loggers are archived locally by the Agency.
+    <P><B><I>Hourly accumulations</I></B>
+    <P>The earliest hourly accumulations of rainfall stored in MIDAS
+    date back to 1949, but it was not until the 1960s that the network
+    of stations reporting hourly began to increase. Some autographic
+    rainfall records from before the war exist in the archives but
+    these have never been digitised.
+    <P>Hourly rainfall from a station may be observed and reported
+    in one or more of 4 different ways, and the observation may be
+    made using one of several raingauges at the site:
+    <UL>
+      <LI>A reading from a 5 inch gauge reported in the SREW for the
+      period HH-70 to HH-10
+      <LI>A reading from a tipping bucket gauge reported in the SREW
+      (e.g. SAMOS or ESAWS station) for the period HH-70 to HH-10
+      <LI>Manual analysis of the autographic record from a TSR reported
+      on a 7113 form for the period HH-60 to HH-0
+      <LI>Processing of the tip times recorded on a SSER or CDL logger
+      for the period HH-60 to HH-0
+    </UL>
+    <P>A number of different practices for observing and storage
+    of the climate data have become established over time depending
+    on the equipment available at the station and the reports received:
+    <UL>
+      <LI>A station with one or more 5 inch gauges and no other rainfall
+      instrumentation will use one of the gauges to record hourly rainfall
+      which is reported in the SREW. A 12-hour total will be reported
+      in the NCM, in most cases from a second gauge.
+      <LI>A station with a TSR and one or more 5 inch gauges follows
+      the practice above for the SREW and NCM but also returns hourly
+      values on a Metform 7113 at the end of the month from an analysis
+      of the autographic record from the TSR. To ensure consistency
+      with the daily total measured using the 5 inch gauge (and reported
+      in the NCMs), the analysed hourly values are adjusted to ensure
+      that their sum equals that daily total. In other words, the 24
+      hour total from the 5 inch gauge, which is regarded as the climatological
+      standard, has been &quot;time sliced&quot; by the TSR. In MIDAS
+      hourly values of precipitation amount from the 7113 form overwrite
+      the SREW reports received earlier and precipitation duration
+      is added.
+      <LI>A fully automatic station uses the TBR for the SREW and NCM.
+      <LI>A station with a SSER system connected to a TBR uses that
+      gauge for the SREW. The analysis of TSR records on a 7113 form
+      is discontinued and the 5 inch gauge remains the source of data
+      for the NCM (except in the case of TBR failure when the TSR analysis
+      is used to infill). Hourly totals are derived from SSER tip times
+      are stored in MIDAS, overwriting the SREW; up to 1997 an adjustment
+      was performed, similar to that for the 7113 analysis, which ensured
+      that the 24 hour sum equalled the total from the 5 inch gauge.
+      <LI>A station with a SAMOS system installed uses the TBR for
+      the SREW and, in most cases, for the NCM. The analysis of TSR
+      records on a 7113 form is often discontinued. Where a SSER system
+      is also at the station the derivation of hourly values is performed,
+      as described above.
+    </UL>
+    <P><B><I>12-hourly accumulations</I></B>
+    <P>12-hourly accumulations of rainfall are contained in the NCM
+    which is sent in real time twice a day at 0900 and 2100 from
+    most synoptic stations. NCMs have been in use since 1982 before
+    which time daily climate readings were returned each month on
+    3259 forms. The NCM value is used for all climatological studies
+    of rainfall on time scales of a day or more, and in the past
+    the observation derived from the reference 5 inch gauge at the
+    site. With the introduction of automated systems, as noted above,
+    the tipping bucket gauge has become the reference gauge. This
+    also applies to fully manned stations where a SAMOS system has
+    been installed to simplify the manual observing process. All
+    automated sites retain a 5 inch gauge, but it takes the role
+    of a check gauge, which is used by the observer or the caretaker
+    for additional readings, taken once a day, or perhaps less frequently,
+    for checking purposes.
+    <P><B><I>Daily accumulations</I></B>
+    <P>Daily accumulations are the starting point for climatological
+    studies of rainfall. They will originate from:
+    <UL>
+      <LI>The sum of the two 12-hour accumulations contained in the
+      NCM sent from synoptic stations
+      <LI>Daily observations at climate stations using the 5 inch gauge
+      <LI>Daily observations at rainfall stations using the 5 inch
+      gauge
+      <LI>Processing of data from loggers (e.g. SSER, CDL) to give
+      24-hour accumulations.
+    </UL>
+    <P>In addition, where an automated system is in operation, check
+    readings are made by the observer, or if the station is fully
+    automatic by the caretaker, using the 5 inch gauge. The values
+    are not stored in MIDAS.
+    <P>From the earliest days of observing in the UK, the standard
+    period for measuring daily rainfall has been 0900-0900. However,
+    at any time a few stations have departed from this practice;
+    for example, some climate stations open today take the observation
+    at 1000 and others, particularly in the first half of the 20th
+    century, made observations at clock time.
+    <P><B><I>Multiple-day accumulations</I></B>
+    <P>The current dense network of rainfall stations relies heavily
+    on contributions from observers whose profession is not meteorology;
+    they may work voluntarily or for an employer in a weather related
+    field. There is no guarantee that observations will be taken
+    every day and indeed an infrequent observing schedule may be
+    agreed when a station opens. It is also possible that the observing
+    time of 0900 is not rigorously adhered to, particularly at remotes
+    sites or where several gauges are read by one observer. Many
+    observed rainfall totals are valid for periods of more than one
+    day; a reading may be taken at 0900 on Monday covering 3 days
+    over the weekend, or at remote sites, it might cover a complete
+    month. In each case, readings for multiple-day accumulations
+    of rainfall should be taken at 0900. All original values are
+    stored in MIDAS with the day count set to the appropriate value.
+    <P><B><I>Snowfall</I></B>
+    <P>Depth of fresh snow and depth of lying snow are reported daily
+    at 0900 at synoptic and climate stations and hourly at synoptic
+    stations when snow is lying. Such measurements should exclude
+    the effects of drifting or blowing snow. All reports of rainfall
+    accumulation should include the liquid equivalent of any solid
+    precipitation that has fallen in the period. At only a very few
+    sites is the raingauge heated to improvement the measurement
+    in snow. The effects of snow are a major source of error in the
+    measurement of rainfall, see below.
+    <P><B><I>Sources of error</I></B>
+    <P>Common errors in the measurement of rainfall accumulations
+    include:
+    <UL>
+      <LI>Gross errors in the reading or the transcription of values
+      at manual stations
+      <LI>Errors in the time the observation was taken. This is a particular
+      problem at voluntary stations where the observer may have other
+      duties. No record may be given for the actual time of observation.
+      <LI>Small, but significant under recording by TSRs and TBRs in
+      moderate to heavy rain during the period of siphoning or tipping.
+      <LI>The effects of snow blocking the raingauge. This problem
+      is particularly severe at automatic stations and may lead to
+      the recording of spurious rainfall amounts as the snow melts.
+      At manned stations any snow is cleared from TBR gauges at 09
+      and 21, and a reading from the 5 inch gauge is used
+      <LI>Malfunctioning instrument. A TBR may &quot;double bounce&quot;,
+      that is produce a spurious rainfall tip event just after a genuine
+      one. Insects and animals may be a problem at unmanned sites.
+      <LI>Poor exposure of the gauge. Trees may have overgrown, or
+      the site may be excessively exposed in strong winds.
+      <LI>Damage due to vandalism or other causes at non-manned sites.
+      <LI>Loss of a significant amount of rainfall in very heavy rainfall
+      with light winds from a TBR. The shallow funnel angle causes
+      water to splash out on the other side of the gauge.
+    </UL>
+    <P><A NAME="5.7"></A><h2>5.7. Radiation</h2>
+    <P>To be completed.</P>
+    <P><B><I>Sources of error</I></B>
+    <ul>
+    <li>   Where a manual shade ring is employed on the diffuse sensor,
+    this might suffer from incorrect setting, particularly when there has been a lack of sunshine for several days, therefore producing little or no shadow to guide the Observer.
+    <li>  Moisture in the sensor, when the silica gel is due for change.
+    <li> Dirt, snow, or frost on the dome of the sensor.
+    <li>Poor exposure is a major source of error.  Few instruments have
+    an unblocked view of the horizon across the span of azimuth required.
+</ul>
+</p>
+
+
+    <P><A NAME="5.8"></A><h2>5.8. Sunshine</h2>
+    <P><I>The Campbell-Stokes recorder</I>
+    <P>The routine measurement of sunshine was started in London,
+    in 1853 by J.F.Campbell. His instrument was modified in 1880
+    by Stokes into the ubiquitous Campbell-Stokes recorder which
+    is still the official sunshine recording method in UK. The instrument
+    has a mounted glass sphere which focuses the suns rays onto a
+    thick card, burning a hole when the sun is shining. The passage
+    of the sun across the sky translates into a linear burn pattern
+    along the card which may be analysed by the observer to give
+    measurements of sunshine duration. Most stations report hourly
+    or daily (00-24) amounts of sunshine although health resort stations
+    are an exception, reporting for the period 1700-1700.
+    <P><B><I>Sources of error</I></B>
+    <UL>
+      <LI>Poor exposure is a major source of error. Few instruments
+      have an unblocked view of the horizon across the span of azimuth
+      required.
+      <LI>Poor maintenance allowing dirt or ice to collect on the glass.
+      The frame may not be levelled correctly.
+      <LI>The instrument over records on days of broken cloud. Systematic
+      errors may be as large as 20%. A short burst of bright sunshine
+      can give a burn representing at least 0.1 hour while several
+      of these in quick succession will appear as a continuous burn.
+      Instructions for the analysis of a sunshine card state that start
+      and end parts of the burn should be discounted, even so the analysis
+      of a card on days of varying sun and cloud is open to many interpretations.
+      <LI>Vandalism may often be a problem at partly manned stations.
+      A glass sphere is a particularly attractive object.
+    </UL>
+    <P><A NAME="5.9"></A><h2>5.9. Visibility</h2>
+    <P><I>Units, accuracy and precision</I>
+    <P>Visibility is reported in m or km and is stored in MIDAS in
+    dam. In the SYNOP message a non-linear code is used giving a
+    reporting precision of 30m (30m to 100 m); 100m (100 m to 5 km);
+    1km (5 km to 30 km) and 5&nbsp;km (30 km to 70 km). There is
+    a further coarser reporting code for use where there are few
+    visual reference points which is principally used at sea. The
+    accuracy requirement for observations of visibility from the
+    synoptic network is <U>+</U>10%. Where visibility is measured
+    at climatological stations the accuracy achieved is generally
+    less that this value.
+    <P><B><I>Visibility estimated by the observer</I></B>
+    <P>Visibility is defined as the greatest distance at which an
+    object in daylight can be seen and recognised, or at night could
+    be seen and recognised if the illumination was raised to daylight
+    levels. Observations should be made at ground level not from
+    observation towers or roof tops. The long standing method of
+    observation has been estimation by the observer using known fixed
+    reference points, such as trees or buildings, which stand out
+    well against the background. Each reference point should subtend
+    an angle of at least 0.5<SUP>o</SUP> at the eye. Estimation of
+    visibility at night is prone to greatest error and should, ideally,
+    by performed with the aid of suitable fixed lights. Visibility
+    estimates on airfields, where accuracy is of particular importance,
+    are often aided in this way. On occasions when the visibility
+    varies in different directions, the minimum value should be reported
+    in the main part of the message and this is the value stored
+    in MIDAS. The guidance to observers at coastal stations states
+    that only visibility over land should be reported; any differing
+    values over the sea being noted in the remarks column of the
+    weather register though it is not clear how closely this practice
+    is followed at voluntary stations.
+    <P>Vertical visibility may be reported from airfields in the
+    SYNOP and METAR messages to a precision of 100ft. It is measured
+    when the sky is obscured and the horizontal visibility tends
+    to be very low. It is a visual measurement for which a nearby
+    object of known height (and intermediate points of known or estimable
+    height) may still be visible. In daylight the timed ascent of
+    a pilot balloon rising vertically, at known rate, may also be
+    used. It is an optional measurement, not being reported where
+    reference objects are absent.
+    <P>Runway visual range may be reported from airfields in the
+    METAR message. It is defined as the maximum distance in the direction
+    of take-off or landing at which the runway, or specified lights
+    or markers along the runway, can be seen from a point above its
+    centre line. The height of this point is taken to be 5m above
+    ground level, corresponding to the average eye-level of pilots
+    at touchdown. The observation is usually made by personnel belonging
+    to the airfield authorities such as the Fire Service. Where there
+    are two runways, for instance as at Heathrow, two measurements
+    may be reported.
+    <P><B><I>Visiometer</I></B>
+    <P>Hand-held Gold visibility meters have been available for many
+    years to aid the estimation of visibility, but it was not until
+    the 1990s that visiometers have been widely installed at stations
+    in the synoptic network for the automation of the measurement.
+    Visiometers measure the transmissivity of a sample volume of
+    air, expressed as the Meteorological Optical Range (MOR), which
+    is converted for observational use into a visibility and coded
+    directly into the SYNOP message at automatic stations. Where
+    the station is manned the visiometer measurement may be altered
+    by the observer if, in his judgement, it is in error or unrepresentative
+    of the conditions obtaining at the time.
+    <P><A NAME="5.10"></A><h2>5.10. Present and past weather</h2>
+    <P>Present and past weather are only reported from a manned station,
+    though present weather sensors are under development.
+    <P>A weather group is reported only when there is or has been
+    significant present or past weather during the period covered
+    by the observation (present weather ww &gt; 03 or past weather
+    W1 &gt; 2 or past weather W2 &gt; 2). Where there is no significant
+    weather to report, the group is omitted and there is a null or
+    missing data indicator in the hourly report in MIDAS.
+    <P>At stations where manual input is available at all hours of
+    the day special practices apply to the first observation taken
+    after a break. The reported present weather should be taken as
+    best assessment by the observer bearing in mind that he/she may
+    not have been at the station for the whole of the previous hour.
+    Similarly the first of the past weather values will be made in
+    the same way. Where it is not possible to give a second past
+    weather value a null value (/) will be reported.
+    <P><A NAME="5.11"></A><h2>5.11. Clouds</h2>
+    <P><I>Units, accuracy and precision</I>
+    <P>Cloud height is one of the remaining meteorological parameter
+    still measured in the imperial units. It is reported in code
+    form for each of the cloud groups in the SYNOP message to a precision
+    of 100ft (100ft to 5000ft), 1000ft (5000ft to 30000ft) and 5000ft
+    (above 30000ft). Heights are converted to decametres (dam) for
+    storage in MIDAS. Cloud amount has been measured in eighths since
+    1949. Cloud amounts before 1949 were measured in tenths but have
+    been converted to eighths for storage in MIDAS. The J-descriptor
+    for the observation indicates the observation units and the sign
+    of the rounding error where a conversion has taken place. In
+    this way the original value as observed may be recovered.
+    <P><B><I>Manual observations of cloud</I></B>
+    <P>A complete observation of cloud containing amount, type and
+    height of cloud base is available only from manned stations.
+    The first automatic weather stations were not equipped to provide
+    any cloud information, however, more recently some SAMOS stations
+    operating automatically provide measurements of cloud height
+    from a Laser Cloud Base Recorder (LCBR).
+    <P>Manual observation of cloud height may be purely visual or
+    be made with the assistance of measuring devices. Pilot balloons,
+    with a lantern attached at night, may be timed to the point of
+    entry into the cloud, and reports from aircraft are a valuable
+    additional source of information at airfields. At some stations,
+    especially airfield sites, cloud searchlights were used at night.
+    These throw a spot of light on the base of the cloud at a height
+    which can be measured by triangulation. Various cloud base recorders
+    for measuring the height of cloud directly above the instrument
+    have been used at times in the past. The Mark 3a (nodding beam,
+    and the main one in use) and 3b (vertical beam) could measure
+    heights up to 4000ft but the accuracy above 1000ft was not good.
+    More recently, these have been replaced by LCBRs (see below).
+    <P>In the report however there is no way of knowing whether the
+    observer measured or visually estimated the cloud height - this
+    information is noted only in the hand written daily register.
+    <P>(NB Aircraft reports of cloud base and tops are reported in
+    a separate message format but they are not stored in MIDAS.)
+    <P><B><I>Laser Cloud Base Recorder (LCBR)</I></B>
+    <P>Where Laser Cloud Base Recorders have since been installed,
+    measurements are available of cloud amount and height at different
+    layers up to a maximum of 25000 ft. Cloud amounts are obtained
+    by processing data over time and are of limited accuracy; orographically
+    forced cloud, not advected over the instrument, will not be recorded.
+    At the manned stations the LCBR is used as an observing aid,
+    while at automatic stations amounts and heights with missing
+    cloud types are reported in the SYNOP message and stored in MIDAS.
+    The ix indicator shows that the observation was made automatically
+    and is also stored in MIDAS.
+  </UL>
+  <P><A NAME="6"></A><h1>6. Storage of data in MIDAS</h1>
+  <P>MIDAS is a relational database residing on the Met Office&#146;s
+  General Purpose Computer Server (GPCS) at Bracknell. The description
+  of the structure of MIDAS, the relationships between the tables
+  and the attributes of each table may be found in the MIDAS Handbook.
+  This section gives details of how the observations described
+  in the sections above are stored in the database and should be
+  read in conjunction with the Handbook.
+  <UL>
+    <P><A NAME="6.1"></A><h2>6.1. Loading of data into MIDAS</h2>
+    <P>MIDAS is not a real time database but every attempt is made
+    to store data as soon after the time of receipt as is practically
+    possible. Synoptic messages (SYNOP, METAR and SREW) and climate
+    messages (NCM and HCM) arriving in real time at Bracknell are
+    stored in the real time synoptic database, the MetDB. Programs
+    run twice daily to load these data into MIDAS:
+    <P>0400: SYNOP, METAR, SREW, NCM and HCM for 0000 &#150; 2300
+    the previous day plus any late messages or correction to messages
+    for earlier dates
+    <P>1000: SYNOP and SREW for 0000 &#150; 0900 plus NCM for 0900
+    <P>Monthly climate data that derive from forms, disks or tapes
+    are loaded as soon as possible after they have been processed.
+    This may be long after the observation time because of delay
+    by the observing station in making the return. Data may not be
+    received from some rainfall stations until 6 months or more have
+    elapsed. Automatic quality control is applied to real time data
+    once a day after the 0400 loading has completed, similar quality
+    control is applied to climate data as soon as possible after
+    loading. Detail of the manual and automatic quality control procedures
+    are given in section 7.
+    <P>The synoptic reporting system allows for the transmission
+    of a correction message (COR) by a station if some part of the
+    original message is seen to be in error. Where a COR message
+    is received and the original has already been loaded into MIDAS,
+    the corrected value overwrites the original on the next occasion
+    that data loading takes place and any quality control flags are
+    unset. Where observations are so much in error that it is not
+    possible to store them in MIDAS, the data are sent to a rejects
+    file where they are investigated by quality control staff at
+    a later date.
+    <P><A NAME="6.2"></A><h2>6.2. Attributes for each observation
+    record</h2>
+    <P>Each observation record has attributes which identify the
+    station, observation period, observed value, quality flags and
+    instrumentation information. The following describes the attributes
+    in use.
+    <P><B><I>Station identifier</I></B>
+    <P>The station source for each observation record is defined
+    by the unique source identifier (SRC_ID) and ID_TYPE, ID where
+    ID_TYPE is WMO, DCNN, ICAO, RAIN, WIND, CLBD or LPMS. See section
+    3.6 for more details.
+    <P><B><I>Observation time or period</I></B>
+    <P>MIDAS does not use the Database Management System&#146;s representation
+    of time. Where an observation is valid at a specific instant,
+    that date/time is defined by the 4 attributes OB_YEAR, OB_MONTH,
+    OB_DAY and OB_TIME. Where an observation is valid over a period
+    of time that period is defined by the date/time at the end of
+    the period (OB_YEAR, OB_MONTH, OB_DAY and OB_END_TIME) plus an
+    hour count or day count (OB_HOUR_COUNT, OB_DAY_COUNT).
+    <P><B><I>Met Domain</I></B>
+    <P>The Met Domain specifies the source of the observations in
+    the record. Typically it will identify the message type by which
+    the observations were received (e.g. SYNOP, NCM). Observations
+    under one Met Domain may be spread across a number of tables;
+    for instance, the daily observations from a climate station entered
+    on Form 3208 are stored in up to 6 MIDAS tables under Met Domain
+    DLY3208. Met Domain is a key attribute in the Source Capability
+    table. Met Domains in use for UK surface records are listed below:
+    <P>AWSDLY*: Elements from an automatic climate logger reporting
+    12/24 hourly<BR>
+    AWSHRLY*: Elements from an automatic climate logger reporting
+    hourly<BR>
+    CHECK*: Daily check readings by caretaker (automatic station)
+    or observer<BR>
+    DLY3208: Elements from Metform 3208, or, more generally, a daily
+    climate return<BR>
+    DLY3259: Elements from Metform 3259 (pre 1982 NCM message)<BR>
+    DRADR35: Elements from Met O 1 Form R35 &#150; radiation/sunshine<BR>
+    ESAWRADT: Hourly radiation from ESAWS<BR>
+    ESAWSOIL: Hourly soil temperatures from ESAWS<BR>
+    ESAWWIND: Mean hourly wind from ESAWS<BR>
+    HSUN3445: Elements from Metform 3445 &#150; analysis of hourly
+    sunshine<BR>
+    HWNDAUTO: Elements from automatic wind loggers<BR>
+    HWND6910: Elements from Metform 6910 &#150; analysis anemograms<BR>
+    METAR: Elements from FM 15 METAR message<BR>
+    MODLERAD: Hourly radiation values from MODLE<BR>
+    NCM: Elements from National Climate Message, including climate
+    reports pre 1982<BR>
+    SREW: Hourly rainfall from SREW message<BR>
+    SSER: Rainfall amounts from SSER loggers<BR>
+    SYNOP: Elements from FM 12-VII SYNOP message (and state of ground
+    from NCM)<BR>
+    WADRAIN: Daily rainfall amounts from rainfall network<BR>
+    WAHRAIN: Hourly rainfall values from analysis of TSR autographic
+    records<BR>
+    WAMRAIN: Monthly rainfall amount from rainfall network
+    <P>&nbsp;
+    <P><B><I>Version Number</I></B>
+    <P>Where quality control is performed and changes are made to
+    the observed value to correct for errors it is important that
+    the original value is not lost. When a change is made to any
+    value in a table record, the original record is stored with Version
+    Number 0 and a new record is created for the corrected version
+    having version number 1. Any further changes are made to version
+    number 1, so that at any time no more than 2 versions exist,
+    the original and the current best version. On initial storage
+    all new records are given Version Number 1. A table will not
+    have Version Number as an attribute if no quality control is
+    ever performed on the observations (e.g. CLIMAT data, sub-hourly
+    rainfall).
+    <P><B><I>Observed Value</I></B>
+    <P>In many cases the observed value is stored as received though
+    some processing of raw data or conversion from outdated measuring
+    units may have been performed. The table below gives detail of
+    the storage units, while all processing is described in section
+    5 above.
+    <P><CENTER><TABLE BORDER="1" CELLSPACING="1" CELLPADDING="7"
+    WIDTH="548">
+      <TR>
+        <TD WIDTH="29%" VALIGN="TOP" BGCOLOR="#ffffff">Met element</TD>
+        <TD WIDTH="19%" VALIGN="TOP" BGCOLOR="#ffffff">Units</TD>
+        <TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff">&nbsp;</TD>
+        <TD WIDTH="29%" VALIGN="TOP" BGCOLOR="#ffffff">Met element</TD>
+        <TD WIDTH="19%" VALIGN="TOP" BGCOLOR="#ffffff">Units</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="29%" VALIGN="TOP">Temperature (all)</TD>
+        <TD WIDTH="19%" VALIGN="TOP">0.1 deg C</TD>
+        <TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff">&nbsp;</TD>
+        <TD WIDTH="29%" VALIGN="TOP">Radiation flux</TD>
+        <TD WIDTH="19%" VALIGN="TOP">Watt m<SUP>-2</SUP></TD>
+      </TR>
+      <TR>
+        <TD WIDTH="29%" VALIGN="TOP">Pressure</TD>
+        <TD WIDTH="19%" VALIGN="TOP">0.1 hPa</TD>
+        <TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff">&nbsp;</TD>
+        <TD WIDTH="29%" VALIGN="TOP">Sunshine duration</TD>
+        <TD WIDTH="19%" VALIGN="TOP">0.1 hour</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="29%" VALIGN="TOP">Wind speed</TD>
+        <TD WIDTH="19%" VALIGN="TOP">knots</TD>
+        <TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff">&nbsp;</TD>
+        <TD WIDTH="29%" VALIGN="TOP">Visibility</TD>
+        <TD WIDTH="19%" VALIGN="TOP">dam</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="29%" VALIGN="TOP">Wind direction</TD>
+        <TD WIDTH="19%" VALIGN="TOP">deg true</TD>
+        <TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff">&nbsp;</TD>
+        <TD WIDTH="29%" VALIGN="TOP">Cloud amount</TD>
+        <TD WIDTH="19%" VALIGN="TOP">octas</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="29%" VALIGN="TOP">Precipitation amount</TD>
+        <TD WIDTH="19%" VALIGN="TOP">0.1 mm</TD>
+        <TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff">&nbsp;</TD>
+        <TD WIDTH="29%" VALIGN="TOP">Cloud height</TD>
+        <TD WIDTH="19%" VALIGN="TOP">dam</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="29%" VALIGN="TOP">Precipitation tip amount</TD>
+        <TD WIDTH="19%" VALIGN="TOP">0.001 mm</TD>
+        <TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff">&nbsp;</TD>
+        <TD WIDTH="29%" VALIGN="TOP">Precipitation duration</TD>
+        <TD WIDTH="19%" VALIGN="TOP">minutes</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="29%" VALIGN="TOP">Snow depth</TD>
+        <TD WIDTH="19%" VALIGN="TOP">cm</TD>
+        <TD WIDTH="3%" VALIGN="TOP" BGCOLOR="#ffffff">&nbsp;</TD>
+        <TD WIDTH="29%" VALIGN="TOP">Time of max gust</TD>
+        <TD WIDTH="19%" VALIGN="TOP">hour/minutes</TD>
+      </TR>
+    </TABLE></CENTER>
+    <P><A NAME="6.3"></A><h2>6.3. Tables and observations</h2>
+    <P>The following tables in MIDAS contain observational data.
+    The different Met Domains and ID-types of the records in each
+    table are listed. (assumes some cleaning up and rationalisation
+    of what is in MIDAS at present)
+    <P><TABLE BORDER="1" CELLSPACING="1" CELLPADDING="7" WIDTH="618"
+    HEIGHT="3196">
+      <TR>
+        <TD WIDTH="14%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT="37"><B>MIDAS
+          table</B></TD>
+        <TD WIDTH="17%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT="37"><B>Met
+          Domain</B></TD>
+        <TD WIDTH="12%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT="37"><B>ID-TYPE</B></TD>
+        <TD WIDTH="44%" VALIGN="TOP" BGCOLOR="#ffffff" HEIGHT="37"><B>Comments</B></TD>
+      </TR>
+      <TR>
+        <TD WIDTH="14%" VALIGN="TOP" HEIGHT="95">RADT-EXTRA-OB</TD>
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="95">MODLERAD</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="95">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="95">Contains optional radiation
+          values that have not been reported since 1994</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="14%" VALIGN="TOP" ROWSPAN="4">RADT-OB<BR>
+          RADT-ARC</TD>
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">DRADR35</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Daily radiation from
+          Form R35</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">MODLERAD</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Hourly radiation from
+          MODLE</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">ESAWRADT</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Hourly radiation from
+          automatic stations</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">AWSHRLY</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Hourly radiation from
+          CDLs</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="14%" VALIGN="TOP" ROWSPAN="7">RAIN-DRNL-OB<BR>
+          RAIN-DRNL-nn</TD>
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="76">NCM</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="76">RAIN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="76">Daily precipitation
+          amount from synoptic station (no 12-hour values reported)</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="76">DLY3208</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="76">RAIN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="76">Daily precipitation
+          amount from ordinary climatological station</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">DLY3208</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">LPMS</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Daily precipitation
+          from long period climate station</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">WADRAIN</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">RAIN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Precipitation amount
+          from daily rainfall station</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">WAMRAIN</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">RAIN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Precipitation amount
+          from monthly rainfall station</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">AWSDLY</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">RAIN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Daily precipitation
+          from CDLs</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">CHECK</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">RAIN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Daily check gauge reading</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="14%" VALIGN="TOP" ROWSPAN="6">RAIN-HRLY-OB<BR>
+          RAIN-HRLY-nn</TD>
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="76">SREW</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="76">RAIN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="76">Hourly amount received
+          in real time SREW report from synoptic station</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="95">NCM</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="95">RAIN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="95">12-hourly amount received
+          in real time NCM report from synoptic station</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">SSER</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">RAIN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Hourly amount calculated
+          from SSER tip times</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="95">WAHRAIN</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="95">RAIN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="95">Hourly amount and duration
+          analysed from TSR. Reported on Form 7113</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">AWSDLY</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">RAIN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">12 hour precipitation
+          from CDLs</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">AWSHRLY</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">RAIN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Hourly precipitation
+          from CDLs</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="14%" VALIGN="TOP" HEIGHT="57">RAIN-SUBHRLY-OB<BR>
+          RAIN-SUBHRLY-ARC</TD>
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">SSER</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">RAIN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Tip times from SSER
+          loggers</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="14%" VALIGN="TOP" HEIGHT="57">RUNWAY-OB<BR>
+          RUNWAY-ARC</TD>
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">METAR</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">ICAO</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Runway visual range
+          from METAR report</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="14%" VALIGN="TOP" ROWSPAN="4">SOIL-TEMP-OB<BR>
+          SOIL-TEMP-ARC</TD>
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="95">NCM</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="95">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="95">Soil temperature from
+          a Principal Climatological Station reported in a NCM</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="76">ESAWSOIL</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="76">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="76">Hourly 10cm soil temperature
+          from an automatic station</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="76">DLY3208</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="76">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="76">Soil temperature from
+          an Ordinary Climatological Station</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">AWSHRLY</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Hourly soil temperatures
+          from CDLs</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="14%" VALIGN="TOP" HEIGHT="57">SUNSHINE-HRLY-OB<BR>
+          SUN-HRLY-ARC</TD>
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">HSUN3445</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">Hourly sunshine reported
+          on Form 3445</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="14%" VALIGN="TOP" ROWSPAN="5">TEMP-DRNL-OB<BR>
+          TEMP-DRNL-nn</TD>
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="115">NCM</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="115">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="115">12 or 24-hour max/min
+          temperatures from a Principal Climatological Station reported
+          in a NCM</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="76">DLY3259</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="76">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="76">As above but reported
+          on Form 3259 (only in archive segments)</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="96">DLY3208</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="96">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="96">24-hour max/min temperatures
+          from an Ordinary Climatological Station</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="76">DLY3208</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="76">LPMS</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="76">24-hour max/min temperatures
+          from a long period climate station</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="57">AWSDLY</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="57">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="57">12 or 24-hour max/min
+          temperatures from CDLs</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="14%" VALIGN="TOP" HEIGHT="37">TEMP-MIN-SOIL-OB</TD>
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="37">&nbsp;</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="37">&nbsp;</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="37">Empty table</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="14%" VALIGN="TOP" ROWSPAN="3">WEATHER-DRNL-OB<BR>
+          WEATHER-DRNL-nn</TD>
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="96">NCM</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="96">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="96">Various daily climate
+          values from a Principal Climatological Station reported in a
+          NCM</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="76">DLY3259</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="76">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="76">As above but reported
+          on Form 3259 (only in archive segments)</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="77">DLY3208</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="77">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="77">Various daily climate
+          values from an Ordinary Climatological Station</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="14%" VALIGN="TOP" ROWSPAN="4">WEATHER-HRLY-OB<BR>
+          WEATHER-HRLY-nn</TD>
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="77">SYNOP</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="77">WMO</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="77">Hourly synoptic observation
+          received in SYNOP report</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="77">AWSHRLY</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="77">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="77">Hourly synoptic observations
+          received from CDLs</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="96">METAR</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="96">ICAO</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="96">Half-hourly synoptic
+          observation received in METAR report from station in aviation
+          network</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="96">DLY3208</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="96">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="96">Daily synoptic report
+          at 0900 or other hour from an Ordinary Climatological Station</TD>
+      </TR>
+      <TR>
+        <TD WIDTH="14%" VALIGN="TOP" ROWSPAN="5">WIND-MEAN-OB<BR>
+          WIND-MEAN-nn</TD>
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="97">HWND6910</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="97">WIND</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="97">Mean hourly wind and
+          gust from analysis of anemograph record reported on Form 6910</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="77">HWNDAUTO</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="77">WIND</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="77">Mean hourly wind and
+          gust from wind logging equipment (DALE)</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="77">ESAWWIND</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="77">WIND</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="77">Mean hourly wind and
+          gust from automatic station</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="77">DLY3208</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="77">DCNN</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="77">24 hour run of wind
+          from an Ordinary Climatological Station</TD>
+      </TR>
+      <TR>
+
+        <TD WIDTH="17%" VALIGN="TOP" HEIGHT="59">AWSHRLY</TD>
+        <TD WIDTH="12%" VALIGN="TOP" HEIGHT="59">WIND</TD>
+        <TD WIDTH="44%" VALIGN="TOP" HEIGHT="59">Hourly mean wind from
+          CDLs</TD>
+      </TR>
+    </TABLE>
+    <P><FONT SIZE="-2">Where nn is the database segment: LH, CE,
+    SW, NT, SS, SN, IR (Regional tables)</FONT>
+    <P>Some CDL stations are operated for commercial purposes only.
+    The data are stored in MIDAS under met domain AWSHRLY or AWSDLY
+    in the same way as for other CDL stations, except that different
+    identifier types are used: CLBD in place of DCNN, CLBR in place
+    of RAIN and CLBW in place of WIND.
+  </UL>
+  <P><A NAME="7"></A><h1>7. Quality control</h1> Quality control
+  processes performed on MIDAS data
+  <P><B><I>Quality control at the point of observation</I></B>
+  <P>Basic quality control is performed at each observing site
+  which ensures that some errors are trapped before being transmitted.
+  In the days before automation, the trained observer was required
+  to check all his entries in the weather register, and these practices
+  continue in the few islands of manual observing that exist today.
+  Observing system software applies a range of checks to all reported
+  parameters which ensure that no irregular values leave the site,
+  however, the human observer, if present at the time of observation,
+  may override many of the queries raised.
+  <P><B><I>MetDB quality checks</I></B>
+  <P>All real time observations that are destined for MIDAS are
+  stored first in the MetDB. These include SYNOP, NCM, HCM, SREW
+  and METAR reports. Some range and self-consistency checks are
+  performed on the values at the point of receipt in the MetDB
+  and the associated flags are passed to MIDAS on data ingestion
+  by setting the query flag equal to 1.
+  <P><B><I>Ingestion checks</I></B>
+  <P>All data on ingestion to MIDAS undergo basic range checks.
+  These do no more than ensure that the meteorological value does
+  not lie outside long-term climatological extremes (taking no
+  account of time of year or location). Those failing have query
+  flag set equal to 2.
+  <P><B><I>QCL checks</I></B>
+  <P>All UK surface data, with the exception of rainfall data,
+  undergo a set of &quot;QCL&quot; checks soon after their ingestion
+  into MIDAS. A level flag set equal to 1 indicates that QCL checks
+  have been performed. These checks ensure:
+  <UL>
+    <LI>The widest possible self-consistency between the elements
+    in each message
+    <LI>Consistency with climatological extremes (location dependent)
+    <LI>Consistency with previous observations from the same source;
+    i.e. range checks are applied to the rate of change of the parameter
+  </UL>
+  <P><B><I>Checks against neighbours</I></B>
+  <P>Automatic algorithms are applied to certain meteorological
+  elements to ensure consistency with neighbours (areal checks).
+  The elements checked are maximum and minimum air temperatures,
+  grass minimum temperatures, 0900 air temperature, rainfall and
+  sunshine. A buddy check of mean hourly wind is also performed
+  Where there are no automatic checks of the climate elements basic
+  manual checks are performed.
+  <P><B><I>Manual quality control</I></B>
+  <P>With few exceptions, all quality control flags raised by the
+  checks are scrutinised by trained meteorological staff in the
+  QC Teams at Bracknell and Edinburgh. It is their decision whether
+  the status flag is set or not; where errors are found corrections
+  are supplied and where values are missing estimates are made.
+  <P><B><I>The final sweep</I></B>
+  <P>To ensure no spurious values have escaped the processes described
+  above, a final sweep through the observations is made in order
+  to trap any remaining gross errors.
+  <P><h1><A NAME="8"></A>8. Bibliography</h1>
+  <P>MIDAS Handbook, 1997. Maintained by Desktop and Databases
+  branch.
+  <P>Observer&#146;s Handbook, 1982. Published by HMSO.
+  <P>Guide to Meteorological Instruments and Methods of Observation,
+  1997. Published by WMO, WMO-No. 8.
+  <P>Handbook of Weather Messages, Part III, 1979. Published by
+  HMSO, Met O 920c.
+  <P>Handbook of Meteorological Instruments, 1980. Published by
+  HMSO, Met O 919.
+  <P>United Kingdom Observing Networks, UKON-1, 1998. A user requirement
+  for the surface synoptic network. Maintained by Observations
+  Plans and Requirements branch.
+  <P>United Kingdom Observing Networks, UKON-2, 1998. A user requirement
+  for the climate network. Maintained by Observations Plans and
+  Requirements branch.
+  <P>United Kingdom Observing Networks, UKON-3, 1999. A user requirement
+  for the wind network. Maintained by Observations Plans and Requirements
+  branch.
+  <P>United Kingdom Observing Networks, UKON-5, 1999. A user requirement
+  for the rainfall network. Maintained by Observations Plans and
+  Requirements branch.
+  <P>United Kingdom Observing Networks, UKON-6, 1998. A user requirement
+  for the surface radiation and sunshine networks. Maintained by
+  Observations Plans and Requirements branch. </UL>
+</OL>
+
+<P>
+</BODY>
+</HTML>

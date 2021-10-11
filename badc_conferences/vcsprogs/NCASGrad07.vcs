@@ -1,0 +1,44 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070906T230000Z
+DTEND:20070918T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:The Isle of Arran=20
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000A02EA603AA8CC7010000000000000000100
+ 000003731E6703FEE244BA75BAE670CF76022
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0AThe NCAS Graduate Summer School=
+ in Atmospheric Measurement http://www.ncas.ac.uk/news/stories/second_ncas_=
+summer_school_07.html =0D=0A=0D=0ADates: Friday 7th - Tuesday 18th Septembe=
+r 2007 =0D=0A=0D=0APlace: =0D=0A=0D=0ARegistration deadline - 31st May 2007=
+=0D=0A=0D=0APoster for your office and department:  http://www.ncas.ac.uk/n=
+ews/stories/arran_poster_2007.pdf =0D=0A=0D=0ASummer School website: http:/=
+/www.see.leeds.ac.uk/ncas/ncas_summer/index.htm =0D=0A=0D=0A=0D=0AFollowing=
+ the great success of the first NCAS Graduate Summer School, the National C=
+entre for Atmospheric Science is funding the second Graduate Summer School =
+in Atmospheric Measurement.  This will be held from 7th to 18th September 2=
+007 on the Isle of Arran. =0D=0A=0D=0AThis eleven day fieldcourse is aimed =
+at atmospheric science students entering their second year of research or i=
+t is also possible for a supervisor to secure a place for a first year stud=
+ent in advance of their start date. =0D=0A=0D=0AThe course has been designe=
+d for: =0D=0A=0D=0AStudents who are researching a specific area of atmosphe=
+ric science in order to give them a broad overview of the atmospheric syste=
+m, or =0D=0AStudents whose research project involves fieldwork in order to =
+introduce them to principles of atmospheric fieldwork including instrumenta=
+tion, data analysis and organizing fieldwork. =0D=0A=0D=0ATo find out more =
+about the lecture topics, fieldwork topics, past comments on the fieldcours=
+e and how to apply, see the NCAS Summer School website http://www.see.leeds=
+.ac.uk/ncas/ncas_summer/index.htm =0D=0A=0D=0AGeneral information and a pos=
+ter for downloading, is available here: http://www.ncas.ac.uk/news/stories/=
+second_ncas_summer_school_07.html =0D=0A=0D=0ACosts: This course is provide=
+d to NERC Atmospheric Science research students free of charge as part of t=
+heir training. In this case, the only cost is return travel to Ardrossan ha=
+rbour, Ayreshire, Scotland. For non-NERC student the cost of the fieldcours=
+e is =A3650.=0D=0A=0D=0AContact for enquiries: Miss Emma Mason - E-mail: em=
+ma@env.leeds.ac.uk , telephone: 0113 343 6408=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:NCAS Graduate Summer School in Atmospheri=
+c Measurement=20
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Datasets: SAGE III Product Quality Summary</TITLE>
+</HEAD>
+<!-- Created 20/05/96 17:59:13  -->
+<!-- Author: Anabelle Menochet BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1>SAGE&nbsp;III Product Quality Summary - General Comments</H1>
+
+<HR ALIGN=LEFT>
+<p>
+Three ozone profiles are available in this release of the solar products: a 
+mesospheric ozone product and two Chappuis-based products using multiple-linear 
+regression (MLR) and least-squares (LS) algorithms. The composite ozone profile 
+included in the V2 data products has not been populated in this version in 
+order to encourage feedback from users regarding the best way to combine the 
+three existing ozone profiles.
+<P>
+To eliminate obvious noise in profile products, the slant path optical depth 
+profiles have been smoothed to an effective vertical resolution of 1 km. The 
+width of the smoothing kernel expands to 5 km when threshold slant path optical 
+depth abundances fall below 0.005. Information on the altitude dependence of 
+the smoothing kernel is provided in the bit flag array for each species.
+<p>
+Transmission measurements used in the retrieval of Chappuis-based ozone, NO2, 
+and aerosol extinction at 449, 521, 601, and 675 nm are corrected for 
+unanticipated etalon effects associated with the use of a silica-fused 
+attenuator plate during solar occultation events. Aerosol extinction measured 
+at 384 nm and at 676 nm and longer wavelengths have not been corrected for 
+these etalon effects in this release.
+<P>
+Water vapor and temperature/pressure products are not included in the V3 data 
+set.
+<P>
+Version 3 provides the first release of the SAGE III Cloud Data Product. This 
+data contains information on the presence of clouds for each profile event. A 
+reader routine is also available.
+<P>
+Lunar event data files contain profiles of ozone, NO2, and NO3. The OClO 
+product algorithm is still under development.
+<P>
+Lunar event measurements are made when the moon's illumination is 40 % or 
+greater, and the solar zenith angle at the observation tangent point is greater 
+than 95 degrees. Data taken near these limits (illumination less than ~60 % 
+and solar zenith angle less than ~105 degrees) may be subject to increased 
+noise.
+<P>
+Altitude registration of lunar data is accomplished in part by comparison to a 
+forward model of the oxygen A-band.
+<P>
+Due to orbital characteristics of the Meteor-3M platform, satellite sunrise 
+events are always local sunsets. Satellite sunset events are local sunsets 
+except between November and February when they are local sunrise events. 
+The Earth-referenced event type is recorded in both the Level 1 and Level 2 
+product data files.
+<P>
+
+</BODY>
+</HTML>

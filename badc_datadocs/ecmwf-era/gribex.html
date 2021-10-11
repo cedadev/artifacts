@@ -1,0 +1,75 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>ECMWF GRIBEX Software</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>ECMWF GRIBEX Fortran Software - for decoding GRIB data</H1>
+<EM>An introduction to the GRIBEX software provided by the ECMWF</EM> 
+<HR ALIGN=LEFT>
+
+<H2>Introduction</H2>
+
+<P>GRIBEX is the ECMWF's proprietary software for reading, decoding and writing <a href="grib.html">GRIB</a> data files. It is available to all BADC users that have access to ECMWF datasets. The software is located in the following directories:
+
+
+  <P><a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/software/gribex">http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-op/software/gribex</a> &nbsp;&nbsp;&nbsp;&nbsp;[Operational Data]
+  <BR><a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-era/software/gribex"</a>http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-era/software/gribex</a> &nbsp;&nbsp;&nbsp;&nbsp;[ERA-15 Data]
+  <BR><a href="http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-e40/software/gribex">http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-e40/software/gribex</a> &nbsp;&nbsp;&nbsp;&nbsp;[ERA-40 Data]
+
+<P>These directories contains the GRIBEX software package needed to read GRIB (GRIdded Binary) format ECMWF data files. The software is provided as a zipped Tar file that contains everything you require, including the GRIBEX code (for multiple platforms), GRIB tables and the PBIO routines required to open and close the binary files. 
+
+<H2>What platforms are supported?</H2>
+
+There is no Windows release for this software but it should work on almost all UNIX platforms. The current release of GRIBEX can be compiled on the following platforms:<P>
+
+<UL>
+<LI>CRAY
+<LI>FUJITSU
+<LI>VPP5000
+<LI>DECALPHA
+<LI>DECMIPS
+<LI>HPPA
+<LI>i686
+<LI>IBM
+<LI>LINUX
+<LI>RS6000
+<LI>SGIMIPS
+<LI>SUN4
+</UL>
+
+<H2>Current GRIBEX version</H2>
+
+<P>The current GRIBEX version is stored in the main 'gribex/' directory along with a readme file relating to that version. Other useful documents such as those on 'complex packing' of data (a GRIB option) are also included for your information (this is only used in exceptional cases so initial users can probably ignore complex packing issues).
+
+<H2>Previous GRIBEX versions</H2>
+
+Previous versions of GRIBEX are stored in the directory 'gribex/gribex_archive/'. These are stored in case users need to refer to an older version but we recommend using the current version in this directory.
+
+<H2>Installing GRIBEX</H2>
+
+<P>In order to install the GRIBEX and PBIO libraries you should first download (or FTP transfer) the zipped GRIBEX tar file from this directory to your local machine. You should place the file in a suitable directory on your UNIX system, unzip and extract the data from the file ('<b>gunzip filename.tar.gz</b>' followed by '<b>tar -xvf filename.tar</b>' will usually work).
+
+<P>You will now have a number of separate files in the current directory. Check the name of the Fortran compiler you plan to use and alter the '<b>config.[YOUR_PLATFORM]</b>' file (where [YOUR_PLATFORM] is the computing platform you are compiling on) so that it uses your installed Fortran compiler. You should now be able to compile the software by typing:
+
+<P><b>make ARCH=[YOUR_PLATFORM]</b>
+
+<P>This will compile a Fortran library called '<b>libemos.a</b>' that contains all the subroutines and functions for manipulating GRIB data. You should link this library to your Fortran programmes that call GRIBEX.
+
+<H2>GRIBEX Documentation</H2>
+
+ECWMF provides useful documentation on GRIBEX, including each of the its subroutines and functions. These are publicly available at:
+
+<P><a href="http://www.ecmwf.int/publications/manuals/libraries/gribex/">http://www.ecmwf.int/publications/manuals/libraries/gribex/</a>
+
+<P>A sample Fortran programme that calls GRIBEX is available at:
+
+<P><a href="http://www.ecmwf.int/publications/manuals/libraries/gribex/sampleProgram.html">http://www.ecmwf.int/publications/manuals/libraries/gribex/sampleProgram.html</a>
+
+<H2>Other GRIB-decoding software</H2>
+
+Other software for reading GRIB data is documented on the <a href="software.html">GRIB software page</a>.
+
+<P></BODY>
+</HTML>

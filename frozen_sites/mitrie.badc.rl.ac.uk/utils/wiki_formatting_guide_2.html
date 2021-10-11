@@ -1,0 +1,189 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/TD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+ <head>
+  <title>MITRIE</title>
+  <link rel="alternate" type="application/atom+xml" title="Leonardo Sample Blog" href="../atom/full" />
+<link rel="stylesheet" type="text/css" href="css.css"/>
+ </head>
+
+ <body>
+
+  <div id="top">
+   <h1>MITRIE</h1> <h2>Millennial Temperature Reconstruction Intercomparison and Evaluation</h2>
+  </div>
+
+  <div id="menu">
+   <h3><a href="../index.html">Home Page</a></h3>
+    <li>wiki_formatting_guide_2</a></li>
+<li>
+            <a href="wiki_formatting_guide.html">wiki_formatting_guide</a></li>
+<li>
+            <a href="startup.html">startup</a></li>
+<li>
+            <a href="css.css">css</a></li>
+<li>
+            <a href="about_the_site_engine.html">about_the_site_engine</a></li>
+<li>
+            <a href="__menu__.html">__menu__</a></li>
+<p>
+Software used for this site:
+</p><p>
+<a class="external" href="http://jtauber.com/leonardo">Leonardo Home Page</a>
+</p><p>
+<a href="about_the_site_engine.html">This code</a>
+</p>
+<h3>&nbsp;</h3>
+
+<p><a href="../login%3Freturn=utils%252Fwiki_formatting_guide_2.html">Login</a></p>
+
+<p><a href="../cite.html">Citation DB</a></p>
+
+  </div>
+
+  <div id="main">
+   
+   <p>This is a guide to Bryan Lawrence's modified wiki format designated "wikiBNL".
+</p><p>
+Syntax supported includes:</p><ul><li>Links (local, and external, labelled or otherwise, including images)</li><li>Lists (obviously), including bulleted and enumerated (to four deep)</li><li>Tables</li><li>Highlighting, Italics, Math mode (simple and latex if available)</li><li>Code Higlighting (where source-highlight is also available)</li><li>Preformatted Text and Blockquoting</li><li>Footnotes are supported too <a id="fn1call"></a><sup><a href="wiki_formatting_guide_2.html#fn1">1</a></sup>.
+</li></ul>
+<p>
+Note that both [ and * can be escaped by using a \ before the [ or
+*. (Sometimes you'll also need to escape the return ],e.g. in a footnote),
+but generally not).
+</p><p>
+Paragraphs are delineated by a blank line.
+</p>
+<h3> Links </h3>
+<ul><li>Simple local links are done with [WikiFormat] to give you <a href="http://mitrie.badc.rl.ac.uk/wikiformat">WikiFormat</a>.</li><li>Local links can be renamed using [:WikiFormat local wiki instructions]
+to give <a href="http://mitrie.badc.rl.ac.uk/WikiFormat">local wiki instructions</a>.</li><li>Remote Links are simply [http:blah] or [http:blah with local label].</li><li>Images are included by using <p><img   src="http://mitrie.badc.rl.ac.uk/linktoimage" alt="Image: linktoimage"/></p>
+</li></ul>
+
+<h3> Bold and Italic Text </h3>
+<p>
+You can easily produce <b>bold</b> and <i>italic</i> text using *bold* and
+ a pair of single quotes either side of the required text, e.g.</p><pre>
+     You can easily produce *bold* and ''italic''</pre>
+<h3> Preformatted Text and Blockquotes </h3>
+<p>
+For preformatted text, simply surround your material with [pre and pre] each
+on their own lines, without following spaces befor the carriage returns, to
+get
+[pre 
+exactly [&amp;&lt;what you typed
+pre]
+</p><p>
+For Blockquotes, begin the material with a colon in the first column, followed
+by a space, to get</p><blockquote><p>Something someone else said.
+</p></blockquote>
+
+<h3> Tables </h3>
+
+<table border="1" rules="all"><tr><td align="center" colspan="1">&nbsp; one  &nbsp;</td><td align="center" colspan="2">&nbsp;  two &nbsp;</td></tr>
+<tr><td align="center" colspan="1">&nbsp; 1  &nbsp;</td><td align="center" colspan="1">&nbsp; 2  &nbsp;</td><td align="center" colspan="1">&nbsp; 3 &nbsp;</td></tr>
+
+</table><br/>
+<p>
+came from </p><pre>
+    | one |2 two |
+    | 1 | 2 | 3 |</pre>
+<h3> Lists </h3>
+<ul><li>lists<ul><li>can<ul><li>go <ul><li>four deep<pre>
+    * lists
+    ** can
+    *** go 
+    **** four deep</pre></li></ul>
+</li></ul>
+</li></ul>
+</li></ul>
+<p>
+Numbered too!
+</p><ol style="list-style-type:decimal"><li>something<ol style="list-style-type:lower-alpha"><li>can<ol style="list-style-type:lower-roman"><li>be numbered<ol style="list-style-type:lower-greek"><li>four deep, and even include preformatted material:<pre>
+    0 something
+    00 can
+    000 be numbered
+    0000 four deep</pre></li></ol>
+</li></ol>
+</li></ol>
+</li></ol>
+
+<h3> Image Support </h3>
+<p>
+Syntax for adding images is:</p><pre>
+      [image: static/flag.gif]  </pre><p>
+resulting in
+<p><img   src="http://mitrie.badc.rl.ac.uk/static/flag.gif" alt="Image: static/flag.gif"/></p>
+</p><p>
+<p><img   src="http://mitrie.badc.rl.ac.uk/static/another.gif" alt="Image: static/another.gif"/></p>
+</p><p>
+Or alternatively</p><pre>
+      [image: static/NotHereYet.jpg picture]</pre><p>
+produces
+<p><img   src="http://mitrie.badc.rl.ac.uk/static/NotHereYet.jpg" alt="picture"/></p>
+</p>
+<h3> Maths Mode </h3>
+<p>
+There are two forms of math mode supported, simple, for inline greek and super
+and subscripts (e.g. &alpha;<sup>2</sup> = &beta;<sup>3</sup> <sub>2</sub>, or CO<sub>2</sub>). This is done
+using a simple [m: \alpha^2 = \beta^3 _2] syntax.
+</p><p>
+More complicated expressions can be constructed using the latex syntax if
+latex is available on your server. The following syntax:</p><pre>
+    [embed latex
+    \int \frac{\partial y}{\partial x}\,\partial z =  
+    b*C\frac{1}{2}
+    embed]</pre><p>
+results in 
+</p><table><tr><td><img src="wiki_formatting_guide_2/__embedded__1" alt="Latex Embedded Image"></img></td></tr></table>
+
+<h3> Embedding Code </h3>
+<p>
+Code can be highlighted and optionally numbered, using the source-highlight 
+software if that is available on your server.
+</p><pre>   def example(argument):
+       ''' commment string '''
+       r=remote(argument)
+       if r: return 'string'
+       return 'another string'
+
+***
+highlight file error
+***
+</pre><p>
+was done with</p><pre>
+[embed code python
+... 
+embed]</pre><p>
+You can access the source-highlight command line to number lines in python
+too with</p><pre>
+[embed code python -n
+...
+embed]</pre><p>
+to get this sort of thing:
+</p><pre>def routine:
+   ''' starting comment '''
+   pass
+
+***
+highlight file error
+***
+</pre>
+<h3> Misc. </h3>
+<p>
+You can access the DOI redirect system with </p><pre>
+[doi:10.1038/news050124-10 nature]</pre><p>
+to get, for example, a link to a <a href="http://dx.doi.org/10.1038/news050124-10">nature</a> paper
+</p><div class="footnotes"><div class="footnoteitem"><a id="fn1">1</a>: All you need do is wrap the footnote text
+in between square brackets with fn following the first one, e.g.[fn: text]&nbsp;<a href="wiki_formatting_guide_2.html#fn1call">(ret)</a>.</div>
+</div>
+  </div>
+
+  <div id="bottom">
+   This page last modified Thursday 02 June, 2005
+   Copyright 2003-2005 <a href="../index.html">Martin Juckes</a>
+  </div>
+ </body>
+</html>

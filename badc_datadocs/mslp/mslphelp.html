@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>MSLP data - File Format</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Met Office Northern Hemsisphere MSLP data file format<BR CLEAR="ALL"></H1>
+
+<P><HR ALIGN=LEFT>The MSLP data are in simple ASCII format.
+
+
+<P>All data are 6-figure integers.<BR>
+
+<P>Field headers are "Day, Month, Year" for daily data (from 1881)
+<P>Field headers are "Month, Year" for monthly data (from 1873)
+
+<P>Pressures are stored as hectapascals (hPa) * 100
+
+<P>The first row is for 90 deg N and the last for 15 deg N.
+<PRE>
+
+          ------------------
+         |     |     |     |
+         | DAY | MON | YR  | 
+         |_____|_____|_____|_____________________________
+     90N |(1,1)                                         |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+     15N |(1,16)_________________________________(36,16)|
+          180W                 0                    170E
+</PRE>
+
+
+</BODY>
+</HTML>

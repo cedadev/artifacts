@@ -1,0 +1,67 @@
+           
+ ******************* Reading this CD-ROM set on VMS ************************
+
+ This CD-ROM set is written to ISO 9660 standard with no record format
+ specified for the files.
+ VAX and Alpha systems on VMS Version 6 can deal with ISO standard CDs,
+ although the procedure is not totally straightforward.
+
+ There are two types of files are on the CDs.
+
+   a) Text files: That is, all the files in the software and docs
+      directories on Disk 1.
+   
+   b) Data files: That is, all the files in the asst, months and supers 
+      directories. These all use fixed-length records with record sizes  
+      of 32, 720 or 1440 bytes.
+
+  
+   a) Considering text files first: the problem with these is that each
+   end of line in the text files on CD is marked by a line feed. 
+   These files will look correct on Unix platforms and PCs. However the
+   default for VMS is to use carriage return to mark the end of line. 
+   Thus the line structure in these files will look wrong and there will 
+   be embedded control characters. 
+   This problem can be circumvented in several ways.
+
+    1) Mount the CD as shown below:
+          $ MOUNT/MEDIA=CD-ROM/UNDEFINED=(STREAM_LF:132) DEVICE "LABEL"
+
+       This causes the system to treat line feeds as ends of lines in 
+       the files on the CD.
+
+    or  
+
+    2) Copy all the required text files and then set the file attributes
+       as shown:
+          $ SET FILE/ATT=(RFM=STMLF) file
+
+       This performs a similar function to the previous command on 
+       specified files only.
+
+
+   b) Reading the data files with C or IDL should prove no problem.
+   In both these cases, the data files are just treated as a stream of
+   bytes, and the files' record structure is irrelevant.
+
+   However if you want to use the Fortran programs, the record structure
+   of the files on the CD must match that expected by the program, that is:
+
+        asst files   -    32-byte fixed length records
+        months files -  1440-byte fixed length records
+        supers files -   720-byte fixed length records
+          
+   As the files on the CDs have no specified record structure, this 
+   requires that the CD is mounted appropriately.
+   For example:
+
+       $ MOUNT/MEDIA=CD-ROM/UNDEFINED=(fixed:none:32) DEVICE "LABEL"
+
+   will cause all files on the CD to have fixed length, 32-byte records,
+   with no carriage return marking the end of line. This will enable the
+   Fortran programs to read the asst files.
+   Unfortunately, should you require to read the months or supers files
+   with Fortran, you would need to dismount the disk, and remount replacing
+   32 with 720 or 1440 as appropriate.
+
+

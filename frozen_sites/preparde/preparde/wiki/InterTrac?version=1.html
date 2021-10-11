@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      InterTrac – PREPARDE
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="search" href="../search.html" />
+        <link rel="help" href="TracGuide.html" />
+        <link rel="alternate" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac?version=1&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac" title="View latest version" />
+        <link rel="start" href="../wiki.1.html" />
+        <link rel="stylesheet" href="../chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="../chrome/common/css/wiki.css" type="text/css" />
+        <link rel="shortcut icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+        <link rel="icon" href="../chrome/common/trac.ico" type="image/x-icon" />
+      <link type="application/opensearchdescription+xml" rel="search" href="../search/opensearch" title="Search PREPARDE" />
+    <script type="text/javascript" src="../chrome/common/js/jquery.js"></script><script type="text/javascript" src="../chrome/common/js/babel.js"></script><script type="text/javascript" src="../chrome/common/js/trac.js"></script><script type="text/javascript" src="../chrome/common/js/search.js"></script><script type="text/javascript" src="../chrome/common/js/folding.js"></script>
+    <!--[if lt IE 7]>
+    <script type="text/javascript" src="/preparde/chrome/common/js/ie_pre7_hacks.js"></script>
+    <![endif]-->
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://trac.edgewall.com/"><img src="../chrome/common/trac_banner.png" alt="Trac" height="73" width="236" /></a>
+      </div>
+      <form id="search" action="../search.html" method="get">
+        <div>
+          <label for="proj-search">Search:</label>
+          <input type="text" id="proj-search" name="q" size="18" value="" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="http://proj.badc.rl.ac.uk/preparde/login">Login</a></li><li><a href="../prefs.html">Preferences</a></li><li><a href="TracGuide.html">Help/Guide</a></li><li class="last"><a href="../about.html">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+    <ul>
+      <li class="first active"><a href="../wiki.1.html">Wiki</a></li><li><a href="../timeline.html">Timeline</a></li><li><a href="../roadmap.html">Roadmap</a></li><li><a href="../browser.html">Browse Source</a></li><li><a href="../report.html">View Tickets</a></li><li><a href="../search.html">Search</a></li><li class="last"><a href="../blog.html">Blog</a></li>
+    </ul>
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="../wiki.1.html">wiki:</a><a class="pathentry" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac" title="View InterTrac">InterTrac</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+          <ul>
+              <li class="first"><span class="missing">&larr; Previous Version</span></li><li><a href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac" title="View latest version">View Latest Version</a></li><li class="last"><span class="missing">Next Version &rarr;</span></li>
+          </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tbody>
+            <tr><th scope="row">Version 1 (modified by trac, <a class="timeline" href="http://proj.badc.rl.ac.uk/preparde/timeline?from=2012-07-12T15%3A26%3A00%2B01%3A00&amp;precision=second" title="2012-07-12T15:26:00+01:00 in Timeline">6 years</a> ago)
+               (<a href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac?action=diff&amp;version=1">diff</a>)</th></tr>
+            <tr><td class="message">
+              <p>
+--
+</p>
+
+            </td></tr>
+          </tbody>
+        </table>
+      <div class="wikipage searchable">
+        
+          
+          
+          <div id="wikipage"><h1 id="InterTracLinks"><a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac">InterTrac</a> Links</h1>
+<p>
+Trac supports a convenient way to refer to resources of other Trac servers, from within the Wiki markup, since version 0.10.
+</p>
+<h2 id="Definitions">Definitions</h2>
+<p>
+An <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac">InterTrac</a> link can be seen as a scoped <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">TracLinks</a>.
+It is used for referring to a Trac resource 
+(Wiki page, changeset, ticket, ...) located in another
+Trac environment.
+</p>
+<h2 id="ListofActiveInterTracPrefixes">List of Active <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac">InterTrac</a> Prefixes</h2>
+<p>
+</p><table class="wiki intertrac"><tr><th><em>Prefix</em></th><th><em>Trac Site</em></th></tr><tr><td><a href="http://trac.edgewall.org/timeline"><b>trac</b></a></td><td><a href="http://trac.edgewall.org">The Trac Project</a></td></tr></table><p>
+</p>
+<h2 id="LinkSyntax">Link Syntax</h2>
+<p>
+Simply use the name of the other Trac environment as a prefix, 
+followed by a colon, ending with the resource located in the other environment.
+</p>
+<pre class="wiki">&lt;target_environment&gt;:&lt;TracLinks&gt;
+</pre><p>
+The other resource is specified using a regular <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">TracLinks</a>, of any flavor.
+</p>
+<p>
+That target environment name is either the real name of the 
+environment, or an alias for it. 
+The aliases are defined in <tt>trac.ini</tt> (see below).
+The prefix is case insensitive.
+</p>
+<p>
+If the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac">InterTrac</a> link is enclosed in square brackets (like <tt>[th:WikiGoodiesPlugin]</tt>), the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac">InterTrac</a> prefix is removed in the displayed link, like a normal link resolver would be (i.e. the above would be displayed as <tt>WikiGoodiesPlugin</tt>).
+</p>
+<p>
+For convenience, there's also some alternative short-hand form, 
+where one can use an alias as an immediate prefix 
+for the identifier of a ticket, changeset or report:
+(e.g. <tt>#T234</tt>, <tt>[T1508]</tt>, <tt>[trac 1508]</tt>, ...)
+</p>
+<h2 id="Examples">Examples</h2>
+<p>
+It is necessary to setup a configuration for the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac">InterTrac</a> facility.
+This configuration has to be done in the <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracIni">TracIni</a> file, <tt>[intertrac]</tt> section.
+</p>
+<p>
+Example configuration:
+</p>
+<pre class="wiki">...
+[intertrac]
+# -- Example of setting up an alias:
+t = trac
+
+# -- Link to an external Trac:
+trac.title = Edgewall's Trac for Trac
+trac.url = http://trac.edgewall.org
+</pre><p>
+The <tt>.url</tt> is mandatory and is used for locating the other Trac.
+This can be a relative URL in case that Trac environment is located 
+on the same server.
+</p>
+<p>
+The <tt>.title</tt> information will be used for providing an useful tooltip
+when moving the cursor over an <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac">InterTrac</a> links.
+</p>
+<p>
+Finally, the <tt>.compat</tt> option can be used to activate or disable
+a <em>compatibility</em> mode:
+</p>
+<ul><li>If the targeted Trac is running a version below <a class="ext-link" href="http://trac.edgewall.org/intertrac/milestone%3A0.10" title="milestone:0.10 in Trac project trac"><span class="icon"> </span>0.10</a> 
+(<a class="ext-link" href="http://trac.edgewall.org/intertrac/r3526" title="r3526 in Trac project trac"><span class="icon"> </span>r3526</a> to be precise), then it doesn't know how to dispatch an <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac">InterTrac</a> 
+link, and it's up to the local Trac to prepare the correct link. 
+Not all links will work that way, but the most common do. 
+This is called the compatibility mode, and is <tt>true</tt> by default. 
+</li><li>If you know that the remote Trac knows how to dispatch <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac">InterTrac</a> links, 
+you can explicitly disable this compatibility mode and then <em>any</em> 
+<a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">TracLinks</a> can become an <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac">InterTrac</a> link.
+</li></ul><p>
+Now, given the above configuration, one could create the following links:
+</p>
+<ul><li>to this <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac">InterTrac</a> page:
+<ul><li><tt>trac:wiki:InterTrac</tt> <a class="ext-link" href="http://trac.edgewall.org/intertrac/wiki%3AInterTrac" title="wiki:InterTrac in Trac project trac"><span class="icon"> </span>trac:wiki:InterTrac</a>
+</li><li><tt>t:wiki:InterTrac</tt> t:wiki:InterTrac
+</li><li>Keys are case insensitive: <tt>T:wiki:InterTrac</tt> T:wiki:InterTrac
+</li></ul></li><li>to the ticket <a class="missing ticket">#234</a>:
+<ul><li><tt>trac:ticket:234</tt> <a class="ext-link" href="http://trac.edgewall.org/intertrac/ticket%3A234" title="ticket:234 in Trac project trac"><span class="icon"> </span>trac:ticket:234</a>
+</li><li><tt>trac:#234</tt> <a class="ext-link" href="http://trac.edgewall.org/intertrac/%23234" title="#234 in Trac project trac"><span class="icon"> </span>trac:#234</a> 
+</li><li><tt>#T234</tt> #T234
+</li></ul></li><li>to the changeset <a class="missing changeset" title="No changeset 1912 in the repository">[1912]</a>:
+<ul><li><tt>trac:changeset:1912</tt> <a class="ext-link" href="http://trac.edgewall.org/intertrac/changeset%3A1912" title="changeset:1912 in Trac project trac"><span class="icon"> </span>trac:changeset:1912</a>
+</li><li><tt>[T1912]</tt> [T1912]
+</li></ul></li><li>to the log range <a class="source" href="http://proj.badc.rl.ac.uk/preparde/log/?revs=3300-3330">[3300:3330]</a>: <strong>(Note: the following ones need <tt>trac.compat=false</tt>)</strong>
+<ul><li><tt>trac:log:@3300:3330</tt> <a class="ext-link" href="http://trac.edgewall.org/intertrac/log%3A%403300%3A3330" title="log:@3300:3330 in Trac project trac"><span class="icon"> </span>trac:log:@3300:3330</a>  
+</li><li><tt>[trac 3300:3330]</tt> <a class="ext-link" href="http://trac.edgewall.org/intertrac/log%3A/%403300%3A3330" title="log:/@3300:3330 in Trac project trac"><span class="icon"> </span>[trac 3300:3330]</a> 
+</li></ul></li><li>finally, to link to the start page of a remote trac, simply use its prefix followed by ':', inside an explicit link. Example: <tt>[th: Trac Hacks]</tt> (<em>since 0.11; note that the </em>remote<em> Trac has to run 0.11 for this to work</em>)
+</li></ul><p>
+The generic form <tt>intertrac_prefix:module:id</tt> is translated
+to the corresponding URL <tt>&lt;remote&gt;/module/id</tt>, shorthand links
+are specific to some modules (e.g. #T234 is processed by the
+ticket module) and for the rest (<tt>intertrac_prefix:something</tt>),
+we rely on the <a class="wiki" href="TracSearch.html#quickjump">TracSearch#quickjump</a> facility of the remote Trac.
+</p>
+<hr />
+<p>
+See also: <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/TracLinks">TracLinks</a>, <a class="wiki" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterWiki">InterWiki</a>
+</p>
+</div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="http://proj.badc.rl.ac.uk/preparde/wiki/InterTrac?version=1&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="../chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="../about.html"><strong>Trac 0.12.2</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>

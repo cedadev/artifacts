@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20041215T100000Z
+DTEND:20041216T163000Z
+LOCATION:London, UK.
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Monitoring Ambient Air: Implications and Implementation of the New Directives and StandardsUWERN Conference 2004=0D=0Ahttp://www.users.waitrose.com/~aamg/pdf/maa04.pdf=0D=0A
+SUMMARY:Monitoring Ambient Air
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

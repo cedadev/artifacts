@@ -1,0 +1,263 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC ECMWF ERA-40 File-naming convention</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<IMG SRC="/graphics/logos/ecmwflogo.gif" ALT="ECMWF logo" ALIGN="BOTTOM">
+<IMG SRC="/graphics/logos/ecmwf_era_logo.gif" ALIGN="BOTTOM" ALT="ERA logo">
+
+<H1>The BADC File-naming Convention for ERA-40 Re-analysis data</H1>
+
+<HR ALIGN=LEFT>
+
+<H2>Introduction</H2>
+
+The BADC has developed a new file-naming convention for its 
+<a href="/data/ecmwf-e40">ECMWF ERA-40</a> 
+Re-analysis archive. This document explains the how the <a href="#filenames">
+file names</a> are derived, presents a <a href="#param_table">table of parameter codes</a>, 
+gives some <a href="#examples">examples of file names</a> and explains the 
+<a href="#directories">directory structure</a> for the ERA-40 data.
+
+<P>
+<HR ALIGN=LEFT>
+
+<H2><a name="filenames">File names</a></H2>
+
+The ERA-40 files are held in individual files for each time-step and parameter. 
+This allows the user to identify the contents of each file specifically from its 
+ name alone. The file-naming convention for ERA-40 files is as follows:<P>
+
+<kbd>AABCYYYYMMDDTTP[PPPP][_SSh].EXT</kbd><P>
+
+<B><kbd>AA</kbd></B>&nbsp;&nbsp;&nbsp; is the grid type.<br>
+<B><kbd>B</kbd></B>&nbsp;&nbsp;&nbsp; denotes whether the file contains analysis or forecast data.<br>
+<B><kbd>C</kbd></B>&nbsp;&nbsp;&nbsp; is the level type.<br>
+<B><kbd>YYYY</kbd></B>&nbsp;&nbsp;&nbsp; is the year (e.g. 1994).<br>
+<B><kbd>MM</kbd></B>&nbsp;&nbsp;&nbsp; is the month (from 01 to 12).<br>
+<B><kbd>DD</kbd></B>&nbsp;&nbsp;&nbsp; is the day of the month (from 01 to 31).<br>
+<B><kbd>TT</kbd></B>&nbsp;&nbsp;&nbsp; is the time of day (either 00, 06, 12 or 18).<br>
+<B><kbd>P[PPPP]</kbd></B>&nbsp;&nbsp;&nbsp; is the parameter name (from one to five characters).<br>
+<B><kbd>[_SSh]</kbd></B>&nbsp;&nbsp;&nbsp; is the forecast time step (SS is number of hours since analysis). This field is only included for forecast fields where <kbd>B</kbd> is 'f'. 'h' represents the unit hours.
+<B><kbd>.EXT</kbd></B>&nbsp;&nbsp;&nbsp; is the file extension, denoting the file format. The main 
+archive is stored in GRIB format (.grb) although some data will be available 
+in NetCDF format (.nc).
+<P>
+Table 1 shows the codes for each grid, field and level type.<P>
+
+<B>Table 1.&nbsp;&nbsp;&nbsp;</B>Grid, field and level types in the 
+ERA-40 file names.<BR>
+
+<table border="1" style="font-size: smaller">
+   <tr align="center">
+    <td colspan="2">
+    <b><big>Grid type</big></b>
+    </td>
+    <td colspan="2">
+    <b><big>Field type</big></b>
+    </td>
+    <td colspan="2">
+    <b><big>Level type</big></b>
+    </td>
+   </tr>
+   <tr align="center">
+    <td width="50">gg</td><td>N80 Reduced Gaussian Grid</td>
+    <td width="50">a</td><td>Analysis (at the zero time-step)</td>
+    <td width="50">m</td><td>Model level data</td>
+   </tr>
+   <tr align="center">
+    <td>sp</td><td>Spectral T159 Resolution</td>
+    <td>-</td><td>-</td>
+    <td>s</td><td>Surface or single level data</td>
+   </tr>
+   <tr align="center">
+    <td>gp</td><td>Regular 1.0&deg; x 1.0&deg; Grid</td>
+    <td>f</td><td>Forecast</td>
+    <td>p</td><td>Pressure level data</td>
+   </tr>
+   <tr align="center">
+    <td>li</td><td>Regular 2.5&deg; x 2.5&deg; Grid</td>
+    <td>-</td><td>-</td>
+    <td>t</td><td>Potential temperature level data</td>
+   </tr>
+   <tr align="center">
+    <td>lf</td><td>Regular 1.125&deg; x 1.125&deg; Grid</td>
+    <td>-</td><td>-</td>
+    <td>v</td><td>Potential vorticity level data</td>
+   </tr>
+   <tr>
+</table>
+<small>* See <a href="/data/ecmwf-e40/params.html#forecasts">explanation 
+of forecast files</a> for more details.</small>
+
+<P><a name="param_table">Parameter</a> abbreviations are used in the file names. These vary in 
+length from one to five characters. Table 2 shows a complete list of the 
+ERA-40 parameter names, abbreviations, numeric ECMWF codes and units.<P>
+
+<B>Table 2.&nbsp;&nbsp;&nbsp;</B>Parameters details in the 
+ERA-40 file names.<BR>
+
+<table border="1" style="font-size: smaller">
+<tr align=center><td><big><b>Parameter name</b></big></td>
+<td><big><b>Parameter code (abbreviation)</b></big></td>
+<td><big><b>ECMWF code (numeric)</b></big></td>
+<td><big><b>Units</b></big></td>
+</tr>
+<small><tr align=center><td>Potential temperature</td><td>PT</td><td>3</td><td>K</td></tr>
+<tr align=center><td>Low vegetation cover</td><td>LVC</td><td>27</td><td>(0-1)</td></tr>
+<tr align=center><td>High vegetation cover</td><td>HVC</td><td>28</td><td>(0-1)</td></tr>
+<tr align=center><td>Low vegetation type (table index)</td><td>LVT</td><td>29</td><td>index</td></tr>
+<tr align=center><td>High vegetation type (table index)</td><td>HVT</td><td>30</td><td>index</td></tr>
+<tr align=center><td>Sea ice fraction (1 = full ice, 0 = no ice)</td><td>CI</td><td>31</td><td>(0, 1)</td></tr>
+<tr align=center><td>Snow albedo</td><td>ASN</td><td>32</td><td>-</td></tr>
+<tr align=center><td>Snow density</td><td>RSN</td><td>33</td><td>kg</td></tr>
+<tr align=center><td>Sea surface temperature</td><td>SSTK</td><td>34</td><td>K</td></tr>
+<tr align=center><td>Sea ice temperature layer 1</td><td>ISTL1</td><td>35</td><td>K</td></tr>
+<tr align=center><td>Sea ice temperature layer 2</td><td>ISTL2</td><td>36</td><td>K</td></tr>
+<tr align=center><td>Sea ice temperature layer 3</td><td>ISTL3</td><td>37</td><td>K</td></tr>
+<tr align=center><td>Sea ice temperature layer 4</td><td>ISTL4</td><td>38</td><td>K</td></tr>
+<tr align=center><td>Soil moisture level 1 (volumetric)</td><td>SWVL1</td><td>39</td><td>m<sup>3</sup>/m<sup>3</sup></td></tr>
+<tr align=center><td>Soil moisture level 2 (volumetric)</td><td>SWVL2</td><td>40</td><td>m<sup>3</sup>/m<sup>3</sup></td></tr>
+<tr align=center><td>Soil moisture level 3 (volumetric)</td><td>SWVL3</td><td>41</td><td>m<sup>3</sup>/m<sup>3</sup></td></tr>
+<tr align=center><td>Soil moisture level 4 (volumetric)</td><td>SWVL4</td><td>42</td><td>m<sup>3</sup>/m<sup>3</sup></td></tr>
+<tr align=center><td>Snow evaporation (accum.)</td><td>ES</td><td>44</td><td>m</td></tr>
+<tr align=center><td>Snow melt (accum.)</td><td>SMLT</td><td>45</td><td>m</td></tr>
+<tr align=center><td>Wind gusts at 10 m</td><td>10FG</td><td>49</td><td>m s<sup>-1</sup></td></tr>
+<tr align=center><td>Large scale precipitation fraction (accum.)</td><td>LSPF</td><td>50</td><td>s</td></tr>
+<tr align=center><td>Montgomery potential</td><td>MONT</td><td>53</td><td>m<sup>2</sup> s<sup>-2</sup></td></tr>
+<tr align=center><td>Pressure</td><td>PRES</td><td>54</td><td>Pa</td></tr>
+<tr align=center><td>Potential vorticity</td><td>PV</td><td>60</td><td>m<sup>2</sup> s<sup>-1</sup> K kg<sup>-1</sup></td></tr>
+<tr align=center><td>Geopotential (at the surface = orography)</td><td>Z</td><td>129</td><td>m<sup>2</sup> s<sup>-2</sup></td></tr>
+<tr align=center><td>Temperature</td><td>T</td><td>130</td><td>K</td></tr>
+<tr align=center><td>U-velocity</td><td>U</td><td>131</td><td>ms<sup>-1</sup></td></tr>
+<tr align=center><td>V-velocity</td><td>V</td><td>132</td><td>ms<sup>-1</sup></td></tr>
+<tr align=center><td>Specific humidity</td><td>Q</td><td>133</td><td>kg/kg</td></tr>
+<tr align=center><td>Vertical velocity</td><td>W</td><td>135</td><td>Pa s<sup>-1</sup></td></tr>
+<tr align=center><td>Total column water</td><td>TCW</td><td>136</td><td>kg/m<sup>2</sup></td></tr>
+<tr align=center><td>Total column water vapour</td><td>TCWV</td><td>137</td><td>kg/m<sup>2</sup></td></tr>
+<tr align=center><td>Vorticity (relative)</td><td>VO</td><td>138</td><td>s<sup>-1</sup></td></tr>
+<tr align=center><td>Soil temperature level 1</td><td>STL1</td><td>139</td><td>K</td></tr>
+<tr align=center><td>Snow Depth</td><td>SD</td><td>141</td><td>m (of water equivalent)</td></tr>
+<tr align=center><td>Large scale precipitation (accum.)</td><td>LSP</td><td>142</td><td>m</td></tr>
+<tr align=center><td>Convective precipitation (accum.)</td><td>CP</td><td>143</td><td>m</td></tr>
+<tr align=center><td>Snow fall (accum.)</td><td>SF</td><td>144</td><td>m (of water equivalent)</td></tr>
+<tr align=center><td>Boundary layer dissipation (accum.)</td><td>BLD</td><td>145</td><td>W m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Surface sensible heat flux (accum.)</td><td>SSHF</td><td>146</td><td>W m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Surface latent heat flux (accum.)</td><td>SLHF</td><td>147</td><td>W m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Charnock parameter</td><td>CHNK</td><td>148</td><td>-</td></tr>
+<tr align=center><td>Mean sea level pressure</td><td>MSL</td><td>151</td><td>Pa</td></tr>
+<tr align=center><td>Log surface pressure</td><td>LNSP</td><td>152</td><td>-</td></tr>
+<tr align=center><td>Divergence</td><td>D</td><td>155</td><td>s<sup>-1</sup></td></tr>
+<tr align=center><td>Relative humidity</td><td>R</td><td>157</td><td>%</td></tr>
+<tr align=center><td>Boundary layer height</td><td>BLH</td><td>159</td><td>m</td></tr>
+<tr align=center><td>Standard deviation of subgrid scale orography</td><td>SDOR</td><td>160</td><td>-</td></tr>
+<tr align=center><td>Anisotropy of subgrid scale orography</td><td>ISOR</td><td>161</td><td>-</td></tr>
+<tr align=center><td>Angle of subgrid scale orography</td><td>ANOR</td><td>162</td><td>-</td></tr>
+<tr align=center><td>Slope of subgrid scale orography</td><td>SLOR</td><td>163</td><td>-</td></tr>
+<tr align=center><td>Total cloud cover</td><td>TCC</td><td>164</td><td>(0-1)</td></tr>
+<tr align=center><td>10 metre u-wind component</td><td>10U</td><td>165</td><td>m s<sup>-1</sup></td></tr>
+<tr align=center><td>10 metre v-wind component</td><td>10V</td><td>166</td><td>m s<sup>-1</sup></td></tr>
+<tr align=center><td>2 metre temperature</td><td>2T</td><td>167</td><td>K</td></tr>
+<tr align=center><td>2 metre dewpoint temperature</td><td>2D</td><td>168</td><td>K</td></tr>
+<tr align=center><td>Downward surface solar radiation (accum.)</td><td>SSRD</td><td>169</td><td>W m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Soil temperature level 2</td><td>STL2</td><td>170</td><td>K</td></tr>
+<tr align=center><td>Land/sea mask</td><td>LSM</td><td>172</td><td>(0, 1)</td></tr>
+<tr align=center><td>Surface roughness</td><td>SR</td><td>173</td><td>m</td></tr>
+<tr align=center><td>Albedo</td><td>AL</td><td>174</td><td>-</td></tr>
+<tr align=center><td>Downward surface thermal radiation (accum.)</td><td>STRD</td><td>175</td><td>W m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Surface solar radiation (accum.)</td><td>SSR</td><td>176</td><td>W m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Surface thermal radiation (accum.)</td><td>STR</td><td>177</td><td>W m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Top solar radiation (accum.)</td><td>TSR</td><td>178</td><td>W m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Top thermal radiation (accum.)</td><td>TTR</td><td>179</td><td>W m<sup>-2</sup>s</td></tr>
+<tr align=center><td>East/West surface stress (accum.)</td><td>EWSS</td><td>180</td><td>N m<sup>-2</sup>s</td></tr>
+<tr align=center><td>North/South surface stress (accum.)</td><td>NSSS</td><td>181</td><td>N m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Evaporation (accum.)</td><td>E</td><td>182</td><td>m (of water)</td></tr>
+<tr align=center><td>Soil temperature level 3</td><td>STL3</td><td>183</td><td>K</td></tr>
+<tr align=center><td>Low cloud cover</td><td>LCC</td><td>186</td><td>(0-1)</td></tr>
+<tr align=center><td>Medium cloud cover</td><td>MCC</td><td>187</td><td>(0-1)</td></tr>
+<tr align=center><td>High cloud cover</td><td>HCC</td><td>188</td><td>(0-1)</td></tr>
+<tr align=center><td>Sunshine duration since last post-processing step</td><td>SUND</td><td>189</td><td>s</td></tr>
+<tr align=center><td>Latitudinal component of gravity wave stress (accum.)</td><td>LGWS</td><td>195</td><td>N m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Meridional component of gravity wave stress (accum.)</td><td>MGWS</td><td>196</td><td>N m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Gravity wave dissipation (accum.)</td><td>GWD</td><td>197</td><td>W m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Skin reservoir content</td><td>SRC</td><td>198</td><td>m (of water)</td></tr>
+<tr align=center><td>Maximum temp. at 2m since previous post-processing</td><td>MX2T</td><td>201</td><td>K</td></tr>
+<tr align=center><td>Minimum temp. at 2m since previous post-processing</td><td>MN2T</td><td>202</td><td>K</td></tr>
+<tr align=center><td>Ozone mass mixing ratio</td><td>O3</td><td>203</td><td>kg/kg</td></tr>
+<tr align=center><td>Runoff (accum.)</td><td>RO</td><td>205</td><td>m</td></tr>
+<tr align=center><td>Total column ozone</td><td>TCO3</td><td>206</td><td>kg m<sup>-2</sup></td></tr>
+<tr align=center><td>Top solar radiation clear sky (accum.)</td><td>TSRC</td><td>208</td><td>W m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Top thermal radiation clear sky (accum.)</td><td>TTRC</td><td>209</td><td>W m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Surface solar radiation clear sky (accum.)</td><td>SSRC</td><td>210</td><td>W m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Surface thermal radiation clear sky (accum.)</td><td>STRC</td><td>211</td><td>W m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Instantaneous X surface stress</td><td>IEWS</td><td>229</td><td>N m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Instantaneous Y surface stress</td><td>INSS</td><td>230</td><td>N m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Instantaneous surface heat flux</td><td>ISHF</td><td>231</td><td>W/m<sup>2</sup></td></tr>
+<tr align=center><td>Instantaneous surface moistrue flux (evaporation)</td><td>IE</td><td>232</td><td>kg m<sup>-2</sup>s</td></tr>
+<tr align=center><td>Logarithm of surface roughness length for heat</td><td>LSRH</td><td>234</td><td>-</td></tr>
+<tr align=center><td>Skin temperature</td><td>SKT</td><td>235</td><td>K</td></tr>
+<tr align=center><td>Soil temperature level 4</td><td>STL4</td><td>236</td><td>K</td></tr>
+<tr align=center><td>Temperature of snow layer</td><td>TSN</td><td>238</td><td>K</td></tr>
+<tr align=center><td>Convective snow fall (accum.)</td><td>CSF</td><td>239</td><td>m (of water equivalent)</td></tr>
+<tr align=center><td>Large scale snow fall (accum.)</td><td>LSF</td><td>240</td><td>m (of water equivalent)</td></tr>
+<tr align=center><td>Forecast albedo</td><td>FAL</td><td>243</td><td>-</td></tr>
+<tr align=center><td>Forecast surface roughness</td><td>FSR</td><td>244</td><td>m</td></tr>
+<tr align=center><td>Forecast logarithm of surface roughness for heat</td><td>FLSR</td><td>245</td><td>-</td></tr>
+<tr align=center><td>Cloud liquid water content</td><td>CLWC</td><td>246</td><td>kg/kg</td></tr>
+<tr align=center><td>Cloud ice water content</td><td>CIWC</td><td>247</td><td>kg/kg</td></tr>
+<tr align=center><td>Cloud cover</td><td>CC</td><td>248</td><td>(0-1)</td></tr>
+</small>
+</table>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<H2><a name="examples">Example file names</a></H2>
+Since the file-naming system is rather complicated some examples are given below:<P>
+
+<B>ggap1992010618o3.grb</B>&nbsp;&nbsp;&nbsp;- N80 Reduced Gaussian Grid, Analysis, 
+Pressure Levels, 6 January 1992, 18:00 hours, Ozone Mass Mixing Ratio field, GRIB format.
+<P>
+<B>spat1962102712vo.grb</B>&nbsp;&nbsp;&nbsp;- T159 Spectral resolution, Analysis, 
+Potential Temperature Levels, 27 October 1962, 12:00 hours, Vorticity (relative), GRIB format.
+<P>
+<B>ggfm1974123100ciwc_24h.grb</B>&nbsp;&nbsp;&nbsp;- N80 Reduced Gaussian Grid, Forecast, 
+Model Levels, 31 December 1974, 00:00 hours (start time of forecast), 24 hours (forecast step time),
+therefore valid time of data is 1974-12-31 00:00 + 24 hours = 1975-01-01 00:00, Cloud Ice Water Content 
+field, GRIB format.
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+
+<H2><a name="directories">Directory names and structure</a></H2>
+
+The directory system for the ERA-40 archive uses the following structure:<P>
+
+<kbd>/badc/ecmwf-e40/data/AA/BC/YYYY/MM/DD/file_name</kbd><P>
+
+<B><kbd>AA</kbd></B>&nbsp;&nbsp;&nbsp; is the grid type.<br>
+<B><kbd>B</kbd></B>&nbsp;&nbsp;&nbsp; denotes whether the file contains analysis or forecast data.<br>
+<B><kbd>C</kbd></B>&nbsp;&nbsp;&nbsp; is the level type.<br>
+<B><kbd>YYYY</kbd></B>&nbsp;&nbsp;&nbsp; is the year (e.g. 1994).<br>
+<B><kbd>MM</kbd></B>&nbsp;&nbsp;&nbsp; is the month (from 01 to 12).<br>
+<B><kbd>DD</kbd></B>&nbsp;&nbsp;&nbsp; is the day of the month (from 01 to 31).<br>
+<B><kbd>file_name</kbd></B>&nbsp;&nbsp;&nbsp; is the file name as discussed above 
+(e.g. spat1991041700pres.grb).<P>
+
+Note that if you accessing the data via the BADC web-interface (BADC registered users only), 
+the data can be found at:<P> 
+
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ecmwf-e40/data/"> 
+
+http://badc.nerc.ac.uk/cgi-bin/data_browser/data_browser/badc/ecmwf-e40/data/</A> 
+
+<P>The directory system beyond the <kdb><b>data</b></kbd> directory is as above:<P>
+
+<kbd>AA/BC/YYYY/MM/DD/file_name</kbd><P>
+
+<P><A HREF="#top"><I>Return to top of page</I></A>
+<HR ALIGN=LEFT>
+<P></BODY>
+</HTML>

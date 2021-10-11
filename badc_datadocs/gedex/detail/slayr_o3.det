@@ -1,0 +1,506 @@
+Angell's Total Ozone and Layer Ozone from Umkehr and Ozonesonde
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  These datasets consist of the deviation of
+seasonal total ozone for various regions and deviations of seasonal layer
+ozone for various regions from ozonesonde and Umkehr.
+
+1.2  Unit of Measurement.  Ozone deviations are measured as a percentage of
+established ozone values for each particular time, location, and pressure
+level.
+
+1.3  Data Source.  These datasets described are composed of mean-monthly
+ozone values published in "Ozone Data of the World", published bimonthly in
+Downsview, Canada, by the Atmospheric Environment Service, Department of
+the Environment, in cooperation with the the World Meteorological
+Organization (WMO).  The total ozone measurements were obtained from
+ground-based Dobson spectrophotometers and Soviet Union M-83 broadband-
+filter instruments (ozonometers).  The layer ozone measurements were
+obtained from in-situ ozonesonde measurements and indirect Umkehr
+measurements.  The Umkehr measurements are based on the change in the
+relative intensity of radiation (in adjacent wavelengths) scattered from
+the zenith sky as the sun rises and sets.
+
+1.4  Data Set Identification.  These datasets consist of level III data and
+are referred to as Angell's Percent Deviation of Seasonal Total Ozone,
+Angell's Percent Deviation of Seasonal Layer Ozone from Ozonesonde, and
+Angell's Percent Deviation of Seasonal Layer Ozone from Umkehr.
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  As a result of the varying availability and density
+of ozone measuring stations worldwide, global coverage for seasonal
+deviations was not obtained,therefore, near global coverage have been
+obtained through the use of regional averages.  To enable filtering within
+the NASA Climate Data System, the regions that compose these data are
+represented by numerical values.  The regions associated with the total
+ozone deviations, Europe(1), North America(2), Asia(3), USSR(4), north
+polar(5), north temperate(6), tropics(7), south temperate(8), south
+polar(9), and world(10) are represented by the numerical values 1 through
+10 respectively.  The regions associated with the layer ozone deviations
+from ozonesonde, north polar(1), south polar(2), south temperate(3), and
+north temperate(4) are represented by the numerical values 1 through 4, and
+the regions that compose the layer ozone deviations from Umkehr, south
+temperate(1), north polar(2), tropical(3), and north temperate(4) are also
+represented by the numerical values 1 through 4.
+
+2.2  Spatial Resolution.  This data set is composed of regional averages
+covering nearly the entire globe.  The layer ozone data from ozonesonde
+consist of layer averages for the north polar, south polar, south
+temperate, and north temperate regions.  The layer ozone data from Umkehr
+consist of layer averages for the south temperate, north polar, tropical,
+and north temperate region.  The total ozone data consist of total column
+measurements for Europe, North America, Asia, USSR north polar, north
+temperate, tropics, south temperate, south polar, and world.  The seasonal
+deviations from ozonesonde consist of measurements for the 2-8 km, 8-16 km,
+16-24 km, and 24-32 km level, with each layer represented by the single
+value 5 km, 12 km, 20 km, and 28 km respectively.  The seasonal deviations
+from Umkehr consist of measurements for the 2-8 km, 8-16 km, 16-24 km, and
+24-32 km level, with each layer represented by the single value 5 km, 12
+km, 20 km, and 28 km respectively.  The total ozone deviations consist of
+total vertical column measurements.
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  The layer ozone deviations data cover the period
+December 1967 through November 1989.  The total column ozone deviations
+cover the period December 1957 through November 1990.
+
+3.2  Temporal Resolution.  These data sets consists of seasonal values of
+ozone deviations.  Each season consist of a three month period, as follows:
+winter (December, January, February), spring (March, April, May), summer
+(June, July, August), and fall (September, October, November).
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  The objective of these data sets are to assist
+researchers in the study of manmade and natural events that influence and
+are influenced by the fluctuations in ozone levels over time.  Some of the
+areas of study include the relationship between ozone and sunspot activity
+(Angell, 1989), anthropogenic influences on the atmosphere, and the
+relationship between ozone levels and the Quasi-Biennial Oscillation
+(Labitzke and van Loon, 1988, 1988, 1989, and Angell, 1986) and Southern
+Oscillation Index, etc.
+
+4.2  Key Satellite Flight Parameters.  None
+
+4.3  Principles of Operation.  None
+
+4.4  Instrument Measurement Geometry.  None
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  The monthly ozone measurements
+obtained from "Ozone Data for the World" are used directly in the
+calculation of both total and layer ozone deviations.
+
+5.2  Derivation Techniques/Algorithms.  The total ozone deviations are
+calculated as the average of reporting stations within each region with the
+exception of north temperate, hemispheric, and world values which are
+computed from various weighted averages of smaller regions.  North
+temperate values are derived from an equal weighting of values calculated
+for the Soviet Union, Europe, North America, and Asia.  The hemispheric
+averages are computed from a 1-3-2 weighting of polar, temperate, and
+tropical values.  The world averages are computed from a 1-3-4-3-1
+weighting of north polar, north temperate, tropical, south temperate, and
+south polar values.  The seasonal values are further computed from the
+three months that compose each season, and are smoothed by means of a
+5-point binomial smoothing, to reduce the complexity of the variations.
+This smoothing technique uses a 1-4-6-4-1 weighting of seasonal values
+divided by 16.  For computation of ozone deviations, reported ozone values
+are compared to the mean values calculated for the period 1958-77, with the
+exception of 1961-77 for the tropics, and 1973-77 for the Soviet Union.
+Layer ozone deviations are also computed directly from "Ozone Data for the
+World" in a similar manner as the total column ozone deviations.  The
+Umkehr measurements for Europe, Japan, India, and North America are given
+equal weighting in the computation of the north temperate averages, and the
+ozonesonde measurements for the north temperate region are computed from a
+2-2-1 weighting of values in North America, Europe, and Japan.  Mean values
+for layer ozone deviations are based on data available through 1977.
+
+5.3  Special Corrections/Adjustments.  None
+
+5.4  Processing Changes.  Several processing changes have taken place since
+these data were first released.  Total ozone deviations for Japan and India
+have been combined with two new Dobson stations in China and are referred
+to as the Asia region.  The Soviet M-83 data is only used after 1973, after
+considerable improvements were made in instruments and observational
+techniques. Finally the north temperate total deviations are now based on
+an equal weighting of values for the Soviet Union, North America, and Asia.
+Layer ozone deviations for the north temperate region are now based on an
+equal weighting of values from Europe, Japan, India, and North America as a
+result of 3 new reporting stations in North America.
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  The seasonal total column ozone values
+have been compared with values obtained from the TIROS Operational Vertical
+Sounder (TOVS) aboard the NOAA series of satellites and the Solar
+Backscatter Ultraviolet (SBUV) instrument on Nimbus-7 by the data producer
+(Planet, Miller, and Angell, 1988).  The comparison found that there was
+good quantitative agreement till about mid 1984, with difference after that
+time.  The greatest differences were found between the measurements
+obtained by the SBUV and TOVS instruments. The best agreement between the
+ground data and satellite data occurred in the north temperate zone with
+the TOVS instrument, possibly due to a higher density of ground stations.
+Agreement between ground data and satellite data in the south temperate
+zone was not as good, possibly due to the poor sampling of ground data.  In
+all zones there was qualitative agreement in trends of ozone values.
+
+6.2  Confidence Level/Accuracy Judgment.  The accuracy of Umkehr- derived
+ozone measurements is best at high stratospheric heights but is of little
+reliability at tropospheric and low stratospheric levels.  It is also
+important to note that values for ozone from high stratospheric levels can
+be affected adversely by the presence of volcanic aerosols (Deluisi, 1979).
+Ozone measurements from ozonesonde are not obtained at the high
+stratospheric levels, but at lower levels the data obtained are considered
+reliable.  The number and distribution of Dobson total-ozone stations is
+considered to be unsatisfactory in the north polar, south temperate, and
+south temperate regions due to the scarcity of stations.  It is also known
+that the instruments have experienced calibration problems which have not
+been taken into account when computing deviations.
+
+6.3  Usage Guidance.  Users of these data should be aware of the
+limitations.  Quantitative use of these data can be affected by a
+calibration errors, scarcity of stations, presence of aerosols, and other
+influences.  Qualitative use of this data in demonstrating trends is
+considered more reliable.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+     Dr. J. K. Angell
+     NOAA Air Resources Laboratory R/E/AR
+     1325 East West Highway
+     Silver Spring, MD 20910
+     (301) 427-7684
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products.  None
+
+8.2  Film Products.  None
+
+8.3  Other products
+                                                                                
+8.3.1  Angell's Percent Deviation of Seasonal Total Ozone
+(ANGELL-TOT03_SEASON-DEV) Common Data Format (CDF).
+
+       Medium/Specification: Magnetic Disk
+
+       Format and Content:  The data are stored in a special data-set-
+       independent format, designated the Common Data Format (CDF).  CDF
+       was developed at the National Space Science Data Center (NSSDC) as a
+       uniform method of storing and retrieving data on disk. The CDF
+       consists of a single file which contain data and descriptions about
+       the data.  A standard software package called the "CDF Library"
+       allows a user within an NCDS session to create and access these data
+       and descriptive information. These CDF files may be accessed within
+       the Data Applications Subsystems of NCDS.  These data consist of the
+       seasonal deviations from the total column ozone means for the period
+       December 1957 - November 1990.
+
+       Data Quantity/Rate: One file, 20 kbytes.
+
+       Status: These data are currently available on-line in the NASA
+       Climate Data System (NCDS).
+
+       Plans/Schedule: NCDS will continue to support this data, and will
+       continue to update this data set as new data are received.
+
+8.3.2  Angell's Percent Deviation of Seasonal Layer Ozone from Ozonesonde
+(ANGELL-LYRO3_SONDE-SEASON) Common Data Format (CDF).
+
+       Medium/Specification: Magnetic disk
+
+       Format and Content:  The data are stored in a special data-set-
+       independent format, designated the Common Data Format (CDF).  See
+       item 8.3.1 above.  These data contain the seasonal deviations from
+       layer ozone means as determined by ozonesonde for the 2 - 8 km, 8 -
+       16 km, 16 - 24 km, and 24 - 32 km layers for the period December
+       1967 - November 1989.
+
+       Data Quantity/Rate: One file, 22 kbytes
+
+       Status: These data are currently available on-line in the NASA
+       Climate Data System (NCDS).
+
+       Plans/Schedule: NCDS will continue to support this data, and will
+       continue to update this data set as new data are received.
+
+8.3.3  Angell's Percent Deviation of Seasonal Layer Ozone from Umkehr
+(ANGELL-LYRO3_UMKEHR-SEASN) Common Data Format (CDF).
+
+       Medium/Specification: Magnetic Disk
+
+       Format and Content:  The data are stored in a special data-set-
+       independent format, designated the Common Data Format (CDF).  See
+       item 8.3.1 above.  These data contain the seasonal deviations from
+       layer ozone means as determined by Umkehr, for the 0 - 16 km, 16 -
+       24 km, 24 - 32 km, and 32 - 48 km layer for the period December 1957
+       - November 1989.
+
+       Data Quantity/Rate: One file, 22 kbytes
+
+       Status: These data are currently available on-line in the NASA
+       Climate Data System (NCDS).
+
+       Plans/Schedule: NCDS will continue to support these data and will
+       continue to update this data set as new data are received.
+
+8.3.4  The Greenhouse Effect Detection Experiment (GEDEX) CD-ROM                
+                                                                                
+       Medium/Specification:  CD-ROM in ISO 9660 standard.                      
+                                                                                
+       Format and Content:  The data on this disk will be stored in a
+       special data-set-independent format, designated the Common Data
+       Format (CDF).  The CDF consists of a single file which contain data
+       and descriptions about the data.  A standard software package called
+       the "CDF Library" will be included with this CD-ROM allowing a user
+       to create and access these data and descriptive information.  The
+       CD-ROM will consist of many different data sets related to the study
+       of the Greenhouse Effect including the ANGELL-LYRO3_SONDE-SEASON,
+       ANGELL-LYRO3_UMKEHR-SEASN, and ANGELL-TOTO3_SEASON-DEV data sets,
+       and the accompanying NCDS data set documentation.
+                                                                                
+       Data Quantity/Rate: 
+
+                 ANGELL-LYRO3_SONDE-SEASON One file, 22 kbytes
+                 ANGELL-LYRO3_UMKEHR-SEASN One file, 22 kbytes
+                 ANGELL-TOTO3_SEASON-DEV One file, 20 kbytes
+                                                                                
+       Status: Release date for this product is scheduled for the near
+       future.
+                                                                                
+       Plans/Schedule: Users interested in this product should contact NCDS
+       staff for more details.
+
+8.3.5  Dr. J.K.Angell's handwritten values for the seasonal total and layer
+ozone deviations.
+
+9.  DATA ACCESS
+
+9.1  Archive Identification.
+
+     NCDS User Support Office
+     Goddard Space Flight Center Code 934
+     Greenbelt, Maryland 20771
+     (301) 286-3209
+     FTS: 888-3209
+     TCP/IP: NCDSUSO@NSSDCB.GSFC.NASA.GOV
+     NSI DECnet: NCF::NCDSUSO
+
+9.2  Procedures for Obtaining Data.  Users can obtain these data online
+through the NASA Climate Data System (NCDS).  To use NCDS, you must be able
+to access the National Space Science Data Center (NSSDC) Computer Facility
+(NCF) and obtain an NCF/VAX user account on the NCF VAX cluster.  These
+data are available through the NASA Climate Data System (NCDS) in Common
+Data Format (CDF).  The CDFs are accessible through the Data Applications
+subsystem of NCDS by specifying the following name:
+                                                                                
+                 ANGELL-LYRO3_SONDE-SEASON 
+                 ANGELL-LYRO3_UMKEHR-SEASN 
+                 ANGELL-TOTO3_SEASON-DEV         
+
+To obtain more information on accessing online data or for more information
+on the GEDEX CD-ROM, contact the NCDS User Support Office. (See item 10).
+
+9.3  NCDS Status/Plans.  NCDS will continue to archive and make these data
+available to researchers and continue to update as additional data are
+received.
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+     NCDS User Support Office
+     Goddard Space Flight Center Code 934
+     Greenbelt, Maryland 20771
+     (301) 286-3209
+     FTS: 888-3209
+     TCP/IP: NCDSUSO@NSSDCB.GSFC.NASA.GOV
+     NSI DECnet: NCF::NCDSUSO
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+          None
+
+11.2  Journal Articles and Study Reports
+
+      a.  Angell, J.K., 1989: "On the Relation between Atmospheric Ozone
+          and Sunspot Number," J. of Climate, 2:1404-1416.
+
+      b.  Angell, J.K., 1988: "An Update through 1985 of the Variation in
+          Global Total Ozone and North Temperate Layer-Mean Ozone," J.
+          Appl. Meteor., 27:91-97.
+
+      c.  Angell, J.K., 1987: "Seasonal Differences in the Trend of Total
+          Ozone and Contributions from Tropospheric and Stratospheric
+          Layers," Mon. Wea. Rev., 115:753-762.
+
+      d.  Angell, J.K., 1986: "On the Variation in Period and Amplitude of
+          the Quasibiennial Oscillation in the Equatorial Stratosphere.
+          1951-85," Mon. Wea. Rev., 114:2272-2278.
+
+      e.  Angell, J.K., 1980: "Temperature and Ozone variations in the
+          Stratosphere," Pure Appl. Geophys., 118:378-386.
+
+      f.  Angell, J.K., and J. Korshover, 1983: "Global Variation in Total
+          Ozone and Layer-Mean Ozone: An Update through 1981," J. Climate
+          Appl. Meteor., 22:1611-1627.
+
+      g.  Angell, J.K., and J. Korshover, 1979: "Comparison of Ozone
+          Variations Derived from Ozonesonde and Umkehr Measurements for
+          the Period 1969-76," Mon. Wea. Rev. 107:599-607.
+
+      h.  Deluisi, J.J., 1979: "Umkehr Vertical Ozone Profile Errors Caused
+          by the Presence of Stratospheric Aerosols," J. Geophys. Res.,
+          84:1766-1770.
+
+      i.  Labitzke, K., 1987: "Sunspots, the QBO, and the Stratospheric
+          Temperature in the North Polar Region," Geophys. Res. Lett.,
+          14:535-537.
+
+      j.  Labitzke, K., and H. van Loon, 1988: "Associations between the
+          11-year solar cycle, the QBO and the Atmosphere. Part I: The
+          Troposphere and  Stratosphere in the Northern Hemisphere in
+          winter," J. Atmos. Terr. Phys., 50:197-206.
+
+      k.  Labitzke, K., and H. van Loon, 1989: "Association between the
+          11-year solar cycle, the QBO and the atmosphere.  Part III:
+          Aspects of the Association," J. Climate, 2:445-565.
+
+      l.  Oltmans, S.J., and J. London, 1982: "The Quasi-Biennial
+          Oscillation in Atmospheric Ozone,"J. Geophys. Res., 87:8981-8989.
+
+      m.  Reinsel, G.C., G.C. Tiao, J.J. Deluisi, C.L. Mateer, A.J. Miller,
+          and J.F. Frederick, 1984: "Analysis of Upper Stratospheric Umkehr
+          Ozone Profile Data for Trends and Effects of Stratospheric
+          Aerosols," J. geophys. Res., 89:4833-4840.
+
+      n.  Stolarski, R.S., A.J. Krueger, M.R. Schoeberl, R.D. McPeters,
+          P.A. Newman, and J.C. Alpert, 1986: "Nimbus-7 Satellite
+          Measurements of the Springtime Antarctic Ozone Decreases,"
+          Nature, 322:808-811.
+
+      o.  van Loon, H., and K. Labitzke, 1988: "Association between the
+          11-year solar cycle, the QBO, and the Atmosphere.  Part II:
+          Surface and 700 mb on the Northern Hemisphere in Winter," J.
+          Climate, 1:905-920.
+
+11.3  Archive/DBMS Usage Documentation
+
+      a.  Olsen, L.M, Closs, J.W., and Corprew, F.E., November 1991.
+          "NASA's Climate Data System Primer: Version 4.0."  EOS DAAC, NASA
+          Goddard Space Flight Center, Greenbelt, Maryland.
+
+      b.  "Ozone Data for the World," bimonthly, Atmospheric Environment
+          Service, Department of the Environment in Cooperation with the
+          World Meteorological Organization (WMO).
+
+12.  RELATED DATA SETS
+
+NCDS supports several other data sets online containing ozone measurements.
+The GRIDTOMS daily and monthly data for the period October 1978 - December
+1989 are available, and are accessible through the Data Applications
+Subsystem of NCDS by specifying the following CDF names:
+
+          GRIDTOMS_XXXX *
+          GRIDTOMS_MONTHLY
+
+Also available are ozone monthly averages and hour-monthly averages derived
+from the AVHRR, MIR, VAS, and VISSR instruments onboard the NOAA, METEOSAT,
+GOES, and GMS series of satellites respectively, for the International
+Satellite Cloud Climatology Project (ISCCP-C2). These data can be accessed
+within the NCDS Data Application Subsystem by specifying the following CDF
+names:
+
+          ISCCP-C2_MONTHLY
+          ISCCP-C2_MONTHLY
+
+* where XXXX is the year of interest in the range 1978 - 1989
+
+The SAGE I and SAGE II data, from the AEM-2 satellite and the Earth
+Radiation Budget satellite (ERBS) respectively, contains ozone profile
+data.  The SAGE I data covers the period Feb 21, 1979 through Nov 18, 1981,
+and the SAGE II data covers the period Oct 21, 1984 through the present.
+These data are available on magnetic tape from NCDS, and through the Data
+Access Subsystem of NCDS.  The SAGE II data will also be available on the
+GEDEX CD-ROM, scheduled for release in early spring 1992.
+
+
+13.  SUMMARY/SAMPLE
+
+      None
+
+14.  NOTES
+
+      None
+*92/03/14

@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>Height data - File Format</TITLE>
+  <!-- Created 9th September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>Met Office Geopotential Height data file format<BR CLEAR="ALL"></H1>
+
+<P><HR ALIGN=LEFT>The Height data are in simple ASCII format.
+
+
+<P>All data are 6-figure integers.<BR>
+
+<P>Field headers are "Day, Month, Year" for daily data.<BR>
+Field headers are "Month, Year" for monthly data.<BR>
+
+
+<P>Both height and thickness are in metres *100
+
+<P>The first row is for 90 deg N and the last for 15 deg N.
+<PRE>
+
+          ------------------
+         |     |     |     |
+         | DAY | MON | YR  | 
+         |_____|_____|_____|_____________________________
+     90N |(1,1)                                         |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+     15N |(1,16)_________________________________(36,16)|
+          180W                 0                    180E
+</PRE>
+
+
+</BODY>
+</HTML>

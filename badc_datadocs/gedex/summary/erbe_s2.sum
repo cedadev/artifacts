@@ -1,0 +1,34 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "ERBE_S2 "
+"SUM_DATA_SET"       "ERBE-S2      "
+"SUM_DATATYPE"       "SAT_COMB     "
+"ARCHIVE_NAME"       "NSSDC/NCDS           "
+"ARCHIVE_STATUS"     "Available through 1/92; updated periodically.        "
+"DS_DESCRIPTION"     "Earth Radiation Budget Experiment Solar Irradiances  "
+"DT_DESCRIPTION"     "NOAA-9, 10 and ERBS Satellite Data Combined          "
+"SUM_BEGIN_DATE"     "25-Oct-1984                                          "
+"SUM_END_DATE"       "15-Jan-1992                                          "
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "Full solar disk                                      "
+"SPATIAL2"           "Solar radiometric data in counts and engineering units."
+"SPATIAL3"           "Non-Scanner instrument is positioned for solar-viewing "
+"SPATIAL4"           "approximately every 14 days.                           "
+"TEMPORAL1"          "ERBS: 11/84 - 01/92; NOAA-9: 02/85 - 12/90; NOAA-10:   "
+"TEMPORAL2"          "11/86 - 05/87.                                         "
+"TEMPORAL3"          "Average of two or more total irradiance measurements made"
+"TEMPORAL4"          "during one orbit/2 weeks; S-2 measurements every 16 sec."
+"PRODUCT1"           "Solar Incidence Tape (S-2): 1 6250-bpi tape.           "
+"PRODUCT2"           "Available through NCDS in Common Data Format (CDF):    "
+"PRODUCT3"           "Averages of the instantaneous values obtained during one"
+"PRODUCT4"           "orbit every 2 weeks. Available on CD-ROM."
+EOF
+                                                                                                                                    
+PARAMETERS
+"SOLAR_FLUX"      "Solar Irradiance" "W/m**2"
+EOF
+
+SOURCES
+"NOAA-9"   "NONSCANNER"
+"NOAA-10"  "NONSCANNER"
+"ERBS"     "NONSCANNER"
+EOF

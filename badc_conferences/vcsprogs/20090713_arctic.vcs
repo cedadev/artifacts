@@ -1,0 +1,34 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20090712T230000Z
+DTEND:20090715T230000Z
+LOCATION:Southampton, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E008000000009035597EFFC4C901000000000000000
+	010000000F258AA9A7AF14148BE52C3CADCC9E621
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+UK Arctic Science Conference=0D=0A=0D=0ATo be held at the National Oceano=
+graphy Centre, Southampton, this three-day conference aims to bring toget=
+her UK Arctic scientists of all natural science disciplines:  atmosphere,=
+ biology, ecology, geology, marine and terrestrial cryosphere, modern cli=
+mate and palaeo-climate, oceans; their various interactions;  observation=
+s and modelling.  There will be ample opportunities for networking, to ex=
+plore overlaps in interest and logistics, with a view to facilitating fut=
+ure interdisciplinary collaborations in Arctic science, and to strengthen=
+ing the UK Arctic science community.=0D=0A =0D=0AThe conference will comp=
+rise talks, posters and invited international guest speakers.  The confer=
+ence will run from the afternoon of Monday 13 July, all through Tuesday 1=
+4 July, and close at lunchtime on 15 July. There will be an icebreaker re=
+ception on the Monday evening, posters with drinks on the Tuesday afterno=
+on and a conference dinner Tuesday evening.=0D=0A =0D=0ASpace will be lim=
+ited to 120, so preference for attendance will be given to those wishing =
+to make oral or poster presentations.=0D=0A =0D=0AA second announcement i=
+n a month's time will provide the location of the conference website with=
+ abstract submission facility, and other relevant information.=0D=0A=0D=
+=0A
+SUMMARY:UK Arctic Science Conference
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

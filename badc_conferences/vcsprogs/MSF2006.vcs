@@ -1,0 +1,36 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060618T230000Z
+DTEND:20060619T230000Z
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000F01C9DED9F6EC6010000000000000000100
+ 00000F589FD49C35AAB4FBF5C02D54288D1CE
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:2006 NERC Molecular Spectroscopy Faci=
+lity (MSF) Users' Meeting=0D=0A=0D=0AEach year a meeting is held at the Rut=
+herford Appleton Laboratory for=0D=0ANERC MSF users to present their work. =
+The meeting is an ideal=0D=0Aopportunity to discuss current research projec=
+ts and the future=0D=0Adirection of the Facility.  It is also useful for pr=
+ospective customers=0D=0Ato find out more about the Facility and to meet MS=
+F staff.  There will=0D=0Abe a representative from the NERC on hand to answ=
+er questions on funding=0D=0Aand access arrangements. =0D=0A=0D=0AThe 2006 =
+NERC MSF Users' Meeting will be held at the Rutherford Appleton=0D=0ALabora=
+tory on Monday 19 June.  More details will be available shortly at=0D=0Awww=
+.msf.rl.ac.uk/meeting.htm <http://www.msf.rl.ac.uk/meeting.htm> . =0D=0A=0D=
+=0AThose wishing to attend should register their interest by sending an=0D=
+=0Ae-mail to ralmsf@rl.ac.uk by 12 June.=0D=0A=0D=0A=0D=0A*****************=
+******************************************=0D=0ANERC-Atmos mailing list=0D=
+=0ANERC-Atmos@ncas.ac.uk =0D=0Ahttp://www.ncas.ac.uk/mailman/listinfo/nerc-=
+atmos =0D=0A=0D=0A=0D=0A=0D=0A-- =0D=0AThis message (and any attachments) i=
+s for the recipient only. NERC=0D=0Ais subject to the Freedom of Informatio=
+n Act 2000 and the contents=0D=0Aof this email and any reply you make may b=
+e disclosed by NERC unless=0D=0Ait is exempt from release under the Act. An=
+y material supplied to=0D=0ANERC may be stored in an electronic records man=
+agement system.=0D=0A=0D=0A=0D=0A__________________________________________=
+_____=0D=0ANERC-Atmos mailing list=0D=0ANERC-Atmos@ncas.ac.uk=0D=0Ahttp://w=
+ww.ncas.ac.uk/mailman/listinfo/nerc-atmos=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:2006 NERC MSF Users' Meeting
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

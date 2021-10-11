@@ -1,0 +1,95 @@
+<html >
+<title>Formatting time in NASA Ames files </title>
+<head>
+</head>
+<body>
+<h1>Formatting time in NASA Ames files:</h1>
+<hr>
+The following information is recommended by the BADC as the correct way to include time dimension information in NASA Ames Files.
+<br>
+<br>In the Header section:
+
+<br><b>Line 7:</b>    	DATE and RDATE should be formatted as:
+<span style='color:green'>	<b>	YYYY MM DD</b></span>
+<br>
+<br><b>Lines that define the Variable name and units:</b>
+<br>		XNAME(x) should be formatted as follows for time:
+<br>
+<br><span style='color:green'><b>time (&lt;unit &gt; since YYYY-MM-DD hh:mm:ss <timezone>)</b></span>
+<br>
+<br>Where &lt;unit &gt; is one of those listed in Appendix I and <timezone> (optional) is relative to Coordinated Universal Time - usually formatted as +hh:mm or –hh:mm.
+<br>
+<br><b>Examples</b> would be:
+<br><span style='font-family:Courier'>	“time (hours since 1999-09-12 18:00:00)”
+<br>	“time (days since 2002-12-01 00:00:00 +6:00)”
+<br>	“time (seconds since 1956-1-30 9:12:12 -3:00)”</span>
+<br>
+<br><b>In the Data section:</b>
+<br>Since the units have been explicitly stated in the header you can either use a REAL or INTEGER to describe the time. For example, if the units in the header were “time (seconds since 1999-09-12 18:00:00)” then the data value of 3600 would represent the valid time 1999-9-12 19:00:00 (or 7 pm on 12th September 1999).
+<p>
+<b>Further details</b>
+Where time is a Variable (Independent, Dependent or Auxiliary), please use the guidelines given for <a href="http://www.cgd.ucar.edu/cms/eaton/cf-metadata/CF-1.0.html#time">CF-compliant NetCDF data for time</a>. The CF document lists a set of accepted unit types that can be used as set out by the <a href="http://www.unidata.ucar.edu/packages/udunits/">UDUNITS software package</a>, these are listed in Appendix I. 
+<p>
+<b>The following full explanation is copied from the CF-metadata web site:</b>
+Variables representing time must always explicitly include the units attribute; there is no default value. The units attribute takes a string value formatted as per the recommendations in the Udunits package. The following excerpt from the Udunits documentation explains the time unit encoding by example: 
+<blockquote><p style='font-family:Courier'>The specification:
+<br><b>
+    seconds since 1992-10-8 15:15:42.5 -6:00
+<br></b>
+indicates seconds since October 8th, 1992  at  3  hours,  15
+minutes  and  42.5 seconds in the afternoon in the time zone
+which is six hours to the west of Coordinated Universal Time
+(i.e.  Mountain Daylight Time).  The time zone specification
+can also be written without a colon using one or  two-digits
+(indicating hours) or three or four digits (indicating hours
+and minutes).</p></blockquote>
+The acceptable units for time are listed in Appendex I. The most commonly used of these strings (and their abbreviations) includes day (d), hour (hr, h), minute (min) and second (sec, s). Plural forms are also acceptable. The reference time string (appearing after the identifier since) may include date alone; date and time; or date, time, and time zone. The reference time is required. A reference time in year 0 has a special meaning (see CF documentation). 
+<br>Note: if the time zone is omitted the default is UTC, and if both time and time zone are omitted the default is 00:00:00 UTC. 
+<p>We recommend that the unit year be used with caution. The Udunits package defines a year to be exactly 365.242198781 days (the interval between 2 successive passages of the sun through vernal equinox). It is not a calendar year. Udunits includes the following definitions for years: a common_year is 365 days, a leap_year is 366 days, a Julian_year is 365.25 days, and a Gregorian_year is 365.2425 days. 
+<br>For similar reasons the unit month, which is defined in udunits.dat to be exactly year/12, should also be used with caution.
+<br>
+<br><b>Appendix I: Accepted units of time in the UDUNITS software package</b>
+<pre>
+<p style='font-family:Courier'><br># UNITS OF TIME
+#
+day                     8.64e4 second		# exact
+hour                     3.6e3 second		# exact
+minute                      60 second		# exact
+s                              second
+sec                            second
+shake                     1e-8 second		# exact
+sidereal_day        8.616409e4 second
+sidereal_hour       3.590170e3 second
+sidereal_minute     5.983617e1 second
+sidereal_second      0.9972696 second
+sidereal_year       3.155815e7 second
+# Interval between 2 successive passages of sun through vernal equinox
+# (365.242198781 days -- see 
+# http://www.ast.cam.ac.uk/pubinfo/leaflets/,
+# http://aa.usno.navy.mil/AA/
+# and http://adswww.colorado.edu/adswww/astro_coord.html):
+tropical_year  3.15569259747e7 second
+lunar_month          29.530589 day
+common_year                365 day		# exact: 153600e7 seconds
+leap_year                  366 day		# exact
+Julian_year             365.25 day		# exact
+Gregorian_year        365.2425 day		# exact
+sidereal_month       27.321661 day
+tropical_month       27.321582 day
+d                              day
+min                            minute
+hr                             hour
+h                              hour
+fortnight                   14 day		# exact
+week                         7 day		# exact
+jiffy                     0.01 second		# believe it or not!
+jiffies                        jiffy		# assumed plural spelling
+year                           tropical_year
+yr                             year
+a                              year		# "anno"
+eon                        1e9 year		# fuzzy
+month                          year/12		# on average
+</pre>
+</p>
+</body>
+</html>

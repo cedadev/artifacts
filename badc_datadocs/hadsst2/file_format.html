@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>Documentation</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>HadSST2 File Format & Data Availability Documentation<BR CLEAR="ALL"></H1>
+
+<HR ALIGN=LEFT>
+
+<P> Data are stored in ASCII.
+<P>
+Temperatures are stored as degrees C<BR><BR>
+Land squares and missing data are set to -99.99<BR><BR>
+
+The month and year are stored at the start of each month.<BR><BR>
+
+Data Array (72x36)<BR>
+Item ( 1,  1) stores the value for the 5-deg-area centred at 177.5W and 87.5N<BR>
+Item (72, 36) stores the value for the 5-deg-area centred at 177.5E and 87.5S<BR>
+<BR><PRE>
+
+          ----- ----- 
+         |     |     |
+         | MON | YR  |
+         |_____|_____|__________________________________
+     90N |(1,1)                                         |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+         |(1,18)                                        |
+     Equ |                                              |
+         |(1,19)                                        |
+         |                                              |
+         |                                              |
+         |                                              |
+         |                                              |
+     90S |(1,36)_________________________________(72,36)|
+          180W                 0                    180E</PRE>
+<P><BR>
+<BR>
+
+<h3><a href="http://badc.nerc.ac.uk/browse/badc/ukmo-hadsst2/data/HadSST2_SST_1850_onwards">HadSST2_SST_1850_onwards</a>: Monthly 5degree resolution SST anomalies wrt 1961-90 climatology</h3>
+
+<p>The observations that make up this dataset are taken from the International 
+Comprehensive Ocean-Atmosphere DataSet, ICOADS (see http://www.cdc.noaa.gov/coads/), 
+until 1997 and from the NCEP GTS  archive thereafter. Individual observations must 
+first pass a series of quality checks (track check, reality check, positional check, 
+climatology check, buddy check, duplicate check). The quality-checked observations 
+in each  1degree longitude X 1degree latitude X pentad gridbox are then averaged 
+using a winsorised average. The pentad climatology is then subtracted from these 
+pentad superobs and the resulting anomalies are averaged to 5degree X 5degree X 
+monthly resolution. The data are then bias-corrected for the use of buckets in the 
+period 1850-1941.
+</p>
+
+<h3><a href="http://badc.nerc.ac.uk/browse/badc/ukmo-hadsst2/data/HadSST2_m_and_s_errors_1850on.txt">HadSST2_m_and_s_errors_1850on.txt</a>: Measurement and sampling error, 1 standard error</h3>
+
+<p>Measurement and sampling error refers to the random error caused by estimating an 
+area-averaged quantity from a finite number of noisy observations. These errors are 
+calculated directly from the gridded data. Measurement and sampling errors are 
+uncorrelated between gridboxes.
+</p>
+
+<h3><a href="http://badc.nerc.ac.uk/browse/badc/ukmo-hadsst2/data/HadSST2_2.5_pct_bias_1850on.txt">HadSST2_2.5_pct_bias_1850on.txt</a>: 2.5 percent bias bound, equivalent to 2 standard errors</h3>
+
+<p>The bias bound represents the low (2.5 percent) error bound on the bias corrected 
+data as calculated from 1000 physically plausible realisations of the bias corrected 
+dataset. The bias errors are completely correlated between gridboxes.
+</p>
+
+<h3><a href="http://badc.nerc.ac.uk/browse/badc/ukmo-hadsst2/data/HadSST2_97.5_pct_bias_1850on.txt">HadSST2_97.5_pct_bias_1850on.txt</a>: 97.5 percent bias bound, equivalent to 2 standard errors</h3>
+
+<p>The bias bound represents the high (97.5 percent) error bound on the bias corrected 
+data as calculated from 1000 physically plausible realisations of the bias corrected 
+dataset. The bias errors are completely correlated between gridboxes.
+</p>
+
+<h3>A note on combining errors</h3>
+
+<blockquote>If you would like to create combined 2 sigma uncertainties at each gridbox, it is 
+suggested that you subtract the "low_bias" field from the "high_bias"field, divide 
+by two and then add to two times the sampling and measurement errors in quadrature, 
+as they are independent uncertainties. This is because the bias uncertainties are 
+95% confidence intervals, but the sampling and measurement errors are 1 standard error. 
+Note that, although the sampling and measurement errors are uncorrelated between grid 
+boxes, the bias correction uncertainties are completely correlated between grid boxes. 
+This will have implications for the way youcalculate average uncertainties for any 
+averaged time series that you create, e.g. your Nino3.4 index.</blockquote>
+
+
+<p>Files showing the corrections applied to the data are:
+
+<ul>
+<li><a href="http://badc.nerc.ac.uk/browse/badc/ukmo-hadsst2/data/HadSST2_bucket_correction_median.txt">HadSST2_bucket_correction_median.txt</a> - the corrections applied to the data 1850-1941.
+<li><a href="http://badc.nerc.ac.uk/browse/badc/ukmo-hadsst2/data/HadSST2_bucket_correction_2.5pc.txt">HadSST2_bucket_correction_2.5pc.txt</a> - the lower bound of the 95% confidence range of the uncertainties 1850-1941.
+<li><a href="http://badc.nerc.ac.uk/browse/badc/ukmo-hadsst2/data/HadSST2_bucket_correction_97.5pc.txt">HadSST2_bucket_correction_97.5pc.txt</a> - the upper bound of the 95% confidence range of the uncertainties 1850-1941.
+</ul>
+
+<P>
+</BODY>
+</HTML>

@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 10.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050308T000000Z
+DTEND:20050309T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Paris, France
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000704D49E9C0E2C4010000000000000000100
+ 000004B447B66A3E01B4E876847646B486A16
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:International Conference "Biodiversit=
+y: Science and Governance",=0D=0Aorganized by the French Ministry for Resea=
+rch.=0D=0A=0D=0AConsult the programme:=0D=0Ahttp://www.recherche.gouv.fr/bi=
+odiv2005paris/en/programme.pdf=0D=0A=0D=0ARegister as soon as possible:=0D=
+=0Ahttp://www.recherche.gouv.fr/biodiv2005paris/en/rgi.htm=0D=0A=0D=0A=0D=
+=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:International Conference "Biodiversity: S=
+cience and Governance"
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,18 @@
+-- ## 7: My Tickets ## --
+
+-- 
+-- This report demonstrates the use of the automatically set 
+-- USER dynamic variable, replaced with the username of the
+-- logged in user when executed.
+
+
+SELECT p.value AS __color__,
+   (CASE status WHEN 'accepted' THEN 'Accepted' ELSE 'Owned' END) AS __group__,
+   id AS ticket, summary, component, version, milestone,
+   t.type AS type, priority, time AS created,
+   changetime AS _changetime, description AS _description,
+   reporter AS _reporter
+  FROM ticket t
+  LEFT JOIN enum p ON p.name = t.priority AND p.type = 'priority'
+  WHERE t.status <> 'closed' AND owner = $USER
+  ORDER BY (status = 'accepted') DESC, CAST(p.value AS int), milestone, t.type, time

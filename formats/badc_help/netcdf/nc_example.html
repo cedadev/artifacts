@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML LANG="EN">
+
+<HEAD>
+
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<TITLE>BADC Datasets: netCDF example and description</TITLE>
+
+</HEAD>
+
+<!-- Written by Helen Walker, BADC RAL CCLRC Feb 2003 -->
+
+<BODY BGCOLOR="#FFFFFF">
+
+<H1>BADC example of a netCDF file and description of contents</H1>
+
+<P>
+<EM>A simple netCDF file is created, and a description of the various elements 
+in the file is given.</EM>
+</P>
+
+<HR ALIGN="LEFT">
+
+<P>
+<H2>Making a netCDF file</H2>
+
+In order to test the ncdump and ncgen utilities you need some data. 
+The beauty of the utilities is that they allow conversion between binary 
+netCDF (file extension .nc) code and the ASCII (text) representation 
+of that code in the network Common data form Description Language 
+(CDL - file extension .cdl). For a thorough understanding of the 
+CDL language and the utilities mentioned here you should consult 
+<A HREF="http://www.unidata.ucar.edu/packages/netcdf/guide_12.html">http://www.unidata.ucar.edu/packages/netcdf/guide_12.html</A>. 
+</P>
+
+<P>
+However, we can start with a very simple example as shown in the figure. 
+The description of the file gives a brief overview of the basic 
+concepts of netCDF.
+</P>
+
+<P>
+<IMG SRC="nc_simple.gif" BORDER="2" ALT="Figure showing a simple netCDF ASCII file">
+</P>
+
+<P>
+The CDL representation of the netCDF file simple.nc (shown in the figure) 
+can be downloaded from 
+<A HREF="http://badc.nerc.ac.uk/help/formats/netcdf/simple.cdl">http://badc.nerc.ac.uk/help/formats/netcdf/simple.cdl</A>
+The <A HREF="http://badc.nerc.ac.uk/help/formats/netcdf/simple.nc">simple.nc</A> file 
+can also be retrieved. This will allow you to experiment 
+with the ncgen and ncdump utilities. 
+Most <A HREF="nc_language_types.html">data types</A> 
+are permitted by netCDF.
+</P>
+
+<H2>Name section</H2>
+<P>
+The format is relatively self-explanatory with the header section 
+giving the name of the netCDF file that corresponds to the CDL file. 
+The rest of the file is then enclosed in curly braces {}.
+</P>
+
+<H2>Dimensions section</H2>
+<P>
+The next section outlines the number of points in each dimension, 
+in this case we have longitude (lon), latitude (lat) and time. 
+Since this is a simple file there are only 2 x 3 grid-points in the 
+spatial domain, and the time axis. The option 
+<EM>'time = UNLIMITED ;'</EM> demonstrates that one variable can 
+be recorded as 'unlimited' allowing further additions to the file 
+in the future.
+</P>
+
+<H2>Variables section</H2>
+<P>
+The variables section defines each of the dimensions in full, 
+including attributes relating to each of them. You can include 
+any attributes you wish but there are conventions for many of
+them. The final variable in this case is the independent
+variable that we are interested in, 
+<EM>'Surface temperature in degrees C'</EM> abbreviates 
+to <EM>'temp'</EM>. The final <EM>'f'</EM> on the 
+temp:valid_min and temp:valid_max values shows that 
+the numbers are floating-point numbers.
+</P>
+
+<H2>Global attributes section</H2>
+<P>
+You can include as many global attributes as you wish. The  
+<A HREF="index_cf.html">CF conventions</A> defining these 
+should be followed.
+</P>
+
+<H2>Data  section</H2>
+<P> 
+The final section is the actual data itself. First the data related to 
+the dimensions are specified. In this case there are 2 x 3 points 
+in longitude and latitude, and there are 5 time steps (in 
+units of 'days since 1994-01-01 00:00:00'). Finally, the temperature 
+values themselves follow in the array (time, lat, long), with
+the last index (long) varying first (so temp for (0.5, 54.2, 2.0) is
+followed by temp for (0.5, 54.2, 2.5), and so on).
+</P>
+
+<P>
+The file can be saved as 'simple.cdl' in a directory 
+that you are going to use for experimentation. This directory is 
+shown as 'your_directory' (ending in '/' for Unix/Linux or '\' for Windows)
+in the example of <A HREF="nc_utilities.html#ncgen">using ncgen and ncdump</A>.
+</P>
+
+<P>
+<A HREF="index.html">The BADC netCDF homepage</A>
+</P>
+
+</BODY>
+
+</HTML>

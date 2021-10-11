@@ -1,0 +1,284 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>User Documentation
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <!-- User documentation page                                  -->
+<!--                                                          -->
+
+<!-- Troubleshooting -->
+<H2>Troubleshooting</H2>
+<P>Here is a document that explains in detail frequently asked questions about 
+  ATSR images. If you have a question not answered here or in the <A href="../faq/index.shtml">general 
+  FAQ</A> then please email <A href="mailto:support@ceda.ac.uk">support@ceda.ac.uk</A>.</P>
+<BLOCKQUOTE> 
+  <P><IMG src="../std_template/std_images/files/std_binary.gif" align="middle" alt="Binary file : "> 
+    <A href="docs/imagefaq/faq.pdf">Download the ATSR image FAQ in pdf format</A> 
+  </P>
+</BLOCKQUOTE>
+<!-- User Guide -->
+<H2>ATSR User Guide</H2>
+<P>A short guide to the ATSR-1 and 2 instruments and their data products. Available 
+  in PDF format, note you will need Acrobat Reader 3 or above.</P>
+<BLOCKQUOTE> 
+  <P><IMG SRC="../std_template/std_images/files/std_doc.gif" ALIGN="middle" ALT="Document file : "> 
+    <a href="docs/userguide/index.shtml">View the userguide online</a><BR>
+    <IMG SRC="../std_template/std_images/files/std_binary.gif" ALIGN="middle" ALT="Binary file : "> 
+    <A HREF="docs/userguide/atsr_user_guide_rev_3.pdf">Download a printable version 
+    in pdf format</A><BR>
+  </P>
+</BLOCKQUOTE>
+
+<!-- Filter Functions -->
+<H2>Filter Functions</H2>
+<P>Tables that contain the normalised response as a function of wavelength for 
+  each of the ATSR1 and 2 channels taken during the integration of the focal plane 
+  assemblies.</P>
+<BLOCKQUOTE> <IMG SRC="../std_template/std_images/files/std_doc.gif" ALIGN="middle" ALT="Document file : "> 
+  <A HREF="docs/filterfunctions/index.shtml">Filter Functions</A> </BLOCKQUOTE>
+<!-- Visible Calibration Tables --> 
+<H2>Visible Calibration Tables</H2>
+<P>Instructions for calibrating the data received from the ATSR instruments.</P>
+<BLOCKQUOTE> <IMG SRC="../std_template/std_images/files/std_doc.gif" ALIGN="middle" ALT="Document file : "> 
+  <A HREF="docs/visiblecalibration/index.shtml">ATSR-2 Visible Calibration Tables</A> 
+</BLOCKQUOTE>
+
+<!-- Sadist 1 documentation --> 
+<h2>Sadist Product Documentation</h2>
+<p>SADIST Products (Version 600), 25 May 1995 </p>
+<BLOCKQUOTE> 
+  <P> <IMG src="../std_template/std_images/files/std_binary.gif" align="middle" alt="Binary file : "> 
+    <a href="docs/sadist/sadist/sadist_600_products_tex.tar.gz">LaTex version 
+    (tar.gz)</a><BR>
+    <IMG src="../std_template/std_images/files/std_binary.gif" align="middle" alt="Binary file : "> 
+    <a href="docs/sadist/sadist/sadist_600_products.ps">Postscript version</a><BR>
+    <IMG src="../std_template/std_images/files/std_binary.gif" align="middle" alt="Binary file : "> 
+    <a href="docs/sadist/sadist/sadist_600_products.pdf">PDF version</a><BR>
+  </P>
+</BLOCKQUOTE>
+
+<!-- Sadist 2 documentation --> 
+<p>SADIST-2 v100 Products (Ref: ER-TN-RAL-AT-2164), 6 September 1995 </p>
+<BLOCKQUOTE> 
+  <P> <IMG src="../std_template/std_images/files/std_binary.gif" align="middle" alt="Binary file : "> 
+    <a href="docs/sadist/sadist2/sadist2_100_products_tex.tar.gz">LaTex version 
+    (tar.gz)</a><BR>
+    <IMG src="../std_template/std_images/files/std_binary.gif" align="middle" alt="Binary file : "> 
+    <a href="docs/sadist/sadist2/sadist2_products_v100.ps">Postscript version</a><BR>
+    <IMG src="../std_template/std_images/files/std_binary.gif" align="middle" alt="Binary file : "> 
+    <a href="docs/sadist/sadist2/sadist2_products_v100.pdf">PDF version</a><BR>
+  </P>
+</BLOCKQUOTE>
+<!-- ATSR Cloud Screening --> 
+<H2>ATSR Cloud Screening</H2>
+<P>A brief explanatiion of ATSR cloud screening process.</P>
+<BLOCKQUOTE> 
+<IMG SRC="../std_template/std_images/files/std_doc.gif" ALIGN="middle" ALT="Document file : "> 
+  <A HREF="../cloudtests/index.shtml">Cloud Test Guide</A> 
+</BLOCKQUOTE>
+<!-- Coefficients --> 
+<H2>Coefficients</H2>
+<P>Generation of retrieval coefficient sets for ATSR-1/ATSR-2.</P>
+<BLOCKQUOTE> 
+<IMG SRC="../std_template/std_images/files/std_binary.gif" ALIGN="middle" ALT="Document file : "> 
+  <A HREF="docs/coefficients/COEFFICI.pdf">Coefficients</A> 
+</BLOCKQUOTE>
+<!-- Sun Glint --> 
+<H2>Sun Glint</H2>
+<P>Sun Light contamintaion of sea surface temperatures measured at infra-red lengths.</P>
+<BLOCKQUOTE> 
+<IMG SRC="../std_template/std_images/files/std_binary.gif" ALIGN="middle" ALT="Document file : "> 
+  <A HREF="docs/sunglint/SUNGLINT.pdf">Sun Glint</A> 
+</BLOCKQUOTE>
+<H2>References </H2>
+<BLOCKQUOTE>
+  <P><IMG src="../std_template/std_images/files/std_doc.gif" align="middle" alt="Document file : "> 
+    <A href="docs/references/references/index.shtml">ATSR References</A><BR>
+    <IMG src="../std_template/std_images/files/std_doc.gif" align="middle" alt="Document file : "> 
+    <A href="docs/references/related/index.shtml">Related Publications</A> </P>
+</BLOCKQUOTE>
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Wednesday, 16-Oct-02 15:36:34 BST</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

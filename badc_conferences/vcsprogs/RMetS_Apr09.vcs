@@ -1,0 +1,20 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20090406T230000Z
+DTEND:20090407T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:University of Leicester, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000C0ED334516A7C9010000000000000000100
+ 000009D64DAD2A839764F91D068D1FA02CF98
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0A=0D=0A <<RMetS_Apr09.doc>> =0D=
+=0A =0D=0A=0D=0AA meeting of the Atmospheric Chemistry Special Interest Gro=
+up of the Royal Meteorological Society will be taking place at Lecture Room=
+ A, George Porter Building (Dept. Chemistry), University of Leicester, on T=
+uesday 7 April 2009.  Please see the attached programme for full details.=
+=0D=0A=0D=0A =0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:The Royal Meteorological Society
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

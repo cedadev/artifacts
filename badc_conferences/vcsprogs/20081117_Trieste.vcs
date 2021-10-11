@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20081117T000000Z
+DTEND:20081121T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Abdus Salam ICTP, Trieste, Italy
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000C02797790CD6C8010000000000000000100
+ 000009F7CA3B0FFD55D478C392D273D91CACF
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:17-20 November 2008  - Conference on =
+Teleconnections in the Atmosphere and Oceans, =0D=0AAbdus Salam ICTP, Tries=
+te, Italy. Email: smr1968@ictp.it. =0D=0AWebsite: http://agenda.ictp.it/smr=
+.php?1968. =0D=0AMain topics will include a) reporting current understandin=
+gs, outstanding questions and potential solutions for=0D=0Athe dynamics of =
+atmospheric and oceanic teleconnections, b) identify difficulties and poten=
+tial advances in models to represent teleconnections and c) teleconnections=
+ under climate change scenarios.=0D=0A=0D=0AAbstract deadline: 30 June 2008=
+. Oral and poster presentations are accepted.=0D=0A=0D=0AThere is no regist=
+ration fee. For more information about the meeting including application de=
+tails, and eligibility for travel and accommodation supports for certain pa=
+rticipants, please go to the conference website.=0D=0A=0D=0AInvited speaker=
+s list (not yet complete) include:=0D=0AGrant Branstator, Isaac Held, Brian=
+ Hoskins, Gabriel Lau, John Marshall, Carlos R. Mechoso, Franco Molteni, Ja=
+gadish Shukla, Anastasios Tsonis, Mike Wallace, Bin Wang=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Conference on Teleconnections in the Atmo=
+sphere and Oceans
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

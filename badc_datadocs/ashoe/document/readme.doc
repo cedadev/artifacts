@@ -1,0 +1,171 @@
+README.DOC  (1995-06-02)
+
+1.  Introduction
+
+    This CD-ROM contains data pertaining to the combined experiment:
+    Airborne Southern Hemisphere Ozone Experiment; and Measurements
+    for Assessing the Effects of Stratospheric Aircraft (ASHOE/MAESA).
+    This experiment was conducted in four phases between March and 
+    November 1994 at NASA Ames Research Center, California; Barbers Point, 
+    Hawaii; and Christchurch, New Zealand.  Most of the data are essentially
+    in their final form, but additional calibrations are being done for some
+    instruments.  A second edition incorporating any changes to the datasets
+    is anticipated in mid 1996.
+ 
+    The data consist of in situ and remotely sensed measurements collected
+    onboard the NASA ER-2 aircraft; radiosonde, ozonesonde, and backscatter
+    sonde balloon measurements; ground-based spectrometer and lidar
+    measurements; and SAGE II satellite measurements.
+    Theory teams provided calculations of: meteorological parameters in the
+    form of partial hemispheric analyses, cross-sections along the ER-2
+    flight track, interpolations to the ER-2 flight path, and back-
+    trajectories of selected parcels along the ER-2 flight path;
+    photodissociation rates of selected chemical species along the ER-2
+    flight path; and cloud properties along the ER-2 flight track.
+
+    All investigators produced either measurements or modelling results, 
+    though not all products were submitted to the archive.  If there is an
+    investigation of interest for which no data is available on this CD-ROM
+    archive, please feel free to contact the Principal Investigator directly.
+    For example, Dr. D. Johnson, University of Wisconsin, has model results
+    from his hybrid forecast model which he is willing to provide to people
+    that contact him.  The project handbook, included in the document 
+    directory and described below, describes all instrumental and theoretical
+    investigations.
+
+    All files within this release are standard ASCII files with variable 
+    length records terminated by a carriage return/line feed pair (<CR><LF>,
+    ASCII decimal values 13 and 10).  Therefore, MS-DOS users should be able
+    to read them as they are, but UNIX and Mac users will have to strip off 
+    either the <CR> or the <LF> from each line to convert them to standard 
+    UNIX or Mac text files.  Commercially available software, such as 
+    dos2unix and Apple File Exchange, exists to convert MS-DOS files to both
+    UNIX and Mac files.  DEC VMS users can define the files to have STREAM 
+    record formats.
+ 
+    The file naming convention uses a two-character prefix followed by a six 
+    digit number (yymmdd) giving the year, month, and day (UT) on which the
+    data begins.  For files pertaining to a particular ER-2 flight, such as
+    those in the er2 subdirectory, the date in the file name is the UT date
+    of launch.  In some files, like those in the ground subdirectory, the
+    data starts on the date in the file name but extends for many days.
+    A three character extension is used to identify the measurement
+    platform or source.  Those with two digits (e.g. Bhh) indicate the
+    UT hour to which the data pertains.
+
+
+2.  Directories
+
+    2.1  The document directory contains several files documenting the 
+         contents of this edition.
+
+         Files:
+
+         2.1.1  contact.doc contains an updated list of names, addresses,
+                and phone numbers of the principal investigators and/or
+                those responsible for generating the datasets in this 
+                release.
+
+         2.1.2  EOM.ps is a PostScript file containing the End of Mission
+                Statement for ASHOE/MAESA.  This document summarizes the
+                objectives and significant findings of the campaign based
+                on preliminary analysis of the data during the field phase
+                of the mission.
+
+         2.1.3  er2table.doc contains a record of the available ER-2 
+                datasets in tabular format.
+
+         2.1.4  fltcat.doc contains a tabular summary of the ASHOE/MAESA
+                flights, compiled by Adrian Tuck, ASHOE Project Scientist.
+
+         2.1.5  forspec1.ps and forspec2.ps are PostScript files of the
+                document entitled "Format Specification for Data Exchange"
+                which defines the standard file formats in which all data 
+                are recorded.  forspec1.ps contains the title page and table
+                of contents; forspec2.ps contains the bulk of the document.
+
+         2.1.6  handbook.ps is a PostScript file containing the project
+                handbook.  This document describes the mission objectives,
+                mission plan, aircraft instruments, and theoretical 
+                investigations.  It can be printed on a PostScript printer
+                (67 pp.), but some PostScript previewers may have problems 
+                with some of the special characters within the document.
+
+         2.1.7  uv_vis.doc, by Tom McElroy, contains a detailed description 
+                of the UV-Vis experiment, also known as the Composition and 
+                Photodissociative Flux Measurement (CPFM).
+
+    2.2  The data directory has seven subdirectories for the ER-2, ground
+         based spectrometers, LIDAR, GSFC model results, ozonesonde 
+         soundings, radiosonde soundings, and SAGE II satellite data files.
+
+         Subdirectories:
+
+         2.2.1  er2 - contains the available data collected onboard the ER-2
+                aircraft, plus derived quantities pertaining to particular 
+                flights.  Each file contains data for one flight beginning 
+                on the UT date indicated in the file name.
+
+         2.2.2  ground - contains ground-based spectrometer measurements
+                from Lauder and Campbell Island, New Zealand; and Arrival 
+                Heights, Antarctica.  Each file contains data for many
+                days.
+
+         2.2.3  lidar - contains stratospheric LIDAR measurements from
+                Lauder, New Zealand.  Each file contains data for one
+                time period.
+
+         2.2.4  model - contains 00 Z and 12 Z analyses of meteorological
+                parameters on isentropic and isobaric surfaces.  From the 
+                GSFC Assimilation Model with each file containing analyses
+                for one time period.
+
+         2.2.5  o3sonde - contains ozonesonde and backscatter sonde 
+                soundings from Lauder, New Zealand and Macquarie Island,
+                Australia.  One sounding per file.
+
+         2.2.6  raob - contains selected radiosonde soundings near the 
+                aircraft flight tracks.  Each file contains one or more 
+                soundings at one or more locations for a particular time 
+                period.
+
+         2.2.7  sat - sunrise and sunset vertical profiles from SAGE II
+                satellite instrument, with several profiles per file.
+ 
+
+3.  Directory Structure for this CD-ROM is as follows:
+
+    README.DOC in top level directory
+    document
+    data
+      |-- er2
+      |-- ground
+      |-- lidar
+      |-- model
+      |-- o3sonde
+      |-- raob
+      |-- sat
+ 
+------------------------------------------------------------------------------
+
+This documentation and the accompanying data files were compiled by:
+
+Steven Gaines
+NASA Ames Research Center
+M/S 245-5
+Moffett Field, CA 94035-1000
+415-604-4546
+gaines@cloud1.arc.nasa.gov
+
+Steve Hipskind
+NASA Ames Research Center
+M/S 245-5
+Moffett Field, CA 94035-1000
+415-604-5076
+hipskind@cloud1.arc.nasa.gov
+
+We have left the quality control of the data to the principal investigators 
+and have checked only the format of the data files.  Therefore, if problems 
+with the data are encountered, please inform us or the appropriate principal 
+investigator.
+

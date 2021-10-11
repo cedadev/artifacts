@@ -1,0 +1,2261 @@
+                                 
+                                   
+                                   
+                                A GUIDE
+                                   
+                                  TO
+                                   
+                              G  R  I  B
+                                   
+                                   
+                              (Edition 1)
+                                   
+                                   
+                            THE WMO FORMAT
+                                   
+                                  FOR
+                                   
+              THE STORAGE OF WEATHER PRODUCT INFORMATION
+                                   
+                                  AND
+                                   
+               THE EXCHANGE OF WEATHER PRODUCT MESSAGES
+                                   
+                        IN GRIDDED BINARY FORM
+                                   
+                                   
+                           John D. Stackpole
+                          Automation Division
+                    National Meteorological Center
+                       National Weather Service
+                                 NOAA
+                                   
+                                   
+                           February 18, 1994
+                                   
+                            GRIB Edition 1
+                                   
+
+INTRODUCTION
+
+     The World Meteorological Organization (WMO) Commission for Basic
+Systems (CBS) Extraordinary Meeting Number VIII (1985) approved a
+general purpose, bit-oriented data exchange format, designated FM 92-
+VIII Ext. GRIB (GRIdded Binary).  It is an efficient vehicle for
+transmitting large volumes of gridded data to automated centers over
+high speed telecommunication lines using modern protocols.  By packing
+information into the GRIB code, messages (or records - the terms are
+synonymous in this context) can be made more compact than character
+oriented bulletins, which will produce faster computer-to-computer
+transmissions.  GRIB can equally well serve as a data storage format,
+generating the same efficiencies relative to information storage and
+retrieval devices.
+
+     Changes and extensions to GRIB were approved at the regular
+meeting of the WMO/CBS in February, 1988; additional changes were
+introduced at the CBS/WGDM/Sub-Group on Data Representation (SGDR)
+meetings in May 1989 and in October 1990.  The 1990 changes were of
+such structural magnitude as to require a new Edition of GRIB, Edition
+1, which this document describes.  Further augmentations and
+interpretations were made by the SGDR in September 1993, with approval
+by the WGDM in February 1994. These changes did not result in a new
+Edition to GRIB, but did change some of the Tables, resulting a new
+Version number for them.  This brings us now to Table Version 2.  The
+changes from Version 1 were mainly additions of new parameters or more
+precise definition of existing ones.
+
+     It is not anticipated that there will be any large-scale
+structural changes to GRIB for at least four to five years, or more.
+The SGDR is undertaking a thorough review of the present and future
+requirements that GRIB is supposed to satisfy.  The plan is to design a
+major revision of GRIB capable of accommodating these requirements and
+more, without "straining" the structure of the data representation
+form.  Some things are getting a little strained even now.  See below.
+
+     Note: the Edition number is placed in the same location, relative
+to the start of the GRIB message, for all Editions. Thus, decoding
+programs can detect which Edition was used to construct a particular
+GRIB message and behave accordingly.  This is useful for archives of
+messages encoded in earlier Editions or during transition periods.  Of
+course, this requires that data centers retain copies of older editions
+of the code, and older versions of the parameter tables.
+
+     Each GRIB record intended for either transmission or storage
+contains a single parameter with values located at an array of grid
+points, or represented as a set of spectral coefficients, for a single
+level (or layer), encoded as a continuous bit stream.  Logical
+divisions of the record are designated as "sections", each of which
+provides control information and/or data.  A GRIB record consists of
+six sections, two of which are optional:
+
+               (0) Indicator Section
+
+               (1) Product Definition Section (PDS)
+
+               (2) Grid Description Section (GDS) -  optional
+
+               (3) Bit Map Section (BMS)          -  optional
+
+               (4) Binary Data Section (BDS)
+
+               (5) '7777' (ASCII Characters)
+
+     Although the Grid Description Section is indicated as optional, it
+is highly desirable that it be included in all messages.  That way
+there will be no question about just what is the "correct" geographical
+grid for a particular field.
+
+     In this documentation, certain symbols are used to clarify the
+contents of octets (groups of eight consecutive binary bits).  If
+unadorned letters are used, they are symbolic and their meanings are
+described in the text; a decimal number is simply printed as is; a
+character or string of characters is represented inside single quote
+marks.  International Alphabet No. 5, which is identical in its
+essential elements to the U.S. National Standard 7-bit ASCII, is used
+for character representation in the GRIB code.
+
+     Octets are numbered consecutively from the start of each section;
+bits within an octet are also numbered from left (the most significant
+bit) to right (the least significant bit).  Thus an octet with bit 8
+set to the value 1 would have the integer value 1; bit 7 set to one
+would have a value of 2, etc.
+
+     The numbering of Tables in the following text corresponds to the
+description of GRIB in the WMO Manual on Codes<1>.  Some additional
+tables not found in the WMO Manual are indicated by letters.  These,
+generally, contain information unique to a particular processing
+center.
+
+     A caveat:  The Official International Documentation for GRIB is
+the just referenced Manual on Codes.  This document is, in part,
+intended to be a guide to the use of GRIB and may not include all of
+the features currently found in the Manual.  The features described
+here are intended to be a completely consistent sub-set of the full WMO
+documentation; if there are any discrepancies the Manual on Codes is
+the final authority.
+
+
+DATA PACKING METHODS.
+
+     The code form represents numeric data as a series of binary digits
+(bits).  Such data representation is independent of any particular
+machine representation; by convention data lengths are measured in
+octets.  Data are coded as binary integers using the minimum number of
+bits required for the desired precision.  Numeric values, with units as
+shown in Table 2, may first be scaled by a power of ten to achieve an
+appropriate decimal precision, a reference value is subtracted from
+them to reduce redundancy and eliminate negative values, and they may
+then be further scaled by a power of two to pack them into a pre-
+selected word length.  The two scaling operations are independent;
+which, or both, are used in any given case depends upon choices made as
+to the method of packing.  See below.
+
+     The representation of a single value is such that:
+
+                        Y * 10D = R + (X * 2E)
+                                   
+     where
+     
+     Y = original or unpacked value; units as in Table 2;
+     D = decimal scale factor, to achieve desired precision
+               (sign bit, followed by a 15-bit integer);
+     R = reference value (32 bits);
+     X = internal value (No. of bits varies for each record);
+     E = binary scale factor for variable bit word length packing
+               (sign bit, followed by a 15-bit integer).
+     
+     
+     The reference value (R) is the minimum value of the (possibly)
+decimally scaled data that is being encoded.
+
+     R is placed in the Binary Data Section in four octets as a single
+precision floating-point number:
+
+                  sAAAAAAA BBBBBBBB BBBBBBBB BBBBBBBB
+                                   
+          where s = sign bit, encoded as   0 => positive
+                                           1 => negative
+                A = 7-bit binary integer, the characteristic
+                B = 24-bit binary integer, the mantissa.
+          
+     The appropriate formula to recover the value of R is:
+
+                   R = (-1)s * 2(-24) * B * 16(A-64)
+                                   
+     This formula is the standard IBM representation for a single
+precision (real) floating point number.  (Consideration is being given
+to using the IEEE floating point representation in the future, in a
+later Edition of GRIB.)
+
+     If second order (or "complex") packing is used (see the
+description of that later on) the internal value, X, will be made up of
+two values, a "local minimum value", Xi, and a "second order packed
+value", Xj.  There will be one Xj for each grid point and a variable
+number of Xi values.  This will all come clear later on when we get to
+the description of second-order packing.
+
+     What follows is a description, slightly simplified, of the process
+that one would go through to pack a (meteorological) field into a GRIB
+message, using "simple packing".  It includes some explanations of why
+certain steps are taken, some of the consequences, and what choices
+have to be made.  Some of the choices are interrelated; the
+relationships should be clear when the explanation is done.  The
+additional features of complex or "second order" packing will be dealt
+with in a later section.
+
+     Give that a full field is available, the first step, if necessary,
+is to convert the units of the parameter into those shown in Table 2,
+the SI standard units, also known as the mks system.  Some of the units
+may seem a little peculiar (kg/m2, for example, for precipitation - 1
+kg/m2 is equivalent to a water depth of 1 mm); others may seem
+inappropriate (Pa for pressure, for example, implies substantially
+greater precision than is typical in meteorological usage; inverse
+seconds are not nearly precise enough for divergence and vorticity) but
+they are all self consistent.  The precision of the parameters, as
+actually packed in a message, can be set to any desired degree through
+the appropriate use of the power-of-10 ("D") scaling and the power-of-2
+("E") scaling.  Just how this comes about will be described
+momentarily.
+
+     At this point there is a choice to be made.  If it is desired to
+use a pre-selected bit word length for the packed variables, then just
+proceed on to the next step.  However, if a variable bit word length is
+to be used, where the word length is adjusted to accommodate the data
+values, then it is necessary to undertake the power-of-ten scaling.
+The D value should be selected such that, when the original data, in
+the SI units of Table 2, is multiplied by 10D, the integer part of the
+result will have enough precision to contain all the appropriate
+information of the variable.  Anticipating things a little bit, the
+(scaled) value will be rounded to an integer as a part of the packing
+process; thus the "significant part" of the value of the variable has
+to be moved to the left of the decimal point prior to the rounding.
+Temperature might be scaled with D=1, thus changing the units to deci-
+degrees; pressure, on the other hand, might be scaled with D=-2, thus
+actually reducing the precision to hectoPascals (mb), a more reasonable
+meteorological precision; vorticity would be scaled up by D=8, and so
+on.
+
+     The second step in the packing operation is to scan through the
+field, which may or may not have been "D-scaled" at this point, find
+the minimum value of the parameter, and subtract that minimum - the
+reference value, R - from all the data points, leaving a residual of
+non-negative numbers.  This step has two benefits.  The first of these
+is convenience -  making all the data points non-negative bypasses
+problems with different computer hardware that represent negatives in
+various ways: 1's complement, 2's complement, signed positive integers,
+whatever.  The GRIB message is rendered just that much more machine
+independent by being non-negative throughout.
+
+     The second benefit is more consequential:  it can result in a
+substantial compression of the bulletin size without any loss of
+information content.  If a field has an appreciable bias away from
+zero, the residuals formed by the minimum removal operation will all be
+much smaller numbers than otherwise.  Thus they will need fewer bits to
+contain them when they are, eventually, packed as integers.
+
+     The third step is simply to scan through the field of residuals
+and find the maximum value.
+
+     At this point another choice must be made, similar to the one made
+previously.  This time, if a variable bit word length is to be used,
+then it is necessary to calculate how many bits (per word or per data
+gridpoint) are going to be needed to contain that largest data value,
+when the latter has been rounded to an integer.  Recall that at the
+previous decision point, the variables were power-of-ten ("D") scaled
+such that a rounding operation will preserve all the significant part
+of the information.  Discovering how many bits are needed is a simple
+scan through a table of powers of two, of course.  The power-of-two-
+scaling is not employed and E is set equal to 0.  Then go on to the
+fourth step.
+
+     If, alternatively, it is desired to use a pre-selected bit word
+length for the packed variables, the data must now be scaled, this time
+by a power of two (the "E" scaling), sufficient to either reduce the
+maximum value down to just fit into the available number of bits, or
+enlarge the value to just fit.  This latter step takes care of the
+problem of small numbers where the precision is all in the fractional
+part of the number.  How much precision is retained, for the eventual
+rounding, is a function of the preselected bit word length and the
+"typical" range, or maximum value with the minimum removed, of the
+particular variable.  The choice of bit word length, which is made
+ahead of time, must be made with full knowledge of the characteristics
+of the particular variable that is to be packed and a prior assumption
+of how much precision needs to be retained for the largest likely
+value.
+
+     The fourth step is then to round all the values to integers, now
+that they have all been scaled to appropriate units, and pack them in
+the specified bit length words.
+
+     The last step is then to set up the various identification fields
+and put the GRIB bulletin in proper form.  We shall turn to this
+"proper form" in the next section.
+
+     We have ended up with two alternate ways to construct a GRIB
+messages:  a fixed bit word length method and a variable bit word
+length method. What are the relative advantages or disadvantages, or at
+least the differences, of one with respect to the other?
+
+     Message length: the fixed word length bulletins are always the
+same length, for a given parameter; the variable word length bulletins
+are, naturally, variable.  The variation is driven by the range of the
+value of the parameter over the field (or the maximum value) which can
+change from day to day.  Whether variations in message length is a
+problem or not depends on the computer systems used to work with the
+GRIB records.
+
+     Precision:  The variable word length bulletins have a fixed and
+unchanging precision, determined by the "D" scaling.  This assures that
+the same information content is available day after day.  It is
+straightforward to change the precision in a familiar manner, that is,
+simply by orders of magnitude, just by altering the D value.  This
+comes at a cost, of course; increasing the precision by a power of 10
+adds about 3.3 bits (average) to each data point in the message.
+
+     The fixed word length bulletins show a variable precision which is
+case by case data driven and is determined by the "E" (power-of-two)
+scaling that was used to fit the numbers into the available space.
+This can happen even with the same data, on the same date, but at
+adjacent grid areas.  If one area shows a low variability and the
+neighboring one a high variability such that a different power-of-two
+scaling is needed in the two areas, then, unfortunately, the values on
+a common boundary will not be exactly equal after they are unpacked.
+This can be disconcerting and a cause for confusion.  It will not
+happen if D-scaling (only) is employed.  On the other hand, the
+variable precision can be viewed as a strength:  a data field with a
+low variability will be encoded at a higher precision, thus preserving
+the character of the field; a high variability field will be
+represented with less precision, but that is not a problem as the
+small, and possibly lost, variations will not matter in the presence of
+the large ones.  The precision of the encoded field can be increased by
+adding bits to the fixed word length, but the degree of change (a power
+of 2 for each bit) may not be as easy to deal with (or explain to
+people) as the simple order of magnitude change afforded by the "D"
+scaling method.
+
+     No mater which packing method was employed, a proper GRIB decoding
+program, that took account of the transmitted values of both "D" and
+"E", would return the correct unpacked numbers, regardless of which
+packing method was employed.  It would be transparent to the user
+except for the questions of precision outlined above.
+
+
+GRIB CODE FORM.
+
+     With the exception of the first four octets of the Indicator
+Section, and the End Section, all octets contain binary values.  All
+sections contain an even number of octets; the variable length sections
+are padded with zero values as necessary.  These extra bits must be
+accounted for in finding one's way through the sections; their content
+should be ignored.
+
+
+SECTION 0: THE INDICATOR SECTION (IS)
+
+     The indicator section serves to: identify the start of the record
+in a human readable form, indicate the total length of the message, and
+indicate the Edition number of GRIB used to construct or encode the
+message.  The section is always eight octets long.
+
+     Octet no.             IS Content
+
+       1-4        'GRIB'  (Coded CCITT-ITA No. 5) (ASCII);
+
+       5-7        Total length, in octets, of GRIB message
+                    (including Sections 0 & 5);
+
+       8          Edition number - currently  1
+
+
+SECTION 1: THE PRODUCT DEFINITION SECTION (PDS).
+
+     The PDS contains indicators for the Parameter table Version, the
+originating center, the numerical model (or "generating process") that
+created the data, the geographical area covered by the data, the
+parameter itself, the values for the appropriate vertical level or
+layer where the data reside, the decimal scale factor, and date/time
+information.  The PDS is normally 28 octets long but it may be longer
+if an originating center chooses to make it so.  Users of GRIB messages
+are strongly urged to use the length-of-section portion of the PDS to
+determine where the next section begins.  Never assume a fixed octet
+length in this, or any other, section.
+
+      Octet no.                    PDS Content
+
+     1 - 3      Length in octets of the Product Definition Section
+
+
+            4  Parameter Table Version number.
+                Currently Version 2 for international exchange.
+                Parameter table version numbers 128-254 are
+                reserved for local use.
+
+      5        Identification of center (Table 0 - Part 1)
+
+      6         Generating process ID number
+                (allocated by the originating center; See Table A)
+
+      7        Grid Identification (geographical location and
+                                   area; See Table B)
+
+      8        Flag specifying the presence or absence of a GDS
+                    or a BMS       (See Table 1)
+
+      9         Indicator of parameter and units (Table 2)
+
+      10        Indicator of type of level or layer
+                         (See Tables 3 & 3a)
+
+      11-12     Height, pressure, etc. of the level or layer
+                         (See Table 3)
+
+      13        Year of century     \  Initial (or Reference)
+                                    |  time of forecast - UTC
+      14        Month of year       |
+                                    |          or
+      15        Day of month         >
+                                    |  Start of time period
+      16        Hour of day         |    for averaging or
+                                    |    accumulation of
+      17        Minute of hour      /    analyses
+     
+      18        Forecast time unit (see Table 4)
+
+      19        P1 - Period of time (Number of time units)
+                    (0 for analysis or initialized analysis.)
+                    Units of time given by content of octet 18.
+
+      20        P2 - Period of time (Number of time units)
+                         or
+                    Time interval between successive analyses,
+                    successive initialized analyses, or forecasts,
+                    undergoing averaging or accumulation.
+                    Units given by octet 18.
+
+      21        Time range indicator (See Table 5)
+
+      22-23     Number included in average, when octet 21
+                  (Table 5) indicates an average or
+                  accumulation; otherwise set to zero.
+
+      24        Number Missing from averages or accumulations.
+
+      25        Century of Initial (Reference) time
+                    (=20 until Jan. 1, 2001)
+
+      26        Identification of sub-center (Table 0 - Part 2)
+
+      27-28     The decimal scale factor D.  A negative value
+                is indicated by setting the high order bit
+                (bit No. 1) in octet 27 to 1 (on).
+
+      29-40     Reserved (need not be present)
+
+      41-...    Reserved for originating center use.
+
+     Note: Octet 8 may indicate the presence of the Grid Description
+Section (GDS) even though octet 7 specifies a predefined grid.  In this
+case the GDS must describe that grid - this device serves as a
+mechanism for transmitting new "predefined" grids to users prior to
+their formal publication in this or the official WMO documentation.  It
+is, however, the desired practice to always include the GDS in GRIB
+bulletins.
+
+     Another Note:  The use of octet 26 to indicate a "sub-center" is
+not (yet) an officially sanctioned WMO practice.  The Manual indicates
+the octet is to be "reserved", and set to 0.  The use arises out of an
+upcoming change in the Manual in which the "originating centers" for
+both GRIB and BUFR (FM 94) will reference a single common table.  The
+difficulty is that BUFR has two octets available for an originating
+center number while GRIB has only one.  The compromise solution is to
+allow the use of octet 26 as the "second" octet for GRIB, but only in a
+national context.  The WMO will coordinate the assignment of the
+numbers  for octet 5 for national and international centers (for both
+GRIB and BUFR), while each national center will then be free to assign
+sub-center numbers at will to be placed in the octet 26.  A zero value
+in octet 26 will serve as the default indicating that there is no sub-
+center associated with a particular center.  Table 0, in this document,
+shows, in Part 1, a selection of the WMO recognized originating centers
+(those that are currently active) as would be found in octet 5.
+
+     
+     
+                          TABLES FOR THE PDS
+                                   
+                                   
+                           TABLE 0 - Part 1
+                                   
+                        NATIONAL/INTERNATIONAL
+                          ORIGINATING CENTERS
+                         (Assigned By The WMO)
+                             (PDS Octet 5)
+                                   
+                                   
+                                   
+          VALUE               CENTER
+     
+          
+            07      US Weather Service - National Met. Center
+            08      US Weather Service - NWS Telecomms Gateway
+            09      US Weather Service - Field Stations
+            34      Japanese Meteorological Agency - Tokyo
+            52      National Hurricane Center, Miami
+            54      Canadian Meteorological Service - Montreal
+            57      U.S. Air Force - Global Weather Center
+            58      US Navy  - Fleet Numerical Oceanography Center
+            59      NOAA Forecast Systems Lab, Boulder CO
+            74      U.K. Met Office - Bracknell
+            85      French Weather Service - Toulouse
+            97      European Space Agency (ESA)
+            98      European Center for Medium-Range Weather
+                    Forecasts - Reading
+            99      DeBilt, Netherlands
+     
+                                   
+                           TABLE 0 - Part 2
+                                   
+                               NATIONAL
+                              SUB-CENTERS
+                       (Assigned By The Nation)
+                            (PDS Octet 26)
+                                   
+                                   
+          National sub-centers, if any, would be found here.
+                                   
+                                   
+              TABLE A.       Generating Process or Model
+                             (PDS Octet 6)
+                                   
+                                   
+          VALUE          MODEL
+     
+       These values and model ("generating process") numbers would be
+                  supplied by the individual centers.
+                                   
+                                   
+                                   
+                    TABLE B.   GRID IDENTIFICATION
+                             (PDS Octet 7)
+                                   
+     Various National Grids would be identified here by the Center
+            International exchange grids are included here.
+                                   
+                                   
+ VALUE                GRID
+
+ 21-26       International Exchange grids - see below
+
+ 37-44       Eight lat-long 1.25x1.25 "thinned" grids,
+             covering the globe by octants of 3447 points.
+             Full GRIB specifications below.
+             For WAFC, ICAO, and International exchange.
+
+ 61-64       International Exchange grids - see below.
+
+ 255         (non-defined grid - specified in the GDS)
+
+                                   
+                                   
+                     INTERNATIONAL EXCHANGE GRIDS
+                                   
+      VALUE  RESOLUTION      AREA              GRID          GRID
+             (degrees)     COVERAGE            SHAPE        POINTS
+             lon x lat     (degrees)        cols  rows
+     
+      21    5.0 x 2.5   0-180E, 0-90N         37   36 + pole  1333
+      22    5.0 x 2.5   180W-0, 0-90N         37   36 + pole  1333
+      23    5.0 x 2.5   0-180E, 90S-0  pole + 37   36         1333
+      24    5.0 x 2.5   180W-0, 90S-0  pole + 37   36         1333
+      25    5.0 x 5.0   0-355E, 0-90N         72   18 + pole  1297
+      26    5.0 x 5.0   0-355E, 90S-0  pole + 72   18         1297
+      61    2.0 x 2.0   0-180E, 0-90N         91   45 + pole  4096
+      62    2.0 x 2.0   180W-0, 0-90N         91   45 + pole  4096
+      63    2.0 x 2.0   0-180E, 90S-0  pole + 91   45         4096
+      64    2.0 x 2.0   180W-0, 90S-0  pole + 91   45         4096
+   
+     255         (non-standard grid - defined in the GDS)
+
+NOTES ON INTERNATIONAL EXCHANGE/FOS GRIDS:
+
+     (i)    The grid points are laid out in a linear array such that
+the longitude index (the columns) is the most rapidly varying.  For the
+northern hemisphere grids the first point in the record is at the
+intersection of the western-most meridian and southern-most circle of
+latitude; the last point is the single polar value (see note iii,
+below).  For the southern hemisphere grids the first point in the
+record is the single polar value (see note iii, below); the last point
+is at the intersection of the eastern-most meridian and northern-most
+circle of latitude.  For those familiar with FORTRAN subscripting
+conventions, longitude is the first subscript, latitude the second.
+
+      (ii)   In grids 21 through 26, and 61 through 64, the values on
+the shared boundaries are included in each area.
+
+      (iii)  The datum for the pole point is given only once in each
+grid.  The user must expand, if desired, the single pole point value to
+all the pole "points" at the pole row of a latitude-longitude grid.
+Scalar quantity values are the same for all pole points on a the grid.
+Wind components at the poles are given by the formulae:
+
+            u = -speed * sin(dd)   &   v = -speed * cos(dd)
+
+where dd is the direction of the wind as reported according to the
+specification of wind direction at the poles (refer to WMO Manual
+on Codes <1>, code table 878).
+
+     The WMO convention can be given this operational definition:  At
+the North Pole, face into the wind and report the value of the west
+longitude meridian along which the wind is coming at you; at the South
+Pole do likewise but report the east longitude meridian value. This is
+equivalent to placing the origin of a right-handed Cartesian coordinate
+system on the North Pole with the y-axis pointing to the prime (0
+degree) meridian and the x-axis pointing to the 90 degrees west
+meridian, and then resolving any vector wind at the pole point into
+components along those axes.  At the South Pole the coordinate axes are
+oriented such that the y-axis points toward 180 degrees west.  Those
+components are the u- and v-values given as the single pair of pole
+point winds in the GRIB format.
+
+     In terms of a longitude/latitude grid these are the wind
+components for the pole point at the 180 degree meridian.  For example,
+on a 2.5x2.5 degree northern hemisphere grid (145x37 points), with the
+abscissa along the equator and the ordinate along the prime meridian,
+the transmitted north pole wind components are those that belong at the
+gridpoint (73,37).  The wind components at the other grid points along
+the pole row may be obtained through suitable rotation of the
+coordinate system.  All the components at the pole row are, of course,
+simply representations of the same vector wind viewed from differing
+(rotated) coordinate systems.  In the southern hemisphere the analogous
+situation holds; the single set of transmitted pole point wind
+components belong at the gridpoint (73,1).
+
+     
+     
+              WAFS/ICAO/INTERNATIONAL EXCHANGE/FOS GRIDS
+                                   
+                            (Grids 37 - 44)
+                                   
+                                   
+                                   
+                                   
+                       Global Coverage of Grids
+                         Octants of the Globe
+                                   
+     In the figure the boxes indicate the location of the octants of
+the globe, the numbers are the corresponding grid identification
+numbers (PDS Octet 7), and the letters are the grid identification used
+in the WMO Abbreviated Heading.
+
+     The left and right meridional columns of each octant/grid are
+shared with the neighbors.
+
+      The basic grid point separation is 1.25x1.25 deg. on a
+latitude/longitude array, but the grid is "thinned" by reducing the
+number of points in each row as one goes northward (or southward) away
+from the equator.  In GRIB terms, this is referred to as a "quasi-
+regular" grid.
+
+     The latitudinal increment is always 1.25 deg.; this results in 73
+rows where the pole is included as a "row", not a single gridpoint.
+
+     The longitudinal spacing at the equator is also 1.25 deg.; thus
+there will be 73 gridpoints at the equator in each octant.
+
+     The number of points on each latitudinal row, other than the
+equator, is given by (using FORTRAN notation):
+
+           NPOINTS = IFIX(2.0 + (90.0/1.25) * COS(LATITUDE))
+
+Thus at the pole there will be two gridpoints, one each at the
+meridians that delineate the edges of the octant.  The formula was
+worked out so that there is (approximately) equal geographic separation
+between the grid points uniformly across the globe.
+
+     Because of variations in precision and roundoff error in different
+computers, the value of NPOINTS may vary by 1 at "critical" latitudes
+when calculated on various hardware platforms.  Here is a table of the
+exact values of NPOINTS as a function of latitude as used in the
+internationally exchanged grids.  These numbers will, of course, be
+found in the Grid Description Section of each GRIB bulletin.
+
+Latitude Range     NPOINTS                 17.50 - 18.75  70
+inclusive                                  20.00 - 21.25  69
+(north or south)                           22.50     68
+                                           23.75 - 25.00  67
+  0.00 -  8.75      73                     26.25     66
+ 10.00 - 12.50      72                     27.50 - 28.75  65
+ 13.75 - 16.25      71                     30.00     64
+ 31.25              63                Latitude Range NPOINTS
+ 32.50              62                inclusive
+ 33.75              61                (north or south)
+ 35.00 - 36.25      60                
+ 37.50              59                   55.00             43
+ 38.75              58                   56.25             42
+ 40.00              57                   57.50             40
+ 41.25              56                   58.75             39
+ 42.50              55                   60.00             38
+ 43.75              54                   61.25             36
+ 45.00              52                   62.50             35
+ 46.25              51                   63.75             33
+ 47.50              50                   65.00             32
+ 48.75              49                   66.25             30
+ 50.00              48                   67.50             29
+ 51.25              47                   68.75             28
+ 52.50              45                   70.00             26
+ 53.75              44                   71.25             25
+                                         72.50             23
+                                         73.75             22
+                                         75.00             20
+                                         76.25             19
+                                         77.50             17
+                                         78.75             16
+                                         80.00             14
+                                         81.25             12
+                                         82.50             11
+                                         83.75              9
+                                         85.00              8
+                                         86.25              6
+                                         87.50              5
+                                         88.75              3
+                                         90.00              2
+                                      
+
+     When all this is put together the result is that there are 3447
+points of data actually transmitted in any individual GRIB bulletin
+containing one octant of the globe.
+
+     In the GRIB bulletins all of this information will be included in
+the Grid Description Section (GDS); the GDS must be included in order
+to describe the thinned or "quasi-regular" grid structure. See Section
+2 and Table C for the general description of the GDS; what follows are
+the specific values of the variables in the GDS that describe these
+eight grids.
+
+                             GDS Contents
+                                   
+                           Octets         Value or variable
+                                   
+                          1-3            178 (length of GDS)
+                  4              0 (or 255, either indicating no PV)
+                   5              33 (pointer to start of PL list)
+                                   6              0
+                                   
+               7-32           Grid description - see below
+               33-178         number of points in each of 73 rows
+                              (2 octets per point)
+
+
+               Details of Octets 7-32 - Grid Description
+                                   
+  Octets            Variable & Value
+
+  7-8               Ni = all bits set to 1 (missing)
+  9-10              Nj = 73
+
+
+
+      GRID:   37     38    39     40     41    42     43    44
+11-13 La1 =    0      0     0      0    90S    90S    90S   90S
+14-16 Lo1 =   330    60    150    240   330    60     150   240
+
+
+  17           Resolution & Component Flag = [10000000] (binary)
+
+
+
+      GRID:   37    38     39     40    41     42    43     44
+18-20 La2 =   90N   90N    90N   90N     0      0     0      0
+21-23 Lo2 =   60    150    240   330    60     150   240    330
+
+
+  24-25                  Di = all bits set to 1 (missing)
+  26-27                  Dj = 1.25 deg
+  28                     Scan Mode = [01000000] (binary)
+  29-32                  Set to 0 (unused)
+
+     Note that the scanning direction is from the bottom (south edge)
+to the top of the octant grids, regardless of the hemisphere.  Thus in
+the northern hemisphere the first 73 data points (in the BDS) will be
+the equatorial values and the last two will be the polar values.  The
+PL counts in the GDS octets 33-178 will, of course, indicate contain
+these numbers.
+
+     In the southern hemisphere, the first two data points will be the
+south pole values, and the last 73 points will be the equatorial
+values.  Octets 33-34 in the GDS will contain "2", octets 35-36 will
+contain a "3", and so on to octets 177-178 which will contain "73".
+
+     
+     
+                     TABLE 1.  FLAG FOR GDS OR BMS
+                             (PDS Octet 8)
+                                   
+     The bit flag indicates the omission or inclusion of the Grid
+                 Description and/or Bit Map Sections.
+                                   
+                                   
+                    BIT       VALUE     MEANING
+
+                    1           0       GDS Omitted
+                                1       GDS Included
+
+                    2           0       BMS Omitted
+                                1       BMS Included
+
+                    3-8         0       reserved
+
+                     TABLE 2.  PARAMETERS & UNITS
+                               Version 2
+                             (PDS Octet 9)
+                                   
+     VALUE               PARAMETER                 UNITS
+          
+          
+      000     Reserved
+
+      001     Pressure                               Pa
+      002     Pressure reduced to MSL                Pa
+      003     Pressure tendency                      Pa/s
+      004
+      005
+      006     Geopotential                          m2/s2
+      007     Geopotential height                    gpm
+     008     Geometric height                    m
+     009     Standard deviation of height        m
+      010
+
+      011     Temperature                            deg. K
+      012     Virtual temperature                    deg. K
+      013     Potential temperature                  deg. K
+      014     Pseudo-adiabatic potential temperature deg. K
+      015     Maximum temperature                    deg. K
+      016     Minimum temperature                    deg. K
+      017     Dew point temperature                  deg. K
+      018     Dew point depression (or deficit)      deg. K
+      019     Lapse rate                           deg. K/m
+      020     Visibility                              m
+
+      021     Radar Spectra (1)                   -
+      022     Radar Spectra (2)                   -
+      023     Radar Spectra (3)                   -
+      024
+      025     Temperature anomaly                    deg. K
+      026     Pressure anomaly                    Pa
+      027     Geopotential height anomaly         gpm
+      028     Wave Spectra (1)                     -
+      029     Wave Spectra (2)                     -
+      030     Wave Spectra (3)                     -
+
+      031     Wind direction                     deg. true
+      032     Wind speed                             m/s
+      033     u-component of wind                    m/s
+      034     v-component of wind                    m/s
+      035     Stream function                        m2/s
+      036     Velocity potential                     m2/s
+      037     Montgomery stream function             m2/s2
+      038     Sigma coord. vertical velocity          /s
+      039     Pressure Vertical velocity            Pa/s
+      040     Geometric Vertical velocity            m/s
+
+      041     Absolute vorticity                     /s
+      042     Absolute divergence                    /s
+      043     Relative vorticity                     /s
+      044     Relative divergence                    /s
+      045     Vertical u-component shear             /s
+      046     Vertical v-component shear             /s
+      047     Direction of current                deg. true
+      048     Speed of current                       m/s
+      049     u-component of current                 m/s
+      050     v-component of current                 m/s
+
+      051     Specific humidity                      kg/kg
+      052     Relative humidity                      %
+      053     Humidity mixing ratio                  kg/kg
+      054     Precipitable water                     kg/m2
+      055     Vapor pressure                         Pa
+      056     Saturation deficit                     Pa
+      057     Evaporation                            kg/m2
+      058     Cloud Ice                           kg/m2
+      059     Precipitation rate                   kg/m2/s
+      060     Thunderstorm probability            %
+
+      061     Total precipitation                   kg/m2
+      062     Large scale precipitation             kg/m2
+      063     Convective precipitation              kg/m2
+      064     Snowfall rate water equivalent        kg/m2s
+      065     Water equiv. of accum. snow depth     kg/m2
+      066     Snow depth                             m
+      067     Mixed layer depth                      m
+      068     Transient thermocline depth            m
+      069     Main thermocline depth                 m
+      070     Main thermocline anomaly               m
+
+      071     Total cloud cover                      %
+      072     Convective cloud cover                 %
+      073     Low cloud cover                        %
+      074     Medium cloud cover                     %
+      075     High cloud cover                       %
+      076     Cloud water                            kg/m2
+      077
+     078     Convective snow                    kg/m2
+     079     Large scale snow                   kg/m2
+     080     Water Temperature                  deg K
+     081     Land-sea mask
+             (1=land;0=sea) (see note)          fraction
+      082     Deviation of sea level from mean       m
+      083     Surface roughness                      m
+      084     Albedo                                 %
+      085     Soil temperature                      deg. K
+      086     Soil moisture content                 kg/m2
+      087     Vegetation                             %
+      088     Salinity                              kg/kg
+      089     Density                               kg/m3
+     090      Water runoff                      kg/m2
+      091     Ice concentration                 fraction
+              (ice=1;no ice=0)(see note)
+      092     Ice thickness                          m
+      093     Direction of ice drift              deg. true
+      094     Speed of ice drift                     m/s
+      095     u-component of ice drift               m/s
+      096     v-component of ice drift               m/s
+      097     Ice growth rate                        m/s
+      098     Ice divergence                         /s
+     099     Snow melt                          kg/m2
+      100     Significant height of combined wind    m
+              waves and swell
+
+      101     Direction of wind waves             deg. true
+      102     Significant height of wind waves       m
+      103     Mean period of wind waves              s
+      104     Direction of swell waves            deg. true
+      105     Significant height of swell waves      m
+      106     Mean period of swell waves             s
+      107     Primary wave direction              deg. true
+      108     Primary wave mean period               s
+      109     Secondary wave direction            deg. true
+      110     Secondary wave mean period             s
+
+      111     Net short-wave radiation (surface)      W/m2
+      112     Net long wave radiation (surface)       W/m2
+      113     Net short-wave radiation (top of atmos.)W/m2
+      114     Net long wave radiation (top of atmos.) W/m2
+      115     Long wave radiation                    W/m2
+      116     Short wave radiation                   W/m2
+      117     Global radiation                       W/m2
+      118
+      119
+      120
+
+     121     Latent heat net flux               W/m2
+     122     Sensible heat net flux             W/m2
+     123     Boundary layer dissipation         W/m2
+     124     Momentum flux, u component         N/m2
+     125     Momentum flux, v component         N/m2
+     126     Wind mixing energy                 J
+     127     Image data
+
+   128-254    Reserved for use by originating center)
+
+      255     Missing
+
+Notes:
+
+       1) By convention, downward net fluxes of radiation or other
+               quantities are assigned negative values; upward net
+               fluxes of radiation or other quantities are
+               assigned positive values.
+               
+       2) Unidirectional flux values, where the direction of flow
+               is indicated in the name of the parameter shall all
+               have positive values irrespective of the direction
+               of flow.  Net (vertical) fluxes shall be calculated
+               by subtracting the downward flux values from the
+               upward flux values.
+               
+       3) The u and v components of vector quantities are defined
+               with reference to GDS Octet 17 and Table 7.
+               However, if the GDS is not included in a message,
+               then any wind components are assumed to be resolved
+               relative to the grid specified in the PDS with u
+               and v defined as positive in the direction of
+               increasing x and y (or i and j) coordinates
+               respectively.
+               
+       4) Provision is made for three types of spectra:
+               
+               1)   Direction and Frequency
+               2)   Direction and radial number
+               3)   Radial number and radial number
+               
+       5) Parameters 81 and 91 show the units as "fraction", thus
+               allowing for a range of coverage. It is up to the
+               user to employ the D (power of ten) scaling to
+               assure that the necessary precision is retained in
+               the numeric values.
+               
+                   TABLE 3.  TYPE AND VALUE OF LEVEL
+                       (PDS Octets 10, 11, & 12)
+                                   
+                                   
+       Octet Number 10            Number 11        Number 12
+
+  VALUE      MEANING                      CONTENTS
+|---------------------------+-----------------+----------------|
+| 0 - 99  special codes,    |        0        |       0        |
+|         see Table 3a      |                 |                |
+|---------------------------+-----------------+----------------|
+| 100     isobaric level    |  pressure in hectoPascals (hPa)  |
+|                           |            (2 octets)            |
+|---------------------------+-----------------+----------------|
+| 101     layer between two |  pressure of    |  pressure of   |
+|         isobaric levels   |  top (kPa)      |  bottom (kPa)  |
+|---------------------------+-----------------+----------------|
+| 102     mean sea level    |        0        |       0        |
+|---------------------------+-----------------+----------------|
+| 103     fixed height level|   height above mean sea level    |
+|                           |        (MSL) in meters           |
+|---------------------------+-----------------+----------------|
+| 104     layer between two |  height of top  |  height of     |
+|           height levels   |     (hm)        |  bottom (hm)   |
+|            above msl      |        above mean sea level      |
+|---------------------------+-----------------+----------------|
+| 105     fixed height above|         height in meters         |
+|           ground          |            (2 octets)            |
+|---------------------------+-----------------+----------------|
+| 106     layer between two |  height of top  |  height of     |
+|           height levels   |      (hm)       |  bottom (hm)   |
+|           above ground    |           above ground           |
+|---------------------------+-----------------+----------------|
+| 107     sigma level       |     sigma value in 1/10000       |
+|                           |            (2 octets)            |
+|---------------------------+-----------------+----------------|
+| 108     layer between two |  sigma value at |  sigma value   |
+|           sigma levels    |       top       |  at bottom     |
+|                           |     in 1/100    |   in 1/100     |
+|---------------------------+-----------------+----------------|
+| 109     Hybrid level      |           level number           |
+|                           |            (2 octets)            |
+|---------------------------+-----------------+----------------|
+| 110     layer between two | level number of | level number   |
+|           hybrid levels   |       top       |  of bottom     |
+|---------------------------+-----------------+----------------|
+| 111     depth below       |            centimeters           |
+|         land surface      |             (2 octets)           |
+|---------------------------+-----------------+----------------|
+| 112     layer between two |  depth of upper | depth of lower |
+|         depths below      |    surface (cm) |   surface (cm) |
+|         land surface      |                 |                |
+|---------------------------+-----------------+----------------|
+|---------------------------+-----------------+----------------|
+| 113     isentropic        |     Potential Temp. degrees K    |
+|         (theta) level     |             (2 octets)           |
+|---------------------------+-----------------+----------------|
+| 114     layer between two |    475K minus   |  475K minus    |
+|         isentropic        |   theta of top  |theta of bottom |
+|         levels            |    in Deg. K    |   in deg. K    |
+|---------------------------+-----------------+----------------|
+| 115    level at specified |                                  |
+|        pressure difference|                hPa               |
+|        from ground to     |             (2 octets)           |
+|        level              |                                  |
+|---------------------------+-----------------+----------------|
+| 116    layer between      |     pressure    |     pressure   |
+|        two levels at      | difference from | difference from|
+|        specified pressure |    ground to    |    ground to   |
+|        differences from   |    top level    |   bottom level |
+|        ground to levels   |      hPa        |       hPa      |
+|---------------------------+-----------------+----------------|
+| 121     layer between two |  1100 hPa minus | 1100 hPa minus |
+|         isobaric surfaces |  pressure of    | pressure of    |
+|         (high precision)  |  top, in hPa    | bottom, in hPa |
+|---------------------------+-----------------+----------------|
+| 125     Height level      |            centimeters           |
+|         above ground      |             (2 octets)           |
+|         (high precision)  |                                  |
+|---------------------------+-----------------+----------------|
+| 128     layer between two |  1.1 minus sigma| 1.1 minus sigma|
+|         sigma levels      |  of top, in     | of bottom, in  |
+|         (high precision)  |  1/1000 of sigma| 1/1000 of sigma|
+|---------------------------+-----------------+----------------|
+| 141     layer between two |  pressure of    | 1100hPa minus  |
+|         isobaric surfaces |  top, in kPa    | pressure of    |
+|         (mixed precision) |                 | bottom, in hPa |
+|---------------------------+-----------------+----------------|
+| 160     depth below       |               meters             |
+|         sea level         |             (2 octets)           |
+|---------------------------+-----------------+----------------|
+| 200     entire atmosphere |                 0                |
+|    considered as a single layer         (2 octets)           |
+|---------------------------+-----------------+----------------|
+| 201     entire ocean      |                 0                |
+|    considered as a single layer         (2 octets)           |
+|---------------------------+-----------------+----------------|
+
+Note: The numbering allows for additions within this framework:
+     
+          100-119   normal precision
+          120-139   high precision
+          140-159   mixed precision
+                                   
+                                   
+                                   
+                      TABLE 3a.   SPECIAL LEVELS
+                            (PDS Octet 10)
+                                   
+                                   
+                                   
+          VALUE               LEVEL
+          
+          00              reserved
+          01              surface (of the Earth, which
+                                   includes sea surface)
+          02              cloud base level
+          03              cloud top level
+          04              0 deg (C) isotherm level
+          05              adiabatic condensation level
+                          (parcel lifted from surface)
+          06              maximum wind speed level
+          07              tropopause level
+          08              Nominal top of atmosphere
+          09              Sea bottom
+          10-99           reserved
+                                   
+                                   
+                                   
+                     TABLE 4.  FORECAST TIME UNIT
+                            (PDS Octet 18)
+                                   
+                                   
+                  VALUE            TIME UNIT
+               
+                    0              minute
+                    1              hour
+                    2              day
+                    3              month
+                    4              year
+                    5              decade
+                    6              normal (30 years)
+                    7              century
+                    8-253          reserved
+                    254            second
+     
+     
+                               TABLE 5.
+                         TIME RANGE INDICATOR
+                            (PDS Octet 21)
+                                   
+                                   
+              VALUE                MEANING
+     
+                0           Forecast product valid
+                            at reference time + P1 (P1>0),
+                            or
+                            Uninitialized analysis product
+                            for reference time (P1=0).
+                            or
+                            Image product
+                            for reference time (P1=0)
+     
+                1           Initialized analysis product
+                            for reference time (P1=0).
+     
+                2           Product with a valid time ranging
+                            between reference time + P1 and
+                            reference time + P2
+     
+                3           Average
+                            (reference time + P1 to
+                            reference time + P2)
+     
+                4           Accumulation
+                            (reference time + P1 to
+                            reference time + P2)
+                            product considered valid at
+                            reference time + P2
+     
+                5           Difference
+                            (reference time + P2 minus
+                            reference time + P1)
+                            product considered valid at
+                            reference time + P2
+     
+                6-9         reserved
+     
+                10          P1 occupies octets 19 and 20;
+                            product valid at reference time + P1
+     
+                11-50      reserved
+                            
+                51         Climatological Mean Value: multiple year
+                            averages of quantities which are
+                            themselves means over some period of time
+                            (P2) less than a year.  The reference time
+                            (R) indicates the date and time of the
+                            start of a period of time, given by R to R
+                            + P2, over which a mean is formed; N
+                            indicates the number of such period-means
+                            that are averaged together to form the
+                            climatological value, assuming that the N
+                            period-mean fields are separated by one
+                            year.  The reference time indicates the
+                            start of the N-year climatology.  N is
+                            given in octets 22-23 of the PDS.
+                            
+                            If P1 = 0 then the data averaged in the
+                            basic interval P2 are assumed to be
+                            continuous, i.e., all available data are
+                            simply averaged together.
+                            
+                            If P1 = 1 (the units of time - octet 18,
+                            code table 4 - are not relevant here) then
+                            the data averaged together in the basic
+                            interval P2 are valid only at the time
+                            (hour, minute) given in the reference
+                            time, for all the days included in the P2
+                            period.  The units of P2 are given by the
+                            contents of octet 18 and Table 4.
+                            
+                52-112      reserved
+     
+                113        Average of N forecasts (or initialized
+                           analyses); each product has forecast
+                           period of P1 (P1=0 for initialized
+                           analyses); products have reference
+                           times at intervals of P2, beginning at
+                           the given reference time.
+     
+                114        Accumulation of N forecasts (or
+                           initialized analyses); each product
+                           has forecast period of P1 (P1=0 for
+                           initialized analyses); products have
+                           reference times at intervals of P2,
+                           beginning at the given reference time.
+     
+                115        Average of N forecasts, all with the
+                           same reference time; the first has a
+                           forecast period of P1, the remaining
+                           forecasts follow at intervals of P2.
+     
+                116         Accumulation of N forecasts, all with
+                            the same reference time; the first has
+                            a forecast period of P1, the remaining
+                            follow at intervals of P2.
+     
+                117         Average of N forecasts, the first has a
+                            period of P1, the subsequent ones have
+                            forecast periods reduced from the previous
+                            one by an interval of P2; the reference
+                            time for the first is given in octets 13-
+                            17, the subsequent ones have reference
+                            times increased from the previous one by an
+                            interval of P2.  Thus all the forecasts
+                            have the same valid time, given by the
+                            initial reference time + P1.
+                            
+                118         Temporal variance, or covariance, of N
+                            initialized analyses; each product has
+                            forecast period P1=0; products have
+                            reference times at intervals of P2,
+                            beginning at the given reference time.
+     
+                119 -122    reserved
+     
+                123         Average of N uninitialized analyses,
+                            starting at the reference time,
+                            at intervals of P2.
+     
+                124         Accumulation of N uninitialized
+                            analyses, starting at the reference
+                            time, at intervals of P2.
+     
+     
+                125-254     reserved
+     
+     
+NOTES:
+     
+1)   For analysis products, or the first of a series of analysis
+     products, the reference time (octets 13 to 17) indicates the valid
+     time.
+     
+2)   For forecast products, or the first of a series of forecast
+     products, the reference time indicates the valid time of the
+     analysis upon which the (first) forecast is based.
+     
+3)   Initialized analysis products are allocated numbers distinct from
+     those allocated to uninitialized analysis products.
+     
+4)   A value of 10 allows the period of a forecast to be extended over
+     two octets; this accommodates extended range forecasts.
+     
+5)   Where products or a series of products are averaged or
+     accumulated, the number involved is to be represented in octets 22-
+     23 of Section 1, while any number missing is to be represented in
+     octet 24.
+     
+6)   Forecasts of the accumulation or difference of some quantity (e.g.
+     quantitative precipitation forecasts), indicated by values of 4 or
+     5 in octet 21, have a product valid time given by the reference
+     time + P2; the period of accumulation, or difference, can be
+     calculated as P2 - P1.
+     
+     A few examples may help to clarify the use of Table 5:
+
+     For analysis products P1 is zero and the time range indicator is
+also zero; for initialized products (sometimes called "zero hour
+forecasts") P1 is zero, but octet 21 is set to 1.
+
+     For forecasts, typically, P1 contains the number of hours of the
+forecast (the unit indicator given in octet 18 would be 1) and octet 21
+contains a zero.
+
+     Value 51 allows for the identification of the most common
+climatological entities.  With P1=0, it could represent (or identify)
+the multiple year climatology of anything from daily means (or less) to
+semi-annual means (or more, up to a full year). The assumption is that
+all the available values within the basic period P2 are averaged
+together. (An "annual mean climatology" would just be an average over
+the total climatological period - Table 5, entry 3.)  P1=1 allows for a
+diurnal sub-stratification of the data within the P2 period, such as 30-
+year climatology of February mean 00Z temperature starting at a date
+certain, or all the 12Z surface radiation fluxes averaged for all the
+days in a season, or whatever.   If other sub-stratifications are
+appropriate they could be identified by different values of P1.  No
+others have been proposed at this time.
+
+     Value 115 would be used, typically, for multiple day mean
+forecasts, all derived from the same initial conditions.
+
+     Value 117 would be used, typically, for Monte Carlo type
+calculations: many forecasts valid at the same time from different
+initial (reference) times.
+
+      Averages, accumulations, and differences get a somewhat
+specialized treatment.  If octet 21 (Table 5) has a value between 2 and
+5 (inclusive) then the reference time + P1 is the initial date/time and
+the reference time + P2 is the final date/time of the period over which
+averaging or accumulation takes place.  If, however, octet 21 has a
+value of 113, 114, 115, 116, 117, 118, 123, or 124 then P2 specifies
+the time interval between each of the fields (or the forecast initial
+times) that have been averaged or accumulated.  These latter values of
+octet 21 require the quantities averaged to be equally separated in
+time; the former values, 3 and 4 in particular, allow for irregular or
+unspecified intervals of time between the fields that are averaged or
+accumulated.
+
+
+SECTION 2: GRID DESCRIPTION SECTION (GDS)
+
+     The purpose of the (optional) GDS is to provide a grid description
+for grids not defined by number in Table B.
+
+     Octet no.                     GDS Content
+
+      1 - 3        Length in octets of the Grid Description Section
+
+      4           NV, the number of vertical coordinate parameters
+
+      5           PV, the location (octet number) of the list of
+
+             vertical coordinate parameters, if present
+                  or
+                  PL, the location (octet number) of the list of
+                  numbers of points in each row (when no vertical
+                  parameters are present), if present
+                  or
+                  255 (all bits set to 1) if neither are present
+
+      6           Data representation type (See Table 6)
+
+      7 - 32      Grid description, according to data
+                  representation type, except Lambert, Mercator or
+                  Space View.
+     or
+
+      7 - 42      Grid description for Lambert or Mercator grid
+
+     or
+
+      7 - 44      Grid description for Space View perspective grid
+
+     PV           List of vertical coordinate parameters
+                  (length = NV x 4 octets);
+                  if present, then PL = 4 x NV + PV
+
+     PL           List of numbers of points in each row, used for
+                  quasi-regular grids
+                  (length = NROWS x 2 octets, where NROWS is the
+                  total number of rows defined within the grid
+                  description)
+
+     Note:     NV and PV relate to features of GRIB not, at present, in
+               use in international exchange.  See the WMO Manual on
+               Codes<1> for the descriptions of those features.
+               
+               PL is used for "quasi-regular" or "thinned" grids; e.g.,
+               a lat/lon grid where the number of points in each row is
+               reduced as one moves poleward from the equator.  The
+               reduction usually follows some mathematical formula
+               involving the cosine of the latitude, to generate an
+               (approximately) equally spaced grid array.  The
+               association of the numbers in octet PL (and following)
+               with the particular row follows the scanning mode
+               specification in Table 8.
+               
+     
+     
+                          TABLES FOR THE GDS
+                                   
+                                   
+                  TABLE 6.  DATA REPRESENTATION TYPE
+                             (GDS Octet 6)
+                                   
+                                   
+              VALUE             MEANING
+
+                0           Latitude/Longitude Grid
+                            also called Equidistant Cylindrical
+                            or Plate Carree projection grid
+                1           Mercator Projection Grid
+                2           Gnomonic Projection Grid
+                3           Lambert Conformal, secant or
+                            tangent, conical or bipolar
+                            (normal or oblique) Projection Grid
+                4           Gaussian Latitude/Longitude Grid
+                5           Polar Stereographic Projection Grid
+
+                6 - 12      (reserved - see Manual on Codes)
+
+                13          Oblique Lambert conformal, secant or
+                            tangent, conical or bipolar,
+                            projection
+
+                14 - 49     (reserved - see Manual on Codes)
+
+                50          Spherical Harmonic Coefficients
+
+                51 - 89     (reserved - see Manual on Codes)
+
+                90          Space view perspective or
+                            orthographic grid
+
+                91 - 191    (reserved - see Manual on Codes)
+
+                192 - 254   reserved for local use
+
+
+
+                   TABLE C. Sundry Grid Definitions
+                                   
+                                   
+                       LATITUDE/LONGITUDE GRIDS
+                          INCLUDING GAUSSIAN
+                          (GDS Octets 7 - 32)
+                                   
+                                   
+ OCTET NO.   CONTENT & MEANING
+
+ 7 -  8      Ni - No. of points along a latitude circle
+
+ 9 - 10      Nj - No. of points along a longitude meridian
+
+ 11 - 13     La1 - latitude of first grid point
+             units: millidegrees (degrees x 1000)
+             values limited to range 0 - 90,000
+             bit 1 (leftmost) set to 1 for south latitude
+
+ 14 - 16     Lo1 - longitude of first grid point
+             units: millidegrees (degrees x 1000)
+             values limited to range 0 - 360,000
+             bit 1 (leftmost) set to 1 for west longitude
+
+ 17          Resolution and component flags (Table 7)
+
+ 18 - 20     La2 - Latitude of last grid point
+             (same units, value range, and bit 1 as La1)
+
+ 21 - 23     Lo2 - Longitude of last grid point
+             (same units, value range, and bit 1 as Lo1)
+
+ 24 - 25     Di - Longitudinal Direction Increment
+             (same units as Lo1)
+             (if not given, all bits set = 1)
+
+             26 - 27  Regular Lat/Lon Grid:
+                      Dj - Latitudinal Direction Increment
+                      (same units as La1)
+                      (if not given, all bits set = 1)
+                      or
+                      Gaussian Grid:
+                      N - number of latitude circles between
+                          a pole and the equator
+                      Mandatory if Gaussian Grid specified
+
+  28         Scanning mode flags  (See Table 8)
+
+  29 - 32    Reserved (set to zero)
+
+Notes:
+
+1)   The latitude and longitude of the first and last grid points
+     should always be given, for regular grids.
+2)   If a quasi-regular grid is to be described, in which all the rows
+     or columns do not necessarily have the same number of grid points,
+     either Ni (octets 7-8) or Nj (octets 9-10) and the corresponding
+     Di (octets 24-25) or Dj (octets 26-27) shall be coded with all
+     bits set to 1 (missing).
+3)   A quasi-regular grid can be defined only for rows or columns, but
+     not both simultaneously.  The first point in each row (column)
+     shall be positioned at the meridian (parallel) indicated in octets
+     11-16.  The grid points shall be evenly spaced in latitude
+     (longitude).
+4)   For Gaussian grids only the rows can be rendered quasi-regular;
+     the first point shall be located at the meridian given in octets
+     14-16 and the last point at the meridian given in octets 21-23.
+
+
+                       POLAR STEREOGRAPHIC GRIDS
+                          (GDS Octets 7 - 32)
+                                   
+         OCTET NO.    CONTENT & MEANING
+
+          7 -  8      Nx - Number of points along x-axis
+          9 - 10      Ny - Number of points along y-axis
+         11 - 13      La1 - Latitude of first grid point
+         14 - 16      Lo1 - Longitude of first grid point
+              17      Resolution and component flags (see Table 7)
+         18 - 20      Lov - The orientation of the grid;
+                      i.e., the east longitude value of the
+                      meridian which is parallel to the
+                      y-axis (or columns of the grid) along
+                      which latitude increases as the
+                      y-coordinate increases. (Note: The
+                      orientation longitude may, or may not,
+                      appear within a particular grid.)
+         21 - 23      Dx - the X-direction grid length
+                           (see Note 2)
+         24 - 26      Dy - the Y-direction grid length
+                           (see note 2)
+              27      Projection center flag  (see note 5)
+              28      Scanning mode           (see Table 8)
+         29 - 32      Set to 0 (reserved)
+
+     NOTES:
+
+1.   Latitude and longitude are in millidegrees (thousandths)
+     
+2.   Grid lengths are in units of meters, at the 60 degree latitude
+     circle nearest to the pole in the projection plane.
+     
+3.   Latitude values are limited to the range 0 - 90,000.  Bit 1 is set
+     to 1 to indicate south latitude.
+     
+4.   Longitude values are limited to the range 0 - 360,000.  Bit one is
+     set to 1 to indicate west longitude.
+     
+5.   Octet 27:
+     Bit 1 set to 0 if the North pole is on the projection plane.
+     Bit 1 set to 1 if the South pole is on the projection plane.
+     
+6.   The first and last grid points may not necessarily be the same as
+     the first and last data points if the bit map section (BMS) is
+     used.
+     
+7.   The resolution flag (bit 1 of Table 7) is not applicable.
+     
+     
+             LAMBERT CONFORMAL SECANT OR TANGENT CONE GRIDS
+                          (GDS Octets 7 - 42)
+                                   
+                         OCTET NO.    CONTENT & MEANING
+
+          7 -  8      Nx - Number of points along x-axis
+          9 - 10      Ny - Number of points along y-axis
+         11 - 13      La1 - Latitude of first grid point
+         14 - 16      Lo1 - Longitude of first grid point
+              17      Resolution and component flags (see Table 7)
+         18 - 20      Lov - The orientation of the grid;
+                      i.e., the east longitude value of the
+                      meridian which is parallel to the
+                      y-axis (or columns of the grid) along
+                      which latitude increases as the
+                      y-coordinate increases. (Note: The
+                      orientation longitude may, or may not,
+                      appear within a particular grid.)
+         21 - 23      Dx - the X-direction grid length
+                           (see note 2)
+         24 - 26      Dy - the Y-direction grid length
+                           (see Note 2)
+              27      Projection center flag   (see note 5)
+              28      Scanning mode            (see Table 8)
+         29 - 31      Latin 1 - The first latitude from the pole
+                      at which the secant cone cuts the spherical
+                      earth.       (See Note 8)
+         32 - 34      Latin 2 - The second latitude from the pole
+                      at which the secant cone cuts the spherical
+                      earth.       (See Note 8)
+         35 - 37      Latitude of southern pole (millidegrees)
+         38 - 40      Longitude of southern pole (millidegrees)
+         41 - 42      Reserved (set to 0)
+
+     NOTES:
+
+1.   Latitude and longitude are in millidegrees (thousandths)
+     
+2.   Grid lengths are in units of meters, at the intersection latitude
+     circle nearest to the pole in the projection plane.
+     
+3.   Latitude values are limited to the range 0 - 90,000.  Bit 1 is set
+     to 1 to indicate south latitude.
+     
+4.   Longitude values are limited to the range 0 - 360,000.  Bit one is
+     set to 1 to indicate west longitude.
+     
+5.   Octet 27:
+     Bit 1 set to 0 if the North pole is on the projection plane.
+     Bit 1 set to 1 if the South pole is on the projection plane.
+     Bit 2 set to 0 if only one projection center used
+     Bit 2 set to 1 if projection is bipolar and symmetric
+     
+6.   The first and last grid points may not necessarily be the same as
+     the first and last data points if the bit map section (BMS) is
+     used.
+     
+7.   The resolution flag (bit 1 of Table 7) is not applicable.
+     
+8.   If Latin 1 = Latin 2 then the projection is on a tangent cone.
+     
+
+
+                            MERCATOR GRIDS
+                          (GDS Octets 7 - 42)
+
+         OCTET NO.    CONTENT & MEANING
+
+          7 -  8      Ni - Number of points along a
+                           latitude circle
+          9 - 10      Nj - Number of points along a
+                           longitude meridian
+         11 - 13      La1 - Latitude of first grid point
+         14 - 16      Lo1 - Longitude of first grid point
+              17      Resolution and component flags (see Table 7)
+         18 - 20      La2 - latitude of last grid point
+         21 - 23      Lo2 - longitude of last grid point
+         24 - 26      Latin - The latitude(s) at which the
+                              Mercator projection cylinder
+                              intersects the earth.
+              27      Reserved (set to 0)
+              28      Scanning mode (see Table 8)
+         29 - 31      Di - the longitudinal direction increment
+                           (see Note 2)
+         32 - 34      Dj - the latitudinal direction increment
+                           (see note 2)
+         35 - 42      Reserved (set to 0)
+
+     NOTES:
+
+1.   Latitude and longitude are in millidegrees (thousandths)
+2.   Grid lengths are in units of meters, at the circle of latitude
+     specified by Latin.
+3.   Latitude values are limited to the range 0 - 90,000.  Bit 1 is set
+     to 1 to indicate south latitude.
+4.   Longitude values are limited to the range 0 - 360,000.  Bit one is
+     set to 1 to indicate west longitude.
+5.   The latitude and longitude of the last grid point should always be
+     given.
+6.   The first and last grid points may not necessarily be the same as
+     the first and last data points if the bit map section (BMS) is
+     used.
+     
+     
+                SPACE VIEW PERSPECTIVE OR ORTHOGRQAPHIC
+                           (GDS Octets 7-44)
+                                   
+     OCTET NUMBER       CONTENTS
+
+      7-8      Nx - number of points along x axis (columns)
+      9-10     Ny - number of points along y axis (rows or lines)
+      11-13    Lap - latitude of sub-satellite point
+      14-16    Lop - longitude of sub-satellite point
+
+ 17       Resolution and component flags (Table 7)
+      18-20    dx - apparent diameter of earth in grid lengths,
+               in x direction
+      21-23    dy - apparent diameter of earth in grid lengths,
+               in y direction
+      24-25    Xp - X-coordinate of sub satellite point
+      26-27    Yp - Y-coordinate of sub-satellite point
+      28       Scanning Mode (Table 8)
+      29-31    the orientation of the grid; i.e., the angle
+               in millidegrees between the increasing y axis
+               and the meridian of the sub-satellite point in the
+               direction of increasing latitude (see Note 3).
+      32-34    Nr - the altitude of the camera
+               from the earth's center,
+               measured in units of the earth's (equatorial)
+               radius
+               (See Note 4).
+      35-44    reserved
+
+
+     Notes:
+
+(1)  It is assumed that the satellite is at its nominal position, i.e.,
+     it is looking directly at its sub-satellite point.
+     
+(2)  Octet 32-34 shall be set to all ones (missing) to indicate the
+     orthographic view (from infinite distance).
+     
+(3)  It is the angle between increasing y axis and the meridian 180
+     degrees east if the sub-satellite point is the North pole; or the
+     meridian 0 degrees, if the sub-satellite point is the south pole.
+     
+(4)  The apparent angular size of the earth will be given by
+     2 * asin(1/Nr).
+     
+(5)  The horizontal and vertical angular resolutions of he sensor (Rx
+     and Ry), needed for navigation equations, can be calculated from
+     the following
+     
+               Rx = 2 * asin(1/Nr) / dx
+                    
+               Ry = 2 * asin(1/Nr) / dy
+                    
+                    SPHERICAL HARMONIC COEFFICIENTS
+                          (GDS Octets 7 - 32)
+                                   
+                                   
+                        OCTET NO.      CONTENT & MEANING
+                                   
+                7 -  8        J - Pentagonal Resolution Parameter
+                                   
+                9 - 10        K - Pentagonal Resolution Parameter
+                                   
+               11 - 12        M - Pentagonal Resolution Parameter
+
+          13             Representation Type (See Table 9)
+
+          14             Coefficient Storage Mode (See Table 10)
+
+          15 - 32        Set to zero (reserved)
+
+
+               TABLE 7 - RESOLUTION AND COMPONENT FLAGS
+                            (GDS Octet 17)
+                                   
+                                   
+        Bit      Value        Meaning
+
+         1         0     Direction increments not given
+                   1     Direction increments given
+
+         2         0     Earth assumed spherical with
+                         radius = 6367.47 km
+                   1     Earth assumed oblate spheroid with size
+                         as determined by IAU in 1965:
+                         6378.160 km, 6356.775 km, f = 1/297.0
+
+         3-4             reserved (set to 0)
+
+         5         0     u- and v-components of vector quantities
+                         resolved relative to easterly and
+                         northerly directions
+                   1     u and v components of vector quantities
+                         resolved relative to the defined grid in
+                         the direction of increasing x and y
+                         (or i and j) coordinates respectively
+
+         6-8             reserved (set to 0)
+
+Note: If the GDS is not included in a message then any wind components
+are assumed to be resolved relative to the grid specified in the PDS
+with u and v defined as positive in the direction of increasing x and y
+(or i and j) coordinates respectively.
+                     TABLE 8.  SCANNING MODE FLAG
+                            (GDS Octet 28)
+                                   
+                                   
+     BIT  VALUE               MEANING
+
+     1    0    Points scan in +i direction
+          1    Points scan in -i direction
+
+     2    0    Points scan in -j direction
+          1    Points scan in +j direction
+
+     3    0    Adjacent points in i direction are consecutive
+                 (FORTRAN: (I,J))
+          1    Adjacent points in j direction are consecutive
+                 (FORTRAN: (J,I))
+                                   
+                                   
+Note:     i direction is defined as west to east along a parallel of
+          latitude, or left to right along an x axis.
+          
+          j direction is defined as south to north along a meridian of
+          longitude, or bottom to top along a y axis.
+
+
+                 TABLE 9. SPECTRAL REPRESENTATION TYPE
+                            (GDS Octet 13)
+                                   
+                                   
+        VALUE                  MEANING
+
+          1              Associated Legendre Polynomials
+                         of the First Kind with normalization
+                         such that the integral equals 1
+
+
+
+                  TABLE 10. COEFFICIENT STORAGE MODE
+                            (GDS Octet 14)
+                                   
+                                   
+        VALUE                     MEANING
+
+          1         The complex coefficients Xnm are stored for   m > 0
+                    as pairs of real numbers Re(Xnm), Im(Xnm) ordered
+                    with n increasing from m to N(m), first for m = 0
+                    and then for m = 1, 2, 3,...M.  The real part of
+                    the (0,0) coefficient is stored in octets 12-15 of
+                    the BDS, as a floating point number in the same
+                    manner as the packing reference value, with units
+                    as in Table 2.  The remaining coefficients,
+                    starting with the imaginary part of the (0,0)
+                    coefficient, are packed according to the GRIB
+                    packing algorithm, with units as given in Table 5,
+                    in octets 16 and onward in the BDS.
+
+
+NOTES ON SPECTRAL TRUNCATION:
+
+     Using the associated Legendre Polynomials of the First Kind, Pnm,
+as typical expansion functions, any variable x(,), which is a function
+of longitude,  , and sin(latitude),  , can be represented by
+                                   
+                                   
+                                   
+                                   
+                                   
+     In the summations, M is the maximum zonal wave number that is to
+be included, and K & J together define the maximum meridional total
+wave number N(m), which, it should be noted, is a function of m.  A
+sketch shows the relationships:
+
+     
+     
+
+     In this figure, the ordinate is n the zonal wave number, the
+abscissa, m, is the total meridional wave number, the vertical line at
+m = M is the zonal truncation, and the diagonal passing through (0,0)
+is the line n = m.  The Legendre Polynomials are defined only on or
+above this line, that is for n > m.  On the n-axis, the horizontal line
+at n = K indicates the upper limit to n values, and the diagonal that
+intersects the n-axis at n = J indicates the upper limit of the area in
+which the Polynomials are defined.  The shaded irregular pentagon
+defined by the n-axis, the diagonal from n = J, the horizontal n = K,
+the vertical m = M, and the other diagonal n = m surrounds the region
+of the (n x m) plane containing the Legendre Polynomials used in the
+expansion.
+
+     This general pentagonal truncation reduces to some familiar common
+truncations as special cases:
+
+          Triangular:    K = J = M and N(m) = J
+          Rhomboidal:    K = J + M and N(m) = J + m
+          Trapezoidal:   K = J, K > M and N(m) = J
+
+     In all of the above m can take on negative values to represent the
+imaginary part of the spectral coefficients.
+
+
+SECTION 3: BIT MAP SECTION (BMS).
+
+     The purpose of the (optional) BMS is to provide either a bit map
+or a reference to a bit map pre-defined by the center.  The bit map
+consists of contiguous bits with a bit-to-data-point correspondence as
+defined in the grid description.  A bit set equal to 1 implies the
+presence of a datum for that grid point in the BDS; a value of zero
+implies the absence of such.  This is useful in shrinking fields where
+fair portions of the field are not defined.  An example would be global
+grids of sea surface temperature; the bit map would be used to suppress
+the "data" at grid points over land.  One would not want to use the BMS
+if the data were un-defined at only a small number of grid points as
+the overhead of adding the bit map array (one bit for each grid point)
+might add more bits to the overall message that were subtracted by the
+removal of a few data values.
+
+     Octet no.
+
+      1 - 3       Length in octets of Bit Map Section
+
+      4           Number of unused bits at end of Section 3.
+
+      5 - 6       Numeric:
+
+                  = 0:        a bit map follows;
+                  otherwise:  the numeric refers to a
+                              predefined bit map provided
+                              by the center
+
+      7 - nnn     Bit map, zero filled to an even number of octets
+
+
+SECTION 4: BINARY DATA SECTION (BDS).
+
+     The BDS contains the packed data and the binary scaling
+information needed to reconstruct the original data from the packed
+data.  The required decimal scale factor is found in the PDS, above.
+The data stream is zero filled to an even number of octets.
+
+     Octet no.
+
+      1 - 3       Length in octets of binary data section
+
+     4          Bits 1 through 4: Flag - See Table 11
+                Bits 5 through 8: Number of unused bits at end
+                                 of Section 4.
+
+     5 - 6      The binary scale factor (E).  A negative value
+                is indicated by setting the high order bit
+                (bit No. 1) in octet 5 to 1 (on).
+
+      7 - 10      Reference value (minimum value); floating
+                  point representation of the number.
+
+      11          Number of bits into which a datum point is
+                  packed
+
+     12 -nnn      Variable, depending on octet 4;
+                  zero filled to an even number of octets.
+
+     14           Optionally, may contain an extension of the flags in
+                  octet 4.  See Table 11.
+                  
+                  
+     Here are some of the various forms the binary data can take; the
+flag table in BDS octet 4, possibly extended into octet 14, identifies
+which variant is in use.
+
+     Grid-point data - Simple packing
+
+     Here the data simply begin in octet 12 and continue, packed
+according to the simple packing algorithm described above, without any
+particular regard for computer "word" boundaries, until there is no
+more data.  There may be some "zero-fill" bits at the end.
+
+     If all the data in a grid point field happen to have the same
+value, then all of the deviations from the reference value are set to
+zero.  Since a zero value requires no bits for packing, octet 11 is set
+to zero, thus indicating a field of constant data, the value of which
+is given by the reference value.  Under these circumstances, octet 12
+is set to zero (the required "zero fill to an even number of octets")
+and bits 5-8 of octet 4 contain an 8.  The number of data points in the
+field is implied by the grid identification given in the PDS and/or the
+GDS and BMS.
+
+     Spherical Harmonic Coefficients - Simple packing
+
+     Octets 12-15 contain the real part of the (0.0) coefficient in the
+same floating point format as the reference value in octets 7-10.  The
+imaginary part of the (0.0) coefficient, mathematically, is always
+equal zero.  Octets 16 to the end contain the remaining coefficients
+packed up as binary data with the same sort of scaling, reference
+value, and the like, as with grid-point numbers.  Excluding the (0,0)
+coefficient, which is usually much larger than the others, from the
+packing operation means that the remaining coefficients can be packed
+to a given precision more efficiently (fewer bits per word) than would
+be the case otherwise.
+
+     Grid-Point Data - Second Order or Complex Packing
+
+     Before laying out where the various second order values, sub-
+parameters, counters, and what have you, go, it is appropriate to
+describe the second order packing method in an algorithmic manner.
+
+     Referring back to the description of simple packing, the encoding
+method is the same up to part way through the fourth step, stopping
+just short of the actual packing of the scaled integers into the
+"words" of either a pre-specified or calculated bit length.
+
+     The basic outline of second order packing is to scan through the
+array of integers (one per grid point, or possibly less than that if
+the Bit Map Section has been employed to discard some of the null value
+points) and seek out sub-sections exhibiting relatively low variability
+within the sub-section.  One then finds the (local) minimum value in
+that sub-section and subtracts it from the ("first order") integers in
+that sub-section, which leave a set of "second order" integers.  These
+numbers are then scanned to find the maximum value, which in turn is
+used to specify the minimum bit width for a "word" necessary to contain
+the sub-section set of second order numbers.
+
+     The term "first order" in this context refers to the integer
+variables that result from subtracting the overall (global) minimum
+from the original variables and then doing all scaling and rounding;
+"second order" refers to the variables that result from subtracting the
+local minimum from the sub-set of first order variables.  No further
+scaling is necessary or appropriate.
+
+     The sub-section set of numbers are then packed into "words" of the
+just determined bit length.  The overall savings in space comes about
+because the second order values are, usually, smaller than their first
+order counterparts.  They have, after all, had two minima subtracted
+from the original values, the overall minimum and the local minimum,
+where the first order values have had only the overall minimum
+subtracted out.  There is no guarantee, however, that the second order
+packing will compress a given field to a greater degree than the first
+order packing.  If the first order field of integers is highly
+variable, or generally close to zero, then there will be no gain in
+compression.  But if the field shows long runs of small variation,
+particularly if some of the runs are constant (zero variability), then
+the second order packing will contribute to the compression.
+
+     The process then repeats and a whole collection of sub-sections
+are found, their local minima are subtracted, etc.  One of the tricky
+parts of this process is defining just what is meant by a "sub-section
+of low variability".  The WMO Manual is silent on this as it only
+describes how the sub-sections and their ancillary data are to be
+packed in the message.  The U.S. National Weather Service, the U.K.
+Meteorological Office, the European Centre for Medium-Range Weather
+Forecasts, and probably other groups have, independently, designed
+selection criteria and built them into GRIB encoders.  It is beyond the
+scope of this document to attempt to describe them in any detail.
+These groups have all expressed their willingness to share their GRIB
+encoders with any who ask for them.
+
+     Before laying out where the second order values, etc., are placed
+in a message, we had best review just what information has to be saved.
+We need to include the following information:
+
+          1)   How many sub-sections there are;
+               
+          2)   Where does each sub-section begin;
+               
+          3)   Where does each sub-section end; or,
+               how many data points are in each sub-section;
+               
+          4)   What is the local minimum value (a first order value)
+               that was found for each sub-section;
+               
+          5)   What is the bit width of the collection of first order
+               values (the local minima) found for each sub-section;
+               
+          6)   What are the second order values for each sub-section;
+               
+          7)   What are the bit widths of the second order values
+               appropriate for all the sub-section; and, finally,
+               
+          8)   Sufficient information to specify where the above
+               information is located.
+               
+     A moments consideration (a long moment, perhaps) will satisfy the
+reader that the information given will be sufficient to reconstruct the
+original data field.
+
+     The information needed for points 2) and 3), the beginning and end
+of the sub-sections, is presented in the form of a bit map, called a
+"secondary bit map" to distinguish it from the bit map (optionally)
+contained in the BMS.  There is one bit for each grid point containing
+data, ordered in the same way as the grid is laid out.  The "primary"
+bit map, the BMS bit map, may have been used to eliminate data at
+points where the data are meaningless - only the remaining "real" data
+points are matched by the bits in the secondary bit map.  This
+possibility is understood to exist throughout the following discussion.
+The start of each sub-section is indicated by the corresponding bit set
+to "on" or to a value of 1.  Clearly, the first bit in the secondary
+bit map will always be set on, since the first data point must be the
+start of the first sub-section.  (If it is not, then something is wrong
+somewhere.  Unfortunately it is not always easy to tell just where the
+error occurred.)  The secondary bit map is then no more than a
+collection of 1s and 0s, indicating the start and the extent of each
+sub-section.  It would be possible to scan through the secondary bit
+map and determine how many sub-sections there are; however, this number
+is explicitly included in the GRIB message to save one the trouble, and
+to serve as an internal self-checking mechanism.
+
+     At long last, then, here is the layout of the information, with
+further explanatory notes, when second order packing has been employed:
+
+   Octet no.       Content
+
+     1-3         Length in octets of binary data section
+                 
+     4           Bits 1 through 4: Flag - See Table 11
+                 Bits 5 through 8: Number of unused bits at end of
+                 Section 4.
+                 
+     5-6         The binary scale factor (E).  A negative value
+                 is indicated by setting the high order bit(bit No. 1)
+                 in octet 5 to 1 (on).
+                 
+     7-10        Reference value (minimum value); floating point
+                 representation of the number.  This is the overall or
+                 "global" minimum that has been subtracted from all
+                 the values.
+                 
+     11          Number of bits into which a datum point is packed.
+                 This width now refers to the collection of first
+                 order packed values that serve as the local minimum
+                 values, one for each sub-section.  It is determined
+                 in the same manner as for the simple (first order)
+                 packing.
+                 
+     12-13       N1 - Octet number, relative to the start of the BDS,
+                 at which the collection of first order packed numbers
+                 begins, i.e. the collection of local minimum values.
+                 
+     14          The flags that are an extension of octet 4.  See Code
+                 Table 11.
+                 
+     15-16       N2 - Octet number, relative to the start of the BDS,
+                 at which the collection of second order packed
+                 numbers begins.
+                 
+     17-18       P1 - The number of first order packed values, the
+                 local minima.  This number is the same as the number
+                 of sub-sections.
+                 
+     19-20       P2 - The number of second order packed values
+                 actually in the message.  This is the number of
+                 actual data points as (possibly) modified by the bit
+                 map in the BMS, if any, and/or reduced by the number
+                 of identical points collapsed together by the run-
+                 length encoding (see below)
+                 
+     21          Reserved
+                 
+     22-(xx-1)   Width(s), in bits, of the second order packed values;
+                 each width value is contained in 1 octet.  There are
+                 as many width values, or octets, as there are sub-
+                 sections, P1 of them.  However, there may be but one
+                 such value under special circumstances; see below.
+                 Also, the width value for a particular sub-section
+                 may perfectly well be zero.
+                 
+     xx-(N1-1)     Secondary bit map, one bit for each data point.  It
+                 will be P2 bits long, then padded to an even number
+                 of octets with binary 0.
+                 
+     N1-(N2-1)   P1 first order packed values, the local minima, each
+                 held in a "word" of bit-length found in octet 11,
+                 then padded to a whole number of octets with 0s.
+                 
+     N2-...      P2 second order packed values.  There is no "marking"
+                 of the sub-sections here; all the sub-section second
+                 order values are placed in a continuous string of
+                 bits.  The bit-length of the "words" holding the
+                 values will change from place to place but again this
+                 has to be determined by reference to the other
+                 information.
+                 
+                 As usual, there may be padding by binary 0 bits
+                 sufficient to bring the entire section to an even
+                 number of octets.
+                 
+     There are a small number of special cases and variations on the
+above layout:
+
+     If the bit-width for a sub-section is zero, then no second order
+values for that sub-section are included in the part of the message
+starting at octet N2.  The value of P2 will reflect the absence of
+those points.  This will happen is all the first order values in the
+sub-section are identical.  This is a form of "run-length encoding" and
+contributes greatly to packing efficiency if the original data contains
+strings of constant value (including zero).
+
+     Under some circumstances, it may turn out that there is no need to
+use different bit-widths for each of the sub-sections.  In that case, a
+flag is set in bit 8 of the extended flags found in octet 14 (see table
+11) indicating that all the sub-sections are packed with the same bit-
+width, and that the single value will be found in octet 22.
+
+     Row by row packing is defined as selecting entire rows (or
+columns) to serve as sub-sections, without regard to "variability"
+determinations.  It can have some compression value.  If row by row
+packing is employed, this is indicated by setting a flag in bit 7 of
+the extended flags found in octet 14 (see table 11) and NOT including
+the secondary bit map in the message.  It is unnecessary since the
+length of the rows (columns) is known from the grid specifications
+given elsewhere in the message.
+
+                           TABLES FOR THE BDS
+                                   
+                                   
+                            TABLE 11.  FLAG
+                   (BDS Octet 4 and, optionally, 14)
+                                   
+                                   
+         Bit     Value      Meaning
+
+
+
+          1       0      Grid point data
+                  1      Spherical Harmonic Coefficients
+
+          2       0      Simple packing
+                  1      Second order ("Complex") Packing
+
+          3       0      Original data were floating point values
+                  1      Original data were integer values
+
+          4       0      No additional flags at octet 14
+                  1      Octet 14 contains flag bits 5 - 12
+
+The following gives the meaning of the bits in octet 14 ONLY if bit 4
+is set to 1.  Otherwise octet 14 contains regular binary data.
+
+          5              Reserved (set to 0)
+
+          6       0      Single datum at each grid point
+                  1      Matrix of values at each grid point
+
+          7       0      No secondary bit maps
+                  1      Secondary bit maps present
+
+          8       0      Second order values have constant width
+                  1      Second order values have different widths
+
+          9-12           Reserved (set to 0)
+
+Notes:
+        
+     (1)  Bit 3 is set to 1 to indicate that the original data were
+          integers; when this is the case any non-zero reference values
+          should be rounded to an integer value prior to placing in the
+          GRIB BDS.
+          
+     (2)  Bit 4 is set to 1 to indicate that bits 5 to 12 are contained
+          in octet 14 of the data section.
+          
+     (3)  Although GRIB is not capable of representing a matrix of data
+          values at each grid point, the meaning of bit 6 is retained
+          in anticipation of a future capability.
+          
+     (4)  When secondary bit maps are present in the data (used in
+          association with second order packing) this is indicated by
+          setting bit 7 to 1.
+          
+     (5)  When octet 14 contains the extended flag information octets
+          12 and 13 will also contain "special" information; the actual
+          data will begin in a subsequent octet.  See above.
+          
+
+SECTION 5: END SECTION
+
+     The end section serves a human readable indication of the end of a
+GRIB record.  It can also be used for computer verification that a
+complete GRIB record is available for data extraction.  It should not
+be used as a search target since a '7777' bit combination could exist
+anywhere in the binary data stream.
+
+     Octet no.
+
+      1-4        '7777' (Coded CCITT-ITA No. 5)
+
+_______________________________
+1<1> World Meteorological Organization publication No. 306, Manual on
+     Codes, Vol. 1, Part B, Secretariat of the WMO, Geneva,
+     Switzerland, 1988, plus Supplements No. 1, 2, & 3 (with more to
+     come)
+

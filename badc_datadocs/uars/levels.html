@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>UARS Data Levels</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UARS data levels<BR CLEAR="ALL"></H1>
+
+<P><EM>The definition of the data levels used to describe the
+different stages in the processing of UARS data.</EM> <HR ALIGN=LEFT> 
+
+<DL>
+  <DT><STRONG>Level 0</STRONG>
+  <DD>data are the basic telemetry data from the instruments after
+  time-reversal and decommutation into specific sensor files. Level
+  0 data have a common format.
+  <DT><STRONG>Level 1</STRONG>
+  <DD>data are the physical parameters actually measured by the
+  sensors (e.g., atmospheric radiances in the case of the limb
+  sounding instruments). Level 1 data have sensor-specific file
+  formats.
+  <DT><STRONG>Level 2</STRONG>
+  <DD>data are the geophysical parameters calculated from Level
+  1 data, such as atmospheric temperature profiles, gas concentrations,
+  winds, or solar spectral irradiances. Atmospheric data at Level
+  2 are related directly to the instrument measurement &quot;footprint&quot;,
+  i.e., the character of the altitude scan is determined by a given
+  instrument's scan rate, integration time, and viewing direction,
+  as well as the spacecraft's orbital velocity. Level 2 data also
+  have sensor-specific file formats.
+  <DT><STRONG>Level 3A</STRONG>
+  <DD>atmospheric data reflect the geophysical information of Level
+  2 transformed into a common format and equally spaced along the
+  measurement trajectory in time (&quot;Level 3AT&quot;, at 65.536
+  second centers) or latitude (&quot;Level 3AL&quot;, every four
+  degrees). Level 3A data have common file formats.
+  <DT><STRONG>Level 3B</STRONG>
+  <DD>atmospheric data consist of two daily latitude-longitude
+  cross sections at approximately one-half scale height altitude
+  intervals. (The two cross sections reflect segregation by north-going
+  and south-going satellite data, which differ by 12 hours local
+  time at the Equator.) These data are stored as 13 Fourier coefficients
+  for each height around the latitude circles defined by Level
+  3AL. Level 3B data also have a common file format.
+</DL>
+
+
+
+<P>
+</BODY>
+</HTML>

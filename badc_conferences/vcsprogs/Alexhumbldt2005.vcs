@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20050516T090000Z
+DTEND:20050520T170000Z
+LOCATION:Guayaquil, Ecuador.
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Alexander von Humboldt International Conference: The El Niño phenomenon and its global impact=0D=0Ahttp://www.cosis.net/members/mailtool/download.php?id=56=0D=0A
+SUMMARY:The El Niño phenomenon
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

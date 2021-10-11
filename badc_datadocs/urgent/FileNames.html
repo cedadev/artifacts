@@ -1,0 +1,151 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>URGENT Data File Names</title>
+</head>
+
+<body bgcolor="#ffffff">
+<h1>URGENT Air Data Files: Naming Conventions</h1>
+<hr>
+<table><tr valign=top><td><i>N.B.</i></td><td><i>
+The following guidelines apply to files containing NASA Ames formatted data,
+images or metadata associated to images.
+No special naming convention applies to files containing software, metadata
+pertaining to software or text documentation other than metadata.
+</i></td></tr></table>
+
+<p>
+<h2>Contents</h2>
+<ol>
+ <li><a href="#Stru">File name structure</a>
+ <li><a href="#Ctre">Centre identifier</a>
+ <li><a href="#Data">Data identifier</a>
+ <li><a href="#Date">Start date</a>
+ <li><a href="#Exte">File name extension</a>
+</ol>
+</p>
+<hr>
+
+<p><h2><a name="Stru">1. File name structure</a></h2></p>
+
+URGENT data or metadata file names are made of four fields.
+The first three fields are separated by an underscore sign ( <b>&#095;</b> ).
+The fourth field is separated from the third one by a dot  ( <b>.</b> ).
+
+<center><h3><i>
+&#091;centre-id&#093;_&#091;data-id&#093;_yymmdd.&#091;ext&#093;
+</i></h3></center>
+
+Explanations on each of these 4 fields are given in the sections below.
+
+<p>
+For the sake of uniformity and to avoid very long file names, standard
+abbreviations have been adopted for the <b><i>&#091;centre-id&#093;</i></b>
+and for the <b><i>&#091;data-id&#093;</i></b>.
+Data suppliers, please make use of the provided abbreviations where possible.
+When making up new file name components, please try to keep them as short as
+possible.
+The total number of characters of data file names should not exceed 40.
+The list of adopted abbreviations will be completed as new standards need to
+be defined.
+</p>
+
+<p>
+For a systematic list of abbreviations currently in use in URGENT data file
+names, please refer to the <a href="Dictionary.html">Alphanumeric Dictionary
+of Abbreviations used in URGENT File Names</a>.
+</p>
+
+<p>
+Apart from the file name extension (last field), files containing images and
+their associated metadata have the same name.
+When data exist both in the form of NASA Ames formatted fields and images,
+files also have the same name, except for the file name extension.
+</p>
+<p><h2><a name="Ctre">
+2. Centre identifier: <i>&#091;centre-id&#093;</i></a></h2></p>
+
+The <b><i>&#091;centre-id&#093;</b></i> section of the file name may refer to
+<ul>
+ <li>a site, a station, a platform, an instrument, ...;
+ <li>an institute, a university, a team, a person, ...;
+ <li>a model;
+ <li>when ambiguity is possible, a combination of the above separated by a
+     hyphen ( &#045; ); for example, <b><i>withybrook-bham_o3_990612.na</b></i>
+     and <b><i>withybrook-cam_o3_990612.na</b></i> will contain ozone data
+     measured at the same site and starting on the same date, by the Birmingham
+     and the Cambridge teams respectively.
+</ul>
+Abbreviations currently in use are listed in the
+<a href="Dictionary.html">Dictionary of Abbreviations used in URGENT File
+Names</a>.
+
+<p><h2><a name="Data">3. Data identifier: <i>&#091;data-id&#093;</i>
+</a></h2></p>
+
+The <b><i>&#091;data-id&#093;</i></b> section identifies the nature of the
+data.
+For chemical compounds, the abbreviation used is the same for concentrations
+or mixing ratios.
+Abbreviations currently in use can be found in the
+<a href="Dictionary.html">Dictionary of Abbreviations used in URGENT File
+Names</a>.
+A combination of not more than three abbreviations separated by a hyphen ( &#045; )
+may be used;
+for example: <b><i>pritchatts_jo1d-jno2_000128.na</b></i>.
+In the same way, some specification, if needed, can be added to the data symbol;
+for example, <b><i>halfpenny_nox-10m_990612.na</b></i> and
+<b><i>halfpenny_nox-5m_990612.na</b></i> will contain NO<sub>X</sub> concentrations
+measured at the altitudes of 5 and 10 metres above ground, at the same location and
+on the same date.
+Numbers may also be used to distinguish between different records of the same
+variable at the same site on the same date; for example:
+<b><i>pritchatts_o3-01_000117.na</b></i>,
+<b><i>pritchatts_o3-02_000117.na</b></i>, ...,
+<b><i>pritchatts_o3-10_000117.na</b></i>.
+
+<p><h2><a name="Date">4. Start date: <i>yymmdd</i></a></h2></p>
+
+The <b><i>yymmdd</i></b> field refers to the date when the recorded observation
+started or to the initial date of the model scenario or to the date when the
+model results were issued (when the computation is not a scenario simulation).
+
+<p>
+<center>
+<table>
+<tr><td><b><i>yy</i></b></td><td width=6em></td>
+    <td>last two digits of year number</td></tr>
+<tr><td><b><i>mm</i></b></td><td></td>
+    <td>month number (2 digits), from 00 to 12</td></tr>
+<tr><td><b><i>dd</i></b<</td><td></td>
+    <td>day number (2 digits), from 00 to 31</td></tr>
+</table>
+</center>
+</p>
+
+<p><h2><a name="Exte">5. File name extension: <i>&#091;ext&#093;</i>
+</a></h2></p>
+
+The <b><i>&#091;ext&#093;</i></b> field depends on the file content as
+indicated in the table below.
+
+<p>
+<center>
+<table border=1>
+<tr><th><i>&#091;ext&#093;</i></th>
+    <th>File content</th></tr>
+<tr><th>na</th>
+    <td align=middle>NASA Ames formatted data &amp; metadata</td></tr>
+<tr><td><b>jpg</b>, <b>gif</b>, etc</td>
+    <td align=middle>images</td></tr>
+<tr><th>txt</th>
+    <td align=middle>metadata associated to images</td></tr>
+</table>
+</center>
+</p>
+
+<p>
+</body>
+
+</html>

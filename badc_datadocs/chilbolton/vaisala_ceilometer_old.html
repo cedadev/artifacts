@@ -1,0 +1,258 @@
+<HTML>
+<!-- saved from url=(0045)http://www.met.rdg.ac.uk/radar/doc/ct75k.html -->
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>Documentation for 905 nm CT75K lidar ceilometer data</TITLE>
+  <META CONTENT="text/html; charset=windows-1252" HTTP-EQUIV="Content-Type">
+</HEAD>
+<BODY ALINK="#ffa500" BGCOLOR="#ffffff" LINK="#ff0000" VLINK="#b00000">
+
+<H1><A NAME="top"></A>Chilbolton 905 nm CT75K lidar ceilometer
+data<BR CLEAR="ALL"></H1>
+
+<H1><IMG SRC="vaisala_ceilometer.gif" WIDTH="215" HEIGHT="271"
+ALIGN="BOTTOM" BORDER="0" NATURALSIZEFLAG="3"></H1>
+
+<P><I>A description of the data obtained from the lidar ceilometer</I>.<HR ALIGN=LEFT></P>
+
+<H3>Introduction</H3>
+
+<P>This dataset consists of attenuated backscatter coefficient
+(beta) measured by the 905 nm <A HREF="http://www.vaisala.com/">Vaisala</A>
+CT75K lidar ceilometer situated at Chilbolton, England (51.1445&deg;N,
+1.4370&deg;W). <B>The data are uncalibrated; see the <A HREF="#interpretation">interpretation</A>
+section below.</B> The CT75K is a low power instrument designed
+principally for accurately determining the height of cloud base.
+However, the backscatter profile also contains potentially useful
+information on the optical properties of clouds and aerosols.
+Due to the low power and relatively long wavelength, the CT75K
+is unable to detect molecular backscatter. It operates continuously
+and has the following characteristics:</P>
+
+<PRE>_________________________________________________
+
+Wavelength:                          905 nm
+Beamwidth:                           0.6 mrad
+Range resolution:                    30 m
+Integration time:                    30 s
+Minimum recorded beta:               10<SUP>-4</SUP> (sr km)<SUP>-1</SUP>
+_________________________________________________</PRE>
+
+<H3>History of operations</H3>
+
+<P>The lidar has operated continuously at Chilbolton, with occasional
+breaks for maintenance, since summer 1996. It was pointing directly
+at zenith until 26 April 2000 when it was inclined 5 degrees off
+vertical towards the west (in order to avoid specular reflection
+from horizontally-aligned planar crystals), and has remained this
+way ever since. We may well move it close to zenith in future
+in order to better match with the radar, which is usually operated
+at zenith so that the Doppler information is not affected by horizontal
+winds.</P>
+
+<P>The data acquisition PC uses NTP (network time protocol) to
+ensure that the time stored in the data files is accurate. However,
+a software upgrade on 10 August 2000 inadvertently deactivated
+this feature, with the result that the time drifted somewhat until
+1 September 2000, when the clock was found to be fast by 7 minutes.
+The time was changed from 09:25:10 to 09:18:10 and the NTP process
+restarted. It is reasonable to suppose that time was being gained
+in a linear sense, equating to a gain of 19 seconds per day since
+08:00 UTC on 10 August 2000.</P>
+
+<H3>Processing that has been applied to the data</H3>
+
+<P>The Vaisala data acquisition system performs the following
+in real-time: range correction, noise subtraction, gain control
+based on the transmit power, and calculation of the first three
+cloud base heights from the attenuated backscatter profile. Data
+are recorded as 30-s/30-m averages. The main problem with raw
+data from this system is the background speckle noise, which is
+highly variable in intensity (with individual values of beta sometimes
+going negative), and of a nature that is difficult to understand
+theoretically. Our approach in removing it is to first estimate
+the standard deviation of the noise in each ray from the 8 highest
+gates and store it in the <TT>stdn</TT> variable (this variable
+can be used to see how bad the noise problem was and thus get
+a qualitative sense of the sensitivity of the lidar in each ray).
+The data are then cleaned up by ascending through each beta profile,
+and essentially assigning a confidence level to each pixel based
+on the magnitude of the signal relative to the standard deviation
+of the noise, the vicinity of other cloudy pixels, the approximate
+optical depth of the cloud up to that point, and the range to
+the instrument (favouring low signals that are nearby). Pixels
+with too low a confidence value are rejected. The results of this
+algorithm can be seen by comparing the raw and clean quicklooks
+which should have been provided with the NetCDF data files.</P>
+
+<P>The `<TT>ceil2nc</TT>' program was used to process the data
+and convert it to NetCDF; source code for the latest version may
+be downloaded from <A HREF="http://www.met.rdg.ac.uk/radar/software.html">http://www.met.rdg.ac.uk/radar/software.html</A>.</P>
+
+<H3>Data format</H3>
+
+<P>The data is provided as daily <A HREF="http://www.unidata.ucar.edu/packages/netcdf/">NetCDF</A>
+files containing the following variables:</P>
+
+<UL>
+  <DL>
+    <DT><TT>wavelength</TT>
+    <DD>The wavelength of the lidar in nanometres (905).
+    <DT><TT>latitude</TT>
+    <DD>The latitude of Chilbolton in degrees north (51.1445).
+    <DT><TT>longitude</TT>
+    <DD>The longitude of Chilbolton in degrees east (-1.4370).
+    <DT><TT>altitude</TT>
+    <DD>The altitude of the lidar above mean sea level in metres
+    (90 m).
+    <DT><TT>time</TT>
+    <DD>A vector containing the time of each ray of data, in decimal
+    hours UTC.
+    <DT><TT>range</TT>
+    <DD>A vector containing the range from the instrument, in km,
+    of each range gate. Note that to get height above mean sea level
+    you should add the <TT>altitude</TT> to this value.
+    <DT><TT>bases</TT>
+    <DD>The number of individual cloud bases that the Vaisala software
+    was able to locate from the beta profile (0 to 3).
+    <DT><TT>base1</TT>
+    <DD>The range to the first cloud base, as calculated by the Vaisala
+    data acquisition system, in km. A value of -999 km indicates
+    that no definite cloud base was detected.
+    <DT><TT>base2</TT>
+    <DD>The range to the second cloud base, in km. A value of -999
+    km indicates that no definite second cloud base was detected.
+    <DT><TT>base3</TT>
+    <DD>The range to the third cloud base, in km. A value of -999
+    km indicates that no definite third cloud base was detected.
+    <DT><TT>stdn</TT>
+    <DD>The standard deviation of the backscatter coefficient background
+    noise, in units of 10<SUP>-4</SUP> (sr km)<SUP>-1</SUP>.
+    <DT><TT>beta</TT>
+    <DD>An array containing uncalibrated attenuated backscatter coefficient,
+    in units of 10<SUP>-4</SUP> (sr km)<SUP>-1</SUP> (or equivalently
+    10<SUP>-7</SUP> (sr m)<SUP>-1</SUP>). A value of 0 indicates
+    that no signal was detected. These values are short (two-byte)
+    integers, the same precision as the raw data. Converting to floating-point
+    would have nearly doubled the size of each NetCDF file.
+  </DL>
+</UL>
+
+<P>The following global attributes are also present:</P>
+
+<UL>
+  <DL>
+    <DT><TT>system</TT>
+    <DD>A string identifying the instrument that took the data, in
+    this case `Vaisala CT75K lidar ceilometer'.
+    <DT><TT>day</TT>
+    <DD>The day of the month as a short (two-byte) integer.
+    <DT><TT>month</TT>
+    <DD>The month as a short integer.
+    <DT><TT>year</TT>
+    <DD>The year as a short integer.
+    <DT><TT>software_version</TT>
+    <DD>The version of <TT>ceil2nc</TT> that was used to produce
+    the data. This field was not implemented in versions of <TT>ceil2nc</TT>
+    earlier than around 0.7.6.
+  </DL>
+</UL>
+
+<P>Simple programs to read NetCDF files of Chilbolton data into
+Matlab, IDL and PV-WAVE can be found at <A HREF="http://www.met.rdg.ac.uk/radar/software.html">http://www.met.rdg.ac.uk/radar/software.html</A>.</P>
+
+<P><A NAME="interpretation"></A></P>
+
+<H3>Interpretation of attenuated backscatter coefficient and cloud
+base height, and calibration issues</H3>
+
+<P>It is assumed that the user has a fairly good understanding
+of the concept of attenuated lidar backscatter coefficient, and
+is aware of the difficulties involved in inverting it to obtain
+optical depth. In this section therefore we discuss only calibration
+issues and the quality of the cloud base height products.</P>
+
+<P>No calibration has been applied to the attenuated backscatter
+coefficient in the NetCDF files beyond the internal calibration
+that is applied in the Vaisala data acquisition software. We have
+been able to evaluate this internal calibration by a method which
+involves integrating the attenuated backscatter coefficient up
+through a cloud that completely extinguishes the signal (see for
+example Spinhirne et al. 1989). Theoretically this integral should
+be equal to 1/(2<I>k</I>), where <I>k</I> is the extinction-to-backscatter
+ratio. For liquid water clouds with mean droplet diameters in
+the range 5-50&micro;m, <I>k</I> at 905 nm should be equal to
+18.5 sr, so this approach provides a means of calibration. If
+the effects of multiple scattering are neglected then we find
+that the raw beta values are around a factor of 2.05 too low.
+However, calculations suggest that multiple scattering acts to
+increase the integrated backscatter by around 20%, with the result
+that <B>the raw attenuated backscatter coefficients should be
+multiplied by 2.45 to calibrate them.</B> Due to the assumptions
+made in the multiple scattering calculations, we estimate the
+uncertainty in this figure to be around 20%. Users are warned
+that no comparison with other lidars has been performed to cross
+check this calibration figure.</P>
+
+<P>The cloud base products are exactly the values produced by
+the Vaisala data acquisition system. It calculates the height
+of the first three cloud bases by performing a so-called Klett
+inversion of the beta profile assuming a fixed extinction-to-backscatter
+ratio, and considers the slope, absolute value and historic observations
+at that height (the exact algorithm is regarded as commercially
+sensitive by Vaisala so unfortunately has not been released by
+them). The bases of liquid water clouds (at temperatures above
+and below 0&deg;C) are characterised by high beta values above
+a sharp gradient in beta, and they typically extinguish the lidar
+signal very rapidly. Thus when liquid water cloud is present,
+the algorithm has no difficulty in determining the height of its
+base, but is unable to reliably detect the base of any clouds
+that may be above it. In ice clouds on the other hand there tends
+to be no sharp gradient in beta and the cloud base reported is
+unreliable. We therefore recommend only using the first cloud
+base reported by this instrument when the beta at that height
+is high enough for it to be composed of liquid water.</P>
+
+<H3>Conditions of use</H3>
+
+<P>If data from the Chilbolton CT75K lidar is used in any publication
+or report then acknowledgement must be given to Radiocommunications
+Research Unit at the Rutherford Appleton Laboratory for providing
+the data.</P>
+
+<H3>Who to contact</H3>
+
+<P>If you have any problems obtaining the data, please contact
+the British Atmospheric Data Centre. If you have problems, queries
+or comments regarding the data themselves that are not covered
+adequately by this document, or if you want some data outside
+the period provided on BADC, please contact Charles Kilburn (<A
+HREF="mailto:C.Kilburn@rl.ac.uk">C.Kilburn@rl.ac.uk</A>) and Robin
+Hogan (<A HREF="mailto:R.J.Hogan@reading.ac.uk">R.J.Hogan@rdg.ac.uk</A>).
+Even if you use the data and have no difficulties at all, we are
+very interested in knowing the uses to which our cloud lidar and
+radar data is being put, so please contact us!</P>
+
+<H3>See also</H3>
+
+<UL>
+  <LI><A HREF="http://www.rcru.rl.ac.uk/">The RCRU home page</A>
+  <LI><A HREF="http://www.met.rdg.ac.uk/radar/">The Reading Radar
+  Group home page</A>
+  <LI><A HREF="http://www.vaisala.com/">Vaisala</A>
+</UL>
+
+<H3>References</H3>
+
+<UL>
+  <LI>Spinhirne, J. D., R. Boers and W. D. Hart, 1989: Cloud top
+  liquid water from lidar observations of marine stratocumulus.
+  <I>J. Appl. Meteorol.,</I> <B>28,</B> 81-90.
+</UL>
+
+<P>&nbsp;</P>
+
+<P>
+
+</BODY>
+</HTML>

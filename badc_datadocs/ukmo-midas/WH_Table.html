@@ -1,0 +1,628 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Hourly Weather Data Table</TITLE>
+  <!-- Created 16th June 2006 -->
+  <!-- Author: Belinda Robinson BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Hourly Weather data - Columns in the WH table <BR CLEAR="ALL"></H1>
+
+
+<HR ALIGN=LEFT>
+<a href="WH_Table.html#description">Table Description</a> - 
+<a href="WH_Table.html#table">Columns in the WH table</a> - 
+<a href="WH_Table.html#filter">How to start filtering the rows of data out</a>
+<a href="WH_Table.html#notes">Additional Notes</a>
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+
+<a name="description"></a><h3>Table Description: </h3>
+This entity contains SYNOPs and METARs measured during the hour ending at 
+	  the stated date and time. The identifier is climatological station number, DCNN or WMO 
+	  station number, or ICAO-id. It also contains sunshine duration measured during the hour ending at the 
+	  specified time. Hourly sunshine is reported using Metform 3445, and the value is reported 
+	  as &quot;hour beginning&quot;. The MIDAS ingestion software makes the necessary 
+	  transformation so that the observations are stored at &quot;hour ending&quot;, consistent 
+	  with other hourly data.
+
+
+
+<a name="table"></a>
+<h3>Columns in the WH table (104 parameters from 2010, 102 parameters before 2010):</h3>
+
+For the convenience of users, the 104 WH file column headers are available for download in <a href="Headers/WH_Column_Headers.xlsx">Excel</a> or as a <a href="Headers/WH_Column_Headers.txt">comma separated text file</a>
+<P>
+
+<!--
+<font color=#FB0000><u><strong>IMPORTANT NOTE on 5th August 2013</strong></u></font>: Some users have reported an issue with the number of defined columns in the WH Table described below. 2 undefined columns appear in the WH data files, whether extracted through the WPS or downloaded directly from the archive. We are checking with the Met Office MIDAS Team on this. This page will be updated as soon as possible. Apologies for the inconvenience caused in the meantime.
+<P>
+-->
+
+<table border="1" cellspacing="0" width="95%">
+      <tr> 
+        <td valign="TOP" width="5%" align="center"><b>PK</b></td>
+        <td valign="TOP" width="40%"><b>Attribute</b></td> 
+        <td valign="TOP" width="35%"><b>Description / Units / Precision</b></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_time</font></td>
+        <td valign="TOP" width="35%">Date and time of observation</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id_type</font></td>
+        <td valign="TOP" width="35%">Identifier type</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_domain_name</font></td>
+        <td valign="TOP" width="35%"><a href="met_domain.html">Message type</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">version_num</font></td>
+        <td valign="TOP" width="35%">Observation version number - <strong>Use the row with '1'</strong>, as this has been quality checked by the Met Office </td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_id</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#wind">Unique source identifier</a> or station site number</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rec_st_ind</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/state_indicators.html">State indicator for the record</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wind_speed_unit_id</font></td>
+        <td valign="TOP" width="35%">Wind speed unit code</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_opr_type</font></td>
+        <td valign="TOP" width="35%">Source operation type code : <ul>
+<li>1- Manual observation with significant weather reported ( sig weather classed at codes 04-99)</li>
+<li>2- Manual observation with no significant weather reported</li>
+<li>3- Manual observation with weather included but not observed throughout the whole period ( usually reported at 0600hrs when obs have been automatic overnight but observer just come on duty at 0530hrs)</li>
+<li>4- Automatic observation weather omitted ( due to malfunction )</li>
+<li>5- Automatic observation at site with weather sensor installed but no significant weather reported</li>
+<li>6 -Automatic observation with no weather sensor installed.</li>
+<li>7 - Automatic observation from site with weather sensor installed and weather reported</li></ul></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wind_direction</font></td>
+        <td valign="TOP" width="35%">Wind direction from which the wind blows, measured in Degrees (true). The entry for an east wind is 090, that for a south wind is 180 and so on clockwise. Note that zero values in both wind speec and wind direction fields indicate that there was no wind blowing at the time of observation. <a href="ukmo_guide.html#5.5">More</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wind_speed</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.5">Wind speed</a><br>knots. Wind mast elevations from selected stations are available <a href="http://badc.nerc.ac.ukhttp://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/WindElevations.xls">here</a> (MIDAS users only).</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prst_wx_id</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#presweath">Present weather code</a> - <a href="ukmo_guide.html#5.10">definition</a> <br><strong>Important Note:</strong> Check the src_opr_type value to determine the type of observation amade (Manual or Automatic). When there is a 1 in the src_opr_type column this is a manual observation where the present weather has been included and reported using <a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#presweath">WMO table 4677</a>. If there is a 7 in the src_opr_type column then this is an automatic observation reported using code from <a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#presweath4680">WMO table 4680</a>.
+        </td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">past_wx_id_1</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#pastweath">Past weather code #1</a> - This is a number between 0-9 which details what the weather has been like in the last 6 hours for observations at 00, 06, 12, 1800 UTC, the last 3 hours for observations at 03, 09, 15, 2100 UTC and the previous hour at any other times. The past weather is only recorded when a manual observation is done at the station. <a href="ukmo_guide.html#5.10">definition</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">past_wx_id_2</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#pastweath">Past weather code #2</a> - Same principle as above but is used to cover two codes or just one code occurring throughout the appropriate period. If more than 2 codes apply for the period then the 2 highest are used. So for example if it rained for a whole hour at the 1000 UTC ob then the code would be 66. If there was rain and drizzle during the period it would be 65 and if cloud was covering more than half the sky during the period it would be 22. The past weather is always coded as two digits which are separated into id_1 and id_2 in MIDAS. <a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#pastweath">definition</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_ttl_amt_id</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#oktas">Total cloud amount code</a> - <a href="ukmo_guide.html#5.11">definition</a><br>oktas</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">low_cld_type_id</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#lowcl">Low cloud type code</a> - <a href="ukmo_guide.html#5.11">definition</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">med_cld_type_id</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#medcl">Medium cloud type code</a> - <a href="ukmo_guide.html#5.11">definition</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">hi_cld_type_id</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#highcl">High cloud type code</a> - <a href="ukmo_guide.html#5.11">definition</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_amt_id</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#oktas">Cloud base amount code</a> - <a href="ukmo_guide.html#5.11">definition</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_ht</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.11">Cloud base height</a><br>decametres</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">visibility</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.9">Visibility</a><br>decametres</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">msl_pressure</font></td>
+        <td valign="TOP" width="35%">Mean sea level air pressure<br>Unit=1 hpa to the nearest 0.1 hpa<br>Precision aneroid barometers are now in general use for measuring pressure and a correction for altitude is applied to obtain the value at mean sea level (MSL). 
+        Please see <a href="WH_Table.html#pressure">additional notes</a> below.</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_amt_id_1</font></td>
+        <td valign="TOP" width="35%">
+<a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#levela">Layer cloud amount code #1</a> - <a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/cloud_layer.html">definition</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cloud_type_id_1</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#levelt">Cloud type code #1</a> - <a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/cloud_layer.html">definition</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_ht_id_1</font></td>
+        <td valign="TOP" width="35%">Cloud base height code #1<br>decametres</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_amt_id_2</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#levela">Layer cloud amount code #2</a> - <a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/cloud_layer.html">definition</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cloud_type_id_2</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#levelt">Cloud type code #2</a> - <a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/cloud_layer.html">definition</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_ht_id_2</font></td>
+        <td valign="TOP" width="35%">Cloud base height code #2<br>decametres</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_amt_id_3</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#levela">Layer cloud amount code #3</a> - <a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/cloud_layer.html">definition</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cloud_type_id_3</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#levelt">Cloud type code #3</a> - <a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/cloud_layer.html">definition</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_ht_id_3</font></td>
+        <td valign="TOP" width="35%">Cloud base height code #3<br>decametres</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_amt_id_4</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#levela">Layer cloud amount code #4</a> - <a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/cloud_layer.html">definition</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cloud_type_id_4</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#levelt">Cloud type code #4</a> - <a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/cloud_layer.html">definition</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_ht_id_4</font></td>
+        <td valign="TOP" width="35%">Cloud base height code #4<br>decametres</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">vert_vsby</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.9">Vertical visibility</a><br>decametres</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">air_temperature</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.2">Air temperature</a><br>Unit=1 deg C to the nearest 0.1 deg C</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">dewpoint</font></td>
+        <td valign="TOP" width="35%">Dewpoint temperature - is the temperature to which the air must be cooled to produce saturation with respect to water at its existing atmospheric pressure and humidity - <a href="ukmo_guide.html#5.4">more...</a><br>Unit=1 deg C to the nearest 0.1 deg C</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wetb_temp</font></td>
+        <td valign="TOP" width="35%">Wet bulb temperature - is the lowest temperature that can be obtained by evaporating water into the air. It measures the humidity of the air - <a href="ukmo_guide.html#5.4">more...</a><br>Unit=1 deg C to the nearest 0.1 deg C</td>
+      </tr>
+ <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">stn_pres</font></td>
+        <td valign="TOP" width="35%">Station air pressure<br>Atmospheric pressure as measured at the station level. Correction for altitude is not applied.<br>Unit=1 hpa to the nearest 0.1 hpa. Please see <a href="WH_Table.html#pressure">Additional notes</a> below.</td>
+      </tr>
+ <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">alt_pres</font></td>
+        <td valign="TOP" width="35%">Altimeter pressure<br>Unit=1 hpa to the nearest 0.1 hpa. Please see <a href="WH_Table.html#pressure">Additional notes</a> below.</td>
+      </tr>
+<tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ground_state_id</font></td>
+        <td valign="TOP" width="35%"><a href="https://artefacts.ceda.ac.uk/badc_datadocs/surface/code.html#ground">Ground state code</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q10mnt_mxgst_spd</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.5">10 minute maximum gust speed</a><br>knots</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cavok_flag</font></td>
+        <td valign="TOP" width="35%">cavok flag</td>
+      </tr>
+      <tr></a> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cs_hr_sun_dur</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.8">Campbell-Stokes hour sunshine duration</a> - This gives the hourly readings taken from the old Campbell Stokes Recorder</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wmo_hr_sun_dur</font> </td>
+        <td valign="TOP" width="35%">This gives the
+readings from the newer automatic sun sensor which has now replaced the
+Campbell Stokes Recorder. See <a href="sun_hour_stations.html">list of UK stations recording sun hour data</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wind_direction_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - wind direction</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wind_speed_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - wind speed</a>**</td>
+      </tr>
+      
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prst_wx_id_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - present weather code</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">past_wx_id_1_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - past weather code #1</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">past_wx_id_2_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - past weather code #2</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_ttl_amt_id_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - cloud total amount</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">low_cld_type_id_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - low cloud type code</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">med_cld_type_id_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - medium cloud type code</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">hi_cld_type_id_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - high cloud type code</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_amt_id_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - cloud base amount</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_ht_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - cloud base height</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">visibility_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - visibility</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">msl_pressure_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - msl pressure</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">air_temperature_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - air temperature</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">dewpoint_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - dewpoint</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wetb_temp_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - wet bulb</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ground_state_id_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - ground state code</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_amt_id_1_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - layer cloud amount #1</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cloud_type_id_1_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - cloud type code #1</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_ht_id_1_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - cloud base ht code #1</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_amt_id_2_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - layer cloud amount #2</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cloud_type_id_2_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - cloud type code #2</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_ht_id_2_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - cloud base ht code #2</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_amt_id_3_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - layer cloud amount #3</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cloud_type_id_3_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - cloud type code #3</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_ht_id_3_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - cloud base ht code #3</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_amt_id_4_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - layer cloud amount #4</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cloud_type_id_4_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - cloud type code #4</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_base_ht_id_4_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - cloud base ht code #4</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">vert_vsby_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - vertical visibility</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">stn_pres_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - station pressure</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">alt_pres_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - altimeter pressure</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q10mnt_mxgst_spd_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - 10 min max gust speed</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cs_hr_sun_dur_q</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wmo_hr_sun_dur_q</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+  <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">meto_stmp_time</font></td>
+        <td valign="TOP" width="35%">Met Office receipt stamp time</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">midas_stmp_etime</font></td>
+        <td valign="TOP" width="35%">Elapsed time to storage in MIDAS<br>minutes</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wind_direction_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - wind direction</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wind_speed_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - wind speed</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">prst_wx_id_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - present weather</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">past_wx_id_1_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - past weather #1</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">past_wx_id_2_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - past weather #2</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_amt_id_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - cloud total amt</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cld_ht_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - cloud base ht</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">visibility_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - visibility</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">msl_pressure_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - msl pressure</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">air_temperature_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - air temperature</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">dewpoint_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - dewpoint</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wetb_temp_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - wet bulb</a>**</td>
+      </tr>
+  
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">vert_vsby_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - vertical vis</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">stn_pres_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - station pressure</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">alt_pres_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - altimeter press</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">q10mnt_mxgst_spd_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - 10 min max gust</a>**</td>
+      </tr>
+    
+ <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rltv_hum</font></td>
+        <td valign="TOP" width="35%"><a href="http://badc.nerc.ac.ukhttp://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/Relative_Humidity_Calculations.html">Calculated relative humidity</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rltv_hum_j</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">Descriptor - relative humidity</a>**</td>
+      </tr>	
+        <tr>
+          <td valign="TOP" width="5%">&nbsp;</td>
+          <td valign="TOP" width="40%"><font face="Courier New">snow_depth</font></td>
+          <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.6">Snow depth</a><br>
+            cm</td>
+        </tr>
+        <tr>
+          <td valign="TOP" width="5%">&nbsp;</td>
+          <td valign="TOP" width="40%"><font face="Courier New">snow_depth_q</font></td>
+          <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - snow depth</a>**</td>
+        </tr>
+      <tr>
+          <td valign="TOP" width="5%">&nbsp;</td>
+          <td valign="TOP" width="40%"><font face="Courier New">drv_hr_sun_dur <br>(only in files from 2010 onwards)</font></td>
+          <td valign="TOP" width="35%">Derived hourly sunshine duration<br>This value is calculated using the MMS global radiation minute values which are each entered into a formula which determines whether each minute is 'sunshine'. An hourly sunshine value between 0 and 1 is then given based on the number of sunshine minutes. For example:           
+           30 sunshine minutes - 30/60 = 0.5 hours;  
+           20 sunshine minutes - 20/60 = 0.3333 hours (rounded to 0.3 hours). 
+<br>
+This is NOT to be confused or compared with the WMO hourly sunshine duration found in the daily weather table. This is calculated from the sunshine sensor directly and is not linked to the global radiation value like the derived figure. Both however do give a value between 0 and 1 and are in increments of 0.1
+
+            </td>
+        </tr>
+        <tr>
+          <td valign="TOP" width="5%">&nbsp;</td>
+          <td valign="TOP" width="40%"><font face="Courier New">drv_hr_sun_dur_q <br>(Only in files from 2010 onwards) </font></td>
+          <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - derived hourly sunshine duration</a>**</td>
+        </tr>
+      </table><BR>
+<BR>
+** Details available to registered users only.
+<P>
+More information about the Met Office surface data is available
+in the <A HREF="ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+<a name="filter"></a>
+<h3>How to start filtering the rows of data out:</h3>
+<ol>
+<li>As the data arrive at the Met Office it undergoes quality control to check that the data are correct and consistent with the surrounding data points. Whether the process has occured or not is indicated by the <strong>version number</strong> (1 is the one to use as indicated in the table above).
+<p>
+<li>To show the progress of the data through the quality control the various variables will have an associated <strong>_q value</strong> (e.g. air_temperature_q). This _q value will have different values for each record (see details in table above).
+<p>
+<li> While the Met Office MIDAS system overwrites the existing entry in their database the BADC's MIDAS entries do not as the BADC takes snapshots of the the MIDAS database from time to time leading to duplicate entries occuring in our archive. If duplicate records are found, check the associated meto_stmp_time to determine which record is the most recent one - this is the one to use and the other(s) can be ignored. 
+</ol> 
+<p>
+<hr>
+<p>
+<a name="notes"></a>
+<h3>Additional notes</h3>
+<ul><a name="pressure"></a><h4>About Pressure:</h4>
+All the data that appears in MIDAS is based on readings taken at the station.<br> 
+All METAR observations are taken at airfields around the country and only record altimeter pressure.<br> 
+All SYNOP readings taken record the actual station pressure through an automatic pressure sensor and then the MSL pressure is automatically
+derived from this reading (this is calculated based on the air temperature and station elevation).<br> 
+If a station has both METAR and SYNOP observations then the altimeter pressure is included in the SYNOP reading within MIDAS giving all three pressure elements.
+<p>
+If a pressure reading does not appear in MIDAS then the Met Office do not perform any calculations to fill in the gaps. The only time that the Met Office would fill in any missing values is if a site was having maintenance done and was put in test mode which means the values are not ingested into MIDAS automatically. If this happened the Met Office would call up the exact readings and then these would be entered in. Also if the Met Office had one value missing and values either side of it then an estimate is sometimes made.
+<p>The Met Office do not have equations that they use to calculate pressure fields that are blank in relation to those pressure values recorded in
+MIDAS.
+</ul>
+<P>
+</BODY>
+</HTML>

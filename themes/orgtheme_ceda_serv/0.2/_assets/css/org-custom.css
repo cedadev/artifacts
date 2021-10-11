@@ -1,0 +1,6 @@
+/* Org customisations of Grunt-produced theme */
+
+/* Change padding of top navbar to avoid overlapping page title text. Only for fixed-top navbar */
+.navbar.fixed-top {
+    padding: 4px 4px;
+}

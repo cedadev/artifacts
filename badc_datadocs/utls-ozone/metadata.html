@@ -1,0 +1,161 @@
+<head>
+<Title>UTLS-Ozone Suggested Metadata Standards</Title>
+</head>
+<body BGCOLOR=#ffffff>
+<h1>UTLS-OZONE Suggested Metadata Standards</h1>
+<em>This is a draft document, and will change with time.</em>
+<HR ALIGN=LEFT><h2>Contents</h2>
+<ul>
+<li><a href="#intro">Introduction</a>
+<li><a href="#nasa">Metadata from the NASA-Ames Format for Data Exchange</a>
+<li><a href="#times">Time Stamps</a>
+<li><a href="#errors">Error Flags</a>
+<li><a href="#keywords">Keywords used for Data Management</a>
+<li><a href="#other">Other Information</a>
+<li><a href="#special">Special Comments</a>
+</ul>
+<h2><a name="intro">Introduction</a></h2>
+<P>
+In order to help the automatic cataloguing of data files, to ensure the
+consistency of the data archive, and to extend the usability of the data 
+archive
+it is important to adopt certain metadata
+standards.  This means that names of institutes, names of compounds, time labels
+etc. are applied consistently both within files of similar type and across
+the data archive as a whole.  By adopting the NASA-Ames
+format for Data Exchange as the format for field observation data certain
+metadata standards are imposed on UTLS-OZONE.  On top of these imposed standards other
+standards can be chosen.  For instance in ACSOE the use of KEYWORDS introduced
+consistent metadata into the files.  This document makes explicit the
+metadata standards that are part of the NASA-Ames file format and suggests other
+standards that could be adopted for UTLS-OZONE.</p>
+
+<p>This document is separate to the description of the file format: the meta data
+standards can be applied to file formats other than NASA Ames.  This document
+has been written with NASA Ames Format for Data Exchange in mind however, and so
+makes most sense if the reader is already familiar with the NASA Ames
+format.  A short introduction to the NASA Ames format can be found
+<a href="./NASAAmes.html">here.</a></p>  
+
+<h2><a name="nasa">Metadata from the NASA-Ames Format for Data Exchange</a></h2>
+<p>The definition of the NASA-Ames Format, and in particular the header,
+automatically defines some of the metadata content, and in some cases the
+metadata format.  The table outlines the content, and where defined, the format
+for metadata that is part of the NASA-Ames format Standard.</p>
+<table border>
+<tr><th>Metadata</th><th>NASA-Ames imposed Format</th><th>UTLS-OZONE
+Format</th><th>Example</th></tr>
+<tr><td>Originator of file</td><td>Surname, Other names.  One line less than 132
+characters</td><td>Surname, Initials</td><td><kbd>Bloggs, J.</kbd></td></tr>
+<tr><td>Originators Address</td><td>One line less than 132
+characters</td><td><a href="./address.html">Agreed Postal Address</a></td> <td> </td></tr>
+<tr><td>Source Name</td><td>One line less than 132 characters</td><td>Platform /
+Instrument</td><td><kbd>c-130 / UV meter</kbd></td></tr>
+<tr><td>Mission Name</td><td>One line less than 132 characters</td><td>Project /
+<kbd>UTLS-OZONE</kbd></td><td><kbd>ACTO / UTLS-OZONE</kbd></td></tr>
+<tr><td>Start date of
+observations</td><td>yyyy mm dd</td><td>yyyy mm dd</td><td><kbd>1999 01 01</kbd></td></tr>
+<tr><td>Date of data
+reduction</td><td>yyyy mm dd</td><td>yyyy mm dd</td><td><kbd>1999 01 01</kbd></td></tr>
+<tr><td>Variable Names</td><td> </td><td>Name (units)</td><td><kbd>UV Flux
+(W/m2)</kbd></td></tr>
+<tr><td>Missing values</td><td>Larger than any good value</td><td>Larger than
+any good value</td><td><kbd>999.999</kbd></td></tr>
+</table>
+
+<P>There are no conventions placed on variable names by the standard.  For
+UTLS-OZONE it is suggested that an agreed set of variable names will be used, to
+ensure consistency across data files, and in particular files from different
+instruments which measure the same quantity.
+
+<h2><a name="times">Time stamps</a></h2>
+<p>Many of the instruments have time as the independent variable.  Where
+possible it is suggested that this time is measured in seconds from 0UTC on the
+start date and labelled <kbd>Seconds from 0UTC on start date</kbd>.  Other time
+units may be used if necessary, but please check with the BADC to get a name
+that is consistent with usage across the archive.</p>
+
+<p>Where data has been averaged or collected over a time interval then the
+centre of the averaging or collection time should be given in the file.  If this
+is not possible then this should be made clear in the normal comments section of
+the file.</p>
+
+<h2><a name="errors">Error Flags</a></h2>
+It is suggested that all observational data submitted to the archive should have
+an indication of the uncertainty limits of the individual observations.  Where
+possible a quantitative error (absolute or relative) should be given.  Failing
+this use the qualitative error flags that have been adopted by the MRF and used
+during ACSOE.<P>
+
+<table border>
+<tr><th>Flag</th><th>Meaning</th><tr>
+<tr><td>0</td><td>Valid</td></tr>
+<tr><td>1</td><td>Reduced quality</td></tr>
+<tr><td>2</td><td>Present, but likely to be wrong or instrument not in
+measurement mode</td></tr>
+<tr><td>3</td><td>Completely invalid or missing data</td></tr>
+</table>
+
+
+<p>It is suggested that a description of these flags be included as part of the
+normal comments in the NASA-Ames file.  The description can be expanded upon 
+where necessary, for instance, give the reason for thinking the data is of
+reduced quality, or the algorithm by which the quality of the data has been
+determined.
+
+<h2><a name="keywords">Keywords used for data management</a></h2>
+In previous campaigns, such as ACSOE, keywords have been included as part of the
+comments in the file header.  For UTLS-OZONE there are two compulsory
+keywords: the e-mail address of the originator and the file version.
+Other keywords are optional.  Keywords 
+can easily lead to inconsistencies in the dataset if not used correctly and
+so it is better to omit the optional keywords if you cannot guarantee their
+correct use. 
+The keywords should be included in the normal comments section of the file.<p>
+
+<table border>
+<tr><th>Keyword</th><th>example</th><th>Use</th></tr>
+<tr><td>E-MAIL-CONTACT</td><td>j.bloggs@rl.ac.uk</td><td>compulsary</td></tr>
+<tr><td>THIS-FILE-NAME</td><td></td><td>optional (omit)</td></tr>
+<tr><td>THIS-FILE-VERSION</td><td>1</td><td>compulsary</td></tr>
+<tr><td>THIS-FILE-ENDS</td><td>1999 01 02</td><td>use if different from start
+date</td></tr>
+</table>
+<p>
+At some time the BADC may take over the implementation of version number recording 
+and updating.  Until they do you should try and keep track of your own version
+numbers.
+
+<h2><a name="other">Other Information</a></h2>
+Other information can be given in the normal comments section of the file.  The
+normal comments section can be used to clarify the instrument type or version,
+its operation mode, retrieval algorithms and the nature of any averaging that has
+been done.  Normal comments need not be verbose, but can used to supply
+information that will greatly enhance the integrity and usability of the data
+set.  The following list is suggested for possible inclusion in the normal
+comments section of the file: <P>
+<ul>
+<li>Flight Number (if appropriate)
+<li>instrument description
+  <ul>
+  <li>Make, model and id for commercial instruments
+  <li>Reference to paper describing instrument operation and characteristics for
+ in-house instruments
+  </ul>
+<li>Retrieval algorithm description and version (with references)
+<li>Description of any averaging that has been performed (with references)
+</ul>
+
+<P>The extra information can be included in a keyword like way, for instance
+using the keyword FLIGHT-NUMBER, but there are no plans as yet to use these
+for cataloguing the data and so their format is much less constrained.
+
+<h2><a name="special">Special Comments</a></h2>
+NASA-Ames format for data exchange provides a section for special comments. 
+These can be used to describe any special problems or circumstances associated
+with the data.  If the file is resubmitted to the archive then the special
+comments should outline any changes from the previous version.
+
+<P>
+</BODY>
+</HTML>

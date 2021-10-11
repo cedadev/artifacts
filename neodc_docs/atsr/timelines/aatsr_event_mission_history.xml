@@ -1,0 +1,163 @@
+<!-- edited with XMLSpy v2008 (http://www.altova.com) by A Menochet (SFTC) -->
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by Matt Pritchard (NERC Earth Observation Data Centre) -->
+<data>
+	<!-- 2002 -->
+	<event start="March 01 2002 1:07:59" title="ENVISAT Launch" image="envisatlaunch.jpg" icon="sphere_red.png">ENVISAT Launch aboard an Ariane 5 into a Sun synchronous polar orbit at a height of 790 km (±10 km). It orbits the Earth in about 101 minutes with a repeat cycle of 35 days. Launched from Kourou, French Guiana</event>
+	<event start="March 05 2002" title="SODAP" icon="sphere_red.png">The SODAP (Switch On and Data Acquisition Phase) starts today, with the switch-on of the Payload Module and Computer.</event>
+	<event start="March 09 2002 09:25" end="March 11 2002" isDuration="true" title="STANDBY Mode" color="red">March 09 2002 09:25GMT: AATSR was commanded into STANDBY mode from OFF for the first time since launch. The first data confirmed that the cooler was clamped as expected. March 09 2002 11:00GMT: The cooler was un-clamped and AATSR was configured for in-flight operations.
+</event>
+	<event start="March 12 2002 17:45" end="March 14 2002" isDuration="true" title="HEATER Mode" color="red">March 12 2002 17:45GMT: AATSR commanded from STANDBY to HEATER mode.Electrical bus currents are all nominal. Equipment temperatures are within limits, orbital variation of cooler is as expected, giving rise to an increase in the anomaly counter. The BB heaters, SCC and Scan Mechanism are all off.
+ </event>
+	<event start="March 15 2002 14:37" end="March 17 2002" isDuration="true" title="MEASUREMENT mode" color="red">March 15 09:37GMT: Scan mirror switched on. All telemetry confirms that the scan mirror is rotating and power consumption is within expected range.
+March 15 14:37GMT : First instrument source packets generated.
+March 15 17:46GMT: Commands for blackbody functional test uplinked. March 15 19:20GMT: BB heater ON. March 17: VISCAL pixel Map test.</event>
+	<event start="March 24 2002 10:00" title="Visible channel gains updated" icon="sphere_orange.png">Visible channel gains updated following analysis of science data.</event>
+	<event start="March 26 2002 09:15" end="March 28 2002" isDuration="true" title=" AATSR IR Detectors at 80K" color="red">March 26 09:15GMT: The instrument was restarted with the SCC cooling the FPA for the first time. March 26 10:39GMT: The scan mirror was restarted and the cooler set to maximum amplitudes. March 26 14:07GMT: The FPA reached 80K and AATSR automatically entered HEATER mode. The IR gains and offsets were being set by the auto-gain offset control loop. March 26 15:43GMT: AATSR was commanded back into measurement mode. March 28 10:14GMT: 1.6 channel gain set to fixed value and offset controlled by Auto-Offset control loop.</event>
+	<event start="April 03 2002 08:26" end="April 08 2002" isDuration="true" title="HEATER Mode" color="red">AATSR in HEATER mode. April 03 08:26GMT: AATSR was commanded into HEATER mode with the cooler drives at zero amplitude and the scan mirror switched off in preparation for the ENVISAT orbit control manoeuvre. April 08 15:34GMT: The second cool-down of the IR channels was started. The detectors were at a temperature of 80K within 5 hours of commanding the cooler.</event>
+	<event start="April 09 2002 08:34" end="April 12 2002" isDuration="true" title="MEASUREMENT Mode" color="green"> AATSR in MEASUREMENT mode.
+April 12 08:34GMT: The scan mechanism was restarted, the auto-gain-offset loop re-enabled and AATSR was commanded back into MEASUREMENT mode.
+April 12 11:57 The cooler was commanded to run at a fixed compressor amplitude setting of 7D hex for the first part of the cooler optimisation procedure.</event>
+	<event start="April 15 2002 11:59" end="April 26 2002 " isDuration="true" title="AATSR Anomaly" color="red">April 15 08:45GMT: The cooler was commanded to zero amplitude for one orbit for part 5 of SDP-3.3
+April 15 11:59GMT: The instrument entered Standby/Refuse mode due to the cooler body temperature dropping below the lower switchdown limit of -10C. April 17 11:02GMT: AATSR commanding was re-enabled and cooler compressor and displacer amplitude initial settings commanded. Transition to Heater mode could not be started because the Cooler Bodfy Temperature remained below the switch-on condition of -8C and rising during passes.  April 18 17:37GMT:  The Heater mode command was executed and AATSR immediately returned to Standby/Refuse mode. The immediate cause was a command echo failure. April 19:  An Anomaly Review Board was held to agree a recovery plan for AATSR and identify further investigations. Memory Dump of the RAM area was taken and the instrument returned to Standby mode. April 19 17:03GMT:  A further attempt to return to Heater mode was made but resulted in AATSR immediately returning to Standby/Refuse mode. April 23: AATSR Recovery Procedure AATSR-IOR-0009
+11:13 AATSR ICU reset and returned to STANDBY mode
+12:53 Cooler initial amplitudes sent
+15:00 AATSR transition to HEATER mode started
+16:11 Cooler default amplitudes sent
+19:33 AATSR in HEATER mode
+April 24 07:26 Scan mirror started; 07:27 AATSR in MEASUREMENT mode;
+visible channel ayuto-offeset loops not enabled and signal channels at hardware default gain settings
+April 26: AATSR in MEASUREMENT mode 13:00 Visible channel auto offset loop enabled and visible channel gains commanded
+</event>
+	<event start="April 30 2002" end="May 02 2002" isDuration="true" title="BB crossover tests" color="orange"/>
+	<event start="May 11 2002 12:54" end="May 15 2002 16:21" isDuration="true" title="ENVISAT PL in SUSPEND (AATSR OFF)" color="red"/>
+	<event start="May 16 2002" end="May 19 2002 " isDuration="true" title="AATSR Auto Gain Offset Loop Tests" color="orange"/>
+	<event start="May 27 2002 " end="May 29 2002 18:53" isDuration="true" title="ENVISAT PL-SOL" color="red">AATSR OFF due to ENVISAT PL-SOL for all instruments</event>
+	<event start="June 05 2002 21:18" end="June 11 2002 12:48" isDuration="true" title="Payload in SUSPEND" color="red">Payload in SUSPEND due to Level 3 PROTOCOL INTERRUPT</event>
+	<event start="July 22 2002 09:06" end="July 25 2002 09:15" isDuration="true" title="Outgassing" color="red">
+        No data
+    </event>
+	<event start="Aug 06 2002 04:15" title="SFCM" icon="sphere_green.png" end="" isDuration="">
+		No impact on data. Envisat SFCM Orbit Maintenance Manoeuvre
+    </event>
+	<event start="Aug 26 2002 18:06" title="SFCM" icon="sphere_green.png" end="" isDuration="">
+		No impact on data. Envisat SFCM Orbit Maintenance Manoeuvre
+    </event>
+	<event start="Sep 04 2002 11:11" title="Repeat of SODAP BB Functional Test" end="Sep 04 2002 11:19" isDuration="true" color="orange">
+		TBD
+    </event>
+	<event start="Sep 08 2002 06:45" end="Sep 12 2002 13:13" isDuration="true" title="OCM/SFCM" color="red">No data. Envisat OCM Out-of-Plane Orbit Inclination Maintenance Manoeuvre then Envisat FCM Orbit Maintenance Manoeuvre</event>
+	<event start="Sep 25 2002 23:21" end="Sep 26 2002 00:11" isDuration="true" title="SFCM">
+		No impact on data. Envisat SFCM Orbit Maintenance Manoeuvre
+    </event>
+	<event start="Oct 17 2002 20:18" title="SFCM" icon="sphere_green.png" end="" isDuration="">
+		No impact on data. Envisat SFCM Orbit Maintenance Manoeuvre
+    </event>
+	<event start="Nov 07 2002 19:15" title="SFCM" icon="sphere_green.png" end="" isDuration="">
+		No impact on data. Envisat SFCM Orbit Maintenance Manoeuvre
+    </event>
+	<event start="Nov 18 2002 06:43" end="Nov 20 2002 15:40" isDuration="true" title="Protection from Leonids" color="red">
+		No data
+    </event>
+	<event start="Nov 29 2002 04:34" title="SFCM" icon="sphere_green.png" end="" isDuration="">
+		No impact on data. Envisat SFCM Orbit Maintenance Manoeuvre
+    </event>
+	<event start="Dec 18 2002 05:27" title="OCM/SFCM" icon="sphere_red.png" color="red" end="" isDuration="">
+No data.Envisat OCM out-of-plane Orbit Inclination Maintenance Manoeuvre. Envisat SFCM Orbit Maintenance Manoeuvre
+    </event>
+	<!-- 2003 -->
+	<event start="Jan 10 2003 03:45" icon="sphere_orange.png" title="AATSR Telemetry Parameter A3511 momentarily OOL">AATSR Telemetry Parameter A3511 momentarily OOL</event>
+	<event start="Jan 14 2003 01:54" icon="sphere_green.png" title="SFCM"> No impact on data. Envisat SFCM Orbit Maintenance Manoeuvre.    </event>
+	<event start="Jan 31 2003 09:39" end="Feb 03 2003 17:15" title="Outgassing" isDuration="true" color="red">
+        No data
+    </event>
+	<event start="Feb 12 2003 00:04" icon="sphere_green.png" title="SFCM">No impact on data. Envisat SFCM Orbit Maintenance Manoeuvre
+    </event>
+	<event start="Feb 20 2003 07:27" end="Feb 23 2003 10:26" title="S/C anomaly/OCM" isDuration="true" color="red">No data. ENVISAT Command Procedure Failure; all instruments commanded OFF then Envisat OCM out-of-plane Orbit Inclination Maintenance Manoeuvre
+    </event>
+	<event start="Mar 04 2003 00:50" icon="sphere_green.png" title="Envisat SFCM Orbit Maintenance Manoeuvre">
+        No impact on data
+    </event>
+	<event start="Mar 15 2003 04:21" end="Mar 19 2003 13:22" title="S/C anomaly" isDuration="true" color="red">
+        No data. ENVISAT anomaly. All instruments off.
+    </event>
+	<event start="Apr 07 2003" end="Apr 08 2003" title="TBD" isDuration="true" color="red">
+        No data
+    </event>
+	<event start="May 18 2003 06:25" end="May 20 2003 12:35" title="S/C maintenance" isDuration="true" color="red">No data. Spacecraft Maintenance/Instrument Switchoff/Instrument Recovery.</event>
+	<event start="Aug 01 2003 09:17" end="Aug 05 2003 10:34" title="Outgassing" isDuration="true" color="red">
+        No data
+    </event>
+	<event start="Aug 13 2003 11:00" icon="sphere_orange.png" title="Reflectance channel gain update">
+        TBD
+    </event>
+	<event start="Aug 14 2003 15:33" icon="sphere_orange.png" title="Modification to 1.6 channel gain">
+        TBD
+    </event>
+	<event start="Sep 04 2003" end="Sep 07 2003 09:55" title="S/C anomaly" isDuration="true" color="red">No data. AATSR OFF due to ENVISAT PL-SOL for all instruments
+    </event>
+	<event start="Oct 28 2003 02:55" icon="sphere_red.png" title="Out of Plane manoeuvre" end="" color="red">No data. AATSR into HEATER mode for Envisat Out-of-Plane Manoeuvre.</event>
+	<event start="Nov 25 2003 10:10" end="Nov 28 2003 18:30" title="Outgassing" isDuration="true" color="red">No data.  AATSR out-gassing pocedure begins. IR channels OFF
+    </event>
+	<event start="Dec 3 2003 07:18" end="Dec 5 2003 11:41" title="S/C anomaly" isDuration="true" color="red">No data. Envisat PL-SOL: AATSR and all other instruments OFF</event>
+	<!-- 2004 -->
+	<event start="Feb 04 2004 02:40" title="OCM" icon="sphere_red.png">No data. Orbital Correction Manoeuvre (OCM)</event>
+	<event start="Apr 14 2004" title="OCM" icon="sphere_red.png" color="red">No data. Orbital Correction Manoeuvre (OCM)</event>
+	<event start="Apr 16 2004 08:40" end="Apr 19 2004 17:04" isDuration="true" title="Outgassing" color="red">
+        No data
+    </event>
+	<event start="Apr 20 2004 08:09" title="Auto Gain Offset (AGO) loop re-started. Visible channel gains updated" end="" isDuration="true" color="red">TBD</event>
+	<event start="Apr 21 2004 07:42" end="Apr 22 2004" isDuration="true" title="BB crossover tests" color="orange">Data impaired. Blackbody crossover tests.</event>
+	<event start="Apr 23 2004 08:17" title="Auto Gain Offset Loop restarted" icon="sphere_red.png" color="red">Auto Gain Offset Loop restarted, Instrument in Nominal Operation.</event>
+	<event start="Jun 10 2004" isDuration="true" title="HSM reset" color="red">
+        No data
+    </event>
+	<event start="Jul 17 2004" end="" isDuration="true" title="HSM anomaly" color="red">
+        No data
+    </event>
+	<event start="Jul 23 2004 09:00" end="Jul 27 2004 15:39" isDuration="true" title="Outgassing" color="red">No data. Outgassing begins as planned in orbit #12529.</event>
+	<event start="Sep 01 2004 23:52" icon="sphere_red.png" end="" isDuration="" title="OCM" color="red">No data. Orbital Correction Manoeuvre (OCM)
+    </event>
+	<event start="Sep 21 2004 03:00" icon="sphere_red.png" end="" isDuration="" title="OCM" color="red">No data. AATSR in HEATER mode for OCM</event>
+	<event start="Nov 19 2004 10:00" end="Nov 22 2004 18:10" isDuration="true" title="Outgassing" color="red">No data. Outgassing begins as planned in orbit #14233.</event>
+	<!-- 2005 -->
+	<event start="Jan 07 2005" title="OCM" icon="sphere_red.png">
+        No data. Orbital Correction Manoeuvre (OCM)
+    </event>
+	<event start="Mar 17 2005" title="OCM" icon="sphere_red.png" color="red">
+        No data. Orbital Correction Manoeuvre (OCM)
+    </event>
+	<event start="Apr 08 2005 08:19" end="Apr 11 2005 13:16" title="Outgassing" isDuration="true" color="red">No data. Coolers commanded off. Outgassing begins as planned in orbit #16236</event>
+	<event start="May 17 2005 07:47" end="May 19 2005 08:24" title="BB crossover test" isDuration="true" color="orange">Data impaired. Black-body cross-over test. Reflectance channels gains update commanded </event>
+	<event start="Aug 22 2005 08:46" end="Aug 25 2005 15:25" title="Outgassing" isDuration="true" color="red">No data. Coolers commanded off. Outgassing begins as planned in orbit #18183. 
+    </event>
+	<event start="Sep 07 2005 04:20" title="OCM" icon="sphere_red.png" color="red" end="" isDuration="">No data. AATSR into HEATER mode for Orbital Correction Manoeuvre (OCM)
+    </event>
+	<event start="Dec 16 2005 09:40" end="Dec 19 2005 15:07" title="Outgassing" isDuration="true" color="red">No data. Coolers commanded off. Outgassing begins as planned in orbit #19844.
+    </event>
+	<!-- 2006 -->
+	<event start="Jan 10 2006 01:00" title="OCM" color="red" end="Jan 10 2006 13:00" isDuration="true">No data. AATSR into HEATER mode for ENVISAT Orbital Correction Manoeuvre (OCM).   </event>
+	<event start="Mar 28 2006 00:45" title="OCM" color="red" end="Mar 28 2006 13:00" isDuration="true">No data. AATSR into HEATER mode for ENVISAT Orbital Correction Manoeuvre (OCM).    </event>
+	<event start="Apr 06 2006 02:09" end="Apr 08 2006 18:39" title="S/C anomaly" isDuration="true" color="red">No data. Spacecraft anomaly. ENVISAT down - AATSR OFF
+    </event>
+	<event start="Apr 12 2006" title="Artemis anomaly" icon="sphere_red.png">
+        No data
+    </event>
+	<event start="Jun 19 2006" title="Collision avoidance manoeuvre" color="red" icon="sphere_red.png">
+        No data
+    </event>
+	<event start="Jun 26 2006 07:20" end="Jun 28 2006" title="BB crossover test" isDuration="true" color="red">Data impaired. Black-body Cross-Over Test     </event>
+	<event start="Aug 04 2006 01:25" end="Aug 08 2006 08:10" title="Instrument anomaly" isDuration="true" color="red">No data. AATSR in Reset/Wait,anomaly under investigation. 
+    </event>
+	<event start="Sep 07 2006 16:39" end="Sep 11 2006 07:07" title="S/C anomaly" isDuration="true" color="red">No data. AATSR OFF owing to ENVISAT AOCS STD-A anomaly. </event>
+	<event start="Sep 13 2006" title="OCM" color="red" icon="sphere_red.png">
+        No data. Orbital Correction Manoeuvre (OCM)
+    </event>
+	<event start="Nov 28 2006 07:58" end="Nov 30 2006 15:07" title="S/C anomaly" isDuration="true" color="red">No data.  AATSR to OFF following Envisat memory maintenance anomaly. </event>
+	<event start="Dec 12 2006 18:02" end="Dec 16 2006 08:26" title="S/C anomaly" isDuration="true" color="red">No data. AATSR unavailable due to an Envisat LVL3 PROTOCOL ERROR AND INTERRUPT .  </event>
+	<!-- 2007 -->
+	<event start="Jan 22 2007 23:52" end="Jan 23 2007 12:05" isDuration="true" title="OCM" color="red">No data. AATSR to HEATER Mode during ENVISAT Orbital Correction Manoeuvre (OCM). </event>
+	<event start="Apr 02 2007 23:51" end="Apr 03 2007 07:00" isDuration="true" title="OCM" color="red">No data. AATSR to HEATER Mode during ENVISAT Orbital Correction Manoeuvre (OCM). </event>
+	<event start="May 18 2007 08:19" end="May 21 2007 11:50" isDuration="true" title="Outgassing" color="red">No data. Cooler off - AATSR out-gassing. </event>
+	<event start="Jul 16 2007 22:05" end="July 17 2007 07:11" isDuration="true" title="OCM" color="red">No data. Orbital Correction Manoeuvre (OCM)</event>
+	<event start="Sep 24 2007 12:27" end="Sep 28 2007 13:40" isDuration="true" title="AATSR unavailability" color="red">No data. AATSR OFF following payload switch-off due to Service Module Anomaly (Global AOCS Surveillance triggered). </event>
+</data>

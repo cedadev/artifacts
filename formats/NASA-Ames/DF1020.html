@@ -1,0 +1,243 @@
+<html>
+
+<head>
+ <meta name="GENERATOR" content="Adobe PageMill 3.0 Win">
+ <title>NASA Ames FFI 1020 Data Format</title>
+</head>
+
+<body bgcolor="#ffffff">
+<h1><font color="#333399">NASA Ames Data Format: FFI 1020</font></h1>
+<hr>
+
+<h2>Symbols used</h2>
+
+<table>
+<tr valign=top>
+ <td>X</td>
+ <td width=6></td>
+ <td>Independent variable marks (explicit values of the independent variable).
+     Real numbers.</td>
+ </tr>
+<tr valign=top>
+ <td>DX</td>
+ <td></td>
+ <td>Independent variable interval</td>
+ </tr>
+<tr valign=top>
+ <td>NVPM</td>
+ <td></td>
+ <td>Number of independent variable intervals between 2 successive independent
+     variable marks:
+     <br>
+     X(m+1) = X(m) + NVPM*DX <b>(See Note below)</b></td>
+ </tr>
+<tr valign=top>
+ <td>NV</td>
+ <td></td><td>Number of primary dependent variables</td>
+ </tr>
+<tr valign=top>
+ <td>NAUXV</td>
+ <td></td>
+ <td>Number of auxiliary dependent variables</td>
+ </tr>
+<tr valign=top>
+ <td>V<sub>n</sub></td>
+ <td></td>
+ <td>n<sup>th</sup> primary variable</td>
+ </tr>
+<tr valign=top>
+ <td>A<sub>a</sub></td>
+ <td></td>
+ <td>a<sup>th</sup> auxiliary variable. Its values are real and are recorded
+     only for explicit values of the independent variable, <i>i.e.</i> at the
+     independent variable marks)</td>
+ </tr>
+</table>
+
+<p>
+<table>
+ <tr><td colspan=7><b>Note:</b> The actual independent variable values at
+     which primary variables V<sub>n</sub> are recorded range through</td>
+     </tr>
+ <tr><td colspan=6></td>
+     <td><u>Index of V<sub>n</sub></u></td>
+     </tr>
+ <tr valign=top><td></td>
+     <td></td>
+     <td><b>X(1)</b></td>
+     <td width=6></td>
+     <td><i>First independent variable mark (explicit)</td>
+     <td width=6></td>
+     <td>1</td>
+     </tr>
+ <tr valign=top><td></td>
+     <td></td>
+     <td>X(1) + DX</td>
+     <td></td>
+     <td><i>Implicit</td>
+     <td></td>
+     <td>2</td>
+     </tr>
+ <tr valign=top><td></td>
+     <td></td>
+     <td>...</td>
+     <td></td>
+     <td>...</td>
+     <td></td>
+     <td>...</td>
+     </tr>
+ <tr valign=top><td></td>
+     <td></td>
+     <td>X(1) + (NVPM-1)*DX</td>
+     <td></td>
+     <td><i>Implicit</td>
+     <td></td>
+     <td>NVPM</td>
+     </tr>
+ <tr valign=top><td align=right><b>X(2)</b></td>
+     <td> = </td>
+     <td>X(1) + NVPM*DX</td>
+     <td></td>
+     <td><i>Second independent variable mark (explicit)</td>
+     <td></td>
+     <td>NVPM+1</td>
+     </tr>
+ <tr valign=top><td align=right>X(2) + DX</td>
+     <td> = </td>
+     <td>X(1) + (NVPM+1)*DX</td>
+     <td></td>
+     <td><i>Implicit</td>
+     <td></td>
+     <td>NVPM+2</td>
+     </tr>
+ <tr valign=top><td></td>
+     <td></td>
+     <td>...</td>
+     <td></td>
+     <td>...</td>
+     <td></td>
+     <td>...</td>
+     </tr>
+ <tr><td align=right>X(2) + (NVPM-1)*DX</td>
+     <td> = </td>
+     <td>X(1) + (2*NVPM-1)*DX</td>
+     <td></td>
+     <td><i>Implicit</td>
+     <td></td>
+     <td>2*NVPM</td>
+     </tr>
+ <tr valign=top><td></td>
+     <td><b>...</b></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td><b>...</b></td>
+     </tr>
+ <tr valign=top><td align=right><b>X(m)</b></td>
+     <td> = </td>
+     <td>X(1) + (m-1)*NVPM*DX</td>
+     <td></td>
+     <td><i>Independent variable mark number m (explicit)</td>
+     <td></td>
+     <td>(m-1)*NVPM+1</td>
+     </tr>
+ <tr valign=top><td align=right>X(m) + DX</td>
+     <td> = </td>
+     <td>X(1) + [(m-1)*NVPM+1]*DX</td>
+     <td></td>
+     <td><i>Implicit</td>
+     <td></td>
+     <td>(m-1)*NVPM+2</td>
+     </tr>
+ <tr valign=top><td></td>
+     <td></td>
+     <td>...</td>
+     <td></td>
+     <td>...</td>
+     <td></td>
+     <td>...</td>
+     </tr>
+ <tr valign=top><td align=right>X(m) + (NVPM-1)*DX</td>
+     <td> = </td>
+     <td>X(1) + (m*NVPM-1)*DX</td>
+     <td></td>
+     <td><i>Implicit</td>
+     <td></td>
+     <td>m*NVPM</td>
+     </tr>
+ <tr valign=top><td></td>
+     <td><b>...</b></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td></td>
+     <td><b>...</b></td>
+     </tr>
+</table>
+</p>
+
+<h2>Condensed notation</h2>
+
+[ X(m) ( A<sub>a</sub>(m), a=1,NAUXV ) ]
+<br>
+[ V<sub>n</sub>(i), i=1+(m-1)*NVPM,m*NVPM ] n=1,NV
+
+<h2>Expanded notation</h2>
+
+<table cellpadding=4> <tr valign=top>
+<td>X(1)</td><td>A<sub>1</sub>(1)</td><td>...</td><td>A<sub>NAUXV</sub>(1)</td>
+<td width=12></td>
+<td><i>1<sup>st</sup> Independent variable mark &#038; auxiliary variables values at that mark
+</i></td>
+</tr> <tr valign=top>
+<td></td><td>V<sub>1</sub>(1)</td><td>...</td><td>V<sub>1</sub>(NVPM)</td>
+<td></td>
+<td><i>Values of V<sub>1</sub> at X(1), X(1)+DX, ..., X(1)+(NVPM-1)*DX</i></td>
+</tr> <tr valign=top>
+<td></td><td>V<sub>2</sub>(1)</td><td>...</td><td>V<sub>2</sub>(NVPM)</td>
+<td></td>
+<td><i>Values of V<sub>2</sub> at X(1), X(1)+DX, ..., X(1)+(NVPM-1)*DX</i></td>
+</tr> <tr valign=top>
+<td></td><td colspan=3>...</td>
+<td></td><td></td>
+</tr> <tr valign=top>
+<td></td><td>V<sub>NV</sub>(1)</td><td>...</td><td>V<sub>NV</sub>(NVPM)</td>
+<td></td>
+<td><i>Values of V<sub>NV</sub> at X(1), X(1)+DX, ..., X(1)+(NVPM-1)*DX</i></td>
+</tr> <tr valign=top>
+<td>X(2)</td><td>A<sub>1</sub>(2)</td><td>...</td><td>A<sub>NAUXV</sub>(2)</td>
+<td></td>
+<td><i>2<sup>nd</sup> Independent variable mark &#038; auxiliary variables values at that mark
+</i></td>
+</tr> <tr valign=top>
+<td></td>
+<td>V<sub>1</sub>(NVPM+1)</td><td>...</td><td>V<sub>1</sub>(2*NVPM)</td>
+<td></td>
+<td><i>Values of V<sub>1</sub> at X(2), X(2)+DX, ..., X(2)+(NVPM-1)*DX</i></td>
+</tr> <tr valign=top>
+<td></td>
+<td>V<sub>2</sub>(NVPM+1)</td><td>...</td><td>V<sub>2</sub>(2*NVPM)</td>
+<td></td>
+<td><i>Values of V<sub>2</sub> at X(2), X(2)+DX, ..., X(2)+(NVPM-1)*DX</i></td>
+</tr> <tr valign=top>
+<td></td><td colspan=3>...</td>
+<td></td><td></td>
+</tr> <tr valign=top>
+<td></td>
+<td>V<sub>NV</sub>(NVPM+1)</td><td>...</td><td>V<sub>NV</sub>(2*NVPM)</td>
+<td></td>
+<td><i>Values of V<sub>NV</sub> at X(2), X(2)+DX, ..., X(2)+(NVPM-1)*DX</i></td>
+</tr> <tr valign=top>
+<td colspan=4>...</td>
+<td></td><td></td>
+</tr> </table>
+
+<p>
+<a href="FFI-summary.html">Back to FFI Summary.</a>
+</p>
+
+<p>
+</body>
+
+</html>

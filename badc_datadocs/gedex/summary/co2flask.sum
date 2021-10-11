@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "CO2FLASK "
+"SUM_DATA_SET"       "GRNHS-GASES  "
+"SUM_DATATYPE"       "CO2-FLASK    "
+"ARCHIVE_NAME"       "NCDS                 "
+"ARCHIVE_STATUS"     "Available                                              "
+"DS_DESCRIPTION"     "Concentrations of atmospheric greenhouse effect gases  "
+"DT_DESCRIPTION"     "NOAA CMDL CO2 Flask Sampling Program                   "
+"SUM_BEGIN_DATE"     "01-Jan-1968                                                                 "
+"SUM_END_DATE"       "31-Dec-1987                                                                 "
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Point data measured at 21 stations                     "
+"SPATIAL2"           "                                                       "
+"SPATIAL3"           "Station                                                "
+"SPATIAL4"           "                                                       "
+"TEMPORAL1"          "January, 1968 - December, 1987                         "
+"TEMPORAL2"          "                                                       "
+"TEMPORAL3"          "Monthly averages                                       "
+"TEMPORAL4"          "                                                       "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF).    "
+"PRODUCT2"           "Available on GEDEX CD-ROM.               "
+"PRODUCT3"           "21 ASCII files on MS-DOS format floppy disk.           "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"CO2"             "Carbon Dioxide Concentration"             "ppmv"
+EOF
+
+SOURCES
+"FIELD-OBS"       "CO2-ANALYZER"
+EOF

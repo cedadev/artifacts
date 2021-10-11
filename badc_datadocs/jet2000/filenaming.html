@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+  <TITLE>JET2000 filenaming convention</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>JET2000 filenaming convention<BR CLEAR="ALL"></H1>
+
+<hr>
+<em>This page defines the filename specification for JET2000 files to be 
+submitted to the BADC. </em>
+
+<P>The format of the file names is as follows:
+<center>
+[platform]YYYYMMDD_[type].[format]
+</center>
+<p>
+Each of the components of the filename are described below
+
+<h1>Components of filename</h1>
+<ul>
+<li><h2>Platform prefix</h2>
+
+The prefix identifies the site or platform for the observation.
+<h4>Allowed values:</h4>
+<table border>
+<th>Value</th><th>Description</th>
+<tr><td>meteosat</td><td>Meteosat</td></tr>
+<tr><td>avhrr</td><td>ARHRR</td></tr>
+<tr><td>he</td><td>Hercules C-130</td></tr>
+<tr><td>rs</td><td>Radiosondes</td></tr>
+<tr><td>synop</td><td>surface synoptic station</td></tr>
+</table>
+<p>
+<li><h2>Type sufix</h2>
+
+Identifies the site or observation subtype.
+<h4>Allowed values:</h4>
+<table border>
+<th>Value</th><th>Description</th>
+<tr><td>.*</td><td>Observation subtype. Any value is excepted, but this 
+should be asc, cns, fs1, lw1, ps1, rad, tmp, tw1, wnd, wv1, etc for aircraft
+measurements; ds001, ds002, ds003, etc for dropsondes; HHMM_[view] for meteosat 
+images (e.g. 0600_d8 for 06:00 African thermal IR image); [WMO number]_[hour]z
+for radiosondes and synoptic stations (e.g. 65503_00z); and ndvi for avhrr data.    
+</td></tr>
+</table>
+<p>
+<li><h2>Start date</h2>
+
+
+The eight character date identifies the start date of the observations in the
+file. The start date is in the format YYYYMMDD.  The observations may span more
+than one day.  The date in the file name is always the start date of the
+observations.
+<p>
+e.g. '19990110' represents  10th January 1999
+<p>
+<li><h2>Type</h2>
+
+Type should be used to describe the type of measurement in the file. 
+It can be given any value, however it should adhere to the following 
+guidelines. 
+<ol>
+<li>It should be descriptive. "time" or "temp" not "t".
+<li>It should be as short as possible. 
+    Remember, this is just the filename other info is contained in the file. 
+    e.g "o3" not "ozone_from_visala_ozonesonde"
+<li>It should be distinct. If you are going to submit a number of files per day of 
+    this kind then they cannot have the same type. 
+    e.g. "sonde01", ..., "sonde12" not "sonde". 
+</ol>
+
+<p>
+
+<p>
+<li><h2>Extension</h2>
+
+Extension gives the format of the data.
+
+<h4>Allowed values:</h4>
+<table border="1">
+<th>Value</th><th>Description</th>
+<tr><td>na</td><td>Nasa-Ames file</td></tr>
+<tr><td>txt</td><td>free form metadata file</td></tr>
+<tr><td>jpg</td><td>JPEG image file</td></tr>
+<tr><td>gif</td><td>GIF image file</td></tr>
+<tr><td>hdf</td><td>HDF file</td></tr>
+</table>
+</ul>
+<P>
+
+</BODY>
+</HTML>
+

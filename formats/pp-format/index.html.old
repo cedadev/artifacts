@@ -1,0 +1,138 @@
+<HTML>
+
+	<HEAD>
+		<META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+		<TITLE>PP Format Welcome Page</TITLE>
+	</HEAD>
+
+	<BODY BGCOLOR="#ffffff">
+
+
+
+<H1><IMG SRC="/graphics/logos/metlogos.gif" ALIGN="RIGHT"><font color="#333399">&quot;PP&quot; File format Utilities</font></H1>
+
+<P><HR ALIGN=LEFT><B>Contents</B></P>
+
+<UL>
+  <LI><A HREF="#intro">Introduction</A>
+  <LI><A HREF="#xconv">Xconv</A>
+  <LI><A HREF="#convsh">Convsh</A>
+  <LI><A HREF="#download">Downloads</A>
+  <LI><A HREF="#swapbytes">Swapbytes</A> (re-arranges byte order in some PP files, allowing XCONV to read them)
+</UL>
+
+<P><HR ALIGN=LEFT></P>
+
+<P><A NAME="intro"></A><B>Introduction</B></P>
+		<P>This page contains binary utilities which allow the user to access, manipulate and graph datafiles which are written in the Met Office binary &quot;PP&quot; file format. These are especially useful for the Unified Model (UM) and COAPEC datasets, although they are also able to handle a variety of input datatypes. There are also text files available descibing the Met Office format for the <a href="files/header.txt">PP file header</a>, and a full list of the <a href="files/fcodes.txt">stash codes</a> used.</P>
+		<p>Please note that these ../../software/xconv/binaries are supplied &quot;as is&quot;, and the BADC cannot offer technical support, such as fixing bugs, adding extra features etc. XCONV is also available on the portable UM CD-ROM .</p>
+		<P>Documentation for <a href="http://www.met.reading.ac.uk/~jeff/xconv/">XCONV</a> (version 1.00) and <a href="http://www.met.reading.ac.uk/~jeff/xconv/appx1.html">CONVSH</a> is also available  (<a href="http://www.ugamp.rdg.ac.uk/~jeff/xconv/">http://www.ugamp.rdg.ac.uk/~jeff/xconv/</a> ).</P>
+		<p></p>
+		<HR ALIGN=LEFT>
+		</P>
+
+<P><A NAME="xconv"></A><B>Xconv</B></P>
+
+<P>Xconv is an X windows utility which allows the user to interactively
+manipulate the data and produce an on-screen plot of the data
+field. It has an intuitive, user-friendly interface and is able
+to read and write a wide variety of different data formats.</P>
+
+<P><IMG SRC="xconv.gif" WIDTH="897" HEIGHT="549" ALIGN="BOTTOM"
+BORDER="0" NATURALSIZEFLAG="3"></P>
+
+<P><HR ALIGN=LEFT></P>
+
+<P><A NAME="convsh"></A><B>Convsh</B></P>
+
+<P>Convsh is the command line equivalent of Xconv, and allows
+PP files to be processed in 'batch' mode.</P>
+
+<P><HR ALIGN=LEFT></P>
+
+<P><A NAME="download"></A><B>Downloads</B></P>
+		<p><b>Xconv/convsh</b></p>
+		<p>This section contains the binary versions of the utilities
+for use on a number of platforms. The current version is <U>1.05.</U></p>
+		<P><!--SELECTION--><!--/SELECTION-->
+		<CENTER>
+
+<TABLE WIDTH="450" BORDER="1" CELLSPACING="2" CELLPADDING="0">
+  <TR>
+    <TD WIDTH="50%">
+      <P><CENTER>&nbsp;<B>Platform</B></CENTER></TD>
+    <TD WIDTH="50%">
+      <P><CENTER><B>Binary</B></CENTER></TD>
+  </TR>
+  <TR>
+    <TD WIDTH="50%">Dec Alpha</TD> 
+    <TD WIDTH="50%">&nbsp;<A HREF="../../software/xconv/binaries/decalpha/xconv1.05">Xconv</A>,
+      <A HREF="../../software/xconv/binaries/decalpha/convsh1.05">convsh</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="50%">Fujitsu</TD> 
+    <TD WIDTH="50%">&nbsp;<A HREF="../../software/xconv/binaries/fujitsu/xconvR81.05">Xconv</A>,
+      <A HREF="../../software/xconv/binaries/fujitsu/convshR81.05">convsh</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="50%">HP</TD> 
+    <TD WIDTH="50%">&nbsp;<A HREF="../../software/xconv/binaries/hp/xconv1.05">Xconv</A>,
+      <A HREF="../../software/xconv/binaries/hp/convsh1.05">convsh</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="50%">Linux_glib2.1</TD> 
+    <TD WIDTH="50%">&nbsp;<A HREF="../../software/xconv/binaries/linux_glib2.1/xconv1.05">Xconv</A>,
+      <A HREF="../../software/xconv/binaries/linux_glib2.1/convsh1.05">convsh</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="50%">Linux_glib2.1.3</TD> 
+    <TD WIDTH="50%">&nbsp;<A HREF="../../software/xconv/binaries/linux_glib2.1.3/xconv1.05">Xconv</A>,
+      <A HREF="../../software/xconv/binaries/linux_glib2.1.3/convsh1.05">convsh</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="50%">SGI</TD> 
+    <TD WIDTH="50%">&nbsp;<A HREF="../../software/xconv/binaries/sgi/xconv1.05">Xconv</A>,
+      <A HREF="../../software/xconv/binaries/sgi/convsh1.05">convsh</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="50%">SGI_origin</TD> 
+    <TD WIDTH="50%">&nbsp;<A HREF="../../software/xconv/binaries/sgi_origin/xconvR81.05">Xconv</A>,
+      <A HREF="../../software/xconv/binaries/sgi_origin/convshR81.05">convsh</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="50%">SUN</TD> 
+    <TD WIDTH="50%">&nbsp;<A HREF="../../software/xconv/binaries/sun/xconv1.05">Xconv</A>,
+      <A HREF="../../software/xconv/binaries/sun/convsh1.05">convsh</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="50%">SUN_static_f77</TD> 
+    <TD WIDTH="50%">&nbsp;<A HREF="../../software/xconv/binaries/sun_static_f77/xconv1.05">Xconv</A>,
+      <A HREF="../../software/xconv/binaries/sun_static_f77/convsh1.05">convsh</A></TD> 
+  </TR>
+  <TR>
+    <TD WIDTH="50%">T3E</TD> 
+    <TD WIDTH="50%">&nbsp;<A HREF="../../software/xconv/binaries/t3e/xconv1.05">Xconv</A>,
+      <A HREF="../../software/xconv/binaries/t3e/convsh1.05">convsh</A></TD> 
+  </TR>
+</TABLE>
+
+
+		</CENTER></P>
+		<p><a name="swapbytes"><b>Swapbytes</b></a></p>
+		<p>Some PP-format files cannot be read in packages such as XCONV 
+without some pre-processing. Some files require byte-swapping (re-ordering of the 
+bytes within the file) to make them compatible.
+		<p>A new addition to this section is a (unix) based byte-swapping 
+utility called swapbytes. This allows a 4 byte word file to be converted from big 
+to little endian, and vice versa. The <a href="programs/swapbytes-0.1.tar">tar</a> 
+file contains the source code and a basic makefile. </p>
+		<P>Another utility that performs the byte-swapping process is 
+<i>ppflipper</i>, this can be accessed by users logged on to Tornado, the BADC 
+computer. A PP file such as <kbd>old_file.pp</kbd> can be used to create a byte-swapped 
+PP file such as <kbd>new_file.pp</kbd> using the following command:
+<P><kbd>ppflipper.pl old_file.pp > new_file.pp</kbd>
+<P>XCONV should then be able to read <kbd>new_file.pp</kbd> without difficulty.
+<P>
+</BODY>
+
+</HTML>

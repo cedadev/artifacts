@@ -1,0 +1,148 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>CLIMAT Upper Air Surface Norms Data Table</TITLE>
+  <!-- Created 13th April 2010 -->
+  <!-- Author: Graham Parton BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>CLIMAT Upper Air Long Period Surface Average Values - Columns in the CUNS table <BR CLEAR="ALL"></H1>
+
+    <p>      <b>Description: </b>This table contains monthly and annual surface climatological averages and met element check values for surface
+	  CLIMAT reports. These values are calculated by the CARLOS and CLIMAT teams.
+<P>
+For the convenience of users, the SCLE file column headers are available for download in <a href="Headers/SCLE_Column_Headers.xlsx    ">Excel</a> or as a <a href="Headers/SCLE_Column_Headers.csv">comma separated text file</a>
+<P>
+<table border="1" cellspacing="0" width="95%">
+      <tbody><tr>
+        <td align="center" valign="TOP" width="5%"><b>PK</b></td>
+        <td valign="TOP" width="40%"><b>Attribute</b></td>
+        <td valign="TOP" width="20%"><b>Datatype</b></td>
+        <td valign="TOP" width="35%"><b>Description / Units / Precision</b></td>
+      </tr>
+      <tr>
+        <td align="center" valign="TOP" width="5%">*</td>
+
+        <td valign="TOP" width="40%"><font face="Courier New">src_id</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(6)</font></td>
+        <td valign="TOP" width="35%">Unique source identifier</td>
+      </tr>
+      <tr>
+        <td align="center" valign="TOP" width="5%">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">clmo_end_date</font></td>
+
+        <td valign="TOP" width="20%"><font face="Courier New">DATE</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center" valign="TOP" width="5%">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">clmo_year_cnt</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(2)</font></td>
+
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td align="center" valign="TOP" width="5%">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_domain_name</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">VARCHAR2(8)</font></td>
+        <td valign="TOP" width="35%"><a href="met_domain.html">Message type</a></td>
+      </tr>
+
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">month_number</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(2)</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_element_id</font></td>
+
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(5)</font></td>
+        <td valign="TOP" width="35%">Each meteorological paremeter is referenced by this value. See the <a href="CARLOS_met_element_id_table.doc">Met Element id  table</a> to determine which value to use for wanted parameter, e.g. 10051 is mean sea level pressure</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rec_st_ind</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(4)</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/state_indicators.html">State indicator for the record</a>**</td>
+
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_elem_ob_per</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(8)</font></td>
+        <td valign="TOP" width="35%">Start and end year joined</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+
+        <td valign="TOP" width="40%"><font face="Courier New">met_elem_ob_mo_cnt</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(3)</font></td>
+        <td valign="TOP" width="35%">Count of months with actual data</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_elem_mean_val</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(6,2)</font></td>
+
+        <td valign="TOP" width="35%">Mean</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_elem_sd_val</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(6,2)</font></td>
+        <td valign="TOP" width="35%">Standard deviation</td>
+      </tr>
+
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_elem_medn_val</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(6,2)</font></td>
+        <td valign="TOP" width="35%">Median</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_elem_75prc_val</font></td>
+
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(6,2)</font></td>
+        <td valign="TOP" width="35%">Value which includes 75% of records</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_elem_25prc_val</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(6,2)</font></td>
+        <td valign="TOP" width="35%">Value which includes 25% of records</td>
+
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_elem_high_cnf_val</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(6,2)</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+
+        <td valign="TOP" width="40%"><font face="Courier New">met_elem_low_cnf_val</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(6,2)</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr>
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">coef_skew_prcp_amt</font></td>
+        <td valign="TOP" width="20%"><font face="Courier New">NUMBER(4,3)</font></td>
+
+        <td valign="TOP" width="35%">Skewness of precipitation record</td>
+        </tr></tbody></table></p><BR>
+<BR>
+** Details available to registered users only.
+<P>
+More information about the Met Office surface data is available
+in the <A HREF="ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+</BODY>
+</HTML>

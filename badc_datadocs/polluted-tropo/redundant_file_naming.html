@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+ <TITLE>File-naming convention for Polluted Troposphere data</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<P>
+<IMG SRC="nerc-logo.gif"
+ALT="NERC logo" ALIGN="BOTTOM">
+
+
+<H1>The Polluted Troposphere file-naming convention</H1>
+
+<HR ALIGN=LEFT>
+
+<H2>Introduction</H2>
+
+<P>The <a href="/data/polluted-tropo/">Polluted Troposphere</a> instruments and facilities produce a range of meteorological and 
+chemical measurements of interest to the scientific community. From the point of view of data access, it is highly desirable to 
+adhere to common file formats and file-naming conventions for all the data produced under Polluted Troposphere projects. This document outlines 
+a file-naming convention agreed between the Polluted Troposphere Principal Investigators and the BADC. A well thought out and organised file-naming 
+convention allows quick data access and avoids the user having to read the file in order to enquire as to its contents. Using this 
+convention will save time and resources when setting up data management for each individual project, it will also allow greater 
+analysis and manipulation of the data by software at the BADC (and beyond). 
+
+<H2>The Polluted Troposphere file-naming convention</H2>
+The Polluted Troposphere file-naming convention uses long file names since these indicate significant information about the contents 
+of the file without having to read the file or refer to the directory structure. Important attributes in a file name include 
+INSTRUMENT, LOCATION and TIME.
+
+<P>The chosen convention is as follows:<P>
+
+<font size="+2">
+<center><kbd><b>instrument_location_YYYYMMDD[hh][mm][ss][_extra].ext</b></kbd></center></font>
+
+<P>Where:
+<P>
+<kbd><font size="+2"><b>instrument</b></kbd></font> - is the instrument name (full or shortened) or model name. When the same instrument is used by 
+a number of groups, the instrument name should be prefixed with the institute name/code and a hyphen, for example <b>uea-ptrms</b> 
+and <b>york-ptrms</b>. See <a href="/data/polluted-tropo/common_names.html#instruments">current list</a>.
+<p><font size="+2"><kbd><b>location</b></kbd></font> - is the location name (full or shortened). This refers to the location of the 
+observation and not the institute or location of the participating scientist/group. This field could be used for a range of items 
+such as a site, a station, a platform, an institute or a university. See <a href="/data/polluted-tropo/common_names.html#locations">current list</a>.
+<p><font size="+2"><kbd><b>YYYYMMDD</b></kbd></font> - is the date on which measurements were taken.
+If a data file spans more than one day then this field should represent the first day during which data was recorded. The year is given 
+as four digits with month and day as two digits each.
+<p><font size="+2"><kbd><b>[hh][mm][ss]</b></kbd></font> - is the time of day specified (optional). Hours, minutes and seconds can be 
+represented as two digits each. Hours can be used alone, only hours and minutes used or all three fields can be included. However, 
+minutes or seconds cannot be used without the preceding time unit (i.e. no minute field allowed unit without the hour field).
+<p><font size="+2"><kbd><b>[_extra]</b></kbd></font> - this section allows additional code to define such things as different range 
+resolutions and so forth. It could also be used for Version numbers etc,.
+<p><font size="+2"><kbd><b>.ext</b></kbd></font> - will normally be .nc (NetCDF) or .na (NASA Ames) although occasionally other formats 
+will be used, in particular .png and .gif for Image files. See 
+<a href="/data/polluted-tropo/common_names.html#extensions">current list</a>.
+
+<P>Filenames should contain only the characters <font size="+2"><kbd><b>[-_.a-z0-9]</b></kbd></font>. 
+Spaces are forbidden and upper case characters should be avoided. 
+The underscore "<b>_</b>" character should only be used as a separator between fields.
+
+<H2>File-naming for non-standard data (e.g. model, trajectory data)</H2>
+Some Polluted Troposphere projects will also generate model data, flight data, data recorded at sea (stationery and in transit), 
+trajectories and other non-standard data types. It is suggested that the above format be adapted in the following ways:
+
+<OL>
+
+<LI><B>Data recorded by onboard moving craft</B><BR>
+When data is recorded on a moving craft the varying spatial location should not be recorded in the filename. Instead, the location 
+field in the filename should include a name (or code) for the vessel and optionally the flight/voyage code/number.<P>
+
+<LI><B>Trajectory data</B><BR>
+Calculated trajectory data is similar to data recorded on a moving craft. The varying spatial location should not be recorded in the 
+filename. Instead, the <kbd><b>location</b></kbd> field in the filename should include a relevant code for the trajectory 
+type/model/number.<P>
+
+<LI><B>Model data</B><BR>
+In the case of the model data, the <kbd><b>instrument</b></kbd> field in the filename should instead be used for a model code 
+(indicating the type, version etc., of the model). For box models running at one location only the <kbd><b>location</b></kbd> fie
+ld should include this. However, models that output data over a grid can use appropriate codes to represent this.<P>
+
+<LI><B>Use of the <kbd><b>[_extra]</b></kbd> additional information field</B><BR>
+The <kbd><b>[_extra]</b></kbd> field is unlikely to be used in most cases but is provided as an option for exceptional cases where the 
+data producer wishes to include some additional information not otherwise catered for. Suitable warning should be used a
+gainst overloading this field. Such a use might be in forecast files where the date and time provide the start time whilst the 
+<kbd><b>[_extra]</b></kbd> field provides the time of the actual forecast.<P>
+
+<LI><B>Use of the <kbd><b>[hh][mm][ss]</b></kbd> time options</B><BR>
+The <kbd><b>[hh][mm][ss]</b></kbd>  options are included or occasions where data is produced at such a high frequency that storing it 
+in multiple files per day, hour or minute becomes appropriate. This is unlikely to be commonplace but is available for special cases.<P>
+
+<LI><B>Image files</B><BR>
+Text files (<kbd><b>.txt</b></kbd>) may be included to describe image data. Apart from the file name extension (last field), files 
+containing images and their associated metadata should have the same name.
+When data exist both in the form of NASA Ames formatted fields and images,files also have the same name, except for the file name 
+extension.
+</OL>
+
+<H2>Standardising common names in the naming convention</B><BR></H2>
+In order to standardise the names used within the file-naming convention the BADC will need to collate those currently used by the 
+community and publish them via our website. This can be regularly extended to include new locations, instruments, models etc
+,. Interaction with Polluted Troposphere scientists will be essential to achieve this aim successfully. Please see the 
+<a href="/data/polluted-tropo/common_names.html">common names in filenames</a> page to see the current list.<P>
+
+<HR ALIGN=LEFT>
+
+<P>Return to main <a href="/data/polluted-tropo/">Polluted Troposphere page</a>.
+
+<P>
+</BODY>
+</HTML>

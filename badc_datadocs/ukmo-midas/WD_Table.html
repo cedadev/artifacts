@@ -1,0 +1,248 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>UK Daily Weather Data Table</TITLE>
+  <!-- Created 16th June 2006 -->
+  <!-- Author: Belinda Robinson BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1>UK Daily Weather data - Columns in the WD table <BR CLEAR="ALL"></H1>
+
+<HR ALIGN=LEFT>
+<a href="WD_Table.html#description">Table Description</a> - 
+<a href="WD_Table.html#table">Columns in the WD table</a> - 
+<a href="WD_Table.html#filter">How to start filtering the rows of data out</a>
+
+<P><HR ALIGN=LEFT>The surface observation data are in a simple
+ASCII format.</P>
+<a name="description"></a>
+<h3>Table Description: </h3>
+This entity contains meteorological values measured on a 24 hour time 
+	   scale. <font face="Courier New">ob_end_time</font> and 
+	   <font face="Courier New">ob_hour_count</font> define the observation period. Sunshine 
+	   duration, snow day, hail day, thunder day and gale day are usually for the period 0000-2359Z, 
+	   i.e. <font face="Courier New">ob_end_time = '2359'</font> and 
+	   <font face="Courier New">ob_hour_count = 24</font>. Concrete state, lying snow, snow depth, 
+	   fresh snow depth and fresh mountain snowfall are &quot;spot&quot; values, usually at 0900Z, 
+	   i.e. <font face="Courier New">ob_end_time = 0900</font> and 
+	   <font face="Courier New">ob_hour_count = 0</font>. Daily rainfall, daily radiation, 
+	   daily temperature ranges and bare soil minimum temperatures are stored in separate 
+       entities. Day of fog at 0900Z is not included. MIDAS will store rows in this table using 
+	   climatological station number, e.g. <font face="Courier New">id_type = 'DCNN'</font>. If 
+	   the station does not have a DCNN, it will use <font face="Courier New">id_type = 'WMO'</font>. 
+	   Attributes with different time scales 
+	   are not compressed into a single row.
+
+<p>
+<a name="table"></a>
+<h3>Columns in the WD table:</h3>
+For the convenience of users, the WD file column headers are available for download in <a href="Headers/WD_Column_Headers.xlsx">Excel</a> or as a <a href="Headers/WD_Column_Headers.txt">comma separated text file</a>.
+<P>
+       <table border="1" cellspacing="0" width="95%">
+      <tr> 
+        <td valign="TOP" width="5%" align="center"><b>PK</b></td>
+        <td valign="TOP" width="40%"><b>Attribute</b></td> 
+        <td valign="TOP" width="35%"><b>Description / Units</b></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_end_time</font></td>
+        <td valign="TOP" width="35%">Date and time at end of observation</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" p align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">id_type</font></td>
+        <td valign="TOP" width="35%">Identifier type</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">ob_hour_count</font></td>
+        <td valign="TOP" width="35%">Observation hour count</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">version_num</font></td>
+        <td valign="TOP" width="35%">Observation version number - <strong>Use the row with '1'</strong>, as this has been quality checked by the Met Office </td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%" align="center">*</td>
+        <td valign="TOP" width="40%"><font face="Courier New">met_domain_name</font></td>
+        <td valign="TOP" width="35%"><a href="met_domain.html">Message type</a></td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">src_id</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#wind">Unique source identifier</a> or station site number</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">rec_st_ind</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/state_indicators.html">State indicator for the record</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cs_24hr_sun_dur</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.8"></a><a href="ukmo_guide.html#5.8">Campbell-Stokes sunshine duration</a><br>0.1 hr</td>
+      </tr>
+
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">conc_state_id</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#slab">Concrete state code</a> gives the state of a concrete slab (e.g. dry, wet, frozen, etc) of specified standard dimensions and composition at the observing station.</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">lying_snow_flag</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#snowlying">Lying snow flag</a>. Snow lying is counted, provided that the snow covers at least one-half of the ground easily visible from the station and the altitude of this ground does not differ by more than 30m from that of the station. In judging if at least one-half of the ground is snow covered no account is taken of bare patches under trees or of aeras occupied by water.</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">snow_depth</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.6">Snow depth</a><br>cm</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">frsh_snw_amt</font></td>
+        <td valign="TOP" width="35%"><a href="ukmo_guide.html#5.6">Fresh snow amount</a><br>cm</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">snow_day_id</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#dsnow">Snow day code</a></td>
+      </tr>
+      
+<tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">hail_day_id</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#dhail">Hail day code</a> - A day of hail is defined as one when pieces of ice, 5mm or more in diameter are observed to fall. The hailstones can fall separately or be agglomerated into irregular lumps.</td>
+      </tr>
+
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">thunder_day_flag</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#dthunder">Thunder day flag</a> - A day of thunder is counted when thunder is heard.</td>
+      </tr>
+
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">gale_day_flag</font></td>
+        <td valign="TOP" width="35%"><a href="/data/surface/code.html#dgale">Gale day flag</a> - A day of gale is counted when a mean wind speed reaches or exceeds or is estimated to have reached or exceeded, 34kn (force 8 on the Beaufort scale) over a period of at least several minutes (10 mn in the case of a station equipped with an anemograph).</td>
+      </tr>
+
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">frsh_mnt_snwfall_flag</font></td>
+        <td valign="TOP" width="35%">Fresh mountain snowfall flag</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wmo_24hr_sun_dur</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">cs_24hr_sun_dur_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - Campbell-Stokes sunshine duration</a>**</td>
+      </tr>
+    
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">conc_state_id_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - concrete state code</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">snow_depth_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - snow depth</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">frsh_snw_amt_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - fresh snow amount</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">snow_day_id_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - snow day code</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">hail_day_id_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - hail day code</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">thunder_day_flag_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - thunder day flag</a>**</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">gale_day_flag_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC code - gale day flag</a>**</td>
+      </tr>
+  <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">wmo_24hr_sun_dur_q</font></td>
+        <td valign="TOP" width="35%">&nbsp;</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">meto_stmp_time</font></td>
+        <td valign="TOP" width="35%">Met Office receipt stamp time</td>
+      </tr>
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">midas_stmp_etime</font></td>
+        <td valign="TOP" width="35%">Elapsed time to storage in MIDAS<br>minutes</td>
+      </tr>
+
+      <tr> 
+        <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">drv_24hr_sun_dur</font></td>
+        <td valign="TOP" width="35%">Derived 24HR Sunshine duration<br>These stations are those with radiation sensors only which use the global radiation values to derive a 24hr sunshine value. This was incorrectly appearing under WMO 24hr sunshine when the value was not coming from a sunshine sensor so was moved into the DRV_24HR_SUN_DUR column. </td>
+      </tr>
+      <tr>
+         <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">drv_24hr_sun_dur_q</font></td>
+        <td valign="TOP" width="35%"><a href="http://badc.nerc.ac.ukhttp://data.ceda.ac.uk/badc/ukmo-midas/metadata/doc/QC_J_flags.html">QC Code - Derived 24HR sunshine duration</a></td>
+      </tr>
+      <tr>
+         <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">lying_snow_ht </font></td>
+        <td valign="TOP" width="35%">height of lowest lying snow (in decametres). Please note that the observer could enter the height of the lowest lying snow at station level. In this case the station height has been rounded to the nearest 10 metres and used. Observations made as part of the Snow Survey of Great Britain (1946-2007).</td>
+      </tr>
+
+      <tr>
+         <td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">lying_snow_ht_q</font></td>
+        <td valign="TOP" width="35%">QC - Lying snow height<br>LYING_SNOW_HT_Q gives a flag for both null and non-null values. For a null value a 0 flag means that there was no snow observed, 120 means that the reading is missing and 130 means that no observation was possible due to the hills being obscured.</td>
+      </tr>
+
+      </table><BR>
+<BR>
+** Details available to registered users only.
+<P>
+More information about the Met Office surface data is available
+in the <A HREF="ukmo_guide.html">documentation provided by the
+Met Office</A>.
+<P>
+<a name="filter"></a>
+<h3>How to start filtering the rows of data out:</h3>
+<ol>
+<li>As the data arrive at the Met Office it undergoes quality control to check that the data are correct and consistent with the surrounding data points. Whether the process has occured or not is indicated by the <strong>version number</strong> (1 is the one to use as indicated in the table above).
+<p>
+<li>To show the progress of the data through the quality control the various variables will have an associated <strong>_q value</strong> (e.g. snow_depth_q). This _q value will have different values for each record (see details in table above).
+<p>
+<li> While the Met Office MIDAS system overwrites the existing entry in their database the BADC's MIDAS entries do not as the BADC takes snapshots of the the MIDAS database from time to time leading to duplicate entries occuring in our archive. If duplicate records are found, check the associated meto_stmp_time to determine which record is the most recent one - this is the one to use and the other(s) can be ignored. 
+</ol>
+<p>
+
+</BODY>
+</HTML>

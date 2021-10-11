@@ -1,0 +1,33 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "SSEUROPE "
+"SUM_DATA_SET"       "SSCLIMATE    "
+"SUM_DATATYPE"       "EUROPE_MONTH "
+"ARCHIVE_NAME"       "NCDC, NCAR   "
+"ARCHIVE_STATUS"     "Available    "
+"DS_DESCRIPTION"     "World Monthly Surface Station Climatology"
+"DT_DESCRIPTION"     "Monthly Temperature/Precipitation Means for Europe"
+"SUM_BEGIN_DATE"     "01-Jan-1752"
+"SUM_END_DATE"       "01-Dec-1989"
+"SUM_PROCESS_LEVEL"  "2"
+"SPATIAL1"           "30N to 90N; 30W to 60E"
+"SPATIAL2"           " "
+"SPATIAL3"           "Station"
+"SPATIAL4"           " "
+"TEMPORAL1"          "January 1752 - December 1989"
+"TEMPORAL2"          " "
+"TEMPORAL3"          "Monthly"
+"TEMPORAL4"          " "
+"PRODUCT1"           "Available online through NCDS in Common Data Format (CDF).   "
+"PRODUCT2"           "Available on GEDEX CD-ROM. "
+"PRODUCT3"           " "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"TEMPERATURE"   "Station Temperature"   "Deg C"
+"PRECIPITATION" "Station Precipitation" "mm"
+EOF
+
+SOURCES
+"STATION"         "IN SITU"
+EOF

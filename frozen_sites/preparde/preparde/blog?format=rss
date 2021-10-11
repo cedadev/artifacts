@@ -1,0 +1,1069 @@
+<?xml version="1.0"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  
+
+  <channel>
+    <title>PREPARDE - Blog</title>
+    <link>http://proj.badc.rl.ac.uk/preparde/blog</link>
+    <description></description>
+    <language>en-US</language>
+    <generator>Trac 0.12.2</generator>
+    <image>
+      <title>PREPARDE</title>
+      <url>http://proj.badc.rl.ac.uk/preparde/chrome/common/trac_banner.png</url>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog</link>
+    </image>
+    <item>
+      <title>PREPARDE final meeting slides</title>
+      <dc:creator>Sarah Callaghan</dc:creator>
+      <pubDate>Thu, 14 Nov 2013 14:40:26 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/FinalMeeting</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/FinalMeeting</guid>
+      <description>&lt;p&gt;
+The PREPARDE project officially finished with a final project meeting on Friday 23rd August, 2013. However, work on the topic of data publication is still in full swing, mainly through the &lt;a class="ext-link" href="https://rd-alliance.org/internal-groups/publishing-data-ig.html"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Publishing Data Interest Group&lt;/a&gt; of the Research Data Alliance.
+&lt;/p&gt;
+&lt;p&gt;
+In the meantime, our project deliverables are being put up on the &lt;a href="http://proj.badc.rl.ac.uk/preparde/wiki/DeliverablesList"&gt;Deliverables page&lt;/a&gt; and the slides from the final meeting have been attached to this post.
+&lt;/p&gt;
+&lt;p&gt;
+I'd like to thank all the project team and all the other interested people who have given so generously of their time and energy to interact with us on this project and in our workshops. Here's hoping we can work together again on this topic soon!
+&lt;/p&gt;
+</description>
+    </item><item>
+      <title>Cross-linking and workflows workshop report</title>
+      <dc:creator>Sarah Callaghan</dc:creator>
+      <pubDate>Fri, 10 May 2013 11:23:53 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/CrossLinkingWorkshopReport</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/CrossLinkingWorkshopReport</guid>
+      <description>&lt;p&gt;
+The third and final workshop for the PREPARDE project was held at Rutherford Appleton Laboratory on the 30th April 2013. It was well attended with over 30 participants and a lot of excellent presentations and discussion on the workshop themes of how to manage workflows for data publication, and how to effectively link between datasets and the papers that cite them.
+&lt;/p&gt;
+&lt;p&gt;
+All the presentations given are now available on the workshop webpage at &lt;a href="http://proj.badc.rl.ac.uk/preparde/wiki/CrosslinkingWorkshop"&gt;http://proj.badc.rl.ac.uk/preparde/wiki/CrosslinkingWorkshop&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+One theme that I noticed coming around several times was that of needing a central registry or broker to manage the flow of information between the data repositories and the data journals. As the moment, the beginnings of this exist in the form of the DataCite metadata store, where repositories deposit the DOI specific metadata, which can then be retrieved by the journal publisher. What is needed is a mechanism for the reverse to happen - i.e. a place for the journal to push the information that a dataset has been cited to, and where a repository can query/pull that citation information from.
+&lt;/p&gt;
+&lt;p&gt;
+Data citation as a mechanism for cross-linking also came up several times, with the general feeling of "if it ain't broke, don't fix it!" The consensus (at least in my breakout group) was that citation is a well-established, well-used and well-understood mechanism for linking between articles, so we can piggy-back on that to expand its use to linking datasets to articles as well.
+&lt;/p&gt;
+&lt;p&gt;
+We all took copious notes from our breakout and discussion session, which are in the process of being written up now. Once they're tidied up, they too will be added to the workshop webpage.
+&lt;/p&gt;
+&lt;p&gt;
+I'd like to thank again our wonderful presenters (some of whom even came from abroad!) and our participants for their active engagement and their insights at the workshop. We really appreciate it!
+&lt;/p&gt;
+</description>
+    </item><item>
+      <title>Report from EGU 2013</title>
+      <dc:creator>Sarah Callaghan</dc:creator>
+      <pubDate>Thu, 18 Apr 2013 15:01:54 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/EGU2013_Report</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/EGU2013_Report</guid>
+      <description>&lt;p&gt;
+As mentioned in our previous post, members of the PREPARDE team attended the European Geophysical Union General Assembly in Vienna, and presented the project at a splinter meeting and in an oral presentation on Friday 12th April.
+&lt;/p&gt;
+&lt;p&gt;
+The splinter meeting went well (aside from me accidentally dumping a glass of water onto my poor colleague!) We had a number of attendees who gave us lots of food for thought and feedback on our proposed guidelines for peer review of data and repository accreditation, so many thanks to them!
+&lt;/p&gt;
+&lt;p&gt;
+Both documents are still open for comment, and all comments are welcome!
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;The peer-review guidelines can be found at &lt;a class="ext-link" href="http://bit.ly/DataPRforComment"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://bit.ly/DataPRforComment&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;The repository accreditation guidelines can be found at &lt;a class="ext-link" href="http://bit.ly/ZhYHZl"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://bit.ly/ZhYHZl&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;All feedback should go to &lt;a class="ext-link" href="https://www.jiscmail.ac.uk/DATA-PUBLICATION"&gt;&lt;span class="icon"&gt; &lt;/span&gt;https://www.jiscmail.ac.uk/DATA-PUBLICATION&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+The data publication &lt;a class="ext-link" href="http://meetingorganizer.copernicus.org/EGU2013/orals/11680"&gt;&lt;span class="icon"&gt; &lt;/span&gt;oral session&lt;/a&gt; itself was very interesting, with Hans Pfeiffenberger highlighting in particular some of the issues that [ESSD &lt;a class="ext-link" href="http://www.earth-system-science-data.net/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.earth-system-science-data.net/&lt;/a&gt;] have experienced in their many years of operating a data journal. We also had excellent talks from Kerstin Lehnert about disciplinary repositories and their role in data publication and David Marques about Elsevier's work in cross-linking publications with research data.
+&lt;/p&gt;
+&lt;p&gt;
+The &lt;a class="ext-link" href="http://meetingorganizer.copernicus.org/EGU2013/posters/11680"&gt;&lt;span class="icon"&gt; &lt;/span&gt;poster session&lt;/a&gt;, though thin on the ground, did provide a lot to think about too.
+&lt;/p&gt;
+&lt;p&gt;
+The PREPARDE presentations that we made from both the oral session and the splinter meeting can be found linked to this post.
+&lt;/p&gt;
+</description>
+    </item><item>
+      <title>PREPARDE and EGU - where we'll be</title>
+      <dc:creator>Sarah Callaghan</dc:creator>
+      <pubDate>Thu, 28 Mar 2013 15:38:14 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/PREPARDEatEGU</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/PREPARDEatEGU</guid>
+      <description>&lt;p&gt;
+Members of the PREPARDE project team will be attending the &lt;a class="ext-link" href="http://www.egu2013.eu/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;European Geophysical Union conference&lt;/a&gt; in Vienna, 7-12 April.
+&lt;/p&gt;
+&lt;p&gt;
+In particular, we'll be hosting a &lt;a class="ext-link" href="http://www.egu2013.eu/splinter/splinter_meeting_overview.html"&gt;&lt;span class="icon"&gt; &lt;/span&gt;splinter meeting&lt;/a&gt; SPM1.38 in room R3 on Fri 12th April, 12:15–13:15, where we'll be canvassing people for their opinions on our proposed guidelines for data publication.
+&lt;/p&gt;
+&lt;p&gt;
+We also have an oral presentation booked in session GI1.2: Data Assimilation and Data Publishing in Geosciences on Friday, 12 Apr 2013 in room G1 at 13:30–13:45.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://meetingorganizer.copernicus.org/EGU2013/EGU2013-6975.pdf"&gt;&lt;span class="icon"&gt; &lt;/span&gt;EGU2013-697&lt;/a&gt;
+Data publication - policies and procedures from the PREPARDE project
+Sarah Callaghan, Fiona Murphy, Jonathan Tedds, John Kunze, Rebecca Lawrence, Matthew S. Mayernik, Angus Whyte, and Timothy Roberts
+&lt;/p&gt;
+&lt;p&gt;
+Hope to see people there!
+&lt;/p&gt;
+</description>
+    </item><item>
+      <title>Workshop on Cross-Linking and Workflows</title>
+      <dc:creator>Sarah Callaghan</dc:creator>
+      <pubDate>Thu, 21 Mar 2013 14:00:07 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/CrossLinkingRegistration</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/CrossLinkingRegistration</guid>
+      <description>&lt;p&gt;
+The PREPARDE project  is pleased to announce that registration for its workshop on cross-linking and workflows for data publication is now open at &lt;a class="ext-link" href="http://www.surveymonkey.com/s/WH8QJM3"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.surveymonkey.com/s/WH8QJM3&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+The workshop will be held at &lt;a class="ext-link" href="http://www.stfc.ac.uk/About+STFC/51.aspx"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Rutherford Appleton Laboratory, Didcot, UK&lt;/a&gt; on Tuesday the 30th April.
+&lt;/p&gt;
+&lt;p&gt;
+More information about the workshop is below:
+&lt;/p&gt;
+&lt;p&gt;
+Linking datasets and articles for publication – cross-linking and workflows
+Data is being increasingly recognised as the foundation of the scientific record. Data journals and other data publishing models (such as enhanced publications) are opening up data and other research products for further use, re-use and validation. A key part of data publication, and linking data to other scientific outputs, is a formalised and standardised method of permanently cross-linking between the dataset (as held in a repository) and the related article (as hosted in a journal).
+&lt;/p&gt;
+&lt;p&gt;
+The PREPARDE project is funded by JISC to address key issues arising from data publication, including cross-linking between repository and journal. It aims to produce guidelines applicable to a wide range of scientific disciplines and data publication models. The project initially focuses on earth science disciplines, and the Geoscience Data Journal, a partnership between the Royal Meteorological Society and Wiley-Blackwell.
+&lt;/p&gt;
+&lt;p&gt;
+Intended audience: the workshop will interest anyone involved in publishing data, either directly, via a data journal or as part of an enhanced publication
+&lt;/p&gt;
+&lt;p&gt;
+Critical issues the workshop aims to cover include:
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;How can publishers and repositories collaborate to exploit and share metadata about related scientific outputs (i.e. datasets and articles)
+&lt;/li&gt;&lt;li&gt;Where are the best points in the various journal and repository workflows to establish persistent links and share metadata for data publication?
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Participating in the workshop will help you to:
+&lt;/p&gt;
+&lt;ol&gt;&lt;li&gt;Understand benefits and risks to stakeholders in scholarly publishing likely to arise from different data publishing models.
+&lt;/li&gt;&lt;li&gt;Shape PREPARDE project guidelines on:- a) workflows for data publication b) data and metadata standards for enabling cross-linking between data repositories and academic publishers.
+&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;
+Please do pass these details on to other interested parties, and please do contact me (sarah.callaghan@…) if you have any questions.
+&lt;/p&gt;
+</description>
+    </item><item>
+      <title>New DATA-PUBLICATION JISCMail list</title>
+      <dc:creator>jtedds</dc:creator>
+      <pubDate>Sat, 23 Feb 2013 22:14:14 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/data-pub-list</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/data-pub-list</guid>
+      <description>&lt;p&gt;
+The JISC Managing Research Data Programme funded PREPARDE project invites anyone with an interest to sign up to the new Research DATA-PUBLICATION announce and discuss &lt;a class="ext-link" href="http://www.jiscmail.ac.uk/DATA-PUBLICATION"&gt;&lt;span class="icon"&gt; &lt;/span&gt;mailing list&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+This list will be used to make announcements and promote discussion to Higher Education and the international research community about research data publication. Topics include technical and scientific peer review, trusted repository accreditation and the challenges for researchers, institutions, funders and publishers.
+&lt;/p&gt;
+&lt;p&gt;
+Creation of this list is a recommended outcome from the recent PREPARDE project workshop which included representatives from many key stakeholders from research, funders, institutions and publishers, and was held in January 2013 at the International Digital Curation Conference in Amsterdam. There will be a write up of this event soon.
+&lt;/p&gt;
+&lt;p&gt;
+And it’s a good idea we hope…!
+&lt;/p&gt;
+&lt;p&gt;
+Thanks,
+Jonathan Tedds
+&lt;/p&gt;
+</description>
+    </item><item>
+      <title>Link Roundup - Data repository accreditation</title>
+      <dc:creator>Sarah Callaghan</dc:creator>
+      <pubDate>Fri, 22 Feb 2013 12:02:19 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/LinkRoundupDataRepos</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/LinkRoundupDataRepos</guid>
+      <description>&lt;p&gt;
+(Pulling together some useful links on the subject of data repository accreditation so that they're all in the one place)
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://www.ncdd.nl/blog/?p=3176"&gt;&lt;span class="icon"&gt; &lt;/span&gt;On trust and risk and, more importantly: Can we measure any of it? – #iPRES2012 (3)&lt;/a&gt; - blog post about an iPRES2012 session about trustworthy digital repositories.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://www.trusteddigitalrepository.eu/Site/Trusted%20Digital%20Repository.html"&gt;&lt;span class="icon"&gt; &lt;/span&gt;TrustedDigitalRepository.eu&lt;/a&gt;  - information about the European Framework for Audit and Certification of Digital Repositories.
+"The framework will consist of a sequence of three levels, in increasing trustworthiness:
+&lt;ul&gt;&lt;li&gt;Basic Certification is granted to repositories which obtain DSA (Data Seal of Approval) certification;
+&lt;/li&gt;&lt;li&gt;Extended Certification is granted to Basic Certification repositories which in addition perform a structured, externally reviewed and publicly available self-audit based on ISO 16363 or DIN 31644;
+&lt;/li&gt;&lt;li&gt;Formal Certification is granted to repositories which in addition to Basic Certification obtain full external audit and certification based on ISO 16363 or equivalent DIN 31644."
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://www.alliancepermanentaccess.org/index.php/aparsen/aparsen-deliverables/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;APARSEN deliverables&lt;/a&gt; - including a link to D33.1A Report on Peer Review of Digital Repositories
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://www.dcc.ac.uk/resources/repository-audit-and-assessment/trustworthy-repositories"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Trustworthy Repositories&lt;/a&gt; - overview of Trusted Repositories Audit &amp;amp; Certification (TRAC).
+"In general terms, TRAC:
+&lt;ul&gt;&lt;li&gt;Provides tools for the audit, assessment, and potential certification of digital repositories
+&lt;/li&gt;&lt;li&gt;Establishes documentation requirements required for audit
+&lt;/li&gt;&lt;li&gt;Delineates a process for certification
+&lt;/li&gt;&lt;li&gt;Establishes appropriate methodologies for determining the soundness and sustainability of digital repositories"
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://www.crl.edu/sites/default/files/attachments/pages/trac_0.pdf"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Trustworthy Repositories Audit &amp;amp; Certification: Criteria and Checklist&lt;/a&gt; - version 1.0, February 2007
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://datasealofapproval.org"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Data Seal of Approval&lt;/a&gt; - "The Data Seal of Approval ensures that in the future, research data can still be processed in a high-quality and reliable manner, without this entailing new thresholds, regulations or high costs." - first level in the Trusted Digital Repositories Framework
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://www.iso16363.org/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Primary Trustworthy Digital Repository Authorisation Body (ISO-PTAB)&lt;/a&gt; - provides ISO audit and certification of digital repositories and plays a major role in training and accrediting auditors. The audits are performed using the standard ISO16363:2011.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://public.ccsds.org/publications/archive/652x0m1.pdf"&gt;&lt;span class="icon"&gt; &lt;/span&gt;ISO16363:2011&lt;/a&gt; - the standard itself - Magenta book, September 2011.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://wokinfo.com//products_tools/multidisciplinary/dci/selection_essay/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Repository selection process for Thompson-Reuters Data Citation Index&lt;/a&gt; - discussing topics such as
+&lt;ul&gt;&lt;li&gt;Persistence and stability
+&lt;/li&gt;&lt;li&gt;Funding statements
+&lt;/li&gt;&lt;li&gt;Peer review
+&lt;/li&gt;&lt;li&gt;Age of material
+&lt;/li&gt;&lt;li&gt;Links to the research literature
+&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</description>
+    </item><item>
+      <title>OpenAIRE Interoperability workshop, University of Minho, 7-8 February</title>
+      <dc:creator>Sarah Callaghan</dc:creator>
+      <pubDate>Fri, 22 Feb 2013 11:03:51 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/OpenAIRE_Interoperability</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/OpenAIRE_Interoperability</guid>
+      <description>&lt;p&gt;
+The &lt;a class="ext-link" href="https://www.openaire.eu/en/component/content/article/9-news-events/432"&gt;&lt;span class="icon"&gt; &lt;/span&gt;OpenAIRE Interoperability Workshop&lt;/a&gt; was held at the University of Minho, Portugal, on the 7/8 February 2013. I was there, wearing a number of different hats. Firstly, as a member of the OpenAIREplus team, secondly, presenting about PREPARDE and our work on workflows and cross-linking, and thirdly as a data scientist and repository manager.
+&lt;/p&gt;
+&lt;p&gt;
+My presentation was videoed and can be seen on the &lt;a class="ext-link" href="http://vimeo.com/channels/openaireworkshop2/59741033"&gt;&lt;span class="icon"&gt; &lt;/span&gt;OpenAIRE Vimeo channel&lt;/a&gt;. I've attached my slides to this blog post too.
+&lt;/p&gt;
+&lt;p&gt;
+I made it to the workshop on the first day (after a few hiccups with broken planes) just in time for the session on Open Science, Open Data and Repositories, which was part of the University of Minho's Open Access Seminar. This was a really good session for introducing people to key concepts about open data and open access, and even gave us a bit of a history lesson too about how this whole scientific publishing thing got started. (I never knew quite how pivotal &lt;a class="ext-link" href="http://en.wikipedia.org/wiki/Henry_Oldenburg"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Henry Oldenburg&lt;/a&gt; was - not only was he the founding editor of the Philosophical Transactions of the Royal Society, but he also pretty much invented the process of pre-publication peer-review.)
+&lt;/p&gt;
+&lt;p&gt;
+The session on OpenAIREplus was also really useful for getting a feel about what OpenAIRE are trying to do to extend their services to include research data, especially in the case where it's linked directly to publications*. Discussions about this were continued on the following day in a splinter group talking about the proposed OpenAIRE guidelines for Data Archive Managers.
+&lt;/p&gt;
+&lt;p&gt;
+I'm very glad to see that these guidelines are based around the &lt;a class="ext-link" href="http://schema.datacite.org"&gt;&lt;span class="icon"&gt; &lt;/span&gt;DataCite metadata schema&lt;/a&gt;, tying in nicely with the work we're doing at BADC and the general direction data citation seems to be going at the moment. The plan is to dig out some case studies of data sets linked to published papers, and I have a couple in mind already, one of which relates to my (very soon to be published) GDJ paper.
+&lt;/p&gt;
+&lt;p&gt;
+OpenAIRE and PREPARDE have a lot of shared interests, so it was very nice to be able to connect with them at this event, and even start talking about what should come next by way of data publication and article-data linking in the future. The calls for Horizon 2020 will be out soon...
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;
+*I'm a bit wary of this, as it's almost putting data as second class citizens in comparison to articles, but I do appreciate they have to limit the scope of the project somehow in order to get stuff done.
+&lt;/p&gt;
+</description>
+    </item><item>
+      <title>Supporting Infrastructure Models for Research Data Management (SIM4RDM) Project workshop</title>
+      <dc:creator>Fiona Murphy</dc:creator>
+      <pubDate>Mon, 04 Feb 2013 09:09:40 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/SIM4RDM</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/SIM4RDM</guid>
+      <description>&lt;p&gt;
+Not strictly a PREPARDE event (although our funder, JISC is one of the partners) but extremely relevant to the bigger picture, I attended the Supporting Infrastructure Models for Research Data Management (&lt;a class="ext-link" href="http://www.sim4rdm.eu/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;SIM4RDM&lt;/a&gt;) Project workshop on the 31st Jan in Dublin. SIM4RDM is putting a framework of evaluation and policy recommendations together to inform key EU research and innovation funding programme &lt;a class="ext-link" href="http://ec.europa.eu/research/horizon2020/index_en.cfm"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Horizon 2020’s&lt;/a&gt; decision-making processes.
+&lt;/p&gt;
+&lt;p&gt;
+Crucially, SIM4RDM is aiming for national and global coverage as well as EU-level initiatives, and research data funding, management, curation, re-use, accreditation (the usual suspects) are all key parts of the picture. There was an interesting EC presentation by Carlos Morais Pires on how it relates to the overall plans for a research data management framework, updates on the project’s progress and methodology to date from key members, as well as a sneak preview on the &lt;a class="ext-link" href="http://rd-alliance.org/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Research Data Alliance&lt;/a&gt; by RDA Council Member (and leader of the group that produced &lt;a class="ext-link" href="http://cordis.europa.eu/fp7/ict/e-infrastructure/docs/hlg-sdi-report.pdf"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Riding the Wave&lt;/a&gt;) John Wood. All in all, a tiring but worthwhile day.
+&lt;/p&gt;
+&lt;p&gt;
+A couple of take-homes:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Collaborations. The SIM4RDM Landscape Report, available on the website, indicates that ‘mixed’ groups such as we have on the JISC funded PREPARDE project - with publishers, researchers, data centre managers, etc all working towards a common goal - are very much the exception rather than the norm. That’s something that would ideally change.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Related point) Engagement. OK, so we can fill a room with engaged enthusiasts, but there is still a sense of it being largely the same crowd in different rooms. We need to find some potential new converts to preach to.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+The workflows and missions espoused by PREPARDE need to become the norm, and I’d very much like to think we can put something in place to support that.
+&lt;/p&gt;
+</description>
+    </item><item>
+      <title>PREPARDE at the International Digital Curation Conference 2013 (IDCC13)</title>
+      <dc:creator>Sarah Callaghan</dc:creator>
+      <pubDate>Tue, 29 Jan 2013 12:07:28 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/IDCC_Report</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/IDCC_Report</guid>
+      <description>&lt;p&gt;
+IDCC13 was an important conference for the PREPARDE team, not just because we had an oral presentation in the Data Publication session, but also because it was the venue for the first of our three project workshops.
+&lt;/p&gt;
+&lt;p&gt;
+As always, the conference was very well attended, and digital technology and social media were used to enable those who weren't there physically to at least follow along. Videos of the keynote speeches, blog posts and storifys of tweets can all be found on the conference &lt;a class="ext-link" href="http://www.dcc.ac.uk/events/idcc13"&gt;&lt;span class="icon"&gt; &lt;/span&gt;homepage&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+The PREPARDE presentation was titled "Processes and Procedures for Data Publication: a case study in the Geosciences" and raised a lot of interest (&lt;a class="ext-link" href="http://www.dcc.ac.uk/webfm_send/1133"&gt;&lt;span class="icon"&gt; &lt;/span&gt;slides can be downloaded here&lt;/a&gt;) - in fact at that stage of the data publication session I noticed that it was standing room only at the back! Angus Whyte (a PREPARDE team member) has written an excellent overview and summary of the whole session that can be found &lt;a class="ext-link" href="http://www.dcc.ac.uk/blog/idcc13-data-publication-generating-trust-around-data-sharing"&gt;&lt;span class="icon"&gt; &lt;/span&gt;here&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+Thursday 17th January was the PREPARDE workshop, titled: "Data publishing, peer review and repository accreditation: everyone a winner?" (which I've been reliably informed was the first IDCC13 workshop to be sold out). The main focus for this workshop was on the tricky issue of repository accreditation, which was addressed by presenters from a wide variety of viewpoints, including, but not limited to publishers, professional societies and data repository managers. The slides are available &lt;a class="ext-link" href="http://www.dcc.ac.uk/events/idcc13/workshops"&gt;&lt;span class="icon"&gt; &lt;/span&gt;here&lt;/a&gt; (scroll down the page to find the workshop title and agenda) and I created a storify of the tweets sent during the workshop &lt;a class="ext-link" href="http://storify.com/sorcha_ni/preparde-workshop-at-idcc13"&gt;&lt;span class="icon"&gt; &lt;/span&gt;here&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+Angus and his DCC colleague Alex Ball took loads of notes during the workshop, and a full workshop report will be coming out soon. I'd like to take the opportunity again to thank all of our excellent speakers, and the workshop attendees for their lively input into our discussions during the day!
+&lt;/p&gt;
+&lt;p&gt;
+&lt;/p&gt;
+</description>
+    </item><item>
+      <title>Report from the American Meteorological Society Annual Meeting </title>
+      <dc:creator>Fiona Murphy</dc:creator>
+      <pubDate>Tue, 22 Jan 2013 10:35:32 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/AMS-report</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/AMS-report</guid>
+      <description>&lt;p&gt;
+The American Meteorological Society held its &lt;a class="ext-link" href="http://annual.ametsoc.org/2013/?CFID=861015&amp;amp;CFTOKEN=26507193"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Annual Meeting&lt;/a&gt; in Austin Texas earlier this month, which gave Matt Mayernik and me the opportunity to hold forth on various aspects of data citation, peer review, etc.
+&lt;/p&gt;
+&lt;p&gt;
+Matt’s poster was based on current work with NCAR colleagues on ‘What Does Peer Review of Data Sets Mean and What Roles do Data Archiving and Quality Control Have in the Process?’ (attached). The poster compares/contrasts conventional peer review processes with data quality control processes in place at current NCAR data archives. It attracted interest from a number of delegates as well as the Editor of BAMS.
+&lt;/p&gt;
+&lt;p&gt;
+I presented on Geoscience Data Journal and PREPARDE, and Matt on the NCAR Data Citation Initiative to the &lt;a class="ext-link" href="http://aslionline.org/wp/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;Atmospheric Science Librarians International&lt;/a&gt; (ASLI) strand of the meeting, which had several sessions around ‘Expanding Data’ and ‘Expanding Publications’. Several other speakers, including John Sandy of Alabama and Gloria Hicks of NSIDC, are working in compatible areas (see full program details &lt;a class="ext-link" href="http://aslionline.org/wp/2013-conference-program/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;here&lt;/a&gt;)  and there were some lively discussions, particularly in the breaks.
+&lt;/p&gt;
+&lt;p&gt;
+Other than that, there were some opportunities to further catch up on &lt;a class="ext-link" href="http://earthcube.ning.com/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;EarthCube&lt;/a&gt;, the NSF-driven cyberinfrastructure project for the geosciences, which is of immense interest and potential importance for underpinning the future of data-driven research, particularly from North America. The other key development, from my point of view was the Town Hall meeting organised by the &lt;a class="ext-link" href="http://www2.ametsoc.org/stac/index.cfm/boards/board-on-data-stewardship/terms-of-reference/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;AMS Board on Data Stewardship&lt;/a&gt; which is working on a wide-ranging position paper. Not only does this encompass data citation, encouraging good data management by producers, it is also looking at the status the ‘data scientist’ has within research institutions, and the influence of funders, policy makers and industry in all aspects of research data origination, use and management. It is simply the most ambitious mission I have yet to see from a learned society. I very much welcome this development and hope we have the opportunity to support its continuing progress.
+&lt;/p&gt;
+</description>
+    </item><item>
+      <title>PREPARDE at the AGU Fall meeting</title>
+      <dc:creator>Sarah Callaghan</dc:creator>
+      <pubDate>Tue, 18 Dec 2012 16:44:39 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/PREPARDEatAGU</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/PREPARDEatAGU</guid>
+      <description>&lt;p&gt;
+The PREPARDE project hosted a town hall meeting at the AGU Fall meeting last week, titled: "TH32F. Publishing Research Data: Peer Review, Data Center Accreditation, and Linking", which was sponsored by ESSI.
+&lt;/p&gt;
+&lt;p&gt;
+The description of the meeting was:
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Data publication is an increasingly important mechanism for incentivising the sharing of research data. The PREPARDE (Peer Review for Publication &amp;amp; Accreditation of Research Data in the Earth sciences) is working with academic institutions, learned societies, data centers and commercial publishers to investigate barriers and drivers to data publishing and sharing, peer review, and re-use of geoscientific datasets. This town hall meeting will provide an overview of the project?s progress to date and invite input from anyone interested in developing long-term sustainable policies, processes, incentives and business models for managing and publishing research data. Key project partners, the publishers and Board Members of the Geoscience Data Journal will also be available for informal discussions.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+We had an excellent attendance, with an audience of over 60 people, varying from librarians and data managers to scientific researchers and data producers. We had some very interesting discussions after the project team had done their brief presentation (see slides attached to this post) - a lot of which spilled out into the corridor after the allotted hour for the Town Hall meeting had finished!
+&lt;/p&gt;
+&lt;p&gt;
+I got the distinct impression that data publication is of interest to a lot of people. There was some balking at the notion of using data papers as a method for giving credit to the data producers and managers for their hard work (and to a certain extent I agree, but until we can convince the powers that be that datasets are valuable entities &lt;em&gt;in their own right&lt;/em&gt;, we're a bit stuck and have to piggyback on existing article publication methods).
+&lt;/p&gt;
+&lt;p&gt;
+Some areas (like the &lt;a class="ext-link" href="http://nsidc.org/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;National Snow and Ice Data Center&lt;/a&gt; ) already have their own processes in place to review and publish information about the data held in their archives (an example is
+&lt;a class="ext-link" href="http://nsidc.org/data/docs/daac/mod10a1_modis_terra_snow_daily_global_500m_grid.gd.html"&gt;&lt;span class="icon"&gt; &lt;/span&gt;here&lt;/a&gt;), which is excellent - and we in no way want to replace these! Instead we want to offer publication options for those subject areas which aren't as well served, or for those data stored in institutional repositories, where data review might not be possible for the repository managers due to the lack of domain knowledge.
+&lt;/p&gt;
+&lt;p&gt;
+We're still at the early stages of writing our guidelines, but it is gratifying to know that what we're doing is of interest to so many people, and to have so many willing volunteers already to act as reviewers!
+&lt;/p&gt;
+&lt;p&gt;
+(p.s. I've also attached the slides I used for my presentation in the session IN22A. Data Stewardship, Citation With Confidence, and Preparing Next Generation of Data Managers, as they too are related to the project)
+&lt;/p&gt;
+</description>
+    </item><item>
+      <title>Report from the CODATA General Assembly, Taipei, 27-31 October 2012</title>
+      <dc:creator>Fiona Murphy</dc:creator>
+      <pubDate>Tue, 13 Nov 2012 14:00:45 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/CODATA_Taipei_report</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/CODATA_Taipei_report</guid>
+      <description>&lt;p&gt;
+This is my first ever blogpost - so it's a momentous moment, for me at least.
+&lt;/p&gt;
+&lt;p&gt;
+I recently had the the opportunity to attend the &lt;a class="ext-link" href="http://www.codata.org/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;CODATA&lt;/a&gt; meeting in Taipei, where I presented on PREPARDE, the Geoscience Data Journal and more generally on some of the projects and initiatives which the scholarly publishing industry has been taking part in (see slides attached).
+&lt;/p&gt;
+&lt;p&gt;
+I was kindly invited to work with the &lt;a class="ext-link" href="http://www.codata.org/taskgroups/TGdatacitation/index.html"&gt;&lt;span class="icon"&gt; &lt;/span&gt;CODATA-ICSTI Task Group on Data Citation Standards and Practices&lt;/a&gt; for two days as a pre-meeting activity. (PREPARDE Project manager, Sarah Callaghan, is one of the Co-Chairs.) The Task Group is currently compiling a report being which focuses on the international good practices in data citation to be published next year. Incidentally, they're on the look-out for reviewers to help facilitate this process, so do get in touch with one of the Co-Chairs if you want to volunteer.
+&lt;/p&gt;
+&lt;p&gt;
+I also chaired a very interesting session on  'Best Practices and Future Directions in Data Sharing'. We had a preview of the new Creative Commons data licence, had an account of the 2011'Canadian Research Data Summit and heard a fascinating account of a discipline wholly new to me - Computer Supported Cooperative Work - which amongst other things studies cyber infrastructure development as a way of understanding dynamic, emergent human collaborations.
+&lt;/p&gt;
+&lt;p&gt;
+As usual at these sorts of events, I emerged both far better informed than before, as well as humbled by the expertise and achievements I witnessed around me. Personal highlights were an impromptu meeting with Mark Hahnel of Figshare, and the WDS members' Forum, where a number of members, including Kerstin Lehnert of IEDA, gave flash presentations of their work.
+&lt;/p&gt;
+&lt;p&gt;
+The general feeling seems to be that progress - towards the better management, curation, re-integration, linking, etc of research data - is being made, but there is still a long way to go. So any feedback you have on what's going well, or where your pain points are would be tremendously welcome. It's all about communities, collaboration and communication, after all.....
+&lt;/p&gt;
+</description>
+    </item><item>
+      <title>A list of Data Journals (in no particular order)</title>
+      <dc:creator>Sarah Callaghan</dc:creator>
+      <pubDate>Fri, 19 Oct 2012 09:28:29 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/DataJournalsList</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/DataJournalsList</guid>
+      <description>&lt;p&gt;
+We don't want to reinvent the wheel when it comes to writing guidelines for data journals, hence it makes sense to see what's out there in terms of pre-exisiting data journals, and what their guidelines are.
+&lt;/p&gt;
+&lt;p&gt;
+Below is a (non-exhaustive, in no particular order) list of the data journals we know of, either through personal experience or through internet searches.
+&lt;/p&gt;
+&lt;p&gt;
+(Thanks to Tom Pollard for the details about Ubiquity Press and Iryna Kuchma  and Simon Hodson for pointing out other journals I missed.)
+&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;
+&lt;strong&gt;Name of Data Journal&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Geoscience Data Journal &lt;a class="ext-link" href="http://www.geosciencedata.com"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.geosciencedata.com&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Aims and Scope&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)2049-6060/homepage/ProductInformation.html"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)2049-6060/homepage/ProductInformation.html&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Geoscience Data Journal provides an Open Access platform where scientific data can be formally published, in a way that includes scientific peer-review. Thus the dataset creator attains full credit for their efforts, while also improving the scientific record, providing version control for the community and allowing major datasets to be fully described, cited and discovered.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+An online-only journal, GDJ publishes short data papers cross-linked to – and citing – datasets that have been deposited in approved data centres and awarded DOIs. The journal will also accept articles on data services, and articles which support and inform data publishing best practices.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Repository Criteria&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)2049-6060/homepage/data_center_faqs.htm"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)2049-6060/homepage/data_center_faqs.htm&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Other notes&lt;/strong&gt;
+Open access for papers, doesn’t mandate open access for datasets.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Name of Data Journal&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Earth System Science Data
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://earth-system-science-data.net/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://earth-system-science-data.net/&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Aims and Scope&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Earth System Science Data (ESSD) is an international, interdisciplinary journal for the publication of articles on original research data(sets), furthering the reuse of high (reference) quality data of benefit to Earth System Sciences. The editors encourage submissions on original data or data collections which are of sufficient quality and potential impact to contribute to these aims.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Repository Criteria&lt;/strong&gt;
+&lt;a class="ext-link" href="http://www.earth-system-science-data.net/general_information/repository_criteria.html"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.earth-system-science-data.net/general_information/repository_criteria.html&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Other notes&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Datasets need to be open access and have a persistent ID (e.g. DOI)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Name of Data Journal&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Ecological Archives - Data Papers
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://esapubs.org/archive/archive_D.htm"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://esapubs.org/archive/archive_D.htm&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Aims and Scope&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Ecological Archives publishes materials that are supplemental to articles that appear in the ESA journals (Ecology, Ecological Applications, Ecological Monographs, Ecosphere, and Bulletin of the Ecological Society of America), as well as peer-reviewed data papers with abstracts published in the printed journals. Ecological Archives is published in digital, Internet-accessible form.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Repository Criteria&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+In addition, all authors are encouraged to register their data at ESA's official Data Registry at data.esa.org
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Other notes&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Page about what ESA considers a data paper and guidelines for reviewers at &lt;a class="ext-link" href="http://esapubs.org/archive/instruct_d.htm"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://esapubs.org/archive/instruct_d.htm&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Doesn't seem to give any information about what constitutes an appropriate data repository.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Name of Data Journal&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Hindawi publishing:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://www.datasets.com/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.datasets.com/&lt;/a&gt;
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Dataset Papers in Agriculture
+&lt;/li&gt;&lt;li&gt;Dataset Papers in Biology
+&lt;/li&gt;&lt;li&gt;Dataset Papers in Chemistry
+&lt;/li&gt;&lt;li&gt;Dataset Papers in Ecology
+&lt;/li&gt;&lt;li&gt;Dataset Papers in Geosciences
+&lt;/li&gt;&lt;li&gt;Dataset Papers in Materials Science
+&lt;/li&gt;&lt;li&gt;Dataset Papers in Medicine
+&lt;/li&gt;&lt;li&gt;Dataset Papers in Nanotechnology
+&lt;/li&gt;&lt;li&gt;Dataset Papers in Neuroscience
+&lt;/li&gt;&lt;li&gt;Dataset Papers in Pharmacology
+&lt;/li&gt;&lt;li&gt;Dataset Papers in Physics
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+&lt;strong&gt;Aims and Scope&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+The following seems to cover all the dataset journals:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Dataset Papers in Geosciences is a peer-reviewed, open access journal devoted to the publication of dataset papers in all areas of geosciences.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Dataset Papers in Geosciences is part of a series of journals devoted to the dissemination of dataset papers covering a wide range of academic disciplines. In addition to publishing dataset papers, the journal hosts the underlying data that is associated with these papers and makes it accessible to all researchers worldwide.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Repository Criteria&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+None – the journal hosts the underlying dataset
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Name of Data Journal&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Journal of Chemical and Engineering Data
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://pubs.acs.org/journal/jceaax"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://pubs.acs.org/journal/jceaax&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Aims and Scope&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+The Journal of Chemical &amp;amp; Engineering Data is a monthly journal devoted to the publication of experimental data and the evaluation and prediction of property values. It is the only American Chemical Society journal primarily concerned with articles containing experimental data on the physical, thermodynamic, and transport properties of welldefined materials including complex mixtures of known compositions and systems of environmental and biochemical interest.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Repository Criteria&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://pubs.acs.org/paragonplus/submission/jceaax/jceaax_scope.pdf"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://pubs.acs.org/paragonplus/submission/jceaax/jceaax_scope.pdf&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+The Journal operates in
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+cooperation with the Thermodynamics Research Center (TRC) of the National Institute of  Standards and Technology (NIST) to process manuscripts.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Name of Data Journal&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a class="missing wiki"&gt;GigaScience?&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://www.gigasciencejournal.com/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.gigasciencejournal.com/&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Aims and Scope&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a class="missing wiki"&gt;GigaScience?&lt;/a&gt; aims to revolutionize data dissemination, organization, understanding, and use. An online open-access open-data journal, we publish 'big-data' studies from the entire spectrum of life and biomedical sciences. To achieve our goals, the journal has a novel publication format: one that links standard manuscript publication with an extensive database that hosts all associated data and provides data analysis tools and cloud-computing resources.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Repository Criteria&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://www.gigasciencejournal.com/about"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.gigasciencejournal.com/about&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Data and materials release
+Submission of a manuscript to &lt;a class="missing wiki"&gt;GigaScience?&lt;/a&gt; implies that readily reproducible materials described in the manuscript, including all relevant raw data, will be freely available to any scientist wishing to use them for non-commercial purposes. Nucleic acid sequences, protein sequences, and atomic coordinates should be deposited in an appropriate database in time for the accession number to be included in the published article. In computational studies where the sequence information is unacceptable for inclusion in databases because of lack of experimental validation, the sequences must be published as an additional file with the article.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Provides suggested repositories and citation methods for:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;&lt;li&gt;Nucleotide sequences
+&lt;/li&gt;&lt;li&gt;Protein sequences
+&lt;/li&gt;&lt;li&gt;Mass spectrometry
+&lt;/li&gt;&lt;li&gt;Structures
+&lt;/li&gt;&lt;li&gt;Chemical structures and assays
+&lt;/li&gt;&lt;li&gt;Functional genomics data (such as microarray, RNA-seq or ChIP-seq data)
+&lt;/li&gt;&lt;li&gt;Computational modeling
+&lt;/li&gt;&lt;li&gt;Plasmids
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+&lt;strong&gt;Other notes&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Open access, open data journal.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+No APCs at this time
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Name of Data Journal&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Journal of Physical and Chemical Research Data
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://jpcrd.aip.org/resource/1/jpcrbu"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://jpcrd.aip.org/resource/1/jpcrbu&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Aims and Scope&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://jpcrd.aip.org/about/about_the_journal"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://jpcrd.aip.org/about/about_the_journal&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Journal of Physical and Chemical Reference Data is published by the American Institute of Physics (AIP) for the National Institute of Standards and Technology (NIST); content is published online daily, collected into quarterly online and printed issues (4 issues per year). The objective of the Journal is to provide critically evaluated physical and chemical property data, fully documented as to the original sources and the criteria used for evaluation, preferably with uncertainty analysis. Critical reviews of measurement techniques may also be included if they shed light on the accuracy of available data in a technical area. Papers reporting correlations of data or estimation methods are acceptable only if they are based on critical data evaluation and if they produce “reference data”—the best available values for the relevant properties. The journal is not intended as a publication outlet for original experimental measurements such as those normally reported in the primary research literature, nor for review articles of a descriptive or primarily theoretical nature.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Repository Criteria&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Can’t find any
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Name of Data Journal&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Biodiversity Data Journal
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://www.pensoft.net/journals/bdj/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.pensoft.net/journals/bdj/&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Aims and Scope&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://www.pensoft.net/journals/bdj/about/Focus%20and%20Scope#Focus"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.pensoft.net/journals/bdj/about/Focus%20and%20Scope#Focus&lt;/a&gt; and Scope
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Biodiversity Data Journal (BDJ) is a community peer-reviewed, open-access, comprehensive online platform, designed to accelerate publishing, dissemination and sharing of biodiversity-related data of any kind.  All structural elements of the articles – text, morphological descriptions, occurrences, data tables, etc. – will be treated and stored as DATA, in accordance with the Data Publishing Policies and Guidelines of Pensoft Publishers.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Repository Criteria&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://www.pensoft.net/J_FILES/Pensoft_Data_Publishing_Policies_and_Guidelines.pdf"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.pensoft.net/J_FILES/Pensoft_Data_Publishing_Policies_and_Guidelines.pdf&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Best practice recommendations:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;&lt;li&gt;Deposition of data in an established international repository is always to be preferred to supplementary files published on a journal‘s website.8
+&lt;/li&gt;&lt;li&gt;Occurrence-by-species records should be deposited through GBIF IPT.
+&lt;/li&gt;&lt;li&gt;Genomic data should be deposited at &lt;a class="missing wiki"&gt;GenBank?&lt;/a&gt;, either directly or via an affiliated repository, e.g. Barcode of Life Data Systems (BOLD).
+&lt;/li&gt;&lt;li&gt;Phylogenetic data should be deposited at TreeBASE, either directly or through the Dryad Data Repository.
+&lt;/li&gt;&lt;li&gt;All other biological data, including heterogeneous datasets, should be deposited in the Dryad Data Repository.
+&lt;/li&gt;&lt;li&gt;Repositories not mentioned above, including institutional repositories, may be used at the discretion of the author.
+&lt;/li&gt;&lt;li&gt;Digital Object Identifiers (DOIs) or other persistent links (URLs) to the data deposited in repositories, as well as the name of the repository, should always be published in the paper describing that data resource.
+&lt;/li&gt;&lt;/ul&gt;&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Other Repositories mentioned
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;&lt;li&gt;PANGAEA.
+&lt;/li&gt;&lt;li&gt;The Knowledge Network for Biocomplexity (KNB)
+&lt;/li&gt;&lt;li&gt;The National Biological Information Infrastructure
+&lt;/li&gt;&lt;li&gt;&lt;a class="missing wiki"&gt;DataBasin?&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;DataONE
+&lt;/li&gt;&lt;li&gt;The &lt;a class="missing wiki"&gt;PaleoBiology?&lt;/a&gt; Database
+&lt;/li&gt;&lt;li&gt;The Research Collaboratory for Structural Bioinformatics (RCSB)‘s Protein
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+Data Bank (PDB)
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;The Universal Protein Resource (&lt;a class="missing wiki"&gt;UniProt?&lt;/a&gt;)
+&lt;/li&gt;&lt;li&gt;INSPIRE.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+&lt;strong&gt;Other notes&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Data publishing policies and guidelines give a good overview of what’s needed in general for data publishing.
+&lt;a class="ext-link" href="http://www.pensoft.net/J_FILES/Pensoft_Data_Publishing_Policies_and_Guidelines.pdf"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.pensoft.net/J_FILES/Pensoft_Data_Publishing_Policies_and_Guidelines.pdf&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Name of Data Journal&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p&gt;
+F1000 Research
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://f1000research.com"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://f1000research.com&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Aims and Scope&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+from &lt;a class="ext-link" href="http://f1000research.com/about/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://f1000research.com/about/&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Data Publication: F1000 Research promotes publication, refereeing and sharing of full datasets to encourage collaboration and accelerate scientific discovery. Data articles are citable and authors are credited when data are reused.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+From &lt;a class="ext-link" href="http://f1000research.com/wordpress/wp-content/uploads/2012/08/F1000R-Online-Information-Pack.pdf"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://f1000research.com/wordpress/wp-content/uploads/2012/08/F1000R-Online-Information-Pack.pdf&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Data Articles: A dataset (or set of datasets) together with the associated
+methods/protocol used to generate the data. A Data Article may be published as a stand-alone article, or in conjunction with a Research Article
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Repository Criteria&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Can’t find anything, but are partnering with Dryad, biosharing and figshare.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+APCs include up to 1 GB of data. For 1-5 GB of data with an article, an additional US $200 to cover the storage costs is charged. Beyond 5 GB of data, authors are asked to contact F1000R to discuss the costs.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Other notes&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+The information pack at &lt;a class="ext-link" href="http://f1000research.com/wordpress/wp-content/uploads/2012/08/F1000R-Online-Information-Pack.pdf"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://f1000research.com/wordpress/wp-content/uploads/2012/08/F1000R-Online-Information-Pack.pdf&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+gives information about the publication model being used.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Name of Data Journal (website)&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+International Journal of Robotics Research
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://ijr.sagepub.com/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://ijr.sagepub.com/&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Aims and Scope&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+from &lt;a class="ext-link" href="http://www.sagepub.com/journalsProdDesc.nav?prodId=Journal201324#tabview=aimsAndScope"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.sagepub.com/journalsProdDesc.nav?prodId=Journal201324#tabview=aimsAndScope&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Repository Criteria&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+From &lt;a class="ext-link" href="http://www.uk.sagepub.com/repository/binaries/pdf/Data_Papers_Submissions.pdf"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.uk.sagepub.com/repository/binaries/pdf/Data_Papers_Submissions.pdf&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Peer Review and hosting Datasets from Data Papers
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+It is the intent of IJRR to solicit archival quality data, which means that all aspects of the Data Paper and associated dataset will be peer reviewed. Our aim is to provide an archival service to authors, however this is an ongoing process, and while we aim  ultimately to host all datasets and their supporting websites, it is anticipated that initially many data papers will refer to websites hosted and author managed.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Other notes&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Guidelines for submissions of Data papers &lt;a class="ext-link" href="http://www.uk.sagepub.com/repository/binaries/pdf/Data_Papers_Submissions.pdf"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.uk.sagepub.com/repository/binaries/pdf/Data_Papers_Submissions.pdf&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Name of Data Journal&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+CODATA's Data Science Journal
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://www.codata.org/dsj/index.html"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.codata.org/dsj/index.html&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Aims and Scope&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+The Data Science Journal is a Journal of the Committee on Data for Science and Technology (CODATA) of the International Council for Science (ICSU)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+The Data Science Journal is a peer-reviewed, open access, electronic journal publishing papers on the management of data and databases in Science and Technology. The scope of the Journal includes descriptions of data systems, their publication on the internet, applications and legal issues. All of the Sciences are covered, including the Physical Sciences, Engineering, the Geosciences and the Biosciences, along with Agricultural and the Medical Sciences.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+The Journal publishes data or data compilations, if the quality of data is excellent or if significant efforts are required in compilation.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Scope of the journal is a long list at &lt;a class="ext-link" href="http://www.codata.org/dsj/scope.html"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.codata.org/dsj/scope.html&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Repository Criteria&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+It looks like data is stored as part of the supplemental information &lt;a class="ext-link" href="http://www.codata.org/dsj/submissions.html"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.codata.org/dsj/submissions.html&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Publisher&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Ubiquity Press: &lt;a class="ext-link" href="http://www.ubiquitypress.com/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.ubiquitypress.com/&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Name of Data Journals&lt;/strong&gt;
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Journal of Open Archaeology Data: &lt;a class="ext-link" href="http://openarchaeologydata.metajnl.com/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://openarchaeologydata.metajnl.com/&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Journal of Open Public Health Data: &lt;a class="ext-link" href="http://openpublichealthdata.metajnl.com/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://openpublichealthdata.metajnl.com/&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Journal of Open Psychology Data: &lt;a class="ext-link" href="http://openpsychologydata.metajnl.com/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://openpsychologydata.metajnl.com/&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Journal of Open Research Software: &lt;a class="ext-link" href="http://openresearchsoftware.metajnl.com/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://openresearchsoftware.metajnl.com/&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+&lt;strong&gt;Aims and Scope&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Ubiquity Press metajournals provide a fully open access way to discover research resources that are spread across multiple locations and usually hard to find.
+Metapapers reward authors for openly archiving their research datasets, software and reports, through citation and impact tracking. The publications encourage new and more efficient research, new collaborations, and reuse by the public (e.g. for teaching and journalism).
+UP metapapers come in three flavours:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;&lt;li&gt;Data papers highlight openly archived data with high reuse potential, and provide recognition for the producers of the data.
+&lt;/li&gt;&lt;li&gt;Software papers help you to locate openly archived, reusable code relevant to your research, and provide a mechanism for citing its use.
+&lt;/li&gt;&lt;li&gt;Research reports provide concise summaries of key developments in a field that the community do not otherwise have access to.
+&lt;/li&gt;&lt;/ul&gt;&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+All papers are peer reviewed to ensure that the associated resources have been archived in suitable repositories, according to appropriate open standards.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Repository Criteria&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Ubiquity Press Metajournals provide a list of repositories recommended for the archiving of datasets. For example:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a class="ext-link" href="http://openarchaeologydata.metajnl.com/repositories/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://openarchaeologydata.metajnl.com/repositories/&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://openpublichealthdata.metajnl.com/repositories/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://openpublichealthdata.metajnl.com/repositories/&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://openpsychologydata.metajnl.com/repositories/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://openpsychologydata.metajnl.com/repositories/&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;&lt;a class="ext-link" href="http://openresearchsoftware.metajnl.com/repositories/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://openresearchsoftware.metajnl.com/repositories/&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+&lt;strong&gt;Other notes&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+All papers and data are fully open access
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Name of Data Journal&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+BMC Research Notes
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://www.biomedcentral.com/bmcresnotes/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.biomedcentral.com/bmcresnotes/&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Aims and Scope&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+BMC Research Notes is an open access journal publishing scientifically sound research across all fields of biology and medicine. The journal provides a home for short publications, case series, and incremental updates to previous work with the intention of reducing the loss suffered by the research community when such results remain unpublished.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+BMC Research Notes also encourages the publication of software tools, databases and data sets and a key objective of the journal is to ensure that associated data files will, wherever possible, be published in standard, reusable formats.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Repository Criteria&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Under "Publishing data" in
+&lt;a class="ext-link" href="http://www.biomedcentral.com/bmcresnotes/authors/instructions/datanote"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.biomedcentral.com/bmcresnotes/authors/instructions/datanote&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Other Notes&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+"Authors linking datasets to their publications should include an Availability of supporting data section in their manuscript and cite the dataset in their reference list."
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;p&gt;
+And finally, a model journal:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Name of Journal&lt;/strong&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Geoscientific Model Development (GMD)
+&lt;/p&gt;
+&lt;p&gt;
+&lt;a class="ext-link" href="http://www.geoscientific-model-development.net/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.geoscientific-model-development.net/&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Aims and Scope&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Geoscientific Model Development (GMD) is an international scientific journal dedicated to the publication and public discussion of the description, development and evaluation of numerical models of the Earth System and its components. Manuscript types considered for peer-reviewed publication are:
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Geoscientific model descriptions, from box models to GCMs;
+Development and Technical papers, describing development such as new parameterisations or technical aspects of running models such as the reproducibility of results;
+Papers describing new standard experiments for assessing model performance, or novel ways of comparing model results with observational data;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+Model intercomparison descriptions, including experimental details and project protocols.
+&lt;/p&gt;
+&lt;p&gt;
+&lt;strong&gt;Repository Criteria&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+None specified
+&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;
+&lt;strong&gt;Other notes&lt;/strong&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;
+Not a Data Journal as such, but serves a similar function for the modelling community.
+&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item><item>
+      <title>Running a project, or tips, tricks and tools for the project manager</title>
+      <dc:creator>Sarah Callaghan</dc:creator>
+      <pubDate>Thu, 27 Sep 2012 13:00:07 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/ToolsForProjects</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/ToolsForProjects</guid>
+      <description>&lt;p&gt;
+As the project manager, I've spent a lot of my time recently sorting out things which will (hopefully) help the project to run smoothly. So, besides the usual project and workpackage plan, I've got this site and blog set up and have introduced the team to a few other things I've found useful.
+&lt;/p&gt;
+&lt;ul&gt;&lt;li&gt;Every project needs good communications, and having a project-specific mailing list is definitely the way to go, as it's one convenient place to send emails to all the partners, without having to make sure everyone's name is in the "To:" field. I use JISCmail (&lt;a class="ext-link" href="http://www.jiscmail.ac.uk/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.jiscmail.ac.uk/&lt;/a&gt;) which is free for members of the academic and research communities, and has never given me any problems.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Trying to find a good date and time for meetings/teleconferences is always tricky. I use Doodle (&lt;a class="ext-link" href="http://doodle.com/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://doodle.com/&lt;/a&gt;) to set up sets of dates that people can then express a preference on. Yes, it's a commercial service, but it's free for basic use. I also like their yes/no/maybe options for responses to the poll.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;At the moment, we're mainly passing documents around via email, which isn't ideal because of lack of version control etc. (though with only a few people working on the documents at any time, it's manageable). Later on, I'm expecting to make a bit more use of Google Docs (now Google Drive &lt;a class="ext-link" href="https://drive.google.com"&gt;&lt;span class="icon"&gt; &lt;/span&gt;https://drive.google.com&lt;/a&gt;) to share and edit documents on-line.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;We've got partners spread out across the UK and also in the USA as well, so a key part of our interactions are through the monthly teleconference. We've used skype (and use it for the weekly project management chat) though the sound quality can be variable, so we've also used a commercial teleconference system. Jury's still out for this particular tool!
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;For keeping track of my "things to do", I use a combination of pen and paper (no need to worry about batteries) and flags and appointments in my Outlook. I have had Remember the Milk (&lt;a class="ext-link" href="http://www.rememberthemilk.com/"&gt;&lt;span class="icon"&gt; &lt;/span&gt;http://www.rememberthemilk.com/&lt;/a&gt;) recommended as a good tool for managing the to-do list.
+&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;Finally, this site is itself is a wiki, and all the project partners are encouraged to create and edit pages as needed. We still need to sort out a proper, secure, project document repository for all our working documents, but in the meantime, we'll keep building this site as a first stop for information about the project.
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;
+So, that's my tools and tips for running a project. If anyone knows of any others, I'd love to hear about them!
+&lt;/p&gt;
+</description>
+      <category>ProjectManagement</category>
+    </item><item>
+      <title>Hello and welcome to the PREPARDE blog!</title>
+      <dc:creator>Sarah Callaghan</dc:creator>
+      <pubDate>Wed, 15 Aug 2012 09:22:13 GMT</pubDate>
+      <link>http://proj.badc.rl.ac.uk/preparde/blog/Hello</link>
+      <guid isPermaLink="true">http://proj.badc.rl.ac.uk/preparde/blog/Hello</guid>
+      <description>&lt;p&gt;
+This is just a quick test post to say hello and welcome to the PREPARDE project blog.
+&lt;/p&gt;
+&lt;p&gt;
+The project kicked off at the beginning of July, and we're currently getting started on a lot of interesting work and discussions around our main project themes of scientific peer-review of data, cross-linking between datasets and papers, accreditation of data repositories and workflows for data publication.
+&lt;/p&gt;
+&lt;p&gt;
+In other words, there's not a lot here yet, but there will be!
+&lt;/p&gt;
+</description>
+    </item>
+   </channel>
+</rss>

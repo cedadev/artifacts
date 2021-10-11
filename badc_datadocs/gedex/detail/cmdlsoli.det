@@ -1,0 +1,384 @@
+Surface Irradiance at NOAA/CMDL Sites
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Total solar irradiance is measured on a
+horizontal surface near (within 15m of) the earth's surface.
+
+1.2  Unit of Measurement.  Watts per meter squared (W/m**2), hourly
+averages.
+
+1.3  Data Source.  Continuous vertically facing passive thermophile
+radiometer.  Data were obtained at four sites specifically chosen to be
+globally distributed and remote so that anthropogenic influences on the
+measurements would be minimized.
+
+1.4  Data Set Identification.  This data set is compiled by the
+NOAA/Climate Monitoring and Diagnostics Laboratory in Boulder, Colorado.
+The measurements were originally intended to be in support of trace
+constituent measurements also made at the sites.  The data provide
+information on one component of the surface radiation budget, the downward
+solar, while the regional representativeness of the data varies from one
+site to the next.  The data have been edited in an attempt to remove
+completely erroneous values, such as obstacle shadowing, but have not been
+edited to remove effects of any locally generated clouds or pollution.
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  71.323 deg N, 156.607 deg W  Barrow, Alaska
+                        19.533 deg N, 155.578 deg W  Mauna Loa, Hawaii
+                        14.353 deg S, 170,563 deg W  American Samoa
+                        90.000 deg S, 0.000   deg W  South Pole
+
+2.2  Spatial Resolution.  Point data
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  The data set began on January 1, 1976 and
+presently extends to December 31, 1989.  There are some missing times
+ranging from 1 to 30 days.  There was also no data available from the
+American Samoa station in 1982.
+
+3.2  Temporal Resolution.  Hourly
+
+
+4.  INSTRUMENT DESCRIPTION
+
+4.1  Mission Objectives.  The objective is the long-term monitoring of the
+incoming solar component of surface heat budget in support of climate
+studies and providing satellite ground truth data.
+
+4.2  Key Satellite Flight Parameters.  N/A
+
+4.3  Principles of Operation.  Radiant heating of blackened surface
+relative to reference cold junction with controlled exposure.
+
+4.4  Instrument Measurement Geometry.  Fixed horizontal mount with 2 pi
+steradian field of view.
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  The instrument output, a low level
+analog voltage, is converted to a digital signal and stored on magnetic
+tape.  On-site personnel inspect instruments and data systems on a
+quasi-daily basis to insure proper operation or to initiate corrective
+procedures.  Magnetic tapes are sent to a central site, Boulder, Colorado,
+where current instrument calibration is incorporated and the data are
+plotted and manually examined.  Erroneous data are removed.  -888 appears
+in final data set if data were removed or are missing.  Data are then
+temporarily locally archived pending final instrument calibration.
+
+5.2  Derivation Techniques/Algorithms.  None, direct measure
+
+5.3  Special Corrections/Adjustments.  Sometimes instrument calibration
+drifts can not be determined until several years after the data have been
+acquired.  If, or when, such a drift is determined the data are adjusted as
+necessary.  All known calibration drifts have been corrected in the current
+data.  The absolute values of all data have been referenced to the World
+Meteorological Center (WMO) World Reference Scale (or Absolute Scale), and
+this is potentially subject to change should the World Reference be
+redefined.  The Absolute Scale is rechecked every five years and has not
+changed significantly in the last 20 years.  The Absolute Scale is based on
+the state-of-the-art in solar radiometry.
+
+5.4  Processing Changes.  The field data acquisition and central facility
+data processing were completely changed (hardware and software) near the
+end of 1983 at all four sites.  These changes had no effect on the data
+itself, but some differences may have occurred due to the better
+performance of the instruments.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  Data were periodically compared to an
+independent "traveling" standard instrument at the field site. Data since
+1985 have been directly compared to clear-sky model calculations.  Data
+were often collected in parallel with other related measurements such as
+direct solar beam of other spectral bands which permitted some quality
+assessment.
+
+6.2  Confidence Level/Accuracy Judgment.  The accuracy of the data is
+difficult to assess.  Absolute calibration transferred from a primary
+standard cavity is possible at the 1% level under controlled conditions.
+Typical correct field operation contributes 1 to 2% additional uncertainty
+with the maximum accuracy never better than +- 5 watts per meter squared.
+Averaging over longer time periods, especially in multiples of 24 hours or
+complete years, significantly improves accuracy.  However, any missing data
+jeopardizes the accuracy of daily or annual averages because of typically
+large cycles on those time scales.  Isolated individual hours in this data
+set may contain errors substantially greater than 5% due to undetected
+artificial obstructions during broken cloud conditions or other failure of
+the editing procedures to identify all erroneous data. Erroneous data are
+sometimes difficult to identify because of the wide range (3 orders of
+magnitude variability).
+
+6.3  Usage Guidance.  The user is urged to read and understand Item 6.2
+above describing the confidence level and accuracy judgement of the data.
+Instrument calibration drifts on the order of 1% per year have been
+corrected for, but drifts on the order of 0.1% per year for several years
+are nearly impossible to detect and may still exist in the data.  Long-term
+calibration errors in the NOAA/CMDL record should be less than 2% over the
+14 years covered by this data set.  Clouds and solar geometry constitute
+the major source of variability in the data on hourly and daily time
+scales.  Caution must be used in averaging solar radiation because of the
+dominant diurnal (except South Pole) and annual cycles.  Be sure to
+recognize the "-888" missing data flag and not include it in any averaging
+scheme.
+
+The entire year of 1982 is missing from the American Samoa.  Data for 1982
+from American Samoa are available but were recorded in true solar time and
+were not included in the current data set to avoid confusion.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+7.1  Investigator
+
+     Ellsworth Dutton
+     NOAA/Climate Monitoring and Diagnostics Laboratory
+     Mail Code R/E/CG1
+     325 Broadway
+     Boulder, Colorado 80303
+     303-497-6660 (voice)
+     303-497-6290 (Fax)
+
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products.  None.
+
+8.2  Film Products.  None.
+
+8.3.1  Other products.  "Surface solar irradiance at NOAA/CMDL baseline 
+       sites"
+
+     Medium/Specifications:  The data are stored online in a special
+     data-set-independent format, designated the Common Data Format (CDF).
+     CDF was developed at the National Space Science Data Center (NSSDC) as
+     a uniform method for storing and retrieving data on disk.  This format
+     is self-describing in that all information required to analyze these
+     data are contained in the data file itself.  The format is supported
+     by the NASA Climate Data System for all of its data manipulation and
+     graphics tools.
+
+     Format and Content:  Data are stored as a single binary data file in
+     NSSDC's Common Data Format (CDF).  All hours and days are accounted
+     for except for data from the 1982 American Samoa station. Other
+     missing data are replaced  by fill values.  Station ID numbers are 199
+     for Barrow, Alaska, 31 for Mauna Loa, Hawaii, 191 for American Samoa,
+     and 111 for South Pole.  Station elevation for Mauna Loa is 3.4 km and
+     South Pole is 2.8 km.  Samoa and Barrow are at sea level.
+
+
+     Data Quantity/Rate:  One binary file approximately 15,000 512-bytes
+     blocks in volume.
+
+     Status:  Available online through the NASA Climate Data System (NCDS).
+
+     Plans and Schedules:  Data acquisition is ongoing, data updates as
+     required or requested.
+
+8.3.2  Hardcopy, monthly or yearly averages available.
+
+8.3.3  "Surface solar irradiance at NOAA/CMDL baseline sites"
+
+     Medium/Specifications:  IBM PC Floppy disk in ASCII format.
+
+     Format and Content:  The data are stored as ASCII characters. One
+     line, or record, contains a complete day or data based on Coordinated
+     Universal Time.  The data format is STATION ID YEAR, DAY of YEAR, and
+     24 ONE HOUR AVERAGES (1st is for 00:00:00 thru 00:59:59 UTC).  Fortran
+     format is 3I4,24I5.  -888 is inserted for all missing or deleted
+     irradiance data.  All hours and all days are accounted for each year.
+     Station ID numbers are 199 for Barrow, Alaska, 31 for Mauna Loa,
+     Hawaii, 191 for American Samoa, and 111 for South Pole.  Station
+     elevation for Mauna Loa is 3.4 km and South Pole is 2.8 km.  Samoa and
+     Barrow are at sea level.
+
+     Data Quantity/Rate:  55 files, 50 kb each (American Samoa 1982 is
+     missing)
+
+     Status:  Available
+
+     Plans and Schedules:  Data acquisition is ongoing, data updates as
+     required or requested.
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification.
+
+     Prof. Ye. P. Borisenkov, Director
+     World Radiation Data Centre
+     Main Geophysical Observatory
+     7, Karbyshev Street
+     194018 Leningrad
+     Russia
+
+9.2  Procedures for Obtaining Data.  Contact Prof. Borisenkov at the above
+address.
+
+9.3  NCDS Status/Plans.  NCDS currently supports these data online. Access
+to the data requires a user account on the NCDS computer.  NASA funded
+researchers may contact the NCDS User Support Office to arrange an account.
+The data set is referenced by the name CMDL-SFC.
+
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+10.1  Data Center Contact
+
+      Prof. Ye. P. Borisenkov, Director
+      World Radiation Data Centre
+      Main Geophysical Observatory
+      7, Karbyshev Street
+      194018 Leningrad
+      Russia
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation
+
+      a. Dutton,  E. G., J.J.  DeLuisi, and D.J. Endres, 1985.  "Solar
+         radiation at the Barrow, Alaska, GMCC Baseline Observatory,
+         1976-1983,"  NOAA Data Report ERL ARL-6.  NOAA/ERL Boulder, CO
+         80303, 112pp.
+
+      b. Dutton, E.G., J.J. DeLuisi, and A.P. Austring, 1987.  "Measure-
+         ments of solar radiation at Mauna Loa Observatory, 1978-1985, with
+         emphasis on the Effects of El Chichon,"  NOAA Data Report ERL
+         ARL-13, NOAA/ERL boulder, CO 80303, 35pp.
+
+      c. Dutton, E.G., R.S. Stone, and J.J. DeLuisi, 1989.  "South Pole
+         surface radiation balance measurements, April 1986 to February
+         1988,"  NOAA Data Report ERL ARL-17, NOAA/ERL Boulder, CO 80303.
+
+      d. NOAA/Geophysical Monitoring for Climate Change annual summary
+         reports 1 to 18 (1972-1989), NOAA/ERL Boulder, CO 80303.
+
+11.2  Journal Articles and Study Reports
+
+       a. Dutton, E.G., December, 1990.  "Annual Forcing of the Surface
+          Radiation Balance Cycle Measured from a high Tower near Boulder,
+          Colorado,"  Journal of Climate, 3:(12), 1400-1408.
+
+       b. Dutton, E.G., R.S. Stone, D.W. Nelson, and B.G. Mendonca, 1991.
+         "Recent Interannual Variations in Solar Radiation, Cloudiness, and
+         Surface Temperature at the South Pole", Journal of Climate (in
+         press, August 1991).
+
+
+11.3  Archive/DBMS Usage Documentation
+
+      a.  Olsen, L.M., J.W. Closs, J.R. Vanderpool, November, 1991. "NASA's
+          Climate Data System Primer: Version 1.2."  National Space Science
+          Data Center, NASA Goddard Space Flight Center, Greenbelt,
+          Maryland.
+
+
+12.  RELATED DATA SETS
+
+     This data set is intended to support a wide range of climate studies
+     and to provide satellite ground truth data.  Correlation with space-
+     borne solar irradiance measurements are also useful in determining the
+     effects of the atmosphere on incoming solar radiation.  The NCDS
+     system supports several solar irradiance data sets including:
+
+     ERBE Solar flux from ERBS, NOAA-9, and NOAA-10
+     Lean-Foukal Monthly Mean Solar Irradiance
+     Nimbus-7 ERB Solar Irradiance
+     Penticton, British Columbia Solar Radio Flux
+     SMM ACRIM Daily Means for Solar Flux
+
+     Other related data sets include:
+
+     Meteorological time series
+     Direct and diffuse solar irradiance
+     Thermal infrared data
+     Atmospheric constituents
+
+
+13.  SUMMARY/SAMPLE
+
+     The NCDS system provides a sample X-Y plot of hourly solar irradiances
+     in the Data Applications subsystem.  The name of the plot is named
+     CMDL-SFC_SOLIRR-HOUR.
+
+
+14.  NOTES
+
+     Barrow is influenced by coastal clouds for most of the summer, so
+     irradiance values during this time may be affected.  Mauna Loa
+     experiences a prevailing upslope/downslope diurnal wind regime. No
+     diurnal or other local cloud signal is known to exist at American
+     Samoa or South Pole.
+
+*92/03/13

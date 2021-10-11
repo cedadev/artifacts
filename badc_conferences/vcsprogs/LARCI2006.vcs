@@ -1,0 +1,40 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20060315T000000Z
+DTEND:20060316T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:=20Manchester, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E008000000000091F5EF662DC6010000000000000000100
+ 000000817477F2B1CB1479D6D2F58894DD12A
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0ALARCI seminar - Climate Change =
+Research: Science into Action, 15th March 2006,  Manchester.=0D=0A=0D=0AThe=
+ Local Authority Research Council Initiative (LARCI)  is holding a seminar =
+at the Manchester Conference Centre, Sackville Street, M1 3BB, Manchester (=
+Five minutes walk from Manchester Piccadilly mainline train station).  =0D=
+=0A=0D=0AFor full details of the programme and to register for this FREE ev=
+ent, visit:  http://www.larci.org.uk =0D=0A=0D=0AAims of the seminar:=0D=0A=
+*	to publicise excellent Research Council-funded research on climate change=
+, emphasising the applications of this work for local government,=0D=0A*	to=
+ provide a forum for practitioners in local government to discuss policy an=
+d research needs with researchers, and explore practical applications of ex=
+isting research,=0D=0A*	to build bridges between different experiences and =
+expertise.=0D=0A=0D=0AProgramme=0D=0AThis LARCI seminar offers a unique inf=
+ormation-gathering and networking opportunity.  The event will include both=
+ plenary and workshop sessions, and following requests from our stakeholder=
+s, a Local Authority Practitioners Forum.  The Forum will consist of presen=
+tations from four local authorities, describing innovative adaptation and m=
+itigation strategies for climate change developed or applied within their t=
+eams, and a panel discussion session.  This event is organised as part of E=
+SRC Social Science week and National Science week.  =0D=0A=0D=0A=0D=0ADr An=
+drea J. Turner=0D=0ALocal Authority Research Council Initiative (LARCI)=0D=
+=0ALARCI Research Co-ordinator=0D=0Ac/o Economic and Social Research Counci=
+l=0D=0APolaris House=0D=0ANorth Star Avenue=0D=0ASwindon SN2 1UJ=0D=0ATelep=
+hone 01793 413121=0D=0AFax 01793 413056=0D=0AE-mail andrea.turner@esrc.ac.u=
+k =0D=0Awww.larci.org.uk =0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:LARCI seminar - Climate Change Research: =
+Science into Action
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

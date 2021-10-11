@@ -1,0 +1,62 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20070909T230000Z
+DTEND:20070921T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:University of Cambridge, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000500C9996AA8CC7010000000000000000100
+ 00000B3A940327B96E8488F45DE0450757B70
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:Joint UK-Japan Climate Collaboration =
+(UJCC) and National Centre for Atmospheric Science (NCAS):  Summer School o=
+n Climate Modelling  http://www.ncas.ac.uk/news/stories/first_ncas_ujcc_cli=
+mate_summer_school_07.html =0D=0A=0D=0A=0D=0ADate: 10th-21st September 2007=
+=0D=0A=0D=0APlace: University of Cambridge, Department of Applied Mathemati=
+cs and Theoretical Physics=0D=0A=0D=0ARegistration deadline: 31st May 2007 =
+=0D=0A =0D=0APoster for your office and department available from:   http:/=
+/www.ncas.ac.uk/news/stories/first_ncas_ujcc_climate_summer_school_07.html =
+=0D=0A=0D=0ASummer School Website:  (accessed via http://www.ncas.ac.uk/new=
+s/stories/first_ncas_ujcc_climate_summer_school_07.html)=0D=0A=0D=0A=0D=0AT=
+he first UJCC-NCAS Summer School on Climate Modelling will be held at Cambr=
+idge University, within the Department of Applied Mathematics and Theoretic=
+al Physics, from 10th - 21st September 2007. =0D=0A=0D=0AThis Summer School=
+ will be the first of a series of bi-annual climate modelling schools which=
+ NCAS intends to offer regularly to the UK and international community.=0D=
+=0A=0D=0ATarget audience: =0D=0A=0D=0AThis intensive 12-day course is aimed=
+ at advanced Ph.D students and/or post-doctoral researchers, working in the=
+ natural sciences wishing to become experts in climate modelling. =0D=0A=0D=
+=0A=0D=0ACourse content & output: =0D=0A=0D=0ARun by UK and Japanese climat=
+e modelling experts, the course will include:=0D=0A=0D=0A* A background to =
+the theory of climate models, the workings of the climate system, and curre=
+nt challenges in climate modelling=0D=0A* Practical training on how to desi=
+gn, run and evaluate climate models=0D=0A=0D=0A=0D=0AA typical day will con=
+sist of lectures in the morning, practical sessions in the afternoons and a=
+n evening activity eg seminars from leading climate scientists. =0D=0A=0D=
+=0AAt the end of this course, participants should be able to understand: =
+=0D=0A=0D=0A* The fundamental principles of the science contained in the mo=
+dels =0D=0A* How the different areas of science in modern climate models ar=
+e interconnected =0D=0A* How models are implemented and operated on modern =
+supercomputers =0D=0A* How to assess the quality of the model results and h=
+ow to perform high-level analysis =0D=0A* How climate science is used for p=
+olicy making.=0D=0A=0D=0ARegistration deadline: 31st May 2007 =0D=0A=0D=0AE=
+ligibility & cost: =0D=0A=0D=0AThis summer school is intended primarily for=
+ UK (NERC-funded) and Japanese students/postdocs. Places will be funded on =
+a competitive basis. =0D=0A=0D=0ANon-NERC funded students/postdocs, includi=
+ng from other countries, are invited to apply. In these cases costs will no=
+t be provided and will need to be met via independent means. Success will b=
+e subject to availability of places.  See UJCC/NCAS Summer School Website f=
+or details  =0D=0A=0D=0AApplication procedure:  See Summer School Website f=
+or details =0D=0A=0D=0AContacts:=0D=0A=0D=0AUJCC-NCAS Summer School =0D=0AM=
+s. Samantha Carr, University of Cambridge =0D=0A=0D=0AEmail: shortcourses a=
+t sel.cam.ac.uk =0D=0ATelephone: (+44) (0)1223 331910=0D=0AFacsimile: (+44)=
+ (0)1223 331720=0D=0A=0D=0A=0D=0ANotes:=0D=0A=0D=0AThis UJCC-NCAS Summer Sc=
+hool is sponsored by:=0D=0A=0D=0AThe National Centre for Atmospheric Scienc=
+e (NCAS) www.ncas.ac.uk =0D=0AThe UK Foreign Office Global Opportunities Fu=
+nd (GOF) http://www.fco.gov.uk/ =0D=0AThe UK-HiGEM programme http://www.hig=
+em.nerc.ac.uk/ =0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:NCAS/UJCC Summer School on Climate Modell=
+ing
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

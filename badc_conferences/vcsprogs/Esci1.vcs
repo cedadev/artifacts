@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20051101T000000Z
+DTEND:20051103T000000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:e-Science Institute 15, South College St=
+reet, Edinburgh
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000F0582ACDB9D4C5010000000000000000100
+ 00000861FE59F49714F46A3C6BEEE5B4B2D27
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:> The e-Science Institute is delighte=
+d to announce two meetings=0D=0A> running back to back, in its "Exploiting =
+Diverse Sources of =0D=0A> Scientific Data"=0D=0A> Theme series.=0D=0A> =0D=
+=0A> The first in conjunction with CCLRC and JISC, is on=0D=0A> 'Spatiotemp=
+oral Databases for Geosciences, Biomedical =0D=0A> Sciences and Physical Sc=
+iences' on=0D=0A> 1-2 November 2005.  For further information see  http://w=
+ww.nesc.ac.uk/esi/events/608/=0D=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:'Spatiotemporal Databases for Geosciences=
+, Biomedical Sciences and Physical Sciences'=20
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

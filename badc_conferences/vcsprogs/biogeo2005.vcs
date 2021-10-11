@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20051002T230000Z
+DTEND:20051004T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:The Geological Society, Burlington House=
+, London.=20
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000606DD7841E4BC5010000000000000000100
+ 00000A2184727FE72C546973B23B114525BFD
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0AMeeting Announcement=0D=0A=0D=
+=0A03-04 October 2005 Biogeochemical Controls on Palaeoceanographic=0D=0APr=
+oxies, The Geological Society, Burlington House, London. =0D=0AOrganisers: =
+Bill Austin (St Andrews), Leon Clarke (Bangor), Rachael=0D=0AJames (Open Un=
+iversity) and Ros Rickaby (Oxford)=0D=0AThe aim of this meeting is to bring=
+ together palaeontologists,=0D=0Ageochemists and palaeoceanographers who ca=
+n contribute evidence that=0D=0Amust be considered together to better const=
+rain proxies that are used=0D=0Afor palaeoclimate reconstruction. This meet=
+ing is open to all=0D=0Aresearchers and practitioners and will include oral=
+ and poster=0D=0Apresentations. The abstract and early registration deadlin=
+e is 01=0D=0AAugust=0D=0A2005.=0D=0AFor more information, please visit our =
+web site:=0D=0Ahttp://www.open.ac.uk/personalpages/r.h.james/index.html.=0D=
+=0A=0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Biogeochemical Controls on Palaeoceanogra=
+phic Proxies
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

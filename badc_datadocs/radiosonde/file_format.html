@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+  <TITLE>Radiosonde - File Format</TITLE>
+  <!-- Created 15 September 1998 -->
+  <!-- Author: Anabelle Menochet BADC-->
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>European Radiosonde (1990 - June
+1998)- Data file format<BR CLEAR="ALL"></H1>
+
+<P><HR ALIGN=LEFT>The radiosonde data is in a simple ASCII format.<BR>
+<BR>
+<STRONG>-32768 indicates a missing value. </STRONG><BR>
+<BR>
+Headers are indicated on the first line of the data file as follows:<BR>
+<BR>
+
+
+<BLOCKQUOTE>
+  <P>PP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HMR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FF</BLOCKQUOTE>
+
+<P>The fields in each file are as indicated below ...
+
+<PRE>
+
+PARAMETER	                 FIELDS   COLUMNS         UNITS   
+--------------------------------------------------------------------
+PP  = Pressure                     1        1- 6      millibars x 10
+HT  = Height above ground	   2        7-12      metres
+TT  = Dry-bulb temperature	   3       13-18      deg C x 10                 
+TD  = Dew-point temperature	   4       19-24      deg C x 10
+RH  = Relative humidity	  	   5       25-30      %
+HMR = Humidity mixing ratio 	   6       31-36      cg/kg
+DD  = Wind direction		   7       37-42      degree true
+FF  = Wind speed		   8       43-48      knots
+--------------------------------------------------------------------</PRE>
+
+<P>The data starts on the second line.
+
+<P>
+</BODY>
+</HTML>

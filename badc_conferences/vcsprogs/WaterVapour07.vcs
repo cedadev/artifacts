@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 12.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20071218T000000Z
+DTEND:20071219T000000Z
+LOCATION:Department of Meteorology, University of Reading 
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000C0609B0D3A28C801000000000000000
+	01000000084AA4E4A07EF6C429B54EB43347D4872
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=
+Open Meeting on Continuum Absorption by Water Vapour=0D=0A=0D=0AThe NERC/=
+EPSRC Consortium CAVIAR (Continuum absorption by visible and infrared rad=
+iation and its atmospheric relevance - www.met.reading.ac.uk/~sws01ivp) w=
+ill=0D=0Abe holding its first open science meeting at the Department of M=
+eteorology, University of Reading on Tuesday 18 December between 1330 and=
+ 1800.=0D=0A=0D=0AThis will include an invited presentation from Dr Eli M=
+lawer (AER, Boston, USA) as well as presentations from CAVIAR members.=0D=
+=0A=0D=0AIf you would like to attend the meeting, please contact Dr Igor =
+Ptashnik (i.v.ptashnik@reading.ac.uk) by 30 November 2007. Lunch (which w=
+ill not include caviar!) is =0D=0Aavailable from 1230 if booked in advanc=
+e.=0D=0A=0D=0AIt is possible that slots will be available for non-CAVIAR =
+members to present short talks; please send the title of your talk to Dr =
+Ptashnik if you are interested.=0D=0A=0D=0A
+SUMMARY:Open Meeting on Continuum Absorption by Water Vapour
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

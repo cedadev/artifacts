@@ -1,0 +1,89 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>AAM data format</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>AAM data file format<BR CLEAR="ALL"></H1>
+
+<HR ALIGN=LEFT><BR>
+The BADC holds AAM data in ASCII files. These files are supplied
+by the European Centre for Medium-range Weather Forecasting (ECMWF)
+and the Met Office. File names
+are detailed in the <A HREF="aamhelp.html#name">Help file</A>.
+
+<H3>Temporal coverage</H3>
+
+<UL>
+  <LI>ECMWF data spans 1979 to 1993, with data at 24 hourly intervals.<BR>
+<BR>
+  <LI>Met Office data are available from 1983 to the present. The Met Office
+  data consists of three subsets:<BR>
+<BR>
+  <OL>
+    <LI>Data prior to 1st November 1986 in Met Office format (24-hourly intervals).
+    <LI>Data after 1st November 1986 in Met Office format (12-hourly intervals).
+    <LI>Washington-coded data for dates after 1st November 1986 (12-hourly
+    intervals).
+  </OL>
+</UL>
+
+<H3>Parameters stored</H3>
+
+<P>The parameters stored in the ECMWF and most recent (after 1st
+November 1986) Met Office files are the same, namely (for each time
+interval stored):
+
+<PRE> 
+   X1PN, X1PS, X1WN, X1WS
+   X2PN, X2PS, X2WN, X2WS
+   X3PN, X3PS, X3WN, X3WS</PRE>
+
+<P>where:
+
+<UL>
+  <LI>X - to be read as chi
+  <LI>1/2/3 represent the AAM component:
+  <OL>
+    <LI>component with rotation axis aligned with greenwich meridian;
+    <LI>&quot; &quot; &quot; &quot; &quot; &quot; 90&deg;East;
+    <LI>&quot; &quot; &quot; &quot; &quot; &quot; principal axis
+    of earth's inertia tensor. n.b. X3 has the opposite sign to X3
+    as defined in BHWW (1983) (5.3) and Hide (1984) (a3) (see <A 
+    HREF="references.html">references</A>);
+  </OL>
+  <LI>P/W indicates pressure (also called matter) or wind term.
+  This is calculated using only the part of the atmosphere between
+  1000 mb and 50 mb.
+  <LI>N/S represents Northern or Southern hemisphere.
+</UL>
+
+<P>The early Met Office data contains global wind and pressure terms
+rather than separate components for each hemisphere and includes
+an additional &quot;total&quot; term (P+W). The situation can
+be summarised as follows:
+
+<PRE>
+|---------------------------------------------------------------------------|
+|     Dataset           |      Pressure       |      Wind           |  P+W  |
+|                       |---------------------|---------------------|       |
+|                       | North | South | N+S | North | South | N+S |       |
+|---------------------------------------------------------------------------|
+|Met Office pre Nov. 86 |   -   |   -   |  Y  |   -   |   -   |  Y  |   Y   |
+|---------------------------------------------------------------------------|
+|Met Office post Nov. 86|   Y   |   Y   |  -  |   Y   |   Y   |  -  |   -   |
+|---------------------------------------------------------------------------|
+|     ECMWF             |   Y   |   Y   |  -  |   Y   |   Y   |  -  |   -   |
+|---------------------------------------------------------------------------|</PRE>
+
+<P>where &quot;Y&quot; denotes that a term is present and &quot;-&quot;
+denotes that term is absent (for all three components X1, X2,
+X3).<BR>
+<BR>
+In addition, Met Office data post-Nov. 1986 is stored at 12-hourly intervals
+(earlier data and ECMWF data are 24-hourly). </blockquote>
+
+<P>
+</BODY>
+</HTML>

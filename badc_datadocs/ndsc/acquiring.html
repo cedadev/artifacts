@@ -1,0 +1,110 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>NDSC Data Downloading</TITLE>
+</HEAD>
+<!-- Created 6th December 1996 12:25:17  -->
+<!-- Author: Deborah Miles BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1><A NAME="top"></A>
+Acquiring the NDAAC data held at
+the BADC<BR CLEAR="ALL"></H1>
+
+<P><EM>This file contains background information to help you get
+the NDACC data held at the BADC.</EM> <HR ALIGN=LEFT></P>
+
+<OL>
+  <li><a href="#for">Before you start</a>
+  <LI><A HREF="#dir">Checking the archive</A>
+  <LI><A HREF="#tra">Transferring data from the BADC</A>
+  <LI><A HREF="#fil">Reading the data files</A>
+</OL>
+
+<HR ALIGN=LEFT>
+
+<H3><A NAME="for"></A>1. Before you start</H3>
+
+<p>
+The BADC holds NDACC data in NASA Ames
+format &#151; an ASCII based file format which incorporates a number
+of self describing data formats. This file format, which has been
+used by a number of measurement campaigns is documented at BADC in the
+<a href="/help/formats/NASA-Ames/">NASA Ames Format</a> page, based on the document
+written by
+<a href="/help/formats/NASA-Ames/G-and-H-June-1998.html">S.E. Gaines and R.S.
+Hipskind</a>.
+</p>
+
+<H3><A NAME="dir"></A>2. Checking the archive</H3>
+
+<P>
+The NDACC archive directories can be browsed using the web at
+<A HREF="/cgi-bin/data_browser/data_browser/badc/ndsc/">/badc/ndsc/</A>.
+All data, documentation and software are located beneath this directory.
+Here you will find a README file and the following subdirectories.
+</P>
+<UL>
+<LI><b><i><a href="/cgi-bin/data_browser/data_browser/badc/ndsc/data/">data</a></i></b> &#150;
+contains the data files in the following subdirectories
+ <ul>
+  <li><b><i>ncep</i></b> &#150;
+      NCEP reanalysed height and temperature above NDSC stations
+  <li><b><i>ndsc</i></b> &#150;
+      NDACC data sorted out by station name
+ </ul>
+ <blockquote>
+ We suggest that you look here to check whether the data you require is
+ available (a summary of all NDACC data is also available from the NDACC web site
+ at <a href="http://www.ndsc.ncep.noaa.gov/get_data/data.html">http://www.ndsc.ncep.noaa.gov/get_data/data.html</a>).
+ Public NDACC data can be directly downloaded from the BADC archive <i>via</i>
+ the Web.
+ If you are an NDACC investigator and need access to NDACC data that are
+ still restricted (signalled by a yellow key), please 
+<A HREF="/cgi-bin/dataset_registration/dataset_info.cgi.pl?datasetid=ndsc">apply for access to the 
+NDACC data</a>. 
+ </blockquote>
+<LI><b><i><a href="/cgi-bin/data_browser/data_browser/badc/ndsc/doc/">doc</a></i></b> &#150;
+contains documentation from BADC and NDACC:
+ <ul>
+  <li><b><i>BADC_documentation.html</i></b> &#150;
+      link to the NDACC front page at BADC
+  <li><b><i>meta</i></b> &#150;
+      under this directory sit the metadata pertaining to NDACC data
+  <li><b><i>protocol</i></b> &#150; contains NDACC data protocols
+ </ul>
+<br>
+<LI><b><i><a href="/cgi-bin/data_browser/data_browser/badc/ndsc/software/">software</a></i></b> &#150;
+contains the example read routines and any 3rd
+party software available
+</UL>
+</P>
+
+<H3><A NAME="tra"></A>3. Transferring data from the BADC</H3>
+
+<P>
+Once you have found the files you require, use the <b>File</b> key of your Web
+browser and the <b>Save as</b> option to retrieve them.
+<br>
+Alternatively, you can use ftp (ftp.ceda.ac.uk) to retrieve the files.
+<br>
+Online <a href="/help/howtogetdata.html">help</a> on retrieving files (by both
+methods) is available from the BADC.
+</p>
+
+<H3><A NAME="fil"></A>4. Reading the data files</H3>
+
+  <H4><A NAME="structure"></A>4.1 The file structure</H4>
+  The structure of NASA Ames formatted files is explained in the
+  <a href="/help/formats/NASA-Ames/FFI-summary.html">Summary of NASA Ames File Format
+  Indices</a> provided by BADC.
+  <H4><A NAME="routines"></A>4.2 The Access Routines</H4>
+  <P>A set of FORTRAN subroutines to read the AMES data are available
+  from the <A HREF="/cgi-bin/data_browser/data_browser/badc/ndsc/software/">NDACC software directory</A>
+  at the BADC. These are the routines supplied by the programme team
+  which should compile and run on the majority of platforms.
+  A set of access routines written in IDL by the programme team
+  is also available.</P>
+<P>
+</BODY>
+</HTML>

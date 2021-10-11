@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "VGLSHTMP "
+"SUM_DATA_SET"       "VGL-TMP-MON  "
+"SUM_DATATYPE"       "SOUTH-STATN  "
+"ARCHIVE_NAME"       "NCDS                 "
+"ARCHIVE_STATUS"     "Available           "
+"DS_DESCRIPTION"     "Vinnikov, Groisman, Lugina Monthly Temperature Deviations"
+"DT_DESCRIPTION"     "Southern Hemisphere Station Temperatures"
+"SUM_BEGIN_DATE"     "01-Jan-1881"
+"SUM_END_DATE"       "31-Dec-1990"
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "265 random stations for the Southern Hemisphere   "
+"SPATIAL2"           " "
+"SPATIAL3"           "Station"
+"SPATIAL4"           " "
+"TEMPORAL1"          "January, 1881 - December, 1990"
+"TEMPORAL2"          " "
+"TEMPORAL3"          "Monthly"
+"TEMPORAL4"          " "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF)."
+"PRODUCT2"           "Available on GEDEX CD-ROM.     "
+"PRODUCT3"           " "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"TEMPERATURE" "Monthly Surface Temperature S. Hem."  "Deg C"
+EOF
+
+SOURCES
+"STATION"           "IN SITU"
+EOF

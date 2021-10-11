@@ -1,0 +1,529 @@
+           Description of the UV-VIS Experiment   23/12/93
+           ====================================
+
+The Composition and Photodissociative Flux Measurement (CPFM) is made
+using a small spectrometer mounted in a wing pod on the right-hand wing 
+of the ER-2.  The instrument operates autonomously according to a 
+measurement sequence coded into it before flight.  Data are recorded 
+using a data assimilation algorithm which runs on a '386, single-board 
+computer mounted on the door of the E-bay.  Data are removed from the
+computer after each flight and converted from the packed-binary format
+stored on-board into a number of useful data formats.
+
+UV-VIS data are collected using a 1024-element photodiode array
+spectrophotometer.  Using order separating filters, measurements
+are made in the near UV (300 - 387 nm) and in the visible (375 -
+775 nm).  The instrument is programmed to make measurements of the
+radiation field in several different ways.  These include
+measurements of the flux on a horizontal surface, measurements of
+the limb brightness at various elevation angles, and observations
+of the apparent surface brightness below the aircraft track. 
+Horizontal flux measurements, which are done using a teflon
+diffuser, are unpolarized.  The limb measurements include two
+polarization components, horizontal and vertical.  The nadir
+measurement is of the polarization component along the aircraft
+track only.  It is to be assumed that the other component is equal
+in magnitude to the one measured.  Therefore the total nadir
+brightness value is two times the reported one.
+
+The detector outputs, which are measured with an A/D converter, are 
+converted to absolute intensity or brightness units using
+calibration data from a NIST-traceable quartz-halogen lamp.  In the
+case of the diffuser port, the lamp directly illuminates the
+entrance surface; in the case of the direct viewing directions a
+certified, reflective diffuser is illuminated by the lamp to
+produce a surface of calculable surface brightness.  The
+observation data are corrected for the instrument responsivity
+using calibrations made using the lamp and diffuser to produce
+results in absolute intensity and brightness units.
+
+Data from each viewing direction, for both polarizations, the UV
+and visible measurement bands, and from the internal krypton and
+neon lamps, are all separately processed.  All the atmospheric data
+are scaled using the known responsivity of the instrument.  The
+data from the different wavebands are then interpolated and
+combined to give a continuous spectrum from 300 nm to about 775 nm. 
+For convenience, the data are reported from 300 to 800 in steps of
+0.5 nm (1000 points).  The spectrum will always start at 300 nm and
+will run to some highest wavelength around 775 nm.  The extra
+spectral values, long of the cut-off value, are set to zero.  The
+visible data are smoothed before interpolation by a 3 pixel (approx
+1.2 nm) FWHM running triangular filter, and the UV by a 5 step
+(about 1.0 nm) FWHM filter.  This filtering removes some of the
+differences in resolution between the two wavebands which exists
+because the UV data are taken in the second order of the
+diffraction grating.  The match is not exact because the resolution
+of the instrument is partly controlled by the imaging properties of
+the grating.  The small difference in resolution between the two
+orders can be seen in the final spectra.  The last two reported
+values in the spectrum are not filtered.
+
+Once the spectra are combined, several other derived quantities are 
+calculated.  These include the fluxes within several wavebands, the
+column amount of ozone and the photodissociation rate for various
+reactions determined from the measured radiation levels.  The
+values calculated for the horizontal diffusing surface have the
+clearest physical interpretation.  The apparent surface brightness
+derived for the other viewing directions must be scaled by
+estimates of the solid angles for which the measured brightnesses are
+appropriate in order to produce units of effective power per unit
+wavelength.
+
+         Data Description for two data product types
+         ===========================================
+
+Two types of data files have been prepared from the CPFM
+observations for the SPADE flights.  These are complete spectra as
+observed, but scaled to true  radiation units, and a number of
+derived products which are described below.
+
+1.  File type - US{date}.ea1
+
+     Spectral Irradiance values every 0.5 nm.
+
+2.  File Type - UV{date}.ea1
+
+     Derived quantities such as J-values and waveband integrals.
+
+
+The spectra (File Type 1) are presented as an ASCII file in Ames format
+number 2010 as a sequence of 1000 spectral flux values reported every
+half nm.  Only the downward (diffuser) flux values are reported.  The
+same housekeeping records which are associated with each block of
+derived data (File Type 2), Ames format 1010, are included at the start
+of each spectrum.  The spectra have not been corrected for the cosine
+dependence of the diffuser, so that the values represent a measurement
+of the horizontal flux, not the direct beam irradiance.  The
+information given below should serve as a guide to making a correction
+to the measured values to estimate the direct beam spectral fluxes. 
+The angle between the diffuser normal in flight and the direction of
+the vector from the aircraft to the sun has been calculated and is
+included in the housekeeping record.
+
+     The reduced data are presented in records which contain
+measurements of 4 different radiation fields.  Each column in the
+table is labelled at the top of the table. The time in seconds from
+the beginning of the day of aircraft launch is included in column
+1.  The fourth entry is time in hhmmss where hh is hours, mm is
+minutes and ss is seconds GMT (CUT).  The complete data record for
+one instrument observation cycle is comprised of 4 lines.  They
+are, in order:
+
+Records in rotation of the following quantities:
+
+     0.  Horizontal flux on upper diffuser surface
+         [microwatts per square centimetre per nanometre]
+     1.  Vertical polarization component of the Limb brightness at 
+         one of ten elevation angles.
+         [microwatts per square centimetre per steradian per      
+         nanometre]
+     2.  Horizontal polarization component of the Limb brightness 
+         at one of ten elevation angles.
+         [microwatts per square centimetre per steradian per      
+         nanometre]
+     3.  Nadir surface brightness in the polarization direction   
+         along the flight track.  
+         [microwatts per square centimetre per steradian per      
+         nanometre]
+
+  SECS   - time in seconds from midnight of the flight launch day
+           seconds of the day when the flight 
+           started (continues to increment past 24:00:00 hours)
+
+  F      - radiation field number
+
+                   0) horizontal flux
+                   1) limb, vertical polarization
+                   2) limb, horizontal polarization
+                   3) nadir, polarization along flight track 
+
+  TIME   - time in hhmmss hh- hours, mm - minutes, ss - seconds   
+           in Coordinated Universal Time (C.U.T.) [GMT for        
+           dinosaurs]
+  ST     - step number of this limb scan relative to the reference 
+           angle
+  Lat.   - instantaneous latitude of the aircraft
+  Long.  - instantaneous longitude of the aircraft
+  Alt.   - altitude reported in kilometres.
+  SZA    - solar zenith angle at the aircraft position and        
+           observation time.
+  RZA    - solar zenith angle relative to the normal of the       
+           detector diffuser surface (degrees).  If the total flux 
+           on the surface were due to the direct solar beam,      
+           dividing by the cosine of this angle would             
+           provide the normal flux from the solar beam (what a    
+           molecule would see from the direct beam).
+  SAA    - solar azimuth angle in MET coordinates relative to the 
+           limb viewing direction (out the starboard wing).  0 to 
+           180 degrees is to the left (toward the nose) and 180 to 
+           360 is to the right.
+  Roll   - aircraft roll angle.  Positive roll is with the right  
+           wing down.
+  cO3    - column ozone in m-atm-cm (i.e.: Dobson units).  Has a
+           simple interpretation only for the horizontal diffuser port. 
+           values should be good down to a solar zenith angle of about
+           75 degrees.
+  NO2    - J-value contribution for this field (NO2 photolysis
+           rate).  For horizontal diffuser, units of inverse seconds,
+           for the others, inverse seconds per steradian.
+  OSD -    J-value contribution for this field (O singlet D production
+           rate).  For horizontal diffuser, units of inverse seconds,
+           for the others, inverse seconds per steradian.
+  308 -    average intensity in a waveband from 300 to 315
+           [microwatts per cm squared per nm for horizontal diffuser
+           and microwatts per cm squared per nm per steradian for the
+           other surfaces].
+  350 -    average intensity in a waveband from 325 to 350
+           [microwatts per cm squared per nm for horizontal diffuser
+           and microwatts per cm squared per nm per steradian for the
+           other surfaces].
+  450 -    average intensity in a waveband from 425 to 475
+           [microwatts per cm squared per nm for horizontal diffuser
+           and microwatts per cm squared per nm per steradian for the
+           other surfaces].
+  600 -    average intensity in a waveband from 575 to 625
+           [microwatts per cm squared per nm for horizontal diffuser
+           and microwatts per cm squared per nm per steradian for the
+           other surfaces].
+  sol -    integrated solar flux
+           [microwatts per cm squared per nm for horizontal flux,
+           microwatts per cm squared per nm per steradian for the other
+           fields]
+
+Sample data record:
+
+                  <<<<<< Start of sample >>>>>>
+Seconds F ST   Time    Lat.   Long.    Alt.    SZA     RZA     SAA     Roll  
+       cO3     NO2     OSD     308     350     450     600     sol   
+  56329 0 00 153856   37.42  122.06    0.11   59.91   50.73  340.40    0.72
+      279.6    1.70    1.62    2.22   21.51   45.25   43.45   34.87 
+  56404 1 00 154021   37.42  122.06    0.12   59.66   50.44  340.22    0.72
+      315.5    6.28    6.07    6.08   70.00  188.12  198.44  157.61 
+  56422 2 00 154038   37.42  122.06    0.12   59.60   50.37  340.17    0.72
+      376.4    6.85    5.65    4.06   41.40  347.40  358.28  264.38 
+  56362 3 00 153930   37.42  122.06    0.11   59.80   50.60  340.32    0.72
+      288.9    0.69    3.35    1.33    6.00   28.21   31.41   23.03 
+  56466 0 01 154113   37.42  122.06    0.13   59.45   50.20  340.07    0.72
+      270.6    1.71    1.69    2.27   21.43   45.84   44.02   35.33 
+  56541 1 01 154238   37.42  122.06    0.14   59.21   49.90  339.88    0.72
+      415.4    8.14    6.78    8.10   80.72  274.06  226.01  196.44 
+  56558 2 01 154253   37.42  122.06    0.15   59.15   49.84  339.84    0.72
+      312.1    8.20    8.16    8.98   82.29  276.66  243.29  204.46 
+  56499 3 01 154147   37.42  122.06    0.14   59.34   50.07  339.98    0.72
+      -26.9    1.02    4.16    1.68    9.17   42.79   44.99   34.99 
+  56599 0 02 154327   37.42  122.06    0.16   59.01   49.68  339.74    0.72
+      280.6    2.19    1.84    2.61   26.66   64.63   65.22   50.52 
+                  <<<<<< End of sample >>>>>>
+
+In order to use the reported data to determine total J-values or
+specific power levels for a particular volume, the contribution of
+the fields from various directions must be combined.  There are 4
+in total: the solar direct beam, the limb contribution (2
+polarization components), and the upward flux.
+
+The solar direct beam component.
+
+If the solar direct beam component were the only intensity acting
+on the horizontal diffuser, the reported flux could be interpreted
+in a very simple  way.  If RZA is the relative solar zenith angle,
+that is the angle between the detector (diffuser) surface normal
+and the sun direction vector, then the  apparent normal flux, Fn
+(microwatts per square centimetre per nanometre), is related to the
+direct beam intensity, Fd by the relation Fn = Fd * cos(RZA).  In
+practice there are two other components due to the intensities Ih
+and Is where Ih is the horizon brightness, and Is is the sky
+brightness.  The sky includes approximately 2 PI steradians.  At 20
+km altitude the limb occupies about 4.5 degrees of zenith angle,
+contributing about 4.5 / 180 * PI radians times 2 PI.  The sensor is
+rolled outboard from the vertical by 3.4 degrees (+3.4 degrees in the
+MET coordinate system) so the full horizon is not observed.  (The MET 
+coordinate system has +x east, +y north and +y up). If the Earth as seen
+near the horizon is assumed to be the same brightness as the limb, then
+the amount of light seen by the diffuser will increase with roll angle
+
+     Fh = ( 3.4 + roll ) / 180 * 2 * PI^2        for roll > -3.4
+
+            and   Fh = 0.0                       for roll < -3.4
+
+        PI is 3.141592...
+
+The same equation holds for the flux of vertically polarized light,
+Fv.
+
+        Clearly, this formulation does not include the fact that
+the atmospheric brightness does increase with decreasing altitude.
+
+ Therefore the complete equation using
+
+         Fs = Is * 2 * PI (as above) is:
+
+
+         Im = Id * cos( RZA ) + Is * 2 * PI + Fh 
+
+Therefore the solar direct beam intensity can only be estimated
+given some knowledge of the sky and horizon components.  The
+horizon component will, in  general, depend on the azimuth angle of
+the sun relative to the aircraft and will also be a function of the
+absolute solar zenith angle (SZA).  If some assumption is made of
+what the horizon component is, using the above equation for Fh, and
+if the sun is reasonably high in the sky (say SZA < 70 degrees)
+then the direct beam intensity can be determined from
+
+                   Fd = (Fm - Fh) / cos( RZA )
+
+where it has been assumed that the sky component Fs is negligible. 
+In order to  make the best use of the measurements, it is probably
+necessary to have a model  estimate of the ratio of the direct beam
+to the sky, and to use measured values  for the horizon component.
+
+     If the horizon component were due to Rayleigh scattering only,
+the two  polarization  components would vary with relative solar
+azimuth angle as the  Rayleigh phase function.  That is:
+
+               Iv = Io
+               Ih = Io * cos^2( SAA )
+
+      where the total intensity is Ih + Iv
+            and SAA is the relative solar azimuth angle.
+
+      With large amounts of aerosol in the upper atmosphere the
+true brightness  levels can be twice as large at large azimuth
+angles and even higher near the  solar direction.
+
+      The contribution of light diffusely reflected from the
+aircraft has not been included.  This is because it is not
+significant.  The aircraft appears to subtend a maximum angle of
+about 5 degrees above the position of the CPFM diffuser surface. 
+Since the diffuser is rolled outboard by 3.4 degrees this means
+that the aircraft is only in view for about 2 degrees.  Since the
+contribution is cosine weighted at the diffuser, this will make a
+very small additional flux compared to the error in estimating the
+horizon contribution.  The aircraft is about 1 radian long (as seen
+by the diffuser) and about 0.03 radians high giving a total solid
+angle of about 0.03 compared with 0.3 radians for the horizon ( 3.4
+/ 180 * 2 * PI^2 ).
+
+      When the sun is high in the sky the total flux which a
+molecule sees can be approximated by summing the various
+components:
+
+             Ft = Fd + 2 * Fn + Fh + Fv
+
+      The nadir flux, Fn is doubled because only one polarization
+is measured  and it is assumed that the upwelling radiation is
+unpolarized.
+
+      In order to estimate the nadir flux (Fn) properly, it must be
+appreciated that the rapid changes in the apparent surface
+brightness beneath the aircraft are not directly seen by an air
+parcel since the area immediately under the aircraft is only a
+small part of the solid angle subtended by the surface under the
+flight path.  An average of the apparent surface brightness over a
+distance scale representative of the averaging area under the
+aircraft should be used.  A solid angle if about PI/2 (or 1/4 of
+the full solid angle under the aircraft) is probably
+representative.  At an altitude of 20 km, taking 90 degrees as
+about 1.5 radians, the surface area seen is 1.5 * 400 square km. 
+This gives a linear dimension of 25 km.  With a ground speed of 800
+km/hr, 60/16 = 4 minutes of data should be averaged to give a
+reasonable estimate half of the surface contribution.  In simple
+terms, several nadir measurements should be averaged.
+
+      When the sun is high in the sky, the sky and horizon fluxes
+can be neglected giving
+
+                       Ft = Fd * cos( SZA )
+
+    clearly the direct beam flux is Fd = Ft / cos( SZA )
+
+One additional instrumental effect is important.  The diffuser
+surface does not exactly follow the cosine relation above. 
+Therefore the direct beam component which is seen at the diffuser
+is actually
+
+             Ft = Fd * cos( SZA ) * correction(wavelength, angle)
+
+      In the original implementation, the diffuser used on the CPFM
+was too thin,  and a direct transmission component of the radiation
+is evident at long wavelengths.  The table below shows the measured
+performance of the diffuser.  For ASHOE/MAESA the diffuser will be
+doubled up to eliminate the wavelength dependence. However, the
+diffuser will remain non-ideal and will therefore still require a
+cosine correction to be applied.  Because of the wavelength
+dependence of the diffuser cosine error, the correction to be
+applied to each flux integral or J-value will be somewhat dependent
+on the wavelengths included and the spectral quality of the light
+measured.  The spectra included in the spectral data file can be
+used to estimate the error in using a typical wavelength to choose
+the effective cosine correction for the flux at a particular zenith
+angle.
+
+Cosine correction table
+=============================================================================
+        Wavelength (nm)
+Zen.    300    350    400    500    600    650    700    750    770    800
+--------------------------------------------------------------------------
+ 0.0	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000	1.000
+10.0	0.959	0.959	0.985	1.002	1.007	1.004	0.980	0.910	0.784	0.705
+20.0	0.993	0.993	1.006	1.023	1.025	1.018	0.983	0.891	0.737	0.644
+30.0	0.998	0.998	1.017	1.035	1.036	1.025	0.980	0.876	0.710	0.613
+40.0	1.001	1.001	1.021	1.041	1.041	1.026	0.974	0.861	0.688	0.590
+50.0	0.943	0.943	1.006	1.034	1.034	1.018	0.961	0.843	0.668	0.569
+60.0	0.950	0.950	0.998	1.027	1.025	1.007	0.948	0.828	0.653	0.555
+65.0	0.904	0.904	0.988	1.015	1.016	0.998	0.939	0.819	0.644	0.548
+70.0	0.989	0.989	1.046	1.077	1.075	1.056	0.992	0.865	0.680	0.577
+75.0	0.804	0.804	0.938	0.981	0.983	0.967	0.910	0.792	0.622	0.527
+80.0	0.827	0.827	0.934	0.972	0.966	0.950	0.895	0.779	0.610	0.518
+85.0	0.746	0.746	0.943	0.993	0.988	0.973	0.917	0.798	0.621	0.525
+90.0	0.746	0.746	0.943	0.993	0.988	0.973	0.917	0.798	0.621	0.525
+=============================================================================
+
+      In using the limb data, it should be noted that the angle of
+view of the limb-viewing port relative to the sun is given by the
+angle RAA in the data tables.  In addition the precise elevation
+angle which the beam makes with respect to the horizon is modified
+by the mechanical reference position of the pointing mirror inside
+the instrument, the angle at which the instrument is installed in
+the aircraft wing, and the roll angle of the plane in flight.  In
+an equation:
+
+              EL( ST ) = RA + REF + ST * IN + roll
+
+         RA   - relative angle in aircraft e.g.: 3.4 degrees      
+         REF  - reference angle relative to diffuser direction; 82.5 degrees
+         ST   - step number recorded in data block
+         IN   - step size of scanner = 1.5 degrees
+         Roll - aircraft roll angle in data table
+
+      A first approximation for correcting the horizontal diffuser
+values is to assume that the horizon brightness does not change
+with time after about 75 degrees SZA and that the mean of a number
+of observations at various azimuth angles is representative of the
+horizon.  A somewhat better estimate can be made by determining an
+approximate variation of the brightness with azimuth angle.  This
+estimate can then be used in the above equations to calculate the
+contributions to the flux at altitude appropriate for a particular
+application. Ultimately the best approach will to be to use a model
+which has been verified in detail using flight data for the
+determination of the appropriate flux value.
+
+SPADE Flights 1992, 1993
+------------------------
+
+      The CPFM experiment was flown on most of the fall, 1992, and spring
+1993 SPADE flights.  Because the instrument was very much still in a 
+developmental phase, not all of the flights lead to useful data.  The 
+following table summarizes the dates on which the instrument might have 
+flown, on which it actually flew, those fligths which have been analyzed 
+and those for which data have been included in this release.
+
+      There are a number of reasons for not contributing fully
+processed data at this time.  These include:
+
+  1) the instrument did not fly on a flight because it was not
+     scheduled to, or because it was not operating
+  2) [for the fall] the gain mode needed to have complete 1024-element
+     spectra on scale was not yet available, and so the spectra were 
+     taken in 256-pixel sub-spectra which have not yet been converted
+     to a form suitable for processing using the data reduction software
+  3) the gains on either the UV or visible spectral order were set 
+     incorrectly
+  4) the instrument failed in flight
+  5) the on-board navigation data stream became unavailable during 
+     flight (further work to assimilate the post-flight data is
+     required; this applies mainly to the attitude information).
+  6) a problem with the instrument, but it was flown anyway
+  7) data recorder failure
+
+     ----------------------------------------------------------------
+     CPFM Flight Summary Table
+     Flight Date    UV    VIS    Problem          Comments
+     ----------------------------------------------------------------
+     92/10/13       P      P        2     Not analyzed yet. 
+     92/10/15       N      N        1                       
+     92/10/27       N      N        1                       
+     92/11/03       N      N        1                       
+     92/11/09       N      N        7                       
+     92/11/12       N      N        1                       
+     92/11/16       P      P        2     Not analyzed yet. 
+     92/11/20       N      N        4
+     93/04/19       N      N        1
+     93/04/23       N      N        1
+     93/04/26       N      N        1
+     93/04/30       N      N        7
+     93/05/01       P      P        2     Not analyzed yet.
+     93/05/03       N      N        1
+     93/05/06       Y      N        3     Sunrise flight
+     93/05/07       Y      Y              Good sunset flight
+     93/05/11       Y      N        6     Sunrise; Filter wheel stuck on UV
+     93/05/12       Y      Y              Good sunset flight
+     93/05/14       Y      Y              Southern daytime flight
+     93/05/18       Y      Y              Nothern daytime flight
+     ----------------------------------------------------------------
+
+     Y - processed data available
+     N - no processed data available
+     P - data probably available
+
+
+General comments on the SPADE series data.
+------------------------------------------
+
+    Ozone data.
+
+    During the SPADE series, there was no independently traceable ozone 
+    calibration for the CPFM instrument.  Neither had tests been done to 
+    see how well the reduction algorithm worked at determining ozone 
+    levels at the surface.  Because there is no solar pointing on the 
+    aircraft, the total ozone column is determined by making a 
+    ratiometric measurement in the UV portion of the spectrum as 
+    observed by the horizontal diffuser.  This measurment will be very 
+    good at altitude where the direct solar intensity completely dominates 
+    other sources of light (such as the scattered sky light) but near 
+    the surface where the pressure is higher and especially when clouds 
+    are present, the results may be considerably in error.  As result, 
+    the calibration (extraterrestrial constant) for the ozone 
+    measurement was estimated by comparing results to TOMS 
+    measurements and making a reasonable choice of calibration constants.  
+    The best indication that the choice is close is the small solar angle 
+    dependence of the data on the flight of May 12th.  The same constant
+    is used for alll flights.
+
+
+Flight Specific Comments
+------------------------
+
+93/05/11
+
+      This flight produced apparently good UV data for all fields except 
+the horizontal flux.  Only UV data are available because the reference 
+sensor for initializing the filter wheel motor failed.  As a temporary 
+remedy, the filter was permanently set, a few minutes before 'hands
+off' at the UV measuring position, and flew that way for the whole
+flight.  The failure was corrected before the next flight.  However, it 
+appears that the prism drive motor did not function completely 
+correctly since the horizontal flux measurements are of a very much 
+lower intensity than those made on other days under comparable 
+conditions.  The ozone values were still computed, but the results have 
+higher-than-usual noise level becasue of the low signal level.
+
+
+FTP at the Atmospheric Environment Service
+------------------------------------------
+
+      Sometime in January, 1994 the AES will make an FTP server
+available to the community.  It will on a computer at the downsview 
+facility and will have a copy of the data included here and available on 
+CLOUD1.  In addition, the full spectral data for ALL radiation fields, not 
+just the horizontal flux, will be available.  Cosine corrected data will 
+also be provided including an estimate of the total photochemically 
+active fluxes.  These last two products should be ready in a couple of 
+months.
+
+      The file server is at address 142.97.22.42.  The account name is 
+ER2 and the password can be obtained by calling the AES.
+
+Call:  Clive Midwinter  416 739 4629   EMAIL: cmidwinter@dow.on.doe.CA
+       Bob Hall         416 739 4624   EMAIL:      bhall@dow.on.doe.CA
+       Tom McElroy      416 739 4630   EMAIL:   tmcelroy@dow.on.doe.CA
+

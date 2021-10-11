@@ -1,0 +1,47 @@
+<html>
+
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+		<meta name="generator" content="Adobe GoLive 5">
+		<title>Welcome to Adobe GoLive 5</title>
+	</head>
+
+	<body bgcolor="#ffffff">
+		<p><b><font size="+3">HadCEM model runs</font></b><br>
+		</p>
+		<hr>
+		<p>The aim of the HadCEM (Hadley Centre Coupled Eddy-permitting Model) project is to build a coupled model with fine (1/3 degree) ocean resolution, which is suitable for long (multicentury) control and climate change integrations. The  motivation for this is that many important features of the large-scale ocean circulation (boundary currents, sill throughflows, baroclinic eddies) are not properly resolved at the HadCM3 ocean resolution of 1.25 degrees, but their importance for climate is not well understood. Once built, the model will be used to study the sensitivity of modelled climate variability and climate change to resolution of such features. <br>
+			<br>
+		</p>
+		<p><b>HadCEM papers </b><br>
+		</p>
+		<p>HadCEM paper, J. Climate, Jan 2004: Impact of an eddy-permitting ocean resolution on control and climate change simulations with a global coupled GCM <br>
+			<br>
+		</p>
+		<p>CGAM Indian Ocean paper using HadCEM, HadCM3 and HadCEML Indian Ocean Climate and Dipole Variability in Hadley Centre Coupled GCMs <br>
+			<br>
+		</p>
+		<p><b>Results</b><br>
+		</p>
+		<p>The main problem encountered in setting up the HadCEM model was been the choice of ocean advection scheme. The high ocean resolution meant that simple centred advection, as used in HadCM3, became unstable rather quickly. Several version of third order schemes, such as QUICK and UTOPIA, were tried as alternavies, but .found to be unsuccessful.  A pseudo-fourth order scheme was then implemented (pseudo since the advecting velocity is still second order, while the tracer gradient is fourth order). This scheme has a dispersive error rather than a diffusive one, meaning some noise is generated, but so far this cost is heavily outweighed by a TOA flux closer to zero and a global SST error also close to zero. The current status of HadCEM is that the integration has reached year 2140 (from a beginning in Sept 1991) and so far looks promising. The runid's used so far (archived under craca.om.abvn...) are:<br>
+		</p>
+		<p><b>abvnd</b> - from the start (Sept 1991) to August 1997.<br>
+			<br>
+		</p>
+		<p><b>abvnc</b> - from Sept 1997 to August 2011. Modifications include a change to the momentum diffusion formulation, introducing two levels of biharmonic tracer diffusion and ensuring salinity does not go below zero.<br>
+			<br>
+		</p>
+		<p><b>abvnb</b> - from Sept 2011 to 2140. At this point the salinity flux correction (to simulate the iceberg flux of water back into the ocean) was introduced.<br>
+			<br>
+			<br>
+		</p>
+		<p><b>abvnt</b> - The climate change run, using a 2% per year CO2 increase, starts from year 70 of the control run and will run for 80 years.<br>
+			<br>
+			<br>
+		</p>
+		<p><b>abvny</b> - Continuation of abvnt from year 30 on 180 PE's.<br>
+		</p>
+		<p></p>
+	</body>
+
+</html>

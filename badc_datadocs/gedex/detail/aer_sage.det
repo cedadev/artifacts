@@ -1,0 +1,665 @@
+Aerosol Profiles from SAGE I and SAGE II                         
+1.  TYPE OF DATA                                                             
+                                                                                
+    1.1  Parameter/Measurement                                               
+    1.2  Unit of Measurement                                                 
+    1.3  Data Source                                                         
+    1.4  Data Set Identification                                            
+                                                                                
+2.  SPATIAL CHARACTERISTICS                                                  
+                                                                                
+    2.1  Spatial Coverage                                                   
+    2.2  Spatial Resolution                                                 
+                                                                                
+3.  TEMPORAL CHARACTERISTICS                                                 
+                                                                                
+    3.1  Temporal Coverage                                                  
+    3.2  Temporal Resolution                                                
+                                                                                
+4.  INSTRUMENT DESCRIPTION                                                   
+                                                                                
+5.  DATA PROCESSING SEQUENCE                                                 
+                                                                                
+    5.1  Processing Steps and Data Sets                                     
+    5.2  Derivation Techniques/Algorithms                                    
+    5.3  Special Corrections/Adjustments                                    
+    5.4  Processing Changes                                                  
+                                                                                
+6.  QUALITY ASSESSMENT                                                       
+                                                                                
+    6.1  Data Validation by Producer                                         
+    6.2  Confidence Level/Accuracy Judgment                                 
+    6.3  Usage Guidance                                                     
+                                                                                
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION                                
+                                                                                
+8.  OUTPUT PRODUCTS AND AVAILABILITY                                         
+                                                                                
+    8.1  Tape Products                                                       
+    8.2  Film Products                                                      
+    8.3  Other Products                                                      
+                                                                                
+9.  DATA ACCESS                                                              
+                                                                                
+    9.1  Archive Identification                                              
+    9.2  Procedures for Obtaining Data                                       
+    9.3  NCDS Status/Plans                                                  
+                                                                                
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION                           
+                                                                                
+11.  REFERENCES                                                             
+                                                                                
+    11.1  Satellite/Instrument/Data Processing Documentation                 
+    11.2  Journal Articles and Study Reports                                 
+    11.3  Archive/DBMS Usage Documentation                                   
+                                                                                
+12.  RELATED DATA SETS                                                       
+                                                                                
+13.  SUMMARY/SAMPLE                                                         
+                                                                                
+14.  NOTES                                                                   
+ENDOFTOC                                  
+1.  TYPE OF DATA                                                                
+                                                                                
+1.1  Parameter/Measurement.  Atmospheric mixing ratio profiles and number
+density profiles for aerosol are measured during spacecraft sunrise and
+sunset.
+                                                                                
+1.2  Unit of Measurement. 
+                                                                                
+            Parameter                           Unit
+            ---------                           ----             
+            Aerosol Extinction Coefficient      1.0E-4 km**-1             
+            Rayleigh Extinction Coefficient     1.0E-4 km**-1              
+            Aerosol Extinction Ratio 
+            (1.0 micrometer only)                    ----                
+                                                                                
+1.3  Data Source.  Parameters are derived from the Stratospheric Aerosol       
+and Gas Experiment (SAGE I) instrument on the Applications Explorer             
+Mission-2 (AEM-2) spacecraft, and the SAGE II instrument on the Earth
+Radiation Budget Experiment Satellite (ERBS).                      
+                                                                                
+1.4  Data Set Identification.  The AEM-2 SAGE I and ERBS SAGE II aerosol
+profile data sets are identified within NCDS as SAGEI-PROF_AEROSOLS and
+SAGEII-PROF_AEROSOLS.
+                                                   
+The data sets contain derived aerosol and Rayleigh extinction coefficients,
+total extinction ratios, and corresponding error arrays for each sunrise
+and sunset event.                         
+                       
+                                                                                
+2.  SPATIAL CHARACTERISTICS                                                     
+                                                                                
+2.1  Spatial Coverage.  The orbital characteristics of SAGE I and SAGE II      
+provide near-global coverage of aerosol measurements.  Low- and mid-
+latitude coverage is obtained from both SAGE I and SAGE II.  Each
+instrument  observes one sunrise and one sunset per orbit.  Within NCDS,
+sunrise events are identified as "0" and sunset events are identified as
+"1".
+                                                                                
+SAGE I:  There are 15 sunrise and 15 sunset events per day.  SAGE I         
+events offer latitudinal sweep ranges of approximately 130 degrees within a
+4 week period.  In addition, they provide global coverage from 72 degrees
+north to 72 degrees south latitude during a year.  Successive observations 
+of the same type are separated by approximately 24 degrees longitude.        
+                                                                                
+SAGE II:  Spatial coverage is similar to that of SAGE I; however,
+coverage is provided from 80 degrees south to 80 degrees north annually. 
+                                                                                
+2.2  Spatial Resolution.  The spatial resolution of the SAGE I and SAGE II
+data sets is the same.  The 1 micrometer wavelength measurement has a
+vertical resolution of 1 kilometer below 25 km and a resolution of 5 km
+above 25 km. The vertical resolution of the 0.45 micrometer wavelength
+channel is 3 km below 25 km.  The horizontal resolution is about 250 km for
+all wavelengths.    
+                                                                                
+                                                                                
+3.  TEMPORAL CHARACTERISTICS                                                    
+                                                                                
+3.1  Temporal Coverage.  SAGE I data collection began February 21, 1979. 
+Four months after launch, a spacecraft power subsystem problem forced 
+SAGE I data collection to be limited to sunsets only.  Limited operation
+continued until November 18, 1981.  SAGE II data collection began October 
+5, 1984 and continues to the present time.                                   
+                                                                                
+3.2  Temporal Resolution.  Each satellite instrument makes two aerosol          
+profile determinations per orbit.  SAGE I and SAGE II each have 15 orbits
+per day.                                                 
+    
+                                                                            
+4.  INSTRUMENT DESCRIPTION                                                      
+
+4.1  Mission Objectives.  The mission objectives of the SAGE I and SAGE
+II are to determine the spatial distribution and to map vertical profiles 
+of stratospheric aerosols.  Specific objectives are:
+
+         a.  To develop a viable satellite-based remote sensing technique
+             for measuring stratospheric aerosols, nitrogen dioxide,
+             ozone, and water vapor.
+
+         b.  To utilize these measurements to study global circulation,
+             transient stratospheric phenomena, and sources and sinks of
+             individual species.
+
+         c.  To investigate aerosol optical properties using data from
+             flight experiments and correlative observations.
+
+4.2  Key Satellite Flight Parameters.  Nominal orbit parameters for SAGE I
+and SAGE II are listed below:
+
+                              SAGE I                 SAGE II
+                              ------                 -------
+     o  Launch Date        February 18, 1979      October 5, 1984
+     o  Planned Duration   1 year                 1 year 
+     o  Actual Duration    2 years and 9 months   Still operating
+     o  Orbit              Non-sun synchronous    Non-sun synchronous
+     o  Inclination        55 degrees             57 degrees
+     o  Nodal Period       96.8 minutes           98 minutes
+                                                            
+4.3  Principles of Operation.  SAGE I is a four-channel solar photometer
+with spectral bands at 0.385, 0.45, 0.60, and 1.00 micrometers.  SAGE II 
+is a seven-channel solar photometer with spectral bands at 0.385, 0.448,
+0.454, 0.525, 0.600, 0.940, and 1.019 micrometers.  The 0.940 um channel
+allows for water vapor detection.  The 0.448 um channel provides an
+additional channel for nitrogen dioxide detection, and the 0.525 um
+channel provides an additional channel for aerosol detection.  The
+remaining channels allow the separation of atmospheric extinction along the
+line-of-sight due to Rayleigh scattering, aerosols, ozone, nitrogen
+dioxide.  
+                                                                                
+4.4  Instrument Measurement Geometry.  The SAGE I and SAGE II instruments
+use the sun as a constant radiant energy source.  The instrument's sensors
+measure the radiation that has passed through the Earth's atmosphere
+during sunrise and sunset.  The photometers receive a vertically scanned
+solar image with respect to the Earth's horizon.
+
+The SAGE I photometric data are sampled at a rate of 64 samples per second
+per channel and digitized to 12-bit resolution.  Accuracy of the sample is
+1 bit.  Sampling occurs twice per orbit for durations varying from 3 to
+10 minutes each, depending on the angle between the orbit plane of the 
+spacecraft and the Earth-Sun vector.  The SAGE I field-of-view,
+approximately 0.5 arc-minutes, produces an approximate vertical resolution
+of 1 km at altitudes ranging from 10 km to the horizon.
+
+The nominal scan rate of the SAGE II instrument is 15 arc-minutes per
+second.  The radiometric data are sampled at a rate of 64 samples per
+second per channel and digitized to 12-bit accuracy.  Sampling occurs 
+twice per orbit for durations varying from 3 to 10 minutes each.  The
+SAGE II vertical field-of-view, approximately 0.5 arc-minutes, produces
+a vertical resolution of approximately 1 km at altitudes ranging from 
+cloud tops to 10 km.
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing steps and data steps.  Radiance data, along with
+spacecraft attitude and housekeeping data are stored aboard the 
+satellite and transmitted four times a day to NASA/Goddard Space
+Flight Center (GSFC) through a ground station or TDRS relay
+satellite.  GSFC then forwards these data to NASA/Langley Research
+Center (LaRC) for processing and scientific analysis.  GSFC also
+sends spacecraft and solar ephemeris data on a separate tape
+containing one week of data.
+
+Data from three sources are combined at Langley to produce the SAGE I
+and SAGE II aerosol profiles.  They include:  (a) NOAA National
+Meteorological Center (NMC) temperature and density readings at
+nineteen different pressure levels in the atmosphere; (b) spacecraft
+position and velocity vectors as functions of time, and (c) SAGE I raw
+radiance data in each of the four spectral bands, or (d) SAGE II raw
+radiance data in each of the seven spectral bands.  Atmospheric
+parameters are derived from these data, including aerosol, ozone, water
+vapor, and nitrogen dioxide density.  These data are arranged into four-
+day periods beginning with the first day of the month.
+
+5.2  Derivation Techniques/Algorithms.  Data from each satellite sunrise 
+and sunset event are converted to an atmospheric transmission versus
+tangent-height profile.  The mean slant path optical depth is calculated 
+for 1 km altitude bins using the Lambert-Beer law.  The following 
+three-step inversion is then performed:                               
+                                                                                
+   1.  The effects of Rayleigh scattering are calculated from the        
+       meteorological data and subtracted out.                   
+                                                                                
+   2.  The slant path optical depths are separated by species: aerosol,      
+       ozone, nitrogen dioxide, and water vapor.
+                                                                                
+   3.  Inversion from slant path optical depth to vertical extinction is      
+       performed using the Twomey modification of the Chahine nonlinear       
+       inversion.                                                   
+                                                                                
+5.3  Special Corrections/Adjustments.  During the processing of SAGE I and
+SAGE II data, corrections are made for solar limb darkening, atmospheric     
+refraction, and Rayleigh scattering to derive the parameter data sets.         
+When atmospheric temperature and pressure profiles are not available to
+make these corrections, latitude-dependent model temperature/pressure
+profiles, based on standard atmospheric profiles, are provided.  If model 
+data are provided, the event containing model data is so annotated.         
+                                                                                
+5.4  Processing Changes.  As a result of published corrections to the NOAA      
+temperature data at 5 mb and above, and the desire to compare SAGE I and    
+SAGE II data for long-term trend studies, the SAGE I data have been        
+reprocessed using improved retrieval techniques employed for SAGE II.
+These data have replaced the original profile data.
+                                                                                
+                                                                                
+6.  QUALITY ASSESSMENT                                                          
+                                                                                
+6.1  Data Validation by Producer.  SAGE I and SAGE II results have been
+validated by comparison with those obtained from a wide range of sensors,
+including an airborne LIDAR, balloon-borne optical particle counters,
+impactors, spectrometer strobes, ozonesondes, ozone rocketsondes, and
+other satellite data sets.  An extensive feedback process for SAGE II has
+produced a vastly improved data set from the original.  Detailed
+information on SAGE I and SAGE II data validation can be found in 
+Items Item 11.1 and 11.2.                              
+                                                                                
+NASA has made facilities available at LaRC so that visiting scientists may      
+analyze and evaluate SAGE I and SAGE II data sets with their correlative
+data.  Predictions of SAGE II overpasses for correlative purposes are also 
+available upon request from LaRC.                             
+                                                                                
+6.2  Confidence Level/Accuracy Judgment.  Since measurement accuracy is a
+function of altitude, each atmospheric profile array is accompanied by an 
+error array.  Typically, 1.0 micrometer aerosol extinction uncertainties
+are less than 10 percent from cloud tops to 25 km.  Uncertainties generally
+increase for aerosol extinction profiles at shorter wavelengths because of
+the stronger Rayleigh influence.
+                                                                                
+6.3  Usage Guidance.  Numerous studies using SAGE I and SAGE II data have 
+been conducted on atmospheric dynamics that use aerosols as tracers and 
+on stratospheric chemistry, which correlates observed aerosol variability 
+with other atmospheric species.         
+                                                                                
+                                                                                
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION                                    
+                                                                                
+7.1  Sensor Scientist                                                           
+                                                                                
+     Dr. M. Patrick McCormick                                                   
+     Mail Stop 475                                                              
+     Langley Research Center                                               
+     Hampton, Virginia  23665-5225                                              
+     (804) 864-2669                                                            
+     FTS 928-2669                                                               
+                                                                                
+                                                                                
+8.  OUTPUT PRODUCTS AND AVAILABILITY                                            
+                                                                                
+8.1  Tape Products.                                                             
+                                                                                
+8.1.1  SAGE I Profile Archival Tape, Level II                
+                                                                                
+       Medium/Specification:  9-track, 6250-bpi computer tape.                  
+                                                                                
+       Format and Content:  The tape is generated on a Control Data Corp.
+       (CDC) Cyber-series computer.  Each record contains one event and is
+       1488 60-bit fields in length.  Each field is in CDC-Cyber floating
+       point notation.  Each record contains the event time and location,
+       the type of event (sunrise [0] or sunset [1]), meteorological data,
+       processing information, ground distances, quality factors for the 
+       wavelength measurements, and arrays of Rayleigh and of aerosol 
+       extinction.
+       
+       Data Quantity/Rate:  1 tape per year                                     
+                                                                                
+       Status:  Available
+                                                                                
+       Plans/Schedule:  No additions or changes are expected.
+                                                                                
+8.1.2  SAGE II Profile Archival Tape, Level II              
+                                                                                
+       Medium/Specification:  9-track, 6250-bpi computer tape.                  
+                                                                                
+       Format and Content:  These tapes contain processed aerosol
+       concentration profiles along with associated error estimates.
+       Each record represents one profile and is 640 60-bit Cyber
+       floating point words long.  An end-of-tape mark is written
+       after the last profile record.
+
+       Data Quantity/Rate:  Each tape contains one year of data, starting
+       with October and ending with December of the following year.  For
+       the first year of SAGE II operation (1985), the tape also contains
+       profiles for November, and December 1984.
+                                                                                
+       Status:  Available.                              
+                                                                                
+       Plans/Schedule:  NCDS plans to archive all SAGE II profile tapes.
+                                                                                
+8.2  Film Products.  None.                                         
+                                                                                
+8.3  Other Products.
+ 
+8.3.1  SAGE I and II Aerosol Profile Common Data Formats (CDF)
+
+       Medium/Specification:  Magnetic disk
+
+       Format and Content:  The data are stored in a special data-set-
+       independent format, designated as the Common Data Form (CDF).
+       CDF was developed as a uniform method of storing and retrieving
+       data on disk.  Each CDF contains data and descriptions about the
+       data.  A standard software package called the "CDF Library" 
+       allows a user within an NCDS session to create and access these
+       data and descriptions.  These CDF files may be accessed within
+       the Data Applications Subsystem of NCDS.
+
+       Data Quantity/Rate:  SAGEI-PROF_AEROSOL; 1 file, 36 Mb
+                            SAGEII-PROF_AEROSOLS; 5 files (1/year), 246 Mb
+                            SAGEII-PROF_MET-DATA; 1 file, 30 Mb
+                           
+       Status:  Available
+
+       Plans/Schedule:  Additional data will be integrated periodically
+       as it becomes available.
+
+8.3.2  The Greenhouse Effect Detection Experiment (GEDEX) CD-ROM
+
+       Medium/Specifications:  CD-ROM in ISO 9660 standard      
+
+       Format and Content:  The data on this disk will be stored in a
+       special data-set-independent format, designated the Common Data
+       Format (CDF).  CDF was developed as a uniform method of storing
+       and retrieving data on disk.  Each CDF contains data and
+       descriptions about the data.  A standard software package called
+       the "CDF Library" will be included with this CD-ROM allowing a
+       user to create and access these data and descriptions.  The CD-ROM
+       will consist of many different data sets related to the study of
+       the Greenhouse Effect, including the SAGE I and SAGE II Aerosol
+       Profile data sets, and the accompanying data set documentation.
+
+       Quantity/Rate:  1 CD-ROM disk set.
+
+       Status:  This product was released in March 1992.  An update is
+       scheduled for June 1, 1992.
+
+       Plans/Schedule:  Users interested in this product should contact
+       NCDS staff for more details.
+
+                                                                                
+9.  DATA ACCESS                                                                 
+                                                                                
+9.1  Archive Identification                                                     
+                                                                                
+     Central Data Services Facility
+     Code 933                                    
+     National Space Science Data Center                                         
+     Goddard Space Flight Center                                                
+     Greenbelt, Maryland  20771                                                 
+     (301) 286-6695                                                             
+                                                                                
+9.2  Procedures for Obtaining Data.  Users may submit requests for data by
+letter, telephone, personal visit, or through the NSI DECnet computer 
+network at NSSDC::REQUEST.  Data costs are dependent on affiliation and
+sponsorship of the user program.  Data are free to NASA personnel. 
+Communication with the NSSDC Request Coordination Office is advised
+before ordering.               
+                                                                                
+Researchers who reside outside the USA should direct their requests to:         
+                                                                                
+     World Data Center A for Rockets and Satellites                             
+     Code 930.2                                                                 
+     Goddard Space Flight Center                                                
+     Greenbelt, Maryland  20771  USA                                            
+     (301) 286-6695                                                             
+                                                                                
+                                                                                
+9.3  NCDS Status/Plans.  NCDS currently supports SAGE I and SAGE II profile
+data:  aerosols, ozone, nitrogen dioxide and water vapor as well as SAGE 
+NMC meteorological data.  NSSDC supports the Meteorological, Ephemeris Raw
+Data Archive Tapes (MERDAT) generated from SAGE I and SAGE II.  
+                                       
+                                                                                
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION                               
+                                                                                
+     Request Coordination Office                                                
+     National Space Science Data Center                                         
+     Code 933-Central Data Services Facility                                    
+     NASA/Goddard Space Flight Center                                           
+     Greenbelt, Maryland 20771                                                  
+     PHONE:  (301) 286-6695                                                     
+     TELEX:  89675 NASCOM GBLT                                                  
+     TWX No: 7108289716                                                         
+                                                                                
+     Goddard DAAC User Support Office
+     NASA/Goddard Space Flight Center
+     Code 935
+     Greenbelt, Maryland  20771
+     INTERNET:: NCDSUSO@NSSDCA.GSFC.NASA.GOV
+     NSI DECnet:  NSSDCA::NCDSUSO
+
+                                                                                
+11.  REFERENCES                                                                 
+                                                                                
+11.1  Satellite/Instrument/Data Processing Documentation                        
+                                                                                
+      a.  Chu, W.P., and M.P. McCormick, 1979.  "Inversion of Stratospheric  
+          Aerosol and Gaseous Constituents from Spacecraft Solar Extinction     
+          Data in the 0.38 - 1.0 Micron Wavelength Region." Appl. Optics,      
+          18:1404-1413.                                                         
+                                                                                
+      b.  Kent, G.S., and P-H. Wang, 1986.  "SAGE II Satellite Data Set
+          Validation."  Science and Technology Corporation, Hampton, VA.
+          NASA Contractor Report 178189.
+
+      c.  Mauldin, L.E., III, N.H. Zaun, M.P. McCormick, J.H. Guy, and          
+          W.P. Vaughan, 1985.  "Stratospheric Aerosol and Gas                   
+          Experiment II Instrument:  A Functional Description." Optical         
+          Eng. 24:307-312                                                       
+                                                                                
+      d.  McCormick, M.P., P. Hamill, T.J. Pepin, W.P. Chu, T.J. Swissler,      
+          and L.R. McMaster, 1979.  "Satellite Studies of the Stratospheric     
+          Aerosol." Bull. Amer. Meteor. Soc. 60:1038-1046.                      
+                                                                                
+      e.  Russell, P.B., T.J. Swissler, M.P. McCormick, W.P. Chu,               
+          J.M. Livingston, and T.J. Pepin, 1981. "Satellite and Correlative     
+          Measurements of the Stratospheric Aerosol I: An Optical Model for     
+          Data Conversions." J. Atmos. Sci. 38:1279-1294.                       
+                                                                                
+      f.  Yue, G.K, M.P. McCormick, and W.P. Chu, 1984.  "A Comparative         
+          Study of Aerosol Extinction Measurements Made by the SAM II and       
+          SAGE I Satellite Experiments." J. Geophys. Res. 89:5321-5327.         
+                                                                                
+11.2  Journal Articles and Study Reports                                        
+                                                                                
+      a.  Ackerman, M., C. Brogniez, B.S. Diallo, G. Fiocco, P. Gobbi,          
+          M. Herman, M. Jager, J. Lenoble, C. Lippens, G. Megie, J. Pelon,      
+          R. Reiter, and R. Santer, 1989.  "European Validation of SAGE II      
+          Aerosol Profiles."  J. Geophys. Res., 94, D6:8399-8411.               
+                                                                                
+      b.  Chu, W.P., M.P. McCormick, J. Lenoble, C. Brogniez, and P.            
+          Pruvost, 1989.  "SAGE II Inversion Algorithm" J. Geophys.             
+          Res. 94, D6:8339-8351                                                 
+                                                                                
+      c.  Ghazi, A., Pi Wang, and M.P. McCormick, 1985.  "On Radiative          
+          Damping of Planetary Waves Using Stratospheric Observations."         
+          J. Atmos. Sci. 42, 19:2032-2042.                                      
+                                                                                
+      d.  Kelly, K. K., A. F. Tuck et al,  1989.  "Dehydration in the           
+          Lower Antarctic Stratosphere During Late Winter and Early             
+          Spring 1987,"  J. of Geophys. Res., 94:D9:11317-11357.                
+                                                                                
+      e.  Kent, G. S. and M. McCormick, 1988.  "Remote Sensing of               
+          Stratospheric Aerosol Following the Eruption of El Chichon,"          
+          Optics News, 14:11-19.                                                
+                                                                                
+      f.  Kent, G. S., U. O. Farrukh, P.-H. Wang and A. Deepak, 1988.           
+          "SAGE I and SAM II Measurements of 1.0 5m Aerosol                    
+          Extinction in the Free Troposphere,"  J. of Climate and               
+          Appl. Meteorol., 27:269-279.                                          
+                                                                                
+      g.  Kent, G.S. and M.P. McCormick, 1984.  "SAGE I and SAM II              
+          Measurements of Global Stratospheric Aerosol Optical Depth and        
+          Mass Loading." J. Geophys. Res. 89:5303-5314.                         
+                                                                                
+      h.  Kent, G.S., C.R. Trepte, U.O. Farrukh, and M.P. McCormick, 1985.      
+          "Variation in the Stratospheric Aerosol Associated with North         
+          Cyclonic Polar Vortex as Measured by the SAM II Satellite 
+          Sensor."  J. Atmos. Sci. 42,14:1536-1551                            
+                                                                                
+      i.  Kinne, S., O. B. Toon, G. C. et al, 1989.  "Measurements of           
+          Size and Composition of Particles in Polar Stratospheric              
+          Clouds From Infrared Solar Absorption Spectra,"  J. of                
+          Geophys. Res.,  94:D14:16481-16491.                                   
+                                                                                
+      j.  Livingston, J.M., and P.B. Russell, 1989.  "Retrieval of              
+          Aerosol Size Distribution Moments From Multiwavelength 
+          Particulate Extinction Measurements."  J. Geophys. Res. 
+          94, D6:8425-8433.         
+          
+      k.  McCormick, M.P., October 1985.  SAGE Aerosol Measurements,
+          Vol. I - February 21, 1979 - December 1980. NASA RP 1144.
+    
+      l.  McCormick, M.P., January 1986.  SAGE Aerosol Measurements,
+          Vol. II - January 1980 - December 31, 1980.  NASA RP 1149.
+
+      m.  McCormick, M.P., P. Hamill, and U.O. Farrukh, 1985.              
+          "Characteristics of Polar Stratospheric Clouds as Observed by         
+          SAM II, SAGE I, and LIDAR." J. Meteor. Soc. of Japan, 63.             
+
+      n.  McCormick M.P., and G.S. Kent, G.L. Yue, and D.M. Cunnold,
+          1982.  "Stratospheric Aerosol Effects from Soufriere, St.
+          Vincent as Measured by the SAGE Satellite System."  Science
+          216:1115-1118.
+
+      o.  McCormick, M.P., and J.C. Larsen, 1986.  "Antarctic Springtime
+          Measurements of Ozone, Nitrogen Dioxide, and Aerosol Extinction
+          by SAM II, SAGE, and SAGE II."  Geophys. Res. Letters 13:1280- 
+          1283.
+ 
+      p.  McCormick, M.P., H. Steele, P. Hamill, W.P. Chu, and                  
+          T.J. Swissler, 1983.  "Polar Stratospheric Cloud Sightings by         
+          SAM II." J. Atmos. Sci. 30:1387-97.                                   
+
+      q.  McCormick, M. P., C. R. Trepte and M. C. Pitts, 1989.                 
+          "Persistence of Polar Stratospheric Clouds in the Southern            
+          Polar Region,"  J. of Geophys. Res., 94:D9:11241-11251.               
+
+      r.  McMaster, L.R., 1986.  "Stratospheric Aerosol and Gas
+          Experiment (SAGE II)."  Presented at the 6th Conference on
+          Atmospheric Radiation, Williamsburg, VA, May 13-19, 1986.
+          (Extended abstracts, pp. J46-J48)
+                                                                                
+      s.  Oberbeck, V.R., J.M. Livingston, P.B. Russell, R.F.                   
+          Pueschel, J.N. Rosen, M.T. Osborn, M.A. Kritz, K.G. Snetsinger,       
+          and G.V. Ferry, 1989.  "SAGE II Aerosol Validation:  Selected         
+          Altitude Measurements, Including Particle Micromeasurements".         
+          J. Geophys. Res. 94, D6:8367-8380.                                    
+                                                                                
+      t.  Osborn, M.T., J.M. Rosen, M.P. McCormick, Pi-Huan Wang,               
+          J.M. Livingston, and T.J. Swissler, 1989.  "SAGE II Aerosol           
+          Correlative Observations:  Profile Measurements."  J. Geophys.        
+          Res. 94, D6:8353-8366.                                                
+                                                                                
+      u.  Russell, P.B., and M.P. McCormick, 1989.  "SAGE II Aerosol            
+          Data Validation and Initial Data Use:  An Introduction and            
+          Overview." J. Geophys. Res. 94, D6:8335-8338.                         
+                                                                                
+      v.  Wang, Pi-Huan, M.P. McCormick, February 1985.  "Behavior of 
+          Zonal Mean Aerosol Extinction Ratio and Its Relationship with 
+          Zonal Mean Temperature During the Winter 1978-1979 Stratospheric
+          Warming."  J. Geophys. Res. 90, C2.                                
+                                                                                
+      w.  Wang, Pi-Huan, and M.P. McCormick, October 1985.  "Variations 
+          in Stratospheric Aerosol Optical Depth During Northern Warming." 
+          J. Geophys. Res. 90, C10.                                             
+                                                                                
+      x.  Wang, Pi-Huan, M.P. McCormick, L.R. McMaster, W.P. Chu, T.J.          
+          Swissler, M.T. Osborn, P.B. Russell, V.R. Oberbeck, J.M.              
+          Livingston, J.M. Rosen, D.J. Hofmann, G.W. Grams, W.H. Fuller,        
+          and G.K. Yue, 1989.  "SAGE II Aerosol Data Validation Based           
+          on Retrieved Aerosol Model Size Distribution From SAGE II Aerosol     
+          Measurements."  J. Geophys. Res. 94, D6:8381-8393.                    
+                                                                                
+      y.  Wang, Pi-Huan, M.P. McCormick, T.J. Swissler, M.T. Osborn,            
+          W.H. Fuller, and G.K. Yue, 1989.  "Inference of Stratospheric         
+          Aerosol Composition and Size Distribution From SAGE II Satellite      
+          Measurements."  J. Geophys. Res. 94, D6:8435-8446.                    
+                                                                                
+      z.  Woodbury, G.E., and M.P. McCormick, 1983.  "Global Distribution     
+          of Cirrus Clouds Determined from SAGE I Data."  Geophys. Res. 
+          Letters 10:1180-1183.                                          
+                                                                                
+     aa.  Woodbury, G.E., and M.P. McCormick, 1986.  "Zonal and Geophysical
+          Distribution of Cirrus Clouds Determined from SAGE Data." 
+          J. Geophys. Res. 91:2775-2785.                             
+                                                                                
+     bb.  Yue, G.K., M.P. McCormick, W.P. Chu, P. Wang, and M.T. Osborn,        
+          1989.  "Comparative Studies of Aerosol Extinction Measurements        
+          Made by the SAM II and SAGE II Satellite Experiments."                
+          J. Geophys. Res., 94, D6:8412-8424.                                   
+
+                                                                                
+12.  RELATED DATA SETS.                                                         
+
+     Several related data sets exist online through NCDS as follows:
+
+     1)  The SAGE I Profile data sets contain derived mixing ratio
+         profiles and number densities for aerosols, ozone, and nitrogen
+         dioxide.  These data sets will be available online through NCDS
+         in Common Data Format (CDF).  To access these CDFs, specify the 
+         following as input within the Data Applications subsystem of the
+         NCDS:
+
+                       NCDS$DATA:SAGEI-PROF_AEROSOLS
+                       NCDS$DATA:SAGEI-PROF_NO2
+                       NCDS$DATA:SAGEI-PROF_OZONE
+
+     2)  The SAGE II Profile data sets contain derived mixing ratio 
+         profiles and number densities for aerosols, ozone, nitrogen 
+         dioxide, and water vapor.  An additional data set contains 
+         the NMC meteorological profile data.  These data sets will be 
+         available online by year in Common Data Format (CDF).  To 
+         access these CDFs, specify the following as input within the 
+         Data Applications subsystem of the NCDS:
+
+                       NCDS$DATA:SAGEII-PROF_AEROSOLS
+                       NCDS$DATA:SAGEII-PROF_NO2
+                       NCDS$DATA:SAGEII-PROF_OZONE
+                       NCDS$DATA:SAGEII-PROF_H20VAPOR
+                       NCDS$DATA:SAGEII-PROF_MET-DATA
+
+     3)  The Nimbus-7 Limb Infrared Monitor of the Stratosphere (LIMS)
+         data sets contain mixing ratio profiles of ozone, nitric acid,
+         water vapor, and nitrogen dioxide, along with temperature and
+         geopotential height distribution.  All profiles are given as a
+         function of pressure.  These data sets are available offline 
+         through NCDS.  To access these data sets, specify the following 
+         as input within the Data Application subsystem of the NCDS.
+         Data sets are converted to Common Data Format "on the fly". 
+
+                       NCDS$DATA:LIMS-LAMAT_DAY_GRID
+                       NCDS$DATA:LIMS-LAMAT_ZONEMEAN
+
+     4)  The Nimbus-7 Stratospheric Aerosol Measurement (SAM II) Beta
+         and Aerosol Number density Archive Tape (BANAT) data sets
+         contain derived aerosol and Rayleigh extinction coefficients, 
+         total extinction ratios, and corresponding error arrays for 
+         each sunrise and sunset event.  These data sets are available 
+         offline through NCDS.  To access these data sets, specify the 
+         following as input within the Data Applications subsystem of the 
+         NCDS.  Data sets are converted to Common Data Format (CDF) "on
+         the fly".
+
+                       NCDS$DATA:BANAT_SUNRISE
+                       NCDS$DATA:BANAT_SUNSET
+
+                     
+13.  SUMMARY/SAMPLE.                                           
+                 
+                                                                                
+14.  NOTES.                                                                     
+
+SAGE I and SAGE II meteorological profile data are provided by the NOAA
+National Meteorological Center (NMC).  The meteorological profile data,
+combined with spacecraft position and velocity and SAGE I or SAGE II raw
+radiance data, are needed to map nitrogen dioxide, ozone, aerosol, and
+water vapor profiles.  The meteorological data include temperature,
+altitude, and density profiles at 19 different pressure levels in the
+atmosphere.  (The pressure levels themselves can be used to derive
+molecular (Rayleigh) scattering corrections.)  In addition, the
+meteorological data provided by NOAA/NMC contain error estimates for both
+temperature and density at each of the pressure levels.  These
+meteorological data are included as part of each SAGE I and SAGE II Profile
+and MERDAT data set.
+
+*92/05/14

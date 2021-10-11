@@ -1,0 +1,462 @@
+GISS Global Temperature Anomalies
+1.  TYPE OF DATA
+
+    1.1  Parameter/Measurement
+    1.2  Unit of Measurement
+    1.3  Data Source
+    1.4  Data Set Identification
+
+2.  SPATIAL CHARACTERISTICS
+
+    2.1  Spatial Coverage
+    2.2  Spatial Resolution
+
+3.  TEMPORAL CHARACTERISTICS
+
+    3.1  Temporal Coverage
+    3.2  Temporal Resolution
+
+4.  INSTRUMENT DESCRIPTION
+
+    4.1  Mission Objectives
+    4.2  Key Satellite Flight Parameters
+    4.3  Principles of Operation
+    4.4  Instrument Measurement Geometry
+
+5.  DATA PROCESSING SEQUENCE
+
+    5.1  Processing Steps and Data Sets
+    5.2  Derivation Techniques/Algorithms
+    5.3  Special Corrections/Adjustments
+    5.4  Processing Changes
+
+6.  QUALITY ASSESSMENT
+
+    6.1  Data Validation by Producer
+    6.2  Confidence Level/Accuracy Judgment
+    6.3  Usage Guidance
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+    8.1  Tape Products
+    8.2  Film Products
+    8.3  Other Products
+
+9.  DATA ACCESS
+
+    9.1  Archive Identification
+    9.2  Procedures for Obtaining Data
+    9.3  NCDS Status/Plans
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+11.  REFERENCES
+
+    11.1  Satellite/Instrument/Data Processing Documentation
+    11.2  Journal Articles and Study Reports
+    11.3  Archive/DBMS Usage Documentation
+
+12.  RELATED DATA SETS
+
+13.  SUMMARY/SAMPLE
+
+14.  NOTES
+ENDOFTOC
+1.  TYPE OF DATA
+
+1.1  Parameter/Measurement.  Surface air temperature deviations from the
+1951-1980 average.
+
+1.2  Unit of Measurement.  Hundreths of degrees Centigrade (.01 deg C).
+
+1.3  Data Source.  The principal data sources for the surface air
+temperature station data are the World Weather Records (WWR), published by
+the Smithsonian Institution, and the WWR continuation, Monthly Climatic
+Data of the World (MCDW), collected under WMO (World Meteorological
+Organization) sponsorship, and published by NOAA's (National Oceanic and
+Atmospheric Administration) National Climatic Data Center (NCDC).
+
+1.4  Data Set Identification.  The GISS (Goddard Institute for Space
+Studies) monthly surface air temperature anomalies cover the period from
+January 1880 to December 1990.  Anomalies are averaged over a range of
+spatial scales:  a fine grid with 8000 equal-area cells, 80 equal-area
+regions, 8 latitude zones, 2 hemispheres, and the globe (see Item 2.2).
+
+
+2.  SPATIAL CHARACTERISTICS
+
+2.1  Spatial Coverage.  Near-Global coverage.
+
+2.2  Spatial Resolution.  The earth's surface is divided into 80 equal area
+"boxes", the full dimension of a box side being about 2500 km.  For the
+locations of the boxes see Figure 2 in Hansen and Lebedeff (1987). Each of
+the 80 boxes is subdivided into an array of 10 by 10 equal-area "subboxes."
+The temperature anomaly for a subbox is defined using all stations located
+within 1200 km of that subbox's center.  The 100 subbox values in a box are
+used to find the box average; the boxes are averaged to 8 latitude zones;
+and the zones are averaged to hemispheric and global anomalies.
+
+The table below shows the distribution among the 8 zones of the
+approximately 2000 continent and island meteorological stations used to
+compute the temperature anomalies.
+
+                  Surface Area     Number of boxes   No. of stations
+Latitude Zone       Fraction       in Latitude Band  in Latitude Band
+-------------  ------------------  ----------------  -----------------
+64.2 - 90.0 N         0.05                4                  88
+44.4 - 64.2 N         0.10                8                 461
+23.6 - 44.4 N         0.15               12                 495
+ 0.0 - 23.6 N         0.20               16                 437
+ 0.0 - 23.6 S         0.20               16                 260
+23.6 - 44.4 S         0.15               12                 179
+44.4 - 64.2 S         0.10                8                  29
+64.2 - 90.0 S         0.05                4                  18
+
+The majority of ocean boxes contain at least several stations, but 5 of the
+80 boxes contain no stations.
+
+Monthly anomalies are available for the globe, northern hemisphere,
+southern hemisphere, each of the zones listed above, each of the 80
+equal-area boxes, and each of the 100 subboxes located within each of the
+larger boxes.  Item 14 describes an accompanying program that converts
+monthly anomalies from the equal-area grid of 8000 subboxes to a uniform
+grid of 1 degree latitude by 1 degree longitude.
+
+
+3.  TEMPORAL CHARACTERISTICS
+
+3.1  Temporal Coverage.  Surface air station temperature anomalies are
+available from 1880 to 1990.  Not all subboxes have data for the entire
+period.
+
+3.2  Temporal Resolution.  Monthly temperature anomalies.
+
+
+4.  INSTRUMENT DESCRIPTION
+
+    N/A
+
+
+5.  DATA PROCESSING SEQUENCE
+
+5.1  Processing Steps and Data Sets.  The object of constructing this data
+set is to estimate the temperature change of large regions.  Hansen and
+Lebedeff (1987) have sought to incorporate the information from all
+relevant available station records.  However, in addition to limitations
+caused by incomplete spatial coverage, there are temporal inconsistencies
+that may be caused by changes in instrumentation, station location,
+observation time, or environmental factors.  The spatial and temporal
+variability of the temperature anomalies has been screened to eliminate
+gross errors.
+
+5.2  Derivation Techniques/Algorithms.  Each of the 80 equal-area boxes is
+divided into a 10 by 10 array of subboxes.  For each subbox, all stations
+within 1200 km are used to define the temperature change for that subbox.
+Each station's contribution to the temperature change for a given subbox is
+weighted according to the distance from the subbox center.  All stations
+within 1200 km are ordered from the one with the longest temperature record
+to the one with the shortest record.  The temperature changes for the first
+two stations are combined, then the third with the first two, and so on.
+Station records must have at least a 20-year overlap in order to be
+combined.  The mean of both records is calculated for the period in common,
+then the entire second record is adjusted by the difference (bias).  The
+mean of the resulting temperature records is the estimated temperature
+change as a function of time.  Monthly temperature changes for a given
+subbox are obtained by applying this method to each of the twelve months.
+
+The temperature change for each of the 80 boxes is computed similarly by
+combining the temperature changes for the 100 boxes contained within the
+box, except that the subboxes are weighted equally and subboxes which have
+no station within 1200 km are excluded.  The boxes in a latitude zone are
+likewise combined to find the temperature change for that zone.  The
+contribution of a box to the zonal average is weighted by the proportion of
+the box's area which contains data.
+
+To compute the hemispheric temperature changes, first, the three highest
+latitude zones in a hemisphere (north of 23.6 N, south of 23.6) are
+combined to a single high latitude zone, applying the same method used to
+find the average for each of the eight zones.  Then the temperature changes
+of the high latitude and the low latitude zones are combined, with each
+zone's contribution weighted by the zone's proportional area of the
+hemisphere.  Temperature change for the globe is computed similarly from
+the two low latitude and two high latitude.
+
+5.3  Special Corrections/Adjustments.  N/A
+
+5.4  Processing Changes.  Work continues to find ways to improve this data
+set by adding station data, detecting and removing non-climatic influences
+on the station data, and refining the methods for evaluating temperature
+change for regions.
+
+
+6.  QUALITY ASSESSMENT
+
+6.1  Data Validation by Producer.  Station temperature deviations more than
+five standard deviations from the long term mean are excluded from the data
+unless the deviation is confirmed by data from neighboring stations.
+
+A quantitative estimate of the error due to imperfect spatial and temporal
+coverage of meteorological stations was obtained with the help of a
+100-year run of a general circulation model (GCM).  The GCM is described in
+Hansen et al., (1983).  The goal was to find the error in the long-term
+surface air temperature change attributed to spatial gaps in station data.
+Of particular interest is the error in large-area results, such as the
+global surface air temperature change.
+
+6.2  Confidence Level/Accuracy Judgment.  The modeled and observed surface
+air temperature changes agreed reasonably well.  At a 95 percent confidence
+level, the principal features in the global and hemispheric temperature
+changes are real, in the sense that they are not artifacts of poor spatial
+coverage of stations.  The error caused by incomplete spatial coverage is
+estimated to be less that .1 degree C.
+
+6.3  Usage Guidance.  Spatial coverage is not complete over the entire
+globe.  Station density is particularly sparse over mid- to high-latitude
+oceans in the Southern Hemisphere.  Not all stations have data for the
+entire period 1880 through 1990.  The procedure of Hansen and Lebedeff
+(1987) for defining temperature change is designed for obtaining the
+results for large regions, from the 1000 km scale to the global scale.
+
+Note that updated versions of this data set may contain some slightly
+different data values from a previous version.  This occurs most frequently
+for data covering recent years, because of late reporting stations.
+Additionally, some data values may change slightly because the longer
+record permits better estimation of temperature changes.  Therefore, when
+acquiring updates to this data set, it is recommended that the user not
+merely append a new year's worth of data to the earlier time series, but
+instead begin afresh with the full time series.
+
+
+7.  CONTACTS FOR DATA PRODUCTION INFORMATION
+
+    Dr. Helene Wilson
+    Center for the Study of Global Habitability
+    Columbia University
+    NASA/Goddard Institute for Space Studies
+    2880 Broadway
+    New York, New York  10025
+    (212) 678-5640
+    BITNET:  CEHWH@NASAGISS
+    INTERNET:  CEHWH@NASAGISS.GISS.NASA.GOV
+    FAX: (212) 678-5552
+
+8.  OUTPUT PRODUCTS AND AVAILABILITY
+
+8.1  Tape Products.  Tapes can be made upon request.
+
+8.2  Film Products.  None.
+
+8.3  Other products.
+
+8.3.1  GISS Global Temperature Anomalies in Common Data Format (CDF) 
+
+    Medium/Specification:  Magnetic Disk
+
+    Format and Content:  The data are stored in a special
+    data-set-independent format, designated the Common Data Format (CDF).
+    CDF was developed as a uniform method of storing and retrieving data on
+    disk.  The CDF contains data and descriptions about the data.  A
+    standard software package called the "CDF Library" allows a user within
+    an NCDS session to create and access these data and descriptions. These
+    CDF files may be accessed within the Data Applications subsystem of
+    NCDS.
+
+    Data Quantity/Rate:
+
+    Data Set Name                          Volume
+    -------------                          ------------------
+    NCDS$DATA:GISS-TMP-DEV_MON-GLB         1 file,  22 Kb
+    NCDS$DATA:GISS-TMP-DEV_MON-NH          1 file,  22 Kb
+    NCDS$DATA:GISS-TMP-DEV_MON-SH          1 file,  22 Kb
+    NCDS$DATA:GISS-TMP-DEV_MON-ZONE        1 file,  60 Kb
+    NCDS$DATA:GISS-TMP-DEV_MON-BOXES       1 file, 441 Kb
+    NCDS$DATA:GISS-TMP-DEV_MON-SUBBOXES    1 file,  42 Mb
+
+    Status: Available
+
+    Plans/Schedule: Additional data will be integrated periodically as they
+    are received.
+
+8.3.2  The Greenhouse Effect Detection Experiment (GEDEX) CD-ROM
+
+       Medium/Specifications:  CD-ROM in ISO 9660 standard
+ 
+       Format and Content:  The data on this disk will be stored in a
+       special data-set-independent format, designated the Common Data
+       Format (CDF).  CDF was developed as a uniform method of storing and
+       retrieving data on disk.  The CDF contains data and descriptions
+       about the data.  A standard software package called the "CDF
+       Library" will be included with this CD-ROM allowing a user to create
+       and access these data and descriptions.  The CD-ROM will consist of
+       many different data sets related to the study of the Greenhouse
+       Effect, including the GISS Temperature Deviations data sets, and the
+       accompanying NCDS data set documentation.
+
+       Data Quantity/Rate:  1 CD-ROM disk set.
+
+       Status:  Release date for this product is scheduled for early 1992.
+
+       Plans/Schedule:  Users interested in this product should contact
+       NCDS staff for more details.
+
+
+9.  DATA ACCESS
+
+9.1  Archive Identification.  These data sets are available to users
+through the NASA Climate Data System (NCDS).  For information about this
+data set or how to access NCDS, contact:
+
+     Goddard DAAC User Support Office
+     NASA/Goddard Space Flight Center
+     Code 935
+     Greenbelt, Maryland  20771
+     (301) 286-3209
+     NSI DECnet:  NSSDCA::NCDSUSO
+     INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+
+9.2  Procedures for Obtaining Data.  The data may be obtained by online
+access through NCDS.  Refer to Item 10 below for assistance in accessing
+the system.  To obtain this data set in its native format, contact NASA
+Goddard Institute for Space Studies directly.  (Refer to Item 7.)
+
+9.3  NCDS Status/Plans.  NCDS currently supports this data set in the
+Common Data Format (CDF) and will continue to update the data set as new
+data are received.  (See Item 8.3.1 for Data Set Names).  These files may
+be accessed by specifying the following data set names when entering the
+Data Applications subsystem of NCDS.
+
+                                              Spatial Scale of
+   Data Set Name                        Monthly Temperature Anomalies
+   -------------                        -----------------------------
+   NCDS$DATA:GISS-TMP-DEV_MON-GLB                 Global
+   NCDS$DATA:GISS-TMP-DEV_MON-NH            Northern Hemisphere
+   NCDS$DATA:GISS-TMP-DEV_MON-SH            Southern Hemisphere
+   NCDS$DATA:GISS-TMP-DEV_MON-ZONE             8 Latitude Zones
+   NCDS$DATA:GISS-TMP-DEV_MON-BOXES           80 equal area boxes
+   NCDS$DATA:GISS-TMP-DEV_MON-SUBBOXES     8000 equal area subboxes
+
+
+10.  CONTACTS FOR ARCHIVE/DATA ACCESS INFORMATION
+
+     For information on how to gain access to NCDS, contact the Goddard
+     DAAC User Support Office:
+
+         Goddard DAAC User Support Office
+         NASA/Goddard Space Flight Center
+         Code 935 
+         Greenbelt, Maryland  20771
+         (301) 286-3209
+         NSI DECnet:  NSSDCA::NCDSUSO
+         INTERNET:  NCDSUSO@NSSDCA.GSFC.NASA.GOV
+
+
+11.  REFERENCES
+
+11.1  Satellite/Instrument/Data Processing Documentation.  None.
+
+11.2  Journal Articles and Study Reports
+
+      a. Hansen, J., G. Russell, D. Rind, P. Stone, A. Lacis, S. Lebedeff,
+         R. Ruedy and L. Travis,  1983. "Efficient Three-dimensional Global
+         Models for Climate Studies: Models I and II." Mon. Wea. Rev.,
+         111:609-662.
+
+      b. Hansen, J. and S. Lebedeff,  1987. "Global Trends of Measured
+         Surface Air Temperature." J. Geophys. Res., 92:13,345-13,372.
+ 
+      c. Hansen, J. and S. Lebedeff,  1988. "Global Surface Air
+         Temperatures:  Update through 1987." Geophys. Res. Lett.,
+         15:323-326.
+
+      d. Jenne, R.L.,  1975. "Data Sets for Meteorological Research."
+         NCAR-TN/JA-111, National Center for Atmospheric Research, Boulder,
+         CO. 192p.
+
+      e. Spangler, W.M. and R.L. Jenne,  1990. "World Monthly Surface
+         Station Climatology." Computer Data Tape Documentation, National
+         Center for Atmospheric Research, Boulder, CO. 74p.
+
+11.3  Archive/DBMS Usage Documentation
+
+      a. Olsen, L.M., J.W. Closs, and F.E. Corprew, November 1991. "NASA's
+         Climate Data System Primer:  Version 4.0"  EOS DAAC, NASA Goddard
+         Space Flight Center, Greenbelt, Maryland.
+
+
+12.  RELATED DATA SETS
+
+     Several related data sets exist online through NCDS.
+
+     1) The Climate Research Unit's Global Temperature Deviations data set
+        contains surface air and marine air temperature anomalies derived
+        from the World Weather Records (WWR).  These data are available
+        online through NCDS in Common Data Format (CDF).  To access this
+        CDF, specify the following as input within the Data Applications
+        Subsystem in NCDS.
+
+                       NCDS$DATA:CLIM-RSRCH-U_TMP-DEV
+
+     2) The Angell Global Temperature Deviations data set contains zonal
+        temperature, and temperature deviations derived from radiosonde
+        measurements compiled in Monthly Climatic Data for the World,
+        published by the National Climatic Data Center. These data are
+        available online through NCDS in Common Data Format (CDF).  To
+        access this CDF, specify the following as input within the Data
+        Applications Subsystem in NCDS.
+
+                       NCDS$DATA:ANGELL_TMP_DEV
+
+     3) Brightness Temperature Anomalies obtained from the Microwave
+        Sounding Unit aboard the TIROS-N series of polar orbiting
+        satellites (TIROS-N, NOAA-6, NOAA-7, NOAA-9, NOAA-10, NOAA-11, and
+        NOAA-12).  These data are available online through NCDS in Common
+        Data Format (CDF).  To access these CDFs, specify the following as
+        input within the Data Applications subsystem of NCDS.
+
+                       NCDS$DATA:MSUTMP_MONTHLY
+                       NCDS$DATA:MSUTMP_CLIMATOLOGY
+
+    4)  The Vinnikov, Groisman, and Lugina zonal and station temperature
+        data sets contain monthly, seasonal, and annual mean zonal
+        temperature deviations and monthly mean station temperature
+        deviations.  These data are available online through NCDS in Common
+        Data Format (CDF).  To access these CDFs, specify the following as
+        input within the Data Applications subsystem of NCDS.
+                                                    
+                       NCDS$DATA:VGL-TMP-DEV_MONTHLY 
+                       NCDS$DATA:VGL-TMP-DEV_SEASONAL 
+                       NCDS$DATA:VGL-TMP-DEV_ANNUAL    
+                       NCDS$DATA:VGL-TMP-MON_NORTH-STATN
+                       NCDS$DATA:VGL-TMP-MON_SOUTH-STATN
+
+
+13.  SUMMARY/SAMPLE
+
+A sample plot is available for this data set.  It is accessible through the
+"Graph Data" option within the Data Applications Subsystem of NCDS.  To
+view this plot, choose "Display Demonstration Plot of a Data Set" and
+specify the plot file NCDS$DEMO:GISS-TMP-DEV as input.
+
+
+14.  NOTES
+
+Included on the GEDEX CD-ROM is a program to replicate a month's 8000
+subbox temperature anomalies to a uniform grid of 1 degree latitude by 1
+degree longitude.  The user must first subset the data using the CDFList
+utility available on the CD-ROM.  (CDFList creates ASCII subsets of the
+data.)  The program to create a uniform grid of 1 x 1 degree resolution
+reads the subbox data from the ASCII subset.  The subboxes are organized in
+a sequence of month-by-month "maps."  This program is not recommended for
+use to replicate the subbox values directly to a grid coarser than 1 by 1
+degree, since some of the subbox values may be omitted with the coarser
+grid.  A two-step procedure--from the subboxes to a 1 x 1 degree grid, and
+then interpolation to a coarser grid--is recommended.
+
+To access this program, specify...
+
+                 ...:GISS-TMP-DEV_MON-SUBBOXES-TO1X1GRID
+
+
+*92/03/13

@@ -1,0 +1,281 @@
+
+
+FIRST WCRP SURFACE RADIATION 
+BUDGET GLOBAL DATA SETS
+
+Shortwave Radiation Parameters
+
+March 1985 - December 1988
+
+
+
+World Climate Research Programme
+
+National Aeronautics and Space Administration
+
+
+
+prepared by
+
+
+
+NASA Earth Observing System
+
+Distributed Active Archive Center
+
+NASA Langley Research Center
+
+Hampton, Virginia 23681-0001
+
+
+
+The data contained herein are for scientific use only and have no com-
+mercial value.
+
+MS-DOS is a registered trademark of Microsoft Corporation.
+
+Macintosh is a registered trademark of Apple Computer, Incorporated.
+
+GIF is a registered trademark of CompuServe Incorporated.
+
+
+
+Table Of Contents
+
+Introduction
+
+The CD-ROM Contents
+
+SRB Data Sets
+
+System Requirements
+
+HDF 
+
+References
+
+Acknowledgments
+
+Contact Information
+
+
+
+
+
+Support for this effort from the Mission to Planet Earth Science Division, 
+NASA Headquarters was provided by Drs. Robert A. Schiffer and James 
+C. Dodge.
+
+First WCRP Surface Radiation Budget Global 
+Data Sets
+
+Shortwave Radiation Parameters
+
+Introduction
+
+This CD-ROM contains Version 1.1 Surface Radiation Budget (SRB) 
+shortwave products for the period March 1985 through December 1988 
+as produced by the World Climate Research Programme's (WCRP) SRB 
+Satellite Data Analysis Center (SDAC).  Inputs to the Version 1.1 prod-
+uct are results from the International Satellite Cloud Climatology Project 
+(ISCCP) and the Earth Radiation Budget Experiment (ERBE).   SDAC 
+uses two methods (known as the Pinker and Staylor algorithms) to esti-
+mate surface downward and net irradiances, surface albedo, downward 
+direct/diffuse ratio, surface cloud forcing, and daylight cloud fraction.  In 
+addition, various other radiation, cloud, meteorological and diagnostic 
+parameters are provided to aid the user in understanding variations in the 
+SRB parameters.  
+
+The data are archived at the NASA Langley Research Center.  The pro-
+duction  of this CD-ROM is a NASA-sponsored effort implemented by 
+the staff of the Langley Distributed Active Archive Center (DAAC).
+
+The CD-ROM Contents
+
+There are four major directories on this disk.
+
+The DATA directory contains the following types of SRB data files.
+
+o	MON_YYMM.HDF is a binary Hierarchical Data Format (HDF) 
+file giving 52 monthly-average parameters for 6596 cells (280x280 
+km) over the globe.
+
+o	DAY_YYMM.HDF is a binary HDF file giving 10 daily-average 
+parameters for 6596 cells over the globe.
+
+The  IMAGES directory contains HDF and GIF images for each of the 
+data months.
+
+o	IMG_YYMM.HDF is a monthly graphics HDF file which may be 
+used for browse purposes.   Each file contains 19 global images of 
+various SRB, ISCCP, and  ERBE parameters. 
+
+o	I##_YYMM.GIF is a GIF  file which may be used for browse pur-
+poses.  Each file contains a single  global image of an SRB, ISCCP, 
+or  ERBE parameter. 
+
+The DOCUMENT directory contains documentation for each data 
+month and general documentation for the disk.
+
+o	SRB_YYMM.DOC is an ASCII README file containing informa-
+tion on  that month's inputs, results of that month's calibration tests 
+and ground-truth comparisons, definitions of SRB parameters, and a 
+physical description of both the Pinker and Staylor algorithms.
+
+The SOFTWARE directory contains programs which access the SRB 
+data as well as the source code for the algorithms used to create the data.
+
+o	PINKER.FOR is an ASCII file showing the FORTRAN listing of 
+the Pinker algorithm.
+
+o	STAYLOR.FOR is an ASCII file showing the FORTRAN listing of 
+the Staylor algorithm.
+
+o	RDSRBHDF.C and RDSRBHDF.F  are C and FORTRAN read 
+routines to access the data files.
+
+README files are located in every directory.   These files  help the user 
+understand and use the data in the directory.
+
+SRB Data Sets
+
+Whitlock et al. (1993) (located in the file WHITLOCK.DOC in the DOC-
+UMENT directory)  is recommended as a reference manual for use with 
+the SRB data sets, however, the srb_yymm.doc files will suffice for many 
+applications.  Sample results for a few selected regions of the globe are 
+presented in DiPasquale and Whitlock (1993).
+
+The user generally may have confidence in the SRB results when surface 
+downward and net values for the Pinker and Staylor algorithms agree 
+within 15 W/m**2.  Data for regions or times where larger differences 
+occur should be viewed with caution.  ISCCP does not give scaled-radi-
+ance values when solar zenith angles are greater than 72.8 degrees.  Also, 
+the satellite bands used by ISCCP do not allow a clear definition of 
+clouds over bright surfaces such as snow/ice and desert regions.  SRB 
+results for near-dark or bright-surface conditions should be viewed with 
+caution.  An unresolved issue in the Version 1.1 SRB data sets is broad-
+band surface albedo.  Significant differences in surface albedo sometimes 
+exist between the Pinker and  Staylor algorithms.
+
+System Requirements
+
+This CD-ROM has been formatted and produced to work with IBM PCs, 
+Apple Macintoshes and Unix systems  with ISO-9660 CD-ROM driver 
+support.   Also included in this package  are two 3.5"  floppy disks which 
+contain access software for IBM PCs and Apple Macintoshes.   Installa-
+tion instructions for the access software are on the label of each disk.  
+Please note,  the filenames on some Unix systems may be interpreted 
+with a period and a version number.  To use these filenames enclose the 
+filename in double quotes; for example, more "README.;1".
+
+HDF 
+
+The SRB data and image files are stored in the Version 3.2r1 of the Hier-
+archical Data Format (HDF) developed by the National Center for Super-
+computing Applications.    The PC and MacIntosh access programs 
+provide the tools needed to view the data and images on those platforms.  
+Users on other systems should refer to the README.HDF file in the 
+DOCUMENT directory on the CD-ROM for information on obtaining 
+the HDF software from NCSA.
+
+References
+
+1. Whitlock, C. H., Charlock, T. P., Staylor, W. F., Pinker, R. T.,  Laszlo, 
+I., DiPasquale, R. C., and Ritchey, N. A.:  WCRP Surface Radiation Bud-
+get Shortwave Data Product  Description - Version 1.1.  NASA Technical 
+Memorandum  107747, National Technical Information Service, Spring-
+field, Virginia, 1993.
+
+ 2. DiPasquale, R. C., and Whitlock, C. H.:  First WCRP Long-Term Sat-
+ellite Estimates of Surface Solar Flux for the Globe  and Selected 
+Regions.  Proceedings of the ERIM/JOANNEUM RESEARCH/CIESIN 
+25th International Symposium on Remote Sensing and Global Environ-
+mental  Change. Graz, Austria, April 4-8, 1993.  Environmental 
+Research Institute of Michigan, Ann Arbor, Michigan, 1993.
+
+Acknowledgments
+
+Input from the SRB Science Working Group was invaluable in defining 
+which parameters to include in the SRB data set as well as analysis of the 
+experimental global processing results.  That group is chaired by Dr. T. 
+Charlock (NASA Langley  Research Center, U.S.A.), and membership 
+includes Drs. A. Arking (NASA Goddard Space Flight Center, U.S.A.), 
+R. Ellingson (University of Maryland, U.S.A.), C. Frohlich (World Radi-
+ation Center, Physikalisch-Meteorologisches Observatorium, Switzer-
+land), W. Liu (NASA Jet Propulsion Laboratory, U.S.A.), G. Ohring 
+(NOAA National  Environmental Satellite Data Information Service, 
+U.S.A.), J. Schmetz (European Space Operations Center, Germany), and 
+G.   Stephens (Colorado State University, U.S.A.). 
+
+We are also indebted to the WCRP Working Group on Radiation Fluxes 
+for their review and advice during the SRB development process over the 
+past 6 years.  That group is chaired by Dr. T. Vonder Haar (Colorado State 
+University, U.S.A.) and membership includes Drs. A. Arking (NASA 
+Goddard Space Flight Center, U.S.A.), Y. Fouquart (Universite des Sci-
+ences et Techniques de Lille, France), V. Khvorostyanov (Central Aero-
+logical Observatory, Russian Federation), J.-J. Morcrette (European 
+Center for Medium-Range Weather Forecasts, United Kingdom), T. 
+Nakajima (University of Tokyo, Japan), G. Ohring (NOAA National 
+Environmental Satellite Data Information Service, U.S.A.), E. Raschke 
+(GKSS- Forschungzentrum, Germany), R. Saunders (Royal Aerospace 
+Establishment, United Kingdom), A. Slingo (Meteorological  Office, 
+United Kingdom), and G. Stephens (Colorado State University, U.S.A.).
+
+Both the WCRP and SDAC are indebted to the SRB Satellite Calibration 
+Team  whose members pooled both their knowledge and advanced data 
+to provide the information used by ISCCP to accurately calibrate scaled-
+radiance values for the NOAA-9 period.  That group was chaired by Dr.  
+C. Whitlock (NASA Langley Research Center, U.S.A.) and  membership 
+included W. Staylor (NASA Langley Research Center, U.S.A.), G. Smith 
+(NOAA National Environmental Satellite Data Information Service, 
+U.S.A.), Drs. P. Abel, Y. Kaufman, and B. Holben (NASA Goddard 
+Space Flight Center,  U.S.A.), Dr. P. Slater (University of Arizona,  
+U.S.A.), Drs. R. Frouin and C. Gautier (University of California,  
+U.S.A.), Dr. P. Teillet (Canada Centre for Remote Sensing), and Dr. C. 
+Justus (Georgia Institute of Technology, U.S.A.). 
+
+
+
+
+
+
+
+
+
+
+
+Contact Information
+
+Further information on SRB can be obtained by contacting:
+
+Charles H. Whitlock, Head 
+
+WCRP/SRB Satellite Data Analysis Center
+
+Mail Stop 420
+
+NASA Langley Research Center
+
+Hampton, Virginia 23681-0001
+
+Tel: (804)864-5675  Fax: (804)864-7996
+
+Email: whitloc@srb1.larc.nasa.gov
+
+Further information on the CD-ROM can be obtained by contact-
+ing:
+
+User and Data Services
+
+Langley DAAC
+
+Mail Stop 157B
+
+NASA Langley Research Center
+
+Hampton, Virginia 23681-0001
+
+Tel: (804)864-8656  Fax: (804)864-8807
+
+Email: userserv@eosdis.larc.nasa.gov
+

@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 3.0 Win">
+  <TITLE>BADC Datasets: Met Office - Stratospheric Assimilated Data News Page</TITLE>
+</HEAD>
+<!-- Created 25/05/96 01:56:03  -->
+<!-- Author: Simon Williams BADC-->
+<BODY BGCOLOR="#ffffff">
+
+<H1>
+
+Met Office - Stratospheric Assimilated Data - NEWS</H1>
+
+<HR ALIGN=LEFT>
+
+   <ul> 
+    <li>
+      <h3>Latest News on 12 August 2010</h3>
+     <p>The ukmo assimilated data files extracted from the Met Office for 2-8 July 2010 has been found to be corrupted. We are attempting to re-extract these files. Apologies for any disruption this may cause. </p>
+    <li>
+      <h3>Latest News on 17th June 2010 &nbsp;</h3> 
+      <p>The ukmo assimilated dataset from the BADC will probably be unavailable for the next few days due to essential system maintenance. &nbsp; The data files for this period  will be added to the archive once it is back on-line.
+        Apologies for any disruption this may cause, 
+      </p>
+    <li><h3>Latest News on 27 April 2010 </h3>
+   <p>More details on changes made to the global fields from the NWP model are available from <a href="http://badc.nerc.ac.uk/data/um/UM_Changes_Mar10.html">http://badc.nerc.ac.uk/data/um/UM_Changes_Mar10.html </a></p>
+   <li><h3>Latest News on 15th April 2010 </h3>
+   <p>Global Fields -Change in spatial resolution. 
+   It appears that the horizontal resolution of the global fields (on pressure levels) has increased since 09/03/10, and that additional vertical levels have ben added at the top of the height range. We are currently making equiries with the Met Office to obtain more details.</p>
+
+     <li>
+       <h3>Latest News on 18th November 2009</h3>
+       Since 10th November 2009, one output level has been added at the top end, i.e. a new level at 0.05mb (between 0.1 and 0.3mb). This makes the total number of levels at 31 (instead of 30 previously).
+       
+     <li><h3>Latest News on 7th February 2008 </h3>
+         <p>A user has reported some issues with using this dataset for the period around 27th October 2003. We have made enquiries with the Met Office and been informed of the following:</p>
+         <p>&quot;The New Dynamics was implemented in the stratosphere model on 28th Oct 2003. From  this date the fields in the PP files  run south to north rather than north to south as previously.     On this date the vertical velocity also changed from dw/dp to dw/dz and the size of the grid these values were held on increased slightly, hence leading to slightly larger file sizes (around 0.5MB larger). &quot; </p>
+         
+         
+     <li><h3>Latest News on 19th December 2006 </h3>
+         <p>We are extracting the ukmo-assim data on a routine basis, and have managed to fill most of the gaps. However, despite repeated efforts, we are unble to extract the data for 14/8/06 from the Met Office archive. </p>
+           
+     <li> <h3>Latest News on 2nd June 2006</h3>
+             
+             <p>The problem with the ordering of the levels has been resolved, and we have recovered most of the data from 14/3/06-present with the levels in the correct order. However, we have found that there is a difference in the size of the files returned depending on which part of the archive they came from. This difference is due to the use of a different packing accuracy for one of the fields,  and we have contacted the Met Office to inform them of the discrepancy. The data files should still be useable as long as the value of the packing accuracy is read from the pp header for each field (in any software users have written), so that it is unpacked correctly. Once the Met Office have decided which size of files is the correct one to use, we will re-extract the data to provide a uniform archive. Apologies again if this has created any problems or confusion.</p>
+             
+             <li><h3>Latest News on 8<sup>th</sup> May 2006</h3>
+               
+               <p>A problem has been found with the data recovered from 28/4/06-present. Initially the data were being returned from the Met Office archive with the pressure levels in the wrong order. In order to recover these levels in the correct order, it was necessary to request each level explicitly in the request script. However, those levels which are at values below 1mb (e.g. 0.4 mb) are generating an error during the extraction process. The Met Office have been informed, and when the issue has been resolved, the data will be re-extracted. In the meantime, users may experience problems when trying to use these files, and the BADC&nbsp;would like to apologise for the inconvenience caused.</p>
+   </ul>
+<P>
+</BODY>
+</HTML>

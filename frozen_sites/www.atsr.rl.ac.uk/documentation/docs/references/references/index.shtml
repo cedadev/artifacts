@@ -1,0 +1,591 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../../../../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>ATSR References
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../../../../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../../../../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../../../../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../../../../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../../../../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../../../../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../../../../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../../../../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../../../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../../../index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../../visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../../../../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="../../../../validation/index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../../../../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../../../../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../../../../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../../../../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../../../../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <HTML>
+See also <A href = "../related/index.shtml">Related Publications</A>. 
+<P> Agarwal, V.K., Mathur, A.K. and Ilanthirayan, S. (1993): Estimations of the 
+  surface fluxes from satellite observations of boundary layer and the surface. 
+  <I>Proc. of the 1st ERS-1 Symposium</I>, Cannes 1992, ESA SP-359, 773-778. </P>
+<P> Albani, M., Beruti, V. and Delia, S. (1995): Evolution of the ERS-2 data-processing 
+  ground segment. <I>ESA Bulletin</I>-European Space Agency, No.83, 61-71 </P>
+<P> Allen, M.R., Mutlow, C.T., Blumberg, G.M.C., Christy, J.R., McNider, R.T. 
+  and Llewellyn-Jones, D.T. (1994): Global change detection. <I>Nature</I> 370, 
+  24-25. </P>
+<P> Allen, M.R., Lawrence, S.P., Murray, M.J., Mutlow, C.T., Stockdale, T.N. Llewellyn-Jones, 
+  D.T. and Anderson, D.L.T. (1995): Control of Tropical Instability Waves in the 
+  Pacific. <I>Geophysical Research Letters</I> 22, No.19, 2581-2584 </P>
+<P> Allen, M.R., Panter, M.J., Blumberg, G.M.C., Mutlow, C.T. and Llewellyn-Jones, 
+  D.T. (1994): Prospects for global change detection with satellite SST observations. 
+  <I>Proc. of the 2nd ERS-1 Symposium</I>, Hamburg 1993, ESA SP-361, 1103-1108. 
+</P>
+<P> Allen, M.R. (1993): Role of satellite observations of sea-surface temperature 
+  in the detection of global change. RAL report RAL-93-095, 51-. </P>
+<P> Arai, K. (1992): A merged data set for obtaining cloud-free infra-red data 
+  and a cloud cover estimation within pixels for SST retrieval. <I>Asian-Pacific 
+  Remote Sensing Journal</I> 4, 121-127. </P>
+<P> Arai, K. (1992): A merged data set of MOS-1/VTIR, NOAA/AVHRR and ERS-1/ATSR 
+  (for diurnal change analysis of sea surface temperature) <I>Advances in Space 
+  Research</I> 12, 357-360. </P>
+<P> Arino, O., Buongiorno, A. and Goryl, P. (1995): Intercalibration of AVHRR 
+  and ATSR data. <I>Advances in Space Research</I>, 17, No.1, 29-38 </P>
+<P> Armitage, S., Corney, D., Mason, G., Taylor, W.H., Watkins, R.E.J., Williamson, 
+  E.J., Cragg, D., Mellor, G., Tinkler, D. and Holmes, A.R. (****): Test and calibration 
+  of the Along Track Scanning Radiometer ESA, <I>International Symposium on Environmental 
+  Testing for Space Programmes: Test Facilities and Methods</I>, 559-564. </P>
+<P> Attema, E.P.W. (1991): The Active Microwave Instrument on-board the ERS-1 
+  satellite <I>Proceedings of the IEEE</I>, 79, No.6, 791-799 </P>
+<P> Bamber, J.L. and Harris, A.R. (1994): The atmospheric correction for satellite 
+  infrared radiometer data in polar regions. <I>Geophys. Res. Letters</I> 21, 
+  2111-2114. </P>
+<P> Barton, I.J. and Prata, A.J. (1995): Satellite-derived Sea-Surface Temperature 
+  data sets for climate applications <I>Advances in Space Research</I>, 16, No.10, 
+  127-136 </P>
+<P> Barton, I.J., Prata, A.J. and Cechet, R.P. (1995): Validation of the ATSR 
+  in Australian waters. <I>Journal of Atmospheric and Oceanic Technology</I>, 
+  12, No.2, </P>
+<P> Barton, I.J., Zavody, A.M., O'Brien, D.M., Cutten, D.R., Saunders, R.W. and 
+  Llewellyn-Jones, D.T. (1989): Theoretical algorithms for satellite-derived sea-surface 
+  temperatures. <I>J. Geophys. Res.</I> - Oceans 94, 3365-3375. </P>
+<P> Barton, I.J. and Llewellyn-Jones, D.T. (1992): Along Track Scanning Radiometer 
+  program - international scientific collaboration. <I>National Conference Publication 
+  - Institution of Engineers, Australia</I> 92, 125-129. </P>
+<P> Barton, I.J., Prata, A.J, and Llewellyn-Jones, D.T. (1993): The Along Track 
+  Scanning Radiometer - an analysis of coincident ship and satellite measurements. 
+  <I>Advances in Space Research</I> 13, 69-74. </P>
+<P> Barton, I.J., Mutlow, C.T., Zavody, A.M. and Llewellyn-Jones, D.T. (1994): 
+  Intercomparison of AVHRR and ATSR data and data products. <I>Proc. of the 2nd 
+  ERS-1 Symposium</I>, Hamburg 1993, ESA SP-361, 1099-1102. </P>
+<P> Barton, I.J., Zavody, A.M., Mutlow, C.T. and Llewellyn-Jones, D.T. (1994): 
+  Water vapour retrievals using combined ATSR Infrared and microwave data. <I>Proc. 
+  of the 2nd ERS-1 Symposium</I>, Hamburg 1993, ESA SP-361, 819-824. </P>
+<P> Barton, I.J., Zavody, A.M., Mutlow, C.T. and Llewellyn-Jones, D.T. (1994): 
+  Water vapour retrievals using combined ATSR Infrared and microwave data. <I>Proc. 
+  of the 2nd ERS-1 Symposium</I>, Hamburg 1993, ESA SP-361. </P>
+<P> Barton, I.J., Llewellyn-Jones, D.T., Prata, A.J. and Cechet, R.P. (****): 
+  Geophysical validation of ATSR sea surface temperatures. Science and Technology 
+  Agency, <I>Asia-Pacific ISY</I> Conference 2, 278-281. </P>
+<P> Barton, I.J., Zavody, A.M. Prata, A.J., Llewellyn-Jones, D.T., Bailey, P., 
+  Cechet, R.P., Gorman, M.R., Kent, P., Lee, D.J. and Mutlow, C.T. (****): Intercomparison 
+  of satellite-derived sea surface temperatures <I>ESA Environment Observation 
+  and Climate Modelling Through International Space Projects</I>, Vol 1: Remote 
+  Sensing for Global Change, Climate Change and Atmosphere and Ocean Forecasting 
+  367-372. </P>
+<P> Bisla, B.S. and White, D.J. (1989): Signal Channel Processing for the Along 
+  Track Scanning Radiometer for ERS-1. <I>RAL report</I>, RAL-89-040. </P>
+<P> Bingham, R., Spicer, D., Llewellyn-Jones, D.T., Mutlow, C.T., Wright, J. and 
+  Murray, M.J. (1994): Von Karmen vortex cloud patterns in the South Atlantic 
+  viewed with ATSR. <I>Proc. of the 2nd ERS-1 Symposium</I>, Hamburg 1993, ESA 
+  SP-361. </P>
+<P> Bradshaw, T.W. and Orlowska, A.H. (1988): Miniature mechanical refrigerators 
+  for space use. <I>Proc. Society of Photo-Optical Instrumentation Engineers</I>, 
+  London 1988, 39-43. </P>
+<P> Conway, J., Eva, H. and Dsouza, G. (1996): Comparison of the detection of 
+  deforested areas using the ERS-1 ATSR and the NOAA-11 AVHRR with reference to 
+  ERS-1 SAR DATA - a case-study in the Brazilian Amazon <I>International Journal 
+  of Remote Sensing</I>, 17, No.17,3419-3440 </P>
+<P> Cudlip, W., Ridley, J.K., Strawbridge, F., Harris, A. and Rapley, C.G. (1994): 
+  Detecting surface roughness and moisture variations in deserts. <I>Proc. of 
+  the 2nd ERS-1 Symposium</I>, Hamburg 1993, ESA SP-361, 849-853. </P>
+<P> Davies, K.H. (1990): The Earth Observing System. <I>J. British Interplanetary 
+  Society</I> 43, 154-159. </P>
+<P> Delderfield, J., Llewellyn-Jones, D.T., Bernard, R., de Javel, Y., Williamson, 
+  E.J., Mason, I., Pick, D.R. and Barton, I.J. (1986): The Along Track Scanning 
+  Radiometer (ATSR) for ERS-1. <I>Proc. SPIE</I> 589, 114-120. </P>
+<P> Desai, P.S. (1995): Satellite Meteorology <I>Indian Journal of Radio & Space 
+  Physics</I>, 24, No.5, 255-259 </P>
+<P> Edwards, T., Browning, R., Delderfield, J., Lee, D.J., Lidiard, K.A., Milborrow, 
+  R.S., McPherson, P.H., Peskett, S.C., Toplis, G.M., Taylor, H.S., Mason, I., 
+  Mason, G., Smith, A. and Stringer S. (1990): The Along Track Scanning Radiometer 
+  measurement of sea-surface temperature from ERS-1. <I>J. British Interplanetary 
+  Soc.</I> 43, 160-180. </P>
+<P> Eva, H.D., Dsouza, G. and Malingreau, J.P. (1995): Potential of ATSR-1 data 
+  for detection of clearings within dense humid tropical forest. <I>International 
+  Journal of Remote Sensing</I>, 16, No.11, 2071-2079 </P>
+<P> Evans, S.J. and Haigh, J.D. (1995): The retrieval of total optical depth and 
+  effective droplet radius of clouds from solar reflection measurements using 
+  the Along-Track Scanning Radiometer-2 (ATSR-2) <I>Geophysical Research Letters</I>, 
+  22, No.6, 695-698 </P>
+<P> Flowerdew, R.J. and Haigh, J.D. (1995): An approximation to improve accuracy 
+  in the derivation of surface reflectances from multi-look satellite radiometers 
+  <I>Geophysical Research Letters</I>, 22, No.13, 1693-1696 </P>
+<P> Flowerdew, R.J. and Haigh, J.D. (1996): Retrieval of aerosol optical-thickness 
+  over land using the ATSR-2 dual-look satellite radiometer <I>Geophysical Research 
+  Letters</I>, 1996, 23, No.4, 351-354 </P>
+<P> Forrester, T.N. and Challenor, P.G. (1995): Validation of ATSR sea-surface 
+  temperatures in the Faeroes region <I>International Journal of Remote Sensing</I>, 
+  16, No.15, 2741-2753 </P>
+<P> Forrester, T.N., Challenor, P.G. and Guymer, T.H. (1993): Validation of ATSR 
+  sea surface temperatures near the Faroes. <I>Proc. of the 1st ERS-1 Symposium</I>, 
+  Cannes 1992, ESA SP-359, 807-811. </P>
+<P> Francis, C.R., Graf, G., Edwards, P.G., McCaig, M., McCarthy, C., Lefebvre, 
+  A., Pieper, B., Pouvreau, P.Y., Wall, R., Weschler, F., Louet, J., Schumann, 
+  W. and Zobl, R. (1995): The ERS-2 Spacecraft and its payload. <I>ESA Bulletin-European 
+  Space Agency</I>, 1995, No.83, 13-31 </P>
+<P> Francois, C. and Ottle, C. (1996): Atmospheric corrections in the thermal 
+  infrared - global and water-vapor dependent split-window algorithms - applications 
+  to ATSR and AVHRR data <I>IEEE Transactions on Geoscience and Remote Sensing</I>, 
+  34, No.2, 457-470 </P>
+<P> Francois, C., Ottle, C. (1994): Estimation of the angular variation of the 
+  sea surface emissivity with the ATSR/ERS-1 data. <I>Remote Sensing of Environment</I>, 
+  48, 302-308. </P>
+<P> Godsalve, C. (1995): Bidirectional reflectance sampling by ATSR-2 - a combined 
+  orbit and scan model <I>International Journal of Remote Sensing</I>, 1995, 16, 
+  No.2, 269-300 </P>
+<P> Godsalve, C. (1996): Simulation OF ATSR-2 optical-data and estimates OF land-surface 
+  reflectance using simple atmospheric corrections <I>IEEE Transactions on Geoscience 
+  and Remote Sensing</I>, 34, No.5, 1204-1212 </P>
+<P> Gohil, B.S., Mathur, A.K. and Pandey, P.C. (1994): An algorithm for sea-surface 
+  temperature estimation from ERS-1 ATSR using moisture dependent coefficients 
+  - a simulation study. <I>Int. J. Remote Sensing</I>, 15, 1161-1167. </P>
+<P> Guneriussen, T. (1990): Processing of ERS-1 ATSR data into averaged sea surface 
+  temperature map at Tromso ERS-1 station. <I>Proc. of the IGARSS</I>, College 
+  Park 1990, 1817-1820. </P>
+<P> Haimerl, M. and Minne, U. (1992): ERS-2 to monitor also ozone levels and vegetation 
+  density. <I>Dornier Post</I>, 2, 14-16. </P>
+<P> Harries, J.E., Llewellyn-jones, D.T., Minnett, P.J., Saunders, R.W. and Zavody, 
+  A.M. (1983), Observations of sea-surface temperature for climate research. <I>Phil. 
+  Trans. Royal Soc.</I> London, 309, 381-395. </P>
+<P> Harris, A.R., Brown, S.J., Mason, I.M. (1994): The effect of windspeed on 
+  sea-surface temperature retrieval from space <I>Geophysical Research Letters</I>, 
+  21, No.16, 1715-1718 </P>
+<P> Harris, A.R. (1994): Time-series Remote-Sensing of a climatically sensitive 
+  lake. <I>Remote Sensing of Environment</I>, 50, No.2, 83-94 </P>
+<P> Harris, A.R., Saunders, M.A., Foot, J.S., Smith, K.F. and Mutlow, C.T. (1995): 
+  Improved sea-surface temperature-measurements from Space <I>Geophysical Research 
+  Letters</I>, 22, No.16, 2159-2162 </P>
+<P> Harris, A.R. and Saunders, M.A. (1996): Global validation OF the Along-Track 
+  Scanning Radiometer against drifting buoys <I>Journal of Geophysical Research</I>-OCEANS, 
+  101, No.C5, 12127-12140 </P>
+<P> Harris, A.R. (1993): Cloud stereo from ATSR. <I>Int J. Remote Sensing</I>, 
+  14, 1835-1837. </P>
+<P> Harris, A.R., Mason, I.M., Birkett, C.M. and Mansley, J.A.D. (****): Lake 
+  remote sensing for global climate research.<I> ESA Environment Observation and 
+  Climate Modelling Through International Space Projects</I>, Vol 1: Remote Sensing 
+  for Global Change, Climate Change and Atmosphere and Ocean Forecasting, 173-178. 
+</P>
+<P> Harrison, D.L. and Jones, C.P. (1993): A User Appraisal of ATSR near-real-time 
+  Products. <I>Proc. of the 1st ERS-1 Symposium</I>, Cannes ESA SP-359, 791-795. 
+</P>
+<P> Henderson, B.W. (1992): SatView: a parallel tool for interactive development 
+  of cloud clearing algorithms. <I>Proc. of Parallel Computing and Transputer 
+  Applications</I>, Barcelona 1992, 889-896. </P>
+<P> Holdaway, R. (1993): U.K. instruments for Mission to Planet Earth. <I>Space 
+  Technology</I>, 13, 561-567. </P>
+<P> Ignatov, A.M. and Dergileva, I.L. (1995): Model approximation of angular-dependence 
+  in AVHRR brightness temperatures over a black surface. <I>International Journal 
+  of Remote Sensing</I>, 16, No.18, 3687-3693 </P>
+<P> Jones, M.S., Saunders, M.A. and Guymer, T.H. (1996): Reducing cloud contamination 
+  in ATSR averaged sea-surface temperature data. <I>Journal of Atmospheric and 
+  Oceanic Technology</I>, 13, No.2, 492-506 </P>
+<P> Jones, M.S., Saunders, M.A. and Guymer, T.H. (1996): Global remnant cloud 
+  contamination in the Along-Track Scanning Radiometer data - source and removal. 
+  <I>Journal of Geophysical Research</I> - Oceans, 101, No.C5, 12141-12147 </P>
+<P> Key, J., Maslanik, J. and Steffen, K. (****): Ice surface temperature retrieval 
+  from AVHRR, ATSR, and passive microwave satellite data: Algorithm development 
+  and application / Annual Report.<I> NASA report</I>, NASA-CR-195276, 20-. </P>
+<P> Knudsen, P., Andersen, O.B. and Knudsen, T. (1996): ATSR sea-surface temperature 
+  data in a global analysis with TOPEX/POSEIDON altimetry. <I>Geophysical Research 
+  Letters</I>, 23, No.8, 821-824 </P>
+<P> Labed, J. and Stoll, M.P. (1991): Angular variation of land surface spectral 
+  emissivity in the thermal infrared. Laboratory investigations on bare soils. 
+  <I>Int. J. Remote Sens</I>, 12, 2299-2310. </P>
+<P> Labed, J., Li, Z.L. and Stoll, M.P. (1994): Land surface temperature retrieval 
+  from ATSR data over the Niamey (Niger) area. <I>Proc. of the 2nd ERS-1 Symposium</I>, 
+  Hamburg 1993, ESA SP-361, 389-392. </P>
+<P> Lawrence, S.P., Allen, M.R., Stockdale, T.N., Mutlow, C.T. and Llewellyn-Jones, 
+  D.T. (1994): Tropical Pacific sea-surface temperature in an ocean general circulation 
+  model and as measured by the Along Track Scanning Radiometer. <I>Proc. of the 
+  2nd ERS-1 Symposium</I>, Hamburg 1993, ESA SP-361, 523-528. </P>
+<P> Leonard, R. (1992): ATSR-2 Electrical Ground Support Equipment software design 
+  and development.<I> National Conference Publication - Institution of Engineers</I>, 
+  Australia 92, 145-150. </P>
+<P> Leonard, R. (1993): ATSR-2 Electrical Ground Support Equipment software design 
+  and development. <I>J. Electrical Electronic Engineering</I> Australia, 13, 
+  313-319. </P>
+<P> Llewellyn-Jones, D. (1993): Precise sea-surface temperature-measurement from 
+  the ERS-1 Satellite - a climate challenge <I>Endeavour</I>, 17, No.2, 52-59 
+</P>
+<P> Llewellyn-Jones, D., Bernard, R. and Eymard, L. (1990): ATSR: Precise sea 
+  surface temperature from the ERS-1 satellite. <I>ESA Space and Sea Colloquium</I>, 
+  Paris 1990, 265-266. </P>
+<P> Llewellyn-Jones, D.T., Mutlow, C.T., Zavody, A.M., Murray, M.J., Allen, M.R. 
+  and Saunders, R.W. (1993): SST measurements from ATSR on ESA's ERS-1 satellite 
+  - early results. <I>Proc. of the IGARSS</I>, Tokyo 1993, 155-156. </P>
+<P> Longdon, N. (1992): ATSR Products: Cape Cod and the Gulf Stream.<I> Earth 
+  Observation Quarterly</I>, 35-36, 16. </P>
+<P> Lorenc, A.C., Bell, R.S., Foreman, S.J., Hall, C.D., Harrison, D.L., Holt, 
+  M.W., Offiler, D. and Smith, S.G. (1993): The use of ERS-1 products in operational 
+  meteorology. <I>Advances in Space Research</I>, 13, 19-27. </P>
+<P> Lorenz, D. (1985): On the feasibility OF cloud stereoscopy and wind determination 
+  with the Along-Track Scanning Radiometer <I>International Journal of Remote 
+  Sensing</I>, 6, No.8, 1445-1461 </P>
+<P> Mason, I.M., Sheather, P.H., Bowles, J.A. and Davies, G. (1996): Blackbody 
+  calibration sources of high-accuracy for a spaceborne infrared instrument - 
+  the Along-Track Scanning Radiometer <I>Applied Optics</I>, 35, No.4, 629-639 
+</P>
+<P> Mason, G. (1991): Test and calibration of the Along Track Scanning Radiometer, 
+  a satellite-bourne infrared radiometer designed to measure sea surface temperature.<I> 
+  D. Phil Thesis</I>, University of Oxford. </P>
+<P> Mason, I., Harris, A., Birkett, C., Cudlip, W. and Rapley, C. (1990): Remote 
+  sensing of lakes for the proxy monitoring of climatic change. <I>Proc. of the 
+  16th Remote Sensing and Global Change Conference</I>, 314-324. </P>
+<P> Masuda, K. and Takashima, T (1996): The effect OF solar zenith angle and surface 
+  wind-speed on water-surface reflectivity <I>Remote Sensing of Environment</I>, 
+  57, No.1, 58-62 </P>
+<P> Mathur, A.K., Ilanthirayan, S. and Agarwal, V.K. (1996): Instantaneous near-surface 
+  level humidity from ERS-1/ATSR observations - a case-study in the Indian Ocean 
+  <I>International Journal of Remote Sensing</I>, 17, No.4, 771-781 </P>
+<P> Mathur, A.K. and Agarwal, V.K. (1993): Multichannel dual angle approach for 
+  sea surface temperature retrieval in context of ERS-1 scenario. <I>Proc. of 
+  the 1st ERS-1 Symposium</I>, Cannes 1992, ESA SP-359, 767-771. </P>
+<P> Mathur, A.K., Ilanthirayan, S. and Agarwal, V.K. (1994): Sea surface temperature 
+  and boundary layer fluxes from ERS-1/ATSR data. <I>Proc. of the 2nd ERS-1 Symposium</I>, 
+  Hamburg 1993, ESA SP-361, 1081-1086. </P>
+<P> Minnett, P.J. (1993): Preliminary results of the comparison of ATSR measurements 
+  with in situ sea temperatures. <I>RAL ATSR Science Team Meeting</I>, 1993. </P>
+<P> Minnett, P.J. and Stansfield, K.L. (1994): The validation of ATSR measurements 
+  with in situ sea temperatures. <I>Proc. of the 2nd ERS-1 Symposium</I>, Hamburg 
+  1993, ESA SP-361, 1233-1237. </P>
+<P> Muirhead, K. and Eccles, D. (1987): The Along-Track Scanning Radiometer with 
+  Microwave Sounder. <I>Proc. NATO Advanced Study Institute</I>, Dundee 1986, 
+  411-423. </P>
+<P> Murray, M.J., Allen, M.R., Mutlow, C.T., and Llewellyn-Jones, D.T. (1994): 
+  Investigating tropical intraseasonal variability in sea surface temperature 
+  using data from the Along Track Scanning Radiometer. <I>Proc. of the 2nd ERS-1 
+  Symposium</I>, Hamburg 1993, ESA SP-361, 529-533. </P>
+<P> Mutlow, C.T., Zavody, A.M., Barton, I.J. and Llewellyn-Jones, D.T. (1994): 
+  Sea-surface temperature-measurements by the Along-Track Scanning Radiometer 
+  on the ERS-1 Satellite - early results <I>Journal of Geophysical Research</I> 
+  - Oceans, 99, No.C11, 22575-22588 </P>
+<P> Mutlow, C.T. (1993): The ATSR instrument. <I>ESA Earth Observation Quarterly</I>, 
+  40, 14-15. </P>
+<P> Mutlow, C.T. and Llewellyn-Jones, D.T. (1993): Sea Surface Temperature. <I>Invited 
+  Paper at WMO/IOC Technical Conference on Space-based Ocean Observation</I>, 
+  Bergen, 5-10th September 1993. </P>
+<P> Mutlow, C.T., Zavody, A.M. and Llewellyn-Jones, D.T. (1994): The Along Track 
+  Scanning Radiometer (ATSR) - Global Validation Results. <I>Proc. of the 2nd 
+  ERS-1 Symposium</I>, Hamburg 1993, ESA SP-361. </P>
+<P> Mutlow, C.T., Murray, M.J., Allen, M.R., Hyams, P., Llewellyn-Jones, D.T. 
+  and Zavody, A.M. (1994): Observations of the El-Niqo phenomenon and the Somali 
+  Upwelling using ATSR Data. <I>Proc. of the 2nd ERS-1 Symposium</I>, Hamburg 
+  1993, ESA SP-361. </P>
+<P> Mutlow, C.T., Llewellyn-Jones, D.T. Zavody, A.M. (1994): The Along Track Scanning 
+  Radiometer (ATSR) global validation results. <I>Proc. of the 2nd ERS-1 Symposium</I>, 
+  Hamburg 1993, ESA SP-361, 1245-1249. </P>
+<P> O'Brien, D.M. and Prata, A.J. (1990): Navigation of ERS-1 Along-Track Scanning 
+  Radiometer (ATSR) images. <I>ESA Journal</I> - European Space Agency, 14, 447-465. 
+</P>
+<P> Onopko, J. (1992): Along Track Scanning Radiometer-2 Electrical Ground Support 
+  Equipment System design. <I>National Conference Publication - Institution of 
+  Engineers</I>, Australia 92, 139-143. </P>
+<P> Prata, A.J. (1993): Land-surface temperature determination from satellites 
+  <I>Advances in Space Research</I>, 14, No.3, 15-26 </P>
+<P> Prata, A.J. and Turner, P.J. (1997): Cloud-top height determination using 
+  ATSR data <I>Remote Sensing of Environment</I>, 59, No.1, 1-13 </P>
+<P> Prata, A.J., Cechet, R.P., Barton, I.J. and Llewellyn-Jones, D.T. (1990): 
+  The Along Track Scanning Radiometer for ERS-1 - Scan Geometry and Data Simulation. 
+  <I>IEEE Transactions on Geoscience and Remote Sensing</I>, 28, 3-13. </P>
+<P> Prata, A.J. and Barton, I.J. (1993): A multichannel, multiangle method for 
+  the determionation of infrared optical depth of semitransparent high cloud from 
+  an orbiting satellite. I. Formulation and simulation.<I> J. Appl. Meteorology</I>, 
+  32, 1623-1637. </P>
+<P> Prata, A.J.F., Cechet, R.P., Barton, I.J. and Llewellyn-Jones, D.T. (1990): 
+  The along track scanning radiometer for ERS-1 - Scan geometry and data simulation.<I> 
+  IEEE Transactions on Geoscience and Remote Sensing</I>, 28, 3-13. </P>
+<P> Prata, A.J. (1993): Land-surface temperatures derived from the Advanced Very 
+  High-Resolution Radiometer and the Along-Track Scanning Radiometer. 1: Theory. 
+  <I>J. Geophys. Res.</I> - Atmospheres, 98, 16689-16702. </P>
+<P> Prata, A.J. (1994): Land-surface temperatures derived from the Advanced Very 
+  High-Resolution Radiometer and the Along-Track Scanning Radiometer. 2: Experimental 
+  Results and validation of AVHRR algorithms. <I>J. Geophys. Res.</I> - Atmospheres, 
+  99, 13025-13058. </P>
+<P> Read, P.D., Hardie, A.L., Magraw, J.E., Taylor, H.S. and Jelley, J.V. (1991): 
+  A calibration system, using an opal diffuser, for the visual channels of the 
+  Along Track Scanning Radiometer, ATSR-2. Proc. of the 10th IOP Symposium. <I>IOP 
+  Conference Series</I> 121, 207-213. </P>
+<P> Read, P.D., Field, D., Hardie, A.L., Lidiard, K.A., Magraw, J.E., Taylor, 
+  H.S., Tosh, I.A.J., Trower, M.A. and White, D.J. (1992): The laboratory performance 
+  of the short wavelength instrument for the Along Track Scanning Radiometer ATSR-2 
+  (initial results). <I>Proc. of Symposium on Photon Detectors for Space Instrumentation</I>, 
+  ESA SP-356, 357-360. </P>
+<P> Rees, W.G. (1993): Infrared emissivities of Arctic land cover types <I>Int. 
+  J. Remote Sensing</I>, 14, 1013-1017. </P>
+<P> Rice, C.I. and Williamson, E.J. (1993): Cloud studies using ATSR data. <I>Proc. 
+  of the 1st ERS-1 Symposium</I>, Cannes 1992, ESA SP-359, 797-799. </P>
+<P> Roberts, E. and Petkovic, M. (1992): Infrared focal plane array of the Along 
+  Track Scanning Radiometer; assembly, integration and test. <I>National Conference 
+  Publication</I> - Institution of Engineers, Australia 92, 131-137. </P>
+<P> Roberts, E. and Petkovic, M. (1993): The infra red Focal plane Array of the 
+  Along Track Scanning Radiometer; assembly, integration and test.<I> J. Electrical 
+  Electronic Engineering</I>, Australia 13, 303-311. </P>
+<P> Robinson, I.S., Donlon, C., Llewellyn-Jones, D.T. and Mutlow, C.T. (1994): 
+  Filaments and fine structure of sea surface temperature in ATSR image data. 
+  <I>Proc. of the 2nd ERS-1 Symposium</I>, Hamburg 1993, ESA SP-361, 1087-1092. 
+</P>
+<P> Saunders, R.W., Smith, A.H. and Harrison, D.L. (1993): Sea-surface temperature 
+  measurements by the ATSR. <I>Meteorological Magazine</I>, 122, 105-113. </P>
+<P> Schluessel, P. and Meywerk, J. (1993): ATSR correlative skin measurements 
+  of sea surface temperature. <I>Proc. of the 1st ERS-1 Symposium</I>, Cannes 
+  1992, ESA SP-359, 779-784. </P>
+<P> Shin, D., Pollard, J.K. (1995): Fine co-location OF pre-corrected ATSR images 
+  <I>International Journal of Remote Sensing</I>, 16, No.11, 1969-1980 </P>
+<P> Singh, S.M. (1994): Effect of surface wind-speed and sensor view zenith angle 
+  dependence of emissivity on SST retrieval from thermal infrared data - ATSR 
+  <I>International Journal of Remote Sensing</I>, 15, No.13, 2615-2625 </P>
+<P> Singh, S.M. (1994): Effect of surface wind-speed and sensor view zenith angle 
+  dependence of emissivity on SST retrieval from thermal infrared data - ATSR 
+  <I>International Journal of Remote Sensing</I>, 1994, 15, No.18, p.3867 </P>
+<P> Smith, A.H., Saunders, R.W. and Zavody, A.M. (1994): The validation of ATSR 
+  using aircraft radiometer data over the tropical Atlantic. <I>J. Atmos. Oceanic 
+  Technology</I>, 11, 789-800. </P>
+<P> Smith, A.H. and Saunders, R.W. (1993): Validation of ATSR-1 using aircraft 
+  radiometer measurements over the South Atlantic. <I>Proc. of the 1st ERS-1 Symposium</I>, 
+  Cannes 1992, ESA SP-359, 785-790. </P>
+<P> Sobrino, J.A., Li, Z.L., Stoll, M.P. and Becker, F. (1996): Multichannel and 
+  multi-angle algorithms for estimating sea and land-surface temperature with 
+  ATSR data <I>International Journal of Remote Sensing</I>, 17, No.11, 2089-2114 
+</P>
+<P> Stricker, N.C.M., Hahne, A., Smith, D.L., Delderfield, J., Oliver, M.B. and 
+  EDWARDS, T. (1995): ATSR-2 - the evolution in its design from ERS-1 to ERS-2. 
+  <I>ESA Bulletin-European Space Agency</I>, No.83, 32-37 </P>
+<P> Stroeve, J., Haefliger, M. and Steffen, K. (1996): Surface-temperature from 
+  ERS-1 ATSR infrared thermal satellite data in polar-regions <I>Journal of Applied 
+  Meteorology</I>, 35, No.8, 1231-1239 </P>
+<P> Thomas, J.P., Knight, R.J., Roscoe, H.K., Turner, J. and Symon, C. (1995): 
+  An evaluation of a self-calibrating infrared radiometer for measuring sea-surface 
+  temperature <I>Journal of Atmospheric and Oceanic Technology</I>, 12, No.2, 
+  301-316 </P>
+<P> Thomas, J.P. and Turner, J. (1995): Validation of Atlantic Ocean sea-surface 
+  temperatures measured by the ERS-1 Along-Track Scanning Radiometer <I>Journal 
+  of Atmospheric and Oceanic Technology</I>, 12, No.6, 1303-1312 </P>
+<P> Thomas, J.P. and Turner, J. (1994): An assessment of the accuracy of ATSR 
+  dual view sea surface temperature algorithms. <I>Proc. of the 2nd ERS-1 Symposium</I>, 
+  Hamburg 1993, ESA SP-361, 1093-1097. </P>
+<P> Thomas, J.P., Turner, J. and Symon, C.J. (1993): A Comparison of ATSR and 
+  Shipboard SST Measurements along Transects between the UK and the Antarctic. 
+  <I>Proc. of the 1st ERS-1 Symposium</I>, Cannes 1992, ESA SP-359, 801-805. </P>
+<P> Tinkler, D. and Pick, D.R. (1985): The Design of the Focal Plane Assembly 
+  for the Along Track Scanning Radiometer, 589. </P>
+<P> Watts, P.D., Zavody, A.M., Mutlow, C.T., Barton, I.J., Minnett, P.J. and Llewellyn-Jones, 
+  D.T. (1995): Effect OF surface wind-speed and sensor view zenith angle dependence 
+  of emissivity on SST retrieval from thermal infrared data - ATSR - comment <I>International 
+  Journal of Remote Sensing</I>, 16, No.11, 2099-2103 </P>
+<P> Watts, P.D., Allen, M.R. and Nightingale, T.J. (1996): Wind-speed effects 
+  on sea-surface emission and reflection for the Along-Track Scanning Radiometer 
+  <I>Journal of Atmospheric and Oceanic Technology</I>, 13, No.1, 126-141 </P>
+<P> White, D.J. and Bisla, B.S. (1989): Preamplifiers for ATSR Infra-Red Analogue 
+  Signal Channels. <I>RAL report</I>, RAL-89-039. </P>
+<P> Wooster, M.J. (1996): In-orbit calibration OF the ATSR-1 1-center-dot-6 MU-M 
+  channel using high-resolution data from the JERS-1 (FUYO-1) optical sensor <I>International 
+  Journal of Remote Sensing</I>, 17, No.5, 1069-1074 </P>
+<P> Xue, Y., Cracknell, A.P. (1995): Operational bi-angle approach to retrieve 
+  the earth surface albedo from AVHHR data in the visible band <I>International 
+  Journal of Remote Sensing</I>, 16, No.3, 417-429 </P>
+<P> Yokoyama, R., Tanba, S., Souma, T., Maejima, H. and Maeda, K. (1992): ISY 
+  sea surface temperature validation test program in Mutsu bay.<I> Proc. ISY Conference</I>, 
+  Munich 1992, 1405-1410. </P>
+<P> Yu, Y. and Barton, I.J. (1994): Non-regression-coefficients method of sea 
+  surface temperature retrieval from space. <I>Int. J. Remote Sensing</I> 15, 
+  1189-1206. </P>
+<P> Zavody, A.M., Mutlow, C.T. and Llewellyn-Jones, D.T. (1995): A radiative-transfer 
+  model for sea-surface temperature retrieval for the Along-Track Scanning Radiometer 
+  <I>Journal of Geophysical Research-Oceans</I>, 100, No.C1, 937-952 </P>
+<P> Zavody, A.M., Gorman, M.R., Lee, D.J., Eccles, D., Mutlow, C.T. and Llewellyn-Jones, 
+  D.T. (1994): The ATSR data processing Scheme Developed for the EODC.<I> Int. 
+  J. Remote Sens.</I>, 15, 827-843. </P>
+<P> Zavody, A.M., Llewellyn-Jones, D.T., Mutlow, C.T., Bailey, P. and Gorman, 
+  M. (1994): The ATSR processing chain - overview and performance analysis. <I>Proc. 
+  of the 2nd ERS-1 Symposium</I>, Hamburg 1993, ESA SP-361. </P>
+<P> Zavody, A.M., Mutlow, C.T. and Llewellyn-Jones D.T. (1994): Quantitative remote 
+  sensing in the 11-micron wavelength region using ATSR. <I>Proc. of the 2nd ERS-1 
+  Symposium</I>, Hamburg 1993, ESA SP-361, 829-833. </P>
+<P> Zhimin, Z. (1987): A method for calculating the effective emissivity of a 
+  groove structure Proc. <I>Society of Photo-Optical Instrumentation Engineers</I>, 
+  The Hague 1987, 270-277. 
+</HTML> 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../../../../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Wednesday, 05-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

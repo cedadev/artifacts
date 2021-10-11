@@ -1,0 +1,39 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20061023T230000Z
+DTEND:20061027T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Birmingham, U.K.
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000109F7D426126C6010000000000000000100
+ 00000C5698733525B9D47901E416D8A88CF18
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:=0D=0A1. Rapid Climate Change Interna=
+tional Science Conference=0D=0A24 - 27 October 2006. Birmingham, U.K.=0D=0A=
+=0D=0ASome models predict that rapid (decadal-scale) climate change could o=
+ccur under the scenario of global warming that is likely to happen over the=
+ next century. The Atlantic Ocean's thermohaline circulation (THC) is thoug=
+ht to have played a key role in rapid changes in the past and to have the p=
+otential to do so in the future, although other processes may also cause ra=
+pid climate change to occur. This conference will explore the scientific un=
+derstanding of rapid climate change, with a main but not exclusive focus on=
+ the role of the THC in such change.=0D=0A=0D=0AThe topics of interest incl=
+ude, but are not limited to:=0D=0A- present day observations of the strengt=
+h and structure of the Atlantic THC=0D=0A- paleo data (ice, land, ocean) on=
+ past rapid climate changes=0D=0A- modelling of past and possible future ra=
+pid climate change=0D=0A- understanding of processes controlling the streng=
+th of THC=0D=0A- testing models using present day and paleo observations=0D=
+=0A- impacts of rapid THC change on climate and weather=0D=0A- probability =
+of rapid climate changing occurring=0D=0A- impacts of rapid climate change =
+on society=0D=0A=0D=0AThe conference seeks to bring together the internatio=
+nal community of scientists carrying out oceanographic observations, paleo =
+studies and ocean and coupled climate modelling in order to discuss recent =
+research findings and to identify outstanding problems and ways forward in =
+the science of rapid climate change.=0D=0A=0D=0AA call for papers will be i=
+ssued early in 2006=0D=0AFor more information and to register your interest=
+ in the meeting:=0D=0Awww.rapid.nerc.ac.uk/rapid2006 =0D=0A=0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:Rapid Climate Change International Scienc=
+e Conference
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR

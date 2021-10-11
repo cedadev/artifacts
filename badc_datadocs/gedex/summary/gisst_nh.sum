@@ -1,0 +1,32 @@
+SUMMARY
+"SUM_DATA_PRODUCT"   "GISST_NH "
+"SUM_DATA_SET"       "GISS-TMP-DEV "
+"SUM_DATATYPE"       "MON-NH       "
+"ARCHIVE_NAME"       "NCDS         "
+"ARCHIVE_STATUS"     "Available    "
+"DS_DESCRIPTION"     "Goddard Institute for Space Studies Temperature Deviations   "
+"DT_DESCRIPTION"     "Monthly Temperature Deviations, N. Hem "
+"SUM_BEGIN_DATE"     "01-Jan-1880  "
+"SUM_END_DATE"       "01-Dec-1990  "
+"SUM_PROCESS_LEVEL"  "3"
+"SPATIAL1"           "Global coverage for the northern hemisphere "
+"SPATIAL2"           " "
+"SPATIAL3"           "One value for the northern hemisphere"
+"SPATIAL4"           " "
+"TEMPORAL1"          "January, 1880 to December, 1990"
+"TEMPORAL2"          " "
+"TEMPORAL3"          "Monthly temperature anomalies  "
+"TEMPORAL4"          "Zero point for each monthly anomaly is its 1951-1980 mean.   "
+"PRODUCT1"           "Available through NCDS in Common Data Format (CDF)           "
+"PRODUCT2"           "Available on GEDEX CD-ROM. "
+"PRODUCT3"           " "
+"PRODUCT4"           " "
+EOF
+                                                                                                                                    
+PARAMETERS
+"TEMPERATURE"     "Monthly Temperature Deviation" "Deg C"
+EOF
+
+SOURCES
+"MODEL" "ANALYSES"
+EOF

@@ -1,0 +1,147 @@
+ISCCP Known and Fixed Data Errors
+
+-----------------------------------------------------------------------------------
+   * Spurious satellite zenith angle dependence (artifact in Indian sector)
+   * Change in land surface pressures from TOVS
+   * Incorrect snow cover (has been corrected)
+   * Incorrect precipitable water amounts and surface temperatures (has been corrected)
+   * Spurious sea ice reports
+   * Flipped array indices in North Polar DX (has been corrected)
+   * Spurious land pixels in METEOSAT DX
+   * D2 versions 0,1,2 contain un-corrected METEOSAT-3 reflectances (has been corrected)
+
+-----------------------------------------------------------------------------------
+
+Spurious satellite zenith angle dependence (artifact in Indian sector)
+
+Global maps of cloud properties retrieved in the ISCCP analysis often show an
+artifact between longitudes of 50E and 100E.  This feature is the most
+noticeable manifestation of a spurious, but weak dependence of the retrieved
+cloud properties on satellite zenith angle:  as cosine of the satellite
+zenith angle (MUE) decreases from 1.0 to 0.3, total cloud amount increases by
+about 15-20%, cloud top temperature decreases by about 4-6K, and cloud
+optical thickness decreases by about 2-3.  Most results are obtained for MUE
+values > 0.4 which reduces the overall effect somewhat.  The dependence of
+total cloud amount is discussed in detail in Rossow and Garder (1993:  J.
+Climate, 6, 2370-2393).  This effect is thought to be caused in part by
+geometric effects on broken cloudiness and by variation in detection
+sensitivity to optically thin clouds; however, the total effect is not
+completely understood.  The dependences of cloud top temperature and optical
+thickness are thought to be caused in part by the use of an inaccurate model
+of cloud microphysics in the retrieval model; the introduction of an ice
+crystal model in the new D-series data in place of the liquid droplet model
+for cold clouds in the C-series reduced but did not completely eliminate this
+dependence.  Research is on-going to understand and develop a correction for
+this effect:  D1 data report the value of cosine of satellite zenith angle
+that could be used to make corrections. -  March 22, 1996
+
+Change in land surface pressures from TOVS
+
+Between May and June 1986, NOAA increased the global mean surface pressure
+used to calculate topographic surface pressures (functions of topographic
+height and surface temperature only) over land from 1000 mb to 1013 mb.  This
+change increases surface pressures over land by about 1%, but the maximum
+value is still 1000 mb.  Surface pressure over ocean remains 1000 mb.  Since
+the TOVS atmospheric temperature and humidity profiles are used in the ISCCP
+analysis, this change may also produce a very small change in the cloud top
+pressures of lower level clouds over land.  The change is partly mitigated by
+retaining 1000 mb as the maximum surface pressure in processing the sounder
+data.  No correction of the data is planned. -  March 22, 1996
+ 
+
+Incorrect snow cover
+ 
+   In the first release of the new D-series datasets, there were two errors
+involving snow cover data.  In the D1 and D2 datasets for January - April
+1990 (Version Number 0), the correct snow cover is reported, but the snow
+cover was erroneously eliminated in the cloud analysis.  This error will
+produce small increases in cloud amount (because of false visible radiance
+detections), decreases in surface reflectance and increases in cloud optical
+thickness in areas where snow cover varies during the month.  In the D1 and
+D2 datasets for 1992 (Version Number 0), the correct snow cover was included
+in the cloud analysis, but incorrect values are reported in the datasets.
+The affected D1 and D2 datasets have been corrected and replaced (Jan90-Apr90 
+and Jan92-Dec92 Version 1). - April 12, 1996
+
+
+Incorrect precipitable water amounts and surface temperatures
+ 
+A processing code error caused monthly mean values of the
+atmospheric water vapor column amount (precipitable water) to be
+excessively high at pressures < 560 mb. Since the monthly mean values
+are sometimes used to fill in when daily observations are missing, a
+small fraction of the daily precipitable water amounts are
+erroneous. These excessive values also cause retrieved surface and
+cloud top temperatures to be overestimated. The effect is largest for
+surface temperatures. The DX/D1/D2 datasets for April, May, August and
+October 1992 (Version 0 or 1) are affected, the first two months more
+so than the other two. The TOVS dataset for 1992, and the DX/D1/D2 datasets
+for April, May, August, and October 1992 have been corrected and replaced.
+- September 9, 1996
+
+
+Spurious sea ice reports
+
+Beginning in 1992, a new sea ice dataset is employed in the ISCCP
+cloud analysis that comes from an analysis of satellite microwave
+observations. One problem with this sea ice product is the presence of
+spurious sea ice along coastlines. A procedure was applied to attempt
+removal of these spurious sea ice reports, which was not entirely
+successful. The procedure does eliminate isolated sea ice at the scale
+of the microwave map if it is surrounded by open water; however, it
+does not eliminate such sea ice if it is adjacent to the coast or if
+there is a cluster of sea ice values. Both of these conditions may
+occur occasionally along complicated coastlines. Therefore, some
+spurious values of snow-ice fraction in the D1/D2 datasets may occur
+at coastlines -- the occurrence frequency appears to be very low. This
+problem affects ONLY the snow-ice fraction since the cloud analysis is
+essentially insensitive to the presence of sea ice in near-coastal
+water: in other words, the cloud analysis is already so conservative
+in such a mixed area that the presence of sea ice makes no
+difference. Therefore, the cloud and surface properties reported are
+unaffected by this error. The error occurs only in 1992 and 1993
+data. The sea ice and snow product will be revised later to reduce
+this problem and the information concerning the frequency and
+locations of its occurrence will be documented. - December 31, 1996
+    
+
+Flipped array indices in North Polar DX
+
+  In the DX dataset the location of each pixel is given by
+latitude/longitude and by array indices (i,j). The latter are used
+primarily when displaying the DX data as pictures.  The NOAA polar
+orbiter dataset is divided into three lower latitude sectors and two
+polar sectors. The array indices given in the North Polar DX datasets
+were incorrectly reversed so that the data, when displayed, appeared to
+be flipped from West to East (as if viewed from inside the Earth
+instead of from outside the Earth). The associated latitudes/longitudes
+for these data were correct, however. This error affected North Polar DX
+data for 1986, 1990-1992, but did not affect data in other years.
+The affected DX data has been corrected and replaced in the archives.
+ -  June 24, 1997
+    
+
+Spurious land pixels in METEOSAT DX
+
+  In the METEOSAT DX data there are 4 pixels just south of the
+African coast at 0 degrees longitude that are mislabeled as land
+pixels. This error arises when the calculated longitude is exactly 360
+degrees in floating point representation, causing an overflow in a
+look-up table.  Although the cloud analysis is somewhat different over
+land and ocean, these differences are reduced for such isolated
+pixels, so that the effects on the reported cloud and surface
+properties should be minimal. This error affects METEOSAT DX data for
+1986, 1990-1993, but does not affect data in other years.  No
+correction of this data is planned. - December 31, 1996
+
+
+D2 versions 0,1,2 contain un-corrected METEOSAT-3 reflectances
+
+ In D2 1992 versions 0,1,2, the special METEOSAT day/land
+reflectance correction (see cloud data document page 53) was not
+applied to METEOSAT-3 while it was in the GOES-EAST position
+(July-December). D2 1992 Version 3 is now
+available which includes this correction. -  March 20, 1997
+
+Last Modified June 24, 1997 by Ralph Karow (rkarow@giss.nasa.gov)
+

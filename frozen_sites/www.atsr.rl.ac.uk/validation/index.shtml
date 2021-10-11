@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!-- ATSR Template system v1.1                                                     -->
+<!-- By Marcus Povey 1999                                                          -->
+<!--                                                                               -->
+<!-- This is the STD_TEMPLATE file that defines the site motif. Modify this file   -->
+<!-- to change the look of the site. Remember to create a new page a symbolic link -->
+<!-- to this file (renamed to index.shtml) must be placed in the new directory. A  -->
+<!-- script, www_newpage, has been provided to do this for you.                    -->
+
+
+<!-- The Standard header. Defines meta tags, inserts *local* title and defines     -->
+<!-- colours.                                                                      -->
+
+<!-- <VOODOO> -->
+
+<HTML>
+	
+<HEAD>
+	<META Name="keywords" Content="ATSR, sea, surface, temperature, AVHRR, satellite, weather, space, earth, ESA, remote, sensing, ERS, SST, ASST, ElNino, elnino, el, nino, climate, change, global, warming, green house effect, LST, land surface temperature">
+	<META Name="description" Content="ATSR (Along Track Scanning Radiometer). High resolution infrared Earth observation.">
+	<META Name="author" Content="Marcus Povey, http://www.dushka.demon.co.uk">
+	<META name="Generator" content="Vi">
+	<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+	<META HTTP-EQUIV="Window-target" CONTENT="_top">
+	
+	<!-- Load standard style for CSS compatible browsers --> 
+	<LINK REL="stylesheet" TYPE="text/css" HREF="../std_template/std_style.css">
+
+	<!-- Load title.txt, the file that holds the title of the page in question --> 
+	<title>Validation
+</title>
+</HEAD>
+
+<!-- The body, make sure that the colours here reflect those in std_style.css to ensure --> 
+<!-- compatibility with older browsers. It also sets margins nicely...                  --> 
+<BODY bgcolor="#ffffff" text="#000000" link="#515151" vlink="#666666" alink="#0000da"
+	topmargin=0 leftmargin=0 marginwidth=0 marginheight=0>
+
+<!-- This is where the fun(tm) starts... --> <!-- Make a nicely formatted table --> 
+<TABLE border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td valign="top" width="140"><!-- Top left --><IMG src="../std_template/std_images/page/tl.gif" width="140" height="64" alt="TL"></td>
+    <td valign="top" align = "center" width="10">&nbsp;</td>
+    <td valign="top" align = "left"> 
+      <H1><FONT size="+4">The ATSR Project</FONT></H1>
+      <!-- The standard title banner. This was previously an include but there was really no need to do so --></td>
+    <td valign="top" align = "center" width="80"><a href="http://www.stfc.ac.uk"><img src="../std_template/std_images/logos/rallogo_small.gif" alt="STFC" border="0" width="227" height="41"></a> 
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" rowspan="2" height="10"> <!-- A bit of a kludge to sort out formatting problems --> 
+      <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+        <TR bgcolor="#FFFFFF"> 
+          <TD width="140"><!-- Include the navbar --><!-- This is the standard navbar, add options to this file when you want to add a  -->
+<!-- new option to the navbar. Remember to use site root relative paths.           -->
+
+<!-- Navbar code -->
+
+
+<!-- Please note that the look is just temporary and will probably be replaced
+by nice buttons. Order and link configuration will probably change as and when
+a more logical layout occurs to me. Remember to remove /website from links 
+before going live. -->
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MAIN</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"><A href="../index.shtml">Home</A><BR>
+          <BR>
+          <A href="../atsr/index.shtml">What is ATSR?</A><BR>
+          <BR>
+	   <A href="../demo/index.shtml">Overview of ATSR Science & Technology</A><BR>
+	   <BR>
+          <A href="http://earth.esa.int/">How can I get ATSR data?</A><BR>
+	  
+           <A href="../images/index.shtml"><BR>
+	  Images &amp; SST maps</A><BR>
+          <BR>
+	    <A href="../ssts/index.shtml">SST Data</A><BR>
+          <BR>
+	  
+	  </FONT></P>
+      </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>USER SUPPORT</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"> 
+        <P><FONT size="-2"> <A href="../satellite/index.shtml">Satellite Engineering<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../software/index.shtml">ATSR Software 
+          Page<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../dataproducts/index.shtml">Data 
+          Products</A> </FONT><FONT size="-2"><BR>
+          <BR>
+          <A href="../documentation/index.shtml">Documentation<BR>
+          <BR>
+          </A></FONT><FONT size="-2"><A href="../documentation/docs/visiblecalibration/index.shtml">Visible 
+          Calibration Tables</A><BR>
+	<BR>
+	  </A></FONT><FONT size="-2"><A href="../cloudtests/index.shtml">ATSR Cloud Screening
+         </A><BR>
+	<BR>
+        
+          </A></FONT><FONT size="-2"><A href="index.shtml">Validation</A><BR>
+         
+	   <BR>
+	  <A href="../faq/index.shtml">FAQ</A> <BR>
+          <BR>
+          </FONT></P>
+        </DIV>
+    </TD>
+  </TR>
+</TABLE>
+
+<TABLE width="100%" border="0">
+  <TR bgcolor="#E3E3E3"> 
+    <TD> 
+      <DIV align="left"><B>MISC</B></DIV>
+    </TD>
+  </TR>
+  <TR valign="top"> 
+    <TD> 
+      <DIV align="left"><FONT size="-2"> <A href="../coregroup/index.shtml">ATSR 
+        Core Group</A><BR>
+        <BR>
+        <A href="../contacts/index.shtml">ATSR Contacts</A><BR>
+        <BR>
+      <A href="../links/index.shtml">Links</A> <BR>
+        <BR>
+        </FONT></DIV>
+    </TD>
+  </TR>
+</TABLE>
+<BR>
+ 
+          </TD>
+        </TR>
+      </TABLE>
+      <IMG src="../std_template/std_images/page/bl.gif" width="140" height="64" alt="BL"> 
+      <BR>
+      <BR>
+        </td>
+    <td valign="top" rowspan="4" width="10"></td>
+    <td valign="top" rowspan="3" width="100%" height="10"> <!-- Include the local page contents --> 
+      <!-- The Validation page starts here -->
+
+<!-- Insert a status message, edit status.html to change -->
+<CENTER>
+</CENTER>
+
+<!-- Validation --> 
+<H2>Validation</H2>
+
+
+<p>The purpose of the ATSR validation programme at RAL is to demonstrate the self-consistency 
+  of ATSR-1 and ATSR-2 products and the agreement of these products with independent 
+  sources of information.</p>
+
+
+
+<!-- Include the gsst validation -->
+
+<!-- The GSST Validation page starts here -->
+
+<!-- Insert a status message, edit status.html to change -->
+<CENTER>
+</CENTER>
+
+<!-- GSST Validation --> 
+
+
+<h2>GSST Validation</h2>
+<p>RAL has constructed two <A HREF="sister/sis_inst/index.shtml"><U>SISTeR</A></U>
+sea-going in-situ validation radiometers to collect independent measurements of skin SST 
+at the bottom of the atmospheric path. The SISTeRs are deployed on research ships and 
+other commercial ships for validation campaigns lasting up to two months. Upwelling sea 
+and downwelling sky radiances are collected whenever conditions permit, along with supporting 
+measurments of bulk SST, local meteorology and other parameters. The first SISTeR 
+campaign was conducted in Mutsu Bay, Japan in 1996. Subsequent campaigns have 
+covered the North and South Atlantic Oceans, the Pacific Ocean and the English Channel.</p>
+
+
+<!-- Sister Campaigns -->
+
+<!-- The SISTeR campaigns page starts here -->
+
+
+<CENTER>
+</CENTER>
+
+<!-- SISTER -->
+
+ 
+<h3>SISTeR Campaigns</h3>
+<p>A SISTeR radiometer has taken part in the following campaigns. Follow the links 
+  for more details of the campaigns and breakdowns of the individual validation 
+  results.</p>
+
+<p><IMG src="../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+  <A href="sister/mbay_96/index.shtml"><U><B>MUBEX96</B></U></A> - Mutsu Bay Japan, 
+  1996 <BR>
+</p>
+<P> <IMG src="../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+  <A href="sister/nsa_96/index.shtml"><U><B>AMT-3/ROSSA96</B></U></A> - North 
+  and South Atlantic, 1996 <BR>
+</P>
+<P> <IMG src="../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+  <A href="sister/channel_97/index.shtml"><U><B>SUDOFEX97</B></U></A> - English 
+  Channel, 1997 <BR>
+</P>
+<P> <IMG src="../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+  <A href="sister/mbay_97/index.shtml"><U><B>MUBEX97</B></U></A> - Mutsu Bay Japan, 
+  1997 <BR>
+</P>
+<P> <IMG src="../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+  <A href="sister/nsa_98/index.shtml"><U><B>AMT-7/ROSSA98</B></U></A> - North 
+  and South Atlantic, 1998 <BR>
+</P>
+<P> <IMG src="../std_template/std_images/icons/std_link.gif" align="middle" alt="Link : "> 
+  <A href="sister/pacific_99/index.shtml"><U><B>Nauru99</B></U></A> - Equatorial 
+  Pacific, 1999<BR>
+</P>
+
+<h3>Summary of Results</h3>
+<TABLE width="100%">
+  <TR>
+    <TD>
+      <TABLE width="100%" border="1">
+        <TR> 
+          <TD width="11%">Date</TD>
+          <TD width="16%">Time</TD>
+          <TD width="11%">Latitude</TD>
+          <TD width="12%">Longitude</TD>
+          <TD width="14%">Pass</TD>
+          <TD width="12%">SISTeR</TD>
+          <TD width="12%">ATSR-2 (V302)</TD>
+          <TD width="12%">ATSR-2(v321)</TD>
+        </TR>
+        <TR> 
+          <TD width="9%">23/09/98</TD>
+          <TD width="11%">12:02:49 UTC</TD>
+          <TD width="12%">36.14°N </TD>
+          <TD width="15%"> 17.49°W </TD>
+          <TD width="13%"> Descending </TD>
+          <TD width="11%">296.44K </TD>
+          <TD width="15%">296.48K </TD>
+          <TD width="14%"> 296.85K</TD>
+        </TR>
+        <TR> 
+          <TD width="9%">26/09/98 </TD>
+          <TD width="11%"> 12:10:17 UTC</TD>
+          <TD width="12%">30.02°N </TD>
+          <TD width="15%">19.97°W </TD>
+          <TD width="13%">Descending</TD>
+          <TD width="11%">297.38K </TD>
+          <TD width="15%"> 297.38K </TD>
+          <TD width="14%"> 297.67K</TD>
+        </TR>
+      </TABLE>
+      <P> <B>Table 1 </B>AMT-7/ROSSA98 validation points.</P>
+    </TD>
+  </TR>
+</TABLE>
+<h3>&nbsp;</h3>
+
+
+
+<!-- Include the asst validation -->
+<!-- The ASST Validation page starts here -->
+
+<!-- Insert a status message, edit status.html to change -->
+<CENTER>
+</CENTER>
+
+<!-- ASST Validation --> 
+
+<h2>ASST Validation</h2>
+
+<TABLE cellpadding="5" width="500">
+<TD width="30"><left><a href="index.shtml"><img SRC="images/at_work.gif" ALT="at_work.gif"></A></left></TD>
+<TD valign="left" width="400"><bottom> 
+      <p>Under Construction</p> </TD>
+</TABLE>
+
+
+<!--  Include Reflectance Calibration & Validation -->
+<!-- The Reflectance Calibration and Validation page starts here -->
+
+<!-- Insert a status message, edit status.html to change -->
+<CENTER>
+</CENTER>
+
+<!-- Calibration and Validation --> 
+
+<h2>Reflectance Calibration and Validation</h2>
+
+<TABLE cellpadding="5" width="500">
+<TD width="30"><left><a href="index.shtml"><img SRC="images/at_work.gif" ALT="at_work.gif"></A></left></TD>
+<TD valign="left" width="400"><bottom> 
+      <p>Under Construction</p> </TD>
+</TABLE>
+
+ 
+      <P>&nbsp;</P>
+    </td>
+    <td valign="top" width="80" bgcolor="#FFFFFF" rowspan="2" align="center"><a href="http://www.ssd.rl.ac.uk"><img src="../std_template/std_images/logos/sstd_large.JPG" alt="SSTD" border=0 width=80 height=80></a> 
+      <P align="center"><FONT size="-2"><B>Page last modified :</B> <I>Tuesday, 04-Dec-07</I></FONT></P>
+    </td>
+  </tr>
+  <tr> 
+    <td width="0" height="0"></td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF" height="80">&nbsp;</td>
+    <td valign="bottom" bgcolor="#FFFFFF" height="80" width="80" align="right"> 
+      <P align="center"><I><FONT size="-2"> </FONT></I></P>
+      <P>&nbsp;</P>
+    </td>
+  </tr>
+  <tr> 
+    <td valign="top" width="140" bgcolor="#8FBCFF">&nbsp;</td>
+    <td valign="top">&nbsp;</td>
+    <td valign="top" width="80" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+</TABLE>
+
+</BODY>
+</HTML>
+
+<!-- </VOODOO> -->
+

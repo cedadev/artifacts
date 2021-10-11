@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+VERSION:1.0
+BEGIN:VEVENT
+DTSTART:20080906T230000Z
+DTEND:20080909T230000Z
+LOCATION;ENCODING=QUOTED-PRINTABLE:Loughborough University, UK
+TRANSP:1
+UID:040000008200E00074C5B7101A82E00800000000E0B46BCF43BDC8010000000000000000100
+ 000006EE6EAE343946B4D8E634B3E7B93D3AF
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:39th British Association for Crystal =
+Growth (BACG) - Loughborough University, UK=0D=0A=0D=0AThe 39th annual BACG=
+ conference will be held at Loughborough University from Sunday 7th Septemb=
+er=0D=0A(evening reception and Annual General Meeting) to Tuesday 9th Septe=
+mber 2008.=0D=0AAs in previous years the Conference will include presentati=
+on of the BACG Annual lecture and the BACG=0D=0AYoung Scientist award, plen=
+ary talks from invited speakers and both invited and contributed papers=0D=
+=0Apresented in a number of dedicated sessions. Poster sessions are also an=
+ integral part of the conference,=0D=0Aand instrument vendors will be exhib=
+iting their products throughout the event.=0D=0A=0D=0A <<BACG 2008 Flyer2.p=
+df>> =0D=0A
+SUMMARY;ENCODING=QUOTED-PRINTABLE:39th British Association for Crystal Grow=
+th (BACG)
+PRIORITY:3
+END:VEVENT
+END:VCALENDAR
