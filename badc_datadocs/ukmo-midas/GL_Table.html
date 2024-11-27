@@ -333,12 +333,15 @@ For the convenience of users, the GL file column headers are available for downl
         <td valign="TOP" width="40%"><font face="Courier New">qc_flag_list_2</font></td>
         <td valign="TOP" width="35%">Please see note below for details.</td>
       </tr>
+      <tr>
+	<td valign="TOP" width="5%">&nbsp;</td>
+        <td valign="TOP" width="40%"><font face="Courier New">MIDAS Version Number (from 2016-11-01)</font></td>
+        <td valign="TOP" width="35%">Please see note below for details.</td>
+      </tr>
       </table>
      <BR>
 <BR>
-More information about the Met Office surface data is available
-in the <A HREF="ukmo_guide.html">documentation provided by the
-Met Office</A>.
+More information about the Met Office surface data is available in the <A HREF="ukmo_guide.html">documentation provided by the Met Office</A>.
 <P>
 <STRONG>NOTES:</STRONG>
 <P>
@@ -384,6 +387,75 @@ which of the elements have caused these flags to be set. If any of bits
 failed the quality control check.
 
 
+</p>
+<br />
 <p>
+<sTRONG>MIDAS Version Number (from 2016-11-01:</STRONG>
+</p>
+<p>
+From 1st November 2016 the number of columns increased to 58 following the addition of a 'version' number for the global weather data held within MIDAS. This follows some additional QC checks carried out
+within the MIDAS system that were introduced at this time.
+
+When data first arrive within the MIDAS system they are given a version number '1'. Subsequentally, the version number 0 is used for a data line which denotes that QC has happened within 
+	the MIDAS system and an adjustment to the orignial data line has been made. The original data line is stored with a version number 0 and the amended line with version 1. 
+	Thus, only those lines with a version 0 can be taken has having had MIDAS QC run on them and the associated version 1 line is the updated value. Where only a version 1 line exists this may either be before MIDAS system QC has been run on the data or that it has run
+	and no issued have been found with the data.
+</p>
+<table>
+    <tr>
+        <td><b>Element</b></td>
+        <td><b>Condition</b></td>
+        <td><b>Value to be set to V0</b></td>
+        <td><b>Value to be set to V0</b></td>
+    </tr>
+    <tr>
+        <td>Air temperature*</td>
+        <td>air temp &gt; +60 or &lt;-70</td>
+        <td>Air temperature</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Dewpoint*</td>
+        <td>dewpoint &gt; +60 or &lt;-70</td>
+        <td>Wetbulb</td>
+        <td>Dewpoint</td>
+    </tr>
+    <tr>
+        <td>Max air temp*</td>
+        <td>max air temp &gt; +60 or &lt;-70</td>
+        <td>Max air temp</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Min air temp*</td>
+        <td>min air temp &gt; +60 or &lt;-70</td>
+        <td>Min air temp</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Wind direction</td>
+        <td>wind direction &gt; 360</td>
+        <td>Wind speed</td>
+        <td>Wind direction</td>
+    </tr>
+    <tr>
+        <td>Dewpoint</td>
+        <td>Dewpoint &gt; air temperature</td>
+        <td>Wetbulb</td>
+        <td>Dewpoint</td>
+    </tr>
+    <tr>
+        <td>Present weather</td>
+        <td>wx &amp; total cloud when wx between 50 and 75 ,80 &amp; 99 and ttl cloud = 0</td>
+        <td>Total cloud</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Present weather</td>
+        <td>Past weather 2 is greater than past weather 1</td>
+        <td>Past weather 1</td>
+        <td>Past weather 2</td>
+    </tr>
+</table>
 </BODY>
 </HTML>
