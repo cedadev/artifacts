@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dataset Labeler</title>
+
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Core
+CSS -->
+    <link rel="stylesheet" href="http://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/4/flatly/bootstrap.css" media="screen">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="http://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/_assets/css/custom.min.css"> <!-- CEDA themeing Important!! -->
+    <link rel="stylesheet" href="http://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/_assets/css/org-custom.css">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+</head>
+
+<body>
+<div class="container">
+    <div class="container alert alert-primary center">
+
+        <a href="https://arrivals.ceda.ac.uk/" class="navbar-brand">
+            <img src="http://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/_assets/img/ceda_archive_logo_transp_white_3_h80.png" alt="CEDA logo">
+        </a>
+
+        <p>Data ingested into the CEDA archive for the IPCC report must be acompanied by metadata to allow searching. Fill in the
+            form below to create a .yaml metadata file to add to your dataset.</p>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md"><button class="btn btn-lg btn-success btn-block mb-2" onclick="download();">Download metadata file
+            <i class="fas fa-download"></i></button></div>
+    </div>
+
+    <div id="figure_no_help" class="alert alert-primary tog">
+        <h4>Figure number <i class="fas fa-info-circle"></i></h4>
+        <div>
+            The number of the figure in the IPCC report
+        </div>
+    </div>
+     <textarea id="figure_number" class="form-control mb-2" style="min-width: 100%" rows="1"></textarea>
+
+     <div id="chapter_no_help" class="alert alert-primary tog">
+        <h4>Chapter number <i class="fas fa-info-circle"></i></h4>
+        <div>
+            The number of the chapter in the IPCC report
+        </div>
+    </div>
+     <textarea id="chapter_number" class="form-control mb-2" style="min-width: 100%" rows="1"></textarea>
+
+    <div id="caption_title_help" class="alert alert-primary tog">
+        <h4>Caption Title <i class="fas fa-info-circle"></i></h4>
+        <div>
+            Use the figure title from the assessment report draft provided by the TSU
+        </div>
+    </div>
+     <textarea id="caption_title" class="form-control mb-2" style="min-width: 100%" rows="4"></textarea>
+
+    <div id="caption_text_help" class="alert alert-primary tog">
+        <h4>Caption Text <i class="fas fa-info-circle"></i></h4>
+        <div>
+            Use the caption text from the assessment report provided by the TSU 
+        </div>
+    </div>
+    <textarea id="caption_text" class="form-control mb-2" style="min-width: 100%" rows="20">
+
+    </textarea>
+
+    <div id="authors_help" class="alert alert-primary tog">
+        <h4>Authors <i class="fas fa-info-circle"></i></h4>
+        <div>
+            <p>A list of authors of the final data</p>
+        </div>
+    </div>
+
+    <div id="authors">
+
+        <div class="row template  mb-1" style="display: none">
+            <div class="col-sm"><input class="form-control" type="text"/></div>
+            <div class="col-sm"><input class="form-control" type="text"/></div>
+        </div>
+        <div class="row">
+            <div class="col-sm">Firstname</div>
+            <div class="col-sm">Surname</div>
+        </div>
+    </div>
+    <button class="form-control mb-2 btn btn-secondary" onclick="add_row('authors');">Add an author</button>
+
+    <div id="keywords_help" class="alert alert-primary tog">
+        <h4>Keywords <i class="fas fa-info-circle"></i></h4>
+        <div>
+            <p>A list of keywords to be included. Please capitalise keywords and seperate them with commas </p>
+            <p>The following keywords are automatically added and do not need to be included:</p>
+            <p>'IPCC-DDC, IPCC, AR7, WG1, WGI, Seventh Assessment Report, Working Group I, Physical Science Basis, Intergovernmental Panel on Climate Change,'</p>
+        </div>
+    </div>
+
+    <div id="keywords"> 
+
+        <div class="row template  mb-1" style="display: none">
+            <div class="col-sm"><input class="form-control" type="text"/></div>
+        </div>
+    </div>
+    <textarea id="keywords_input" class="form-control mb-2" style="min-width: 100%" rows="2"></textarea>
+
+
+    <div id="coverage_help" class="alert alert-primary tog">
+        <h4>Coverage / Bounding Box <i class="fas fa-info-circle"></i></h4> <!--Need to add some validation!-->
+        <div><p>Where is the data? Latitude/Longitude bounding box.</p>
+        </div>
+    </div>
+
+   <div id="coverage" class="mb-2">
+
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-1"><input id="north" class="form-control" type="text"/>North</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1">West<input id="west" class="form-control" type="text"/></div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1"><input id="east" class="form-control" type="text"/>East</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-1"><input id="south" class="form-control" type="text"/>South</div>
+        </div>
+
+    </div>
+
+    
+    <div id="temporal_range" class="alert alert-primary tog">
+        <h4><b>Temporal Coverage</b></h3>
+        <h4>How is the temporal range of the data represented? <i class="fas fa-info-circle"></i></h4>
+    <div>
+        You can choose between two options: Common Era (CE) or Before Present (BP)
+        <li>Common Era follows the traditional structure (YYYY-MM-DD) (00:00) </li>
+        <li>Before Present allows for free text entry to describe the temporal range</li>
+    </div>
+    </div>
+
+        Datetime Format
+    <select id="time_format" class="form-control mb-2" onchange="toggle_time_fields();">
+    <option value="">-- Select an option --</option>
+    <option value="CE">Common Era</option>
+    <option value="BP">Before Present</option>
+    </select>
+
+    <div id="CE_field" style="display:none;">
+        Start Date & Time
+    <input type="datetime-local" id="start_date" class="form-control mb-2">
+        End Date & Time
+    <input type="datetime-local" id="end_date" class="form-control mb-2">
+    </div>
+
+    <div id="BP_field" style="display:none;">
+        Temporal range description
+        <textarea id="BP_description" class="form-control mb-2" style="min-width: 100%" rows="2"></textarea>
+    </div>
+
+
+    <div id="docs_help" class="alert alert-primary tog">
+            <h4>Relevent online documentation sources <i class="fas fa-info-circle"></i></h4>
+            <div>
+                The title field is what users will see in the catalogue record. Ideally the URL will be a DOI link
+            </div>
+    </div>
+
+    <div id="docs">
+
+        <div class="row template mb-2" style="display: none">
+            <div class="col-lg"><input class="form-control" type="text"/></div>
+            <div class="col-md"><input class="form-control" type="text"/></div>
+        </div>
+        <div class="row">
+            <div class="col-sm">Title</div>
+            <div class="col-sm">URL</div>
+        </div>
+    </div>
+    <button class="form-control mb-2 btn btn-secondary" onclick="add_row('docs');">Add a document</button>
+
+    
+
+    
+    <div id="comp_help" class="alert alert-primary tog">
+        <h4>Computation / Link to Repository <i class="fas fa-info-circle"></i></h4>
+
+        <div>
+            Include here the link to the Github repository that contains the code used to produce the figure.
+            The repository should include instructions on how to use the code
+        </div>
+    </div>
+
+    GitHub Link
+    <textarea id="github_link" class="form-control mb-2" style="min-width: 100%" rows="1"></textarea>
+
+    <div class="row">
+        <div class="col-md"><button class="btn btn-lg btn-success btn-block mb-2" onclick="download();">Download metadata file
+            <i class="fas fa-download"></i></button></div>
+    </div>
+
+
+    <script src="http://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_vendor/jquery/dist/jquery.min.js"></script>
+    <script src="http://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="http://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="http://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_assets/js/custom.js"></script>
+    <script src="labeler.js"></script>
+</div>
+
+</body>
+</html>
