@@ -9,12 +9,10 @@ function make_download() {
     var chap_num = $('#chapter_number').val();
     var draft_num = "1st" //make a function to change this!
     var today = current_date();
-    
-    var cap_title = $('#caption_title').val();
-    var cap_text = $('#caption_text').val();
+
     var title = `Data for Figure ${fig_num} from Chapter ${chap_num} of the ${draft_num} draft of the Working Group I Contribution to the IPCC Seventh Assessment Report (v${today})`;
     var description = `This dataset contains the final data for Figure ${fig_num} from Chapter ${chap_num} of the Working Group I (WGI) Contribution to the Intergovernmental Panel on Climate Change (IPCC) Seventh Assessment Report (AR7). Additional information, including how to cite this figure dataset, is provided in the README.txt alongside the data. 
-    Figure ${fig_num} caption: ${cap_title} ${cap_text}
+    Figure ${fig_num} caption: [ADD]
     Links to the figure, report chapter and supplementary material are provided in the Details/Docs section of this catalogue record. Code to reproduce the figure which is hosted on GitHub is also linked, and described under the Process tab below.`;
 
     var authors = $('#authors input');
