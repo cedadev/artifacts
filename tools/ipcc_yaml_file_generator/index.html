@@ -32,7 +32,7 @@ CSS -->
             <img src="http://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/_assets/img/ceda_archive_logo_transp_white_3_h80.png" alt="CEDA logo">
         </a>
 
-        <p>Data ingested into the CEDA archive for the IPCC report must be acompanied by metadata to allow searching. Fill in the
+        <p>Data ingested into the CEDA archive for the IPCC report must be accompanied by metadata to allow searching. Fill in the
             form below to create a .yaml metadata file to add to your dataset.</p>
     </div>
 
@@ -42,27 +42,23 @@ CSS -->
             <i class="fas fa-download"></i></button></div>
     </div>
 
-    <div id="figure_no_help" class="alert alert-primary tog">
-        <h4>Figure number <i class="fas fa-info-circle"></i></h4>
-        <div>
-            The number of the figure in the IPCC report
-        </div>
-    </div>
-     <textarea id="figure_number" class="form-control mb-2" style="min-width: 100%" rows="1"></textarea>
-
-     <div id="chapter_no_help" class="alert alert-primary tog">
-        <h4>Chapter number <i class="fas fa-info-circle"></i></h4>
-        <div>
-            The number of the chapter in the IPCC report
-        </div>
+    <div id="chapter_no_help" class="alert alert-primary tog">
+        <h4>Chapter number </h4>
+        <h7>The number of the chapter in the IPCC report</h7>
     </div>
      <textarea id="chapter_number" class="form-control mb-2" style="min-width: 100%" rows="1"></textarea>
 
+    <div id="figure_no_help" class="alert alert-primary tog">
+        <h4>Figure number </h4>
+        <h7>The number of the figure in the IPCC report</h7>
+    </div>
+     <textarea id="figure_number" class="form-control mb-2" style="min-width: 100%" rows="1"></textarea>
+
+     
+
     <div id="authors_help" class="alert alert-primary tog">
-        <h4>Authors <i class="fas fa-info-circle"></i></h4>
-        <div>
-            <p>A list of authors of the final data</p>
-        </div>
+        <h4>Authors </h4>
+        <h7>A list of authors of the final data <h7>
     </div>
 
     <div id="authors">
@@ -76,15 +72,15 @@ CSS -->
             <div class="col-sm">Surname</div>
         </div>
     </div>
-    <button class="form-control mb-2 btn btn-secondary" onclick="add_row('authors');">Add an author</button>
+    <button class="form-control mb-2 btn btn-secondary" onclick="add_row('authors');">Add more boxes</button>
 
     <div id="keywords_help" class="alert alert-primary tog">
-        <h4>Keywords <i class="fas fa-info-circle"></i></h4>
-        <div>
+        <h4>Keywords </h4>
+        <h7> 
             <p>A list of keywords to be included. Please capitalise keywords and seperate them with commas </p>
             <p>The following keywords are automatically added and do not need to be included:</p>
             <p>'IPCC-DDC, IPCC, AR7, WG1, WGI, Seventh Assessment Report, Working Group I, Physical Science Basis, Intergovernmental Panel on Climate Change,'</p>
-        </div>
+        </h7>
     </div>
 
     <div id="keywords"> 
@@ -98,8 +94,7 @@ CSS -->
 
     <div id="coverage_help" class="alert alert-primary tog">
         <h4>Coverage / Bounding Box <i class="fas fa-info-circle"></i></h4> <!--Need to add some validation!-->
-        <div><p>Where is the data? Latitude/Longitude bounding box.</p>
-        </div>
+        <h7> Where is the data? Latitude/Longitude bounding box.</h7>
     </div>
 
    <div id="coverage" class="mb-2">
@@ -124,12 +119,12 @@ CSS -->
     
     <div id="temporal_range" class="alert alert-primary tog">
         <h4><b>Temporal Coverage</b></h3>
-        <h4>How is the temporal range of the data represented? <i class="fas fa-info-circle"></i></h4>
-    <div>
+        <h5>How is the temporal range of the data represented? </h5>
+    <h7>
         You can choose between two options: Common Era (CE) or Before Present (BP)
         <li>Common Era follows the traditional structure (YYYY-MM-DD) (00:00) </li>
         <li>Before Present allows for free text entry to describe the temporal range</li>
-    </div>
+    </h7>
     </div>
 
         Datetime Format
@@ -153,10 +148,8 @@ CSS -->
 
 
     <div id="docs_help" class="alert alert-primary tog">
-            <h4>Relevent online documentation sources <i class="fas fa-info-circle"></i></h4>
-            <div>
-                The title field is what users will see in the catalogue record. Ideally the URL will be a DOI link
-            </div>
+            <h4>Relevant online documentation sources </h4>
+            <h7> The title field is what users will see in the catalogue record. Ideally the URL will be a DOI link </h7>
     </div>
 
     <div id="docs">
@@ -170,18 +163,14 @@ CSS -->
             <div class="col-sm">URL</div>
         </div>
     </div>
-    <button class="form-control mb-2 btn btn-secondary" onclick="add_row('docs');">Add a document</button>
+    <button class="form-control mb-2 btn btn-secondary" onclick="add_row('docs');">Add more boxes</button>
 
-    
-
-    
     <div id="comp_help" class="alert alert-primary tog">
-        <h4>Computation / Link to Repository <i class="fas fa-info-circle"></i></h4>
-
-        <div>
+        <h4>Computation / Link to Repository </h4>
+        <h7>
             Include here the link to the Github repository that contains the code used to produce the figure.
             The repository should include instructions on how to use the code
-        </div>
+        </h7>
     </div>
 
     GitHub Link
