@@ -1,6 +1,5 @@
 /**
- * Created by sjp23 on 13/09/2018.
- * Updated by jesse on 24/06/2026
+ * Produced by jesse on 24/06/2026
  */
 
 function make_download() {
@@ -125,6 +124,66 @@ function download() {
 
   document.body.removeChild(element);
 }
+
+// Mandatory field validation 
+function validate_mandatory_fields() {
+    var missing = [];
+ 
+    function checkVal(id, label) {
+        var el = document.getElementById(id);
+        var ok = !!(el && el.value && el.value.trim());
+        if (el) el.classList.toggle('is-invalid', !ok);
+        if (!ok) missing.push(label);
+        return ok;
+    }
+ 
+    checkVal('chapter_number', 'Chapter number');
+    checkVal('figure_number', 'Figure number');
+    checkVal('keywords_input', 'Keywords');
+    checkVal('north', 'North (bounding box)');
+    checkVal('west', 'West (bounding box)');
+    checkVal('east', 'East (bounding box)');
+    checkVal('south', 'South (bounding box)');
+ 
+    // Authors: mirrors the indexing used in make_download() - skip the
+    // hidden template row's inputs (indices 0,1), then walk pairs from index 2.
+    var authors = $('#authors input');
+    var authorOk = false;
+    for (var i = 2; i < authors.length; i += 2) {
+        var first = authors[i];
+        var last = authors[i + 1];
+        var rowOk = first.value.trim() && last.value.trim();
+        if (rowOk) authorOk = true;
+        $(first).toggleClass('is-invalid', !first.value.trim());
+        $(last).toggleClass('is-invalid', !last.value.trim());
+    }
+    if (!authorOk) missing.push('Authors (at least one Firstname + Surname)');
+ 
+    // Temporal coverage
+    var timeFormat = $('#time_format');
+    var timeFormatOk = !!timeFormat.val();
+    timeFormat.toggleClass('is-invalid', !timeFormatOk);
+    if (!timeFormatOk) {
+        missing.push('Datetime Format');
+    } else if (timeFormat.val() === 'CE') {
+        checkVal('start_date', 'Start Date & Time');
+        checkVal('end_date', 'End Date & Time');
+    } else if (timeFormat.val() === 'BP') {
+        checkVal('BP_description', 'Temporal range description');
+    }
+ 
+    return missing;
+}
+ 
+function checkAndDownload() {
+    var missing = validate_mandatory_fields();
+    if (missing.length > 0) {
+        alert('Please fill in the following required fields before downloading:\n\n- ' + missing.join('\n- '));
+        return;
+    }
+    download();
+}
+
 
 
 $(".tog").click(function(event){

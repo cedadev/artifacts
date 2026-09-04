@@ -14,10 +14,10 @@
 
     <!-- Bootstrap Core
 CSS -->
-    <link rel="stylesheet" href="http://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/4/flatly/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="https://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/4/flatly/bootstrap.css" media="screen">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="http://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/_assets/css/custom.min.css"> <!-- CEDA themeing Important!! -->
-    <link rel="stylesheet" href="http://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/_assets/css/org-custom.css">
+    <link rel="stylesheet" href="https://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/_assets/css/custom.min.css"> <!-- CEDA themeing Important!! -->
+    <link rel="stylesheet" href="https://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/_assets/css/org-custom.css">
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
@@ -29,7 +29,7 @@ CSS -->
     <div class="container alert alert-primary center">
 
         <a href="https://arrivals.ceda.ac.uk/" class="navbar-brand">
-            <img src="http://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/_assets/img/ceda_archive_logo_transp_white_3_h80.png" alt="CEDA logo">
+            <img src="https://artefacts.ceda.ac.uk/themes/orgtheme_ceda_serv/0.1/_assets/img/ceda_archive_logo_transp_white_3_h80.png" alt="CEDA logo">
         </a>
 
         <p>Data ingested into the CEDA archive for the IPCC report must be accompanied by metadata to allow searching. Fill in the
@@ -38,18 +38,18 @@ CSS -->
 
 
     <div class="row">
-        <div class="col-md"><button class="btn btn-lg btn-success btn-block mb-2" onclick="download();">Download metadata file
+        <div class="col-md"><button class="btn btn-lg btn-success btn-block mb-2" onclick="checkAndDownload();">Download metadata file
             <i class="fas fa-download"></i></button></div>
     </div>
 
     <div id="chapter_no_help" class="alert alert-primary tog">
-        <h4>Chapter number </h4>
+        <h4>Chapter number <span class="text-danger">*</span> </h4>
         <h7>The number of the chapter in the IPCC report</h7>
     </div>
      <textarea id="chapter_number" class="form-control mb-2" style="min-width: 100%" rows="1"></textarea>
 
     <div id="figure_no_help" class="alert alert-primary tog">
-        <h4>Figure number </h4>
+        <h4>Figure number <span class="text-danger">*</span> </h4>
         <h7>The number of the figure in the IPCC report</h7>
     </div>
      <textarea id="figure_number" class="form-control mb-2" style="min-width: 100%" rows="1"></textarea>
@@ -57,7 +57,7 @@ CSS -->
      
 
     <div id="authors_help" class="alert alert-primary tog">
-        <h4>Authors </h4>
+        <h4>Authors <span class="text-danger">*</span> </h4>
         <h7>A list of authors of the final data <h7>
     </div>
 
@@ -75,7 +75,7 @@ CSS -->
     <button class="form-control mb-2 btn btn-secondary" onclick="add_row('authors');">Add more boxes</button>
 
     <div id="keywords_help" class="alert alert-primary tog">
-        <h4>Keywords </h4>
+        <h4>Keywords <span class="text-danger">*</span> </h4>
         <h7> 
             <p>A list of keywords to be included. Please capitalise keywords and seperate them with commas </p>
             <p>The following keywords are automatically added and do not need to be included:</p>
@@ -93,7 +93,7 @@ CSS -->
 
 
     <div id="coverage_help" class="alert alert-primary tog">
-        <h4>Coverage / Bounding Box <i class="fas fa-info-circle"></i></h4> <!--Need to add some validation!-->
+        <h4>Coverage / Bounding Box <span class="text-danger">*</span> <i class="fas fa-info-circle"></i></h4> <!--Need to add some validation!-->
         <h7> Where is the data? Latitude/Longitude bounding box.</h7>
     </div>
 
@@ -118,7 +118,7 @@ CSS -->
 
     
     <div id="temporal_range" class="alert alert-primary tog">
-        <h4><b>Temporal Coverage</b></h3>
+        <h4><b>Temporal Coverage <span class="text-danger">*</span></b></h3>
         <h5>How is the temporal range of the data represented? </h5>
     <h7>
         You can choose between two options: Common Era (CE) or Before Present (BP)
@@ -177,15 +177,15 @@ CSS -->
     <textarea id="github_link" class="form-control mb-2" style="min-width: 100%" rows="1"></textarea>
 
     <div class="row">
-        <div class="col-md"><button class="btn btn-lg btn-success btn-block mb-2" onclick="download();">Download metadata file
+        <div class="col-md"><button class="btn btn-lg btn-success btn-block mb-2" onclick="checkAndDownload();">Download metadata file
             <i class="fas fa-download"></i></button></div>
     </div>
 
 
-    <script src="http://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_vendor/jquery/dist/jquery.min.js"></script>
-    <script src="http://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_vendor/popper.js/dist/umd/popper.min.js"></script>
-    <script src="http://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="http://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_assets/js/custom.js"></script>
+    <script src="https://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_vendor/jquery/dist/jquery.min.js"></script>
+    <script src="https://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_vendor/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://artefacts.ceda.ac.uk/themes/orgtheme/0.1/_assets/js/custom.js"></script>
     <script src="labeler.js"></script>
 </div>
 
